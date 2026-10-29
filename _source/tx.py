@@ -1,4 +1,10 @@
 import os,sys,time,json
+# CUDA DLLs from the nvidia-cublas-cu12 / nvidia-cudnn-cu12 pip packages
+try:
+    import nvidia.cublas,nvidia.cudnn
+    for m in (nvidia.cublas,nvidia.cudnn):
+        b=os.path.join(m.__path__[0],'bin'); os.add_dll_directory(b); os.environ['PATH']=b+os.pathsep+os.environ['PATH']
+except ImportError: pass
 from faster_whisper import WhisperModel
 root="D:/Study/SEM 6"; out=sys.argv[1]; dev=sys.argv[2]; only=sys.argv[3] if len(sys.argv)>3 else None
 os.makedirs(out,exist_ok=True)

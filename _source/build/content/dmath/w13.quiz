@@ -1,0 +1,110 @@
+? A decision tree is best described as:
++ A map of the possible outcomes of a series of related choices
+- A graph with no vertices
+- A list of edges sorted by weight
+- A binary search tree of words
+= It weighs actions by their costs, probabilities and benefits.
+
+? In Definition 1, each internal vertex of a decision tree corresponds to:
++ A decision, with a subtree for each possible outcome
+- A leaf
+- A circuit
+- An edge weight
+= The leaves are the final results.
+
+? When drawing a decision tree, an uncertain outcome is drawn as a:
+- Square
++ Circle
+- Triangle
+- Diamond
+= Squares are decisions; nothing or a triangle marks a result.
+
+? At a chance node, a 0.7 probability of promotion worth 80,000 contributes:
+# 56000
+= 0.7 × 80,000 = 56,000.
+
+? The probabilities of the outcomes at a chance node must add up to:
+# 1
+= Or 100% when written as percentages.
+
+? A product costs $400,000 in R&D and its expected value if launched is $555,000. What is the expected net value?
+# 155000
+= 555,000 − 400,000 = 155,000, so the recommendation is to launch.
+
+? Which is an advantage of decision trees?
++ They handle both continuous and categorical variables
+- They're never computationally expensive to train
+- They're error-free with many classes and few examples
+- They need no data
+= They also show clearly which fields matter most.
+
+? How many sequences of length six of A's and B's have no two adjacent A's and never three adjacent B's?
+# 9
+= ABABAB, ABABBA, ABBABA, ABBABB, BABABA, BABABB, BABBAB, BBABAB, BBABBA.
+
+? Preorder traversal visits:
++ The root first, then each subtree left to right in preorder
+- Each subtree in postorder, then the root
+- Only the leaves
+- The vertices in alphabetical order
+= Postorder visits the root last.
+
+? In Example 13.2.1 (a → b, c, d; b → e, f; e → j, k; k → n, o, p; d → g, h, i; g → l, m), what is the last vertex of the postorder traversal?
++ a
+- i
+- p
+- j
+= Postorder always ends at the root.
+
+? In the same tree, which vertex comes right after p in the preorder traversal?
++ f
+- j
+- c
+- k
+= After finishing e's subtree (j, k, n, o, p), preorder visits b's next child, f. The PDF wrongly repeats j here.
+
+? A spanning tree of a simple graph G is:
++ A subgraph of G that is a tree containing every vertex of G
+- Any path in G
+- G with all edges removed
+- The longest circuit in G
+= Remove edges from simple circuits until none remain.
+
+? Theorem 1 states that a simple graph is connected if and only if:
++ It has a spanning tree
+- It has no edges
+- It is a binary tree
+- It has exactly n edges
+= Every connected simple graph has a spanning tree, and vice versa.
+
+? How many edges must be removed from a connected graph with 7 vertices and 10 edges to get a spanning tree?
+# 4
+= A tree on 7 vertices has 6 edges, so remove 10 − 7 + 1 = 4.
+
+? In IP multicasting, the root of the spanning tree is:
++ The multicast source
+- A receiving subnetwork
+- A random router
+- The slowest link
+= The leaves are the subnetworks containing receiving computers.
+
+? Why do multicast routers use a spanning tree?
++ So data never loops back to a router it has already reached
+- To send a separate copy to every computer
+- To make the network slower
+- Because unicasting is required
+= Loops are circuits; a tree has none.
+
+? A decision tree that becomes over-complex and doesn't generalise well to new data suffers from:
++ Overfitting
+- Spanning
+- Traversal
+- Stratification
+= Trees can also be unstable: small data changes can give a completely different tree.
+
+? In the badminton tree, when the outlook is cloudy:
++ You play, whatever the other variables are
+- It depends on humidity
+- It depends on wind
+- You never play
+= Sunny depends on humidity; rainy depends on wind.

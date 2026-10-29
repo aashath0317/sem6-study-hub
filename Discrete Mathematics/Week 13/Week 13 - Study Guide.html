@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 13 · Decision Trees, Tree Traversal &amp; Spanning Trees — Discrete Mathematics</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.vdrive{width:100%;border:0;border-radius:10px;background:#000;aspect-ratio:16/9;display:block}
+.vdlink{display:inline-block;margin-top:6px;font-size:13px;color:var(--muted)}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="dmath-Week13">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Discrete Mathematics</a> › Week 13</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 13</div><h1>Decision Trees, Tree Traversal &amp; Spanning Trees</h1><p>Decision trees as maps of choices and outcomes (drawing, evaluating with expected values, pros and cons), preorder and postorder traversal of ordered rooted trees, and spanning trees with their use in IP multicasting.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">2 videos · 24 min</span><span class="chip">📄 Lesson 12 - Trees_2.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Video Lecture 1 – Decision trees · 11 min</button><button>2. Video Lecture 2 – Expected values, traversal &amp; spanning trees · 13 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Lesson 13 - Video Lecture 1.mp4" data-drive="1YBa4YF-28Y6ySITCUf6UXgnmO8cReGGt"><source src="Lesson%2013%20-%20Video%20Lecture%201.mp4"></video></div><div class="chap"><p class="vt">Video Lecture 1 – Decision trees</p><p class="vs">What a decision tree is, the buy-a-car example, drawing with squares and circles, extra advantages, disadvantages and applications, and the badminton tree.</p><a href="#" data-v="0" data-t="1"><b>00:01</b><span>Lesson 12.2: decision trees, traversal, spanning trees</span></a><a href="#" data-v="0" data-t="89"><b>01:29</b><span>A decision tree weighs possible actions</span></a><a href="#" data-v="0" data-t="104"><b>01:44</b><span>Informal example: should I buy a car?</span></a><a href="#" data-v="0" data-t="182"><b>03:02</b><span>Definition: rooted tree, internal vertex = decision</span></a><a href="#" data-v="0" data-t="284"><b>04:44</b><span>Drawing: lines = options, squares = decisions, circles = uncertainty</span></a><a href="#" data-v="0" data-t="323"><b>05:23</b><span>Seven extra advantages</span></a><a href="#" data-v="0" data-t="398"><b>06:38</b><span>Disadvantages: overfitting, instability, many classes</span></a><a href="#" data-v="0" data-t="434"><b>07:14</b><span>When to use decision trees, and application areas</span></a><a href="#" data-v="0" data-t="501"><b>08:21</b><span>Example: play badminton?</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Lesson 13 - Video Lecture 2.mp4" data-drive="15XhqYcQMeMXF_uxzNutRl5DpaTgYuxLH"><source src="Lesson%2013%20-%20Video%20Lecture%202.mp4"></video></div><div class="chap"><p class="vt">Video Lecture 2 – Expected values, traversal &amp; spanning trees</p><p class="vs">The new-product expected-value exercise, preorder and postorder traversal, and spanning trees.</p><a href="#" data-v="1" data-t="8"><b>00:08</b><span>Self-assessment 2: launch a new product?</span></a><a href="#" data-v="1" data-t="88"><b>01:28</b><span>Draw the decision tree: develop or not</span></a><a href="#" data-v="1" data-t="153"><b>02:33</b><span>EV at A = $780,000; EV at C = 0.7 × A + 0.3 × B</span></a><a href="#" data-v="1" data-t="223"><b>03:43</b><span>Tree traversal: visit every node exactly once</span></a><a href="#" data-v="1" data-t="297"><b>04:57</b><span>Preorder: start with the root</span></a><a href="#" data-v="1" data-t="471"><b>07:51</b><span>Postorder: subtrees first, root last</span></a><a href="#" data-v="1" data-t="603"><b>10:03</b><span>Spanning trees: G is connected</span></a><a href="#" data-v="1" data-t="689"><b>11:29</b><span>Connected ⇔ has a spanning tree</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Decision trees"><span class="num">1</span>Decision trees</h2><div class="call key"><div class="ct">What is a decision tree?</div><p>A <strong>decision tree</strong> is a <strong>map of the possible outcomes of a series of related choices</strong>. It lets a person or organisation <strong>weigh possible actions against one another</strong> based on their <strong>costs, probabilities and benefits</strong>.</p></div>
+<ul>
+<li>It uses a <strong>tree-like model of decisions</strong>: it starts at a <strong>single node</strong> that branches into possible outcomes, and each outcome leads to further nodes.</li>
+<li>It can drive <strong>informal discussion</strong> or map out an <strong>algorithm</strong> that predicts the best choice mathematically.</li>
+<li>A <strong>rooted tree</strong> is a tree in which one special node, the <strong>root</strong>, is singled out.</li>
+</ul>
+<div class="call example"><div class="ct">Should I buy a car? <a class="ts" href="#" data-v="0" data-t="104">01:44</a></div><ul>
+<li><strong>Should I buy a car?</strong> → Do I have good public transport?</li>
+<li><strong>Yes</strong> → don't buy</li>
+<li><strong>No</strong> → buy</li>
+<li>If I decide <strong>not</strong> to buy → Do I often travel outside my city?</li>
+<li><strong>Yes</strong> → consider buying</li>
+<li><strong>No</strong> → don't buy</li>
+</ul>
+<p>The tree starts at <strong>one node</strong> (the question), branches into outcomes (<strong>yes / no</strong>), and each outcome leads to further nodes.</p></div>
+<div class="call key"><div class="ct">Definition 1</div><p>A rooted tree in which <strong>each internal vertex corresponds to a decision</strong>, with a <strong>subtree at these vertices for each possible outcome</strong> of the decision, is called a <strong>decision tree</strong>.</p></div>
+<h3 id="drawing-your-own-decision-tree">Drawing your own decision tree</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Square</strong> ■</td>
+<td>A <strong>decision</strong> to be made</td>
+</tr>
+<tr>
+<td><strong>Circle</strong> ●</td>
+<td>An <strong>uncertain</strong> outcome (chance)</td>
+</tr>
+<tr>
+<td>Nothing / <strong>triangle</strong> ▲</td>
+<td>A final <strong>result</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="flow"><span><ol>
+<li>Draw the decision as a <strong>small square</strong> on the left</li>
+</ol></span><span><ol start="2">
+<li>Draw <strong>one line per option</strong> to the right and label it</li>
+</ol></span><span><ol start="3">
+<li>At each line's end: another decision → <strong>square</strong>; uncertain → <strong>circle</strong>; result → nothing</li>
+</ol></span><span><ol start="4">
+<li>From squares draw the <strong>choices</strong>; from circles draw the <strong>possible outcomes</strong></li>
+</ol></span><span><ol start="5">
+<li>Keep going until every path ends in a result</li>
+</ol></span></div>
+<h3 id="evaluating-a-decision-tree">Evaluating a decision tree</h3>
+<ol>
+<li><strong>Estimate the value</strong> of each final outcome.</li>
+<li>At each <strong>circle</strong>, assign a <strong>probability</strong> to each outcome. They must add up to <strong>100%</strong> (or <strong>1</strong>).</li>
+<li><strong>Calculate</strong>: multiply each end value by its probability and add them up at each circle. Subtract any <strong>costs</strong> along the way to get the <strong>net value</strong>.</li>
+<li>Choose the option with the <strong>highest value</strong>.</li>
+</ol>
+<div class="call example"><div class="ct">From the lesson</div><p>The probability of promotion is <strong>0.7</strong> and it's worth <strong>80,000</strong>, so that branch contributes 0.7 × 80,000 = <strong>56,000</strong>.</p></div>
+<div class="formula"><strong>Expected value</strong> at a chance node = Σ (probability × value)</div>
+<div class="call example"><div class="ct">Self-assessment 2: launch a new product? <a class="ts" href="#" data-v="1" data-t="8">00:08</a></div><p>The tree has two choices: <strong>develop</strong> or <strong>don't develop</strong> (profit $0). Under "develop" there's a chance node for <strong>success / failure</strong>, then chance nodes for <strong>high / medium / low</strong> and <strong>sell / worthless</strong> <a class="ts" href="#" data-v="1" data-t="88">01:28</a>.</p>
+<p>R&amp;D costs <strong>$400,000</strong>. Success <strong>70%</strong>, failure <strong>30%</strong>.</p>
+<p><strong>If successful</strong> (profits for <strong>two years</strong>):</p>
+<table>
+<thead>
+<tr>
+<th>Popularity</th>
+<th>Probability</th>
+<th>Profit per year</th>
+<th>Two-year profit</th>
+<th>Prob × profit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High</td>
+<td>0.2</td>
+<td>$500,000</td>
+<td>$1,000,000</td>
+<td>$200,000</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>0.5</td>
+<td>$400,000</td>
+<td>$800,000</td>
+<td>$400,000</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>0.3</td>
+<td>$300,000</td>
+<td>$600,000</td>
+<td>$180,000</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>EV(success)</strong></td>
+<td><strong>$780,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>If it fails:</strong> 0.6 × $50,000 + 0.4 × $0 = <strong>$30,000</strong></p>
+<p><strong>Launch:</strong> 0.7 × 780,000 + 0.3 × 30,000 = 546,000 + 9,000 = <strong>$555,000</strong></p>
+<p><strong>Net of R&amp;D:</strong> 555,000 − 400,000 = <strong>$155,000 &gt; 0</strong></p>
+<p><strong>Recommendation:</strong> develop and launch the product, because its expected net value is positive (<strong>+$155,000</strong>) compared with <strong>$0</strong> for not launching.</p></div>
+<div class="tool"><div class="tt">🧪 Try it — Expected value calculator</div><div id="ev">
+<div class="row"><label>R&amp;D cost <input type="number" class="rd" value="400000" step="10000" style="width:110px"></label><label>P(success) <input type="number" class="ps" value="0.7" step="0.05" min="0" max="1" style="width:80px"></label><label>Years <input type="number" class="yr" value="2" min="1" style="width:60px"></label></div>
+<div class="row"><label>High p <input type="number" class="p0" value="0.2" step="0.05" style="width:70px"></label><label>profit/yr <input type="number" class="v0" value="500000" step="10000" style="width:100px"></label></div>
+<div class="row"><label>Medium p <input type="number" class="p1" value="0.5" step="0.05" style="width:70px"></label><label>profit/yr <input type="number" class="v1" value="400000" step="10000" style="width:100px"></label></div>
+<div class="row"><label>Low p <input type="number" class="p2" value="0.3" step="0.05" style="width:70px"></label><label>profit/yr <input type="number" class="v2" value="300000" step="10000" style="width:100px"></label></div>
+<div class="row"><label>If failed: P(sell) <input type="number" class="pf" value="0.6" step="0.05" style="width:70px"></label><label>sale value <input type="number" class="vf" value="50000" step="5000" style="width:100px"></label></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('ev');function g(c){return +R.querySelector('.'+c).value}function m(x){return '$'+Math.round(x).toLocaleString()}
+function run(){var y=g('yr'),ps=g('ps'),s=0,pt=0;for(var i=0;i<3;i++){s+=g('p'+i)*g('v'+i)*y;pt+=g('p'+i)}var f=g('pf')*g('vf'),ev=ps*s+(1-ps)*f,net=ev-g('rd');
+R.querySelector('.out').innerHTML=(Math.abs(pt-1)>1e-9?'<p style="color:var(--warn)">The success probabilities add up to '+(+pt.toFixed(3))+', not 1.</p>':'')+'<p>EV(success) = '+m(s)+' · EV(failure) = '+m(f)+'</p><p>EV(launch) = '+ps+' × '+m(s)+' + '+(+(1-ps).toFixed(3))+' × '+m(f)+' = <b>'+m(ev)+'</b></p><p style="font-size:19px">Net = '+m(ev)+' − '+m(g('rd'))+' = <b style="color:'+(net>=0?'var(--accent)':'var(--warn)')+'">'+m(net)+'</b> → '+(net>=0?'<b>launch</b>':'<b>don\'t launch</b>')+'</p>'}
+R.addEventListener('input',run);run();})();
+</script></div>
+<h3 id="advantages-and-disadvantages">Advantages and disadvantages</h3>
+<table>
+<thead>
+<tr>
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Classify <strong>without much computation</strong></td>
+<td><strong>Error-prone</strong> with <strong>many classes</strong> and <strong>few training examples</strong></td>
+</tr>
+<tr>
+<td>Handle both <strong>continuous and categorical</strong> variables</td>
+<td><strong>Computationally expensive to train</strong> (growing the tree is costly)</td>
+</tr>
+<tr>
+<td>Clearly show <strong>which fields matter most</strong> for prediction</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The lecture adds more <a class="ts" href="#" data-v="0" data-t="323">05:23</a>:</p>
+<div class="grid2"><div><p><strong>More advantages</strong></p>
+<ol>
+<li><strong>Easy to understand</strong>, even for people from non-analytical backgrounds</li>
+<li>Useful in <strong>data exploration</strong>: one of the fastest ways to find the most significant variables and relations between them</li>
+<li><strong>Less effort</strong> needed from users for <strong>data preparation</strong></li>
+<li><strong>Less data cleaning</strong> required</li>
+<li><strong>Data type is not a constraint</strong></li>
+<li><strong>Non-parametric</strong>: no assumptions about the space distribution or classifier structure</li>
+<li><strong>Non-linear relationships</strong> between parameters don't affect performance</li>
+</ol></div><div><p><strong>More disadvantages</strong> <a class="ts" href="#" data-v="0" data-t="398">06:38</a></p>
+<ol>
+<li><strong>Overfitting</strong>: over-complex trees that don't <strong>generalise</strong> well</li>
+<li><strong>Unstable</strong>: small variations in the data can produce a <strong>completely different tree</strong></li>
+<li>Calculations get <strong>complex with many class labels</strong></li>
+</ol></div></div>
+<p><strong>When to use a decision tree</strong> <a class="ts" href="#" data-v="0" data-t="434">07:14</a>:</p>
+<ol>
+<li>The decision maker has an <strong>objective</strong> (e.g. maximise profit, optimise cost)</li>
+<li>There are <strong>several courses of action</strong></li>
+<li>There's a <strong>calculable measure of benefit</strong> for the alternatives</li>
+<li>There are <strong>events beyond the decision maker's control</strong> (e.g. environmental factors)</li>
+<li>There's <strong>uncertainty</strong> about which outcome will actually happen</li>
+</ol>
+<p><strong>Application areas:</strong> medicine, planning, pharmacology, molecular biology, astronomy, biomedical engineering, production and manufacturing.</p>
+<h3 id="example-131-play-badminton">Example 13.1: play badminton?</h3>
+<p>To decide whether to play on Saturday, you record <strong>temperature, wind, humidity and outlook</strong> (sunny, cloudy, rainy) for the last ten days in a <strong>lookup table</strong>.</p>
+<ul>
+<li>Problem: Saturday's weather might <strong>not match any row</strong> of the table.</li>
+<li>A <strong>decision tree</strong> solves this. It considers <strong>every path</strong> to the final decision.</li>
+<li>Each <strong>node</strong> is an <strong>attribute</strong>, each <strong>branch</strong> is an <strong>outcome</strong> of that attribute, and each <strong>leaf</strong> is the <strong>final decision</strong> (play / don't play).</li>
+</ul>
+<div class="call example"><div class="ct">The badminton tree <a class="ts" href="#" data-v="0" data-t="529">08:49</a></div><ul>
+<li><strong>Outlook = sunny</strong> → depends on <strong>humidity</strong>: high → <strong>don't play</strong>; normal → <strong>play</strong></li>
+<li><strong>Outlook = cloudy</strong> → <strong>play</strong> (no other variable matters)</li>
+<li><strong>Outlook = rainy</strong> → depends on <strong>wind</strong>: strong → <strong>don't play</strong>; weak → <strong>play</strong></li>
+</ul>
+<p>Temperature never matters in this tree.</p></div>
+<div class="call example"><div class="ct">Self-assessment 1: sequences of A's and B's</div><p>List all sequences of length six with <strong>no two adjacent A's</strong> and <strong>never three adjacent B's</strong>, with the leaves in alphabetical order.</p>
+<p>Build the tree one letter at a time, cutting a branch as soon as it creates <strong>AA</strong> or <strong>BBB</strong>. There are <strong>9</strong> leaves:</p>
+<p>ABABAB · ABABBA · ABBABA · ABBABB · BABABA · BABABB · BABBAB · BBABAB · BBABBA</p></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Tree traversal"><span class="num">2</span>Tree traversal</h2><p><strong>Tree traversal</strong> is a form of graph traversal: visiting <strong>each node of a tree exactly once</strong> <a class="ts" href="#" data-v="1" data-t="223">03:43</a>. <strong>Ordered rooted trees</strong> store information and can represent <strong>expressions</strong> (numbers, variables, operations). To use the data, we need procedures that <strong>visit every vertex</strong>: <strong>traversal algorithms</strong>. Both are defined <strong>recursively</strong>.</p>
+<div class="grid2"><div><p><strong>Preorder: root first</strong></p>
+<p>Visit the <strong>root r</strong>, then traverse T₁ in preorder, then T₂, … then Tₙ (subtrees <strong>left to right</strong>).</p></div><div><p><strong>Postorder: root last</strong></p>
+<p>Traverse T₁ in postorder, then T₂, … then Tₙ, and <strong>finally visit the root r</strong>.</p></div></div>
+<div class="call key"><div class="ct">Definition 2 (postorder)</div><p>Let T be an ordered rooted tree with root r. If T is only r, then r is the postorder traversal. Otherwise, with subtrees T₁, …, Tₙ from left to right, the postorder traversal <strong>traverses T₁ … Tₙ in postorder and ends by visiting r</strong>.</p></div>
+<h3 id="example-1321">Example 13.2.1</h3>
+<p>The tree T in the lesson has root <strong>a</strong> with children <strong>b, c, d</strong>. Then:</p>
+<ul>
+<li><strong>b</strong> → e, f</li>
+<li><strong>e</strong> → j, k</li>
+<li><strong>k</strong> → n, o, p</li>
+<li><strong>d</strong> → g, h, i</li>
+<li><strong>g</strong> → l, m</li>
+</ul>
+<div class="call example"><div class="ct">Preorder of T</div><p>a, <strong>b</strong>, e, j, k, n, o, p, <strong>f</strong>, <strong>c</strong>, <strong>d</strong>, g, l, m, h, i</p></div>
+<div class="call warn"><div class="ct">Correction to the PDF</div><p>The PDF lists the preorder as "a, b, e, j, k, n, o, p, <strong>j</strong>, c, …". The second <strong>j</strong> should be <strong>f</strong>. After finishing the subtree at e, you visit b's next child, f.</p></div>
+<div class="call example"><div class="ct">Postorder of the same tree</div><p>j, n, o, p, k, e, f, b, c, l, m, g, h, i, d, a</p></div>
+<div class="tool"><div class="tt">🧪 Try it — Traversal explorer (tree T from Example 13.2.1)</div><div id="tv">
+<div class="row"><button class="pre">Preorder</button><button class="post">Postorder</button><button class="nx">Next vertex ▸</button></div>
+<svg viewBox="0 0 460 250" style="width:100%;max-width:560px;display:block"></svg>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('tv'),K={a:['b','c','d'],b:['e','f'],e:['j','k'],k:['n','o','p'],d:['g','h','i'],g:['l','m']},
+X={a:230,b:110,c:230,d:350,e:70,f:150,g:300,h:350,i:400,j:40,k:100,l:280,m:320,n:70,o:100,p:130},Y={a:25,b:80,c:80,d:80,e:135,f:135,g:135,h:135,i:135,j:190,k:190,l:190,m:190,n:235,o:235,p:235};
+function pre(v){return [v].concat([].concat.apply([],(K[v]||[]).map(pre)))}
+function post(v){return [].concat.apply([],(K[v]||[]).map(post)).concat([v])}
+var seq=pre('a'),n=0,mode='Preorder',svg=R.querySelector('svg');
+function draw(){var vis=seq.slice(0,n),h='';for(var v in K)K[v].forEach(function(c){h+='<line x1="'+X[v]+'" y1="'+Y[v]+'" x2="'+X[c]+'" y2="'+Y[c]+'" stroke="currentColor" opacity=".35"/>'});
+for(var v in X){var i=vis.indexOf(v),cur=i===n-1&&n>0;h+='<circle cx="'+X[v]+'" cy="'+Y[v]+'" r="13" fill="'+(cur?'var(--accent)':i>=0?'var(--accent-soft)':'var(--bg)')+'" stroke="var(--accent)"/><text x="'+X[v]+'" y="'+(Y[v]+4)+'" text-anchor="middle" font-size="12" fill="currentColor">'+v+'</text>'+(i>=0?'<text x="'+(X[v]+15)+'" y="'+(Y[v]-9)+'" font-size="10" fill="var(--accent)">'+(i+1)+'</text>':'')}
+svg.innerHTML=h;R.querySelector('.out').innerHTML='<p><b>'+mode+':</b> '+(vis.join(', ')||'press Next')+(n===seq.length?' <span style="color:var(--accent)">(done)</span>':'')+'</p>'}
+R.querySelector('.pre').onclick=function(){seq=pre('a');mode='Preorder';n=0;draw()};
+R.querySelector('.post').onclick=function(){seq=post('a');mode='Postorder';n=0;draw()};
+R.querySelector('.nx').onclick=function(){if(n<seq.length)n++;draw()};draw();})();
+</script></div>
+<div class="call tip"><div class="ct">Quick trick</div><ul>
+<li><strong>Preorder:</strong> walk around the tree from the root, counter-clockwise, and list each vertex the <strong>first</strong> time you pass it.</li>
+<li><strong>Postorder:</strong> list each vertex the <strong>last</strong> time you pass it.</li>
+</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Spanning trees"><span class="num">3</span>Spanning trees</h2><div class="call key"><div class="ct">Definition</div><p>Let G be a simple graph. A <strong>spanning tree</strong> of G is a <strong>subgraph of G that is a tree containing every vertex of G</strong>.</p></div>
+<h3 id="finding-one-remove-edges-from-circuits">Finding one: remove edges from circuits</h3>
+<div class="call example"><div class="ct">Example 13.3.1</div><p>G is <strong>connected</strong> but not a tree, because it has <strong>simple circuits</strong>.</p>
+<ol>
+<li>Remove <strong>{a, e}</strong>: one circuit is gone, and G stays connected with every vertex.</li>
+<li>Remove <strong>{e, f}</strong>: a second circuit is gone.</li>
+<li>Remove <strong>{c, g}</strong>: no simple circuits are left.</li>
+</ol>
+<p>The result is a <strong>spanning tree</strong> of G.</p></div>
+<div class="call key"><div class="ct">Theorem 1</div><p>A simple graph is <strong>connected if and only if it has a spanning tree</strong>.</p></div>
+<div class="formula">A tree with <strong>n</strong> vertices has <strong>n − 1</strong> edges, so from a connected graph with <strong>n vertices and m edges</strong> you must remove <strong>m − (n − 1) = m − n + 1</strong> edges to get a spanning tree.</div>
+<div class="tool"><div class="tt">🧪 Try it — Edges to remove</div><div id="sp">
+<div class="row"><label>Vertices n <input type="number" class="n" value="7" min="1" style="width:70px"></label><label>Edges m <input type="number" class="m" value="10" min="0" style="width:70px"></label></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('sp');function run(){var n=+R.querySelector('.n').value,m=+R.querySelector('.m').value,k=m-n+1;
+R.querySelector('.out').innerHTML=m<n-1?'<p style="color:var(--warn)">With fewer than n − 1 = '+(n-1)+' edges the graph can\'t be connected, so it has no spanning tree.</p>':'<p>Spanning tree has n − 1 = <b>'+(n-1)+'</b> edges → remove m − n + 1 = '+m+' − '+n+' + 1 = <b style="font-size:19px">'+k+'</b> edge'+(k===1?'':'s')+' (one per independent circuit).</p>'}
+R.addEventListener('input',run);run();})();
+</script></div>
+<h3 id="application-ip-multicasting-example-1332">Application: IP multicasting (Example 13.3.2)</h3>
+<div class="grid2"><div><p><strong>Unicasting</strong></p>
+<p>Send a <strong>separate copy</strong> to each receiving computer. Inefficient: many copies of the same data cross the network.</p></div><div><p><strong>IP multicasting</strong></p>
+<p>Send data <strong>once</strong> along a <strong>spanning tree</strong> to all receivers. Efficient and fast.</p></div></div>
+<ul>
+<li>Data must <strong>never loop</strong>: once it reaches a router it should never return there. Loops are <strong>circuits</strong>, so the routers build a <strong>spanning tree</strong>.</li>
+<li><strong>Vertices:</strong> the multicast source, the routers, and the subnetworks with receiving computers.</li>
+<li><strong>Edges:</strong> the links between computers and/or routers.</li>
+<li><strong>Root:</strong> the <strong>multicast source</strong>.</li>
+<li><strong>Leaves:</strong> the <strong>subnetworks containing receiving computers</strong>.</li>
+</ul>
+<div class="call exam"><div class="ct">Exam focus</div><ul>
+<li><strong>Decision tree:</strong> draw it with squares and circles, show <strong>probability × value</strong> at each chance node, subtract <strong>costs</strong>, and give a clear <strong>recommendation</strong>.</li>
+<li><strong>Traversal:</strong> write the full vertex list, and check that every vertex appears <strong>exactly once</strong>.</li>
+<li><strong>Spanning tree:</strong> remove one edge from each circuit; a tree with n vertices has <strong>n − 1 edges</strong>.</li>
+</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Quick revision sheet"><span class="num">4</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decision tree</td>
+<td>Map of outcomes of related choices; internal vertex = decision, subtree per outcome</td>
+</tr>
+<tr>
+<td>Symbols</td>
+<td>Square = decision · circle = uncertainty · nothing/triangle = result</td>
+</tr>
+<tr>
+<td>Evaluate</td>
+<td>Probability × value at chance nodes; subtract costs; pick the highest</td>
+</tr>
+<tr>
+<td>Product example</td>
+<td>EV = 0.7 × 780,000 + 0.3 × 30,000 = 555,000; net <strong>+155,000</strong> → launch</td>
+</tr>
+<tr>
+<td>Pros</td>
+<td>Little computation; continuous + categorical; shows important fields</td>
+</tr>
+<tr>
+<td>Cons</td>
+<td>Errors with many classes/few examples; expensive to train; overfitting; unstable</td>
+</tr>
+<tr>
+<td>A/B exercise</td>
+<td>9 sequences (no AA, no BBB)</td>
+</tr>
+<tr>
+<td>Preorder</td>
+<td>Root, then subtrees left to right: a b e j k n o p f c d g l m h i</td>
+</tr>
+<tr>
+<td>Postorder</td>
+<td>Subtrees left to right, then root: j n o p k e f b c l m g h i d a</td>
+</tr>
+<tr>
+<td>Spanning tree</td>
+<td>Subgraph that's a tree containing every vertex</td>
+</tr>
+<tr>
+<td>Theorem 1</td>
+<td>Connected ⇔ has a spanning tree</td>
+</tr>
+<tr>
+<td>Edges to remove</td>
+<td>m − n + 1</td>
+</tr>
+<tr>
+<td>Multicasting</td>
+<td>Spanning tree, no loops; root = source, leaves = receiving subnetworks</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">18 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="dmath-Week13" data-pick="0"><script type="application/json" class="qdata">[{"q": "A decision tree is best described as:", "o": ["A map of the possible outcomes of a series of related choices", "A graph with no vertices", "A list of edges sorted by weight", "A binary search tree of words"], "e": "It weighs actions by their costs, probabilities and benefits. ", "a": 0, "w": "Week 13"}, {"q": "In Definition 1, each internal vertex of a decision tree corresponds to:", "o": ["A decision, with a subtree for each possible outcome", "A leaf", "A circuit", "An edge weight"], "e": "The leaves are the final results. ", "a": 0, "w": "Week 13"}, {"q": "When drawing a decision tree, an uncertain outcome is drawn as a:", "o": ["Square", "Circle", "Triangle", "Diamond"], "e": "Squares are decisions; nothing or a triangle marks a result. ", "a": 1, "w": "Week 13"}, {"q": "At a chance node, a 0.7 probability of promotion worth 80,000 contributes:", "e": "0.7 × 80,000 = 56,000. ", "n": 56000.0, "w": "Week 13"}, {"q": "The probabilities of the outcomes at a chance node must add up to:", "e": "Or 100% when written as percentages. ", "n": 1.0, "w": "Week 13"}, {"q": "A product costs $400,000 in R&amp;D and its expected value if launched is $555,000. What is the expected net value?", "e": "555,000 − 400,000 = 155,000, so the recommendation is to launch. ", "n": 155000.0, "w": "Week 13"}, {"q": "Which is an advantage of decision trees?", "o": ["They handle both continuous and categorical variables", "They're never computationally expensive to train", "They're error-free with many classes and few examples", "They need no data"], "e": "They also show clearly which fields matter most. ", "a": 0, "w": "Week 13"}, {"q": "How many sequences of length six of A's and B's have no two adjacent A's and never three adjacent B's?", "e": "ABABAB, ABABBA, ABBABA, ABBABB, BABABA, BABABB, BABBAB, BBABAB, BBABBA. ", "n": 9.0, "w": "Week 13"}, {"q": "Preorder traversal visits:", "o": ["The root first, then each subtree left to right in preorder", "Each subtree in postorder, then the root", "Only the leaves", "The vertices in alphabetical order"], "e": "Postorder visits the root last. ", "a": 0, "w": "Week 13"}, {"q": "In Example 13.2.1 (a → b, c, d; b → e, f; e → j, k; k → n, o, p; d → g, h, i; g → l, m), what is the last vertex of the postorder traversal?", "o": ["a", "i", "p", "j"], "e": "Postorder always ends at the root. ", "a": 0, "w": "Week 13"}, {"q": "In the same tree, which vertex comes right after p in the preorder traversal?", "o": ["f", "j", "c", "k"], "e": "After finishing e's subtree (j, k, n, o, p), preorder visits b's next child, f. The PDF wrongly repeats j here. ", "a": 0, "w": "Week 13"}, {"q": "A spanning tree of a simple graph G is:", "o": ["A subgraph of G that is a tree containing every vertex of G", "Any path in G", "G with all edges removed", "The longest circuit in G"], "e": "Remove edges from simple circuits until none remain. ", "a": 0, "w": "Week 13"}, {"q": "Theorem 1 states that a simple graph is connected if and only if:", "o": ["It has a spanning tree", "It has no edges", "It is a binary tree", "It has exactly n edges"], "e": "Every connected simple graph has a spanning tree, and vice versa. ", "a": 0, "w": "Week 13"}, {"q": "How many edges must be removed from a connected graph with 7 vertices and 10 edges to get a spanning tree?", "e": "A tree on 7 vertices has 6 edges, so remove 10 − 7 + 1 = 4. ", "n": 4.0, "w": "Week 13"}, {"q": "In IP multicasting, the root of the spanning tree is:", "o": ["The multicast source", "A receiving subnetwork", "A random router", "The slowest link"], "e": "The leaves are the subnetworks containing receiving computers. ", "a": 0, "w": "Week 13"}, {"q": "Why do multicast routers use a spanning tree?", "o": ["So data never loops back to a router it has already reached", "To send a separate copy to every computer", "To make the network slower", "Because unicasting is required"], "e": "Loops are circuits; a tree has none. ", "a": 0, "w": "Week 13"}, {"q": "A decision tree that becomes over-complex and doesn't generalise well to new data suffers from:", "o": ["Overfitting", "Spanning", "Traversal", "Stratification"], "e": "Trees can also be unstable: small data changes can give a completely different tree. ", "a": 0, "w": "Week 13"}, {"q": "In the badminton tree, when the outlook is cloudy:", "o": ["You play, whatever the other variables are", "It depends on humidity", "It depends on wind", "You never play"], "e": "Sunny depends on humidity; rainy depends on wind. ", "a": 0, "w": "Week 13"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2012/Week%2012%20-%20Study%20Guide.html"><small>← Previous</small>Trees &amp; Applications of Trees</a><span></span></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  var ONLINE = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 || /[?&]online\b/.test(location.search);
+  // online copy: swap the local <video> for the Google Drive player (loaded only while its tab is open)
+  function drive(e){
+    var id = e.getAttribute('data-drive'); if (!id) return false;
+    var w = document.createElement('div');
+    var f = document.createElement('iframe'); f.className = 'vdrive'; f.allow = 'autoplay; fullscreen'; f.allowFullscreen = true;
+    f.setAttribute('data-src', 'https://drive.google.com/file/d/' + id + '/preview');
+    var a = document.createElement('a'); a.className = 'vdlink'; a.target = '_blank'; a.rel = 'noopener';
+    a.href = 'https://drive.google.com/file/d/' + id + '/view'; a.textContent = 'Open in Google Drive ↗';
+    w.appendChild(f); w.appendChild(a); e.replaceWith(w);
+    return true;
+  }
+  function show(i){
+    vids.forEach(function(v, j){
+      v.style.display = j === i ? '' : 'none';
+      var e = v.querySelector('video'); if (j !== i && e) e.pause();
+      var f = v.querySelector('iframe.vdrive');
+      if (f){ if (j === i){ if (!f.getAttribute('src')) f.src = f.getAttribute('data-src'); } else f.removeAttribute('src'); }
+    });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (ONLINE) vids.forEach(function(v){ var e = v.querySelector('video'); if (e) drive(e); });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      if (drive(e)){ var k = [].indexOf.call(vids, v); if (v.style.display !== 'none') show(k); return; }
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var f = vids[i] && vids[i].querySelector('iframe.vdrive');
+    if (f){ f.src = f.getAttribute('data-src') + '?t=' + t; document.getElementById('videos').scrollIntoView({behavior: 'smooth'}); return; }
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

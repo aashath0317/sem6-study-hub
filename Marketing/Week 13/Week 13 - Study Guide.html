@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 13 · Channel Strategies, Logistics &amp; Supply Chain — Marketing</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.vdrive{width:100%;border:0;border-radius:10px;background:#000;aspect-ratio:16/9;display:block}
+.vdlink{display:inline-block;margin-top:6px;font-size:13px;color:var(--muted)}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="mkt-Week13">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Marketing</a> › Week 13</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Marketing · Week 13</div><h1>Channel Strategies, Logistics &amp; Supply Chain</h1><p>Place, the last of the 4 Ps: the nature of marketing channels, push and pull, how channel members add value, channel levels, behaviour and conflict, conventional vs vertical and horizontal marketing systems, designing a channel step by step, managing channel members, and marketing logistics.</p><div class="meta"><span class="chip">ITE3642</span><span class="chip">1 video · 6 min</span><span class="chip">📄 Reading Assignment.pdf · Quiz 13.docx</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Channel Strategies – Introduction · 6 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Channel Strategy_01.mp4" data-drive="17zV57rZdWtPHObOJ7Px2cGvUhKkHqJZB"><source src="Channel%20Strategy_01.mp4"></video></div><div class="chap"><p class="vt">Channel Strategies – Introduction</p><p class="vs">Place as the last marketing-mix element, intermediaries in the Sri Lankan context, the session objectives, how intermediaries add value, and push vs pull.</p><a href="#" data-v="0" data-t="0"><b>00:00</b><span>Channel strategy = the "place" element of the marketing mix</span></a><a href="#" data-v="0" data-t="33"><b>00:33</b><span>Intermediaries between manufacturer and consumer</span></a><a href="#" data-v="0" data-t="64"><b>01:04</b><span>Sri Lankan examples: wholesalers, supermarkets, pharmacies, grocery shops</span></a><a href="#" data-v="0" data-t="88"><b>01:28</b><span>Direct marketing: no intermediary</span></a><a href="#" data-v="0" data-t="114"><b>01:54</b><span>Objectives of this session</span></a><a href="#" data-v="0" data-t="178"><b>02:58</b><span>Nature of marketing channels: intermediaries add value</span></a><a href="#" data-v="0" data-t="211"><b>03:31</b><span>Utilities: time and storage; converting and packaging</span></a><a href="#" data-v="0" data-t="257"><b>04:17</b><span>Push and pull strategies need intermediaries</span></a><a href="#" data-v="0" data-t="336"><b>05:36</b><span>Pull: advertising builds demand; insights from intermediaries</span></a><a href="#" data-v="0" data-t="379"><b>06:19</b><span>Next: how channel members add value</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What is &quot;place&quot;?"><span class="num">1</span>What is "place"?</h2><p><strong>Place</strong> is the <strong>fourth and final</strong> element of the marketing mix. It is also called the <strong>channel</strong>, <strong>distribution</strong> or <strong>intermediary</strong> decision. It's the mechanism through which goods and services are <strong>transferred from producer to consumer</strong> <a class="ts" href="#" data-v="0" data-t="0">00:00</a>.</p>
+<div class="call key"><div class="ct">Marketing channel</div><p>A <strong>marketing channel</strong> is a set of <strong>interdependent organisations</strong> involved in making a product or service <strong>available for use or consumption</strong> by the consumer.</p></div>
+<ul>
+<li>An excellent product at a great price is <strong>worthless if it isn't available</strong> where and when the customer wants it.</li>
+<li>Channel decisions mean <strong>selecting, managing and motivating</strong> intermediaries: <strong>wholesalers, distributors, brokers and retailers</strong>. They're also called <strong>resellers</strong>.</li>
+<li>A firm's channel decisions <strong>directly affect every other marketing decision</strong>.</li>
+<li><strong>Sri Lankan examples</strong> <a class="ts" href="#" data-v="0" data-t="64">01:04</a>: wholesalers buy in bulk from the manufacturer, while supermarkets, pharmacies and grocery shops are retailers that meet the final consumer.</li>
+<li>Selling with <strong>no intermediary</strong> is <strong>direct marketing</strong> <a class="ts" href="#" data-v="0" data-t="88">01:28</a>. It can cost more, so firms choose the number of intermediaries based on their <strong>capacity and scope</strong>.</li>
+</ul>
+<p><strong>Session objectives:</strong></p>
+<ol>
+<li>Describe the <strong>nature</strong> of marketing channels and their <strong>importance</strong></li>
+<li>Identify how channels <strong>interact</strong> and are <strong>organised</strong></li>
+<li>Understand the <strong>problems in designing and managing</strong> channels</li>
+<li>Explain the role of <strong>physical distribution and supply chain management</strong> in attracting and satisfying customers</li>
+</ol><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="The nature of marketing channels"><span class="num">2</span>The nature of marketing channels</h2><ul>
+<li>Few producers sell <strong>directly</strong> to end customers. Most use <strong>intermediaries</strong> to reach the market.</li>
+<li>Intermediaries <strong>add value</strong>: they make the product available <strong>at lower cost</strong> and reach customers <strong>country-wide</strong> <a class="ts" href="#" data-v="0" data-t="178">02:58</a>.</li>
+<li>They create <strong>utilities</strong> <a class="ts" href="#" data-v="0" data-t="211">03:31</a>: <strong>time</strong> utility, and <strong>storage</strong> utility (the manufacturer can't store everything). They sometimes <strong>convert or repackage</strong> the product.</li>
+<li>Each layer of intermediaries that moves the product and its <strong>ownership</strong> closer to the final buyer is a <strong>channel level</strong>.</li>
+</ul><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Push and pull strategies"><span class="num">3</span>Push and pull strategies</h2><div class="grid2"><div><p><strong>Push</strong></p>
+<p>Marketers <strong>take the product to the customer</strong> by pushing it through the channel. The manufacturer gives <strong>sales incentives, discounts and promotions to intermediaries</strong> so they push it onto consumers <a class="ts" href="#" data-v="0" data-t="257">04:17</a>.</p>
+<p><em>Example:</em> fragrance brands give department stores incentives to push a new fragrance. Customers first meet it in the store.</p>
+<p>Best for <strong>new brands or new lines</strong> that aren't well established.</p></div><div><p><strong>Pull</strong></p>
+<p>Marketers make <strong>consumers come to them</strong>. Uses <strong>word of mouth, mass media promotion and advertised sales promotions</strong> to build demand, so consumers ask intermediaries for the product <a class="ts" href="#" data-v="0" data-t="336">05:36</a>.</p>
+<p>Pull aims at <strong>brand loyalty</strong> and repeat buying; push is more about the <strong>short-term sale</strong>.</p>
+<p>Intermediaries feed <strong>customer insights</strong> back to the manufacturer to make pull campaigns more effective.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="How channel members add value"><span class="num">4</span>How channel members add value</h2><p>All these functions use scarce resources, are done <strong>better through specialisation</strong>, and can be <strong>shifted</strong> between channel members.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>What the channel member does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Negotiate prices</strong></td>
+<td>Handles all negotiation with end consumers. Once bought, the product <strong>belongs to the channel member</strong></td>
+</tr>
+<tr>
+<td><strong>Inventory management</strong></td>
+<td>Matches stock to <strong>demand</strong>, and doesn't order stock that won't sell (it blocks inventory and finance)</td>
+</tr>
+<tr>
+<td><strong>Communicate with buyers</strong></td>
+<td>Keeps contact with current and potential customers; may run a <strong>CRM</strong></td>
+</tr>
+<tr>
+<td><strong>Persuasive communications</strong></td>
+<td>Local marketing and promotion to build awareness of the buying point</td>
+</tr>
+<tr>
+<td><strong>Gather and distribute information</strong></td>
+<td>About consumers, competitors and the environment, which feeds the firm's strategy</td>
+</tr>
+<tr>
+<td><strong>Risk taking</strong></td>
+<td>Bears the risk of unsold stock, bad debts and other losses</td>
+</tr>
+<tr>
+<td><strong>Financing</strong></td>
+<td>Pays in advance or on credit, often before consumers pay</td>
+</tr>
+<tr>
+<td><strong>Physical distribution</strong></td>
+<td>Gets goods to end users <strong>quickly and in good condition</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-use-intermediaries">Why use intermediaries?</h3>
+<ul>
+<li>Using them <strong>raises product awareness</strong> and reaches a <strong>larger customer base</strong>, so sales grow.</li>
+<li>They're usually <strong>cheaper</strong> than doing distribution yourself, giving <strong>higher profit</strong> and less spent on advertising and promotion.</li>
+</ul>
+<div class="call key"><div class="ct">Reasons for using intermediaries</div><ul>
+<li><strong>Lack of financial resources</strong></li>
+<li><strong>Lack of necessary skills</strong></li>
+<li><strong>Direct marketing isn't feasible</strong></li>
+<li>To <strong>improve distribution efficiency</strong></li>
+</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Channel levels"><span class="num">5</span>Channel levels</h2><div class="call key"><div class="ct">Channel level</div><p>The number of intermediary <strong>levels</strong> between producer and consumer. It can be <strong>0, 1, 2, 3 or more</strong>.</p></div>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Path</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zero-level</strong> (direct)</td>
+<td>Manufacturer → Consumer</td>
+<td><strong>Telemarketing</strong>, company website, own stores</td>
+</tr>
+<tr>
+<td><strong>One-level</strong></td>
+<td>Manufacturer → <strong>Retailer</strong> → Consumer</td>
+<td>Car maker → dealer</td>
+</tr>
+<tr>
+<td><strong>Two-level</strong></td>
+<td>Manufacturer → <strong>Wholesaler</strong> → <strong>Retailer</strong> → Consumer</td>
+<td>FMCG → wholesaler → grocery shop</td>
+</tr>
+<tr>
+<td><strong>Three-level</strong></td>
+<td>Manufacturer → <strong>Agent/Distributor</strong> → Wholesaler → Retailer → Consumer</td>
+<td>Imported goods</td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Channel level builder</div><div id="cl">
+<div class="row"><label><input type="checkbox" class="i" value="Agent / distributor"> Agent / distributor</label><label><input type="checkbox" class="i" value="Wholesaler" checked> Wholesaler</label><label><input type="checkbox" class="i" value="Retailer" checked> Retailer</label></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('cl');function run(){var m=[].filter.call(R.querySelectorAll('.i'),function(x){return x.checked}).map(function(x){return x.value}),p=['Manufacturer'].concat(m,['Consumer']);
+R.querySelector('.out').innerHTML='<p style="font-size:17px">'+p.map(function(x,i){return '<b'+(i&&i<p.length-1?' style="color:var(--accent)"':'')+'>'+x+'</b>'}).join(' → ')+'</p><p>This is a <b>'+['zero','one','two','three'][m.length]+'-level</b> channel'+(m.length?' ('+m.length+' intermediar'+(m.length>1?'ies':'y')+').':': direct marketing.')+'</p>'}
+R.addEventListener('change',run);run();})();
+</script></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Channel behaviour and conflict"><span class="num">6</span>Channel behaviour and conflict</h2><ul>
+<li>A channel is a <strong>complex behavioural system</strong>: firms depend on each other to reach individual, firm and channel goals.</li>
+<li><em>Example:</em> a <strong>Volvo dealer</strong> depends on Volvo to design cars customers want, and Volvo depends on the dealer to sell them. Each dealer's success depends on how well the <strong>whole Volvo channel</strong> competes with other carmakers' channels.</li>
+<li>The channel works best when <strong>each member does the tasks it does best</strong>.</li>
+<li>But members often focus on their <strong>own short-run goals</strong>, and disagree on <strong>who does what, for what reward</strong>. That creates <strong>channel conflict</strong>.</li>
+</ul>
+<div class="grid2"><div><p><strong>Horizontal conflict</strong></p>
+<p>Between firms at the <strong>same level</strong> of the channel.</p>
+<p><em>Example:</em> a dealer complains that other dealers in town steal sales by aggressive pricing or by selling outside their territories.</p></div><div><p><strong>Vertical conflict</strong></p>
+<p>Between <strong>different levels</strong> of the <strong>same</strong> channel. It's <strong>more common</strong>.</p>
+<p><em>Example:</em> a manufacturer and its distributors or retailers disagree, as in the pharmaceutical industry, where powerful intermediaries strengthen their negotiating position.</p></div></div>
+<div class="call tip"><div class="ct">Conflict isn't always bad</div><p>Some conflict is <strong>healthy competition</strong> and can <strong>trigger innovation</strong>. But for the channel to perform well, roles must be <strong>clearly specified</strong> and conflict <strong>managed</strong>, ideally by a firm with the <strong>power to assign roles</strong>. The goal is a <strong>win-win</strong> for all members.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Conventional vs vertical marketing systems"><span class="num">7</span>Conventional vs vertical marketing systems</h2><div class="grid2"><div><p><strong>Conventional marketing channel</strong></p>
+<p>Manufacturer, wholesaler and retailer are <strong>independent businesses</strong>, each seeking <strong>its own profit</strong>. No member controls the others beyond specific contracts.</p>
+<p><em>Example:</em> a supermarket buys from several wholesalers, who each buy from different growers.</p></div><div><p><strong>Vertical marketing system (VMS)</strong></p>
+<p>Producers, wholesalers and retailers act as a <strong>unified system</strong>. One member <strong>owns</strong> the others, has <strong>contracts</strong> with them, or has so much <strong>power</strong> that they all cooperate.</p>
+<p><em>Examples:</em> <strong>Ferrero</strong> (Nutella) owns hazelnut suppliers; <strong>Delta Airlines</strong> owns a jet-fuel refinery.</p></div></div>
+<table>
+<thead>
+<tr>
+<th>VMS type</th>
+<th>How it's coordinated</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Corporate VMS</strong></td>
+<td><strong>Ownership</strong> of all levels by one firm, through <strong>forward</strong> integration (towards customers) or <strong>backward</strong> integration (towards suppliers)</td>
+<td><strong>Apple</strong> selling through its own stores</td>
+</tr>
+<tr>
+<td><strong>Contractual VMS</strong></td>
+<td><strong>Formal contracts</strong> between independent firms at different levels; gains <strong>economies of scale</strong>. The most popular kind</td>
+<td><strong>Franchising</strong> (McDonald's, Burger King), retailer- or wholesaler-sponsored cooperatives</td>
+</tr>
+<tr>
+<td><strong>Administered VMS</strong></td>
+<td><strong>Size and power</strong> of one dominant member, informally</td>
+<td><strong>Walmart</strong> setting standards for makers of small products</td>
+</tr>
+</tbody>
+</table>
+<div class="call key"><div class="ct">Horizontal marketing system</div><p><strong>Two or more companies at the same level</strong> join forces to exploit a new opportunity, combining financial, production or marketing resources.</p>
+<p><em>Examples:</em> a <strong>bank's ATMs inside a supermarket</strong>; two manufacturers joining to get economies of scale.</p></div>
+<p><strong>Choosing the right system:</strong> look at <strong>product, environment, customer and company</strong> factors, and ask:</p>
+<ol>
+<li>Which system gives the best <strong>coverage</strong> of the target market?</li>
+<li>Which gives customers what they want: <strong>convenience, variety or service</strong>?</li>
+<li>Which is the most <strong>profitable</strong>?</li>
+</ol><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Designing a marketing channel"><span class="num">8</span>Designing a marketing channel</h2><div class="flow"><span><ol>
+<li>Analyse consumer needs</li>
+</ol></span><span><ol start="2">
+<li>Set channel objectives and constraints</li>
+</ol></span><span><ol start="3">
+<li>Identify the major channel alternatives</li>
+</ol></span><span><ol start="4">
+<li>Evaluate the alternatives</li>
+</ol></span></div>
+<h3 id="1-analyse-consumer-needs-five-service-outputs">1. Analyse consumer needs: five service outputs</h3>
+<table>
+<thead>
+<tr>
+<th>Service output</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lot size</strong></td>
+<td>How many units a buyer can purchase at one time</td>
+</tr>
+<tr>
+<td><strong>Waiting and delivery time</strong></td>
+<td>How long customers wait for the goods (buyers prefer fast)</td>
+</tr>
+<tr>
+<td><strong>Spatial convenience</strong></td>
+<td>How easy the channel makes it to reach and buy the product</td>
+</tr>
+<tr>
+<td><strong>Product variety</strong></td>
+<td>The range offered (consumers usually prefer more)</td>
+</tr>
+<tr>
+<td><strong>Service backup</strong></td>
+<td>Add-ons such as delivery, credit, installation and maintenance</td>
+</tr>
+</tbody>
+</table>
+<div class="call warn"><div class="ct">Trade-off</div><p><strong>Higher service outputs mean higher channel costs and higher prices.</strong> Discount resellers (online and offline) show that many customers accept <strong>lower service</strong> to <strong>save money</strong>.</p></div>
+<h3 id="2-set-objectives-and-constraints">2. Set objectives and constraints</h3>
+<p>State objectives in terms of <strong>targeted service output levels</strong>, while keeping <strong>total channel cost</strong> down. Different segments may need different service levels.</p>
+<p>Objectives are influenced by:</p>
+<ol>
+<li>The nature of the <strong>company</strong></li>
+<li>The <strong>products</strong></li>
+<li>The <strong>marketing intermediaries</strong></li>
+<li><strong>Competitors</strong></li>
+<li>The <strong>environment</strong> (economic conditions, legal regulations)</li>
+</ol>
+<p>Sometimes a firm sells <strong>in the same outlets as competitors</strong>; sometimes it <strong>avoids</strong> their channels.</p>
+<h3 id="3-identify-the-major-alternatives">3. Identify the major alternatives</h3>
+<p>Each alternative is described by <strong>(a) types of intermediaries</strong>, <strong>(b) number of intermediaries</strong> and <strong>(c) responsibilities of each member</strong>.</p>
+<p><strong>(a) Types of intermediaries</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Role</th>
+<th>Takes title?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Agents and brokers</strong></td>
+<td>Facilitate sales and earn a <strong>fee or commission</strong>. Popular with <strong>small firms</strong> needing wider distribution</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Merchant wholesalers</strong></td>
+<td><strong>Buy in bulk</strong>, hold inventory, resell to businesses and small/medium retailers</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr>
+<td><strong>Distributors (functional wholesalers)</strong></td>
+<td>Advance sales between manufacturer and retailers <strong>without buying</strong> the products</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Retailers (traditional and online)</strong></td>
+<td>Sell to the final consumer: corner stores, malls, e-commerce sites</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>(b) Number of intermediaries</strong></p>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Meaning</th>
+<th>Typical products</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Intensive</strong></td>
+<td>Stock the product in <strong>as many outlets as possible</strong> (place utility)</td>
+<td><strong>Convenience goods</strong>: soap, biscuits, soft drinks</td>
+</tr>
+<tr>
+<td><strong>Selective</strong></td>
+<td><strong>More than a few but fewer than all</strong> willing intermediaries</td>
+<td><strong>Shopping goods</strong>: appliances, clothing brands</td>
+</tr>
+<tr>
+<td><strong>Exclusive</strong></td>
+<td><strong>Strictly limit</strong> the number of intermediaries, for more aggressive, informed selling and <strong>control</strong> over price, credit and promotion</td>
+<td><strong>Luxury and specialty goods</strong>: luxury fashion, high-end cars</td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Which distribution intensity?</div><div id="di">
+<div class="row"><label>Product type <select class="t"><option value="c">Convenience (bought often, little effort)</option><option value="s">Shopping (compared before buying)</option><option value="l">Luxury / specialty (prestige brand)</option></select></label></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('di'),M={c:['Intensive','As many outlets as possible: supermarkets, grocery shops, pharmacies, kiosks.','e.g. soap, biscuits, tea'],s:['Selective','A chosen set of good outlets that give service and reach without losing control.','e.g. home appliances, clothing'],l:['Exclusive','One or very few outlets per area, giving control over image, price and service.','e.g. luxury fashion, high-end cars']};
+function run(){var m=M[R.querySelector('.t').value];R.querySelector('.out').innerHTML='<p style="font-size:19px"><b style="color:var(--accent)">'+m[0]+' distribution</b></p><p>'+m[1]+' <span class="note">'+m[2]+'</span></p>'}
+R.addEventListener('change',run);run();})();
+</script></div>
+<p><strong>(c) Responsibilities of each member</strong></p>
+<p>Members must be treated fairly and given a chance to be <strong>profitable</strong>. Responsibilities include <strong>risk taking, financing, physical distribution, negotiations, inventory management, contacts, promotions and information</strong>.</p>
+<h3 id="4-evaluate-the-alternatives">4. Evaluate the alternatives</h3>
+<p>The firm's options might be a <strong>company sales force</strong>, a <strong>manufacturer's agency</strong> or <strong>industrial distributors</strong>. Judge each one against three criteria:</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Economic</strong></td>
+<td>Which gives more sales at lower cost: own sales force or an agency?</td>
+</tr>
+<tr>
+<td><strong>Control</strong></td>
+<td>Using intermediaries means giving up control. How much is acceptable?</td>
+</tr>
+<tr>
+<td><strong>Adaptive</strong></td>
+<td>Can we keep flexibility over the long term vs the short term?</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s9"><h2 id="s9" data-t="Managing the marketing channel"><span class="num">9</span>Managing the marketing channel</h2><p>Managing a channel means <strong>analysing, planning, organising and controlling</strong> it. Motivation tools include <strong>higher allowances, strong advertising support, higher trade discounts, training, and logistic support</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Key points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Selecting members</strong></td>
+<td>"For consumers, <strong>the channels are the company</strong>." Check years in business, growth and profit, financial strength, service reputation. For agents, check other lines carried and sales-force quality; for exclusive outlets, check location and type of customer</td>
+</tr>
+<tr>
+<td><strong>Training and motivating</strong></td>
+<td>Treat intermediaries <strong>like customers</strong>: understand their needs, offer <strong>training and capability building</strong></td>
+</tr>
+<tr>
+<td><strong>Evaluating</strong></td>
+<td>Regularly check <strong>sales quota attainment, delivery time, average inventory, handling of damaged/lost goods, cooperation in training</strong>. Give <strong>functional discounts</strong> for each agreed service; retrain or counsel weak performers</td>
+</tr>
+<tr>
+<td><strong>Modifying arrangements</strong></td>
+<td>Review when distribution isn't working, buying patterns change, new competitors or channels appear, or the product moves through its <strong>life cycle</strong>. Add/drop members or channels; use <strong>data mining</strong> on shopping data</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s10"><h2 id="s10" data-t="Marketing logistics and supply chain management"><span class="num">10</span>Marketing logistics and supply chain management</h2><div class="call key"><div class="ct">Marketing logistics (physical distribution)</div><p><strong>Planning, implementing and controlling</strong> the physical flow of goods, services and related information <strong>from points of origin to points of consumption</strong> to meet customer requirements <strong>at a profit</strong>.</p></div>
+<table>
+<thead>
+<tr>
+<th>Logistics type</th>
+<th>Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Outbound</strong></td>
+<td>Factory → resellers → customers</td>
+</tr>
+<tr>
+<td><strong>Inbound</strong></td>
+<td>Suppliers → factory</td>
+</tr>
+<tr>
+<td><strong>Reverse</strong></td>
+<td>Returned goods: <strong>reusing, refurbishing or disposing</strong> of broken or excess products</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Supply chain management</strong> handles the <strong>upstream and downstream</strong> flows of materials, finished goods and information among suppliers, the company, resellers and final customers.</p>
+<div class="call tip"><div class="ct">The goal</div><p>Give a <strong>targeted level of customer service at the lowest cost</strong>. Logistics is about <strong>profit</strong>, not just sales.</p></div>
+<p><strong>Advantages of good logistics:</strong></p>
+<ul>
+<li><strong>Reduced delivery time</strong>: impresses customers and builds loyalty</li>
+<li><strong>Pinpointing customer issues</strong>: tracking orders and shipments to fix problems fast</li>
+<li><strong>Quality control</strong>: catch and correct production problems quickly</li>
+<li><strong>Extra services</strong>: better tracking, customisation, self-service tools</li>
+</ul>
+<h3 id="major-logistics-functions">Major logistics functions</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Key decisions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Warehousing</strong></td>
+<td>Storing finished goods until sold. Decide <strong>location, number, size, layout, building design and ownership</strong>. Automated warehouses cut injuries, labour costs and theft</td>
+</tr>
+<tr>
+<td><strong>Inventory management</strong></td>
+<td>Balance <strong>too much</strong> (high carrying cost: finance, insurance, storage, losses) vs <strong>too little</strong> (stock-outs, emergency shipments, unhappy customers)</td>
+</tr>
+<tr>
+<td><strong>Transportation</strong></td>
+<td>Choose among <strong>rail, truck, water, pipeline and air</strong>, based on cost, infrastructure and urgency (fastest is usually most expensive)</td>
+</tr>
+<tr>
+<td><strong>Order processing</strong></td>
+<td>The purchase order is the central <strong>legal document</strong>: product, price, delivery, payment terms. Computerised systems speed up the <strong>order–shipping–billing</strong> cycle</td>
+</tr>
+<tr>
+<td><strong>Logistical packaging</strong></td>
+<td>Protects against <strong>damage</strong>, eases handling and saves storage space. It's <strong>different from product packaging</strong>, which serves marketing goals</td>
+</tr>
+<tr>
+<td><strong>Information</strong></td>
+<td>Logistics is information-based: identification, storage, analysis and decision support</td>
+</tr>
+</tbody>
+</table>
+<div class="call exam"><div class="ct">Exam focus</div><p><strong>Quiz 13 / Activity:</strong> take a known <strong>FMCG company</strong> (e.g. a Sri Lankan biscuit, tea or soap maker) and explain:</p>
+<ol>
+<li>Its <strong>channel levels</strong> (e.g. manufacturer → distributor → wholesaler → retailer → consumer) and <strong>channel behaviour</strong> (conflict, VMS type)</li>
+<li>How it <strong>analyses consumer needs</strong> (the five service outputs)</li>
+<li>How it <strong>sets channel objectives</strong> (company, product, intermediaries, competitors, environment)</li>
+<li>Its <strong>channel alternatives</strong> (types and number of intermediaries, i.e. <strong>intensive</strong> distribution, and members' responsibilities)</li>
+</ol>
+<p><strong>Terminal question 2:</strong> a <strong>luxury fashion brand</strong> should use <strong>exclusive</strong> distribution, few levels (often a <strong>corporate VMS</strong> with its own boutiques), high <strong>service backup</strong>, and tight <strong>control</strong> over price and image.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s11"><h2 id="s11" data-t="Quick revision sheet"><span class="num">11</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Place</td>
+<td>4th P: channel / distribution; producer → consumer</td>
+</tr>
+<tr>
+<td>Marketing channel</td>
+<td>Interdependent organisations making the product available</td>
+</tr>
+<tr>
+<td>Push vs pull</td>
+<td>Push = incentives to intermediaries · Pull = advertising builds consumer demand</td>
+</tr>
+<tr>
+<td>Member functions</td>
+<td>Negotiate, inventory, communicate, promote, information, risk, financing, physical distribution</td>
+</tr>
+<tr>
+<td>Why intermediaries</td>
+<td>Lack of money, lack of skills, direct not feasible, efficiency</td>
+</tr>
+<tr>
+<td>Channel levels</td>
+<td>0 = direct · 1 = retailer · 2 = wholesaler + retailer · 3 = + agent</td>
+</tr>
+<tr>
+<td>Conflict</td>
+<td>Horizontal = same level · vertical = different levels (more common)</td>
+</tr>
+<tr>
+<td>Conventional vs VMS</td>
+<td>Independent members vs one unified system</td>
+</tr>
+<tr>
+<td>VMS types</td>
+<td>Corporate (ownership, Apple) · contractual (franchise, McDonald's) · administered (power, Walmart)</td>
+</tr>
+<tr>
+<td>Horizontal system</td>
+<td>Same-level firms join forces (bank ATM in supermarket)</td>
+</tr>
+<tr>
+<td>Design steps</td>
+<td>Analyse needs → objectives → alternatives → evaluate</td>
+</tr>
+<tr>
+<td>Five service outputs</td>
+<td>Lot size, waiting time, spatial convenience, variety, service backup</td>
+</tr>
+<tr>
+<td>Number of intermediaries</td>
+<td>Intensive (convenience) · selective (shopping) · exclusive (luxury)</td>
+</tr>
+<tr>
+<td>Evaluate alternatives</td>
+<td>Economic · control · adaptive</td>
+</tr>
+<tr>
+<td>Logistics</td>
+<td>Outbound, inbound, reverse; goal = target service at lowest cost</td>
+</tr>
+<tr>
+<td>Logistics functions</td>
+<td>Warehousing, inventory, transportation, order processing, packaging, information</td>
+</tr>
+<tr>
+<td>Transport modes</td>
+<td>Rail, truck, water, pipeline, air</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">18 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="mkt-Week13" data-pick="0"><script type="application/json" class="qdata">[{"q": "Channel strategy is which element of the marketing mix?", "o": ["Place", "Product", "Price", "Promotion"], "e": "It's the last of the 4 Ps, also called distribution. ", "a": 0, "w": "Week 13"}, {"q": "A manufacturer selling directly to customers with no intermediary (e.g. telemarketing) uses a:", "o": ["Zero-level channel", "One-level channel", "Two-level channel", "Three-level channel"], "e": "A one-level channel has one intermediary, usually a retailer. ", "a": 0, "w": "Week 13"}, {"q": "Manufacturer → wholesaler → retailer → consumer is a:", "o": ["Zero-level channel", "One-level channel", "Two-level channel", "Three-level channel"], "e": "Count the intermediaries: wholesaler and retailer. ", "a": 2, "w": "Week 13"}, {"q": "A fragrance brand gives department stores incentives to sell its new line. This is a:", "o": ["Push strategy", "Pull strategy", "Horizontal marketing system", "Reverse logistics"], "e": "Pull uses advertising and word of mouth so consumers ask for the product. ", "a": 0, "w": "Week 13"}, {"q": "Which is <strong>not<\/strong> one of the reasons for using intermediaries?", "o": ["Lack of financial resources", "Lack of necessary skills", "Direct marketing isn't feasible", "To raise the price paid by consumers"], "e": "The fourth reason is to improve distribution efficiency. ", "a": 3, "w": "Week 13"}, {"q": "Two dealers of the same brand in one town fighting over customers is:", "o": ["Horizontal conflict", "Vertical conflict", "An administered VMS", "Selective distribution"], "e": "Vertical conflict is between different levels of the same channel, and it's more common. ", "a": 0, "w": "Week 13"}, {"q": "Apple selling its products through its own retail stores is an example of a:", "o": ["Corporate VMS", "Contractual VMS", "Administered VMS", "Conventional channel"], "e": "A corporate VMS controls the channel through ownership. ", "a": 0, "w": "Week 13"}, {"q": "McDonald's and Burger King franchises are examples of a:", "o": ["Corporate VMS", "Contractual VMS", "Administered VMS", "Horizontal marketing system"], "e": "Contractual VMSs use formal agreements; it's the most popular kind. ", "a": 1, "w": "Week 13"}, {"q": "Walmart setting standards for makers of smaller products, through its size and power, is a:", "o": ["Corporate VMS", "Contractual VMS", "Administered VMS", "Conventional channel"], "e": "There's no ownership or contract, only the dominant member's power. ", "a": 2, "w": "Week 13"}, {"q": "A bank placing its ATMs inside a supermarket is a:", "o": ["Horizontal marketing system", "Vertical marketing system", "Zero-level channel", "Vertical conflict"], "e": "Two firms at the same level join forces. ", "a": 0, "w": "Week 13"}, {"q": "Which is <strong>not<\/strong> one of the five service outputs consumers want from a channel?", "o": ["Lot size", "Spatial convenience", "Service backup", "Brand repositioning"], "e": "The other two are waiting/delivery time and product variety. ", "a": 3, "w": "Week 13"}, {"q": "Stocking soap and biscuits in as many outlets as possible is:", "o": ["Intensive distribution", "Selective distribution", "Exclusive distribution", "Reverse logistics"], "e": "Convenience goods need place utility. ", "a": 0, "w": "Week 13"}, {"q": "A luxury fashion brand would most likely use:", "o": ["Intensive distribution", "Selective distribution", "Exclusive distribution", "Telemarketing only"], "e": "Exclusive distribution gives control over image, price and service. ", "a": 2, "w": "Week 13"}, {"q": "Which intermediary buys products in bulk, takes title and holds inventory before reselling?", "o": ["Merchant wholesaler", "Agent or broker", "Functional wholesaler (distributor)", "Consumer"], "e": "Agents, brokers and functional wholesalers don't buy the products. ", "a": 0, "w": "Week 13"}, {"q": "Channel alternatives are evaluated against which three criteria?", "o": ["Economic, control and adaptive", "Price, product and promotion", "Lot size, variety and backup", "Inbound, outbound and reverse"], "e": "Economic = sales vs cost; control = how much you give up; adaptive = flexibility. ", "a": 0, "w": "Week 13"}, {"q": "Reusing, refurbishing or disposing of products returned by customers is:", "o": ["Reverse logistics", "Inbound logistics", "Outbound logistics", "Order processing"], "e": "Marketing logistics covers outbound, inbound and reverse flows. ", "a": 0, "w": "Week 13"}, {"q": "Which is <strong>not<\/strong> a major logistics function?", "o": ["Warehousing", "Transportation", "Order processing", "Price skimming"], "e": "The others are inventory management, logistical packaging and information. ", "a": 3, "w": "Week 13"}, {"q": "Which is <strong>not<\/strong> one of the five transportation modes?", "o": ["Rail", "Pipeline", "Water", "Franchise"], "e": "The five modes are rail, truck, water, pipeline and air. ", "a": 3, "w": "Week 13"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2012/Week%2012%20-%20Study%20Guide.html"><small>← Previous</small>Promotional Strategies &amp; Integrated Marketing Communication</a><span></span></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  var ONLINE = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 || /[?&]online\b/.test(location.search);
+  // online copy: swap the local <video> for the Google Drive player (loaded only while its tab is open)
+  function drive(e){
+    var id = e.getAttribute('data-drive'); if (!id) return false;
+    var w = document.createElement('div');
+    var f = document.createElement('iframe'); f.className = 'vdrive'; f.allow = 'autoplay; fullscreen'; f.allowFullscreen = true;
+    f.setAttribute('data-src', 'https://drive.google.com/file/d/' + id + '/preview');
+    var a = document.createElement('a'); a.className = 'vdlink'; a.target = '_blank'; a.rel = 'noopener';
+    a.href = 'https://drive.google.com/file/d/' + id + '/view'; a.textContent = 'Open in Google Drive ↗';
+    w.appendChild(f); w.appendChild(a); e.replaceWith(w);
+    return true;
+  }
+  function show(i){
+    vids.forEach(function(v, j){
+      v.style.display = j === i ? '' : 'none';
+      var e = v.querySelector('video'); if (j !== i && e) e.pause();
+      var f = v.querySelector('iframe.vdrive');
+      if (f){ if (j === i){ if (!f.getAttribute('src')) f.src = f.getAttribute('data-src'); } else f.removeAttribute('src'); }
+    });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (ONLINE) vids.forEach(function(v){ var e = v.querySelector('video'); if (e) drive(e); });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      if (drive(e)){ var k = [].indexOf.call(vids, v); if (v.style.display !== 'none') show(k); return; }
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var f = vids[i] && vids[i].querySelector('iframe.vdrive');
+    if (f){ f.src = f.getAttribute('data-src') + '?t=' + t; document.getElementById('videos').scrollIntoView({behavior: 'smooth'}); return; }
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

@@ -1,0 +1,111 @@
+? Evaluation in HCI is mainly a measure of:
++ How usable the interface is
+- How fast the code runs
+- How many features were planned
+- The cost of the hardware
+= Evaluation is the core of user-centred design.
+
+? Why is evaluation called the core of user-centred design?
++ Without user feedback you can't know if users are satisfied
+- It's the first stage of the life cycle
+- It replaces prototyping
+- It needs no users
+= Feedback shows satisfaction, areas to improve and preferred features.
+
+? Evaluation gives feedback on:
++ What we have designed, not what we planned
+- Only what we planned
+- Only the competitor's product
+- The programming language
+= It tests the actual design, usually through a prototype.
+
+? The evaluation method should match the prototype based on its:
++ Functions and stage
+- Colour and font
+- Price
+- File size
+= Functions, stage and prototype type are interlinked.
+
+? Asking users whether they like a colour theme or concept is typical of evaluation at which stage?
++ Early: qualitative feedback
+- Middle: usability
+- Late: quantitative
+- After release only
+= Early feedback is abstract and about preferences.
+
+? "Does it minimise your workload? Is it intuitive? Is it easy to learn?" These questions check:
++ Usability, in the middle stages
+- Colour preferences, early on
+- Sales figures, late
+- Hardware performance
+= If it isn't easy to learn, people won't use it.
+
+? Measuring how long it takes to fill and submit a form is:
++ A quantitative evaluation, late in design
+- A qualitative evaluation, early in design
+- A predictive evaluation
+- Needfinding
+= Other late measures: jobs completed per day, sales volumes.
+
+? Why is evaluation described as a journey?
++ You evaluate early, in the middle and late, iterating until the interface meets user needs
+- It's done only once at the end
+- It requires travelling to users
+- It never involves prototypes
+= The evaluation type is coupled with the design stage.
+
+? Which is **not** one of the three main types of evaluation?
+- Qualitative
+- Empirical
+- Predictive
++ Decorative
+= Qualitative and empirical involve users; predictive doesn't.
+
+? Empirical evaluation typically uses:
++ Controlled experiments to evaluate quantitatively
+- Only users' opinions about patterns
+- A model with no users
+- Guesswork
+= Do a qualitative evaluation first.
+
+? Predictive evaluation is different because it:
++ Uses a model of the human instead of real users
+- Always uses hundreds of users
+- Is fast and cheap
+- Is the most common in user-centred design
+= It's slow and expensive, so it's rare in UCD.
+
+? Why is predictive evaluation not widely used in user-centred design?
++ UCD needs real user feedback, not predictions, and predictive evaluation is slow and expensive
+- It's illegal
+- It needs too many users
+- It only works on paper prototypes
+= Qualitative and empirical evaluations are common in UCD.
+
+? An assessment that gives the same result each time you repeat it is:
++ Reliable
+- Valid
+- Generalisable
+- Precise
+= Reliability means consistency over time.
+
+? A distance table with a printing error always gives the same wrong answer. It is:
++ Reliable but not valid
+- Valid but not reliable
+- Both reliable and valid
+- Neither, because it's precise
+= Validity is how accurately it measures reality.
+
+? Applying what you learned from evaluation to a broader audience of people is:
++ Generalisability
+- Precision
+- Reliability
+- Validity
+= The wider the lessons apply, the more generalisable they are.
+
+? Reporting a distance as 106.43 km instead of 106 km increases its:
++ Precision
+- Validity
+- Generalisability
+- Reliability
+= 106.43 km is to the nearest 10 m; 106 km is to the nearest km.

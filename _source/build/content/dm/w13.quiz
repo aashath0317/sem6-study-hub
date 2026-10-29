@@ -1,0 +1,148 @@
+? A cluster is a collection of data objects that are:
++ Similar within the same cluster and dissimilar to objects in other clusters
+- Labelled with known classes before mining
+- Always spherical and the same size
+- Randomly grouped
+= High intracluster similarity, low intercluster similarity.
+
+? How does clustering differ from classification?
++ Clustering doesn't need labelled training data; groups are found first and labelled afterwards
+- Clustering needs a larger labelled training set
+- They are the same thing
+- Classification never uses training data
+= Clustering is unsupervised; classification is supervised.
+
+? Detecting credit card fraud as values "far away" from any cluster is called:
++ Outlier detection
+- Data compression
+- Grid quantisation
+- Rule extraction
+= Outliers can be more interesting than the common cases.
+
+? Methods based on Euclidean or Manhattan distance tend to find clusters that are:
++ Spherical, with similar size and density
+- Any arbitrary shape
+- Always one cluster
+- Hierarchical
+= That's why "discovery of clusters with arbitrary shape" is a requirement.
+
+? Clustering households to place new ATMs while respecting rivers and highways illustrates:
++ Constraint-based clustering
+- High dimensionality
+- Incremental clustering
+- Grid-based clustering
+= Real applications often cluster under constraints.
+
+? In a partitioning method, which requirement can be relaxed in fuzzy partitioning?
++ Each object must belong to exactly one group
+- Each group must contain at least one object
+- k must be at most n
+- Clusters must be close together
+= In fuzzy partitioning an object can belong to several groups.
+
+? k-means represents each cluster by:
++ The mean value of the objects in the cluster
+- One actual object near the centre
+- The first object chosen
+- A grid cell
+= k-medoids uses a representative object instead.
+
+? The agglomerative hierarchical approach:
++ Starts with each object as its own group and merges the closest groups
+- Starts with one cluster and splits it
+- Uses a grid of cells
+- Fits a statistical model
+= Agglomerative is bottom-up; divisive is top-down.
+
+? A main weakness of hierarchical methods is that:
++ A merge or split can never be undone
+- They only work on grids
+- They need labelled data
+- They are always slower than k-means
+= Rigidity keeps computation cheap but erroneous decisions can't be corrected.
+
+? Which method grows a cluster while its neighbourhood density exceeds a threshold?
++ DBSCAN (density-based)
+- STING (grid-based)
+- k-medoids (partitioning)
+- COBWEB (model-based)
+= Density-based methods find arbitrary shapes and filter out noise.
+
+? The main advantage of grid-based methods is:
++ Fast processing that depends on the number of cells, not the number of objects
+- They find the exact global optimum
+- They need no parameters at all
+- They can undo merges
+= STING is a typical grid-based method.
+
+? Which is a model-based clustering algorithm?
++ EM (expectation-maximisation)
+- BIRCH
+- DBSCAN
+- WaveCluster
+= Other model-based examples: COBWEB and SOM.
+
+? With Manhattan distance, what is the distance between (8, 4) and (2, 10)?
+# 12
+= |8 − 2| + |4 − 10| = 6 + 6 = 12.
+
+? Cluster 2 contains (8,4), (5,8), (7,5), (6,4) and (4,9). What is the x-coordinate of its new mean?
+# 6
+= (8 + 5 + 7 + 6 + 4) / 5 = 30 / 5 = 6. The new centre is (6, 6).
+
+? In the lesson example, which point moves from cluster 2 to cluster 1 in the second iteration?
++ A8 (4, 9)
+- A4 (5, 8)
+- A2 (2, 5)
+- A3 (8, 4)
+= A8 is 3 from (2, 10) but 5 from (6, 6).
+
+? What is a key weakness of k-means?
++ You must choose k in advance, and outliers pull the means
+- It can't handle numeric data
+- It always finds arbitrary-shaped clusters
+- It never converges
+= Its result also depends on the initial centres.
+
+? With q = 2, the Minkowski distance becomes:
++ Euclidean distance
+- Manhattan distance
+- Cosine similarity
+- Hamming distance
+= q = 1 gives Manhattan distance.
+
+? The ZeroR classifier:
++ Always predicts the most popular class
+- Builds the deepest possible tree
+- Uses 10-fold cross-validation internally
+- Picks a random class each time
+= It's the baseline you should always try first.
+
+? The diabetes data has 500 negative and 268 positive instances. What percentage accuracy does ZeroR get?
+# 65 ~0.5
+= 500 / 768 = 65.1%.
+
+? In 10-fold cross-validation, each instance is used for testing:
++ Exactly once
+- Ten times
+- Never
+- Nine times
+= It's used for training nine times.
+
+? Stratified cross-validation ensures that:
++ Each fold has about the right proportion of each class
+- Each fold has exactly one instance
+- The folds overlap
+- Only the training set is used
+= It reduces the variance of the estimate further, and it's Weka's default.
+
+? With 10-fold cross-validation, how many times does Weka run the learning algorithm?
+# 11
+= Once per fold, plus a final time on the whole data set.
+
+? Compared with repeated holdout, 10-fold cross-validation on the diabetes data gave:
++ About the same mean but a much smaller standard deviation
+- A much higher mean
+- A larger standard deviation
+- Exactly the baseline accuracy
+= 74.5% ± 0.9% vs 74.8% ± 4.6%.

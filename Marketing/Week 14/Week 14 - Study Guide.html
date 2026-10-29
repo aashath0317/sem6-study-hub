@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 14 · The Marketing Plan — Marketing</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.vdrive{width:100%;border:0;border-radius:10px;background:#000;aspect-ratio:16/9;display:block}
+.vdlink{display:inline-block;margin-top:6px;font-size:13px;color:var(--muted)}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="mkt-Week14">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Marketing</a> › Week 14</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Marketing · Week 14</div><h1>The Marketing Plan</h1><p>The final session: what marketing planning is, why it matters, and every component of a marketing plan, from the executive summary, company information, environment and current situation through SWOT, objectives and the full marketing strategy (STP and the 4 Ps) to action programmes, budget and controls.</p><div class="meta"><span class="chip">ITE3642</span><span class="chip">📄 Reading Assignment (1).pdf</span><span class="chip">📄 Quiz 14.docx</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Marketing planning"><span class="num">1</span>Marketing planning</h2><div class="call key"><div class="ct">Market planning</div><p>The process of <strong>gathering strategies and tactics</strong> to achieve the defined <strong>marketing aims</strong> of an organisation. Its outcome is the <strong>marketing plan</strong>.</p></div>
+<div class="call key"><div class="ct">Marketing plan</div><p>A <strong>business document</strong> that outlines the <strong>marketing strategy</strong>, usually for a <strong>specific period</strong> (e.g. the next year), with details such as <strong>costs, goals and action steps</strong>. All relevant parties should refer to it.</p></div>
+<p>A good marketing plan includes:</p>
+<ul>
+<li>The <strong>value proposition</strong></li>
+<li><strong>Target market</strong> and <strong>customer</strong> information</li>
+<li><strong>Competitive positioning</strong></li>
+<li><strong>Promotion</strong> strategies</li>
+<li><strong>Distribution channels</strong></li>
+<li>
+<p>The <strong>budget</strong></p>
+</li>
+<li>
+<p>Marketing is crucial to success, second only to creating a <strong>stellar product or service</strong>. Without marketing, people don't know about your product, and <strong>without customers you don't have a business</strong>.</p>
+</li>
+<li>Small businesses may put a <strong>mini marketing plan</strong> inside their business plan, or attach the full plan as an <strong>appendix</strong>.</li>
+</ul>
+<p><strong>Session objectives:</strong></p>
+<ol>
+<li>Understand the <strong>purpose</strong> of marketing planning</li>
+<li>Explain its <strong>importance</strong> for organisations</li>
+<li>Identify the <strong>components</strong> of a marketing plan</li>
+</ol><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Purpose of marketing planning"><span class="num">2</span>Purpose of marketing planning</h2><ul>
+<li>Marketing decisions involve many people with different responsibilities. Planning defines the <strong>role and duties of marketing executives</strong> in reaching the company's objectives.</li>
+<li>It emphasises the <strong>best and most economical way to allocate marketing resources</strong>, and gives <strong>direction</strong> to marketing operations.</li>
+<li>It includes implementing <strong>plans, programmes and budgets</strong> for the marketing strategies.</li>
+</ul>
+<div class="call key"><div class="ct">AMA definition</div><p>Marketing planning is "the work of <strong>setting up objectives</strong> for marketing activity and of <strong>determining and scheduling the steps</strong> necessary to achieve such objectives".</p></div>
+<ul>
+<li>Planning is the <strong>starting function</strong> of management. It ensures <strong>sustainable survival</strong> in a dynamic environment.</li>
+<li>For a business, planning is always <strong>strategic</strong>: decide <strong>where you want to go and how to get there</strong>, and don't leave the future to chance.</li>
+<li>Marketing is described as <strong>the railway engine that pulls all the other departmental wagons</strong>. It puts the <strong>customer at both the beginning and the end</strong> of the business cycle: define needs → turn them into products → deliver satisfaction → earn income.</li>
+</ul><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Importance of marketing planning"><span class="num">3</span>Importance of marketing planning</h2><table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Avoids future uncertainty</strong></td>
+<td>Thinking ahead reduces surprises</td>
+</tr>
+<tr>
+<td><strong>Coordination and communication</strong></td>
+<td>Links departments towards the same goals</td>
+</tr>
+<tr>
+<td><strong>Successful implementation</strong></td>
+<td>Marketing operations run to a plan</td>
+</tr>
+<tr>
+<td><strong>Systematic thinking about the future</strong></td>
+<td>Forces management to plan product growth, market growth, channel design, promotion and profitability</td>
+</tr>
+<tr>
+<td><strong>Balances resources against opportunities</strong></td>
+<td>Puts money where the market opportunities are</td>
+</tr>
+<tr>
+<td><strong>Market enlargement</strong></td>
+<td>Focus on <strong>growing</strong> the market, not just maintaining it</td>
+</tr>
+<tr>
+<td><strong>Performance appraisal</strong></td>
+<td>A standard to measure results against</td>
+</tr>
+<tr>
+<td><strong>SWOT use</strong></td>
+<td>Capitalise on strengths, minimise weaknesses and threats, open up new opportunities</td>
+</tr>
+<tr>
+<td><strong>Reduces adverse consequences</strong></td>
+<td>Of unfavourable circumstances beyond management's control</td>
+</tr>
+</tbody>
+</table>
+<p>It applies to the whole organisation or to individual <strong>strategic business units (SBUs)</strong>.</p><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Components of a marketing plan"><span class="num">4</span>Components of a marketing plan</h2><div class="flow"><span><ol>
+<li>Executive summary</li>
+</ol></span><span><ol start="2">
+<li>Company information</li>
+</ol></span><span><ol start="3">
+<li>Marketing environment analysis (macro forces)</li>
+</ol></span><span><ol start="4">
+<li>Current marketing situation (customers, competitors, suppliers, channels)</li>
+</ol></span><span><ol start="5">
+<li>SWOT analysis</li>
+</ol></span><span><ol start="6">
+<li>Objectives and issues</li>
+</ol></span><span><ol start="7">
+<li>Marketing strategy (STP + 4 Ps)</li>
+</ol></span><span><ol start="8">
+<li>Action programmes</li>
+</ol></span><span><ol start="9">
+<li>Marketing budget</li>
+</ol></span><span><ol start="10">
+<li>Controls</li>
+</ol></span></div>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>What goes in it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Executive summary</strong></td>
+<td>A <strong>brief summary</strong> of the whole plan: key insights, strategies, programmes and <strong>financial projections</strong>. An investor should see the <strong>whole picture</strong> from it. It's the plan's <strong>narrator</strong></td>
+</tr>
+<tr>
+<td><strong>Company information</strong></td>
+<td><strong>Vision, mission, brief history</strong>; current size, scale, products; current <strong>performance, market share, growth rate, profitability</strong>; resources, people, management, structure and culture</td>
+</tr>
+<tr>
+<td><strong>Marketing environment (macro forces)</strong></td>
+<td><strong>Demographic, economic, natural, technological, political &amp; legal, social &amp; cultural</strong> environments (from the environment-scanning session)</td>
+</tr>
+<tr>
+<td><strong>Current marketing situation</strong></td>
+<td><strong>Customer analysis</strong> and <strong>competitor analysis</strong> (see below)</td>
+</tr>
+<tr>
+<td><strong>Suppliers</strong></td>
+<td>Identify and evaluate potential suppliers</td>
+</tr>
+<tr>
+<td><strong>Marketing channels and logistics</strong></td>
+<td>Suitable channels, arrangements, conditions, and issues in developing channels and logistics</td>
+</tr>
+<tr>
+<td><strong>SWOT analysis</strong></td>
+<td>Internal <strong>strengths &amp; weaknesses</strong>, external <strong>opportunities &amp; threats</strong>; how to exploit opportunities, reduce weaknesses and face threats</td>
+</tr>
+<tr>
+<td><strong>Objectives and issues</strong></td>
+<td>Company objectives and the issues that may affect strategy and implementation</td>
+</tr>
+<tr>
+<td><strong>Marketing strategy</strong></td>
+<td>The <strong>customer-driven</strong> strategy: segmentation, targeting, positioning and the marketing mix</td>
+</tr>
+<tr>
+<td><strong>Action programmes</strong></td>
+<td>How strategies become actions: <strong>what, when, who, and how much it costs</strong></td>
+</tr>
+<tr>
+<td><strong>Marketing budget</strong></td>
+<td>The budget for the strategies; <strong>projected profit and loss statement</strong> and other financial projections</td>
+</tr>
+<tr>
+<td><strong>Controls</strong></td>
+<td>How progress will be <strong>monitored</strong> and results reviewed; measures of <strong>return on marketing investment</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="current-marketing-situation-in-detail">Current marketing situation in detail</h3>
+<div class="grid2"><div><p><strong>Customer analysis</strong></p>
+<ul>
+<li><strong>Current markets</strong>: potential markets, buying attitudes and preferences, needs and wants</li>
+<li><strong>Purchase behaviour</strong>: what, when, where, how much; the buyer decision process</li>
+<li><strong>Market trends</strong> and expected growth</li>
+<li><strong>Product review</strong>: main features, types of customers and markets</li>
+</ul></div><div><p><strong>Competitor analysis</strong></p>
+<ul>
+<li>Nature of competition and <strong>key competitors</strong></li>
+<li>Their size/type, image/reputation, resources/capabilities</li>
+<li>Their products, <strong>market share, growth rate</strong></li>
+<li>Their marketing strategies</li>
+<li><strong>Key findings</strong></li>
+</ul></div></div>
+<h3 id="the-marketing-strategy-section">The marketing strategy section</h3>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Market segmentation</strong></td>
+<td>Possible <strong>segmentation variables</strong>; segmenting the market; evaluating segments by <strong>size and growth</strong> (demand, sales, growth, profitability), <strong>structural attractiveness</strong> (competitors, substitutes, buyer and supplier power) and <strong>company objectives and resources</strong></td>
+</tr>
+<tr>
+<td><strong>Targeting</strong></td>
+<td>The target market(s) chosen, a brief overview, and a <strong>profile</strong> of each target consumer</td>
+</tr>
+<tr>
+<td><strong>Positioning</strong></td>
+<td>Positioning strategy; <strong>differentiation, competitive advantage, customer value</strong>; <strong>positioning map</strong>; <strong>positioning statement</strong></td>
+</tr>
+<tr>
+<td><strong>Product strategy</strong></td>
+<td>The physical product; attributes (characteristics, quality, features, style and design); <strong>branding</strong>, <strong>packaging</strong>, <strong>labelling</strong>, product line</td>
+</tr>
+<tr>
+<td><strong>Pricing strategy</strong></td>
+<td>Customer price perception, pricing objectives and strategies, method of calculating the final price, <strong>suggested price</strong></td>
+</tr>
+<tr>
+<td><strong>Distribution strategy</strong></td>
+<td>Consumer needs, <strong>channel objectives</strong>, channel strategy and network</td>
+</tr>
+<tr>
+<td><strong>Communication strategy</strong></td>
+<td>Communication objectives and message, <strong>promotional mix</strong>, <strong>push vs pull</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="call tip"><div class="ct">It ties the module together</div><p>The marketing strategy section uses everything from earlier sessions: <strong>environment</strong> (macro forces), <strong>STP</strong>, <strong>product and branding</strong>, <strong>pricing</strong>, <strong>promotion/IMC</strong>, and <strong>channels</strong>.</p></div>
+<div class="tool"><div class="tt">🧪 Try it — Marketing plan checklist</div><div id="mp">
+<p class="note">Tick the components your plan covers. Your progress isn't saved.</p>
+<div class="row ck" style="flex-direction:column;align-items:flex-start;gap:6px"></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('mp'),I=['Executive summary (narrator of the plan)','Company information (vision, mission, history, performance)','Macro environment (demographic, economic, natural, technological, political-legal, socio-cultural)','Current situation: customers','Current situation: competitors','Suppliers','Marketing channels and logistics','SWOT analysis','Objectives and issues','Segmentation and targeting','Positioning (map and statement)','Product strategy (attributes, brand, packaging, labelling)','Pricing strategy (suggested price)','Distribution strategy','Communication strategy (promo mix, push vs pull)','Action programmes (what, when, who, cost)','Marketing budget (projected P&L)','Controls (monitoring, ROI)'];
+var c=R.querySelector('.ck');I.forEach(function(t){var l=document.createElement('label');l.innerHTML='<input type="checkbox"> '+t;c.appendChild(l)});
+function run(){var b=R.querySelectorAll('.ck input'),n=[].filter.call(b,function(x){return x.checked}).length,miss=I.filter(function(_,i){return !b[i].checked});
+R.querySelector('.out').innerHTML='<div style="height:12px;background:var(--bg);border:1px solid var(--line);border-radius:6px;margin-top:6px"><div class="bar" style="height:10px;width:'+(100*n/I.length)+'%"></div></div><p><b>'+n+' / '+I.length+'</b> components covered'+(miss.length?'. Still missing: '+miss.slice(0,3).join('; ')+(miss.length>3?' …':''):'. <b style="color:var(--accent)">Your plan is complete.</b>')+'</p>'}
+R.addEventListener('change',run);run();})();
+</script></div>
+<div class="call exam"><div class="ct">Exam focus</div><p><strong>Quiz 14 / Activity:</strong> develop a marketing plan for a <strong>new product</strong> of your own for the <strong>telecommunication industry</strong>:</p>
+<ol>
+<li>Take a telecom company (e.g. a Sri Lankan mobile operator)</li>
+<li>Invent a new product for it (e.g. a student data bundle with a study-app zero-rating)</li>
+<li>Follow <strong>all the steps from analysing to implementing</strong>: summary → company → environment → current situation → SWOT → objectives → STP and 4 Ps → action programmes → budget → controls</li>
+</ol>
+<p><strong>Terminal questions:</strong></p>
+<ol>
+<li>The <strong>importance</strong> of marketing planning (see the table above)</li>
+<li>How <strong>environmental scanning</strong> supports a plan: the macro forces feed the <strong>opportunities and threats</strong> in the SWOT and shape objectives</li>
+<li>How to recognise the <strong>current state</strong> of marketing programmes: the <strong>customer, competitor, supplier and channel</strong> analysis of the current marketing situation</li>
+</ol></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Quick revision sheet"><span class="num">5</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Market planning</td>
+<td>Gathering strategies and tactics to reach marketing aims</td>
+</tr>
+<tr>
+<td>Marketing plan</td>
+<td>Business document: strategy, costs, goals, actions for a set period</td>
+</tr>
+<tr>
+<td>AMA</td>
+<td>Set objectives + determine and schedule the steps</td>
+</tr>
+<tr>
+<td>Marketing</td>
+<td>The railway engine pulling the other departments</td>
+</tr>
+<tr>
+<td>Importance</td>
+<td>Less uncertainty, coordination, implementation, resource balance, market enlargement, appraisal, SWOT</td>
+</tr>
+<tr>
+<td>Components</td>
+<td>Summary · company · macro · current situation · SWOT · objectives · strategy · actions · budget · controls</td>
+</tr>
+<tr>
+<td>Executive summary</td>
+<td>The narrator: the whole picture for investors</td>
+</tr>
+<tr>
+<td>Macro forces</td>
+<td>Demographic, economic, natural, technological, political-legal, socio-cultural</td>
+</tr>
+<tr>
+<td>Strategy</td>
+<td>Segmentation → targeting → positioning → product, price, place, promotion</td>
+</tr>
+<tr>
+<td>Action programmes</td>
+<td>What, when, who, how much</td>
+</tr>
+<tr>
+<td>Budget</td>
+<td>Projected P&amp;L</td>
+</tr>
+<tr>
+<td>Controls</td>
+<td>Monitor progress; return on marketing investment</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">15 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="mkt-Week14" data-pick="0"><script type="application/json" class="qdata">[{"q": "The process of gathering strategies and tactics to achieve an organisation's marketing aims is:", "o": ["Market planning", "Market segmentation", "Channel conflict", "Branding"], "e": "Its outcome is the marketing plan. ", "a": 0, "w": "Week 14"}, {"q": "A marketing plan usually covers:", "o": ["A specific time period, with costs, goals and action steps", "Only the company's history", "Only last year's results", "Only the product's packaging"], "e": "It's a business document outlining the marketing strategy. ", "a": 0, "w": "Week 14"}, {"q": "According to the AMA, marketing planning is the work of:", "o": ["Setting up objectives for marketing activity and determining and scheduling the steps to achieve them", "Printing advertisements", "Hiring a sales force", "Reducing production costs"], "e": "It ensures sustainable survival in a dynamic environment. ", "a": 0, "w": "Week 14"}, {"q": "Marketing is described as the railway engine because it:", "o": ["Pulls along all the other departmental wagons", "Is the slowest department", "Works only in transport companies", "Replaces finance"], "e": "It puts the customer at the start and end of the business cycle. ", "a": 0, "w": "Week 14"}, {"q": "Which is a benefit of marketing planning?", "o": ["It helps coordination and communication among departments", "It guarantees no competition", "It removes the need for a budget", "It ends all uncertainty forever"], "e": "It also helps avoid future uncertainty and balance resources against opportunities. ", "a": 0, "w": "Week 14"}, {"q": "Marketing planning makes the firm focus more on:", "o": ["Market enlargement rather than market maintenance", "Market maintenance only", "Cutting all promotion", "Ignoring customers"], "e": "It aims to grow the market. ", "a": 0, "w": "Week 14"}, {"q": "Which component is described as the \"narrator\" of the plan?", "o": ["Executive summary", "Controls", "Marketing budget", "Suppliers"], "e": "An investor should get the whole picture from it. ", "a": 0, "w": "Week 14"}, {"q": "Vision, mission, history, market share and growth rate belong in:", "o": ["Company information", "Executive summary", "Action programmes", "Controls"], "e": "It also covers resources, people, management, structure and culture. ", "a": 0, "w": "Week 14"}, {"q": "Demographic, economic, natural, technological, political-legal and socio-cultural forces are analysed in:", "o": ["Marketing environment analysis (macro forces)", "Current marketing situation", "Action programmes", "Marketing budget"], "e": "They come from the environment-scanning session. ", "a": 0, "w": "Week 14"}, {"q": "Customer analysis and competitor analysis are part of the:", "o": ["Current marketing situation", "Executive summary", "Controls", "Company information"], "e": "Customer analysis covers markets, purchase behaviour, trends and a product review. ", "a": 0, "w": "Week 14"}, {"q": "Internal strengths and weaknesses plus external opportunities and threats form the:", "o": ["SWOT analysis", "Positioning map", "Action programme", "Budget"], "e": "Explain how to exploit opportunities, reduce weaknesses and face threats. ", "a": 0, "w": "Week 14"}, {"q": "\"What will be done, when, by whom, and at what cost\" describes:", "o": ["Action programmes", "Controls", "Objectives and issues", "Positioning"], "e": "They turn strategies into specific actions. ", "a": 0, "w": "Week 14"}, {"q": "A projected profit and loss statement belongs in the:", "o": ["Marketing budget", "Executive summary", "Suppliers section", "Positioning statement"], "e": "Other financial projections go here too. ", "a": 0, "w": "Week 14"}, {"q": "Monitoring progress and measuring return on marketing investment is the role of:", "o": ["Controls", "Company information", "Market segmentation", "Macro forces"], "e": "Controls review the implementation results. ", "a": 0, "w": "Week 14"}, {"q": "A positioning map and positioning statement are part of which section?", "o": ["Marketing strategy", "Controls", "Suppliers", "Company information"], "e": "The strategy section also covers segmentation, targeting and the 4 Ps. ", "a": 0, "w": "Week 14"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2013/Week%2013%20-%20Study%20Guide.html"><small>← Previous</small>Channel Strategies, Logistics &amp; Supply Chain</a><span></span></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  var ONLINE = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 || /[?&]online\b/.test(location.search);
+  // online copy: swap the local <video> for the Google Drive player (loaded only while its tab is open)
+  function drive(e){
+    var id = e.getAttribute('data-drive'); if (!id) return false;
+    var w = document.createElement('div');
+    var f = document.createElement('iframe'); f.className = 'vdrive'; f.allow = 'autoplay; fullscreen'; f.allowFullscreen = true;
+    f.setAttribute('data-src', 'https://drive.google.com/file/d/' + id + '/preview');
+    var a = document.createElement('a'); a.className = 'vdlink'; a.target = '_blank'; a.rel = 'noopener';
+    a.href = 'https://drive.google.com/file/d/' + id + '/view'; a.textContent = 'Open in Google Drive ↗';
+    w.appendChild(f); w.appendChild(a); e.replaceWith(w);
+    return true;
+  }
+  function show(i){
+    vids.forEach(function(v, j){
+      v.style.display = j === i ? '' : 'none';
+      var e = v.querySelector('video'); if (j !== i && e) e.pause();
+      var f = v.querySelector('iframe.vdrive');
+      if (f){ if (j === i){ if (!f.getAttribute('src')) f.src = f.getAttribute('data-src'); } else f.removeAttribute('src'); }
+    });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (ONLINE) vids.forEach(function(v){ var e = v.querySelector('video'); if (e) drive(e); });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      if (drive(e)){ var k = [].indexOf.call(vids, v); if (v.style.display !== 'none') show(k); return; }
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var f = vids[i] && vids[i].querySelector('iframe.vdrive');
+    if (f){ f.src = f.getAttribute('data-src') + '?t=' + t; document.getElementById('videos').scrollIntoView({behavior: 'smooth'}); return; }
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

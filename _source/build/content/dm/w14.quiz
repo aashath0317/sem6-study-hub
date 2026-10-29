@@ -1,0 +1,91 @@
+? In k-medoids, each cluster is represented by:
++ An actual object located near the centre (the medoid)
+- The mean of the cluster's objects
+- A random point in space
+- The first object in the data set
+= k-means uses the mean, which may not be a real point.
+
+? Why is k-medoids less sensitive to outliers than k-means?
++ A medoid is a real central object, so an outlier can't drag it far the way it drags a mean
+- It ignores half the data
+- It uses no distance function
+- It always uses k = 1
+= It's more robust but more expensive to compute.
+
+? PAM stands for:
++ Partitioning Around Medoids
+- Probabilistic Agglomerative Merging
+- Partial Average Mean
+- Pattern Analysis Method
+= It was one of the first k-medoids algorithms.
+
+? The complexity of each PAM iteration is:
++ O(k(n − k)²)
+- O(n)
+- O(log n)
+- O(k)
+= That makes it very costly for large n and k.
+
+? In PAM, a representative oⱼ is swapped with o_random when the total swap cost S is:
++ Less than 0
+- Greater than 0
+- Exactly 1
+- Equal to k
+= A negative S means the swap lowers the total cost.
+
+? With medoids A1, A4 and A7 in the lesson example, what is the total cost S₁?
+# 23
+= 0 + 4 + 7 + 0 + 5 + 5 + 0 + 2 = 23.
+
+? After swapping A4 for A5 (medoids A1, A5, A7), what is the total cost S₂?
+# 16
+= 0 + 4 + 2 + 5 + 0 + 2 + 0 + 3 = 16.
+
+? Since S₂ = 16 and S₁ = 23, the swap of A4 for A5 is:
++ Suitable, because the cost decreases
+- Not suitable, because the cost increases
+- Impossible
+- Irrelevant
+= If S₁ > S₂, the change is suitable.
+
+? Agglomerative hierarchical clustering:
++ Starts with each object in its own cluster and merges them
+- Starts with one cluster and splits it
+- Needs k as input
+- Uses medoids
+= It's bottom-up, and most hierarchical methods are agglomerative.
+
+? DIANA is an example of:
++ Divisive hierarchical clustering
+- Agglomerative hierarchical clustering
+- Density-based clustering
+- k-medoids
+= AGNES is the agglomerative one.
+
+? The main weakness of pure hierarchical clustering is that:
++ It can't backtrack and correct a poor merge or split
+- It can't handle more than five objects
+- It always needs labelled data
+- It ignores distances
+= Once a step is done, it can never be undone.
+
+? Using the minimum distance between the closest pair of points in two clusters is called:
++ Single linkage (nearest-neighbour)
+- Complete linkage (farthest-neighbour)
+- Average linkage
+- Mean distance
+= AGNES in the lesson uses single linkage.
+
+? Using the maximum distance d_max between clusters gives:
++ Complete linkage (farthest-neighbour)
+- Single linkage
+- k-means
+- Grid clustering
+= DIANA in the lesson uses complete linkage.
+
+? Why are the mean or average cluster distances often preferred?
++ They are a compromise that is less sensitive to outliers than d_min or d_max
+- They are always the smallest distance
+- They need no computation
+- They only work for one cluster
+= d_min and d_max are extremes and overly sensitive to noise.

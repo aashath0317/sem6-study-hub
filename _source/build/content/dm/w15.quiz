@@ -1,0 +1,90 @@
+? Why is financial data especially suitable for data mining?
++ It is usually relatively complete, reliable and of high quality
+- It is always tiny
+- It has no structure
+- It is never stored digitally
+= That supports systematic analysis.
+
+? Which technique helps identify the critical factors behind loan payment performance?
++ Attribute selection and attribute relevance ranking
+- Sequence alignment
+- Grid-based clustering
+- Logistical packaging
+= It also removes irrelevant factors.
+
+? To detect money laundering, it is essential to:
++ Integrate information from multiple databases, then look for unusual patterns
+- Use only one small spreadsheet
+- Delete transaction histories
+- Look only at average balances
+= For example, large cash flows at certain periods by certain customer groups.
+
+? Why is retail data growing so quickly?
++ The ease and popularity of e-commerce
+- Shops are closing their tills
+- Retailers stopped collecting data
+- Only cash sales are recorded
+= Some firms, like Amazon, have no physical stores at all.
+
+? How can a retailer analyse the effectiveness of a sales campaign?
++ Compare sales and transactions with the promoted items during the campaign vs before or after
+- Count the number of employees
+- Look only at last year's tax return
+- Measure warehouse size
+= This is a use of multidimensional analysis.
+
+? Which is a typical dimension of telecommunication data?
++ Calling time, duration, and caller and callee location
+- Gene sequence
+- Hazelnut supply
+- Shelf position
+= Multidimensional analysis compares traffic, workload, resource usage and profit.
+
+? Which is one of the three fraud tasks in telecommunications?
++ Detecting attempts to gain fraudulent entry to customer accounts
+- Lowering call prices
+- Building new towers
+- Printing phone books
+= The others: find fraudulent users and atypical usage; discover unusual patterns.
+
+? Periodic calls from badly programmed automatic dial-out equipment (like fax machines) are an example of:
++ An unusual pattern that needs special attention
+- A normal busy-hour call
+- Sequence alignment
+- A retail campaign
+= Others include busy-hour frustrated call attempts and route congestion.
+
+? Finding usage patterns for services by customer group, month and time of day uses:
++ Multidimensional association and sequential pattern analysis
+- k-medoids
+- Logistical packaging
+- Money laundering detection
+= It's used to promote telecom services.
+
+? Biological data mining is an essential part of which field?
++ Bioinformatics
+- Telemarketing
+- Accounting
+- Logistics
+= It covers genomics and proteomics.
+
+? BLAST and FASTA are tools for:
++ Aligning and comparing nucleotide or protein sequences
+- Clustering supermarket customers
+- Detecting telecom fraud
+- Building data warehouses for banks
+= They must allow gaps and mismatches.
+
+? Why must biological sequence analysis allow gaps and mismatches?
++ To handle insertions, deletions and mutations
+- To make the data smaller
+- Because DNA has no order
+- To speed up the network
+= That's how it differs from ordinary sequential pattern mining.
+
+? Genomic and proteomic data sets need semantic integration mainly because they are:
++ Generated at different labs by different methods, so they are distributed and heterogeneous
+- Always identical
+- Too small to analyse
+- Stored only on paper
+= Linking research literature to biological entities also matters.

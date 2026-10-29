@@ -91,6 +91,8 @@ dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--in
 .vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
 video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.vdrive{width:100%;border:0;border-radius:10px;background:#000;aspect-ratio:16/9;display:block}
+.vdlink{display:inline-block;margin-top:6px;font-size:13px;color:var(--muted)}
 .chap{max-height:420px;overflow:auto;font-size:14.5px}
 .chap .vt{font-weight:650;margin:0 0 4px}
 .chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
@@ -192,7 +194,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dm-Week05">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 05</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 05</div><h1>Introduction to Data Warehousing</h1><p>What a data warehouse is (Inmon's 4 keywords), OLTP vs OLAP, why keep it separate, and the multidimensional data model — cubes, facts, dimensions and the lattice of cuboids.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">2 videos · 17 min</span><span class="chip">📄 week 5.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Introduction to Data Warehousing · 8 min</button><button>2. Data Mining with Weka 1.1 – Introduction · 9 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3432-25S2- Introduction to Data Warehousing - CODL-UOM.mp4"><source src="ITE3432-25S2-%20Introduction%20to%20Data%20Warehousing%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Introduction to Data Warehousing</p><p class="vs">Lecture overview of data warehouses and the multidimensional model.</p><a href="#" data-v="0" data-t="1"><b>00:01</b><span>The need for data warehouses</span></a><a href="#" data-v="0" data-t="51"><b>00:51</b><span>Heterogeneous sources: scientific, health, transactional data</span></a><a href="#" data-v="0" data-t="97"><b>01:37</b><span>Integrating multiple sources into one store</span></a><a href="#" data-v="0" data-t="194"><b>03:14</b><span>The metadata repository</span></a><a href="#" data-v="0" data-t="243"><b>04:03</b><span>Definition: subject-oriented, integrated, time-variant, non-volatile</span></a><a href="#" data-v="0" data-t="322"><b>05:22</b><span>Integrated: sources, cleaning, consistency</span></a><a href="#" data-v="0" data-t="363"><b>06:03</b><span>Time-variant: long time horizon</span></a><a href="#" data-v="0" data-t="432"><b>07:12</b><span>Non-volatile: no transaction processing, recovery or concurrency control</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Data Mining with Weka (1.1_ Introduction).mp4"><source src="Data%20Mining%20with%20Weka%20%281.1_%20Introduction%29.mp4"></video></div><div class="chap"><p class="vt">Data Mining with Weka 1.1 – Introduction</p><p class="vs">Ian Witten's introduction to the Weka course and the Weka workbench.</p><a href="#" data-v="1" data-t="18"><b>00:18</b><span>Welcome to Data Mining with Weka</span></a><a href="#" data-v="1" data-t="63"><b>01:03</b><span>We're overwhelmed with data: credit cards, coupons</span></a><a href="#" data-v="1" data-t="157"><b>02:37</b><span>Applications: e.g. IVF embryo selection</span></a><a href="#" data-v="1" data-t="244"><b>04:04</b><span>What Weka is</span></a><a href="#" data-v="1" data-t="295"><b>04:55</b><span>Course structure: classes and lessons</span></a><a href="#" data-v="1" data-t="341"><b>05:41</b><span>Using Weka on your own data</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why data warehouses matter"><span class="num">1</span>Why data warehouses matter</h2><ul>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 05</div><h1>Introduction to Data Warehousing</h1><p>What a data warehouse is (Inmon's 4 keywords), OLTP vs OLAP, why keep it separate, and the multidimensional data model — cubes, facts, dimensions and the lattice of cuboids.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">2 videos · 17 min</span><span class="chip">📄 week 5.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Introduction to Data Warehousing · 8 min</button><button>2. Data Mining with Weka 1.1 – Introduction · 9 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3432-25S2- Introduction to Data Warehousing - CODL-UOM.mp4" data-drive="1mVLSX1j7sLjOWPZb19uAQZgdOE_9-i3o"><source src="ITE3432-25S2-%20Introduction%20to%20Data%20Warehousing%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Introduction to Data Warehousing</p><p class="vs">Lecture overview of data warehouses and the multidimensional model.</p><a href="#" data-v="0" data-t="1"><b>00:01</b><span>The need for data warehouses</span></a><a href="#" data-v="0" data-t="51"><b>00:51</b><span>Heterogeneous sources: scientific, health, transactional data</span></a><a href="#" data-v="0" data-t="97"><b>01:37</b><span>Integrating multiple sources into one store</span></a><a href="#" data-v="0" data-t="194"><b>03:14</b><span>The metadata repository</span></a><a href="#" data-v="0" data-t="243"><b>04:03</b><span>Definition: subject-oriented, integrated, time-variant, non-volatile</span></a><a href="#" data-v="0" data-t="322"><b>05:22</b><span>Integrated: sources, cleaning, consistency</span></a><a href="#" data-v="0" data-t="363"><b>06:03</b><span>Time-variant: long time horizon</span></a><a href="#" data-v="0" data-t="432"><b>07:12</b><span>Non-volatile: no transaction processing, recovery or concurrency control</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Data Mining with Weka (1.1_ Introduction).mp4" data-drive="1mreF72Q4jPMD-pxnf_4owXErwRwQRqN5"><source src="Data%20Mining%20with%20Weka%20%281.1_%20Introduction%29.mp4"></video></div><div class="chap"><p class="vt">Data Mining with Weka 1.1 – Introduction</p><p class="vs">Ian Witten's introduction to the Weka course and the Weka workbench.</p><a href="#" data-v="1" data-t="18"><b>00:18</b><span>Welcome to Data Mining with Weka</span></a><a href="#" data-v="1" data-t="63"><b>01:03</b><span>We're overwhelmed with data: credit cards, coupons</span></a><a href="#" data-v="1" data-t="157"><b>02:37</b><span>Applications: e.g. IVF embryo selection</span></a><a href="#" data-v="1" data-t="244"><b>04:04</b><span>What Weka is</span></a><a href="#" data-v="1" data-t="295"><b>04:55</b><span>Course structure: classes and lessons</span></a><a href="#" data-v="1" data-t="341"><b>05:41</b><span>Using Weka on your own data</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why data warehouses matter"><span class="num">1</span>Why data warehouses matter</h2><ul>
 <li>Data warehouses <strong>generalise and consolidate data in multidimensional space</strong>.</li>
 <li><strong>Building</strong> one involves <strong>data cleaning, data integration and data transformation</strong>, so it is an <strong>important preprocessing step for data mining</strong>.</li>
 <li>They provide <strong>OLAP (On-Line Analytical Processing)</strong> tools for <strong>interactive analysis</strong> of multidimensional data at <strong>different granularities</strong>.</li>
@@ -603,17 +605,36 @@ draw();})();
   // videos
   var vids = document.querySelectorAll('.vpane');
   var tabs = document.querySelectorAll('.vtabs button');
+  var ONLINE = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 || /[?&]online\b/.test(location.search);
+  // online copy: swap the local <video> for the Google Drive player (loaded only while its tab is open)
+  function drive(e){
+    var id = e.getAttribute('data-drive'); if (!id) return false;
+    var w = document.createElement('div');
+    var f = document.createElement('iframe'); f.className = 'vdrive'; f.allow = 'autoplay; fullscreen'; f.allowFullscreen = true;
+    f.setAttribute('data-src', 'https://drive.google.com/file/d/' + id + '/preview');
+    var a = document.createElement('a'); a.className = 'vdlink'; a.target = '_blank'; a.rel = 'noopener';
+    a.href = 'https://drive.google.com/file/d/' + id + '/view'; a.textContent = 'Open in Google Drive ↗';
+    w.appendChild(f); w.appendChild(a); e.replaceWith(w);
+    return true;
+  }
   function show(i){
-    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    vids.forEach(function(v, j){
+      v.style.display = j === i ? '' : 'none';
+      var e = v.querySelector('video'); if (j !== i && e) e.pause();
+      var f = v.querySelector('iframe.vdrive');
+      if (f){ if (j === i){ if (!f.getAttribute('src')) f.src = f.getAttribute('data-src'); } else f.removeAttribute('src'); }
+    });
     tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
   }
   tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (ONLINE) vids.forEach(function(v){ var e = v.querySelector('video'); if (e) drive(e); });
   if (vids.length) show(0);
   vids.forEach(function(v){
     var e = v.querySelector('video'); if (!e) return;
     e.addEventListener('error', function(){
+      if (drive(e)){ var k = [].indexOf.call(vids, v); if (v.style.display !== 'none') show(k); return; }
       var m = document.createElement('div'); m.className = 'vmissing';
-      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      m.textContent = 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
       e.replaceWith(m);
     }, true);
     var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
@@ -626,6 +647,8 @@ draw();})();
     ev.preventDefault();
     var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
     show(i);
+    var f = vids[i] && vids[i].querySelector('iframe.vdrive');
+    if (f){ f.src = f.getAttribute('data-src') + '?t=' + t; document.getElementById('videos').scrollIntoView({behavior: 'smooth'}); return; }
     var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
     document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
     e.currentTime = t; e.play();

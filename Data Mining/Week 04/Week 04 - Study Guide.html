@@ -91,6 +91,8 @@ dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--in
 .vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
 video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.vdrive{width:100%;border:0;border-radius:10px;background:#000;aspect-ratio:16/9;display:block}
+.vdlink{display:inline-block;margin-top:6px;font-size:13px;color:var(--muted)}
 .chap{max-height:420px;overflow:auto;font-size:14.5px}
 .chap .vt{font-weight:650;margin:0 0 4px}
 .chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
@@ -192,7 +194,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dm-Week04">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 04</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 04</div><h1>Data Reduction &amp; Discretization</h1><p>Make the dataset smaller without changing what it tells you — cubes, attribute selection, compression, histograms, binning and concept hierarchies.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 10 min</span><span class="chip">📄 week 4.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Data Discretization · 10 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3432-25S2- Data Discretization - CODL-UOM.mp4"><source src="ITE3432-25S2-%20Data%20Discretization%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Data Discretization</p><p class="vs">Equal-width vs equal-depth binning, smoothing by bin means / medians / boundaries, and histogram partitioning (equal-width, equal-frequency, V-Optimal, MaxDiff) — all with worked examples.</p><a href="#" data-v="0" data-t="0"><b>00:00</b><span>Why discretize? Large ranges hide frequent patterns</span></a><a href="#" data-v="0" data-t="37"><b>00:37</b><span>Equal-width partitioning and the formula W = (B − A) / N</span></a><a href="#" data-v="0" data-t="78"><b>01:18</b><span>Problem: outliers distort equal-width bins</span></a><a href="#" data-v="0" data-t="104"><b>01:44</b><span>Equal-depth (equal-frequency) partitioning</span></a><a href="#" data-v="0" data-t="137"><b>02:17</b><span>Example: temperatures into 7 equal-width bins</span></a><a href="#" data-v="0" data-t="206"><b>03:26</b><span>Example: prices into 3 equal-depth bins</span></a><a href="#" data-v="0" data-t="256"><b>04:16</b><span>Smoothing noise: by bin means and medians</span></a><a href="#" data-v="0" data-t="318"><b>05:18</b><span>Smoothing by bin boundaries</span></a><a href="#" data-v="0" data-t="389"><b>06:29</b><span>Discretization using histograms</span></a><a href="#" data-v="0" data-t="441"><b>07:21</b><span>MaxDiff histograms (β − 1 largest gaps)</span></a><a href="#" data-v="0" data-t="474"><b>07:54</b><span>Example: ages — equal-width, equal-depth and MaxDiff</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why reduce data at all?"><span class="num">1</span>Why reduce data at all?</h2><p>Real datasets are huge — millions of rows and hundreds of columns. Mining algorithms on such data are <strong>slow</strong> and need <strong>a lot of memory</strong>. <strong>Data reduction</strong> produces a <em>much smaller</em> version of the dataset that still gives <strong>the same (or almost the same) analytical results</strong>.</p>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 04</div><h1>Data Reduction &amp; Discretization</h1><p>Make the dataset smaller without changing what it tells you — cubes, attribute selection, compression, histograms, binning and concept hierarchies.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 10 min</span><span class="chip">📄 week 4.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Data Discretization · 10 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3432-25S2- Data Discretization - CODL-UOM.mp4" data-drive="1A2UGarT5TKOQitxKL2UId9ANyew9kalr"><source src="ITE3432-25S2-%20Data%20Discretization%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Data Discretization</p><p class="vs">Equal-width vs equal-depth binning, smoothing by bin means / medians / boundaries, and histogram partitioning (equal-width, equal-frequency, V-Optimal, MaxDiff) — all with worked examples.</p><a href="#" data-v="0" data-t="0"><b>00:00</b><span>Why discretize? Large ranges hide frequent patterns</span></a><a href="#" data-v="0" data-t="37"><b>00:37</b><span>Equal-width partitioning and the formula W = (B − A) / N</span></a><a href="#" data-v="0" data-t="78"><b>01:18</b><span>Problem: outliers distort equal-width bins</span></a><a href="#" data-v="0" data-t="104"><b>01:44</b><span>Equal-depth (equal-frequency) partitioning</span></a><a href="#" data-v="0" data-t="137"><b>02:17</b><span>Example: temperatures into 7 equal-width bins</span></a><a href="#" data-v="0" data-t="206"><b>03:26</b><span>Example: prices into 3 equal-depth bins</span></a><a href="#" data-v="0" data-t="256"><b>04:16</b><span>Smoothing noise: by bin means and medians</span></a><a href="#" data-v="0" data-t="318"><b>05:18</b><span>Smoothing by bin boundaries</span></a><a href="#" data-v="0" data-t="389"><b>06:29</b><span>Discretization using histograms</span></a><a href="#" data-v="0" data-t="441"><b>07:21</b><span>MaxDiff histograms (β − 1 largest gaps)</span></a><a href="#" data-v="0" data-t="474"><b>07:54</b><span>Example: ages — equal-width, equal-depth and MaxDiff</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why reduce data at all?"><span class="num">1</span>Why reduce data at all?</h2><p>Real datasets are huge — millions of rows and hundreds of columns. Mining algorithms on such data are <strong>slow</strong> and need <strong>a lot of memory</strong>. <strong>Data reduction</strong> produces a <em>much smaller</em> version of the dataset that still gives <strong>the same (or almost the same) analytical results</strong>.</p>
 <div class="call key"><div class="ct">The one-sentence definition</div><p>Data reduction = obtaining a <strong>reduced representation</strong> of the dataset that is <strong>much smaller in volume</strong> but <strong>keeps the integrity</strong> of the original data, so mining it is more efficient and the results barely change.</p></div>
 <p>Two benefits are named in the notes:</p>
 <ol>
@@ -904,17 +906,36 @@ R.addEventListener('input',run);run();
   // videos
   var vids = document.querySelectorAll('.vpane');
   var tabs = document.querySelectorAll('.vtabs button');
+  var ONLINE = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 || /[?&]online\b/.test(location.search);
+  // online copy: swap the local <video> for the Google Drive player (loaded only while its tab is open)
+  function drive(e){
+    var id = e.getAttribute('data-drive'); if (!id) return false;
+    var w = document.createElement('div');
+    var f = document.createElement('iframe'); f.className = 'vdrive'; f.allow = 'autoplay; fullscreen'; f.allowFullscreen = true;
+    f.setAttribute('data-src', 'https://drive.google.com/file/d/' + id + '/preview');
+    var a = document.createElement('a'); a.className = 'vdlink'; a.target = '_blank'; a.rel = 'noopener';
+    a.href = 'https://drive.google.com/file/d/' + id + '/view'; a.textContent = 'Open in Google Drive ↗';
+    w.appendChild(f); w.appendChild(a); e.replaceWith(w);
+    return true;
+  }
   function show(i){
-    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    vids.forEach(function(v, j){
+      v.style.display = j === i ? '' : 'none';
+      var e = v.querySelector('video'); if (j !== i && e) e.pause();
+      var f = v.querySelector('iframe.vdrive');
+      if (f){ if (j === i){ if (!f.getAttribute('src')) f.src = f.getAttribute('data-src'); } else f.removeAttribute('src'); }
+    });
     tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
   }
   tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (ONLINE) vids.forEach(function(v){ var e = v.querySelector('video'); if (e) drive(e); });
   if (vids.length) show(0);
   vids.forEach(function(v){
     var e = v.querySelector('video'); if (!e) return;
     e.addEventListener('error', function(){
+      if (drive(e)){ var k = [].indexOf.call(vids, v); if (v.style.display !== 'none') show(k); return; }
       var m = document.createElement('div'); m.className = 'vmissing';
-      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      m.textContent = 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
       e.replaceWith(m);
     }, true);
     var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
@@ -927,6 +948,8 @@ R.addEventListener('input',run);run();
     ev.preventDefault();
     var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
     show(i);
+    var f = vids[i] && vids[i].querySelector('iframe.vdrive');
+    if (f){ f.src = f.getAttribute('data-src') + '?t=' + t; document.getElementById('videos').scrollIntoView({behavior: 'smooth'}); return; }
     var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
     document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
     e.currentTime = t; e.play();

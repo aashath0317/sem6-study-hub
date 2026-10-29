@@ -91,6 +91,8 @@ dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--in
 .vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
 video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.vdrive{width:100%;border:0;border-radius:10px;background:#000;aspect-ratio:16/9;display:block}
+.vdlink{display:inline-block;margin-top:6px;font-size:13px;color:var(--muted)}
 .chap{max-height:420px;overflow:auto;font-size:14.5px}
 .chap .vt{font-weight:650;margin:0 0 4px}
 .chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
@@ -192,7 +194,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dm-Week03">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 03</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 03</div><h1>Data Preprocessing — Cleaning, Integration &amp; Transformation</h1><p>Why real data is dirty, how to fill missing values and smooth noise, cleaning as a process, integrating sources with correlation analysis, and normalization.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 7 min</span><span class="chip">📄 week 3.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Introduction to Data Preprocessing · 7 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3432-25S2- Introduction to Data Pre processing - CODL-UOM.mp4"><source src="ITE3432-25S2-%20Introduction%20to%20Data%20Pre%20processing%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Introduction to Data Preprocessing</p><p class="vs">Overview of why preprocessing is needed and the main preprocessing tasks.</p><a href="#" data-v="0" data-t="1"><b>00:01</b><span>Why data preprocessing is needed</span></a><a href="#" data-v="0" data-t="48"><b>00:48</b><span>Dirty data: errors, inconsistent codes (1-2-3 vs A-B-C)</span></a><a href="#" data-v="0" data-t="117"><b>01:57</b><span>Why data is dirty: entry, transmission, multiple sources</span></a><a href="#" data-v="0" data-t="239"><b>03:59</b><span>Cleaning: inconsistencies, missing values, noise</span></a><a href="#" data-v="0" data-t="278"><b>04:38</b><span>Preprocessing in the knowledge discovery (KDD) process</span></a><a href="#" data-v="0" data-t="330"><b>05:30</b><span>Major tasks: cleaning, integration, reduction, transformation</span></a><a href="#" data-v="0" data-t="381"><b>06:21</b><span>Data reduction and summarisation</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why preprocessing is needed"><span class="num">1</span>Why preprocessing is needed</h2><p>Real-world databases and data warehouses are commonly <strong>incomplete, noisy and inconsistent</strong>. Mining dirty data gives poor results, and <strong>users don't trust results from data they believe is dirty</strong>.</p>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 03</div><h1>Data Preprocessing — Cleaning, Integration &amp; Transformation</h1><p>Why real data is dirty, how to fill missing values and smooth noise, cleaning as a process, integrating sources with correlation analysis, and normalization.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 7 min</span><span class="chip">📄 week 3.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Introduction to Data Preprocessing · 7 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3432-25S2- Introduction to Data Pre processing - CODL-UOM.mp4" data-drive="1QLQsoOn4HmcwXQVX9-iJEtRlrYm8zUh0"><source src="ITE3432-25S2-%20Introduction%20to%20Data%20Pre%20processing%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Introduction to Data Preprocessing</p><p class="vs">Overview of why preprocessing is needed and the main preprocessing tasks.</p><a href="#" data-v="0" data-t="1"><b>00:01</b><span>Why data preprocessing is needed</span></a><a href="#" data-v="0" data-t="48"><b>00:48</b><span>Dirty data: errors, inconsistent codes (1-2-3 vs A-B-C)</span></a><a href="#" data-v="0" data-t="117"><b>01:57</b><span>Why data is dirty: entry, transmission, multiple sources</span></a><a href="#" data-v="0" data-t="239"><b>03:59</b><span>Cleaning: inconsistencies, missing values, noise</span></a><a href="#" data-v="0" data-t="278"><b>04:38</b><span>Preprocessing in the knowledge discovery (KDD) process</span></a><a href="#" data-v="0" data-t="330"><b>05:30</b><span>Major tasks: cleaning, integration, reduction, transformation</span></a><a href="#" data-v="0" data-t="381"><b>06:21</b><span>Data reduction and summarisation</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why preprocessing is needed"><span class="num">1</span>Why preprocessing is needed</h2><p>Real-world databases and data warehouses are commonly <strong>incomplete, noisy and inconsistent</strong>. Mining dirty data gives poor results, and <strong>users don't trust results from data they believe is dirty</strong>.</p>
 <div class="grid2"><div><p><strong>Incomplete</strong> (missing values)</p>
 <ul>
 <li>Attribute of interest <strong>not available</strong> (e.g. customer info on sales records)</li>
@@ -687,17 +689,36 @@ R.addEventListener('input',run);run();})();
   // videos
   var vids = document.querySelectorAll('.vpane');
   var tabs = document.querySelectorAll('.vtabs button');
+  var ONLINE = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 || /[?&]online\b/.test(location.search);
+  // online copy: swap the local <video> for the Google Drive player (loaded only while its tab is open)
+  function drive(e){
+    var id = e.getAttribute('data-drive'); if (!id) return false;
+    var w = document.createElement('div');
+    var f = document.createElement('iframe'); f.className = 'vdrive'; f.allow = 'autoplay; fullscreen'; f.allowFullscreen = true;
+    f.setAttribute('data-src', 'https://drive.google.com/file/d/' + id + '/preview');
+    var a = document.createElement('a'); a.className = 'vdlink'; a.target = '_blank'; a.rel = 'noopener';
+    a.href = 'https://drive.google.com/file/d/' + id + '/view'; a.textContent = 'Open in Google Drive ↗';
+    w.appendChild(f); w.appendChild(a); e.replaceWith(w);
+    return true;
+  }
   function show(i){
-    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    vids.forEach(function(v, j){
+      v.style.display = j === i ? '' : 'none';
+      var e = v.querySelector('video'); if (j !== i && e) e.pause();
+      var f = v.querySelector('iframe.vdrive');
+      if (f){ if (j === i){ if (!f.getAttribute('src')) f.src = f.getAttribute('data-src'); } else f.removeAttribute('src'); }
+    });
     tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
   }
   tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (ONLINE) vids.forEach(function(v){ var e = v.querySelector('video'); if (e) drive(e); });
   if (vids.length) show(0);
   vids.forEach(function(v){
     var e = v.querySelector('video'); if (!e) return;
     e.addEventListener('error', function(){
+      if (drive(e)){ var k = [].indexOf.call(vids, v); if (v.style.display !== 'none') show(k); return; }
       var m = document.createElement('div'); m.className = 'vmissing';
-      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      m.textContent = 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
       e.replaceWith(m);
     }, true);
     var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
@@ -710,6 +731,8 @@ R.addEventListener('input',run);run();})();
     ev.preventDefault();
     var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
     show(i);
+    var f = vids[i] && vids[i].querySelector('iframe.vdrive');
+    if (f){ f.src = f.getAttribute('data-src') + '?t=' + t; document.getElementById('videos').scrollIntoView({behavior: 'smooth'}); return; }
     var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
     document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
     e.currentTime = t; e.play();

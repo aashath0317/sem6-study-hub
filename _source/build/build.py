@@ -4,6 +4,9 @@ import markdown
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = "D:/Study/SEM 6"
+# Google Drive file IDs of the uploaded videos ("Folder/Week NN/file" -> id), used by the online copy
+_dp = os.path.join(HERE, "drive_ids.json")
+DRIVE = json.load(open(_dp, encoding="utf-8")) if os.path.exists(_dp) else {}
 CSS = open(os.path.join(HERE, "template.css"), encoding="utf-8").read()
 JS = open(os.path.join(HERE, "template.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "quiz.js"), encoding="utf-8").read()
 OUTNAME = "{week} - Study Guide.html"
@@ -192,8 +195,9 @@ def build_week(skey, wfile, prev, nxt):
         exists = os.path.exists(fp)
         vt.append(f'<button>{i+1}. {html.escape(v["title"])}{" · " + str(round(d/60)) + " min" if d else ""}</button>')
         chap = "".join(f'<a href="#" data-v="{i}" data-t="{secs(t)}"><b>{t}</b><span>{md_inline(l)}</span></a>' for t, l in v["chapters"])
-        player = (f'<video controls preload="metadata" data-file="{html.escape(v["file"])}"><source src="{quote(v["file"])}"></video>'
-                  if exists else f'<div class="vmissing">Video file not found next to this page: {html.escape(v["file"])}</div>')
+        did = DRIVE.get(f'{folder}/{week}/{v["file"]}', "")
+        player = (f'<video controls preload="metadata" data-file="{html.escape(v["file"])}" data-drive="{did}"><source src="{quote(v["file"])}"></video>'
+                  if exists or did else f'<div class="vmissing">Video file not found next to this page: {html.escape(v["file"])}</div>')
         vp.append(f'<div class="vpane"><div class="vgrid"><div>{player}</div><div class="chap"><p class="vt">{html.escape(v["title"])}</p>'
                   f'<p class="vs">{md_inline(v["summary"].strip())}</p>{chap}</div></div></div>')
     vhtml = ""

@@ -89,6 +89,8 @@ dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--in
 .vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
 video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.vdrive{width:100%;border:0;border-radius:10px;background:#000;aspect-ratio:16/9;display:block}
+.vdlink{display:inline-block;margin-top:6px;font-size:13px;color:var(--muted)}
 .chap{max-height:420px;overflow:auto;font-size:14.5px}
 .chap .vt{font-weight:650;margin:0 0 4px}
 .chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}

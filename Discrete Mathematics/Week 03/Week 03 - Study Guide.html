@@ -91,6 +91,8 @@ dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--in
 .vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
 video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.vdrive{width:100%;border:0;border-radius:10px;background:#000;aspect-ratio:16/9;display:block}
+.vdlink{display:inline-block;margin-top:6px;font-size:13px;color:var(--muted)}
 .chap{max-height:420px;overflow:auto;font-size:14.5px}
 .chap .vt{font-weight:650;margin:0 0 4px}
 .chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
@@ -192,7 +194,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dmath-Week03">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Discrete Mathematics</a> › Week 03</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 03</div><h1>Functions</h1><p>Definition of a function, domain, codomain and range, finding domains, one-to-one (injective), onto (surjective) and bijective functions, inverses, and composition.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">1 video · 52 min</span><span class="chip">📄 Lesson 3.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Lesson 3 – Functions · 52 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- Lesson 3 - Functions - CODL-UOM.mp4"><source src="ITE3822-25S2-%20Lesson%203%20-%20Functions%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Lesson 3 – Functions</p><p class="vs">Functions, their properties, inverses and composition.</p></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What is a function?"><span class="num">1</span>What is a function?</h2><p>Many questions ask <strong>how one quantity depends on another</strong>: a company's profit vs production level, bacteria population vs time, vocabulary learned vs learning time. <strong>Functions</strong> describe these relationships.</p>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 03</div><h1>Functions</h1><p>Definition of a function, domain, codomain and range, finding domains, one-to-one (injective), onto (surjective) and bijective functions, inverses, and composition.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">1 video · 52 min</span><span class="chip">📄 Lesson 3.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Lesson 3 – Functions · 52 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- Lesson 3 - Functions - CODL-UOM.mp4" data-drive="1LQCgA1SmUKZbSr_77arTgL27dDfCsWIM"><source src="ITE3822-25S2-%20Lesson%203%20-%20Functions%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Lesson 3 – Functions</p><p class="vs">Functions, their properties, inverses and composition.</p></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What is a function?"><span class="num">1</span>What is a function?</h2><p>Many questions ask <strong>how one quantity depends on another</strong>: a company's profit vs production level, bacteria population vs time, vocabulary learned vs learning time. <strong>Functions</strong> describe these relationships.</p>
 <div class="call key"><div class="ct">Definition</div><p>A <strong>function</strong> f from A to B is a rule that assigns to <strong>each</strong> element of A <strong>one and only one</strong> element of B. We write <strong>f : A → B</strong>. Functions are also called <strong>mappings</strong> or <strong>transformations</strong>.</p></div>
 <table>
 <thead>
@@ -489,17 +491,36 @@ R.addEventListener('input',run);run();})();
   // videos
   var vids = document.querySelectorAll('.vpane');
   var tabs = document.querySelectorAll('.vtabs button');
+  var ONLINE = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 || /[?&]online\b/.test(location.search);
+  // online copy: swap the local <video> for the Google Drive player (loaded only while its tab is open)
+  function drive(e){
+    var id = e.getAttribute('data-drive'); if (!id) return false;
+    var w = document.createElement('div');
+    var f = document.createElement('iframe'); f.className = 'vdrive'; f.allow = 'autoplay; fullscreen'; f.allowFullscreen = true;
+    f.setAttribute('data-src', 'https://drive.google.com/file/d/' + id + '/preview');
+    var a = document.createElement('a'); a.className = 'vdlink'; a.target = '_blank'; a.rel = 'noopener';
+    a.href = 'https://drive.google.com/file/d/' + id + '/view'; a.textContent = 'Open in Google Drive ↗';
+    w.appendChild(f); w.appendChild(a); e.replaceWith(w);
+    return true;
+  }
   function show(i){
-    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    vids.forEach(function(v, j){
+      v.style.display = j === i ? '' : 'none';
+      var e = v.querySelector('video'); if (j !== i && e) e.pause();
+      var f = v.querySelector('iframe.vdrive');
+      if (f){ if (j === i){ if (!f.getAttribute('src')) f.src = f.getAttribute('data-src'); } else f.removeAttribute('src'); }
+    });
     tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
   }
   tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (ONLINE) vids.forEach(function(v){ var e = v.querySelector('video'); if (e) drive(e); });
   if (vids.length) show(0);
   vids.forEach(function(v){
     var e = v.querySelector('video'); if (!e) return;
     e.addEventListener('error', function(){
+      if (drive(e)){ var k = [].indexOf.call(vids, v); if (v.style.display !== 'none') show(k); return; }
       var m = document.createElement('div'); m.className = 'vmissing';
-      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      m.textContent = 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
       e.replaceWith(m);
     }, true);
     var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
@@ -512,6 +533,8 @@ R.addEventListener('input',run);run();})();
     ev.preventDefault();
     var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
     show(i);
+    var f = vids[i] && vids[i].querySelector('iframe.vdrive');
+    if (f){ f.src = f.getAttribute('data-src') + '?t=' + t; document.getElementById('videos').scrollIntoView({behavior: 'smooth'}); return; }
     var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
     document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
     e.currentTime = t; e.play();

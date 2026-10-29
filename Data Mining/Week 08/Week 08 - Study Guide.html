@@ -91,6 +91,8 @@ dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--in
 .vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
 video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.vdrive{width:100%;border:0;border-radius:10px;background:#000;aspect-ratio:16/9;display:block}
+.vdlink{display:inline-block;margin-top:6px;font-size:13px;color:var(--muted)}
 .chap{max-height:420px;overflow:auto;font-size:14.5px}
 .chap .vt{font-weight:650;margin:0 0 4px}
 .chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
@@ -192,7 +194,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dm-Week08">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 08</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 08</div><h1>Data Cube Computation &amp; Data Generalization</h1><p>Materializing cubes, base vs aggregate cells, iceberg cubes, MultiWay array aggregation, BUC, star-nodes and star-trees, and attribute-oriented induction (AOI).</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 15 min</span><span class="chip">📄 week 8.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Data Cube Computation · 15 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Data Cube Computation.mp4"><source src="Data%20Cube%20Computation.mp4"></video></div><div class="chap"><p class="vt">Data Cube Computation</p><p class="vs">Walkthrough of cube materialization and efficient computation methods.</p><a href="#" data-v="0" data-t="2"><b>00:02</b><span>A simple data cube example (product, location, time)</span></a><a href="#" data-v="0" data-t="115"><b>01:55</b><span>The apex cuboid: the most summarised view</span></a><a href="#" data-v="0" data-t="171"><b>02:51</b><span>Base cells: P1, Calgary, Wednesday…</span></a><a href="#" data-v="0" data-t="277"><b>04:37</b><span>Aggregate cells and slices ("*" = all)</span></a><a href="#" data-v="0" data-t="384"><b>06:24</b><span>Reading aggregate values (111, 27…)</span></a><a href="#" data-v="0" data-t="502"><b>08:22</b><span>Two categories of cube computation</span></a><a href="#" data-v="0" data-t="567"><b>09:27</b><span>Simultaneous aggregation: base → 1-D → 2-D cells</span></a><a href="#" data-v="0" data-t="669"><b>11:09</b><span>Example: Apple, Central Province, January</span></a><a href="#" data-v="0" data-t="784"><b>13:04</b><span>How aggregated values are updated</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why compute cubes efficiently?"><span class="num">1</span>Why compute cubes efficiently?</h2><ul>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 08</div><h1>Data Cube Computation &amp; Data Generalization</h1><p>Materializing cubes, base vs aggregate cells, iceberg cubes, MultiWay array aggregation, BUC, star-nodes and star-trees, and attribute-oriented induction (AOI).</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 15 min</span><span class="chip">📄 week 8.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Data Cube Computation · 15 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Data Cube Computation.mp4" data-drive="1Vx6y6MP-kc9OZyR_4KmTdjR_li5AS2Dz"><source src="Data%20Cube%20Computation.mp4"></video></div><div class="chap"><p class="vt">Data Cube Computation</p><p class="vs">Walkthrough of cube materialization and efficient computation methods.</p><a href="#" data-v="0" data-t="2"><b>00:02</b><span>A simple data cube example (product, location, time)</span></a><a href="#" data-v="0" data-t="115"><b>01:55</b><span>The apex cuboid: the most summarised view</span></a><a href="#" data-v="0" data-t="171"><b>02:51</b><span>Base cells: P1, Calgary, Wednesday…</span></a><a href="#" data-v="0" data-t="277"><b>04:37</b><span>Aggregate cells and slices ("*" = all)</span></a><a href="#" data-v="0" data-t="384"><b>06:24</b><span>Reading aggregate values (111, 27…)</span></a><a href="#" data-v="0" data-t="502"><b>08:22</b><span>Two categories of cube computation</span></a><a href="#" data-v="0" data-t="567"><b>09:27</b><span>Simultaneous aggregation: base → 1-D → 2-D cells</span></a><a href="#" data-v="0" data-t="669"><b>11:09</b><span>Example: Apple, Central Province, January</span></a><a href="#" data-v="0" data-t="784"><b>13:04</b><span>How aggregated values are updated</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why compute cubes efficiently?"><span class="num">1</span>Why compute cubes efficiently?</h2><ul>
 <li><strong>Data cube computation</strong> is an <strong>essential</strong> task in warehouse implementation.</li>
 <li><strong>Pre-computing</strong> all or part of a cube <strong>greatly reduces response time</strong> and improves OLAP performance.</li>
 <li><strong>The challenge:</strong> it can need <strong>substantial computation time and storage space</strong>.</li>
@@ -715,17 +717,36 @@ where status in &quot;graduate&quot;
   // videos
   var vids = document.querySelectorAll('.vpane');
   var tabs = document.querySelectorAll('.vtabs button');
+  var ONLINE = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 || /[?&]online\b/.test(location.search);
+  // online copy: swap the local <video> for the Google Drive player (loaded only while its tab is open)
+  function drive(e){
+    var id = e.getAttribute('data-drive'); if (!id) return false;
+    var w = document.createElement('div');
+    var f = document.createElement('iframe'); f.className = 'vdrive'; f.allow = 'autoplay; fullscreen'; f.allowFullscreen = true;
+    f.setAttribute('data-src', 'https://drive.google.com/file/d/' + id + '/preview');
+    var a = document.createElement('a'); a.className = 'vdlink'; a.target = '_blank'; a.rel = 'noopener';
+    a.href = 'https://drive.google.com/file/d/' + id + '/view'; a.textContent = 'Open in Google Drive ↗';
+    w.appendChild(f); w.appendChild(a); e.replaceWith(w);
+    return true;
+  }
   function show(i){
-    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    vids.forEach(function(v, j){
+      v.style.display = j === i ? '' : 'none';
+      var e = v.querySelector('video'); if (j !== i && e) e.pause();
+      var f = v.querySelector('iframe.vdrive');
+      if (f){ if (j === i){ if (!f.getAttribute('src')) f.src = f.getAttribute('data-src'); } else f.removeAttribute('src'); }
+    });
     tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
   }
   tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (ONLINE) vids.forEach(function(v){ var e = v.querySelector('video'); if (e) drive(e); });
   if (vids.length) show(0);
   vids.forEach(function(v){
     var e = v.querySelector('video'); if (!e) return;
     e.addEventListener('error', function(){
+      if (drive(e)){ var k = [].indexOf.call(vids, v); if (v.style.display !== 'none') show(k); return; }
       var m = document.createElement('div'); m.className = 'vmissing';
-      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      m.textContent = 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
       e.replaceWith(m);
     }, true);
     var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
@@ -738,6 +759,8 @@ where status in &quot;graduate&quot;
     ev.preventDefault();
     var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
     show(i);
+    var f = vids[i] && vids[i].querySelector('iframe.vdrive');
+    if (f){ f.src = f.getAttribute('data-src') + '?t=' + t; document.getElementById('videos').scrollIntoView({behavior: 'smooth'}); return; }
     var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
     document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
     e.currentTime = t; e.play();

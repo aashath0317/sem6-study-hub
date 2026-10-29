@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Past papers — Human Computer Interaction</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.vdrive{width:100%;border:0;border-radius:10px;background:#000;aspect-ratio:16/9;display:block}
+.vdlink{display:inline-block;margin-top:6px;font-size:13px;color:var(--muted)}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+.exams{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 18px}.exams table{width:100%}.exams td.cd{font-weight:700;color:var(--accent);white-space:nowrap}.wk em.exd{color:var(--accent);font-style:normal}
+.wk a.papers{border-color:var(--accent);background:var(--accent-soft)}
+</style></head>
+<body data-key="hci-papers">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../SEM 6 Study Hub.html">SEM 6</a> › <a href="Study%20Guide%20-%20Index.html">Human Computer Interaction</a> › Past papers</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Human Computer Interaction · Past papers</div><h1>Past Papers — Model Answers &amp; What to Expect</h1><p>The ITE 3752 paper (same module code as yours) answered in full, with examples you can reuse, plus outline answers for two older ITE 3603 papers (December 2019 and September 2020) whose overlapping topics still matter.</p><div class="meta"><span class="chip">ITE3752</span><span class="chip">📄 HCI 2020 (ITE 3752)</span><span class="chip">📄 HCI December 2019 (ITE 3603)</span><span class="chip">📄 HCI September 2020 (ITE 3603)</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What the exam looks like and what to focus on"><span class="num">1</span>What the exam looks like and what to focus on</h2><div class="call key"><div class="ct">Format</div><ul>
+<li><strong>3 hours, 100 marks</strong>, closed book.</li>
+<li><strong>4 questions × 25 marks</strong>, answer <strong>all</strong> of them.</li>
+<li>It's <strong>all essay-style</strong>: define the term, explain it, and <strong>illustrate with an example</strong>.</li>
+</ul></div>
+<div class="call warn"><div class="ct">Two different syllabuses</div><ul>
+<li><strong>ITE 3752</strong> is <strong>your module</strong>. Its paper tests exactly the course topics: UCD and ISO, stakeholders, Norman's model and the gulfs, slips and mistakes, goals and tasks, HTA, needfinding biases, and the design life cycle.</li>
+<li><strong>ITE 3603</strong> was the <strong>older module</strong>. It also covered groupware and ubiquitous computing, which <strong>aren't in your weekly notes</strong>. Its usability-evaluation, memory, attention and mobile-design questions still overlap with your course.</li>
+</ul></div>
+<table>
+<thead>
+<tr>
+<th>Topic (ITE 3752)</th>
+<th>Week to revise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UCD importance, the 8 user characteristics, ISO 9241-210, stakeholders</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Norman's execution and evaluation loop, gulfs, slips vs mistakes</td>
+<td>2, 5</td>
+</tr>
+<tr>
+<td>Goals vs tasks, textual and diagrammatic HTA</td>
+<td>9, 10</td>
+</tr>
+<tr>
+<td>Needfinding biases</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Design life cycle: alternatives, prototyping, evaluation</td>
+<td>11–13</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="ITE 3752 — Question 1: User-centred design (25 marks)"><span class="num">2</span>ITE 3752 — Question 1: User-centred design (25 marks)</h2><div class="call example"><div class="ct">(a) Why UCD matters [4]</div><p>UCD puts <strong>users, their tasks and their context</strong> at the centre of every design decision, and involves them <strong>throughout</strong> the life cycle.</p>
+<ul>
+<li>It builds systems people <strong>actually want and can use</strong>, which raises <strong>usability and satisfaction</strong>.</li>
+<li>It cuts <strong>errors, training and support costs</strong>.</li>
+<li>It catches problems <strong>early</strong>, when they're cheap to fix, instead of after release.</li>
+<li>It increases <strong>adoption and productivity</strong>, and gives a competitive advantage.</li>
+</ul>
+<p>Specification-driven design <strong>presumes</strong> users' needs. UCD <strong>discovers</strong> them.</p></div>
+<div class="call example"><div class="ct">(b) How user characteristics affect design [6]</div><p>There's no "average user". Designers must consider:</p>
+<ul>
+<li><strong>Role:</strong> e.g. an admin needs different screens from a cashier.</li>
+<li><strong>Age:</strong> older users need larger fonts and memory aids.</li>
+<li><strong>Gender:</strong> preferences such as colour and theme.</li>
+<li><strong>Education level:</strong> plain language vs technical terms.</li>
+<li><strong>Cultural background:</strong> colour meanings, reading direction, metaphors.</li>
+<li><strong>Interests and motivation.</strong></li>
+<li><strong>Professional level:</strong> familiarity with domain terms.</li>
+<li><strong>Computer literacy:</strong> novices need <strong>wizards and guidance</strong>, while experts want <strong>shortcuts</strong>.</li>
+</ul>
+<p>These shape vocabulary, layout, help, and the number of steps. Designers combine them into <strong>personas</strong> and support <strong>dual pathways</strong> (novice and expert).</p></div>
+<div class="call example"><div class="ct">(c) The ISO 9241-210 UCD principles [9]</div><ol>
+<li><strong>Explicit understanding of users, tasks and environments.</strong> Design from evidence about who the users are, what they do, and where they do it.</li>
+<li><strong>Users involved throughout design and development:</strong> interviews, co-design, usability trials at every stage.</li>
+<li><strong>Design driven and refined by user-centred evaluation:</strong> formative tests on sketches, summative tests on finished versions.</li>
+<li><strong>Iterative process:</strong> design → test → refine → test again.</li>
+<li><strong>Address the whole user experience:</strong> expectations, emotion, onboarding, error recovery, support.</li>
+<li><strong>Multidisciplinary team:</strong> designers, engineers, psychologists, domain experts, technical writers.</li>
+</ol></div>
+<div class="call example"><div class="ct">(d) Levels of stakeholders, with an example [6]</div><p><strong>Example: a university Moodle (LMS)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Who</th>
+<th>In the example</th>
+<th>What to design for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Primary</strong></td>
+<td><strong>Direct users</strong> of the interface</td>
+<td>Students and lecturers using Moodle</td>
+<td>Ease of use, low cognitive load, error prevention</td>
+</tr>
+<tr>
+<td><strong>Secondary</strong></td>
+<td>Don't use the interface, but <strong>use its output</strong></td>
+<td>The photocopy shop receiving a report of which notes no longer need printing</td>
+<td>Format, accuracy and timeliness of the output</td>
+</tr>
+<tr>
+<td><strong>Tertiary</strong></td>
+<td>Never touch the system or its output, but are <strong>affected</strong></td>
+<td>Parents, administration and staff whose workloads change</td>
+<td>Ethics, workload balance, wider impact</td>
+</tr>
+</tbody>
+</table></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="ITE 3752 — Question 2: Norman&#x27;s model (25 marks)"><span class="num">3</span>ITE 3752 — Question 2: Norman's model (25 marks)</h2><div class="call example"><div class="ct">(a) The execution and evaluation loop, with an example [12]</div><p><strong>Example: setting an alarm for 6:00 am on a phone.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Loop</th>
+<th>In the example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. <strong>Goal</strong></td>
+<td>—</td>
+<td>Wake up at 6:00 tomorrow</td>
+</tr>
+<tr>
+<td>2. <strong>Plan / form the intention</strong></td>
+<td>Execution</td>
+<td>Decide to set an alarm in the Clock app</td>
+</tr>
+<tr>
+<td>3. <strong>Specify the action sequence</strong></td>
+<td>Execution</td>
+<td>Open Clock → Alarm tab → tap + → choose 06:00</td>
+</tr>
+<tr>
+<td>4. <strong>Perform / execute</strong></td>
+<td>Execution</td>
+<td>Physically tap and scroll the time wheel, then press Save</td>
+</tr>
+<tr>
+<td>5. <strong>Perceive</strong> the state of the world</td>
+<td>Evaluation</td>
+<td>See the new alarm row showing "06:00, ON"</td>
+</tr>
+<tr>
+<td>6. <strong>Interpret</strong> the perception</td>
+<td>Evaluation</td>
+<td>"The alarm I made is switched on for 6 am"</td>
+</tr>
+<tr>
+<td>7. <strong>Compare / evaluate</strong> against the goal</td>
+<td>Evaluation</td>
+<td>"It will ring at 6 am. Goal achieved." If not, start the loop again</td>
+</tr>
+</tbody>
+</table></div>
+<div class="call example"><div class="ct">(b) The gulfs of execution and evaluation [6]</div><ul>
+<li><strong>Gulf of execution:</strong> the gap between what the user <strong>wants to do</strong> and the <strong>actions the system allows</strong>. <em>Example:</em> the user doesn't know whether to press <strong>+</strong> or long-press the clock. Bridge it with <strong>clear affordances, labels and mapping</strong>, e.g. a visible "Add alarm" button.</li>
+<li><strong>Gulf of evaluation:</strong> the gap between the <strong>system state</strong> and the user's ability to <strong>perceive and interpret</strong> it. <em>Example:</em> after Save, no confirmation appears, so the user can't tell whether the alarm is set. Bridge it with <strong>feedback</strong>, e.g. "Alarm set for 8 hours 12 minutes from now".</li>
+</ul></div>
+<div class="call example"><div class="ct">(c) Slips vs mistakes, and how to reduce them [7]</div><table>
+<thead>
+<tr>
+<th></th>
+<th>Slip</th>
+<th>Mistake</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cause</td>
+<td><strong>The goal is right, but the execution goes wrong</strong> (attention, habit)</td>
+<td><strong>The goal or plan itself is wrong</strong> (wrong mental model)</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>Tapping "Delete" next to "Edit" by accident; a typo</td>
+<td>Setting the alarm for 6 <strong>PM</strong> because of misreading the AM/PM switch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reducing slips:</strong></p>
+<ul>
+<li>Space dangerous buttons apart, and make targets large</li>
+<li>Add <strong>confirmation</strong> for destructive actions</li>
+<li>Provide <strong>undo</strong></li>
+<li>Use <strong>constraints</strong> (disable invalid options) and <strong>forcing functions</strong></li>
+</ul>
+<p><strong>Reducing mistakes:</strong></p>
+<ul>
+<li>Use <strong>clear conceptual models and labels</strong> that match users' mental models</li>
+<li>Give <strong>informative feedback</strong></li>
+<li>Provide <strong>help</strong> and sensible <strong>defaults</strong></li>
+<li>Show a <strong>preview</strong> of the result before it's committed</li>
+</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)"><span class="num">4</span>ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)</h2><div class="call example"><div class="ct">(a) Goals vs tasks [6]</div><ul>
+<li>A <strong>goal</strong> is the <strong>end state</strong> the user wants to reach: the <em>what</em>. <em>Example:</em> "Have the report in the Projects folder."</li>
+<li>A <strong>task</strong> is the <strong>structured set of activities</strong> (actions) needed to reach the goal: the <em>how</em>. <em>Example:</em> "Open File Explorer, select the file, cut, open the destination, paste."</li>
+</ul>
+<p>Goals are stable. Tasks depend on the <strong>technology</strong>: the same goal could be done by drag-and-drop or with a command line.</p></div>
+<div class="call example"><div class="ct">(b) Textual HTA: move a file in Windows [11]</div><pre><code>0. Move a file to another location
+   1. Locate the file
+      1.1 Open File Explorer
+      1.2 Navigate to the source folder
+      1.3 Find/select the file (search if not visible)
+   2. Choose a moving method
+   3. Move the file
+      3.1 Cut-and-paste method
+          3.1.1 Right-click file → Cut (or Ctrl+X)
+          3.1.2 Navigate to destination folder
+          3.1.3 Right-click empty area → Paste (or Ctrl+V)
+      3.2 Drag-and-drop method
+          3.2.1 Open destination folder in a second window / nav pane
+          3.2.2 Drag the file to the destination (Shift+drag on another drive)
+          3.2.3 Release the mouse button
+   4. Handle conflicts
+      4.1 If a file with the same name exists → choose Replace / Skip / Keep both
+   5. Verify the move
+      5.1 Check the file appears in the destination
+      5.2 Check it no longer appears in the source
+</code></pre>
+<p><strong>Plans:</strong></p>
+<ul>
+<li><strong>Plan 0:</strong> do 1, 2, 3; then 4 if there's a conflict; then 5.</li>
+<li><strong>Plan 3:</strong> if the method is cut-and-paste, do 3.1 (3.1.1 → 3.1.3); otherwise do 3.2 (3.2.1 → 3.2.3).</li>
+</ul></div>
+<div class="call example"><div class="ct">(c) Diagrammatic HTA [8]</div><p>Draw it <strong>top-down</strong>:</p>
+<ul>
+<li><strong>Box 0</strong> "Move a file" at the top, with sub-boxes <strong>1, 2, 3, 4, 5</strong> in a row beneath it.</li>
+<li>Under <strong>3</strong>, branch to <strong>3.1</strong> (cut/paste) and <strong>3.2</strong> (drag/drop), each with its numbered sub-steps.</li>
+<li>Write the <strong>plans</strong> beside each parent box, e.g. "Plan 3: if cut/paste, 3.1 else 3.2".</li>
+<li><strong>Notation:</strong> number every box. Mark <strong>leaf tasks</strong> (no further breakdown) with a line under the box. Read the diagram top to bottom, left to right.</li>
+</ul>
+<p>See the Week 10 HTA diagrams for the layout.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)"><span class="num">5</span>ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)</h2><div class="call example"><div class="ct">(a) Bias in needfinding [3]</div><p>A <strong>bias</strong> is an <strong>attachment to a particular idea</strong>: a preconception or preference that <strong>distorts the data we collect</strong> about users, so we "find" what we expected instead of what users really need.</p></div>
+<div class="call example"><div class="ct">(b) The five types of bias [10]</div><table>
+<thead>
+<tr>
+<th>Bias</th>
+<th>What happens</th>
+<th>How to avoid it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Confirmation</strong></td>
+<td>We notice data that <strong>confirms</strong> our ideas and ignore data that contradicts them</td>
+<td>Look for evidence that you're <strong>wrong</strong>; test with many users</td>
+</tr>
+<tr>
+<td><strong>Observer</strong></td>
+<td>We <strong>influence</strong> users: helping some more, or asking leading questions</td>
+<td>Script the sessions, stay neutral, use separate observers</td>
+</tr>
+<tr>
+<td><strong>Social desirability</strong></td>
+<td>Users say <strong>what pleases</strong> the designer</td>
+<td>Hide that you're the designer; observe behaviour, not opinions</td>
+</tr>
+<tr>
+<td><strong>Voluntary response</strong></td>
+<td>Only people with <strong>strong opinions</strong> reply</td>
+<td>Sample deliberately; follow up with non-responders</td>
+</tr>
+<tr>
+<td><strong>Recall</strong></td>
+<td>Users <strong>misremember</strong> past actions</td>
+<td>Observe in context, or ask about recent specific events</td>
+</tr>
+</tbody>
+</table></div>
+<div class="call example"><div class="ct">(c) How the life cycle stages produce a usable and used interface [12]</div><ul>
+<li><strong>(i) Designing alternatives:</strong> generate <strong>many</strong> different ideas before committing (brainstorming, personas, scenarios, timelines). This avoids fixating on the first idea and explores the design space, and the best features can be combined.</li>
+<li><strong>(ii) Prototyping:</strong> make ideas <strong>tangible and testable</strong>, from paper and wireframes up to interactive high-fidelity versions. It's cheap to change, lets users react to something real, and reveals problems early.</li>
+<li><strong>(iii) Evaluation:</strong> measure <strong>usability with real users</strong>. Early on it's qualitative (preferences); in the middle it checks usability (learnability, workload); late on it's quantitative (time, errors). The findings feed the <strong>next iteration</strong>.</li>
+</ul>
+<p><strong>Together:</strong> needfinding → alternatives → prototypes → evaluation, <strong>repeated</strong>. Each cycle closes the gap between the design and users' needs, so the interface is both <strong>usable</strong> and <strong>actually used</strong>.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Older ITE 3603 papers — outline answers"><span class="num">6</span>Older ITE 3603 papers — outline answers</h2><div class="call example"><div class="ct">Dec 2019 Q1: Usability evaluation</div><p><strong>a) Points to consider when gathering usability data:</strong></p>
+<ul>
+<li>Clear <strong>goals and measures</strong> (effectiveness, efficiency, satisfaction)</li>
+<li><strong>Representative users</strong> and tasks, and a realistic context</li>
+<li><strong>Ethics and consent</strong></li>
+<li>Avoid <strong>bias</strong></li>
+<li>Combine <strong>qualitative and quantitative</strong> data</li>
+<li>Check <strong>reliability, validity, generalisability and precision</strong></li>
+</ul>
+<p><strong>b) Five evaluation methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Users?</th>
+<th>Data</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Heuristic evaluation</td>
+<td>No (experts)</td>
+<td>Problems found</td>
+<td>Cheap, quick, can miss real-user issues</td>
+</tr>
+<tr>
+<td>Cognitive walkthrough</td>
+<td>No</td>
+<td>Learnability problems</td>
+<td>Steps through a task as a new user</td>
+</tr>
+<tr>
+<td>Think-aloud usability test</td>
+<td>Yes</td>
+<td>Qualitative</td>
+<td>Shows why users struggle</td>
+</tr>
+<tr>
+<td>Controlled experiment (empirical)</td>
+<td>Yes</td>
+<td>Quantitative</td>
+<td>Statistical; needs a careful setup</td>
+</tr>
+<tr>
+<td>Questionnaires / surveys</td>
+<td>Yes</td>
+<td>Satisfaction</td>
+<td>Many users, but self-reported</td>
+</tr>
+<tr>
+<td>Predictive (GOMS / KLM)</td>
+<td>No</td>
+<td>Estimated times</td>
+<td>No users needed; slow to model</td>
+</tr>
+</tbody>
+</table>
+<p><strong>c) Shortcut keys vs menus in MS Word: a controlled experiment.</strong></p>
+<ul>
+<li><strong>Hypothesis:</strong> shortcuts are faster.</li>
+<li><strong>Independent variable:</strong> method (shortcut or menu). <strong>Dependent variables:</strong> task time and errors.</li>
+<li><strong>Participants:</strong> about 20 representative users, in a <strong>within-subjects</strong> design with <strong>counterbalanced order</strong>.</li>
+<li><strong>Tasks:</strong> standard ones, e.g. bold, copy, save, repeated 10 times each.</li>
+<li><strong>Measure</strong> with a timer or logging. <strong>Analyse</strong> with a paired t-test.</li>
+<li><strong>Control</strong> for practice and fatigue. Also use the <strong>KLM</strong> to predict the times beforehand.</li>
+</ul></div>
+<div class="call example"><div class="ct">Dec 2019 Q2: Cost savings, mobile vs desktop, good and bad UI</div><p><strong>a) Agree: HCI guidelines save money.</strong> They mean fewer redesigns and late changes, lower training and help-desk costs, fewer user errors, and higher productivity and sales. Fixing a problem at the design stage costs far less than after release.</p>
+<p><strong>b) Mobile vs desktop:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mobile</th>
+<th>Desktop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small screen, touch input (fat-finger problem)</td>
+<td>Large screen; mouse and keyboard precision</td>
+</tr>
+<tr>
+<td>Used <strong>on the move</strong>, with interruptions and variable lighting</td>
+<td>Used seated, with sustained attention</td>
+</tr>
+<tr>
+<td>Limited battery, network and processing</td>
+<td>Plenty of resources</td>
+</tr>
+<tr>
+<td>Sensors: GPS, camera, motion</td>
+<td>Multitasking with many windows</td>
+</tr>
+<tr>
+<td>Platform guidelines (iOS / Android); app stores</td>
+<td>Native or web apps</td>
+</tr>
+</tbody>
+</table>
+<p><strong>c) Good vs bad UI:</strong> pick real examples and judge them on visibility, feedback, consistency, affordance, mapping, constraints, error prevention and recovery, and learnability.</p>
+<ul>
+<li><strong>Good:</strong> e.g. Google Search (simple, clear feedback).</li>
+<li><strong>Bad:</strong> e.g. a cluttered government form with unclear errors.</li>
+</ul></div>
+<div class="call example"><div class="ct">Dec 2019 Q3: Attention, memory, learning</div><p><strong>a) Attention:</strong> people have <strong>limited attention</strong>. Use selective attention by highlighting what matters through contrast, position and motion used sparingly. Avoid <strong>divided attention</strong> and clutter, and design for <strong>interruptions</strong> by saving state.</p>
+<p><strong>b) Memory:</strong></p>
+<ul>
+<li><strong>Sensory memory</strong> is very brief.</li>
+<li><strong>Short-term memory</strong> holds about <strong>7 ± 2</strong> chunks, so <strong>chunk</strong> information, use <strong>recognition rather than recall</strong> (menus, icons), and limit how much users must remember between screens.</li>
+<li><strong>Long-term memory</strong> is helped by <strong>consistency</strong>, meaningful labels and familiar metaphors.</li>
+</ul>
+<p><strong>c) Problems learning new interfaces:</strong></p>
+<ul>
+<li>Unfamiliar concepts (a <strong>mismatched mental model</strong>)</li>
+<li>Inconsistent controls, and hidden features (<strong>poor visibility</strong>)</li>
+<li>Jargon, too many options (cognitive overload), and poor feedback</li>
+<li>Fear of making errors (no undo)</li>
+</ul>
+<p><strong>Remedies:</strong> consistency, help and onboarding, progressive disclosure, undo.</p></div>
+<div class="call example"><div class="ct">Dec 2019 Q4 and Sept 2020 Q3/Q4: Groupware (older syllabus)</div><ul>
+<li><strong>Groupware</strong> is software that helps <strong>groups work together</strong>: communication, coordination and collaboration. Examples: email, chat, video meetings, shared documents (Google Docs), calendars, workflow tools.</li>
+<li><strong>Design issues:</strong></li>
+<li><strong>Awareness</strong> of others' activity</li>
+<li><strong>Concurrency control</strong>, i.e. managing simultaneous edits</li>
+<li><strong>Access control</strong> and privacy</li>
+<li><strong>Critical mass:</strong> it's only useful if enough people use it</li>
+<li>Avoiding <strong>disparity</strong> between who does the work and who benefits</li>
+<li>Supporting <strong>social protocols</strong></li>
+<li><strong>Synchronous vs asynchronous:</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Synchronous (same time)</th>
+<th>Asynchronous (different times)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Video calls, chat, co-editing</td>
+<td>Email, forums, version control, shared drives</td>
+</tr>
+<tr>
+<td>Immediate feedback</td>
+<td>Flexible, works across time zones</td>
+</tr>
+<tr>
+<td>Needs everyone available</td>
+<td>Slower decisions</td>
+</tr>
+</tbody>
+</table></div>
+<div class="call example"><div class="ct">Sept 2020 Q1 and Q2: Ubiquitous computing and small screens</div><p><strong>Ubiquitous computing (UC):</strong> computing <strong>embedded everywhere</strong> and fading into the background (Weiser).</p>
+<table>
+<thead>
+<tr>
+<th>Compared with</th>
+<th>Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI</strong></td>
+<td>AI is about intelligence</td>
+</tr>
+<tr>
+<td><strong>VR</strong></td>
+<td>VR puts the user <strong>inside the computer</strong>; UC puts <strong>computers into the world</strong></td>
+</tr>
+<tr>
+<td><strong>User agents</strong></td>
+<td>Agents act on the user's behalf; UC provides the environment they work in</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How UC transforms HCI:</strong></p>
+<ul>
+<li>Moves from desktop to <strong>implicit, context-aware interaction</strong>: sensors, voice, gestures</li>
+<li>Uses many devices per person, and calm technology</li>
+</ul>
+<p><strong>Future trends:</strong></p>
+<ul>
+<li><strong>IoT</strong> and smart homes and cities</li>
+<li><strong>Wearables</strong> and health sensing</li>
+<li><strong>Context-aware assistants</strong></li>
+</ul>
+<p><strong>Five small-screen design guidelines:</strong></p>
+<ol>
+<li><strong>Prioritise content:</strong> one main task per screen</li>
+<li><strong>Large touch targets</strong> (about 44–48 px) with spacing</li>
+<li><strong>Minimise typing:</strong> pickers and autofill</li>
+<li><strong>Simple navigation:</strong> tab bar, back button</li>
+<li><strong>Readable text and high contrast</strong>, with feedback for every touch</li>
+</ol>
+<p>Also: design for one-handed use and interruptions.</p>
+<p><strong>Four early design techniques:</strong> brainstorming · personas · scenarios and storyboards · paper prototyping (also card sorting).</p></div><button class="done-btn"></button></section></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  var ONLINE = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 || /[?&]online\b/.test(location.search);
+  // online copy: swap the local <video> for the Google Drive player (loaded only while its tab is open)
+  function drive(e){
+    var id = e.getAttribute('data-drive'); if (!id) return false;
+    var w = document.createElement('div');
+    var f = document.createElement('iframe'); f.className = 'vdrive'; f.allow = 'autoplay; fullscreen'; f.allowFullscreen = true;
+    f.setAttribute('data-src', 'https://drive.google.com/file/d/' + id + '/preview');
+    var a = document.createElement('a'); a.className = 'vdlink'; a.target = '_blank'; a.rel = 'noopener';
+    a.href = 'https://drive.google.com/file/d/' + id + '/view'; a.textContent = 'Open in Google Drive ↗';
+    w.appendChild(f); w.appendChild(a); e.replaceWith(w);
+    return true;
+  }
+  function show(i){
+    vids.forEach(function(v, j){
+      v.style.display = j === i ? '' : 'none';
+      var e = v.querySelector('video'); if (j !== i && e) e.pause();
+      var f = v.querySelector('iframe.vdrive');
+      if (f){ if (j === i){ if (!f.getAttribute('src')) f.src = f.getAttribute('data-src'); } else f.removeAttribute('src'); }
+    });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (ONLINE) vids.forEach(function(v){ var e = v.querySelector('video'); if (e) drive(e); });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      if (drive(e)){ var k = [].indexOf.call(vids, v); if (v.style.display !== 'none') show(k); return; }
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var f = vids[i] && vids[i].querySelector('iframe.vdrive');
+    if (f){ f.src = f.getAttribute('data-src') + '?t=' + t; document.getElementById('videos').scrollIntoView({behavior: 'smooth'}); return; }
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

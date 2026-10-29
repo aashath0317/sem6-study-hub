@@ -190,6 +190,8 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .kv{color:var(--muted)}.kv b{color:var(--ink)}
 @media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
 .kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+.exams{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 18px}.exams table{width:100%}.exams td.cd{font-weight:700;color:var(--accent);white-space:nowrap}.wk em.exd{color:var(--accent);font-style:normal}
+.wk a.papers{border-color:var(--accent);background:var(--accent-soft)}
 </style></head>
 <body data-key="hci-Week10">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Human Computer Interaction</a> › Week 10</div>
@@ -276,7 +278,9 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <li><strong>Assess the service quality</strong> (reasoning and emotion)</li>
 <li><strong>Mentally agree on and organise what to mention</strong> (decision)</li>
 </ol>
-<p>The user may loop through these several times. A processor model would see only "typing". CTA reveals the thinking that a good design should support, for example with prompts like <em>"How was the delivery speed?"</em></p><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Hierarchical Task Analysis (HTA)"><span class="num">4</span>Hierarchical Task Analysis (HTA)</h2><p><strong>HTA breaks high-level goals into nested sub-tasks, basic operations and plans.</strong> It can be written as <strong>text</strong> or drawn as a <strong>tree diagram</strong>. Usually you do the <strong>textual version first</strong> <a class="ts" href="#" data-v="1" data-t="0">00:00</a>.</p>
+<p>The user may loop through these several times. A processor model would see only "typing". CTA reveals the thinking that a good design should support, for example with prompts like <em>"How was the delivery speed?"</em></p><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Hierarchical Task Analysis (HTA)"><span class="num">4</span>Hierarchical Task Analysis (HTA)</h2><figure><img src="Figure%2010.1.PNG" alt="Top level of the feedback task"><figcaption>Figure 10.1: The top level of "Provide feedback": choose method → write/mention → submit</figcaption></figure>
+
+<p><strong>HTA breaks high-level goals into nested sub-tasks, basic operations and plans.</strong> It can be written as <strong>text</strong> or drawn as a <strong>tree diagram</strong>. Usually you do the <strong>textual version first</strong> <a class="ts" href="#" data-v="1" data-t="0">00:00</a>.</p>
 <h3 id="textual-hta">Textual HTA</h3>
 <pre><code>0. Provide feedback
    1. Choose feedback method
@@ -294,6 +298,8 @@ Plan 2: IF method = email THEN do 2.1, 2.2 in order ELSE do 2.3, 2.4 in order
 Plan 3: IF method = email THEN do 3.1 ELSE do 3.2
 </code></pre>
 <div class="call key"><div class="ct">Plans</div><p>A <strong>plan</strong> says <strong>in what order, and under what condition</strong>, the sub-tasks are done. At any time <strong>either</strong> 2.1 + 2.2 <strong>or</strong> 2.3 + 2.4 is done, never both <a class="ts" href="#" data-v="1" data-t="155">02:35</a>.</p></div>
+<figure><img src="Figure%2010.4.PNG" alt="HTA diagram view 1"><figcaption>Figure 10.4: The HTA diagram from the lesson, with plans: if email do 2.1, 2.2, else 2.3, 2.4; if email do 3.1, else 3.2</figcaption></figure>
+
 <h3 id="reading-the-diagram-top-to-bottom-left-to-right-0351">Reading the diagram: top to bottom, left to right <a class="ts" href="#" data-v="1" data-t="231">03:51</a></h3>
 <p>Start at the root and go <strong>down</strong>. At each node, <strong>finish all its sub-branches before moving right</strong>. Where a plan has a choice, follow <strong>only the chosen branch</strong>, then come back up and continue right.</p>
 <div class="tool"><div class="tt">🧪 Try it — HTA walker</div><div id="hta">
@@ -317,6 +323,8 @@ R.querySelector('.go').onclick=function(){clearInterval(tm);k=-1;seq=order();tm=
 R.querySelector('.m').onchange=function(){clearInterval(tm);k=-1;draw()};draw();})();
 </script></div>
 <h3 id="an-alternative-decomposition-view-2">An alternative decomposition (View 2)</h3>
+<figure><img src="Figure%2010.6.PNG" alt="HTA diagram view 2"><figcaption>Figure 10.6: The alternative decomposition: submit feedback holds all six sub-tasks, with the plan choosing email (2.1 to 2.3) or form (2.4 to 2.6)</figcaption></figure>
+
 <p>The same goal can be broken down differently. The PDF's second view puts <strong>writing inside submitting</strong>:</p>
 <pre><code>0. Provide feedback
    1. Choose feedback method

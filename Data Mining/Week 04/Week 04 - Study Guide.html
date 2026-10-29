@@ -190,6 +190,8 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .kv{color:var(--muted)}.kv b{color:var(--ink)}
 @media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
 .kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+.exams{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 18px}.exams table{width:100%}.exams td.cd{font-weight:700;color:var(--accent);white-space:nowrap}.wk em.exd{color:var(--accent);font-style:normal}
+.wk a.papers{border-color:var(--accent);background:var(--accent-soft)}
 </style></head>
 <body data-key="dm-Week04">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 04</div>
@@ -763,7 +765,128 @@ R.addEventListener('input',run);run();
 </tbody>
 </table>
 <p>MaxDiff isolates the unusual values (52 and 70) — the cuts go where the data has natural <strong>gaps</strong>.</p></div>
-<div class="call video"><div class="ct">How the lecturer finds MaxDiff values <a class="ts" href="#" data-v="0" data-t="545">09:05</a></div><p>"For each pair of data elements we take the difference… out of this we select the 2 maximum differences." In the lecturer's own dataset the two largest gaps were <strong>55 → 62 (7)</strong> and <strong>29 → 35 (6)</strong>, giving buckets ending at 29, then 35–55, then 62–65 <a class="ts" href="#" data-v="0" data-t="600">10:00</a>.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s10"><h2 id="s10" data-t="Quick revision sheet"><span class="num">10</span>Quick revision sheet</h2><table>
+<div class="call video"><div class="ct">How the lecturer finds MaxDiff values <a class="ts" href="#" data-v="0" data-t="545">09:05</a></div><p>"For each pair of data elements we take the difference… out of this we select the 2 maximum differences." In the lecturer's own dataset the two largest gaps were <strong>55 → 62 (7)</strong> and <strong>29 → 35 (6)</strong>, giving buckets ending at 29, then 35–55, then 62–65 <a class="ts" href="#" data-v="0" data-t="600">10:00</a>.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s10"><h2 id="s10" data-t="Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule"><span class="num">10</span>Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule</h2><p>These two methods <strong>aren't in this week's PDF</strong>, but the 2024 cohort's <strong>Self-Assessment 4</strong> asked about them (they're from the Han &amp; Kamber textbook). Learn the idea and one example of each.</p>
+<h3 id="entropy-based-discretization-supervised">Entropy-based discretization (supervised)</h3>
+<div class="call key"><div class="ct">Idea</div><p>Use the <strong>class labels</strong> to choose the split point <strong>T</strong> that makes the two intervals as <strong>pure</strong> as possible, i.e. the one with the <strong>lowest expected information</strong> (equivalently, the <strong>highest information gain</strong>):</p>
+<p>I(S, T) = (|S₁| / |S|)·Ent(S₁) + (|S₂| / |S|)·Ent(S₂), where Ent(S) = −Σ pᵢ log₂ pᵢ</p>
+<p>Then split each interval again <strong>recursively</strong> until the gain is too small (below a threshold).</p></div>
+<div class="call example"><div class="ct">Ages with class "buys"</div><p>Data: 21 N · 25 N · 30 Y · 35 Y · 40 Y · 45 N. The whole set has Ent(S) = 1.000 (3 Y and 3 N).</p>
+<table>
+<thead>
+<tr>
+<th>Candidate T (midpoint)</th>
+<th>Left / right</th>
+<th>I(S, T)</th>
+<th>Gain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>23</td>
+<td N="N" N_="N," Y_="Y,">{N} /</td>
+<td>0.809</td>
+<td>0.191</td>
+</tr>
+<tr>
+<td><strong>27.5</strong></td>
+<td><strong>{N, N} / {Y, Y, Y, N}</strong></td>
+<td><strong>0.541</strong></td>
+<td><strong>0.459</strong> ← best</td>
+</tr>
+<tr>
+<td>32.5</td>
+<td N="N" Y_="Y,">{N, N, Y} /</td>
+<td>0.918</td>
+<td>0.082</td>
+</tr>
+<tr>
+<td>37.5</td>
+<td N="N" Y_="Y,">{N, N, Y, Y} /</td>
+<td>1.000</td>
+<td>0</td>
+</tr>
+<tr>
+<td>42.5</td>
+<td N="N">{N, N, Y, Y, Y} /</td>
+<td>0.809</td>
+<td>0.191</td>
+</tr>
+</tbody>
+</table>
+<p>So the first split is <strong>age ≤ 27.5 vs age &gt; 27.5</strong>.</p></div>
+<h3 id="the-3-4-5-rule-natural-partitioning">The 3-4-5 rule (natural partitioning)</h3>
+<div class="call key"><div class="ct">Rule</div><p>Look at the <strong>most significant digit (msd)</strong> of the range, and count how many <strong>distinct msd values</strong> the range covers:</p>
+<table>
+<thead>
+<tr>
+<th>Distinct msd values covered</th>
+<th>Split into</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>3, 6, 7 or 9</strong></td>
+<td><strong>3</strong> equal-width intervals (7 → 2-3-2)</td>
+</tr>
+<tr>
+<td><strong>2, 4 or 8</strong></td>
+<td><strong>4</strong> intervals</td>
+</tr>
+<tr>
+<td><strong>1, 5 or 10</strong></td>
+<td><strong>5</strong> intervals</td>
+</tr>
+</tbody>
+</table>
+<p>Apply it <strong>recursively</strong> to each interval. This gives "natural", rounded boundaries that people find easy to read.</p></div>
+<div class="call example"><div class="ct">Profit from −Rs. 351,976 to Rs. 4,700,896 (textbook example)</div><ol>
+<li>Use the 5th to 95th percentile range (−159,876 to 1,838,761) to avoid outliers. The msd is <strong>1,000,000</strong>, so round outwards to <strong>Low = −1,000,000</strong> and <strong>High = 2,000,000</strong>.</li>
+<li>That covers <strong>3</strong> distinct msd values (−1, 0, 1 million), so make <strong>3 intervals</strong>: (−1M, 0], (0, 1M], (1M, 2M].</li>
+<li>Adjust to the real min and max: the first interval shrinks to <strong>(−400,000, 0]</strong>, and a new interval <strong>(2M, 5M]</strong> is added to cover the maximum.</li>
+<li>Repeat inside each interval. For example, at the 100,000s digit, (0, 1M] covers <strong>10</strong> distinct values, so split it into <strong>5</strong> intervals of 200,000: (0, 200k], (200k, 400k], …, (800k, 1M].</li>
+</ol></div><button class="done-btn"></button></section><section class="card" data-sec="s11"><h2 id="s11" data-t="Self-assignment (2024): binning in practice"><span class="num">11</span>Self-assignment (2024): binning in practice</h2><div class="call example"><div class="ct">Ages: 13, 15, 16, 16, 19, 20, 20, 21, 22, 22, 25, 25, 25, 25, 30, 33, 33, 35, 35, 35, 35, 36, 40, 45, 46, 52, 70</div><p><strong>a) Three equal-depth bins</strong> (27 values, so 9 per bin), smoothed by bin means:</p>
+<table>
+<thead>
+<tr>
+<th>Bin</th>
+<th>Values</th>
+<th>Mean</th>
+<th>Smoothed (means)</th>
+<th>Smoothed (boundaries)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>13 15 16 16 19 20 20 21 22</td>
+<td>162 / 9 = <strong>18</strong></td>
+<td>18 × 9</td>
+<td>13 13 13 13 22 22 22 22 22</td>
+</tr>
+<tr>
+<td>2</td>
+<td>22 25 25 25 25 30 33 33 35</td>
+<td>253 / 9 = <strong>28.11</strong></td>
+<td>28.11 × 9</td>
+<td>22 22 22 22 22 35 35 35 35</td>
+</tr>
+<tr>
+<td>3</td>
+<td>35 35 35 36 40 45 46 52 70</td>
+<td>394 / 9 = <strong>43.78</strong></td>
+<td>43.78 × 9</td>
+<td>35 35 35 35 35 35 35 35 70</td>
+</tr>
+</tbody>
+</table>
+<p><strong>b) Finding outliers:</strong></p>
+<ul>
+<li><strong>IQR rule:</strong> Q1 = 20, Q3 = 35, so the upper fence = 35 + 1.5 × 15 = <strong>57.5</strong>, and <strong>70 is an outlier</strong>.</li>
+<li><strong>z-score:</strong> (70 − 29.96) / 12.70 = <strong>3.15 &gt; 3</strong>.</li>
+<li><strong>Clustering:</strong> 70 sits far from every cluster.</li>
+<li><strong>Boxplots:</strong> 70 shows as a point beyond the whisker.</li>
+</ul>
+<p><strong>c) Other smoothing methods:</strong> bin <strong>medians</strong> (19, 25, 40), bin <strong>boundaries</strong>, <strong>regression</strong>, <strong>clustering</strong>, moving averages.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s12"><h2 id="s12" data-t="Quick revision sheet"><span class="num">12</span>Quick revision sheet</h2><table>
 <thead>
 <tr>
 <th>Concept</th>

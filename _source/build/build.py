@@ -1,4 +1,4 @@
-import os, re, sys, html, json, struct
+import os, re, sys, html, json, struct, datetime
 from urllib.parse import quote
 import markdown
 
@@ -18,6 +18,10 @@ SUBJECTS = [
     ("mkt", "Marketing", "ITE3642", "Marketing"),
 ]
 SUBJ = {s[0]: s for s in SUBJECTS}
+# Final exams (from "Final Exam Time Table 25S2 (2018).pdf"): date, start, end
+EXAMS = {"bpas": ("2026-11-15", "11:00", "14:00"), "dmath": ("2026-11-22", "08:30", "11:30"),
+         "hci": ("2026-11-28", "08:30", "11:30"), "dm": ("2026-11-28", "11:30", "14:30"),
+         "mkt": ("2026-11-28", "14:45", "17:45")}
 CALLS = {"tip": "Tip", "exam": "Exam focus", "warn": "Common mistake", "example": "Worked example",
          "key": "Key idea", "video": "From the lecture video"}
 
@@ -242,7 +246,33 @@ def build_week(skey, wfile, prev, nxt):
 
 def weeks_of(skey):
     d = os.path.join(HERE, "content", skey)
-    return sorted([f for f in os.listdir(d) if f.endswith(".md")]) if os.path.isdir(d) else []
+    return sorted([f for f in os.listdir(d) if re.match(r"w\d+\.md$", f)]) if os.path.isdir(d) else []
+
+
+PAPERS = "Past Papers.html"
+
+
+def build_papers(skey):
+    """content/<skey>/papers.md -> <Subject>/Past Papers.html (past exam papers with worked answers)."""
+    _, folder, code, sname = SUBJ[skey]
+    src = os.path.join(HERE, "content", skey, "papers.md")
+    if not os.path.exists(src): return False
+    meta, body = parse(src)
+    parts = re.split(r"^## (.+)$", body, flags=re.M)
+    secs_html, n = [], 0
+    for i in range(1, len(parts), 2):
+        n += 1
+        h = parts[i].strip(); sid = f"s{n}"
+        secs_html.append(f'<section class="card" data-sec="{sid}"><h2 id="{sid}" data-t="{html.escape(re.sub(r"[*`]", "", h))}"><span class="num">{n}</span>{md_inline(h)}</h2>'
+                         f'{md(parts[i+1])}<button class="done-btn"></button></section>')
+    chips = [f'<span class="chip">{code}</span>'] + [f'<span class="chip">📄 {html.escape(s)}</span>' for s in meta["sources"]] + ['<span class="chip" id="donecount"></span>']
+    hero = (f'<div class="hero"><div class="sub">{html.escape(sname)} · Past papers</div><h1>{md_inline(meta["title"])}</h1>'
+            f'<p>{md_inline(meta.get("lead", ""))}</p>{md(parts[0].strip()) if parts[0].strip() else ""}<div class="meta">{"".join(chips)}</div></div>')
+    crumbs = f'<a href="../SEM 6 Study Hub.html">SEM 6</a> › <a href="{quote("Study Guide - Index.html")}">{html.escape(sname)}</a> › Past papers'
+    out = page(f"Past papers — {sname}", f'<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main>{hero}{"".join(secs_html)}</main></div>',
+               key=f"{skey}-papers", crumbs=crumbs)
+    open(os.path.join(ROOT, folder, PAPERS), "w", encoding="utf-8").write(out)
+    return True
 
 
 def build_subject(skey):
@@ -253,6 +283,9 @@ def build_subject(skey):
         _, meta_peek = None, parse(os.path.join(HERE, "content", skey, f))[0]
         info.append(("Week " + re.search(r"(\d+)", f).group(1).zfill(2), re.sub(r"[*`]", "", meta_peek["title"])))
     cards, allq = [], []
+    if build_papers(skey):
+        cards.append(f'<a href="{quote(PAPERS)}" data-key="{skey}-papers" class="papers"><small>Exam practice</small><span>Past papers with worked answers</span>'
+                     f'<em>Real exam questions from previous years, fully solved, plus which topics come up most.</em><div class="pg"><i></i></div></a>')
     for i, f in enumerate(files):
         week, meta, n, qs = build_week(skey, f, info[i-1] if i > 0 else None, info[i+1] if i + 1 < len(info) else None)
         cards.append(f'<a href="{quote(week)}/{quote(OUTNAME.format(week=week))}" data-key="{skey}-{week.replace(" ", "")}" data-n="{n}"><small>{week}</small>'
@@ -278,10 +311,18 @@ def build_hub():
         n = len(weeks_of(skey))
         if not n: continue
         keys = ",".join(f"{skey}-Week{re.search(r'(\d+)', f).group(1).zfill(2)}" for f in weeks_of(skey) if os.path.exists(os.path.join(HERE, "content", skey, f[:-3] + ".quiz")))
-        cards.append(f'<a href="{quote(folder)}/{quote("Study Guide - Index.html")}" data-qkeys="{keys}" data-skey="{skey}"><small>{code}</small><span>{html.escape(sname)}</span><em>{n} weekly study guides</em>'
+        ex = EXAMS.get(skey)
+        exl = f'<em class="exd" data-exam="{ex[0]}T{ex[1]}">Exam: {datetime.date.fromisoformat(ex[0]).strftime("%a %d %b")}, {ex[1]}–{ex[2]}</em>' if ex else ""
+        cards.append(f'<a href="{quote(folder)}/{quote("Study Guide - Index.html")}" data-qkeys="{keys}" data-skey="{skey}"><small>{code}</small><span>{html.escape(sname)}</span><em>{n} weekly study guides</em>{exl}'
                      f'<b class="hq"></b></a>')
+    rows = "".join(f'<tr data-exam="{d}T{a}"><td>{datetime.date.fromisoformat(d).strftime("%a %d %b %Y")}</td><td>{a}–{b}</td><td>{html.escape(SUBJ[k][3])} <small>({SUBJ[k][2]})</small></td><td class="cd"></td></tr>'
+                   for k, (d, a, b) in sorted(EXAMS.items(), key=lambda kv: kv[1]))
+    exams = (f'<div class="exams"><h2 style="margin-top:0">Final exams</h2><table>{rows}</table>'
+             '<p class="note">From the 25S2 final exam timetable. Check the official timetable for any changes.</p></div>'
+             '<script>(function(){var now=new Date();document.querySelectorAll("[data-exam]").forEach(function(e){var t=new Date(e.getAttribute("data-exam")),d=Math.ceil((t-now)/864e5),s=d>1?"in "+d+" days":d===1?"tomorrow":d===0?"today":"done";'
+             'if(e.tagName==="TR"){e.querySelector(".cd").textContent=s;if(d<0)e.style.opacity=.5}else if(d>=0)e.textContent+=" · "+s})})();</script>')
     body = (f'<div class="layout" style="display:block;max-width:1100px"><main><div class="hero"><div class="sub">Semester 6</div><h1>SEM 6 Study Hub</h1>'
-            f'<p>Every subject, every week — complete notes that replace the PDFs and videos. Works fully offline.</p></div><div class="kpanel" data-hub="1"></div><div class="wk">{"".join(cards)}</div></main></div>')
+            f'<p>Every subject, every week — complete notes that replace the PDFs and videos. Works fully offline.</p></div>{exams}<div class="kpanel" data-hub="1"></div><div class="wk">{"".join(cards)}</div></main></div>')
     open(os.path.join(ROOT, "SEM 6 Study Hub.html"), "w", encoding="utf-8").write(page("SEM 6 Study Hub", body, crumbs="SEM 6 Study Hub"))
     open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(
         '<!doctype html><meta charset="utf-8"><title>SEM 6 Study Hub</title>'

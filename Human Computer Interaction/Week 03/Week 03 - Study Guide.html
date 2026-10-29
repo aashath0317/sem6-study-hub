@@ -190,6 +190,8 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .kv{color:var(--muted)}.kv b{color:var(--ink)}
 @media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
 .kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+.exams{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 18px}.exams table{width:100%}.exams td.cd{font-weight:700;color:var(--accent);white-space:nowrap}.wk em.exd{color:var(--accent);font-style:normal}
+.wk a.papers{border-color:var(--accent);background:var(--accent-soft)}
 </style></head>
 <body data-key="hci-Week03">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Human Computer Interaction</a> › Week 03</div>
@@ -311,6 +313,8 @@ tm=setTimeout(function(){d.textContent='• • • (hidden) • • •';R.quer
 R.querySelector('.chk').onclick=function(){if(!cur)return;var a=R.querySelector('.ans').value.toUpperCase().replace(/\s/g,''),c=cur.replace(/\s/g,''),ok=0;for(var i=0;i<c.length;i++)if(a[i]===c[i])ok++;
 R.querySelector('.out').innerHTML='<p>Answer: <b>'+cur+'</b> · you got <b>'+ok+' / '+c.length+'</b> in the right position.</p><p class="note">'+(mode==='chunk'?'9 letters became just <b>3 chunks</b> (BBC, IBM…), well within STM capacity. That is the power of chunking plus semantic LTM.':'Random items each take up a "slot". 9–10 of them exceed the realistic STM capacity of about 4–5 items, so most people lose some.')+'</p>'}})();
 </script></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Chunking &amp; semantic networks"><span class="num">4</span>Chunking &amp; semantic networks</h2><p><strong>Chunking</strong> means <strong>grouping individual pieces of information into meaningful clusters</strong>. It greatly <strong>expands effective STM capacity</strong> without overloading it.</p>
+<figure><img src="Figure%203.3.PNG" alt="Meaningful words vs nonsense letters"><figcaption>Figure 3.3: Try to recall each set. Set 01 (real words) is far easier than Set 02 (meaningless letter groups): meaning helps memory</figcaption></figure>
+
 <figure><img src="Chunking.PNG" alt="Chunking phone numbers"><figcaption>Chunking applied to phone numbers (groups of 3–4 digits)</figcaption></figure>
 
 <div class="call example"><div class="ct">Phone numbers</div><p><strong>0112650301</strong> (10 separate digits) is hard to hold.

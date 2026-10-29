@@ -194,7 +194,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dmath-Week01">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Discrete Mathematics</a> › Week 01</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 01</div><h1>The Foundations — Predicate Logic, Quantifiers &amp; Direct Proofs</h1><p>Predicates and propositional functions, compound expressions, ∀ / ∃ / ∃!, negating quantifiers, translating English into logic, and constructing direct proofs.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">2 videos</span><span class="chip">📄 Lesson 1_2.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Logic &amp; Proofs – Part I</button><button>2. Logic &amp; Proofs – Part II</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- The Foundations- Logic &amp; Proofs- Part I - CODL-UOM.mp4" data-drive="1_1lwgIeeIgNSUY_IGm_JgEMqPbOuyAiz"><source src="ITE3822-25S2-%20The%20Foundations-%20Logic%20%26%20Proofs-%20Part%20I%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Logic &amp; Proofs – Part I</p><p class="vs">Predicates, propositional functions and quantifiers. ⚠ This video file is damaged (it contains only zeros), so it won't play. Download it again from the course site.</p></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- The Foundations- Logic &amp; Proofs- Part II - CODL-UOM.mp4" data-drive="1aSSJE4Q2UQGE9_22ldDhY2YV8Ql8JzK6"><source src="ITE3822-25S2-%20The%20Foundations-%20Logic%20%26%20Proofs-%20Part%20II%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Logic &amp; Proofs – Part II</p><p class="vs">Translating English to logic and direct proofs. ⚠ This video file is damaged (it contains only zeros), so it won't play. Download it again from the course site.</p></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="From propositions to predicates"><span class="num">1</span>From propositions to predicates</h2><p><strong>Recall:</strong> a <strong>proposition</strong> is a <strong>declarative statement that is either true or false, but not both</strong>.</p>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 01</div><h1>The Foundations — Predicate Logic, Quantifiers &amp; Direct Proofs</h1><p>Predicates and propositional functions, compound expressions, ∀ / ∃ / ∃!, negating quantifiers, translating English into logic, and constructing direct proofs.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">2 videos</span><span class="chip">📄 Lesson 1_2.pdf</span><span class="chip">📄 Assignment 1.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Logic &amp; Proofs – Part I</button><button>2. Logic &amp; Proofs – Part II</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- The Foundations- Logic &amp; Proofs- Part I - CODL-UOM.mp4" data-drive="1_1lwgIeeIgNSUY_IGm_JgEMqPbOuyAiz"><source src="ITE3822-25S2-%20The%20Foundations-%20Logic%20%26%20Proofs-%20Part%20I%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Logic &amp; Proofs – Part I</p><p class="vs">Predicates, propositional functions and quantifiers. ⚠ This video file is damaged (it contains only zeros), so it won't play. Download it again from the course site.</p></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- The Foundations- Logic &amp; Proofs- Part II - CODL-UOM.mp4" data-drive="1aSSJE4Q2UQGE9_22ldDhY2YV8Ql8JzK6"><source src="ITE3822-25S2-%20The%20Foundations-%20Logic%20%26%20Proofs-%20Part%20II%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Logic &amp; Proofs – Part II</p><p class="vs">Translating English to logic and direct proofs. ⚠ This video file is damaged (it contains only zeros), so it won't play. Download it again from the course site.</p></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="From propositions to predicates"><span class="num">1</span>From propositions to predicates</h2><p><strong>Recall:</strong> a <strong>proposition</strong> is a <strong>declarative statement that is either true or false, but not both</strong>.</p>
 <ul>
 <li>"Colombo is in Sri Lanka" → a proposition (true)</li>
 <li>"2 + 3 = 7" → a proposition (false)</li>
@@ -664,7 +664,92 @@ R.querySelector('.out').innerHTML=h}R.addEventListener('change',run);run();})();
 <li>Translate English ⇄ logic.</li>
 <li>Write a <strong>direct proof</strong>.</li>
 </ul>
-<p>Always state the domain and show the definition you use (2k / 2k + 1).</p></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Quick revision sheet"><span class="num">8</span>Quick revision sheet</h2><table>
+<p>Always state the domain and show the definition you use (2k / 2k + 1).</p></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Assignment 1: worked answers"><span class="num">8</span>Assignment 1: worked answers</h2><p>From <code>ITE3822 Assignment 1_25S2_2.pdf</code>. The course only accepts <strong>handwritten</strong> answers, so use these to check your work.</p>
+<div class="call example"><div class="ct">Q1: Truth values over the integers</div><table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Value</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(∀x)(∃y)(x + y = x)</td>
+<td><strong>True</strong></td>
+<td>Take y = 0 for every x</td>
+</tr>
+<tr>
+<td>(∀x)(∃y)(x + y = 0)</td>
+<td><strong>True</strong></td>
+<td>Take y = −x, which is always an integer</td>
+</tr>
+<tr>
+<td>(∀x)(∀y)(x &lt; y ∨ y &lt; x)</td>
+<td><strong>False</strong></td>
+<td>Counterexample x = y = 1: neither 1 &lt; 1 nor 1 &lt; 1</td>
+</tr>
+<tr>
+<td>(∃x)(∃y)(x² = y)</td>
+<td><strong>True</strong></td>
+<td>x = 2, y = 4</td>
+</tr>
+</tbody>
+</table></div>
+<div class="call example"><div class="ct">Q2: f(x) = ln(4 − 2x), x &lt; 2</div><p><strong>(a) Inverse.</strong> Let y = ln(4 − 2x). Then eʸ = 4 − 2x, so x = (4 − eʸ)/2.</p>
+<p><strong>f⁻¹(x) = (4 − eˣ)/2 = 2 − eˣ/2</strong></p>
+<p><strong>(b) Domain and range.</strong></p>
+<ul>
+<li>As x runs over (−∞, 2), the value 4 − 2x takes <strong>every positive value</strong>, so ln(4 − 2x) takes <strong>every real value</strong>.</li>
+<li>Domain of f⁻¹ = range of f = <strong>ℝ</strong></li>
+<li>Range of f⁻¹ = domain of f = <strong>(−∞, 2)</strong></li>
+</ul>
+<p><strong>(c) Sketch.</strong></p>
+<ul>
+<li>y-intercept: f⁻¹(0) = (4 − 1)/2 = <strong>(0, 1.5)</strong></li>
+<li>x-intercept: eˣ = 4, so <strong>(ln 4, 0) ≈ (1.386, 0)</strong></li>
+<li>As x → −∞, f⁻¹(x) → 2, so there's a <strong>horizontal asymptote y = 2</strong></li>
+<li>The curve is <strong>decreasing</strong> everywhere</li>
+</ul>
+<p><svg viewBox="-10 -10 320 220" style="width:100%;max-width:420px;display:block">
+<line x1="0" y1="140" x2="300" y2="140" stroke="currentColor" opacity=".5"/><line x1="200" y1="0" x2="200" y2="200" stroke="currentColor" opacity=".5"/>
+<line x1="0" y1="60" x2="300" y2="60" stroke="var(--warn)" stroke-dasharray="4 4"/><text x="4" y="54" font-size="11" fill="var(--warn)">y = 2 (asymptote)</text>
+<polyline fill="none" stroke="var(--accent)" stroke-width="2.5" points="0.9,60.0 50.0,60.1 99.0,60.6 125.0,61.5 145.2,63.0 159.6,64.9 171.1,67.4 179.8,69.9 188.5,73.4 194.2,76.4 200.0,80.0 205.8,84.4 211.5,89.8 217.3,96.4 223.1,104.5 228.8,114.4 234.6,126.4 240.4,141.1 246.2,159.1 251.9,181.0 254.8,193.7"/>
+<circle cx="200" cy="80" r="4" fill="var(--accent)"/><text x="206" y="76" font-size="11" fill="currentColor">(0, 1.5)</text>
+<circle cx="240" cy="140" r="4" fill="var(--accent)"/><text x="244" y="156" font-size="11" fill="currentColor">(ln 4, 0)</text>
+<text x="290" y="135" font-size="11" fill="currentColor">x</text><text x="205" y="10" font-size="11" fill="currentColor">y</text>
+</svg></p></div>
+<div class="call example"><div class="ct">Q3: Injective, surjective, both or neither?</div><table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Injective?</th>
+<th>Surjective?</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f : ℝ → ℝ, f(x) = x²</td>
+<td>No: f(1) = f(−1) = 1</td>
+<td>No: −1 has no preimage</td>
+<td><strong>Neither</strong></td>
+</tr>
+<tr>
+<td>g : ℝ → [0, ∞), g(x) = x²</td>
+<td>No: g(2) = g(−2)</td>
+<td>Yes: for y ≥ 0, take x = √y</td>
+<td><strong>Surjective only</strong></td>
+</tr>
+<tr>
+<td>k : ℝ → ℝ, k(x) = x³ − x</td>
+<td>No: k(0) = k(1) = 0</td>
+<td>Yes: k is continuous, k → −∞ as x → −∞ and k → +∞ as x → +∞, so by the IVT it hits every real number</td>
+<td><strong>Surjective only</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Changing the <strong>codomain</strong> from ℝ to [0, ∞) turns the non-surjective f into the surjective g.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s9"><h2 id="s9" data-t="Quick revision sheet"><span class="num">9</span>Quick revision sheet</h2><table>
 <thead>
 <tr>
 <th>Concept</th>

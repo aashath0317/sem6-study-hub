@@ -1,0 +1,16 @@
+# Publish only the generated study pages, the images they use, and the builder source.
+# PDFs, videos, quizzes (.docx) and other course materials stay on this computer.
+*
+!*/
+!/.gitignore
+!/README.md
+!/index.html
+!/SEM 6 Study Hub.html
+!/*/Study Guide - Index.html
+!/*/Week */Week * - Study Guide.html
+!/Human Computer Interaction/Week */*.PNG
+!/Human Computer Interaction/Week */*.png
+!/Human Computer Interaction/Week */*.jpg
+!/_source/build/**
+!/_source/*.py
+__pycache__/

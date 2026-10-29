@@ -1,0 +1,66 @@
+? Inmon's definition describes a data warehouse as:
++ Subject-oriented, integrated, time-variant and nonvolatile, supporting management decisions
+- Real-time, transactional, volatile and normalised
+- Small, fast, local and private
+- Object-oriented, distributed, encrypted
+= These four characteristics are commonly examined.
+
+? "Nonvolatile" means that the data warehouse:
++ Is physically separate and needs no transaction processing, recovery or concurrency control; data is loaded and read
+- Loses data when the power fails
+- Is updated every second
+- Stores only current data
+= Operational updates don't happen in the warehouse.
+
+? "Time-variant" means that the warehouse:
++ Keeps a long history (5–10 years), and every key structure has a time element
+- Changes its schema daily
+- Stores only today's data
+- Uses timestamps for locking
+= Operational databases hold mainly current data.
+
+? Which is true of **OLTP**?
++ Used by clerks for day-to-day operations, with short read/write transactions on current data
+- Used by analysts for complex historical queries
+- Holds terabytes of historical data
+- Has mainly read-only scans
+= OLAP serves knowledge workers with historical, consolidated data for decision support.
+
+? Why keep the data warehouse separate from operational databases?
++ Performance, different concurrency and recovery needs, and different (historical, consolidated) data
+- To save licence costs
+- Because SQL can't run on warehouses
+- Because the law requires it
+= OLAP queries would slow down OLTP systems.
+
+? In a data cube, the numeric measures (e.g. dollars_sold) are called:
++ Facts
+- Dimensions
+- Hierarchies
+- Cuboids
+= Dimensions are the perspectives (time, item, location).
+
+? A cube has 4 dimensions. How many cuboids are in its lattice?
+# 16
+= 2⁴ = 16 (1 apex + 4 + 6 + 4 + 1 base).
+
+? The **apex** cuboid is:
++ The most summarised (0-D) cuboid, "all"
+- The cuboid with all dimensions
+- An empty cube
+- The fact table
+= The base cuboid contains all the dimensions and is the least summarised.
+
+? Moving from city to country level in a cube is:
++ Roll-up
+- Drill-down
+- Slice
+- Dice
+= Drill-down goes the other way, to more detail.
+
+? Selecting a single value on one dimension (e.g. time = Q1) to get a sub-cube is:
+- Dice
++ Slice
+- Pivot
+- Roll-up
+= Dice selects on two or more dimensions.

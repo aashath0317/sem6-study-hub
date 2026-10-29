@@ -1,0 +1,74 @@
+? The matrix [[m: 1 0 1; 1 2 3]] has size:
++ 2 × 3
+- 3 × 2
+- 2 × 2
+- 3 × 3
+= 2 rows, 3 columns.
+
+? A is 3 × 4 and B is 4 × 5. What size is AB?
++ 3 × 5
+- 4 × 4
+- 5 × 3
+- Undefined
+= (m × k)(k × n) = m × n.
+
+? A is 3 × 4 and B is 4 × 5. BA is:
++ Undefined
+- 4 × 4
+- 5 × 3
+- 3 × 5
+= B has 5 columns but A has 3 rows.
+
+? A = [[m: 3 1 4; −1 2 3]], B = [[m: 1 3 −3; 4 −1 2; 2 4 1]]. What is entry c₁₁ of AB?
+# 15
+= 3·1 + 1·4 + 4·2 = 15.
+
+? Same matrices: what is entry c₂₂ of AB?
+# 7
+= (−1)(3) + 2(−1) + 3(4) = 7.
+
+? In general, matrix multiplication is:
++ Not commutative: AB ≠ BA
+- Commutative
+- Only defined for square matrices
+- The same as entrywise multiplication
+= Even when both products exist, they usually differ.
+
+? Multiplying two n × n matrices with the standard algorithm uses how many multiplications?
++ n³
+- n²
+- 2n
+- n²(n − 1)
+= n²(n − 1) is the number of additions.
+
+? For 0–1 matrices, the **join** A ∨ B is:
++ The entrywise OR
+- The entrywise AND
+- The matrix product
+- The transpose
+= The meet A ∧ B is the entrywise AND.
+
+? A = [[m: 1 0 1; 0 1 0]], B = [[m: 0 1 0; 1 1 0]]. How many 1s are in A ∧ B?
+# 1
+= Only position (2,2) has 1 in both.
+
+? A square matrix is **symmetric** when:
++ A = Aᵗ
+- A = −A
+- AB = BA
+- All its entries are 1
+= The transpose swaps rows and columns.
+
+? (AB)ᵗ equals:
++ BᵗAᵗ
+- AᵗBᵗ
+- AB
+- BA
+= The order reverses.
+
+? A⁰ for an n × n matrix A is:
++ Iₙ (the identity matrix)
+- The zero matrix
+- A
+- Undefined
+= IₙA = AIₙ = A.

@@ -1,0 +1,76 @@
+? HCI grew out of which earlier field, and roughly when was the term coined?
++ Human–machine interaction (HMI), around 1980
+- Artificial intelligence, around 2000
+- Software engineering, around 1960
+- Graphic design, around 1995
+= HMI became HCI in the late 1970s and early 1980s.
+
+? Vannevar Bush's 1945 essay "As We May Think" argued that:
++ Humans should be at the centre, with technology in the background
+- Computers should replace humans
+- Only experts should use computers
+- Interfaces should be command-line only
+= It's an early vision of human-centred technology.
+
+? Processors embedded everywhere (ATMs, cars, rice cookers) is called:
++ Ubiquitous computing
+- Cloud computing
+- Mainframe computing
+- Batch processing
+= Computers are everywhere, often invisible.
+
+? Which human sense is the **primary** channel for most interfaces?
++ Sight
+- Hearing
+- Touch
+- Smell
+= Hearing and touch are secondary; taste and smell are experimental.
+
+? The word "credit" meaning different things in finance and in education shows that:
++ Perception is shaped by context and experience
+- Words have only one meaning
+- Users can't read
+- Interfaces should avoid words
+= Designers must support the right perception for their users.
+
+? A face-recognition door that opens as you approach is an example of:
+- Intentional interaction
++ Unintentional interaction
+- Command-line interaction
+- No interaction
+= Clicking Print is intentional interaction.
+
+? Interaction is described as:
++ A two-way process: input and feedback
+- One-way, from user to computer
+- One-way, from computer to user
+- Only physical contact
+= The system must respond to the user's input.
+
+? In the HCI space, HCI sits under human factors engineering alongside:
++ Industrial design and product design
+- Accounting and law
+- Networking and databases
+- Marketing and sales
+= HCI itself includes UI design, UX design and interaction design.
+
+? The main difference between HCI and human factors engineering is:
++ HCI covers digital interfaces only; HFE covers digital and physical
+- HFE is only about software
+- They are identical
+- HCI covers only hardware
+= HFE is broader.
+
+? A task-centred view of HCI says that:
++ Users interact with the task, and the interface should become invisible
+- Users should focus on the interface
+- Tasks don't matter
+- Interfaces should be as visible as possible
+= Good interfaces get out of the way.
+
+? HCI is multidisciplinary. Which discipline is **not** usually part of it?
+- Cognitive psychology
+- Computer science
+- Ergonomics
++ Petroleum engineering
+= Others: design and arts, sociology, and the application domains.

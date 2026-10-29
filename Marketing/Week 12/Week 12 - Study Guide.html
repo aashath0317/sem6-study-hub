@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 12 · Promotional Strategies &amp; Integrated Marketing Communication — Marketing</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="mkt-Week12">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Marketing</a> › Week 12</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Marketing · Week 12</div><h1>Promotional Strategies &amp; Integrated Marketing Communication</h1><p>IMC, the new marketing communications model, six promotion objectives, the five promotion-mix tools, advertising types and strategy, message strategy (appeals, structure, format), PR tools, sales promotion (consumer and trade), push vs pull, and socially responsible communication.</p><div class="meta"><span class="chip">ITE3642</span><span class="chip">2 videos · 109 min</span><span class="chip">📄 Reading Assignment 12.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Session Video – Pricing (full recording) · 53 min</button><button>2. Session Video – 12th Session · 55 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3642-25S2- Session Video - CODL-UOM_3.mp4"><source src="ITE3642-25S2-%20Session%20Video%20-%20CODL-UOM_3.mp4"></video></div><div class="chap"><p class="vt">Session Video – Pricing (full recording)</p><p class="vs">Despite being filed in Week 12, this is the complete Week 11 pricing lecture. The first ~43 minutes match the Week 11 video; from 42:49 it continues with price-adjustment strategies. It's useful for reviewing Week 11, not for promotion.</p><a href="#" data-v="0" data-t="0"><b>00:00</b><span>Introduction: marketing-mix strategies (price)</span></a><a href="#" data-v="0" data-t="143"><b>02:23</b><span>Segmentation recap and marketing tactics</span></a><a href="#" data-v="0" data-t="355"><b>05:55</b><span>Customer perceived value</span></a><a href="#" data-v="0" data-t="499"><b>08:19</b><span>Price: the only income-generating element</span></a><a href="#" data-v="0" data-t="641"><b>10:41</b><span>Costs: the company's and the customer's</span></a><a href="#" data-v="0" data-t="787"><b>13:07</b><span>Marketing and pricing objectives</span></a><a href="#" data-v="0" data-t="858"><b>14:18</b><span>Steps to set the price</span></a><a href="#" data-v="0" data-t="1001"><b>16:41</b><span>Product differentiation</span></a><a href="#" data-v="0" data-t="1072"><b>17:52</b><span>Nature of the market and demand</span></a><a href="#" data-v="0" data-t="1144"><b>19:04</b><span>Market structure: leader, competitors (soft drinks)</span></a><a href="#" data-v="0" data-t="1357"><b>22:37</b><span>Monopoly and pure competition</span></a><a href="#" data-v="0" data-t="1710"><b>28:30</b><span>Demand and price elasticity</span></a><a href="#" data-v="0" data-t="1854"><b>30:54</b><span>Price must cover variable and fixed costs</span></a><a href="#" data-v="0" data-t="1997"><b>33:17</b><span>Competitors' prices and offers</span></a><a href="#" data-v="0" data-t="2068"><b>34:28</b><span>Consumers' assessment of value</span></a><a href="#" data-v="0" data-t="2212"><b>36:52</b><span>Floor price and ceiling price</span></a><a href="#" data-v="0" data-t="2354"><b>39:14</b><span>Target profit pricing</span></a><a href="#" data-v="0" data-t="2497"><b>41:37</b><span>Shortened product life cycles</span></a><a href="#" data-v="0" data-t="2569"><b>42:49</b><span>Enhancing usage; elastic vs inelastic markets</span></a><a href="#" data-v="0" data-t="2711"><b>45:11</b><span>Segmented pricing: by customer, location, time</span></a><a href="#" data-v="0" data-t="2854"><b>47:34</b><span>Geographic pricing (e.g. climate differences)</span></a><a href="#" data-v="0" data-t="2925"><b>48:45</b><span>Price-adjustment strategies</span></a><a href="#" data-v="0" data-t="2997"><b>49:57</b><span>Price changes and buyer reactions</span></a><a href="#" data-v="0" data-t="3141"><b>52:21</b><span>Summary</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3642-25S2- Session Video_12th Session - CODL-UOM.mp4"><source src="ITE3642-25S2-%20Session%20Video_12th%20Session%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Session Video – 12th Session</p><p class="vs">Session 12 recording.</p></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Before promoting"><span class="num">1</span>Before promoting</h2><ol>
+<li><strong>Identify your unique features and competitive edge</strong>: your <strong>unique value proposition</strong>.</li>
+<li><strong>Find the best ways to reach the target market</strong>: their internet literacy, time online, preference for print, phone and so on.</li>
+<li><strong>Design a multi-stage promotional strategy.</strong> Each tool serves a different goal: <strong>personal selling</strong> builds close relationships, <strong>advertising</strong> reaches large audiences.</li>
+</ol><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Integrated marketing communication (IMC)"><span class="num">2</span>Integrated marketing communication (IMC)</h2><div class="call key"><div class="ct">IMC</div><p><strong>Integrating all promotional tools so they work together in coordination</strong>, not in isolation. <strong>All communications and messages are carefully connected.</strong></p>
+<ul>
+<li>Levels of integration: <strong>vertical, horizontal, internal, external</strong>.</li>
+<li><strong>A combined message has more impact</strong> than many separate ones.</li>
+<li>A consistent, crystal-clear message can <strong>cut through the 500+ commercial messages</strong> consumers see each day.</li>
+<li>IMC <strong>consolidates the image</strong>, <strong>creates dialogue</strong>, <strong>strengthens relationships</strong> and <strong>raises profit</strong> through effectiveness.</li>
+</ul></div>
+<h3 id="the-new-marketing-communications">The new marketing communications</h3>
+<p>Three changes drove the new (integrated) model:</p>
+<table>
+<thead>
+<tr>
+<th>Change</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Changing consumers</strong></td>
+<td>Better informed and more involved. With the internet they <strong>create their own messages</strong> about brands, positive or negative (the Old Spice example)</td>
+</tr>
+<tr>
+<td><strong>Changing marketing strategies</strong></td>
+<td>Away from <strong>mass marketing</strong> toward <strong>targeted segments</strong> and <strong>direct relationships</strong></td>
+</tr>
+<tr>
+<td><strong>Advances in communication technology</strong></td>
+<td><strong>Social media</strong> (blogging, tweeting, status updates) builds stronger connections</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Promotion objectives"><span class="num">3</span>Promotion objectives</h2><table>
+<thead>
+<tr>
+<th>Objective</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>a) Stimulate demand</strong></td>
+<td>The main objective: turn <strong>potential buyers into real buyers</strong> by highlighting benefits</td>
+</tr>
+<tr>
+<td><strong>b) Inform consumers</strong></td>
+<td>Price, features, performance, quality, availability, changes, <strong>new products</strong>, special offers</td>
+</tr>
+<tr>
+<td><strong>c) Persuade consumers</strong></td>
+<td>Show the product's <strong>superiority</strong> over competitors' products</td>
+</tr>
+<tr>
+<td><strong>d) Promote a new product</strong></td>
+<td>Introduce it successfully against existing products, at every stage of adoption</td>
+</tr>
+<tr>
+<td><strong>e) Face competition</strong></td>
+<td>Compete effectively, <strong>deter entry</strong>, push rivals out</td>
+</tr>
+<tr>
+<td><strong>f) Create or improve image</strong></td>
+<td>Build <strong>brand and corporate image</strong> (Unilever, Sony, Philips, Hero Honda, Singer)</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="The promotion mix"><span class="num">4</span>The promotion mix</h2><p>The <strong>balance of promotional tools</strong> used to create, maintain and grow demand. To balance them, ask: what's the most effective way to inform customers? Which methods? Aimed at whom? What's the budget and how is it allocated?</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Advertising</strong></td>
+<td>A <strong>paid</strong>, non-personal promotion by an <strong>identified sponsor</strong>. Builds a <strong>pull</strong> strategy and encourages a first trial</td>
+<td>TV, print, digital ads</td>
+</tr>
+<tr>
+<td><strong>Personal selling</strong></td>
+<td><strong>Face-to-face</strong> communication between a company representative and the consumer, to influence purchase</td>
+<td>Insurance agents, B2B sales reps</td>
+</tr>
+<tr>
+<td><strong>Sales promotion</strong></td>
+<td><strong>Short-term incentives</strong> to boost sales for a period (festivals, season-end): offers, discounts, paybacks, freebies, coupons</td>
+<td>Avurudu sales, "buy 1 get 1"</td>
+</tr>
+<tr>
+<td><strong>Public relations (PR)</strong></td>
+<td>Build a <strong>favourable image</strong> through relationships with the public; <strong>publicity</strong> brings news to the market</td>
+<td>Press releases, sponsorships</td>
+</tr>
+<tr>
+<td><strong>Direct marketing</strong></td>
+<td>Reach consumers <strong>directly, without intermediaries</strong>: email, SMS, fax</td>
+<td><strong>Shoppers Stop</strong> SMSes about year-end sales and gold-card benefits</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Advertising"><span class="num">5</span>Advertising</h2><p><strong>Advertising</strong> is drawing public attention to a product through <strong>paid announcements by an identified sponsor</strong>.</p>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li><strong>very cost-efficient</strong> per person for large audiences</li>
+<li><strong>repeatable</strong> across media</li>
+<li><strong>adds value</strong> and enhances the firm's image</li>
+</ul>
+<h3 id="four-types-of-advertising">Four types of advertising</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Purpose</th>
+<th>When</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Informative</strong></td>
+<td>Explain <strong>features and benefits</strong> with facts; build <strong>primary demand</strong></td>
+<td><strong>New product categories</strong> or new products</td>
+<td><strong>Dialog eZ Cash</strong></td>
+</tr>
+<tr>
+<td><strong>Persuasive</strong></td>
+<td>Build <strong>selective demand and brand preference</strong>; user-oriented; may use <strong>celebrities</strong> and discounts</td>
+<td>Competitive growth stage</td>
+<td><strong>Teleshop / TV-shop ads</strong></td>
+</tr>
+<tr>
+<td><strong>Comparison</strong></td>
+<td>Present your product as <strong>better than a competitor's</strong> (side by side, on value or cost)</td>
+<td>Competitive markets</td>
+<td><strong>Panadol vs paracetamol</strong>, <strong>Hutch vs Airtel</strong>, insurance and utility comparisons</td>
+</tr>
+<tr>
+<td><strong>Reminder</strong></td>
+<td>Keep <strong>top-of-mind awareness</strong>; reinforce brand value</td>
+<td><strong>Well-known brands</strong>, maturity or late PLC</td>
+<td><strong>Coke ads during cricket tournaments</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Which ad type fits?</div><div id="adt">
+<div class="row"><label>PLC stage <select class="s"><option value="0">Introduction (new category)</option><option value="1">Growth (rivals arriving)</option><option value="2">Maturity (strong rivals)</option><option value="3">Late maturity / well-known brand</option></select></label></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('adt'),A=[['Informative','Build primary demand: explain what the product is and how it solves a problem.','"What is eZ Cash and how to send money by phone"'],['Persuasive','Build selective demand: why <b>our</b> brand, often with celebrities and offers.','A cricketer endorsing a phone brand'],['Comparison','Show superiority directly against a named or implied competitor.','"Faster data than Network X for the same price"'],['Reminder','Keep the brand top-of-mind; reinforce existing preference.','A Coke ad during a cricket match']];function run(){var a=A[+R.querySelector('.s').value];R.querySelector('.out').innerHTML='<p style="font-size:18px"><b>'+a[0]+' advertising</b></p><p>'+a[1]+'</p><p class="note">e.g. '+a[2]+'</p>'}R.addEventListener('change',run);run();})();
+</script></div>
+<h3 id="advertising-strategy-four-principles">Advertising strategy: four principles</h3>
+<ol>
+<li><strong>Qualities of the product</strong>: purpose, features, advantages over alternatives. These define the message.</li>
+<li><strong>State of the market</strong>: openness to purchase, competitors' share, the economy (luxury is hard to sell in a recession).</li>
+<li><strong>Advertising goals</strong>: specific goals that give a roadmap and a way to <strong>measure effectiveness</strong>.</li>
+<li><strong>Methodology</strong>: tone, qualities emphasised, <strong>medium</strong> (TV, magazines), ad <strong>location</strong>, and <strong>budget</strong>.</li>
+</ol>
+<p>The plan's elements are the <strong>product and its advantages</strong>, the <strong>customer and their characteristics</strong>, <strong>alternative ways to inform buyers</strong>, and <strong>optimising choices within the budget</strong>. <strong>No plan is perfect</strong>: resources are always limited.</p>
+<p>Two major elements:</p>
+<ol>
+<li><strong>Creating the advertising message</strong>: something special and unique about the product.</li>
+<li><strong>Selecting the media</strong>: cost-effectiveness. <strong>Many ad failures come from choosing the wrong media.</strong></li>
+</ol><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Message strategy"><span class="num">6</span>Message strategy</h2><p><strong>Factors to consider:</strong></p>
+<ul>
+<li><strong>target audience characteristics</strong> (age, location, attitudes)</li>
+<li><strong>media type</strong></li>
+<li><strong>product factors</strong> (new vs established)</li>
+<li><strong>overall advertising objective</strong> (immediate sales vs initial awareness)</li>
+</ul>
+<p><strong>Steps:</strong> identify <strong>consumer benefits</strong> → develop <strong>meaningful, believable, distinctive</strong> appeals → create a <strong>creative concept</strong>.</p>
+<h3 id="1-design-the-message">1. Design the message</h3>
+<p>Decide <strong>what to say</strong> (content) and <strong>how to say it</strong> (structure and format).</p>
+<h3 id="2-the-appeal">2. The appeal</h3>
+<table>
+<thead>
+<tr>
+<th>Appeal</th>
+<th>How it works</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rational</strong></td>
+<td><strong>Evidence and reason</strong>; appeals to <strong>self-interest</strong></td>
+<td>"Saves 30% fuel"</td>
+</tr>
+<tr>
+<td><strong>Emotional</strong></td>
+<td>Stirs <strong>positive or negative feelings</strong> (love, pride, joy, humour, fear) that motivate purchase</td>
+<td>Family moments in a milk-powder ad</td>
+</tr>
+<tr>
+<td><strong>Moral</strong></td>
+<td>Appeals to the sense of what is <strong>right and proper</strong></td>
+<td>"Don't drink and drive", charity campaigns</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-message-structure-three-issues">3. Message structure: three issues</h3>
+<ol>
+<li><strong>Draw a conclusion</strong> for the audience, or <strong>leave it to them</strong>?</li>
+<li>Put the <strong>strongest arguments first or last</strong>?</li>
+<li><strong>One-sided</strong> (strengths only) or <strong>two-sided</strong> (strengths and admitted shortcomings)?</li>
+</ol>
+<h3 id="4-message-format">4. Message format</h3>
+<p>Use <strong>novelty and contrast</strong> (eye-catching pictures and headlines), <strong>distinctive formats</strong> (size, position), <strong>colour, shape, movement</strong>.</p>
+<p><strong>Clear marketing messages:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Characteristic</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Get to the point</strong></td>
+<td>"Our software reduces your manufacturing time."</td>
+</tr>
+<tr>
+<td><strong>Take the customer's viewpoint</strong></td>
+<td>"It takes just two minutes, tops, to learn our product."</td>
+</tr>
+<tr>
+<td><strong>Use familiar language</strong></td>
+<td>"We help your sales team close deals faster."</td>
+</tr>
+<tr>
+<td><strong>Feel informal</strong></td>
+<td>"Without surprises. Ever."</td>
+</tr>
+<tr>
+<td><strong>Say something original</strong></td>
+<td>"You'll save so much you'll think you won the lottery."</td>
+</tr>
+<tr>
+<td><strong>Need no explanation</strong></td>
+<td>"We win more eyes for your advertisements."</td>
+</tr>
+<tr>
+<td><strong>Make you smile</strong></td>
+<td>"It's rocket science meets brain surgery, but easy to use."</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Public relations"><span class="num">7</span>Public relations</h2><ul>
+<li><strong>PR</strong> manages <strong>perceptions</strong> of the business to <strong>attract new customers</strong> and <strong>strengthen existing loyalty</strong>.</li>
+<li>It uses <strong>unpaid</strong> channels (media, internet, networks, community).</li>
+<li>PR is <strong>more credible than paid advertising</strong>, because the result is <strong>shaped by a third party</strong>.</li>
+<li><strong>Marketing promotes products; PR promotes awareness and behaviour change.</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>PR tool</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Media relations</strong></td>
+<td>Pitch interesting stories (facts, customer stories, spokesperson news) to newspapers, magazines, TV and the internet. Good contact lists also help <strong>manage crises</strong></td>
+</tr>
+<tr>
+<td><strong>Advertorials</strong></td>
+<td><strong>Ads written like news stories</strong>: they borrow the paper's credibility (also on TV)</td>
+</tr>
+<tr>
+<td><strong>Social media</strong></td>
+<td><strong>Bypass the media</strong> and talk to customers directly; respond quickly to negative perceptions</td>
+</tr>
+<tr>
+<td><strong>Newsletters</strong></td>
+<td>Print or email: regular contact, new launches, stronger relationships</td>
+</tr>
+<tr>
+<td><strong>Brochures and catalogues</strong></td>
+<td>Keep customers thinking of you; drive traffic to the website or store</td>
+</tr>
+<tr>
+<td><strong>Business events</strong></td>
+<td>Exposure, launches, answering doubts, market research, building mailing lists</td>
+</tr>
+<tr>
+<td><strong>Speaking engagements</strong></td>
+<td>Talks that position the firm as a <strong>leader</strong>; networking</td>
+</tr>
+<tr>
+<td><strong>Sponsorships and partnerships</strong></td>
+<td>Support non-profit causes for <strong>goodwill and loyalty</strong>; associate the brand with ethics</td>
+</tr>
+<tr>
+<td><strong>Employee relations</strong></td>
+<td>Keep staff informed (email, newsletters, intranet)</td>
+</tr>
+<tr>
+<td><strong>Media tour</strong></td>
+<td>A spokesperson, expert or celebrity tours target cities (e.g. book launches with readings and signings)</td>
+</tr>
+<tr>
+<td><strong>Financial relations</strong></td>
+<td>Relationships with <strong>investors, analysts and financial journalists</strong> (earnings affect stock prices)</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Sales promotion"><span class="num">8</span>Sales promotion</h2><div class="call key"><div class="ct">AMA definition</div><p>"<strong>Media and non-media marketing pressure applied for a predetermined, limited period</strong> to <strong>stimulate trial, increase consumer demand or improve product availability</strong>."</p></div>
+<p>Used to launch new products, <strong>sell out inventory</strong>, attract customers and <strong>lift sales temporarily</strong>.</p>
+<p><strong>Objectives:</strong></p>
+<ul>
+<li><strong>create a market for new products</strong> (penetration pricing, offers, discounts, scarcity)</li>
+<li><strong>remain competitive</strong> against rivals' short-term tactics</li>
+<li><strong>gain dealers' trust</strong> (more sales means more dealer income)</li>
+<li><strong>enter new markets</strong></li>
+<li><strong>increase brand awareness</strong></li>
+<li><strong>woo existing customers</strong> against competitors' poaching</li>
+</ul>
+<h3 id="three-sales-promotion-strategies">Three sales-promotion strategies</h3>
+<ul>
+<li><strong>Pull</strong>: customers <strong>"pull"</strong> the product from the company through communication, seasonal discounts and finance schemes.</li>
+<li><strong>Push</strong>: <strong>convince intermediaries</strong> to push the product through the channel to consumers, with trade promotions and personal selling aimed at resellers, dealers, distributors and agents.</li>
+<li><strong>Hybrid</strong>: <strong>both</strong>, e.g. coupons for consumers <strong>plus</strong> incentives for merchants.</li>
+</ul>
+<h3 id="consumer-vs-trade-promotions">Consumer vs trade promotions</h3>
+<div class="grid2"><div><p><strong>Consumer sales promotion</strong> (to end users)</p>
+<ul>
+<li><strong>Free samples</strong>: awareness and a sense of ownership</li>
+<li><strong>Free gifts</strong>: more for less</li>
+<li><strong>Discounts and coupons</strong></li>
+<li><strong>Exchange schemes</strong>: value for old products</li>
+<li><strong>Finance schemes</strong>: make expensive items affordable</li>
+<li><strong>Shipping schemes</strong>: remove freight friction</li>
+<li><strong>Bundle discounts</strong>: clear unsold stock</li>
+<li><strong>Bulk-purchase deals</strong></li>
+</ul></div><div><p><strong>Trade sales promotion</strong> (to dealers, distributors, agents)</p>
+<ul>
+<li><strong>Point-of-purchase (POP) displays</strong>: free display units</li>
+<li><strong>Trade shows</strong></li>
+<li><strong>Push money (spiffs)</strong>: e.g. a Rs 50 bonus per unit of A, Rs 30 per unit of B</li>
+<li><strong>Deal loaders</strong>: gifts for ordering a set quantity</li>
+<li><strong>Trade deals</strong>: concessions to promote a product for a limited time</li>
+<li><strong>Buying allowances</strong>: discounts for ordering a set number</li>
+</ul>
+<p><strong>Aims:</strong> more shelf space, motivated dealers, indirect sales growth.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s9"><h2 id="s9" data-t="Push vs pull channel policies"><span class="num">9</span>Push vs pull channel policies</h2><div class="tool"><div class="tt">🧪 Try it — Push vs pull — watch the flow</div><div id="pp">
+<div class="row"><button data-m="push">Push strategy</button><button data-m="pull" class="alt">Pull strategy</button></div>
+<svg viewBox="0 0 620 170" class="sv" style="max-width:660px"></svg>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('pp'),N=['Manufacturer','Wholesaler','Retailer','Consumer'];
+function draw(m){R.querySelectorAll('[data-m]').forEach(function(b){b.className=b.dataset.m===m?'':'alt'});var h='<defs><marker id="pa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="var(--accent)"/></marker><marker id="pb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="var(--tip)"/></marker></defs>';
+N.forEach(function(n,i){var x=20+i*150;h+='<rect x="'+x+'" y="60" width="120" height="44" rx="10" fill="var(--bg)" stroke="var(--line)"/><text x="'+(x+60)+'" y="87" text-anchor="middle" font-size="13" font-weight="700">'+n+'</text>'});
+for(var i=0;i<3;i++){var x=140+i*150;h+='<line x1="'+(x+2)+'" y1="82" x2="'+(x+28)+'" y2="82" stroke="var(--accent)" stroke-width="2.5" marker-end="url(#pa)"/>'}
+if(m==='push'){for(var i=0;i<3;i++){var x=80+i*150;h+='<path d="M'+x+',58 Q'+(x+75)+',10 '+(x+150)+',58" fill="none" stroke="var(--warn)" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#pa)"/>'}h+='<text x="310" y="22" text-anchor="middle" font-size="12" style="fill:var(--warn)">promotion (sales force, trade promotion) flows DOWN the channel</text>'}
+else{h+='<path d="M560,108 Q300,175 80,108" fill="none" stroke="var(--tip)" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#pb)"/><text x="320" y="160" text-anchor="middle" font-size="12" style="fill:var(--tip)">demand flows UP: consumer asks retailer → wholesaler → manufacturer</text><path d="M80,58 Q320,0 560,58" fill="none" stroke="var(--warn)" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#pa)"/><text x="320" y="22" text-anchor="middle" font-size="12" style="fill:var(--warn)">advertising and consumer promotion go DIRECTLY to consumers</text>'}
+R.querySelector('.sv').innerHTML=h;R.querySelector('.out').innerHTML=m==='push'?'<p><b>Push:</b> uses the sales force and trade promotion to push the product through intermediaries to consumers. Example: <b>Nokia</b> handsets through retailers such as Carphone Warehouse; <b>Mars</b> chocolate through distributors.</p>':'<p><b>Pull:</b> heavy advertising and consumer promotion create demand, so consumers ask for the product and pull it through the channel. Example: <b>"Intel Inside"</b>: buyers asked whether a PC had an Intel chip. Tools: advertising, referrals (word of mouth), promotions, discounts.</p>'}
+R.querySelectorAll('[data-m]').forEach(function(b){b.onclick=function(){draw(b.dataset.m)}});draw('push');})();
+</script></div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Push</strong></th>
+<th><strong>Pull</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Main tools</strong></td>
+<td><strong>Sales force, trade promotion</strong>, personal selling</td>
+<td><strong>Heavy advertising, consumer promotion</strong></td>
+</tr>
+<tr>
+<td><strong>Direction</strong></td>
+<td>Product <strong>pushed</strong> down the channel to the consumer</td>
+<td>Consumer demand <strong>pulls</strong> the product: consumer → retailer → wholesaler → manufacturer</td>
+</tr>
+<tr>
+<td><strong>Example</strong></td>
+<td><strong>Nokia</strong> via retailers; <strong>Mars</strong> via distributors</td>
+<td><strong>"Intel Inside"</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="call tip"><div class="ct">Best practice</div><p><strong>A good promotional strategy combines push and pull.</strong></p></div><button class="done-btn"></button></section><section class="card" data-sec="s10"><h2 id="s10" data-t="Socially responsible marketing communication"><span class="num">10</span>Socially responsible marketing communication</h2><ul>
+<li><strong>Social responsibility:</strong> businesses should be <strong>good citizens</strong>, combining profit-making with actions that <strong>support society</strong> (local, national, global). It attracts customers who want their purchases to make a <strong>meaningful impact</strong>.</li>
+<li><strong>Examples:</strong> <strong>recyclable packaging</strong>, ads raising awareness of <strong>community problems</strong>, giving <strong>part of the proceeds to charity</strong>.</li>
+</ul>
+<div class="call warn"><div class="ct">Greenwashing backfires</div><p><strong>Deceptively promoting</strong> environmentally friendly practices or products shows consumers the firm <strong>isn't really committed</strong>, and eventually <strong>harms the brand and profitability</strong>. Communicate your responsible behaviour <strong>strategically and honestly</strong>.</p></div>
+<div class="call exam"><div class="ct">Exam focus</div><p>Expect:</p>
+<ul>
+<li><strong>The importance of IMC</strong></li>
+<li><strong>Promotion objectives</strong> with examples</li>
+<li><strong>Promotion-mix elements</strong>, e.g. used by a <strong>Sri Lankan telecom company</strong>: TV and digital ads (Dialog, Mobitel), reload and data <strong>sales promotions</strong>, retail <strong>personal selling</strong>, <strong>sponsorships</strong> (cricket, events), <strong>SMS direct marketing</strong></li>
+<li><strong>Advertising types</strong></li>
+<li><strong>Message strategy</strong> (appeals, structure, format)</li>
+<li><strong>PR tools</strong></li>
+<li><strong>Consumer vs trade promotions</strong></li>
+<li><strong>Push vs pull</strong></li>
+<li><strong>Social responsibility</strong></li>
+<li>The activity: critically evaluate a recent ad's <strong>message strategy</strong>: its appeal, structure (conclusion? one- or two-sided?) and format</li>
+</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s11"><h2 id="s11" data-t="Quick revision sheet"><span class="num">11</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IMC</td>
+<td>All tools coordinated; one consistent message cuts through 500+ daily messages</td>
+</tr>
+<tr>
+<td>New communications</td>
+<td>Changing consumers · changing strategies · new technology</td>
+</tr>
+<tr>
+<td>6 objectives</td>
+<td>Stimulate demand · inform · persuade · launch new product · face competition · image</td>
+</tr>
+<tr>
+<td>Promotion mix</td>
+<td>Advertising · personal selling · sales promotion · PR · direct marketing</td>
+</tr>
+<tr>
+<td>Ad types</td>
+<td>Informative (eZ Cash) · persuasive · comparison (Hutch vs Airtel) · reminder (Coke at cricket)</td>
+</tr>
+<tr>
+<td>Ad strategy</td>
+<td>Product qualities · market state · goals · methodology; message + media</td>
+</tr>
+<tr>
+<td>Appeals</td>
+<td>Rational · emotional · moral</td>
+</tr>
+<tr>
+<td>Structure</td>
+<td>Conclusion? · strongest first or last? · one- or two-sided?</td>
+</tr>
+<tr>
+<td>PR</td>
+<td>Unpaid, more credible; media relations, advertorials, social, newsletters, events, sponsorship…</td>
+</tr>
+<tr>
+<td>Sales promotion</td>
+<td>Limited-time pressure (AMA); consumer vs trade</td>
+</tr>
+<tr>
+<td>Push vs pull</td>
+<td>Sales force and trade promotion (Nokia, Mars) vs ads and consumer demand (Intel Inside)</td>
+</tr>
+<tr>
+<td>Social responsibility</td>
+<td>Recyclable packs, cause campaigns, charity; avoid greenwashing</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">12 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="mkt-Week12" data-pick="0"><script type="application/json" class="qdata">[{"q": "Integrated marketing communication (IMC) means:", "o": ["Coordinating all promotion tools to deliver one clear, consistent message", "Using only TV ads", "Letting each department advertise independently", "Spending the most on promotion"], "e": "One consistent voice cuts through 500+ messages a day. ", "a": 0, "w": "Week 12"}, {"q": "Which is <strong>not<\/strong> a promotion-mix element?", "o": ["Advertising", "Personal selling", "Sales promotion", "Product design"], "e": "The others are public relations and direct marketing. ", "a": 3, "w": "Week 12"}, {"q": "An ad explaining how a new mobile money service (eZ Cash) works is:", "o": ["Informative advertising", "Persuasive advertising", "Comparison advertising", "Reminder advertising"], "e": "Informative ads are used when launching a new product. ", "a": 0, "w": "Week 12"}, {"q": "Coca-Cola ads during cricket matches, keeping the brand top of mind, are:", "o": ["Informative", "Comparison", "Reminder advertising", "Persuasive"], "e": "Reminder ads suit mature products. ", "a": 2, "w": "Week 12"}, {"q": "An ad that directly compares one brand with a rival (e.g. Hutch vs Airtel) is:", "o": ["Comparison advertising", "Reminder advertising", "Informative advertising", "Public relations"], "e": "It's a form of persuasive advertising. ", "a": 0, "w": "Week 12"}, {"q": "Message appeals can be:", "o": ["Rational, emotional or moral", "Fast, slow or medium", "Cheap, expensive or free", "Push, pull or hybrid"], "e": "Structure decisions: draw a conclusion? strongest point first or last? one- or two-sided? ", "a": 0, "w": "Week 12"}, {"q": "Compared with advertising, public relations is:", "o": ["Unpaid (earned) and more credible", "Always more expensive", "Less credible", "The same as sales promotion"], "e": "PR tools include media relations, events, sponsorships and newsletters. ", "a": 0, "w": "Week 12"}, {"q": "Short-term incentives like coupons or \"buy one get one free\" are:", "o": ["Sales promotion", "Public relations", "Personal selling", "Branding"], "e": "They can target consumers or the trade. ", "a": 0, "w": "Week 12"}, {"q": "Promoting through the sales force and trade incentives to intermediaries is a:", "o": ["Push strategy", "Pull strategy", "Reminder strategy", "Viral strategy"], "e": "A pull strategy (e.g. \"Intel Inside\") builds consumer demand so customers ask for it. ", "a": 0, "w": "Week 12"}, {"q": "Intel's \"Intel Inside\" campaign aimed at end consumers is an example of a:", "o": ["Push strategy", "Pull strategy", "Direct marketing strategy", "Sales promotion"], "e": "Consumers pull the product through the channel. ", "a": 1, "w": "Week 12"}, {"q": "Which is a <strong>promotion objective<\/strong>?", "o": ["Informing customers and building the brand image", "Reducing production costs", "Hiring staff", "Setting the factory location"], "e": "The others: stimulate demand, persuade, launch new products, face competition. ", "a": 0, "w": "Week 12"}, {"q": "Claiming to be eco-friendly without real action is called:", "o": ["Greenwashing", "Societal marketing", "Cause marketing", "Rebranding"], "e": "Socially responsible promotion should avoid it. ", "a": 0, "w": "Week 12"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2011/Week%2011%20-%20Study%20Guide.html"><small>← Previous</small>Pricing Strategies</a><span></span></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  function show(i){
+    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

@@ -1,0 +1,61 @@
+? Does 6 divide 17?
+- Yes
++ No
+= 17/6 isn't an integer, so 6 ∤ 17.
+
+? What is 27 mod 4?
+# 3
+= 27 = 4·6 + 3.
+
+? What is −23 mod 5?
+# 2
+= −23 = 5·(−5) + 2. The remainder is never negative.
+
+? What is −23 div 5?
+# -5
+= The quotient is −5, since −23 = 5(−5) + 2.
+
+? Is 21 ≡ 6 (mod 8)?
+- Yes
++ No
+= 21 − 6 = 15, and 8 ∤ 15.
+
+? 12 ≡ 2 (mod 5) and 16 ≡ 1 (mod 5). What is 12·16 mod 5?
+# 2
+= 2·1 = 2. Congruences can be multiplied.
+
+? If a | b and a | c, then:
++ a | (mb + nc) for any integers m, n
+- b | c
+- c | a
+- a = b
+= This is the corollary of Theorem 1.
+
+? The prime factorisation of 748 is:
++ 2² × 11 × 17
+- 2 × 374
+- 4 × 187
+- 2³ × 7 × 13
+= The Fundamental Theorem of Arithmetic says it's unique.
+
+? Encrypt the letter Y (p = 24) with the Caesar cipher (shift 3). What is the cipher value?
+# 1
+= (24 + 3) mod 26 = 1, which is B.
+
+? Decrypt C (p = 2) with the Caesar cipher. What is the plaintext value?
+# 25
+= (2 − 3) mod 26 = −1 mod 26 = 25, which is Z.
+
+? Which number is in the congruence class of 2 modulo 7?
++ 23
+- 20
+- 14
+- 3
+= 23 = 7·3 + 2.
+
+? Who proved that there are infinitely many primes?
++ Euclid
+- Fermat
+- Euler
+- Gauss
+= Proof by contradiction: multiply all the primes together and add 1.

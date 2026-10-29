@@ -1,0 +1,71 @@
+? Project appraisal is best described as:
++ Assessing and questioning proposals before resources are committed
+- Auditing completed projects
+- Preparing the cash budget
+- Valuing inventory
+= It evaluates whether an investment is worthwhile.
+
+? Which methods **ignore** the time value of money?
++ Payback and ARR
+- NPV and IRR
+- NPV and payback
+- IRR and ARR
+= Non-discounting methods: payback, ARR. Discounting methods: NPV, IRR.
+
+? Project B costs 1,000,000 and returns 600,000 in year 1 and 400,000 in year 2. What is its payback period in years?
+# 2
+= 600k + 400k recovers the 1m by the end of year 2.
+
+? The main weakness shown by Project A (payback 3 years, but 1.3m arriving in year 4) is that payback:
+- Uses accounting profit
++ Ignores cash flows after the payback point
+- Is hard to calculate
+- Always picks the larger project
+= Payback ignores A's large year-4 inflow.
+
+? What is the present value of 1,210 received in 2 years at 10%?
+# 1000
+= 1,210 ÷ 1.1² = 1,210 ÷ 1.21 = 1,000.
+
+? Average annual profit $63,750; machine cost $400,000 with no scrap. Using **average investment**, what is the ARR (%)?
+# 31.875 ~0.01
+= Average investment = (400,000 + 0) ÷ 2 = 200,000, so ARR = 63,750 ÷ 200,000 = 31.875%.
+
+? NPV of zero means:
+- Reject the project
++ Indifferent: the project earns exactly the required return (accept if necessary)
+- The project has no cash flows
+- IRR is zero
+= NPV > 0 accept; < 0 reject; = 0 indifferent.
+
+? Four projects have NPVs of +517,327, +214,920, 0 and a negative value. With resources for only one, choose:
++ The project with NPV +517,327
+- The project with NPV 0 (least risk)
+- The smallest investment
+- Any project with a positive NPV, chosen at random
+= With limited resources, choose the highest NPV.
+
+? IRR is the discount rate at which:
+- Payback equals the project life
++ NPV equals zero
+- ARR equals the cost of capital
+- Cash inflows are doubled
+= Accept if IRR is at least the cost of capital.
+
+? NPV is +8.4 at 22% and −3.8 at 24%. Using interpolation, what is the IRR (%)?
+# 23.38 ~0.02
+= 22 + 8.4 ÷ (8.4 + 3.8) × 2 = 23.38%.
+
+? Which is **not** a reason for the time value of money?
+- Opportunity cost
+- Inflation
+- Uncertainty and risk
++ Depreciation of fixed assets
+= The three reasons are opportunity cost, inflation, and risk/uncertainty.
+
+? Which appraisal method does the lecture rate as **best**?
+- Payback
+- ARR
++ NPV
+- IRR
+= NPV uses the time value of money and all cash flows, uses cash not profit, and measures wealth in rupees.

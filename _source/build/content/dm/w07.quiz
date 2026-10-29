@@ -1,0 +1,69 @@
+? The four steps of the data warehouse design process, in order, are:
++ Choose the business process → choose the grain → choose the dimensions → choose the measures
+- Choose measures → dimensions → grain → process
+- Build the cube → load data → design the schema → test
+- Grain → process → measures → dimensions
+= The grain is the atomic level of data in the fact table (e.g. an individual transaction).
+
+? The **top-down** design approach is best when:
++ The technology is mature and the business problems are clear and well understood
+- The organisation is at an early stage and wants quick results
+- No planning is possible
+- The budget is very small
+= Bottom-up (prototype first) is cheaper and gives faster returns early on.
+
+? A methodology that delivers increasing functionality in rapid, short releases is:
+- Waterfall
++ Spiral
+- Top-down
+- Star
+= Waterfall is a structured, step-by-step approach.
+
+? Which is **not** one of the four views in data warehouse design?
+- Top-down view
+- Data source view
+- Business query view
++ Network view
+= The fourth is the data warehouse view (fact and dimension tables).
+
+? In the three-tier architecture, the **middle** tier is the:
++ OLAP server
+- Relational warehouse database server
+- Client front-end tools
+- Operational database
+= Bottom: the warehouse server and metadata repository. Top: query, reporting and analysis tools.
+
+? A set of views over operational databases, with no separate storage, is a:
+- Enterprise warehouse
+- Data mart
++ Virtual warehouse
+- Snowflake schema
+= It's easy to build, but needs spare capacity on the operational servers.
+
+? Metadata is:
++ Data about data: structure, definitions, sources, mappings, summarisation algorithms
+- The fact table
+- The OLAP server
+- A backup copy
+= The metadata repository is held in the bottom tier.
+
+? **MOLAP** stores data in:
+- Relational tables only
++ Multidimensional arrays (sparse-array technology)
+- XML files
+- Spreadsheets
+= ROLAP uses relational tables and scales better. HOLAP combines the two.
+
+? HOLAP typically keeps:
++ Detailed data in ROLAP and aggregates in MOLAP
+- Everything in MOLAP
+- Everything in flat files
+- Only metadata
+= Microsoft SQL Server 2000 is the classic example.
+
+? Which is a benefit of a data warehouse?
++ Competitive advantage and improved decision-making productivity
+- Faster OLTP transactions
+- No need for data cleaning
+- Real-time locking
+= Also better customer relationship management and cost reduction.

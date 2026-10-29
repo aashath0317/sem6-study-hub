@@ -1,0 +1,69 @@
+? The correct order of the KDD process is:
++ Cleaning → Integration → Selection → Transformation → Mining → Evaluation → Presentation
+- Selection → Cleaning → Mining → Integration → Evaluation → Transformation → Presentation
+- Mining → Cleaning → Selection → Presentation → Integration → Transformation → Evaluation
+- Integration → Mining → Cleaning → Transformation → Selection → Presentation → Evaluation
+= Memory chain C-I-S-T-M-E-P: "Can I See The Mined Evidence Please".
+
+? Which KDD steps are data **preprocessing**?
++ Steps 1–4 (cleaning, integration, selection, transformation)
+- Steps 5–7
+- Only step 1
+- Only step 5
+= Mining is step 5; evaluation and presentation follow it.
+
+? Data mining relates to KDD how?
++ Data mining is one essential step inside the KDD process
+- They are unrelated
+- KDD is one step of data mining
+- They are exactly the same thing in every textbook
+= Many people use "data mining" loosely to mean the whole KDD process.
+
+? Which component of a data mining system holds concept hierarchies, user beliefs and interestingness thresholds?
+- The user interface
+- The mining engine
++ The knowledge base
+- The database server
+= The architecture is UI, pattern evaluation, mining engine, knowledge base, and DB/DW server.
+
+? A data warehouse is:
++ A repository of data from multiple sources, stored under a unified schema at a single site
+- A transactional database for daily operations
+- A single spreadsheet
+- A backup tape
+= It's built by cleaning, integrating, transforming, loading and periodically refreshing data.
+
+? A database where each record is a transaction ID plus a list of items bought is a:
++ Transactional database
+- Spatial database
+- Time-series database
+- Text database
+= This is the classic input for association mining.
+
+? Raster spatial data is stored as:
++ Pixel (bit) maps
+- Points, lines and polygons
+- Text documents
+- Transaction lists
+= Vector data uses points, lines and polygons.
+
+? Mining user access patterns from weblogs is:
+- Web content mining
++ Web usage mining
+- Web structure mining
+- Text mining
+= It's used for things like improving site design and personalisation.
+
+? Which is **not** one of the five data mining task primitives?
+- Task-relevant data
+- Kind of knowledge to be mined
+- Interestingness measures and thresholds
++ The price of the software
+= The fifth is background knowledge and the representation or visualisation of patterns.
+
+? Audio and video data that need steady, real-time retrieval are:
++ Continuous-media data
+- Sequence data
+- Raster data
+- Transactional data
+= Time-series data are repeated measurements over time; sequence data are ordered events.

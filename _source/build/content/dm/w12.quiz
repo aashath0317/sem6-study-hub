@@ -1,0 +1,67 @@
+? The "naive" assumption in naive Bayes is:
++ Attributes are conditionally independent of each other given the class
+- All classes are equally likely
+- Attributes are numeric
+- The data has no missing values
+= This makes P(X|C) the product of individual P(xₖ|C).
+
+? Bayes' theorem is:
++ P(H|X) = P(X|H) · P(H) ÷ P(X)
+- P(H|X) = P(H) ÷ P(X|H)
+- P(X|H) = P(H|X) · P(X)
+- P(H|X) = P(X) · P(H)
+= P(H|X) is the posterior; P(H) is the prior.
+
+? P(S|M) = 0.5, P(M) = 1/50,000, P(S) = 1/20. What is P(M|S)?
+# 0.0002 ~0.00001
+= 0.5 × (1/50,000) ÷ (1/20) = 0.0002.
+
+? To classify X, naive Bayes chooses the class that maximises:
++ P(X|Cᵢ) · P(Cᵢ)
+- P(X)
+- P(Cᵢ) only
+- P(X|Cᵢ) ÷ P(Cᵢ)
+= P(X) is the same for every class, so it can be ignored.
+
+? Of 9 "yes" tuples, 2 have age ≤ 30. What is P(age ≤ 30 | yes) (3 decimals)?
+# 0.222 ~0.001
+= 2 ÷ 9 = 0.222.
+
+? For a continuous attribute such as age, naive Bayes usually estimates P(xₖ|Cᵢ) with:
++ A Gaussian (normal) density using the class mean and standard deviation
+- A simple count
+- The median
+- A decision tree
+= g(x, μ, σ) = 1/(√(2π)σ) · e^(−(x−μ)²/2σ²).
+
+? A zero count (e.g. no "no" tuple with income = high) makes the whole product zero. The fix is:
++ The Laplacian correction (add 1 to each count)
+- Delete the attribute
+- Multiply by 100
+- Use gain ratio
+= The corrected estimates stay close to the originals.
+
+? Final scores: yes = 0.044 × 0.643 = 0.028; no = 0.019 × 0.357 = 0.007. The predicted class is:
++ yes
+- no
+- Can't decide
+- Both
+= The larger P(X|C)·P(C) wins.
+
+? Rule R1 covers 2 of 14 tuples and classifies both correctly. What is its coverage (%)?
+# 14.29 ~0.05
+= 2 ÷ 14 = 14.29%; accuracy = 2 ÷ 2 = 100%.
+
+? Rules extracted from a decision tree (one per root-to-leaf path) are:
++ Mutually exclusive and exhaustive
+- Always overlapping
+- Unordered and incomplete
+- Always fewer than the leaves
+= Each tuple is covered by exactly one rule.
+
+? Bayesian belief networks improve on naive Bayes by:
++ Allowing dependencies between attributes, shown in a graph
+- Removing probabilities
+- Using only one attribute
+- Needing no training data
+= They model conditional dependencies with a directed acyclic graph and probability tables.

@@ -1,0 +1,76 @@
+? User-centred design (UCD) differs from specification-driven design because UCD:
++ Involves real users throughout, to discover what we don't know about them
+- Assumes the users' needs from a specification
+- Never tests with users
+- Is only for games
+= Spec-driven systems can meet 100% of the spec and still fail adoption.
+
+? Design guidelines in UCD are:
++ Necessary but not sufficient, because usability depends on context
+- Sufficient on their own
+- Unnecessary
+- Only for hardware
+= You still need to involve users.
+
+? Which is **not** one of the eight user characteristics?
+- Role
+- Age
+- Computer literacy
++ Shoe size
+= The rest: gender, education, culture, interests, professional level.
+
+? Personas are:
++ Concrete profiles representing user types, instead of an "average user"
+- Real customers' passwords
+- Marketing slogans
+- System requirements documents
+= They keep the design focused on real kinds of people.
+
+? Which is one of the six ISO 9241-210 principles?
++ The design is driven and refined by user-centred evaluation
+- Ship first, test later
+- Avoid user involvement
+- Design only for experts
+= The others: understand users and context, involve users, iterate, address the whole UX, multidisciplinary teams.
+
+? The design life cycle stages, in order, are:
++ Requirements (needfinding) → design alternatives → prototype → evaluate (and loop)
+- Code → test → design → requirements
+- Prototype → requirements → release → evaluate
+- Evaluate → code → deploy → stop
+= It's iterative: evaluation feeds back into requirements.
+
+? Paper prototypes are:
++ Low fidelity: cheap and quick, for early ideas
+- High fidelity
+- The final product
+- Not prototypes
+= High-fidelity prototypes are clickable and realistic.
+
+? Fixing a usability problem late in development can cost up to:
++ About 100 times more than fixing it early
+- The same
+- Less
+- Twice as much at most
+= That's why we iterate early.
+
+? In the Moodle example, the photocopy shop that uses reports from the system is a:
+- Primary stakeholder
++ Secondary stakeholder
+- Tertiary stakeholder
+- Not a stakeholder
+= Secondary stakeholders use the system's output without using the interface.
+
+? People affected by a system without ever interacting with it or its output are:
+- Primary stakeholders
+- Secondary stakeholders
++ Tertiary stakeholders
+- Developers
+= Example: sanitation workers affected by a municipal system.
+
+? Students and lecturers using Moodle directly are:
++ Primary stakeholders
+- Secondary stakeholders
+- Tertiary stakeholders
+- Competitors
+= Primary stakeholders use the interface itself.

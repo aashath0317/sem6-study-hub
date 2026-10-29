@@ -1,0 +1,70 @@
+? An n-ary relation on A₁, …, Aₙ is:
++ A subset of A₁ × A₂ × ⋯ × Aₙ
+- A function with n inputs
+- A set of n numbers
+- Always binary
+= The Aᵢ are its domains, and n is its degree.
+
+? A relation of student records (name, index, area, GPA) has degree:
+# 4
+= The degree is the number of fields in each tuple.
+
+? A **primary key** is:
++ A field whose value uniquely identifies each tuple
+- Any field with numbers
+- The first column always
+- A field that repeats
+= E.g. a student index number.
+
+? Which is the most suitable primary key for students?
++ Student index number
+- Name
+- Phone number
+- GPA
+= Names and phone numbers can repeat or change.
+
+? A combination of fields that together identify each tuple uniquely is a:
++ Composite key
+- Projection
+- Selection
+- Join
+= E.g. Area × GPA in the lecture's table.
+
+? The current set of tuples in a relation is its:
++ Extension
+- Intension
+- Degree
+- Domain
+= The intension is the permanent name and attributes.
+
+? Selection S꜀ does what?
++ Keeps the rows (tuples) that satisfy condition C
+- Keeps the chosen columns
+- Combines two tables
+- Sorts the table
+= E.g. Area = CS ∧ GPA > 3.5 keeps only Ackermann.
+
+? Applying projection P₁,₃ to (2, 3, 0, 4) gives:
++ (2, 0)
+- (2, 3)
+- (3, 4)
+- (2, 3, 0)
+= Keep the 1st and 3rd components.
+
+? After a projection, the number of rows can:
++ Decrease, because identical rows merge
+- Only increase
+- Never change
+- Double
+= Rows that become identical after dropping columns are merged.
+
+? A **join** combines two relations by:
++ Matching tuples on their common fields
+- Keeping only the first table
+- Deleting duplicate columns only
+- Sorting both tables
+= E.g. joining on Department or Course_code.
+
+? How many 3-tuples (a, b, c) satisfy 0 < a < b < c < 5 with integer values?
+# 4
+= (1,2,3), (1,2,4), (1,3,4), (2,3,4).

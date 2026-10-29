@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 12 · Needfinding — Understanding Users, Biases &amp; Requirement-Gathering Methods — Human Computer Interaction</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="hci-Week12">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Human Computer Interaction</a> › Week 12</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Human Computer Interaction · Week 12</div><h1>Needfinding — Understanding Users, Biases &amp; Requirement-Gathering Methods</h1><p>The first stage of the design life cycle: why needfinding matters, the seven questions about users and context, five biases and how to avoid them, and every method (naturalistic and participant observation, hacks and workarounds, apprenticeship, interviews, focus groups, think-aloud, questionnaires, documentation) through to representing the needs.</p><div class="meta"><span class="chip">ITE3752</span><span class="chip">6 videos · 60 min</span><span class="chip">📄 Lecture videos (no PDF for this week)</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Needfinding: Basics · 21 min</button><button>2. Methods 1: Observation · 12 min</button><button>3. Methods 2: Apprenticeship &amp; Interviews · 6 min</button><button>4. Methods 3: Interview Types &amp; Focus Groups · 9 min</button><button>5. Methods 4: Think-Aloud · 4 min</button><button>6. Methods 5: Questionnaires, Documentation &amp; Representing Needs · 9 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3752-25S2- Needfinding-Basics - CODL-UOM.mp4"><source src="ITE3752-25S2-%20Needfinding-Basics%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Needfinding: Basics</p><p class="vs">The design life cycle revisited, what needfinding is, the seven questions, and the five biases with their remedies.</p><a href="#" data-v="0" data-t="1"><b>00:01</b><span>Revisiting the design life cycle</span></a><a href="#" data-v="0" data-t="32"><b>00:32</b><span>Four stages: requirements → alternatives → prototyping → evaluation</span></a><a href="#" data-v="0" data-t="179"><b>02:59</b><span>Evaluation sends you back to the requirements</span></a><a href="#" data-v="0" data-t="246"><b>04:06</b><span>Needfinding: understanding the user and the context</span></a><a href="#" data-v="0" data-t="277"><b>04:37</b><span>Cover as many types of users as possible</span></a><a href="#" data-v="0" data-t="313"><b>05:13</b><span>Avoid preconceptions</span></a><a href="#" data-v="0" data-t="424"><b>07:04</b><span>The seven questions about users and context</span></a><a href="#" data-v="0" data-t="630"><b>10:30</b><span>Biases: what they are and why they matter</span></a><a href="#" data-v="0" data-t="663"><b>11:03</b><span>The five biases</span></a><a href="#" data-v="0" data-t="681"><b>11:21</b><span><ol>
+<li>Confirmation bias</li>
+</ol></span></a><a href="#" data-v="0" data-t="783"><b>13:03</b><span><ol start="2">
+<li>Observer bias</li>
+</ol></span></a><a href="#" data-v="0" data-t="878"><b>14:38</b><span><ol start="3">
+<li>Social desirability bias</li>
+</ol></span></a><a href="#" data-v="0" data-t="980"><b>16:20</b><span><ol start="4">
+<li>Voluntary response bias</li>
+</ol></span></a><a href="#" data-v="0" data-t="1106"><b>18:26</b><span><ol start="5">
+<li>Recall bias</li>
+</ol></span></a><a href="#" data-v="0" data-t="1198"><b>19:58</b><span>Use multiple needfinding methods</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Need Finding Methods - Observation_Final.mkv"><source src="Need%20Finding%20Methods%20-%20Observation_Final.mkv"></video></div><div class="chap"><p class="vt">Methods 1: Observation</p><p class="vs">Naturalistic and participant observation, hacks and workarounds, errors, direct vs indirect observation.</p><a href="#" data-v="1" data-t="1"><b>00:01</b><span>Needfinding methods overview</span></a><a href="#" data-v="1" data-t="35"><b>00:35</b><span>Why needfinding is the most important stage</span></a><a href="#" data-v="1" data-t="70"><b>01:10</b><span>Naturalistic observation</span></a><a href="#" data-v="1" data-t="166"><b>02:46</b><span>Limitations: ethics; you can't know what users think</span></a><a href="#" data-v="1" data-t="266"><b>04:26</b><span>Tips for naturalistic observation</span></a><a href="#" data-v="1" data-t="329"><b>05:29</b><span>Participant observation: subjective participant + objective observer</span></a><a href="#" data-v="1" data-t="428"><b>07:08</b><span>Concern: you are not the user</span></a><a href="#" data-v="1" data-t="459"><b>07:39</b><span>What to look for: hacks and workarounds</span></a><a href="#" data-v="1" data-t="528"><b>08:48</b><span>Example: ATM withdrawal vs depositing a cheque at the counter</span></a><a href="#" data-v="1" data-t="590"><b>09:50</b><span>What to look for: errors (slips and mistakes)</span></a><a href="#" data-v="1" data-t="626"><b>10:26</b><span>Direct vs indirect observation</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Needfinding Methods - Part 2_Final.mkv"><source src="Needfinding%20Methods%20-%20Part%202_Final.mkv"></video></div><div class="chap"><p class="vt">Methods 2: Apprenticeship &amp; Interviews</p><p class="vs">Apprenticeship and ethnography, interview types, tips, and unstructured interviews.</p><a href="#" data-v="2" data-t="1"><b>00:01</b><span>Apprenticeship: for complex tasks</span></a><a href="#" data-v="2" data-t="36"><b>00:36</b><span>Ethnography: become part of the community</span></a><a href="#" data-v="2" data-t="116"><b>01:56</b><span>Interviews: a conversation with a purpose</span></a><a href="#" data-v="2" data-t="150"><b>02:30</b><span>Four types of interview</span></a><a href="#" data-v="2" data-t="182"><b>03:02</b><span>Interview tips: the 5W + H questions</span></a><a href="#" data-v="2" data-t="243"><b>04:03</b><span>Practise the interview first</span></a><a href="#" data-v="2" data-t="279"><b>04:39</b><span>Unstructured (open-ended) interviews</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Need Finding Methods - Part 3 Final.mkv"><source src="Need%20Finding%20Methods%20-%20Part%203%20Final.mkv"></video></div><div class="chap"><p class="vt">Methods 3: Interview Types &amp; Focus Groups</p><p class="vs">Open-ended pros and cons, structured and semi-structured interviews, leading questions, and focus groups.</p><a href="#" data-v="3" data-t="2"><b>00:02</b><span>Benefits of open-ended interviews</span></a><a href="#" data-v="3" data-t="69"><b>01:09</b><span>Concerns: unstructured data, time-consuming</span></a><a href="#" data-v="3" data-t="99"><b>01:39</b><span>Structured interviews: same questions, same order, closed</span></a><a href="#" data-v="3" data-t="168"><b>02:48</b><span>Example: most comfortable device for email</span></a><a href="#" data-v="3" data-t="202"><b>03:22</b><span>When structured interviews fit</span></a><a href="#" data-v="3" data-t="233"><b>03:53</b><span>Semi-structured interviews: the hybrid</span></a><a href="#" data-v="3" data-t="297"><b>04:57</b><span>Don't preempt answers (the yellow background example)</span></a><a href="#" data-v="3" data-t="328"><b>05:28</b><span>Use prompts</span></a><a href="#" data-v="3" data-t="360"><b>06:00</b><span>Focus groups: 3–10 people and a facilitator</span></a><a href="#" data-v="3" data-t="424"><b>07:04</b><span>Benefits of focus groups</span></a><a href="#" data-v="3" data-t="489"><b>08:09</b><span>Concerns: dominant participants</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Need finfing Methods -Part 4 - Final.mkv"><source src="Need%20finfing%20Methods%20-Part%204%20-%20Final.mkv"></video></div><div class="chap"><p class="vt">Methods 4: Think-Aloud</p><p class="vs">The think-aloud protocol and its limitations.</p><a href="#" data-v="4" data-t="11"><b>00:11</b><span>The problem: observers can't see thoughts</span></a><a href="#" data-v="4" data-t="45"><b>00:45</b><span>Think-aloud: users voice what they're doing</span></a><a href="#" data-v="4" data-t="81"><b>01:21</b><span>Example: sending an email</span></a><a href="#" data-v="4" data-t="116"><b>01:56</b><span>Best in controlled environments</span></a><a href="#" data-v="4" data-t="151"><b>02:31</b><span>Link to task analysis (HTA, GOMS)</span></a><a href="#" data-v="4" data-t="183"><b>03:03</b><span>Concerns: thinking aloud changes behaviour; retrospective recall</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Need finfing Methods -Part 5 - Final.mkv"><source src="Need%20finfing%20Methods%20-Part%205%20-%20Final.mkv"></video></div><div class="chap"><p class="vt">Methods 5: Questionnaires, Documentation &amp; Representing Needs</p><p class="vs">Questionnaire tips, studying documentation, and formalising the needs.</p><a href="#" data-v="5" data-t="40"><b>00:40</b><span>Questionnaires: reaching many users at once</span></a><a href="#" data-v="5" data-t="107"><b>01:47</b><span>Every question needs a real purpose</span></a><a href="#" data-v="5" data-t="204"><b>03:24</b><span>Survey tips: less is more, avoid bias, tie to inventory, test, iterate</span></a><a href="#" data-v="5" data-t="358"><b>05:58</b><span>Studying documentation: reports, policies, manuals, procedures</span></a><a href="#" data-v="5" data-t="426"><b>07:06</b><span>Representing the needs: task lists and hierarchies, diagrams, flowcharts</span></a><a href="#" data-v="5" data-t="497"><b>08:17</b><span>Handing over to design alternatives and prototyping</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Where needfinding fits"><span class="num">1</span>Where needfinding fits</h2><p>The <strong>design life cycle</strong> (Week 11) has <strong>four iterative stages</strong> <a class="ts" href="#" data-v="0" data-t="32">00:32</a>:</p>
+<div class="flow"><span><ol>
+<li>Needfinding (establish requirements)</li>
+</ol></span><span><ol start="2">
+<li>Design alternatives</li>
+</ol></span><span><ol start="3">
+<li>Prototyping</li>
+</ol></span><span><ol start="4">
+<li>Evaluation</li>
+</ol></span></div>
+<ul>
+<li>You <strong>design as many alternatives as possible</strong>, <strong>prototype</strong> the best one or few, then <strong>evaluate</strong>.</li>
+<li>If the evaluation shows the prototype <strong>doesn't meet the real requirement</strong>, you <strong>go back to needfinding</strong> <a class="ts" href="#" data-v="0" data-t="179">02:59</a>.</li>
+</ul>
+<div class="call key"><div class="ct">Needfinding</div><p><strong>Needfinding</strong> is about <strong>understanding the user and understanding the context</strong> <a class="ts" href="#" data-v="0" data-t="246">04:06</a>. It's the <strong>first and most important</strong> stage: if needs are identified wrongly, every later design and prototype will be inadequate <a class="ts" href="#" data-v="1" data-t="35">00:35</a>.</p>
+<p><strong>Three rules:</strong></p>
+<ul>
+<li><strong>Cover as many types of users as possible</strong>, not just a few.</li>
+<li><strong>Avoid preconceptions.</strong></li>
+<li>Find out <strong>who the user is, what they're doing, and what they need</strong>.</li>
+</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="The seven questions"><span class="num">2</span>The seven questions</h2><p>Use these to understand users and their context properly <a class="ts" href="#" data-v="0" data-t="424">07:04</a>:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Question</th>
+<th>What it reveals</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Who are the users?</strong> Age, gender, level of expertise</td>
+<td>Preferences, skills, attitudes, capabilities</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Where are the users?</strong> Their environment</td>
+<td>The types of things they engage with</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>What is the context of the task?</strong> And <strong>what else competes for their attention</strong>?</td>
+<td>What the interface should look like</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>What are their goals?</strong> What are they trying to accomplish?</td>
+<td>Found by <strong>observing or asking</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>What do they need right now?</strong> Physical objects, information, collaborators</td>
+<td>Their goal may not be their immediate need</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>What are their tasks?</strong> What they do <strong>physically, cognitively and socially</strong></td>
+<td>The interactions that will take place</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>What are their subtasks?</strong> How they do it, step by step</td>
+<td>Users' expectations of the interface</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Biases in needfinding"><span class="num">3</span>Biases in needfinding</h2><div class="call key"><div class="ct">Bias</div><p>A <strong>bias</strong> is an <strong>attachment to a particular idea</strong>: a preference or <strong>preconception</strong>. Biases come from <strong>preconceived notions, human prejudices and limitations</strong>. They <strong>unbalance requirements gathering</strong>, so the results won't reveal users' <strong>real</strong> requirements <a class="ts" href="#" data-v="0" data-t="630">10:30</a>.</p></div>
+<table>
+<thead>
+<tr>
+<th>Bias</th>
+<th>What happens</th>
+<th>How to avoid it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Confirmation bias</strong> <a class="ts" href="#" data-v="0" data-t="681">11:21</a></td>
+<td>We <strong>notice what confirms our preconceptions</strong> and miss what contradicts them</td>
+<td><strong>Look specifically for where you're wrong</strong>. <strong>Test beliefs empirically</strong> (observation, user studies). <strong>Involve many people</strong>, whose different biases balance out</td>
+</tr>
+<tr>
+<td><strong>2. Observer bias</strong> <a class="ts" href="#" data-v="0" data-t="783">13:03</a></td>
+<td>We <strong>subconsciously influence users</strong>: more help for some, <strong>questions biased towards "favourites"</strong></td>
+<td><strong>Separate the experimenter's motives</strong> from the participant. <strong>Script the interactions</strong> step by step. Have <strong>someone else review the script</strong></td>
+</tr>
+<tr>
+<td><strong>3. Social desirability bias</strong> <a class="ts" href="#" data-v="0" data-t="878">14:38</a></td>
+<td>People are <strong>nice and supportive</strong>. Told you're the designer, they <strong>say good things</strong> and hide the negatives</td>
+<td><strong>Hide or discount socially desirable responses</strong>. Use <strong>naturalistic observation</strong>, where nobody sees you as separate. Record <strong>objective data</strong></td>
+</tr>
+<tr>
+<td><strong>4. Voluntary response bias</strong> <a class="ts" href="#" data-v="0" data-t="980">16:20</a></td>
+<td>In voluntary surveys, people with <strong>extremely good or extremely bad</strong> views reply; the <strong>average majority is missing</strong></td>
+<td><strong>Limit what you reveal before they begin</strong>, so they can't prepare answers. <strong>Confirm volunteers' conclusions with other methods</strong></td>
+</tr>
+<tr>
+<td><strong>5. Recall bias</strong> <a class="ts" href="#" data-v="0" data-t="1106">18:26</a></td>
+<td><strong>Memory decay</strong>: users <strong>can't recall</strong> later how they felt or what they did. (Forgetting is a "blessing": it makes room for new things)</td>
+<td>Collect data <strong>during the activity</strong>. Ask users to <strong>think aloud</strong> while doing it</td>
+</tr>
+</tbody>
+</table>
+<div class="call tip"><div class="ct">The master rule <a class="ts" href="#" data-v="0" data-t="1198">19:58</a></div><p><strong>Use multiple needfinding methods.</strong> Each method's bias is checked by the others.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Needfinding methods"><span class="num">4</span>Needfinding methods</h2><h3 id="1-naturalistic-observation">1. Naturalistic observation</h3>
+<p><strong>Observe people in their natural context</strong>: you <strong>just watch</strong>, without interfering <a class="ts" href="#" data-v="1" data-t="70">01:10</a>.</p>
+<ul>
+<li><strong>Start specific:</strong> note everything. <strong>Summarise and generalise later</strong> into abstract tasks.</li>
+<li><strong>Pros:</strong></li>
+<li>a <strong>vast amount of information</strong></li>
+<li>shows the <strong>start and end and the frequency</strong> of tasks</li>
+<li>very informative about the <strong>problem space</strong></li>
+<li>helps you find <strong>questions to ask later</strong></li>
+<li><strong>Limitations:</strong></li>
+<li><strong>ethics:</strong> you <strong>can't interact</strong> with users, and <strong>can't video, photograph or voice-record</strong> them. You only take notes.</li>
+<li>you <strong>can't know what users think</strong>: "you can guess but you will never know" <a class="ts" href="#" data-v="1" data-t="231">03:51</a></li>
+<li><strong>high risk of confirmation bias</strong></li>
+</ul>
+<div class="call tip"><div class="ct">Tips for naturalistic observation <a class="ts" href="#" data-v="1" data-t="266">04:26</a></div><ol>
+<li><strong>Take notes</strong> of everything.</li>
+<li><strong>Start specific</strong>; abstract later.</li>
+<li><strong>Spread out sessions</strong> to cover many situations.</li>
+<li><strong>Bring a partner</strong>: different eyes reduce confirmation bias.</li>
+<li><strong>Look for questions</strong> to ask later.</li>
+</ol></div>
+<h3 id="2-participant-observation">2. Participant observation</h3>
+<p><strong>You take part in the task yourself</strong> <a class="ts" href="#" data-v="1" data-t="329">05:29</a>. The designer plays <strong>two roles at once</strong>:</p>
+<ul>
+<li>a <strong>subjective participant</strong>, who gains insight into the task</li>
+<li>an <strong>objective observer</strong>, who records everything</li>
+</ul>
+<p>Others <strong>may or may not know</strong> you're observing. You join the team <strong>for an extended period</strong>.</p>
+<div class="call warn"><div class="ct">Concern</div><p><strong>You are not the user.</strong> You're still an outsider. Use the insights, but <strong>don't over-represent your own experience</strong> in the design <a class="ts" href="#" data-v="1" data-t="428">07:08</a>.</p></div>
+<h3 id="what-to-look-for-when-observing-0739">What to look for when observing <a class="ts" href="#" data-v="1" data-t="459">07:39</a></h3>
+<ul>
+<li><strong>Hacks and workarounds:</strong> users <strong>bypassing the interface</strong> to get something done. These reveal tasks that are <strong>available but not user-friendly</strong>.</li>
+<li><em>Example:</em> someone uses the <strong>ATM to withdraw</strong> cash, but distrusts its <strong>cheque deposit</strong> and <strong>walks to the counter</strong> instead <a class="ts" href="#" data-v="1" data-t="528">08:48</a>.</li>
+<li><strong>Errors:</strong></li>
+<li><strong>slips</strong> suggest a <strong>design change</strong></li>
+<li><strong>mistakes</strong> need wider rethinking (Week 8)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Direct observation</strong> <a class="ts" href="#" data-v="1" data-t="626">10:26</a></th>
+<th><strong>Indirect observation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In context (naturalistic or participant) or in a <strong>controlled environment</strong> (a usability lab)</td>
+<td>The observer <strong>can't be present</strong>: <strong>diaries</strong>, <strong>interaction logs</strong>, <strong>analytics</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-apprenticeship-ethnography">3. Apprenticeship (ethnography)</h3>
+<p>For <strong>complex tasks</strong>, where watching isn't enough <a class="ts" href="#" data-v="2" data-t="1">00:01</a>:</p>
+<ul>
+<li>The designer <strong>joins the community</strong>, becomes "<strong>one of them</strong>", and <strong>learns the task</strong> over a long period until they're an <strong>expert</strong>.</li>
+<li>The users <strong>educate the designer</strong>, who is the <strong>apprentice</strong>. The designer then builds an interface to help that community.</li>
+<li>The method comes from <strong>sociology and ethnography</strong>.</li>
+</ul>
+<h3 id="4-interviews-a-conversation-with-a-purpose-0156">4. Interviews: "a conversation with a purpose" <a class="ts" href="#" data-v="2" data-t="116">01:56</a></h3>
+<p><strong>Tips for effective interviewing:</strong></p>
+<ol>
+<li>Focus on <strong>5W + H</strong>: <strong>who</strong> does it, <strong>what</strong> they do, <strong>where</strong>, <strong>when</strong>, <strong>why</strong>, and <strong>how</strong>.</li>
+<li><strong>Avoid biases.</strong></li>
+<li><strong>Listen carefully.</strong></li>
+<li><strong>Organise and plan</strong>: it isn't ad hoc.</li>
+<li><strong>Practise</strong> with a friend or co-worker first.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Questions</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unstructured (open-ended)</strong> <a class="ts" href="#" data-v="2" data-t="279">04:39</a></td>
+<td><strong>Open</strong>, exploratory; a conversation around a topic; the interviewer still has a <strong>plan of topics</strong></td>
+<td><strong>Rich, deep, interrelated data</strong>; interviewees raise <strong>issues you never thought of</strong> <a class="ts" href="#" data-v="3" data-t="2">00:02</a></td>
+<td><strong>Unstructured data</strong>; <strong>inconsistent</strong> across participants; <strong>time-consuming</strong> to run and analyse</td>
+</tr>
+<tr>
+<td><strong>Structured</strong> <a class="ts" href="#" data-v="3" data-t="99">01:39</a></td>
+<td><strong>Predefined, short, closed</strong> questions; <strong>same wording and same order</strong> for everyone. E.g. "Which device is most comfortable for email? Laptop / PC / tablet / phone"</td>
+<td><strong>Standardised</strong>; quick to analyse</td>
+<td>Fits only <strong>clear goals and a limited range of answers</strong>, or limited time</td>
+</tr>
+<tr>
+<td><strong>Semi-structured</strong> <a class="ts" href="#" data-v="3" data-t="233">03:53</a></td>
+<td><strong>Hybrid</strong> of open and closed. Order: specific → open, open → specific, or structured → open → structured</td>
+<td>Balance of depth and consistency</td>
+<td>Needs skill</td>
+</tr>
+<tr>
+<td><strong>Focus group</strong> <a class="ts" href="#" data-v="3" data-t="360">06:00</a></td>
+<td><strong>3–10 people</strong> led by a <strong>trained facilitator</strong>; choose <strong>all types of users</strong></td>
+<td>People share perspectives; <strong>reveals conflicting expectations</strong>; raises <strong>diverse or sensitive issues</strong>; good for <strong>shared issues</strong></td>
+<td><strong>Dominant talkers</strong>; the <strong>minority stays quiet</strong>; <strong>not for individual experience</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="call warn"><div class="ct">Don't preempt answers <a class="ts" href="#" data-v="3" data-t="297">04:57</a></div><p>❌ "You seem to like yellow as the background, don't you?" leads the user.</p>
+<p>✅ "<strong>Which colour would you like as the background?</strong>"</p>
+<p>End by <strong>prompting</strong>: "Is there anything else you'd like to tell us?"</p></div>
+<h3 id="5-think-aloud-protocol">5. Think-aloud protocol</h3>
+<p>Observers <strong>can't see what users think</strong>, and in naturalistic observation <strong>you can't talk to them</strong>. So you ask users to <strong>voice what they're doing as they do it</strong> <a class="ts" href="#" data-v="4" data-t="45">00:45</a>.</p>
+<div class="call example"><div class="ct">Sending an email, thinking aloud <a class="ts" href="#" data-v="4" data-t="81">01:21</a></div><p>"First I choose which email client to use… I open it… I click <strong>New message</strong>… I pick the saved recipient… type the subject… compose the body… attach the file… and click <strong>Send</strong>."</p></div>
+<ul>
+<li>It's best done in a <strong>controlled environment</strong>.</li>
+<li>It feeds <strong>task analysis</strong> (HTA, GOMS: Weeks 9–10).</li>
+</ul>
+<p><strong>Concerns</strong> <a class="ts" href="#" data-v="4" data-t="183">03:03</a>:</p>
+<ul>
+<li><strong>Thinking aloud changes behaviour:</strong> users become <strong>deliberate and unnatural</strong>.</li>
+<li>If you ask <strong>afterwards</strong> instead, users <strong>forget</strong> (recall bias).</li>
+<li><strong>Compromise:</strong> ask <strong>immediately after</strong> the task (<strong>retrospective think-aloud</strong>). Memory is fresh and performance isn't disturbed.</li>
+</ul>
+<h3 id="6-questionnaires-surveys">6. Questionnaires (surveys)</h3>
+<p>These <strong>reach many users at once</strong> without taxing the designer's time <a class="ts" href="#" data-v="5" data-t="40">00:40</a>. <strong>Every question must have a real purpose.</strong></p>
+<div class="call tip"><div class="ct">Five tips for effective surveys <a class="ts" href="#" data-v="5" data-t="204">03:24</a></div><ol>
+<li><strong>Less is more:</strong> the minimum number of questions gives <strong>higher response rates</strong> and more reliable data.</li>
+<li><strong>Be aware of biases:</strong> no leading phrasing.</li>
+<li><strong>Tie to inventory:</strong> <strong>map every question to a data item you need</strong>. If it doesn't map, <strong>drop it</strong>.</li>
+<li><strong>Test it</strong> on friends or co-workers before sending it out.</li>
+<li><strong>Iterate:</strong> deploy, review what you collected, redesign for the next round.</li>
+</ol></div>
+<h3 id="7-studying-documentation-passive">7. Studying documentation (passive)</h3>
+<p><strong>Scrutinise existing documents</strong> <a class="ts" href="#" data-v="5" data-t="358">05:58</a>:</p>
+<ul>
+<li><strong>usability reports</strong>: feedback forms, summaries, reviews</li>
+<li><strong>company reports</strong>, which show what the company really needs</li>
+<li><strong>policy documents</strong>, which show the <strong>constraints</strong> on the design</li>
+<li><strong>user training manuals</strong>, which show what happens with the <strong>current</strong> interfaces</li>
+<li><strong>guideline and procedure documents</strong></li>
+</ul><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Representing the needs"><span class="num">5</span>Representing the needs</h2><p>Finally, <strong>formalise</strong> the needs you identified <a class="ts" href="#" data-v="5" data-t="426">07:06</a>:</p>
+<ul>
+<li>Make a <strong>list of tasks</strong>, then break them into <strong>subtasks</strong> down to the real operations (like HTA in Week 10).</li>
+<li>Represent them <strong>graphically</strong>: annotated hierarchies, <strong>flowcharts</strong> or other diagrams.</li>
+</ul>
+<p>This is the input to <strong>design alternatives</strong>, then <strong>prototyping</strong> and <strong>production</strong>.</p>
+<div class="tool"><div class="tt">🧪 Try it — Needfinding method planner</div><div id="nf">
+<p class="note">Describe your situation. The planner recommends a mix of methods and warns about the biases to watch.</p>
+<div class="row" style="flex-direction:column;align-items:flex-start">
+<label><input type="checkbox" class="cx"> The task is complex or expert-level</label>
+<label><input type="checkbox" class="th"> I need to know what users are thinking</label>
+<label><input type="checkbox" class="mn"> I need views from many users (dozens or hundreds)</label>
+<label><input type="checkbox" class="na"> I must not disturb users in their real setting</label>
+<label><input type="checkbox" class="ab"> The observer can't be present</label>
+<label><input type="checkbox" class="dp"> I need deep, rich insight from a few users</label>
+<label><input type="checkbox" class="cf"> I want to surface conflicting expectations between user groups</label>
+<label><input type="checkbox" class="tm"> Time is very limited and the questions are clear</label>
+<label><input type="checkbox" class="dc"> The organisation has existing reports, manuals and policies</label>
+</div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('nf');function c(k){return R.querySelector('.'+k).checked}
+var M={'Naturalistic observation':['na'],'Participant observation':['cx','dp'],'Apprenticeship':['cx'],'Think-aloud':['th'],'Unstructured interview':['dp','th'],'Structured interview':['tm'],'Semi-structured interview':['dp','tm'],'Focus group':['cf','mn'],'Questionnaire':['mn','tm'],'Indirect observation (diaries, logs, analytics)':['ab','mn'],'Studying documentation':['dc']};
+var B={'Naturalistic observation':'confirmation bias: bring a partner','Participant observation':'over-representing yourself: you are not the user','Apprenticeship':'takes a long time','Think-aloud':'changes behaviour: use retrospective think-aloud','Unstructured interview':'observer bias: plan topics, avoid leading questions','Structured interview':'shallow answers','Semi-structured interview':'needs a skilled interviewer','Focus group':'dominant talkers: needs a trained facilitator','Questionnaire':'voluntary response bias: confirm with other methods','Indirect observation (diaries, logs, analytics)':'recall bias in diaries','Studying documentation':'documents may be out of date'};
+function run(){var sc=Object.keys(M).map(function(k){return [k,M[k].filter(c).length]}).filter(function(x){return x[1]>0}).sort(function(a,b){return b[1]-a[1]});
+R.querySelector('.out').innerHTML=sc.length?sc.map(function(x,i){return '<p>'+(i<3?'<span class="pill ok">recommended</span> ':'<span class="pill hi">also useful</span> ')+'<b>'+x[0]+'</b> <span class="note">· watch: '+B[x[0]]+'</span></p>'}).join('')+'<p class="note">Always combine at least two methods: each one checks the others\' biases.</p>':'<p class="note">Tick at least one situation.</p>'}R.addEventListener('change',run);run();})();
+</script></div>
+<div class="call exam"><div class="ct">Exam focus</div><p>Likely questions:</p>
+<ul>
+<li><strong>What needfinding is</strong>, and why it's the most important stage</li>
+<li>The <strong>seven questions</strong></li>
+<li><strong>Name, explain and give remedies for the five biases</strong> (a very common question)</li>
+<li><strong>Naturalistic vs participant observation</strong>, including pros, cons and tips</li>
+<li><strong>Hacks and workarounds</strong>, with the <strong>ATM example</strong></li>
+<li><strong>Direct vs indirect observation</strong></li>
+<li>The <strong>interview types</strong> with pros and cons, and <strong>5W + H</strong></li>
+<li><strong>Focus groups</strong></li>
+<li><strong>Think-aloud</strong> and its problems</li>
+<li>The five <strong>questionnaire tips</strong></li>
+<li>Sources of <strong>documentation</strong></li>
+</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Needfinding</td>
+<td>Understand the <strong>user + context</strong>; first and most important stage</td>
+</tr>
+<tr>
+<td>Seven questions</td>
+<td>Who · where · context · goals · needs now · tasks · subtasks</td>
+</tr>
+<tr>
+<td>Five biases</td>
+<td><strong>C</strong>onfirmation · <strong>O</strong>bserver · <strong>S</strong>ocial desirability · <strong>V</strong>oluntary response · <strong>R</strong>ecall</td>
+</tr>
+<tr>
+<td>Confirmation</td>
+<td>Seek where you're wrong; test empirically; many people</td>
+</tr>
+<tr>
+<td>Observer</td>
+<td>Script the interaction; separate motives; have the script reviewed</td>
+</tr>
+<tr>
+<td>Social desirability</td>
+<td>Naturalistic observation; discount nice answers</td>
+</tr>
+<tr>
+<td>Voluntary response</td>
+<td>Reveal little beforehand; confirm with other methods</td>
+</tr>
+<tr>
+<td>Recall</td>
+<td>Collect during the activity; think-aloud</td>
+</tr>
+<tr>
+<td>Naturalistic observation</td>
+<td>Just watch; no recording or talking; can't know thoughts</td>
+</tr>
+<tr>
+<td>Participant observation</td>
+<td>Participant (subjective) + observer (objective); you're not the user</td>
+</tr>
+<tr>
+<td>Look for</td>
+<td>Hacks and workarounds (ATM cheque) · errors (slips and mistakes)</td>
+</tr>
+<tr>
+<td>Indirect observation</td>
+<td>Diaries · interaction logs · analytics</td>
+</tr>
+<tr>
+<td>Apprenticeship</td>
+<td>Become an expert in complex tasks (ethnography)</td>
+</tr>
+<tr>
+<td>Interviews</td>
+<td>5W + H; unstructured · structured · semi-structured · focus group (3–10)</td>
+</tr>
+<tr>
+<td>Think-aloud</td>
+<td>Voice actions; changes behaviour → retrospective</td>
+</tr>
+<tr>
+<td>Survey tips</td>
+<td>Less is more · avoid bias · tie to inventory · test · iterate</td>
+</tr>
+<tr>
+<td>Representing needs</td>
+<td>Task and subtask lists, diagrams, flowcharts → design alternatives</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">13 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="hci-Week12" data-pick="0"><script type="application/json" class="qdata">[{"q": "Needfinding is mainly about:", "o": ["Understanding the user and understanding the context", "Writing code", "Choosing colours", "Testing the final product"], "e": "It's the first and most important stage of the design life cycle. ", "a": 0, "w": "Week 12"}, {"q": "Which is <strong>not<\/strong> one of the seven needfinding questions?", "o": ["Who are the users?", "What is the context of the task?", "What do they need right now?", "What programming language should we use?"], "e": "The others: where are the users, what are their goals, tasks and subtasks. ", "a": 3, "w": "Week 12"}, {"q": "Noticing only what supports your preconceptions is:", "o": ["Confirmation bias", "Recall bias", "Voluntary response bias", "Social desirability bias"], "e": "Fix it by looking for where you're wrong, testing empirically, and involving many people. ", "a": 0, "w": "Week 12"}, {"q": "Users saying only nice things because they know you're the designer is:", "o": ["Social desirability bias", "Observer bias", "Recall bias", "Confirmation bias"], "e": "Use naturalistic observation and discount overly nice answers. ", "a": 0, "w": "Week 12"}, {"q": "Mostly very happy and very angry people answering an optional survey is:", "o": ["Voluntary response bias", "Recall bias", "Observer bias", "Confirmation bias"], "e": "Confirm the conclusions with other methods. ", "a": 0, "w": "Week 12"}, {"q": "Users being unable to remember later how they felt during a task is:", "o": ["Recall bias", "Observer bias", "Social desirability bias", "Confirmation bias"], "e": "Collect data during the activity, e.g. by thinking aloud. ", "a": 0, "w": "Week 12"}, {"q": "The remedy for <strong>observer bias<\/strong> is to:", "o": ["Script the interactions and have someone else review the script", "Ask leading questions", "Help only your favourite users", "Avoid writing anything down"], "e": "Also separate the experimenter's motives from the participant. ", "a": 0, "w": "Week 12"}, {"q": "A limitation of <strong>naturalistic observation<\/strong> is that:", "o": ["You can't know what users are thinking, and you can't record or interact with them", "It gives very little information", "It requires users to fill in forms", "It's always biased in the user's favour"], "e": "You can guess but never know. ", "a": 0, "w": "Week 12"}, {"q": "A customer avoids the ATM's cheque deposit and walks to the counter instead. This is a:", "o": ["Workaround (a hack), revealing an unfriendly feature", "Slip", "Focus group", "Recall bias"], "e": "Look for hacks and workarounds when observing. ", "a": 0, "w": "Week 12"}, {"q": "Interviews that use the same predefined, closed questions in the same order for everyone are:", "o": ["Structured", "Unstructured (open-ended)", "Semi-structured", "Focus groups"], "e": "They suit clear goals, a limited range of answers, or limited time. ", "a": 0, "w": "Week 12"}, {"q": "A focus group usually has:", "o": ["3–10 people led by a trained facilitator", "1 person", "100+ people online", "No facilitator"], "e": "Risk: dominant talkers drown out the quiet ones. ", "a": 0, "w": "Week 12"}, {"q": "Which survey tip means \"every question must map to a data item you need\"?", "o": ["Tie to inventory", "Less is more", "Be aware of biases", "Iterate"], "e": "Drop any question that doesn't map to a required data item. ", "a": 0, "w": "Week 12"}, {"q": "The main concern with the think-aloud technique is:", "o": ["Thinking aloud makes users behave more deliberately and unnaturally", "It's too cheap", "It needs no users", "It always causes recall bias"], "e": "A compromise is retrospective think-aloud, done immediately after the task. ", "a": 0, "w": "Week 12"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2011/Week%2011%20-%20Study%20Guide.html"><small>← Previous</small>User-Centred Design &amp; the Design Life Cycle</a><span></span></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  function show(i){
+    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

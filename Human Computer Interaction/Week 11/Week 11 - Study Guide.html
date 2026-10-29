@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 11 · User-Centred Design &amp; the Design Life Cycle — Human Computer Interaction</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="hci-Week11">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Human Computer Interaction</a> › Week 11</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Human Computer Interaction · Week 11</div><h1>User-Centred Design &amp; the Design Life Cycle</h1><p>UCD vs specification-driven design, the 8 user characteristics, ISO 9241-210's 6 principles, the 4-phase iterative life cycle, and stakeholder-centred design (primary, secondary, tertiary).</p><div class="meta"><span class="chip">ITE3752</span><span class="chip">5 videos · 38 min</span><span class="chip">📄 Week 11 - User Centered Design &amp; Design Life Cycle.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. User Centred Design – Basics · 12 min</button><button>2. User Centred Design – Principles · 10 min</button><button>3. Characteristics of the User · 7 min</button><button>4. Design Life Cycle – in Brief · 4 min</button><button>5. Stakeholder-Centred Design · 5 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3752-25S2- User Centered Design Basics - CODL-UOM.mp4"><source src="ITE3752-25S2-%20User%20Centered%20Design%20Basics%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">User Centred Design – Basics</p><p class="vs">What UCD is and why users must be involved.</p><a href="#" data-v="0" data-t="2"><b>00:02</b><span>Introduction to user-centred design (UCD)</span></a><a href="#" data-v="0" data-t="48"><b>00:48</b><span>Why UCD: designing for users' tasks</span></a><a href="#" data-v="0" data-t="192"><b>03:12</b><span>Example: Facebook mimicking real-world social behaviour</span></a><a href="#" data-v="0" data-t="242"><b>04:02</b><span>The problem with new designs</span></a><a href="#" data-v="0" data-t="293"><b>04:53</b><span>Evaluate, improve, repeat</span></a><a href="#" data-v="0" data-t="346"><b>05:46</b><span>What makes UCD specific: involving users throughout</span></a><a href="#" data-v="0" data-t="445"><b>07:25</b><span>Recognise what we don't know about the user</span></a><a href="#" data-v="0" data-t="599"><b>09:59</b><span>Requirements → development → evaluation with users</span></a><a href="#" data-v="0" data-t="651"><b>10:51</b><span>Keep an open mind; get user feedback</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3752-25S2- User Centered Design Principles - CODL-UOM.mp4"><source src="ITE3752-25S2-%20User%20Centered%20Design%20Principles%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">User Centred Design – Principles</p><p class="vs">The principles that guide UCD.</p><a href="#" data-v="1" data-t="0"><b>00:00</b><span>UCD principles: user variability</span></a><a href="#" data-v="1" data-t="92"><b>01:32</b><span>Principle 5: multidisciplinary teams</span></a><a href="#" data-v="1" data-t="193"><b>03:13</b><span>Understanding users, tasks and context</span></a><a href="#" data-v="1" data-t="296"><b>04:56</b><span>Involving real users (interviews), not fake ones</span></a><a href="#" data-v="1" data-t="399"><b>06:39</b><span>Iteration: no interface is perfect at release</span></a><a href="#" data-v="1" data-t="495"><b>08:15</b><span>Know what users do and expect</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3752-25S2- Characteristics of User - CODL-UOM.mp4"><source src="ITE3752-25S2-%20Characteristics%20of%20User%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Characteristics of the User</p><p class="vs">The eight user characteristics and why the test group must be diverse.</p><a href="#" data-v="2" data-t="0"><b>00:00</b><span>Iterate until the user is satisfied; test with real users</span></a><a href="#" data-v="2" data-t="82"><b>01:22</b><span>Role and age</span></a><a href="#" data-v="2" data-t="132"><b>02:12</b><span>Gender and education level</span></a><a href="#" data-v="2" data-t="184"><b>03:04</b><span>Cultural background and interests</span></a><a href="#" data-v="2" data-t="283"><b>04:43</b><span>Professional level and computer skills</span></a><a href="#" data-v="2" data-t="329"><b>05:29</b><span>Involve a diverse blend of users at every step</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3752-25S2- Design Life Cycle - in Brief - CODL-UOM.mp4"><source src="ITE3752-25S2-%20Design%20Life%20Cycle%20-%20in%20Brief%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Design Life Cycle – in Brief</p><p class="vs">Requirements → alternatives → prototype → evaluate, and the loops back.</p><a href="#" data-v="3" data-t="7"><b>00:07</b><span>Establish requirements, then design alternatives</span></a><a href="#" data-v="3" data-t="82"><b>01:22</b><span>Not enough information? Go back to requirements</span></a><a href="#" data-v="3" data-t="147"><b>02:27</b><span>Hard to prototype? Revise the design alternative</span></a><a href="#" data-v="3" data-t="202"><b>03:22</b><span>Evaluation satisfied → final product; users involved at every stage</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3752-25S2- Stakeholder Centered Design - CODL-UOM.mp4"><source src="ITE3752-25S2-%20Stakeholder%20Centered%20Design%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Stakeholder-Centred Design</p><p class="vs">From users to stakeholders: primary, secondary, tertiary (with the Moodle example).</p><a href="#" data-v="4" data-t="47"><b>00:47</b><span>Stakeholders: anyone impacted by the design</span></a><a href="#" data-v="4" data-t="158"><b>02:38</b><span>Primary stakeholders = direct users</span></a><a href="#" data-v="4" data-t="217"><b>03:37</b><span>Secondary: interact with the output (Moodle → photocopy shop)</span></a><a href="#" data-v="4" data-t="273"><b>04:33</b><span>Tertiary: never touch the system or its output</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What is user-centred design (UCD)?"><span class="num">1</span>What is user-centred design (UCD)?</h2><p><strong>The goal of any new interface is to meet user needs better than existing designs or workarounds.</strong></p>
+<ul>
+<li>Most projects build interfaces for tasks people <strong>already do</strong> (often manually). The aim is <strong>not to invent a foreign activity</strong> but to <strong>do existing tasks more smoothly</strong>.</li>
+<li>Even genuinely new systems (like early <strong>Facebook</strong>) <strong>build on established human communication and social behaviour</strong> and on lessons from earlier chat and telecom systems.</li>
+</ul>
+<div class="call warn"><div class="ct">The trap of specification-driven design</div><p>Traditional software engineering builds around <strong>rigid, pre-agreed functional specifications</strong>. Developers <strong>assume</strong> they know what users want and <strong>never cross-check with real users</strong>. The result is <strong>100% functional compliance</strong> but <strong>failed adoption</strong>, because the system doesn't match real mental models.</p></div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>📋 <strong>Specification-driven design</strong></th>
+<th>🎯 <strong>User-centred design</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Focus</strong></td>
+<td><strong>System-centric</strong>: feature checklists, database efficiency, tidy architecture</td>
+<td><strong>Human-centric</strong>: starts by finding <strong>what we don't know</strong> about real users and their tasks</td>
+</tr>
+<tr>
+<td><strong>Users' needs</strong></td>
+<td><strong>Presumed</strong> in isolation</td>
+<td><strong>Discovered</strong> with active user involvement at every stage</td>
+</tr>
+<tr>
+<td><strong>Feedback</strong></td>
+<td>Little or none until release</td>
+<td><strong>Iterative evaluation</strong> of low- to high-fidelity prototypes</td>
+</tr>
+<tr>
+<td><strong>Outcome</strong></td>
+<td>High risk of <strong>resistance, errors, abandonment</strong></td>
+<td><strong>High usability</strong>, fast task completion, satisfaction</td>
+</tr>
+</tbody>
+</table>
+<div class="call key"><div class="ct">Why guidelines alone aren't enough</div><p>Knowing HCI guidelines and heuristics helps you <strong>avoid obvious pitfalls</strong>, but it <strong>never guarantees success</strong>. <strong>Usability is contextual.</strong> Success needs <strong>continuous contact with real users</strong> in their <strong>natural environment</strong>.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="The 8 user characteristics"><span class="num">2</span>The 8 user characteristics</h2><p>The user is the focal point, so analyse <strong>eight dimensions</strong> <a class="ts" href="#" data-v="2" data-t="82">01:22</a>:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Characteristic</th>
+<th>Influences</th>
+<th>Design example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>💼 <strong>Role</strong></td>
+<td>What the user <strong>does</strong>: goals, responsibilities, permissions, tasks</td>
+<td>Admin vs cashier screens</td>
+</tr>
+<tr>
+<td>2</td>
+<td>⏳ <strong>Age</strong></td>
+<td>Processing speed, working memory, eyesight, motor control</td>
+<td><strong>Elderly</strong>: more options and <strong>memory/recall aids</strong>, larger fonts <a class="ts" href="#" data-v="2" data-t="82">01:22</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>🎨 <strong>Gender</strong></td>
+<td>Preferences: colour theme, shape, texture, backdrop <a class="ts" href="#" data-v="2" data-t="132">02:12</a></td>
+<td>Theme options</td>
+</tr>
+<tr>
+<td>4</td>
+<td>🎓 <strong>Education level</strong></td>
+<td>How fast they <strong>acquire knowledge</strong>, <strong>reasoning</strong> ability, tolerance for jargon</td>
+<td>Plain language vs technical terms</td>
+</tr>
+<tr>
+<td>5</td>
+<td>🌍 <strong>Cultural background</strong></td>
+<td>Customs, habits, <strong>metaphors</strong>, reading direction (LTR/RTL), <strong>colour symbolism</strong> (red = danger or celebration), vocabulary, <strong>mode of interaction</strong> <a class="ts" href="#" data-v="2" data-t="184">03:04</a></td>
+<td>Localised icons and wording</td>
+</tr>
+<tr>
+<td>6</td>
+<td>💡 <strong>Interests</strong></td>
+<td><strong>Psychological</strong> likes and dislikes, motivation, willingness to explore</td>
+<td>Personalised content</td>
+</tr>
+<tr>
+<td>7</td>
+<td>🏢 <strong>Professional level</strong></td>
+<td>Familiarity with domain terms, workflows and charts <a class="ts" href="#" data-v="2" data-t="283">04:43</a></td>
+<td>Expert dashboards</td>
+</tr>
+<tr>
+<td>8</td>
+<td>⌨️ <strong>Computer literacy</strong></td>
+<td>Novices need <strong>wizards and signposts</strong>; experts want <strong>hotkeys</strong>. More skill means they expect less hand-holding</td>
+<td>Dual pathways</td>
+</tr>
+</tbody>
+</table>
+<div class="call tip"><div class="ct">Personas</div><p>There's <strong>no "average user"</strong>. Designers combine these 8 dimensions into concrete <strong>user personas</strong> (e.g. "Nimal, 62, retired teacher, low computer literacy, reads Sinhala") to guide design trade-offs.</p></div>
+<div class="call key"><div class="ct">Use a diverse user group <a class="ts" href="#" data-v="2" data-t="329">05:29</a></div><p>Users take part in <strong>every step</strong> of the life cycle, so recruit a group with a <strong>broad blend</strong> of these characteristics. A narrow group gives a narrow view of your design.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="ISO 9241-210: the 6 UCD principles"><span class="num">3</span>ISO 9241-210: the 6 UCD principles</h2><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Principle</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Explicit understanding of users, tasks and environments</strong></td>
+<td>Start from evidence about <strong>who</strong> the users are, <strong>what</strong> they do, and the <strong>physical, social and operational context</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Users involved throughout design and development</strong></td>
+<td>Not a one-off survey: contextual interviews, <strong>co-design / participatory design</strong>, usability trials across the whole life cycle</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Design driven and refined by user-centred evaluation</strong></td>
+<td>Real feedback drives every change. <strong>Formative</strong> testing on early sketches; <strong>summative</strong> testing on high-fidelity versions against benchmarks</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Iterative process</strong></td>
+<td>Never perfect first time: develop → test → critique → refine → test again</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Address the whole user experience</strong></td>
+<td>Beyond buttons: expectations, brand, emotion, onboarding, error recovery, support, responsiveness</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Multidisciplinary team</strong></td>
+<td>Engineers, UX/UI designers, cognitive psychologists, domain experts, ergonomists, technical writers, business stakeholders</td>
+</tr>
+</tbody>
+</table>
+<div class="call tip"><div class="ct">Memory hook: "U-I-E-I-W-M"</div><p><strong>U</strong>nderstand · <strong>I</strong>nvolve · <strong>E</strong>valuate · <strong>I</strong>terate · <strong>W</strong>hole UX · <strong>M</strong>ultidisciplinary</p></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="The 4-phase interaction design life cycle"><span class="num">4</span>The 4-phase interaction design life cycle</h2><figure><img src="Figure%2011.1.PNG" alt="Design life cycle"><figcaption>Figure 11.1: The 4-phase interaction design life cycle</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Establishing requirements (need-finding)</strong></td>
+<td>Find out <strong>who</strong> the users are, <strong>what tasks</strong> they must do, their <strong>constraints</strong> and the purpose. Use field observation, contextual inquiry, surveys, task analysis</td>
+</tr>
+<tr>
+<td><strong>2. Designing alternatives</strong></td>
+<td>Create <strong>several different designs</strong>. This stops you <strong>locking onto or getting attached to your first idea</strong></td>
+</tr>
+<tr>
+<td><strong>3. Prototyping</strong></td>
+<td>Turn the best concepts into tangible artefacts. <strong>Low-fidelity</strong> (paper sketches, storyboards) first, then <strong>high-fidelity</strong> (clickable mock-ups)</td>
+</tr>
+<tr>
+<td><strong>4. Evaluation</strong></td>
+<td>Real users try the prototypes. Measure <strong>usability and error rates</strong>, collect impressions, find pain points. The insights <strong>feed the next cycle</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Navigate the life cycle</div><div id="lc">
+<svg viewBox="0 0 600 250" class="sv"></svg>
+<div class="out"></div>
+<div class="row ch"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('lc'),P={req:[300,35,'1. Establish requirements'],alt:[510,125,'2. Design alternatives'],pro:[300,215,'3. Prototype'],eva:[90,125,'4. Evaluate'],fin:[300,125,'✅ Final product']},cur='req',hist=['req'];
+var C={req:['Requirements gathered with users. Next?',[['Design several alternatives','alt']]],
+alt:['Alternatives designed. Is there enough information to design well?',[['Yes, prototype them','pro'],['No, back to requirements (the lecture\'s loop)','req']]],
+pro:['Prototyping. Can the suggested designs actually be prototyped?',[['Yes, send for evaluation','eva'],['Too hard, revise the design alternative','alt']]],
+eva:['Users evaluated the prototype. Result?',[['Satisfied, develop the final product','fin'],['Designs inadequate, back to alternatives','alt'],['Things missing, back to requirements','req']]],
+fin:['Done. User involvement continues into the final product and documentation.',[['Start a new release cycle','req']]]};
+function draw(){var h='<defs><marker id="la" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="var(--muted)"/></marker></defs>';
+[['req','alt'],['alt','pro'],['pro','eva'],['eva','req'],['eva','fin']].forEach(function(e){var a=P[e[0]],b=P[e[1]];h+='<line x1="'+a[0]+'" y1="'+a[1]+'" x2="'+(a[0]+(b[0]-a[0])*.7)+'" y2="'+(a[1]+(b[1]-a[1])*.7)+'" stroke="var(--muted)" stroke-width="1.5" marker-end="url(#la)" opacity=".6"/>'});
+Object.keys(P).forEach(function(k){var p=P[k],on=k===cur,v=hist.indexOf(k)>=0;h+='<rect x="'+(p[0]-82)+'" y="'+(p[1]-17)+'" width="164" height="34" rx="17" fill="'+(on?'var(--accent)':v?'var(--accent-soft)':'var(--bg)')+'" stroke="var(--line)"/><text x="'+p[0]+'" y="'+(p[1]+5)+'" text-anchor="middle" font-size="12.5" style="fill:'+(on?'#fff':'var(--ink)')+'">'+p[2]+'</text>'});
+R.querySelector('.sv').innerHTML=h;var c=C[cur];R.querySelector('.out').innerHTML='<p><b>'+c[0]+'</b></p><p class="note">Path so far: '+hist.map(function(x){return P[x][2].replace(/^\d\. /,'')}).join(' → ')+'</p>';
+var ch=R.querySelector('.ch');ch.innerHTML='';c[1].forEach(function(o){var b=document.createElement('button');b.textContent=o[0];b.onclick=function(){cur=o[1];hist.push(cur);if(hist.length>14)hist=hist.slice(-14);draw()};ch.appendChild(b)})}draw();})();
+</script></div>
+<div class="call video"><div class="ct">The loops back <a class="ts" href="#" data-v="3" data-t="82">01:22</a></div><ul>
+<li><strong>Not enough information</strong> to design alternatives → <strong>revisit requirements</strong>.</li>
+<li><strong>Hard to prototype</strong> a design → <strong>change the design alternative</strong> <a class="ts" href="#" data-v="3" data-t="147">02:27</a>.</li>
+<li><strong>Evaluation finds missing things</strong> → <strong>back to requirements</strong>.</li>
+<li><strong>Evaluation finds inadequate designs</strong> → <strong>back to design alternatives</strong>.</li>
+</ul>
+<p>When evaluation is satisfied, the design is developed into the <strong>final product</strong> <a class="ts" href="#" data-v="3" data-t="202">03:22</a>.</p></div>
+<div class="call key"><div class="ct">The economics of early iteration</div><p>Fixing a conceptual flaw on a <strong>paper sketch</strong> costs <strong>pennies and minutes</strong>. Fixing it after the backend is <strong>written and deployed</strong> can cost <strong>up to 100× more</strong> in rework, technical debt and lost trust.</p></div>
+<p>In UCD, <strong>users are involved at every stage</strong>: requirements, alternatives, prototyping, evaluation, and even the final product and documentation <a class="ts" href="#" data-v="3" data-t="202">03:22</a>.</p><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Stakeholder-centred design"><span class="num">5</span>Stakeholder-centred design</h2><p>UCD focuses on the person at the screen, but systems affect a wider group. <strong>Stakeholders</strong> are <strong>everyone impacted by the design</strong> <a class="ts" href="#" data-v="4" data-t="47">00:47</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Who</th>
+<th>Interaction</th>
+<th>Design concern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Primary</strong></td>
+<td><strong>Direct users</strong></td>
+<td><strong>Operate the interface hands-on</strong></td>
+<td>Ergonomics, clarity, low cognitive load, speed, error prevention</td>
+</tr>
+<tr>
+<td><strong>Secondary</strong></td>
+<td>Rely on the <strong>output / reports</strong></td>
+<td><strong>Don't use the interface</strong>, but <strong>use its output</strong></td>
+<td>Format, readability, accuracy, timeliness, delivery channel</td>
+</tr>
+<tr>
+<td><strong>Tertiary</strong></td>
+<td>Everyone else affected</td>
+<td><strong>Never touch the system or its output</strong>, yet their lives or workloads change</td>
+<td>Sustainability, workload balance, ethics, preventing strain or exploitation</td>
+</tr>
+</tbody>
+</table>
+<div class="call example"><div class="ct">Lecture example: Moodle <a class="ts" href="#" data-v="4" data-t="217">03:37</a></div><ul>
+<li><strong>Primary:</strong> students and lecturers using Moodle.</li>
+<li><strong>Secondary:</strong> the <strong>photocopy shop</strong>, which gets a "report" of which notes students no longer need printed, based on what's on Moodle <a class="ts" href="#" data-v="4" data-t="273">04:33</a>.</li>
+<li><strong>Tertiary:</strong> people who never interact with Moodle or its output but are still affected.</li>
+</ul></div>
+<div class="tool"><div class="tt">🧪 Try it — Stakeholder rings — Municipal Council waste SMS system</div><div id="sh">
+<svg viewBox="0 0 600 300" class="sv"></svg>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('sh'),T=[['Primary','🧑‍💼 Clerical officers','Use the admin dashboard to enter collection rosters and schedules.','Fast, foolproof data entry.'],['Secondary','🏠 Residents','Get the reminder SMS a day before collection. They never open the admin panel.','Clear timing, actionable instructions, no spam.'],['Tertiary','🚛 Truck drivers & sanitation workers','Never touch the software or receive an SMS. But because residents now remember collection day, curbside waste surges, causing exhaustion and overloaded trucks.','Load-balancing routes and schedules to protect workers from burnout.']],sel=0;
+function draw(){var h='',r=[140,95,50];[2,1,0].forEach(function(i){h+='<circle cx="300" cy="150" r="'+r[i]+'" fill="'+(i===sel?'var(--accent)':['var(--accent-soft)','var(--tip-bg)','var(--key-bg)'][i])+'" stroke="var(--panel)" stroke-width="3" style="cursor:pointer" data-i="'+i+'"/>'});
+h+='<text x="300" y="155" text-anchor="middle" font-size="13" style="fill:'+(sel===0?'#fff':'var(--ink)')+';pointer-events:none">Primary</text><text x="300" y="80" text-anchor="middle" font-size="13" style="fill:'+(sel===1?'#fff':'var(--ink)')+';pointer-events:none">Secondary</text><text x="300" y="33" text-anchor="middle" font-size="13" style="fill:'+(sel===2?'#fff':'var(--ink)')+';pointer-events:none">Tertiary</text><text x="470" y="150" font-size="12" style="fill:var(--muted)">← click a ring</text>';
+R.querySelector('.sv').innerHTML=h;R.querySelectorAll('[data-i]').forEach(function(c){c.onclick=function(){sel=+c.dataset.i;draw()}});var t=T[sel];
+R.querySelector('.out').innerHTML='<p><b>'+t[0]+': '+t[1]+'</b></p><p>'+t[2]+'</p><p class="note">Design goal: '+t[3]+'</p>'}draw();})();
+</script></div>
+<div class="call key"><div class="ct">Holistic takeaway</div><p>A truly successful design accounts for <strong>ripple effects across all three tiers</strong>: an efficient clerk portal, helpful resident SMS, <strong>and</strong> protection for the sanitation workers.</p></div>
+<div class="call exam"><div class="ct">Exam focus</div><p>Expect:</p>
+<ul>
+<li>"Differentiate UCD and specification-driven design"</li>
+<li>"Explain the 8 user characteristics"</li>
+<li>"List ISO 9241-210's six principles"</li>
+<li>"Explain the design life cycle with a diagram" (include the loops)</li>
+<li>"Identify primary/secondary/tertiary stakeholders for system X". Use the Municipal Council or Moodle examples as models.</li>
+</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UCD</td>
+<td>Discover what we don't know about users; involve them throughout</td>
+</tr>
+<tr>
+<td>Spec-driven</td>
+<td>Assumes needs; 100% spec, fails adoption</td>
+</tr>
+<tr>
+<td>Guidelines</td>
+<td>Necessary but not sufficient; usability is contextual</td>
+</tr>
+<tr>
+<td>8 characteristics</td>
+<td>Role · Age · Gender · Education · Culture · Interests · Professional level · Computer literacy</td>
+</tr>
+<tr>
+<td>Personas</td>
+<td>Concrete profiles, not an "average user"</td>
+</tr>
+<tr>
+<td>ISO 9241-210</td>
+<td>Understand · Involve · Evaluate · Iterate · Whole UX · Multidisciplinary</td>
+</tr>
+<tr>
+<td>Life cycle</td>
+<td>Requirements → Alternatives → Prototype → Evaluate (loop)</td>
+</tr>
+<tr>
+<td>Fidelity</td>
+<td>Low (paper) → high (clickable)</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>Fixing late costs up to 100×</td>
+</tr>
+<tr>
+<td>Primary</td>
+<td>Use the interface</td>
+</tr>
+<tr>
+<td>Secondary</td>
+<td>Use the output (residents' SMS, photocopy shop)</td>
+</tr>
+<tr>
+<td>Tertiary</td>
+<td>Affected without contact (sanitation workers)</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">11 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="hci-Week11" data-pick="0"><script type="application/json" class="qdata">[{"q": "User-centred design (UCD) differs from specification-driven design because UCD:", "o": ["Involves real users throughout, to discover what we don't know about them", "Assumes the users' needs from a specification", "Never tests with users", "Is only for games"], "e": "Spec-driven systems can meet 100% of the spec and still fail adoption. ", "a": 0, "w": "Week 11"}, {"q": "Design guidelines in UCD are:", "o": ["Necessary but not sufficient, because usability depends on context", "Sufficient on their own", "Unnecessary", "Only for hardware"], "e": "You still need to involve users. ", "a": 0, "w": "Week 11"}, {"q": "Which is <strong>not<\/strong> one of the eight user characteristics?", "o": ["Role", "Age", "Computer literacy", "Shoe size"], "e": "The rest: gender, education, culture, interests, professional level. ", "a": 3, "w": "Week 11"}, {"q": "Personas are:", "o": ["Concrete profiles representing user types, instead of an \"average user\"", "Real customers' passwords", "Marketing slogans", "System requirements documents"], "e": "They keep the design focused on real kinds of people. ", "a": 0, "w": "Week 11"}, {"q": "Which is one of the six ISO 9241-210 principles?", "o": ["The design is driven and refined by user-centred evaluation", "Ship first, test later", "Avoid user involvement", "Design only for experts"], "e": "The others: understand users and context, involve users, iterate, address the whole UX, multidisciplinary teams. ", "a": 0, "w": "Week 11"}, {"q": "The design life cycle stages, in order, are:", "o": ["Requirements (needfinding) → design alternatives → prototype → evaluate (and loop)", "Code → test → design → requirements", "Prototype → requirements → release → evaluate", "Evaluate → code → deploy → stop"], "e": "It's iterative: evaluation feeds back into requirements. ", "a": 0, "w": "Week 11"}, {"q": "Paper prototypes are:", "o": ["Low fidelity: cheap and quick, for early ideas", "High fidelity", "The final product", "Not prototypes"], "e": "High-fidelity prototypes are clickable and realistic. ", "a": 0, "w": "Week 11"}, {"q": "Fixing a usability problem late in development can cost up to:", "o": ["About 100 times more than fixing it early", "The same", "Less", "Twice as much at most"], "e": "That's why we iterate early. ", "a": 0, "w": "Week 11"}, {"q": "In the Moodle example, the photocopy shop that uses reports from the system is a:", "o": ["Primary stakeholder", "Secondary stakeholder", "Tertiary stakeholder", "Not a stakeholder"], "e": "Secondary stakeholders use the system's output without using the interface. ", "a": 1, "w": "Week 11"}, {"q": "People affected by a system without ever interacting with it or its output are:", "o": ["Primary stakeholders", "Secondary stakeholders", "Tertiary stakeholders", "Developers"], "e": "Example: sanitation workers affected by a municipal system. ", "a": 2, "w": "Week 11"}, {"q": "Students and lecturers using Moodle directly are:", "o": ["Primary stakeholders", "Secondary stakeholders", "Tertiary stakeholders", "Competitors"], "e": "Primary stakeholders use the interface itself. ", "a": 0, "w": "Week 11"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2010/Week%2010%20-%20Study%20Guide.html"><small>← Previous</small>Cognitive Task Analysis &amp; Hierarchical Task Analysis</a><a class="nx" href="../Week%2012/Week%2012%20-%20Study%20Guide.html"><small>Next →</small>Needfinding — Understanding Users, Biases &amp; Requirement-Gathering Methods</a></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  function show(i){
+    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

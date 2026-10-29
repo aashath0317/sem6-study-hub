@@ -1,0 +1,69 @@
+? A star schema has:
++ One central fact table and one table per dimension
+- Several fact tables sharing dimensions
+- Normalised dimension tables in many levels
+- No fact table
+= It's the simplest schema, with some redundancy in the dimensions.
+
+? In a **snowflake** schema, dimension tables are:
++ Normalised into further tables (e.g. item → supplier, location → city)
+- Removed
+- Merged into the fact table
+- Duplicated for each fact
+= That means less redundancy but more joins.
+
+? Sales and shipping fact tables sharing the time, item and location dimensions form a:
+- Star schema
+- Snowflake schema
++ Fact constellation (galaxy) schema
+- ER schema
+= Multiple fact tables share dimension tables.
+
+? An enterprise-wide data warehouse typically uses a:
++ Fact constellation schema
+- Star schema only
+- Flat file
+- ER model
+= Data marts usually use star (preferred) or snowflake schemas.
+
+? A data mart is:
++ A departmental subset of the warehouse, focused on selected subjects
+- A copy of the OLTP database
+- A data cleaning tool
+- A type of index
+= The warehouse covers the whole enterprise and many subjects.
+
+? Why isn't the ER model used for data warehouses?
++ ER models suit OLTP; warehouses need a concise, subject-oriented, multidimensional schema
+- ER models can't store numbers
+- ER models are too new
+- ER models need cubes
+= The multidimensional model supports OLAP queries.
+
+? In DMQL, which statement defines a cube?
++ define cube sales_star [time, item, branch, location]: dollars_sold = sum(sales_in_dollars)
+- create table sales
+- select * from cube
+- define hierarchy sales
+= Dimensions use "define dimension name as (attributes)".
+
+? In DMQL, sharing a dimension between cubes (constellation) is written as:
++ define dimension time as time in cube sales
+- share time with sales
+- join time sales
+- copy dimension time
+= The second cube reuses the time dimension defined in the sales cube.
+
+? Which is the correct concept hierarchy for location (low → high)?
++ street < city < province_or_state < country
+- country < city < street < province
+- city < street < country < province
+- province < country < city < street
+= Example: Vancouver → British Columbia → Canada → all.
+
+? The main **disadvantage** of a snowflake schema compared with a star schema is:
++ More joins are needed, which can reduce query performance
+- More redundancy
+- It can't represent hierarchies
+- It has no fact table
+= The advantage is less redundancy and easier maintenance.

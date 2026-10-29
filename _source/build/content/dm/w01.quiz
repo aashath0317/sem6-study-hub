@@ -1,0 +1,69 @@
+? Data mining is best defined as:
++ Discovering interesting (non-trivial, implicit, previously unknown, potentially useful) patterns from large amounts of data
+- Running SQL queries on a database
+- Storing data efficiently
+- Deleting old data
+= Simple query processing is not data mining.
+
+? Who coined the term "Big Data", and when?
++ Roger Mougalas (O'Reilly Media), 2005
+- Bill Inmon, 1990
+- Jiawei Han, 2001
+- Tim Berners-Lee, 1989
+= Mougalas coined it in 2005.
+
+? The original three V's of big data are:
++ Volume, Velocity, Variety
+- Value, Veracity, Volume
+- Variety, Validity, Visibility
+- Velocity, Value, Vision
+= Veracity and Value were added later.
+
+? **Veracity** refers to:
+- The speed at which data arrives
++ The trustworthiness and quality of the data
+- The size of the data
+- The number of data formats
+= Velocity = speed; volume = size; variety = formats.
+
+? The nature of data mining is described as:
++ Iterative and exploratory, involving cooperation between human and computer
+- Fully automatic, with no human involvement
+- A one-step process
+- Only for scientists
+= The user guides the discovery and interprets the patterns.
+
+? Why is data mining needed?
++ Huge amounts of data are collected but mostly unused; databases are designed for storage, not analysis
+- Databases can't store data
+- It replaces databases
+- It's required by law
+= Organisations are "data rich but information poor".
+
+? Market basket analysis, CRM and fraud detection are typical data mining applications in:
++ Banking and retail
+- Weather forecasting only
+- Bioinformatics only
+- Criminal investigation only
+= Health care uses it for treatment effectiveness, bioinformatics and fraud detection.
+
+? A "black box" pattern is one that:
++ Can't be understood by humans, even though it predicts well
+- Is always wrong
+- Is a decision tree
+- Is shown as a chart
+= Transparent-box patterns (e.g. rules, trees) reveal their structure.
+
+? **Variety** in big data refers to:
+- How fast data is produced
++ The many forms of data: structured, semi-structured and unstructured (text, images, video)
+- How much the data is worth
+- How accurate the data is
+= The lecture also calls it the complexity of data.
+
+? Weather forecasting and criminal investigation are applications of data mining in:
+- Banking
+- Retail
++ The public sector
+- Manufacturing only
+= Public-sector applications also include planning and security.

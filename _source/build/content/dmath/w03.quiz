@@ -1,0 +1,67 @@
+? f : ℤ → ℤ, f(x) = x². The **range** is:
++ The perfect squares {0, 1, 4, 9, …}
+- All integers
+- All positive integers
+- {0, 1}
+= The range need not equal the codomain.
+
+? The domain of f(x) = √(x − 1) is:
++ [1, ∞)
+- (1, ∞)
+- All real numbers
+- (−∞, 1]
+= We need x − 1 ≥ 0.
+
+? f(x) = 1/(x² − 4) is undefined at:
++ x = 2 and x = −2
+- x = 4 only
+- x = 0
+- Nowhere
+= The denominator must not be 0.
+
+? Why is f(x) = x² on ℝ **not** one-to-one?
++ f(1) = f(−1) = 1, but 1 ≠ −1
+- It isn't defined everywhere
+- Its range is all of ℝ
+- It's a straight line
+= One counterexample is enough to disprove one-to-one.
+
+? f : ℝ → ℝ, f(x) = 3x − 5 is:
++ A bijection (one-to-one and onto)
+- One-to-one only
+- Onto only
+- Neither
+= So it has an inverse.
+
+? For f(x) = 3x − 5, what is f⁻¹(10)?
+# 5
+= f⁻¹(y) = (y + 5)/3 = 15/3 = 5.
+
+? f(x) = x² − 1 and g(x) = √x + 1. What is (g ∘ f)(x)?
++ √(x² − 1) + 1
+- x + 2√x
+- (√x + 1)² − 1
+- x² + √x
+= g ∘ f means apply f first, then g.
+
+? f(x) = 2x + 1 and g(x) = x². What is (f ∘ g)(3)?
+# 19
+= g(3) = 9, then f(9) = 19.
+
+? Using the same functions, what is (g ∘ f)(3)?
+# 49
+= f(3) = 7, then g(7) = 49. So f ∘ g ≠ g ∘ f.
+
+? f⁻¹(x) means:
++ The inverse function, which undoes f
+- 1/f(x)
+- f(x) − 1
+- −f(x)
+= The inverse exists only for bijections; f⁻¹ ≠ 1/f.
+
+? A function is **onto** when:
++ Every element of the codomain has at least one preimage (range = codomain)
+- Different inputs give different outputs
+- It's defined on all real numbers
+- It's increasing
+= Different inputs giving different outputs is one-to-one.

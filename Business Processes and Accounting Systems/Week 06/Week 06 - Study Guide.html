@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 06 · Statement of Financial Position, Closing Inventory, Depreciation &amp; LKAS 16 — Business Processes &amp; Accounting Systems</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="bpas-Week06">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Business Processes &amp; Accounting Systems</a> › Week 06</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Business Processes &amp; Accounting Systems · Week 06</div><h1>Statement of Financial Position, Closing Inventory, Depreciation &amp; LKAS 16</h1><p>Preparing the statement of financial position, the closing inventory adjustment (lower of cost and NRV), LKAS 16 PPE (definition, recognition, cost, cost vs revaluation model), straight-line and reducing-balance depreciation, and disposals.</p><div class="meta"><span class="chip">ITE3622</span><span class="chip">3 videos · 63 min</span><span class="chip">📄 Financial position statment and adjustment.pdf</span><span class="chip">📄 Property Plant and Equipments - LKAS 16.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Preparing Final Statements I · 14 min</button><button>2. Preparing Final Statements II · 29 min</button><button>3. Preparing Final Statements III · 20 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3622-25S2- Preparing Final Statement I - CODL-UOM.mp4"><source src="ITE3622-25S2-%20Preparing%20Final%20Statement%20I%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Preparing Final Statements I</p><p class="vs">Preparing final accounts, part 1.</p><a href="#" data-v="0" data-t="2"><b>00:02</b><span>Introduction: the trading account</span></a><a href="#" data-v="0" data-t="77"><b>01:17</b><span>Purpose: gross profit or loss</span></a><a href="#" data-v="0" data-t="155"><b>02:35</b><span>Trading account components: opening stock, purchases, returns, carriage</span></a><a href="#" data-v="0" data-t="309"><b>05:09</b><span>From trading account to income statement</span></a><a href="#" data-v="0" data-t="358"><b>05:58</b><span>Income statement components: administrative and distribution expenses</span></a><a href="#" data-v="0" data-t="456"><b>07:36</b><span>Format of the trading and P&amp;L account</span></a><a href="#" data-v="0" data-t="613"><b>10:13</b><span>Other classification: comprehensive income and operating profit</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3622-25S2- Preparing Final Statement II - CODL-UOM.mp4"><source src="ITE3622-25S2-%20Preparing%20Final%20Statement%20II%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Preparing Final Statements II</p><p class="vs">Part 2.</p><a href="#" data-v="1" data-t="2"><b>00:02</b><span>Introduction and learning outcomes</span></a><a href="#" data-v="1" data-t="91"><b>01:31</b><span>What financial statements are (CSE annual reports)</span></a><a href="#" data-v="1" data-t="214"><b>03:34</b><span>The five components of a set of financial statements</span></a><a href="#" data-v="1" data-t="281"><b>04:41</b><span>Purpose: information for stakeholders' decisions</span></a><a href="#" data-v="1" data-t="440"><b>07:20</b><span>Input → accounting process → output</span></a><a href="#" data-v="1" data-t="522"><b>08:42</b><span>Linking trial balance accounts to the statements</span></a><a href="#" data-v="1" data-t="703"><b>11:43</b><span>Statement of financial position (balance sheet) format</span></a><a href="#" data-v="1" data-t="877"><b>14:37</b><span>Assets: definition</span></a><a href="#" data-v="1" data-t="1031"><b>17:11</b><span>Non-current vs current assets</span></a><a href="#" data-v="1" data-t="1181"><b>19:41</b><span>Liabilities: non-current vs current</span></a><a href="#" data-v="1" data-t="1385"><b>23:05</b><span>Equity: residual interest</span></a><a href="#" data-v="1" data-t="1550"><b>25:50</b><span>Worked example: classifying items</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3622-25S2- Preparing Final Statement III - CODL-UOM.mp4"><source src="ITE3622-25S2-%20Preparing%20Final%20Statement%20III%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Preparing Final Statements III</p><p class="vs">Part 3.</p><a href="#" data-v="2" data-t="5"><b>00:05</b><span>Introduction: the cash flow statement</span></a><a href="#" data-v="2" data-t="79"><b>01:19</b><span>What a cash flow statement shows</span></a><a href="#" data-v="2" data-t="129"><b>02:09</b><span>Cash flow statement vs income statement</span></a><a href="#" data-v="2" data-t="328"><b>05:28</b><span>Three categories of cash flows</span></a><a href="#" data-v="2" data-t="370"><b>06:10</b><span>Operating activities: inflows and outflows</span></a><a href="#" data-v="2" data-t="577"><b>09:37</b><span>Investing activities</span></a><a href="#" data-v="2" data-t="733"><b>12:13</b><span>Financing activities</span></a><a href="#" data-v="2" data-t="803"><b>13:23</b><span>Direct vs indirect method</span></a><a href="#" data-v="2" data-t="930"><b>15:30</b><span>The direct method</span></a><a href="#" data-v="2" data-t="1003"><b>16:43</b><span>The indirect method: steps and adjustments</span></a><a href="#" data-v="2" data-t="1112"><b>18:32</b><span>Advantages and disadvantages of each method</span></a><a href="#" data-v="2" data-t="1204"><b>20:04</b><span>Summary</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="The statement of financial position (SFP)"><span class="num">1</span>The statement of financial position (SFP)</h2><div class="call key"><div class="ct">Definition</div><p>The <strong>statement of financial position</strong> (balance sheet) shows <strong>a business's wealth at a particular date</strong>: its <strong>assets, liabilities and capital</strong>.</p></div>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Meaning</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Non-current assets</strong></td>
+<td>Used for <strong>more than one year</strong>, not for resale</td>
+<td>Land, buildings, machinery, motor vehicles, furniture (at <strong>cost less accumulated depreciation</strong>)</td>
+</tr>
+<tr>
+<td><strong>Current assets</strong></td>
+<td>Turned into cash <strong>within 12 months</strong> or the operating cycle</td>
+<td><strong>Inventory (closing stock), trade receivables (debtors), prepayments, bank, cash</strong></td>
+</tr>
+<tr>
+<td><strong>Current liabilities</strong></td>
+<td>Due <strong>within 12 months</strong></td>
+<td><strong>Trade payables (creditors), accruals, bank overdraft</strong>, the current part of loans</td>
+</tr>
+<tr>
+<td><strong>Non-current liabilities</strong></td>
+<td>Due <strong>after 12 months</strong></td>
+<td>Long-term bank loans</td>
+</tr>
+<tr>
+<td><strong>Capital (owner's equity)</strong></td>
+<td>The owner's claim</td>
+<td>Opening capital + net profit (+ capital introduced) − drawings</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Format (sole trader):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Statement of financial position as at 31 March 20xx</th>
+<th style="text-align: right;">Rs</th>
+<th style="text-align: right;">Rs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Non-current assets</strong> (cost − accumulated depreciation)</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">xxx</td>
+</tr>
+<tr>
+<td><strong>Current assets</strong>: inventory, receivables, prepayments, bank, cash</td>
+<td style="text-align: right;">xxx</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td><strong>Total assets</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>xxxx</strong></td>
+</tr>
+<tr>
+<td><strong>Capital</strong>: opening + net profit − drawings</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">xxx</td>
+</tr>
+<tr>
+<td><strong>Non-current liabilities</strong>: long-term loan</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">xxx</td>
+</tr>
+<tr>
+<td><strong>Current liabilities</strong>: payables, accruals, overdraft</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">xxx</td>
+</tr>
+<tr>
+<td><strong>Total capital and liabilities</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>xxxx</strong></td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Adjustment 1: closing inventory"><span class="num">2</span>Adjustment 1: closing inventory</h2><ul>
+<li><strong>Why it's an adjustment:</strong> goods bought are recorded as an <strong>expense</strong> (Purchases a/c), so the <strong>value of unsold stock isn't in the books</strong>.</li>
+<li>At year end, it's <strong>physically counted</strong> and valued at the <strong>lower of cost and net realisable value</strong> (LKAS 2, Week 8).</li>
+</ul>
+<div class="formula"><strong>Closing stock A/C  Dr</strong>  /  <strong>Cost of sales (Trading A/C)  Cr</strong></div>
+<p><strong>Effects:</strong></p>
+<ol>
+<li>It <strong>reduces cost of sales</strong>, which <strong>increases gross profit</strong>.</li>
+<li>It appears as a <strong>current asset</strong> on the SFP.</li>
+</ol>
+<p><strong>This year's closing stock is next year's opening stock.</strong></p><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="LKAS 16 — Property, Plant &amp; Equipment"><span class="num">3</span>LKAS 16 — Property, Plant &amp; Equipment</h2><p><strong>Objective:</strong> prescribe the accounting for PPE: <strong>recognition</strong>, <strong>carrying amounts</strong>, <strong>depreciation</strong> and <strong>impairment</strong>.</p>
+<div class="call key"><div class="ct">Definition of PPE</div><p><strong>Tangible</strong> items that are:</p>
+<ol>
+<li><strong>held for use</strong> in production or supply of goods or services, <strong>for rental to others</strong>, or for <strong>administrative purposes</strong>, <strong>and</strong></li>
+<li><strong>expected to be used for more than one period</strong>.</li>
+</ol></div>
+<p><strong>Recognition:</strong> it's <strong>probable</strong> that future economic benefits will flow to the entity, <strong>and</strong> the cost can be <strong>measured reliably</strong>.</p>
+<h3 id="initial-measurement-at-cost">Initial measurement: at cost</h3>
+<p>Cost = <strong>everything needed to bring the asset to working condition for its intended use</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Purchase cost of PPE</th>
+<th style="text-align: right;">Rs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purchase price</td>
+<td style="text-align: right;">xxxx</td>
+</tr>
+<tr>
+<td>Less: trade discounts</td>
+<td style="text-align: right;">(xxx)</td>
+</tr>
+<tr>
+<td>Less: subsidies</td>
+<td style="text-align: right;">(xxx)</td>
+</tr>
+<tr>
+<td>Carriage inwards (delivery and handling)</td>
+<td style="text-align: right;">xxxx</td>
+</tr>
+<tr>
+<td>Direct and <strong>non-refundable</strong> taxes / import duties</td>
+<td style="text-align: right;">xxxx</td>
+</tr>
+<tr>
+<td><strong>Installation</strong> charges</td>
+<td style="text-align: right;">xxxx</td>
+</tr>
+<tr>
+<td><strong>Test-run</strong> expenses</td>
+<td style="text-align: right;">xxxx</td>
+</tr>
+<tr>
+<td>Site preparation, professional fees (architects, engineers)</td>
+<td style="text-align: right;">xxxx</td>
+</tr>
+<tr>
+<td>Estimated <strong>dismantling and site-restoration</strong> cost</td>
+<td style="text-align: right;">xxxx</td>
+</tr>
+<tr>
+<td><strong>Total cost</strong></td>
+<td style="text-align: right;"><strong>xxxx</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="call warn"><div class="ct">Not part of cost</div><p><strong>Refundable</strong> taxes (e.g. VAT that can be claimed back), <strong>repairs and maintenance</strong> (revenue expenditure, Week 4), training, and general overheads.</p></div>
+<h3 id="subsequent-measurement-two-models">Subsequent measurement: two models</h3>
+<div class="grid2"><div><p><strong>Cost model</strong></p>
+<p>Carried at <strong>cost − accumulated depreciation − impairment</strong></p></div><div><p><strong>Revaluation model</strong></p>
+<p>Carried at <strong>fair value at the revaluation date − later depreciation and impairment</strong>, if fair value can be <strong>measured reliably</strong> (gains go to OCI, Week 5)</p></div></div>
+<h3 id="key-terms">Key terms</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Depreciable amount</strong></td>
+<td><strong>Cost − residual value</strong></td>
+</tr>
+<tr>
+<td><strong>Residual value</strong></td>
+<td>The <strong>scrap value</strong> at the end of the useful life</td>
+</tr>
+<tr>
+<td><strong>Useful life</strong></td>
+<td>The period over which the asset is expected to be used</td>
+</tr>
+<tr>
+<td><strong>Depreciation</strong></td>
+<td><strong>Systematic allocation</strong> of the depreciable amount <strong>over the useful life</strong></td>
+</tr>
+<tr>
+<td><strong>Carrying amount (NBV)</strong></td>
+<td>Cost − accumulated depreciation − impairment</td>
+</tr>
+</tbody>
+</table>
+<p><strong>All PPE is depreciated except land.</strong></p><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Adjustment 2: depreciation"><span class="num">4</span>Adjustment 2: depreciation</h2><div class="formula"><strong>Depreciation A/C  Dr</strong>  /  <strong>Provision for (accumulated) depreciation A/C  Cr</strong></div>
+<ul>
+<li>The <strong>expense</strong> goes to the income statement.</li>
+<li>The <strong>provision</strong> is deducted from cost on the SFP.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Formula</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Straight-line</strong></td>
+<td><strong>(Cost − Residual value) ÷ Useful life</strong></td>
+<td>The <strong>same charge every year</strong></td>
+</tr>
+<tr>
+<td><strong>Reducing balance</strong></td>
+<td>Charge = <strong>rate × NBV at the start of the year</strong>, where <strong>rate = 1 − ⁿ√(S/C)</strong> × 100%</td>
+<td><strong>Higher early</strong>, decreasing later</td>
+</tr>
+</tbody>
+</table>
+<p><em>(n = useful life, S = residual value, C = cost.)</em></p>
+<div class="tool"><div class="tt">🧪 Try it — Depreciation schedule calculator</div><div id="dep">
+<div class="row"><label>Cost <input type="number" class="c" value="1000000" style="width:110px"></label><label>Residual value <input type="number" class="s" value="100000" style="width:100px"></label><label>Useful life (yrs) <input type="number" class="n" value="5" min="1" max="30" style="width:60px"></label><label>Method <select class="m"><option value="sl">Straight-line</option><option value="rb">Reducing balance</option><option value="both">Compare both</option></select></label></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('dep');function g(c){return +R.querySelector('.'+c).value||0}function f(x){return Math.round(x).toLocaleString()}
+function sched(m,C,S,n){var rows=[],nbv=C,acc=0,rate=1-Math.pow(S/C,1/n);for(var y=1;y<=n;y++){var d=m==='sl'?(C-S)/n:nbv*rate;acc+=d;nbv-=d;rows.push([y,d,acc,nbv])}return [rows,rate]}
+function run(){var C=g('c'),S=g('s'),n=Math.max(1,g('n')),m=R.querySelector('.m').value,h='',ms=m==='both'?['sl','rb']:[m];
+ms.forEach(function(mm){var r=sched(mm,C,S,n);h+='<p><b>'+(mm==='sl'?'Straight-line':'Reducing balance')+'</b>: '+(mm==='sl'?'('+f(C)+' − '+f(S)+') ÷ '+n+' = Rs '+f((C-S)/n)+' per year':'rate = 1 − '+n+'√('+f(S)+'/'+f(C)+') = <b>'+(r[1]*100).toFixed(2)+'%</b> of opening NBV')+'</p><table><tr><th>Year</th><th class="r">Depreciation</th><th class="r">Accumulated</th><th class="r">NBV (carrying amount)</th></tr>'+r[0].map(function(x){return '<tr><td>'+x[0]+'</td><td class="r">'+f(x[1])+'</td><td class="r">'+f(x[2])+'</td><td class="r">'+f(x[3])+'</td></tr>'}).join('')+'</table>'});
+if(m==='both'){var a=sched('sl',C,S,n)[0],b=sched('rb',C,S,n)[0],W=480,H=150,mx=C,pt=function(rows){return 'M30,'+(10+H*(1-C/mx))+' '+rows.map(function(x){return 'L'+(30+x[0]*(W-40)/n)+','+(10+H*(1-x[3]/mx))}).join(' ')};h+='<svg viewBox="0 0 500 180" style="max-width:520px"><line x1="30" y1="160" x2="490" y2="160" stroke="var(--line)"/><path d="'+pt(a)+'" fill="none" stroke="var(--accent)" stroke-width="2.5"/><path d="'+pt(b)+'" fill="none" stroke="var(--warn)" stroke-width="2.5"/><text x="380" y="30" font-size="12" style="fill:var(--accent)">— straight-line NBV</text><text x="380" y="46" font-size="12" style="fill:var(--warn)">— reducing balance NBV</text></svg>'}
+h+='<p class="note">Both end at the residual value Rs '+f(S)+'. Reducing balance writes off more in the early years. Journal each year: Dr Depreciation / Cr Provision for depreciation.</p>';R.querySelector('.out').innerHTML=h}R.addEventListener('input',run);run();})();
+</script></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Disposal of PPE"><span class="num">5</span>Disposal of PPE</h2><p>An asset is <strong>derecognised</strong> (removed from the SFP) when it's <strong>disposed of</strong>, or <strong>withdrawn from use</strong> with no further benefits expected. The <strong>gain or loss = proceeds − carrying amount</strong>, recognised in <strong>profit or loss</strong>.</p>
+<p><strong>Steps using a disposal account:</strong></p>
+<ol>
+<li><strong>Remove the cost:</strong> Dr <strong>Disposal</strong> / Cr <strong>Asset (cost)</strong></li>
+<li><strong>Remove the accumulated depreciation:</strong> Dr <strong>Provision for depreciation</strong> / Cr <strong>Disposal</strong></li>
+<li><strong>Record the proceeds:</strong> Dr <strong>Cash / Debtor</strong> / Cr <strong>Disposal</strong></li>
+<li><strong>Balancing figure:</strong> a <strong>credit balance</strong> on the disposal account is a <strong>profit</strong>; a <strong>debit balance</strong> is a <strong>loss</strong>. Transfer it to the income statement.</li>
+</ol>
+<div class="tool"><div class="tt">🧪 Try it — Disposal calculator</div><div id="dsp">
+<div class="row"><label>Cost <input type="number" class="c" value="600000" style="width:100px"></label><label>Accumulated depreciation <input type="number" class="a" value="360000" style="width:100px"></label><label>Sale proceeds <input type="number" class="p" value="280000" style="width:100px"></label></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('dsp');function g(c){return +R.querySelector('.'+c).value||0}function f(x){return x.toLocaleString()}function run(){var c=g('c'),a=g('a'),p=g('p'),nbv=c-a,gl=p-nbv;
+R.querySelector('.out').innerHTML='<table style="max-width:560px"><tr><th colspan="2">Disposal A/C (Dr)</th><th colspan="2">Disposal A/C (Cr)</th></tr><tr><td>Asset (cost)</td><td class="r">'+f(c)+'</td><td>Provision for depreciation</td><td class="r">'+f(a)+'</td></tr><tr><td>'+(gl>0?'<b>Profit on disposal</b> (to P&amp;L)':'')+'</td><td class="r">'+(gl>0?'<b>'+f(gl)+'</b>':'')+'</td><td>Cash / debtor (proceeds)</td><td class="r">'+f(p)+'</td></tr>'+(gl<0?'<tr><td></td><td></td><td><b>Loss on disposal</b> (to P&amp;L)</td><td class="r"><b>'+f(-gl)+'</b></td></tr>':'')+'<tr style="font-weight:700"><td></td><td class="r">'+f(Math.max(c+Math.max(gl,0),c))+'</td><td></td><td class="r">'+f(a+p+Math.max(-gl,0))+'</td></tr></table><p>Carrying amount = '+f(c)+' − '+f(a)+' = '+f(nbv)+' · Proceeds '+f(p)+' → <b>'+(gl>=0?'profit':'loss')+' of Rs '+f(Math.abs(gl))+'</b></p>'}R.addEventListener('input',run);run();})();
+</script></div>
+<h3 id="lkas-16-disclosures-for-each-class-of-ppe">LKAS 16 disclosures (for each class of PPE)</h3>
+<ul>
+<li><strong>Measurement basis</strong> for the carrying amount</li>
+<li><strong>Depreciation method(s)</strong></li>
+<li><strong>Useful lives or depreciation rates</strong></li>
+<li><strong>Gross carrying amount and accumulated depreciation and impairment</strong></li>
+<li><strong>A reconciliation</strong> of the carrying amount from start to end of the period</li>
+</ul>
+<div class="call exam"><div class="ct">Exam focus</div><p>Expect:</p>
+<ul>
+<li><strong>Prepare the SFP</strong> (classify current vs non-current correctly; capital + profit − drawings)</li>
+<li><strong>The closing-stock journal</strong> and its effect</li>
+<li><strong>The LKAS 16 definition and recognition</strong> of PPE</li>
+<li><strong>Calculating cost</strong> (include installation and test runs; exclude refundable taxes and trade discounts)</li>
+<li><strong>Cost vs revaluation model</strong></li>
+<li><strong>Straight-line and reducing-balance calculations</strong> (use 1 − ⁿ√(S/C))</li>
+<li><strong>The disposal account</strong> and the profit or loss</li>
+</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SFP</td>
+<td>Wealth at a date: assets = capital + liabilities</td>
+</tr>
+<tr>
+<td>Current assets</td>
+<td>Inventory, receivables, prepayments, bank, cash</td>
+</tr>
+<tr>
+<td>Current liabilities</td>
+<td>Payables, accruals, overdraft</td>
+</tr>
+<tr>
+<td>Capital</td>
+<td>Opening + profit − drawings</td>
+</tr>
+<tr>
+<td>Closing stock</td>
+<td>Lower of cost and NRV; Dr Closing stock / Cr Trading; lowers COS, raises GP</td>
+</tr>
+<tr>
+<td>PPE</td>
+<td>Tangible, used in operations, more than one period</td>
+</tr>
+<tr>
+<td>Recognition</td>
+<td>Probable benefits + reliable cost</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>Price − discounts − subsidies + carriage + non-refundable taxes + installation + test run + dismantling</td>
+</tr>
+<tr>
+<td>Models</td>
+<td>Cost vs revaluation</td>
+</tr>
+<tr>
+<td>Depreciable amount</td>
+<td>Cost − residual value</td>
+</tr>
+<tr>
+<td>SL</td>
+<td>(C − S) ÷ n</td>
+</tr>
+<tr>
+<td>RB</td>
+<td>Rate = 1 − ⁿ√(S/C), applied to NBV</td>
+</tr>
+<tr>
+<td>Land</td>
+<td>Not depreciated</td>
+</tr>
+<tr>
+<td>Disposal</td>
+<td>Proceeds − carrying amount = gain or loss</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">10 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="bpas-Week06" data-pick="0"><script type="application/json" class="qdata">[{"q": "Opening capital 500,000; net profit 120,000; drawings 40,000. What is the closing capital?", "e": "Capital = opening + profit − drawings. ", "n": 580000.0, "w": "Week 06"}, {"q": "Which is a <strong>current liability<\/strong>?", "o": ["Bank loan repayable in five years", "Bank overdraft", "Capital", "Machinery"], "e": "Others: trade payables and accrued expenses. ", "a": 1, "w": "Week 06"}, {"q": "The journal entry to record closing stock is:", "o": ["Dr Closing stock (SFP) / Cr Trading account", "Dr Trading account / Cr Closing stock", "Dr Purchases / Cr Closing stock", "Dr Cash / Cr Closing stock"], "e": "Closing stock lowers cost of sales and raises gross profit. ", "a": 0, "w": "Week 06"}, {"q": "Under LKAS 16, which cost is <strong>included<\/strong> in the cost of PPE?", "o": ["A refundable VAT", "A trade discount", "Installation and test-run costs", "Staff training on the new machine"], "e": "Cost = price − discounts − subsidies + carriage + non-refundable taxes + installation + testing + dismantling. ", "a": 2, "w": "Week 06"}, {"q": "A machine costs Rs 500,000, has a residual value of Rs 50,000 and a life of 5 years. What is the straight-line annual depreciation?", "e": "(500,000 − 50,000) ÷ 5. ", "n": 90000.0, "w": "Week 06"}, {"q": "Which asset is <strong>not<\/strong> depreciated?", "o": ["Land", "Buildings", "Motor vehicles", "Computers"], "e": "Land normally has an unlimited useful life. ", "a": 0, "w": "Week 06"}, {"q": "The reducing-balance rate is calculated as:", "o": ["1 − ⁿ√(Residual ÷ Cost)", "(Cost − Residual) ÷ n", "Cost ÷ n", "Residual ÷ Cost"], "e": "It's applied to the net book value each year. ", "a": 0, "w": "Week 06"}, {"q": "An asset with a carrying amount of 120,000 is sold for 150,000. What is the gain on disposal?", "e": "Gain = proceeds − carrying amount. ", "n": 30000.0, "w": "Week 06"}, {"q": "The two measurement models after recognition under LKAS 16 are:", "o": ["The cost model and the revaluation model", "FIFO and weighted average", "Straight-line and reducing balance", "Historical cost and NRV"], "e": "Straight-line and reducing balance are depreciation methods, not measurement models. ", "a": 0, "w": "Week 06"}, {"q": "PPE is defined as tangible items that are:", "o": ["Held for use in production, supply, rental or admin, and expected to be used for more than one period", "Held for sale in the ordinary course of business", "Intangible, such as patents", "Used up within one year"], "e": "Inventory is held for sale; PPE is held for use. ", "a": 0, "w": "Week 06"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2005/Week%2005%20-%20Study%20Guide.html"><small>← Previous</small>Financial Statements I — Trading Account, Income Statement &amp; LKAS 1</a><a class="nx" href="../Week%2007/Week%2007%20-%20Study%20Guide.html"><small>Next →</small>Year-End Adjustments — Accruals, Prepayments, Bad Debts &amp; Impairment Provisions</a></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  function show(i){
+    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

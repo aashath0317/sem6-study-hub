@@ -1,0 +1,1045 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 04 · Data Reduction &amp; Discretization — Data Mining</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="dm-Week04">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 04</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 04</div><h1>Data Reduction &amp; Discretization</h1><p>Make the dataset smaller without changing what it tells you — cubes, attribute selection, compression, histograms, binning and concept hierarchies.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 10 min</span><span class="chip">📄 week 4.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Data Discretization · 10 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3432-25S2- Data Discretization - CODL-UOM.mp4"><source src="ITE3432-25S2-%20Data%20Discretization%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Data Discretization</p><p class="vs">Equal-width vs equal-depth binning, smoothing by bin means / medians / boundaries, and histogram partitioning (equal-width, equal-frequency, V-Optimal, MaxDiff) — all with worked examples.</p><a href="#" data-v="0" data-t="0"><b>00:00</b><span>Why discretize? Large ranges hide frequent patterns</span></a><a href="#" data-v="0" data-t="37"><b>00:37</b><span>Equal-width partitioning and the formula W = (B − A) / N</span></a><a href="#" data-v="0" data-t="78"><b>01:18</b><span>Problem: outliers distort equal-width bins</span></a><a href="#" data-v="0" data-t="104"><b>01:44</b><span>Equal-depth (equal-frequency) partitioning</span></a><a href="#" data-v="0" data-t="137"><b>02:17</b><span>Example: temperatures into 7 equal-width bins</span></a><a href="#" data-v="0" data-t="206"><b>03:26</b><span>Example: prices into 3 equal-depth bins</span></a><a href="#" data-v="0" data-t="256"><b>04:16</b><span>Smoothing noise: by bin means and medians</span></a><a href="#" data-v="0" data-t="318"><b>05:18</b><span>Smoothing by bin boundaries</span></a><a href="#" data-v="0" data-t="389"><b>06:29</b><span>Discretization using histograms</span></a><a href="#" data-v="0" data-t="441"><b>07:21</b><span>MaxDiff histograms (β − 1 largest gaps)</span></a><a href="#" data-v="0" data-t="474"><b>07:54</b><span>Example: ages — equal-width, equal-depth and MaxDiff</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why reduce data at all?"><span class="num">1</span>Why reduce data at all?</h2><p>Real datasets are huge — millions of rows and hundreds of columns. Mining algorithms on such data are <strong>slow</strong> and need <strong>a lot of memory</strong>. <strong>Data reduction</strong> produces a <em>much smaller</em> version of the dataset that still gives <strong>the same (or almost the same) analytical results</strong>.</p>
+<div class="call key"><div class="ct">The one-sentence definition</div><p>Data reduction = obtaining a <strong>reduced representation</strong> of the dataset that is <strong>much smaller in volume</strong> but <strong>keeps the integrity</strong> of the original data, so mining it is more efficient and the results barely change.</p></div>
+<p>Two benefits are named in the notes:</p>
+<ol>
+<li><strong>Less time and memory</strong> needed by data-mining algorithms.</li>
+<li>Data becomes <strong>easier to visualise</strong>.</li>
+</ol>
+<h3 id="where-this-fits-the-four-preprocessing-tasks">Where this fits — the four preprocessing tasks</h3>
+<p>This lesson is the third member of the data-preprocessing family introduced in Week 3:</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>What it does</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data cleaning</strong></td>
+<td>Removes noise, fixes inconsistencies</td>
+<td>Filling missing ages, smoothing noisy prices</td>
+</tr>
+<tr>
+<td><strong>Data integration</strong></td>
+<td>Merges data from multiple sources into one coherent store</td>
+<td>Combining branch databases into a data warehouse</td>
+</tr>
+<tr>
+<td><strong>Data transformation</strong></td>
+<td>Converts data into a suitable form</td>
+<td>Normalisation (helps distance-based algorithms)</td>
+</tr>
+<tr>
+<td><strong>Data reduction</strong> ← <em>this week</em></td>
+<td>Shrinks the data size</td>
+<td>Aggregating, dropping redundant features, clustering</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-five-data-reduction-strategies">The five data-reduction strategies</h3>
+<p>Memorise these five — they are the outline of the whole lesson:</p>
+<div class="flow"><span>Data cube aggregation</span><span>Attribute subset selection</span><span>Dimensionality reduction</span><span>Numerosity reduction</span><span>Discretization &amp; concept hierarchies</span></div>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Idea in plain words</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data cube aggregation</strong></td>
+<td>Apply aggregation (sum, count…) while building a data cube — store summaries, not every transaction.</td>
+</tr>
+<tr>
+<td><strong>Attribute subset selection</strong></td>
+<td>Detect and <strong>remove irrelevant, weakly relevant or redundant attributes</strong> (columns).</td>
+</tr>
+<tr>
+<td><strong>Dimensionality reduction</strong></td>
+<td>Use <strong>encoding mechanisms</strong> to compress the data (e.g. wavelets, PCA).</td>
+</tr>
+<tr>
+<td><strong>Numerosity reduction</strong></td>
+<td>Replace the data by a <strong>smaller representation</strong> — a model (parametric) or histograms / clusters / samples (non-parametric).</td>
+</tr>
+<tr>
+<td><strong>Discretization &amp; concept hierarchy generation</strong></td>
+<td>Replace raw values by <strong>ranges</strong> or <strong>higher-level concepts</strong> (e.g. age 23 → "youth").</td>
+</tr>
+</tbody>
+</table>
+<div class="call exam"><div class="ct">Exam focus</div><p>"List and briefly explain the strategies for data reduction" is a classic question. Write all five with one line each — exactly the table above.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Data cube aggregation"><span class="num">2</span>Data cube aggregation</h2><p>A <strong>data cube</strong> stores <strong>multidimensional aggregated information</strong>. (Cubes are covered in detail in Week 5 – Data Warehousing; here you only need the idea.)</p>
+<p>Picture sales data with three dimensions — <strong>item type</strong>, <strong>branch</strong> and <strong>year</strong>. Instead of storing every single sale, each <strong>cell</strong> of the cube holds an <strong>aggregate value</strong> (e.g. total sales of <em>computers</em> at <em>Branch B</em> in <em>2008</em>).</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">Branch A</th>
+<th style="text-align: right;">Branch B</th>
+<th style="text-align: right;">Branch C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Home entertainment</td>
+<td style="text-align: right;">568</td>
+<td style="text-align: right;">750</td>
+<td style="text-align: right;">150</td>
+</tr>
+<tr>
+<td>Computer</td>
+<td style="text-align: right;">680</td>
+<td style="text-align: right;">952</td>
+<td style="text-align: right;">31</td>
+</tr>
+<tr>
+<td>Phone</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">512</td>
+<td style="text-align: right;">290</td>
+</tr>
+<tr>
+<td>Security</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">580</td>
+<td style="text-align: right;">7</td>
+</tr>
+</tbody>
+</table>
+<p><em>One "slice" of a sales cube: annual sales per item type for each branch (values illustrative).</em></p>
+<ul>
+<li>Each attribute can have a <strong>concept hierarchy</strong> — e.g. branches can be grouped into <strong>regions</strong> based on their address — so you can analyse at <strong>multiple levels of abstraction</strong>.</li>
+<li>Cubes give <strong>fast access to pre-computed, summarised data</strong>, which benefits both <strong>OLAP</strong> (on-line analytical processing) and data mining.</li>
+</ul>
+<div class="call tip"><div class="ct">Why it reduces data</div><p>If the analysis only needs <em>annual totals per branch</em>, keeping quarterly or per-transaction rows is waste. Aggregating to the level you need shrinks the data massively with no loss for that task.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Attribute subset selection"><span class="num">3</span>Attribute subset selection</h2><p>Datasets may contain <strong>hundreds of attributes</strong>, many <strong>irrelevant</strong> or <strong>redundant</strong>.</p>
+<div class="call example"><div class="ct">The notes' example</div><p>Task: predict whether a customer will buy a new CD when told about a sale.
+- <strong>Relevant:</strong> age, music taste
+- <strong>Irrelevant:</strong> telephone number</p></div>
+<p>Why not keep everything? <strong>Leaving out relevant attributes or keeping irrelevant ones confuses the mining algorithm</strong> → poor-quality patterns. A domain expert <em>could</em> pick attributes by hand, but that is slow and hard when the data's behaviour is not well known.</p>
+<div class="call key"><div class="ct">Goal</div><p>Find the <strong>minimum set of attributes</strong> such that the <strong>probability distribution of the data classes is as close as possible</strong> to the distribution obtained using <strong>all</strong> attributes.</p></div>
+<p>Extra benefit: fewer attributes in the discovered patterns → patterns are <strong>easier to understand</strong>.</p>
+<h3 id="heuristic-greedy-methods">Heuristic (greedy) methods</h3>
+<p>Trying every subset of <em>n</em> attributes means 2<sup>n</sup> possibilities — impossible for large <em>n</em>. So we use <strong>greedy heuristics</strong>: at each step make the choice that <strong>looks best right now</strong> (a <em>locally optimal</em> choice) hoping it leads to a <em>globally optimal</em> solution. In practice they come close to the optimum.</p>
+<p>The four basic methods (Figure 3-2 in the notes):</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>How it works</th>
+<th A1_A6="A1…A6">Example with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Stepwise forward selection</strong></td>
+<td>Start with an <strong>empty</strong> set. Repeatedly <strong>add the best</strong> remaining attribute.</td>
+<td>{} → {A1} → {A1, A4} → <strong>{A1, A4, A6}</strong></td>
+</tr>
+<tr>
+<td><strong>Stepwise backward elimination</strong></td>
+<td>Start with <strong>all</strong> attributes. Repeatedly <strong>remove the worst</strong> one.</td>
+<td>{A1…A6} → {A1, A3, A4, A5, A6} → {A1, A4, A5, A6} → <strong>{A1, A4, A6}</strong></td>
+</tr>
+<tr>
+<td><strong>Combined forward + backward</strong></td>
+<td>Each step <strong>adds the best</strong> and <strong>removes the worst</strong>.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Decision tree induction</strong></td>
+<td>Build a decision tree; attributes that <strong>appear in the tree</strong> form the reduced set; those that never appear are irrelevant.</td>
+<td>Tree tests A4, A1, A6 → <strong>{A1, A4, A6}</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="call tip"><div class="ct">How to remember</div><p><em>Forward</em> = grow from nothing. <em>Backward</em> = shrink from everything. <em>Decision tree</em> = "whatever the tree bothered to use".</p></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Dimensionality reduction"><span class="num">4</span>Dimensionality reduction</h2><p>Here <strong>data encoding or transformations</strong> are applied to get a <strong>compressed</strong> representation of the original data.</p>
+<div class="grid2"><div><p><strong>Lossless</strong></p>
+<p>The original data can be <strong>reconstructed exactly</strong> from the compressed data — no information lost.</p>
+<p>Example: string compression algorithms (like ZIP).</p></div><div><p><strong>Lossy</strong></p>
+<p>Only an <strong>approximation</strong> of the original can be reconstructed.</p>
+<p>Two popular, effective methods:
+- <strong>Wavelet transforms</strong>
+- <strong>Principal Components Analysis (PCA)</strong></p></div></div>
+<ul>
+<li><strong>Wavelet transform</strong> – converts the data vector into a vector of wavelet coefficients; keeping only the strongest coefficients gives a compressed approximation.</li>
+<li><strong>PCA</strong> – finds a small number of new axes (<em>principal components</em>) that capture most of the variation in the data, then represents each record using only those few components.</li>
+</ul>
+<div class="call exam"><div class="ct">Exam focus</div><p>Be able to define <strong>lossless vs lossy</strong> and name <strong>wavelet transforms and PCA</strong> as the two popular lossy methods — that's what the notes emphasise.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Numerosity reduction"><span class="num">5</span>Numerosity reduction</h2><p>Replace the data with an <strong>alternative, smaller representation</strong>. Two families:</p>
+<div class="grid2"><div><p><strong>Parametric methods</strong></p>
+<p>A <strong>model</strong> estimates the data, so you store <strong>only the model parameters</strong> (plus maybe outliers) instead of the data.</p>
+<ul>
+<li>Regression</li>
+<li>Log-linear models (estimate discrete multidimensional probability distributions)</li>
+</ul></div><div><p><strong>Non-parametric methods</strong></p>
+<p>No model is assumed; store a reduced version of the data itself.</p>
+<ul>
+<li><strong>Histograms</strong></li>
+<li><strong>Clustering</strong></li>
+<li><strong>Sampling</strong></li>
+</ul></div></div>
+<h3 id="regression">Regression</h3>
+<p>In <strong>linear regression</strong> the data are modelled to fit a straight line:</p>
+<div class="formula"><em>y</em> = <em>w x</em> + <em>b</em></div>
+<ul>
+<li><em>y</em> = <strong>response variable</strong>, <em>x</em> = <strong>predictor variable</strong></li>
+<li><em>w</em> (slope) and <em>b</em> (intercept) are the <strong>regression coefficients</strong>.</li>
+</ul>
+<p>So instead of storing 10,000 (x, y) pairs you store just <strong>two numbers</strong>, <em>w</em> and <em>b</em>. That's the reduction.</p>
+<h3 id="histograms">Histograms</h3>
+<p>Histograms use <strong>binning</strong> to approximate the data distribution — a very popular form of data reduction. A histogram for attribute <em>A</em> splits A's values into <strong>disjoint subsets called buckets</strong>.</p>
+<ul>
+<li><strong>Singleton bucket</strong> – a bucket holding just <strong>one</strong> attribute-value/frequency pair.</li>
+<li>Usually buckets represent <strong>continuous ranges</strong> of the attribute.</li>
+</ul>
+<p>Partitioning rules — <strong>know all four</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>How buckets are formed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Equal-width</strong></td>
+<td>Every bucket has the <strong>same range width</strong>.</td>
+</tr>
+<tr>
+<td><strong>Equal-frequency (equi-depth)</strong></td>
+<td>Every bucket holds <strong>roughly the same number</strong> of (contiguous) values.</td>
+</tr>
+<tr>
+<td><strong>V-Optimal</strong></td>
+<td>Of all possible histograms with the given number of buckets, the one with the <strong>least variance</strong> (histogram variance = weighted sum of the original values each bucket represents, weight = number of values in the bucket).</td>
+</tr>
+<tr>
+<td><strong>MaxDiff</strong></td>
+<td>Look at the difference between each pair of <strong>adjacent</strong> sorted values. Put a bucket boundary at the <strong>β − 1 largest differences</strong>, where β = number of buckets wanted.</td>
+</tr>
+</tbody>
+</table>
+<p>We work through all of these with numbers in section 7.</p>
+<h3 id="clustering-and-sampling-for-completeness">Clustering and sampling (for completeness)</h3>
+<ul>
+<li><strong>Clustering</strong> – group similar records into clusters; store only the <strong>cluster representations</strong> (e.g. centre + diameter) instead of every record.</li>
+<li><strong>Sampling</strong> – represent a large dataset by a much smaller <strong>random sample</strong> (e.g. simple random sample without/with replacement, cluster sample, stratified sample).</li>
+</ul><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Discretization &amp; concept hierarchies"><span class="num">6</span>Discretization &amp; concept hierarchies</h2><p><strong>Discretization</strong> reduces the number of values of a <strong>continuous</strong> attribute by <strong>dividing its range into intervals</strong>. Interval labels then <strong>replace</strong> the actual values.</p>
+<div class="call example"><div class="ct">Worked example</div><p>Ages 13, 15, 16, 19, 22, 25, 33, 35, 46, 52 → replace with labels <strong>"10–19", "20–29", "30–39", "40+"</strong>.
+Ten distinct values become four labels — the data is simpler and the mining results become a concise, <strong>knowledge-level</strong> representation.</p></div>
+<h3 id="ways-to-classify-discretization-methods">Ways to classify discretization methods</h3>
+<table>
+<thead>
+<tr>
+<th>Basis</th>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uses class information?</td>
+<td><strong>Supervised</strong></td>
+<td>Yes — uses the class labels to choose intervals</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Unsupervised</strong></td>
+<td>No class information used (e.g. plain binning)</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td><strong>Top-down (splitting)</strong></td>
+<td>Find one or a few <strong>split points (cut points)</strong> to split the whole range, then repeat <strong>recursively</strong> on each interval</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Bottom-up (merging)</strong></td>
+<td>Start with <strong>all values as potential split points</strong>, remove some by <strong>merging neighbouring values</strong> into intervals, repeat recursively</td>
+</tr>
+</tbody>
+</table>
+<h3 id="concept-hierarchies">Concept hierarchies</h3>
+<p>Doing discretization <strong>recursively</strong> on an attribute gives a <strong>hierarchical (multiresolution) partitioning</strong> — a <strong>concept hierarchy</strong>. It lets you mine at <strong>multiple levels of abstraction</strong>.</p>
+<p>A concept hierarchy <strong>replaces low-level concepts</strong> (numeric age values) with <strong>higher-level concepts</strong> (<em>youth</em>, <em>middle-aged</em>, <em>senior</em>).</p>
+<p>Figure 3-3 — a concept hierarchy for <strong>price</strong>:</p>
+<pre><code>                        ($0 … $1000]
+      ┌──────────┬───────────┼───────────┬────────────┐
+ ($0…$200]  ($200…$400]  ($400…$600]  ($600…$800]  ($800…$1000]
+  ┌───┴───┐   ┌───┴───┐     …            …            …
+($0…$100] ($100…$200] ($200…$300] ($300…$400] …
+</code></pre>
+<p>Why bother, if detail is lost?</p>
+<ul>
+<li>Generalised data is <strong>more meaningful and easier to interpret</strong>.</li>
+<li>Gives a <strong>consistent representation</strong> of results across multiple mining tasks.</li>
+<li>Mining a reduced dataset needs <strong>fewer I/O operations</strong> → <strong>more efficient</strong>.</li>
+</ul>
+<div class="call key"><div class="ct">Important</div><p>Because of these benefits, discretization and concept hierarchies are applied <strong>before</strong> mining as a <strong>preprocessing step</strong>, not during mining. More than one hierarchy can be defined for the same attribute to suit different users.</p></div>
+<div class="call tip"><div class="ct">Link</div><p>Discretization is itself <strong>a form of numerosity reduction</strong>, and it is very useful for <strong>automatically generating concept hierarchies</strong>.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Binning: equal-width vs equal-depth"><span class="num">7</span>Binning: equal-width vs equal-depth</h2><p>The lecture video opens with <em>why</em>: data mining looks for <strong>hidden frequent patterns</strong>. If an attribute has a <strong>very large range</strong> of values, the same exact value rarely repeats, so patterns are hard to find. Breaking the range into <strong>bins (partitions)</strong> makes values "collide" so frequent patterns appear <a class="ts" href="#" data-v="0" data-t="0">00:00</a>.</p>
+<h3 id="equal-width-partitioning-uniform-grid-0037">Equal-width partitioning (uniform grid) <a class="ts" href="#" data-v="0" data-t="37">00:37</a></h3>
+<p>Divide the range into <strong>N intervals of equal size</strong>. If <strong>A</strong> is the lowest value and <strong>B</strong> is the highest:</p>
+<div class="formula">Width  <strong>W = (B − A) / N</strong></div>
+<p>Bins: [A, A+W), [A+W, A+2W), … up to B. Simple and straightforward.</p>
+<div class="call warn"><div class="ct">Weakness — outliers <a class="ts" href="#" data-v="0" data-t="78">01:18</a></div><p>If <strong>B is an outlier</strong> (one huge value), B − A becomes huge, so W becomes huge, and almost all normal data falls into one or two bins. Skewed data is not handled well.</p></div>
+<h3 id="equal-depth-equal-frequency-partitioning-0144">Equal-depth (equal-frequency) partitioning <a class="ts" href="#" data-v="0" data-t="104">01:44</a></h3>
+<p>Divide into <strong>N intervals each containing approximately the same number of samples</strong>. Good <strong>data scaling</strong>; but managing <strong>categorical attributes</strong> can be tricky.</p>
+<div class="call example"><div class="ct">Equal-width example — temperatures into 7 bins <a class="ts" href="#" data-v="0" data-t="137">02:17</a></div><p>Temperatures (sorted): 64, 65, 68, 69, 70, 71, 72, 72, 75, 75, 80, 81, 83, 85</p>
+<p><strong>Step 1 – width:</strong> W = (85 − 64) / 7 = 21 / 7 = <strong>3</strong></p>
+<p><strong>Step 2 – bins and counts:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Bin</th>
+<th>Values</th>
+<th style="text-align: right;">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>64 – &lt;67</td>
+<td>64, 65</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>67 – &lt;70</td>
+<td>68, 69</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>70 – &lt;73</td>
+<td>70, 71, 72, 72</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td>73 – &lt;76</td>
+<td>75, 75</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>76 – &lt;79</td>
+<td>—</td>
+<td style="text-align: right;"><strong>0</strong></td>
+</tr>
+<tr>
+<td>79 – &lt;82</td>
+<td>80, 81</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>82 – 85</td>
+<td>83, 85</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
+<p>Notice the <strong>76–79 bin is empty</strong> — with equal width that is perfectly possible, as the lecturer points out <a class="ts" href="#" data-v="0" data-t="184">03:04</a>.</p></div>
+<div class="call example"><div class="ct">Equal-depth example — prices into 3 bins <a class="ts" href="#" data-v="0" data-t="206">03:26</a></div><p>Prices: 4, 8, 9, 15, 21, 21, 24, 25, 26, 28, 29, 34</p>
+<p><strong>Step 1 – sort</strong> (already sorted). <strong>Step 2 – count:</strong> 12 values. <strong>Step 3 – depth:</strong> 12 / 3 = <strong>4 values per bin</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Bin</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bin 1</td>
+<td>4, 8, 9, 15</td>
+</tr>
+<tr>
+<td>Bin 2</td>
+<td>21, 21, 24, 25</td>
+</tr>
+<tr>
+<td>Bin 3</td>
+<td>26, 28, 29, 34</td>
+</tr>
+</tbody>
+</table></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Smoothing noisy data with bins"><span class="num">8</span>Smoothing noisy data with bins</h2><p>Data can contain <strong>noise</strong> (random errors). After binning, we can <strong>smooth</strong> each bin <a class="ts" href="#" data-v="0" data-t="256">04:16</a>. Using the price bins above:</p>
+<h3 id="1-smoothing-by-bin-means-0430">1. Smoothing by bin means <a class="ts" href="#" data-v="0" data-t="270">04:30</a></h3>
+<p>Replace <strong>every value in a bin by the bin's mean</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Bin</th>
+<th>Values</th>
+<th>Mean</th>
+<th>Smoothed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>4, 8, 9, 15</td>
+<td>36/4 = <strong>9</strong></td>
+<td>9, 9, 9, 9</td>
+</tr>
+<tr>
+<td>2</td>
+<td>21, 21, 24, 25</td>
+<td>91/4 = 22.75 ≈ <strong>23</strong></td>
+<td>23, 23, 23, 23</td>
+</tr>
+<tr>
+<td>3</td>
+<td>26, 28, 29, 34</td>
+<td>117/4 = 29.25 ≈ <strong>29</strong></td>
+<td>29, 29, 29, 29</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-smoothing-by-bin-medians-0507">2. Smoothing by bin medians <a class="ts" href="#" data-v="0" data-t="307">05:07</a></h3>
+<p>Same idea but replace by the <strong>median</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Bin</th>
+<th>Median</th>
+<th>Smoothed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>(8+9)/2 = <strong>8.5</strong></td>
+<td>8.5, 8.5, 8.5, 8.5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>(21+24)/2 = <strong>22.5</strong></td>
+<td>22.5, 22.5, 22.5, 22.5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>(28+29)/2 = <strong>28.5</strong></td>
+<td>28.5, 28.5, 28.5, 28.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-smoothing-by-bin-boundaries-0518">3. Smoothing by bin boundaries <a class="ts" href="#" data-v="0" data-t="318">05:18</a></h3>
+<p>The <strong>minimum and maximum</strong> of each bin are its <strong>boundaries</strong>. Every value is replaced by the <strong>closest boundary</strong>; the boundaries themselves stay.</p>
+<table>
+<thead>
+<tr>
+<th>Bin</th>
+<th>Boundaries</th>
+<th>Reasoning</th>
+<th>Smoothed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>4 and 15</td>
+<td>8 → closer to 4 (4 away vs 7); 9 → closer to 4 (5 vs 6)</td>
+<td><strong>4, 4, 4, 15</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>21 and 25</td>
+<td>21 stays; 24 → closer to 25</td>
+<td><strong>21, 21, 25, 25</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>26 and 34</td>
+<td>28 → 26 (2 vs 6); 29 → 26 (3 vs 5)</td>
+<td><strong>26, 26, 26, 34</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Binning &amp; smoothing lab</div><div id="bin1">
+<label style="display:block">Data values (comma separated)<input type="text" class="d" value="4, 8, 9, 15, 21, 21, 24, 25, 26, 28, 29, 34"></label>
+<div class="row"><label>Bins <input type="number" class="n" value="3" min="1" max="12" style="width:70px"></label>
+<label>Partition <select class="m"><option value="depth">Equal-depth (frequency)</option><option value="width">Equal-width</option><option value="maxdiff">MaxDiff</option></select></label>
+<label>Smooth by <select class="s"><option value="none">— none —</option><option value="mean">Bin means</option><option value="median">Bin medians</option><option value="bound">Bin boundaries</option></select></label></div>
+<div class="out"></div>
+<p class="note">Change anything — the bins, the calculation steps and the smoothed values update instantly. Try adding an outlier like 300 with equal-width to see why outliers are a problem.</p>
+</div>
+<script>
+(function(){
+var R=document.getElementById('bin1'),o=R.querySelector('.out');
+function f(x){return Math.round(x*100)/100}
+function run(){
+ var v=R.querySelector('.d').value.split(/[ ,;]+/).filter(Boolean).map(Number).filter(isFinite).sort(function(a,b){return a-b});
+ var n=Math.max(1,Math.min(+R.querySelector('.n').value||1,v.length)),m=R.querySelector('.m').value,s=R.querySelector('.s').value;
+ if(!v.length){o.innerHTML='Enter some numbers.';return}
+ var bins=[],step='';
+ if(m==='width'){var A=v[0],B=v[v.length-1],W=(B-A)/n;step='W = (B − A) / N = ('+B+' − '+A+') / '+n+' = <b>'+f(W)+'</b>';
+  for(var i=0;i<n;i++)bins.push({lo:A+i*W,hi:A+(i+1)*W,v:[]});
+  v.forEach(function(x){var k=W?Math.min(n-1,Math.floor((x-A)/W)):0;bins[k].v.push(x)});}
+ else if(m==='depth'){var d=v.length/n;step='Depth = '+v.length+' values / '+n+' bins ≈ <b>'+f(d)+'</b> values per bin';
+  for(var i=0;i<n;i++)bins.push({v:v.slice(Math.round(i*d),Math.round((i+1)*d))});}
+ else{var g=[];for(var i=1;i<v.length;i++)g.push({d:v[i]-v[i-1],i:i});
+  var cut=g.slice().sort(function(a,b){return b.d-a.d}).slice(0,n-1).map(function(x){return x.i}).sort(function(a,b){return a-b});
+  step='Adjacent gaps: '+g.map(function(x){return '<span class="pill'+(cut.indexOf(x.i)>=0?' hi':'')+'">'+v[x.i-1]+'→'+v[x.i]+' = '+f(x.d)+'</span>'}).join(' ')+'<br>Cut at the <b>'+(n-1)+'</b> largest gaps (highlighted).';
+  var p=0;cut.concat([v.length]).forEach(function(c){bins.push({v:v.slice(p,c)});p=c});}
+ var mx=Math.max.apply(null,bins.map(function(b){return b.v.length}))||1;
+ var h='<p>Sorted: '+v.join(', ')+'</p><p>'+step+'</p><table><tr><th>Bin</th><th>Range</th><th>Values</th><th>Count</th>'+(s!=='none'?'<th>Smoothed</th>':'')+'</tr>';
+ bins.forEach(function(b,i){var r=b.lo!==undefined?f(b.lo)+' – '+(i<n-1?'<':'')+f(b.hi):(b.v.length?b.v[0]+' – '+b.v[b.v.length-1]:'—'),sm='';
+  if(s!=='none'&&b.v.length){var a=b.v,mean=a.reduce(function(x,y){return x+y},0)/a.length,mid=a.length%2?a[(a.length-1)/2]:(a[a.length/2-1]+a[a.length/2])/2,lo=a[0],hi=a[a.length-1];
+   sm=a.map(function(x){return s==='mean'?f(mean):s==='median'?f(mid):(x-lo<=hi-x?lo:hi)}).join(', ');
+   sm+=s==='mean'?' <span class="note">(mean '+f(mean)+')</span>':s==='median'?' <span class="note">(median '+f(mid)+')</span>':' <span class="note">(boundaries '+lo+' / '+hi+')</span>';}
+  h+='<tr><td>'+(i+1)+'</td><td>'+r+'</td><td>'+(b.v.join(', ')||'<i>empty</i>')+'</td><td><div class="bar" style="width:'+(60*b.v.length/mx)+'px"></div>'+b.v.length+'</td>'+(s!=='none'?'<td>'+sm+'</td>':'')+'</tr>'});
+ o.innerHTML=h+'</table>';}
+R.addEventListener('input',run);run();
+})();
+</script></div>
+<div class="call exam"><div class="ct">Exam focus</div><p>This exact style of question (sort → partition into equal-depth bins → smooth by means / boundaries) is very common. Always <strong>show the sorted data, the depth calculation, each bin, and the replaced values</strong>. If a value is exactly in the middle, state which boundary you chose.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s9"><h2 id="s9" data-t="Histogram partitioning — a full worked example"><span class="num">9</span>Histogram partitioning — a full worked example</h2><p>The video then applies the histogram rules <a class="ts" href="#" data-v="0" data-t="389">06:29</a>. Equal-width and equal-frequency work exactly like the binning above; <strong>V-Optimal</strong> chooses the partition with the <strong>least histogram variance</strong>; <strong>MaxDiff</strong> cuts at the <strong>β − 1 largest adjacent differences</strong> <a class="ts" href="#" data-v="0" data-t="441">07:21</a>.</p>
+<div class="call example"><div class="ct">Ages into 3 buckets (β = 3) <a class="ts" href="#" data-v="0" data-t="474">07:54</a></div><p>Ages (sorted, 20 values): 13, 15, 16, 16, 19, 20, 21, 22, 22, 25, 30, 33, 35, 35, 36, 40, 45, 46, 52, 70</p>
+<p><strong>(a) Equal-width:</strong> W = (70 − 13) / 3 = 57 / 3 = <strong>19</strong></p>
+<table>
+<thead>
+<tr>
+<th>Bucket</th>
+<th>Values</th>
+<th style="text-align: right;">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13 – &lt;32</td>
+<td>13, 15, 16, 16, 19, 20, 21, 22, 22, 25, 30</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr>
+<td>32 – &lt;51</td>
+<td>33, 35, 35, 36, 40, 45, 46</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td>51 – 70</td>
+<td>52, 70</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>(b) Equal-depth:</strong> 20 / 3 ≈ <strong>7</strong> values per bucket</p>
+<table>
+<thead>
+<tr>
+<th>Bucket</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>13, 15, 16, 16, 19, 20, 21</td>
+</tr>
+<tr>
+<td>2</td>
+<td>22, 22, 25, 30, 33, 35, 35</td>
+</tr>
+<tr>
+<td>3</td>
+<td>36, 40, 45, 46, 52, 70</td>
+</tr>
+</tbody>
+</table>
+<p><strong>(c) MaxDiff:</strong> need β − 1 = <strong>2</strong> largest adjacent differences.</p>
+<p>Differences between neighbours: 15−13=2, 16−15=1, 0, 3, 1, 1, 1, 0, 3, <strong>5</strong> (25→30), 3, 2, 0, 1, 4, 5, 1, <strong>6</strong> (46→52), <strong>18</strong> (52→70)</p>
+<p>Two largest: <strong>18</strong> (between 52 and 70) and <strong>6</strong> (between 46 and 52) → cut there.</p>
+<table>
+<thead>
+<tr>
+<th>Bucket</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>13 … 46 (18 values)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>52</td>
+</tr>
+<tr>
+<td>3</td>
+<td>70</td>
+</tr>
+</tbody>
+</table>
+<p>MaxDiff isolates the unusual values (52 and 70) — the cuts go where the data has natural <strong>gaps</strong>.</p></div>
+<div class="call video"><div class="ct">How the lecturer finds MaxDiff values <a class="ts" href="#" data-v="0" data-t="545">09:05</a></div><p>"For each pair of data elements we take the difference… out of this we select the 2 maximum differences." In the lecturer's own dataset the two largest gaps were <strong>55 → 62 (7)</strong> and <strong>29 → 35 (6)</strong>, giving buckets ending at 29, then 35–55, then 62–65 <a class="ts" href="#" data-v="0" data-t="600">10:00</a>.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s10"><h2 id="s10" data-t="Quick revision sheet"><span class="num">10</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data reduction</td>
+<td>Smaller data, (almost) same results; saves time &amp; memory</td>
+</tr>
+<tr>
+<td>5 strategies</td>
+<td>Cube aggregation · Attribute subset selection · Dimensionality reduction · Numerosity reduction · Discretization</td>
+</tr>
+<tr>
+<td>Attribute subset goal</td>
+<td>Minimum attributes, class distribution ≈ original</td>
+</tr>
+<tr>
+<td>Greedy methods</td>
+<td>Forward selection · Backward elimination · Combined · Decision tree induction</td>
+</tr>
+<tr>
+<td>Lossless vs lossy</td>
+<td>Exact reconstruction vs approximation (wavelet, PCA)</td>
+</tr>
+<tr>
+<td>Parametric numerosity</td>
+<td>Store model parameters: regression <em>y = wx + b</em>, log-linear</td>
+</tr>
+<tr>
+<td>Non-parametric numerosity</td>
+<td>Histograms, clustering, sampling</td>
+</tr>
+<tr>
+<td>Histogram rules</td>
+<td>Equal-width · Equal-frequency · V-Optimal (least variance) · MaxDiff (β − 1 largest gaps)</td>
+</tr>
+<tr>
+<td>Equal-width formula</td>
+<td>W = (B − A) / N — hurt by outliers</td>
+</tr>
+<tr>
+<td>Equal-depth</td>
+<td>Same count per bin — sort first, depth = n / N</td>
+</tr>
+<tr>
+<td>Smoothing</td>
+<td>By means · by medians · by boundaries (closest of min/max)</td>
+</tr>
+<tr>
+<td>Supervised vs unsupervised</td>
+<td>Uses class labels or not</td>
+</tr>
+<tr>
+<td>Top-down vs bottom-up</td>
+<td>Splitting at cut points vs merging neighbours</td>
+</tr>
+<tr>
+<td>Concept hierarchy</td>
+<td>Recursive discretization: age → youth / middle-aged / senior; done <strong>before</strong> mining</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">11 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="dm-Week04" data-pick="0"><script type="application/json" class="qdata">[{"q": "Which is <strong>not<\/strong> one of the five data reduction strategies?", "o": ["Data cube aggregation", "Attribute subset selection", "Numerosity reduction", "Data cleaning"], "e": "The five are cube aggregation, attribute subset selection, dimensionality reduction, numerosity reduction and discretisation. ", "a": 3, "w": "Week 04"}, {"q": "To predict whether a customer will buy a CD, which attribute is <strong>irrelevant<\/strong>?", "o": ["Age", "Music taste", "Telephone number", "Past purchases"], "e": "Attribute subset selection removes irrelevant attributes. ", "a": 2, "w": "Week 04"}, {"q": "Which is a <strong>greedy<\/strong> attribute-selection method?", "o": ["Stepwise forward selection", "Wavelet transform", "Equal-width binning", "Z-score"], "e": "Others: backward elimination, a combination of the two, and decision-tree induction. ", "a": 0, "w": "Week 04"}, {"q": "Wavelet transforms and PCA are examples of:", "o": ["Lossy dimensionality reduction", "Lossless compression", "Parametric numerosity reduction", "Data cleaning"], "e": "Lossy means the original can only be approximated. ", "a": 0, "w": "Week 04"}, {"q": "Storing only regression parameters (y = wx + b) instead of the data is:", "o": ["Parametric numerosity reduction", "Non-parametric numerosity reduction", "Discretisation", "Data cube aggregation"], "e": "Histograms, clustering and sampling are non-parametric. ", "a": 0, "w": "Week 04"}, {"q": "Temperatures range from 64 to 85, with 7 equal-width bins. What is the bin width?", "e": "W = (85 − 64) ÷ 7 = 3. ", "n": 3.0, "w": "Week 04"}, {"q": "12 sorted prices split into 3 equal-depth (equal-frequency) bins. How many values go in each bin?", "e": "Depth = 12 ÷ 3 = 4. ", "n": 4.0, "w": "Week 04"}, {"q": "A weakness of <strong>equal-width<\/strong> binning is that:", "o": ["Outliers can stretch the range, leaving most values in a few bins and some bins empty", "It needs class labels", "It always gives the same count per bin", "It can't be computed"], "e": "Equal-depth bins avoid this by holding the same number of values each. ", "a": 0, "w": "Week 04"}, {"q": "With β buckets, the MaxDiff histogram places boundaries at:", "o": ["The β − 1 largest differences between adjacent values", "Every value", "Equal widths", "The mean and median"], "e": "V-Optimal minimises the variance within buckets. ", "a": 0, "w": "Week 04"}, {"q": "Discretisation that uses class labels is called:", "o": ["Supervised", "Unsupervised", "Top-down", "Lossless"], "e": "Top-down (splitting) and bottom-up (merging) describe the direction instead. ", "a": 0, "w": "Week 04"}, {"q": "A concept hierarchy for age (youth / middle-aged / senior) is an example of:", "o": ["Recursive discretisation, replacing low-level values with higher-level concepts", "Normalisation", "Sampling", "Correlation analysis"], "e": "It's done before mining, giving concise, knowledge-level results. ", "a": 0, "w": "Week 04"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2003/Week%2003%20-%20Study%20Guide.html"><small>← Previous</small>Data Preprocessing — Cleaning, Integration &amp; Transformation</a><a class="nx" href="../Week%2005/Week%2005%20-%20Study%20Guide.html"><small>Next →</small>Introduction to Data Warehousing</a></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  function show(i){
+    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

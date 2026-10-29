@@ -1,0 +1,52 @@
+? aₙ = n/(n + 1). What is a₃ (as a decimal)?
+# 0.75
+= 3/4 = 0.75.
+
+? 3, 6, 12, 24, … is:
++ A geometric progression with a = 3, r = 2
+- An arithmetic progression with d = 3
+- An arithmetic progression with d = 2
+- Neither
+= Each term is multiplied by 2.
+
+? What is the 10th term of the arithmetic sequence 5, 8, 11, …?
+# 32
+= a + 9d = 5 + 27 = 32.
+
+? Σ from k = 1 to 100 of k equals:
+# 5050
+= n(n + 1)/2 = 100 × 101/2.
+
+? Σ from k = 100 to 200 of k equals:
+# 15150
+= 20,100 − 4,950 = 15,150 (the sum to 200 minus the sum to 99).
+
+? Σ from j = 0 to 8 of 3·2ʲ equals:
+# 1533
+= (3·2⁹ − 3)/(2 − 1) = 1,536 − 3 = 1,533.
+
+? Σ from n = 0 to ∞ of 3·(3/4)ⁿ equals:
+# 12
+= a/(1 − r) = 3/(1/4) = 12.
+
+? An infinite geometric series converges when:
++ |r| < 1
+- r > 1
+- r = 1
+- Always
+= The sum is then a/(1 − r).
+
+? Σᵢ₌₀² Σⱼ₌₀³ (i·j) equals:
+# 18
+= Inner sum = 6i, then 0 + 6 + 12 = 18.
+
+? Σ from k = 1 to 4 of k² equals:
+# 30
+= 1 + 4 + 9 + 16 = 30, or 4·5·9/6.
+
+? A string is:
++ A finite sequence; its length is the number of terms
+- An infinite sequence
+- A sum of terms
+- A set with no order
+= The empty string has length 0.

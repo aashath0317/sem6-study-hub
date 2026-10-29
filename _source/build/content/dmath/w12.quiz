@@ -1,0 +1,73 @@
+? A tree is:
++ A connected undirected graph with no simple circuits
+- Any graph with no loops
+- A disconnected graph
+- A directed graph with cycles
+= A forest has no simple circuits but may be disconnected.
+
+? How many edges does a tree with 15 vertices have?
+# 14
+= A tree with n vertices has n − 1 edges.
+
+? A graph with 10 vertices and 10 edges is:
++ Not a tree (a tree would have 9 edges)
+- Definitely a tree
+- A forest of two trees
+- A binary tree
+= Too many edges means there must be a circuit.
+
+? In a tree, between any two vertices there is:
++ Exactly one simple path
+- No path
+- At least two paths
+- A circuit
+= This characterises trees (Theorem 1).
+
+? A vertex with **no children** in a rooted tree is a:
++ Leaf
+- Root
+- Internal vertex
+- Ancestor
+= Internal vertices have children.
+
+? Vertices with the same parent are:
++ Siblings
+- Ancestors
+- Descendants
+- Leaves
+= E.g. h, i, j are the children of g, so they're siblings.
+
+? In the lecture tree, the ancestors of e are:
++ c, b, a
+- d only
+- f, g
+- e itself
+= Follow the path from e up to the root.
+
+? In a binary search tree, each vertex's key is:
++ Greater than every key in its left subtree and less than every key in its right subtree
+- Smaller than all keys below it
+- Equal to its children's keys
+- Random
+= New items are inserted by comparing from the root.
+
+? Building a BST from "mathematics, physics, geography, …": where does "physics" go?
++ Right child of mathematics
+- Left child of mathematics
+- The root
+- Left child of geography
+= physics > mathematics alphabetically.
+
+? Inserting "oceanography" into that BST: mathematics → physics → meteorology → ?
++ New right child of meteorology
+- Left child of physics
+- Right child of zoology
+- Replaces meteorology
+= oceanography > meteorology, and there's no right child yet.
+
+? Which is **not** an application of trees mentioned?
+- Binary search trees for searching
+- Decision trees
+- Game trees
++ Sorting a matrix by columns
+= Others include family trees and Cayley's chemistry (molecule) trees.

@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 09 · Cognitive Modelling — GOMS, KLM &amp; Fitts&#x27;s Law — Human Computer Interaction</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="hci-Week09">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Human Computer Interaction</a> › Week 09</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Human Computer Interaction · Week 09</div><h1>Cognitive Modelling — GOMS, KLM &amp; Fitts's Law</h1><p>Predicting user performance before building anything: task analysis, the GOMS framework, keystroke-level model timings, Fitts's law, and the strengths and limits of predictive models.</p><div class="meta"><span class="chip">ITE3752</span><span class="chip">5 videos · 51 min</span><span class="chip">📄 Week 09 - Task Analysis, GOMS, KLM &amp; Fitts Law.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Cognitive Modelling · 7 min</button><button>2. GOMS Model · 13 min</button><button>3. Keystroke-Level Model (KLM) · 16 min</button><button>4. Fitts&#x27;s Law · 10 min</button><button>5. GOMS (extra) · 6 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3752-25S2- Cognitive Modelling - CODL-UOM.mp4"><source src="ITE3752-25S2-%20Cognitive%20Modelling%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Cognitive Modelling</p><p class="vs">What cognitive models are, why they don't need prototypes, and the GOMS / KLM / Fitts / MHP family.</p><a href="#" data-v="0" data-t="0"><b>00:00</b><span>Cognitive modelling: predicting how users perform</span></a><a href="#" data-v="0" data-t="61"><b>01:01</b><span>Related to task analysis: tasks → sub-tasks</span></a><a href="#" data-v="0" data-t="120"><b>02:00</b><span>Theoretical roots in the 1970s–80s</span></a><a href="#" data-v="0" data-t="166"><b>02:46</b><span>Advantages: no prototype or real users needed</span></a><a href="#" data-v="0" data-t="249"><b>04:09</b><span>KLM: the lowest, operational level</span></a><a href="#" data-v="0" data-t="281"><b>04:41</b><span>GOMS: the umbrella (Goals, Operators, Methods, Selection rules)</span></a><a href="#" data-v="0" data-t="339"><b>05:39</b><span>Fitts's law: time to reach and act on a target</span></a><a href="#" data-v="0" data-t="385"><b>06:25</b><span>Model Human Processor (MHP) underlies them all</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3752-25S2- GOMS Model - CODL-UOM.mp4"><source src="ITE3752-25S2-%20GOMS%20Model%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">GOMS Model</p><p class="vs">Goals, operators, methods and selection rules in detail.</p><a href="#" data-v="1" data-t="0"><b>00:00</b><span>GOMS: the model underlying the earlier theories</span></a><a href="#" data-v="1" data-t="95"><b>01:35</b><span>GOMS as a description of knowledge</span></a><a href="#" data-v="1" data-t="149"><b>02:29</b><span>Goals, Operators, Methods, Selection rules</span></a><a href="#" data-v="1" data-t="235"><b>03:55</b><span>GOMS models expert users</span></a><a href="#" data-v="1" data-t="476"><b>07:56</b><span>Analysing tasks at a very detailed level</span></a><a href="#" data-v="1" data-t="580"><b>09:40</b><span>Worked example: methods and selection rules</span></a><a href="#" data-v="1" data-t="717"><b>11:57</b><span>"Unless other rules apply"</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3752-25S2- Key Stroke Level Model (KLM) - CODL-UOM.mp4"><source src="ITE3752-25S2-%20Key%20Stroke%20Level%20Model%20%28KLM%29%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Keystroke-Level Model (KLM)</p><p class="vs">Operators, their times, and how to add up a task.</p><a href="#" data-v="2" data-t="0"><b>00:00</b><span>The Keystroke-Level Model (KLM)</span></a><a href="#" data-v="2" data-t="45"><b>00:45</b><span>Operators tied to the human motor system</span></a><a href="#" data-v="2" data-t="137"><b>02:17</b><span>Three categories of operators: physical, mental, system response</span></a><a href="#" data-v="2" data-t="235"><b>03:55</b><span>Execution time = pointing + homing + keystrokes + mental…</span></a><a href="#" data-v="2" data-t="280"><b>04:40</b><span>Pointing time (Fitts' law)</span></a><a href="#" data-v="2" data-t="379"><b>06:19</b><span>Operator times table (M = 1.35 s…)</span></a><a href="#" data-v="2" data-t="475"><b>07:55</b><span>Worked example: adding up the operators</span></a><a href="#" data-v="2" data-t="614"><b>10:14</b><span>Why shortcuts help expert users</span></a><a href="#" data-v="2" data-t="751"><b>12:31</b><span>Different users, different experience levels</span></a><a href="#" data-v="2" data-t="846"><b>14:06</b><span>Second example: inserting text</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3752-25S2- Fitt&#x27;s Law - CODL-UOM.mp4"><source src="ITE3752-25S2-%20Fitt%27s%20Law%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Fitts&#x27;s Law</p><p class="vs">Placing M operators, then Fitts's law, the speed–accuracy trade-off and mobile-button examples.</p><a href="#" data-v="3" data-t="0"><b>00:00</b><span>KLM: insert an M before every P that selects a command</span></a><a href="#" data-v="3" data-t="64"><b>01:04</b><span>Too many choices = too many M operators = slow</span></a><a href="#" data-v="3" data-t="218"><b>03:38</b><span>Fitts's law: time to move a pointer to a target</span></a><a href="#" data-v="3" data-t="279"><b>04:39</b><span>Distance and target width</span></a><a href="#" data-v="3" data-t="347"><b>05:47</b><span>MT = a + b·log₂(D/W + 1), a linear regression model</span></a><a href="#" data-v="3" data-t="404"><b>06:44</b><span>Speed–accuracy trade-off</span></a><a href="#" data-v="3" data-t="471"><b>07:51</b><span>Mobile phone: call and cut buttons are large</span></a><a href="#" data-v="3" data-t="538"><b>08:58</b><span>Applies to rapid pointing, not continuous movement</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="HCI GOMS.mp4"><source src="HCI%20GOMS.mp4"></video></div><div class="chap"><p class="vt">GOMS (extra)</p><p class="vs">Additional explanation of GOMS.</p><a href="#" data-v="4" data-t="0"><b>00:00</b><span>Introduction to GOMS</span></a><a href="#" data-v="4" data-t="46"><b>00:46</b><span>Why GOMS: predicting task time</span></a><a href="#" data-v="4" data-t="96"><b>01:36</b><span>Goals and subgoals</span></a><a href="#" data-v="4" data-t="190"><b>03:10</b><span>Methods: alternative ways (cab late → take a train)</span></a><a href="#" data-v="4" data-t="237"><b>03:57</b><span>Example: sending a video message</span></a><a href="#" data-v="4" data-t="289"><b>04:49</b><span>Operators: basic actions (typing, tapping)</span></a><a href="#" data-v="4" data-t="336"><b>05:36</b><span>Selection rules; assumes expert, error-free use</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Task analysis &amp; cognitive modelling"><span class="num">1</span>Task analysis &amp; cognitive modelling</h2><ul>
+<li><strong>Task analysis</strong> is the formal breakdown of <strong>what a user must do</strong> (physical actions and cognitive processing) to reach a desired system state.</li>
+<li><strong>Cognitive modelling</strong> predicts <strong>how a person's mind works while using a particular UI</strong>: how they'd complete a task with that specific interface <a class="ts" href="#" data-v="0" data-t="61">01:01</a>.</li>
+</ul>
+<div class="call key"><div class="ct">Why model instead of test? <a class="ts" href="#" data-v="0" data-t="166">02:46</a></div><ul>
+<li>Models <strong>don't need to be implemented or prototyped</strong>. You predict and assess mentally, <strong>without real users</strong>.</li>
+<li>They have <strong>explanatory power</strong> (theory explains behaviour) and give a <strong>foundation for design</strong>, as in other engineering fields.</li>
+<li>You can <strong>calculate performance times</strong> and compare workflows <strong>before writing code</strong>.</li>
+</ul></div>
+<div class="grid2"><div><p><strong>🖥 Information processor model</strong></p>
+<p>Human = input–output unit (the <strong>Model Human Processor</strong>, MHP). Focuses on <strong>keystrokes, pointing and perceptual cycles</strong>: GOMS, KLM.</p></div><div><p><strong>🧠 Cognitive / predictor model</strong></p>
+<p>Focuses on <strong>mental simulations</strong>, hypotheses, problem-solving strategies and forming intentions.</p></div></div>
+<h3 id="the-model-family-0409">The model family <a class="ts" href="#" data-v="0" data-t="249">04:09</a></h3>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Level</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GOMS</strong></td>
+<td><strong>Higher, abstract</strong>: the <strong>umbrella</strong>; structured and hierarchical like HTA</td>
+<td>Goals, Operators, Methods, Selection rules</td>
+</tr>
+<tr>
+<td><strong>KLM</strong></td>
+<td><strong>Lowest, operational</strong></td>
+<td>Times individual keystrokes, pointing, clicks</td>
+</tr>
+<tr>
+<td><strong>Fitts's law</strong></td>
+<td>Motor</td>
+<td>Time to <strong>reach and act on a target</strong></td>
+</tr>
+<tr>
+<td><strong>MHP</strong> (Model Human Processor)</td>
+<td>Underlying</td>
+<td>The model of human cognition beneath all of these</td>
+</tr>
+</tbody>
+</table>
+<p>The roots are <strong>1970s–80s theory</strong> (Card, Moran &amp; Newell) <a class="ts" href="#" data-v="0" data-t="120">02:00</a>.</p><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="The GOMS framework"><span class="num">2</span>The GOMS framework</h2><p><strong>GOMS</strong> (Card, Moran &amp; Newell) models an expert doing <strong>goal-oriented, error-free</strong> tasks:</p>
+<table>
+<thead>
+<tr>
+<th>Letter</th>
+<th>Component</th>
+<th>Meaning</th>
+<th>Example: send a report to your manager</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>G</strong></td>
+<td><strong>Goals</strong></td>
+<td>The high-level objective</td>
+<td>"Send an official report to the manager"</td>
+</tr>
+<tr>
+<td><strong>O</strong></td>
+<td><strong>Operators</strong></td>
+<td><strong>Elementary</strong> perceptual, motor or cognitive actions</td>
+<td>Click a button, type a key, scan a list</td>
+</tr>
+<tr>
+<td><strong>M</strong></td>
+<td><strong>Methods</strong></td>
+<td><strong>Ordered sequences of operators</strong> that achieve a (sub)goal</td>
+<td>Method A: email · Method B: chat app</td>
+</tr>
+<tr>
+<td><strong>S</strong></td>
+<td><strong>Selection rules</strong></td>
+<td><strong>If-then logic</strong> choosing which method to use</td>
+<td>IF formal or urgent THEN email ELSE chat</td>
+</tr>
+</tbody>
+</table>
+<figure><img src="Figure%209.1.PNG" alt="GOMS methods and selection rules"><figcaption>Figure 9.1: Methods and selection rules branching from a goal</figcaption></figure>
+
+<pre><code>GOAL: Send report to manager
+ ├─ [Selection rule] IF formal THEN use METHOD-A ELSE METHOD-B
+ ├─ METHOD-A (Email):  open mail → click Compose → type address → attach file → click Send
+ └─ METHOD-B (Chat):   open chat → find manager → drag file in → press Enter
+</code></pre><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Keystroke-Level Model (KLM)"><span class="num">3</span>Keystroke-Level Model (KLM)</h2><p>KLM is a <strong>simplified, quantitative version of GOMS</strong>. It calculates the <strong>execution time for an expert doing a routine task with no errors</strong>:</p>
+<div class="formula">T<sub>execute</sub> = T<sub>K</sub> + T<sub>P</sub> + T<sub>H</sub> + T<sub>D</sub> + T<sub>M</sub> + T<sub>R</sub></div>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+<th>Typical time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>K</strong></td>
+<td><strong>Keystroke</strong> / button press</td>
+<td>~<strong>0.20 s</strong> (skilled typist 0.12 s, novice 0.40 s)</td>
+</tr>
+<tr>
+<td><strong>P</strong></td>
+<td><strong>Pointing</strong> the mouse at a target</td>
+<td>~<strong>1.10 s</strong></td>
+</tr>
+<tr>
+<td><strong>H</strong></td>
+<td><strong>Homing</strong>: moving the hand between keyboard and mouse</td>
+<td>~<strong>0.40 s</strong></td>
+</tr>
+<tr>
+<td><strong>M</strong></td>
+<td><strong>Mental preparation</strong> before the next chunk</td>
+<td>~<strong>1.35 s</strong> (the largest)</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td><strong>Drawing</strong> with pen or mouse</td>
+<td>Depends on the domain</td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td><strong>System response</strong> time (waiting)</td>
+<td>Depends on the system</td>
+</tr>
+</tbody>
+</table>
+<div class="call warn"><div class="ct">Where to put M operators <a class="ts" href="#" data-v="3" data-t="0">00:00</a></div><p><strong>Insert an M before every P that selects a command.</strong> You must mentally prepare before every choice. M is the <strong>biggest</strong> operator, so <strong>too many commands to choose from means too many M's</strong>, which makes the task slow <a class="ts" href="#" data-v="3" data-t="64">01:04</a>. Each operator time is an <strong>estimate</strong>; add them up for the total task time.</p></div>
+<div class="tool"><div class="tt">🧪 Try it — KLM task-time calculator</div><div id="klm">
+<p class="note">Click operators to build the sequence (click a chip to remove it). A preset fills in a typical task.</p>
+<div class="row ops"></div>
+<div class="row"><label>Presets <select class="pre"><option value="">—</option><option value="save">Save a file with the mouse (File ▸ Save)</option><option value="ctrl">Save with Ctrl+S (hands on keyboard)</option><option value="word">Delete a word: point, double-click, Del</option></select></label><label>R (system wait, s) <input type="number" class="r" value="0" step="0.1" style="width:70px"></label><button class="alt clr">Clear</button></div>
+<div class="seq" style="min-height:36px;margin:8px 0"></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('klm'),T={K:0.2,P:1.1,H:0.4,M:1.35,B:0.1},L={K:'Keystroke',P:'Point',H:'Home hands',M:'Mental prep',B:'Mouse button press/release'},seq=[];
+var P={save:['H','M','P','B','B','M','P','B','B'],ctrl:['M','K','K'],word:['H','M','P','B','B','B','B','H','K']};
+Object.keys(T).forEach(function(k){var b=document.createElement('button');b.textContent=k+' · '+L[k]+' ('+T[k]+'s)';b.className='alt';b.onclick=function(){seq.push(k);draw()};R.querySelector('.ops').appendChild(b)});
+R.querySelector('.pre').onchange=function(e){seq=(P[e.target.value]||[]).slice();draw()};R.querySelector('.clr').onclick=function(){seq=[];draw()};R.querySelector('.r').oninput=draw;
+function draw(){var s=R.querySelector('.seq');s.innerHTML=seq.map(function(k,i){return '<span class="pill hi" data-i="'+i+'" style="cursor:pointer" title="remove">'+k+'</span>'}).join('');s.querySelectorAll('[data-i]').forEach(function(x){x.onclick=function(){seq.splice(+x.dataset.i,1);draw()}});
+var r=+R.querySelector('.r').value||0,c={},t=r;seq.forEach(function(k){c[k]=(c[k]||0)+1;t+=T[k]});
+R.querySelector('.out').innerHTML='<p>'+Object.keys(c).map(function(k){return c[k]+'×'+k+' = '+(c[k]*T[k]).toFixed(2)+'s'}).join(' + ')+(r?' + R '+r+'s':'')+'</p><p style="font-size:20px">T<sub>execute</sub> ≈ <b>'+t.toFixed(2)+' s</b></p>'+(c.M?'<p class="note">Mental preparation accounts for '+Math.round(100*c.M*T.M/(t||1))+'% of the time.</p>':'')}draw();})();
+</script></div>
+<div class="call example"><div class="ct">Mouse vs keyboard save</div><ul>
+<li><strong>Menu save:</strong> H + M + P + B B + M + P + B B = 0.4 + 1.35 + 1.1 + 0.2 + 1.35 + 1.1 + 0.2 = <strong>5.70 s</strong></li>
+<li><strong>Ctrl+S:</strong> M + K + K = 1.35 + 0.2 + 0.2 = <strong>1.75 s</strong></li>
+</ul>
+<p>That's why experts love shortcuts. (B = mouse button press or release, ≈ 0.1 s each.)</p></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Fitts&#x27;s law"><span class="num">4</span>Fitts's law</h2><p><strong>Fitts's law</strong> comes from product ergonomics and is easily adapted to UIs. It predicts the <strong>time to move a pointer (or finger) to a target</strong> <a class="ts" href="#" data-v="3" data-t="218">03:38</a>.</p>
+<div class="formula"><strong>MT = a + b · log₂(2D / W)</strong>   (PDF form)<br><strong>MT = a + b · log₂(D / W + 1)</strong>   (Shannon form, used in the lecture video <a class="ts" href="#" data-v="3" data-t="347">05:47</a>)</div>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MT</strong></td>
+<td>Movement time</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td><strong>Distance</strong> (amplitude) to the target</td>
+</tr>
+<tr>
+<td><strong>W</strong></td>
+<td><strong>Width</strong> of the target along the direction of movement</td>
+</tr>
+<tr>
+<td><strong>a, b</strong></td>
+<td>Constants from <strong>linear regression</strong>: a = intercept, b = slope</td>
+</tr>
+<tr>
+<td><strong>log₂(2D/W)</strong></td>
+<td><strong>Index of Difficulty (ID)</strong> in bits</td>
+</tr>
+</tbody>
+</table>
+<div class="call key"><div class="ct">In plain words <a class="ts" href="#" data-v="3" data-t="404">06:44</a></div><p><strong>Longer distance + smaller target = more time.</strong> The wider the target, the less time it takes; the narrower, the more.</p></div>
+<div class="tool"><div class="tt">🧪 Try it — Fitts's law lab — feel it, then measure it</div><div id="ft">
+<div class="row"><label>Distance D <input type="range" min="60" max="560" value="400" class="d"></label><label>Width W <input type="range" min="8" max="120" value="40" class="w"></label><label>a <input type="number" class="a" value="0.1" step="0.05" style="width:60px"></label><label>b <input type="number" class="b" value="0.15" step="0.05" style="width:60px"></label></div>
+<div class="arena" style="position:relative;height:120px;border:1px dashed var(--line);border-radius:10px;margin:8px 0;user-select:none;overflow:hidden"></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('ft'),A=R.querySelector('.arena'),t0=0,res=[];
+function g(c){return +R.querySelector('.'+c).value}
+function draw(){var d=g('d'),w=g('w'),id=Math.log2(2*d/w),mt=g('a')+g('b')*id;var maxW=A.clientWidth||600,sx=Math.min(1,(maxW-40)/(d+w));
+A.innerHTML='<div class="st" style="position:absolute;left:10px;top:40px;width:40px;height:40px;border-radius:8px;background:var(--bg);border:2px solid var(--accent);display:grid;place-items:center;cursor:pointer;font-size:11px">START</div><div class="tg" style="position:absolute;left:'+(30+d*sx-w*sx/2)+'px;top:10px;width:'+(w*sx)+'px;height:100px;border-radius:6px;background:var(--accent);opacity:.85;cursor:pointer"></div>';
+A.querySelector('.st').onclick=function(){t0=performance.now();A.querySelector('.st').style.background='var(--tip-bg)'};
+A.querySelector('.tg').onclick=function(){if(!t0)return;var t=(performance.now()-t0)/1000;t0=0;res.push([id,t]);A.querySelector('.st').style.background='var(--bg)';out()};
+R._p=[id,mt];out()}
+function out(){var p=R._p;R.querySelector('.out').innerHTML='<p>ID = log₂(2D/W) = log₂(2×'+g('d')+'/'+g('w')+') = <b>'+p[0].toFixed(2)+' bits</b> → predicted MT = '+g('a')+' + '+g('b')+'×'+p[0].toFixed(2)+' = <b>'+p[1].toFixed(2)+' s</b></p>'+(res.length?'<p>Your trials (click START then the target): '+res.slice(-6).map(function(r){return '<span class="pill">ID '+r[0].toFixed(1)+' → '+r[1].toFixed(2)+'s</span>'}).join(' ')+'</p><p class="note">Make the target narrow and far, then wide and near. Your times follow the law.</p>':'<p class="note">Click START, then the blue target, as fast as you can. Try different D and W.</p>')}
+R.addEventListener('input',draw);setTimeout(draw,50);window.addEventListener('resize',draw);})();
+</script></div>
+<h3 id="what-fittss-law-means-for-design">What Fitts's law means for design</h3>
+<table>
+<thead>
+<tr>
+<th>Implication</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎯 <strong>Make important targets big</strong></td>
+<td>Larger W means a faster click. <strong>Primary call-to-action</strong> buttons need generous hit areas. On phones, the <strong>answer and end-call buttons are large</strong> <a class="ts" href="#" data-v="3" data-t="471">07:51</a></td>
+</tr>
+<tr>
+<td>📏 <strong>Keep small targets close</strong></td>
+<td>If a target must be narrow, <strong>reduce the distance</strong>, which also cuts errors</td>
+</tr>
+<tr>
+<td>🖥 <strong>Use screen edges and corners</strong></td>
+<td>Edges have <strong>effectively infinite width</strong> (W = ∞), because the cursor stops at the edge: Windows <strong>Start</strong> menu, Mac <strong>Apple menu</strong></td>
+</tr>
+<tr>
+<td>⚖️ <strong>Speed–accuracy trade-off</strong></td>
+<td>Fast movement + small targets = <strong>higher error rates</strong> <a class="ts" href="#" data-v="3" data-t="404">06:44</a></td>
+</tr>
+<tr>
+<td>⚡ <strong>Scope</strong></td>
+<td>Applies to <strong>rapid pointing movements</strong>, not continuous movements <a class="ts" href="#" data-v="3" data-t="538">08:58</a></td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Strengths and limits of predictive models"><span class="num">5</span>Strengths and limits of predictive models</h2><div class="grid2"><div><p><strong>✅ Strengths</strong></p>
+<ul>
+<li><strong>Objective, repeatable</strong> numbers to compare prototypes</li>
+<li><strong>Saves time and money</strong>: finds bottlenecks <strong>before</strong> user testing</li>
+<li>Breaks complex tasks into <strong>measurable micro-steps</strong></li>
+</ul></div><div><p><strong>⚠️ Limitations</strong></p>
+<ul>
+<li>Assumes <strong>expert, error-free</strong> performance. <strong>No novice confusion, slips or exploring</strong></li>
+<li>Ignores <strong>fatigue, stress, emotion, delight, creativity</strong></li>
+<li>Hard to use when goals are <strong>unstructured or keep changing</strong></li>
+</ul></div></div>
+<div class="call exam"><div class="ct">Exam focus</div><p>Expect:</p>
+<ul>
+<li>"Explain GOMS with an example": draw the goal → methods → selection rule</li>
+<li><strong>KLM time calculation</strong>: list the operators and add their times</li>
+<li>"State Fitts's law and give UI design implications": big targets, edges and corners, keep small targets close</li>
+<li>"Limitations of GOMS/KLM"</li>
+</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cognitive modelling</td>
+<td>Predict performance with a specific UI; no prototype or users needed</td>
+</tr>
+<tr>
+<td>Family</td>
+<td>GOMS (umbrella) · KLM (lowest level) · Fitts (pointing) · MHP (underlying)</td>
+</tr>
+<tr>
+<td>GOMS</td>
+<td>Goals · Operators · Methods · Selection rules</td>
+</tr>
+<tr>
+<td>KLM</td>
+<td>T = K + P + H + D + M + R; expert, error-free</td>
+</tr>
+<tr>
+<td>Times</td>
+<td>K 0.2 · P 1.1 · H 0.4 · M 1.35</td>
+</tr>
+<tr>
+<td>M rule</td>
+<td>Put an M before each P that selects a command; many choices = slow</td>
+</tr>
+<tr>
+<td>Fitts</td>
+<td>MT = a + b·log₂(2D/W); ID = log₂(2D/W)</td>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Far + small = slow; big + near = fast</td>
+</tr>
+<tr>
+<td>Edges</td>
+<td>Infinite width: Start menu, Apple menu</td>
+</tr>
+<tr>
+<td>Trade-off</td>
+<td>Speed vs accuracy; rapid pointing only</td>
+</tr>
+<tr>
+<td>Limits</td>
+<td>No novices or errors, no emotion or fatigue, structured goals only</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">11 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="hci-Week09" data-pick="0"><script type="application/json" class="qdata">[{"q": "GOMS stands for:", "o": ["Goals, Operators, Methods, Selection rules", "Goals, Objects, Models, Systems", "Graphs, Operations, Menus, Screens", "Goals, Outputs, Memory, Senses"], "e": "Selection rules choose between alternative methods. ", "a": 0, "w": "Week 09"}, {"q": "GOMS and KLM model which kind of user?", "o": ["An expert, error-free user", "A complete novice", "A user making many errors", "A child"], "e": "That's a key limitation: no novices, errors, emotion or fatigue. ", "a": 0, "w": "Week 09"}, {"q": "In KLM, the mental preparation operator M takes about:", "e": "K ≈ 0.2 s, P ≈ 1.1 s, H ≈ 0.4 s. ", "n": 1.35, "t": 0.01, "w": "Week 09"}, {"q": "In KLM, pointing with the mouse (P) takes about:", "e": "Fitts's law gives a more precise estimate. ", "n": 1.1, "t": 0.01, "w": "Week 09"}, {"q": "KLM time for Ctrl+S, modelled as M + K + K (seconds)?", "e": "1.35 + 0.2 + 0.2. ", "n": 1.75, "t": 0.01, "w": "Week 09"}, {"q": "Saving through the menu took 5.70 s, but Ctrl+S takes 1.75 s. This shows that:", "o": ["Shortcuts make expert users much faster", "Menus are always better", "KLM is useless", "The mouse is faster than the keyboard"], "e": "Each extra M and P operator adds time. ", "a": 0, "w": "Week 09"}, {"q": "Fitts's law is MT = a + b·log₂(2D/W). Movement time increases when:", "o": ["The distance is larger or the target is smaller", "The target is bigger", "The target is closer", "The colour is brighter"], "e": "Far and small means slow; near and big means fast. ", "a": 0, "w": "Week 09"}, {"q": "Why are screen edges and corners (Start menu, Apple menu) easy targets?", "o": ["The cursor stops at the edge, so they act as if they had infinite width", "They're brighter", "They're closer to the centre", "They use keyboard shortcuts"], "e": "Fitts's law design implication. ", "a": 0, "w": "Week 09"}, {"q": "D = 8 and W = 2. What is the index of difficulty ID = log₂(2D/W)?", "e": "log₂(16/2) = log₂ 8 = 3. ", "n": 3.0, "w": "Week 09"}, {"q": "Which is a <strong>limitation<\/strong> of GOMS and KLM?", "o": ["They ignore novices, errors, emotion and fatigue, and need structured goals", "They need working prototypes", "They need many real users", "They can't predict time"], "e": "They predict performance without prototypes or users, which is their advantage. ", "a": 0, "w": "Week 09"}, {"q": "The KLM operator H stands for:", "o": ["Homing: moving the hand between keyboard and mouse", "Holding a key", "Help", "Highlight"], "e": "It takes about 0.4 s. ", "a": 0, "w": "Week 09"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2008/Week%2008%20-%20Study%20Guide.html"><small>← Previous</small>Mental Models, Representations &amp; Error Taxonomy</a><a class="nx" href="../Week%2010/Week%2010%20-%20Study%20Guide.html"><small>Next →</small>Cognitive Task Analysis &amp; Hierarchical Task Analysis</a></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  function show(i){
+    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

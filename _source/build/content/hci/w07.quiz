@@ -1,0 +1,76 @@
+? Which has the **highest authority but the lowest generality**?
+- Principles
+- Guidelines
++ Standards
+- Heuristics
+= Standards are binding, like ISO 9241 and WCAG 2.1. Principles are general but advisory.
+
+? Apple's Human Interface Guidelines and Google's Material Design are examples of:
+- Principles
++ Guidelines
+- Standards
+- Laws
+= They have moderate generality and are advisory.
+
+? ISO 9241 and WCAG 2.1 are examples of:
+- Principles
+- Guidelines
++ Standards
+- Mental models
+= Standards are specific and enforced.
+
+? "Recognition rather than recall" comes from:
++ Nielsen's 10 heuristics
+- Shneiderman's 8 golden rules
+- Norman's 7 stages
+- Fitts's law
+= Show options instead of making users remember them.
+
+? "Enable frequent users to use shortcuts" and "Design dialogues to yield closure" come from:
+- Nielsen
++ Shneiderman's eight golden rules
+- ISO 9241
+- Constantine and Lockwood
+= The others include consistency, feedback, error handling, reversal, locus of control and memory load.
+
+? A stove whose knobs are arranged like its burners demonstrates:
++ Mapping
+- Constraints
+- Tolerance
+- Equity
+= Mapping means controls match their effects.
+
+? A date picker that stops you choosing 31 February demonstrates:
++ Constraints
+- Mapping
+- Affordance
+- Documentation
+= Constraints limit the possible actions to prevent errors.
+
+? An Undo button demonstrates:
++ Tolerance (and reversibility)
+- Simplicity
+- Mapping
+- Equity
+= This is also called defensive design.
+
+? Using colour **plus** an icon (not colour alone) demonstrates:
++ Perceptibility (multi-modal)
+- Consistency
+- Simplicity
+- Comfort
+= Colour-blind users still get the message.
+
+? A door handle that invites pulling demonstrates:
++ Affordance
+- Equity
+- Documentation
+- Flexibility
+= Affordance means an object's design suggests how to use it.
+
+? Which principle appears in nearly every principle set (the common core)?
++ Feedback (with visibility, consistency, error prevention and memory load)
+- Equity
+- Comfort
+- Documentation
+= These recur in Norman, Nielsen and Shneiderman.

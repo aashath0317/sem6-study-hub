@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 08 · Data Cube Computation &amp; Data Generalization — Data Mining</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="dm-Week08">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 08</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 08</div><h1>Data Cube Computation &amp; Data Generalization</h1><p>Materializing cubes, base vs aggregate cells, iceberg cubes, MultiWay array aggregation, BUC, star-nodes and star-trees, and attribute-oriented induction (AOI).</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 15 min</span><span class="chip">📄 week 8.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Data Cube Computation · 15 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Data Cube Computation.mp4"><source src="Data%20Cube%20Computation.mp4"></video></div><div class="chap"><p class="vt">Data Cube Computation</p><p class="vs">Walkthrough of cube materialization and efficient computation methods.</p><a href="#" data-v="0" data-t="2"><b>00:02</b><span>A simple data cube example (product, location, time)</span></a><a href="#" data-v="0" data-t="115"><b>01:55</b><span>The apex cuboid: the most summarised view</span></a><a href="#" data-v="0" data-t="171"><b>02:51</b><span>Base cells: P1, Calgary, Wednesday…</span></a><a href="#" data-v="0" data-t="277"><b>04:37</b><span>Aggregate cells and slices ("*" = all)</span></a><a href="#" data-v="0" data-t="384"><b>06:24</b><span>Reading aggregate values (111, 27…)</span></a><a href="#" data-v="0" data-t="502"><b>08:22</b><span>Two categories of cube computation</span></a><a href="#" data-v="0" data-t="567"><b>09:27</b><span>Simultaneous aggregation: base → 1-D → 2-D cells</span></a><a href="#" data-v="0" data-t="669"><b>11:09</b><span>Example: Apple, Central Province, January</span></a><a href="#" data-v="0" data-t="784"><b>13:04</b><span>How aggregated values are updated</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why compute cubes efficiently?"><span class="num">1</span>Why compute cubes efficiently?</h2><ul>
+<li><strong>Data cube computation</strong> is an <strong>essential</strong> task in warehouse implementation.</li>
+<li><strong>Pre-computing</strong> all or part of a cube <strong>greatly reduces response time</strong> and improves OLAP performance.</li>
+<li><strong>The challenge:</strong> it can need <strong>substantial computation time and storage space</strong>.</li>
+</ul><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Cube materialization: cells and cuboids"><span class="num">2</span>Cube materialization: cells and cuboids</h2><p>A data cube is a <strong>lattice of cuboids</strong>, and <strong>each cuboid is a group-by</strong>. For dimensions A, B, C:</p>
+<pre><code>                 all            ← apex cuboid (0-D): most generalized, ONE value
+           A      B      C      ← 1-D cuboids
+          AB     AC     BC      ← 2-D cuboids
+                ABC             ← base cuboid (3-D): least generalized
+</code></pre>
+<ul>
+<li><strong>Drill down</strong>: move from the apex <strong>down</strong> toward the base.</li>
+<li><strong>Roll up</strong>: move from the base <strong>up</strong> toward the apex.</li>
+</ul>
+<h3 id="base-cells-vs-aggregate-cells">Base cells vs aggregate cells</h3>
+<ul>
+<li>A cell in the <strong>base cuboid</strong> is a <strong>base cell</strong>. A cell in any <strong>non-base</strong> cuboid is an <strong>aggregate cell</strong>.</li>
+<li>In an aggregate cell, each aggregated dimension is written as <strong>*</strong>.</li>
+<li>A cell a = (a₁, …, aₙ, measures) is an <strong>m-dimensional cell</strong> if <strong>exactly m values are not "*"</strong>.</li>
+<li><strong>m = n</strong> → base cell</li>
+<li><strong>m &lt; n</strong> → aggregate cell</li>
+</ul>
+<div class="call example"><div class="ct">Month × City × Customer group, measure = price</div><table>
+<thead>
+<tr>
+<th>Cell</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(Jan, *, *, 2800)</td>
+<td><strong>1-D</strong> aggregate cell</td>
+</tr>
+<tr>
+<td>(*, Toronto, *, 1200)</td>
+<td><strong>1-D</strong> aggregate cell</td>
+</tr>
+<tr>
+<td>(Jan, *, Business, 150)</td>
+<td><strong>2-D</strong> aggregate cell</td>
+</tr>
+<tr>
+<td>(Jan, Toronto, Business, 45)</td>
+<td><strong>3-D base cell</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="ancestors-and-descendants">Ancestors and descendants</h3>
+<p>An <strong>i-D cell a</strong> is an <strong>ancestor</strong> of a <strong>j-D cell b</strong> (and b is a <strong>descendant</strong> of a) if and only if:</p>
+<ol>
+<li><strong>i &lt; j</strong>, and</li>
+<li><strong>a and b agree on every dimension where a is not "*"</strong>.</li>
+</ol>
+<p>If additionally <strong>j = i + 1</strong>, then a is the <strong>parent</strong> and b is the <strong>child</strong>.</p>
+<p><em>Example:</em> (Jan, *, *) is an ancestor of (Jan, Toronto, Business) and the <strong>parent</strong> of (Jan, Toronto, *).</p>
+<div class="tool"><div class="tt">🧪 Try it — One base cell feeds 2ⁿ cells</div><div id="anc">
+<p class="note">Choose a base cell. Every highlighted cell is an aggregate that this one base tuple adds to. This is exactly what MultiWay does when it fills a cell. Click any cell to see its ancestors and descendants.</p>
+<div class="row"><label>Month <select class="m"><option>Jan</option><option>Feb</option></select></label><label>City <select class="c"><option>Toronto</option><option>Vancouver</option></select></label><label>Group <select class="g"><option>Business</option><option>Home</option></select></label></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('anc'),sel=null;
+function run(){var v=[R.querySelector('.m').value,R.querySelector('.c').value,R.querySelector('.g').value],lv=[[],[],[],[]];
+for(var k=0;k<8;k++){var c=v.map(function(x,i){return k&(1<<i)?x:'*'}),d=c.filter(function(x){return x!=='*'}).length;lv[d].push(c)}
+var h='';[0,1,2,3].forEach(function(d){h+='<div style="margin:6px 0"><span class="note" style="display:inline-block;width:110px">'+(d===0?'0-D apex':d===3?'3-D base':d+'-D cuboids')+'</span>'+lv[d].map(function(c){var t='('+c.join(', ')+')',cls='pill hi';
+if(sel){var a=sel.split('|'),isA=c.every(function(x,i){return x==='*'||x===a[i]})&&c.join('|')!==sel,isD=a.every(function(x,i){return x==='*'||x===c[i]})&&c.join('|')!==sel;cls=c.join('|')===sel?'pill hi':isA?'pill ok':isD?'pill':'pill';if(isD)cls+='" style="border:2px dashed var(--accent)';}
+return '<span class="'+cls+'" data-c="'+c.join('|')+'" title="click">'+t+'</span>'}).join(' ')+'</div>'});
+h+=sel?'<p class="note">Selected '+sel.replace(/\|/g,', ')+' · <span class="pill ok">ancestors (more general)</span> <span class="pill" style="border:2px dashed var(--accent)">descendants (more specific)</span></p>':'<p>All <b>2³ = 8</b> cells get +1 from this single base tuple.</p>';
+R.querySelector('.out').innerHTML=h;R.querySelectorAll('[data-c]').forEach(function(s){s.style.cursor='pointer';s.onclick=function(){sel=sel===s.dataset.c?null:s.dataset.c;run()}})}
+R.addEventListener('change',function(){sel=null;run()});run();})();
+</script></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Full cube vs iceberg cube"><span class="num">3</span>Full cube vs iceberg cube</h2><h3 id="full-cube">Full cube</h3>
+<p><strong>Pre-computing all cells of all cuboids</strong> gives the fastest OLAP, but:</p>
+<ul>
+<li>It's <strong>exponential in the number of dimensions</strong>: n dimensions → <strong>2ⁿ cuboids</strong>. With concept hierarchies there are <strong>even more</strong>:</li>
+</ul>
+<div class="formula">Total cuboids = Π<sub>i=1..n</sub> (L<sub>i</sub> + 1)   (L<sub>i</sub> = number of levels in dimension i's hierarchy, +1 for "all")</div>
+<ul>
+<li>Each cuboid's size depends on the <strong>cardinality</strong> of its dimensions.</li>
+<li>So the full cube can need <strong>huge, excessive memory</strong>.</li>
+</ul>
+<h3 id="iceberg-cube">Iceberg cube</h3>
+<ul>
+<li>Cube cells are usually <strong>sparse</strong>. A customer buys only a few items, so most cells are <strong>empty or have tiny values</strong>.</li>
+<li>Instead, <strong>materialize only cells whose measure passes a minimum threshold</strong> (the <strong>iceberg condition</strong>), e.g. <strong>count ≥ 10</strong> or <strong>sales ≥ $100</strong>.</li>
+</ul>
+<div class="call key"><div class="ct">Iceberg cube</div><p>A <strong>partially materialized</strong> cube that stores only cells meeting the iceberg condition. It <strong>saves processing time and disk space</strong> and gives a <strong>more focused analysis</strong>. Cells below the threshold are usually too <strong>trivial</strong> to analyse.</p></div>
+<div class="call example"><div class="ct">Cuboid count with hierarchies</div><p>Time has levels day &lt; month &lt; quarter &lt; year (L = 4); item has 2 levels; location has 3.</p>
+<p>Cuboids = (4+1)(2+1)(3+1) = <strong>60</strong>, compared with only 2³ = 8 without hierarchies.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="MultiWay array aggregation"><span class="num">4</span>MultiWay array aggregation</h2><p><strong>Data structures:</strong> <strong>ROLAP</strong> stores cuboids in <strong>relational tables</strong>. <strong>MOLAP</strong> uses <strong>multidimensional arrays</strong>. Two methods for computing <strong>full cubes</strong> are covered: <strong>MultiWay</strong> (array-based) and <strong>BUC</strong>.</p>
+<h3 id="the-chunked-array">The chunked array</h3>
+<ul>
+<li>Take a 3-D array for A, B, C, <strong>partitioned into small memory-based chunks</strong>.</li>
+<li>Each dimension is split into <strong>4 equal partitions</strong>, giving 4 × 4 × 4 = <strong>64 chunks</strong> (chunk 1 = a0b0c0, chunk 2 = a1b0c0, …, chunk 64 = a3b3c3).</li>
+<li>Cardinalities <strong>A = 40, B = 400, C = 4000</strong> → partition sizes <strong>10, 100, 1000</strong>.</li>
+</ul>
+<p><strong>Cuboids to compute</strong> for the full cube:</p>
+<ul>
+<li><strong>ABC</strong>: the base cuboid, already given as the 3-D array. Everything else is computed from it, directly or indirectly.</li>
+<li><strong>AB, AC, BC</strong>: 2-D cuboids</li>
+<li><strong>A, B, C</strong>: 1-D cuboids</li>
+<li><strong>all</strong>: the apex, group-by (); one value, e.g. the total count</li>
+</ul>
+<h3 id="simultaneous-aggregation">Simultaneous aggregation</h3>
+<p>The key idea is that when a base cell is read, <strong>all the aggregate cells it belongs to are updated at the same time</strong>. Then the array is scanned <strong>once</strong>, not once per cuboid.</p>
+<div class="call example"><div class="ct">From the notes: product, city, customer</div><p>Reading the base tuple <strong>{P1, Calgary, Vance}</strong> (count 2) adds <strong>2</strong> to all of these at once:</p>
+<ul>
+<li><strong>2-D:</strong> {P1, Calgary, *}, {P1, *, Vance}, {*, Calgary, Vance}</li>
+<li><strong>1-D:</strong> {P1, *, *}, {*, Calgary, *}, {*, *, Vance}</li>
+<li><strong>Apex:</strong> {*, *, *}</li>
+</ul>
+<p>Do this for every row and the whole cube is filled. The tool above shows this.</p></div>
+<div class="call tip"><div class="ct">Chunk order matters</div><p>MultiWay visits chunks in an order that <strong>minimises memory</strong>: the 2-D planes kept in memory should be for the <strong>smallest dimensions</strong> (here, <strong>AB</strong>, since A = 40 and B = 400 are smallest). The largest plane (BC) only needs one chunk in memory at a time.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="BUC — Bottom-Up Computation"><span class="num">5</span>BUC — Bottom-Up Computation</h2><ul>
+<li><strong>BUC</strong> builds the cube <strong>from the apex cuboid toward the base cuboid</strong>, the opposite direction to MultiWay.</li>
+<li>The usual lattice drawing puts the <strong>apex (all) at the top</strong> and the <strong>base (ABC) at the bottom</strong>.</li>
+</ul>
+<div class="call warn"><div class="ct">The naming confusion (likely exam trap)</div><p>BUC stands for <strong>"Bottom-Up Construction"</strong>, but in the standard lattice drawing (apex at top) its processing order is actually <strong>top-down</strong>: it starts at <em>all</em> and drills down toward ABC. The name comes from a worldview where the apex is drawn at the bottom.</p></div>
+<p><strong>BUC's exploration order for a 3-D cube (Figure 8-4):</strong></p>
+<pre><code>all → A → AB → ABC → AC → B → BC → C
+</code></pre>
+<p>It partitions on A, then recursively on B within each A partition, and so on, depth-first. <strong>BUC's strength: iceberg pruning.</strong> If a partition fails the minimum support, none of its descendants can pass, so BUC <strong>stops exploring that branch</strong>.</p><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Star attributes, star-nodes and star-trees"><span class="num">6</span>Star attributes, star-nodes and star-trees</h2><ul>
+<li>If the <strong>single-dimension aggregate</strong> for an attribute value p <strong>fails the iceberg condition</strong>, there's no point treating p separately.</li>
+<li>Replace p with <strong>*</strong>. Then p is a <strong>star-node</strong>; values that pass are <strong>non-star-nodes</strong>.</li>
+<li>A cuboid tree compressed this way is a <strong>star-tree</strong>. A <strong>star-table</strong> lists the star-nodes.</li>
+</ul>
+<div class="tool"><div class="tt">🧪 Try it — Star-reduction lab</div><div id="star">
+<div class="row"><label>min_sup <input type="range" min="1" max="4" value="2" class="ms"></label><b class="mv">2</b></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('star'),B=[['a1','b1','c1','d1'],['a1','b1','c4','d3'],['a1','b2','c2','d2'],['a2','b3','c3','d4'],['a2','b4','c3','d4']];
+function run(){var ms=+R.querySelector('.ms').value;R.querySelector('.mv').textContent=ms;var cnt={};B.forEach(function(r){r.forEach(function(x){cnt[x]=(cnt[x]||0)+1})});
+var h='<p><b>1-D aggregates</b> (count of each value): '+Object.keys(cnt).sort().map(function(k){return '<span class="pill '+(cnt[k]>=ms?'ok':'bad')+'">'+k+':'+cnt[k]+'</span>'}).join('')+'</p>';
+var rep=B.map(function(r){return r.map(function(x){return cnt[x]>=ms?x:'*'})});
+h+='<div class="grid2"><div><p><b>After replacing star-nodes with *</b></p><table><tr><th>A</th><th>B</th><th>C</th><th>D</th><th>count</th></tr>'+rep.map(function(r){return '<tr>'+r.map(function(x){return '<td>'+(x==='*'?'<b style="color:var(--warn)">*</b>':x)+'</td>'}).join('')+'<td>1</td></tr>'}).join('')+'</table></div>';
+var red={};rep.forEach(function(r){var k=r.join(' ');red[k]=(red[k]||0)+1});
+h+='<div><p><b>Reduced base table</b> (identical rows merged)</p><table><tr><th>A</th><th>B</th><th>C</th><th>D</th><th>count</th></tr>'+Object.keys(red).map(function(k){return '<tr>'+k.split(' ').map(function(x){return '<td>'+x+'</td>'}).join('')+'<td><b>'+red[k]+'</b></td></tr>'}).join('')+'</table><p class="note">'+B.length+' rows → '+Object.keys(red).length+' rows</p></div></div>';
+var star=Object.keys(cnt).filter(function(k){return cnt[k]<ms});h+='<p><b>Star-table</b> (star-nodes): '+(star.length?star.join(', '):'none')+'</p>';R.querySelector('.out').innerHTML=h}
+R.addEventListener('input',run);run();})();
+</script></div>
+<div class="call example"><div class="ct">The notes' example (min_sup = 2)</div><p>Base table: 5 tuples, 4 dimensions, cardinalities A = 2, B = 4, C = 4, D = 4.</p>
+<ul>
+<li>Values meeting min_sup = 2: <strong>a1 (3), a2 (2), b1 (2), c3 (2), d4 (2)</strong>. All others are star-nodes.</li>
+<li>After replacing star-nodes with * and merging, the reduced table is:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a1</td>
+<td>b1</td>
+<td>*</td>
+<td>*</td>
+<td>2</td>
+</tr>
+<tr>
+<td>a1</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>1</td>
+</tr>
+<tr>
+<td>a2</td>
+<td>*</td>
+<td>c3</td>
+<td>d4</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>That's <strong>two fewer rows</strong> and fewer distinct values, so the <strong>star-tree</strong> built from it is much smaller.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Attribute-oriented induction (AOI)"><span class="num">7</span>Attribute-oriented induction (AOI)</h2><p><strong>Data generalization</strong> replaces low-level values (numeric age) with <strong>higher-level concepts</strong> (young, middle-aged, senior), so large data can be described <strong>concisely at multiple levels of abstraction</strong>.</p>
+<div class="grid2"><div><p><strong>Data cube approach</strong></p>
+<ul>
+<li>Based on <strong>materialized views</strong> pre-computed in the warehouse</li>
+<li><strong>Off-line aggregation</strong> <em>before</em> the query arrives</li>
+</ul></div><div><p><strong>Attribute-oriented induction (1989)</strong></p>
+<ul>
+<li><strong>Query-oriented</strong>, generalization-based, <strong>on-line</strong> analysis</li>
+<li>Proposed <strong>a few years before</strong> the data cube approach</li>
+</ul></div></div>
+<h3 id="the-aoi-idea">The AOI idea</h3>
+<ol>
+<li><strong>Collect the task-relevant data</strong> with a database query.</li>
+<li><strong>Generalize</strong> by looking at the <strong>number of distinct values</strong> of each attribute: either <strong>attribute removal</strong> or <strong>attribute generalization</strong>.</li>
+<li><strong>Aggregate</strong> by <strong>merging identical generalized tuples</strong> and <strong>accumulating their counts</strong>.</li>
+<li><strong>Present</strong> the result as charts, cross-tabs or rules.</li>
+</ol>
+<h3 id="the-two-rules">The two rules</h3>
+<div class="grid2"><div><p><strong>Attribute removal</strong></p>
+<p>If an attribute has <strong>many distinct values</strong> but either:</p>
+<ol>
+<li>there is <strong>no generalization operator</strong> (no concept hierarchy), or</li>
+<li>its higher-level concepts are <strong>expressed by other attributes</strong></li>
+</ol>
+<p>→ <strong>remove it</strong>.</p></div><div><p><strong>Attribute generalization</strong></p>
+<p>If an attribute has <strong>many distinct values</strong> and <strong>a generalization operator exists</strong></p>
+<p>→ <strong>apply it</strong> (climb the hierarchy) until the number of distinct values ≤ the <strong>attribute generalization threshold</strong>.</p></div></div>
+<h3 id="worked-example-science-students-at-big-university">Worked example: "Science Students" at Big University</h3>
+<pre><code>use Big_University_DB
+mine characteristics as &quot;Science_Students&quot;
+in relevance to name, gender, major, birth_place, birth_date,
+                residence, phone#, gpa
+from student
+where status in &quot;graduate&quot;
+</code></pre>
+<p><strong>Step 1: initial (working) relation.</strong> Data focusing collects the task-relevant tuples.</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>gender</th>
+<th>major</th>
+<th>birth_place</th>
+<th>birth_date</th>
+<th>residence</th>
+<th>phone#</th>
+<th>gpa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jim Woodman</td>
+<td>M</td>
+<td>CS</td>
+<td>Vancouver, BC, Canada</td>
+<td>8-12-76</td>
+<td>3511 Main St., Richmond</td>
+<td>687-4598</td>
+<td>3.67</td>
+</tr>
+<tr>
+<td>Scott Lachance</td>
+<td>M</td>
+<td>CS</td>
+<td>Montreal, Que, Canada</td>
+<td>28-7-75</td>
+<td>345 1st Ave., Richmond</td>
+<td>253-9106</td>
+<td>3.70</td>
+</tr>
+<tr>
+<td>Laura Lee</td>
+<td>F</td>
+<td>Physics</td>
+<td>Seattle, WA, USA</td>
+<td>25-8-70</td>
+<td>125 Austin Ave., Burnaby</td>
+<td>420-5232</td>
+<td>3.83</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 2: prepare for generalization.</strong> Decide each attribute:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Decision</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>Removed</strong></td>
+<td>Many distinct values, <strong>no generalization operator</strong></td>
+</tr>
+<tr>
+<td><strong>gender</strong></td>
+<td><strong>Retained</strong> as is</td>
+<td>Only <strong>2</strong> distinct values</td>
+</tr>
+<tr>
+<td><strong>major</strong></td>
+<td _="&amp;" arts="arts" business="business" engineering_="engineering," science_="science,"><strong>Generalized</strong> →</td>
+<td>Hierarchy exists; &gt; 20 values vs threshold 5</td>
+</tr>
+<tr>
+<td><strong>birth_place</strong></td>
+<td><strong>Generalized</strong> → birth_country (or <strong>removed</strong> if countries still exceed the threshold)</td>
+<td>Hierarchy city &lt; province &lt; country</td>
+</tr>
+<tr>
+<td><strong>birth_date</strong></td>
+<td><strong>Generalized</strong> → age → <strong>age_range</strong></td>
+<td>Few age ranges, under the threshold</td>
+</tr>
+<tr>
+<td><strong>residence</strong></td>
+<td>number and street <strong>removed</strong> → <strong>residence_city</strong></td>
+<td>Too low-level</td>
+</tr>
+<tr>
+<td><strong>phone#</strong></td>
+<td><strong>Removed</strong></td>
+<td>Too many values, no hierarchy</td>
+</tr>
+<tr>
+<td><strong>gpa</strong></td>
+<td _="…" excellent_="excellent," good_="good," very="very"><strong>Generalized</strong> →</td>
+<td>Interval hierarchy exists</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 3: derive the prime relation P.</strong> Insert the generalized tuples and merge identical ones, keeping a <strong>count</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>gender</th>
+<th>major</th>
+<th>birth_country</th>
+<th>age_range</th>
+<th>residence_city</th>
+<th>gpa</th>
+<th style="text-align: right;">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M</td>
+<td>Science</td>
+<td>Canada</td>
+<td>20–25</td>
+<td>Richmond</td>
+<td>very good</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Science</td>
+<td>Foreign</td>
+<td>25–30</td>
+<td>Burnaby</td>
+<td>excellent</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td style="text-align: right;">…</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 4: presentation.</strong> The user interacts by <strong>drilling, pivoting and mapping into rules</strong>, and controls how it is visualised, e.g. as a cross-tab:</p>
+<table>
+<thead>
+<tr>
+<th>birth_country</th>
+<th style="text-align: right;">M</th>
+<th style="text-align: right;">F</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canada</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">26</td>
+</tr>
+<tr>
+<td>Foreign</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">36</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">62</td>
+</tr>
+</tbody>
+</table>
+<div class="call exam"><div class="ct">Exam focus</div><p>For AOI questions, explain the <strong>two rules</strong> (removal vs generalization) and walk through the attributes <strong>name, gender, major, birth_place, birth_date, residence, phone#, gpa</strong> with the decision for each. That table is the core of the answer.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Quick revision sheet"><span class="num">8</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base cell / aggregate cell</td>
+<td>All n values set / at least one "*"</td>
+</tr>
+<tr>
+<td>m-D cell</td>
+<td>Exactly m non-* values</td>
+</tr>
+<tr>
+<td>Ancestor</td>
+<td>Fewer dims, agrees where not *; parent if exactly one fewer</td>
+</tr>
+<tr>
+<td>Full cube size</td>
+<td>2ⁿ cuboids; with hierarchies Π(Lᵢ + 1)</td>
+</tr>
+<tr>
+<td>Iceberg cube</td>
+<td>Store only cells with measure ≥ threshold (count ≥ 10, sales ≥ $100)</td>
+</tr>
+<tr>
+<td>ROLAP / MOLAP structures</td>
+<td>Relational tables / multidimensional arrays</td>
+</tr>
+<tr>
+<td>MultiWay</td>
+<td>Chunked array; one base cell updates all its aggregate cells simultaneously</td>
+</tr>
+<tr>
+<td>BUC</td>
+<td>Apex → base; called bottom-up but explores top-down; prunes iceberg branches</td>
+</tr>
+<tr>
+<td>Star-node</td>
+<td>Value whose 1-D aggregate fails the iceberg condition → *; star-tree, star-table</td>
+</tr>
+<tr>
+<td>AOI</td>
+<td>Query-oriented, on-line (1989); removal vs generalization; prime relation with counts</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">11 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="dm-Week08" data-pick="0"><script type="application/json" class="qdata">[{"q": "The cell (Jan, *, Business, 150) is a:", "o": ["Base cell", "1-D aggregate cell", "2-D aggregate cell", "Apex cell"], "e": "Two dimensions have non-* values. ", "a": 2, "w": "Week 08"}, {"q": "(Jan, Toronto, Business, 45) in a 3-dimensional cube is a:", "o": ["Base cell", "1-D aggregate cell", "2-D aggregate cell", "Apex cell"], "e": "All three dimensions are set (no *). ", "a": 0, "w": "Week 08"}, {"q": "A cube with 3 dimensions and <strong>no<\/strong> hierarchies has how many cuboids?", "e": "2³ = 8. ", "n": 8.0, "w": "Week 08"}, {"q": "Time has 4 levels, item has 2 and location has 3. How many cuboids are there in total?", "e": "(4+1)(2+1)(3+1) = 60. ", "n": 60.0, "w": "Week 08"}, {"q": "An <strong>iceberg cube<\/strong> stores:", "o": ["Only cells whose measure meets a threshold (e.g. count ≥ 10)", "Every possible cell", "Only base cells", "Only the apex"], "e": "This avoids storing a huge number of trivial cells. ", "a": 0, "w": "Week 08"}, {"q": "In the MultiWay array approach, reading one base cell:", "o": ["Updates all its aggregate cells simultaneously", "Updates only the apex cell", "Requires a new database scan for each cuboid", "Deletes the cell"], "e": "Chunked arrays let all cuboids be computed in one pass. ", "a": 0, "w": "Week 08"}, {"q": "BUC computes the cube:", "o": ["From the apex towards the base (exploring top-down), pruning branches that fail the iceberg condition", "From the base upwards only", "Without any pruning", "Only for 2-D cubes"], "e": "It's called \"bottom-up\" but explores from the apex. ", "a": 0, "w": "Week 08"}, {"q": "In Star-Cubing, a <strong>star-node<\/strong> is:", "o": ["A dimension value whose 1-D aggregate fails the iceberg condition, so it's replaced by *", "The root of the tree", "The most frequent value", "A base cell"], "e": "Collapsing star-nodes makes the star-tree much smaller. ", "a": 0, "w": "Week 08"}, {"q": "Attribute-oriented induction (AOI) is:", "o": ["A query-oriented, on-line generalisation technique that removes or generalises attributes", "A classification algorithm", "A clustering method", "A cube storage format"], "e": "The prime relation keeps counts of merged tuples. ", "a": 0, "w": "Week 08"}, {"q": "In AOI, an attribute such as <strong>name<\/strong> (many distinct values, no hierarchy) is:", "o": ["Removed", "Generalised to country", "Kept unchanged", "Converted to a number"], "e": "Attributes with a concept hierarchy (e.g. birth_place) are generalised instead. ", "a": 0, "w": "Week 08"}, {"q": "A cell is a <strong>parent<\/strong> of another when it:", "o": ["Has exactly one fewer non-* dimension and agrees on all its non-* values", "Has the same number of dimensions", "Has a larger count", "Is in a different cube"], "e": "Ancestors in general can have any fewer dimensions. ", "a": 0, "w": "Week 08"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2007/Week%2007%20-%20Study%20Guide.html"><small>← Previous</small>Design of a Data Warehouse</a><a class="nx" href="../Week%2009/Week%2009%20-%20Study%20Guide.html"><small>Next →</small>Frequent Patterns &amp; the Apriori Algorithm</a></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  function show(i){
+    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

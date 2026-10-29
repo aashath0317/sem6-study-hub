@@ -1,0 +1,70 @@
+? The cell (Jan, \*, Business, 150) is a:
+- Base cell
+- 1-D aggregate cell
++ 2-D aggregate cell
+- Apex cell
+= Two dimensions have non-\* values.
+
+? (Jan, Toronto, Business, 45) in a 3-dimensional cube is a:
++ Base cell
+- 1-D aggregate cell
+- 2-D aggregate cell
+- Apex cell
+= All three dimensions are set (no \*).
+
+? A cube with 3 dimensions and **no** hierarchies has how many cuboids?
+# 8
+= 2³ = 8.
+
+? Time has 4 levels, item has 2 and location has 3. How many cuboids are there in total?
+# 60
+= (4+1)(2+1)(3+1) = 60.
+
+? An **iceberg cube** stores:
++ Only cells whose measure meets a threshold (e.g. count ≥ 10)
+- Every possible cell
+- Only base cells
+- Only the apex
+= This avoids storing a huge number of trivial cells.
+
+? In the MultiWay array approach, reading one base cell:
++ Updates all its aggregate cells simultaneously
+- Updates only the apex cell
+- Requires a new database scan for each cuboid
+- Deletes the cell
+= Chunked arrays let all cuboids be computed in one pass.
+
+? BUC computes the cube:
++ From the apex towards the base (exploring top-down), pruning branches that fail the iceberg condition
+- From the base upwards only
+- Without any pruning
+- Only for 2-D cubes
+= It's called "bottom-up" but explores from the apex.
+
+? In Star-Cubing, a **star-node** is:
++ A dimension value whose 1-D aggregate fails the iceberg condition, so it's replaced by \*
+- The root of the tree
+- The most frequent value
+- A base cell
+= Collapsing star-nodes makes the star-tree much smaller.
+
+? Attribute-oriented induction (AOI) is:
++ A query-oriented, on-line generalisation technique that removes or generalises attributes
+- A classification algorithm
+- A clustering method
+- A cube storage format
+= The prime relation keeps counts of merged tuples.
+
+? In AOI, an attribute such as **name** (many distinct values, no hierarchy) is:
++ Removed
+- Generalised to country
+- Kept unchanged
+- Converted to a number
+= Attributes with a concept hierarchy (e.g. birth_place) are generalised instead.
+
+? A cell is a **parent** of another when it:
++ Has exactly one fewer non-\* dimension and agrees on all its non-\* values
+- Has the same number of dimensions
+- Has a larger count
+- Is in a different cube
+= Ancestors in general can have any fewer dimensions.

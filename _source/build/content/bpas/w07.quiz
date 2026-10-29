@@ -1,0 +1,57 @@
+? Rent is Rs 10,000 a month. Rs 110,000 was paid during the 12-month year. What rent expense appears in the P&L?
+# 120000
+= Charge 12 months: 120,000. The unpaid 10,000 is an accrual.
+
+? Using the same facts, the accrued rent of Rs 10,000 is shown in the SFP as:
+- A current asset
++ A current liability
+- Part of capital
+- Not shown
+= The entry is Dr Rent / Cr Accrued rent.
+
+? Insurance of Rs 36,000 was paid for 18 months starting at the beginning of the year. How much is **prepaid** at the year end?
+# 12000
+= 36,000 × 6/18 = 12,000. The P&L charge is 24,000.
+
+? A prepaid expense is shown in the SFP as:
++ A current asset
+- A current liability
+- An expense
+- Equity
+= Dr Prepaid / Cr Expense.
+
+? Income received in advance is:
+- A current asset
++ A current liability
+- Income for this year
+- Capital
+= We owe the service in the future.
+
+? The entry to write off a bad debt is:
++ Dr Bad debts expense / Cr Trade receivables
+- Dr Trade receivables / Cr Bad debts
+- Dr Provision / Cr Cash
+- Dr Cash / Cr Bad debts
+= The debt is removed from receivables and charged to the P&L.
+
+? Receivables are 200,000 before writing off a bad debt of 10,000. The provision is 5%. What is the required provision?
+# 9500
+= Write off first: (200,000 − 10,000) × 5% = 9,500.
+
+? The existing provision is 7,000 and the required provision is 9,500. What is charged to the P&L?
+# 2500
+= Only the increase in the provision hits the P&L.
+
+? A **decrease** in the provision for impairment is:
+- Charged as an expense
++ Credited to the P&L as income
+- Ignored
+- Added to receivables in the P&L
+= The entry is Dr Provision / Cr Impairment loss (P&L).
+
+? The concept behind all year-end adjustments is the:
++ Accrual (matching) concept
+- Money measurement concept
+- Business entity concept
+- Historical cost concept
+= Record income and expenses when earned or incurred, not when cash moves.

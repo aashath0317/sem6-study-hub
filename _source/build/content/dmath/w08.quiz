@@ -1,0 +1,53 @@
+? 3 shirts and 2 pairs of pants. How many outfits?
+# 6
+= Product rule: 3 × 2.
+
+? How many functions are there from a 3-element set to a 5-element set?
+# 125
+= 5³ = 125.
+
+? How many **one-to-one** functions are there from a 3-element set to a 5-element set?
+# 60
+= 5 × 4 × 3 = 60.
+
+? How many one-to-one functions are there from a 6-element set to a 4-element set?
+# 0
+= If m > n, two elements must share an image.
+
+? Choose a representative from 37 maths faculty or 83 maths majors (nobody is both). How many choices?
+# 120
+= Sum rule: 37 + 83.
+
+? Choose 2 people from 10, where order doesn't matter. How many ways?
+# 45
+= ¹⁰C₂ = 45.
+
+? Award 1st, 2nd and 3rd prizes among 100 people. How many ways?
+# 970200
+= ¹⁰⁰P₃ = 100 × 99 × 98.
+
+? ¹⁰P₃ equals:
+# 720
+= 10 × 9 × 8.
+
+? When **order matters** and there's no repetition, use:
++ Permutations ⁿPᵣ
+- Combinations ⁿCᵣ
+- The sum rule
+- nʳ
+= If repetition is allowed, there are nʳ ways.
+
+? How many bit strings of length 4 have **no two consecutive 1s**?
+# 8
+= Use a tree diagram (the counts vary along the branches).
+
+? The relation between permutations and combinations is:
++ ⁿPᵣ = ⁿCᵣ × r!
+- ⁿCᵣ = ⁿPᵣ × r!
+- ⁿPᵣ = ⁿCᵣ + r
+- They are equal
+= Each combination can be arranged in r! orders.
+
+? How many 3-letter strings can be made from 26 letters if repetition is allowed?
+# 17576
+= 26³ = 17,576.

@@ -1,0 +1,64 @@
+? GOMS stands for:
++ Goals, Operators, Methods, Selection rules
+- Goals, Objects, Models, Systems
+- Graphs, Operations, Menus, Screens
+- Goals, Outputs, Memory, Senses
+= Selection rules choose between alternative methods.
+
+? GOMS and KLM model which kind of user?
++ An expert, error-free user
+- A complete novice
+- A user making many errors
+- A child
+= That's a key limitation: no novices, errors, emotion or fatigue.
+
+? In KLM, the mental preparation operator M takes about:
+# 1.35 ~0.01
+= K ≈ 0.2 s, P ≈ 1.1 s, H ≈ 0.4 s.
+
+? In KLM, pointing with the mouse (P) takes about:
+# 1.1 ~0.01
+= Fitts's law gives a more precise estimate.
+
+? KLM time for Ctrl+S, modelled as M + K + K (seconds)?
+# 1.75 ~0.01
+= 1.35 + 0.2 + 0.2.
+
+? Saving through the menu took 5.70 s, but Ctrl+S takes 1.75 s. This shows that:
++ Shortcuts make expert users much faster
+- Menus are always better
+- KLM is useless
+- The mouse is faster than the keyboard
+= Each extra M and P operator adds time.
+
+? Fitts's law is MT = a + b·log₂(2D/W). Movement time increases when:
++ The distance is larger or the target is smaller
+- The target is bigger
+- The target is closer
+- The colour is brighter
+= Far and small means slow; near and big means fast.
+
+? Why are screen edges and corners (Start menu, Apple menu) easy targets?
++ The cursor stops at the edge, so they act as if they had infinite width
+- They're brighter
+- They're closer to the centre
+- They use keyboard shortcuts
+= Fitts's law design implication.
+
+? D = 8 and W = 2. What is the index of difficulty ID = log₂(2D/W)?
+# 3
+= log₂(16/2) = log₂ 8 = 3.
+
+? Which is a **limitation** of GOMS and KLM?
++ They ignore novices, errors, emotion and fatigue, and need structured goals
+- They need working prototypes
+- They need many real users
+- They can't predict time
+= They predict performance without prototypes or users, which is their advantage.
+
+? The KLM operator H stands for:
++ Homing: moving the hand between keyboard and mouse
+- Holding a key
+- Help
+- Highlight
+= It takes about 0.4 s.

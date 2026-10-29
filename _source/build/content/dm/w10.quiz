@@ -1,0 +1,73 @@
+? The two main costs of Apriori that FP-growth avoids are:
++ Huge candidate sets and repeated database scans
+- Too few rules and slow memory
+- Lack of support and confidence
+- Its need for class labels
+= With 10⁴ frequent items, Apriori generates about 10⁷ candidate pairs.
+
+? How many database scans does FP-growth need?
+# 2
+= One scan to count item supports, and one to build the FP-tree.
+
+? When building an FP-tree, items in each transaction are first:
++ Sorted in descending order of support (infrequent items removed)
+- Sorted alphabetically
+- Shuffled randomly
+- Sorted by price
+= Shared prefixes then share branches, with counts incremented.
+
+? The header table in an FP-tree:
++ Lists each frequent item with node-links to all its occurrences in the tree
+- Stores the transactions
+- Holds the confidence values
+- Is the root node
+= Node-links let mining start from each item quickly.
+
+? FP-growth mining starts from:
++ The least frequent item (the bottom of the header table) as a suffix
+- The most frequent item
+- The root
+- A random item
+= Then: conditional pattern base → conditional FP-tree → recurse.
+
+? Item p has prefix paths {f,c,a,m}:2 and {c,b}:1, with min_sup 3. Which frequent pattern contains p?
++ {c, p}: 3
+- {f, c, a, m, p}: 2
+- {b, p}: 1
+- None
+= Only c reaches 3 (2 + 1) in p's conditional pattern base.
+
+? FP-growth is described as a:
++ Divide-and-conquer method without candidate generation
+- Level-wise candidate generate-and-test method
+- Clustering algorithm
+- Decision tree method
+= It's typically about an order of magnitude faster than Apriori.
+
+? If the FP-tree doesn't fit in memory, use:
++ Projected databases (partition the data)
+- A bigger min_conf
+- Apriori pruning
+- Normalisation
+= Each projected database is mined separately.
+
+? Rules over concept hierarchies (e.g. milk ⇒ bread at different levels) are:
++ Multilevel association rules
+- Multidimensional rules
+- Quantitative rules
+- Negative rules
+= Uniform support uses one threshold for every level; reduced support uses lower thresholds at lower levels.
+
+? age(X, "20–29") ∧ occupation(X, "student") ⇒ buys(X, "laptop") is a:
++ Multidimensional (inter-dimension) association rule
+- Single-dimensional rule
+- Hybrid-dimension rule
+- Multilevel rule
+= No predicate is repeated. Hybrid rules repeat a predicate.
+
+? Specifying the form of rules to mine, e.g. P(X) ∧ Q(X) ⇒ buys(X, "office software"), uses:
++ Rule constraints (metarules)
+- Data constraints
+- Interestingness constraints
+- Dimension constraints
+= The other constraint types are knowledge type, data, dimension/level and interestingness.

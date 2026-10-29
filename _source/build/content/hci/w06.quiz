@@ -1,0 +1,69 @@
+? Direct manipulation means:
++ Acting on the object itself (pinch to zoom, drag and drop)
+- Typing commands
+- Using menus only
+- Asking someone else
+= It narrows both gulfs.
+
+? Moving a file by dragging it into a folder, instead of typing `mv` in a CLI, is an example of:
++ The desktop metaphor (direct manipulation)
+- Indirect manipulation
+- A slip
+- Semantic memory
+= The CLI requires remembering syntax.
+
+? A good interface is described as:
++ Metaphorically invisible but literally present (it still gives feedback)
+- Literally invisible, with no feedback
+- Highly visible and distracting
+- Text-only
+= The user thinks about the task, not the interface.
+
+? An interface that is **literally** invisible (no feedback) is bad because:
++ It breaks the feedback cycle
+- It's too colourful
+- It's too fast
+- It uses direct manipulation
+= Users can't tell what happened.
+
+? A TV remote that becomes "invisible" after months of use is invisibility by:
++ Learning: the user does the work
+- Design: the designer does the work
+- Accident
+- Default
+= Invisibility by design is invisible from the first use, like YouTube on an iPad.
+
+? Which is one of the five tips for designing invisible interfaces?
++ Use affordances
+- Hide all feedback
+- Add more menus
+- Never talk to users
+= The others: know your user, differentiate users, let the interface teach, talk to users.
+
+? Novice users mainly need:
++ Ease of use
+- Efficiency shortcuts
+- Command lines
+- No feedback
+= Experts value efficiency, e.g. shortcuts.
+
+? Which task is given as an example **lacking** direct manipulation?
++ Picking an emoji or fixing a typo on a phone
+- Pinch to zoom
+- Drag and drop
+- Swiping photos
+= Car climate controls are another example.
+
+? Direct manipulation helps because it reduces:
++ Both the gulf of execution and the gulf of evaluation
+- Only screen size
+- The number of users
+- Feedback
+= The object's response is visible straight away.
+
+? Invisibility **by design** means:
++ The interface is intuitive from the first use; the designer does the work
+- Users must practise for months
+- The interface has no screen
+- There's no feedback
+= Example: YouTube on an iPad.

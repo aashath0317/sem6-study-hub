@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 01 · Introduction to Marketing — Marketing</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="mkt-Week01">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Marketing</a> › Week 01</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Marketing · Week 01</div><h1>Introduction to Marketing</h1><p>What marketing is (Kotler, CIM, AMA, social marketing), marketing vs selling and the iceberg, why marketing matters, its core concepts (needs, wants, demand states, offerings, value, satisfaction, exchange, markets) and its objectives.</p><div class="meta"><span class="chip">ITE3642</span><span class="chip">📄 1. Introduction to Marketing.pdf</span><span class="chip">📄 Week_1.pdf</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What is marketing?"><span class="num">1</span>What is marketing?</h2><p>Everyday life is a <strong>package of goods and services</strong>, and the value they bring is created through <strong>marketing</strong>. Good marketing is <strong>no accident</strong>: it comes from <strong>well-planned, well-executed marketing-mix strategies</strong>.</p>
+<p>These include product planning, pricing, promotion, middlemen (wholesalers, retailers), warehousing and transportation. All of these together are "marketing".</p>
+<h3 id="definitions-to-memorise">Definitions to memorise</h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Philip Kotler</strong> ("father of marketing")</td>
+<td><strong>"Meeting needs profitably"</strong>: identifying and meeting human and social needs</td>
+</tr>
+<tr>
+<td><strong>Chartered Institute of Marketing (CIM, UK, 2001)</strong></td>
+<td>"The <strong>management process</strong> responsible for <strong>identifying, anticipating and satisfying customer requirements profitably</strong>"</td>
+</tr>
+<tr>
+<td><strong>American Marketing Association (AMA)</strong></td>
+<td>"The <strong>activity, set of institutions and processes</strong> for <strong>creating, communicating, delivering and exchanging offerings</strong> that have <strong>value</strong> for customers, clients, partners and society at large"</td>
+</tr>
+</tbody>
+</table>
+<div class="call key"><div class="ct">The two goals of marketing</div><ol>
+<li><strong>Attract new customers</strong> by promising <strong>superior value</strong>.</li>
+<li><strong>Keep and grow current customers</strong> by delivering <strong>satisfaction</strong>.</li>
+</ol>
+<p>First win the first customer, then the next, and keep them through satisfaction.</p></div>
+<h3 id="value-hedonic-vs-utilitarian">Value: hedonic vs utilitarian</h3>
+<p>The AMA definition stresses <strong>value</strong>, not "product" or "service".</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Meaning</th>
+<th>BMW example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Utilitarian value</strong></td>
+<td>The <strong>core functional benefit</strong></td>
+<td>Transport from A to B</td>
+</tr>
+<tr>
+<td><strong>Hedonic value</strong></td>
+<td>Something <strong>beyond function</strong>: pleasure, prestige, esteem</td>
+<td>Prestige and self-esteem of owning a BMW</td>
+</tr>
+</tbody>
+</table>
+<h3 id="social-marketing">Social marketing</h3>
+<p><strong>Social marketing</strong> applies marketing concepts (with other approaches) to <strong>influence behaviours that benefit individuals and communities for the greater social good</strong>. It integrates research, best practice, theory, audience and partnership insight to deliver <strong>competition-sensitive, segmented social-change programmes</strong> that are <strong>effective, efficient, equitable and sustainable</strong>.</p>
+<p><em>Examples:</em> anti-smoking campaigns, road-safety campaigns, dengue-prevention campaigns.</p><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Marketing vs selling — the iceberg"><span class="num">2</span>Marketing vs selling — the iceberg</h2><p><strong>The old view:</strong> marketing = selling ("telling and selling"). <strong>Wrong.</strong> Selling is just <strong>one part</strong> of marketing.</p>
+<div class="grid2"><div><p><strong>🧊 The iceberg theory</strong></p>
+<ul>
+<li><strong>Above water (visible tip):</strong> <strong>selling and advertising</strong>.</li>
+<li><strong>Below water (hidden "homework"):</strong> selecting target markets, understanding needs and wants, designing the value and the product, pricing, making products available in stores, displays, inventory and more.</li>
+</ul></div><div><p><strong>Peter Drucker (1973)</strong></p>
+<p>"The aim of marketing is to <strong>know and understand the customer so well</strong> that the product or service <strong>fits him and sells itself</strong>."</p>
+<p>In other words, the aim of marketing is to make <strong>selling superfluous</strong> (unnecessary).</p></div></div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Selling</strong></th>
+<th><strong>Marketing</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Starting point</td>
+<td>The <strong>product</strong> (the factory)</td>
+<td>The <strong>customer's needs</strong> (the market)</td>
+</tr>
+<tr>
+<td>Focus</td>
+<td>Pushing existing products, getting the sale</td>
+<td>Understanding and satisfying needs</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td><strong>Part</strong> of marketing (tip of the iceberg)</td>
+<td>Whole business, from research to after-sales</td>
+</tr>
+<tr>
+<td>Time horizon</td>
+<td>Short-term sales volume</td>
+<td>Long-term relationships and profit through satisfaction</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Why marketing matters"><span class="num">3</span>Why marketing matters</h2><ul>
+<li><strong>Seller's market → buyer's market:</strong> today's customers are <strong>better informed</strong>, <strong>compare products</strong> more, and have <strong>fast-changing needs</strong> in a tech-savvy world.</li>
+<li><strong>Profit</strong> mostly comes from <strong>successful sales</strong>, and marketing <strong>informs, attracts and convinces</strong> people to value your offer.</li>
+<li>Even an amazing product <strong>won't sell if nobody knows it exists</strong> or understands its value.</li>
+</ul>
+<h3 id="marketing-has-three-faces">Marketing has three faces</h3>
+<table>
+<thead>
+<tr>
+<th>As…</th>
+<th>Meaning</th>
+<th>Aim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A business philosophy</strong></td>
+<td>Marketing is <strong>the whole business seen from the customer's point of view</strong> (Drucker). It must <strong>permeate every area</strong> of the firm: "Business success is determined not by the product but by the customer"</td>
+<td><strong>Effectiveness</strong> (doing the right things)</td>
+</tr>
+<tr>
+<td><strong>A function (marketing management)</strong></td>
+<td>A functional area of management: <strong>analysis, planning, implementation, control</strong></td>
+<td><strong>Efficiency</strong>: maximum output for minimum input</td>
+</tr>
+<tr>
+<td><strong>A skill</strong></td>
+<td><strong>Market sensing ability</strong> and <strong>market relating ability</strong> (below)</td>
+<td>Competitive advantage</td>
+</tr>
+</tbody>
+</table>
+<div class="grid2"><div><p><strong>🔭 Market sensing ability</strong></p>
+<p>Understanding customers, the market and environmental trends <strong>ahead of competitors</strong>, and <strong>anticipating</strong> how customers will respond to your actions.</p></div><div><p><strong>🤝 Market relating ability</strong></p>
+<p><strong>Maintaining and enhancing customer relationships</strong>: negotiation, <strong>inter-functional coordination</strong>, conflict management, effective communication, teamwork, mutual commitment.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Core concepts of marketing"><span class="num">4</span>Core concepts of marketing</h2><div class="flow"><span>Needs</span><span>Wants</span><span>Demand</span><span>Offerings</span><span>Value &amp; satisfaction</span><span>Exchange</span><span>Markets</span></div>
+<h3 id="a-needs-wants">a) Needs &amp; wants</h3>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Need</strong></td>
+<td>A <strong>state of felt deprivation</strong></td>
+<td>Physical (food, clothing, shelter, safety), social (belonging, affection), individual (learning, knowledge, self-expression)</td>
+</tr>
+<tr>
+<td><strong>Want</strong></td>
+<td>The <strong>form a need takes</strong>, shaped by <strong>culture and individual personality</strong>: the object that satisfies the need</td>
+<td>Thirst (need) → water, king coconut or a soft drink (want)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="b-demand">b) Demand</h3>
+<p><strong>Demand = wants backed by the ability and willingness to buy</strong> (want + buying power). Marketing managers try to influence the <strong>level, timing and composition</strong> of demand.</p>
+<div class="tool"><div class="tt">🧪 Try it — The 8 demand states</div><div id="ds">
+<div class="row tabs"></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('ds'),D=[
+['Negative','Consumers dislike the product and may even pay to avoid it.','Dental surgery, vaccinations','Find out why people dislike it; redesign, lower the price, promote more positively.'],
+['Nonexistent','Consumers are unaware of, or uninterested in, the product.','A new farming gadget in a village that has never seen it','Connect the product\'s benefits to people\'s natural needs.'],
+['Latent','A strong need exists but no current product satisfies it.','Harmless cigarettes, very fuel-efficient cars','Measure the potential market and develop the product.'],
+['Declining','Consumers buy less often or stop buying.','Landline phones, DVDs','Reverse the decline: new markets, new features, better communication.'],
+['Irregular','Purchases vary by season, month, week, day or hour.','Raincoats, school supplies in January, peak-hour buses','Smooth it out: flexible pricing, promotions, incentives.'],
+['Full','Consumers are adequately buying everything put on the market.','A well-balanced popular product','Maintain the level against changing preferences and competition.'],
+['Overfull','More people want to buy than can be satisfied.','Concert tickets, a new phone launch','Demarketing: raise prices, reduce promotion, temporarily or permanently.'],
+['Unwholesome','People are attracted to products with bad social consequences.','Cigarettes, alcohol, illegal drugs','Discourage consumption: fear messages, price rises, reduced availability.']];
+var t=R.querySelector('.tabs');D.forEach(function(d,i){var b=document.createElement('button');b.textContent=d[0];b.className='alt';b.onclick=function(){show(i)};t.appendChild(b)});
+function show(i){t.querySelectorAll('button').forEach(function(b,j){b.className=j===i?'':'alt'});var d=D[i];R.querySelector('.out').innerHTML='<h4 style="margin-top:6px">'+d[0]+' demand</h4><p>'+d[1]+'</p><p><b>Example:</b> '+d[2]+'</p><p class="note"><b>Marketing task:</b> '+d[3]+'</p>'}show(0);})();
+</script></div>
+<table>
+<thead>
+<tr>
+<th>Demand state</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Negative</strong></td>
+<td>Consumers dislike it and may pay to avoid it</td>
+</tr>
+<tr>
+<td><strong>Nonexistent</strong></td>
+<td>Consumers are unaware or uninterested</td>
+</tr>
+<tr>
+<td><strong>Latent</strong></td>
+<td>A strong need that no existing product satisfies</td>
+</tr>
+<tr>
+<td><strong>Declining</strong></td>
+<td>Consumers buy less often or not at all</td>
+</tr>
+<tr>
+<td><strong>Irregular</strong></td>
+<td>Varies seasonally, monthly, weekly, daily or hourly</td>
+</tr>
+<tr>
+<td><strong>Full</strong></td>
+<td>Consumers adequately buy everything offered</td>
+</tr>
+<tr>
+<td><strong>Overfull</strong></td>
+<td>More want to buy than can be satisfied</td>
+</tr>
+<tr>
+<td><strong>Unwholesome</strong></td>
+<td>Attraction to products with undesirable social consequences</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c-offerings">c) Offerings</h3>
+<p><strong>Anything that can be offered to a market</strong> for attention, acquisition, use or consumption that <strong>might satisfy a need or want</strong>. These are generally called <strong>products</strong>:</p>
+<ul>
+<li><strong>physical goods</strong> (soap)</li>
+<li><strong>services</strong> (banking)</li>
+<li><strong>events</strong> (a cricket match)</li>
+<li><strong>experiences</strong> (a theme park)</li>
+<li><strong>persons</strong> (a celebrity)</li>
+<li><strong>places</strong> (Sigiriya, Ella)</li>
+<li><strong>properties</strong> (a house)</li>
+<li><strong>organisations</strong> (a university)</li>
+<li><strong>information</strong> (a book)</li>
+<li><strong>ideas</strong> (road safety)</li>
+</ul>
+<h3 id="d-customer-perceived-value-satisfaction">d) Customer perceived value &amp; satisfaction</h3>
+<div class="formula"><strong>Customer perceived value = perceived benefits − perceived sacrifice (costs)</strong></div>
+<p><strong>Armstrong &amp; Kotler:</strong> customer perceived value is the customer's <strong>evaluation of the difference between all the benefits and all the costs</strong> of an offer <strong>relative to competing offers</strong>. Perceptions are <strong>subjective</strong>: customers don't judge value and cost objectively.</p>
+<p><strong>Satisfaction</strong> depends on <strong>perceived performance relative to expectations</strong>:</p>
+<ul>
+<li>Performance <strong>&lt;</strong> expectations → <strong>dissatisfied</strong> (low satisfaction)</li>
+<li>Performance <strong>≥</strong> expectations → <strong>satisfied</strong> (high satisfaction)</li>
+<li>Performance <strong>≫</strong> expectations → <strong>delighted</strong>. Some firms deliberately aim to <strong>DELIGHT</strong>.</li>
+</ul>
+<p>Satisfaction often leads to <strong>customer loyalty</strong>.</p>
+<div class="tool"><div class="tt">🧪 Try it — Value &amp; satisfaction meter</div><div id="vs">
+<div class="row"><label>Perceived benefits <input type="range" min="0" max="100" value="70" class="b"></label><label>Perceived costs (price, time, effort) <input type="range" min="0" max="100" value="40" class="c"></label></div>
+<div class="row"><label>Expectation <input type="range" min="0" max="100" value="60" class="e"></label><label>Actual performance <input type="range" min="0" max="100" value="75" class="p"></label></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('vs');function g(c){return +R.querySelector('.'+c).value}function run(){var v=g('b')-g('c'),d=g('p')-g('e'),s=d<0?['😞 Dissatisfied','var(--warn)','Performance fell short of expectations. Risk of switching and bad word of mouth.']:d<15?['🙂 Satisfied','var(--tip)','Expectations met. Likely to repurchase.']:['🤩 Delighted','var(--accent)','Expectations exceeded. This is how loyalty and advocacy are built.'];
+R.querySelector('.out').innerHTML='<p>Customer perceived value = '+g('b')+' − '+g('c')+' = <b style="color:'+(v>=0?'var(--tip)':'var(--warn)')+'">'+v+'</b> '+(v>=0?'(worth buying)':'(costs outweigh benefits)')+'</p><p style="font-size:19px"><b style="color:'+s[1]+'">'+s[0]+'</b></p><p class="note">'+s[2]+' Tip: don\'t over-promise. Raising expectations too high makes dissatisfaction more likely.</p>'}R.addEventListener('input',run);run();})();
+</script></div>
+<h3 id="e-exchange">e) Exchange</h3>
+<p><strong>Exchange</strong> is the act of <strong>obtaining a desired product from someone by offering something in return</strong>. Five conditions must hold:</p>
+<ol>
+<li>There are <strong>at least two parties</strong>.</li>
+<li>Each party has something <strong>of value</strong> to the other.</li>
+<li>Each can <strong>communicate and deliver</strong>.</li>
+<li>Each is <strong>free to accept or reject</strong> the offer.</li>
+<li>Each believes it is <strong>appropriate or desirable</strong> to deal with the other.</li>
+</ol>
+<h3 id="f-markets">f) Markets</h3>
+<p>Economists define a <strong>market</strong> as a <strong>collection of buyers and sellers</strong> who transact over a product or product class.</p>
+<table>
+<thead>
+<tr>
+<th>Market</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resource market</strong></td>
+<td>Supplies manufacturers with <strong>raw materials, labour and money</strong></td>
+</tr>
+<tr>
+<td><strong>Manufacturer market</strong></td>
+<td>Turns resources into goods and services and sells them to intermediaries or end consumers</td>
+</tr>
+<tr>
+<td><strong>Intermediary market</strong></td>
+<td><strong>Bridges</strong> manufacturer and customer, <strong>reduces the number of transactions</strong>, creates <strong>utilities</strong> (time, place, possession)</td>
+</tr>
+<tr>
+<td><strong>Consumer market</strong></td>
+<td>Consumers <strong>sell their labour for money</strong> and buy goods and services</td>
+</tr>
+<tr>
+<td><strong>Government market</strong></td>
+<td>Collects <strong>taxes</strong>, buys from other markets, provides <strong>public services</strong></td>
+</tr>
+<tr>
+<td><strong>Marketer's view</strong></td>
+<td>A market = <strong>all potential customers sharing a need or want</strong> who are <strong>willing and able</strong> to exchange to satisfy it</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Objectives of marketing"><span class="num">5</span>Objectives of marketing</h2><table>
+<thead>
+<tr>
+<th>Objective</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>(a) Provide customer satisfaction</strong></td>
+<td>Everything begins by identifying customer requirements; product, price and distribution are planned around them</td>
+</tr>
+<tr>
+<td><strong>(b) Increase demand</strong></td>
+<td>Advertising and promotion create extra demand; <strong>satisfied customers bring new ones</strong> (you love a gel pen, rebuy it and tell friends)</td>
+</tr>
+<tr>
+<td><strong>(c) Provide better-quality products</strong></td>
+<td>Keep upgrading expertise and technology, or competition will phase you out</td>
+</tr>
+<tr>
+<td><strong>(d) Create goodwill</strong></td>
+<td>A positive public image builds <strong>brand loyalty</strong> and acceptance of new products</td>
+</tr>
+<tr>
+<td><strong>(e) Generate profitable sales volume</strong></td>
+<td>The <strong>ultimate goal</strong>: the right products at affordable prices, convenient places and times lead to revenue and profit</td>
+</tr>
+</tbody>
+</table>
+<div class="call exam"><div class="ct">Exam focus</div><p>Typical questions:</p>
+<ul>
+<li><strong>Define marketing</strong> (quote Kotler, CIM or AMA)</li>
+<li><strong>Distinguish marketing and selling</strong> using the <strong>iceberg</strong> and <strong>Drucker</strong></li>
+<li><strong>Explain why marketing is important</strong> (philosophy, function, skill)</li>
+<li><strong>Explain the core concepts with real examples</strong>, especially the <strong>8 demand states</strong> and <strong>customer perceived value</strong></li>
+<li><strong>List the objectives of marketing</strong></li>
+</ul>
+<p>Use Sri Lankan examples where you can.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kotler</td>
+<td>"Meeting needs profitably"</td>
+</tr>
+<tr>
+<td>CIM</td>
+<td>Identify, anticipate, satisfy customer requirements profitably</td>
+</tr>
+<tr>
+<td>AMA</td>
+<td>Create, communicate, deliver, exchange offerings with value</td>
+</tr>
+<tr>
+<td>2 goals</td>
+<td>Attract new customers (value) · keep and grow existing ones (satisfaction)</td>
+</tr>
+<tr>
+<td>Value types</td>
+<td>Utilitarian (function) vs hedonic (prestige): BMW</td>
+</tr>
+<tr>
+<td>Iceberg</td>
+<td>Selling and advertising = tip; homework below</td>
+</tr>
+<tr>
+<td>Drucker</td>
+<td>Make selling superfluous</td>
+</tr>
+<tr>
+<td>Three faces</td>
+<td>Philosophy (effectiveness) · function (efficiency) · skill (sensing + relating)</td>
+</tr>
+<tr>
+<td>Need → want → demand</td>
+<td>Deprivation → culturally shaped object → want + buying power</td>
+</tr>
+<tr>
+<td>8 demand states</td>
+<td>Negative, nonexistent, latent, declining, irregular, full, overfull, unwholesome</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>Perceived benefits − perceived sacrifice</td>
+</tr>
+<tr>
+<td>Satisfaction</td>
+<td>Performance vs expectations; delight = exceed</td>
+</tr>
+<tr>
+<td>Exchange</td>
+<td>2+ parties, value, communicate, free choice, appropriate</td>
+</tr>
+<tr>
+<td>Markets</td>
+<td>Resource, manufacturer, intermediary, consumer, government, marketer's view</td>
+</tr>
+<tr>
+<td>Objectives</td>
+<td>Satisfaction, demand, quality, goodwill, profitable sales</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">11 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="mkt-Week01" data-pick="0"><script type="application/json" class="qdata">[{"q": "Kotler's shortest definition of marketing is:", "o": ["\"Meeting needs profitably\"", "\"Selling as much as possible\"", "\"Advertising products\"", "\"Making products cheaply\""], "e": "CIM: identifying, anticipating and satisfying customer requirements profitably. ", "a": 0, "w": "Week 01"}, {"q": "According to the iceberg analogy, selling and advertising are:", "o": ["Only the tip; most marketing work happens below the surface", "The whole of marketing", "Unrelated to marketing", "The bottom of the iceberg"], "e": "Research, product development, pricing and distribution happen below the waterline. ", "a": 0, "w": "Week 01"}, {"q": "Peter Drucker said the aim of marketing is to:", "o": ["Make selling superfluous", "Increase advertising spend", "Lower prices", "Replace production"], "e": "If you know the customer well, the product sells itself. ", "a": 0, "w": "Week 01"}, {"q": "A <strong>need<\/strong> shaped by culture and personality into a specific object (e.g. wanting a burger when hungry) is a:", "o": ["Need", "Want", "Demand", "Exchange"], "e": "A demand is a want backed by buying power. ", "a": 1, "w": "Week 01"}, {"q": "Customer perceived value equals:", "o": ["Perceived benefits − perceived sacrifice (costs)", "Price + profit", "Product cost only", "Advertising spend"], "e": "Customers choose the offer with the highest perceived value. ", "a": 0, "w": "Week 01"}, {"q": "Customer <strong>delight<\/strong> occurs when performance:", "o": ["Exceeds expectations", "Equals expectations", "Falls below expectations", "Is unknown"], "e": "Satisfaction = performance vs expectations. ", "a": 0, "w": "Week 01"}, {"q": "People avoiding a product and even paying to avoid it (e.g. dental surgery, vaccinations) is:", "o": ["Negative demand", "Latent demand", "Full demand", "Overfull demand"], "e": "The 8 demand states: negative, nonexistent, latent, declining, irregular, full, overfull, unwholesome. ", "a": 0, "w": "Week 01"}, {"q": "A strong need that no existing product satisfies (e.g. harmless cigarettes) is:", "o": ["Negative demand", "Latent demand", "Declining demand", "Irregular demand"], "e": "Marketers try to develop products to meet it. ", "a": 1, "w": "Week 01"}, {"q": "Buying a BMW for prestige and status is an example of:", "o": ["Utilitarian value", "Hedonic value", "Negative demand", "Exchange cost"], "e": "Utilitarian value is about function. ", "a": 1, "w": "Week 01"}, {"q": "What are the two main goals of marketing?", "o": ["Attract new customers by promising superior value, and keep and grow existing ones by delivering satisfaction", "Cut costs and raise prices", "Advertise more and sell more", "Produce more and store more"], "e": "Win the first customer, then keep them. ", "a": 0, "w": "Week 01"}, {"q": "Which is <strong>not<\/strong> a condition for exchange?", "o": ["At least two parties", "Each party has something of value", "Freedom to accept or reject", "A written contract approved by government"], "e": "The other conditions: able to communicate and deliver, and believes dealing is appropriate. ", "a": 3, "w": "Week 01"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><span></span><a class="nx" href="../Week%2002/Week%2002%20-%20Study%20Guide.html"><small>Next →</small>Paradigms (Philosophies) of Marketing</a></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  function show(i){
+    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

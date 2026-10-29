@@ -1,0 +1,71 @@
+? The three characteristics of dirty data are:
++ Incomplete, noisy, inconsistent
+- Large, fast, varied
+- Old, new, duplicated
+- Numeric, nominal, ordinal
+= Incomplete = missing values; noisy = errors and outliers; inconsistent = discrepancies in codes or names.
+
+? Roughly how much of the KDD effort goes into data preparation?
+- 10–20%
+- 30–40%
++ 70–80%
+- 95–100%
+= Preprocessing dominates the time spent.
+
+? Which missing-value method is considered the **most popular**, because it uses the most information?
+- Ignore the tuple
+- Use a global constant
+- Use the attribute mean
++ Use the most probable value (e.g. regression, Bayesian inference, decision tree)
+= It uses the other attributes to predict the missing value.
+
+? What is the trap in filling missing values with a global constant like "Unknown"?
++ The mining algorithm may treat "Unknown" as a real, meaningful group
+- It's too slow
+- It deletes the tuple
+- It changes other attributes
+= Many records sharing "Unknown" can create false patterns.
+
+? Bin 1 holds 4, 8, 15. After smoothing **by bin means**, every value becomes:
+# 9
+= (4 + 8 + 15) ÷ 3 = 9.
+
+? Bin 3 holds 25, 28, 34. Smoothing **by bin boundaries**, 28 becomes:
+# 25
+= 28 is closer to 25 (gap 3) than to 34 (gap 6).
+
+? Income min $12,000, max $98,000. Normalise $73,600 to [0, 1] with min-max (3 decimals).
+# 0.716 ~0.001
+= (73,600 − 12,000) ÷ 86,000 = 0.716.
+
+? Mean $54,000, σ $16,000. What is the z-score of $73,600?
+# 1.225 ~0.001
+= (73,600 − 54,000) ÷ 16,000 = 1.225.
+
+? When is z-score normalisation better than min-max?
++ When the min and max are unknown, or there are outliers
+- When the data is already in [0, 1]
+- When the attribute is nominal
+- Never
+= Min-max is distorted by outliers and needs known bounds.
+
+? A correlation coefficient near +1 between two attributes in data integration suggests:
++ Strong positive correlation: one may be redundant
+- They're independent
+- A negative relationship
+- A data entry error
+= r = 0 means no linear correlation; r < 0 is negative correlation.
+
+? Squeezing a new attribute into unused bits of an existing field is called:
++ Field overloading
+- Binning
+- Normalisation
+- Aggregation
+= It's a source of discrepancies that cleaning must detect.
+
+? The two main issues in data integration are:
++ Entity identification (use metadata) and redundancy (use correlation analysis)
+- Binning and clustering
+- Volume and velocity
+- Lossy and lossless compression
+= E.g. customer_id vs cust_number may be the same attribute.

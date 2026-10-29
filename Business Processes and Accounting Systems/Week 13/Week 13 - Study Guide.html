@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 13 · Project Appraisal — Payback, ARR, Time Value of Money, NPV &amp; IRR — Business Processes &amp; Accounting Systems</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="bpas-Week13">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Business Processes &amp; Accounting Systems</a> › Week 13</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Business Processes &amp; Accounting Systems · Week 13</div><h1>Project Appraisal — Payback, ARR, Time Value of Money, NPV &amp; IRR</h1><p>What project appraisal is and its key issues, non-discounting methods (payback, ARR), the time value of money and discounting, NPV with the four-project example, IRR by interpolation (23.38%), and which method is best.</p><div class="meta"><span class="chip">ITE3622</span><span class="chip">2 videos · 74 min</span><span class="chip">📄 Project appraisal - Session 13.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Project Appraisal: Part 1 · 39 min</button><button>2. Project Appraisal: Part 2 · 34 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Project Appraisal - Part 1.mp4"><source src="Project%20Appraisal%20-%20Part%201.mp4"></video></div><div class="chap"><p class="vt">Project Appraisal: Part 1</p><p class="vs">Project appraisal, its key issues, and the non-discounting methods: payback period and accounting rate of return.</p><a href="#" data-v="0" data-t="4"><b>00:04</b><span>Introduction and lecture outcomes</span></a><a href="#" data-v="0" data-t="118"><b>01:58</b><span>What project appraisal is (the Hambantota Port example)</span></a><a href="#" data-v="0" data-t="221"><b>03:41</b><span>Goal: maximise the firm's wealth</span></a><a href="#" data-v="0" data-t="281"><b>04:41</b><span>Discounting vs non-discounting techniques</span></a><a href="#" data-v="0" data-t="387"><b>06:27</b><span>Payback period: definition and acceptance criteria</span></a><a href="#" data-v="0" data-t="487"><b>08:07</b><span>Example: project A ($900k) vs project B ($1m)</span></a><a href="#" data-v="0" data-t="811"><b>13:31</b><span>Payback advantages</span></a><a href="#" data-v="0" data-t="878"><b>14:38</b><span>Payback disadvantages</span></a><a href="#" data-v="0" data-t="1136"><b>18:56</b><span>Discounted payback period at 20%</span></a><a href="#" data-v="0" data-t="1519"><b>25:19</b><span>Project A 3.3 years vs project B 2.96 years</span></a><a href="#" data-v="0" data-t="1659"><b>27:39</b><span>Accounting rate of return (ARR)</span></a><a href="#" data-v="0" data-t="1806"><b>30:06</b><span>ARR acceptance criteria</span></a><a href="#" data-v="0" data-t="1948"><b>32:28</b><span>ARR example: $400k machine → 31.875%</span></a><a href="#" data-v="0" data-t="2170"><b>36:10</b><span>ARR advantages and disadvantages</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Project Appraisal - Part 2.mp4"><source src="Project%20Appraisal%20-%20Part%202.mp4"></video></div><div class="chap"><p class="vt">Project Appraisal: Part 2</p><p class="vs">Time value of money, discounting, NPV (four-project example) and IRR (interpolation example).</p><a href="#" data-v="1" data-t="48"><b>00:48</b><span>Lecture outcomes: NPV and IRR</span></a><a href="#" data-v="1" data-t="145"><b>02:25</b><span>Why time matters: project A ($110 in year 1) vs B ($121 in year 2)</span></a><a href="#" data-v="1" data-t="288"><b>04:48</b><span>Three reasons for the time value of money</span></a><a href="#" data-v="1" data-t="329"><b>05:29</b><span>Opportunity cost</span></a><a href="#" data-v="1" data-t="468"><b>07:48</b><span>Inflation</span></a><a href="#" data-v="1" data-t="587"><b>09:47</b><span>Uncertainty and risk (risk premium)</span></a><a href="#" data-v="1" data-t="779"><b>12:59</b><span>Discounting: PV = FV ÷ (1 + r)ⁿ</span></a><a href="#" data-v="1" data-t="817"><b>13:37</b><span>Example: 3,000 today vs 1,100 + 1,210 + 1,331</span></a><a href="#" data-v="1" data-t="936"><b>15:36</b><span>The NPV method and its steps</span></a><a href="#" data-v="1" data-t="1065"><b>17:45</b><span>NPV decision rules</span></a><a href="#" data-v="1" data-t="1181"><b>19:41</b><span>Example: four projects at 12%</span></a><a href="#" data-v="1" data-t="1411"><b>23:31</b><span>Limited resources: choose the highest NPV</span></a><a href="#" data-v="1" data-t="1496"><b>24:56</b><span>Advantages of NPV</span></a><a href="#" data-v="1" data-t="1582"><b>26:22</b><span>IRR: definition</span></a><a href="#" data-v="1" data-t="1664"><b>27:44</b><span>Calculating IRR by trial and interpolation</span></a><a href="#" data-v="1" data-t="1826"><b>30:26</b><span>Example: $400k, $200k a year for 3 years → IRR 23.38%</span></a><a href="#" data-v="1" data-t="2002"><b>33:22</b><span>Comparing the four techniques: NPV is best</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What is project appraisal?"><span class="num">1</span>What is project appraisal?</h2><div class="call key"><div class="ct">Definition</div><p><strong>Project appraisal</strong> is the process of <strong>assessing and questioning proposals before resources are committed</strong>. It evaluates <strong>whether an investment project is worthwhile</strong>.</p></div>
+<p><strong>Key issues of project appraisal:</strong></p>
+<ul>
+<li><strong>environmental factors</strong></li>
+<li><strong>options</strong> (alternatives)</li>
+<li><strong>inputs</strong></li>
+<li><strong>value for money</strong></li>
+<li><strong>implementation</strong></li>
+<li><strong>risk and uncertainty</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Non-discounting methods</strong> (ignore the time value of money)</th>
+<th><strong>Discounting methods</strong> (consider the time value of money)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Payback period</strong></td>
+<td><strong>Net present value (NPV)</strong></td>
+</tr>
+<tr>
+<td><strong>Accounting rate of return (ARR)</strong></td>
+<td><strong>Internal rate of return (IRR)</strong></td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Non-discounting methods"><span class="num">2</span>Non-discounting methods</h2><h3 id="payback-period">Payback period</h3>
+<div class="call key"><div class="ct">Definition</div><p><strong>Payback</strong> is the length of time taken to <strong>repay the initial capital cost</strong> from the project's cash inflows <a class="ts" href="#" data-v="0" data-t="387">06:27</a>.</p></div>
+<ul>
+<li><strong>Equal cash flows:</strong> payback = <strong>initial investment ÷ annual cash inflow</strong>.</li>
+<li><strong>Unequal cash flows:</strong> <strong>accumulate</strong> the cash flows year by year until the cost is recovered. Then add the fraction of the year: <strong>(amount still needed ÷ that year's cash flow)</strong>.</li>
+<li><strong>Decision:</strong> accept if payback ≤ the <strong>benchmark</strong> period. Among mutually exclusive projects, choose the <strong>shortest</strong> payback.</li>
+</ul>
+<div class="call example"><div class="ct">Projects A and B <a class="ts" href="#" data-v="0" data-t="487">08:07</a></div><table>
+<thead>
+<tr>
+<th>Year</th>
+<th style="text-align: right;">Project A</th>
+<th style="text-align: right;">Cumulative A</th>
+<th style="text-align: right;">Project B</th>
+<th style="text-align: right;">Cumulative B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td style="text-align: right;">(900,000)</td>
+<td style="text-align: right;">(900,000)</td>
+<td style="text-align: right;">(1,000,000)</td>
+<td style="text-align: right;">(1,000,000)</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align: right;">700,000</td>
+<td style="text-align: right;">(200,000)</td>
+<td style="text-align: right;">600,000</td>
+<td style="text-align: right;">(400,000)</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">100,000</td>
+<td style="text-align: right;">(100,000)</td>
+<td style="text-align: right;">400,000</td>
+<td style="text-align: right;"><strong>0</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">100,000</td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td style="text-align: right;">400,000</td>
+<td style="text-align: right;">400,000</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">1,300,000</td>
+<td style="text-align: right;">1,300,000</td>
+<td style="text-align: right;">400,000</td>
+<td style="text-align: right;">800,000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Payback:</strong> A = <strong>3 years</strong>, B = <strong>2 years</strong>, so <strong>choose B</strong> <a class="ts" href="#" data-v="0" data-t="771">12:51</a>.</p>
+<p><strong>Notice:</strong> payback <strong>ignores A's huge 1.3m in year 4</strong>. That's its main weakness <a class="ts" href="#" data-v="0" data-t="908">15:08</a>.</p></div>
+<table>
+<thead>
+<tr>
+<th><strong>Advantages</strong> <a class="ts" href="#" data-v="0" data-t="811">13:31</a></th>
+<th><strong>Disadvantages</strong> <a class="ts" href="#" data-v="0" data-t="878">14:38</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Easy to calculate and interpret</strong></td>
+<td><strong>Ignores cash flows after payback</strong></td>
+</tr>
+<tr>
+<td>Favours <strong>quick liquidity</strong>; less risk</td>
+<td>The benchmark period is <strong>arbitrary</strong> <a class="ts" href="#" data-v="0" data-t="965">16:05</a></td>
+</tr>
+<tr>
+<td><strong>Facilitates further evaluation</strong>: a first screen before NPV and IRR</td>
+<td><strong>Ignores the time value of money</strong> <a class="ts" href="#" data-v="0" data-t="1079">17:59</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="discounted-payback-period">Discounted payback period</h3>
+<p>This fixes the time-value problem: <strong>discount each cash flow first</strong>, then do payback on the <strong>discounted</strong> figures <a class="ts" href="#" data-v="0" data-t="1136">18:56</a>.</p>
+<div class="call example"><div class="ct">Same projects, discount rate 20% <a class="ts" href="#" data-v="0" data-t="1178">19:38</a></div><table>
+<thead>
+<tr>
+<th>Year</th>
+<th style="text-align: right;">DF = 1/1.2ⁿ</th>
+<th style="text-align: right;">A: PV</th>
+<th style="text-align: right;">A: cumulative</th>
+<th style="text-align: right;">B: PV</th>
+<th style="text-align: right;">B: cumulative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: right;">0.8333</td>
+<td style="text-align: right;">583,333</td>
+<td style="text-align: right;">583,333</td>
+<td style="text-align: right;">500,000</td>
+<td style="text-align: right;">500,000</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">0.6944</td>
+<td style="text-align: right;">69,444</td>
+<td style="text-align: right;">652,778</td>
+<td style="text-align: right;">277,778</td>
+<td style="text-align: right;">777,778</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">0.5787</td>
+<td style="text-align: right;">57,870</td>
+<td style="text-align: right;">710,648</td>
+<td style="text-align: right;">231,481</td>
+<td style="text-align: right;">1,009,259</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">0.4823</td>
+<td style="text-align: right;">626,929</td>
+<td style="text-align: right;">1,337,577</td>
+<td style="text-align: right;">192,901</td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>A</strong> = 3 + (900,000 − 710,648) ÷ 626,929 = <strong>3.30 years</strong></li>
+<li><strong>B</strong> = 2 + (1,000,000 − 777,778) ÷ 231,481 = <strong>2.96 years</strong></li>
+</ul>
+<p><strong>Choose B</strong> <a class="ts" href="#" data-v="0" data-t="1634">27:14</a>.</p></div>
+<h3 id="accounting-rate-of-return-arr">Accounting rate of return (ARR)</h3>
+<div class="formula"><strong>ARR = Average annual profit ÷ Investment × 100%</strong><br>PDF: ÷ <strong>initial cost</strong>.   Video: ÷ <strong>average investment = (cost + scrap) ÷ 2</strong></div>
+<ul>
+<li>ARR compares <strong>accounting profit</strong> (after depreciation and tax), <strong>not cash flows</strong>, with the investment <a class="ts" href="#" data-v="0" data-t="1663">27:43</a>.</li>
+<li><strong>Decision:</strong> accept if ARR ≥ the <strong>predetermined minimum ARR (benchmark)</strong>; choose the <strong>highest</strong> ARR <a class="ts" href="#" data-v="0" data-t="1806">30:06</a>.</li>
+</ul>
+<div class="call example"><div class="ct">$400,000 machine, 4 years, no scrap, benchmark 20% <a class="ts" href="#" data-v="0" data-t="1948">32:28</a></div><table>
+<thead>
+<tr>
+<th>Year</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+<th style="text-align: right;">4</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Profit after 15% tax</td>
+<td style="text-align: right;">51,000</td>
+<td style="text-align: right;">68,000</td>
+<td style="text-align: right;">59,500</td>
+<td style="text-align: right;">76,500</td>
+<td style="text-align: right;">255,000</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Average profit</strong> = 255,000 ÷ 4 = <strong>63,750</strong></li>
+<li><strong>Average investment</strong> = (400,000 + 0) ÷ 2 = <strong>200,000</strong></li>
+<li><strong>ARR</strong> = 63,750 ÷ 200,000 = <strong>31.875%</strong>. That's above 20%, so <strong>invest</strong> <a class="ts" href="#" data-v="0" data-t="2141">35:41</a>.</li>
+</ul>
+<p><strong>On initial cost</strong> (the PDF formula), ARR = 63,750 ÷ 400,000 = 15.9%. <strong>State which base you use.</strong></p></div>
+<table>
+<thead>
+<tr>
+<th><strong>Advantages</strong></th>
+<th><strong>Disadvantages</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Easy to compute and understand</td>
+<td><strong>Ignores the time value of money</strong></td>
+</tr>
+<tr>
+<td>Uses averages, so projects with <strong>different lives can be compared</strong> <a class="ts" href="#" data-v="0" data-t="2191">36:31</a></td>
+<td><strong>Ignores cash flows</strong>: profit can be <strong>manipulated</strong> <a class="ts" href="#" data-v="0" data-t="2234">37:14</a></td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Time value of money"><span class="num">3</span>Time value of money</h2><div class="call key"><div class="ct">Definition</div><p><strong>Money available today is worth more than the same amount in the future</strong>, because of its earning potential: money can earn interest and grow.</p></div>
+<p><strong>Three reasons</strong> <a class="ts" href="#" data-v="1" data-t="288">04:48</a>:</p>
+<ol>
+<li><strong>Opportunity cost:</strong> money in hand could earn a return elsewhere, such as a fixed deposit. Waiting means <strong>giving up the best alternative</strong> <a class="ts" href="#" data-v="1" data-t="329">05:29</a>.</li>
+<li><strong>Inflation:</strong> prices rise, so the <strong>purchasing power of money falls</strong>. Rs 1,000 buys fewer loaves next year <a class="ts" href="#" data-v="1" data-t="468">07:48</a>.</li>
+<li><strong>Uncertainty and risk:</strong> the future is uncertain (nobody predicted COVID in 2019), so investors demand a <strong>risk premium</strong> <a class="ts" href="#" data-v="1" data-t="587">09:47</a>.</li>
+</ol>
+<div class="formula"><strong>Present value: PV = FV ÷ (1 + i)ⁿ</strong>   i = interest (discount) rate, n = number of years<br><strong>Discount factor = 1 ÷ (1 + i)ⁿ</strong></div>
+<div class="call example"><div class="ct">Equal in today's money <a class="ts" href="#" data-v="1" data-t="817">13:37</a></div><p>At <strong>10%</strong>: receive <strong>3,000 today</strong>, or receive <strong>1,100 (year 1) + 1,210 (year 2) + 1,331 (year 3)</strong>?</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th style="text-align: right;">Cash</th>
+<th style="text-align: right;">÷ (1.1)ⁿ</th>
+<th style="text-align: right;">PV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: right;">1,100</td>
+<td style="text-align: right;">1.100</td>
+<td style="text-align: right;">1,000</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">1,210</td>
+<td style="text-align: right;">1.210</td>
+<td style="text-align: right;">1,000</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">1,331</td>
+<td style="text-align: right;">1.331</td>
+<td style="text-align: right;">1,000</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>3,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The two options have <strong>the same present value</strong>. Likewise, $110 in year 1 and $121 in year 2 are <strong>both worth $100 today</strong> <a class="ts" href="#" data-v="1" data-t="145">02:25</a>.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Net present value (NPV)"><span class="num">4</span>Net present value (NPV)</h2><p><strong>Steps</strong> <a class="ts" href="#" data-v="1" data-t="985">16:25</a>:</p>
+<ol>
+<li>Identify the <strong>discount rate</strong> (cost of capital).</li>
+<li>Identify the project's <strong>cash flows</strong>.</li>
+<li><strong>Discount</strong> each cash flow to present value.</li>
+<li><strong>Add</strong> them and <strong>deduct the initial investment</strong>.</li>
+</ol>
+<div class="formula"><strong>NPV = Σ CFₜ ÷ (1 + r)ᵗ − Initial investment</strong></div>
+<table>
+<thead>
+<tr>
+<th>NPV</th>
+<th>Decision <a class="ts" href="#" data-v="1" data-t="1065">17:45</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>&gt; 0</strong></td>
+<td><strong>Accept</strong>: the return beats an equal-risk alternative</td>
+</tr>
+<tr>
+<td><strong>&lt; 0</strong></td>
+<td><strong>Reject</strong></td>
+</tr>
+<tr>
+<td><strong>= 0</strong></td>
+<td><strong>Indifferent</strong>: accept if the project is necessary</td>
+</tr>
+<tr>
+<td>Several projects with limited funds</td>
+<td>Choose the <strong>highest NPV</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="call example"><div class="ct">Four projects at 12% <a class="ts" href="#" data-v="1" data-t="1181">19:41</a></div><table>
+<thead>
+<tr>
+<th>Project</th>
+<th style="text-align: right;">Initial investment</th>
+<th style="text-align: right;">NPV</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align: right;">900,000 (cash flows 120k, 250k, 400k, 1.3m)</td>
+<td style="text-align: right;"><strong>+517,327</strong></td>
+<td>Accept</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align: right;">1,000,000</td>
+<td style="text-align: right;"><strong>+214,920</strong></td>
+<td>Accept</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align: right;">303,730</td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Indifferent</td>
+</tr>
+<tr>
+<td>D</td>
+<td style="text-align: right;">1,500,000</td>
+<td style="text-align: right;"><strong>negative</strong></td>
+<td><strong>Reject</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Resources for only one project:</strong> choose <strong>A</strong>, the highest NPV <a class="ts" href="#" data-v="1" data-t="1473">24:33</a>.</p>
+<p><strong>Check for A:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Working</th>
+<th style="text-align: right;">PV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>120,000 ÷ 1.12</td>
+<td style="text-align: right;">107,143</td>
+</tr>
+<tr>
+<td>2</td>
+<td>250,000 ÷ 1.2544</td>
+<td style="text-align: right;">199,298</td>
+</tr>
+<tr>
+<td>3</td>
+<td>400,000 ÷ 1.4049</td>
+<td style="text-align: right;">284,712</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1,300,000 ÷ 1.5735</td>
+<td style="text-align: right;">826,174</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Total PV</strong></td>
+<td style="text-align: right;"><strong>1,417,327</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>Less investment</td>
+<td style="text-align: right;">(900,000)</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>NPV</strong></td>
+<td style="text-align: right;"><strong>517,327</strong> ✓</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Advantages of NPV</strong> <a class="ts" href="#" data-v="1" data-t="1496">24:56</a>:</p>
+<ul>
+<li>it uses the <strong>time value of money</strong></li>
+<li>it considers <strong>all cash flows</strong> over the project's life</li>
+<li>it uses <strong>cash flows, not accounting profit</strong> (which can be manipulated)</li>
+<li>it's consistent with <strong>maximising shareholder wealth</strong></li>
+</ul><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Internal rate of return (IRR)"><span class="num">5</span>Internal rate of return (IRR)</h2><div class="call key"><div class="ct">Definition</div><p><strong>IRR</strong> is the <strong>discount rate that makes NPV = 0</strong>: discounted inflows exactly equal discounted outflows <a class="ts" href="#" data-v="1" data-t="1582">26:22</a>.</p>
+<p><strong>Accept</strong> if IRR ≥ the <strong>cost of capital (benchmark)</strong>; <strong>reject</strong> if it's lower.</p>
+<ul>
+<li>IRR helps measure the worth of an investment against <strong>internal standards of return</strong>.</li>
+<li>It allows comparison of projects with <strong>different initial outlays</strong>.</li>
+</ul></div>
+<p><strong>Calculating IRR (trial and interpolation)</strong> <a class="ts" href="#" data-v="1" data-t="1664">27:44</a>:</p>
+<ol>
+<li>Find the NPV at a rate that gives a <strong>positive</strong> NPV (P).</li>
+<li>Find it at a higher rate that gives a <strong>negative</strong> NPV (N).</li>
+<li>Interpolate:</li>
+</ol>
+<div class="formula"><strong>IRR = L + [P ÷ (P − N)] × (H − L)</strong><br>L = lower rate, H = higher rate, P = NPV at L (positive), N = NPV at H (negative)</div>
+<div class="call example"><div class="ct">IRR example <a class="ts" href="#" data-v="1" data-t="1826">30:26</a></div><p>Cost <strong>$400,000</strong>; inflows <strong>$200,000 a year for 3 years</strong>; benchmark <strong>15%</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Rate</th>
+<th style="text-align: right;">Annuity factor (3 years)</th>
+<th style="text-align: right;">PV of inflows</th>
+<th style="text-align: right;">NPV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>22%</td>
+<td style="text-align: right;">2.0422</td>
+<td style="text-align: right;">408,440</td>
+<td style="text-align: right;"><strong>+8.4k</strong> (P)</td>
+</tr>
+<tr>
+<td>24%</td>
+<td style="text-align: right;">1.9813</td>
+<td style="text-align: right;">396,260</td>
+<td style="text-align: right;"><strong>−3.8k</strong> (N)</td>
+</tr>
+</tbody>
+</table>
+<p>IRR = 22 + [8.4 ÷ (8.4 − (−3.8))] × (24 − 22) = 22 + (8.4 ÷ 12.2) × 2 = <strong>23.38%</strong> <a class="ts" href="#" data-v="1" data-t="1944">32:24</a></p>
+<p>Since 23.38% &gt; 15%, <strong>accept</strong>.</p>
+<p><strong>Watch the signs:</strong> P − N = 8.4 + 3.8.</p></div>
+<p><strong>IRR disadvantages:</strong></p>
+<ul>
+<li><strong>complex</strong></li>
+<li><strong>time-consuming</strong></li>
+<li>needs <strong>expertise to calculate and interpret</strong> <a class="ts" href="#" data-v="1" data-t="1965">32:45</a></li>
+</ul>
+<div class="tool"><div class="tt">🧪 Try it — NPV · IRR · payback lab</div><div id="np">
+<div class="row"><label>Initial investment <input type="number" class="i0" value="900000" style="width:100px"></label><label>Discount rate % <input type="number" class="r" value="12" step="0.5" style="width:60px"></label><label>Benchmark payback (yrs) <input type="number" class="pb" value="3" style="width:50px"></label></div>
+<div class="row"><label>Cash flows yr 1…n (comma-separated) <input type="text" class="cf" value="120000, 250000, 400000, 1300000" style="width:320px"></label></div>
+<div class="row"><button type="button" data-x="900000|12|120000, 250000, 400000, 1300000">Project A (video)</button><button type="button" data-x="400000|15|200000, 200000, 200000">IRR example</button><button type="button" data-x="3000|10|1100, 1210, 1331">TVM example</button></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('np');function g(c){return +R.querySelector('.'+c).value||0}function f(x){return Math.round(x).toLocaleString()}
+function npv(r,c,i){return c.reduce(function(s,v,t){return s+v/Math.pow(1+r,t+1)},0)-i}
+function run(){var c=R.querySelector('.cf').value.split(/[,\s]+/).filter(Boolean).map(Number),i=g('i0'),r=g('r')/100,cum=-i,pb=null,rows='',tot=0;
+c.forEach(function(v,t){var d=1/Math.pow(1+r,t+1);tot+=v*d;var prev=cum;cum+=v;if(pb===null&&cum>=0)pb=t+(-prev)/v;rows+='<tr><td>'+(t+1)+'</td><td class="r">'+f(v)+'</td><td class="r">'+d.toFixed(4)+'</td><td class="r">'+f(v*d)+'</td><td class="r">'+f(cum)+'</td></tr>'});
+var N=tot-i,lo=-0.99,hi=10,irr=null;if(npv(lo,c,i)*npv(hi,c,i)<0){for(var k=0;k<200;k++){var m=(lo+hi)/2;if(npv(lo,c,i)*npv(m,c,i)<=0)hi=m;else lo=m}irr=(lo+hi)/2}
+var L=Math.floor((irr||r)*100/2)*2/100,H=L+.02,P=npv(L,c,i),Nn=npv(H,c,i),interp=L+P/(P-Nn)*(H-L);
+R.querySelector('.out').innerHTML='<table><tr><th>Year</th><th class="r">Cash flow</th><th class="r">DF @'+(r*100)+'%</th><th class="r">PV</th><th class="r">Cumulative (undiscounted)</th></tr><tr><td>0</td><td class="r">('+f(i)+')</td><td class="r">1.0000</td><td class="r">('+f(i)+')</td><td class="r">'+f(-i)+'</td></tr>'+rows+'<tr style="font-weight:700"><td colspan="3">NPV</td><td class="r">'+f(N)+'</td><td></td></tr></table>'+
+'<p>NPV = <b>'+f(N)+'</b> → <span class="pill '+(N>0.5?'ok">accept':N<-0.5?'bad">reject':'hi">indifferent')+'</span></p>'+
+'<p>Payback = <b>'+(pb===null?'not within the project life':pb.toFixed(2)+' years')+'</b>'+(pb!==null?' → '+(pb<=g('pb')?'<span class="pill ok">within</span>':'<span class="pill bad">exceeds</span>')+' the '+g('pb')+'-year target':'')+'</p>'+
+(irr!==null?'<p>IRR ≈ <b>'+(irr*100).toFixed(2)+'%</b> vs cost of capital '+(r*100)+'% → '+(irr>=r?'<span class="pill ok">accept</span>':'<span class="pill bad">reject</span>')+'<br><span class="note">Interpolation between '+(L*100).toFixed(0)+'% (NPV '+f(P)+') and '+(H*100).toFixed(0)+'% (NPV '+f(Nn)+'): '+(L*100).toFixed(0)+' + '+f(P)+' ÷ ('+f(P)+' − ('+f(Nn)+')) × 2 = '+(interp*100).toFixed(2)+'%</span></p>':'<p class="note">No IRR found (cash flows never turn NPV negative or positive).</p>')}
+R.addEventListener('input',run);R.querySelectorAll('button').forEach(function(b){b.onclick=function(){var x=b.dataset.x.split('|');R.querySelector('.i0').value=x[0];R.querySelector('.r').value=x[1];R.querySelector('.cf').value=x[2];run()}});run();})();
+</script></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Which method is best?"><span class="num">6</span>Which method is best?</h2><table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align: center;">Time value of money?</th>
+<th style="text-align: center;">All cash flows?</th>
+<th>Basis</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Payback</td>
+<td style="text-align: center;">✗</td>
+<td style="text-align: center;">✗ (ignores later flows)</td>
+<td>Cash</td>
+<td>Simple, liquidity-focused</td>
+</tr>
+<tr>
+<td>ARR</td>
+<td style="text-align: center;">✗</td>
+<td style="text-align: center;">✓</td>
+<td><strong>Accounting profit</strong></td>
+<td>Simple; profit can be manipulated</td>
+</tr>
+<tr>
+<td><strong>NPV</strong></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td>Cash</td>
+<td><strong>Best</strong>: wealth in absolute Rs <a class="ts" href="#" data-v="1" data-t="2018">33:38</a></td>
+</tr>
+<tr>
+<td>IRR</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td>Cash</td>
+<td>Good, but complex; gives a %</td>
+</tr>
+</tbody>
+</table>
+<div class="call exam"><div class="ct">Exam focus</div><p><strong>Calculate:</strong></p>
+<ul>
+<li><strong>payback</strong>, especially with unequal flows</li>
+<li><strong>ARR</strong></li>
+<li><strong>NPV</strong> using discount factors</li>
+<li><strong>IRR</strong> by interpolation (watch the minus sign)</li>
+</ul>
+<p><strong>Then:</strong></p>
+<ul>
+<li>state the <strong>accept or reject</strong> decision and choose between projects</li>
+<li><strong>explain the time value of money</strong> (opportunity cost, inflation, risk)</li>
+<li>give the <strong>pros and cons</strong> of each method, and <strong>why NPV is best</strong></li>
+</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Quick revision sheet"><span class="num">7</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Project appraisal</td>
+<td>Assess proposals <strong>before</strong> committing resources</td>
+</tr>
+<tr>
+<td>Key issues</td>
+<td>Environment · options · inputs · value for money · implementation · risk</td>
+</tr>
+<tr>
+<td>Non-discounting</td>
+<td>Payback, ARR (ignore the time value of money)</td>
+</tr>
+<tr>
+<td>Discounting</td>
+<td>NPV, IRR</td>
+</tr>
+<tr>
+<td>Time value of money</td>
+<td>Rs today &gt; Rs tomorrow: opportunity cost, inflation, risk</td>
+</tr>
+<tr>
+<td>PV</td>
+<td>FV ÷ (1 + i)ⁿ</td>
+</tr>
+<tr>
+<td>Payback</td>
+<td>Time to recover the cost; shorter is better (A 3 years vs B 2 years)</td>
+</tr>
+<tr>
+<td>Discounted payback</td>
+<td>Payback on PVs (A 3.30 vs B 2.96 years at 20%)</td>
+</tr>
+<tr>
+<td>ARR</td>
+<td>Average profit ÷ investment (63,750 ÷ 200,000 = 31.875%)</td>
+</tr>
+<tr>
+<td>NPV</td>
+<td>Σ PV of inflows − investment; &gt; 0 accept, highest wins</td>
+</tr>
+<tr>
+<td>Video NPV</td>
+<td>A 517,327 · B 214,920 · C 0 · D negative → choose A</td>
+</tr>
+<tr>
+<td>IRR</td>
+<td>Rate where NPV = 0; L + P ÷ (P − N) × (H − L)</td>
+</tr>
+<tr>
+<td>Video IRR</td>
+<td>22 + 8.4 ÷ 12.2 × 2 = 23.38% &gt; 15% → accept</td>
+</tr>
+<tr>
+<td>Best method</td>
+<td>NPV</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">12 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="bpas-Week13" data-pick="0"><script type="application/json" class="qdata">[{"q": "Project appraisal is best described as:", "o": ["Assessing and questioning proposals before resources are committed", "Auditing completed projects", "Preparing the cash budget", "Valuing inventory"], "e": "It evaluates whether an investment is worthwhile. ", "a": 0, "w": "Week 13"}, {"q": "Which methods <strong>ignore<\/strong> the time value of money?", "o": ["Payback and ARR", "NPV and IRR", "NPV and payback", "IRR and ARR"], "e": "Non-discounting methods: payback, ARR. Discounting methods: NPV, IRR. ", "a": 0, "w": "Week 13"}, {"q": "Project B costs 1,000,000 and returns 600,000 in year 1 and 400,000 in year 2. What is its payback period in years?", "e": "600k + 400k recovers the 1m by the end of year 2. ", "n": 2.0, "w": "Week 13"}, {"q": "The main weakness shown by Project A (payback 3 years, but 1.3m arriving in year 4) is that payback:", "o": ["Uses accounting profit", "Ignores cash flows after the payback point", "Is hard to calculate", "Always picks the larger project"], "e": "Payback ignores A's large year-4 inflow. ", "a": 1, "w": "Week 13"}, {"q": "What is the present value of 1,210 received in 2 years at 10%?", "e": "1,210 ÷ 1.1² = 1,210 ÷ 1.21 = 1,000. ", "n": 1000.0, "w": "Week 13"}, {"q": "Average annual profit $63,750; machine cost $400,000 with no scrap. Using <strong>average investment<\/strong>, what is the ARR (%)?", "e": "Average investment = (400,000 + 0) ÷ 2 = 200,000, so ARR = 63,750 ÷ 200,000 = 31.875%. ", "n": 31.875, "t": 0.01, "w": "Week 13"}, {"q": "NPV of zero means:", "o": ["Reject the project", "Indifferent: the project earns exactly the required return (accept if necessary)", "The project has no cash flows", "IRR is zero"], "e": "NPV &gt; 0 accept; &lt; 0 reject; = 0 indifferent. ", "a": 1, "w": "Week 13"}, {"q": "Four projects have NPVs of +517,327, +214,920, 0 and a negative value. With resources for only one, choose:", "o": ["The project with NPV +517,327", "The project with NPV 0 (least risk)", "The smallest investment", "Any project with a positive NPV, chosen at random"], "e": "With limited resources, choose the highest NPV. ", "a": 0, "w": "Week 13"}, {"q": "IRR is the discount rate at which:", "o": ["Payback equals the project life", "NPV equals zero", "ARR equals the cost of capital", "Cash inflows are doubled"], "e": "Accept if IRR is at least the cost of capital. ", "a": 1, "w": "Week 13"}, {"q": "NPV is +8.4 at 22% and −3.8 at 24%. Using interpolation, what is the IRR (%)?", "e": "22 + 8.4 ÷ (8.4 + 3.8) × 2 = 23.38%. ", "n": 23.38, "t": 0.02, "w": "Week 13"}, {"q": "Which is <strong>not<\/strong> a reason for the time value of money?", "o": ["Opportunity cost", "Inflation", "Uncertainty and risk", "Depreciation of fixed assets"], "e": "The three reasons are opportunity cost, inflation, and risk/uncertainty. ", "a": 3, "w": "Week 13"}, {"q": "Which appraisal method does the lecture rate as <strong>best<\/strong>?", "o": ["Payback", "ARR", "NPV", "IRR"], "e": "NPV uses the time value of money and all cash flows, uses cash not profit, and measures wealth in rupees. ", "a": 2, "w": "Week 13"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2012/Week%2012%20-%20Study%20Guide.html"><small>← Previous</small>Ratio Analysis — Liquidity, Gearing, Efficiency, Profitability &amp; Shareholder Ratios</a><a class="nx" href="../Week%2014/Week%2014%20-%20Study%20Guide.html"><small>Next →</small>Budgeting — Purposes, Budgetary Control, the Master Budget &amp; Functional Budgets to the Cash Budget</a></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  function show(i){
+    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

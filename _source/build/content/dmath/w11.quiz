@@ -1,0 +1,76 @@
+? A graph G = (V, E) consists of:
++ A non-empty set of vertices and a set of edges, each with one or two endpoints
+- Only vertices
+- Only edges
+- A table of numbers
+= A graph is finite if V and E are finite.
+
+? How many landmasses and bridges were in the Königsberg problem?
++ 4 landmasses, 7 bridges
+- 7 landmasses, 4 bridges
+- 3 landmasses, 5 bridges
+- 2 landmasses, 7 bridges
+= Euler showed the walk is impossible, which is considered the birth of graph theory.
+
+? Why is the Königsberg walk impossible?
++ More than two vertices have odd degree
+- There are too many bridges
+- The graph is disconnected
+- All degrees are even
+= An Euler path needs 0 or 2 odd-degree vertices.
+
+? A **simple graph** has:
++ Undirected edges, no multiple edges, no loops
+- Loops but no multiple edges
+- Directed edges only
+- Multiple edges allowed
+= Multigraphs allow multiple edges; pseudographs also allow loops.
+
+? An undirected graph with multiple edges **and** loops is a:
+- Simple graph
+- Multigraph
++ Pseudograph
+- Directed graph
+= A multigraph has multiple edges but no loops.
+
+? Modelling every flight between cities as its own edge (including several between the same pair) gives a:
++ Multigraph
+- Simple graph
+- Tree
+- Mixed graph
+= Adding a sightseeing round trip (a loop) would make it a pseudograph.
+
+? In a directed edge (u, v), u is the:
++ Start (initial) vertex
+- End (terminal) vertex
+- Loop
+- Weight
+= v is the end vertex.
+
+? A graph with both directed and undirected edges is a:
++ Mixed graph
+- Multigraph
+- Pseudograph
+- Simple directed graph
+= E.g. a road map with some one-way streets.
+
+? An influence graph (who influences whom on a board) is best modelled as:
++ A directed graph
+- An undirected simple graph
+- A tree
+- A pseudograph
+= Influence has a direction.
+
+? Round-robin tournament results (who beat whom) are modelled as:
++ A simple directed graph
+- An undirected multigraph
+- A pseudograph
+- A mixed graph
+= Each edge goes from the winner to the loser.
+
+? An acquaintanceship graph is a:
++ Simple undirected graph
+- Directed multigraph
+- Pseudograph
+- Mixed graph
+= Knowing someone is mutual, with no loops or repeated edges.

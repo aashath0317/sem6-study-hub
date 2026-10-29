@@ -1,0 +1,61 @@
+? LKAS 2 requires inventories to be measured at:
++ The lower of cost and net realisable value
+- Market value
+- Selling price
+- The higher of cost and NRV
+= NRV = estimated selling price − costs of completion − selling costs.
+
+? Which cost is **excluded** from the cost of inventory under LKAS 2?
+- Purchase price net of trade discounts
+- Import duties (non-refundable)
+- Carriage inwards
++ Storage costs and selling costs
+= Also excluded: abnormal waste, unrelated admin overheads, FX differences, interest on deferred terms.
+
+? Which cost formula is **not** allowed by LKAS 2?
+- FIFO
+- Weighted average cost
++ LIFO
+- Specific identification for unique items
+= LIFO is prohibited.
+
+? Item cost 800 and NRV 650. At what value is it carried?
+# 650
+= The lower of cost and NRV, item by item.
+
+? 6,000 units at Rs 4 less 25% trade discount, plus Rs 200 freight, plus net container cost Rs 12. Ignoring the cash discount, what is the total material cost?
+# 18212
+= 24,000 − 6,000 + 200 + 12 = 18,212.
+
+? Annual demand 3,000 units, ordering cost Rs 30 per order, holding cost Rs 0.50 per unit. What is the EOQ (units)?
+# 600
+= √(2 × 3,000 × 30 ÷ 0.5) = √360,000 = 600.
+
+? Maximum consumption 9,000 a month, maximum lead time 4 months. What is the re-order level (units)?
+# 36000
+= ROL = maximum usage × maximum lead time.
+
+? The correct order of the purchase documents is:
++ Purchase requisition → purchase order → goods received note → invoice
+- Invoice → GRN → purchase order → requisition
+- Purchase order → requisition → invoice → GRN
+- GRN → invoice → requisition → order
+= The GRN is the basis for stores ledger entries.
+
+? An advantage of **centralised** purchasing is:
++ Better control and concentration of expert buying staff
+- Lower transport costs
+- Faster local settlement of shortages
+- Benefits from local seasonal prices
+= Those other three are advantages of decentralised buying.
+
+? 200 units at Rs 500 are in stock; 300 units are bought at Rs 600. 250 units are issued. Using **FIFO**, what is the issue value?
+# 130000
+= 200 × 500 + 50 × 600 = 130,000.
+
+? A cash discount (e.g. 5% for paying within 10 days) is treated in material cost as:
+- A reduction of material cost
++ Ignored: it's a financing benefit, not part of material cost
+- An addition to cost
+- A trade discount
+= Only trade discounts reduce the purchase cost.

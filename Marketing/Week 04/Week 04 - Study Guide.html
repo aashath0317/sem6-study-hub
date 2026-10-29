@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 04 · Customer-Driven Marketing Strategy — Segmentation, Targeting, Differentiation &amp; Positioning — Marketing</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="mkt-Week04">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Marketing</a> › Week 04</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Marketing · Week 04</div><h1>Customer-Driven Marketing Strategy — Segmentation, Targeting, Differentiation &amp; Positioning</h1><p>STP explained: four segmentation bases, why segment, the five requirements for useful segments, targeting with Porter's five forces and the five target-selection patterns, differentiation types, positioning and perceptual maps.</p><div class="meta"><span class="chip">ITE3642</span><span class="chip">📄 4.Basics of value generation and delivery (Customer driven STP) (1).pdf</span><span class="chip">📄 Week_4.pdf</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Customer-driven marketing strategy"><span class="num">1</span>Customer-driven marketing strategy</h2><p><strong>Why "customer-driven"?</strong> A marketing strategy built <strong>without understanding your real customer fails</strong>. Focus on recognising <strong>real needs</strong>, then <strong>retain</strong> customers by meeting them repeatedly. That builds <strong>loyalty</strong>.</p>
+<div class="flow"><span><ol>
+<li>Segmentation</li>
+</ol></span><span><ol start="2">
+<li>Targeting</li>
+</ol></span><span><ol start="3">
+<li>Differentiation</li>
+</ol></span><span><ol start="4">
+<li>Positioning</li>
+</ol></span></div>
+<div class="grid2"><div><p><strong>Decide who to serve</strong></p>
+<ul>
+<li><strong>Market segmentation:</strong> dividing a market into <strong>smaller segments</strong> with <strong>distinct needs, characteristics or behaviour</strong> that may need separate strategies or mixes.</li>
+<li><strong>Market targeting:</strong> <strong>evaluating each segment's attractiveness</strong> and <strong>selecting</strong> one or more to enter.</li>
+</ul></div><div><p><strong>Decide how to create value</strong></p>
+<ul>
+<li><strong>Differentiation:</strong> differentiating the offer to create <strong>superior customer value</strong>.</li>
+<li><strong>Positioning:</strong> arranging for the offer to occupy a <strong>clear, distinctive and desirable place</strong> in target consumers' minds, relative to competitors.</li>
+</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Market segmentation — four bases"><span class="num">2</span>Market segmentation — four bases</h2><p><strong>Kotler:</strong> segmentation is dividing a market of potential customers <strong>into groups based on different characteristics</strong>, then serving selected segments.</p>
+<table>
+<thead>
+<tr>
+<th>Base</th>
+<th>Divides by</th>
+<th>Examples from the notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Geographic</strong></td>
+<td>Nations, regions, states, counties, cities</td>
+<td><strong>Keells Super</strong> locates branches in <strong>high-residential areas</strong> across the country</td>
+</tr>
+<tr>
+<td><strong>Demographic</strong></td>
+<td><strong>Age, gender, family size, family life cycle, income, occupation, education, religion, race, generation, nationality</strong></td>
+<td><strong>Milk powder in Sri Lanka</strong>: different packs from infants to the elderly; age bands such as ≤5, 5–15, 15–30, 30–45</td>
+</tr>
+<tr>
+<td><strong>Psychographic</strong></td>
+<td><strong>Social class, lifestyle, personality</strong></td>
+<td>Social classes (lower-lower … upper-upper); <strong>working women's lifestyle</strong> → instant foods, day-care centres, workwear</td>
+</tr>
+<tr>
+<td><strong>Behavioural</strong></td>
+<td><strong>Buying behaviour</strong></td>
+<td>See below</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Behavioural segmentation parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Occasion</strong></td>
+<td>Purchased for a <strong>specific occasion</strong>, frequent or once in a lifetime</td>
+<td>Avurudu sweets, wedding sarees, Valentine's gifts</td>
+</tr>
+<tr>
+<td><strong>Usage rate</strong></td>
+<td><strong>Heavy / medium / light users</strong></td>
+<td>Heavy mobile-data users get unlimited plans</td>
+</tr>
+<tr>
+<td><strong>Loyalty</strong></td>
+<td>Customer <strong>retention rates</strong> show brand loyalty</td>
+<td>Loyalty card tiers</td>
+</tr>
+<tr>
+<td><strong>Benefits sought</strong></td>
+<td>The <strong>benefit</strong> customers want</td>
+<td>Toothpaste: whitening vs sensitivity vs cavity protection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-segment">Why segment?</h3>
+<ul>
+<li><strong>Meet customer needs more precisely</strong></li>
+<li><strong>Increase sales and profits</strong></li>
+<li><strong>Segment leadership</strong>: become the leader in a segment</li>
+<li><strong>Retain customers</strong></li>
+<li><strong>Focus marketing communications</strong> and cut <strong>needless advertising and feature costs</strong></li>
+</ul>
+<h3 id="five-requirements-for-effective-segments">Five requirements for effective segments</h3>
+<p><strong>Segmenting salt buyers by hair colour is useless.</strong> Hair colour doesn't affect salt purchases. Useful segments must be:</p>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Meaning</th>
+<th>Example from the notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Measurable</strong></td>
+<td>Size, purchasing power and profile can be <strong>measured</strong></td>
+<td>10–15% of Sri Lankans are left-handed, but there's <strong>no data</strong> on them, so the segment is hard to quantify</td>
+</tr>
+<tr>
+<td><strong>Accessible</strong></td>
+<td>Can be <strong>effectively reached and served</strong></td>
+<td>Late-night socialisers who heavily use a fragrance but share no common places or media are hard to reach</td>
+</tr>
+<tr>
+<td><strong>Substantial</strong></td>
+<td><strong>Large or profitable enough</strong> to serve</td>
+<td>Cars for people over 7 feet tall wouldn't pay</td>
+</tr>
+<tr>
+<td><strong>Differentiable</strong></td>
+<td>Segments <strong>respond differently</strong> to marketing-mix elements</td>
+<td>If men and women respond the same way to soft-drink marketing, they aren't separate segments</td>
+</tr>
+<tr>
+<td><strong>Actionable</strong></td>
+<td>Effective programmes <strong>can be designed</strong> to attract and serve them</td>
+<td>A small airline found 7 segments but lacked the staff for 7 programmes</td>
+</tr>
+</tbody>
+</table>
+<div class="call tip"><div class="ct">Memory hook: "MASDA"</div><p><strong>M</strong>easurable · <strong>A</strong>ccessible · <strong>S</strong>ubstantial · <strong>D</strong>ifferentiable · <strong>A</strong>ctionable</p></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Market targeting &amp; Porter&#x27;s five forces"><span class="num">3</span>Market targeting &amp; Porter's five forces</h2><p><strong>Target marketing</strong> is choosing the <strong>group of customers the business will satisfy</strong>. Prices, promotions and distribution are then designed for them. To evaluate segments, consider:</p>
+<ol>
+<li><strong>Segment size and growth</strong></li>
+<li><strong>Structural attractiveness</strong>, using <strong>Porter's five forces</strong></li>
+<li><strong>Company objectives and resources</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Force</th>
+<th>Meaning</th>
+<th>Depends on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Rivalry among existing competitors</strong></td>
+<td>More competitors with similar offers means <strong>less power</strong> for the company</td>
+<td>Exit barriers, similarity of offers and strategies, number, size and commitment of rivals, high fixed costs</td>
+</tr>
+<tr>
+<td><strong>2. Threat of new entrants</strong></td>
+<td>Easy entry weakens incumbents. <strong>High entry barriers protect</strong> them</td>
+<td>Capital needed, economies of scale, distribution access, brand loyalty, cumulative experience, switching costs</td>
+</tr>
+<tr>
+<td><strong>3. Threat of substitutes</strong></td>
+<td>Different products meeting the <strong>same need</strong>. <em>Red Bull vs coffee</em>: both give energy</td>
+<td>Number of substitutes, buyers' propensity to switch, relative price-performance, perceived differentiation, switching costs</td>
+</tr>
+<tr>
+<td><strong>4. Bargaining power of suppliers</strong></td>
+<td>How easily sellers can <strong>raise input costs</strong></td>
+<td>Supplier concentration, input uniqueness, switching cost, threat of forward integration, importance of volume to the supplier</td>
+</tr>
+<tr>
+<td><strong>5. Bargaining power of buyers</strong></td>
+<td>Buyers' ability to <strong>drive prices down</strong></td>
+<td>Buyer volume and concentration, order size, ability to substitute, switching costs, information, threat of backward integration, price sensitivity</td>
+</tr>
+</tbody>
+</table>
+<div class="call key"><div class="ct">Reading the five forces</div><p><strong>Strong forces → less attractive segment</strong> (low profit potential). Weak rivalry, high entry barriers, few substitutes, weak suppliers and weak buyers → <strong>attractive</strong> segment.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Five patterns of target-market selection"><span class="num">4</span>Five patterns of target-market selection</h2><div class="tool"><div class="tt">🧪 Try it — Target-market pattern grid (products × markets)</div><div id="tp">
+<div class="row btns"></div>
+<svg viewBox="0 0 400 250" class="sv" style="max-width:440px"></svg>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('tp'),P=[
+['Single-segment concentration',[[0,0]],'One product for one market segment (focused or concentrated marketing). Best when the firm has a strong share, deep knowledge of the segment, credibility and a feasible leadership position.','A luxury watchmaker serving only the affluent'],
+['Selective specialisation',[[0,0],[1,2],[2,1]],'Several attractive, suitable segments that may be unrelated (multi-segment coverage). Diversifies risk.','A firm selling baby food to parents and sports drinks to athletes'],
+['Product specialisation',[[1,0],[1,1],[1,2]],'One product sold to several segments. Builds a strong reputation in that product area.','A microscope maker selling to universities, labs and hospitals'],
+['Market specialisation',[[0,1],[1,1],[2,1]],'Many products for one customer group, meeting all its needs.','A firm supplying everything a hospital needs'],
+['Full market coverage',[[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1],[2,2]],'All customer groups with all the products they need. Only very large firms can do this, through undifferentiated (mass) or differentiated (multi-segment) marketing.','Coca-Cola, Unilever, Toyota']];
+var b=R.querySelector('.btns');P.forEach(function(p,i){var x=document.createElement('button');x.textContent=p[0];x.className='alt';x.onclick=function(){show(i)};b.appendChild(x)});
+function show(i){b.querySelectorAll('button').forEach(function(x,j){x.className=j===i?'':'alt'});var on=P[i][1],h='';
+for(var r=0;r<3;r++)for(var c=0;c<3;c++){var f=on.some(function(q){return q[0]===r&&q[1]===c});h+='<rect x="'+(90+c*95)+'" y="'+(30+r*65)+'" width="90" height="60" rx="6" fill="'+(f?'var(--accent)':'var(--bg)')+'" stroke="var(--line)"/>'}
+['M1','M2','M3'].forEach(function(m,c){h+='<text x="'+(135+c*95)+'" y="20" text-anchor="middle" font-size="13" font-weight="700">'+m+'</text>'});['P1','P2','P3'].forEach(function(p,r){h+='<text x="60" y="'+(65+r*65)+'" text-anchor="middle" font-size="13" font-weight="700">'+p+'</text>'});
+h+='<text x="20" y="245" font-size="10" style="fill:var(--muted)">P = products, M = markets (segments)</text>';R.querySelector('.sv').innerHTML=h;R.querySelector('.out').innerHTML='<p><b>'+P[i][0]+':</b> '+P[i][2]+'</p><p class="note">Example: '+P[i][3]+'</p>'}show(0);})();
+</script></div>
+<h3 id="two-ways-to-achieve-full-market-coverage">Two ways to achieve full market coverage</h3>
+<div class="grid2"><div><p><strong>Undifferentiated (mass) marketing</strong></p>
+<ul>
+<li><strong>Ignores segment differences</strong>: <strong>one offer, one strategy</strong> for the whole market.</li>
+<li>Focuses on what buyers have <strong>in common</strong>.</li>
+</ul></div><div><p><strong>Differentiated (multi-segment) marketing</strong></p>
+<ul>
+<li><strong>Different offers and messages</strong> for different segments.</li>
+<li>A combination of concentrated and undifferentiated marketing.</li>
+</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Differentiation"><span class="num">5</span>Differentiation</h2><p>After choosing targets, the firm decides on a <strong>value proposition</strong>: how it will create <strong>competitive value</strong> for those segments. <strong>Marketing differentiation</strong> produces offers customised to a segment to gain <strong>competitive advantage</strong>.</p>
+<p>There are two options:</p>
+<ul>
+<li><strong>broad differentiation</strong>: wide appeal with special features</li>
+<li><strong>focused differentiation</strong>: appeals to a <strong>niche</strong></li>
+</ul>
+<h3 id="how-to-promote-it">How to promote it</h3>
+<ul>
+<li>Through <strong>packaging, promotion, even the name</strong>.</li>
+<li>It may need <strong>new functional features</strong>, or just a <strong>packaging redesign</strong>.</li>
+<li>Sometimes <strong>no product change at all</strong>: just a new <strong>advertising campaign</strong>.</li>
+</ul>
+<h3 id="how-to-measure-it">How to measure it</h3>
+<ul>
+<li>Some differences are <strong>physical and measurable</strong> (e.g. "the lowest-price gym in the area").</li>
+<li>Others are <strong>abstract</strong> ("the coolest car", fashion shown on young, hip models). These <strong>can't be measured</strong>.</li>
+<li>So differentiation is often <strong>subjective</strong>: it changes how customers <strong>evaluate the benefits</strong> of one item versus another.</li>
+</ul>
+<p><em>Example:</em> BMW's slogan <strong>"Sheer Driving Pleasure"</strong> claims an abstract benefit that can't be measured, and the real difference may be tiny.</p>
+<h3 id="types-of-differentiation">Types of differentiation</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Price</strong></td>
+<td><strong>Lowest price</strong> for cost-conscious buyers, <strong>or a high price</strong> to signal luxury</td>
+</tr>
+<tr>
+<td><strong>Performance and reliability</strong></td>
+<td>Long-lasting value, better performance (e.g. longer-life batteries)</td>
+</tr>
+<tr>
+<td><strong>Location and service</strong></td>
+<td>"Local business in your community" → personal service, which also justifies a higher price than national brands</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li><strong>Brand loyalty</strong></li>
+<li>Can <strong>sustain a higher price</strong> (customers see it as worth more)</li>
+<li>Helps <strong>stand out</strong> when products are similar (bottled water: stress price, local origin or design)</li>
+</ul><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Positioning &amp; perceptual maps"><span class="num">6</span>Positioning &amp; perceptual maps</h2><div class="call key"><div class="ct">Positioning</div><p><strong>The place a product occupies in consumers' minds</strong>, on important attributes, <strong>relative to competing products</strong>.</p>
+<ul>
+<li>Firms position by stressing <strong>unique features</strong> or building an <strong>image through the marketing mix</strong>.</li>
+<li><strong>Once a strong position is established, it's hard to reposition.</strong></li>
+</ul></div>
+<p><strong>Perceptual (positioning) maps</strong> show how <strong>customers perceive</strong> brands versus competitors on key buying dimensions. A firm can then position:</p>
+<ul>
+<li><strong>in a gap</strong> in the market (no competitor there), <strong>or</strong></li>
+<li><strong>head-to-head</strong> next to a competitor.</li>
+</ul>
+<div class="tool"><div class="tt">🧪 Try it — Perceptual map — drag the brands</div><div id="pm">
+<div class="row"><label>X axis <input type="text" class="xl" value="Price (low → high)" style="width:160px"></label><label>Y axis <input type="text" class="yl" value="Performance ↔ Luxury" style="width:160px"></label><label>Add brand <input type="text" class="nb" placeholder="name" style="width:110px"></label><button class="add">Add</button></div>
+<svg viewBox="0 0 520 360" class="sv" style="max-width:560px;touch-action:none;user-select:none"></svg>
+<p class="note out">Drag circles to where customers would place each brand. Circle size = market share. Look for empty areas: those are the gaps.</p>
+</div>
+<script>
+(function(){var R=document.getElementById('pm'),B=[['Toyota Land Cruiser',150,95,26],['Mercedes',420,60,30],['BMW',380,250,28],['Lexus',330,110,22],['Toyota Corolla',120,280,34],['Honda',190,230,24]],drag=null,sv=R.querySelector('.sv');
+function draw(){var h='<line x1="260" y1="20" x2="260" y2="340" stroke="var(--line)"/><line x1="20" y1="180" x2="500" y2="180" stroke="var(--line)"/><text x="260" y="356" text-anchor="middle" font-size="12" style="fill:var(--muted)">'+R.querySelector('.xl').value+'</text><text x="12" y="180" font-size="12" transform="rotate(-90 12 180)" text-anchor="middle" style="fill:var(--muted)">'+R.querySelector('.yl').value+'</text>';
+B.forEach(function(b,i){h+='<g data-i="'+i+'" style="cursor:grab"><circle cx="'+b[1]+'" cy="'+b[2]+'" r="'+b[3]+'" fill="var(--accent)" fill-opacity=".25" stroke="var(--accent)" stroke-width="2"/><text x="'+b[1]+'" y="'+(b[2]+4)+'" text-anchor="middle" font-size="11" font-weight="700" style="pointer-events:none">'+b[0]+'</text></g>'});sv.innerHTML=h}
+function pt(e){var r=sv.getBoundingClientRect(),t=e.touches?e.touches[0]:e;return [(t.clientX-r.left)*520/r.width,(t.clientY-r.top)*360/r.height]}
+sv.addEventListener('pointerdown',function(e){var g=e.target.closest('[data-i]');if(g){drag=+g.dataset.i;sv.setPointerCapture(e.pointerId)}});
+sv.addEventListener('pointermove',function(e){if(drag===null)return;var p=pt(e);B[drag][1]=Math.max(20,Math.min(500,p[0]));B[drag][2]=Math.max(20,Math.min(340,p[1]));draw()});
+sv.addEventListener('pointerup',function(){drag=null});
+R.querySelector('.add').onclick=function(){var n=R.querySelector('.nb').value.trim();if(n){B.push([n,260,180,22]);R.querySelector('.nb').value='';draw()}};R.querySelectorAll('.xl,.yl').forEach(function(x){x.oninput=draw});draw();})();
+</script></div>
+<div class="call example"><div class="ct">The car positioning map (from the notes)</div><p>The dimensions are <strong>price</strong> and <strong>luxury vs performance orientation</strong>. Circle size = market share. <strong>Toyota's Land Cruiser</strong> sits as a <strong>niche brand</strong>: <strong>relatively affordable</strong> and <strong>performance-oriented</strong>.</p></div>
+<h3 id="choosing-a-differentiation-and-positioning-strategy-three-steps">Choosing a differentiation and positioning strategy: three steps</h3>
+<ol>
+<li><strong>Identify</strong> a set of possible <strong>competitive advantages</strong> to build a position on.</li>
+<li><strong>Choose</strong> the right advantages and an <strong>overall positioning strategy</strong>. A competitive advantage is gained by offering <strong>greater customer value</strong>, through <strong>lower prices or more benefits</strong>.</li>
+<li><strong>Communicate and deliver</strong> the chosen position effectively to the market.</li>
+</ol>
+<p>When several firms chase the <strong>same position</strong>, each must find <strong>another way to stand out</strong>, offering <strong>unique benefits</strong> valued by a substantial group in the segment.</p>
+<div class="call exam"><div class="ct">Exam focus</div><p>Expect:</p>
+<ul>
+<li><strong>The 4 segmentation bases with Sri Lankan examples</strong></li>
+<li><strong>The importance of segmentation</strong></li>
+<li><strong>The 5 requirements</strong> (MASDA) with the notes' examples</li>
+<li><strong>Porter's 5 forces</strong> and what each depends on</li>
+<li><strong>The 5 target-market patterns</strong> (draw the P × M grid)</li>
+<li><strong>Undifferentiated vs differentiated marketing</strong></li>
+<li><strong>Differentiation types</strong></li>
+<li><strong>Positioning and perceptual maps</strong></li>
+<li>"How does Coca-Cola position its brand?" Emotional happiness ("Open Happiness", "Taste the Feeling"), universal appeal, consistent red branding.</li>
+</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Quick revision sheet"><span class="num">7</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STP + D</td>
+<td>Segment → Target → Differentiate → Position</td>
+</tr>
+<tr>
+<td>Segmentation bases</td>
+<td>Geographic · Demographic · Psychographic · Behavioural</td>
+</tr>
+<tr>
+<td>Behavioural</td>
+<td>Occasion · usage rate · loyalty · benefits sought</td>
+</tr>
+<tr>
+<td>Why segment</td>
+<td>Precise needs, sales and profit, leadership, retention, focused communication</td>
+</tr>
+<tr>
+<td>Requirements</td>
+<td>MASDA</td>
+</tr>
+<tr>
+<td>Targeting</td>
+<td>Size and growth + structural attractiveness (Porter) + company goals</td>
+</tr>
+<tr>
+<td>Porter's 5 forces</td>
+<td>Rivalry · new entrants · substitutes · supplier power · buyer power</td>
+</tr>
+<tr>
+<td>5 patterns</td>
+<td>Single concentration · selective specialisation · product specialisation · market specialisation · full coverage</td>
+</tr>
+<tr>
+<td>Full coverage</td>
+<td>Undifferentiated (mass) vs differentiated (multi-segment)</td>
+</tr>
+<tr>
+<td>Differentiation</td>
+<td>Price · performance and reliability · location and service</td>
+</tr>
+<tr>
+<td>Positioning</td>
+<td>Place in the mind vs competitors; perceptual maps; find gaps</td>
+</tr>
+<tr>
+<td>Positioning steps</td>
+<td>Identify advantages → choose → communicate and deliver</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">10 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="mkt-Week04" data-pick="0"><script type="application/json" class="qdata">[{"q": "The correct order of customer-driven strategy is:", "o": ["Segmentation → targeting → differentiation → positioning", "Positioning → targeting → segmentation → differentiation", "Targeting → positioning → segmentation → differentiation", "Differentiation → segmentation → positioning → targeting"], "e": "Segment, choose targets, then decide how to stand out in customers' minds. ", "a": 0, "w": "Week 04"}, {"q": "Segmenting by lifestyle, personality or values is:", "o": ["Geographic", "Demographic", "Psychographic", "Behavioural"], "e": "Demographic uses age, gender, income and so on. ", "a": 2, "w": "Week 04"}, {"q": "Segmenting by usage rate, loyalty, occasion or benefits sought is:", "o": ["Geographic", "Demographic", "Psychographic", "Behavioural"], "e": "Example: heavy vs light users. ", "a": 3, "w": "Week 04"}, {"q": "Effective segments must be (MASDA):", "o": ["Measurable, accessible, substantial, differentiable, actionable", "Many, Additional, Simple, Direct, Active", "Mass, Average, Small, Diverse, Abstract", "Measurable, Affordable, Seasonal, Digital, Automatic"], "e": "Segments must be worth serving and reachable. ", "a": 0, "w": "Week 04"}, {"q": "Which is <strong>not<\/strong> one of Porter's five forces?", "o": ["Threat of new entrants", "Threat of substitutes", "Bargaining power of buyers", "Government advertising"], "e": "The other two: supplier power and rivalry among competitors. ", "a": 3, "w": "Week 04"}, {"q": "Serving several unrelated segments, each attractive on its own, is:", "o": ["Selective specialisation", "Single-segment concentration", "Product specialisation", "Full market coverage"], "e": "Product specialisation sells one product to several segments. ", "a": 0, "w": "Week 04"}, {"q": "Serving the whole market with <strong>one offer<\/strong> (ignoring segment differences) is:", "o": ["Undifferentiated (mass) marketing", "Differentiated marketing", "Niche marketing", "Micromarketing"], "e": "Differentiated marketing designs separate offers for several segments. ", "a": 0, "w": "Week 04"}, {"q": "Positioning is:", "o": ["Arranging for a product to occupy a clear, distinctive and desirable place in target consumers' minds relative to competitors", "Placing products on store shelves", "Setting the price", "Choosing the factory location"], "e": "Perceptual maps show positions and gaps. ", "a": 0, "w": "Week 04"}, {"q": "A perceptual map is used to:", "o": ["Show how consumers see brands on key dimensions and find gaps", "Map store locations", "Draw the supply chain", "Track the delivery route"], "e": "E.g. price vs luxury/performance for SUVs (Land Cruiser). ", "a": 0, "w": "Week 04"}, {"q": "The three positioning steps are:", "o": ["Identify possible competitive advantages → choose the right ones → communicate and deliver the position", "Advertise → sell → collect", "Research → produce → distribute", "Segment → target → price"], "e": "Differentiation can be by price, performance and reliability, or location and service. ", "a": 0, "w": "Week 04"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2003/Week%2003%20-%20Study%20Guide.html"><small>← Previous</small>Environmental Scanning &amp; Marketing Planning</a><a class="nx" href="../Week%2005/Week%2005%20-%20Study%20Guide.html"><small>Next →</small>Consumer Markets &amp; Consumer Buyer Behaviour</a></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  function show(i){
+    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

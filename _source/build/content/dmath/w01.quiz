@@ -1,0 +1,76 @@
+? P(x): "x > 3". What is the truth value of P(2)?
+- True
++ False
+- Not a proposition
+- Depends on the domain
+= 2 > 3 is false.
+
+? P(x, y, z): "x + y = z". P(x, 3, z) is:
+- True
+- False
++ Not a proposition (x and z are still free)
+- Always true
+= A propositional function becomes a proposition only when all its variables are given values or quantified.
+
+? p ⇒ q is false only when:
++ p is true and q is false
+- p is false and q is true
+- both are false
+- both are true
+= F ⇒ anything is true.
+
+? P(x): "x > 0" on the domain of **all integers**. ∀x P(x) is:
+- True
++ False
+- Not a proposition
+- Undefined
+= x = −1 is a counterexample. On the positive integers it would be true.
+
+? ∃!x (x + 1 = 0) over the integers is:
++ True: only x = −1 works
+- False: no x works
+- False: many x work
+- Not a proposition
+= ∃! means exactly one.
+
+? The negation of ∀x (x² + 1 = 5) is:
++ ∃x (x² + 1 ≠ 5)
+- ∀x (x² + 1 ≠ 5)
+- ∃x (x² + 1 = 5)
+- ¬∃x (x² + 1 = 5)
+= ¬∀x P(x) ≡ ∃x ¬P(x).
+
+? The negation of ∃x (x + 5 > 0) is:
++ ∀x (x + 5 ≤ 0)
+- ∃x (x + 5 ≤ 0)
+- ∀x (x + 5 > 0)
+- ∃x (x + 5 < 0)
+= ¬∃x P(x) ≡ ∀x ¬P(x).
+
+? "You drive over 100 mph, **but** you do not get a ticket" (p = drive over 100, q = get a ticket) is:
++ p ∧ ¬q
+- p ⇒ ¬q
+- ¬p ∨ q
+- p ∨ ¬q
+= "But" means "and".
+
+? "Every student in this class has studied either Java (Q) or Python (R)" is:
++ ∀x (Q(x) ∨ R(x))
+- ∃x (Q(x) ∨ R(x))
+- ∀x Q(x) ∨ ∃x R(x)
+- ∃x Q(x) ∧ ∃x R(x)
+= Domain: students in the class.
+
+? In a direct proof that "n odd ⇒ n² odd", we start by writing:
++ n = 2k + 1 for some integer k
+- n = 2k for some integer k
+- Assume n² is even
+- n = k² + 1
+= Then n² = 2(2k² + 2k) + 1, which is odd.
+
+? Which is a proposition?
++ "7 is a prime number."
+- "What time is it?"
+- "x + 2 = 5"
+- "Close the door."
+= A proposition is a declarative sentence that is true or false, but not both.

@@ -1,0 +1,69 @@
+? A successful interface must be:
++ Useful, usable and used
+- Cheap, fast and colourful
+- Large, loud and bright
+- Secure, private and encrypted
+= Something can be useful but not usable, or useful and usable but never used.
+
+? **Useful** means the interface:
++ Lets you achieve the task
+- Is pleasant to look at
+- Is used repeatedly
+- Is free
+= Usable = effective, efficient and pleasant; used = long-term acceptance.
+
+? Why must designers understand tasks before designing?
++ Premature design can deviate from or complicate the real task
+- Tasks never change
+- Design is cheaper than research
+- Users don't have tasks
+= This is "task primacy".
+
+? The GPS rerouting example shows that:
++ An algorithmically optimal route may not suit the driver's real sub-tasks and context
+- GPS is always wrong
+- Drivers don't need maps
+- Shorter routes are always better
+= Consider context and sub-tasks.
+
+? Viewing the user as a **processor** focuses on:
++ Human limits, measured quantitatively, without explaining why
+- The user's knowledge and reasoning
+- The full context of use
+- Emotions only
+= Weakness: it gives no explanation and no support for redesign.
+
+? Viewing the user as a **predictor** uses methods like:
++ Think-aloud and cognitive walkthroughs (qualitative, ex-situ)
+- Reaction-time experiments
+- Long field studies
+- Eye surgery
+= It uses human knowledge, but ignores the context of use.
+
+? Viewing the user as a **participant** studies:
++ Users in their real context (in-situ field studies)
+- Users in a lab with timers only
+- Only the designer's opinion
+- Machines only
+= It's authentic but expensive.
+
+? GPS prompts at 500 m with multiple alerts come from which view of the user?
+- Processor
+- Predictor
++ Participant
+- None
+= Processor → 2 s; predictor → 10 s; participant → 500 m plus multiple alerts.
+
+? UX (user experience) is mainly concerned with:
++ Emotion and personal fit, for individuals, teams and society
+- Hardware speed
+- Database normalisation
+- Server uptime
+= It goes beyond usability.
+
+? Something that is useful and usable but nobody adopts long-term fails which criterion?
+- Useful
+- Usable
++ Used
+- None
+= "Used" means repeated long-term use, i.e. acceptance.

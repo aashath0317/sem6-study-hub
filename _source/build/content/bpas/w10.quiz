@@ -1,0 +1,74 @@
+? Overhead is best defined as:
+- The total of direct materials, direct labour and direct expenses
++ The total of indirect materials, indirect labour and indirect expenses
+- Prime cost plus profit
+- Only factory rent and electricity
+= Overheads can't be traced directly and in full to a product, so they're the indirect costs.
+
+? A single cost item is charged **in full** to one cost centre (e.g. food colouring used only by Dept A). This is:
++ Allocation
+- Apportionment
+- Absorption
+- Re-apportionment
+= Allocation charges a whole cost to one centre. Apportionment shares a common cost on a fair basis.
+
+? The most appropriate basis for apportioning factory **rent** is:
+- Number of employees
+- Machine hours
++ Floor area occupied
+- Value of materials
+= Rent, rates, lighting and building insurance are shared by floor area.
+
+? The most appropriate basis for apportioning **canteen and welfare** costs is:
++ Number of employees
+- Floor area
+- Capital value of machines
+- Kilowatt usage
+= Welfare, canteen, time-keeping and supervision costs are driven by headcount.
+
+? Rent of Rs 150,000 is shared by floor area 2,500 : 3,750 : 1,250 (A : B : maintenance). How much goes to **Dept B**?
+# 75000
+= The ratio is 2 : 3 : 1 (total 6), so B = 150,000 ÷ 6 × 3 = 75,000.
+
+? Which re-apportionment method **ignores services that service departments provide to each other**?
++ Direct method
+- Step-down method
+- Reciprocal (repeated distribution) method
+- Simultaneous equation method
+= The direct method sends each service department's cost straight to the production departments.
+
+? Maintenance (Rs 85,500) is re-apportioned by maintenance hours 3,000 : 2,000. Dept A's primary total is Rs 216,500. What is Dept A's final overhead?
+# 267800
+= Dept A gets 85,500 × 3/5 = 51,300, so 216,500 + 51,300 = 267,800.
+
+? Dept A has overhead of Rs 267,800 and 4,000 budgeted labour hours. What is the overhead absorption rate (Rs per labour hour)?
+# 66.95 ~0.01
+= OAR = 267,800 ÷ 4,000 = Rs 66.95 per labour hour.
+
+? Why are **predetermined** OARs normally used instead of actual rates?
+- They are always more accurate
++ Actual overheads and activity are only known at the end of the period, but costs are needed now for pricing and control
+- Accounting standards forbid actual rates
+- They remove under- and over-absorption
+= The rate is budgeted OH ÷ budgeted activity, so product costs are known in advance.
+
+? For a **machine-intensive** department, the best absorption basis is:
+- Direct labour hour rate
++ Machine hour rate
+- Percentage of direct material cost
+- Production unit method
+= Machines drive the cost, so absorb overhead per machine hour.
+
+? Absorbed overhead is Rs 281,190 and actual overhead is Rs 270,000. The result is:
++ Over-absorption of Rs 11,190, credited to the P&L
+- Under-absorption of Rs 11,190, debited to the P&L
+- Over-absorption of Rs 11,190, debited to the P&L
+- No adjustment needed
+= Absorbed > actual means over-absorbed: costs were overstated, so the excess is credited back to profit.
+
+? A blanket (single) overhead rate is:
+- A separate rate for each production department
++ One rate for the whole factory
+- A rate used only for service departments
+- The same as a machine hour rate
+= Blanket rates are simple, but inaccurate when departments differ. Departmental rates are more accurate.

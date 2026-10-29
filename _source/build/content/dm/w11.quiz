@@ -1,0 +1,64 @@
+? Classification differs from (numeric) prediction because classification predicts:
++ Categorical class labels; prediction models continuous values
+- Continuous values; prediction predicts labels
+- Clusters without labels
+- Only yes/no answers
+= Both are supervised learning.
+
+? Why must the test set be independent of the training set?
++ Testing on training data gives an optimistic estimate because of overfitting
+- It makes training faster
+- The algorithm requires it to run
+- It reduces the number of attributes
+= An overfitted model learns anomalies of the training data.
+
+? In a decision tree, a **leaf node** represents:
+- A test on an attribute
+- An outcome of a test
++ A class label
+- The training set
+= Internal nodes are tests; branches are outcomes.
+
+? ID3, C4.5 and CART use which attribute selection measures?
++ Information gain, gain ratio, Gini index (respectively)
+- Gini, information gain, gain ratio
+- Support, confidence, lift
+- Mean, median, mode
+= All three are greedy, top-down, recursive algorithms.
+
+? A set has 9 "yes" and 5 "no". What is its entropy Info(D) (3 decimals)?
+# 0.940 ~0.001
+= −(9/14)log₂(9/14) − (5/14)log₂(5/14) = 0.940.
+
+? Info(D) = 0.940 and Info_age(D) = 0.694. What is Gain(age)?
+# 0.246 ~0.001
+= Gain = 0.940 − 0.694 = 0.246, the highest, so age is the root.
+
+? A node with all tuples in one class has entropy:
+# 0
+= A pure node has zero uncertainty.
+
+? Why use **gain ratio** instead of information gain?
++ Information gain is biased towards attributes with many values (e.g. IDs); gain ratio normalises by SplitInfo
+- Gain ratio is faster
+- Information gain can't handle numbers
+- Gain ratio needs no class labels
+= Gain ratio = Gain ÷ SplitInfo.
+
+? Gini index for a node with class proportions 0.5 and 0.5 is:
+# 0.5
+= 1 − (0.25 + 0.25) = 0.5.
+
+? With the Gini index (CART), the attribute chosen for the split is the one with:
++ The minimum Gini index (largest reduction in impurity), using binary splits
+- The maximum Gini index
+- The most values
+- The highest support
+= An attribute with v values has 2ᵛ − 2 possible binary subsets.
+
+? Which is **not** a criterion for comparing classifiers?
+- Accuracy
+- Speed
+- Interpretability
++ Colour of the output
+= The others are robustness and scalability.

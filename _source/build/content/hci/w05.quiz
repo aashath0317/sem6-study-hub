@@ -1,0 +1,69 @@
+? Feedback is:
++ Information about the effect of an action, returned to the person who acted
+- The action itself
+- The effect itself
+- An error message only
+= The effect is that the volume goes up; the feedback is hearing it louder.
+
+? A kettle whistling when the water boils is an example of:
++ Feedback
+- Affordance
+- A slip
+- A mental model
+= Other examples: a volume bar, a bank's "success/failed" message, ATM beeps.
+
+? Why do feedback cycles matter?
++ We learn through them, so the next interaction improves
+- They make interfaces slower
+- They replace the need for design
+- They only matter for games
+= They bridge the gulfs of execution and evaluation.
+
+? The bridge of **execution** consists of:
++ Plan → specify → perform
+- Perceive → interpret → compare
+- Goal → evaluate → act
+- See → think → feel
+= The bridge of evaluation is perceive → interpret → compare.
+
+? Which is one of the **user's** seven questions?
++ "What happened?"
+- "How easily can one determine the function of the device?"
+- "What's the server load?"
+- "How many pixels is the button?"
+= The designer's questions take the form "How easily can one…".
+
+? The **visceral** level of design is about:
++ Look and feel: the immediate reaction
+- Usability and function
+- Meaning, pride and brand
+- Price
+= Behavioural = usability; reflective = meaning and self-image.
+
+? Being proud to own a luxury brand appeals to which level?
+- Visceral
+- Behavioural
++ Reflective
+- None
+= The reflective level involves metacognition and meaning.
+
+? A product that works smoothly and efficiently in use satisfies which level?
+- Visceral
++ Behavioural
+- Reflective
+- None
+= The behavioural level is about usability.
+
+? A bank app showing "Transfer successful" after you send money is:
++ Feedback that closes the evaluation side of the cycle
+- A gulf of execution
+- A slip
+- Unnecessary
+= Without it, the user can't tell what happened.
+
+? Designer's question: "How easily can one tell what actions are possible?" relates to:
++ The gulf of execution (what the user can do)
+- The gulf of evaluation
+- The reflective level
+- Ergonomics only
+= Questions about perceiving and interpreting the state relate to evaluation.

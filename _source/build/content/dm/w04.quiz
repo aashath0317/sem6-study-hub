@@ -1,0 +1,70 @@
+? Which is **not** one of the five data reduction strategies?
+- Data cube aggregation
+- Attribute subset selection
+- Numerosity reduction
++ Data cleaning
+= The five are cube aggregation, attribute subset selection, dimensionality reduction, numerosity reduction and discretisation.
+
+? To predict whether a customer will buy a CD, which attribute is **irrelevant**?
+- Age
+- Music taste
++ Telephone number
+- Past purchases
+= Attribute subset selection removes irrelevant attributes.
+
+? Which is a **greedy** attribute-selection method?
++ Stepwise forward selection
+- Wavelet transform
+- Equal-width binning
+- Z-score
+= Others: backward elimination, a combination of the two, and decision-tree induction.
+
+? Wavelet transforms and PCA are examples of:
++ Lossy dimensionality reduction
+- Lossless compression
+- Parametric numerosity reduction
+- Data cleaning
+= Lossy means the original can only be approximated.
+
+? Storing only regression parameters (y = wx + b) instead of the data is:
++ Parametric numerosity reduction
+- Non-parametric numerosity reduction
+- Discretisation
+- Data cube aggregation
+= Histograms, clustering and sampling are non-parametric.
+
+? Temperatures range from 64 to 85, with 7 equal-width bins. What is the bin width?
+# 3
+= W = (85 − 64) ÷ 7 = 3.
+
+? 12 sorted prices split into 3 equal-depth (equal-frequency) bins. How many values go in each bin?
+# 4
+= Depth = 12 ÷ 3 = 4.
+
+? A weakness of **equal-width** binning is that:
++ Outliers can stretch the range, leaving most values in a few bins and some bins empty
+- It needs class labels
+- It always gives the same count per bin
+- It can't be computed
+= Equal-depth bins avoid this by holding the same number of values each.
+
+? With β buckets, the MaxDiff histogram places boundaries at:
++ The β − 1 largest differences between adjacent values
+- Every value
+- Equal widths
+- The mean and median
+= V-Optimal minimises the variance within buckets.
+
+? Discretisation that uses class labels is called:
++ Supervised
+- Unsupervised
+- Top-down
+- Lossless
+= Top-down (splitting) and bottom-up (merging) describe the direction instead.
+
+? A concept hierarchy for age (youth / middle-aged / senior) is an example of:
++ Recursive discretisation, replacing low-level values with higher-level concepts
+- Normalisation
+- Sampling
+- Correlation analysis
+= It's done before mining, giving concise, knowledge-level results.

@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 01 · The Foundations — Predicate Logic, Quantifiers &amp; Direct Proofs — Discrete Mathematics</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="dmath-Week01">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Discrete Mathematics</a> › Week 01</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 01</div><h1>The Foundations — Predicate Logic, Quantifiers &amp; Direct Proofs</h1><p>Predicates and propositional functions, compound expressions, ∀ / ∃ / ∃!, negating quantifiers, translating English into logic, and constructing direct proofs.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">2 videos</span><span class="chip">📄 Lesson 1_2.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Logic &amp; Proofs – Part I</button><button>2. Logic &amp; Proofs – Part II</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- The Foundations- Logic &amp; Proofs- Part I - CODL-UOM.mp4"><source src="ITE3822-25S2-%20The%20Foundations-%20Logic%20%26%20Proofs-%20Part%20I%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Logic &amp; Proofs – Part I</p><p class="vs">Predicates, propositional functions and quantifiers.</p></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- The Foundations- Logic &amp; Proofs- Part II - CODL-UOM.mp4"><source src="ITE3822-25S2-%20The%20Foundations-%20Logic%20%26%20Proofs-%20Part%20II%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Logic &amp; Proofs – Part II</p><p class="vs">Translating English to logic and direct proofs.</p></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="From propositions to predicates"><span class="num">1</span>From propositions to predicates</h2><p><strong>Recall:</strong> a <strong>proposition</strong> is a <strong>declarative statement that is either true or false, but not both</strong>.</p>
+<ul>
+<li>"Colombo is in Sri Lanka" → a proposition (true)</li>
+<li>"2 + 3 = 7" → a proposition (false)</li>
+<li>"<strong>x is greater than 5</strong>" → <strong>not</strong> a proposition. You can't tell if it's true until you know x.</li>
+</ul>
+<p>Propositional logic <strong>can't handle statements with variables</strong>, and these are everywhere in maths and CS. So we use <strong>predicate logic</strong>.</p>
+<div class="call key"><div class="ct">Subject and predicate</div><p>In "<strong>x</strong> is greater than 5":</p>
+<ul>
+<li><strong>x</strong> is the <strong>subject</strong> (also called the <strong>variable</strong> or <strong>argument</strong>).</li>
+<li>"<strong>is greater than 5</strong>" is the <strong>predicate</strong>: a <strong>property</strong> the subject can have.</li>
+</ul></div>
+<p>Predicate logic has three features: <strong>variables</strong>, <strong>predicates</strong> and <strong>quantifiers</strong>.</p><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Propositional functions"><span class="num">2</span>Propositional functions</h2><ul>
+<li>We write "x is greater than 3" as <strong>P(x)</strong>, where P is the predicate "is greater than 3" and x is the variable.</li>
+<li>P(x) is called <strong>the value of the propositional function P at x</strong>.</li>
+<li>Once x gets a value, <strong>P(x) becomes a proposition</strong> with a truth value.</li>
+</ul>
+<div class="call example"><div class="ct">Worked example</div><p>P(x): "x &gt; 3"</p>
+<ul>
+<li>P(4): "4 &gt; 3" → <strong>True</strong></li>
+<li>P(2): "2 &gt; 3" → <strong>False</strong></li>
+</ul>
+<p>The truth value of a predicate <strong>depends on the value of the variable</strong>.</p></div>
+<div class="call key"><div class="ct">Note 1</div><ul>
+<li>A propositional function <strong>becomes a proposition</strong> when <strong>every variable is replaced by a value</strong> from the domain, <strong>or bound by a quantifier</strong>.</li>
+<li>The domain is usually called <strong>U</strong>.</li>
+<li><strong>Remark 2:</strong> the <strong>domain</strong> (the set of possible values of the arguments) is also called the <strong>universe of discourse</strong>.</li>
+</ul></div>
+<div class="call example"><div class="ct">Example 1.2.3 — several variables</div><p>Let P(x, y, z) denote "x + y = z", with U = the integers.</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Check</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P(2, −1, 5)</td>
+<td>2 + (−1) = 1 ≠ 5</td>
+<td><strong>F</strong></td>
+</tr>
+<tr>
+<td>P(3, 4, 7)</td>
+<td>3 + 4 = 7</td>
+<td><strong>T</strong></td>
+</tr>
+<tr>
+<td>P(x, 3, z)</td>
+<td>x and z still unknown</td>
+<td><strong>Not a proposition</strong></td>
+</tr>
+</tbody>
+</table></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Compound expressions"><span class="num">3</span>Compound expressions</h2><p>Compound propositions combine propositions with <strong>logical operators</strong>. The same works with predicates.</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Read as</th>
+<th>True when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>¬p</td>
+<td>Negation</td>
+<td>not p</td>
+<td>p is false</td>
+</tr>
+<tr>
+<td>p ∧ q</td>
+<td>Conjunction</td>
+<td>p and q</td>
+<td><strong>both</strong> are true</td>
+</tr>
+<tr>
+<td>p ∨ q</td>
+<td>Disjunction</td>
+<td>p or q</td>
+<td><strong>at least one</strong> is true</td>
+</tr>
+<tr>
+<td>p ⇒ q</td>
+<td>Implication</td>
+<td>if p then q</td>
+<td><strong>false only when p is T and q is F</strong></td>
+</tr>
+<tr>
+<td>p ⇔ q</td>
+<td>Biconditional</td>
+<td>p if and only if q</td>
+<td>p and q have the <strong>same</strong> value</td>
+</tr>
+</tbody>
+</table>
+<div class="call example"><div class="ct">Example 1.3.1 — P(x): "x &gt; 0"</div><ul>
+<li>P(3) is <strong>T</strong> (since 3 &gt; 0) and P(−1) is <strong>F</strong> (since −1 &lt; 0).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Working</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P(3) ∨ P(−1)</td>
+<td>T ∨ F</td>
+<td><strong>True</strong></td>
+</tr>
+<tr>
+<td>P(3) ∧ P(−1)</td>
+<td>T ∧ F</td>
+<td><strong>False</strong></td>
+</tr>
+<tr>
+<td>P(3) ⇒ P(−1)</td>
+<td>T ⇒ F</td>
+<td><strong>False</strong></td>
+</tr>
+<tr>
+<td>P(−1) ⇒ P(3)</td>
+<td>F ⇒ T</td>
+<td><strong>True</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="tool"><div class="tt">🧪 Try it — Truth table generator</div><div id="tt">
+<label style="display:block">Expression (use p q r s, ¬ or ~ or !, ∧ or &, ∨ or |, ⇒ or ->, ⇔ or <->, brackets)<input type="text" class="e" value="(p -> q) <-> (~p | q)"></label>
+<div class="row"><button class="alt" data-x="p & ~q">p ∧ ¬q</button><button class="alt" data-x="p -> q">p ⇒ q</button><button class="alt" data-x="~p -> ~q">¬p ⇒ ¬q</button><button class="alt" data-x="~(p & q) <-> (~p | ~q)">De Morgan</button><button class="alt" data-x="(p -> q) & (q -> r) -> (p -> r)">Transitivity</button></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('tt');
+function tok(s){s=s.replace(/<->|⇔|↔/g,' E ').replace(/->|⇒|→/g,' I ').replace(/[¬~!]/g,' N ').replace(/[∧&]/g,' A ').replace(/[∨|]/g,' O ').replace(/\(/g,' ( ').replace(/\)/g,' ) ');return s.split(/\s+/).filter(Boolean)}
+function parse(t){var i=0;function peek(){return t[i]}function eat(){return t[i++]}
+function E(){var a=I();while(peek()==='E'){eat();var b=I(),x=a;a=function(v){return x(v)===b(v)}}return a}
+function I(){var a=O();if(peek()==='I'){eat();var b=I(),x=a;return function(v){return !x(v)||b(v)}}return a}
+function O(){var a=A();while(peek()==='O'){eat();var b=A(),x=a;a=(function(x,b){return function(v){return x(v)||b(v)}})(x,b)}return a}
+function A(){var a=U();while(peek()==='A'){eat();var b=U(),x=a;a=(function(x,b){return function(v){return x(v)&&b(v)}})(x,b)}return a}
+function U(){var k=eat();if(k==='N'){var a=U();return function(v){return !a(v)}}if(k==='('){var a=E();if(eat()!==')')throw 'missing )';return a}if(/^[pqrs]$/.test(k))return function(v){return v[k]};throw 'unexpected '+k}
+var f=E();if(i<t.length)throw 'unexpected '+t[i];return f}
+function run(){var s=R.querySelector('.e').value,o=R.querySelector('.out');try{var t=tok(s),f=parse(t),vs=['p','q','r','s'].filter(function(v){return t.indexOf(v)>=0}),n=vs.length,rows=[],all=true,none=true;
+for(var m=0;m<(1<<n);m++){var v={};vs.forEach(function(x,j){v[x]=!(m&(1<<(n-1-j)))});var r=f(v);all=all&&r;none=none&&!r;rows.push([v,r])}
+var pretty=s.replace(/<->/g,'⇔').replace(/->/g,'⇒').replace(/[~!]/g,'¬').replace(/&/g,'∧').replace(/\|/g,'∨');
+o.innerHTML='<table><tr>'+vs.map(function(x){return '<th>'+x+'</th>'}).join('')+'<th>'+pretty+'</th></tr>'+rows.map(function(r){return '<tr>'+vs.map(function(x){return '<td>'+(r[0][x]?'T':'F')+'</td>'}).join('')+'<td style="font-weight:700;color:'+(r[1]?'var(--tip)':'var(--warn)')+'">'+(r[1]?'T':'F')+'</td></tr>'}).join('')+'</table><p>'+(all?'✅ <b>Tautology</b>: always true.':none?'⛔ <b>Contradiction</b>: always false.':'Contingency: sometimes true, sometimes false.')+'</p>'}catch(e){o.innerHTML='<p style="color:var(--warn)">Could not read the expression: '+e+'</p>'}}
+R.querySelectorAll('[data-x]').forEach(function(b){b.onclick=function(){R.querySelector('.e').value=b.dataset.x;run()}});R.querySelector('.e').oninput=run;run();})();
+</script></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Quantifiers: ∀, ∃, ∃!"><span class="num">4</span>Quantifiers: ∀, ∃, ∃!</h2><p><strong>Universe of discourse (domain)</strong> = the set of everything we can sensibly assign to a variable. Does it make sense to set x = "blue" in "x &gt; 0"? No.</p>
+<div class="call example"><div class="ct">Example 1.4.1</div><p>P(x) = "The test will be on x the 23rd". U = {Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday}.</p></div>
+<p>A predicate becomes a proposition <strong>either</strong> by assigning values <strong>or</strong> by <strong>quantifying</strong> it, i.e. saying it holds for <strong>all</strong> values or <strong>some</strong> values.</p>
+<table>
+<thead>
+<tr>
+<th>Quantifier</th>
+<th>Notation</th>
+<th>Read as</th>
+<th>True when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Universal</strong></td>
+<td><strong>∀x P(x)</strong></td>
+<td>"for all x"</td>
+<td>P(x) is true for <strong>every</strong> x in U</td>
+</tr>
+<tr>
+<td><strong>Existential</strong></td>
+<td><strong>∃x P(x)</strong></td>
+<td>"there exists an x"</td>
+<td>P(x) is true for <strong>at least one</strong> x in U</td>
+</tr>
+<tr>
+<td><strong>Uniqueness</strong></td>
+<td><strong>∃!x P(x)</strong></td>
+<td>"there exists a unique x"</td>
+<td>P(x) is true for <strong>exactly one</strong> x in U</td>
+</tr>
+</tbody>
+</table>
+<div class="call example"><div class="ct">Examples 1.4.2, 1.4.4, 1.4.6</div><table>
+<thead>
+<tr>
+<th>P(x)</th>
+<th>U</th>
+<th>Statement</th>
+<th>Value</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x &gt; 0</td>
+<td>integers</td>
+<td>∀x P(x)</td>
+<td><strong>F</strong></td>
+<td>−1 isn't &gt; 0</td>
+</tr>
+<tr>
+<td>x &gt; 0</td>
+<td>positive integers</td>
+<td>∀x P(x)</td>
+<td><strong>T</strong></td>
+<td>every positive integer &gt; 0</td>
+</tr>
+<tr>
+<td>x is even</td>
+<td>integers</td>
+<td>∀x P(x)</td>
+<td><strong>F</strong></td>
+<td>3 is odd</td>
+</tr>
+<tr>
+<td>x &gt; 0</td>
+<td>integers</td>
+<td>∃x P(x)</td>
+<td><strong>T</strong></td>
+<td>e.g. x = 1 (also T for positive integers)</td>
+</tr>
+<tr>
+<td>x &lt; 0</td>
+<td>positive integers</td>
+<td>∃x P(x)</td>
+<td><strong>F</strong></td>
+<td>no positive integer is negative</td>
+</tr>
+<tr>
+<td>x is even</td>
+<td>integers</td>
+<td>∃x P(x)</td>
+<td><strong>T</strong></td>
+<td>e.g. x = 2</td>
+</tr>
+<tr>
+<td>x + 1 = 0</td>
+<td>integers</td>
+<td>∃!x P(x)</td>
+<td><strong>T</strong></td>
+<td>only x = −1</td>
+</tr>
+<tr>
+<td>x &gt; 0</td>
+<td>integers</td>
+<td>∃!x P(x)</td>
+<td><strong>F</strong></td>
+<td>many values work</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="several-variables">Several variables</h3>
+<ul>
+<li><strong>Example 1.4.3:</strong> R(x, y) = "x + y &gt; 10", U = integers. "For every x and every y, x + y &gt; 10" is <strong>∀x∀y R(x, y)</strong>, shorthand <strong>∀x, y R(x, y)</strong>.</li>
+<li><strong>Example 1.4.5:</strong> R(x, y) = "x² + y² = −5". "There exist x and y such that x² + y² = −5" is <strong>∃x∃y R(x, y)</strong>, shorthand <strong>∃x, y R(x, y)</strong>. It's <strong>false</strong>, since squares are never negative.</li>
+</ul>
+<h3 id="truth-depends-on-the-predicate-and-the-domain-example-147">Truth depends on the predicate <strong>and</strong> the domain (Example 1.4.7)</h3>
+<table>
+<thead>
+<tr>
+<th>U</th>
+<th>P(x)</th>
+<th>∃x P(x)</th>
+<th>∀x P(x)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>positive integers</td>
+<td>x &lt; 2</td>
+<td><strong>T</strong> (x = 1)</td>
+<td><strong>F</strong></td>
+</tr>
+<tr>
+<td>negative integers</td>
+<td>x &lt; 2</td>
+<td><strong>T</strong></td>
+<td><strong>T</strong></td>
+</tr>
+<tr>
+<td>{3, 4, 5}</td>
+<td>x &gt; 2</td>
+<td><strong>T</strong></td>
+<td><strong>T</strong></td>
+</tr>
+<tr>
+<td>{3, 4, 5}</td>
+<td>x &lt; 2</td>
+<td><strong>F</strong></td>
+<td><strong>F</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Quantifier evaluator</div><div id="qe">
+<div class="row"><label>P(x) <select class="p"><option value="x>0">x &gt; 0</option><option value="x<2">x &lt; 2</option><option value="x>2">x &gt; 2</option><option value="x%2==0">x is even</option><option value="x+1==0">x + 1 = 0</option><option value="x*x-4==0">x² − 4 = 0</option><option value="x+10==0">x + 10 = 0</option><option value="x*x+1>0">x² + 1 &gt; 0</option></select></label>
+<label>Domain U <select class="u"><option value="int">integers (shown −10…10)</option><option value="pos">positive integers (1…20)</option><option value="neg">negative integers (−20…−1)</option><option value="set">{3, 4, 5}</option></select></label></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('qe');function run(){var p=R.querySelector('.p').value,u=R.querySelector('.u').value,D=[];
+if(u==='int')for(var i=-10;i<=10;i++)D.push(i);if(u==='pos')for(var i=1;i<=20;i++)D.push(i);if(u==='neg')for(var i=-20;i<=-1;i++)D.push(i);if(u==='set')D=[3,4,5];
+var f=new Function('x','return '+p),T=D.filter(function(x){return f(x)}),F=D.filter(function(x){return !f(x)});
+var h='<p>'+D.map(function(x){return '<span class="pill '+(f(x)?'ok':'')+'">'+x+'</span>'}).join('')+'</p>';
+h+='<table><tr><th>Statement</th><th>Value</th><th>Reason</th></tr><tr><td>∀x P(x)</td><td><b>'+(F.length?'F':'T')+'</b></td><td>'+(F.length?'counterexample x = '+F[0]:'true for every x shown')+'</td></tr><tr><td>∃x P(x)</td><td><b>'+(T.length?'T':'F')+'</b></td><td>'+(T.length?'witness x = '+T[0]:'no x works')+'</td></tr><tr><td>∃!x P(x)</td><td><b>'+(T.length===1?'T':'F')+'</b></td><td>'+T.length+' value(s) make it true'+(T.length>1?' ('+T.slice(0,4).join(', ')+(T.length>4?'…':'')+')':'')+'</td></tr><tr><td>¬∀x P(x) ≡ ∃x ¬P(x)</td><td><b>'+(F.length?'T':'F')+'</b></td><td>a false case exists?</td></tr></table>'+(u==='int'||u==='pos'||u==='neg'?'<p class="note">Infinite domains are sampled here. The real answer reasons about all values (e.g. x² + 1 &gt; 0 holds for every integer).</p>':'');
+R.querySelector('.out').innerHTML=h}R.addEventListener('change',run);run();})();
+</script></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Negating quantified expressions"><span class="num">5</span>Negating quantified expressions</h2><p>"Every student in your class has a computer" is <strong>∀x P(x)</strong>, where P(x) = "x has a computer".</p>
+<ul>
+<li><strong>Its negation:</strong> "It is not the case that every student has one."</li>
+<li>That means <strong>"there is a student who does not have one"</strong>, which is <strong>∃x ¬P(x)</strong>.</li>
+</ul>
+<div class="formula"><strong>¬∀x P(x) ≡ ∃x ¬P(x)</strong><br><strong>¬∃x P(x) ≡ ∀x ¬P(x)</strong></div>
+<p>These are <strong>De Morgan's laws for quantifiers</strong>. <strong>Flip the quantifier and push the ¬ inside.</strong></p>
+<div class="call example"><div class="ct">Example 1.4.8</div><table>
+<thead>
+<tr>
+<th>Statement</th>
+<th>Negation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>∀x (x² + 1 = 5)</td>
+<td><strong>∃x (x² + 1 ≠ 5)</strong></td>
+</tr>
+<tr>
+<td>∃x (x + 5 &gt; 0)</td>
+<td><strong>∀x (x + 5 ≤ 0)</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="call warn"><div class="ct">Note 3 — precedence of quantifiers</div><p>∀ and ∃ have <strong>higher precedence than all the logical operators</strong>:</p>
+<ul>
+<li>∀x P(x) ∨ Q(x) means <strong>(∀x P(x)) ∨ Q(x)</strong>.</li>
+<li><strong>∀x (P(x) ∨ Q(x))</strong> means something <strong>different</strong>.</li>
+</ul>
+<p>People often write ∀x P(x) ∨ Q(x) when they mean ∀x (P(x) ∨ Q(x)). <strong>Use brackets.</strong></p></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Translating English into logic"><span class="num">6</span>Translating English into logic</h2><p>English is <strong>ambiguous</strong>. Translating sentences into logic <strong>removes the ambiguity</strong> and lets us analyse truth values.</p>
+<div class="call example"><div class="ct">Example 1.5.1</div><p>"The election is decided and the votes have been counted."</p>
+<p>Let p = "the election is decided", q = "the votes have been counted". Then the sentence is <strong>p ∧ q</strong>.</p></div>
+<div class="call example"><div class="ct">Example 1.5.2</div><p>p = "You drive over 100 miles per hour", q = "You get a speeding ticket".</p>
+<table>
+<thead>
+<tr>
+<th>Sentence</th>
+<th>Logic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>You do not drive over 100 mph</td>
+<td><strong>¬p</strong></td>
+</tr>
+<tr>
+<td>You drive over 100 mph, <strong>but</strong> you do not get a ticket</td>
+<td><strong>p ∧ ¬q</strong> ("but" = "and")</td>
+</tr>
+<tr>
+<td>If you drive over 100 mph, then you will get a ticket</td>
+<td><strong>p ⇒ q</strong></td>
+</tr>
+<tr>
+<td>If you do not drive over 100 mph, then you will not get a ticket</td>
+<td><strong>¬p ⇒ ¬q</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="the-3-step-method-with-quantifiers">The 3-step method with quantifiers</h3>
+<ol>
+<li><strong>Rewrite</strong> the sentence so the quantifier is obvious ("For every student in this class…").</li>
+<li><strong>Introduce a variable</strong> x.</li>
+<li><strong>Introduce predicates</strong> and write the formula.</li>
+</ol>
+<div class="call example"><div class="ct">Example 1.5.3</div><p>"Every student in this class has studied calculus."</p>
+<ol>
+<li>"For every student in this class, that student has studied calculus."</li>
+<li>"For every student x in this class, x has studied calculus."</li>
+<li>P(x) = "x has studied calculus", with U = students in the class.</li>
+</ol>
+<p>Result: <strong>∀x P(x)</strong></p></div>
+<div class="call example"><div class="ct">Example 1.5.4</div><p>Let Q(x) = "x has studied Java" and R(x) = "x has studied Python".</p>
+<ul>
+<li>"Some student in this class has studied Java" → <strong>∃x Q(x)</strong></li>
+<li>"Every student in this class has studied either Java or Python" → <strong>∀x (Q(x) ∨ R(x))</strong></li>
+</ul></div>
+<div class="call tip"><div class="ct">Common patterns</div><table>
+<thead>
+<tr>
+<th>English</th>
+<th>Logic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Every / all A are B"</td>
+<td>∀x (A(x) ⇒ B(x)), or ∀x B(x) if U is already the A's</td>
+</tr>
+<tr>
+<td>"Some A is B"</td>
+<td>∃x (A(x) ∧ B(x)), or ∃x B(x)</td>
+</tr>
+<tr>
+<td>"No A is B"</td>
+<td>∀x (A(x) ⇒ ¬B(x)) ≡ ¬∃x (A(x) ∧ B(x))</td>
+</tr>
+<tr>
+<td>"but"</td>
+<td>∧</td>
+</tr>
+<tr>
+<td>"unless"</td>
+<td>∨</td>
+</tr>
+</tbody>
+</table></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Introduction to proofs — direct proof"><span class="num">7</span>Introduction to proofs — direct proof</h2><table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Proof</strong></td>
+<td>A <strong>logical argument</strong> showing a statement is true</td>
+</tr>
+<tr>
+<td><strong>Theorem</strong></td>
+<td>A mathematical statement <strong>proven to be true</strong></td>
+</tr>
+<tr>
+<td><strong>Lemma</strong></td>
+<td>A statement proven true <strong>to help prove another</strong> statement</td>
+</tr>
+<tr>
+<td>Methods</td>
+<td>Direct proof, proof by contradiction, proof by induction (this lesson: <strong>direct</strong>)</td>
+</tr>
+</tbody>
+</table>
+<div class="call key"><div class="ct">Direct proof of P ⇒ Q — only two steps</div><ol>
+<li><strong>Assume P</strong> (the hypothesis) is true.</li>
+<li><strong>Use P to show that Q</strong> (the conclusion) must be true.</li>
+</ol></div>
+<p>Useful definitions:</p>
+<ul>
+<li><strong>Even:</strong> n = 2k</li>
+<li><strong>Odd:</strong> n = 2k + 1, for some integer k</li>
+</ul>
+<div class="call example"><div class="ct">Example 1.6.1 — the sum of consecutive integers is odd</div><p><strong>Assume</strong> a and b are consecutive integers. Then b = a + 1.</p>
+<p>So a + b = a + (a + 1) = 2a + 1. Let k = a, so a + b = <strong>2k + 1</strong>.</p>
+<p>2k is even, and an even number plus 1 is odd. Therefore <strong>a + b is odd</strong>. ∎</p></div>
+<div class="call example"><div class="ct">Example 1.6.2 — if n is odd, then n² is odd</div><p><strong>Assume</strong> n is odd, so n = 2k + 1 for some integer k. Square both sides:</p>
+<p>n² = (2k + 1)² = 4k² + 4k + 1 = <strong>2(2k² + 2k) + 1</strong></p>
+<p>This is one more than twice the integer (2k² + 2k), so <strong>n² is odd</strong>. ∎</p></div>
+<div class="call tip"><div class="ct">The proof template you can reuse</div><ol>
+<li>"Assume [hypothesis]."</li>
+<li>"By definition, [n = 2k + 1, etc.]."</li>
+<li>Do the algebra until the result has the form of the conclusion's definition.</li>
+<li>"Therefore [conclusion]. ∎"</li>
+</ol>
+<p>The same pattern proves "if n is even then n² is even" (n = 2k ⇒ n² = 2(2k²)) and "odd × odd = odd" ((2a+1)(2b+1) = 2(2ab+a+b)+1).</p></div>
+<div class="call exam"><div class="ct">Exam focus</div><p>Typical questions:</p>
+<ul>
+<li>Evaluate predicates at given values.</li>
+<li>Find the truth value of ∀ / ∃ / ∃! statements <strong>for a given domain</strong> (and see how changing the domain changes it).</li>
+<li>Negate quantified statements.</li>
+<li>Translate English ⇄ logic.</li>
+<li>Write a <strong>direct proof</strong>.</li>
+</ul>
+<p>Always state the domain and show the definition you use (2k / 2k + 1).</p></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Quick revision sheet"><span class="num">8</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proposition</td>
+<td>Declarative, T or F, not both</td>
+</tr>
+<tr>
+<td>Predicate</td>
+<td>A property of the subject; P(x)</td>
+</tr>
+<tr>
+<td>Propositional function</td>
+<td>Becomes a proposition when the variables get values or are quantified</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Universe of discourse U</td>
+</tr>
+<tr>
+<td>∀x P(x)</td>
+<td>True for every x (one counterexample makes it false)</td>
+</tr>
+<tr>
+<td>∃x P(x)</td>
+<td>True for at least one x (one witness makes it true)</td>
+</tr>
+<tr>
+<td>∃!x P(x)</td>
+<td>Exactly one x</td>
+</tr>
+<tr>
+<td>Negation</td>
+<td>¬∀x P ≡ ∃x ¬P; ¬∃x P ≡ ∀x ¬P</td>
+</tr>
+<tr>
+<td>Precedence</td>
+<td>Quantifiers bind tighter than ∧ ∨ ⇒; use brackets</td>
+</tr>
+<tr>
+<td>p ⇒ q</td>
+<td>False only when T ⇒ F</td>
+</tr>
+<tr>
+<td>English</td>
+<td>"but" = ∧; 3 steps: rewrite → variable → predicate</td>
+</tr>
+<tr>
+<td>Direct proof</td>
+<td>Assume P, derive Q; even = 2k, odd = 2k + 1</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">11 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="dmath-Week01" data-pick="0"><script type="application/json" class="qdata">[{"q": "P(x): \"x &gt; 3\". What is the truth value of P(2)?", "o": ["True", "False", "Not a proposition", "Depends on the domain"], "e": "2 &gt; 3 is false. ", "a": 1, "w": "Week 01"}, {"q": "P(x, y, z): \"x + y = z\". P(x, 3, z) is:", "o": ["True", "False", "Not a proposition (x and z are still free)", "Always true"], "e": "A propositional function becomes a proposition only when all its variables are given values or quantified. ", "a": 2, "w": "Week 01"}, {"q": "p ⇒ q is false only when:", "o": ["p is true and q is false", "p is false and q is true", "both are false", "both are true"], "e": "F ⇒ anything is true. ", "a": 0, "w": "Week 01"}, {"q": "P(x): \"x &gt; 0\" on the domain of <strong>all integers<\/strong>. ∀x P(x) is:", "o": ["True", "False", "Not a proposition", "Undefined"], "e": "x = −1 is a counterexample. On the positive integers it would be true. ", "a": 1, "w": "Week 01"}, {"q": "∃!x (x + 1 = 0) over the integers is:", "o": ["True: only x = −1 works", "False: no x works", "False: many x work", "Not a proposition"], "e": "∃! means exactly one. ", "a": 0, "w": "Week 01"}, {"q": "The negation of ∀x (x² + 1 = 5) is:", "o": ["∃x (x² + 1 ≠ 5)", "∀x (x² + 1 ≠ 5)", "∃x (x² + 1 = 5)", "¬∃x (x² + 1 = 5)"], "e": "¬∀x P(x) ≡ ∃x ¬P(x). ", "a": 0, "w": "Week 01"}, {"q": "The negation of ∃x (x + 5 &gt; 0) is:", "o": ["∀x (x + 5 ≤ 0)", "∃x (x + 5 ≤ 0)", "∀x (x + 5 &gt; 0)", "∃x (x + 5 &lt; 0)"], "e": "¬∃x P(x) ≡ ∀x ¬P(x). ", "a": 0, "w": "Week 01"}, {"q": "\"You drive over 100 mph, <strong>but<\/strong> you do not get a ticket\" (p = drive over 100, q = get a ticket) is:", "o": ["p ∧ ¬q", "p ⇒ ¬q", "¬p ∨ q", "p ∨ ¬q"], "e": "\"But\" means \"and\". ", "a": 0, "w": "Week 01"}, {"q": "\"Every student in this class has studied either Java (Q) or Python (R)\" is:", "o": ["∀x (Q(x) ∨ R(x))", "∃x (Q(x) ∨ R(x))", "∀x Q(x) ∨ ∃x R(x)", "∃x Q(x) ∧ ∃x R(x)"], "e": "Domain: students in the class. ", "a": 0, "w": "Week 01"}, {"q": "In a direct proof that \"n odd ⇒ n² odd\", we start by writing:", "o": ["n = 2k + 1 for some integer k", "n = 2k for some integer k", "Assume n² is even", "n = k² + 1"], "e": "Then n² = 2(2k² + 2k) + 1, which is odd. ", "a": 0, "w": "Week 01"}, {"q": "Which is a proposition?", "o": ["\"7 is a prime number.\"", "\"What time is it?\"", "\"x + 2 = 5\"", "\"Close the door.\""], "e": "A proposition is a declarative sentence that is true or false, but not both. ", "a": 0, "w": "Week 01"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><span></span><a class="nx" href="../Week%2002/Week%2002%20-%20Study%20Guide.html"><small>Next →</small>Sets &amp; Set Operations</a></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  function show(i){
+    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

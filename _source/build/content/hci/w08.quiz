@@ -1,0 +1,69 @@
+? A mental model is:
++ An internal simulation the user relies on to predict how a system will behave
+- The system's source code
+- A diagram drawn by the designer
+- A user's password
+= Mismatched models cause errors.
+
+? The bus bell rope was silently replaced by seat buttons with no signs. Passengers are confused because:
++ Their old mental model no longer applies, and there are no signifiers for the new system
+- The rope is mechanically broken
+- They have bad memory
+- The bus is too fast
+= If the rope were simply broken, the model would be correct but the mechanism faulty.
+
+? An interface representation should match:
++ The user's mental model, not the implementation model
+- The database schema
+- The programmer's code structure
+- The hardware layout
+= E.g. inline attachments in Gmail vs a legacy "Update" step that lost files.
+
+? Which is a characteristic of a good representation?
++ It makes relationships explicit and excludes extraneous detail
+- It shows every internal detail
+- It hides all constraints
+- It separates objects from their actions
+= It also keeps objects and actions together and exposes constraints.
+
+? Pouring orange juice into your coffee instead of the glass is a:
++ Action-based slip (right action, wrong object)
+- Knowledge-based mistake
+- Rule-based mistake
+- Memory-lapse mistake
+= The plan was right; the execution went wrong.
+
+? Forgetting to collect your card after an ATM withdrawal is a:
++ Memory-lapse slip
+- Rule-based mistake
+- Knowledge-based mistake
+- Action slip
+= One step was forgotten.
+
+? Correctly assessing the situation but applying the wrong rule is a:
++ Rule-based mistake
+- Knowledge-based mistake
+- Action slip
+- Memory-lapse slip
+= A knowledge-based mistake is a wrong assessment through lack of knowledge.
+
+? Learned helplessness happens when:
++ Repeated failures make the user give up trying
+- The user becomes an expert
+- The designer forgets the user
+- The system is too simple
+= Avoid it with forgiving designs and support for different learners.
+
+? Expert blindness is when:
++ Designers miss steps that seem "obvious" to them but aren't to novices
+- Experts can't see the screen
+- Users refuse to learn
+- The interface has no colour
+= The fix is to test with novices.
+
+? Which design principles most help users form accurate mental models?
++ Consistency, affordance and mapping
+- Colour and sound only
+- Long manuals
+- Random layouts
+= They make the system's behaviour predictable.

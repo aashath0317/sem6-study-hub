@@ -1,0 +1,90 @@
+? Needfinding is mainly about:
++ Understanding the user and understanding the context
+- Writing code
+- Choosing colours
+- Testing the final product
+= It's the first and most important stage of the design life cycle.
+
+? Which is **not** one of the seven needfinding questions?
+- Who are the users?
+- What is the context of the task?
+- What do they need right now?
++ What programming language should we use?
+= The others: where are the users, what are their goals, tasks and subtasks.
+
+? Noticing only what supports your preconceptions is:
++ Confirmation bias
+- Recall bias
+- Voluntary response bias
+- Social desirability bias
+= Fix it by looking for where you're wrong, testing empirically, and involving many people.
+
+? Users saying only nice things because they know you're the designer is:
++ Social desirability bias
+- Observer bias
+- Recall bias
+- Confirmation bias
+= Use naturalistic observation and discount overly nice answers.
+
+? Mostly very happy and very angry people answering an optional survey is:
++ Voluntary response bias
+- Recall bias
+- Observer bias
+- Confirmation bias
+= Confirm the conclusions with other methods.
+
+? Users being unable to remember later how they felt during a task is:
++ Recall bias
+- Observer bias
+- Social desirability bias
+- Confirmation bias
+= Collect data during the activity, e.g. by thinking aloud.
+
+? The remedy for **observer bias** is to:
++ Script the interactions and have someone else review the script
+- Ask leading questions
+- Help only your favourite users
+- Avoid writing anything down
+= Also separate the experimenter's motives from the participant.
+
+? A limitation of **naturalistic observation** is that:
++ You can't know what users are thinking, and you can't record or interact with them
+- It gives very little information
+- It requires users to fill in forms
+- It's always biased in the user's favour
+= You can guess but never know.
+
+? A customer avoids the ATM's cheque deposit and walks to the counter instead. This is a:
++ Workaround (a hack), revealing an unfriendly feature
+- Slip
+- Focus group
+- Recall bias
+= Look for hacks and workarounds when observing.
+
+? Interviews that use the same predefined, closed questions in the same order for everyone are:
++ Structured
+- Unstructured (open-ended)
+- Semi-structured
+- Focus groups
+= They suit clear goals, a limited range of answers, or limited time.
+
+? A focus group usually has:
++ 3–10 people led by a trained facilitator
+- 1 person
+- 100+ people online
+- No facilitator
+= Risk: dominant talkers drown out the quiet ones.
+
+? Which survey tip means "every question must map to a data item you need"?
++ Tie to inventory
+- Less is more
+- Be aware of biases
+- Iterate
+= Drop any question that doesn't map to a required data item.
+
+? The main concern with the think-aloud technique is:
++ Thinking aloud makes users behave more deliberately and unnaturally
+- It's too cheap
+- It needs no users
+- It always causes recall bias
+= A compromise is retrospective think-aloud, done immediately after the task.

@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 14 · Budgeting — Purposes, Budgetary Control, the Master Budget &amp; Functional Budgets to the Cash Budget — Business Processes &amp; Accounting Systems</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){#tocbtn{display:none}}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+</style></head>
+<body data-key="bpas-Week14">
+<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Business Processes &amp; Accounting Systems</a> › Week 14</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Business Processes &amp; Accounting Systems · Week 14</div><h1>Budgeting — Purposes, Budgetary Control, the Master Budget &amp; Functional Budgets to the Cash Budget</h1><p>What a budget is, its purposes and functions, steps in budgetary control, types of budgets and master budget components, sales forecasting, and the full LFT chain (sales → production → material usage → material purchases → labour → cash budget), plus limitations.</p><div class="meta"><span class="chip">ITE3622</span><span class="chip">1 video · 38 min</span><span class="chip">📄 Budgeting - Session 14.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Budgeting · 38 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Budgeting.mp4"><source src="Budgeting.mp4"></video></div><div class="chap"><p class="vt">Budgeting</p><p class="vs">Definitions and functions, then a complete worked example (LFT company, grades A and B, wood and glass) through every functional budget to the cash budget.</p><a href="#" data-v="0" data-t="2"><b>00:02</b><span>Introduction</span></a><a href="#" data-v="0" data-t="79"><b>01:19</b><span>What a budget is: a quantifiable action plan</span></a><a href="#" data-v="0" data-t="231"><b>03:51</b><span>Functions of budgets</span></a><a href="#" data-v="0" data-t="456"><b>07:36</b><span>Types: functional, master and cash budgets</span></a><a href="#" data-v="0" data-t="504"><b>08:24</b><span>Sales budget</span></a><a href="#" data-v="0" data-t="610"><b>10:10</b><span>Production budget: the format and its logic</span></a><a href="#" data-v="0" data-t="877"><b>14:37</b><span>LFT example: sales and production budgets</span></a><a href="#" data-v="0" data-t="1114"><b>18:34</b><span>Material usage budget</span></a><a href="#" data-v="0" data-t="1211"><b>20:11</b><span>Material purchases budget</span></a><a href="#" data-v="0" data-t="1341"><b>22:21</b><span>LFT: material usage (wood and glass)</span></a><a href="#" data-v="0" data-t="1646"><b>27:26</b><span>LFT: material purchases</span></a><a href="#" data-v="0" data-t="1761"><b>29:21</b><span>Direct labour budget</span></a><a href="#" data-v="0" data-t="1843"><b>30:43</b><span>LFT: labour budget (Rs 200/hour, 4 and 6 hours)</span></a><a href="#" data-v="0" data-t="1925"><b>32:05</b><span>Cash budget</span></a><a href="#" data-v="0" data-t="1980"><b>33:00</b><span>LFT: cash budget</span></a><a href="#" data-v="0" data-t="2168"><b>36:08</b><span>Limitations of budgeting</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What is a budget?"><span class="num">1</span>What is a budget?</h2><div class="call key"><div class="ct">Definitions</div><ul>
+<li><strong>Budget:</strong> a detailed plan, <strong>expressed in quantitative terms</strong>, that specifies how an organisation will <strong>acquire and use resources</strong> during a <strong>particular period</strong>. In the lecture's words, "a <strong>quantifiable action plan for a specified time period</strong>" <a class="ts" href="#" data-v="0" data-t="79">01:19</a>.</li>
+<li><strong>Budgetary control:</strong> a system of <strong>planning and controlling cost</strong>.</li>
+</ul></div>
+<ul>
+<li>Budgets flow from <strong>strategic planning</strong>. Every enterprise has goals: <strong>profitability, growth, public service</strong>.</li>
+<li>Strategy aims at <strong>achieving and maintaining a competitive advantage</strong> through <strong>critical success factors</strong>: the key strengths most responsible for the organisation's success.</li>
+<li>A budget is built on <strong>past activities</strong>: last year's figures plus planned changes <a class="ts" href="#" data-v="0" data-t="149">02:29</a>.</li>
+</ul>
+<h3 id="purposes-functions-of-budgeting-0351">Purposes &amp; functions of budgeting <a class="ts" href="#" data-v="0" data-t="231">03:51</a></h3>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Planning</strong></td>
+<td>Plan annual operations: what and how much to produce and sell</td>
+</tr>
+<tr>
+<td><strong>Facilitating communication &amp; coordination</strong></td>
+<td>Departments share information, giving <strong>harmony between departments</strong></td>
+</tr>
+<tr>
+<td><strong>Allocating resources</strong></td>
+<td>Scarce resources go where they're needed</td>
+</tr>
+<tr>
+<td><strong>Managing financial &amp; operating performance</strong> (control)</td>
+<td>Compare progress against the budget; take corrective action</td>
+</tr>
+<tr>
+<td><strong>Evaluating performance &amp; providing incentives</strong></td>
+<td><strong>Motivates managers</strong> towards organisational goals</td>
+</tr>
+</tbody>
+</table>
+<h3 id="steps-in-budgetary-control">Steps in budgetary control</h3>
+<div class="flow"><span><ol>
+<li>Establish budgets</li>
+</ol></span><span><ol start="2">
+<li>Measure actual performance</li>
+</ol></span><span><ol start="3">
+<li>Compare actual with budget</li>
+</ol></span><span><ol start="4">
+<li>Analyse causes of variances &amp; report</li>
+</ol></span></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Types of budgets"><span class="num">2</span>Types of budgets</h2><table>
+<thead>
+<tr>
+<th>Budget</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Master budget</strong></td>
+<td>A <strong>comprehensive set of budgets</strong> covering <strong>all phases</strong> of operations for a period</td>
+</tr>
+<tr>
+<td><strong>Operational budgets</strong></td>
+<td>How operations will meet demand, using <strong>material, labour and overhead</strong></td>
+</tr>
+<tr>
+<td><strong>Financial budget</strong></td>
+<td>How the organisation will <strong>acquire its financial resources</strong></td>
+</tr>
+<tr>
+<td><strong>Capital budget</strong></td>
+<td>Plan for <strong>acquiring (and disposing of) capital assets</strong></td>
+</tr>
+<tr>
+<td><strong>Cash budget</strong></td>
+<td>Expected <strong>cash receipts and disbursements</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The lecture groups them as <strong>functional budgets → master budget → cash budget</strong> <a class="ts" href="#" data-v="0" data-t="456">07:36</a>.</p>
+<p><strong>Master budget components:</strong></p>
+<ul>
+<li><strong>Operational:</strong></li>
+<li>sales budget</li>
+<li>production budget</li>
+<li>direct material budget</li>
+<li>direct labour budget</li>
+<li>overhead budget</li>
+<li>budgeted cost of goods manufactured and sold</li>
+<li>selling, general and admin budget (R&amp;D, marketing, customer service)</li>
+<li><strong>Financial:</strong></li>
+<li>capital budget</li>
+<li>cash budget</li>
+<li><strong>budgeted income statement</strong></li>
+<li><strong>budgeted statement of financial position</strong></li>
+<li>budgeted statement of cash flows</li>
+</ul>
+<div class="flow"><span>Sales budget</span><span>Production budget</span><span>Material usage → purchases</span><span>Labour &amp; overhead budgets</span><span>Cash budget</span><span>Budgeted income statement &amp; balance sheet</span></div>
+<h3 id="sales-forecasting-the-starting-point">Sales forecasting: the starting point</h3>
+<p>The sales budget drives everything else. The factors are:</p>
+<ol>
+<li><strong>past sales levels and trends</strong></li>
+<li><strong>general economic trends</strong></li>
+<li><strong>economic trends in the industry</strong></li>
+<li><strong>other factors</strong> expected to affect industry sales</li>
+<li><strong>political and legal events</strong></li>
+<li><strong>intended pricing policy</strong></li>
+<li><strong>planned advertising and promotion</strong></li>
+<li><strong>expected actions of competitors</strong></li>
+<li><strong>new products</strong> planned by the company or others</li>
+<li><strong>market research studies</strong></li>
+</ol><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="The functional budgets: formats"><span class="num">3</span>The functional budgets: formats</h2><div class="formula"><strong>Sales budget:</strong> Sales units × Selling price = Sales revenue<br><strong>Production (units) = Budgeted sales + Closing finished goods − Opening finished goods</strong><br><strong>Material usage = Production units × Material per unit</strong><br><strong>Material purchases = Usage + Closing raw materials − Opening raw materials</strong>   (× cost per unit)<br><strong>Labour budget = Production units × Hours per unit × Rate per hour</strong></div>
+<p><strong>Why subtract opening and add closing?</strong> <strong>Opening</strong> inventory is <strong>already made</strong>, so we don't produce it again. <strong>Closing</strong> inventory must <strong>also be made</strong> this period <a class="ts" href="#" data-v="0" data-t="833">13:53</a>.</p>
+<div class="call example"><div class="ct">PDF example: quarterly sales &amp; labour budgets (seasonal pattern)</div><table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">Q1</th>
+<th style="text-align: right;">Q2</th>
+<th style="text-align: right;">Q3</th>
+<th style="text-align: right;">Q4</th>
+<th style="text-align: right;">Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sales units</td>
+<td style="text-align: right;">15,000</td>
+<td style="text-align: right;">5,000</td>
+<td style="text-align: right;">10,000</td>
+<td style="text-align: right;">20,000</td>
+<td style="text-align: right;">50,000</td>
+</tr>
+<tr>
+<td>× Rs 12</td>
+<td style="text-align: right;"><strong>180,000</strong></td>
+<td style="text-align: right;"><strong>60,000</strong></td>
+<td style="text-align: right;"><strong>120,000</strong></td>
+<td style="text-align: right;"><strong>240,000</strong></td>
+<td style="text-align: right;"><strong>600,000</strong></td>
+</tr>
+<tr>
+<td>Units produced</td>
+<td style="text-align: right;">14,000</td>
+<td style="text-align: right;">5,500</td>
+<td style="text-align: right;">11,000</td>
+<td style="text-align: right;">19,500</td>
+<td style="text-align: right;">50,000</td>
+</tr>
+<tr>
+<td>× 0.2 labour hours</td>
+<td style="text-align: right;">2,800</td>
+<td style="text-align: right;">1,100</td>
+<td style="text-align: right;">2,200</td>
+<td style="text-align: right;">3,900</td>
+<td style="text-align: right;">10,000</td>
+</tr>
+<tr>
+<td>× Rs 10 per hour</td>
+<td style="text-align: right;"><strong>28,000</strong></td>
+<td style="text-align: right;"><strong>11,000</strong></td>
+<td style="text-align: right;"><strong>22,000</strong></td>
+<td style="text-align: right;"><strong>39,000</strong></td>
+<td style="text-align: right;"><strong>100,000</strong></td>
+</tr>
+</tbody>
+</table></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Full worked example: LFT company"><span class="num">4</span>Full worked example: LFT company</h2><div class="call example"><div class="ct"><ol>
+<li>Sales &amp; production budgets <a class="ts" href="#" data-v="0" data-t="877">14:37</a></li>
+</ol></div><p><strong>Data:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">Grade A</th>
+<th style="text-align: right;">Grade B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expected sales (units)</td>
+<td style="text-align: right;">50,000</td>
+<td style="text-align: right;">10,000</td>
+</tr>
+<tr>
+<td>Selling price</td>
+<td style="text-align: right;">Rs 6,000</td>
+<td style="text-align: right;">Rs 8,000</td>
+</tr>
+<tr>
+<td>Opening finished goods</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">500</td>
+</tr>
+<tr>
+<td>Target closing finished goods</td>
+<td style="text-align: right;">11,000</td>
+<td style="text-align: right;">500</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sales budget:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">A</th>
+<th style="text-align: right;">B</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Units × price</td>
+<td style="text-align: right;">50,000 × 6,000</td>
+<td style="text-align: right;">10,000 × 8,000</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td><strong>Revenue</strong></td>
+<td style="text-align: right;"><strong>300m</strong></td>
+<td style="text-align: right;"><strong>80m</strong></td>
+<td style="text-align: right;"><strong>380m</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Production budget:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">A</th>
+<th style="text-align: right;">B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sales units</td>
+<td style="text-align: right;">50,000</td>
+<td style="text-align: right;">10,000</td>
+</tr>
+<tr>
+<td>Less: opening finished goods</td>
+<td style="text-align: right;">(1,000)</td>
+<td style="text-align: right;">(500)</td>
+</tr>
+<tr>
+<td>Add: closing finished goods</td>
+<td style="text-align: right;">11,000</td>
+<td style="text-align: right;">500</td>
+</tr>
+<tr>
+<td><strong>Production</strong></td>
+<td style="text-align: right;"><strong>60,000</strong></td>
+<td style="text-align: right;"><strong>10,000</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="call example"><div class="ct"><ol start="2">
+<li>Material usage &amp; purchases <a class="ts" href="#" data-v="0" data-t="1341">22:21</a></li>
+</ol></div><p><strong>Per unit:</strong></p>
+<ul>
+<li><strong>wood:</strong> 12 boards for both grades, Rs 70 per board</li>
+<li><strong>glass:</strong> A 6 sq ft, B 8 sq ft, Rs 100 per sq ft</li>
+</ul>
+<p><strong>Inventories:</strong></p>
+<ul>
+<li><strong>wood:</strong> opening 70,000, closing 80,000</li>
+<li><strong>glass:</strong> opening 60,000, closing 20,000</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Usage</strong></th>
+<th style="text-align: right;">Wood (boards)</th>
+<th style="text-align: right;">Glass (sq ft)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grade A: 60,000 × 12 / × 6</td>
+<td style="text-align: right;">720,000</td>
+<td style="text-align: right;">360,000</td>
+</tr>
+<tr>
+<td>Grade B: 10,000 × 12 / × 8</td>
+<td style="text-align: right;">120,000</td>
+<td style="text-align: right;">80,000</td>
+</tr>
+<tr>
+<td><strong>Total usage</strong></td>
+<td style="text-align: right;"><strong>840,000</strong></td>
+<td style="text-align: right;"><strong>440,000</strong></td>
+</tr>
+<tr>
+<td>Value (× 70 / × 100)</td>
+<td style="text-align: right;">Rs 58.8m</td>
+<td style="text-align: right;">Rs 44m</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Purchases</strong></th>
+<th style="text-align: right;">Wood</th>
+<th style="text-align: right;">Glass</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Usage</td>
+<td style="text-align: right;">840,000</td>
+<td style="text-align: right;">440,000</td>
+</tr>
+<tr>
+<td>Less: opening</td>
+<td style="text-align: right;">(70,000)</td>
+<td style="text-align: right;">(60,000)</td>
+</tr>
+<tr>
+<td>Add: closing</td>
+<td style="text-align: right;">80,000</td>
+<td style="text-align: right;">20,000</td>
+</tr>
+<tr>
+<td><strong>Purchase quantity</strong></td>
+<td style="text-align: right;"><strong>850,000</strong></td>
+<td style="text-align: right;"><strong>400,000</strong></td>
+</tr>
+<tr>
+<td><strong>Purchase cost</strong></td>
+<td style="text-align: right;"><strong>Rs 59.5m</strong></td>
+<td style="text-align: right;"><strong>Rs 40m</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Usage and purchases differ <strong>because of the inventory adjustments</strong> <a class="ts" href="#" data-v="0" data-t="1761">29:21</a>.</p></div>
+<div class="call example"><div class="ct"><ol start="3">
+<li>Direct labour budget <a class="ts" href="#" data-v="0" data-t="1843">30:43</a></li>
+</ol></div><p>Rs <strong>200 per labour hour</strong>. <strong>A uses 4 hours</strong> and <strong>B uses 6 hours</strong> per unit.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">A</th>
+<th style="text-align: right;">B</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Production</td>
+<td style="text-align: right;">60,000</td>
+<td style="text-align: right;">10,000</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Hours</td>
+<td style="text-align: right;">240,000</td>
+<td style="text-align: right;">60,000</td>
+<td style="text-align: right;">300,000</td>
+</tr>
+<tr>
+<td><strong>Cost × 200</strong></td>
+<td style="text-align: right;"><strong>48m</strong></td>
+<td style="text-align: right;"><strong>12m</strong></td>
+<td style="text-align: right;"><strong>60m</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="call example"><div class="ct"><ol start="4">
+<li>Cash budget <a class="ts" href="#" data-v="0" data-t="1980">33:00</a></li>
+</ol></div><p><strong>Assumptions:</strong></p>
+<ul>
+<li>opening cash <strong>Rs 3m</strong></li>
+<li><strong>all sales are cash sales</strong></li>
+<li>material purchases are paid <strong>100% within the year</strong></li>
+<li>labour is paid in the year</li>
+<li>overheads are paid in cash</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">Rs m</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opening balance</td>
+<td style="text-align: right;">3.0</td>
+</tr>
+<tr>
+<td><strong>Receipts:</strong> cash sales</td>
+<td style="text-align: right;">380.0</td>
+</tr>
+<tr>
+<td><strong>Payments:</strong> material purchases (59.5 + 40)</td>
+<td style="text-align: right;">(99.5)</td>
+</tr>
+<tr>
+<td>Direct labour</td>
+<td style="text-align: right;">(60.0)</td>
+</tr>
+<tr>
+<td>Overheads</td>
+<td style="text-align: right;">(55.0)</td>
+</tr>
+<tr>
+<td><strong>Total payments</strong></td>
+<td style="text-align: right;"><strong>(214.5)</strong></td>
+</tr>
+<tr>
+<td>Net surplus (380 − 214.5)</td>
+<td style="text-align: right;">165.5</td>
+</tr>
+<tr>
+<td><strong>Closing balance</strong> (165.5 + 3)</td>
+<td style="text-align: right;"><strong>168.5</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="call warn"><div class="ct">Two slips in the video</div><ol>
+<li>The question says overheads of <strong>Rs 50m</strong>, but the solution uses <strong>Rs 55m</strong> (that's what gives 214.5). With 50m, payments = 209.5, surplus = 170.5, and closing = <strong>173.5</strong>.</li>
+<li>The video says the closing balance is <strong>186.5m</strong>. That's an arithmetic slip: 165.5 + 3 = <strong>168.5m</strong>.</li>
+</ol>
+<p>Learn the method; check the numbers yourself.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="The cash budget: rules"><span class="num">5</span>The cash budget: rules</h2><div class="formula"><strong>Closing cash = Opening cash + Cash inflows − Cash outflows</strong></div>
+<ul>
+<li>It's prepared <strong>weekly or monthly</strong> so management can deal with <strong>shortages</strong> (arrange overdrafts or loans) or <strong>surpluses</strong> (invest them).</li>
+<li><strong>Only actual cash receipts and payments</strong> are included.</li>
+<li><strong>Depreciation is always excluded</strong>: it's not a cash flow.</li>
+<li><strong>Credit sales and purchases still outstanding at period end are excluded.</strong> Include cash when it's <strong>received or paid</strong>, e.g. a 30-day credit sale in March is received in April.</li>
+<li><strong>The closing balance of period 1 = the opening balance of period 2.</strong></li>
+</ul>
+<div class="tool"><div class="tt">🧪 Try it — Budget chain builder (two products, one material)</div><div id="bd">
+<div class="row"><label>Sales units A <input type="number" class="sa" value="50000" style="width:80px"></label><label>Price A <input type="number" class="pa" value="6000" style="width:70px"></label><label>Opening FG A <input type="number" class="oa" value="1000" style="width:70px"></label><label>Closing FG A <input type="number" class="ca" value="11000" style="width:70px"></label></div>
+<div class="row"><label>Sales units B <input type="number" class="sb" value="10000" style="width:80px"></label><label>Price B <input type="number" class="pb" value="8000" style="width:70px"></label><label>Opening FG B <input type="number" class="ob" value="500" style="width:70px"></label><label>Closing FG B <input type="number" class="cb" value="500" style="width:70px"></label></div>
+<div class="row"><label>Wood/unit A <input type="number" class="wa" value="12" style="width:50px"></label><label>Wood/unit B <input type="number" class="wb" value="12" style="width:50px"></label><label>Rs/board <input type="number" class="wp" value="70" style="width:60px"></label><label>Opening wood <input type="number" class="wo" value="70000" style="width:80px"></label><label>Closing wood <input type="number" class="wc" value="80000" style="width:80px"></label></div>
+<div class="row"><label>Hours/unit A <input type="number" class="ha" value="4" style="width:50px"></label><label>Hours/unit B <input type="number" class="hb" value="6" style="width:50px"></label><label>Rs/hour <input type="number" class="hr" value="200" style="width:60px"></label><label>Other cash payments (glass + overheads) <input type="number" class="ot" value="95000000" style="width:110px"></label><label>Opening cash <input type="number" class="oc" value="3000000" style="width:100px"></label></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('bd');function g(c){return +R.querySelector('.'+c).value||0}function f(x){return Math.round(x).toLocaleString()}function m(x){return 'Rs '+(x/1e6).toFixed(2).replace(/\.?0+$/,'')+'m'}
+function run(){var ra=g('sa')*g('pa'),rb=g('sb')*g('pb'),pa=g('sa')-g('oa')+g('ca'),pb=g('sb')-g('ob')+g('cb'),wu=pa*g('wa')+pb*g('wb'),wq=wu-g('wo')+g('wc'),wcst=wq*g('wp'),hrs=pa*g('ha')+pb*g('hb'),lab=hrs*g('hr'),pay=wcst+lab+g('ot'),cl=g('oc')+ra+rb-pay;
+function step(t,b){return '<div style="border-left:3px solid var(--accent,#4f7cff);padding:4px 10px;margin:6px 0"><b>'+t+'</b><br>'+b+'</div>'}
+R.querySelector('.out').innerHTML=step('1. Sales budget','A '+f(g('sa'))+' × '+f(g('pa'))+' = '+m(ra)+' · B '+f(g('sb'))+' × '+f(g('pb'))+' = '+m(rb)+' → <b>'+m(ra+rb)+'</b>')+step('2. Production budget','A: '+f(g('sa'))+' − '+f(g('oa'))+' + '+f(g('ca'))+' = <b>'+f(pa)+'</b> · B: '+f(g('sb'))+' − '+f(g('ob'))+' + '+f(g('cb'))+' = <b>'+f(pb)+'</b> units')+step('3. Material usage (wood)',f(pa)+' × '+g('wa')+' + '+f(pb)+' × '+g('wb')+' = <b>'+f(wu)+' boards</b> ('+m(wu*g('wp'))+')')+step('4. Material purchases (wood)',f(wu)+' − '+f(g('wo'))+' + '+f(g('wc'))+' = <b>'+f(wq)+' boards</b> × '+g('wp')+' = <b>'+m(wcst)+'</b>')+step('5. Labour budget',f(pa)+' × '+g('ha')+' + '+f(pb)+' × '+g('hb')+' = '+f(hrs)+' hrs × '+g('hr')+' = <b>'+m(lab)+'</b>')+step('6. Cash budget','Opening '+m(g('oc'))+' + receipts '+m(ra+rb)+' − payments ('+m(wcst)+' wood + '+m(lab)+' labour + '+m(g('ot'))+' other) = <b>'+m(cl)+'</b> '+(cl<0?'<span class="pill bad">shortage: arrange finance</span>':'<span class="pill ok">surplus</span>'))}R.addEventListener('input',run);run();})();
+</script>
+<p class="note">Defaults: "other payments" = glass Rs 40m + overheads Rs 55m, which reproduces the 168.5m closing cash.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Limitations of budgeting [[36:08]]"><span class="num">6</span>Limitations of budgeting <a class="ts" href="#" data-v="0" data-t="2168">36:08</a></h2><ul>
+<li><strong>Based on estimates and assumptions</strong>, so they <strong>lack accuracy</strong>.</li>
+<li><strong>Preparation takes time, cost and management effort.</strong></li>
+<li><strong>Lack of flexibility:</strong> once fixed, budgets aren't changed for unexpected events (e.g. a <strong>COVID lockdown</strong>). This can <strong>demotivate employees</strong> who see the targets as unachievable <a class="ts" href="#" data-v="0" data-t="2253">37:33</a>.</li>
+<li>Budgets can encourage <strong>budgetary slack</strong> and "spend it or lose it" behaviour.</li>
+</ul>
+<div class="call exam"><div class="ct">Exam focus</div><p>Expect:</p>
+<ol>
+<li><strong>Define a budget and budgetary control.</strong></li>
+<li>Give the <strong>purposes and functions</strong> of budgets.</li>
+<li>List the <strong>steps in budgetary control</strong>.</li>
+<li>Name the <strong>master budget components</strong>.</li>
+<li>List <strong>sales forecasting factors</strong>.</li>
+<li><strong>Prepare sales, production, material usage and purchases, labour and cash budgets.</strong> Remember the <strong>opening and closing stock adjustments</strong>. In the cash budget, <strong>exclude depreciation</strong> and account for <strong>credit timing</strong>.</li>
+<li>Give the <strong>limitations</strong>.</li>
+</ol></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Quick revision sheet"><span class="num">7</span>Quick revision sheet</h2><table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Remember it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Budget</td>
+<td>Quantified plan for acquiring and using resources over a period</td>
+</tr>
+<tr>
+<td>Budgetary control</td>
+<td>System of planning and controlling cost</td>
+</tr>
+<tr>
+<td>Purposes</td>
+<td>Plan · coordinate and communicate · allocate · control · evaluate and motivate</td>
+</tr>
+<tr>
+<td>Control steps</td>
+<td>Set → measure → compare → analyse variances and report</td>
+</tr>
+<tr>
+<td>Master budget</td>
+<td>All the budgets together → budgeted income statement and balance sheet</td>
+</tr>
+<tr>
+<td>Production</td>
+<td>Sales + closing FG − opening FG</td>
+</tr>
+<tr>
+<td>Purchases</td>
+<td>Usage + closing RM − opening RM</td>
+</tr>
+<tr>
+<td>Labour</td>
+<td>Production × hours × rate</td>
+</tr>
+<tr>
+<td>LFT answers</td>
+<td>Sales 380m · production A 60k, B 10k · wood 850k boards = 59.5m · glass 400k = 40m · labour 60m</td>
+</tr>
+<tr>
+<td>Cash budget</td>
+<td>Opening + receipts − payments; cash items only; no depreciation</td>
+</tr>
+<tr>
+<td>Limitations</td>
+<td>Estimates · time and cost · inflexible · can demotivate</td>
+</tr>
+</tbody>
+</table><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">12 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="bpas-Week14" data-pick="0"><script type="application/json" class="qdata">[{"q": "A budget is best defined as:", "o": ["A detailed quantitative plan for acquiring and using resources over a specified period", "A record of last year's actual results", "A per-unit target cost", "A list of the company's assets"], "e": "In the lecture's words, \"a quantifiable action plan for a specified time period\". ", "a": 0, "w": "Week 14"}, {"q": "The correct order of steps in budgetary control is:", "o": ["Set budgets → measure actual → compare → analyse variances and report", "Measure actual → set budgets → report → compare", "Compare → set budgets → analyse → measure", "Analyse → report → set budgets → measure"], "e": "Budgetary control is a system of planning and controlling cost. ", "a": 0, "w": "Week 14"}, {"q": "Sales 50,000 units, opening finished goods 1,000, target closing finished goods 11,000. How many units must be produced?", "e": "Production = sales + closing − opening = 50,000 + 11,000 − 1,000. ", "n": 60000.0, "w": "Week 14"}, {"q": "Usage 840,000 boards, opening wood 70,000, closing wood 80,000. How many boards must be purchased?", "e": "Purchases = usage + closing − opening. ", "n": 850000.0, "w": "Week 14"}, {"q": "60,000 units × 4 hours + 10,000 units × 6 hours at Rs 200 per hour. What is the total labour cost in Rs?", "e": "300,000 hours × 200 = Rs 60 million. ", "n": 60000000.0, "w": "Week 14"}, {"q": "Which item is <strong>always excluded<\/strong> from a cash budget?", "o": ["Cash sales", "Loan repayments", "Depreciation", "Wages paid"], "e": "Depreciation isn't a cash flow. ", "a": 2, "w": "Week 14"}, {"q": "Which budget is usually prepared <strong>first<\/strong>, because it drives the others?", "o": ["The sales budget", "The cash budget", "The labour budget", "The budgeted balance sheet"], "e": "Sales → production → materials → labour → cash → budgeted statements. ", "a": 0, "w": "Week 14"}, {"q": "Opening cash 3m, receipts 380m, payments 214.5m. What is the closing cash in Rs millions?", "e": "3 + 380 − 214.5 = 168.5m. (The video's 186.5m is an arithmetic slip.) ", "n": 168.5, "t": 0.05, "w": "Week 14"}, {"q": "A credit sale made at the end of the period, to be paid next period, should be:", "o": ["Included in this period's cash budget", "Excluded from this period and included when the cash is received", "Included at half value", "Ignored completely"], "e": "Cash budgets show cash when it's actually received or paid. ", "a": 1, "w": "Week 14"}, {"q": "Which is a <strong>limitation<\/strong> of budgeting?", "o": ["It improves coordination between departments", "It's inflexible once set, and can demotivate staff when unexpected events occur (e.g. COVID)", "It helps allocate resources", "It provides targets for evaluation"], "e": "Other limitations: it's based on estimates, and costs time and money. ", "a": 1, "w": "Week 14"}, {"q": "A plan for acquiring capital assets is a:", "o": ["Cash budget", "Capital budget", "Sales budget", "Operational budget"], "e": "The capital budget details planned acquisitions and disposals of assets. ", "a": 1, "w": "Week 14"}, {"q": "Which of these is <strong>not<\/strong> a sales-forecasting factor in the notes?", "o": ["Past sales levels and trends", "Planned advertising and promotion", "Expected actions of competitors", "The company's depreciation policy"], "e": "Depreciation doesn't affect sales demand. ", "a": 3, "w": "Week 14"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2013/Week%2013%20-%20Study%20Guide.html"><small>← Previous</small>Project Appraisal — Payback, ARR, Time Value of Money, NPV &amp; IRR</a><a class="nx" href="../Week%2015/Week%2015%20-%20Study%20Guide.html"><small>Next →</small>Standard Costing &amp; Variance Analysis</a></div></main></div>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  if (!KEY) return;
+
+  // TOC
+  var toc = document.getElementById('toc'), links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ toc.classList.remove('open'); };
+  });
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  function show(i){
+    vids.forEach(function(v, j){ v.style.display = j === i ? '' : 'none'; if (j !== i){ var e = v.querySelector('video'); if (e) e.pause(); } });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 ? 'Lecture videos are not included in the online copy. The notes above cover the video content; the video plays when you open this page from your laptop folder.' : 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header();
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+</script></body></html>

@@ -199,6 +199,8 @@ body{top:0!important}
 .goog-te-banner-frame,iframe.skiptranslate,#goog-gt-tt,.goog-te-balloon-frame,.VIpgJd-ZVi9od-ORHb-OEVmcd,.VIpgJd-ZVi9od-aZ2wEe-wOHMyf{display:none!important}
 font font{background:none!important;box-shadow:none!important}
 @media print{#langbtn{display:none}}
+
+.section-tamil{font:inherit;border:1px solid var(--accent);background:var(--accent-soft);color:var(--ink);border-radius:10px;padding:8px 14px;cursor:pointer;margin:0 0 14px}.tamil-panel{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:18px}.tamil-panel[hidden]{display:none}.tamil-panel>p{font-size:15px;line-height:1.9}.tamil-reader{width:100%;height:65vh;min-height:360px;border:0;border-radius:8px;background:white}@media print{.section-tamil,.tamil-panel{display:none}}
 </style></head>
 <body data-key="mkt-Week04">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Marketing</a> › Week 04</div>
@@ -683,39 +685,41 @@ R.querySelector('.add').onclick=function(){var n=R.querySelector('.nb').value.tr
     document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
     e.currentTime = t; e.play();
   });
-  // Tamil translation (Google Translate), floating toggle
+  // Independent Tamil reading panels. Keep the original DOM and tool state intact.
   (function(){
-    var ta = load('sg-lang', 'en') === 'ta';
-    var b = document.createElement('button');
-    b.id = 'langbtn'; b.setAttribute('translate', 'no'); b.className = 'notranslate';
-    b.title = ta ? 'Switch back to English' : 'Translate this page to Tamil';
-    b.textContent = ta ? 'English' : 'தமிழ்';
-    document.body.appendChild(b);
-    document.querySelectorAll('pre, code, .formula, .ts, svg, .vdlink').forEach(function(e){ e.setAttribute('translate', 'no'); e.classList.add('notranslate'); });
-    function cookie(v){
-      var h = location.hostname, exp = v ? '' : ';expires=Thu, 01 Jan 1970 00:00:00 GMT';
-      document.cookie = 'googtrans=' + v + ';path=/' + exp;
-      if (h) document.cookie = 'googtrans=' + v + ';path=/;domain=' + h + exp;
-    }
-    b.onclick = function(){
-      if (ta){ save('sg-lang', 'en'); cookie(''); location.reload(); return; }
-      if (!navigator.onLine){ alert('Tamil translation needs an internet connection.'); return; }
-      save('sg-lang', 'ta'); cookie('/en/ta'); location.reload();
-    };
-    if (!ta || !navigator.onLine) return;
-    cookie('/en/ta');
-    var box = document.createElement('div'); box.id = 'gte'; box.style.display = 'none'; document.body.appendChild(box);
-    window.sgTranslateInit = function(){
-      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ta', autoDisplay: false}, 'gte');
-      var tries = 0, t = setInterval(function(){
-        var c = document.querySelector('.goog-te-combo');
-        if (c && c.options.length > 1){ clearInterval(t); if (c.value !== 'ta'){ c.value = 'ta'; c.dispatchEvent(new Event('change')); } }
-        else if (++tries > 50) clearInterval(t);
-      }, 200);
-    };
-    var s = document.createElement('script');
-    s.src = 'https://translate.google.com/translate_a/element.js?cb=sgTranslateInit';
-    document.body.appendChild(s);
+    try { localStorage.removeItem('sg-lang'); } catch(e){}
+    ['',location.hostname,'.'+location.hostname].forEach(function(d){
+      document.cookie='googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT'+(d?';domain='+d:'');
+    });
+    document.querySelectorAll('section.card').forEach(function(section,index){
+      var heading=section.querySelector('h2');
+      if(!heading || section.querySelector('.quiz')) return;
+      var button=document.createElement('button'); button.type='button'; button.className='section-tamil';
+      button.textContent='தமிழில் படிக்க'; button.setAttribute('aria-expanded','false');
+      var panel=document.createElement('div'); panel.className='tamil-panel'; panel.hidden=true;
+      panel.id='tamil-section-'+index; button.setAttribute('aria-controls',panel.id);
+      var note=document.createElement('p'); note.lang='ta';
+      note.textContent='இந்தப் பகுதியை மட்டும் தமிழில் படிக்கலாம். இது தானியங்கி மொழிபெயர்ப்பு. முக்கியமான English சொற்களை மூலப் பகுதியில் ஒப்பிட்டுப் பாருங்கள். படித்த பிறகு, “இதன் முக்கிய கருத்து என்ன?” என்று உங்கள் சொந்த வார்த்தைகளில் சொல்லிப் பாருங்கள்.';
+      panel.appendChild(note);
+      heading.insertAdjacentElement('afterend',button); button.insertAdjacentElement('afterend',panel);
+      button.onclick=function(){
+        var open=panel.hidden; panel.hidden=!open; button.setAttribute('aria-expanded',String(open));
+        button.textContent=open?'தமிழை மறைக்க · English':'தமிழில் படிக்க';
+        if(!open || panel.querySelector('iframe')) return;
+        if(!navigator.onLine){ note.textContent='தமிழ் மொழிபெயர்ப்பைப் பெற இணைய இணைப்பு தேவை. இணையம் வந்ததும் இந்தப் பொத்தானை மீண்டும் அழுத்துங்கள்.'; return; }
+        var copy=section.cloneNode(true);
+        copy.querySelectorAll('script,iframe,video,button,input,select,textarea,.section-tamil,.tamil-panel,.done-btn,svg').forEach(function(n){n.remove();});
+        copy.querySelectorAll('[id]').forEach(function(n){n.removeAttribute('id');});
+        copy.querySelectorAll('*').forEach(function(n){Array.from(n.attributes).forEach(function(a){if(/^on/i.test(a.name))n.removeAttribute(a.name);});});
+        copy.querySelectorAll('pre,code,.formula,.ts').forEach(function(n){n.classList.add('notranslate');});
+        var frame=document.createElement('iframe'); frame.title='Tamil reading: '+heading.textContent; frame.className='tamil-reader';
+        // A separate document prevents Google Translate from changing other sections.
+        var init="function initTamil(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ta',autoDisplay:false},'translator');var n=0,t=setInterval(function(){var c=document.querySelector('.goog-te-combo');if(c&&c.options.length>1){c.value='ta';c.dispatchEvent(new Event('change'));clearInterval(t);}if(++n>75)clearInterval(t);},200);}";
+        frame.srcdoc='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.85 system-ui,sans-serif;padding:12px;color:#182431;background:#fff;margin:0}table{border-collapse:collapse;width:100%;display:block;overflow:auto}td,th{border:1px solid #bbb;padding:8px}img{max-width:100%}pre{white-space:pre-wrap}#translator{margin-bottom:12px}h2{font-size:1.35em}</style><body><div id="translator"></div><p lang="ta" class="notranslate">தமிழ் வர சில வினாடிகள் ஆகலாம். மொழிபெயர்ப்பு வரவில்லை என்றால் மேலே Tamil என்பதைத் தேர்வு செய்யுங்கள்.</p>'+copy.innerHTML+'<script>'+init+'<\/script><script src="https://translate.google.com/translate_a/element.js?cb=initTamil"><\/script></body></html>';
+        frame.srcdoc=frame.srcdoc.replace(/<\\\/script>/g,'<'+'/script>');
+        panel.appendChild(frame);
+      };
+    });
   })();
 })();
 ;

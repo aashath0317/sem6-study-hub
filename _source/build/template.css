@@ -197,3 +197,5 @@ body{top:0!important}
 .goog-te-banner-frame,iframe.skiptranslate,#goog-gt-tt,.goog-te-balloon-frame,.VIpgJd-ZVi9od-ORHb-OEVmcd,.VIpgJd-ZVi9od-aZ2wEe-wOHMyf{display:none!important}
 font font{background:none!important;box-shadow:none!important}
 @media print{#langbtn{display:none}}
+
+.section-tamil{font:inherit;border:1px solid var(--accent);background:var(--accent-soft);color:var(--ink);border-radius:10px;padding:8px 14px;cursor:pointer;margin:0 0 14px}.tamil-panel{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:18px}.tamil-panel[hidden]{display:none}.tamil-panel>p{font-size:15px;line-height:1.9}.tamil-reader{width:100%;height:65vh;min-height:360px;border:0;border-radius:8px;background:white}@media print{.section-tamil,.tamil-panel{display:none}}

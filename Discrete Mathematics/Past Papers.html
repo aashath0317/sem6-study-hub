@@ -193,19 +193,24 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .exams{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 18px}.exams table{width:100%}.exams td.cd{font-weight:700;color:var(--accent);white-space:nowrap}.wk em.exd{color:var(--accent);font-style:normal}
 .wk a.papers{border-color:var(--accent);background:var(--accent-soft)}
 
-#langbtn{position:fixed;right:18px;bottom:18px;z-index:60;font:inherit;font-size:15px;font-weight:600;padding:10px 16px;border-radius:999px;border:1px solid var(--accent);background:var(--accent);color:var(--bg);box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer}
-#langbtn:hover{filter:brightness(1.1)}
-body{top:0!important}
-.goog-te-banner-frame,iframe.skiptranslate,#goog-gt-tt,.goog-te-balloon-frame,.VIpgJd-ZVi9od-ORHb-OEVmcd,.VIpgJd-ZVi9od-aZ2wEe-wOHMyf{display:none!important}
-font font{background:none!important;box-shadow:none!important}
-@media print{#langbtn{display:none}}
-
-.section-tamil{font:inherit;border:1px solid var(--accent);background:var(--accent-soft);color:var(--ink);border-radius:10px;padding:8px 14px;cursor:pointer;margin:0 0 14px}.tamil-panel{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:18px}.tamil-panel[hidden]{display:none}.tamil-panel>p{font-size:15px;line-height:1.9}.tamil-reader{width:100%;height:65vh;min-height:360px;border:0;border-radius:8px;background:white}@media print{.section-tamil,.tamil-panel{display:none}}
+/* Native Tamil explanations: inline, offline, independently controlled. */
+.section-language{display:flex;gap:8px;margin:2px 0 18px}
+.native-toggle{font:inherit;font-size:14px;font-weight:600;line-height:1.7;border:1px solid var(--accent);background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:7px 14px;cursor:pointer;white-space:normal}
+.native-toggle:hover{border-color:var(--ink)}
+.native-toggle:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.tamil-native{font-family:"Nirmala UI","Latha","Tamil Sangam MN",system-ui,sans-serif;line-height:2.05;overflow-wrap:break-word}
+.tamil-native h3{font-size:1.15em;line-height:1.8;margin:8px 0 14px;color:var(--accent-ink)}
+.tamil-native p{margin:0 0 18px}
+.tamil-native strong{font-weight:700}
+.tamil-native[hidden],.section-english[hidden]{display:none!important}
+.ta-recap-item{border-bottom:1px solid var(--line);padding:4px 0 10px;margin:0 0 14px}
+.ta-recap-item h4{line-height:1.8;margin:6px 0}
+@media print{.section-language{display:none}}
 </style></head>
 <body data-key="dmath-papers">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../SEM 6 Study Hub.html">SEM 6</a> › <a href="Study%20Guide%20-%20Index.html">Discrete Mathematics</a> › Past papers</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Past papers</div><h1>Past Papers — Worked Answers &amp; What to Expect</h1><p>Four past papers solved step by step: January 2023, July 2023, October 2019 and the official model questions. Quantifiers, functions, relations, number theory, induction, sets and Venn diagrams, sequences, matrices, counting and graphs come up every year, often almost word for word.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">📄 ITE 3822 January 2023</span><span class="chip">📄 July 2023</span><span class="chip">📄 October 2019</span><span class="chip">📄 Model questions</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What the exam looks like and what keeps coming back"><span class="num">1</span>What the exam looks like and what keeps coming back</h2><div class="call key"><div class="ct">Format</div><ul>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Past papers</div><h1>Past Papers — Worked Answers &amp; What to Expect</h1><p>Four past papers solved step by step: January 2023, July 2023, October 2019 and the official model questions. Quantifiers, functions, relations, number theory, induction, sets and Venn diagrams, sequences, matrices, counting and graphs come up every year, often almost word for word.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">📄 ITE 3822 January 2023</span><span class="chip">📄 July 2023</span><span class="chip">📄 October 2019</span><span class="chip">📄 Model questions</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What the exam looks like and what keeps coming back"><span class="num">1</span>What the exam looks like and what keeps coming back</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>Maths past papers படிப்பது</h3><p>Formula மனப்பாடத்துடன் ஏன் பொருந்துகிறது என்பதையும் எழுதிப் பயிற்சி செய்யுங்கள். Proof-இல் claim, assumption, steps, conclusion தெளிவாக வேண்டும். Numerical example மட்டும் பொதுவான proof ஆகாது.</p></div><div class="section-english" id="en-s1" lang="en"><div class="call key"><div class="ct">Format</div><ul>
 <li><strong>3 hours, 100 marks</strong>, closed book, non-programmable calculator.</li>
 <li><strong>2023:</strong> 4 questions × 25 marks, answer <strong>all</strong>.</li>
 <li><strong>2019:</strong> 5 questions × 20 marks, answer <strong>all</strong>.</li>
@@ -341,7 +346,7 @@ font font{background:none!important;box-shadow:none!important}
 <li><strong>"Every graph has two vertices of equal degree"</strong> appeared in both 2023 papers.</li>
 <li><strong>Caesar cipher on YARD / CHVW</strong> is the <strong>same example as the Week 6 lecture</strong>.</li>
 <li>The <strong>truth-value question</strong> uses the Week 1 Assignment formulas, e.g. (∀x)(∃y)(x + y = x).</li>
-</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="January 2023 — Question 1"><span class="num">2</span>January 2023 — Question 1</h2><div class="call example"><div class="ct">a) Truth values over the integers</div><table>
+</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="January 2023 — Question 1"><span class="num">2</span>January 2023 — Question 1</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>ஜனவரி 2023: Logic மற்றும் Matrices</h3><p>Quantifier-க்கு domain முக்கியம்; உண்மையான counterexample தேடுங்கள். Matrix inverse-ஐ A×A⁻¹=I மூலம் சோதிக்கலாம். Inverse function-இன் domain original function-இன் range ஆகும்.</p></div><div class="section-english" id="en-s2" lang="en"><div class="call example"><div class="ct">a) Truth values over the integers</div><table>
 <thead>
 <tr>
 <th>Statement</th>
@@ -380,7 +385,7 @@ font font{background:none!important;box-shadow:none!important}
 <li><strong>Symmetric:</strong> if 3a − 7b is even, then 3b − 7a = −(3a − 7b) − 4a − 4b is even ✓</li>
 <li><strong>Transitive:</strong> if 3a − 7b and 3b − 7c are even, their sum 3a − 4b − 7c is even, so 3a − 7c = (sum) + 4b is even ✓</li>
 </ul>
-<p>So <strong>R is an equivalence relation</strong>. In fact aRb exactly when <strong>a and b have the same parity</strong>.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="January 2023 — Question 2 (number theory)"><span class="num">3</span>January 2023 — Question 2 (number theory)</h2><div class="call example"><div class="ct">a) If 7 | 4n then 7 | n (also July 2023 Q3b)</div><p>7 | 4n, so 4n = 7k for some integer k. Then:</p>
+<p>So <strong>R is an equivalence relation</strong>. In fact aRb exactly when <strong>a and b have the same parity</strong>.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="January 2023 — Question 2 (number theory)"><span class="num">3</span>January 2023 — Question 2 (number theory)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>ஜனவரி 2023: Number theory</h3><p>Divisibility proof-இல் a|b என்றால் b=ak என்று எழுதுங்கள். Modular powers-இல் ஒவ்வொரு படியிலும் remainder எடுத்து எண்களைச் சிறிதாக்கலாம். Induction-இல் base case விடுபடக்கூடாது.</p></div><div class="section-english" id="en-s3" lang="en"><div class="call example"><div class="ct">a) If 7 | 4n then 7 | n (also July 2023 Q3b)</div><p>7 | 4n, so 4n = 7k for some integer k. Then:</p>
 <p><strong>n = 8n − 7n = 2(4n) − 7n = 14k − 7n = 7(2k − n)</strong></p>
 <p>so 7 | n. ∎ (This works because gcd(4, 7) = 1.)</p></div>
 <div class="call example"><div class="ct">b) a | b and c | d ⇒ ac | bd</div><p>b = ak and d = cm, so bd = (ac)(km), and therefore ac | bd. ∎</p></div>
@@ -399,7 +404,7 @@ font font{background:none!important;box-shadow:none!important}
 <li>V (21) → S (18)</li>
 <li>W (22) → T (19)</li>
 </ul>
-<p><strong>→ ZEST</strong></p></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="January 2023 — Question 3"><span class="num">4</span>January 2023 — Question 3</h2><div class="call example"><div class="ct">a) Pain-reliever survey (Venn diagram)</div><p>150 people answered and 37 were positive about none of the items, so <strong>113</strong> were positive about at least one.</p>
+<p><strong>→ ZEST</strong></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="January 2023 — Question 3"><span class="num">4</span>January 2023 — Question 3</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>ஜனவரி 2023: Relations மற்றும் Counting</h3><p>Reflexive, symmetric, transitive ஒவ்வொன்றையும் தனியாகச் சோதிக்க வேண்டும். Counting-இல் order முக்கியமா, repetition அனுமதியா என்று முதலில் தீர்மானித்த பிறகே permutation அல்லது combination தேர்வு செய்யுங்கள்.</p></div><div class="section-english" id="en-s4" lang="en"><div class="call example"><div class="ct">a) Pain-reliever survey (Venn diagram)</div><p>150 people answered and 37 were positive about none of the items, so <strong>113</strong> were positive about at least one.</p>
 <p>E = 60, S = 50, C = 40, E∩S = 20, S∩C = 15, C∩E = 10:</p>
 <p>113 = 60 + 50 + 40 − 20 − 15 − 10 + x, so <strong>x = 8 were positive about all three</strong>.</p>
 <table>
@@ -444,7 +449,7 @@ font font{background:none!important;box-shadow:none!important}
 <div class="call example"><div class="ct">c) Inverse matrix and solving BX = 2X + C</div><p><strong>(i)</strong> det A = 1(1 − 6) − 2(2 − 9) + 3(4 − 3) = <strong>12</strong>.</p>
 <p>adj A = [[−5, 4, 3], [7, −8, 3], [1, 4, −3]], so A⁻¹ = (1/12) adj A. Matching T gives <strong>s = −5 and t = 4</strong>.</p>
 <p><strong>(ii)</strong> BX = 2X + C, so (B − 2I)X = C. And <strong>B − 2I = [[1, 2, 3], [2, 1, 3], [3, 2, 1]] = A</strong>, so <strong>X = A⁻¹C = TC</strong>:</p>
-<p>X = [[−1/2, 0, 0, 1/6], [1/2, 3, −3, 1/6], [1/2, −1, 2, 1/6]]</p></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="January 2023 — Question 4 (graphs)"><span class="num">5</span>January 2023 — Question 4 (graphs)</h2><div class="call example"><div class="ct">a) Every graph with n ≥ 2 vertices has two vertices of equal degree (simple graph)</div><ul>
+<p>X = [[−1/2, 0, 0, 1/6], [1/2, 3, −3, 1/6], [1/2, −1, 2, 1/6]]</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="January 2023 — Question 4 (graphs)"><span class="num">5</span>January 2023 — Question 4 (graphs)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>ஜனவரி 2023: Graphs</h3><p>Vertices எதைக் குறிக்கின்றன, edges எதைக் குறிக்கின்றன என்று முதலில் எழுதுங்கள். Directed edges-இன் திசையைப் பாருங்கள். Degree sum-இல் ஒவ்வொரு undirected edge-உம் இரண்டு endpoints-க்கு பங்களிக்கும்.</p></div><div class="section-english" id="en-s5" lang="en"><div class="call example"><div class="ct">a) Every graph with n ≥ 2 vertices has two vertices of equal degree (simple graph)</div><ul>
 <li>Degrees lie in {0, 1, …, n − 1}, which is n values.</li>
 <li>But <strong>0 and n − 1 can't both occur</strong>: a vertex joined to all the others means no vertex is isolated.</li>
 <li>So the degrees take at most <strong>n − 1 different values</strong> for n vertices.</li>
@@ -459,7 +464,7 @@ font font{background:none!important;box-shadow:none!important}
 <li><strong>Vertices:</strong> the 10 lanes L₁ … L₁₀.</li>
 <li><strong>Edges:</strong> join two lanes if their paths <strong>cross or merge</strong>, i.e. they <strong>can't have green at the same time</strong>.</li>
 <li>A set of lanes that can share a phase is an <strong>independent set</strong>. The minimum number of phases is the graph's <strong>chromatic number</strong>: colour the vertices so no two joined vertices share a colour, and each colour is one phase.</li>
-</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="July 2023"><span class="num">6</span>July 2023</h2><div class="call example"><div class="ct">Q1 a) Truth values over the real numbers</div><table>
+</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="July 2023"><span class="num">6</span>July 2023</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>ஜூலை 2023 அணுகுமுறை</h3><p>ஏற்கெனவே பார்த்த மாதிரி இருந்தாலும் domain, numbers, conditions மாறியுள்ளனவா கவனியுங்கள். Σ sum-ஐ சில terms-ஆக விரித்து pattern பாருங்கள். Degree proof-இல் 0-degree மற்றும் n−1-degree ஒன்றாக வருமா சிந்தியுங்கள்.</p></div><div class="section-english" id="en-s6" lang="en"><div class="call example"><div class="ct">Q1 a) Truth values over the real numbers</div><table>
 <thead>
 <tr>
 <th>Statement</th>
@@ -576,7 +581,7 @@ font font{background:none!important;box-shadow:none!important}
 <li><strong>Slot 1:</strong> UG, Colloquium, Personnel</li>
 <li><strong>Slot 2:</strong> Grad, Library</li>
 <li><strong>Slot 3:</strong> Hiring</li>
-</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="October 2019"><span class="num">7</span>October 2019</h2><div class="call example"><div class="ct">Q1: Predicates and quantifiers</div><p><strong>a)</strong> A <strong>predicate</strong> is a statement with variables that becomes a proposition once the variables are given values. Example: P(x): "x &gt; 3". P(5) is true and P(1) is false.</p>
+</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="October 2019"><span class="num">7</span>October 2019</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>அக்டோபர் 2019 அணுகுமுறை</h3><p>Universal statement-க்கு ஒரு counterexample போதும். Set inclusion-இல் C⊆A∪B என்பதால் C முழுவதும் A-விலோ B-விலோ இருக்கவேண்டும் என்றில்லை. உறுப்புகள் இரண்டு sets-இலும் பரவியிருக்கலாம்.</p></div><div class="section-english" id="en-s7" lang="en"><div class="call example"><div class="ct">Q1: Predicates and quantifiers</div><p><strong>a)</strong> A <strong>predicate</strong> is a statement with variables that becomes a proposition once the variables are given values. Example: P(x): "x &gt; 3". P(5) is true and P(1) is false.</p>
 <p><strong>b)</strong> Over the reals, with P(x) = "x is positive" and N(x) = "x is negative":</p>
 <table>
 <thead>
@@ -642,7 +647,7 @@ font font{background:none!important;box-shadow:none!important}
 <li>(iii) Multiple edges plus loops: <strong>pseudograph</strong></li>
 </ul>
 <p><strong>b) Acquaintanceship graph:</strong> an undirected simple graph with vertices Tom, Patricia, Hope, Sandy, Amy, Marika, Jeff and Mary.</p>
-<p><strong>Edges:</strong> Tom–Patricia, Tom–Hope, Tom–Sandy, Tom–Amy, Tom–Marika, Jeff–Patricia, Jeff–Mary, Patricia–Hope, Amy–Hope, Amy–Marika.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Model questions (official sample problems)"><span class="num">8</span>Model questions (official sample problems)</h2><div class="call example"><div class="ct">Q1: Sets and odd numbers</div><p><strong>a) Matching:</strong> (a)–(5) · (b)–(1) · (c)–(6) · (d)–(2) · (e)–(3) · (f)–(4)</p>
+<p><strong>Edges:</strong> Tom–Patricia, Tom–Hope, Tom–Sandy, Tom–Amy, Tom–Marika, Jeff–Patricia, Jeff–Mary, Patricia–Hope, Amy–Hope, Amy–Marika.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Model questions (official sample problems)"><span class="num">8</span>Model questions (official sample problems)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s8 en-s8" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s8" lang="ta" hidden><h3>மாதிரி வினாக்களின் அணுகுமுறை</h3><p>Odd எண்ணை 2k+1 என்று எழுதினால் பல direct proofs எளிதாகும். Function-இல் codomain-ஐ தவறவிடாதீர்கள். தேர்ந்தெடுக்கும் குழுவில் “at least” வந்தால் total-இலிருந்து அனுமதிக்காத குழுக்களை கழிப்பதும் உதவும்.</p></div><div class="section-english" id="en-s8" lang="en"><div class="call example"><div class="ct">Q1: Sets and odd numbers</div><p><strong>a) Matching:</strong> (a)–(5) · (b)–(1) · (c)–(6) · (d)–(2) · (e)–(3) · (f)–(4)</p>
 <p><strong>b) n odd ⇒ 4 | n² − 5, but 8 ∤ n² − 5</strong></p>
 <ul>
 <li>n = 2k + 1 gives n² − 5 = 4(k² + k − 1)</li>
@@ -697,7 +702,7 @@ font font{background:none!important;box-shadow:none!important}
 </table>
 <p><strong>b) ABRACADABRA:</strong> 11 letters, with A × 5, B × 2 and R × 2. So 11! / (5! 2! 2!) = <strong>83,160</strong>.</p>
 <p><strong>c) 7 men and 6 women, choose 5 with at least 3 men:</strong></p>
-<p>C(7,3)C(6,2) + C(7,4)C(6,1) + C(7,5) = 525 + 210 + 21 = <strong>756</strong></p></div><button class="done-btn"></button></section></main></div>
+<p>C(7,3)C(6,2) + C(7,4)C(6,1) + C(7,5) = 525 + 210 + 21 = <strong>756</strong></p></div></div><button class="done-btn"></button></section></main></div>
 <script>(function(){
   var KEY = document.body.getAttribute('data-key');
   function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
@@ -736,7 +741,7 @@ font font{background:none!important;box-shadow:none!important}
     var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
     var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
     a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
-    a.onclick = function(){ toc.classList.remove('open'); };
+    a.onclick = function(){ var english=h.closest('.section-english'); if(english && english.hidden){ var toggle=h.closest('section').querySelector('.native-toggle'); if(toggle) toggle.click(); } toc.classList.remove('open'); };
   });
   var tbtn = document.getElementById('tocbtn');
   if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
@@ -765,7 +770,7 @@ font font{background:none!important;box-shadow:none!important}
   var bar = document.querySelector('.progress');
   function spy(){
     var y = window.scrollY + 90, cur = null;
-    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    heads.forEach(function(h){ if (h.getClientRects().length && h.offsetTop <= y) cur = h; });
     links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
     var max = document.documentElement.scrollHeight - window.innerHeight;
     if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
@@ -823,39 +828,21 @@ font font{background:none!important;box-shadow:none!important}
     document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
     e.currentTime = t; e.play();
   });
-  // Independent Tamil reading panels. Keep the original DOM and tool state intact.
+  // Native, offline Tamil explanations. Each section keeps its own language.
   (function(){
     try { localStorage.removeItem('sg-lang'); } catch(e){}
     ['',location.hostname,'.'+location.hostname].forEach(function(d){
       document.cookie='googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT'+(d?';domain='+d:'');
     });
-    document.querySelectorAll('section.card').forEach(function(section,index){
-      var heading=section.querySelector('h2');
-      if(!heading || section.querySelector('.quiz')) return;
-      var button=document.createElement('button'); button.type='button'; button.className='section-tamil';
-      button.textContent='தமிழில் படிக்க'; button.setAttribute('aria-expanded','false');
-      var panel=document.createElement('div'); panel.className='tamil-panel'; panel.hidden=true;
-      panel.id='tamil-section-'+index; button.setAttribute('aria-controls',panel.id);
-      var note=document.createElement('p'); note.lang='ta';
-      note.textContent='இந்தப் பகுதியை மட்டும் தமிழில் படிக்கலாம். இது தானியங்கி மொழிபெயர்ப்பு. முக்கியமான English சொற்களை மூலப் பகுதியில் ஒப்பிட்டுப் பாருங்கள். படித்த பிறகு, “இதன் முக்கிய கருத்து என்ன?” என்று உங்கள் சொந்த வார்த்தைகளில் சொல்லிப் பாருங்கள்.';
-      panel.appendChild(note);
-      heading.insertAdjacentElement('afterend',button); button.insertAdjacentElement('afterend',panel);
+    document.querySelectorAll('.native-toggle').forEach(function(button){
+      var section=button.closest('section'), tamil=section.querySelector('.tamil-native'), english=section.querySelector('.section-english');
+      if(!tamil || !english) return;
       button.onclick=function(){
-        var open=panel.hidden; panel.hidden=!open; button.setAttribute('aria-expanded',String(open));
-        button.textContent=open?'தமிழை மறைக்க · English':'தமிழில் படிக்க';
-        if(!open || panel.querySelector('iframe')) return;
-        if(!navigator.onLine){ note.textContent='தமிழ் மொழிபெயர்ப்பைப் பெற இணைய இணைப்பு தேவை. இணையம் வந்ததும் இந்தப் பொத்தானை மீண்டும் அழுத்துங்கள்.'; return; }
-        var copy=section.cloneNode(true);
-        copy.querySelectorAll('script,iframe,video,button,input,select,textarea,.section-tamil,.tamil-panel,.done-btn,svg').forEach(function(n){n.remove();});
-        copy.querySelectorAll('[id]').forEach(function(n){n.removeAttribute('id');});
-        copy.querySelectorAll('*').forEach(function(n){Array.from(n.attributes).forEach(function(a){if(/^on/i.test(a.name))n.removeAttribute(a.name);});});
-        copy.querySelectorAll('pre,code,.formula,.ts').forEach(function(n){n.classList.add('notranslate');});
-        var frame=document.createElement('iframe'); frame.title='Tamil reading: '+heading.textContent; frame.className='tamil-reader';
-        // A separate document prevents Google Translate from changing other sections.
-        var init="function initTamil(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ta',autoDisplay:false},'translator');var n=0,t=setInterval(function(){var c=document.querySelector('.goog-te-combo');if(c&&c.options.length>1){c.value='ta';c.dispatchEvent(new Event('change'));clearInterval(t);}if(++n>75)clearInterval(t);},200);}";
-        frame.srcdoc='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.85 system-ui,sans-serif;padding:12px;color:#182431;background:#fff;margin:0}table{border-collapse:collapse;width:100%;display:block;overflow:auto}td,th{border:1px solid #bbb;padding:8px}img{max-width:100%}pre{white-space:pre-wrap}#translator{margin-bottom:12px}h2{font-size:1.35em}</style><body><div id="translator"></div><p lang="ta" class="notranslate">தமிழ் வர சில வினாடிகள் ஆகலாம். மொழிபெயர்ப்பு வரவில்லை என்றால் மேலே Tamil என்பதைத் தேர்வு செய்யுங்கள்.</p>'+copy.innerHTML+'<script>'+init+'<\/script><script src="https://translate.google.com/translate_a/element.js?cb=initTamil"><\/script></body></html>';
-        frame.srcdoc=frame.srcdoc.replace(/<\\\/script>/g,'<'+'/script>');
-        panel.appendChild(frame);
+        var showTamil=tamil.hidden;
+        tamil.hidden=!showTamil; english.hidden=showTamil;
+        button.setAttribute('aria-expanded',String(showTamil));
+        button.textContent=showTamil?'English-இல் படிக்க':'தமிழில் புரிந்துகொள்ள';
+        section.classList.toggle('show-tamil',showTamil);
       };
     });
   })();

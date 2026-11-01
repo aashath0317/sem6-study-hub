@@ -169,7 +169,52 @@ def quiz_block(qid, qs, pick=0, intro=""):
             f'<div class="qhead"></div><div class="qbody"></div></div>')
 
 
+# Authored Tamil concept explanations, matched to the original section headings.
+NATIVE_TAMIL = json.load(open(os.path.join(HERE, "native_tamil.json"), encoding="utf-8"))
+
+
+def native_sections(body, key):
+    match = re.fullmatch(r"([a-z]+)-(?:Week(\d+)|(papers))", key)
+    if not match:
+        return body
+    subject, week, papers = match.groups()
+    path = subject + "/" + ("papers" if papers else "w" + week)
+    entries = NATIVE_TAMIL.get(path, [])
+    if entries:
+        source = os.path.join(HERE, "content", path + ".md")
+        headings = re.findall(r"^## (.+)$", open(source, encoding="utf-8").read(), re.M)
+        if headings != [entry["heading"] for entry in entries]:
+            raise ValueError(f"Tamil explanations need review after section changes: {path}")
+    if not entries:
+        return body
+
+    def replace_section(m):
+        start, sid, english, end = m.groups()
+        index = int(sid[1:]) - 1
+        if index >= len(entries):
+            raise ValueError(f"Tamil section missing: {path}/{sid}")
+        entry = entries[index]
+        panel_id = "ta-" + sid
+        english_id = "en-" + sid
+        if "items" in entry:
+            tamil = "".join('<div class="ta-recap-item"><h4>' + html.escape(item["title"]) + '</h4>' + md(item["text"]) + '</div>' for item in entry["items"])
+        else:
+            tamil = md(entry["text"])
+        toggle = ('<div class="section-language"><button type="button" class="native-toggle" '
+                  f'aria-controls="{panel_id} {english_id}" aria-expanded="false" '
+                  'lang="ta">தமிழில் புரிந்துகொள்ள</button></div>')
+        panel = (f'<div class="tamil-native" id="{panel_id}" lang="ta" hidden>'
+                 f'<h3>{html.escape(entry["title"])}</h3>' + tamil + '</div>')
+        done = '<button class="done-btn"></button>'
+        has_done = done in english
+        english = english.replace(done, "")
+        return start + toggle + panel + f'<div class="section-english" id="{english_id}" lang="en">' + english + '</div>' + (done if has_done else '') + end
+
+    return re.sub(r'(<section class="card" data-sec="([^"]+)"><h2\b[^>]*>.*?</h2>)(.*?)(</section>)', replace_section, body, flags=re.S)
+
+
 def page(title, body, key="", crumbs=""):
+    body = native_sections(body, key)
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title><style>{CSS}</style></head>

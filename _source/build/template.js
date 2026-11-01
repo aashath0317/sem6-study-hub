@@ -36,7 +36,7 @@
     var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
     var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
     a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
-    a.onclick = function(){ toc.classList.remove('open'); };
+    a.onclick = function(){ var english=h.closest('.section-english'); if(english && english.hidden){ var toggle=h.closest('section').querySelector('.native-toggle'); if(toggle) toggle.click(); } toc.classList.remove('open'); };
   });
   var tbtn = document.getElementById('tocbtn');
   if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
@@ -65,7 +65,7 @@
   var bar = document.querySelector('.progress');
   function spy(){
     var y = window.scrollY + 90, cur = null;
-    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    heads.forEach(function(h){ if (h.getClientRects().length && h.offsetTop <= y) cur = h; });
     links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
     var max = document.documentElement.scrollHeight - window.innerHeight;
     if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
@@ -123,39 +123,21 @@
     document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
     e.currentTime = t; e.play();
   });
-  // Independent Tamil reading panels. Keep the original DOM and tool state intact.
+  // Native, offline Tamil explanations. Each section keeps its own language.
   (function(){
     try { localStorage.removeItem('sg-lang'); } catch(e){}
     ['',location.hostname,'.'+location.hostname].forEach(function(d){
       document.cookie='googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT'+(d?';domain='+d:'');
     });
-    document.querySelectorAll('section.card').forEach(function(section,index){
-      var heading=section.querySelector('h2');
-      if(!heading || section.querySelector('.quiz')) return;
-      var button=document.createElement('button'); button.type='button'; button.className='section-tamil';
-      button.textContent='தமிழில் படிக்க'; button.setAttribute('aria-expanded','false');
-      var panel=document.createElement('div'); panel.className='tamil-panel'; panel.hidden=true;
-      panel.id='tamil-section-'+index; button.setAttribute('aria-controls',panel.id);
-      var note=document.createElement('p'); note.lang='ta';
-      note.textContent='இந்தப் பகுதியை மட்டும் தமிழில் படிக்கலாம். இது தானியங்கி மொழிபெயர்ப்பு. முக்கியமான English சொற்களை மூலப் பகுதியில் ஒப்பிட்டுப் பாருங்கள். படித்த பிறகு, “இதன் முக்கிய கருத்து என்ன?” என்று உங்கள் சொந்த வார்த்தைகளில் சொல்லிப் பாருங்கள்.';
-      panel.appendChild(note);
-      heading.insertAdjacentElement('afterend',button); button.insertAdjacentElement('afterend',panel);
+    document.querySelectorAll('.native-toggle').forEach(function(button){
+      var section=button.closest('section'), tamil=section.querySelector('.tamil-native'), english=section.querySelector('.section-english');
+      if(!tamil || !english) return;
       button.onclick=function(){
-        var open=panel.hidden; panel.hidden=!open; button.setAttribute('aria-expanded',String(open));
-        button.textContent=open?'தமிழை மறைக்க · English':'தமிழில் படிக்க';
-        if(!open || panel.querySelector('iframe')) return;
-        if(!navigator.onLine){ note.textContent='தமிழ் மொழிபெயர்ப்பைப் பெற இணைய இணைப்பு தேவை. இணையம் வந்ததும் இந்தப் பொத்தானை மீண்டும் அழுத்துங்கள்.'; return; }
-        var copy=section.cloneNode(true);
-        copy.querySelectorAll('script,iframe,video,button,input,select,textarea,.section-tamil,.tamil-panel,.done-btn,svg').forEach(function(n){n.remove();});
-        copy.querySelectorAll('[id]').forEach(function(n){n.removeAttribute('id');});
-        copy.querySelectorAll('*').forEach(function(n){Array.from(n.attributes).forEach(function(a){if(/^on/i.test(a.name))n.removeAttribute(a.name);});});
-        copy.querySelectorAll('pre,code,.formula,.ts').forEach(function(n){n.classList.add('notranslate');});
-        var frame=document.createElement('iframe'); frame.title='Tamil reading: '+heading.textContent; frame.className='tamil-reader';
-        // A separate document prevents Google Translate from changing other sections.
-        var init="function initTamil(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ta',autoDisplay:false},'translator');var n=0,t=setInterval(function(){var c=document.querySelector('.goog-te-combo');if(c&&c.options.length>1){c.value='ta';c.dispatchEvent(new Event('change'));clearInterval(t);}if(++n>75)clearInterval(t);},200);}";
-        frame.srcdoc='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.85 system-ui,sans-serif;padding:12px;color:#182431;background:#fff;margin:0}table{border-collapse:collapse;width:100%;display:block;overflow:auto}td,th{border:1px solid #bbb;padding:8px}img{max-width:100%}pre{white-space:pre-wrap}#translator{margin-bottom:12px}h2{font-size:1.35em}</style><body><div id="translator"></div><p lang="ta" class="notranslate">தமிழ் வர சில வினாடிகள் ஆகலாம். மொழிபெயர்ப்பு வரவில்லை என்றால் மேலே Tamil என்பதைத் தேர்வு செய்யுங்கள்.</p>'+copy.innerHTML+'<script>'+init+'<\/script><script src="https://translate.google.com/translate_a/element.js?cb=initTamil"><\/script></body></html>';
-        frame.srcdoc=frame.srcdoc.replace(/<\\\/script>/g,'<'+'/script>');
-        panel.appendChild(frame);
+        var showTamil=tamil.hidden;
+        tamil.hidden=!showTamil; english.hidden=showTamil;
+        button.setAttribute('aria-expanded',String(showTamil));
+        button.textContent=showTamil?'English-இல் படிக்க':'தமிழில் புரிந்துகொள்ள';
+        section.classList.toggle('show-tamil',showTamil);
       };
     });
   })();

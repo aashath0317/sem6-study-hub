@@ -193,19 +193,24 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .exams{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 18px}.exams table{width:100%}.exams td.cd{font-weight:700;color:var(--accent);white-space:nowrap}.wk em.exd{color:var(--accent);font-style:normal}
 .wk a.papers{border-color:var(--accent);background:var(--accent-soft)}
 
-#langbtn{position:fixed;right:18px;bottom:18px;z-index:60;font:inherit;font-size:15px;font-weight:600;padding:10px 16px;border-radius:999px;border:1px solid var(--accent);background:var(--accent);color:var(--bg);box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer}
-#langbtn:hover{filter:brightness(1.1)}
-body{top:0!important}
-.goog-te-banner-frame,iframe.skiptranslate,#goog-gt-tt,.goog-te-balloon-frame,.VIpgJd-ZVi9od-ORHb-OEVmcd,.VIpgJd-ZVi9od-aZ2wEe-wOHMyf{display:none!important}
-font font{background:none!important;box-shadow:none!important}
-@media print{#langbtn{display:none}}
-
-.section-tamil{font:inherit;border:1px solid var(--accent);background:var(--accent-soft);color:var(--ink);border-radius:10px;padding:8px 14px;cursor:pointer;margin:0 0 14px}.tamil-panel{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:18px}.tamil-panel[hidden]{display:none}.tamil-panel>p{font-size:15px;line-height:1.9}.tamil-reader{width:100%;height:65vh;min-height:360px;border:0;border-radius:8px;background:white}@media print{.section-tamil,.tamil-panel{display:none}}
+/* Native Tamil explanations: inline, offline, independently controlled. */
+.section-language{display:flex;gap:8px;margin:2px 0 18px}
+.native-toggle{font:inherit;font-size:14px;font-weight:600;line-height:1.7;border:1px solid var(--accent);background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:7px 14px;cursor:pointer;white-space:normal}
+.native-toggle:hover{border-color:var(--ink)}
+.native-toggle:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.tamil-native{font-family:"Nirmala UI","Latha","Tamil Sangam MN",system-ui,sans-serif;line-height:2.05;overflow-wrap:break-word}
+.tamil-native h3{font-size:1.15em;line-height:1.8;margin:8px 0 14px;color:var(--accent-ink)}
+.tamil-native p{margin:0 0 18px}
+.tamil-native strong{font-weight:700}
+.tamil-native[hidden],.section-english[hidden]{display:none!important}
+.ta-recap-item{border-bottom:1px solid var(--line);padding:4px 0 10px;margin:0 0 14px}
+.ta-recap-item h4{line-height:1.8;margin:6px 0}
+@media print{.section-language{display:none}}
 </style></head>
 <body data-key="hci-papers">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../SEM 6 Study Hub.html">SEM 6</a> › <a href="Study%20Guide%20-%20Index.html">Human Computer Interaction</a> › Past papers</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Human Computer Interaction · Past papers</div><h1>Past Papers — Model Answers &amp; What to Expect</h1><p>The ITE 3752 paper (same module code as yours) answered in full, with examples you can reuse, plus outline answers for two older ITE 3603 papers (December 2019 and September 2020) whose overlapping topics still matter.</p><div class="meta"><span class="chip">ITE3752</span><span class="chip">📄 HCI 2020 (ITE 3752)</span><span class="chip">📄 HCI December 2019 (ITE 3603)</span><span class="chip">📄 HCI September 2020 (ITE 3603)</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What the exam looks like and what to focus on"><span class="num">1</span>What the exam looks like and what to focus on</h2><div class="call key"><div class="ct">Format</div><ul>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Human Computer Interaction · Past papers</div><h1>Past Papers — Model Answers &amp; What to Expect</h1><p>The ITE 3752 paper (same module code as yours) answered in full, with examples you can reuse, plus outline answers for two older ITE 3603 papers (December 2019 and September 2020) whose overlapping topics still matter.</p><div class="meta"><span class="chip">ITE3752</span><span class="chip">📄 HCI 2020 (ITE 3752)</span><span class="chip">📄 HCI December 2019 (ITE 3603)</span><span class="chip">📄 HCI September 2020 (ITE 3603)</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What the exam looks like and what to focus on"><span class="num">1</span>What the exam looks like and what to focus on</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>HCI தேர்வில் எழுதுவது எப்படி?</h3><p>Definition மட்டும் அல்லாமல் scenario-விற்கு theory-ஐப் பொருத்த வேண்டும். பயனர் யார், goal என்ன, சிக்கல் என்ன, design அதை எப்படிச் சரிசெய்கிறது என்று எழுதினால் விளக்கம் உறுதியானதாகும்.</p></div><div class="section-english" id="en-s1" lang="en"><div class="call key"><div class="ct">Format</div><ul>
 <li><strong>3 hours, 100 marks</strong>, closed book.</li>
 <li><strong>4 questions × 25 marks</strong>, answer <strong>all</strong> of them.</li>
 <li>It's <strong>all essay-style</strong>: define the term, explain it, and <strong>illustrate with an example</strong>.</li>
@@ -243,7 +248,7 @@ font font{background:none!important;box-shadow:none!important}
 <td>11–13</td>
 </tr>
 </tbody>
-</table><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="ITE 3752 — Question 1: User-centred design (25 marks)"><span class="num">2</span>ITE 3752 — Question 1: User-centred design (25 marks)</h2><div class="call example"><div class="ct">(a) Why UCD matters [4]</div><p>UCD puts <strong>users, their tasks and their context</strong> at the centre of every design decision, and involves them <strong>throughout</strong> the life cycle.</p>
+</table></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="ITE 3752 — Question 1: User-centred design (25 marks)"><span class="num">2</span>ITE 3752 — Question 1: User-centred design (25 marks)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>UCD வினா</h3><p>பயனர் characteristics மற்றும் சூழலை வைத்து design choices விளக்குங்கள். முதியவர் என்றால் அனைவரும் ஒரே மாதிரி என்று ஊகிக்காமல், பார்வை, அனுபவம், தேவையைச் சோதிக்க வேண்டும். ISO principles-ஐ எடுத்துக்காட்டுடன் இணைக்குங்கள்.</p></div><div class="section-english" id="en-s2" lang="en"><div class="call example"><div class="ct">(a) Why UCD matters [4]</div><p>UCD puts <strong>users, their tasks and their context</strong> at the centre of every design decision, and involves them <strong>throughout</strong> the life cycle.</p>
 <ul>
 <li>It builds systems people <strong>actually want and can use</strong>, which raises <strong>usability and satisfaction</strong>.</li>
 <li>It cuts <strong>errors, training and support costs</strong>.</li>
@@ -301,7 +306,7 @@ font font{background:none!important;box-shadow:none!important}
 <td>Ethics, workload balance, wider impact</td>
 </tr>
 </tbody>
-</table></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="ITE 3752 — Question 2: Norman&#x27;s model (25 marks)"><span class="num">3</span>ITE 3752 — Question 2: Norman's model (25 marks)</h2><div class="call example"><div class="ct">(a) The execution and evaluation loop, with an example [12]</div><p><strong>Example: setting an alarm for 6:00 am on a phone.</strong></p>
+</table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="ITE 3752 — Question 2: Norman&#x27;s model (25 marks)"><span class="num">3</span>ITE 3752 — Question 2: Norman's model (25 marks)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Norman model வினா</h3><p>கொடுத்த வேலையை ஏழு படிகளாகக் காட்டுங்கள். “எப்படி செய்கிறேன்?” execution பக்கம்; “என்ன நடந்தது?” evaluation பக்கம். ஒவ்வொரு gulf-க்கும் scenario-வில் உள்ள ஒரு பிரச்சினையும் தீர்வும் எழுதுங்கள்.</p></div><div class="section-english" id="en-s3" lang="en"><div class="call example"><div class="ct">(a) The execution and evaluation loop, with an example [12]</div><p><strong>Example: setting an alarm for 6:00 am on a phone.</strong></p>
 <table>
 <thead>
 <tr>
@@ -386,7 +391,7 @@ font font{background:none!important;box-shadow:none!important}
 <li>Give <strong>informative feedback</strong></li>
 <li>Provide <strong>help</strong> and sensible <strong>defaults</strong></li>
 <li>Show a <strong>preview</strong> of the result before it's committed</li>
-</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)"><span class="num">4</span>ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)</h2><div class="call example"><div class="ct">(a) Goals vs tasks [6]</div><ul>
+</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)"><span class="num">4</span>ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>இலக்கிலிருந்து சிறு வேலைகள் வரை</h3><p>Goal என்பது அடைய வேண்டியது; task என்பது அதைச் செய்யும் வேலை. HTA-இல் subgoals உடன் order மற்றும் conditions-ஐ plan-ஆக எழுத வேண்டும். Interface buttons பட்டியல் மட்டும் task analysis அல்ல.</p></div><div class="section-english" id="en-s4" lang="en"><div class="call example"><div class="ct">(a) Goals vs tasks [6]</div><ul>
 <li>A <strong>goal</strong> is the <strong>end state</strong> the user wants to reach: the <em>what</em>. <em>Example:</em> "Have the report in the Projects folder."</li>
 <li>A <strong>task</strong> is the <strong>structured set of activities</strong> (actions) needed to reach the goal: the <em>how</em>. <em>Example:</em> "Open File Explorer, select the file, cut, open the destination, paste."</li>
 </ul>
@@ -424,7 +429,7 @@ font font{background:none!important;box-shadow:none!important}
 <li>Write the <strong>plans</strong> beside each parent box, e.g. "Plan 3: if cut/paste, 3.1 else 3.2".</li>
 <li><strong>Notation:</strong> number every box. Mark <strong>leaf tasks</strong> (no further breakdown) with a line under the box. Read the diagram top to bottom, left to right.</li>
 </ul>
-<p>See the Week 10 HTA diagrams for the layout.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)"><span class="num">5</span>ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)</h2><div class="call example"><div class="ct">(a) Bias in needfinding [3]</div><p>A <strong>bias</strong> is an <strong>attachment to a particular idea</strong>: a preconception or preference that <strong>distorts the data we collect</strong> about users, so we "find" what we expected instead of what users really need.</p></div>
+<p>See the Week 10 HTA diagrams for the layout.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)"><span class="num">5</span>ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>Needfinding மற்றும் Life cycle</h3><p>Observation, interview போன்றவற்றைத் தேர்வுசெய்த காரணம் சொல்லுங்கள். கிடைத்த தேவையிலிருந்து prototype, user evaluation, திருத்தம் என்ற தொடரைக் காட்டுங்கள். Bias-ஐ எப்படிக் குறைப்பீர்கள் என்பதையும் சேருங்கள்.</p></div><div class="section-english" id="en-s5" lang="en"><div class="call example"><div class="ct">(a) Bias in needfinding [3]</div><p>A <strong>bias</strong> is an <strong>attachment to a particular idea</strong>: a preconception or preference that <strong>distorts the data we collect</strong> about users, so we "find" what we expected instead of what users really need.</p></div>
 <div class="call example"><div class="ct">(b) The five types of bias [10]</div><table>
 <thead>
 <tr>
@@ -466,7 +471,7 @@ font font{background:none!important;box-shadow:none!important}
 <li><strong>(ii) Prototyping:</strong> make ideas <strong>tangible and testable</strong>, from paper and wireframes up to interactive high-fidelity versions. It's cheap to change, lets users react to something real, and reveals problems early.</li>
 <li><strong>(iii) Evaluation:</strong> measure <strong>usability with real users</strong>. Early on it's qualitative (preferences); in the middle it checks usability (learnability, workload); late on it's quantitative (time, errors). The findings feed the <strong>next iteration</strong>.</li>
 </ul>
-<p><strong>Together:</strong> needfinding → alternatives → prototypes → evaluation, <strong>repeated</strong>. Each cycle closes the gap between the design and users' needs, so the interface is both <strong>usable</strong> and <strong>actually used</strong>.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Older ITE 3603 papers — outline answers"><span class="num">6</span>Older ITE 3603 papers — outline answers</h2><div class="call example"><div class="ct">Dec 2019 Q1: Usability evaluation</div><p><strong>a) Points to consider when gathering usability data:</strong></p>
+<p><strong>Together:</strong> needfinding → alternatives → prototypes → evaluation, <strong>repeated</strong>. Each cycle closes the gap between the design and users' needs, so the interface is both <strong>usable</strong> and <strong>actually used</strong>.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Older ITE 3603 papers — outline answers"><span class="num">6</span>Older ITE 3603 papers — outline answers</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>பழைய Syllabus வினாக்கள்</h3><p>பழைய module-இன் சில தலைப்புகள் தற்போதைய பாடத்துடன் முழுவதும் பொருந்தாமல் இருக்கலாம். முதலில் தற்போதைய lecture topics, பிறகு supplementary topics. பழைய paper-இன் answer format இன்றும் அப்படியே வரும் என்று உறுதி செய்ய வேண்டாம்.</p></div><div class="section-english" id="en-s6" lang="en"><div class="call example"><div class="ct">Dec 2019 Q1: Usability evaluation</div><p><strong>a) Points to consider when gathering usability data:</strong></p>
 <ul>
 <li>Clear <strong>goals and measures</strong> (effectiveness, efficiency, satisfaction)</li>
 <li><strong>Representative users</strong> and tasks, and a realistic context</li>
@@ -661,7 +666,7 @@ font font{background:none!important;box-shadow:none!important}
 <li><strong>Readable text and high contrast</strong>, with feedback for every touch</li>
 </ol>
 <p>Also: design for one-handed use and interruptions.</p>
-<p><strong>Four early design techniques:</strong> brainstorming · personas · scenarios and storyboards · paper prototyping (also card sorting).</p></div><button class="done-btn"></button></section></main></div>
+<p><strong>Four early design techniques:</strong> brainstorming · personas · scenarios and storyboards · paper prototyping (also card sorting).</p></div></div><button class="done-btn"></button></section></main></div>
 <script>(function(){
   var KEY = document.body.getAttribute('data-key');
   function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
@@ -700,7 +705,7 @@ font font{background:none!important;box-shadow:none!important}
     var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
     var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
     a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
-    a.onclick = function(){ toc.classList.remove('open'); };
+    a.onclick = function(){ var english=h.closest('.section-english'); if(english && english.hidden){ var toggle=h.closest('section').querySelector('.native-toggle'); if(toggle) toggle.click(); } toc.classList.remove('open'); };
   });
   var tbtn = document.getElementById('tocbtn');
   if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
@@ -729,7 +734,7 @@ font font{background:none!important;box-shadow:none!important}
   var bar = document.querySelector('.progress');
   function spy(){
     var y = window.scrollY + 90, cur = null;
-    heads.forEach(function(h){ if (h.offsetTop <= y) cur = h; });
+    heads.forEach(function(h){ if (h.getClientRects().length && h.offsetTop <= y) cur = h; });
     links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
     var max = document.documentElement.scrollHeight - window.innerHeight;
     if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
@@ -787,39 +792,21 @@ font font{background:none!important;box-shadow:none!important}
     document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
     e.currentTime = t; e.play();
   });
-  // Independent Tamil reading panels. Keep the original DOM and tool state intact.
+  // Native, offline Tamil explanations. Each section keeps its own language.
   (function(){
     try { localStorage.removeItem('sg-lang'); } catch(e){}
     ['',location.hostname,'.'+location.hostname].forEach(function(d){
       document.cookie='googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT'+(d?';domain='+d:'');
     });
-    document.querySelectorAll('section.card').forEach(function(section,index){
-      var heading=section.querySelector('h2');
-      if(!heading || section.querySelector('.quiz')) return;
-      var button=document.createElement('button'); button.type='button'; button.className='section-tamil';
-      button.textContent='தமிழில் படிக்க'; button.setAttribute('aria-expanded','false');
-      var panel=document.createElement('div'); panel.className='tamil-panel'; panel.hidden=true;
-      panel.id='tamil-section-'+index; button.setAttribute('aria-controls',panel.id);
-      var note=document.createElement('p'); note.lang='ta';
-      note.textContent='இந்தப் பகுதியை மட்டும் தமிழில் படிக்கலாம். இது தானியங்கி மொழிபெயர்ப்பு. முக்கியமான English சொற்களை மூலப் பகுதியில் ஒப்பிட்டுப் பாருங்கள். படித்த பிறகு, “இதன் முக்கிய கருத்து என்ன?” என்று உங்கள் சொந்த வார்த்தைகளில் சொல்லிப் பாருங்கள்.';
-      panel.appendChild(note);
-      heading.insertAdjacentElement('afterend',button); button.insertAdjacentElement('afterend',panel);
+    document.querySelectorAll('.native-toggle').forEach(function(button){
+      var section=button.closest('section'), tamil=section.querySelector('.tamil-native'), english=section.querySelector('.section-english');
+      if(!tamil || !english) return;
       button.onclick=function(){
-        var open=panel.hidden; panel.hidden=!open; button.setAttribute('aria-expanded',String(open));
-        button.textContent=open?'தமிழை மறைக்க · English':'தமிழில் படிக்க';
-        if(!open || panel.querySelector('iframe')) return;
-        if(!navigator.onLine){ note.textContent='தமிழ் மொழிபெயர்ப்பைப் பெற இணைய இணைப்பு தேவை. இணையம் வந்ததும் இந்தப் பொத்தானை மீண்டும் அழுத்துங்கள்.'; return; }
-        var copy=section.cloneNode(true);
-        copy.querySelectorAll('script,iframe,video,button,input,select,textarea,.section-tamil,.tamil-panel,.done-btn,svg').forEach(function(n){n.remove();});
-        copy.querySelectorAll('[id]').forEach(function(n){n.removeAttribute('id');});
-        copy.querySelectorAll('*').forEach(function(n){Array.from(n.attributes).forEach(function(a){if(/^on/i.test(a.name))n.removeAttribute(a.name);});});
-        copy.querySelectorAll('pre,code,.formula,.ts').forEach(function(n){n.classList.add('notranslate');});
-        var frame=document.createElement('iframe'); frame.title='Tamil reading: '+heading.textContent; frame.className='tamil-reader';
-        // A separate document prevents Google Translate from changing other sections.
-        var init="function initTamil(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'ta',autoDisplay:false},'translator');var n=0,t=setInterval(function(){var c=document.querySelector('.goog-te-combo');if(c&&c.options.length>1){c.value='ta';c.dispatchEvent(new Event('change'));clearInterval(t);}if(++n>75)clearInterval(t);},200);}";
-        frame.srcdoc='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:18px/1.85 system-ui,sans-serif;padding:12px;color:#182431;background:#fff;margin:0}table{border-collapse:collapse;width:100%;display:block;overflow:auto}td,th{border:1px solid #bbb;padding:8px}img{max-width:100%}pre{white-space:pre-wrap}#translator{margin-bottom:12px}h2{font-size:1.35em}</style><body><div id="translator"></div><p lang="ta" class="notranslate">தமிழ் வர சில வினாடிகள் ஆகலாம். மொழிபெயர்ப்பு வரவில்லை என்றால் மேலே Tamil என்பதைத் தேர்வு செய்யுங்கள்.</p>'+copy.innerHTML+'<script>'+init+'<\/script><script src="https://translate.google.com/translate_a/element.js?cb=initTamil"><\/script></body></html>';
-        frame.srcdoc=frame.srcdoc.replace(/<\\\/script>/g,'<'+'/script>');
-        panel.appendChild(frame);
+        var showTamil=tamil.hidden;
+        tamil.hidden=!showTamil; english.hidden=showTamil;
+        button.setAttribute('aria-expanded',String(showTamil));
+        button.textContent=showTamil?'English-இல் படிக்க':'தமிழில் புரிந்துகொள்ள';
+        section.classList.toggle('show-tamil',showTamil);
       };
     });
   })();

@@ -19,12 +19,12 @@
 - Rule extraction
 = Outliers can be more interesting than the common cases.
 
-? Methods based on Euclidean or Manhattan distance tend to find clusters that are:
-+ Spherical, with similar size and density
+? Ordinary k-means tends to work best with clusters that are:
++ Compact, roughly spherical, and of comparable scale
 - Any arbitrary shape
 - Always one cluster
 - Hierarchical
-= That's why "discovery of clusters with arbitrary shape" is a requirement.
+= This is a limitation of the centroid-based method, not a restriction on every algorithm using a distance metric.
 
 ? Clustering households to place new ATMs while respecting rivers and highways illustrates:
 + Constraint-based clustering
@@ -69,11 +69,11 @@
 = Density-based methods find arbitrary shapes and filter out noise.
 
 ? The main advantage of grid-based methods is:
-+ Fast processing that depends on the number of cells, not the number of objects
++ After grid construction, clustering operates on cells, which can make it fast
 - They find the exact global optimum
 - They need no parameters at all
 - They can undo merges
-= STING is a typical grid-based method.
+= STING is a typical example. Reading data and constructing the grid still depends on the input size.
 
 ? Which is a model-based clustering algorithm?
 + EM (expectation-maximisation)

@@ -6,11 +6,11 @@
 = These four characteristics are commonly examined.
 
 ? "Nonvolatile" means that the data warehouse:
-+ Is physically separate and needs no transaction processing, recovery or concurrency control; data is loaded and read
++ Is maintained mainly by controlled loads/refreshes rather than ordinary operational row updates
 - Loses data when the power fails
 - Is updated every second
 - Stores only current data
-= Operational updates don't happen in the warehouse.
+= Nonvolatile does not mean no backups, recovery or concurrency safeguards; safe loads and analytical reads still matter.
 
 ? "Time-variant" means that the warehouse:
 + Keeps a long history (5–10 years), and every key structure has a time element

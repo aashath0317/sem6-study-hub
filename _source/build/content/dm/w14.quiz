@@ -81,11 +81,11 @@
 - Single linkage
 - k-means
 - Grid clustering
-= DIANA in the lesson uses complete linkage.
+= Complete linkage is a cluster-distance rule. DIANA is a divisive algorithm with its own splitting procedure, not a synonym for complete linkage.
 
-? Why are the mean or average cluster distances often preferred?
-+ They are a compromise that is less sensitive to outliers than d_min or d_max
+? Which statement about mean or average cluster distances is accurate?
++ They offer different trade-offs, but do not guarantee immunity to outliers
 - They are always the smallest distance
 - They need no computation
 - They only work for one cluster
-= d_min and d_max are extremes and overly sensitive to noise.
+= Single linkage can chain through noise, complete linkage depends on extremes, and mean/average measures can also be affected by outliers.

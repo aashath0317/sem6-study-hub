@@ -5,12 +5,12 @@
 - Deleting old data
 = Simple query processing is not data mining.
 
-? Who coined the term "Big Data", and when?
-+ Roger Mougalas (O'Reilly Media), 2005
-- Bill Inmon, 1990
-- Jiawei Han, 2001
-- Tim Berners-Lee, 1989
-= Mougalas coined it in 2005.
+? What is the best caution when using the course history of the term "Big Data"?
++ A 2005 attribution is not proof of earliest use; the phrase was documented earlier
+- No one used the phrase before 2005
+- Big data means only large spreadsheets
+- The five Vs are all about database size
+= NASA documents the phrase in a 1997 visualization paper; distinguish a course attribution from an earliest-use claim.
 
 ? The original three V's of big data are:
 + Volume, Velocity, Variety

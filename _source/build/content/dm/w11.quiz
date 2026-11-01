@@ -54,7 +54,7 @@
 - The maximum Gini index
 - The most values
 - The highest support
-= An attribute with v values has 2ᵛ − 2 possible binary subsets.
+= There are 2ᵛ − 2 nonempty proper subsets, or (2ᵛ − 2)/2 distinct unordered binary splits.
 
 ? Which is **not** a criterion for comparing classifiers?
 - Accuracy

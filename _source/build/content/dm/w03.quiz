@@ -12,7 +12,7 @@
 - 95–100%
 = Preprocessing dominates the time spent.
 
-? Which missing-value method is considered the **most popular**, because it uses the most information?
+? Which missing-value method predicts the missing entry using information from other attributes?
 - Ignore the tuple
 - Use a global constant
 - Use the attribute mean
@@ -42,12 +42,12 @@
 # 1.225 ~0.001
 = (73,600 − 54,000) ÷ 16,000 = 1.225.
 
-? When is z-score normalisation better than min-max?
-+ When the min and max are unknown, or there are outliers
-- When the data is already in [0, 1]
-- When the attribute is nominal
-- Never
-= Min-max is distorted by outliers and needs known bounds.
+? Which statement about z-score normalisation is accurate?
++ It uses mean and standard deviation, and is still sensitive to outliers
+- It guarantees a [0,1] output range
+- It removes all outliers
+- It is defined when the standard deviation is zero
+= Fit scaling statistics on training data; outliers can affect both mean and standard deviation.
 
 ? A correlation coefficient near +1 between two attributes in data integration suggests:
 + Strong positive correlation: one may be redundant

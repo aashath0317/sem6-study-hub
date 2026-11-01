@@ -42,7 +42,7 @@
 - Level-wise candidate generate-and-test method
 - Clustering algorithm
 - Decision tree method
-= It's typically about an order of magnitude faster than Apriori.
+= FP-growth avoids explicit candidate generation, but the speedup depends on data and implementation.
 
 ? If the FP-tree doesn't fit in memory, use:
 + Projected databases (partition the data)

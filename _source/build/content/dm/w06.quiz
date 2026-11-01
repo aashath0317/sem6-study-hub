@@ -27,13 +27,13 @@
 = Data marts usually use star (preferred) or snowflake schemas.
 
 ? A data mart is:
-+ A departmental subset of the warehouse, focused on selected subjects
++ A department/process-focused analytical store, often a warehouse subset but possibly independent
 - A copy of the OLTP database
 - A data cleaning tool
 - A type of index
 = The warehouse covers the whole enterprise and many subjects.
 
-? Why isn't the ER model used for data warehouses?
+? Why is a multidimensional schema commonly preferred for analytical warehouse queries?
 + ER models suit OLTP; warehouses need a concise, subject-oriented, multidimensional schema
 - ER models can't store numbers
 - ER models are too new

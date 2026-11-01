@@ -14,7 +14,7 @@ sources: HCI 2020 (ITE 3752); HCI December 2019 (ITE 3603); HCI September 2020 (
 
 :::warn Two different syllabuses
 - **ITE 3752** is **your module**. Its paper tests exactly the course topics: UCD and ISO, stakeholders, Norman's model and the gulfs, slips and mistakes, goals and tasks, HTA, needfinding biases, and the design life cycle.
-- **ITE 3603** was the **older module**. It also covered groupware and ubiquitous computing, which **aren't in your weekly notes**. Its usability-evaluation, memory, attention and mobile-design questions still overlap with your course.
+- **ITE 3603** was the **older module**. It also covered **more extensive groupware and ubiquitous-computing questions**; the weekly notes introduce these ideas, but do not cover every older-module detail. Its usability-evaluation, memory, attention and mobile-design questions still overlap with your course.
 :::
 
 | Topic (ITE 3752) | Week to revise |
@@ -245,7 +245,7 @@ A **bias** is an **attachment to a particular idea**: a preconception or prefere
 **b) Memory:**
 
 - **Sensory memory** is very brief.
-- **Short-term memory** holds about **7 ± 2** chunks, so **chunk** information, use **recognition rather than recall** (menus, icons), and limit how much users must remember between screens.
+- **Short-term memory** has limited capacity (Miller's historical **7 ± 2 chunks** is a course reference, not a universal fixed limit), so **chunk** information, use **recognition rather than recall** (menus, icons), and limit how much users must remember between screens.
 - **Long-term memory** is helped by **consistency**, meaningful labels and familiar metaphors.
 
 **c) Problems learning new interfaces:**

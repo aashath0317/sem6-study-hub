@@ -132,9 +132,21 @@
     document.querySelectorAll('.native-toggle').forEach(function(button){
       var section=button.closest('section'), tamil=section.querySelector('.tamil-native'), english=section.querySelector('.section-english');
       if(!tamil || !english) return;
+      var reference=section.querySelector('.native-reference');
+      if(reference) reference.onclick=function(){
+        var showReference=english.hidden;
+        english.hidden=!showReference;
+        english.classList.toggle('reference-open',showReference);
+        reference.setAttribute('aria-expanded',String(showReference));
+        reference.textContent=showReference?'English விவரத்தை மறைக்க':'முழு விவரம், கணக்கு, படம், கருவிகள் · English';
+        window.dispatchEvent(new Event('resize'));
+      };
       button.onclick=function(){
         var showTamil=tamil.hidden;
         tamil.hidden=!showTamil; english.hidden=showTamil;
+        english.classList.remove('reference-open');
+        var ref=section.querySelector('.native-reference');
+        if(ref){ ref.setAttribute('aria-expanded','false'); ref.textContent='முழு விவரம், கணக்கு, படம், கருவிகள் · English'; }
         button.setAttribute('aria-expanded',String(showTamil));
         button.textContent=showTamil?'English-இல் படிக்க':'தமிழில் புரிந்துகொள்ள';
         section.classList.toggle('show-tamil',showTamil);

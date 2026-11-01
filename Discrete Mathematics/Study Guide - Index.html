@@ -206,6 +206,14 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .ta-recap-item{border-bottom:1px solid var(--line);padding:4px 0 10px;margin:0 0 14px}
 .ta-recap-item h4{line-height:1.8;margin:6px 0}
 @media print{.section-language{display:none}}
+
+.tamil-details{border-top:1px solid var(--line);padding-top:14px;margin-top:18px}
+.ta-detail-label{font-weight:700;color:var(--accent-ink);font-size:.93em}
+.tamil-native li{line-height:2;margin-bottom:8px}
+.native-reference{font:inherit;font-size:14px;line-height:1.8;padding:8px 12px;border:1px solid var(--accent);border-radius:10px;background:var(--accent-soft);color:var(--accent-ink);cursor:pointer;white-space:normal;text-align:left;margin:8px 0 10px}
+.native-reference:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.section-english.reference-open{border-top:2px solid var(--accent);padding-top:18px;margin-top:16px}
+.section-english.reference-open::before{content:'முழுக் குறிப்பு · English';display:block;color:var(--accent-ink);font-weight:700;margin-bottom:12px}
 </style></head>
 <body data-key="">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../SEM 6 Study Hub.html">SEM 6</a> › Discrete Mathematics</div>
@@ -345,9 +353,21 @@ mark{background:#ffe680;color:#000;border-radius:3px}
     document.querySelectorAll('.native-toggle').forEach(function(button){
       var section=button.closest('section'), tamil=section.querySelector('.tamil-native'), english=section.querySelector('.section-english');
       if(!tamil || !english) return;
+      var reference=section.querySelector('.native-reference');
+      if(reference) reference.onclick=function(){
+        var showReference=english.hidden;
+        english.hidden=!showReference;
+        english.classList.toggle('reference-open',showReference);
+        reference.setAttribute('aria-expanded',String(showReference));
+        reference.textContent=showReference?'English விவரத்தை மறைக்க':'முழு விவரம், கணக்கு, படம், கருவிகள் · English';
+        window.dispatchEvent(new Event('resize'));
+      };
       button.onclick=function(){
         var showTamil=tamil.hidden;
         tamil.hidden=!showTamil; english.hidden=showTamil;
+        english.classList.remove('reference-open');
+        var ref=section.querySelector('.native-reference');
+        if(ref){ ref.setAttribute('aria-expanded','false'); ref.textContent='முழு விவரம், கணக்கு, படம், கருவிகள் · English'; }
         button.setAttribute('aria-expanded',String(showTamil));
         button.textContent=showTamil?'English-இல் படிக்க':'தமிழில் புரிந்துகொள்ள';
         section.classList.toggle('show-tamil',showTamil);

@@ -200,11 +200,14 @@ def native_sections(body, key):
             tamil = "".join('<div class="ta-recap-item"><h4>' + html.escape(item["title"]) + '</h4>' + md(item["text"]) + '</div>' for item in entry["items"])
         else:
             tamil = md(entry["text"])
+            if entry.get("details"):
+                tamil += '<div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p>' + md(entry["details"]) + '</div>'
         toggle = ('<div class="section-language"><button type="button" class="native-toggle" '
                   f'aria-controls="{panel_id} {english_id}" aria-expanded="false" '
                   'lang="ta">தமிழில் புரிந்துகொள்ள</button></div>')
         panel = (f'<div class="tamil-native" id="{panel_id}" lang="ta" hidden>'
-                 f'<h3>{html.escape(entry["title"])}</h3>' + tamil + '</div>')
+                 f'<h3>{html.escape(entry["title"])}</h3>' + tamil +
+                 f'<button type="button" class="native-reference" aria-controls="{english_id}" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div>')
         done = '<button class="done-btn"></button>'
         has_done = done in english
         english = english.replace(done, "")

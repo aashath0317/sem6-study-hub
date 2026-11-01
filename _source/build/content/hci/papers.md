@@ -42,8 +42,8 @@ Specification-driven design **presumes** users' needs. UCD **discovers** them.
 There's no "average user". Designers must consider:
 
 - **Role:** e.g. an admin needs different screens from a cashier.
-- **Age:** older users need larger fonts and memory aids.
-- **Gender:** preferences such as colour and theme.
+- **Age:** investigate actual visual, motor and memory needs; readable text and aids may help, without assuming all older users are alike.
+- **Gender:** investigate actual preferences and needs without assuming fixed colour/theme preferences.
 - **Education level:** plain language vs technical terms.
 - **Cultural background:** colour meanings, reading direction, metaphors.
 - **Interests and motivation.**

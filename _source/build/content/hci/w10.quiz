@@ -33,12 +33,12 @@
 - Never written down
 = Number the nodes 1, 1.1, 1.2…
 
-? Reading an HTA diagram follows the order:
+? In the lesson HTA example, which reading pattern is used while following its plans?
 + Top to bottom, left to right, finishing sub-branches first
 - Bottom to top
 - Right to left
 - At random
-= This matches the plans.
+= The written plans determine sequence and conditions; diagram position alone is not a general HTA execution rule.
 
 ? Reusing standard sub-tasks like "checkout" via PayPal or Stripe illustrates HTA's:
 + Modularity

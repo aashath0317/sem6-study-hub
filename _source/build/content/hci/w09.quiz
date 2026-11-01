@@ -39,7 +39,7 @@
 = Far and small means slow; near and big means fast.
 
 ? Why are screen edges and corners (Start menu, Apple menu) easy targets?
-+ The cursor stops at the edge, so they act as if they had infinite width
++ The cursor is stopped at a screen edge, reducing overshoot in that direction
 - They're brighter
 - They're closer to the centre
 - They use keyboard shortcuts

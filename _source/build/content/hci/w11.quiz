@@ -47,12 +47,12 @@
 - Not prototypes
 = High-fidelity prototypes are clickable and realistic.
 
-? Fixing a usability problem late in development can cost up to:
-+ About 100 times more than fixing it early
-- The same
-- Less
-- Twice as much at most
-= That's why we iterate early.
+? Why can early usability evaluation save money?
++ It can expose design problems before implementation makes changes expensive
+- Every project has exactly the same 100-fold cost increase
+- It removes all need for later testing
+- Prototypes guarantee error-free software
+= Early iteration may reduce rework; the actual cost difference depends on the project.
 
 ? In the Moodle example, the photocopy shop that uses reports from the system is a:
 - Primary stakeholder

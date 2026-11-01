@@ -66,21 +66,21 @@
 - Only users' opinions about patterns
 - A model with no users
 - Guesswork
-= Do a qualitative evaluation first.
+= The lecture recommends qualitative feedback to inform experiment design. Empirical evidence more broadly can also include qualitative observation.
 
 ? Predictive evaluation is different because it:
 + Uses a model of the human instead of real users
 - Always uses hundreds of users
 - Is fast and cheap
 - Is the most common in user-centred design
-= It's slow and expensive, so it's rare in UCD.
+= Modelling effort varies. It can compare designs before implementation, but does not replace real-user evidence.
 
-? Why is predictive evaluation not widely used in user-centred design?
-+ UCD needs real user feedback, not predictions, and predictive evaluation is slow and expensive
-- It's illegal
-- It needs too many users
-- It only works on paper prototypes
-= Qualitative and empirical evaluations are common in UCD.
+? Why should predictive evaluation be complemented by real-user studies?
++ A model estimate can miss actual users' errors, learning, context and satisfaction
+- Models are illegal
+- Models always need hundreds of test users
+- Real-user feedback cannot inform design
+= Use model predictions as one source of evidence; verify relevant assumptions with users.
 
 ? An assessment that gives the same result each time you repeat it is:
 + Reliable

@@ -3,7 +3,7 @@
 - Guidelines
 + Standards
 - Heuristics
-= Standards are binding, like ISO 9241 and WCAG 2.1. Principles are general but advisory.
+= In the course authority/generality diagram, standards have the strongest authority. Their actual obligation depends on applicable policy, contract or regulation.
 
 ? Apple's Human Interface Guidelines and Google's Material Design are examples of:
 - Principles
@@ -17,7 +17,7 @@
 - Guidelines
 + Standards
 - Mental models
-= Standards are specific and enforced.
+= Standards specify requirements; publication alone does not automatically make them law.
 
 ? "Recognition rather than recall" comes from:
 + Nielsen's 10 heuristics

@@ -26,12 +26,12 @@
 - Affordance
 = Three chunks are easier to hold than ten digits.
 
-? Sensory memory holds information for:
-+ Less than about 1 second
-- About 30 seconds
-- Days
-- A lifetime
-= Attention moves information into short-term memory.
+? Which statement about sensory memory is most accurate?
++ It is brief, but duration differs by modality and task
+- Every sensory trace lasts exactly one second
+- It permanently stores all incoming information
+- Auditory and visual traces always have identical durations
+= Iconic visual traces are very brief; auditory traces can last longer. Attention supports use in working memory.
 
 ? Remembering your last birthday party uses:
 + Episodic memory
@@ -45,7 +45,7 @@
 - Boredom
 - Better performance
 - Nothing
-= Underload (around 30%) causes boredom and lapses of attention.
+= Low engagement may cause boredom and attention lapses. Demo percentages are illustrations, not measured universal thresholds.
 
 ? Why is sound good for alerts but sometimes a problem?
 + It's non-directional, so it gets attention anywhere, but it can annoy others
@@ -54,12 +54,12 @@
 - It's directional
 = Vision is directional; touch is private.
 
-? On screen, critical information should usually be placed:
-+ In the centre (alerts often top-right)
-- In the bottom-left corner only
-- Off-screen
+? How should critical interface information be presented?
++ With clear visual priority in a task-appropriate location, supported by readable contrast and cues
+- Always in one fixed corner on every device
+- Off-screen until an error occurs
 - In very small text
-= The design follows from how vision works.
+= Foveal/peripheral differences matter, but a fixed corner rule is not a substitute for task and context analysis.
 
 ? About what proportion of men are colour-blind (red–green)?
 + 1 in 12

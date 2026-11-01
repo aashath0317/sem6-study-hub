@@ -123,4 +123,38 @@
     document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
     e.currentTime = t; e.play();
   });
+  // Tamil translation (Google Translate), floating toggle
+  (function(){
+    var ta = load('sg-lang', 'en') === 'ta';
+    var b = document.createElement('button');
+    b.id = 'langbtn'; b.setAttribute('translate', 'no'); b.className = 'notranslate';
+    b.title = ta ? 'Switch back to English' : 'Translate this page to Tamil';
+    b.textContent = ta ? 'English' : 'தமிழ்';
+    document.body.appendChild(b);
+    document.querySelectorAll('pre, code, .formula, .ts, svg, .vdlink').forEach(function(e){ e.setAttribute('translate', 'no'); e.classList.add('notranslate'); });
+    function cookie(v){
+      var h = location.hostname, exp = v ? '' : ';expires=Thu, 01 Jan 1970 00:00:00 GMT';
+      document.cookie = 'googtrans=' + v + ';path=/' + exp;
+      if (h) document.cookie = 'googtrans=' + v + ';path=/;domain=' + h + exp;
+    }
+    b.onclick = function(){
+      if (ta){ save('sg-lang', 'en'); cookie(''); location.reload(); return; }
+      if (!navigator.onLine){ alert('Tamil translation needs an internet connection.'); return; }
+      save('sg-lang', 'ta'); cookie('/en/ta'); location.reload();
+    };
+    if (!ta || !navigator.onLine) return;
+    cookie('/en/ta');
+    var box = document.createElement('div'); box.id = 'gte'; box.style.display = 'none'; document.body.appendChild(box);
+    window.sgTranslateInit = function(){
+      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ta', autoDisplay: false}, 'gte');
+      var tries = 0, t = setInterval(function(){
+        var c = document.querySelector('.goog-te-combo');
+        if (c && c.options.length > 1){ clearInterval(t); if (c.value !== 'ta'){ c.value = 'ta'; c.dispatchEvent(new Event('change')); } }
+        else if (++tries > 50) clearInterval(t);
+      }, 200);
+    };
+    var s = document.createElement('script');
+    s.src = 'https://translate.google.com/translate_a/element.js?cb=sgTranslateInit';
+    document.body.appendChild(s);
+  })();
 })();

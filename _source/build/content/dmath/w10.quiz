@@ -10,7 +10,7 @@
 = The degree is the number of fields in each tuple.
 
 ? A **primary key** is:
-+ A field whose value uniquely identifies each tuple
++ A chosen field or minimal combination of fields whose values uniquely identify each tuple
 - Any field with numbers
 - The first column always
 - A field that repeats
@@ -63,7 +63,7 @@
 - Keeping only the first table
 - Deleting duplicate columns only
 - Sorting both tables
-= E.g. joining on Department or Course_code.
+= In the lesson example, match both Department AND Course_code.
 
 ? How many 3-tuples (a, b, c) satisfy 0 < a < b < c < 5 with integer values?
 # 4

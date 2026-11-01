@@ -2144,48 +2144,49 @@
       "heading": "From propositions to predicates",
       "title": "Proposition மற்றும் Predicate",
       "text": "“2 + 1 = 3” உண்மையா என்று உடனே சொல்லலாம்; அது **Proposition**. “x > 3” என்பது x என்ன என்பதைப் பொறுத்தது; அது **Predicate**. Variable-க்கு மதிப்பு கொடுத்த பிறகே truth value முடியும்.",
-      "details": "ஒரு **Proposition**-க்கு true அல்லது false என்ற truth value இருக்க வேண்டும். “கதவை மூடு” என்ற கட்டளை proposition அல்ல. Variable உள்ள expression-இன் domain மற்றும் values fix ஆன பிறகே அது proposition ஆகலாம்.\nP(x): x²>0 என்றால் P(0) பொய்; P(−2) உண்மை. x negative என்ற காரணத்தால் x² negative என்று தவறாகக் கொள்ளாதீர்கள்."
+      "details": "ஒரு **Proposition**-க்கு true அல்லது false என்ற truth value இருக்க வேண்டும். “கதவை மூடு” என்ற கட்டளை proposition அல்ல. Variable உள்ள expression-இன் domain மற்றும் values fix ஆன பிறகே அது proposition ஆகலாம்.\nP(x): x²>0 என்றால் P(0) பொய்; P(−2) உண்மை. x negative என்ற காரணத்தால் x² negative என்று தவறாகக் கொள்ளாதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Proposition** உண்மை அல்லது பொய் என்று தீர்மானிக்கக்கூடிய declarative statement. “2+3=7” பொய்யானாலும் proposition. “x>5” free x இருக்கும்போது predicate/open statement. Variable, predicate, quantifier மூன்றையும் வேறுபடுத்துங்கள்; question/command proposition அல்ல."
     },
     {
       "heading": "Propositional functions",
       "title": "P(x) என்ற குறியீடு",
-      "text": "**P(x)** என்பது x பற்றிய நிபந்தனையின் சுருக்கப் பெயர். P(x): x இரட்டைப்படை என்றால் P(4) உண்மை; P(5) பொய். P(x,y) போன்றவை ஒன்றுக்கு மேற்பட்ட variables-ஐக் கொண்டிருக்கலாம்."
+      "text": "**P(x)** என்பது x பற்றிய நிபந்தனையின் சுருக்கப் பெயர். P(x): x இரட்டைப்படை என்றால் P(4) உண்மை; P(5) பொய். P(x,y) போன்றவை ஒன்றுக்கு மேற்பட்ட variables-ஐக் கொண்டிருக்கலாம்.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nP(x):x>3 என்றால் P(4)=True,P(2)=False. P(x,y,z):x+y=z-க்கு P(3,4,7)=True;P(2,−1,5)=False. **எல்லா free variables-க்கும் values கொடுக்கப்பட்டோ quantifiers-ஆல் bind செய்யப்பட்டோ தான் closed proposition**. P(x,3,z)-இல் x,z இன்னும் free. Domain/U=universe of discourse முன்பே குறிப்பிடவும்."
     },
     {
       "heading": "Compound expressions",
       "title": "Logic இணைப்புகள்",
       "text": "**AND (∧)** இரண்டும் உண்மையாக வேண்டும்; **OR (∨)** குறைந்தது ஒன்று உண்மையாக வேண்டும்; **NOT (¬)** எதிர்மறை. **P→Q** என்பது P உண்மை என்றால் Q உண்மை வேண்டும்; P பொய் என்றால் இதனால் Q பற்றி உறுதி கிடைக்காது.",
-      "details": "**Implication P→Q பொய்யாகும் ஒரே நிலை:** P உண்மை, Q பொய். P பொய் என்ற இரு rows-லும் implication true. **Biconditional P↔Q** இரண்டுக்கும் ஒரே truth value இருக்கும்போது true.\nP→Q-இன் converse Q→P தானாக உண்மை அல்ல. Contrapositive **¬Q→¬P** மட்டும் அதற்கு logically equivalent. ஒரு உதாரணத்தை வைத்து truth table-இன் எல்லா rows-ஐயும் சரிபார்க்க முடியாது."
+      "details": "**Implication P→Q பொய்யாகும் ஒரே நிலை:** P உண்மை, Q பொய். P பொய் என்ற இரு rows-லும் implication true. **Biconditional P↔Q** இரண்டுக்கும் ஒரே truth value இருக்கும்போது true.\nP→Q-இன் converse Q→P தானாக உண்மை அல்ல. Contrapositive **¬Q→¬P** மட்டும் அதற்கு logically equivalent. ஒரு உதாரணத்தை வைத்து truth table-இன் எல்லா rows-ஐயும் சரிபார்க்க முடியாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n¬p உண்மையை மாற்றும்; p∧q இரண்டும் true; p∨q குறைந்தது ஒன்று (inclusive OR); p⇒q **T⇒F மட்டும் false**; p⇔q இரண்டும் ஒரே truth value. F⇒T,F⇒F இரண்டும் true. Implication-ஐ அதன் converse q⇒p அல்லது inverse¬p⇒¬q-உடன் சமமாகக் கருதாதீர்கள்; contrapositive¬q⇒¬p சமம்."
     },
     {
       "heading": "Quantifiers: ∀, ∃, ∃!",
       "title": "அனைத்துமா, சிலவா, ஒன்றே ஒன்றா?",
       "text": "**∀** எல்லோருக்கும்; **∃** குறைந்தது ஒருவருக்கு; **∃!** ஒரே ஒருவருக்கு. “ஒவ்வொரு மாணவருக்கும் ஒரு புத்தகம் உள்ளது” என்றால் எல்லோருக்கும் ஒரே புத்தகம் என்று அர்த்தமில்லை. Quantifier வரிசையும் domain-உம் முக்கியம்.",
-      "details": "**∀x∃y**-இல் ஒவ்வொரு x-க்கும் வேறு y தேர்வு செய்யலாம். **∃y∀x**-இல் ஒரே y எல்லா x-க்கும் வேலை செய்ய வேண்டும். ∀x∃y(x+y=0) integers-இல் y=−x மூலம் உண்மை; ஒரே y எல்லா x-க்கும் முடியாது.\n**∃!x P(x)** = குறைந்தது ஒன்று உள்ளது + அதைவிட வேறு எதுவும் இல்லை. ∃-க்கு ஒரு witness; ∃!-க்கு uniqueness-யும் நிரூபிக்க வேண்டும்."
+      "details": "**∀x∃y**-இல் ஒவ்வொரு x-க்கும் வேறு y தேர்வு செய்யலாம். **∃y∀x**-இல் ஒரே y எல்லா x-க்கும் வேலை செய்ய வேண்டும். ∀x∃y(x+y=0) integers-இல் y=−x மூலம் உண்மை; ஒரே y எல்லா x-க்கும் முடியாது.\n**∃!x P(x)** = குறைந்தது ஒன்று உள்ளது + அதைவிட வேறு எதுவும் இல்லை. ∃-க்கு ஒரு witness; ∃!-க்கு uniqueness-யும் நிரூபிக்க வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n∀ எல்லாவற்றுக்கும்;∃ குறைந்தது ஒன்று;∃! சரியாக ஒன்று. Integers-இல் ∀x(x>0) false (x=−1);positive integers-இல் true. **∀x∃y(x+y=0)** true:y=−x; **∃y∀x(x+y=0)** false:ஒரே y எல்லா x-க்கும் முடியாது. ∃!xP(x) எழுதினால் existence-உம் uniqueness-உம் இரண்டும் காட்டவேண்டும்."
     },
     {
       "heading": "Negating quantified expressions",
       "title": "Negation எப்படிச் செய்வது?",
       "text": "“எல்லாரும் தேர்ச்சி” என்பதன் எதிர்மறை “யாரும் தேர்ச்சி இல்லை” அல்ல; “குறைந்தது ஒருவர் தேர்ச்சி இல்லை”. அதனால் **¬∀x P(x) = ∃x ¬P(x)**. ∃-ஐ மறுத்தால் ∀ ஆகும்.",
-      "details": "**¬∀xP ≡ ∃x¬P**; **¬∃xP ≡ ∀x¬P**. பல quantifiers இருந்தால் ஒவ்வொன்றையும் மாற்றி negation-ஐ உள்ளே கொண்டு செல்லுங்கள்.\n¬[∀x∃y R(x,y)] ≡ **∃x∀y ¬R(x,y)**. “x≤5” என்பதன் negation x>5; x≥5 அல்ல. AND/OR உள்ளே இருந்தால் De Morgan விதியும் சேர வேண்டும்."
+      "details": "**¬∀xP ≡ ∃x¬P**; **¬∃xP ≡ ∀x¬P**. பல quantifiers இருந்தால் ஒவ்வொன்றையும் மாற்றி negation-ஐ உள்ளே கொண்டு செல்லுங்கள்.\n¬[∀x∃y R(x,y)] ≡ **∃x∀y ¬R(x,y)**. “x≤5” என்பதன் negation x>5; x≥5 அல்ல. AND/OR உள்ளே இருந்தால் De Morgan விதியும் சேர வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**¬∀xP≡∃x¬P;¬∃xP≡∀x¬P.** “அனைவரிடமும் computer உண்டு” என்பதன் negation “குறைந்தது ஒருவரிடம் இல்லை”; “யாரிடமும் இல்லை” அல்ல. ¬∀x∃yR≡∃x∀y¬R. x+5>0 negation x+5≤0. Quantifier scope தெளிவாக parentheses-இல் எழுதுங்கள்; பின்புற Q(x)-இல் x free ஆக விடாதீர்கள்."
     },
     {
       "heading": "Translating English into logic",
       "title": "வாக்கியத்தை Logic-ஆக மாற்றுதல்",
       "text": "முதலில் domain, பிறகு predicates, கடைசியில் quantifiers தேர்வு செய்யுங்கள். “எல்லா மாணவர்களும் படிக்கிறார்கள்” என்பது ∀x(Student(x)→Studies(x)). எல்லா மனிதர்களையும் மாணவர்களாகக் கூறும் AND பதிவுடன் இதைக் குழப்பாதீர்கள்.",
-      "details": "**All A are B:** ∀x(A(x)→B(x)). **Some A are B:** ∃x(A(x)∧B(x)). **No A are B:** ∀x(A(x)→¬B(x)). “But” logic-இல் AND.\n“Unless” போன்ற சொல்லுக்கு முதலில் தெளிவான if/then அல்லது OR வடிவம் அமைக்கவும். Domain already students என்றால் Students(x) மீண்டும் தேவையில்லாமல் இருக்கலாம்; assumptions எழுதுங்கள்."
+      "details": "**All A are B:** ∀x(A(x)→B(x)). **Some A are B:** ∃x(A(x)∧B(x)). **No A are B:** ∀x(A(x)→¬B(x)). “But” logic-இல் AND.\n“Unless” போன்ற சொல்லுக்கு முதலில் தெளிவான if/then அல்லது OR வடிவம் அமைக்கவும். Domain already students என்றால் Students(x) மீண்டும் தேவையில்லாமல் இருக்கலாம்; assumptions எழுதுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nU எல்லா மனிதர்களாக இருந்தால் “எல்லா students calculus படித்தனர்”→∀x(Student(x)⇒Calculus(x));U students மட்டும் என்றால்∀xCalculus(x). “சில students”→∃x(Student(x)∧Calculus(x));existential implication தவறான vacuous witnesses தரலாம். “But”∧;“either” inclusive OR என்ற assumption சொல்லவும். “p unless q” பொதுவாக¬q⇒p≡p∨q;உண்மை sentence context பார்க்கவும்."
     },
     {
       "heading": "Introduction to proofs — direct proof",
       "title": "நேரடி நிரூபணம்",
       "text": "கொடுத்த நிபந்தனையை உண்மை என எடுத்துத் தொடங்கி நிரூபிக்க வேண்டிய முடிவிற்கு வருவது **Direct proof**. n odd என்றால் n=2k+1. அப்போது n²=2(2k²+2k)+1 என்பதால் n²-உம் odd.",
-      "details": "a,b consecutive integers எனில் b=a+1; a+b=2a+1 என்பதால் odd. இரண்டு odd integers 2m+1,2n+1 கூட்டினால் **2(m+n+1)** என்பதால் even.\nProof-இல் m,n integers என்று சொல்ல வேண்டும். சில odd numbers-ஐச் சேர்த்து பார்த்தது கூற்றிற்கு ஆதாரம் தரும்; எல்லா odd integers-க்கும் proof ஆகாது."
+      "details": "a,b consecutive integers எனில் b=a+1; a+b=2a+1 என்பதால் odd. இரண்டு odd integers 2m+1,2n+1 கூட்டினால் **2(m+n+1)** என்பதால் even.\nProof-இல் m,n integers என்று சொல்ல வேண்டும். சில odd numbers-ஐச் சேர்த்து பார்த்தது கூற்றிற்கு ஆதாரம் தரும்; எல்லா odd integers-க்கும் proof ஆகாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Direct proof:** hypothesis assume→definition substitute→algebra→conclusion form. Consecutive a,a+1 sum2a+1 odd. Odd n=2k+1→n²=2(2k²+2k)+1 odd. Odd×odd=(2a+1)(2b+1)=2(2ab+a+b)+1. k,a,b integers என்பதைக் கூறுங்கள். இரண்டு numerical examples என்பது universal proof அல்ல; conclusion-ஐ முன்பே assume செய்யக்கூடாது."
     },
     {
       "heading": "Assignment 1: worked answers",
       "title": "Assignment அணுகுமுறை",
       "text": "∀ வினாவை மறுக்க ஒரு counterexample போதும்; ∃ வினாவை நிரூபிக்க ஒரு example போதும். Inverse-க்கு x,y இடங்களை மாற்றித் தீருங்கள். Injective-க்கு வெவ்வேறு inputs ஒரே output தருகிறதா பாருங்கள்.",
-      "details": "Assignment Q1 integers-இல்: (a) y=0 மூலம் true; (b) y=−x மூலம் true; (c) x=y counterexample, false; (d) x=0,y=0 மூலம் true.\nQ2 f(x)=ln(4−2x), x<2 என்றால் **f⁻¹(x)=2−eˣ/2**; domain ℝ, range (−∞,2). y-intercept (0,1.5), x-intercept (ln4,0), horizontal asymptote y=2.\nQ3: x²:ℝ→ℝ neither; x²:ℝ→[0,∞) onto ஆனால் injective அல்ல; x³−x onto ஆனால் −1,0,1 மூன்றுக்கும் output 0 என்பதால் injective அல்ல. ஒவ்வொன்றுக்கும் domain/codomain எழுதுவது முக்கியம்."
+      "details": "Assignment Q1 integers-இல்: (a) y=0 மூலம் true; (b) y=−x மூலம் true; (c) x=y counterexample, false; (d) x=0,y=0 மூலம் true.\nQ2 f(x)=ln(4−2x), x<2 என்றால் **f⁻¹(x)=2−eˣ/2**; domain ℝ, range (−∞,2). y-intercept (0,1.5), x-intercept (ln4,0), horizontal asymptote y=2.\nQ3: x²:ℝ→ℝ neither; x²:ℝ→[0,∞) onto ஆனால் injective அல்ல; x³−x onto ஆனால் −1,0,1 மூன்றுக்கும் output 0 என்பதால் injective அல்ல. ஒவ்வொன்றுக்கும் domain/codomain எழுதுவது முக்கியம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Assignment1:** integer formulas true(y0),true(y−x),false(x=y),true(x2,y4). f(x)=ln(4−2x),x<2:inverse **2−eˣ/2**;inverse domainℝ,range(−∞,2);intercepts(0,1.5),(ln4,0);asymptote y2;decreasing. x²:ℝ→ℝ neither;ℝ→[0,∞) onto only. x³−x:0,1 same output→not injective;continuous and reaches±∞→ontoℝ. Domain/codomain மாற்றினால் verdict மாறலாம்."
     },
     {
       "heading": "Quick revision sheet",
@@ -2193,35 +2194,35 @@
       "items": [
         {
           "title": "Proposition மற்றும் Predicate",
-          "text": "“2 + 1 = 3” உண்மையா என்று உடனே சொல்லலாம்; அது **Proposition**. “x > 3” என்பது x என்ன என்பதைப் பொறுத்தது; அது **Predicate**. Variable-க்கு மதிப்பு கொடுத்த பிறகே truth value முடியும்."
+          "text": "“2 + 1 = 3” உண்மையா என்று உடனே சொல்லலாம்; அது **Proposition**. “x > 3” என்பது x என்ன என்பதைப் பொறுத்தது; அது **Predicate**. Variable-க்கு மதிப்பு கொடுத்த பிறகே truth value முடியும்.\n\nஒரு **Proposition**-க்கு true அல்லது false என்ற truth value இருக்க வேண்டும். “கதவை மூடு” என்ற கட்டளை proposition அல்ல. Variable உள்ள expression-இன் domain மற்றும் values fix ஆன பிறகே அது proposition ஆகலாம்.\nP(x): x²>0 என்றால் P(0) பொய்; P(−2) உண்மை. x negative என்ற காரணத்தால் x² negative என்று தவறாகக் கொள்ளாதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Proposition** உண்மை அல்லது பொய் என்று தீர்மானிக்கக்கூடிய declarative statement. “2+3=7” பொய்யானாலும் proposition. “x>5” free x இருக்கும்போது predicate/open statement. Variable, predicate, quantifier மூன்றையும் வேறுபடுத்துங்கள்; question/command proposition அல்ல."
         },
         {
           "title": "P(x) என்ற குறியீடு",
-          "text": "**P(x)** என்பது x பற்றிய நிபந்தனையின் சுருக்கப் பெயர். P(x): x இரட்டைப்படை என்றால் P(4) உண்மை; P(5) பொய். P(x,y) போன்றவை ஒன்றுக்கு மேற்பட்ட variables-ஐக் கொண்டிருக்கலாம்."
+          "text": "**P(x)** என்பது x பற்றிய நிபந்தனையின் சுருக்கப் பெயர். P(x): x இரட்டைப்படை என்றால் P(4) உண்மை; P(5) பொய். P(x,y) போன்றவை ஒன்றுக்கு மேற்பட்ட variables-ஐக் கொண்டிருக்கலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nP(x):x>3 என்றால் P(4)=True,P(2)=False. P(x,y,z):x+y=z-க்கு P(3,4,7)=True;P(2,−1,5)=False. **எல்லா free variables-க்கும் values கொடுக்கப்பட்டோ quantifiers-ஆல் bind செய்யப்பட்டோ தான் closed proposition**. P(x,3,z)-இல் x,z இன்னும் free. Domain/U=universe of discourse முன்பே குறிப்பிடவும்."
         },
         {
           "title": "Logic இணைப்புகள்",
-          "text": "**AND (∧)** இரண்டும் உண்மையாக வேண்டும்; **OR (∨)** குறைந்தது ஒன்று உண்மையாக வேண்டும்; **NOT (¬)** எதிர்மறை. **P→Q** என்பது P உண்மை என்றால் Q உண்மை வேண்டும்; P பொய் என்றால் இதனால் Q பற்றி உறுதி கிடைக்காது."
+          "text": "**AND (∧)** இரண்டும் உண்மையாக வேண்டும்; **OR (∨)** குறைந்தது ஒன்று உண்மையாக வேண்டும்; **NOT (¬)** எதிர்மறை. **P→Q** என்பது P உண்மை என்றால் Q உண்மை வேண்டும்; P பொய் என்றால் இதனால் Q பற்றி உறுதி கிடைக்காது.\n\n**Implication P→Q பொய்யாகும் ஒரே நிலை:** P உண்மை, Q பொய். P பொய் என்ற இரு rows-லும் implication true. **Biconditional P↔Q** இரண்டுக்கும் ஒரே truth value இருக்கும்போது true.\nP→Q-இன் converse Q→P தானாக உண்மை அல்ல. Contrapositive **¬Q→¬P** மட்டும் அதற்கு logically equivalent. ஒரு உதாரணத்தை வைத்து truth table-இன் எல்லா rows-ஐயும் சரிபார்க்க முடியாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n¬p உண்மையை மாற்றும்; p∧q இரண்டும் true; p∨q குறைந்தது ஒன்று (inclusive OR); p⇒q **T⇒F மட்டும் false**; p⇔q இரண்டும் ஒரே truth value. F⇒T,F⇒F இரண்டும் true. Implication-ஐ அதன் converse q⇒p அல்லது inverse¬p⇒¬q-உடன் சமமாகக் கருதாதீர்கள்; contrapositive¬q⇒¬p சமம்."
         },
         {
           "title": "அனைத்துமா, சிலவா, ஒன்றே ஒன்றா?",
-          "text": "**∀** எல்லோருக்கும்; **∃** குறைந்தது ஒருவருக்கு; **∃!** ஒரே ஒருவருக்கு. “ஒவ்வொரு மாணவருக்கும் ஒரு புத்தகம் உள்ளது” என்றால் எல்லோருக்கும் ஒரே புத்தகம் என்று அர்த்தமில்லை. Quantifier வரிசையும் domain-உம் முக்கியம்."
+          "text": "**∀** எல்லோருக்கும்; **∃** குறைந்தது ஒருவருக்கு; **∃!** ஒரே ஒருவருக்கு. “ஒவ்வொரு மாணவருக்கும் ஒரு புத்தகம் உள்ளது” என்றால் எல்லோருக்கும் ஒரே புத்தகம் என்று அர்த்தமில்லை. Quantifier வரிசையும் domain-உம் முக்கியம்.\n\n**∀x∃y**-இல் ஒவ்வொரு x-க்கும் வேறு y தேர்வு செய்யலாம். **∃y∀x**-இல் ஒரே y எல்லா x-க்கும் வேலை செய்ய வேண்டும். ∀x∃y(x+y=0) integers-இல் y=−x மூலம் உண்மை; ஒரே y எல்லா x-க்கும் முடியாது.\n**∃!x P(x)** = குறைந்தது ஒன்று உள்ளது + அதைவிட வேறு எதுவும் இல்லை. ∃-க்கு ஒரு witness; ∃!-க்கு uniqueness-யும் நிரூபிக்க வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n∀ எல்லாவற்றுக்கும்;∃ குறைந்தது ஒன்று;∃! சரியாக ஒன்று. Integers-இல் ∀x(x>0) false (x=−1);positive integers-இல் true. **∀x∃y(x+y=0)** true:y=−x; **∃y∀x(x+y=0)** false:ஒரே y எல்லா x-க்கும் முடியாது. ∃!xP(x) எழுதினால் existence-உம் uniqueness-உம் இரண்டும் காட்டவேண்டும்."
         },
         {
           "title": "Negation எப்படிச் செய்வது?",
-          "text": "“எல்லாரும் தேர்ச்சி” என்பதன் எதிர்மறை “யாரும் தேர்ச்சி இல்லை” அல்ல; “குறைந்தது ஒருவர் தேர்ச்சி இல்லை”. அதனால் **¬∀x P(x) = ∃x ¬P(x)**. ∃-ஐ மறுத்தால் ∀ ஆகும்."
+          "text": "“எல்லாரும் தேர்ச்சி” என்பதன் எதிர்மறை “யாரும் தேர்ச்சி இல்லை” அல்ல; “குறைந்தது ஒருவர் தேர்ச்சி இல்லை”. அதனால் **¬∀x P(x) = ∃x ¬P(x)**. ∃-ஐ மறுத்தால் ∀ ஆகும்.\n\n**¬∀xP ≡ ∃x¬P**; **¬∃xP ≡ ∀x¬P**. பல quantifiers இருந்தால் ஒவ்வொன்றையும் மாற்றி negation-ஐ உள்ளே கொண்டு செல்லுங்கள்.\n¬[∀x∃y R(x,y)] ≡ **∃x∀y ¬R(x,y)**. “x≤5” என்பதன் negation x>5; x≥5 அல்ல. AND/OR உள்ளே இருந்தால் De Morgan விதியும் சேர வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**¬∀xP≡∃x¬P;¬∃xP≡∀x¬P.** “அனைவரிடமும் computer உண்டு” என்பதன் negation “குறைந்தது ஒருவரிடம் இல்லை”; “யாரிடமும் இல்லை” அல்ல. ¬∀x∃yR≡∃x∀y¬R. x+5>0 negation x+5≤0. Quantifier scope தெளிவாக parentheses-இல் எழுதுங்கள்; பின்புற Q(x)-இல் x free ஆக விடாதீர்கள்."
         },
         {
           "title": "வாக்கியத்தை Logic-ஆக மாற்றுதல்",
-          "text": "முதலில் domain, பிறகு predicates, கடைசியில் quantifiers தேர்வு செய்யுங்கள். “எல்லா மாணவர்களும் படிக்கிறார்கள்” என்பது ∀x(Student(x)→Studies(x)). எல்லா மனிதர்களையும் மாணவர்களாகக் கூறும் AND பதிவுடன் இதைக் குழப்பாதீர்கள்."
+          "text": "முதலில் domain, பிறகு predicates, கடைசியில் quantifiers தேர்வு செய்யுங்கள். “எல்லா மாணவர்களும் படிக்கிறார்கள்” என்பது ∀x(Student(x)→Studies(x)). எல்லா மனிதர்களையும் மாணவர்களாகக் கூறும் AND பதிவுடன் இதைக் குழப்பாதீர்கள்.\n\n**All A are B:** ∀x(A(x)→B(x)). **Some A are B:** ∃x(A(x)∧B(x)). **No A are B:** ∀x(A(x)→¬B(x)). “But” logic-இல் AND.\n“Unless” போன்ற சொல்லுக்கு முதலில் தெளிவான if/then அல்லது OR வடிவம் அமைக்கவும். Domain already students என்றால் Students(x) மீண்டும் தேவையில்லாமல் இருக்கலாம்; assumptions எழுதுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nU எல்லா மனிதர்களாக இருந்தால் “எல்லா students calculus படித்தனர்”→∀x(Student(x)⇒Calculus(x));U students மட்டும் என்றால்∀xCalculus(x). “சில students”→∃x(Student(x)∧Calculus(x));existential implication தவறான vacuous witnesses தரலாம். “But”∧;“either” inclusive OR என்ற assumption சொல்லவும். “p unless q” பொதுவாக¬q⇒p≡p∨q;உண்மை sentence context பார்க்கவும்."
         },
         {
           "title": "நேரடி நிரூபணம்",
-          "text": "கொடுத்த நிபந்தனையை உண்மை என எடுத்துத் தொடங்கி நிரூபிக்க வேண்டிய முடிவிற்கு வருவது **Direct proof**. n odd என்றால் n=2k+1. அப்போது n²=2(2k²+2k)+1 என்பதால் n²-உம் odd."
+          "text": "கொடுத்த நிபந்தனையை உண்மை என எடுத்துத் தொடங்கி நிரூபிக்க வேண்டிய முடிவிற்கு வருவது **Direct proof**. n odd என்றால் n=2k+1. அப்போது n²=2(2k²+2k)+1 என்பதால் n²-உம் odd.\n\na,b consecutive integers எனில் b=a+1; a+b=2a+1 என்பதால் odd. இரண்டு odd integers 2m+1,2n+1 கூட்டினால் **2(m+n+1)** என்பதால் even.\nProof-இல் m,n integers என்று சொல்ல வேண்டும். சில odd numbers-ஐச் சேர்த்து பார்த்தது கூற்றிற்கு ஆதாரம் தரும்; எல்லா odd integers-க்கும் proof ஆகாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Direct proof:** hypothesis assume→definition substitute→algebra→conclusion form. Consecutive a,a+1 sum2a+1 odd. Odd n=2k+1→n²=2(2k²+2k)+1 odd. Odd×odd=(2a+1)(2b+1)=2(2ab+a+b)+1. k,a,b integers என்பதைக் கூறுங்கள். இரண்டு numerical examples என்பது universal proof அல்ல; conclusion-ஐ முன்பே assume செய்யக்கூடாது."
         },
         {
           "title": "Assignment அணுகுமுறை",
-          "text": "∀ வினாவை மறுக்க ஒரு counterexample போதும்; ∃ வினாவை நிரூபிக்க ஒரு example போதும். Inverse-க்கு x,y இடங்களை மாற்றித் தீருங்கள். Injective-க்கு வெவ்வேறு inputs ஒரே output தருகிறதா பாருங்கள்."
+          "text": "∀ வினாவை மறுக்க ஒரு counterexample போதும்; ∃ வினாவை நிரூபிக்க ஒரு example போதும். Inverse-க்கு x,y இடங்களை மாற்றித் தீருங்கள். Injective-க்கு வெவ்வேறு inputs ஒரே output தருகிறதா பாருங்கள்.\n\nAssignment Q1 integers-இல்: (a) y=0 மூலம் true; (b) y=−x மூலம் true; (c) x=y counterexample, false; (d) x=0,y=0 மூலம் true.\nQ2 f(x)=ln(4−2x), x<2 என்றால் **f⁻¹(x)=2−eˣ/2**; domain ℝ, range (−∞,2). y-intercept (0,1.5), x-intercept (ln4,0), horizontal asymptote y=2.\nQ3: x²:ℝ→ℝ neither; x²:ℝ→[0,∞) onto ஆனால் injective அல்ல; x³−x onto ஆனால் −1,0,1 மூன்றுக்கும் output 0 என்பதால் injective அல்ல. ஒவ்வொன்றுக்கும் domain/codomain எழுதுவது முக்கியம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Assignment1:** integer formulas true(y0),true(y−x),false(x=y),true(x2,y4). f(x)=ln(4−2x),x<2:inverse **2−eˣ/2**;inverse domainℝ,range(−∞,2);intercepts(0,1.5),(ln4,0);asymptote y2;decreasing. x²:ℝ→ℝ neither;ℝ→[0,∞) onto only. x³−x:0,1 same output→not injective;continuous and reaches±∞→ontoℝ. Domain/codomain மாற்றினால் verdict மாறலாம்."
         }
       ]
     }
@@ -2231,36 +2232,37 @@
       "heading": "Set terminology & notation",
       "title": "Set என்றால் என்ன?",
       "text": "தெளிவாகத் தீர்மானிக்கக்கூடிய உறுப்பினர்களின் தொகுப்பு **Set**. வரிசை முக்கியமில்லை; ஒரே உறுப்பை மீண்டும் எழுதினாலும் set மாறாது. {1,2,2} என்பது {1,2}-தான்; cardinality 2.",
-      "details": "**Roster** உறுப்புகளைப் பட்டியலிடும்; **set-builder** ஒரு நிபந்தனை சொல்கிறது. {1,3,5}={x∈ℤ: 0<x<6, x odd}.\nℤ integers; ℝ reals; ℚ rationals a/b, b≠0; ∅ empty set. **∅ ≠ {∅}**: முதலாவது members 0; இரண்டாவது member 1. ℕ-இல் 0 சேருகிறதா என்பது convention; பாடத்தின் notation பின்பற்றுங்கள்."
+      "details": "**Roster** உறுப்புகளைப் பட்டியலிடும்; **set-builder** ஒரு நிபந்தனை சொல்கிறது. {1,3,5}={x∈ℤ: 0<x<6, x odd}.\nℤ integers; ℝ reals; ℚ rationals a/b, b≠0; ∅ empty set. **∅ ≠ {∅}**: முதலாவது members 0; இரண்டாவது member 1. ℕ-இல் 0 சேருகிறதா என்பது convention; பாடத்தின் notation பின்பற்றுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nSet unordered;duplicates சேர்த்தாலும் cardinality மாறாது. ∈ element membership;⊆ subset. Roster{1,3,5,7,9};builder{x∈ℤ⁺:odd,x<10}. ∅-க்கு0 elements;{∅}-க்கு1. ℕ பாடத்தில்1இல் தொடங்குகிறது;ℕ₀ zero உட்பட. ℤ integers;ℚ=p/q,q≠0;ℝ rationals+irrationals. ±∞ real elements அல்ல."
     },
     {
       "heading": "Equality, subsets & disjoint sets",
       "title": "Subset மற்றும் Disjoint",
       "text": "A-வின் ஒவ்வொரு உறுப்பும் B-யில் இருந்தால் **A⊆B**. A=B-யும் subset ஆகும். உறுப்புகள் பொதுவாக ஒன்றுமே இல்லாவிட்டால் **Disjoint**. Proper subset-இல் A, B சமமாக இருக்கக்கூடாது.",
-      "details": "**A=B iff A⊆B and B⊆A**. **A⊂B** proper subset-இல் குறைந்தது ஒரு B member A-இல் இருக்காது. Empty set எல்லா set-க்கும் subset.\n**x∈A** என்பது ஒரு member பற்றியது; **B⊆A** ஒரு set-இன் அனைத்து members பற்றியது. A={1,2} என்றால் 1∈A; {1}⊆A; இவை ஒரே notation அல்ல."
+      "details": "**A=B iff A⊆B and B⊆A**. **A⊂B** proper subset-இல் குறைந்தது ஒரு B member A-இல் இருக்காது. Empty set எல்லா set-க்கும் subset.\n**x∈A** என்பது ஒரு member பற்றியது; **B⊆A** ஒரு set-இன் அனைத்து members பற்றியது. A={1,2} என்றால் 1∈A; {1}⊆A; இவை ஒரே notation அல்ல.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nA⊆B என்றால் A-வின் எல்லாம்B-இல்;proper subset என்றால் மேலும்A≠B. A=B நிரூபிக்க இரு inclusions. ∅ எல்லா set-க்கும் subset;ஒவ்வொரு set-உம் தனக்கே subset. n-element set-க்கு **2ⁿ subsets**,nonempty2ⁿ−1;proper subsets2ⁿ−1. Disjoint A∩B=∅;equal என்றால் அதே elements,order/repetition முக்கியமில்லை."
     },
     {
       "heading": "Venn diagrams",
       "title": "தொகுப்புகளைப் படமாகப் பார்த்தல்",
-      "text": "Universal set ஒரு பெரிய பெட்டி; sets வட்டங்கள். இரண்டிலும் இருப்பது overlap. முதலில் எந்தப் பகுதி கேள்விக்குத் தேவையோ கண்டுபிடித்துப் பிறகே shade செய்யுங்கள்; படம் உறுப்புகளின் சரியான எண்ணிக்கையைக் காட்டவேண்டியதில்லை."
+      "text": "Universal set ஒரு பெரிய பெட்டி; sets வட்டங்கள். இரண்டிலும் இருப்பது overlap. முதலில் எந்தப் பகுதி கேள்விக்குத் தேவையோ கண்டுபிடித்துப் பிறகே shade செய்யுங்கள்; படம் உறுப்புகளின் சரியான எண்ணிக்கையைக் காட்டவேண்டியதில்லை.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nRectangle U;circles sets. A circleB-க்குள்→A⊆B;B-இல் extra elements இருந்தால்தான் proper. Separate circles→disjoint. Overlap region இரண்டிலும்;circles வெளியே rectangle-க்குள் none. Diagram சாதாரண படம் மட்டுமல்ல;ஒவ்வொரு region எந்த membership conditions என்பதைக் கூறுங்கள்."
     },
     {
       "heading": "Set operations",
       "title": "Union மற்றும் Intersection",
       "text": "**A∪B** A அல்லது B-யில் உள்ளவர்கள்; **A∩B** இரண்டிலும் உள்ளவர்கள். **A−B** A-யில் இருந்து B உறுப்புகளை நீக்கியது. Complement universal set-ஐப் பொறுத்தது; அதை மறக்காதீர்கள்.",
-      "details": "A={1,2,3}, B={3,4} என்றால் union {1,2,3,4}; intersection {3}; A−B={1,2}; B−A={4}. Difference commutative அல்ல.\n**A−B=A∩Bᶜ**. Complement-க்கு universal set சொல்லாமல் விடை முழுமையடையாது. A∪A=A; A∩A=A; repetitions set size-ஐ உயர்த்தாது."
+      "details": "A={1,2,3}, B={3,4} என்றால் union {1,2,3,4}; intersection {3}; A−B={1,2}; B−A={4}. Difference commutative அல்ல.\n**A−B=A∩Bᶜ**. Complement-க்கு universal set சொல்லாமல் விடை முழுமையடையாது. A∪A=A; A∩A=A; repetitions set size-ஐ உயர்த்தாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nU={a,b,c,d},A={a,b,c},B={a,c,d}:union{a,b,c,d};intersection{a,c};complementA{d};A\\B{b},B\\A{d}. Difference **A∩Bᶜ**. Complement எப்போதும் குறிப்பிட்ட U-ஐப் பொறுத்தது. Exactly one of A,B,C என்பது மூன்று “one set AND other two complements” regions-இன் union."
     },
     {
       "heading": "Set laws",
       "title": "தொகுப்புகளின் விதிகள்",
       "text": "எண் algebra போல set operations-க்கும் விதிகள் உள்ளன. **(A∪B)ᶜ = Aᶜ∩Bᶜ** என்பது De Morgan. Union-ஐ மறுக்கும் போது intersection ஆகும்; இரு sets-க்கும் complement வர வேண்டும்.",
-      "details": "**Commutative:** A∪B=B∪A; A∩B=B∩A. **Associative:** grouping மாற்றலாம். **Distributive:** A∩(B∪C)=(A∩B)∪(A∩C); dual rule-உம் உண்டு.\n**De Morgan:** (A∪B)ᶜ=Aᶜ∩Bᶜ; (A∩B)ᶜ=Aᶜ∪Bᶜ. Complement of complement A. Formula-ஐ Venn shading அல்லது arbitrary member argument மூலம் சோதிக்கலாம்."
+      "details": "**Commutative:** A∪B=B∪A; A∩B=B∩A. **Associative:** grouping மாற்றலாம். **Distributive:** A∩(B∪C)=(A∩B)∪(A∩C); dual rule-உம் உண்டு.\n**De Morgan:** (A∪B)ᶜ=Aᶜ∩Bᶜ; (A∩B)ᶜ=Aᶜ∪Bᶜ. Complement of complement A. Formula-ஐ Venn shading அல்லது arbitrary member argument மூலம் சோதிக்கலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**De Morgan:**(A∪B)ᶜ=Aᶜ∩Bᶜ;(A∩B)ᶜ=Aᶜ∪Bᶜ. Complement செய்யும்போது union/intersection மாற்றி ஒவ்வொன்றையும் complement செய். Commutative order;associative grouping;distributive ஒரு operation-ஐ மற்ற grouping-க்குள் விரித்தல். U1…10,A1,2,4,8,9;B3,4,5,6,8→இருபக்கமும்{7,10}. ஒரே example law-க்கு general proof அல்ல;membership equivalence மூலம் general proof தரலாம்."
     },
     {
       "heading": "Number of elements — inclusion–exclusion",
       "title": "இருமுறை எண்ணுவதைத் தவிர்த்தல்",
       "text": "**|A∪B| = |A| + |B| − |A∩B|**. இரண்டு பாடங்களையும் படிப்பவர் இருமுறை எண்ணப்பட்டதால் intersection-ஐ ஒருமுறை கழிக்கிறோம். மூன்று sets-இல் pair overlaps கழித்து triple overlap மீண்டும் சேர்க்க வேண்டும்.",
-      "details": "**மூன்று Sets:** |A∪B∪C|=|A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|.\n**Only A**=|A|−|A∩B| இரண்டு sets சூழலில். **Neither**=|U|−|A∪B|. “Exactly one”, “at least one”, “both” மூன்றும் வேறு பகுதிகள்; கேள்விச் சொல்லை வட்டமிடுங்கள்."
+      "details": "**மூன்று Sets:** |A∪B∪C|=|A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|.\n**Only A**=|A|−|A∩B| இரண்டு sets சூழலில். **Neither**=|U|−|A∪B|. “Exactly one”, “at least one”, “both” மூன்றும் வேறு பகுதிகள்; கேள்விச் சொல்லை வட்டமிடுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Inclusion–exclusion:**|A∪B|=|A|+|B|−|A∩B|. Coffee100,sugar70,cream60,both50→only20/10,union80,exactly-one30,neither20. Three sets:singles−pair intersections+triple. Pair intersection counts-இல் triple பொதுவாக ஏற்கெனவே உள்ளது;“only pair” வேண்டுமெனில் triple கழிக்கவும். Venn fill order triple→pair-only→single-only→none;negative region வந்தால் data/interpretation பிழை."
     },
     {
       "heading": "Quick revision sheet",
@@ -2268,27 +2270,27 @@
       "items": [
         {
           "title": "Set என்றால் என்ன?",
-          "text": "தெளிவாகத் தீர்மானிக்கக்கூடிய உறுப்பினர்களின் தொகுப்பு **Set**. வரிசை முக்கியமில்லை; ஒரே உறுப்பை மீண்டும் எழுதினாலும் set மாறாது. {1,2,2} என்பது {1,2}-தான்; cardinality 2."
+          "text": "தெளிவாகத் தீர்மானிக்கக்கூடிய உறுப்பினர்களின் தொகுப்பு **Set**. வரிசை முக்கியமில்லை; ஒரே உறுப்பை மீண்டும் எழுதினாலும் set மாறாது. {1,2,2} என்பது {1,2}-தான்; cardinality 2.\n\n**Roster** உறுப்புகளைப் பட்டியலிடும்; **set-builder** ஒரு நிபந்தனை சொல்கிறது. {1,3,5}={x∈ℤ: 0<x<6, x odd}.\nℤ integers; ℝ reals; ℚ rationals a/b, b≠0; ∅ empty set. **∅ ≠ {∅}**: முதலாவது members 0; இரண்டாவது member 1. ℕ-இல் 0 சேருகிறதா என்பது convention; பாடத்தின் notation பின்பற்றுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nSet unordered;duplicates சேர்த்தாலும் cardinality மாறாது. ∈ element membership;⊆ subset. Roster{1,3,5,7,9};builder{x∈ℤ⁺:odd,x<10}. ∅-க்கு0 elements;{∅}-க்கு1. ℕ பாடத்தில்1இல் தொடங்குகிறது;ℕ₀ zero உட்பட. ℤ integers;ℚ=p/q,q≠0;ℝ rationals+irrationals. ±∞ real elements அல்ல."
         },
         {
           "title": "Subset மற்றும் Disjoint",
-          "text": "A-வின் ஒவ்வொரு உறுப்பும் B-யில் இருந்தால் **A⊆B**. A=B-யும் subset ஆகும். உறுப்புகள் பொதுவாக ஒன்றுமே இல்லாவிட்டால் **Disjoint**. Proper subset-இல் A, B சமமாக இருக்கக்கூடாது."
+          "text": "A-வின் ஒவ்வொரு உறுப்பும் B-யில் இருந்தால் **A⊆B**. A=B-யும் subset ஆகும். உறுப்புகள் பொதுவாக ஒன்றுமே இல்லாவிட்டால் **Disjoint**. Proper subset-இல் A, B சமமாக இருக்கக்கூடாது.\n\n**A=B iff A⊆B and B⊆A**. **A⊂B** proper subset-இல் குறைந்தது ஒரு B member A-இல் இருக்காது. Empty set எல்லா set-க்கும் subset.\n**x∈A** என்பது ஒரு member பற்றியது; **B⊆A** ஒரு set-இன் அனைத்து members பற்றியது. A={1,2} என்றால் 1∈A; {1}⊆A; இவை ஒரே notation அல்ல.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nA⊆B என்றால் A-வின் எல்லாம்B-இல்;proper subset என்றால் மேலும்A≠B. A=B நிரூபிக்க இரு inclusions. ∅ எல்லா set-க்கும் subset;ஒவ்வொரு set-உம் தனக்கே subset. n-element set-க்கு **2ⁿ subsets**,nonempty2ⁿ−1;proper subsets2ⁿ−1. Disjoint A∩B=∅;equal என்றால் அதே elements,order/repetition முக்கியமில்லை."
         },
         {
           "title": "தொகுப்புகளைப் படமாகப் பார்த்தல்",
-          "text": "Universal set ஒரு பெரிய பெட்டி; sets வட்டங்கள். இரண்டிலும் இருப்பது overlap. முதலில் எந்தப் பகுதி கேள்விக்குத் தேவையோ கண்டுபிடித்துப் பிறகே shade செய்யுங்கள்; படம் உறுப்புகளின் சரியான எண்ணிக்கையைக் காட்டவேண்டியதில்லை."
+          "text": "Universal set ஒரு பெரிய பெட்டி; sets வட்டங்கள். இரண்டிலும் இருப்பது overlap. முதலில் எந்தப் பகுதி கேள்விக்குத் தேவையோ கண்டுபிடித்துப் பிறகே shade செய்யுங்கள்; படம் உறுப்புகளின் சரியான எண்ணிக்கையைக் காட்டவேண்டியதில்லை.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nRectangle U;circles sets. A circleB-க்குள்→A⊆B;B-இல் extra elements இருந்தால்தான் proper. Separate circles→disjoint. Overlap region இரண்டிலும்;circles வெளியே rectangle-க்குள் none. Diagram சாதாரண படம் மட்டுமல்ல;ஒவ்வொரு region எந்த membership conditions என்பதைக் கூறுங்கள்."
         },
         {
           "title": "Union மற்றும் Intersection",
-          "text": "**A∪B** A அல்லது B-யில் உள்ளவர்கள்; **A∩B** இரண்டிலும் உள்ளவர்கள். **A−B** A-யில் இருந்து B உறுப்புகளை நீக்கியது. Complement universal set-ஐப் பொறுத்தது; அதை மறக்காதீர்கள்."
+          "text": "**A∪B** A அல்லது B-யில் உள்ளவர்கள்; **A∩B** இரண்டிலும் உள்ளவர்கள். **A−B** A-யில் இருந்து B உறுப்புகளை நீக்கியது. Complement universal set-ஐப் பொறுத்தது; அதை மறக்காதீர்கள்.\n\nA={1,2,3}, B={3,4} என்றால் union {1,2,3,4}; intersection {3}; A−B={1,2}; B−A={4}. Difference commutative அல்ல.\n**A−B=A∩Bᶜ**. Complement-க்கு universal set சொல்லாமல் விடை முழுமையடையாது. A∪A=A; A∩A=A; repetitions set size-ஐ உயர்த்தாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nU={a,b,c,d},A={a,b,c},B={a,c,d}:union{a,b,c,d};intersection{a,c};complementA{d};A\\B{b},B\\A{d}. Difference **A∩Bᶜ**. Complement எப்போதும் குறிப்பிட்ட U-ஐப் பொறுத்தது. Exactly one of A,B,C என்பது மூன்று “one set AND other two complements” regions-இன் union."
         },
         {
           "title": "தொகுப்புகளின் விதிகள்",
-          "text": "எண் algebra போல set operations-க்கும் விதிகள் உள்ளன. **(A∪B)ᶜ = Aᶜ∩Bᶜ** என்பது De Morgan. Union-ஐ மறுக்கும் போது intersection ஆகும்; இரு sets-க்கும் complement வர வேண்டும்."
+          "text": "எண் algebra போல set operations-க்கும் விதிகள் உள்ளன. **(A∪B)ᶜ = Aᶜ∩Bᶜ** என்பது De Morgan. Union-ஐ மறுக்கும் போது intersection ஆகும்; இரு sets-க்கும் complement வர வேண்டும்.\n\n**Commutative:** A∪B=B∪A; A∩B=B∩A. **Associative:** grouping மாற்றலாம். **Distributive:** A∩(B∪C)=(A∩B)∪(A∩C); dual rule-உம் உண்டு.\n**De Morgan:** (A∪B)ᶜ=Aᶜ∩Bᶜ; (A∩B)ᶜ=Aᶜ∪Bᶜ. Complement of complement A. Formula-ஐ Venn shading அல்லது arbitrary member argument மூலம் சோதிக்கலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**De Morgan:**(A∪B)ᶜ=Aᶜ∩Bᶜ;(A∩B)ᶜ=Aᶜ∪Bᶜ. Complement செய்யும்போது union/intersection மாற்றி ஒவ்வொன்றையும் complement செய். Commutative order;associative grouping;distributive ஒரு operation-ஐ மற்ற grouping-க்குள் விரித்தல். U1…10,A1,2,4,8,9;B3,4,5,6,8→இருபக்கமும்{7,10}. ஒரே example law-க்கு general proof அல்ல;membership equivalence மூலம் general proof தரலாம்."
         },
         {
           "title": "இருமுறை எண்ணுவதைத் தவிர்த்தல்",
-          "text": "**|A∪B| = |A| + |B| − |A∩B|**. இரண்டு பாடங்களையும் படிப்பவர் இருமுறை எண்ணப்பட்டதால் intersection-ஐ ஒருமுறை கழிக்கிறோம். மூன்று sets-இல் pair overlaps கழித்து triple overlap மீண்டும் சேர்க்க வேண்டும்."
+          "text": "**|A∪B| = |A| + |B| − |A∩B|**. இரண்டு பாடங்களையும் படிப்பவர் இருமுறை எண்ணப்பட்டதால் intersection-ஐ ஒருமுறை கழிக்கிறோம். மூன்று sets-இல் pair overlaps கழித்து triple overlap மீண்டும் சேர்க்க வேண்டும்.\n\n**மூன்று Sets:** |A∪B∪C|=|A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|.\n**Only A**=|A|−|A∩B| இரண்டு sets சூழலில். **Neither**=|U|−|A∪B|. “Exactly one”, “at least one”, “both” மூன்றும் வேறு பகுதிகள்; கேள்விச் சொல்லை வட்டமிடுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Inclusion–exclusion:**|A∪B|=|A|+|B|−|A∩B|. Coffee100,sugar70,cream60,both50→only20/10,union80,exactly-one30,neither20. Three sets:singles−pair intersections+triple. Pair intersection counts-இல் triple பொதுவாக ஏற்கெனவே உள்ளது;“only pair” வேண்டுமெனில் triple கழிக்கவும். Venn fill order triple→pair-only→single-only→none;negative region வந்தால் data/interpretation பிழை."
         }
       ]
     }
@@ -2298,31 +2300,31 @@
       "heading": "What is a function?",
       "title": "Function என்றால் என்ன?",
       "text": "ஒவ்வொரு input-க்கும் **ஒரே ஒரு output** ஒதுக்க வேண்டும். இரண்டு inputs ஒரே output-க்கு வரலாம்; ஆனால் ஒரு input இரண்டு outputs-க்கு போனால் function அல்ல. Domain, codomain இரண்டையும் கவனியுங்கள்.",
-      "details": "**Domain** அனுமதித்த inputs; **codomain** அறிவிக்கப்பட்ட outputs set; **range** உண்மையில் கிடைக்கும் outputs. Range codomain-இன் subset.\nf(x)=1/(x−2) என்றால் x≠2. √(x−1) real-valued என்றால் x≥1. ln(g(x))-க்கு g(x)>0. இவற்றைச் சேர்த்து domain restriction அமைக்க வேண்டும்."
+      "details": "**Domain** அனுமதித்த inputs; **codomain** அறிவிக்கப்பட்ட outputs set; **range** உண்மையில் கிடைக்கும் outputs. Range codomain-இன் subset.\nf(x)=1/(x−2) என்றால் x≠2. √(x−1) real-valued என்றால் x≥1. ln(g(x))-க்கு g(x)>0. இவற்றைச் சேர்த்து domain restriction அமைக்க வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nFunction f:A→B-இல் **ஒவ்வொரு input-க்கும் exactly one output**. Many inputs ஒரே output தரலாம். DomainA;codomainB;rangef(A)⊆B. ℤ→ℤ,x²-க்கு range nonnegative perfect squares மட்டும். √(x−1) real domain[1,∞);1/(x²−4) domainℝ\\{−2,2}. Formula மட்டும் இல்லாமல் declared sets-உம் function-இன் பகுதி."
     },
     {
       "heading": "One-to-one (injective)",
       "title": "வெவ்வேறு உள்ளீடுகளுக்கு வெவ்வேறு வெளியீடு",
       "text": "வெவ்வேறு inputs ஒரே output-ஐத் தரக்கூடாது. f(x)=x², real domain-இல் f(2)=f(−2), அதனால் injective அல்ல. நிரூபிக்க f(a)=f(b) எனத் தொடங்கி a=b கிடைக்கிறதா பாருங்கள்.",
-      "details": "**Proof method:** f(a)=f(b) எனக் கொண்டு algebra செய்து a=b கிடைக்கிறதா பாருங்கள். Counterexample-க்கு a≠b இருந்தும் same output ஒரு ஜோடி போதும்.\nx² negative மற்றும் positive inputs-இல் one-to-one அல்ல. ஆனால் domain [0,∞) என்றால் one-to-one. Function formula மட்டும் பார்த்து classification சொல்லக்கூடாது."
+      "details": "**Proof method:** f(a)=f(b) எனக் கொண்டு algebra செய்து a=b கிடைக்கிறதா பாருங்கள். Counterexample-க்கு a≠b இருந்தும் same output ஒரு ஜோடி போதும்.\nx² negative மற்றும் positive inputs-இல் one-to-one அல்ல. ஆனால் domain [0,∞) என்றால் one-to-one. Function formula மட்டும் பார்த்து classification சொல்லக்கூடாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nInjective proof:f(a)=f(b) assume செய்து a=b derive. 3a−5=3b−5→a=b. x² onℝ not injective:1,−1 same1. Domain[0,∞) restriction-இல் x² injective ஆகலாம். Disproof-க்கு distinct inputs same image என்ற **ஒரு witness pair** போதும்;different inputs சிலவற்றுக்கு different outputs என்பது proof அல்ல."
     },
     {
       "heading": "Onto (surjective) & bijection",
       "title": "Surjective மற்றும் Bijection",
       "text": "Codomain-இன் ஒவ்வொரு உறுப்புக்கும் குறைந்தது ஒரு input இருந்தால் **Surjective**. Injective-உம் surjective-உம் இரண்டும் இருந்தால் **Bijective**. Codomain மாறினால் surjectivity-யும் மாறலாம்.",
-      "details": "**Onto proof:** arbitrary y∈codomain எடுத்துக் கொண்டு f(x)=y தீர்த்து, கிடைத்த x domain-இல் இருக்கிறதா நிரூபியுங்கள். f(x)=2x+1, ℝ→ℝ என்றால் x=(y−1)/2 எப்போதும் real; onto.\nInjective+onto → bijection → inverse function A↔B. ஒரு codomain value-க்கு preimage இல்லாவிட்டால் onto அல்ல; இரண்டு preimages இருந்தால் injective அல்ல."
+      "details": "**Onto proof:** arbitrary y∈codomain எடுத்துக் கொண்டு f(x)=y தீர்த்து, கிடைத்த x domain-இல் இருக்கிறதா நிரூபியுங்கள். f(x)=2x+1, ℝ→ℝ என்றால் x=(y−1)/2 எப்போதும் real; onto.\nInjective+onto → bijection → inverse function A↔B. ஒரு codomain value-க்கு preimage இல்லாவிட்டால் onto அல்ல; இரண்டு preimages இருந்தால் injective அல்ல.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nSurjective:arbitrary y∈codomain எடுத்துப் f(x)=y solve செய்து x∈domain என்பதை நிரூபி. 3x−5 y-க்கு x=(y+5)/3∈ℝ;ontoℝ. x² ontoℝ இல்லை:y−1 counterexample;onto[0,∞) என்றால் x√y witness. Bijection=injective+onto. Finite sets-இல் bijection இருந்தால் sizes சமம்;size சமம் என்பதால் எந்த mapping-உம் bijection ஆகிவிடாது."
     },
     {
       "heading": "Inverse functions",
       "title": "வெளியீட்டிலிருந்து உள்ளீட்டிற்குத் திரும்புதல்",
       "text": "Output-இலிருந்து input-க்கு திரும்பும் விதி **Inverse**. இரு திசையிலும் ஒரே பதில் வேண்டுமென்றால் பொருத்தமான domain, codomain-இல் bijection வேண்டும். x²-க்கு real domain முழுவதிலும் தனித்த inverse இல்லை.",
-      "details": "f(x)=(x−1)/2 என்றால் y=(x−1)/2 → x=2y+1; ஆகவே f⁻¹(x)=2x+1. **f⁻¹(x) என்பது 1/f(x) அல்ல**.\nCheck: f⁻¹(f(x))=x, f(f⁻¹(y))=y உரிய domains-இல். Domain restriction இல்லாமல் square root-இல் ± விடையை ஒரே inverse function என்று சொல்ல முடியாது."
+      "details": "f(x)=(x−1)/2 என்றால் y=(x−1)/2 → x=2y+1; ஆகவே f⁻¹(x)=2x+1. **f⁻¹(x) என்பது 1/f(x) அல்ல**.\nCheck: f⁻¹(f(x))=x, f(f⁻¹(y))=y உரிய domains-இல். Domain restriction இல்லாமல் square root-இல் ± விடையை ஒரே inverse function என்று சொல்ல முடியாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nInverse **இருபக்கமும் undo செய்யும் function** ஆக A↔B இருக்க f bijection வேண்டும். y=3x−5→x=(y+5)/3→f⁻¹(y). f⁻¹ என்பது reciprocal1/f அல்ல. Domain/range swap;f⁻¹∘f=idA,f∘f⁻¹=idB. Noninjective function-ஐ appropriate restricted domain-இல் invert செய்யலாம்;inverse image of a set வேறு கருத்து."
     },
     {
       "heading": "Composition of functions",
       "title": "ஒரு Function-க்குப் பிறகு மற்றொன்று",
       "text": "**(f∘g)(x)=f(g(x))**. முதலில் உள்ளே உள்ள g; பிறகு f. வரிசை முக்கியம்: துணியைத் துவைத்துப் பிறகு உலர்த்துவது போல, வரிசை மாற்றினால் முடிவு பொதுவாக மாறும்.",
-      "details": "f(x)=x+1, g(x)=2x என்றால் **f∘g=2x+1**; **g∘f=2x+2**. இவை வேறுபடும்.\nf(g(x)) வரையறுக்க g(x) output f-இன் domain-இல் இருக்க வேண்டும். Inverse composition-இல் (f∘g)⁻¹=g⁻¹∘f⁻¹; வரிசை திரும்புகிறது."
+      "details": "f(x)=x+1, g(x)=2x என்றால் **f∘g=2x+1**; **g∘f=2x+2**. இவை வேறுபடும்.\nf(g(x)) வரையறுக்க g(x) output f-இன் domain-இல் இருக்க வேண்டும். Inverse composition-இல் (f∘g)⁻¹=g⁻¹∘f⁻¹; வரிசை திரும்புகிறது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**f∘g:g முதலில்**. f=x²−1,g=√x+1: f∘g=x+2√x,domainx≥0;g∘f=√(x²−1)+1,domainx≤−1 அல்லதுx≥1. Formula simplify செய்தபின் original domain restrictions மறக்காதீர்கள். Whole domain-இல் composition வேண்டுமெனில் inner function image outer domain-க்குள் இருக்கவேண்டும்;இல்லையெனில் restricted composite domain குறிப்பிடவும்."
     },
     {
       "heading": "Quick revision sheet",
@@ -2330,23 +2332,23 @@
       "items": [
         {
           "title": "Function என்றால் என்ன?",
-          "text": "ஒவ்வொரு input-க்கும் **ஒரே ஒரு output** ஒதுக்க வேண்டும். இரண்டு inputs ஒரே output-க்கு வரலாம்; ஆனால் ஒரு input இரண்டு outputs-க்கு போனால் function அல்ல. Domain, codomain இரண்டையும் கவனியுங்கள்."
+          "text": "ஒவ்வொரு input-க்கும் **ஒரே ஒரு output** ஒதுக்க வேண்டும். இரண்டு inputs ஒரே output-க்கு வரலாம்; ஆனால் ஒரு input இரண்டு outputs-க்கு போனால் function அல்ல. Domain, codomain இரண்டையும் கவனியுங்கள்.\n\n**Domain** அனுமதித்த inputs; **codomain** அறிவிக்கப்பட்ட outputs set; **range** உண்மையில் கிடைக்கும் outputs. Range codomain-இன் subset.\nf(x)=1/(x−2) என்றால் x≠2. √(x−1) real-valued என்றால் x≥1. ln(g(x))-க்கு g(x)>0. இவற்றைச் சேர்த்து domain restriction அமைக்க வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nFunction f:A→B-இல் **ஒவ்வொரு input-க்கும் exactly one output**. Many inputs ஒரே output தரலாம். DomainA;codomainB;rangef(A)⊆B. ℤ→ℤ,x²-க்கு range nonnegative perfect squares மட்டும். √(x−1) real domain[1,∞);1/(x²−4) domainℝ\\{−2,2}. Formula மட்டும் இல்லாமல் declared sets-உம் function-இன் பகுதி."
         },
         {
           "title": "வெவ்வேறு உள்ளீடுகளுக்கு வெவ்வேறு வெளியீடு",
-          "text": "வெவ்வேறு inputs ஒரே output-ஐத் தரக்கூடாது. f(x)=x², real domain-இல் f(2)=f(−2), அதனால் injective அல்ல. நிரூபிக்க f(a)=f(b) எனத் தொடங்கி a=b கிடைக்கிறதா பாருங்கள்."
+          "text": "வெவ்வேறு inputs ஒரே output-ஐத் தரக்கூடாது. f(x)=x², real domain-இல் f(2)=f(−2), அதனால் injective அல்ல. நிரூபிக்க f(a)=f(b) எனத் தொடங்கி a=b கிடைக்கிறதா பாருங்கள்.\n\n**Proof method:** f(a)=f(b) எனக் கொண்டு algebra செய்து a=b கிடைக்கிறதா பாருங்கள். Counterexample-க்கு a≠b இருந்தும் same output ஒரு ஜோடி போதும்.\nx² negative மற்றும் positive inputs-இல் one-to-one அல்ல. ஆனால் domain [0,∞) என்றால் one-to-one. Function formula மட்டும் பார்த்து classification சொல்லக்கூடாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nInjective proof:f(a)=f(b) assume செய்து a=b derive. 3a−5=3b−5→a=b. x² onℝ not injective:1,−1 same1. Domain[0,∞) restriction-இல் x² injective ஆகலாம். Disproof-க்கு distinct inputs same image என்ற **ஒரு witness pair** போதும்;different inputs சிலவற்றுக்கு different outputs என்பது proof அல்ல."
         },
         {
           "title": "Surjective மற்றும் Bijection",
-          "text": "Codomain-இன் ஒவ்வொரு உறுப்புக்கும் குறைந்தது ஒரு input இருந்தால் **Surjective**. Injective-உம் surjective-உம் இரண்டும் இருந்தால் **Bijective**. Codomain மாறினால் surjectivity-யும் மாறலாம்."
+          "text": "Codomain-இன் ஒவ்வொரு உறுப்புக்கும் குறைந்தது ஒரு input இருந்தால் **Surjective**. Injective-உம் surjective-உம் இரண்டும் இருந்தால் **Bijective**. Codomain மாறினால் surjectivity-யும் மாறலாம்.\n\n**Onto proof:** arbitrary y∈codomain எடுத்துக் கொண்டு f(x)=y தீர்த்து, கிடைத்த x domain-இல் இருக்கிறதா நிரூபியுங்கள். f(x)=2x+1, ℝ→ℝ என்றால் x=(y−1)/2 எப்போதும் real; onto.\nInjective+onto → bijection → inverse function A↔B. ஒரு codomain value-க்கு preimage இல்லாவிட்டால் onto அல்ல; இரண்டு preimages இருந்தால் injective அல்ல.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nSurjective:arbitrary y∈codomain எடுத்துப் f(x)=y solve செய்து x∈domain என்பதை நிரூபி. 3x−5 y-க்கு x=(y+5)/3∈ℝ;ontoℝ. x² ontoℝ இல்லை:y−1 counterexample;onto[0,∞) என்றால் x√y witness. Bijection=injective+onto. Finite sets-இல் bijection இருந்தால் sizes சமம்;size சமம் என்பதால் எந்த mapping-உம் bijection ஆகிவிடாது."
         },
         {
           "title": "வெளியீட்டிலிருந்து உள்ளீட்டிற்குத் திரும்புதல்",
-          "text": "Output-இலிருந்து input-க்கு திரும்பும் விதி **Inverse**. இரு திசையிலும் ஒரே பதில் வேண்டுமென்றால் பொருத்தமான domain, codomain-இல் bijection வேண்டும். x²-க்கு real domain முழுவதிலும் தனித்த inverse இல்லை."
+          "text": "Output-இலிருந்து input-க்கு திரும்பும் விதி **Inverse**. இரு திசையிலும் ஒரே பதில் வேண்டுமென்றால் பொருத்தமான domain, codomain-இல் bijection வேண்டும். x²-க்கு real domain முழுவதிலும் தனித்த inverse இல்லை.\n\nf(x)=(x−1)/2 என்றால் y=(x−1)/2 → x=2y+1; ஆகவே f⁻¹(x)=2x+1. **f⁻¹(x) என்பது 1/f(x) அல்ல**.\nCheck: f⁻¹(f(x))=x, f(f⁻¹(y))=y உரிய domains-இல். Domain restriction இல்லாமல் square root-இல் ± விடையை ஒரே inverse function என்று சொல்ல முடியாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nInverse **இருபக்கமும் undo செய்யும் function** ஆக A↔B இருக்க f bijection வேண்டும். y=3x−5→x=(y+5)/3→f⁻¹(y). f⁻¹ என்பது reciprocal1/f அல்ல. Domain/range swap;f⁻¹∘f=idA,f∘f⁻¹=idB. Noninjective function-ஐ appropriate restricted domain-இல் invert செய்யலாம்;inverse image of a set வேறு கருத்து."
         },
         {
           "title": "ஒரு Function-க்குப் பிறகு மற்றொன்று",
-          "text": "**(f∘g)(x)=f(g(x))**. முதலில் உள்ளே உள்ள g; பிறகு f. வரிசை முக்கியம்: துணியைத் துவைத்துப் பிறகு உலர்த்துவது போல, வரிசை மாற்றினால் முடிவு பொதுவாக மாறும்."
+          "text": "**(f∘g)(x)=f(g(x))**. முதலில் உள்ளே உள்ள g; பிறகு f. வரிசை முக்கியம்: துணியைத் துவைத்துப் பிறகு உலர்த்துவது போல, வரிசை மாற்றினால் முடிவு பொதுவாக மாறும்.\n\nf(x)=x+1, g(x)=2x என்றால் **f∘g=2x+1**; **g∘f=2x+2**. இவை வேறுபடும்.\nf(g(x)) வரையறுக்க g(x) output f-இன் domain-இல் இருக்க வேண்டும். Inverse composition-இல் (f∘g)⁻¹=g⁻¹∘f⁻¹; வரிசை திரும்புகிறது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**f∘g:g முதலில்**. f=x²−1,g=√x+1: f∘g=x+2√x,domainx≥0;g∘f=√(x²−1)+1,domainx≤−1 அல்லதுx≥1. Formula simplify செய்தபின் original domain restrictions மறக்காதீர்கள். Whole domain-இல் composition வேண்டுமெனில் inner function image outer domain-க்குள் இருக்கவேண்டும்;இல்லையெனில் restricted composite domain குறிப்பிடவும்."
         }
       ]
     }
@@ -2355,43 +2357,44 @@
     {
       "heading": "Sequences",
       "title": "வரிசையாக வரும் எண்கள்",
-      "text": "வரிசையுடன் வரும் terms-இன் பட்டியல் **Sequence**. 2,4,6,…-இல் aₙ=2n. Terms எந்த இடத்திலிருந்து எண்ணப்படுகின்றன என்று பாருங்கள்; n=0-இலா n=1-இலா என்பது formula-ஐ மாற்றும்."
+      "text": "வரிசையுடன் வரும் terms-இன் பட்டியல் **Sequence**. 2,4,6,…-இல் aₙ=2n. Terms எந்த இடத்திலிருந்து எண்ணப்படுகின்றன என்று பாருங்கள்; n=0-இலா n=1-இலா என்பது formula-ஐ மாற்றும்.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nSequence **ordered**;set போல order/duplicates மறக்கமுடியாது. aₙ=n/(n+1),n1இல் தொடங்கினால்1/2,2/3,3/4. Finite sequence/string length terms எண்ணிக்கை. Index0ஆ1ஆ என்றதை முதலில் பாருங்கள்;அதே list-க்கு formula index convention-ஐப் பொறுத்து மாறும்."
     },
     {
       "heading": "Geometric & arithmetic progressions",
       "title": "Arithmetic மற்றும் Geometric",
       "text": "ஒவ்வொரு term-க்கும் ஒரே எண்ணைச் சேர்த்தால் **Arithmetic**. ஒரே எண்ணால் பெருக்கினால் **Geometric**. 2,5,8…-இல் difference 3; 2,6,18…-இல் ratio 3.",
-      "details": "**AP nth term:** aₙ=a+(n−1)d. **GP nth term:** aₙ=arⁿ⁻¹, n=1-இல் தொடங்கினால். 2,5,8,…-க்கு aₙ=3n−1; 2,6,18,…-க்கு aₙ=2·3ⁿ⁻¹.\n0-based sequence-இல் exponent n ஆக மாறும். சில terms மட்டும் கொடுத்தால் பல formulas பொருந்தலாம்; கேள்வியின் intended simple pattern/assumptions-ஐச் சொல்லுங்கள்."
+      "details": "**AP nth term:** aₙ=a+(n−1)d. **GP nth term:** aₙ=arⁿ⁻¹, n=1-இல் தொடங்கினால். 2,5,8,…-க்கு aₙ=3n−1; 2,6,18,…-க்கு aₙ=2·3ⁿ⁻¹.\n0-based sequence-இல் exponent n ஆக மாறும். சில terms மட்டும் கொடுத்தால் பல formulas பொருந்தலாம்; கேள்வியின் intended simple pattern/assumptions-ஐச் சொல்லுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nIndex0இல் arithmetic aₙ=a+nd;geometric aₙ=arⁿ. Index1இல் a+(n−1)d/arⁿ⁻¹. −1+4n,n0→−1,3,7;6(1/3)ⁿ→6,2,2/3;(-1)ⁿ alternates. Constant differences/ratios pattern clues;finite listed terms மட்டும் unique continuation நிரூபிக்காது. n! products;0!=1."
     },
     {
       "heading": "Summation notation (Σ)",
       "title": "கூட்டுத்தொகைக் குறியீடு",
       "text": "**Σ** கொடுத்த வரம்பில் terms சேர்க்கச் சொல்கிறது. Σₖ₌₁³ k² = 1²+2²+3² = 14. தொடக்க, முடிவு indices இரண்டும் சேரும்; terms எண்ணிக்கை end−start+1.",
-      "details": "Σₖ₌ₘⁿ [aₖ+bₖ]=Σaₖ+Σbₖ; constant c-ஐ வெளியே எடுக்கலாம்: Σc·aₖ=cΣaₖ. **Σₖ₌ₘⁿ c=c(n−m+1)**.\nIndex k ஒரு dummy variable; j என்று மாற்றினாலும் sum மாறாது. ஆனால் bounds-ஐ மாற்றும்போது expression-ஐயும் மாற்ற வேண்டியிருக்கும். Product of sums மற்றும் sum of products ஒன்றல்ல."
+      "details": "Σₖ₌ₘⁿ [aₖ+bₖ]=Σaₖ+Σbₖ; constant c-ஐ வெளியே எடுக்கலாம்: Σc·aₖ=cΣaₖ. **Σₖ₌ₘⁿ c=c(n−m+1)**.\nIndex k ஒரு dummy variable; j என்று மாற்றினாலும் sum மாறாது. ஆனால் bounds-ஐ மாற்றும்போது expression-ஐயும் மாற்ற வேண்டியிருக்கும். Product of sums மற்றும் sum of products ஒன்றல்ல.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nΣⱼ₌ₘⁿaⱼ என்பது m…n inclusive;terms n−m+1. Dummy index பெயர் மாற்றலாம்,limits சரியாகவேண்டும். Σ(axⱼ+byⱼ)=aΣxⱼ+bΣyⱼ. Sum of products பொதுவாக product of sums அல்ல. Σ100…200-இல்101 terms;100 terms என்று எண்ணுவது off-by-one பிழை."
     },
     {
       "heading": "Geometric series (Theorem 1)",
       "title": "முடிவுள்ள பெருக்கல் தொடரின் கூட்டுத்தொகை",
       "text": "a+ar+…+arⁿ-இல் n+1 terms உள்ளன. r≠1 என்றால் sum = a(1−rⁿ⁺¹)/(1−r). r=1 என்றால் எல்லா terms-உம் a; ஆகவே a(n+1).",
-      "details": "முதல் n terms-க்கு **Sₙ=a(1−rⁿ)/(1−r)**, r≠1. k=0 முதல் n வரை என்றால் n+1 terms; exponent n+1. முதலில் terms எண்ணிக்கையைத் தீர்மானிக்குங்கள்.\n2+6+18+54=2(1−3⁴)/(1−3)=**80**. r=1 என்றால் formula denominator பூஜ்யம்; நேரடியாக number of terms×a பயன்படுத்துங்கள்."
+      "details": "முதல் n terms-க்கு **Sₙ=a(1−rⁿ)/(1−r)**, r≠1. k=0 முதல் n வரை என்றால் n+1 terms; exponent n+1. முதலில் terms எண்ணிக்கையைத் தீர்மானிக்குங்கள்.\n2+6+18+54=2(1−3⁴)/(1−3)=**80**. r=1 என்றால் formula denominator பூஜ்யம்; நேரடியாக number of terms×a பயன்படுத்துங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nS=a+ar+…+arⁿ, **n+1 terms**. rS−S=a(rⁿ⁺¹−1)→S=a(rⁿ⁺¹−1)/(r−1),r≠1; r1→(n+1)a. n0…8 3·2ⁿ sum1533;2·3ⁿ sum19682;total**21215**. r0 sequence-ஐ தனியாக a,0,0,… என எடுத்தால் sum a;0⁰ notation-ஐ convention இல்லாமல் பயன்படுத்தாதீர்கள்."
     },
     {
       "heading": "Infinite series (Theorem 2)",
       "title": "முடிவில்லாத தொடரின் கூட்டுத்தொகை",
       "text": "முடிவில்லாத geometric series-க்கு **|r|<1** என்றால்தான் finite sum a/(1−r) கிடைக்கும். r=2 போன்ற வளர்ந்து வரும் series-க்கு அந்த formula பயன்படுத்தக்கூடாது.",
-      "details": "a+ar+ar²+… = **a/(1−r)** only if |r|<1. 1+½+¼+…=2. Negative ratio −½ இருந்தாலும் convergence உண்டு; signs மாறிக்கொண்டே இருக்கும்.\nr=1,−1, அல்லது |r|>1 என்றால் இந்த finite formula-வை infinite sum-ஆகப் பயன்படுத்த முடியாது. General series-க்கு terms→0 அவசியம்; அது மட்டும் convergence-க்கு போதாது."
+      "details": "a+ar+ar²+… = **a/(1−r)** only if |r|<1. 1+½+¼+…=2. Negative ratio −½ இருந்தாலும் convergence உண்டு; signs மாறிக்கொண்டே இருக்கும்.\nr=1,−1, அல்லது |r|>1 என்றால் இந்த finite formula-வை infinite sum-ஆகப் பயன்படுத்த முடியாது. General series-க்கு terms→0 அவசியம்; அது மட்டும் convergence-க்கு போதாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nInfinite geometric **a/(1−r)**,nonzero a-க்கு|r|<1 தேவை. r≥1 அல்லதுr≤−1 என்றால் அதே formula கொடுத்த number-ஐ sum என்று சொல்ல முடியாது. 2⁻²ⁿ3¹⁺ⁿ=3(3/4)ⁿ→3/(1−3/4)=**12**. முதலில் geometric form,பின் convergence condition,பின் substitution."
     },
     {
       "heading": "Double sums",
       "title": "கூட்டுத்தொகைக்குள் கூட்டுத்தொகை",
       "text": "ஒரு Σ-க்குள் இன்னொரு Σ இருக்கும். உள்ளே இருப்பதை ஒவ்வொரு outer index மதிப்பிற்கும் கணக்கிட்டு, பின்னர் வெளியே கூட்டுங்கள். ஒரே term-ஐ விடாமல் சிறிய அட்டவணையாக எழுதுவது உதவும்.",
-      "details": "Σᵢ₌₀²Σⱼ₌₀³ ij என்றால் ஒவ்வொரு i-க்கும் inner sum = i(0+1+2+3)=6i. Outer sum=0+6+12=**18**.\nBounds ஒன்றையொன்று சார்ந்தால் எளிதில் product-of-sums ஆகப் பிரிக்க முடியாது. i,j பாத்திரம் மற்றும் எந்த sum உள்ளே இருக்கிறது என்று எழுதிப் பாருங்கள்."
+      "details": "Σᵢ₌₀²Σⱼ₌₀³ ij என்றால் ஒவ்வொரு i-க்கும் inner sum = i(0+1+2+3)=6i. Outer sum=0+6+12=**18**.\nBounds ஒன்றையொன்று சார்ந்தால் எளிதில் product-of-sums ஆகப் பிரிக்க முடியாது. i,j பாத்திரம் மற்றும் எந்த sum உள்ளே இருக்கிறது என்று எழுதிப் பாருங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nInner index first:Σᵢ₌₀²Σⱼ₌₀³ij=Σᵢ6i=**18**. i inner evaluation-இல் constant. Independent finite rectangular limits என்றால் order மாற்றலாம்;dependent limits இருந்தால் region/limits மாற்றவேண்டும். நான்கு j values,மூன்று i values→12 terms."
     },
     {
       "heading": "Useful closed forms (Table 2)",
       "title": "நேரடியாகக் கூட்டுத்தொகை காணும் விதிகள்",
       "text": "1+…+n, squares, cubes ஆகியவற்றிற்குத் தயார் sum formulas உண்டு. ஆனால் 100 முதல் 200 வரை என்றால் S(200)−S(99). S(100)-ஐ கழித்தால் 100-ஐயும் தவறாக நீக்கிவிடுவீர்கள்.",
-      "details": "**1+…+n=n(n+1)/2**; **1²+…+n²=n(n+1)(2n+1)/6**; **1³+…+n³=[n(n+1)/2]²**.\n100…200 sum = S(200)−S(99)=20,100−4,950=**15,150**. PDF-இல் 196,050 என இருப்பது arithmetic slip. Answer-ஐ average×count=150×101 மூலமும் சோதிக்கலாம்."
+      "details": "**1+…+n=n(n+1)/2**; **1²+…+n²=n(n+1)(2n+1)/6**; **1³+…+n³=[n(n+1)/2]²**.\n100…200 sum = S(200)−S(99)=20,100−4,950=**15,150**. PDF-இல் 196,050 என இருப்பது arithmetic slip. Answer-ஐ average×count=150×101 மூலமும் சோதிக்கலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nΣk=n(n+1)/2;Σk²=n(n+1)(2n+1)/6;Σk³=[n(n+1)/2]². Σ100…200=20100−4950=**15150**. 1…10 squares385,cubes3025. Σ₀∞xᵏ=1/(1−x);Σ₁∞kxᵏ⁻¹=1/(1−x)²,|x|<1. Lower index வேறாக இருந்தால் missing initial terms adjust செய்யவேண்டும்."
     },
     {
       "heading": "Quick revision sheet",
@@ -2399,31 +2402,31 @@
       "items": [
         {
           "title": "வரிசையாக வரும் எண்கள்",
-          "text": "வரிசையுடன் வரும் terms-இன் பட்டியல் **Sequence**. 2,4,6,…-இல் aₙ=2n. Terms எந்த இடத்திலிருந்து எண்ணப்படுகின்றன என்று பாருங்கள்; n=0-இலா n=1-இலா என்பது formula-ஐ மாற்றும்."
+          "text": "வரிசையுடன் வரும் terms-இன் பட்டியல் **Sequence**. 2,4,6,…-இல் aₙ=2n. Terms எந்த இடத்திலிருந்து எண்ணப்படுகின்றன என்று பாருங்கள்; n=0-இலா n=1-இலா என்பது formula-ஐ மாற்றும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nSequence **ordered**;set போல order/duplicates மறக்கமுடியாது. aₙ=n/(n+1),n1இல் தொடங்கினால்1/2,2/3,3/4. Finite sequence/string length terms எண்ணிக்கை. Index0ஆ1ஆ என்றதை முதலில் பாருங்கள்;அதே list-க்கு formula index convention-ஐப் பொறுத்து மாறும்."
         },
         {
           "title": "Arithmetic மற்றும் Geometric",
-          "text": "ஒவ்வொரு term-க்கும் ஒரே எண்ணைச் சேர்த்தால் **Arithmetic**. ஒரே எண்ணால் பெருக்கினால் **Geometric**. 2,5,8…-இல் difference 3; 2,6,18…-இல் ratio 3."
+          "text": "ஒவ்வொரு term-க்கும் ஒரே எண்ணைச் சேர்த்தால் **Arithmetic**. ஒரே எண்ணால் பெருக்கினால் **Geometric**. 2,5,8…-இல் difference 3; 2,6,18…-இல் ratio 3.\n\n**AP nth term:** aₙ=a+(n−1)d. **GP nth term:** aₙ=arⁿ⁻¹, n=1-இல் தொடங்கினால். 2,5,8,…-க்கு aₙ=3n−1; 2,6,18,…-க்கு aₙ=2·3ⁿ⁻¹.\n0-based sequence-இல் exponent n ஆக மாறும். சில terms மட்டும் கொடுத்தால் பல formulas பொருந்தலாம்; கேள்வியின் intended simple pattern/assumptions-ஐச் சொல்லுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nIndex0இல் arithmetic aₙ=a+nd;geometric aₙ=arⁿ. Index1இல் a+(n−1)d/arⁿ⁻¹. −1+4n,n0→−1,3,7;6(1/3)ⁿ→6,2,2/3;(-1)ⁿ alternates. Constant differences/ratios pattern clues;finite listed terms மட்டும் unique continuation நிரூபிக்காது. n! products;0!=1."
         },
         {
           "title": "கூட்டுத்தொகைக் குறியீடு",
-          "text": "**Σ** கொடுத்த வரம்பில் terms சேர்க்கச் சொல்கிறது. Σₖ₌₁³ k² = 1²+2²+3² = 14. தொடக்க, முடிவு indices இரண்டும் சேரும்; terms எண்ணிக்கை end−start+1."
+          "text": "**Σ** கொடுத்த வரம்பில் terms சேர்க்கச் சொல்கிறது. Σₖ₌₁³ k² = 1²+2²+3² = 14. தொடக்க, முடிவு indices இரண்டும் சேரும்; terms எண்ணிக்கை end−start+1.\n\nΣₖ₌ₘⁿ [aₖ+bₖ]=Σaₖ+Σbₖ; constant c-ஐ வெளியே எடுக்கலாம்: Σc·aₖ=cΣaₖ. **Σₖ₌ₘⁿ c=c(n−m+1)**.\nIndex k ஒரு dummy variable; j என்று மாற்றினாலும் sum மாறாது. ஆனால் bounds-ஐ மாற்றும்போது expression-ஐயும் மாற்ற வேண்டியிருக்கும். Product of sums மற்றும் sum of products ஒன்றல்ல.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nΣⱼ₌ₘⁿaⱼ என்பது m…n inclusive;terms n−m+1. Dummy index பெயர் மாற்றலாம்,limits சரியாகவேண்டும். Σ(axⱼ+byⱼ)=aΣxⱼ+bΣyⱼ. Sum of products பொதுவாக product of sums அல்ல. Σ100…200-இல்101 terms;100 terms என்று எண்ணுவது off-by-one பிழை."
         },
         {
           "title": "முடிவுள்ள பெருக்கல் தொடரின் கூட்டுத்தொகை",
-          "text": "a+ar+…+arⁿ-இல் n+1 terms உள்ளன. r≠1 என்றால் sum = a(1−rⁿ⁺¹)/(1−r). r=1 என்றால் எல்லா terms-உம் a; ஆகவே a(n+1)."
+          "text": "a+ar+…+arⁿ-இல் n+1 terms உள்ளன. r≠1 என்றால் sum = a(1−rⁿ⁺¹)/(1−r). r=1 என்றால் எல்லா terms-உம் a; ஆகவே a(n+1).\n\nமுதல் n terms-க்கு **Sₙ=a(1−rⁿ)/(1−r)**, r≠1. k=0 முதல் n வரை என்றால் n+1 terms; exponent n+1. முதலில் terms எண்ணிக்கையைத் தீர்மானிக்குங்கள்.\n2+6+18+54=2(1−3⁴)/(1−3)=**80**. r=1 என்றால் formula denominator பூஜ்யம்; நேரடியாக number of terms×a பயன்படுத்துங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nS=a+ar+…+arⁿ, **n+1 terms**. rS−S=a(rⁿ⁺¹−1)→S=a(rⁿ⁺¹−1)/(r−1),r≠1; r1→(n+1)a. n0…8 3·2ⁿ sum1533;2·3ⁿ sum19682;total**21215**. r0 sequence-ஐ தனியாக a,0,0,… என எடுத்தால் sum a;0⁰ notation-ஐ convention இல்லாமல் பயன்படுத்தாதீர்கள்."
         },
         {
           "title": "முடிவில்லாத தொடரின் கூட்டுத்தொகை",
-          "text": "முடிவில்லாத geometric series-க்கு **|r|<1** என்றால்தான் finite sum a/(1−r) கிடைக்கும். r=2 போன்ற வளர்ந்து வரும் series-க்கு அந்த formula பயன்படுத்தக்கூடாது."
+          "text": "முடிவில்லாத geometric series-க்கு **|r|<1** என்றால்தான் finite sum a/(1−r) கிடைக்கும். r=2 போன்ற வளர்ந்து வரும் series-க்கு அந்த formula பயன்படுத்தக்கூடாது.\n\na+ar+ar²+… = **a/(1−r)** only if |r|<1. 1+½+¼+…=2. Negative ratio −½ இருந்தாலும் convergence உண்டு; signs மாறிக்கொண்டே இருக்கும்.\nr=1,−1, அல்லது |r|>1 என்றால் இந்த finite formula-வை infinite sum-ஆகப் பயன்படுத்த முடியாது. General series-க்கு terms→0 அவசியம்; அது மட்டும் convergence-க்கு போதாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nInfinite geometric **a/(1−r)**,nonzero a-க்கு|r|<1 தேவை. r≥1 அல்லதுr≤−1 என்றால் அதே formula கொடுத்த number-ஐ sum என்று சொல்ல முடியாது. 2⁻²ⁿ3¹⁺ⁿ=3(3/4)ⁿ→3/(1−3/4)=**12**. முதலில் geometric form,பின் convergence condition,பின் substitution."
         },
         {
           "title": "கூட்டுத்தொகைக்குள் கூட்டுத்தொகை",
-          "text": "ஒரு Σ-க்குள் இன்னொரு Σ இருக்கும். உள்ளே இருப்பதை ஒவ்வொரு outer index மதிப்பிற்கும் கணக்கிட்டு, பின்னர் வெளியே கூட்டுங்கள். ஒரே term-ஐ விடாமல் சிறிய அட்டவணையாக எழுதுவது உதவும்."
+          "text": "ஒரு Σ-க்குள் இன்னொரு Σ இருக்கும். உள்ளே இருப்பதை ஒவ்வொரு outer index மதிப்பிற்கும் கணக்கிட்டு, பின்னர் வெளியே கூட்டுங்கள். ஒரே term-ஐ விடாமல் சிறிய அட்டவணையாக எழுதுவது உதவும்.\n\nΣᵢ₌₀²Σⱼ₌₀³ ij என்றால் ஒவ்வொரு i-க்கும் inner sum = i(0+1+2+3)=6i. Outer sum=0+6+12=**18**.\nBounds ஒன்றையொன்று சார்ந்தால் எளிதில் product-of-sums ஆகப் பிரிக்க முடியாது. i,j பாத்திரம் மற்றும் எந்த sum உள்ளே இருக்கிறது என்று எழுதிப் பாருங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nInner index first:Σᵢ₌₀²Σⱼ₌₀³ij=Σᵢ6i=**18**. i inner evaluation-இல் constant. Independent finite rectangular limits என்றால் order மாற்றலாம்;dependent limits இருந்தால் region/limits மாற்றவேண்டும். நான்கு j values,மூன்று i values→12 terms."
         },
         {
           "title": "நேரடியாகக் கூட்டுத்தொகை காணும் விதிகள்",
-          "text": "1+…+n, squares, cubes ஆகியவற்றிற்குத் தயார் sum formulas உண்டு. ஆனால் 100 முதல் 200 வரை என்றால் S(200)−S(99). S(100)-ஐ கழித்தால் 100-ஐயும் தவறாக நீக்கிவிடுவீர்கள்."
+          "text": "1+…+n, squares, cubes ஆகியவற்றிற்குத் தயார் sum formulas உண்டு. ஆனால் 100 முதல் 200 வரை என்றால் S(200)−S(99). S(100)-ஐ கழித்தால் 100-ஐயும் தவறாக நீக்கிவிடுவீர்கள்.\n\n**1+…+n=n(n+1)/2**; **1²+…+n²=n(n+1)(2n+1)/6**; **1³+…+n³=[n(n+1)/2]²**.\n100…200 sum = S(200)−S(99)=20,100−4,950=**15,150**. PDF-இல் 196,050 என இருப்பது arithmetic slip. Answer-ஐ average×count=150×101 மூலமும் சோதிக்கலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nΣk=n(n+1)/2;Σk²=n(n+1)(2n+1)/6;Σk³=[n(n+1)/2]². Σ100…200=20100−4950=**15150**. 1…10 squares385,cubes3025. Σ₀∞xᵏ=1/(1−x);Σ₁∞kxᵏ⁻¹=1/(1−x)²,|x|<1. Lower index வேறாக இருந்தால் missing initial terms adjust செய்யவேண்டும்."
         }
       ]
     }
@@ -2432,31 +2435,32 @@
     {
       "heading": "Matrices represent data",
       "title": "Matrix அளவு",
-      "text": "வரிசைகளும் நிரல்களும் கொண்ட எண்ணட்டவணை **Matrix**. m×n என்றால் m rows, n columns. முதலில் size-ஐ எழுதினால் எந்த operation செய்யலாம் என்பதில் தவறு குறையும்."
+      "text": "வரிசைகளும் நிரல்களும் கொண்ட எண்ணட்டவணை **Matrix**. m×n என்றால் m rows, n columns. முதலில் size-ஐ எழுதினால் எந்த operation செய்யலாம் என்பதில் தவறு குறையும்.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nMatrix m×n என்றால்m rows,n columns. Entry aᵢⱼ rowi,columnj. **ஒரு column m×1**,row1×n. Equal matrices same dimensions+entrywise equality. Square m=n. Data table மட்டும் அல்ல;relations/graphs matrix representation-க்கும் பயன்படும்."
     },
     {
       "heading": "Matrix addition",
       "title": "அணிகளைக் கூட்டுதல்",
       "text": "ஒரே size உள்ள matrices-ஐ மட்டும் கூட்டலாம். பொருந்தும் இடங்களின் எண்களைச் சேருங்கள். Row 1 column 2-இன் எண்ணை அதே இடத்திலுள்ள எண்ணுடன் மட்டுமே கூட்ட வேண்டும்.",
-      "details": "Same dimensions தேவை. **(A+B)ᵢⱼ=aᵢⱼ+bᵢⱼ**; scalar multiplication-இல் ஒவ்வொரு entry-க்கும் scalar பெருக்க வேண்டும். Matrix size வேறாக இருந்தால் addition defined அல்ல; காலி இடத்தை zero என்று தானாக நிரப்பாதீர்கள்."
+      "details": "Same dimensions தேவை. **(A+B)ᵢⱼ=aᵢⱼ+bᵢⱼ**; scalar multiplication-இல் ஒவ்வொரு entry-க்கும் scalar பெருக்க வேண்டும். Matrix size வேறாக இருந்தால் addition defined அல்ல; காலி இடத்தை zero என்று தானாக நிரப்பாதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nAddition same dimensions மட்டும்;entrywise sum/subtract. Source3×3 example result rows **(0,3,9),(1,0,−1),(2,−5,−3)**. Multiplication size rule-ஐ addition-க்கு பயன்படுத்தாதீர்கள்;2×3 மற்றும்3×2 add முடியாது."
     },
     {
       "heading": "Matrix multiplication",
       "title": "அணிகளைப் பெருக்குதல்",
       "text": "A m×n, B n×p என்றால் AB m×p. A-வின் row-ஐ B-யின் column-உடன் பெருக்கிச் சேர்ப்போம். ஒவ்வொரு இடத்திலுள்ள எண்களை நேரடியாகப் பெருக்குவது வழக்கமான matrix multiplication அல்ல.",
-      "details": "**cᵢⱼ=Σₖ aᵢₖbₖⱼ**. Row [1,2], column [3,4]ᵀ என்றால் entry 1×3+2×4=**11**. A 2×3, B 3×4 என்றால் AB 2×4; BA இங்கே defined அல்ல.\nAB=0 என்றதால் A=0 அல்லது B=0 என்று பொதுவாக முடிவு செய்ய முடியாது. எண்களின் எல்லா properties-யும் matrices-க்கு வராது."
+      "details": "**cᵢⱼ=Σₖ aᵢₖbₖⱼ**. Row [1,2], column [3,4]ᵀ என்றால் entry 1×3+2×4=**11**. A 2×3, B 3×4 என்றால் AB 2×4; BA இங்கே defined அல்ல.\nAB=0 என்றதால் A=0 அல்லது B=0 என்று பொதுவாக முடிவு செய்ய முடியாது. எண்களின் எல்லா properties-யும் matrices-க்கு வராது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n(m×k)(k×n)→m×n;entry row·column sum. Example c11=3·1+1·4+4·2=15;fullAB rows **(15,24,−3),(13,7,10)**. AB≠BA பொதுவாக;ஒரு product exist ஆனாலும் மற்றது இல்லாமல் இருக்கலாம். Standard square algorithm n³ multiplications,n²(n−1) mathematical additions;zero accumulator code-இல் extra additions இருக்கலாம்."
     },
     {
       "heading": "Identity, powers, transpose & symmetric",
       "title": "அலகு அணியும் வரிசை மாற்றமும்",
       "text": "**AI=IA=A**; I-இன் diagonal-இல் 1. **Transpose** rows-ஐ columns-ஆக மாற்றும். Aᵀ=A என்றால் symmetric. AB மற்றும் BA பொதுவாகச் சமம் அல்ல.",
-      "details": "**A⁰=I** square matrix-க்கு; **Aᵏ** மீண்டும் மீண்டும் matrix multiplication. **(AB)ᵀ=BᵀAᵀ** — order திரும்பும். Symmetric matrix-க்கு aᵢⱼ=aⱼᵢ.\nNon-square matrix-க்கு same-size identity என்ற பெயரில் arbitrary array வைக்காதீர்கள்; left, right identity sizes multiplication-க்கு பொருந்த வேண்டும்."
+      "details": "**A⁰=I** square matrix-க்கு; **Aᵏ** மீண்டும் மீண்டும் matrix multiplication. **(AB)ᵀ=BᵀAᵀ** — order திரும்பும். Symmetric matrix-க்கு aᵢⱼ=aⱼᵢ.\nNon-square matrix-க்கு same-size identity என்ற பெயரில் arbitrary array வைக்காதீர்கள்; left, right identity sizes multiplication-க்கு பொருந்த வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nI diagonal1 மற்றவை0;A square என்றால்A⁰=I,Aʳ repeated matrix products,entrywise power அல்ல. Transpose m×n→n×m;(AB)ᵀ=BᵀAᵀ order reverse. Symmetric A=Aᵀ square. RectangularA-க்கும்IₘA=AIₙ=A சரியான sizes-இல் பொருந்தும்."
     },
     {
       "heading": "Zero–one matrices: join and meet",
       "title": "பூஜ்யம்–ஒன்று அணிகள்",
       "text": "ஒவ்வொரு இடமும் 0 அல்லது 1. **Join** என்பது OR; **Meet** என்பது AND. Join-இல் ஏதேனும் ஒன்று 1 என்றால் 1; Meet-இல் இரண்டும் 1 ஆக வேண்டும். இவை சாதாரண கூட்டல் விதிகள் அல்ல.",
-      "details": "Join/Meet entry-wise: **1∨0=1; 1∧0=0; 1∨1=1; 1∧1=1**. Join addition அல்ல: 1+1=2, ஆனால் 1∨1=1.\nZero–one matrices relations-ஐக் குறிக்க உதவும். OR, AND எந்தப் பணியைச் செய்கிறது என்று truth table-உடன் இணைத்தால் நினைவில் நிற்கும்."
+      "details": "Join/Meet entry-wise: **1∨0=1; 1∧0=0; 1∨1=1; 1∧1=1**. Join addition அல்ல: 1+1=2, ஆனால் 1∨1=1.\nZero–one matrices relations-ஐக் குறிக்க உதவும். OR, AND எந்தப் பணியைச் செய்கிறது என்று truth table-உடன் இணைத்தால் நினைவில் நிற்கும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nZero–one entries0/1. **Join OR** ஒரே position-இல் குறைந்தது ஒன்று1;**meet AND** இரண்டும்1. Examplejoin rows(1,1,1),(1,1,0);meet(0,0,0),(0,1,0). Ordinary addition1+1=2;Boolean OR1∨1=1. Join/meet elementwise,ordinary row-column product அல்ல."
     },
     {
       "heading": "Quick revision sheet",
@@ -2464,23 +2468,23 @@
       "items": [
         {
           "title": "Matrix அளவு",
-          "text": "வரிசைகளும் நிரல்களும் கொண்ட எண்ணட்டவணை **Matrix**. m×n என்றால் m rows, n columns. முதலில் size-ஐ எழுதினால் எந்த operation செய்யலாம் என்பதில் தவறு குறையும்."
+          "text": "வரிசைகளும் நிரல்களும் கொண்ட எண்ணட்டவணை **Matrix**. m×n என்றால் m rows, n columns. முதலில் size-ஐ எழுதினால் எந்த operation செய்யலாம் என்பதில் தவறு குறையும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nMatrix m×n என்றால்m rows,n columns. Entry aᵢⱼ rowi,columnj. **ஒரு column m×1**,row1×n. Equal matrices same dimensions+entrywise equality. Square m=n. Data table மட்டும் அல்ல;relations/graphs matrix representation-க்கும் பயன்படும்."
         },
         {
           "title": "அணிகளைக் கூட்டுதல்",
-          "text": "ஒரே size உள்ள matrices-ஐ மட்டும் கூட்டலாம். பொருந்தும் இடங்களின் எண்களைச் சேருங்கள். Row 1 column 2-இன் எண்ணை அதே இடத்திலுள்ள எண்ணுடன் மட்டுமே கூட்ட வேண்டும்."
+          "text": "ஒரே size உள்ள matrices-ஐ மட்டும் கூட்டலாம். பொருந்தும் இடங்களின் எண்களைச் சேருங்கள். Row 1 column 2-இன் எண்ணை அதே இடத்திலுள்ள எண்ணுடன் மட்டுமே கூட்ட வேண்டும்.\n\nSame dimensions தேவை. **(A+B)ᵢⱼ=aᵢⱼ+bᵢⱼ**; scalar multiplication-இல் ஒவ்வொரு entry-க்கும் scalar பெருக்க வேண்டும். Matrix size வேறாக இருந்தால் addition defined அல்ல; காலி இடத்தை zero என்று தானாக நிரப்பாதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nAddition same dimensions மட்டும்;entrywise sum/subtract. Source3×3 example result rows **(0,3,9),(1,0,−1),(2,−5,−3)**. Multiplication size rule-ஐ addition-க்கு பயன்படுத்தாதீர்கள்;2×3 மற்றும்3×2 add முடியாது."
         },
         {
           "title": "அணிகளைப் பெருக்குதல்",
-          "text": "A m×n, B n×p என்றால் AB m×p. A-வின் row-ஐ B-யின் column-உடன் பெருக்கிச் சேர்ப்போம். ஒவ்வொரு இடத்திலுள்ள எண்களை நேரடியாகப் பெருக்குவது வழக்கமான matrix multiplication அல்ல."
+          "text": "A m×n, B n×p என்றால் AB m×p. A-வின் row-ஐ B-யின் column-உடன் பெருக்கிச் சேர்ப்போம். ஒவ்வொரு இடத்திலுள்ள எண்களை நேரடியாகப் பெருக்குவது வழக்கமான matrix multiplication அல்ல.\n\n**cᵢⱼ=Σₖ aᵢₖbₖⱼ**. Row [1,2], column [3,4]ᵀ என்றால் entry 1×3+2×4=**11**. A 2×3, B 3×4 என்றால் AB 2×4; BA இங்கே defined அல்ல.\nAB=0 என்றதால் A=0 அல்லது B=0 என்று பொதுவாக முடிவு செய்ய முடியாது. எண்களின் எல்லா properties-யும் matrices-க்கு வராது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n(m×k)(k×n)→m×n;entry row·column sum. Example c11=3·1+1·4+4·2=15;fullAB rows **(15,24,−3),(13,7,10)**. AB≠BA பொதுவாக;ஒரு product exist ஆனாலும் மற்றது இல்லாமல் இருக்கலாம். Standard square algorithm n³ multiplications,n²(n−1) mathematical additions;zero accumulator code-இல் extra additions இருக்கலாம்."
         },
         {
           "title": "அலகு அணியும் வரிசை மாற்றமும்",
-          "text": "**AI=IA=A**; I-இன் diagonal-இல் 1. **Transpose** rows-ஐ columns-ஆக மாற்றும். Aᵀ=A என்றால் symmetric. AB மற்றும் BA பொதுவாகச் சமம் அல்ல."
+          "text": "**AI=IA=A**; I-இன் diagonal-இல் 1. **Transpose** rows-ஐ columns-ஆக மாற்றும். Aᵀ=A என்றால் symmetric. AB மற்றும் BA பொதுவாகச் சமம் அல்ல.\n\n**A⁰=I** square matrix-க்கு; **Aᵏ** மீண்டும் மீண்டும் matrix multiplication. **(AB)ᵀ=BᵀAᵀ** — order திரும்பும். Symmetric matrix-க்கு aᵢⱼ=aⱼᵢ.\nNon-square matrix-க்கு same-size identity என்ற பெயரில் arbitrary array வைக்காதீர்கள்; left, right identity sizes multiplication-க்கு பொருந்த வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nI diagonal1 மற்றவை0;A square என்றால்A⁰=I,Aʳ repeated matrix products,entrywise power அல்ல. Transpose m×n→n×m;(AB)ᵀ=BᵀAᵀ order reverse. Symmetric A=Aᵀ square. RectangularA-க்கும்IₘA=AIₙ=A சரியான sizes-இல் பொருந்தும்."
         },
         {
           "title": "பூஜ்யம்–ஒன்று அணிகள்",
-          "text": "ஒவ்வொரு இடமும் 0 அல்லது 1. **Join** என்பது OR; **Meet** என்பது AND. Join-இல் ஏதேனும் ஒன்று 1 என்றால் 1; Meet-இல் இரண்டும் 1 ஆக வேண்டும். இவை சாதாரண கூட்டல் விதிகள் அல்ல."
+          "text": "ஒவ்வொரு இடமும் 0 அல்லது 1. **Join** என்பது OR; **Meet** என்பது AND. Join-இல் ஏதேனும் ஒன்று 1 என்றால் 1; Meet-இல் இரண்டும் 1 ஆக வேண்டும். இவை சாதாரண கூட்டல் விதிகள் அல்ல.\n\nJoin/Meet entry-wise: **1∨0=1; 1∧0=0; 1∨1=1; 1∧1=1**. Join addition அல்ல: 1+1=2, ஆனால் 1∨1=1.\nZero–one matrices relations-ஐக் குறிக்க உதவும். OR, AND எந்தப் பணியைச் செய்கிறது என்று truth table-உடன் இணைத்தால் நினைவில் நிற்கும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nZero–one entries0/1. **Join OR** ஒரே position-இல் குறைந்தது ஒன்று1;**meet AND** இரண்டும்1. Examplejoin rows(1,1,1),(1,1,0);meet(0,0,0),(0,1,0). Ordinary addition1+1=2;Boolean OR1∨1=1. Join/meet elementwise,ordinary row-column product அல்ல."
         }
       ]
     }
@@ -2490,30 +2494,31 @@
       "heading": "Divisibility",
       "title": "மீதியில்லாமல் வகுபடுதல்",
       "text": "**a|b** என்றால் b=ak ஆகும் ஒரு integer k உள்ளது. 3|12 ஏனெனில் 12=3×4. இது a÷b என்ற division instruction அல்ல; மீதியில்லாமல் வகுபடுகிறதா என்ற கூற்று.",
-      "details": "a|b, a|c என்றால் a|(b+c) மற்றும் a|(b−c). a|b, b|c என்றால் a|c. b=ak, c=aℓ என்று எழுதி factor a வெளியே எடுத்தால் proof கிடைக்கும்.\na|b என்பதால் b|a என்று சொல்ல முடியாது: 3|12 true; 12|3 false. Division notation-உடன் divisibility symbol-ஐக் குழப்பாதீர்கள்."
+      "details": "a|b, a|c என்றால் a|(b+c) மற்றும் a|(b−c). a|b, b|c என்றால் a|c. b=ak, c=aℓ என்று எழுதி factor a வெளியே எடுத்தால் proof கிடைக்கும்.\na|b என்பதால் b|a என்று சொல்ல முடியாது: 3|12 true; 12|3 false. Division notation-உடன் divisibility symbol-ஐக் குழப்பாதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\na|b என்றால்b=ak,integerk,a≠0 (course definition);a/b numerical division வேறு. a|b,a|c→a|(b+c) மற்றும்a|(mb+nc). b=as,c=at substitute→a(ms+nt). a|b,b|c→a|c. Definition-இன் integer multiplier-ஐ explicit காட்டுவது proof-இன் முக்கியப் படி."
     },
     {
       "heading": "The division algorithm",
       "title": "ஈவும் மீதியும்",
-      "text": "**a=bq+r**, b>0, **0≤r<b**. Negative a இருந்தாலும் remainder non-negative வர வேண்டும். −23=5(−5)+2; ஆகவே −23 mod 5 = 2."
+      "text": "**a=bq+r**, b>0, **0≤r<b**. Negative a இருந்தாலும் remainder non-negative வர வேண்டும். −23=5(−5)+2; ஆகவே −23 mod 5 = 2.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**a=dq+r,d>0,0≤r<d**,q/r unique.27=4·6+3;−23=5·(−5)+2. q−4,r−3 அனுமதி இல்லை. Mathematical q=floor(a/d). சில programming மொழிகளின் % negative remainder தரலாம்;அதை course mod-உடன் தானாக ஒப்பிடாதீர்கள்."
     },
     {
       "heading": "Modular arithmetic & congruence",
       "title": "மீதியை அடிப்படையாகக் கொண்ட கணக்கு",
       "text": "Clock-இல் 12-க்குப் பிறகு மீண்டும் 1 வருவது போல ஒரு modulus-க்குள் எண்ணுகிறோம். **a≡b (mod m)** என்றால் m, a−b-ஐ வகுக்கும். இரண்டுக்கும் ஒரே remainder என்பதும் அதே பொருள்.",
-      "details": "**a≡b(mod m) iff m|(a−b)**. ஒரே remainder கொண்ட அனைத்தும் ஒரு congruence class. Classes [0],…,[m−1].\nCongruences-ஐ கூட்டவும் பெருக்கவும்லாம். ஆனால் இருபுறமும் ஒரு எண்ணால் cancel செய்வது எல்லா நேரமும் அனுமதி இல்லை; modulus-உடன் அந்த எண்ணின் gcd போன்ற நிபந்தனை தேவை. Modular arithmetic-இல் ordinary division-ஐக் கண்மூடி செய்யாதீர்கள்."
+      "details": "**a≡b(mod m) iff m|(a−b)**. ஒரே remainder கொண்ட அனைத்தும் ஒரு congruence class. Classes [0],…,[m−1].\nCongruences-ஐ கூட்டவும் பெருக்கவும்லாம். ஆனால் இருபுறமும் ஒரு எண்ணால் cancel செய்வது எல்லா நேரமும் அனுமதி இல்லை; modulus-உடன் அந்த எண்ணின் gcd போன்ற நிபந்தனை தேவை. Modular arithmetic-இல் ordinary division-ஐக் கண்மூடி செய்யாதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\na≡b(modm)⇔m|(a−b)⇔same remainder.17≡3(mod7);21≢6(mod8). Add/multiply congruences valid. **Cancellation பொதுவாக தவறு:**2·1≡2·4(mod6),ஆனால்1≢4. gcd(c,m)=1 என்றால் c cancel செய்யலாம். Class[a]ₘ={a+km:k∈ℤ};residues0…m−1."
     },
     {
       "heading": "Primes",
       "title": "பகா எண்கள்",
       "text": "1-ஐவிடப் பெரிய எண்ணை 1 மற்றும் அதே எண்ணால் மட்டுமே வகுக்க முடிந்தால் **Prime**. 1 prime அல்ல. பெரிய எண்ணின் prime factors-ஐப் பிரித்தால் gcd, lcm போன்றவற்றைக் கணக்கிட உதவும்.",
-      "details": "Prime factor தேட n-க்கு **√n** வரை possible divisors சோதித்தால் போதும். n=ab-இல் இரண்டும் √n-ஐவிடப் பெரியதாக இருந்தால் product>n ஆகிவிடும் என்பதே காரணம்.\n2 ஒரே even prime. 1 neither prime nor composite. n>2 even என்றால் 2 என்ற nontrivial divisor இருப்பதால் composite."
+      "details": "Prime factor தேட n-க்கு **√n** வரை possible divisors சோதித்தால் போதும். n=ab-இல் இரண்டும் √n-ஐவிடப் பெரியதாக இருந்தால் product>n ஆகிவிடும் என்பதே காரணம்.\n2 ஒரே even prime. 1 neither prime nor composite. n>2 even என்றால் 2 என்ற nontrivial divisor இருப்பதால் composite.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nPrimep>1 factors1,p;1 neither prime nor composite;2 மட்டும் even prime. Factor748=2²·11·17. Check primes≤√n போதும். Unique prime factorisation order தவிர. Euclid proof:finite primes product+1 எந்த listed prime-ஆலும் divide ஆகாது;அந்த number தானே prime ஆகவேண்டும் என்றில்லை,புதிய prime factor இருக்கவேண்டும்."
     },
     {
       "heading": "Cryptography — Caesar's cipher",
       "title": "எழுத்துகளை நகர்த்தி மறைகுறியாக்குதல்",
       "text": "எழுத்துகளை ஒரு நிரந்தர எண்ணால் நகர்த்துவோம். A=0,…,Z=25 என்றால் **E(x)=(x+k) mod 26**. Decode செய்ய k-ஐக் கழிக்க வேண்டும். இது கருத்தைப் புரிய உதவும் எளிய cipher; வலுவான நவீன பாதுகாப்பு அல்ல.",
-      "details": "k=3 என்றால் Y(24)→B(1), A(0)→D(3); அதனால் **YARD→BDUG**. Decode-இல் **CHVW→ZEST**.\nAlphabet A=0 convention-ஐப் பின்பற்றுங்கள்; A=1 என்று நடுவில் மாற்றினால் answer shift ஆகிவிடும். Negative remainder வந்தால் 26 சேர்த்து 0…25 range-க்கு மாற்றுங்கள்."
+      "details": "k=3 என்றால் Y(24)→B(1), A(0)→D(3); அதனால் **YARD→BDUG**. Decode-இல் **CHVW→ZEST**.\nAlphabet A=0 convention-ஐப் பின்பற்றுங்கள்; A=1 என்று நடுவில் மாற்றினால் answer shift ஆகிவிடும். Negative remainder வந்தால் 26 சேர்த்து 0…25 range-க்கு மாற்றுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nA0…Z25;encrypt(p+k)mod26;decrypt(c−k)mod26. YARD→BDUG;CHVW→ZEST. Y24+3=27→1B;C2−3=−1→25Z. Shift map alphabet residues-இல் bijective. இது mathematical teaching cipher;நவீன secure encryption என்று கருதாதீர்கள்."
     },
     {
       "heading": "Quick revision sheet",
@@ -2521,23 +2526,23 @@
       "items": [
         {
           "title": "மீதியில்லாமல் வகுபடுதல்",
-          "text": "**a|b** என்றால் b=ak ஆகும் ஒரு integer k உள்ளது. 3|12 ஏனெனில் 12=3×4. இது a÷b என்ற division instruction அல்ல; மீதியில்லாமல் வகுபடுகிறதா என்ற கூற்று."
+          "text": "**a|b** என்றால் b=ak ஆகும் ஒரு integer k உள்ளது. 3|12 ஏனெனில் 12=3×4. இது a÷b என்ற division instruction அல்ல; மீதியில்லாமல் வகுபடுகிறதா என்ற கூற்று.\n\na|b, a|c என்றால் a|(b+c) மற்றும் a|(b−c). a|b, b|c என்றால் a|c. b=ak, c=aℓ என்று எழுதி factor a வெளியே எடுத்தால் proof கிடைக்கும்.\na|b என்பதால் b|a என்று சொல்ல முடியாது: 3|12 true; 12|3 false. Division notation-உடன் divisibility symbol-ஐக் குழப்பாதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\na|b என்றால்b=ak,integerk,a≠0 (course definition);a/b numerical division வேறு. a|b,a|c→a|(b+c) மற்றும்a|(mb+nc). b=as,c=at substitute→a(ms+nt). a|b,b|c→a|c. Definition-இன் integer multiplier-ஐ explicit காட்டுவது proof-இன் முக்கியப் படி."
         },
         {
           "title": "ஈவும் மீதியும்",
-          "text": "**a=bq+r**, b>0, **0≤r<b**. Negative a இருந்தாலும் remainder non-negative வர வேண்டும். −23=5(−5)+2; ஆகவே −23 mod 5 = 2."
+          "text": "**a=bq+r**, b>0, **0≤r<b**. Negative a இருந்தாலும் remainder non-negative வர வேண்டும். −23=5(−5)+2; ஆகவே −23 mod 5 = 2.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**a=dq+r,d>0,0≤r<d**,q/r unique.27=4·6+3;−23=5·(−5)+2. q−4,r−3 அனுமதி இல்லை. Mathematical q=floor(a/d). சில programming மொழிகளின் % negative remainder தரலாம்;அதை course mod-உடன் தானாக ஒப்பிடாதீர்கள்."
         },
         {
           "title": "மீதியை அடிப்படையாகக் கொண்ட கணக்கு",
-          "text": "Clock-இல் 12-க்குப் பிறகு மீண்டும் 1 வருவது போல ஒரு modulus-க்குள் எண்ணுகிறோம். **a≡b (mod m)** என்றால் m, a−b-ஐ வகுக்கும். இரண்டுக்கும் ஒரே remainder என்பதும் அதே பொருள்."
+          "text": "Clock-இல் 12-க்குப் பிறகு மீண்டும் 1 வருவது போல ஒரு modulus-க்குள் எண்ணுகிறோம். **a≡b (mod m)** என்றால் m, a−b-ஐ வகுக்கும். இரண்டுக்கும் ஒரே remainder என்பதும் அதே பொருள்.\n\n**a≡b(mod m) iff m|(a−b)**. ஒரே remainder கொண்ட அனைத்தும் ஒரு congruence class. Classes [0],…,[m−1].\nCongruences-ஐ கூட்டவும் பெருக்கவும்லாம். ஆனால் இருபுறமும் ஒரு எண்ணால் cancel செய்வது எல்லா நேரமும் அனுமதி இல்லை; modulus-உடன் அந்த எண்ணின் gcd போன்ற நிபந்தனை தேவை. Modular arithmetic-இல் ordinary division-ஐக் கண்மூடி செய்யாதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\na≡b(modm)⇔m|(a−b)⇔same remainder.17≡3(mod7);21≢6(mod8). Add/multiply congruences valid. **Cancellation பொதுவாக தவறு:**2·1≡2·4(mod6),ஆனால்1≢4. gcd(c,m)=1 என்றால் c cancel செய்யலாம். Class[a]ₘ={a+km:k∈ℤ};residues0…m−1."
         },
         {
           "title": "பகா எண்கள்",
-          "text": "1-ஐவிடப் பெரிய எண்ணை 1 மற்றும் அதே எண்ணால் மட்டுமே வகுக்க முடிந்தால் **Prime**. 1 prime அல்ல. பெரிய எண்ணின் prime factors-ஐப் பிரித்தால் gcd, lcm போன்றவற்றைக் கணக்கிட உதவும்."
+          "text": "1-ஐவிடப் பெரிய எண்ணை 1 மற்றும் அதே எண்ணால் மட்டுமே வகுக்க முடிந்தால் **Prime**. 1 prime அல்ல. பெரிய எண்ணின் prime factors-ஐப் பிரித்தால் gcd, lcm போன்றவற்றைக் கணக்கிட உதவும்.\n\nPrime factor தேட n-க்கு **√n** வரை possible divisors சோதித்தால் போதும். n=ab-இல் இரண்டும் √n-ஐவிடப் பெரியதாக இருந்தால் product>n ஆகிவிடும் என்பதே காரணம்.\n2 ஒரே even prime. 1 neither prime nor composite. n>2 even என்றால் 2 என்ற nontrivial divisor இருப்பதால் composite.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nPrimep>1 factors1,p;1 neither prime nor composite;2 மட்டும் even prime. Factor748=2²·11·17. Check primes≤√n போதும். Unique prime factorisation order தவிர. Euclid proof:finite primes product+1 எந்த listed prime-ஆலும் divide ஆகாது;அந்த number தானே prime ஆகவேண்டும் என்றில்லை,புதிய prime factor இருக்கவேண்டும்."
         },
         {
           "title": "எழுத்துகளை நகர்த்தி மறைகுறியாக்குதல்",
-          "text": "எழுத்துகளை ஒரு நிரந்தர எண்ணால் நகர்த்துவோம். A=0,…,Z=25 என்றால் **E(x)=(x+k) mod 26**. Decode செய்ய k-ஐக் கழிக்க வேண்டும். இது கருத்தைப் புரிய உதவும் எளிய cipher; வலுவான நவீன பாதுகாப்பு அல்ல."
+          "text": "எழுத்துகளை ஒரு நிரந்தர எண்ணால் நகர்த்துவோம். A=0,…,Z=25 என்றால் **E(x)=(x+k) mod 26**. Decode செய்ய k-ஐக் கழிக்க வேண்டும். இது கருத்தைப் புரிய உதவும் எளிய cipher; வலுவான நவீன பாதுகாப்பு அல்ல.\n\nk=3 என்றால் Y(24)→B(1), A(0)→D(3); அதனால் **YARD→BDUG**. Decode-இல் **CHVW→ZEST**.\nAlphabet A=0 convention-ஐப் பின்பற்றுங்கள்; A=1 என்று நடுவில் மாற்றினால் answer shift ஆகிவிடும். Negative remainder வந்தால் 26 சேர்த்து 0…25 range-க்கு மாற்றுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nA0…Z25;encrypt(p+k)mod26;decrypt(c−k)mod26. YARD→BDUG;CHVW→ZEST. Y24+3=27→1B;C2−3=−1→25Z. Shift map alphabet residues-இல் bijective. இது mathematical teaching cipher;நவீன secure encryption என்று கருதாதீர்கள்."
         }
       ]
     }
@@ -2547,24 +2552,25 @@
       "heading": "Why induction?",
       "title": "Induction ஏன்?",
       "text": "எல்லா positive integers-க்கும் ஒரு கூற்றை ஒவ்வொன்றாகச் சோதிக்க முடியாது. **Base case** உண்மை; **P(k) உண்மையெனில் P(k+1) உண்மை** என்று நிரூபித்தால் சங்கிலிபோல் எல்லாவற்றுக்கும் பரவும்.",
-      "details": "Induction proof இரண்டு பகுதிகளும் அவசியம்: **P(n₀)** base; **P(k)⇒P(k+1)** step. Base இல்லாமல் step மட்டும் இருந்தால் தொடங்காத domino chain போல.\nStep-இல் arbitrary k≥n₀-ஐ எடுத்துக்கொள்ளுங்கள்; ஒரு குறிப்பிட்ட k-க்கு மட்டும் நிரூபித்தால் எல்லா integers-க்கும் கிடைக்காது. Strong induction பயன்படுத்தினால் அதற்கான பல முந்தைய cases hypothesis-ஐத் தெளிவாக எழுதுங்கள்."
+      "details": "Induction proof இரண்டு பகுதிகளும் அவசியம்: **P(n₀)** base; **P(k)⇒P(k+1)** step. Base இல்லாமல் step மட்டும் இருந்தால் தொடங்காத domino chain போல.\nStep-இல் arbitrary k≥n₀-ஐ எடுத்துக்கொள்ளுங்கள்; ஒரு குறிப்பிட்ட k-க்கு மட்டும் நிரூபித்தால் எல்லா integers-க்கும் கிடைக்காது. Strong induction பயன்படுத்தினால் அதற்கான பல முந்தைய cases hypothesis-ஐத் தெளிவாக எழுதுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nInduction **base+universal inductive implication** இரண்டும் வேண்டும். P(k) assume செய்வது எல்லாn-க்கும் conclusion assume செய்தல் அல்ல;arbitraryk-இல்P(k)⇒P(k+1) நிரூபிக்கிறோம். Startn0 என்றால் அதற்கான base;induction chain அந்த இடத்திலிருந்துதான். Numeric checker சில cases மட்டும்;proof மாற்றாகாது."
     },
     {
       "heading": "Worked induction proofs",
       "title": "Induction proof எழுதுதல்",
       "text": "முதலில் தொடக்க எண்ணிற்குச் சோதியுங்கள். பிறகு P(k)-ஐ hypothesis-ஆகப் பயன்படுத்தி P(k+1)-ஐ உருவாக்குங்கள். நிரூபிக்க வேண்டிய P(k+1)-ஐ ஆரம்பத்திலேயே உண்மை என்று எடுத்துக்கொள்ளக்கூடாது.",
-      "details": "**Σᵢ₌₁ⁿ i=n(n+1)/2** proof: n=1 true. k வரை formula சரி எனில் k+1 term சேர்த்து k(k+1)/2+(k+1)=(k+1)(k+2)/2. இது P(k+1)-க்கு வேண்டிய வடிவம்.\nInduction hypothesis எங்கு பயன்படுத்தப்பட்டது என்று குறிப்பிடுங்கள். இருபுறமும் ஒரே மாற்றம் செய்வதால் மட்டும் proof ஆகாது; known case-இலிருந்து next case வர வேண்டும்."
+      "details": "**Σᵢ₌₁ⁿ i=n(n+1)/2** proof: n=1 true. k வரை formula சரி எனில் k+1 term சேர்த்து k(k+1)/2+(k+1)=(k+1)(k+2)/2. இது P(k+1)-க்கு வேண்டிய வடிவம்.\nInduction hypothesis எங்கு பயன்படுத்தப்பட்டது என்று குறிப்பிடுங்கள். இருபுறமும் ஒரே மாற்றம் செய்வதால் மட்டும் proof ஆகாது; known case-இலிருந்து next case வர வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Sum:**k(k+1)/2+(k+1)=(k+1)(k+2)/2. **Odd sum:**k²+(2k+1)=(k+1)². **Inequality:**k+1<2ᵏ+1≤2ᵏ+2ᵏ=2ᵏ⁺¹,k≥1. **Divisibility:**(k+1)³−(k+1)=(k³−k)+3(k²+k). ஒவ்வொன்றிலும்base n1 சரிபார்;hypothesis பகுதியைப் பிரித்துக் காட்டி desired next form அடைந்து conclude."
     },
     {
       "heading": "The well-ordering property",
       "title": "மிகச் சிறிய உறுப்பின் பண்பு",
-      "text": "Positive integers-இன் காலியல்லாத எந்த subset-க்கும் மிகச் சிறிய உறுப்பு உள்ளது. இதை வைத்து “மிகச் சிறிய counterexample” தேர்ந்தெடுத்து contradiction பெறலாம். Real numbers-க்கு இதே கூற்றை அப்படியே சொல்ல முடியாது."
+      "text": "Positive integers-இன் காலியல்லாத எந்த subset-க்கும் மிகச் சிறிய உறுப்பு உள்ளது. இதை வைத்து “மிகச் சிறிய counterexample” தேர்ந்தெடுத்து contradiction பெறலாம். Real numbers-க்கு இதே கூற்றை அப்படியே சொல்ல முடியாது.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Well-ordering:**nonempty subset of nonnegative integers-க்கு least element உண்டு;infinite set-க்கும் உண்டு,உதாரணம்{n∈ℕ:n>7} least8. எல்லா integer subsets-க்கும் அல்ல:ℤ itself least இல்லை. காலி set-க்கும் least இல்லை. Induction-உடன் equivalent principle;smallest counterexample arguments-க்கு பயன்படும்."
     },
     {
       "heading": "Recursion",
       "title": "முந்தைய மதிப்பிலிருந்து அடுத்த மதிப்பு",
       "text": "ஒரு term-ஐ முந்தைய terms மூலம் வரையறுப்பது **Recursion**. Fibonacci-இல் fₙ=fₙ₋₁+fₙ₋₂; தொடக்க மதிப்புகளும் தேவை. விதி மட்டும் இருந்தால் sequence முழுவதும் தீர்மானிக்கப்படாது.",
-      "details": "Recursive definition-க்கு **base values + recursive rule** தேவை. f(0)=1, f(n+1)=2f(n)+3 என்றால் f(1)=5, f(2)=13, f(3)=29.\nFactorial: 0!=1; n!=n(n−1)!, n≥1. Base இல்லாவிட்டால் recursion நிற்காது அல்லது பல sequences அதே rule-க்கு பொருந்தலாம்."
+      "details": "Recursive definition-க்கு **base values + recursive rule** தேவை. f(0)=1, f(n+1)=2f(n)+3 என்றால் f(1)=5, f(2)=13, f(3)=29.\nFactorial: 0!=1; n!=n(n−1)!, n≥1. Base இல்லாவிட்டால் recursion நிற்காது அல்லது பல sequences அதே rule-க்கு பொருந்தலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nRecursion initial values+smaller arguments-இலிருந்து next rule. f0=3,f(n+1)=2fn+3→**3,9,21,45,93**. FactorialF0=1,F(n+1)=(n+1)Fn. Powersa0=1,nexta×previous. FibonacciF0=0,F1=1→0,1,1,2,3,5,8;two initials வேண்டும். Base இல்லாத circular rule unique sequence தராது. Induction statement நிரூபிக்கும்;recursion object வரையறுக்கும்."
     },
     {
       "heading": "Quick revision sheet",
@@ -2572,19 +2578,19 @@
       "items": [
         {
           "title": "Induction ஏன்?",
-          "text": "எல்லா positive integers-க்கும் ஒரு கூற்றை ஒவ்வொன்றாகச் சோதிக்க முடியாது. **Base case** உண்மை; **P(k) உண்மையெனில் P(k+1) உண்மை** என்று நிரூபித்தால் சங்கிலிபோல் எல்லாவற்றுக்கும் பரவும்."
+          "text": "எல்லா positive integers-க்கும் ஒரு கூற்றை ஒவ்வொன்றாகச் சோதிக்க முடியாது. **Base case** உண்மை; **P(k) உண்மையெனில் P(k+1) உண்மை** என்று நிரூபித்தால் சங்கிலிபோல் எல்லாவற்றுக்கும் பரவும்.\n\nInduction proof இரண்டு பகுதிகளும் அவசியம்: **P(n₀)** base; **P(k)⇒P(k+1)** step. Base இல்லாமல் step மட்டும் இருந்தால் தொடங்காத domino chain போல.\nStep-இல் arbitrary k≥n₀-ஐ எடுத்துக்கொள்ளுங்கள்; ஒரு குறிப்பிட்ட k-க்கு மட்டும் நிரூபித்தால் எல்லா integers-க்கும் கிடைக்காது. Strong induction பயன்படுத்தினால் அதற்கான பல முந்தைய cases hypothesis-ஐத் தெளிவாக எழுதுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nInduction **base+universal inductive implication** இரண்டும் வேண்டும். P(k) assume செய்வது எல்லாn-க்கும் conclusion assume செய்தல் அல்ல;arbitraryk-இல்P(k)⇒P(k+1) நிரூபிக்கிறோம். Startn0 என்றால் அதற்கான base;induction chain அந்த இடத்திலிருந்துதான். Numeric checker சில cases மட்டும்;proof மாற்றாகாது."
         },
         {
           "title": "Induction proof எழுதுதல்",
-          "text": "முதலில் தொடக்க எண்ணிற்குச் சோதியுங்கள். பிறகு P(k)-ஐ hypothesis-ஆகப் பயன்படுத்தி P(k+1)-ஐ உருவாக்குங்கள். நிரூபிக்க வேண்டிய P(k+1)-ஐ ஆரம்பத்திலேயே உண்மை என்று எடுத்துக்கொள்ளக்கூடாது."
+          "text": "முதலில் தொடக்க எண்ணிற்குச் சோதியுங்கள். பிறகு P(k)-ஐ hypothesis-ஆகப் பயன்படுத்தி P(k+1)-ஐ உருவாக்குங்கள். நிரூபிக்க வேண்டிய P(k+1)-ஐ ஆரம்பத்திலேயே உண்மை என்று எடுத்துக்கொள்ளக்கூடாது.\n\n**Σᵢ₌₁ⁿ i=n(n+1)/2** proof: n=1 true. k வரை formula சரி எனில் k+1 term சேர்த்து k(k+1)/2+(k+1)=(k+1)(k+2)/2. இது P(k+1)-க்கு வேண்டிய வடிவம்.\nInduction hypothesis எங்கு பயன்படுத்தப்பட்டது என்று குறிப்பிடுங்கள். இருபுறமும் ஒரே மாற்றம் செய்வதால் மட்டும் proof ஆகாது; known case-இலிருந்து next case வர வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Sum:**k(k+1)/2+(k+1)=(k+1)(k+2)/2. **Odd sum:**k²+(2k+1)=(k+1)². **Inequality:**k+1<2ᵏ+1≤2ᵏ+2ᵏ=2ᵏ⁺¹,k≥1. **Divisibility:**(k+1)³−(k+1)=(k³−k)+3(k²+k). ஒவ்வொன்றிலும்base n1 சரிபார்;hypothesis பகுதியைப் பிரித்துக் காட்டி desired next form அடைந்து conclude."
         },
         {
           "title": "மிகச் சிறிய உறுப்பின் பண்பு",
-          "text": "Positive integers-இன் காலியல்லாத எந்த subset-க்கும் மிகச் சிறிய உறுப்பு உள்ளது. இதை வைத்து “மிகச் சிறிய counterexample” தேர்ந்தெடுத்து contradiction பெறலாம். Real numbers-க்கு இதே கூற்றை அப்படியே சொல்ல முடியாது."
+          "text": "Positive integers-இன் காலியல்லாத எந்த subset-க்கும் மிகச் சிறிய உறுப்பு உள்ளது. இதை வைத்து “மிகச் சிறிய counterexample” தேர்ந்தெடுத்து contradiction பெறலாம். Real numbers-க்கு இதே கூற்றை அப்படியே சொல்ல முடியாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Well-ordering:**nonempty subset of nonnegative integers-க்கு least element உண்டு;infinite set-க்கும் உண்டு,உதாரணம்{n∈ℕ:n>7} least8. எல்லா integer subsets-க்கும் அல்ல:ℤ itself least இல்லை. காலி set-க்கும் least இல்லை. Induction-உடன் equivalent principle;smallest counterexample arguments-க்கு பயன்படும்."
         },
         {
           "title": "முந்தைய மதிப்பிலிருந்து அடுத்த மதிப்பு",
-          "text": "ஒரு term-ஐ முந்தைய terms மூலம் வரையறுப்பது **Recursion**. Fibonacci-இல் fₙ=fₙ₋₁+fₙ₋₂; தொடக்க மதிப்புகளும் தேவை. விதி மட்டும் இருந்தால் sequence முழுவதும் தீர்மானிக்கப்படாது."
+          "text": "ஒரு term-ஐ முந்தைய terms மூலம் வரையறுப்பது **Recursion**. Fibonacci-இல் fₙ=fₙ₋₁+fₙ₋₂; தொடக்க மதிப்புகளும் தேவை. விதி மட்டும் இருந்தால் sequence முழுவதும் தீர்மானிக்கப்படாது.\n\nRecursive definition-க்கு **base values + recursive rule** தேவை. f(0)=1, f(n+1)=2f(n)+3 என்றால் f(1)=5, f(2)=13, f(3)=29.\nFactorial: 0!=1; n!=n(n−1)!, n≥1. Base இல்லாவிட்டால் recursion நிற்காது அல்லது பல sequences அதே rule-க்கு பொருந்தலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nRecursion initial values+smaller arguments-இலிருந்து next rule. f0=3,f(n+1)=2fn+3→**3,9,21,45,93**. FactorialF0=1,F(n+1)=(n+1)Fn. Powersa0=1,nexta×previous. FibonacciF0=0,F1=1→0,1,1,2,3,5,8;two initials வேண்டும். Base இல்லாத circular rule unique sequence தராது. Induction statement நிரூபிக்கும்;recursion object வரையறுக்கும்."
         }
       ]
     }
@@ -2593,35 +2599,38 @@
     {
       "heading": "Why counting?",
       "title": "ஏன் Counting கற்கிறோம்?",
-      "text": "எல்லா arrangements-ஐயும் எழுதாமல் சாத்தியமான வழிகளின் எண்ணிக்கையை அறியலாம். Password, team, route ஆகியவற்றில் எந்தத் தேர்வுகள் ஒன்றையொன்று சார்கின்றன என்பதை முதலில் பார்க்க வேண்டும்."
+      "text": "எல்லா arrangements-ஐயும் எழுதாமல் சாத்தியமான வழிகளின் எண்ணிக்கையை அறியலாம். Password, team, route ஆகியவற்றில் எந்தத் தேர்வுகள் ஒன்றையொன்று சார்கின்றன என்பதை முதலில் பார்க்க வேண்டும்.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nCounting-க்கு முதலில் sample space/constraints:order முக்கியமா?repetition உண்டா?leading zero அனுமதியா? AlphabetL letters,D digits,lengthr,குறைந்தது ஒரு digit என்றால் **(L+D)ʳ−Lʳ**,repetition allowed assumption. Length6…8 என்றால் மூன்று disjoint lengths-இன் counts கூட்டவும். Equally likely outcomes இருந்தால்தான் simple favourable/total probability formula."
     },
     {
       "heading": "The product rule (\"AND\", then multiply)",
       "title": "தொடர் தேர்வுகளில் பெருக்குதல்",
       "text": "இரண்டு தொடர்ச்சியான தேர்வுகளில் முதலாவது m வழி, ஒவ்வொன்றுக்கும் அடுத்தது n வழி என்றால் **m×n**. 3 shirts, 2 trousers என்றால் 6 outfits. ஒவ்வொரு படியிலும் வாய்ப்புகள் ஒரே எண்ணிக்கையா பாருங்கள்.",
-      "details": "Repetition allowed length-r strings, alphabet size n என்றால் **nʳ**. Without repetition என்றால் n(n−1)…(n−r+1).\nமுதல் தேர்வு அடுத்ததை மாற்றினால் ஒவ்வொரு level-இன் count வேறுபடும். 5 seats-க்கு 5 people ஒதுக்குவது 5⁵ அல்ல; **5!**."
+      "details": "Repetition allowed length-r strings, alphabet size n என்றால் **nʳ**. Without repetition என்றால் n(n−1)…(n−r+1).\nமுதல் தேர்வு அடுத்ததை மாற்றினால் ஒவ்வொரு level-இன் count வேறுபடும். 5 seats-க்கு 5 people ஒதுக்குவது 5⁵ அல்ல; **5!**.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nSequential choices multiplication;Lily3shirts×2pants=6;32computers×24ports=768. m-domain→n-codomain functions **nᵐ**;injective m≤n என்றால்n!/(n−m)!,m>n→0. 3→5:125functions,60injective. Independence என்பது probability தேவையல்ல;ஒவ்வொரு preceding choice-க்கும் அதே number of next options இருக்கவேண்டும்."
     },
     {
       "heading": "The sum rule (\"OR\", then add)",
       "title": "தனித்தனி வாய்ப்புகளைக் கூட்டுதல்",
-      "text": "ஒன்றுக்குப் பதில் மற்றொன்றைத் தேர்வு செய்யும், overlap இல்லாத வழிகள் m+n. Overlap இருந்தால் இருமுறை எண்ணியதை கழிக்க வேண்டும். “OR” என்ற சொல்லைப் பார்த்தவுடனே கண்மூடி கூட்டாதீர்கள்."
+      "text": "ஒன்றுக்குப் பதில் மற்றொன்றைத் தேர்வு செய்யும், overlap இல்லாத வழிகள் m+n. Overlap இருந்தால் இருமுறை எண்ணியதை கழிக்க வேண்டும். “OR” என்ற சொல்லைப் பார்த்தவுடனே கண்மூடி கூட்டாதீர்கள்.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nDisjoint alternatives sum:37faculty அல்லது83students,nobody both→120. Overlap இருந்தால் subtractintersection. “AND” என்ற சொல்லைக் கண்டவுடன் multiply செய்யாமல் construction steps பார்க்கவும்;“OR” disjoint தானா சோதி. Committee குறைந்தது1boy→all committees−all-girl,இது complement counting."
     },
     {
       "heading": "Tree diagrams",
       "title": "தேர்வுகளை மரமாக வரைதல்",
-      "text": "ஒவ்வொரு branch ஒரு தேர்வு; root-இலிருந்து leaf வரை ஒரு முழு outcome. கட்டுப்பாடு வந்தால் அனுமதிக்காத branches நீக்குங்கள். சிறிய பிரச்சினையில் வழிகளைத் தவறாமல் எண்ண இது உதவும்."
+      "text": "ஒவ்வொரு branch ஒரு தேர்வு; root-இலிருந்து leaf வரை ஒரு முழு outcome. கட்டுப்பாடு வந்தால் அனுமதிக்காத branches நீக்குங்கள். சிறிய பிரச்சினையில் வழிகளைத் தவறாமல் எண்ண இது உதவும்.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nBranch invalid ஆனவுடன் prune;length4 bits,no11→**0000,0001,0010,0100,0101,1000,1001,1010**,8 outcomes. Branching choices prefix-ஐப் பொறுத்து மாறுவதால் naive2⁴ சரியல்ல. Distinct complete leaves எண்ணுங்கள்;intermediate nodes எண்ணுவது outcomes அல்ல."
     },
     {
       "heading": "Combinations — order doesn't matter",
       "title": "வரிசையின்றித் தேர்வு செய்தல்",
       "text": "குழுவில் யார் இருக்கிறார்கள் என்பதே முக்கியம்; வரிசை முக்கியமில்லை. **nCr=n!/[r!(n−r)!]**. A,B மற்றும் B,A ஒரே குழு; அதனால் permutations-இன் r! arrangements-ஐப் பிரிக்கிறோம்.",
-      "details": "**nCr=n!/[r!(n−r)!]**; **nCr=nC(n−r)**. 6 boys,4 girls-இல் 4 பேர், குறைந்தது ஒரு boy என்றால் total C(10,4)−all-girls C(4,4)=210−1=**209**.\n“At least one” கணக்கில் பல cases-ஐப் பிரிப்பதைவிட prohibited complement-ஐ கழிப்பது எளிதாகலாம். Overlap இல்லாத cases-ஆ என்பதைச் சரிபாருங்கள்."
+      "details": "**nCr=n!/[r!(n−r)!]**; **nCr=nC(n−r)**. 6 boys,4 girls-இல் 4 பேர், குறைந்தது ஒரு boy என்றால் total C(10,4)−all-girls C(4,4)=210−1=**209**.\n“At least one” கணக்கில் பல cases-ஐப் பிரிப்பதைவிட prohibited complement-ஐ கழிப்பது எளிதாகலாம். Overlap இல்லாத cases-ஆ என்பதைச் சரிபாருங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nUnordered selection,no repeats **C(n,r)=n!/[r!(n−r)!]**.10choose2=45;choosingAB மற்றும்BA same. C(n,0)=1,0!=1,C(n,r)=C(n,n−r). Repetition allowed unordered selection வேறு formula;அதை nʳ என கருதாதீர்கள். Factorials cancel செய்து overflow குறைக்கவும்."
     },
     {
       "heading": "Permutations — order matters",
       "title": "வரிசையுடன் அமைத்தல்",
       "text": "யார் முதலாவது, இரண்டாவது என்று வரிசை முக்கியமானால் **nPr=n!/(n−r)!**. திரும்பத் தேர்வு செய்ய அனுமதியா, ஒரே மாதிரியான உறுப்புகள் உள்ளனவா என்பதைப் பொறுத்து formula மாறும்.",
-      "details": "**nPr=n!/(n−r)!** order முக்கியமான without-replacement தேர்வு. Repeated identical letters இருப்பின் arrangements = n!/(n₁!n₂!…). வேறுபட்ட objects போல எண்ணினால் overcount ஆகும்.\nCircular arrangements-க்கு rotations ஒன்றாகக் கருதப்படுகிறதா என்பது கூடுதல் assumption. கேள்வி line-ஆ circle-ஆ தெளிவாகப் படியுங்கள்."
+      "details": "**nPr=n!/(n−r)!** order முக்கியமான without-replacement தேர்வு. Repeated identical letters இருப்பின் arrangements = n!/(n₁!n₂!…). வேறுபட்ட objects போல எண்ணினால் overcount ஆகும்.\nCircular arrangements-க்கு rotations ஒன்றாகக் கருதப்படுகிறதா என்பது கூடுதல் assumption. கேள்வி line-ஆ circle-ஆ தெளிவாகப் படியுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nOrdered no repeats **nPr=n!/(n−r)!**;repeats allowed ordered strings **nʳ**.10P3=720;100P3=970200;nPr=C(n,r)r!. Repeated identical letters arrangements n!/(m1!m2!…). PIN-க்கு leading0 பொதுவாக அனுமதி;4-digit integer-க்கு first0 இல்லை. Notation P(n,r)-ஐ ஒரே இடத்தில் இரு அர்த்தங்களில் பயன்படுத்தாமல் assumptions தெளிவாக்கவும்."
     },
     {
       "heading": "Quick revision sheet",
@@ -2629,27 +2638,27 @@
       "items": [
         {
           "title": "ஏன் Counting கற்கிறோம்?",
-          "text": "எல்லா arrangements-ஐயும் எழுதாமல் சாத்தியமான வழிகளின் எண்ணிக்கையை அறியலாம். Password, team, route ஆகியவற்றில் எந்தத் தேர்வுகள் ஒன்றையொன்று சார்கின்றன என்பதை முதலில் பார்க்க வேண்டும்."
+          "text": "எல்லா arrangements-ஐயும் எழுதாமல் சாத்தியமான வழிகளின் எண்ணிக்கையை அறியலாம். Password, team, route ஆகியவற்றில் எந்தத் தேர்வுகள் ஒன்றையொன்று சார்கின்றன என்பதை முதலில் பார்க்க வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nCounting-க்கு முதலில் sample space/constraints:order முக்கியமா?repetition உண்டா?leading zero அனுமதியா? AlphabetL letters,D digits,lengthr,குறைந்தது ஒரு digit என்றால் **(L+D)ʳ−Lʳ**,repetition allowed assumption. Length6…8 என்றால் மூன்று disjoint lengths-இன் counts கூட்டவும். Equally likely outcomes இருந்தால்தான் simple favourable/total probability formula."
         },
         {
           "title": "தொடர் தேர்வுகளில் பெருக்குதல்",
-          "text": "இரண்டு தொடர்ச்சியான தேர்வுகளில் முதலாவது m வழி, ஒவ்வொன்றுக்கும் அடுத்தது n வழி என்றால் **m×n**. 3 shirts, 2 trousers என்றால் 6 outfits. ஒவ்வொரு படியிலும் வாய்ப்புகள் ஒரே எண்ணிக்கையா பாருங்கள்."
+          "text": "இரண்டு தொடர்ச்சியான தேர்வுகளில் முதலாவது m வழி, ஒவ்வொன்றுக்கும் அடுத்தது n வழி என்றால் **m×n**. 3 shirts, 2 trousers என்றால் 6 outfits. ஒவ்வொரு படியிலும் வாய்ப்புகள் ஒரே எண்ணிக்கையா பாருங்கள்.\n\nRepetition allowed length-r strings, alphabet size n என்றால் **nʳ**. Without repetition என்றால் n(n−1)…(n−r+1).\nமுதல் தேர்வு அடுத்ததை மாற்றினால் ஒவ்வொரு level-இன் count வேறுபடும். 5 seats-க்கு 5 people ஒதுக்குவது 5⁵ அல்ல; **5!**.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nSequential choices multiplication;Lily3shirts×2pants=6;32computers×24ports=768. m-domain→n-codomain functions **nᵐ**;injective m≤n என்றால்n!/(n−m)!,m>n→0. 3→5:125functions,60injective. Independence என்பது probability தேவையல்ல;ஒவ்வொரு preceding choice-க்கும் அதே number of next options இருக்கவேண்டும்."
         },
         {
           "title": "தனித்தனி வாய்ப்புகளைக் கூட்டுதல்",
-          "text": "ஒன்றுக்குப் பதில் மற்றொன்றைத் தேர்வு செய்யும், overlap இல்லாத வழிகள் m+n. Overlap இருந்தால் இருமுறை எண்ணியதை கழிக்க வேண்டும். “OR” என்ற சொல்லைப் பார்த்தவுடனே கண்மூடி கூட்டாதீர்கள்."
+          "text": "ஒன்றுக்குப் பதில் மற்றொன்றைத் தேர்வு செய்யும், overlap இல்லாத வழிகள் m+n. Overlap இருந்தால் இருமுறை எண்ணியதை கழிக்க வேண்டும். “OR” என்ற சொல்லைப் பார்த்தவுடனே கண்மூடி கூட்டாதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nDisjoint alternatives sum:37faculty அல்லது83students,nobody both→120. Overlap இருந்தால் subtractintersection. “AND” என்ற சொல்லைக் கண்டவுடன் multiply செய்யாமல் construction steps பார்க்கவும்;“OR” disjoint தானா சோதி. Committee குறைந்தது1boy→all committees−all-girl,இது complement counting."
         },
         {
           "title": "தேர்வுகளை மரமாக வரைதல்",
-          "text": "ஒவ்வொரு branch ஒரு தேர்வு; root-இலிருந்து leaf வரை ஒரு முழு outcome. கட்டுப்பாடு வந்தால் அனுமதிக்காத branches நீக்குங்கள். சிறிய பிரச்சினையில் வழிகளைத் தவறாமல் எண்ண இது உதவும்."
+          "text": "ஒவ்வொரு branch ஒரு தேர்வு; root-இலிருந்து leaf வரை ஒரு முழு outcome. கட்டுப்பாடு வந்தால் அனுமதிக்காத branches நீக்குங்கள். சிறிய பிரச்சினையில் வழிகளைத் தவறாமல் எண்ண இது உதவும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nBranch invalid ஆனவுடன் prune;length4 bits,no11→**0000,0001,0010,0100,0101,1000,1001,1010**,8 outcomes. Branching choices prefix-ஐப் பொறுத்து மாறுவதால் naive2⁴ சரியல்ல. Distinct complete leaves எண்ணுங்கள்;intermediate nodes எண்ணுவது outcomes அல்ல."
         },
         {
           "title": "வரிசையின்றித் தேர்வு செய்தல்",
-          "text": "குழுவில் யார் இருக்கிறார்கள் என்பதே முக்கியம்; வரிசை முக்கியமில்லை. **nCr=n!/[r!(n−r)!]**. A,B மற்றும் B,A ஒரே குழு; அதனால் permutations-இன் r! arrangements-ஐப் பிரிக்கிறோம்."
+          "text": "குழுவில் யார் இருக்கிறார்கள் என்பதே முக்கியம்; வரிசை முக்கியமில்லை. **nCr=n!/[r!(n−r)!]**. A,B மற்றும் B,A ஒரே குழு; அதனால் permutations-இன் r! arrangements-ஐப் பிரிக்கிறோம்.\n\n**nCr=n!/[r!(n−r)!]**; **nCr=nC(n−r)**. 6 boys,4 girls-இல் 4 பேர், குறைந்தது ஒரு boy என்றால் total C(10,4)−all-girls C(4,4)=210−1=**209**.\n“At least one” கணக்கில் பல cases-ஐப் பிரிப்பதைவிட prohibited complement-ஐ கழிப்பது எளிதாகலாம். Overlap இல்லாத cases-ஆ என்பதைச் சரிபாருங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nUnordered selection,no repeats **C(n,r)=n!/[r!(n−r)!]**.10choose2=45;choosingAB மற்றும்BA same. C(n,0)=1,0!=1,C(n,r)=C(n,n−r). Repetition allowed unordered selection வேறு formula;அதை nʳ என கருதாதீர்கள். Factorials cancel செய்து overflow குறைக்கவும்."
         },
         {
           "title": "வரிசையுடன் அமைத்தல்",
-          "text": "யார் முதலாவது, இரண்டாவது என்று வரிசை முக்கியமானால் **nPr=n!/(n−r)!**. திரும்பத் தேர்வு செய்ய அனுமதியா, ஒரே மாதிரியான உறுப்புகள் உள்ளனவா என்பதைப் பொறுத்து formula மாறும்."
+          "text": "யார் முதலாவது, இரண்டாவது என்று வரிசை முக்கியமானால் **nPr=n!/(n−r)!**. திரும்பத் தேர்வு செய்ய அனுமதியா, ஒரே மாதிரியான உறுப்புகள் உள்ளனவா என்பதைப் பொறுத்து formula மாறும்.\n\n**nPr=n!/(n−r)!** order முக்கியமான without-replacement தேர்வு. Repeated identical letters இருப்பின் arrangements = n!/(n₁!n₂!…). வேறுபட்ட objects போல எண்ணினால் overcount ஆகும்.\nCircular arrangements-க்கு rotations ஒன்றாகக் கருதப்படுகிறதா என்பது கூடுதல் assumption. கேள்வி line-ஆ circle-ஆ தெளிவாகப் படியுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nOrdered no repeats **nPr=n!/(n−r)!**;repeats allowed ordered strings **nʳ**.10P3=720;100P3=970200;nPr=C(n,r)r!. Repeated identical letters arrangements n!/(m1!m2!…). PIN-க்கு leading0 பொதுவாக அனுமதி;4-digit integer-க்கு first0 இல்லை. Notation P(n,r)-ஐ ஒரே இடத்தில் இரு அர்த்தங்களில் பயன்படுத்தாமல் assumptions தெளிவாக்கவும்."
         }
       ]
     }
@@ -2658,29 +2667,32 @@
     {
       "heading": "Binary relations",
       "title": "இரு உறுப்புகளுக்கிடையிலான தொடர்பு",
-      "text": "A-வின் உறுப்புக்கும் B-வின் உறுப்புக்கும் உள்ள தொடர்பை ordered pairs-ஆக எழுதுவோம். **R⊆A×B**. “மாணவர் இந்த நகரத்திற்குச் சென்றுள்ளார்” என்பது ஒரு relation; எல்லா ஜோடிகளும் இருக்க வேண்டியதில்லை."
+      "text": "A-வின் உறுப்புக்கும் B-வின் உறுப்புக்கும் உள்ள தொடர்பை ordered pairs-ஆக எழுதுவோம். **R⊆A×B**. “மாணவர் இந்த நகரத்திற்குச் சென்றுள்ளார்” என்பது ஒரு relation; எல்லா ஜோடிகளும் இருக்க வேண்டியதில்லை.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nR⊆A×B;pair(a,b) order முக்கியம்;aRb iff pair∈R. Friend→visited-city ஒரு relation:ஒருவருக்கு பல cities அல்லது city இல்லாமலும் இருக்கலாம். Pair set/arrow/table ஒரே information. A m elements,Bn என்றால்mn possible pairs,அதனால் **2ᵐⁿ binary relations**."
     },
     {
       "heading": "Functions as relations",
       "title": "Function ஒரு சிறப்பு Relation",
-      "text": "Relation-இல் ஒரு input பல outputs-உடன் தொடர்புபடலாம். Function-இல் ஒவ்வொரு input-க்கும் ஒரே output வேண்டும். அதனால் ஒவ்வொரு function-உம் relation; ஒவ்வொரு relation-உம் function அல்ல."
+      "text": "Relation-இல் ஒரு input பல outputs-உடன் தொடர்புபடலாம். Function-இல் ஒவ்வொரு input-க்கும் ஒரே output வேண்டும். அதனால் ஒவ்வொரு function-உம் relation; ஒவ்வொரு relation-உம் function அல்ல.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nFunction ஒரு special relation:ஒவ்வொரு a∈A exactly one pair-இன் first coordinate. Relation-இல் one-to-many/no output allowed;function-இல் இல்லை. (1,1),(2,4),(3,9),(4,16) sourceA1…4-இல் function;A-இல்5 இருந்தும் pair இல்லாவிட்டால் அந்தA-இல் total function அல்ல."
     },
     {
       "heading": "Relations on a set",
       "title": "ஒரே Set-இல் Relation",
-      "text": "A-இலிருந்து A-க்கே தொடர்பு என்றால் **Relation on A**. உதாரணம்: எண்களில் “விடச் சிறியது”. Properties சோதிக்கும்போது அந்த set-இன் எல்லா உறுப்புகளையும் கணக்கில் கொள்ள வேண்டும்."
+      "text": "A-இலிருந்து A-க்கே தொடர்பு என்றால் **Relation on A**. உதாரணம்: எண்களில் “விடச் சிறியது”. Properties சோதிக்கும்போது அந்த set-இன் எல்லா உறுப்புகளையும் கணக்கில் கொள்ள வேண்டும்.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nRelation “on A”=R⊆A×A. Divides on{1,2,3,4}:**11,12,13,14,22,24,33,44** (ordered pairs shorthand). Domain membership மதிப்புகள் சரிபார். A n elements என்றால்2ⁿ² possible relations. ≤,>,equality,offset,sum bound rules-க்கு ஒவ்வொரு ordered pair substitute செய்து list செய்யவும்."
     },
     {
       "heading": "Properties: reflexive, symmetric, transitive",
       "title": "மூன்று Properties",
       "text": "**Reflexive**: ஒவ்வொருவரும் தன்னுடன் தொடர்பு. **Symmetric**: aRb இருந்தால் bRa. **Transitive**: aRb, bRc இருந்தால் aRc. ஒரு counterexample இருந்தாலே அந்த property இல்லை.",
-      "details": "**Not reflexive**: ஏதேனும் ஒரு a-க்கு (a,a) இல்லை. **Not symmetric**: (a,b) உண்டு, (b,a) இல்லை. **Not transitive**: (a,b),(b,c) உண்டு, (a,c) இல்லை.\n“Symmetric அல்ல” என்பது antisymmetric என்பதல்ல. Antisymmetric: aRb, bRa இரண்டும் இருந்தால் a=b. Relation ஒரே நேரத்தில் symmetric-உம் antisymmetric-உம் ஆகக்கூடும்; உதாரணம் equality."
+      "details": "**Not reflexive**: ஏதேனும் ஒரு a-க்கு (a,a) இல்லை. **Not symmetric**: (a,b) உண்டு, (b,a) இல்லை. **Not transitive**: (a,b),(b,c) உண்டு, (a,c) இல்லை.\n“Symmetric அல்ல” என்பது antisymmetric என்பதல்ல. Antisymmetric: aRb, bRa இரண்டும் இருந்தால் a=b. Relation ஒரே நேரத்தில் symmetric-உம் antisymmetric-உம் ஆகக்கூடும்; உதாரணம் equality.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nReflexive:எல்லா(a,a). Symmetric:(a,b) இருந்தால்(b,a). Transitive:(a,b),(b,c) இரண்டும் இருந்தால்(a,c). Disproof-க்கு specific missing loop/reverse/shortcut. **Empty relation nonemptyA-இல் symmetric/transitive vacuously,ஆனால் reflexive இல்லை.** Symmetric என்பது antisymmetric-இன் negation அல்ல. Common-grandparent relation transitive என தானாக assume செய்யாதீர்கள்."
     },
     {
       "heading": "Equivalence relations",
       "title": "சமத்துவ வகைக் குழுக்களை உருவாக்கும் தொடர்பு",
       "text": "Reflexive, symmetric, transitive மூன்றும் இருந்தால் equivalence. “ஒரே பிறந்த மாதம்” என்பது உதாரணம். இதனால் overlap இல்லாத **Equivalence classes** உருவாகி set-ஐப் பிரிக்கும்.",
-      "details": "Equivalence class **[a]={x:xRa}**. aRb என்றால் [a]=[b]; இல்லையெனில் classes disjoint. ஒவ்வொரு member-உம் ஒரு class-இல் மட்டுமே இருக்கும்.\n“mod 3-இல் same remainder” என்ற relation classes 0,1,2 remainders-ஆகப் பிரிக்கும். Class என்பது ஒரு member அல்ல; பல members கொண்ட set."
+      "details": "Equivalence class **[a]={x:xRa}**. aRb என்றால் [a]=[b]; இல்லையெனில் classes disjoint. ஒவ்வொரு member-உம் ஒரு class-இல் மட்டுமே இருக்கும்.\n“mod 3-இல் same remainder” என்ற relation classes 0,1,2 remainders-ஆகப் பிரிக்கும். Class என்பது ஒரு member அல்ல; பல members கொண்ட set.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nEquivalence=reflexive+symmetric+transitive மூன்று தனிப் proofs. m|(a−b):a−a0;reverse negative;chain(a−b)+(b−c)=a−c. Classes partitionA. Same-remainder mod7→7classes. “Parallel lines” reflexive ஆகக் course relation **same line or parallel** என எடுத்தால் equivalence;strict distinct parallel மட்டும் reflexive இல்லை."
     },
     {
       "heading": "Quick revision sheet",
@@ -2688,23 +2700,23 @@
       "items": [
         {
           "title": "இரு உறுப்புகளுக்கிடையிலான தொடர்பு",
-          "text": "A-வின் உறுப்புக்கும் B-வின் உறுப்புக்கும் உள்ள தொடர்பை ordered pairs-ஆக எழுதுவோம். **R⊆A×B**. “மாணவர் இந்த நகரத்திற்குச் சென்றுள்ளார்” என்பது ஒரு relation; எல்லா ஜோடிகளும் இருக்க வேண்டியதில்லை."
+          "text": "A-வின் உறுப்புக்கும் B-வின் உறுப்புக்கும் உள்ள தொடர்பை ordered pairs-ஆக எழுதுவோம். **R⊆A×B**. “மாணவர் இந்த நகரத்திற்குச் சென்றுள்ளார்” என்பது ஒரு relation; எல்லா ஜோடிகளும் இருக்க வேண்டியதில்லை.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nR⊆A×B;pair(a,b) order முக்கியம்;aRb iff pair∈R. Friend→visited-city ஒரு relation:ஒருவருக்கு பல cities அல்லது city இல்லாமலும் இருக்கலாம். Pair set/arrow/table ஒரே information. A m elements,Bn என்றால்mn possible pairs,அதனால் **2ᵐⁿ binary relations**."
         },
         {
           "title": "Function ஒரு சிறப்பு Relation",
-          "text": "Relation-இல் ஒரு input பல outputs-உடன் தொடர்புபடலாம். Function-இல் ஒவ்வொரு input-க்கும் ஒரே output வேண்டும். அதனால் ஒவ்வொரு function-உம் relation; ஒவ்வொரு relation-உம் function அல்ல."
+          "text": "Relation-இல் ஒரு input பல outputs-உடன் தொடர்புபடலாம். Function-இல் ஒவ்வொரு input-க்கும் ஒரே output வேண்டும். அதனால் ஒவ்வொரு function-உம் relation; ஒவ்வொரு relation-உம் function அல்ல.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nFunction ஒரு special relation:ஒவ்வொரு a∈A exactly one pair-இன் first coordinate. Relation-இல் one-to-many/no output allowed;function-இல் இல்லை. (1,1),(2,4),(3,9),(4,16) sourceA1…4-இல் function;A-இல்5 இருந்தும் pair இல்லாவிட்டால் அந்தA-இல் total function அல்ல."
         },
         {
           "title": "ஒரே Set-இல் Relation",
-          "text": "A-இலிருந்து A-க்கே தொடர்பு என்றால் **Relation on A**. உதாரணம்: எண்களில் “விடச் சிறியது”. Properties சோதிக்கும்போது அந்த set-இன் எல்லா உறுப்புகளையும் கணக்கில் கொள்ள வேண்டும்."
+          "text": "A-இலிருந்து A-க்கே தொடர்பு என்றால் **Relation on A**. உதாரணம்: எண்களில் “விடச் சிறியது”. Properties சோதிக்கும்போது அந்த set-இன் எல்லா உறுப்புகளையும் கணக்கில் கொள்ள வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nRelation “on A”=R⊆A×A. Divides on{1,2,3,4}:**11,12,13,14,22,24,33,44** (ordered pairs shorthand). Domain membership மதிப்புகள் சரிபார். A n elements என்றால்2ⁿ² possible relations. ≤,>,equality,offset,sum bound rules-க்கு ஒவ்வொரு ordered pair substitute செய்து list செய்யவும்."
         },
         {
           "title": "மூன்று Properties",
-          "text": "**Reflexive**: ஒவ்வொருவரும் தன்னுடன் தொடர்பு. **Symmetric**: aRb இருந்தால் bRa. **Transitive**: aRb, bRc இருந்தால் aRc. ஒரு counterexample இருந்தாலே அந்த property இல்லை."
+          "text": "**Reflexive**: ஒவ்வொருவரும் தன்னுடன் தொடர்பு. **Symmetric**: aRb இருந்தால் bRa. **Transitive**: aRb, bRc இருந்தால் aRc. ஒரு counterexample இருந்தாலே அந்த property இல்லை.\n\n**Not reflexive**: ஏதேனும் ஒரு a-க்கு (a,a) இல்லை. **Not symmetric**: (a,b) உண்டு, (b,a) இல்லை. **Not transitive**: (a,b),(b,c) உண்டு, (a,c) இல்லை.\n“Symmetric அல்ல” என்பது antisymmetric என்பதல்ல. Antisymmetric: aRb, bRa இரண்டும் இருந்தால் a=b. Relation ஒரே நேரத்தில் symmetric-உம் antisymmetric-உம் ஆகக்கூடும்; உதாரணம் equality.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nReflexive:எல்லா(a,a). Symmetric:(a,b) இருந்தால்(b,a). Transitive:(a,b),(b,c) இரண்டும் இருந்தால்(a,c). Disproof-க்கு specific missing loop/reverse/shortcut. **Empty relation nonemptyA-இல் symmetric/transitive vacuously,ஆனால் reflexive இல்லை.** Symmetric என்பது antisymmetric-இன் negation அல்ல. Common-grandparent relation transitive என தானாக assume செய்யாதீர்கள்."
         },
         {
           "title": "சமத்துவ வகைக் குழுக்களை உருவாக்கும் தொடர்பு",
-          "text": "Reflexive, symmetric, transitive மூன்றும் இருந்தால் equivalence. “ஒரே பிறந்த மாதம்” என்பது உதாரணம். இதனால் overlap இல்லாத **Equivalence classes** உருவாகி set-ஐப் பிரிக்கும்."
+          "text": "Reflexive, symmetric, transitive மூன்றும் இருந்தால் equivalence. “ஒரே பிறந்த மாதம்” என்பது உதாரணம். இதனால் overlap இல்லாத **Equivalence classes** உருவாகி set-ஐப் பிரிக்கும்.\n\nEquivalence class **[a]={x:xRa}**. aRb என்றால் [a]=[b]; இல்லையெனில் classes disjoint. ஒவ்வொரு member-உம் ஒரு class-இல் மட்டுமே இருக்கும்.\n“mod 3-இல் same remainder” என்ற relation classes 0,1,2 remainders-ஆகப் பிரிக்கும். Class என்பது ஒரு member அல்ல; பல members கொண்ட set.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nEquivalence=reflexive+symmetric+transitive மூன்று தனிப் proofs. m|(a−b):a−a0;reverse negative;chain(a−b)+(b−c)=a−c. Classes partitionA. Same-remainder mod7→7classes. “Parallel lines” reflexive ஆகக் course relation **same line or parallel** என எடுத்தால் equivalence;strict distinct parallel மட்டும் reflexive இல்லை."
         }
       ]
     }
@@ -2713,24 +2725,26 @@
     {
       "heading": "From pairs to n-tuples",
       "title": "n-tuple என்றால் என்ன?",
-      "text": "(பெயர், வயது, பாடம்) போல ஒழுங்குடன் உள்ள n மதிப்புகளின் பதிவு **n-tuple**. Degree என்பது இடங்களின் எண்ணிக்கை; records எண்ணிக்கை அல்ல. வரிசை மாறினால் tuple-இன் பொருள் மாறலாம்."
+      "text": "(பெயர், வயது, பாடம்) போல ஒழுங்குடன் உள்ள n மதிப்புகளின் பதிவு **n-tuple**. Degree என்பது இடங்களின் எண்ணிக்கை; records எண்ணிக்கை அல்ல. வரிசை மாறினால் tuple-இன் பொருள் மாறலாம்.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nn-aryR⊆A1×…×An;degree=n fields,numberofrows அல்ல. Every tuple same length;domains ஒரே type/set ஆகவேண்டியதில்லை. Sum-to relation(a,b,c):a+b=c;contacts Names×Numbers.3-tuple(2,2,4) valid;(2,2,5) இல்லை."
     },
     {
       "heading": "Databases & the relational data model",
       "title": "அட்டவணைகளாகத் தரவை அமைத்தல்",
-      "text": "Table-இன் row ஒரு record; column ஒரு field. n-ary relation-ஐ table-ஆகப் பார்க்கலாம். நடைமுறை SQL duplicates அனுமதிக்கலாம்; கணித relation set என்பதால் duplicate tuples தனியாக எண்ணப்படாது."
+      "text": "Table-இன் row ஒரு record; column ஒரு field. n-ary relation-ஐ table-ஆகப் பார்க்கலாம். நடைமுறை SQL duplicates அனுமதிக்கலாம்; கணித relation set என்பதால் duplicate tuples தனியாக எண்ணப்படாது.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nRelational model table row=record/tuple,column=attribute;ஒவ்வொரு coordinate-க்கும் domain. Pure mathematical relation set என்பதால் identical tuples duplicates இல்லை;row order முக்கியமில்லை. SQL tables default duplicate/bag behaviour இருக்கலாம்;இங்கே mathematical set semantics பயன்படுத்தப்படுகிறது."
     },
     {
       "heading": "Primary keys, composite keys, extension & intension",
       "title": "Key மற்றும் Schema",
       "text": "ஒரு record-ஐத் தனியாக அடையாளம் காணும் attribute **Primary key**. பல fields சேர்ந்தால் **Composite key**. **Intension** table அமைப்பு; **Extension** அப்போது இருக்கும் records. இரண்டையும் மாற்றிப் பொருள் கொள்ளாதீர்கள்.",
-      "details": "Key அந்த relation-இல் row-ஐ uniquely identify செய்ய வேண்டும். GPA மட்டும் பல students-க்கு சமமாக இருப்பதால் பொதுவாக key அல்ல. Composite key-இல் combination unique ஆகலாம்; ஒவ்வொரு field-உம் தனியாக unique ஆக வேண்டியதில்லை.\n**Extension** இப்போதைய rows; **Intension** schema/meaning/constraints. Data மாறினால் extension மாறும்; table structure மாறாதிருக்கலாம்."
+      "details": "Key அந்த relation-இல் row-ஐ uniquely identify செய்ய வேண்டும். GPA மட்டும் பல students-க்கு சமமாக இருப்பதால் பொதுவாக key அல்ல. Composite key-இல் combination unique ஆகலாம்; ஒவ்வொரு field-உம் தனியாக unique ஆக வேண்டியதில்லை.\n**Extension** இப்போதைய rows; **Intension** schema/meaning/constraints. Data மாறினால் extension மாறும்; table structure மாறாதிருக்கலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nKey value(s) uniquely identify row;composite பலattributes சேர்ந்து. இந்த snapshot-இல் names unique என்பது future constraint அல்ல. StudentID declared unique நல்லkey;name duplicates வரலாம். **Extension=current rows;intension=schema/definitions/constraints**. Primary key ஒரு chosen candidate key;domain set தானே “key” அல்ல. Area+GPA இன்றைய sample-இல் unique;all future students-க்கும் guarantee இல்லை."
     },
     {
       "heading": "Operations: selection, projection, join",
       "title": "வரிசை தேர்வு, நிரல் தேர்வு, இணைப்பு",
       "text": "**Selection** condition பொருந்தும் rows; **Projection** வேண்டிய columns; **Join** தொடர்புடைய tables இணைப்பு. மாணவர் table-ஐ marks table-உடன் Student ID மூலம் சேர்ப்பது Join.",
-      "details": "**Selection** rows குறைக்கும்; degree வழக்கமாக மாறாது. **Projection** columns தேர்வு செய்யும்; duplicates set semantics-இல் நீங்கலாம். **Join** common fields பொருந்தும் tuples-ஐ இணைக்கும்.\nProjection-இல் column order கேட்டபடி வைத்திருங்கள். Join key repeated என்றால் பல matching pairs உருவாகலாம்; ஒரு row மட்டும் கிடைக்கும் என்று ஊகிக்காதீர்கள்."
+      "details": "**Selection** rows குறைக்கும்; degree வழக்கமாக மாறாது. **Projection** columns தேர்வு செய்யும்; duplicates set semantics-இல் நீங்கலாம். **Join** common fields பொருந்தும் tuples-ஐ இணைக்கும்.\nProjection-இல் column order கேட்டபடி வைத்திருங்கள். Join key repeated என்றால் பல matching pairs உருவாகலாம்; ஒரு row மட்டும் கிடைக்கும் என்று ஊகிக்காதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Selection rows** condition;**projection columns**,set duplicates merge;**join matching attributes** கொண்ட row combinations. GPA>3.5→Ackermann/Rao;CS ANDGPA>3.5→Ackermann மட்டும். P1,3(2,3,0,4)=(2,0). Lecturer/course schedulejoin common Department+Coursecode-இல் match செய்யவேண்டும்;ஒரு field மட்டும் match செய்தால் spurious combinations. SQL projection-இல் distinct behaviour வேறுபடலாம்."
     },
     {
       "heading": "Quick revision sheet",
@@ -2738,19 +2752,19 @@
       "items": [
         {
           "title": "n-tuple என்றால் என்ன?",
-          "text": "(பெயர், வயது, பாடம்) போல ஒழுங்குடன் உள்ள n மதிப்புகளின் பதிவு **n-tuple**. Degree என்பது இடங்களின் எண்ணிக்கை; records எண்ணிக்கை அல்ல. வரிசை மாறினால் tuple-இன் பொருள் மாறலாம்."
+          "text": "(பெயர், வயது, பாடம்) போல ஒழுங்குடன் உள்ள n மதிப்புகளின் பதிவு **n-tuple**. Degree என்பது இடங்களின் எண்ணிக்கை; records எண்ணிக்கை அல்ல. வரிசை மாறினால் tuple-இன் பொருள் மாறலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nn-aryR⊆A1×…×An;degree=n fields,numberofrows அல்ல. Every tuple same length;domains ஒரே type/set ஆகவேண்டியதில்லை. Sum-to relation(a,b,c):a+b=c;contacts Names×Numbers.3-tuple(2,2,4) valid;(2,2,5) இல்லை."
         },
         {
           "title": "அட்டவணைகளாகத் தரவை அமைத்தல்",
-          "text": "Table-இன் row ஒரு record; column ஒரு field. n-ary relation-ஐ table-ஆகப் பார்க்கலாம். நடைமுறை SQL duplicates அனுமதிக்கலாம்; கணித relation set என்பதால் duplicate tuples தனியாக எண்ணப்படாது."
+          "text": "Table-இன் row ஒரு record; column ஒரு field. n-ary relation-ஐ table-ஆகப் பார்க்கலாம். நடைமுறை SQL duplicates அனுமதிக்கலாம்; கணித relation set என்பதால் duplicate tuples தனியாக எண்ணப்படாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nRelational model table row=record/tuple,column=attribute;ஒவ்வொரு coordinate-க்கும் domain. Pure mathematical relation set என்பதால் identical tuples duplicates இல்லை;row order முக்கியமில்லை. SQL tables default duplicate/bag behaviour இருக்கலாம்;இங்கே mathematical set semantics பயன்படுத்தப்படுகிறது."
         },
         {
           "title": "Key மற்றும் Schema",
-          "text": "ஒரு record-ஐத் தனியாக அடையாளம் காணும் attribute **Primary key**. பல fields சேர்ந்தால் **Composite key**. **Intension** table அமைப்பு; **Extension** அப்போது இருக்கும் records. இரண்டையும் மாற்றிப் பொருள் கொள்ளாதீர்கள்."
+          "text": "ஒரு record-ஐத் தனியாக அடையாளம் காணும் attribute **Primary key**. பல fields சேர்ந்தால் **Composite key**. **Intension** table அமைப்பு; **Extension** அப்போது இருக்கும் records. இரண்டையும் மாற்றிப் பொருள் கொள்ளாதீர்கள்.\n\nKey அந்த relation-இல் row-ஐ uniquely identify செய்ய வேண்டும். GPA மட்டும் பல students-க்கு சமமாக இருப்பதால் பொதுவாக key அல்ல. Composite key-இல் combination unique ஆகலாம்; ஒவ்வொரு field-உம் தனியாக unique ஆக வேண்டியதில்லை.\n**Extension** இப்போதைய rows; **Intension** schema/meaning/constraints. Data மாறினால் extension மாறும்; table structure மாறாதிருக்கலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nKey value(s) uniquely identify row;composite பலattributes சேர்ந்து. இந்த snapshot-இல் names unique என்பது future constraint அல்ல. StudentID declared unique நல்லkey;name duplicates வரலாம். **Extension=current rows;intension=schema/definitions/constraints**. Primary key ஒரு chosen candidate key;domain set தானே “key” அல்ல. Area+GPA இன்றைய sample-இல் unique;all future students-க்கும் guarantee இல்லை."
         },
         {
           "title": "வரிசை தேர்வு, நிரல் தேர்வு, இணைப்பு",
-          "text": "**Selection** condition பொருந்தும் rows; **Projection** வேண்டிய columns; **Join** தொடர்புடைய tables இணைப்பு. மாணவர் table-ஐ marks table-உடன் Student ID மூலம் சேர்ப்பது Join."
+          "text": "**Selection** condition பொருந்தும் rows; **Projection** வேண்டிய columns; **Join** தொடர்புடைய tables இணைப்பு. மாணவர் table-ஐ marks table-உடன் Student ID மூலம் சேர்ப்பது Join.\n\n**Selection** rows குறைக்கும்; degree வழக்கமாக மாறாது. **Projection** columns தேர்வு செய்யும்; duplicates set semantics-இல் நீங்கலாம். **Join** common fields பொருந்தும் tuples-ஐ இணைக்கும்.\nProjection-இல் column order கேட்டபடி வைத்திருங்கள். Join key repeated என்றால் பல matching pairs உருவாகலாம்; ஒரு row மட்டும் கிடைக்கும் என்று ஊகிக்காதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Selection rows** condition;**projection columns**,set duplicates merge;**join matching attributes** கொண்ட row combinations. GPA>3.5→Ackermann/Rao;CS ANDGPA>3.5→Ackermann மட்டும். P1,3(2,3,0,4)=(2,0). Lecturer/course schedulejoin common Department+Coursecode-இல் match செய்யவேண்டும்;ஒரு field மட்டும் match செய்தால் spurious combinations. SQL projection-இல் distinct behaviour வேறுபடலாம்."
         }
       ]
     }
@@ -2759,29 +2773,32 @@
     {
       "heading": "Why graphs?",
       "title": "Graph ஏன்?",
-      "text": "நகரங்களும் சாலைகளும், மனிதர்களும் தொடர்புகளும் போன்றவற்றை எளிமையாக மாதிரியாக்கலாம். பொருட்கள் **Vertices**, தொடர்புகள் **Edges**. எந்த விவரத்தை edge காட்டுகிறது என்பதைக் முதலில் தெளிவுபடுத்த வேண்டும்."
+      "text": "நகரங்களும் சாலைகளும், மனிதர்களும் தொடர்புகளும் போன்றவற்றை எளிமையாக மாதிரியாக்கலாம். பொருட்கள் **Vertices**, தொடர்புகள் **Edges**. எந்த விவரத்தை edge காட்டுகிறது என்பதைக் முதலில் தெளிவுபடுத்த வேண்டும்.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nVertices entities;edges chosen relationship. Road intersections/routes;people/acquaintance;pages/links;teams/results;workers/jobs. முதலில் vertex என்ன,edge என்ன, direction/multiplicity/loops allowed என்ன என்று define செய்யுங்கள். Drawing-இல் lines cross ஆவதால் மட்டும் vertex இல்லை;vertex explicit ஆக இருக்கவேண்டும்."
     },
     {
       "heading": "The birth of graph theory — Königsberg",
       "title": "Königsberg பிரச்சினை",
-      "text": "ஒவ்வொரு பாலத்தையும் ஒரே முறை கடக்க முடியுமா என்ற கேள்வியில் நிலப்பகுதிகள் vertices; பாலங்கள் edges. Map-இன் துல்லியத் தூரத்தைவிட இணைப்பும் degree-யும் முக்கியம் என்பதே graph modelling-இன் பலம்."
+      "text": "ஒவ்வொரு பாலத்தையும் ஒரே முறை கடக்க முடியுமா என்ற கேள்வியில் நிலப்பகுதிகள் vertices; பாலங்கள் edges. Map-இன் துல்லியத் தூரத்தைவிட இணைப்பும் degree-யும் முக்கியம் என்பதே graph modelling-இன் பலம்.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nKönigsberg4landmasses,7bridges→vertices/edges;degrees5,3,3,3. Finite undirected graph-இல் **nonzero-degree vertices connected** என்ற condition-உடன் Euler circuit iff எல்லா degrees even;open Euler trail exactly2odd. இங்கு4odd,அதனால் trail/circuit இரண்டும் இல்லை. Euler edge-once problem;every vertexonce என்பது வேறு Hamilton problem."
     },
     {
       "heading": "What is a graph?",
       "title": "Graph அடிப்படை",
       "text": "Graph என்பது vertices மற்றும் edges சேர்ந்த அமைப்பு. Degree ஒரு vertex-க்கு சேர்ந்த edges எண்ணிக்கை; undirected loop இரண்டு முறை எண்ணப்படும். ஒரு படம் வேறுபட்டுப் பார்த்தாலும் இணைப்பு ஒரே மாதிரி இருக்கலாம்.",
-      "details": "Finite graph-க்கு vertices எண்ணிக்கை finite; loops ஒரு vertex-ஐ அதனுடனே இணைக்கும்; parallel edges அதே endpoint pair-ஐ மீண்டும் இணைக்கும். Undirected degree sum **Σdeg(v)=2|E|**.\nDirected graph-இல் indegree/outdegree தனியாக. Total indegree=total outdegree=|E|. ஒரு arrow-ஐ undirected edge போல degree கணக்கில் கலக்காதீர்கள்."
+      "details": "Finite graph-க்கு vertices எண்ணிக்கை finite; loops ஒரு vertex-ஐ அதனுடனே இணைக்கும்; parallel edges அதே endpoint pair-ஐ மீண்டும் இணைக்கும். Undirected degree sum **Σdeg(v)=2|E|**.\nDirected graph-இல் indegree/outdegree தனியாக. Total indegree=total outdegree=|E|. ஒரு arrow-ஐ undirected edge போல degree கணக்கில் கலக்காதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nG=(V,E),edge endpoints;loop same endpoint;parallel edges same pair. Undirected loopdegree-க்கு2 contribution;**Σdegree=2|E|**;directed indegrees sum=outdegrees sum=|E|. Finite simple nvertices-க்கு maxdegree n−1. Loops/multiple allowed என்றால் அந்த bound பொதுவாக இல்லை."
     },
     {
       "heading": "The six types of graphs",
       "title": "Graph வகைகள்",
       "text": "**Simple graph**-இல் loop, parallel edges இல்லை. Multigraph பல edges அனுமதிக்கலாம்; pseudograph loops-யும் அனுமதிக்கும். Directed graph-இல் அம்பின் திசை முக்கியம். கேள்வியின் definitions-ஐப் பின்பற்றுங்கள்.",
-      "details": "**ஆறு வகைகள்:** simple undirected — loops/parallel இல்லை; multigraph — parallel அனுமதி, பாட வரையறையில் loops இல்லை; pseudograph — loops-உம் அனுமதி; simple directed; directed multigraph; mixed — directed, undirected இரண்டும்.\n“Simple directed” loop convention புத்தகங்களுக்கு மாறலாம்; பாட அட்டவணை/கேள்வி definition-ஐப் பின்பற்றுங்கள். Road question-இல் one-way condition வந்தால் அம்பு தேவை."
+      "details": "**ஆறு வகைகள்:** simple undirected — loops/parallel இல்லை; multigraph — parallel அனுமதி, பாட வரையறையில் loops இல்லை; pseudograph — loops-உம் அனுமதி; simple directed; directed multigraph; mixed — directed, undirected இரண்டும்.\n“Simple directed” loop convention புத்தகங்களுக்கு மாறலாம்; பாட அட்டவணை/கேள்வி definition-ஐப் பின்பற்றுங்கள். Road question-இல் one-way condition வந்தால் அம்பு தேவை.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nCourse six types: simpleundirected no loops/parallel;multigraph parallel/no loops;pseudograph both;simpledirected no loops/parallel perorderedpair;directedmulti both;mixed directed+undirected. Definitions textbook-க்கு மாறலாம்;இந்த course convention சொல்லுங்கள். Opposite arrows(u,v),(v,u) same parallel edge அல்ல;orderedpairs வேறு. Undirected{u,v} orderஇல்லை."
     },
     {
       "heading": "Graph models",
       "title": "Graph model உருவாக்குதல்",
-      "text": "Highway-க்கு நகரங்கள் vertices; network-க்கு computers vertices. One-way சாலை என்றால் directed edge. நகரத்திற்கு வெளியே சென்று அதே நகருக்கு வரும் சாலை loop ஆகும். Model உண்மைச் சூழலைப் பொருத்த வேண்டும்."
+      "text": "Highway-க்கு நகரங்கள் vertices; network-க்கு computers vertices. One-way சாலை என்றால் directed edge. நகரத்திற்கு வெளியே சென்று அதே நகருக்கு வரும் சாலை loop ஆகும். Model உண்மைச் சூழலைப் பொருத்த வேண்டும்.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nAcquaintance undirected mutual;influence directed;web/citation directed link;roads direction/multiple/loops description-ஐப் பொறுத்தது;airline perflight directedmultigraph;roundrobin winner→loser (draws இல்லாத assumption). Traffic/committee conflict edge ஒரேநேரம் முடியாத pair;colour=timeslot. பழைய billions figures current counts அல்ல;model structure-ஐப் படிக்கவும்."
     },
     {
       "heading": "Quick revision sheet",
@@ -2789,23 +2806,23 @@
       "items": [
         {
           "title": "Graph ஏன்?",
-          "text": "நகரங்களும் சாலைகளும், மனிதர்களும் தொடர்புகளும் போன்றவற்றை எளிமையாக மாதிரியாக்கலாம். பொருட்கள் **Vertices**, தொடர்புகள் **Edges**. எந்த விவரத்தை edge காட்டுகிறது என்பதைக் முதலில் தெளிவுபடுத்த வேண்டும்."
+          "text": "நகரங்களும் சாலைகளும், மனிதர்களும் தொடர்புகளும் போன்றவற்றை எளிமையாக மாதிரியாக்கலாம். பொருட்கள் **Vertices**, தொடர்புகள் **Edges**. எந்த விவரத்தை edge காட்டுகிறது என்பதைக் முதலில் தெளிவுபடுத்த வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nVertices entities;edges chosen relationship. Road intersections/routes;people/acquaintance;pages/links;teams/results;workers/jobs. முதலில் vertex என்ன,edge என்ன, direction/multiplicity/loops allowed என்ன என்று define செய்யுங்கள். Drawing-இல் lines cross ஆவதால் மட்டும் vertex இல்லை;vertex explicit ஆக இருக்கவேண்டும்."
         },
         {
           "title": "Königsberg பிரச்சினை",
-          "text": "ஒவ்வொரு பாலத்தையும் ஒரே முறை கடக்க முடியுமா என்ற கேள்வியில் நிலப்பகுதிகள் vertices; பாலங்கள் edges. Map-இன் துல்லியத் தூரத்தைவிட இணைப்பும் degree-யும் முக்கியம் என்பதே graph modelling-இன் பலம்."
+          "text": "ஒவ்வொரு பாலத்தையும் ஒரே முறை கடக்க முடியுமா என்ற கேள்வியில் நிலப்பகுதிகள் vertices; பாலங்கள் edges. Map-இன் துல்லியத் தூரத்தைவிட இணைப்பும் degree-யும் முக்கியம் என்பதே graph modelling-இன் பலம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nKönigsberg4landmasses,7bridges→vertices/edges;degrees5,3,3,3. Finite undirected graph-இல் **nonzero-degree vertices connected** என்ற condition-உடன் Euler circuit iff எல்லா degrees even;open Euler trail exactly2odd. இங்கு4odd,அதனால் trail/circuit இரண்டும் இல்லை. Euler edge-once problem;every vertexonce என்பது வேறு Hamilton problem."
         },
         {
           "title": "Graph அடிப்படை",
-          "text": "Graph என்பது vertices மற்றும் edges சேர்ந்த அமைப்பு. Degree ஒரு vertex-க்கு சேர்ந்த edges எண்ணிக்கை; undirected loop இரண்டு முறை எண்ணப்படும். ஒரு படம் வேறுபட்டுப் பார்த்தாலும் இணைப்பு ஒரே மாதிரி இருக்கலாம்."
+          "text": "Graph என்பது vertices மற்றும் edges சேர்ந்த அமைப்பு. Degree ஒரு vertex-க்கு சேர்ந்த edges எண்ணிக்கை; undirected loop இரண்டு முறை எண்ணப்படும். ஒரு படம் வேறுபட்டுப் பார்த்தாலும் இணைப்பு ஒரே மாதிரி இருக்கலாம்.\n\nFinite graph-க்கு vertices எண்ணிக்கை finite; loops ஒரு vertex-ஐ அதனுடனே இணைக்கும்; parallel edges அதே endpoint pair-ஐ மீண்டும் இணைக்கும். Undirected degree sum **Σdeg(v)=2|E|**.\nDirected graph-இல் indegree/outdegree தனியாக. Total indegree=total outdegree=|E|. ஒரு arrow-ஐ undirected edge போல degree கணக்கில் கலக்காதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nG=(V,E),edge endpoints;loop same endpoint;parallel edges same pair. Undirected loopdegree-க்கு2 contribution;**Σdegree=2|E|**;directed indegrees sum=outdegrees sum=|E|. Finite simple nvertices-க்கு maxdegree n−1. Loops/multiple allowed என்றால் அந்த bound பொதுவாக இல்லை."
         },
         {
           "title": "Graph வகைகள்",
-          "text": "**Simple graph**-இல் loop, parallel edges இல்லை. Multigraph பல edges அனுமதிக்கலாம்; pseudograph loops-யும் அனுமதிக்கும். Directed graph-இல் அம்பின் திசை முக்கியம். கேள்வியின் definitions-ஐப் பின்பற்றுங்கள்."
+          "text": "**Simple graph**-இல் loop, parallel edges இல்லை. Multigraph பல edges அனுமதிக்கலாம்; pseudograph loops-யும் அனுமதிக்கும். Directed graph-இல் அம்பின் திசை முக்கியம். கேள்வியின் definitions-ஐப் பின்பற்றுங்கள்.\n\n**ஆறு வகைகள்:** simple undirected — loops/parallel இல்லை; multigraph — parallel அனுமதி, பாட வரையறையில் loops இல்லை; pseudograph — loops-உம் அனுமதி; simple directed; directed multigraph; mixed — directed, undirected இரண்டும்.\n“Simple directed” loop convention புத்தகங்களுக்கு மாறலாம்; பாட அட்டவணை/கேள்வி definition-ஐப் பின்பற்றுங்கள். Road question-இல் one-way condition வந்தால் அம்பு தேவை.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nCourse six types: simpleundirected no loops/parallel;multigraph parallel/no loops;pseudograph both;simpledirected no loops/parallel perorderedpair;directedmulti both;mixed directed+undirected. Definitions textbook-க்கு மாறலாம்;இந்த course convention சொல்லுங்கள். Opposite arrows(u,v),(v,u) same parallel edge அல்ல;orderedpairs வேறு. Undirected{u,v} orderஇல்லை."
         },
         {
           "title": "Graph model உருவாக்குதல்",
-          "text": "Highway-க்கு நகரங்கள் vertices; network-க்கு computers vertices. One-way சாலை என்றால் directed edge. நகரத்திற்கு வெளியே சென்று அதே நகருக்கு வரும் சாலை loop ஆகும். Model உண்மைச் சூழலைப் பொருத்த வேண்டும்."
+          "text": "Highway-க்கு நகரங்கள் vertices; network-க்கு computers vertices. One-way சாலை என்றால் directed edge. நகரத்திற்கு வெளியே சென்று அதே நகருக்கு வரும் சாலை loop ஆகும். Model உண்மைச் சூழலைப் பொருத்த வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nAcquaintance undirected mutual;influence directed;web/citation directed link;roads direction/multiple/loops description-ஐப் பொறுத்தது;airline perflight directedmultigraph;roundrobin winner→loser (draws இல்லாத assumption). Traffic/committee conflict edge ஒரேநேரம் முடியாத pair;colour=timeslot. பழைய billions figures current counts அல்ல;model structure-ஐப் படிக்கவும்."
         }
       ]
     }
@@ -2815,24 +2832,25 @@
       "heading": "Trees",
       "title": "Tree என்றால் என்ன?",
       "text": "Connected ஆகவும் cycle இல்லாமலும் இருக்கும் undirected graph **Tree**. n vertices இருந்தால் n−1 edges. இரண்டு vertices இடையே ஒரே simple path மட்டுமே இருக்கும். Edge count மட்டும் tree என்பதை உறுதிப்படுத்தாது.",
-      "details": "Tree=connected+acyclic. Forest=cycles இல்லாத, ஒன்றுக்கு மேற்பட்ட components இருக்கக்கூடிய graph. n vertices, c components கொண்ட forest-க்கு **edges=n−c**.\nTree-இன் இரண்டு vertices இடையே unique simple path. n−1 edges இருந்தும் disconnected graph-இல் cycle இருக்கலாம்; edge count ஒன்றால் மட்டும் tree என முடிவு செய்யாதீர்கள்."
+      "details": "Tree=connected+acyclic. Forest=cycles இல்லாத, ஒன்றுக்கு மேற்பட்ட components இருக்கக்கூடிய graph. n vertices, c components கொண்ட forest-க்கு **edges=n−c**.\nTree-இன் இரண்டு vertices இடையே unique simple path. n−1 edges இருந்தும் disconnected graph-இல் cycle இருக்கலாம்; edge count ஒன்றால் மட்டும் tree என முடிவு செய்யாதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nFinite undirected tree connected+acyclic;forest acyclic,components trees. nvertices tree→n−1edges;unique simplepath betweeneverypair. Edgecount மட்டும் tree proof அல்ல:disconnected graph cycle கொண்டும் n−1edges இருக்கலாம். Connected+n−1 அல்லது acyclic+n−1 போதும். Singlevertex,n0edges tree;empty graph convention தனி."
     },
     {
       "heading": "Rooted trees & terminology",
       "title": "வேர் தேர்ந்தெடுக்கப்பட்ட மரம்",
       "text": "ஒரு vertex-ஐ **Root** என்று தேர்வு செய்தால் parent, child, ancestor போன்ற உறவுகள் கிடைக்கும். Root-க்கு parent இல்லை; child இல்லாதது leaf. Level root-இலிருந்து உள்ள distance-ஐப் பொறுத்தது.",
-      "details": "Parent ஒரு படி root பக்கம்; children ஒரு படி கீழே; siblings ஒரே parent; ancestors root வரையிலான மேல்பாதை; descendants கீழேயுள்ள nodes. **Subtree rooted at v** என்பது v மற்றும் அதன் descendants.\nLeaf-க்கு children இல்லை. Root-ஐ மாற்றினால் parent/child/leaf classification மாறலாம்; underlying unrooted tree edges மாறாது."
+      "details": "Parent ஒரு படி root பக்கம்; children ஒரு படி கீழே; siblings ஒரே parent; ancestors root வரையிலான மேல்பாதை; descendants கீழேயுள்ள nodes. **Subtree rooted at v** என்பது v மற்றும் அதன் descendants.\nLeaf-க்கு children இல்லை. Root-ஐ மாற்றினால் parent/child/leaf classification மாறலாம்; underlying unrooted tree edges மாறாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nRoot singled vertex;nonroot uniqueparent;children,siblings,ancestors,descendants. Ancestors pathroot→v,excludingv;root-க்குancestors இல்லை. Leaf nochildren;internal atleastone. Subtree(v)=v+descendants+**அவர்களுக்குள் உள்ள edges**;v-இன் parentedge சேராது. Root தேர்வு மாறினால்parent/leaf relationships மாறலாம்."
     },
     {
       "heading": "Ordered rooted trees & binary trees",
       "title": "Ordered மற்றும் Binary tree",
-      "text": "Ordered tree-இல் children-இன் வரிசை முக்கியம். **Binary tree**-இல் ஒவ்வொரு node-க்கும் அதிகபட்சம் இரண்டு children. எல்லா nodes-க்கும் இரண்டு children இருக்க வேண்டும் என்ற அவசியமில்லை."
+      "text": "Ordered tree-இல் children-இன் வரிசை முக்கியம். **Binary tree**-இல் ஒவ்வொரு node-க்கும் அதிகபட்சம் இரண்டு children. எல்லா nodes-க்கும் இரண்டு children இருக்க வேண்டும் என்ற அவசியமில்லை.",
+      "details": "**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nOrderedrooted tree children lefttoright. **Binarytree ஒவ்வொரு node-க்கும் அதிகபட்சம்2children**,left/right slots;onechild இருந்தாலும்left/right distinction தேவைப்படலாம். இரண்டுக்கு மேல் children இல்லாதது definition-இல் முக்கியம். Fullbinary:ஒவ்வொருinternal-க்கும் exactly2 என்பது கூடுதல் condition,ordinarybinary அல்ல."
     },
     {
       "heading": "Binary search trees (BST)",
       "title": "இருகிளைத் தேடல் மரம்",
       "text": "சிறிய keys இடது subtree-இலும் பெரிய keys வலது subtree-இலும் வரும் விதி. புதிய value-ஐ root-உடன் ஒப்பிட்டு இடம் அல்லது வலம் சென்று insert செய்வோம். Insert வரிசை tree-இன் shape-ஐ மாற்றலாம்.",
-      "details": "ஒவ்வொரு compare-இலும் குறைவு left, அதிகம் right. Sorted order-இல் insert செய்தால் skewed tree ஆகி search **O(n)** வரை போகலாம்; balanced tree-இல் **O(log n)** ஆகலாம்.\nDuplicates-ஐ left-ஆ right-ஆ அல்லது count-ஆ கையாளும் policy முன்பே தேவை. Binary tree என்றாலே binary *search* tree ஆகாது; ordering rule பூர்த்தியாக வேண்டும்."
+      "details": "ஒவ்வொரு compare-இலும் குறைவு left, அதிகம் right. Sorted order-இல் insert செய்தால் skewed tree ஆகி search **O(n)** வரை போகலாம்; balanced tree-இல் **O(log n)** ஆகலாம்.\nDuplicates-ஐ left-ஆ right-ஆ அல்லது count-ஆ கையாளும் policy முன்பே தேவை. Binary tree என்றாலே binary *search* tree ஆகாது; ordering rule பூர்த்தியாக வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nBST leftsubtreeallkeys<node<rightsubtreeallkeys,distinctkeys convention. Insert comparefromroot until empty slot;equalkey duplicatepolicy specify. Mathematicsroot→oceanography rightphysics→leftmeteorology→rightempty. Height h-க்கு searchO(h);balancedO(logn),skewedO(n),alwaysfast guarantee இல்லை. Numerickeys numbers போல compare;stringlexicographic order50 vs100 வேறாகலாம்."
     },
     {
       "heading": "Quick revision sheet",
@@ -2840,19 +2858,19 @@
       "items": [
         {
           "title": "Tree என்றால் என்ன?",
-          "text": "Connected ஆகவும் cycle இல்லாமலும் இருக்கும் undirected graph **Tree**. n vertices இருந்தால் n−1 edges. இரண்டு vertices இடையே ஒரே simple path மட்டுமே இருக்கும். Edge count மட்டும் tree என்பதை உறுதிப்படுத்தாது."
+          "text": "Connected ஆகவும் cycle இல்லாமலும் இருக்கும் undirected graph **Tree**. n vertices இருந்தால் n−1 edges. இரண்டு vertices இடையே ஒரே simple path மட்டுமே இருக்கும். Edge count மட்டும் tree என்பதை உறுதிப்படுத்தாது.\n\nTree=connected+acyclic. Forest=cycles இல்லாத, ஒன்றுக்கு மேற்பட்ட components இருக்கக்கூடிய graph. n vertices, c components கொண்ட forest-க்கு **edges=n−c**.\nTree-இன் இரண்டு vertices இடையே unique simple path. n−1 edges இருந்தும் disconnected graph-இல் cycle இருக்கலாம்; edge count ஒன்றால் மட்டும் tree என முடிவு செய்யாதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nFinite undirected tree connected+acyclic;forest acyclic,components trees. nvertices tree→n−1edges;unique simplepath betweeneverypair. Edgecount மட்டும் tree proof அல்ல:disconnected graph cycle கொண்டும் n−1edges இருக்கலாம். Connected+n−1 அல்லது acyclic+n−1 போதும். Singlevertex,n0edges tree;empty graph convention தனி."
         },
         {
           "title": "வேர் தேர்ந்தெடுக்கப்பட்ட மரம்",
-          "text": "ஒரு vertex-ஐ **Root** என்று தேர்வு செய்தால் parent, child, ancestor போன்ற உறவுகள் கிடைக்கும். Root-க்கு parent இல்லை; child இல்லாதது leaf. Level root-இலிருந்து உள்ள distance-ஐப் பொறுத்தது."
+          "text": "ஒரு vertex-ஐ **Root** என்று தேர்வு செய்தால் parent, child, ancestor போன்ற உறவுகள் கிடைக்கும். Root-க்கு parent இல்லை; child இல்லாதது leaf. Level root-இலிருந்து உள்ள distance-ஐப் பொறுத்தது.\n\nParent ஒரு படி root பக்கம்; children ஒரு படி கீழே; siblings ஒரே parent; ancestors root வரையிலான மேல்பாதை; descendants கீழேயுள்ள nodes. **Subtree rooted at v** என்பது v மற்றும் அதன் descendants.\nLeaf-க்கு children இல்லை. Root-ஐ மாற்றினால் parent/child/leaf classification மாறலாம்; underlying unrooted tree edges மாறாது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nRoot singled vertex;nonroot uniqueparent;children,siblings,ancestors,descendants. Ancestors pathroot→v,excludingv;root-க்குancestors இல்லை. Leaf nochildren;internal atleastone. Subtree(v)=v+descendants+**அவர்களுக்குள் உள்ள edges**;v-இன் parentedge சேராது. Root தேர்வு மாறினால்parent/leaf relationships மாறலாம்."
         },
         {
           "title": "Ordered மற்றும் Binary tree",
-          "text": "Ordered tree-இல் children-இன் வரிசை முக்கியம். **Binary tree**-இல் ஒவ்வொரு node-க்கும் அதிகபட்சம் இரண்டு children. எல்லா nodes-க்கும் இரண்டு children இருக்க வேண்டும் என்ற அவசியமில்லை."
+          "text": "Ordered tree-இல் children-இன் வரிசை முக்கியம். **Binary tree**-இல் ஒவ்வொரு node-க்கும் அதிகபட்சம் இரண்டு children. எல்லா nodes-க்கும் இரண்டு children இருக்க வேண்டும் என்ற அவசியமில்லை.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nOrderedrooted tree children lefttoright. **Binarytree ஒவ்வொரு node-க்கும் அதிகபட்சம்2children**,left/right slots;onechild இருந்தாலும்left/right distinction தேவைப்படலாம். இரண்டுக்கு மேல் children இல்லாதது definition-இல் முக்கியம். Fullbinary:ஒவ்வொருinternal-க்கும் exactly2 என்பது கூடுதல் condition,ordinarybinary அல்ல."
         },
         {
           "title": "இருகிளைத் தேடல் மரம்",
-          "text": "சிறிய keys இடது subtree-இலும் பெரிய keys வலது subtree-இலும் வரும் விதி. புதிய value-ஐ root-உடன் ஒப்பிட்டு இடம் அல்லது வலம் சென்று insert செய்வோம். Insert வரிசை tree-இன் shape-ஐ மாற்றலாம்."
+          "text": "சிறிய keys இடது subtree-இலும் பெரிய keys வலது subtree-இலும் வரும் விதி. புதிய value-ஐ root-உடன் ஒப்பிட்டு இடம் அல்லது வலம் சென்று insert செய்வோம். Insert வரிசை tree-இன் shape-ஐ மாற்றலாம்.\n\nஒவ்வொரு compare-இலும் குறைவு left, அதிகம் right. Sorted order-இல் insert செய்தால் skewed tree ஆகி search **O(n)** வரை போகலாம்; balanced tree-இல் **O(log n)** ஆகலாம்.\nDuplicates-ஐ left-ஆ right-ஆ அல்லது count-ஆ கையாளும் policy முன்பே தேவை. Binary tree என்றாலே binary *search* tree ஆகாது; ordering rule பூர்த்தியாக வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nBST leftsubtreeallkeys<node<rightsubtreeallkeys,distinctkeys convention. Insert comparefromroot until empty slot;equalkey duplicatepolicy specify. Mathematicsroot→oceanography rightphysics→leftmeteorology→rightempty. Height h-க்கு searchO(h);balancedO(logn),skewedO(n),alwaysfast guarantee இல்லை. Numerickeys numbers போல compare;stringlexicographic order50 vs100 வேறாகலாம்."
         }
       ]
     }
@@ -2862,19 +2880,19 @@
       "heading": "Decision trees",
       "title": "கேள்விகள் மூலம் முடிவெடுக்கும் மரம்",
       "text": "ஒரு முடிவை எடுக்கத் தேவையான கேள்விகளை tree-ஆக வரிசைப்படுத்துவோம். Branch-கள் தேர்வுகள் அல்லது நிகழ்வுகள். Chance node-இல் probability×value சேர்க்கலாம்; decision node-இல் நோக்கத்திற்கு ஏற்ற சிறந்த தேர்வை எடுப்போம்.",
-      "details": "**Square** முடிவுத் தேர்வு; **circle** chance/uncertainty; **leaf/triangle** இறுதி outcome. Chance branches probabilities கூட்டினால் 1. **Expected value=Σp×payoff**; cost இருந்தால் நிகர value-இல் சேர்க்க வேண்டும்.\nRightmost outcomes-இலிருந்து பின்னோக்கிச் சுருக்குவது உதவும்: chance node-இல் weighted sum; decision node-இல் சிறந்த alternative. Badminton example: sunny→humidity, rainy→wind; cloudy என்றால் play. Decision trees overfit ஆகலாம்; small data changes tree-ஐ மாற்றலாம்."
+      "details": "**Square** முடிவுத் தேர்வு; **circle** chance/uncertainty; **leaf/triangle** இறுதி outcome. Chance branches probabilities கூட்டினால் 1. **Expected value=Σp×payoff**; cost இருந்தால் நிகர value-இல் சேர்க்க வேண்டும்.\nRightmost outcomes-இலிருந்து பின்னோக்கிச் சுருக்குவது உதவும்: chance node-இல் weighted sum; decision node-இல் சிறந்த alternative. Badminton example: sunny→humidity, rainy→wind; cloudy என்றால் play. Decision trees overfit ஆகலாம்; small data changes tree-ஐ மாற்றலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Chance node(circle)** probability-weighted sum;**decision(square)** feasible alternatives-இல் best value;leaf payoff. SuccessEV .2·1000000+.5·800000+.3·600000=**780000**;failureEV.6·50000=30000;gross.7·780000+.3·30000=555000;R&D400000 கழித்து **155000**. Costs double-subtract வேண்டாம்;probabilities eachchance node sum1. Expectedvalue guaranteed outcome அல்ல,risk-neutral assumption.\n\nClassification tree வேறு role:attribute→test,leafclass;sunnyhumidity,rainywind,cloudyplay. Tree arbitrary nonlinearity எல்லாம் perfect handle செய்யாது;data cleaning தேவையில்லை என்பதும் தவறு. Length6 A/B noAA/noBBB leaves**9**;branchinvalid ஆனவுடன்prune."
     },
     {
       "heading": "Tree traversal",
       "title": "Traversal வரிசை",
       "text": "**Preorder**-இல் node முதலில்; **Postorder**-இல் children முதலில், node கடைசியில். இடமிருந்து வலமாக அதே child order-ஐப் பின்பற்றுங்கள். எல்லா nodes-உம் ஒருமுறை வந்துள்ளனவா இறுதியில் பாருங்கள்.",
-      "details": "சிறு மரம்: root A; children B,C; B-க்கு D,E என்றால் **Preorder A,B,D,E,C**; **Postorder D,E,B,C,A**. Left-to-right child order முக்கியம்.\nPreorder என்றால் alphabetical order அல்ல; node-ஐ *எப்போது* visit செய்கிறோம் என்பதே பெயரின் பொருள். எல்லா nodes-உம் ஒருமுறை உள்ளனவா சோதியுங்கள்."
+      "details": "சிறு மரம்: root A; children B,C; B-க்கு D,E என்றால் **Preorder A,B,D,E,C**; **Postorder D,E,B,C,A**. Left-to-right child order முக்கியம்.\nPreorder என்றால் alphabetical order அல்ல; node-ஐ *எப்போது* visit செய்கிறோம் என்பதே பெயரின் பொருள். எல்லா nodes-உம் ஒருமுறை உள்ளனவா சோதியுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Preorder root→subtrees lefttoright;postorder subtrees→root.** Examplepre: a,b,e,j,k,n,o,p,f,c,d,g,l,m,h,i. Post:j,n,o,p,k,e,f,b,c,l,m,g,h,i,d,a. ஒவ்வொருvertex exactlyonce;pre-list-இன் secondj source typo உண்மையில்f. Binaryinorder வேறு traversal;arbitrary multi-child tree-க்கு ஒரே standard inorder இல்லை."
     },
     {
       "heading": "Spanning trees",
       "title": "எல்லா முனைகளையும் இணைக்கும் மரம்",
       "text": "Graph-இன் எல்லா vertices-ஐயும் cycle இல்லாமல் இணைக்கும் subgraph **Spanning tree**. Connected graph-க்குத்தான் அது இருக்கும். n vertices என்றால் n−1 edges; extra edges நீக்கினாலும் connectivity காக்க வேண்டும்.",
-      "details": "Connected graph-இல் cycle edge-ஐ நீக்கினால் connectivity காக்கப்படும்; cycle-இன் redundant edges நீக்கித் தொடருங்கள். n vertices, m edges இருந்தால் spanning tree பெற **m−n+1** edges நீக்க வேண்டும்.\nஎந்த edge-ஐயும் சீரற்ற முறையில் நீக்காதீர்கள்; bridge நீக்கினால் disconnect ஆகும். Spanning tree பல இருக்கலாம். Weighted minimum spanning tree என்பது கூடுதல் optimisation problem."
+      "details": "Connected graph-இல் cycle edge-ஐ நீக்கினால் connectivity காக்கப்படும்; cycle-இன் redundant edges நீக்கித் தொடருங்கள். n vertices, m edges இருந்தால் spanning tree பெற **m−n+1** edges நீக்க வேண்டும்.\nஎந்த edge-ஐயும் சீரற்ற முறையில் நீக்காதீர்கள்; bridge நீக்கினால் disconnect ஆகும். Spanning tree பல இருக்கலாம். Weighted minimum spanning tree என்பது கூடுதல் optimisation problem.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nSpanningtree original graph-இன் **allvertices**,subsetedges,connected+acyclic. Finite connected graph iff spanningtree exists;nvertices,medges→remove m−n+1 **cycle edges safely**. Arbitrary அந்தஎண்ணிக்கை edges remove செய்தால் connectedness உறுதி இல்லை;bridge remove செய்யாதீர்கள். Disconnected graph-க்கு spanningforest. Multicast deliverytree participating network/receivers-ஐ இணைக்கலாம்;entirephysicalnetwork எல்லாவற்றையும் span செய்யவேண்டிய அவசியமில்லை."
     },
     {
       "heading": "Quick revision sheet",
@@ -2882,15 +2900,15 @@
       "items": [
         {
           "title": "கேள்விகள் மூலம் முடிவெடுக்கும் மரம்",
-          "text": "ஒரு முடிவை எடுக்கத் தேவையான கேள்விகளை tree-ஆக வரிசைப்படுத்துவோம். Branch-கள் தேர்வுகள் அல்லது நிகழ்வுகள். Chance node-இல் probability×value சேர்க்கலாம்; decision node-இல் நோக்கத்திற்கு ஏற்ற சிறந்த தேர்வை எடுப்போம்."
+          "text": "ஒரு முடிவை எடுக்கத் தேவையான கேள்விகளை tree-ஆக வரிசைப்படுத்துவோம். Branch-கள் தேர்வுகள் அல்லது நிகழ்வுகள். Chance node-இல் probability×value சேர்க்கலாம்; decision node-இல் நோக்கத்திற்கு ஏற்ற சிறந்த தேர்வை எடுப்போம்.\n\n**Square** முடிவுத் தேர்வு; **circle** chance/uncertainty; **leaf/triangle** இறுதி outcome. Chance branches probabilities கூட்டினால் 1. **Expected value=Σp×payoff**; cost இருந்தால் நிகர value-இல் சேர்க்க வேண்டும்.\nRightmost outcomes-இலிருந்து பின்னோக்கிச் சுருக்குவது உதவும்: chance node-இல் weighted sum; decision node-இல் சிறந்த alternative. Badminton example: sunny→humidity, rainy→wind; cloudy என்றால் play. Decision trees overfit ஆகலாம்; small data changes tree-ஐ மாற்றலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Chance node(circle)** probability-weighted sum;**decision(square)** feasible alternatives-இல் best value;leaf payoff. SuccessEV .2·1000000+.5·800000+.3·600000=**780000**;failureEV.6·50000=30000;gross.7·780000+.3·30000=555000;R&D400000 கழித்து **155000**. Costs double-subtract வேண்டாம்;probabilities eachchance node sum1. Expectedvalue guaranteed outcome அல்ல,risk-neutral assumption.\n\nClassification tree வேறு role:attribute→test,leafclass;sunnyhumidity,rainywind,cloudyplay. Tree arbitrary nonlinearity எல்லாம் perfect handle செய்யாது;data cleaning தேவையில்லை என்பதும் தவறு. Length6 A/B noAA/noBBB leaves**9**;branchinvalid ஆனவுடன்prune."
         },
         {
           "title": "Traversal வரிசை",
-          "text": "**Preorder**-இல் node முதலில்; **Postorder**-இல் children முதலில், node கடைசியில். இடமிருந்து வலமாக அதே child order-ஐப் பின்பற்றுங்கள். எல்லா nodes-உம் ஒருமுறை வந்துள்ளனவா இறுதியில் பாருங்கள்."
+          "text": "**Preorder**-இல் node முதலில்; **Postorder**-இல் children முதலில், node கடைசியில். இடமிருந்து வலமாக அதே child order-ஐப் பின்பற்றுங்கள். எல்லா nodes-உம் ஒருமுறை வந்துள்ளனவா இறுதியில் பாருங்கள்.\n\nசிறு மரம்: root A; children B,C; B-க்கு D,E என்றால் **Preorder A,B,D,E,C**; **Postorder D,E,B,C,A**. Left-to-right child order முக்கியம்.\nPreorder என்றால் alphabetical order அல்ல; node-ஐ *எப்போது* visit செய்கிறோம் என்பதே பெயரின் பொருள். எல்லா nodes-உம் ஒருமுறை உள்ளனவா சோதியுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Preorder root→subtrees lefttoright;postorder subtrees→root.** Examplepre: a,b,e,j,k,n,o,p,f,c,d,g,l,m,h,i. Post:j,n,o,p,k,e,f,b,c,l,m,g,h,i,d,a. ஒவ்வொருvertex exactlyonce;pre-list-இன் secondj source typo உண்மையில்f. Binaryinorder வேறு traversal;arbitrary multi-child tree-க்கு ஒரே standard inorder இல்லை."
         },
         {
           "title": "எல்லா முனைகளையும் இணைக்கும் மரம்",
-          "text": "Graph-இன் எல்லா vertices-ஐயும் cycle இல்லாமல் இணைக்கும் subgraph **Spanning tree**. Connected graph-க்குத்தான் அது இருக்கும். n vertices என்றால் n−1 edges; extra edges நீக்கினாலும் connectivity காக்க வேண்டும்."
+          "text": "Graph-இன் எல்லா vertices-ஐயும் cycle இல்லாமல் இணைக்கும் subgraph **Spanning tree**. Connected graph-க்குத்தான் அது இருக்கும். n vertices என்றால் n−1 edges; extra edges நீக்கினாலும் connectivity காக்க வேண்டும்.\n\nConnected graph-இல் cycle edge-ஐ நீக்கினால் connectivity காக்கப்படும்; cycle-இன் redundant edges நீக்கித் தொடருங்கள். n vertices, m edges இருந்தால் spanning tree பெற **m−n+1** edges நீக்க வேண்டும்.\nஎந்த edge-ஐயும் சீரற்ற முறையில் நீக்காதீர்கள்; bridge நீக்கினால் disconnect ஆகும். Spanning tree பல இருக்கலாம். Weighted minimum spanning tree என்பது கூடுதல் optimisation problem.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nSpanningtree original graph-இன் **allvertices**,subsetedges,connected+acyclic. Finite connected graph iff spanningtree exists;nvertices,medges→remove m−n+1 **cycle edges safely**. Arbitrary அந்தஎண்ணிக்கை edges remove செய்தால் connectedness உறுதி இல்லை;bridge remove செய்யாதீர்கள். Disconnected graph-க்கு spanningforest. Multicast deliverytree participating network/receivers-ஐ இணைக்கலாம்;entirephysicalnetwork எல்லாவற்றையும் span செய்யவேண்டிய அவசியமில்லை."
         }
       ]
     }
@@ -2900,49 +2918,49 @@
       "heading": "What the exam looks like and what keeps coming back",
       "title": "Maths past papers படிப்பது",
       "text": "Formula மனப்பாடத்துடன் ஏன் பொருந்துகிறது என்பதையும் எழுதிப் பயிற்சி செய்யுங்கள். Proof-இல் claim, assumption, steps, conclusion தெளிவாக வேண்டும். Numerical example மட்டும் பொதுவான proof ஆகாது.",
-      "details": "Proof questions-இல் ஒரு example உண்மை என்பது எல்லா values-க்கும் proof அல்ல. Universal false என்றால் ஒரு counterexample போதும்; universal true என்றால் general argument தேவை.\nPaper format ஆண்டுக்கு மாறியுள்ளது. முதலில் instructions, marks, all/choice questions படித்து நேரத்தைப் பிரியுங்கள். ஒவ்வொரு long answer-இலும் domain/assumptions தெளிவாக எழுதுங்கள்."
+      "details": "Proof questions-இல் ஒரு example உண்மை என்பது எல்லா values-க்கும் proof அல்ல. Universal false என்றால் ஒரு counterexample போதும்; universal true என்றால் general argument தேவை.\nPaper format ஆண்டுக்கு மாறியுள்ளது. முதலில் instructions, marks, all/choice questions படித்து நேரத்தைப் பிரியுங்கள். ஒவ்வொரு long answer-இலும் domain/assumptions தெளிவாக எழுதுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nPast-paperformat historical:2023 four25marks;2019five20marks;3hours/100. எதிர்காலpaper அதே என்று guarantee இல்லை. Repeatedtopics practicepriority தரும்;proofconditions மறக்காதீர்கள். Equaldegrees theorem **finite simple undirected n≥2**-க்கு. Definition→substitute/proof→reasonedconclusion;formula மட்டும் answer அல்ல."
     },
     {
       "heading": "January 2023 — Question 1",
       "title": "ஜனவரி 2023: Logic மற்றும் Matrices",
       "text": "Quantifier-க்கு domain முக்கியம்; உண்மையான counterexample தேடுங்கள். Matrix inverse-ஐ A×A⁻¹=I மூலம் சோதிக்கலாம். Inverse function-இன் domain original function-இன் range ஆகும்.",
-      "details": "∃y∀x(x+y=0) false: ஒரே y, x=1 மற்றும் x=2 இரண்டையும் சமப்படுத்த முடியாது. ∀x∃y என்றால் y=−x என ஒவ்வொருவருக்கும் வேறு தேர்வு செய்யலாம்.\nf:ℤ→ℤ, f(x)=2x−1 injective; ஆனால் even outputs வராததால் onto அல்ல. 3a−7b even என்ற relation, a,b ஒரே parity என்ற கருத்திற்கு இணையானது; இதன் reflexive/symmetric/transitive proofs-ஐ தனித்தனியாகக் காட்டுங்கள்."
+      "details": "∃y∀x(x+y=0) false: ஒரே y, x=1 மற்றும் x=2 இரண்டையும் சமப்படுத்த முடியாது. ∀x∃y என்றால் y=−x என ஒவ்வொருவருக்கும் வேறு தேர்வு செய்யலாம்.\nf:ℤ→ℤ, f(x)=2x−1 injective; ஆனால் even outputs வராததால் onto அல்ல. 3a−7b even என்ற relation, a,b ஒரே parity என்ற கருத்திற்கு இணையானது; இதன் reflexive/symmetric/transitive proofs-ஐ தனித்தனியாகக் காட்டுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**JanQ1:**∀x∃y(x+y=x)true:y0;∃y∀x(x+y=0)false:x1/2 வேறுபட்டyதேவை;∀x∀y strictorder false:x=y;∃x∃y(x²=y)true. f:ℤ→ℤ,2x−1 injective algebra,notonto0preimage1/2∉ℤ. R:3a−7b even iff sameparity;reflexive−4a;reverse negativeplus evenmultiple;transitivity sum+4b. மூன்றுproperties-உம் explicit நிரூபிக்கவும்."
     },
     {
       "heading": "January 2023 — Question 2 (number theory)",
       "title": "ஜனவரி 2023: Number theory",
       "text": "Divisibility proof-இல் a|b என்றால் b=ak என்று எழுதுங்கள். Modular powers-இல் ஒவ்வொரு படியிலும் remainder எடுத்து எண்களைச் சிறிதாக்கலாம். Induction-இல் base case விடுபடக்கூடாது.",
-      "details": "7|4n என்றால் 4n=7k; **n=2(4n)−7n=7(2k−n)**; integer factor கிடைப்பதால் 7|n. 4-ஐ கண்மூடி divide செய்யாமல் இந்த integer expression காட்டுங்கள்.\na=3q+r, r=0,1,2 பிரித்தால் a² mod3 என்பது 0 அல்லது1. 78+x≡3(mod5) என்றால் x≡0; **least positive** x=5, 0 அல்ல. CHVW decode **ZEST**."
+      "details": "7|4n என்றால் 4n=7k; **n=2(4n)−7n=7(2k−n)**; integer factor கிடைப்பதால் 7|n. 4-ஐ கண்மூடி divide செய்யாமல் இந்த integer expression காட்டுங்கள்.\na=3q+r, r=0,1,2 பிரித்தால் a² mod3 என்பது 0 அல்லது1. 78+x≡3(mod5) என்றால் x≡0; **least positive** x=5, 0 அல்ல. CHVW decode **ZEST**.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**JanQ2:**7|4n→4n=7k→n=2(4n)−7n=7(2k−n),integerfactor. a|b,c|d→b=ak,d=cm→bd=ac(km),divisorsnonzero courseassumption. a=3q+r,r0/1/2→a² residues0/1only.78+x≡3mod5→x≡0;leastpositive**5**,leastnonnegative0. CHVW decrypt−3→ZEST."
     },
     {
       "heading": "January 2023 — Question 3",
       "title": "ஜனவரி 2023: Relations மற்றும் Counting",
       "text": "Reflexive, symmetric, transitive ஒவ்வொன்றையும் தனியாகச் சோதிக்க வேண்டும். Counting-இல் order முக்கியமா, repetition அனுமதியா என்று முதலில் தீர்மானித்த பிறகே permutation அல்லது combination தேர்வு செய்யுங்கள்.",
-      "details": "Venn: total150−none37=union113. Inclusion–exclusion மூலம் triple intersection **8**; pair-only values கணக்கிட triple-ஐக் கழிக்க வேண்டும்.\nSequence aₙ=53+4(n−1) → a₃₀=**169**. Matrix detA=12; inverse=(1/12)adjA; s=−5,t=4. **BX=2X+C ⇒ (B−2I)X=C**; B−2I=A என்றால் **X=A⁻¹C**. Multiplication order-ஐ மாற்றாதீர்கள்."
+      "details": "Venn: total150−none37=union113. Inclusion–exclusion மூலம் triple intersection **8**; pair-only values கணக்கிட triple-ஐக் கழிக்க வேண்டும்.\nSequence aₙ=53+4(n−1) → a₃₀=**169**. Matrix detA=12; inverse=(1/12)adjA; s=−5,t=4. **BX=2X+C ⇒ (B−2I)X=C**; B−2I=A என்றால் **X=A⁻¹C**. Multiplication order-ஐ மாற்றாதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**JanQ3 Venn:**union150−37=113;singles150−pairs45+triple→triple8. Regions onlyE38,S23,C23;pairs-only12,7,2;triple8;none37;total150. AP53+4(n−1):first53,57,61,65;30th169. MatrixA rows(1,2,3),(2,1,3),(3,2,1):det12;adjrows(−5,4,3),(7,−8,3),(1,4,−3). BX=2X+C→(B−2I)X=C→X=A⁻¹C;ordinarynumber division “C/A” அல்ல."
     },
     {
       "heading": "January 2023 — Question 4 (graphs)",
       "title": "ஜனவரி 2023: Graphs",
       "text": "Vertices எதைக் குறிக்கின்றன, edges எதைக் குறிக்கின்றன என்று முதலில் எழுதுங்கள். Directed edges-இன் திசையைப் பாருங்கள். Degree sum-இல் ஒவ்வொரு undirected edge-உம் இரண்டு endpoints-க்கு பங்களிக்கும்.",
-      "details": "Simple graph n≥2 vertices-இல் degree 0, n−1 இரண்டும் ஒன்றாக வராது. ஆகவே n vertices-க்கு அதிகபட்சம் n−1 degree choices; pigeonhole மூலம் இரண்டு degree சமம்.\nDegree sequence-க்கு max degree≤n−1, even degree sum என்பது தேவையான checks; இவை மட்டும் எல்லா sequences-க்கும் போதுமான நிபந்தனைகள் அல்ல. Traffic model-இல் conflicting lanes edges; ஒரே நிற independent lanes ஒரே green phase பகிரலாம்."
+      "details": "Simple graph n≥2 vertices-இல் degree 0, n−1 இரண்டும் ஒன்றாக வராது. ஆகவே n vertices-க்கு அதிகபட்சம் n−1 degree choices; pigeonhole மூலம் இரண்டு degree சமம்.\nDegree sequence-க்கு max degree≤n−1, even degree sum என்பது தேவையான checks; இவை மட்டும் எல்லா sequences-க்கும் போதுமான நிபந்தனைகள் அல்ல. Traffic model-இல் conflicting lanes edges; ஒரே நிற independent lanes ஒரே green phase பகிரலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**JanQ4 equaldegree:**degrees0…n−1 ஆனால்0,n−1 ஒரேsimplegraph-இல் இரண்டும் இருக்காது→nvertices,n−1possiblevalues→pigeonhole. Degree sequence test max≤n−1,even sum necessary;இரண்டும் மட்டும் sufficiency இல்லை. n5 sequence2,3,3,3,5 impossiblemax5>4;fiveedges degrees1,1,3 impossible sum5≠10. Fourdegrees1,2,3,4 multigraph viaAD,BC,BD,CDtwice. Trafficconflict edges cross/merge;independentsets samephase;chromaticnumber minimumphases under model."
     },
     {
       "heading": "July 2023",
       "title": "ஜூலை 2023 அணுகுமுறை",
       "text": "ஏற்கெனவே பார்த்த மாதிரி இருந்தாலும் domain, numbers, conditions மாறியுள்ளனவா கவனியுங்கள். Σ sum-ஐ சில terms-ஆக விரித்து pattern பாருங்கள். Degree proof-இல் 0-degree மற்றும் n−1-degree ஒன்றாக வருமா சிந்தியுங்கள்.",
-      "details": "Real domain-இல் ∀x∃y(x=y²) false, x=−1 witness. GP condition r⁴=1/81 என்றால் **r=±1/3**; positivity restriction இல்லாவிட்டால் negative solution-ஐ விடக்கூடாது; a முறையே 6 அல்லது12.\nPᵀP=2Q-இல் **b=4,a=±2**. Modular product result **4**; YARD encode **BDUG**. Committee graph-இல் shared member உள்ள committees adjacent; 3-clique மூன்று slots குறைந்தது தேவை என்பதைக் காட்டி, valid 3-slot assignment மூலம் அது போதும் என நிரூபியுங்கள்."
+      "details": "Real domain-இல் ∀x∃y(x=y²) false, x=−1 witness. GP condition r⁴=1/81 என்றால் **r=±1/3**; positivity restriction இல்லாவிட்டால் negative solution-ஐ விடக்கூடாது; a முறையே 6 அல்லது12.\nPᵀP=2Q-இல் **b=4,a=±2**. Modular product result **4**; YARD encode **BDUG**. Committee graph-இல் shared member உள்ள committees adjacent; 3-clique மூன்று slots குறைந்தது தேவை என்பதைக் காட்டி, valid 3-slot assignment மூலம் அது போதும் என நிரூபியுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**JulyQ1:**realquantifier answersfalse,true,true,true;firstx−1counterexample;othersy=x²,x0,y1−x. x/(1+x):ℕ→ℚ injectivecrossmultiply;notonto2. Pairrelationa+d=b+c equivalent a−b=c−d→equivalence.\n\n**Q2 Venn:**triple21,pairsonly26,14,6;singles3,3,5;union78,none2. GP second=81sixth andS∞9: **(a,r)=(6,1/3),(12,−1/3)**;nonzero assumption justified sum9. PᵀP comparison b4,a±2.\n\n**Q3:**f(k+1)−f(k)=6(k+1)² forf(n)=2n³+3n²+n;2¹⁰≡−1mod41→2²⁰≡1.3·7·13·515·23mod11=**4**;YARD→BDUG. **Q4:**degree6on6vertices impossible;degree4on4 impossible;2,2,2,4,4 constructtwohubvertices. Committee triangleforces≥3slots;providedthree-colouring provesupperbound3."
     },
     {
       "heading": "October 2019",
       "title": "அக்டோபர் 2019 அணுகுமுறை",
       "text": "Universal statement-க்கு ஒரு counterexample போதும். Set inclusion-இல் C⊆A∪B என்பதால் C முழுவதும் A-விலோ B-விலோ இருக்கவேண்டும் என்றில்லை. உறுப்புகள் இரண்டு sets-இலும் பரவியிருக்கலாம்.",
-      "details": "f(x)=3x²−4: real→real neither; ±1 same output; −5 no preimage. Σ[k²−(k−1)²] telescoping செய்து **n²**.\na≠b relation symmetric, not reflexive, not transitive; 1≠2,2≠1 இருந்தும் 1≠1 false. 4 பேர் குறைந்தது ஒரு boy: C(10,4)−C(4,4)=**209**. Set union inclusion-க்கு தனிப் counterexample கொடுங்கள்."
+      "details": "f(x)=3x²−4: real→real neither; ±1 same output; −5 no preimage. Σ[k²−(k−1)²] telescoping செய்து **n²**.\na≠b relation symmetric, not reflexive, not transitive; 1≠2,2≠1 இருந்தும் 1≠1 false. 4 பேர் குறைந்தது ஒரு boy: C(10,4)−C(4,4)=**209**. Set union inclusion-க்கு தனிப் counterexample கொடுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**2019:**positive/negative overℝ:∀(P∨N)false0;∃(¬P∧¬N)true0;positive⇒notnegative true;existentialimplication true. Oddsum2(a+b+1). f:ℝ→ℝ,3x²−4 neither:witness±1;range[−4,∞). TelescopingΣ[k²−(k−1)²]=n². C⊆A∪B doesnotimply C⊆AorC⊆B:singletons split C witness.\n\nn!≥2ⁿ⁻¹:base1;step(k+1)k!≥2·2ᵏ⁻¹=2ᵏ. ≠ relation symmetric,notreflexive,nottransitive(1,2,1). Choose4 atleast1boyfrom6boys4girls: **C10,4−C4,4=209**. Highwayoneperpair simple;oneperroadmulti;loopsallowedpseudo;acquaintance model undirectedmutual."
     },
     {
       "heading": "Model questions (official sample problems)",
       "title": "மாதிரி வினாக்களின் அணுகுமுறை",
       "text": "Odd எண்ணை 2k+1 என்று எழுதினால் பல direct proofs எளிதாகும். Function-இல் codomain-ஐ தவறவிடாதீர்கள். தேர்ந்தெடுக்கும் குழுவில் “at least” வந்தால் total-இலிருந்து அனுமதிக்காத குழுக்களை கழிப்பதும் உதவும்.",
-      "details": "Odd n=2k+1 என்றால் n²−5=4(k²+k−1); k(k+1) even என்பதால் bracket odd. ஆகவே **4 வகுக்கும், 8 வகுக்காது**.\nSurjections 4→3: **3⁴−3·2⁴+3·1⁴=36**. ABRACADABRA: 11!/(5!2!2!)=**83,160**. குறைந்தது 3 men கொண்ட 5-person team: C(7,3)C(6,2)+C(7,4)C(6,1)+C(7,5)=**756**. தனித்த cases overlap இல்லாமல் சேர்க்கப்படுகின்றன."
+      "details": "Odd n=2k+1 என்றால் n²−5=4(k²+k−1); k(k+1) even என்பதால் bracket odd. ஆகவே **4 வகுக்கும், 8 வகுக்காது**.\nSurjections 4→3: **3⁴−3·2⁴+3·1⁴=36**. ABRACADABRA: 11!/(5!2!2!)=**83,160**. குறைந்தது 3 men கொண்ட 5-person team: C(7,3)C(6,2)+C(7,4)C(6,1)+C(7,5)=**756**. தனித்த cases overlap இல்லாமல் சேர்க்கப்படுகின்றன.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**ModelQ1:**oddn=2k+1→n²−5=4(k²+k−1);k(k+1)even→bracketodd→divisible4not8. **Q2:**Σᵢ₌₀ⁿ1/[(i+1)(i+2)] telescopes **1−1/(n+2)**;limits0important. RecurrenceSₙ=3Sₙ₋₁+nSₙ₋₂+4,**S0=1,S1=2**→S2=12,S3=46,S4=190.\n\n**Q3 rationalfunction:**(7x−3)/(x−1)=7+4/(x−1),domainℝ\\{1},rangeℝ\\{7};inverse(y−3)/(y−7). Onto mappings4→3 **3⁴−3·2⁴+3·1⁴=36**. **Q4:**ABRACADABRA 11!/(5!2!2!)=**83160**;5-personcommittee7men6women at least3men→C7,3C6,2+C7,4C6,1+C7,5=**756**. Cases disjoint மற்றும்complete என்று காட்டுங்கள்."
     }
   ],
   "hci/w01": [

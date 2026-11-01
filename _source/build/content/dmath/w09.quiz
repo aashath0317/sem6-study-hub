@@ -35,7 +35,7 @@
 - Only symmetric
 - Not transitive
 - Not reflexive
-= Similar examples: same birthday, congruence mod m, parallel lines.
+= Congruence mod m is another example. For lines, include coincident lines to make parallelism reflexive.
 
 ? "a is a friend of b" is usually:
 + Symmetric but not transitive

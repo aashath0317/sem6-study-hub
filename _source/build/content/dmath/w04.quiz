@@ -29,7 +29,7 @@
 # 12
 = a/(1 − r) = 3/(1/4) = 12.
 
-? An infinite geometric series converges when:
+? An infinite geometric series with a nonzero first term converges when:
 + |r| < 1
 - r > 1
 - r = 1

@@ -17,7 +17,7 @@
 - There are too many bridges
 - The graph is disconnected
 - All degrees are even
-= An Euler path needs 0 or 2 odd-degree vertices.
+= In a finite undirected graph, an Euler trail requires 0 or 2 odd-degree vertices and connectivity of the non-isolated vertices.
 
 ? A **simple graph** has:
 + Undirected edges, no multiple edges, no loops
@@ -33,7 +33,7 @@
 - Directed graph
 = A multigraph has multiple edges but no loops.
 
-? Modelling every flight between cities as its own edge (including several between the same pair) gives a:
+? Ignoring flight direction, modelling every flight between different cities as its own undirected edge gives a:
 + Multigraph
 - Simple graph
 - Tree

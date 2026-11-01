@@ -31,7 +31,7 @@ sources: ITE 3822 January 2023; July 2023; October 2019; Model questions
 
 :::tip Repeated questions
 - **"Show that if 7 | 4n then 7 | n"** appeared in both 2023 papers.
-- **"Every graph has two vertices of equal degree"** appeared in both 2023 papers.
+- **"Every finite simple undirected graph with at least two vertices has two vertices of equal degree"** appeared in both 2023 papers.
 - **Caesar cipher on YARD / CHVW** is the **same example as the Week 6 lecture**.
 - The **truth-value question** uses the Week 1 Assignment formulas, e.g. (∀x)(∃y)(x + y = x).
 :::
@@ -138,7 +138,7 @@ X = [[−1/2, 0, 0, 1/6], [1/2, 3, −3, 1/6], [1/2, −1, 2, 1/6]]
 
 ## January 2023 — Question 4 (graphs)
 
-:::example a) Every graph with n ≥ 2 vertices has two vertices of equal degree (simple graph)
+:::example a) Every finite simple undirected graph with n ≥ 2 vertices has two vertices of equal degree
 - Degrees lie in {0, 1, …, n − 1}, which is n values.
 - But **0 and n − 1 can't both occur**: a vertex joined to all the others means no vertex is isolated.
 - So the degrees take at most **n − 1 different values** for n vertices.
@@ -318,9 +318,9 @@ V = 64, L = 56, K = 46, all three = 21, V∩L = 47, V∩K = 35, L∩K = 27.
 :::
 
 :::example Q2: Sums and recurrences
-**a)** 1/((i + 1)(i + 2)) = 1/(i + 1) − 1/(i + 2). The sum **telescopes** to 1 − 1/(n + 2) = **(n + 1)/(n + 2)**.
+**a)** 1/((i + 1)(i + 2)) = 1/(i + 1) − 1/(i + 2). With **i = 0, …, n**, the sum **telescopes** to 1 − 1/(n + 2) = **(n + 1)/(n + 2)**.
 
-**b)** Sₙ = 3Sₙ₋₁ + nSₙ₋₂ + 4:
+**b)** With **S₀ = 1 and S₁ = 2**, Sₙ = 3Sₙ₋₁ + nSₙ₋₂ + 4:
 
 - **S₂** = 6 + 2 + 4 = **12**
 - **S₃** = 36 + 6 + 4 = **46**

@@ -56,7 +56,7 @@
       });
       var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
       st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
-      save('sg-quiz-' + qid, st); header();
+      save('sg-quiz-' + qid, st); header(); window.dispatchEvent(new CustomEvent('sg-progress', {detail:{kind:'quiz',key:qid,score:p}}));
       var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
       body.querySelector('.qact').innerHTML = '';
       body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +

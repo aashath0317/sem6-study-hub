@@ -56,7 +56,7 @@
   }
   secs.forEach(function(s){
     s.querySelector('.done-btn').onclick = function(){
-      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint();
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint(); window.dispatchEvent(new CustomEvent('sg-progress', {detail:{kind:'section',key:KEY,section:id,on:done[id]}}));
     };
   });
   paint();

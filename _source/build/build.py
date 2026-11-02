@@ -7,8 +7,8 @@ ROOT = "D:/Study/SEM 6"
 # Google Drive file IDs of the uploaded videos ("Folder/Week NN/file" -> id), used by the online copy
 _dp = os.path.join(HERE, "drive_ids.json")
 DRIVE = json.load(open(_dp, encoding="utf-8")) if os.path.exists(_dp) else {}
-CSS = open(os.path.join(HERE, "template.css"), encoding="utf-8").read()
-JS = open(os.path.join(HERE, "template.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "quiz.js"), encoding="utf-8").read()
+CSS = open(os.path.join(HERE, "template.css"), encoding="utf-8").read() + "\n" + open(os.path.join(HERE, "study-plan.css"), encoding="utf-8").read()
+JS = open(os.path.join(HERE, "template.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "quiz.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "study-plan.js"), encoding="utf-8").read()
 OUTNAME = "{week} - Study Guide.html"
 SUBJECTS = [
     ("bpas", "Business Processes and Accounting Systems", "ITE3622", "Business Processes & Accounting Systems"),
@@ -216,15 +216,44 @@ def native_sections(body, key):
     return re.sub(r'(<section class="card" data-sec="([^"]+)"><h2\b[^>]*>.*?</h2>)(.*?)(</section>)', replace_section, body, flags=re.S)
 
 
+_STUDY_DATA = None
+
+def study_data():
+    global _STUDY_DATA
+    if _STUDY_DATA is None:
+        catalog = []
+        for skey, folder, code, name in SUBJECTS:
+            weeks = []
+            for f in weeks_of(skey):
+                num = re.search(r"(\d+)", f).group(1).zfill(2)
+                meta, body = parse(os.path.join(HERE, "content", skey, f))
+                headings = re.findall(r"^## (.+)$", body, re.M)
+                week = "Week " + num
+                weeks.append({"key": skey + "-Week" + num, "label": week, "url": quote(folder + "/" + week + "/" + OUTNAME.format(week=week)),
+                              "sections": [{"id": "s" + str(i+1), "title": re.sub(r"[*`]", "", h)} for i, h in enumerate(headings)],
+                              "quiz": os.path.exists(os.path.join(HERE, "content", skey, "w" + num + ".quiz"))})
+            paper = os.path.join(HERE, "content", skey, "papers.md")
+            if os.path.exists(paper):
+                meta, body = parse(paper)
+                headings = re.findall(r"^## (.+)$", body, re.M)
+                weeks.append({"key": skey + "-papers", "label": "Past papers", "url": quote(folder + "/Past Papers.html"), "paper": True, "quiz": False,
+                              "sections": [{"id": "s" + str(i+1), "title": re.sub(r"[*`]", "", h)} for i, h in enumerate(headings)]})
+            catalog.append({"key": skey, "name": name, "exam": EXAMS[skey], "url": quote(folder + "/Study Guide - Index.html"), "weeks": weeks})
+        _STUDY_DATA = json.dumps(catalog, ensure_ascii=False).replace("</", "<\\/")
+    return _STUDY_DATA
+
+
 def page(title, body, key="", crumbs=""):
     body = native_sections(body, key)
+    home = ("../../" if re.fullmatch(r"[a-z]+-Week\d+", key) else "../" if key.endswith("-papers") or 'href="../SEM 6' in crumbs else "") + "SEM%206%20Study%20Hub.html#study-plan"
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title><style>{CSS}</style></head>
-<body data-key="{key}">
+<body data-key="{key}" data-study-home="{home}">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb">{crumbs}</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
 {body}
+<script type="application/json" id="study-data">{study_data()}</script>
 <script>{JS}</script></body></html>"""
 
 
@@ -360,17 +389,17 @@ def build_hub():
         if not n: continue
         keys = ",".join(f"{skey}-Week{re.search(r'(\d+)', f).group(1).zfill(2)}" for f in weeks_of(skey) if os.path.exists(os.path.join(HERE, "content", skey, f[:-3] + ".quiz")))
         ex = EXAMS.get(skey)
-        exl = f'<em class="exd" data-exam="{ex[0]}T{ex[1]}">Exam: {datetime.date.fromisoformat(ex[0]).strftime("%a %d %b")}, {ex[1]}–{ex[2]}</em>' if ex else ""
+        exl = f'<em class="exd" data-exam="{ex[0]}T{ex[1]}+05:30">Exam: {datetime.date.fromisoformat(ex[0]).strftime("%a %d %b")}, {ex[1]}–{ex[2]}</em>' if ex else ""
         cards.append(f'<a href="{quote(folder)}/{quote("Study Guide - Index.html")}" data-qkeys="{keys}" data-skey="{skey}"><small>{code}</small><span>{html.escape(sname)}</span><em>{n} weekly study guides</em>{exl}'
                      f'<b class="hq"></b></a>')
-    rows = "".join(f'<tr data-exam="{d}T{a}"><td>{datetime.date.fromisoformat(d).strftime("%a %d %b %Y")}</td><td>{a}–{b}</td><td>{html.escape(SUBJ[k][3])} <small>({SUBJ[k][2]})</small></td><td class="cd"></td></tr>'
+    rows = "".join(f'<tr data-exam="{d}T{a}+05:30"><td>{datetime.date.fromisoformat(d).strftime("%a %d %b %Y")}</td><td>{a}–{b}</td><td>{html.escape(SUBJ[k][3])} <small>({SUBJ[k][2]})</small></td><td class="cd"></td></tr>'
                    for k, (d, a, b) in sorted(EXAMS.items(), key=lambda kv: kv[1]))
-    exams = (f'<div class="exams"><h2 style="margin-top:0">Final exams</h2><table>{rows}</table>'
+    exams = (f'<div class="exams" id="exam-dates"><h2 style="margin-top:0">Final exams</h2><table>{rows}</table>'
              '<p class="note">From the 25S2 final exam timetable. Check the official timetable for any changes.</p></div>'
-             '<script>(function(){var now=new Date();document.querySelectorAll("[data-exam]").forEach(function(e){var t=new Date(e.getAttribute("data-exam")),d=Math.ceil((t-now)/864e5),s=d>1?"in "+d+" days":d===1?"tomorrow":d===0?"today":"done";'
+             '<script>(function(){var now=new Date();document.querySelectorAll("[data-exam]").forEach(function(e){var t=new Date(e.getAttribute("data-exam")),d=Math.round((Date.UTC(t.getUTCFullYear(),t.getUTCMonth(),t.getUTCDate())-Date.parse(new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Colombo",year:"numeric",month:"2-digit",day:"2-digit"}).format(now)+"T00:00:00Z"))/864e5),s=d>1?"in "+d+" days":d===1?"tomorrow":d===0?"today":"done";'
              'if(e.tagName==="TR"){e.querySelector(".cd").textContent=s;if(d<0)e.style.opacity=.5}else if(d>=0)e.textContent+=" · "+s})})();</script>')
     body = (f'<div class="layout" style="display:block;max-width:1100px"><main><div class="hero"><div class="sub">Semester 6</div><h1>SEM 6 Study Hub</h1>'
-            f'<p>Every subject, every week — complete notes that replace the PDFs and videos. Works fully offline.</p></div>{exams}<div class="kpanel" data-hub="1"></div><div class="wk">{"".join(cards)}</div></main></div>')
+            f'<p>Every subject, every week — complete notes that replace the PDFs and videos. Works fully offline.</p><p><a href="#study-plan">My finish plan</a> · <a href="#subjects">Study subjects</a> · <a href="#exam-dates">Exam timetable</a></p></div><section id="study-plan" class="study-plan" aria-label="Semester study plan"></section>{exams}<div class="kpanel" data-hub="1"></div><div class="wk" id="subjects">{"".join(cards)}</div></main></div>')
     open(os.path.join(ROOT, "SEM 6 Study Hub.html"), "w", encoding="utf-8").write(page("SEM 6 Study Hub", body, crumbs="SEM 6 Study Hub"))
     open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(
         '<!doctype html><meta charset="utf-8"><title>SEM 6 Study Hub</title>'

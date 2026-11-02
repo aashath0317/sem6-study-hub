@@ -18,10 +18,10 @@ SUBJECTS = [
     ("mkt", "Marketing", "ITE3642", "Marketing"),
 ]
 SUBJ = {s[0]: s for s in SUBJECTS}
-# Final exams (from "Final Exam Time Table 25S2 (2018).pdf"): date, start, end
-EXAMS = {"bpas": ("2026-11-15", "11:00", "14:00"), "dmath": ("2026-11-22", "08:30", "11:30"),
-         "hci": ("2026-11-28", "08:30", "11:30"), "dm": ("2026-11-28", "11:30", "14:30"),
-         "mkt": ("2026-11-28", "14:45", "17:45")}
+# Final exams: corrected timetable image supplied by the user on 2026-11-02; date, start, end (Sri Lanka time).
+EXAMS = {"bpas": ("2026-11-15", "11:00", "14:00"), "dmath": ("2026-11-21", "08:30", "11:30"),
+         "hci": ("2026-11-22", "08:30", "11:30"), "dm": ("2026-11-22", "11:30", "14:30"),
+         "mkt": ("2026-11-22", "14:45", "17:45")}
 CALLS = {"tip": "Tip", "exam": "Exam focus", "warn": "Common mistake", "example": "Worked example",
          "key": "Key idea", "video": "From the lecture video"}
 

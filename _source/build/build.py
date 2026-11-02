@@ -173,6 +173,27 @@ def quiz_block(qid, qs, pick=0, intro=""):
 NATIVE_TAMIL = json.load(open(os.path.join(HERE, "native_tamil.json"), encoding="utf-8"))
 
 
+def native_tables(tables):
+    result = []
+    for table in tables:
+        headers = table["headers"]
+        if not headers or any(len(row) != len(headers) for row in table["rows"]):
+            raise ValueError("Tamil table columns do not match headers")
+        esc = lambda value: html.escape(str(value)).replace("\n", "<br>")
+        head = "".join('<th scope="col" role="columnheader">' + esc(h) + '</th>' for h in headers)
+        rows = []
+        for row in table["rows"]:
+            cells = []
+            for i, value in enumerate(row):
+                tag = "th" if i == 0 else "td"
+                attrs = ' scope="row" role="rowheader"' if i == 0 else ' role="cell"'
+                label = '<span class="ta-cell-label" aria-hidden="true">' + esc(headers[i]) + '</span>'
+                cells.append('<' + tag + attrs + '>' + label + esc(value) + '</' + tag + '>')
+            rows.append('<tr role="row">' + "".join(cells) + '</tr>')
+        result.append('<div class="ta-table-wrap"><table class="ta-readable-table" role="table"><caption>' + esc(table["title"]) + '</caption><thead role="rowgroup"><tr role="row">' + head + '</tr></thead><tbody role="rowgroup">' + "".join(rows) + '</tbody></table></div>')
+    return "".join(result)
+
+
 def native_sections(body, key):
     match = re.fullmatch(r"([a-z]+)-(?:Week(\d+)|(papers))", key)
     if not match:
@@ -200,6 +221,7 @@ def native_sections(body, key):
             tamil = "".join('<div class="ta-recap-item"><h4>' + html.escape(item["title"]) + '</h4>' + md(item["text"]) + '</div>' for item in entry["items"])
         else:
             tamil = md(entry["text"])
+            tamil += native_tables(entry.get("tables", []))
             if entry.get("details"):
                 tamil += '<div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p>' + md(entry["details"]) + '</div>'
         toggle = ('<div class="section-language"><button type="button" class="native-toggle" '

@@ -212,3 +212,21 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .native-reference:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .section-english.reference-open{border-top:2px solid var(--accent);padding-top:18px;margin-top:16px}
 .section-english.reference-open::before{content:'முழுக் குறிப்பு · English';display:block;color:var(--accent-ink);font-weight:700;margin-bottom:12px}
+
+/* Authored Tamil comparisons: labelled rows on small screens. */
+.ta-table-wrap{margin:20px 0 28px;max-width:100%}
+.ta-readable-table{width:100%;table-layout:fixed;border-collapse:collapse;line-height:1.95;font-size:.95em}
+.ta-readable-table caption{text-align:left;font-weight:700;color:var(--accent-ink);font-size:1.05em;padding:0 0 12px;line-height:1.9}
+.ta-readable-table th,.ta-readable-table td{padding:14px 16px;vertical-align:top;text-align:left;white-space:normal;overflow-wrap:anywhere;border:1px solid var(--line)}
+.ta-readable-table thead th{background:var(--accent-soft);color:var(--accent-ink)}
+.ta-readable-table tbody th{font-weight:700;background:var(--panel)}
+.ta-cell-label{display:none}
+@media(max-width:760px){
+ .ta-readable-table,.ta-readable-table tbody{display:block;width:100%}
+ .ta-readable-table caption{display:block}
+ .ta-readable-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .ta-readable-table tbody tr{display:block;margin:0 0 18px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+ .ta-readable-table tbody th,.ta-readable-table tbody td{display:block;width:auto;border:0;border-bottom:1px solid var(--line);padding:12px 14px}
+ .ta-readable-table tbody td:last-child{border-bottom:0}
+ .ta-readable-table .ta-cell-label{display:block;font-weight:700;color:var(--accent-ink);font-size:.9em;margin-bottom:4px}
+}

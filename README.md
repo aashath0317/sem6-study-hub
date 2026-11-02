@@ -31,7 +31,7 @@ The hub's **My finish plan** reads existing section checks and latest quiz score
 
 The dashboard checks cumulative work due before every deadline, shows capacity shortfalls and projected completion, and builds today's and the next seven study days' focus blocks. Latest weak quiz results and older passed learning add revision tasks. The default estimates are not a personalised measurement or a guarantee of passing.
 
-Use **Start focus**, **Pause/Resume** and **Finish** on any study page. The timer pauses when the page is hidden or after five minutes without interaction. Only one tab can run a timer at a time. Finish or navigation saves counted time; manual time entries and corrections are also available. History is recorded from installation forward; old section checks have no historical completion dates. After three tracked study days, the dashboard compares logged time/day with required hours/day.
+Study pages now **start tracking automatically** while visible and focused. The timer **automatically pauses** after two minutes without mouse movement, scrolling, touch or typing (adjustable from 1–30 minutes), when minimised, when switching tabs/windows, or when navigating away. It **automatically resumes** on activity or return to a visible focused study page. A deliberate **Pause/Stop** remains paused until **Resume**; that manual choice survives study-page navigation. Only one tab can count at a time. Counted time is checkpointed every ten seconds and on pause/navigation, including sessions shorter than six seconds. The clock displays the total recorded study time for today, so navigating does not visually reset it. Entries split at Sri Lanka midnight; manual time entries and corrections are also available. History is recorded from installation forward; old section checks have no historical completion dates. After three tracked study days, the dashboard compares logged time/day with required hours/day.
 
 Progress stays in the current browser/site and is not uploaded to GitHub or automatically synced. **Download progress backup** and **Restore / merge backup** transfer section checks, quizzes, plan settings and history between browsers/devices and online/offline copies. Restore retains understood sections and merges logs by ID to avoid duplicates. Warnings appear in the open site; background phone/push notifications are not provided.
 
@@ -39,4 +39,5 @@ Planner checks (Node.js, no extra packages):
 
 ```
 node _source/build/tests/study-plan.test.cjs
+node _source/build/tests/study-timer.test.cjs
 ```

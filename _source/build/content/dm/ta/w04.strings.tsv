@@ -1,0 +1,35 @@
+Data Reduction & Discretization	தரவுக் குறைப்பும் தனித்துண்டாக்கலும்
+Make the dataset smaller without changing what it tells you — cubes, attribute selection, compression, histograms, binning and concept hierarchies.	தரவு தெரிவிக்கும் தகவலை மாற்றாமல் தரவுத்தொகுப்பைச் சிறிதாக்குதல் — கனசதுரங்கள், பண்புக்கூறுத் தேர்வு, சுருக்கம், அலைவெண் செவ்வகங்கள், தொட்டிப் பிரித்தல், கருத்துப் படிநிலைகள்.
+Data Discretization	தரவுத் தனித்துண்டாக்கல்
+Equal-width vs equal-depth binning, smoothing by bin means / medians / boundaries, and histogram partitioning (equal-width, equal-frequency, V-Optimal, MaxDiff) — all with worked examples.	சம அகல மற்றும் சம ஆழத் தொட்டிப் பிரித்தல், தொட்டிச் சராசரிகள் / இடைநிலைகள் / எல்லைகளால் சீராக்கல், அலைவெண் செவ்வகப் பிரித்தல் (சம அகலம், சம அதிர்வெண், V-Optimal, MaxDiff) — அனைத்தும் செய்முறை எடுத்துக்காட்டுகளுடன்.
+Why discretize? Large ranges hide frequent patterns	ஏன் தனித்துண்டாக்க வேண்டும்? பெரிய வீச்சுகள் அடிக்கடி நிகழும் வடிவங்களை மறைக்கின்றன
+Equal-width partitioning and the formula W = (B − A) / N	சம அகலப் பிரித்தலும் W = (B − A) / N சூத்திரமும்
+Problem: outliers distort equal-width bins	சிக்கல்: புறநிலைகள் சம அகலத் தொட்டிகளைச் சிதைக்கின்றன
+Equal-depth (equal-frequency) partitioning	சம ஆழ (சம அதிர்வெண்) பிரித்தல்
+Example: temperatures into 7 equal-width bins	எடுத்துக்காட்டு: வெப்பநிலைகளை 7 சம அகலத் தொட்டிகளாக்குதல்
+Example: prices into 3 equal-depth bins	எடுத்துக்காட்டு: விலைகளை 3 சம ஆழத் தொட்டிகளாக்குதல்
+Smoothing noise: by bin means and medians	இரைச்சலைச் சீராக்குதல்: தொட்டிச் சராசரிகளாலும் இடைநிலைகளாலும்
+Smoothing by bin boundaries	தொட்டி எல்லைகளால் சீராக்குதல்
+Discretization using histograms	அலைவெண் செவ்வகங்களால் தனித்துண்டாக்கல்
+MaxDiff histograms (β − 1 largest gaps)	MaxDiff அலைவெண் செவ்வகங்கள் (β − 1 மிகப்பெரிய இடைவெளிகள்)
+Example: ages — equal-width, equal-depth and MaxDiff	எடுத்துக்காட்டு: வயதுகள் — சம அகலம், சம ஆழம், MaxDiff
+Binning & smoothing lab	தொட்டிப் பிரித்தல் மற்றும் சீராக்கல் ஆய்வகம்
+Data values (comma separated)	தரவுப் பெறுமதிகள் (காற்புள்ளியால் பிரிக்கப்பட்டவை)
+Bins	தொட்டிகள்
+Partition	பிரித்தல்
+Equal-depth (frequency)	சம ஆழம் (அதிர்வெண்)
+Equal-width	சம அகலம்
+Smooth by	சீராக்கும் முறை
+— none —	— எதுவுமில்லை —
+Bin means	தொட்டிச் சராசரிகள்
+Bin medians	தொட்டி இடைநிலைகள்
+Bin boundaries	தொட்டி எல்லைகள்
+Change anything — the bins, the calculation steps and the smoothed values update instantly. Try adding an outlier like 300 with equal-width to see why outliers are a problem.	எதையும் மாற்றுங்கள் — தொட்டிகள், கணக்கீட்டுப் படிகள், சீராக்கப்பட்ட பெறுமதிகள் உடனடியாகப் புதுப்பிக்கப்படும். புறநிலைகள் ஏன் சிக்கல் என்பதைப் பார்க்க சம அகல முறையில் 300 போன்ற புறநிலையைச் சேர்க்கவும்.
+Enter some numbers.	சில எண்களை உள்ளிடவும்.
+Bin	தொட்டி
+Range	வீச்சு
+Values	பெறுமதிகள்
+Count	எண்ணிக்கை
+Smoothed	சீராக்கப்பட்டவை
+empty	வெற்று
+Adjacent gaps:	அடுத்தடுத்த இடைவெளிகள்:

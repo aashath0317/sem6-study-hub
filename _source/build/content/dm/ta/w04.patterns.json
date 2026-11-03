@@ -1,0 +1,42 @@
+[
+  {
+    "pattern": "Sorted:",
+    "replacement": "வரிசைப்படுத்தப்பட்டவை:"
+  },
+  {
+    "pattern": "Depth =",
+    "replacement": "ஆழம் ="
+  },
+  {
+    "pattern": " values / ",
+    "replacement": " பெறுமதிகள் / "
+  },
+  {
+    "pattern": " bins ≈ ",
+    "replacement": " தொட்டிகள் ≈ "
+  },
+  {
+    "pattern": " values per bin",
+    "replacement": " ஒரு தொட்டிக்கான பெறுமதிகள்"
+  },
+  {
+    "pattern": "Adjacent gaps:",
+    "replacement": "அடுத்தடுத்த இடைவெளிகள்:"
+  },
+  {
+    "pattern": "Cut at the <b>(\\d+)</b> largest gaps \\(highlighted\\)\\.",
+    "replacement": "மிகப்பெரிய <b>$1</b> இடைவெளிகளில் வெட்டவும் (சுட்டிக்காட்டப்பட்டவை)."
+  },
+  {
+    "pattern": "\\(mean ([\\d.,−-]+)\\)",
+    "replacement": "(சராசரி $1)"
+  },
+  {
+    "pattern": "\\(median ([\\d.,−-]+)\\)",
+    "replacement": "(இடைநிலை $1)"
+  },
+  {
+    "pattern": "\\(boundaries ([\\d.,−-]+) / ([\\d.,−-]+)\\)",
+    "replacement": "(எல்லைகள் $1 / $2)"
+  }
+]

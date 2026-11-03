@@ -96,6 +96,17 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     if(dataMining && d.querySelector('#kdd')) {
       for(const stage of d.querySelectorAll('#kdd .row .pill')) { stage.click(); await tick(); scan(); }
     }
+    if(dataMining) {
+      for(const selector of ['#km .st','#ag .st']) {
+        for(let step=0; step<25; step++) {
+          const action=d.querySelector(selector);
+          if(!action || action.disabled) break;
+          const previous=action.closest('.tool').textContent;
+          action.click(); await tick(); scan();
+          if(action.closest('.tool').textContent===previous) break;
+        }
+      }
+    }
     // Financial controls must keep their edited values and numeric results when labels change.
     const editedInputs = [...d.querySelectorAll('.tool input[type=number],.tool input[type=range]')];
     if(business) {

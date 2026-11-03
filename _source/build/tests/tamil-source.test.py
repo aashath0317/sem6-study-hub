@@ -23,6 +23,7 @@ for source in sorted(BASE.glob('*.md')):
     assert tool_ids == re.findall(r'\{\{tool:([^}]+)\}\}', tamil), f'Tool mismatch: {source.name}'
     english = re.sub(r'^:::tool[^\n]*\n.*?^:::\s*$', '', english, flags=re.M | re.S)
     tamil = re.sub(r'^:::html\s*\n\{\{tool:[^}]+\}\}\s*\n:::\s*$', '', tamil, flags=re.M)
+    tamil = re.sub(r'\{\{tool:[^}]+\}\}', '', tamil)
     en_sections = re.split(r'^## .+$', english, flags=re.M)[1:]
     ta_sections = re.split(r'^## .+$', tamil, flags=re.M)[1:]
     assert len(en_sections) == len(ta_sections), f'Section mismatch: {source.name}'

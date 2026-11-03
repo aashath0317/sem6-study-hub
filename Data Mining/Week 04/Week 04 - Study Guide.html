@@ -247,7 +247,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 04</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
 <div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 04</div><h1>Data Reduction &amp; Discretization</h1><p>Make the dataset smaller without changing what it tells you — cubes, attribute selection, compression, histograms, binning and concept hierarchies.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 10 min</span><span class="chip">📄 week 4.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Data Discretization · 10 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3432-25S2- Data Discretization - CODL-UOM.mp4" data-drive="1A2UGarT5TKOQitxKL2UId9ANyew9kalr"><source src="ITE3432-25S2-%20Data%20Discretization%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Data Discretization</p><p class="vs">Equal-width vs equal-depth binning, smoothing by bin means / medians / boundaries, and histogram partitioning (equal-width, equal-frequency, V-Optimal, MaxDiff) — all with worked examples.</p><a href="#" data-v="0" data-t="0"><b>00:00</b><span>Why discretize? Large ranges hide frequent patterns</span></a><a href="#" data-v="0" data-t="37"><b>00:37</b><span>Equal-width partitioning and the formula W = (B − A) / N</span></a><a href="#" data-v="0" data-t="78"><b>01:18</b><span>Problem: outliers distort equal-width bins</span></a><a href="#" data-v="0" data-t="104"><b>01:44</b><span>Equal-depth (equal-frequency) partitioning</span></a><a href="#" data-v="0" data-t="137"><b>02:17</b><span>Example: temperatures into 7 equal-width bins</span></a><a href="#" data-v="0" data-t="206"><b>03:26</b><span>Example: prices into 3 equal-depth bins</span></a><a href="#" data-v="0" data-t="256"><b>04:16</b><span>Smoothing noise: by bin means and medians</span></a><a href="#" data-v="0" data-t="318"><b>05:18</b><span>Smoothing by bin boundaries</span></a><a href="#" data-v="0" data-t="389"><b>06:29</b><span>Discretization using histograms</span></a><a href="#" data-v="0" data-t="441"><b>07:21</b><span>MaxDiff histograms (β − 1 largest gaps)</span></a><a href="#" data-v="0" data-t="474"><b>07:54</b><span>Example: ages — equal-width, equal-depth and MaxDiff</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why reduce data at all?"><span class="num">1</span>Why reduce data at all?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>குறைந்த தரவில் அதே பயன்</h3><p>முழுத் தரவும் மிகப் பெரியதாக இருந்தால் கணக்கிட நேரம் அதிகம். முக்கியத் தகவலை அதிகமாக இழக்காமல் அளவைக் குறைப்பதே <strong>Data reduction</strong>. சுருக்கம் பயனுள்ள முடிவை வைத்திருக்கிறதா என்று பார்க்க வேண்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>பெரிய data-வைச் சிறு representation-ஆக மாற்றியும் analysis-க்கு தேவையான தகவலைப் பாதுகாப்பதே reduction. <strong>ஐந்து strategies:</strong> cube aggregation; attribute subset; dimensionality reduction; numerosity reduction; discretisation/concept hierarchy. அளவு குறைந்தது மட்டும் வெற்றி அல்ல; original data-இன் task result-க்கு போதுமான ஒற்றுமை இருக்கிறதா சோதிக்கவேண்டும்.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><p>Real datasets are huge — millions of rows and hundreds of columns. Mining algorithms on such data are <strong>slow</strong> and need <strong>a lot of memory</strong>. <strong>Data reduction</strong> produces a <em>much smaller</em> version of the dataset that still gives <strong>the same (or almost the same) analytical results</strong>.</p>
+<p>பெரிய data-வைச் சிறு representation-ஆக மாற்றியும் analysis-க்கு தேவையான தகவலைப் பாதுகாப்பதே reduction. <strong>ஐந்து strategies:</strong> cube aggregation; attribute subset; dimensionality reduction; numerosity reduction; discretisation/concept hierarchy. அளவு குறைந்தது மட்டும் வெற்றி அல்ல; original data-இன் task result-க்கு போதுமான ஒற்றுமை இருக்கிறதா சோதிக்கவேண்டும்.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p>Real datasets are huge — millions of rows and hundreds of columns. Mining algorithms on such data are <strong>slow</strong> and need <strong>a lot of memory</strong>. <strong>Data reduction</strong> produces a <em>much smaller</em> version of the dataset that still gives <strong>the same (or almost the same) analytical results</strong>.</p>
 <div class="call key"><div class="ct">The one-sentence definition</div><p>Data reduction = obtaining a <strong>reduced representation</strong> of the dataset that is <strong>much smaller in volume</strong> but <strong>keeps the integrity</strong> of the original data, so mining it is more efficient and the results barely change.</p></div>
 <p>Two benefits are named in the notes:</p>
 <ol>
@@ -320,8 +320,81 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 </tr>
 </tbody>
 </table>
-<div class="call exam"><div class="ct">Exam focus</div><p>"List and briefly explain the strategies for data reduction" is a classic question. Write all five with one line each — exactly the table above.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Data cube aggregation"><span class="num">2</span>Data cube aggregation</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>விவரங்களை மொத்தங்களாகச் சுருக்குதல்</h3><p>தினசரி விற்பனையை மாத மொத்தமாகச் சேர்த்தால் குறைந்த பதிவுகளில் போக்கைக் காணலாம். இதுதான் <strong>Aggregation</strong>. ஆனால் மாத மொத்தத்தில் எந்த நாளில் திடீர் விற்பனை நடந்தது என்ற நுணுக்கம் மறையலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>ஒவ்வொரு sale row-க்கு பதில் item×branch×year totals வைத்தால் cube aggregation. Branch→region அல்லது month→year roll-up செய்யலாம். Annual total கேள்விக்கு transaction detail தேவையில்லாமல் வேகம் கிடைக்கலாம்; ஆனால் individual sale fraud தேட அதே summary போதாது. <strong>“No loss” என்பது அந்த குறிப்பிட்ட task-க்கு மட்டுமே</strong>, எல்லாப் புதிய கேள்விகளுக்கும் அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><p>A <strong>data cube</strong> stores <strong>multidimensional aggregated information</strong>. (Cubes are covered in detail in Week 5 – Data Warehousing; here you only need the idea.)</p>
+<div class="call exam"><div class="ct">Exam focus</div><p>"List and briefly explain the strategies for data reduction" is a classic question. Write all five with one line each — exactly the table above.</p></div></div><div class="hci-ta" lang="ta" hidden data-title="தரவை ஏன் குறைக்க வேண்டும்?"><p>உண்மையான தரவுத்தொகுப்புகள் மிகப்பெரியவை — மில்லியன் கணக்கான வரிசைகளும் நூற்றுக்கணக்கான நிரல்களும். அவற்றில் சுரங்கப் படிமுறைகள் <strong>மெதுவாக</strong> இயங்கும்; <strong>அதிக நினைவகம்</strong> தேவைப்படும். <strong>தரவுக் குறைப்பு</strong>, <strong>அதே (அல்லது ஏறத்தாழ அதே) பகுப்பாய்வு முடிவுகளை</strong> வழங்கும் <em>மிகச்சிறிய</em> தரவுத்தொகுப்புப் பதிப்பை உருவாக்குகிறது.</p>
+<div class="call key"><div class="ct">ஒரு வாக்கிய வரையறை</div><p>தரவுக் குறைப்பு = <strong>அளவில் மிகச்சிறியதாகவும்</strong> மூலத் தரவின் <strong>முழுமையைப் பேணுவதாகவும்</strong> இருக்கும் <strong>குறைக்கப்பட்ட பிரதிநிதித்துவத்தைப்</strong> பெறுதல்; இதனால் சுரங்கம் திறம்பட நடைபெறும், முடிவுகள் மிகக்குறைவாகவே மாறும்.</p></div>
+<p>குறிப்புகளில் இரு நன்மைகள் குறிப்பிடப்படுகின்றன:</p>
+<ol>
+<li>தரவுச் சுரங்கப் படிமுறைகளுக்கு <strong>குறைந்த நேரமும் நினைவகமும்</strong> தேவை.</li>
+<li>தரவைக் <strong>காட்சிப்படுத்துவது எளிதாகிறது</strong>.</li>
+</ol>
+<h3>இது இடம்பெறும் இடம் — நான்கு முன்செயலாக்கப் பணிகள்</h3>
+<p>வாரம் 3-இல் அறிமுகப்படுத்தப்பட்ட தரவு முன்செயலாக்கக் குடும்பத்தின் மூன்றாவது உறுப்பினர் இந்தப் பாடம்:</p>
+<table>
+<thead>
+<tr>
+<th>பணி</th>
+<th>செய்வது</th>
+<th>எடுத்துக்காட்டு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>தரவுத் தூய்மைப்படுத்தல்</strong></td>
+<td>இரைச்சலை அகற்றி முரண்பாடுகளைத் திருத்துகிறது</td>
+<td>விடுபட்ட வயதுகளை நிரப்புதல், இரைச்சலுள்ள விலைகளைச் சீராக்குதல்</td>
+</tr>
+<tr>
+<td><strong>தரவு ஒருங்கிணைப்பு</strong></td>
+<td>பல மூலத் தரவுகளை ஒரு சீரான சேமிப்பகத்தில் இணைக்கிறது</td>
+<td>கிளைத் தரவுத்தளங்களைத் தரவுக் கிடங்காக இணைத்தல்</td>
+</tr>
+<tr>
+<td><strong>தரவு உருமாற்றம்</strong></td>
+<td>தரவைப் பொருத்தமான வடிவமாக மாற்றுகிறது</td>
+<td>இயல்பாக்கம் (தொலைவு அடிப்படையிலான படிமுறைகளுக்கு உதவுகிறது)</td>
+</tr>
+<tr>
+<td><strong>தரவுக் குறைப்பு</strong> ← <em>இந்த வாரம்</em></td>
+<td>தரவின் அளவைச் சுருக்குகிறது</td>
+<td>திரட்டுதல், மிகையான அம்சங்களை நீக்குதல், குழுமமாக்கல்</td>
+</tr>
+</tbody>
+</table>
+<h3>ஐந்து தரவுக் குறைப்பு உத்திகள்</h3>
+<p>இந்த ஐந்தையும் மனப்பாடம் செய்யவும் — முழுப் பாடத்தின் சுருக்க அமைப்பும் இதுவே:</p>
+<div class="flow"><span>தரவுக் கனசதுரத் திரட்டல்</span><span>பண்புக்கூறு உட்கணத் தேர்வு</span><span>பரிமாணக் குறைப்பு</span><span>எண்ணிக்கைக் குறைப்பு</span><span>தனித்துண்டாக்கலும் கருத்துப் படிநிலைகளும்</span></div>
+<table>
+<thead>
+<tr>
+<th>உத்தி</th>
+<th>எளிய சொற்களில் கருத்து</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>தரவுக் கனசதுரத் திரட்டல்</strong></td>
+<td>தரவுக் கனசதுரத்தை உருவாக்கும்போது திரட்டலைப் (கூட்டுத்தொகை, எண்ணிக்கை…) பயன்படுத்தவும் — ஒவ்வொரு பரிவர்த்தனையையும் அல்லாமல் சுருக்கங்களைச் சேமிக்கவும்.</td>
+</tr>
+<tr>
+<td><strong>பண்புக்கூறு உட்கணத் தேர்வு</strong></td>
+<td><strong>பொருத்தமற்ற, பலவீனமாகப் பொருத்தமான அல்லது மிகையான பண்புக்கூறுகளை</strong> (நிரல்களை) கண்டறிந்து <strong>நீக்குதல்</strong>.</td>
+</tr>
+<tr>
+<td><strong>பரிமாணக் குறைப்பு</strong></td>
+<td>தரவைச் சுருக்க <strong>குறியாக்க முறைகளைப்</strong> பயன்படுத்துதல் (எ.கா. சிற்றலைகள், PCA).</td>
+</tr>
+<tr>
+<td><strong>எண்ணிக்கைக் குறைப்பு</strong></td>
+<td>தரவை <strong>சிறிய பிரதிநிதித்துவத்தால்</strong> மாற்றுதல் — மாதிரி (அளவுரு சார்ந்தது) அல்லது அலைவெண் செவ்வகங்கள் / குழுமங்கள் / மாதிரிகள் (அளவுரு சாராதவை).</td>
+</tr>
+<tr>
+<td><strong>தனித்துண்டாக்கலும் கருத்துப் படிநிலை உருவாக்கமும்</strong></td>
+<td>மூலப் பெறுமதிகளை <strong>வீச்சுகளால்</strong> அல்லது <strong>உயர்நிலைக் கருத்துகளால்</strong> மாற்றுதல் (எ.கா. வயது 23 → "இளைஞர்").</td>
+</tr>
+</tbody>
+</table>
+<div class="call exam"><div class="ct">Exam focus</div><p>"தரவுக் குறைப்பு உத்திகளைப் பட்டியலிட்டுச் சுருக்கமாக விளக்குக" என்பது வழக்கமான கேள்வி. மேலுள்ள அட்டவணையைப் போலவே ஐந்தையும் ஒவ்வொன்றுக்கு ஒரு வரி எழுதவும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Data cube aggregation"><span class="num">2</span>Data cube aggregation</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>விவரங்களை மொத்தங்களாகச் சுருக்குதல்</h3><p>தினசரி விற்பனையை மாத மொத்தமாகச் சேர்த்தால் குறைந்த பதிவுகளில் போக்கைக் காணலாம். இதுதான் <strong>Aggregation</strong>. ஆனால் மாத மொத்தத்தில் எந்த நாளில் திடீர் விற்பனை நடந்தது என்ற நுணுக்கம் மறையலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
+<p>ஒவ்வொரு sale row-க்கு பதில் item×branch×year totals வைத்தால் cube aggregation. Branch→region அல்லது month→year roll-up செய்யலாம். Annual total கேள்விக்கு transaction detail தேவையில்லாமல் வேகம் கிடைக்கலாம்; ஆனால் individual sale fraud தேட அதே summary போதாது. <strong>“No loss” என்பது அந்த குறிப்பிட்ட task-க்கு மட்டுமே</strong>, எல்லாப் புதிய கேள்விகளுக்கும் அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p>A <strong>data cube</strong> stores <strong>multidimensional aggregated information</strong>. (Cubes are covered in detail in Week 5 – Data Warehousing; here you only need the idea.)</p>
 <p>Picture sales data with three dimensions — <strong>item type</strong>, <strong>branch</strong> and <strong>year</strong>. Instead of storing every single sale, each <strong>cell</strong> of the cube holds an <strong>aggregate value</strong> (e.g. total sales of <em>computers</em> at <em>Branch B</em> in <em>2008</em>).</p>
 <table>
 <thead>
@@ -364,10 +437,53 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <li>Each attribute can have a <strong>concept hierarchy</strong> — e.g. branches can be grouped into <strong>regions</strong> based on their address — so you can analyse at <strong>multiple levels of abstraction</strong>.</li>
 <li>Cubes give <strong>fast access to pre-computed, summarised data</strong>, which benefits both <strong>OLAP</strong> (on-line analytical processing) and data mining.</li>
 </ul>
-<div class="call tip"><div class="ct">Why it reduces data</div><p>If the analysis only needs <em>annual totals per branch</em>, keeping quarterly or per-transaction rows is waste. Aggregating to the level you need shrinks the data massively with no loss for that task.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Attribute subset selection"><span class="num">3</span>Attribute subset selection</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>முக்கிய Attributes தேர்வு</h3><p>எல்லா columns-மும் prediction-க்கு உதவாது. தேவையற்ற அல்லது ஒரே தகவலைத் திரும்பக் கூறும் attributes-ஐ நீக்குவது <strong>Subset selection</strong>. சரியான subset வேகத்தையும் பொதுமைப்படுத்தலையும் மேம்படுத்தலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Forward selection</strong> காலி subset-இலிருந்து பயனுள்ள attributes சேர்க்கும்; <strong>backward elimination</strong> அனைத்திலிருந்து தேவையற்றதை நீக்கும்; combined முறை இரண்டையும் செய்கிறது. Decision tree தேர்ந்த split attributes-உம் relevance காட்டலாம்.
+<div class="call tip"><div class="ct">Why it reduces data</div><p>If the analysis only needs <em>annual totals per branch</em>, keeping quarterly or per-transaction rows is waste. Aggregating to the level you need shrinks the data massively with no loss for that task.</p></div></div><div class="hci-ta" lang="ta" hidden data-title="தரவுக் கனசதுரத் திரட்டல்"><p><strong>தரவுக் கனசதுரம்</strong>, <strong>பல்பரிமாணத் திரட்டப்பட்ட தகவல்களைச்</strong> சேமிக்கிறது. (வாரம் 5 — தரவுக் கிடங்காக்கலில் கனசதுரங்கள் விரிவாக வருகின்றன; இங்கு கருத்து மட்டும் போதும்.)</p>
+<p><strong>பொருள் வகை</strong>, <strong>கிளை</strong>, <strong>ஆண்டு</strong> என்ற மூன்று பரிமாணங்களுடன் விற்பனைத் தரவை எண்ணிப்பாருங்கள். ஒவ்வொரு விற்பனையையும் சேமிப்பதற்குப் பதிலாக, கனசதுரத்தின் ஒவ்வொரு <strong>கலமும்</strong> ஒரு <strong>திரட்டப்பட்ட பெறுமதியைக்</strong> கொண்டிருக்கும் (எ.கா. <em>2008</em>-இல் <em>கிளை B</em>-இல் <em>கணினிகளின்</em> மொத்த விற்பனை).</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">கிளை A</th>
+<th style="text-align: right;">கிளை B</th>
+<th style="text-align: right;">கிளை C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>வீட்டு பொழுதுபோக்கு</td>
+<td style="text-align: right;">568</td>
+<td style="text-align: right;">750</td>
+<td style="text-align: right;">150</td>
+</tr>
+<tr>
+<td>கணினி</td>
+<td style="text-align: right;">680</td>
+<td style="text-align: right;">952</td>
+<td style="text-align: right;">31</td>
+</tr>
+<tr>
+<td>தொலைபேசி</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: right;">512</td>
+<td style="text-align: right;">290</td>
+</tr>
+<tr>
+<td>பாதுகாப்பு</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">580</td>
+<td style="text-align: right;">7</td>
+</tr>
+</tbody>
+</table>
+<p><em>விற்பனைக் கனசதுரத்தின் ஒரு "துண்டு": ஒவ்வொரு கிளையிலும் பொருள் வகைவாரியான ஆண்டு விற்பனை (பெறுமதிகள் விளக்கத்துக்கானவை).</em></p>
+<ul>
+<li>ஒவ்வொரு பண்புக்கூறுக்கும் <strong>கருத்துப் படிநிலை</strong> இருக்கலாம் — எ.கா. முகவரியை அடிப்படையாகக் கொண்டு கிளைகளை <strong>பிராந்தியங்களாகத்</strong> தொகுக்கலாம் — எனவே <strong>பல அருவாக்க நிலைகளில்</strong> பகுப்பாய்வு செய்யலாம்.</li>
+<li>கனசதுரங்கள் <strong>முன்கணக்கிடப்பட்ட, சுருக்கப்பட்ட தரவை விரைவாக அணுக</strong> உதவுகின்றன; இது <strong>OLAP</strong> (நிகழ்நிலைப் பகுப்பாய்வுச் செயலாக்கம்), தரவுச் சுரங்கம் இரண்டுக்கும் நன்மை பயக்கிறது.</li>
+</ul>
+<div class="call tip"><div class="ct">இது தரவை ஏன் குறைக்கிறது</div><p>பகுப்பாய்வுக்கு <em>கிளைவாரியான ஆண்டுக் கூட்டுத்தொகைகள்</em> மட்டும் தேவைப்பட்டால், காலாண்டு அல்லது ஒவ்வொரு பரிவர்த்தனை வரிசையையும் வைத்திருப்பது வீண். தேவையான நிலைக்குத் திரட்டுவது அந்தப் பணிக்கு இழப்பின்றித் தரவைப் பெருமளவில் சுருக்குகிறது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Attribute subset selection"><span class="num">3</span>Attribute subset selection</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>முக்கிய Attributes தேர்வு</h3><p>எல்லா columns-மும் prediction-க்கு உதவாது. தேவையற்ற அல்லது ஒரே தகவலைத் திரும்பக் கூறும் attributes-ஐ நீக்குவது <strong>Subset selection</strong>. சரியான subset வேகத்தையும் பொதுமைப்படுத்தலையும் மேம்படுத்தலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Forward selection</strong> காலி subset-இலிருந்து பயனுள்ள attributes சேர்க்கும்; <strong>backward elimination</strong> அனைத்திலிருந்து தேவையற்றதை நீக்கும்; combined முறை இரண்டையும் செய்கிறது. Decision tree தேர்ந்த split attributes-உம் relevance காட்டலாம்.
 Target prediction-க்கு உதவாத ID போன்ற column-ஐ வைத்தால் noise அல்லது leakage அதிகரிக்கலாம். Feature selection-ஐ evaluation fold-க்கு வெளியே முழுத் dataset-இல் செய்ய வேண்டாம்.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>n attributes-க்கு <strong>2ⁿ subsets</strong>; exhaustive search செலவு அதிகம். Forward empty-இலிருந்து best add; backward full-இலிருந்து worst remove; combined add/remove; tree பயன்படுத்திய attributes subset ஆகலாம். Greedy local choice global optimum உத்தரவாதமில்லை. Phone number CD taste-க்கு நேரடி predictor அல்ல என்ற பாட உதாரணம்; IDs leakage/overfitting தரலாம். Feature selection-ஐ training folds-க்குள் fit செய்து evaluation leakage தவிர்க்கவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><p>Datasets may contain <strong>hundreds of attributes</strong>, many <strong>irrelevant</strong> or <strong>redundant</strong>.</p>
+<p>n attributes-க்கு <strong>2ⁿ subsets</strong>; exhaustive search செலவு அதிகம். Forward empty-இலிருந்து best add; backward full-இலிருந்து worst remove; combined add/remove; tree பயன்படுத்திய attributes subset ஆகலாம். Greedy local choice global optimum உத்தரவாதமில்லை. Phone number CD taste-க்கு நேரடி predictor அல்ல என்ற பாட உதாரணம்; IDs leakage/overfitting தரலாம். Feature selection-ஐ training folds-க்குள் fit செய்து evaluation leakage தவிர்க்கவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><p>Datasets may contain <strong>hundreds of attributes</strong>, many <strong>irrelevant</strong> or <strong>redundant</strong>.</p>
 <div class="call example"><div class="ct">The notes' example</div><p>Task: predict whether a customer will buy a new CD when told about a sale.
 - <strong>Relevant:</strong> age, music taste
 - <strong>Irrelevant:</strong> telephone number</p></div>
@@ -408,10 +524,51 @@ Target prediction-க்கு உதவாத ID போன்ற column-ஐ வ
 </tr>
 </tbody>
 </table>
-<div class="call tip"><div class="ct">How to remember</div><p><em>Forward</em> = grow from nothing. <em>Backward</em> = shrink from everything. <em>Decision tree</em> = "whatever the tree bothered to use".</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Dimensionality reduction"><span class="num">4</span>Dimensionality reduction</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>பரிமாணங்களைக் குறைத்தல்</h3><p>பல அளவுகளை சில புதிய அளவுகளால் பிரதிநிதித்துவப்படுத்தலாம். <strong>PCA</strong> போன்ற முறைகள் முக்கிய variation-ஐ வைத்திருக்க முயல்கின்றன. இது சில original columns-ஐ மட்டும் தேர்ந்தெடுப்பதிலிருந்து வேறுபடும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Feature selection</strong> original columns-ஐத் தேர்வு செய்யும்; <strong>PCA</strong> original attributes-இன் புதிய linear combinations உருவாக்கும். குறைந்த components அதிக variance வைத்திருக்க முயலும்; interpretation கடினமாகலாம்.
+<div class="call tip"><div class="ct">How to remember</div><p><em>Forward</em> = grow from nothing. <em>Backward</em> = shrink from everything. <em>Decision tree</em> = "whatever the tree bothered to use".</p></div></div><div class="hci-ta" lang="ta" hidden data-title="பண்புக்கூறு உட்கணத் தேர்வு"><p>தரவுத்தொகுப்புகளில் <strong>நூற்றுக்கணக்கான பண்புக்கூறுகள்</strong> இருக்கலாம்; பல <strong>பொருத்தமற்றவை</strong> அல்லது <strong>மிகையானவை</strong>.</p>
+<div class="call example"><div class="ct">குறிப்புகளின் எடுத்துக்காட்டு</div><p>பணி: விற்பனைச் சலுகை தெரிவிக்கப்பட்டதும் வாடிக்கையாளர் புதிய CD வாங்குவாரா என்பதை முன்னறிவித்தல்.
+- <strong>பொருத்தமானவை:</strong> வயது, இசை விருப்பம்
+- <strong>பொருத்தமற்றது:</strong> தொலைபேசி எண்</p></div>
+<p>அனைத்தையும் ஏன் வைத்திருக்கக்கூடாது? <strong>பொருத்தமான பண்புக்கூறுகளை விடுவதோ பொருத்தமற்றவற்றை வைத்திருப்பதோ சுரங்கப் படிமுறையைக் குழப்புகிறது</strong> → தரமற்ற வடிவங்கள். துறை நிபுணர் கைமுறையில் தேர்ந்தெடுக்க <em>முடியும்</em>; ஆனால் தரவின் நடத்தை நன்கு தெரியாதபோது அது மெதுவானதும் கடினமானதும்.</p>
+<div class="call key"><div class="ct">இலக்கு</div><p><strong>அனைத்துப்</strong> பண்புக்கூறுகளாலும் பெறப்படும் பகிர்வுக்கு <strong>தரவு வகுப்புகளின் நிகழ்தகவுப் பகிர்வு இயன்றவரை அருகிலிருக்குமாறு</strong>, <strong>குறைந்தபட்சப் பண்புக்கூறுத் தொகுப்பைக்</strong> கண்டறிதல்.</p></div>
+<p>கூடுதல் நன்மை: கண்டறிந்த வடிவங்களில் குறைவான பண்புக்கூறுகள் → வடிவங்களைப் <strong>புரிந்துகொள்வது எளிது</strong>.</p>
+<h3>அனுபவவழி (பேராசை) முறைகள்</h3>
+<p><em>n</em> பண்புக்கூறுகளின் ஒவ்வொரு உட்கணத்தையும் முயன்றால் 2<sup>n</sup> சாத்தியங்கள் — பெரிய <em>n</em>-க்கு இயலாது. எனவே <strong>பேராசை அனுபவவழிகளைப்</strong> பயன்படுத்துகிறோம்: ஒவ்வொரு படியிலும் <strong>அப்போது சிறந்ததாகத் தோன்றும்</strong> தேர்வை (<em>உள்ளூர் உகந்த</em> தேர்வு) செய்து, அது <em>உலகளாவிய உகந்த</em> தீர்வுக்கு இட்டுச்செல்லும் என நம்புகிறோம். இவை நன்றாகச் செயல்படலாம்; ஆனால் உலகளாவிய உகந்த உட்கணத்தை உறுதிப்படுத்துவதில்லை.</p>
+<p>நான்கு அடிப்படை முறைகள் (குறிப்புகளில் படம் 3-2):</p>
+<table>
+<thead>
+<tr>
+<th>முறை</th>
+<th>செயல்படுவது எவ்வாறு</th>
+<th>{A1…A6} உடன் எடுத்துக்காட்டு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>படிப்படியான முன்னோக்குத் தேர்வு</strong></td>
+<td><strong>வெற்றுத்</strong> தொகுப்புடன் தொடங்கி, மீதமுள்ளவற்றில் <strong>சிறந்ததைச் சேர்த்துக்கொண்டே</strong> செல்லவும்.</td>
+<td>{} → {A1} → {A1, A4} → <strong>{A1, A4, A6}</strong></td>
+</tr>
+<tr>
+<td><strong>படிப்படியான பின்னோக்கு நீக்கம்</strong></td>
+<td><strong>அனைத்துப்</strong> பண்புக்கூறுகளுடன் தொடங்கி, <strong>மிக மோசமானதை நீக்கிக்கொண்டே</strong> செல்லவும்.</td>
+<td>{A1…A6} → {A1, A3, A4, A5, A6} → {A1, A4, A5, A6} → <strong>{A1, A4, A6}</strong></td>
+</tr>
+<tr>
+<td><strong>இணைந்த முன்னோக்கு + பின்னோக்கு</strong></td>
+<td>ஒவ்வொரு படியும் <strong>சிறந்ததைச் சேர்த்து</strong>, <strong>மோசமானதை நீக்குகிறது</strong>.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>முடிவெடுக்கும் மர உருவாக்கம்</strong></td>
+<td>முடிவெடுக்கும் மரத்தை உருவாக்கவும்; <strong>மரத்தில் தோன்றும்</strong> பண்புக்கூறுகள் குறைக்கப்பட்ட தொகுப்பாகும்; தோன்றாதவை பொருத்தமற்றவை.</td>
+<td>மரம் A4, A1, A6-ஐச் சோதிக்கிறது → <strong>{A1, A4, A6}</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="call tip"><div class="ct">நினைவில் கொள்வது எப்படி</div><p><em>முன்னோக்கு</em> = ஒன்றுமில்லாததிலிருந்து வளர்த்தல். <em>பின்னோக்கு</em> = அனைத்திலிருந்தும் சுருக்குதல். <em>முடிவெடுக்கும் மரம்</em> = "மரம் பயன்படுத்தத் தேர்ந்தெடுத்தவை".</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Dimensionality reduction"><span class="num">4</span>Dimensionality reduction</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>பரிமாணங்களைக் குறைத்தல்</h3><p>பல அளவுகளை சில புதிய அளவுகளால் பிரதிநிதித்துவப்படுத்தலாம். <strong>PCA</strong> போன்ற முறைகள் முக்கிய variation-ஐ வைத்திருக்க முயல்கின்றன. இது சில original columns-ஐ மட்டும் தேர்ந்தெடுப்பதிலிருந்து வேறுபடும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Feature selection</strong> original columns-ஐத் தேர்வு செய்யும்; <strong>PCA</strong> original attributes-இன் புதிய linear combinations உருவாக்கும். குறைந்த components அதிக variance வைத்திருக்க முயலும்; interpretation கடினமாகலாம்.
 Scale மிக வேறுபட்டால் PCA முடிவைப் பாதிக்கும். புதிய components குறைந்தவை என்பதால் அவை தானாக அதிக classification accuracy தரும் என்று உறுதி இல்லை.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Feature selection</strong> பழைய columns சிலவற்றைத் தேர்வு செய்கிறது; <strong>PCA</strong> பழைய columns-இன் combinations மூலம் புதிய axes உருவாக்குகிறது. Lossless exact reconstruction; reduced PCA/selected wavelet coefficients பொதுவாக approximate (lossy). Full invertible transform செய்தது மட்டும் loss அல்ல; components/coefficients கைவிடுவதால் தகவல் இழப்பு. PCA அதிக variance capture செய்கிறது; அதுவே target class-க்கு மிகப் பயன்படும் direction என்று உறுதி இல்லை.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><p>Here <strong>data encoding or transformations</strong> are applied to get a <strong>compressed</strong> representation of the original data.</p>
+<p><strong>Feature selection</strong> பழைய columns சிலவற்றைத் தேர்வு செய்கிறது; <strong>PCA</strong> பழைய columns-இன் combinations மூலம் புதிய axes உருவாக்குகிறது. Lossless exact reconstruction; reduced PCA/selected wavelet coefficients பொதுவாக approximate (lossy). Full invertible transform செய்தது மட்டும் loss அல்ல; components/coefficients கைவிடுவதால் தகவல் இழப்பு. PCA அதிக variance capture செய்கிறது; அதுவே target class-க்கு மிகப் பயன்படும் direction என்று உறுதி இல்லை.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>Here <strong>data encoding or transformations</strong> are applied to get a <strong>compressed</strong> representation of the original data.</p>
 <div class="grid2"><div><p><strong>Lossless</strong></p>
 <p>The original data can be <strong>reconstructed exactly</strong> from the compressed data — no information lost.</p>
 <p>Example: string compression algorithms (like ZIP).</p></div><div><p><strong>Lossy</strong></p>
@@ -423,10 +580,22 @@ Scale மிக வேறுபட்டால் PCA முடிவைப் �
 <li><strong>Wavelet transform</strong> – converts the data vector into a vector of wavelet coefficients; keeping only the strongest coefficients gives a compressed approximation.</li>
 <li><strong>PCA</strong> – finds a small number of new axes (<em>principal components</em>) that capture most of the variation in the data, then represents each record using only those few components.</li>
 </ul>
-<div class="call exam"><div class="ct">Exam focus</div><p>Be able to define <strong>lossless vs lossy</strong> and name <strong>wavelet transforms and PCA</strong> as the two popular lossy methods — that's what the notes emphasise.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Numerosity reduction"><span class="num">5</span>Numerosity reduction</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>பதிவுகளுக்குப் பதில் சுருக்கம்</h3><p>முழுப் பதிவுகளுக்குப் பதில் sampling, regression, histogram, clustering போன்ற சுருக்கங்களைப் பயன்படுத்துவது <strong>Numerosity reduction</strong>. சுருக்கத்தின் அளவும் தகவல் இழப்பும் இடையே சமநிலை வேண்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Parametric</strong> regression போன்ற model parameters வைத்துத் தரவைச் சுருக்கும். <strong>Non-parametric</strong> histogram, clustering, sampling போன்ற சுருக்கங்களைப் பயன்படுத்தலாம்.
+<div class="call exam"><div class="ct">Exam focus</div><p>Be able to define <strong>lossless vs lossy</strong> and name <strong>wavelet transforms and PCA</strong> as the two popular lossy methods — that's what the notes emphasise.</p></div></div><div class="hci-ta" lang="ta" hidden data-title="பரிமாணக் குறைப்பு"><p>மூலத் தரவின் <strong>சுருக்கப்பட்ட</strong> பிரதிநிதித்துவத்தைப் பெற <strong>தரவுக் குறியாக்கம் அல்லது உருமாற்றங்கள்</strong> இங்கு பயன்படுத்தப்படுகின்றன.</p>
+<div class="grid2"><div><p><strong>இழப்பற்றது</strong></p>
+<p>சுருக்கப்பட்ட தரவிலிருந்து மூலத் தரவை <strong>அப்படியே மீளமைக்கலாம்</strong> — தகவல் இழப்பில்லை.</p>
+<p>எடுத்துக்காட்டு: சரச் சுருக்கப் படிமுறைகள் (ZIP போன்றவை).</p></div><div><p><strong>இழப்புள்ளது</strong></p>
+<p>மூலத்தின் <strong>தோராயத்தை</strong> மட்டுமே மீளமைக்கலாம்.</p>
+<p>பிரபலமான, பயனுள்ள இரு முறைகள்:
+- <strong>சிற்றலை உருமாற்றங்கள்</strong>
+- <strong>முதன்மைக் கூறுப் பகுப்பாய்வு (PCA)</strong></p></div></div>
+<ul>
+<li><strong>சிற்றலை உருமாற்றம்</strong> – தரவு வெக்டரைச் சிற்றலைக் குணக வெக்டராக மாற்றுகிறது; வலுவான குணகங்களை மட்டும் வைத்திருப்பது சுருக்கப்பட்ட தோராயத்தை வழங்குகிறது.</li>
+<li><strong>PCA</strong> – தரவின் பெரும்பாலான மாறுபாட்டைப் பிடிக்கும் குறைந்த எண்ணிக்கையிலான புதிய அச்சுகளை (<em>முதன்மைக் கூறுகள்</em>) கண்டறிந்து, அந்தச் சில கூறுகளால் மட்டும் ஒவ்வொரு பதிவையும் பிரதிநிதித்துவப்படுத்துகிறது.</li>
+</ul>
+<div class="call exam"><div class="ct">Exam focus</div><p><strong>இழப்பற்றது மற்றும் இழப்புள்ளது</strong> என்பவற்றை வரையறுத்து, பிரபலமான இரு இழப்புள்ள முறைகளாக <strong>சிற்றலை உருமாற்றங்களையும் PCA-ஐயும்</strong> பெயரிடத் தெரிய வேண்டும் — குறிப்புகள் வலியுறுத்துவது இதுவே.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Numerosity reduction"><span class="num">5</span>Numerosity reduction</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>பதிவுகளுக்குப் பதில் சுருக்கம்</h3><p>முழுப் பதிவுகளுக்குப் பதில் sampling, regression, histogram, clustering போன்ற சுருக்கங்களைப் பயன்படுத்துவது <strong>Numerosity reduction</strong>. சுருக்கத்தின் அளவும் தகவல் இழப்பும் இடையே சமநிலை வேண்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Parametric</strong> regression போன்ற model parameters வைத்துத் தரவைச் சுருக்கும். <strong>Non-parametric</strong> histogram, clustering, sampling போன்ற சுருக்கங்களைப் பயன்படுத்தலாம்.
 Histogram strategies: equal-width — அகலம் சமம்; equal-frequency — பதிவுகளின் எண்ணிக்கை சமம்; <strong>V-optimal</strong> bucket உள்ள variation குறையப் பிரிக்கும்; <strong>MaxDiff</strong> அடுத்தடுத்த frequency வேறுபாடு அதிகமான இடங்களில் பிரிக்கும். Random sample representative ஆகிறதா சோதிக்க வேண்டும்.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Parametric:</strong> y=wx+b regression coefficients அல்லது log-linear model சேமி. <strong>Non-parametric summaries:</strong> histogram, cluster representative, sample. Full records reconstruct ஆகும் என்று உத்தரவாதமில்லை. Histogram rules: equal-width range; equal-depth count; <strong>V-optimal within-bin squared error குறைப்பு</strong>; MaxDiff பெரிய adjacent gaps. Sampling-இல் random, stratified, cluster samples வேறுபடும்; சிறிய sample representative தானா பார்க்கவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><p>Replace the data with an <strong>alternative, smaller representation</strong>. Two families:</p>
+<p><strong>Parametric:</strong> y=wx+b regression coefficients அல்லது log-linear model சேமி. <strong>Non-parametric summaries:</strong> histogram, cluster representative, sample. Full records reconstruct ஆகும் என்று உத்தரவாதமில்லை. Histogram rules: equal-width range; equal-depth count; <strong>V-optimal within-bin squared error குறைப்பு</strong>; MaxDiff பெரிய adjacent gaps. Sampling-இல் random, stratified, cluster samples வேறுபடும்; சிறிய sample representative தானா பார்க்கவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><p>Replace the data with an <strong>alternative, smaller representation</strong>. Two families:</p>
 <div class="grid2"><div><p><strong>Parametric methods</strong></p>
 <p>A <strong>model</strong> estimates the data, so you store <strong>only the model parameters</strong> (plus maybe outliers) instead of the data.</p>
 <ul>
@@ -485,10 +654,69 @@ Histogram strategies: equal-width — அகலம் சமம்; equal-freque
 <ul>
 <li><strong>Clustering</strong> – group similar records into clusters; store only the <strong>cluster representations</strong> (e.g. centre + diameter) instead of every record.</li>
 <li><strong>Sampling</strong> – represent a large dataset by a much smaller <strong>random sample</strong> (e.g. simple random sample without/with replacement, cluster sample, stratified sample).</li>
-</ul></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Discretization &amp; concept hierarchies"><span class="num">6</span>Discretization &amp; concept hierarchies</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>எண்களை வகைகளாக மாற்றுதல்</h3><p>வயது 21, 22, 23 என்பதை இளைஞர் என்ற interval-ஆக மாற்றுவது <strong>Discretization</strong>. நகரம் → மாவட்டம் → நாடு போன்ற படிநிலையே <strong>Concept hierarchy</strong>. நுணுக்கத்தை விட்டுப் பொதுப் பார்வைக்குச் செல்ல உதவும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Supervised discretization</strong> class labels பயன்படுத்தும்; <strong>unsupervised</strong> அவற்றைப் பயன்படுத்தாது. <strong>Top-down splitting</strong> பெரிய interval-ஐப் பிரிக்கும்; <strong>bottom-up merging</strong> சிறிய intervals-ஐ இணைக்கும்.
+</ul></div><div class="hci-ta" lang="ta" hidden data-title="எண்ணிக்கைக் குறைப்பு"><p>தரவை <strong>மாற்றுச் சிறிய பிரதிநிதித்துவத்தால்</strong> மாற்றவும். இரு குடும்பங்கள்:</p>
+<div class="grid2"><div><p><strong>அளவுரு சார்ந்த முறைகள்</strong></p>
+<p>ஒரு <strong>மாதிரி</strong> தரவை மதிப்பிடுவதால், தரவுக்குப் பதிலாக <strong>மாதிரி அளவுருக்களை மட்டும்</strong> (தேவைப்பட்டால் புறநிலைகளையும்) சேமிக்கிறீர்கள்.</p>
+<ul>
+<li>பின்னடைவு</li>
+<li>மடக்கை-நேரியல் மாதிரிகள் (தனித்த பல்பரிமாண நிகழ்தகவுப் பகிர்வுகளை மதிப்பிடுகின்றன)</li>
+</ul></div><div><p><strong>அளவுரு சாராத முறைகள்</strong></p>
+<p>மாதிரி அனுமானிக்கப்படுவதில்லை; தரவின் குறைக்கப்பட்ட பதிப்பையே சேமிக்கவும்.</p>
+<ul>
+<li><strong>அலைவெண் செவ்வகங்கள்</strong></li>
+<li><strong>குழுமமாக்கல்</strong></li>
+<li><strong>மாதிரியெடுத்தல்</strong></li>
+</ul></div></div>
+<h3>பின்னடைவு</h3>
+<p><strong>நேரியல் பின்னடைவில்</strong> தரவுகள் நேர்கோட்டுக்குப் பொருந்துமாறு மாதிரியாக்கப்படுகின்றன:</p>
+<div class="formula"><em>y</em> = <em>w x</em> + <em>b</em></div>
+<ul>
+<li><em>y</em> = <strong>பதில் மாறி</strong>, <em>x</em> = <strong>முன்னறிவிப்பு மாறி</strong></li>
+<li><em>w</em> (சாய்வு), <em>b</em> (வெட்டுத்துண்டு) ஆகியவை <strong>பின்னடைவுக் குணகங்கள்</strong>.</li>
+</ul>
+<p>எனவே 10,000 (x, y) சோடிகளுக்குப் பதிலாக <em>w</em>, <em>b</em> என்ற <strong>இரு எண்களை</strong> மட்டும் சேமிக்கிறீர்கள். அதுவே குறைப்பு.</p>
+<h3>அலைவெண் செவ்வகங்கள்</h3>
+<p>அலைவெண் செவ்வகங்கள் <strong>தொட்டிப் பிரித்தல்</strong> மூலம் தரவுப் பகிர்வைத் தோராயமாக்குகின்றன — மிகவும் பிரபலமான தரவுக் குறைப்பு வடிவம். <em>A</em> பண்புக்கூறின் பெறுமதிகளை அலைவெண் செவ்வகம் <strong>வாளிகள் எனப்படும் ஒன்றுக்கொன்று வெட்டாத உட்கணங்களாகப்</strong> பிரிக்கிறது.</p>
+<ul>
+<li><strong>ஒற்றை வாளி</strong> – <strong>ஒரு</strong> பண்புக்கூறு-பெறுமதி/அதிர்வெண் சோடியை மட்டும் கொண்ட வாளி.</li>
+<li>பொதுவாக வாளிகள் பண்புக்கூறின் <strong>தொடர்ச்சியான வீச்சுகளைப்</strong> பிரதிநிதித்துவப்படுத்துகின்றன.</li>
+</ul>
+<p>பிரித்தல் விதிகள் — <strong>நான்கையும் அறிந்திருக்கவும்</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>விதி</th>
+<th>வாளிகள் உருவாவது எவ்வாறு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>சம அகலம்</strong></td>
+<td>ஒவ்வொரு வாளிக்கும் <strong>ஒரே வீச்சு அகலம்</strong>.</td>
+</tr>
+<tr>
+<td><strong>சம அதிர்வெண் (சம ஆழம்)</strong></td>
+<td>ஒவ்வொரு வாளியிலும் <strong>ஏறத்தாழ ஒரே எண்ணிக்கையிலான</strong> (அடுத்தடுத்த) பெறுமதிகள்.</td>
+</tr>
+<tr>
+<td><strong>V-Optimal</strong></td>
+<td>கொடுக்கப்பட்ட வாளி எண்ணிக்கையுடைய அனைத்து அலைவெண் செவ்வகங்களிலும், <strong>வாளிச் சராசரிகளிலிருந்து வாளிக்குள்ளான மொத்த வர்க்க விலகலைக்</strong> குறைப்பது (சீரான மாறுபாட்டு வரையறைக்கு, வாளி அளவு × வாளிக்குள்ளான மாறுபாடு என்பவற்றின் கூட்டுத்தொகைக்குச் சமம்).</td>
+</tr>
+<tr>
+<td><strong>MaxDiff</strong></td>
+<td>வரிசைப்படுத்தப்பட்ட <strong>அடுத்தடுத்த</strong> ஒவ்வொரு பெறுமதிச் சோடியின் வேறுபாட்டைப் பார்க்கவும். <strong>β − 1 மிகப்பெரிய வேறுபாடுகளில்</strong> வாளி எல்லையை இடவும்; β = தேவைப்படும் வாளிகளின் எண்ணிக்கை.</td>
+</tr>
+</tbody>
+</table>
+<p>பகுதி 7-இல் இவற்றையெல்லாம் எண்களுடன் செய்து பார்க்கிறோம்.</p>
+<h3>குழுமமாக்கலும் மாதிரியெடுத்தலும் (முழுமைக்காக)</h3>
+<ul>
+<li><strong>குழுமமாக்கல்</strong> – ஒத்த பதிவுகளைக் குழுமங்களாக்கி, ஒவ்வொரு பதிவுக்கும் பதிலாக <strong>குழுமப் பிரதிநிதித்துவங்களை</strong> மட்டும் (எ.கா. மையம் + விட்டம்) சேமிக்கவும்.</li>
+<li><strong>மாதிரியெடுத்தல்</strong> – பெரிய தரவுத்தொகுப்பை மிகச்சிறிய <strong>சீரற்ற மாதிரியால்</strong> பிரதிநிதித்துவப்படுத்தவும் (எ.கா. மீளிடாமல்/மீளிட்டு எளிய சீரற்ற மாதிரி, குழும மாதிரி, படையாக்கப்பட்ட மாதிரி).</li>
+</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Discretization &amp; concept hierarchies"><span class="num">6</span>Discretization &amp; concept hierarchies</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>எண்களை வகைகளாக மாற்றுதல்</h3><p>வயது 21, 22, 23 என்பதை இளைஞர் என்ற interval-ஆக மாற்றுவது <strong>Discretization</strong>. நகரம் → மாவட்டம் → நாடு போன்ற படிநிலையே <strong>Concept hierarchy</strong>. நுணுக்கத்தை விட்டுப் பொதுப் பார்வைக்குச் செல்ல உதவும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Supervised discretization</strong> class labels பயன்படுத்தும்; <strong>unsupervised</strong> அவற்றைப் பயன்படுத்தாது. <strong>Top-down splitting</strong> பெரிய interval-ஐப் பிரிக்கும்; <strong>bottom-up merging</strong> சிறிய intervals-ஐ இணைக்கும்.
 Concept hierarchy numeric intervals-ஆகவோ city→country போன்ற semantic levels-ஆகவோ இருக்கலாம். Label “young” எந்த வயது range என்பதைத் தெளிவாக வரையறுத்தால்தான் மற்றவர் அதே முடிவை மீண்டும் பெற முடியும்.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Continuous age→interval labels என்பது discretisation; youth/middle-aged/senior போன்ற உயர்நிலை concepts generalisation. <strong>Supervised</strong> class labels பயன்படும்; <strong>unsupervised</strong> பயன்படாது. Top-down split; bottom-up adjacent merge. Hierarchy street&lt;city&lt;province&lt;country மூலம் abstraction levels. Preprocessing-இலும் query-time generalisation-இலும் பயன்படுத்தலாம்; “mining-இன் போது ஒருபோதும் நடக்காது” என பொதுவிதி இல்லை.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><p><strong>Discretization</strong> reduces the number of values of a <strong>continuous</strong> attribute by <strong>dividing its range into intervals</strong>. Interval labels then <strong>replace</strong> the actual values.</p>
+<p>Continuous age→interval labels என்பது discretisation; youth/middle-aged/senior போன்ற உயர்நிலை concepts generalisation. <strong>Supervised</strong> class labels பயன்படும்; <strong>unsupervised</strong> பயன்படாது. Top-down split; bottom-up adjacent merge. Hierarchy street&lt;city&lt;province&lt;country மூலம் abstraction levels. Preprocessing-இலும் query-time generalisation-இலும் பயன்படுத்தலாம்; “mining-இன் போது ஒருபோதும் நடக்காது” என பொதுவிதி இல்லை.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p><strong>Discretization</strong> reduces the number of values of a <strong>continuous</strong> attribute by <strong>dividing its range into intervals</strong>. Interval labels then <strong>replace</strong> the actual values.</p>
 <div class="call example"><div class="ct">Worked example</div><p>Ages 13, 15, 16, 19, 22, 25, 33, 35, 46, 52 → replace with labels <strong>"10–19", "20–29", "30–39", "40+"</strong>.
 Ten distinct values become four labels — the data is simpler and the mining results become a concise, <strong>knowledge-level</strong> representation.</p></div>
 <h3 id="ways-to-classify-discretization-methods">Ways to classify discretization methods</h3>
@@ -540,10 +768,62 @@ Ten distinct values become four labels — the data is simpler and the mining re
 <li>Mining a reduced dataset needs <strong>fewer I/O operations</strong> → <strong>more efficient</strong>.</li>
 </ul>
 <div class="call key"><div class="ct">Important</div><p>Discretization and concept hierarchies often support <strong>preprocessing</strong>. Generalisation can also be task/query-oriented (see AOI in Week 8); it is not a universal rule that hierarchy use never happens during analysis. More than one hierarchy can be defined for the same attribute to suit different users.</p></div>
-<div class="call tip"><div class="ct">Link</div><p>Discretization is itself <strong>a form of numerosity reduction</strong>, and it is very useful for <strong>automatically generating concept hierarchies</strong>.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Binning: equal-width vs equal-depth"><span class="num">7</span>Binning: equal-width vs equal-depth</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>இரண்டு Binning முறைகள்</h3><p><strong>Equal-width</strong> ஒவ்வொரு bin-க்கும் ஒரே அகலம்; <strong>Equal-depth</strong> ஒவ்வொரு bin-க்கும் சுமார் ஒரே எண்ணிக்கையான பதிவுகள். தரவு சமமாகப் பரவவில்லை என்றால் இவ்விரு முறைகளின் bins மிகவும் வேறுபடலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Equal-width width=(max−min)/k</strong>. Equal-depth-இல் sorted N records-ஐ ஒவ்வொரு bin-க்கும் சுமார் N/k records-ஆகப் பிரிப்போம். Duplicate values இருப்பதால் எல்லைகளில் policy தேவைப்படலாம்.
+<div class="call tip"><div class="ct">Link</div><p>Discretization is itself <strong>a form of numerosity reduction</strong>, and it is very useful for <strong>automatically generating concept hierarchies</strong>.</p></div></div><div class="hci-ta" lang="ta" hidden data-title="தனித்துண்டாக்கலும் கருத்துப் படிநிலைகளும்"><p><strong>தனித்துண்டாக்கல்</strong>, <strong>தொடர்ச்சியான</strong> பண்புக்கூறின் <strong>வீச்சை இடைவெளிகளாகப் பிரிப்பதன்</strong> மூலம் பெறுமதிகளின் எண்ணிக்கையைக் குறைக்கிறது. இடைவெளி அடையாளங்கள் உண்மைப் பெறுமதிகளை <strong>மாற்றீடு செய்கின்றன</strong>.</p>
+<div class="call example"><div class="ct">Worked example</div><p>வயதுகள் 13, 15, 16, 19, 22, 25, 33, 35, 46, 52 → <strong>"10–19", "20–29", "30–39", "40+"</strong> என்ற அடையாளங்களால் மாற்றவும்.
+பத்து வேறுபட்ட பெறுமதிகள் நான்கு அடையாளங்களாகின்றன — தரவு எளிமையாகி, சுரங்க முடிவுகள் சுருக்கமான <strong>அறிவு-நிலைப்</strong> பிரதிநிதித்துவமாகின்றன.</p></div>
+<h3>தனித்துண்டாக்கல் முறைகளை வகைப்படுத்தும் வழிகள்</h3>
+<table>
+<thead>
+<tr>
+<th>அடிப்படை</th>
+<th>வகை</th>
+<th>பொருள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>வகுப்புத் தகவல் பயன்படுகிறதா?</td>
+<td><strong>மேற்பார்வையுள்ளது</strong></td>
+<td>ஆம் — இடைவெளிகளைத் தேர்ந்தெடுக்க வகுப்பு அடையாளங்களைப் பயன்படுத்துகிறது</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>மேற்பார்வையற்றது</strong></td>
+<td>வகுப்புத் தகவல் பயன்படுத்தப்படுவதில்லை (எ.கா. சாதாரணத் தொட்டிப் பிரித்தல்)</td>
+</tr>
+<tr>
+<td>திசை</td>
+<td><strong>மேலிருந்து கீழ் (பிரித்தல்)</strong></td>
+<td>முழு வீச்சைப் பிரிக்க ஒன்று அல்லது சில <strong>பிரிப்புப் புள்ளிகளை (வெட்டுப் புள்ளிகளை)</strong> கண்டறிந்து, ஒவ்வொரு இடைவெளியிலும் <strong>மறுசுழற்சியாகத்</strong> தொடரவும்</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>கீழிருந்து மேல் (இணைத்தல்)</strong></td>
+<td><strong>அனைத்துப் பெறுமதிகளையும் சாத்தியமான பிரிப்புப் புள்ளிகளாகக்</strong> கொண்டு தொடங்கி, <strong>அடுத்தடுத்த பெறுமதிகளை</strong> இடைவெளிகளாக <strong>இணைப்பதன்</strong> மூலம் சிலவற்றை நீக்கி, மறுசுழற்சியாகத் தொடரவும்</td>
+</tr>
+</tbody>
+</table>
+<h3>கருத்துப் படிநிலைகள்</h3>
+<p>ஒரு பண்புக்கூற்றில் <strong>மறுசுழற்சியாகத்</strong> தனித்துண்டாக்குவது <strong>படிநிலை (பல தெளிவுத்திறன்) பிரித்தலை</strong> — ஒரு <strong>கருத்துப் படிநிலையை</strong> — வழங்குகிறது. <strong>பல அருவாக்க நிலைகளில்</strong> சுரங்கம் செய்ய இது உதவுகிறது.</p>
+<p>கருத்துப் படிநிலை <strong>கீழ்நிலைக் கருத்துகளை</strong> (எண் வயதுப் பெறுமதிகள்) <strong>உயர்நிலைக் கருத்துகளால்</strong> (<em>இளைஞர்</em>, <em>நடுத்தர வயது</em>, <em>முதியவர்</em>) மாற்றுகிறது.</p>
+<p>படம் 3-3 — <strong>விலைக்கான</strong> கருத்துப் படிநிலை:</p>
+<pre><code>                        ($0 … $1000]
+      ┌──────────┬───────────┼───────────┬────────────┐
+ ($0…$200]  ($200…$400]  ($400…$600]  ($600…$800]  ($800…$1000]
+  ┌───┴───┐   ┌───┴───┐     …            …            …
+($0…$100] ($100…$200] ($200…$300] ($300…$400] …
+</code></pre>
+<p>விவரங்கள் இழக்கப்படும்போது இதை ஏன் செய்ய வேண்டும்?</p>
+<ul>
+<li>பொதுமைப்படுத்தப்பட்ட தரவு <strong>மேலும் பொருளுள்ளதும் விளக்கமளிக்க எளிதானதும்</strong> ஆகும்.</li>
+<li>பல சுரங்கப் பணிகளில் முடிவுகளின் <strong>சீரான பிரதிநிதித்துவத்தை</strong> வழங்குகிறது.</li>
+<li>குறைக்கப்பட்ட தரவுத்தொகுப்பைச் சுரங்கம் செய்ய <strong>குறைவான உள்ளீடு/வெளியீட்டுச் செயல்பாடுகள்</strong> தேவை → <strong>அதிகத் திறன்</strong>.</li>
+</ul>
+<div class="call key"><div class="ct">முக்கியம்</div><p>தனித்துண்டாக்கலும் கருத்துப் படிநிலைகளும் பெரும்பாலும் <strong>முன்செயலாக்கத்தை</strong> ஆதரிக்கின்றன. பொதுமைப்படுத்தல் பணி/வினவல் சார்ந்ததாகவும் இருக்கலாம் (வாரம் 8-இல் AOI பார்க்கவும்); பகுப்பாய்வின்போது படிநிலைகள் ஒருபோதும் பயன்படாது என்பது பொதுவிதி அல்ல. வெவ்வேறு பயனர்களுக்கு ஏற்றவாறு ஒரே பண்புக்கூறுக்கு ஒன்றுக்கும் மேற்பட்ட படிநிலைகளை வரையறுக்கலாம்.</p></div>
+<div class="call tip"><div class="ct">தொடர்பு</div><p>தனித்துண்டாக்கலும் <strong>எண்ணிக்கைக் குறைப்பின் ஒரு வடிவமே</strong>; <strong>கருத்துப் படிநிலைகளைத் தானாக உருவாக்குவதற்கு</strong> மிகவும் பயனுள்ளது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Binning: equal-width vs equal-depth"><span class="num">7</span>Binning: equal-width vs equal-depth</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>இரண்டு Binning முறைகள்</h3><p><strong>Equal-width</strong> ஒவ்வொரு bin-க்கும் ஒரே அகலம்; <strong>Equal-depth</strong> ஒவ்வொரு bin-க்கும் சுமார் ஒரே எண்ணிக்கையான பதிவுகள். தரவு சமமாகப் பரவவில்லை என்றால் இவ்விரு முறைகளின் bins மிகவும் வேறுபடலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Equal-width width=(max−min)/k</strong>. Equal-depth-இல் sorted N records-ஐ ஒவ்வொரு bin-க்கும் சுமார் N/k records-ஆகப் பிரிப்போம். Duplicate values இருப்பதால் எல்லைகளில் policy தேவைப்படலாம்.
 “3 bins” என்பது ஒவ்வொரு bin-இலும் 3 values என்றில்லை. Count=27, k=3 என்றால் 9 values/bin. Outlier ஒன்று equal-width-இன் பெரும்பாலான range-ஐப் பிடித்துக்கொள்ளலாம்.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Equal-width:</strong> W=(B−A)/N. 64…85,7 bins→W=3; [64,67),[67,70),…last bin85 உட்பட. Counts <strong>2,2,4,2,0,2,2</strong>; empty bin சாத்தியம். <strong>Equal-depth:</strong> 12 values/3→4 per bin: <strong>4,8,9,15 |21,21,24,25 |26,28,29,34</strong>. Ties/மீதியை எப்படிப் பகிர்ந்தோம் குறிப்பிடுங்கள். Equal-depth ஒரே count தர முயலும்; equal-width ஒரே range.</p></div><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><p>The lecture video opens with <em>why</em>: data mining looks for <strong>hidden frequent patterns</strong>. If an attribute has a <strong>very large range</strong> of values, the same exact value rarely repeats, so patterns are hard to find. Breaking the range into <strong>bins (partitions)</strong> makes values "collide" so frequent patterns appear <a class="ts" href="#" data-v="0" data-t="0">00:00</a>.</p>
+<p><strong>Equal-width:</strong> W=(B−A)/N. 64…85,7 bins→W=3; [64,67),[67,70),…last bin85 உட்பட. Counts <strong>2,2,4,2,0,2,2</strong>; empty bin சாத்தியம். <strong>Equal-depth:</strong> 12 values/3→4 per bin: <strong>4,8,9,15 |21,21,24,25 |26,28,29,34</strong>. Ties/மீதியை எப்படிப் பகிர்ந்தோம் குறிப்பிடுங்கள். Equal-depth ஒரே count தர முயலும்; equal-width ஒரே range.</p></div><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><p>The lecture video opens with <em>why</em>: data mining looks for <strong>hidden frequent patterns</strong>. If an attribute has a <strong>very large range</strong> of values, the same exact value rarely repeats, so patterns are hard to find. Breaking the range into <strong>bins (partitions)</strong> makes values "collide" so frequent patterns appear <a class="ts" href="#" data-v="0" data-t="0">00:00</a>.</p>
 <h3 id="equal-width-partitioning-uniform-grid-0037">Equal-width partitioning (uniform grid) <a class="ts" href="#" data-v="0" data-t="37">00:37</a></h3>
 <p>Divide the range into <strong>N intervals of equal size</strong>. If <strong>A</strong> is the lowest value and <strong>B</strong> is the highest:</p>
 <div class="formula">Width  <strong>W = (B − A) / N</strong></div>
@@ -624,8 +904,89 @@ Ten distinct values become four labels — the data is simpler and the mining re
 <td>26, 28, 29, 34</td>
 </tr>
 </tbody>
-</table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Smoothing noisy data with bins"><span class="num">8</span>Smoothing noisy data with bins</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s8 en-s8" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s8" lang="ta" hidden><h3>Bin-களால் Noise குறைத்தல்</h3><p>ஒரு bin-இல் உள்ள எண்களை அதன் mean, median அல்லது அருகிலுள்ள boundary-ஆல் மாற்றலாம். Mean-இல் எல்லா எண்களும் ஒரே மதிப்பாகும்; boundaries-இல் இரண்டு முனைகளில் ஒன்றாக மாறும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>மேலுள்ள மூன்று bins-க்கு <strong>means 9,22.75,29.25</strong>. பாடத்தில் integers-க்கு round செய்தால்23,29; கணக்கில் exact mean-ஐயும் காட்டுங்கள். <strong>Medians 8.5,22.5,28.5</strong>. Boundary outputs <strong>4,4,4,15 |21,21,25,25 |26,26,26,34</strong>. Mean/median/boundary மூன்றையும் கலக்காதீர்கள். Equidistant boundary இருந்தால் tie rule குறிப்பிடவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s8" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s8" lang="en"><p>Data can contain <strong>noise</strong> (random errors). After binning, we can <strong>smooth</strong> each bin <a class="ts" href="#" data-v="0" data-t="256">04:16</a>. Using the price bins above:</p>
+</table></div></div><div class="hci-ta" lang="ta" hidden data-title="தொட்டிப் பிரித்தல்: சம அகலம் மற்றும் சம ஆழம்"><p><em>ஏன்</em> என்பதுடன் விரிவுரைக் காணொளி தொடங்குகிறது: தரவுச் சுரங்கம் <strong>மறைந்துள்ள அடிக்கடி நிகழும் வடிவங்களைத்</strong> தேடுகிறது. ஒரு பண்புக்கூறின் பெறுமதிகள் <strong>மிகப்பெரிய வீச்சைக்</strong> கொண்டிருந்தால், துல்லியமாக ஒரே பெறுமதி மீண்டும் வருவது அரிது; வடிவங்களைக் கண்டறிவது கடினம். வீச்சை <strong>தொட்டிகளாக (பிரிவுகளாக)</strong> உடைப்பதால் பெறுமதிகள் "ஒன்றுகூடி", அடிக்கடி நிகழும் வடிவங்கள் தோன்றுகின்றன <a class="ts" href="#" data-v="0" data-t="0">00:00</a>.</p>
+<h3>சம அகலப் பிரித்தல் (சீரான கட்டம்) <a class="ts" href="#" data-v="0" data-t="37">00:37</a></h3>
+<p>வீச்சை <strong>சம அளவிலான N இடைவெளிகளாகப்</strong> பிரிக்கவும். <strong>A</strong> குறைந்த பெறுமதி, <strong>B</strong> உயர்ந்த பெறுமதி எனில்:</p>
+<div class="formula">அகலம் <strong>W = (B − A) / N</strong></div>
+<p>தொட்டிகள்: [A, A+W), [A+W, A+2W), … B வரை. எளிமையானதும் நேரடியானதும்.</p>
+<div class="call warn"><div class="ct">பலவீனம் — புறநிலைகள் <a class="ts" href="#" data-v="0" data-t="78">01:18</a></div><p><strong>B ஒரு புறநிலையாக</strong> இருந்தால் (ஒரு மிகப்பெரிய பெறுமதி), B − A பெரிதாகி W-வும் பெரிதாகும்; ஏறத்தாழ அனைத்து வழக்கமான தரவுகளும் ஒன்று அல்லது இரண்டு தொட்டிகளில் விழும். சாய்ந்த தரவு நன்கு கையாளப்படுவதில்லை.</p></div>
+<h3>சம ஆழ (சம அதிர்வெண்) பிரித்தல் <a class="ts" href="#" data-v="0" data-t="104">01:44</a></h3>
+<p><strong>ஒவ்வொன்றிலும் ஏறத்தாழ ஒரே எண்ணிக்கையிலான மாதிரிகளுள்ள N இடைவெளிகளாகப்</strong> பிரிக்கவும். சிறந்த <strong>தரவு அளவுமாற்றம்</strong>; ஆனால் <strong>வகைசார் பண்புக்கூறுகளைக்</strong> கையாளுவது சிக்கலாக இருக்கலாம்.</p>
+<div class="call example"><div class="ct">சம அகல எடுத்துக்காட்டு — வெப்பநிலைகளை 7 தொட்டிகளாக்குதல் <a class="ts" href="#" data-v="0" data-t="137">02:17</a></div><p>வெப்பநிலைகள் (வரிசைப்படுத்தப்பட்டவை): 64, 65, 68, 69, 70, 71, 72, 72, 75, 75, 80, 81, 83, 85</p>
+<p><strong>படி 1 – அகலம்:</strong> W = (85 − 64) / 7 = 21 / 7 = <strong>3</strong></p>
+<p><strong>படி 2 – தொட்டிகளும் எண்ணிக்கைகளும்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>தொட்டி</th>
+<th>பெறுமதிகள்</th>
+<th style="text-align: right;">எண்ணிக்கை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>64 – &lt;67</td>
+<td>64, 65</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>67 – &lt;70</td>
+<td>68, 69</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>70 – &lt;73</td>
+<td>70, 71, 72, 72</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td>73 – &lt;76</td>
+<td>75, 75</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>76 – &lt;79</td>
+<td>—</td>
+<td style="text-align: right;"><strong>0</strong></td>
+</tr>
+<tr>
+<td>79 – &lt;82</td>
+<td>80, 81</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>82 – 85</td>
+<td>83, 85</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>76–79 தொட்டி வெற்றாக இருப்பதைக்</strong> கவனிக்கவும் — விரிவுரையாளர் கூறுவதுபோல் சம அகலத்தில் இது முற்றிலும் சாத்தியம் <a class="ts" href="#" data-v="0" data-t="184">03:04</a>.</p></div>
+<div class="call example"><div class="ct">சம ஆழ எடுத்துக்காட்டு — விலைகளை 3 தொட்டிகளாக்குதல் <a class="ts" href="#" data-v="0" data-t="206">03:26</a></div><p>விலைகள்: 4, 8, 9, 15, 21, 21, 24, 25, 26, 28, 29, 34</p>
+<p><strong>படி 1 – வரிசைப்படுத்து</strong> (ஏற்கெனவே வரிசைப்படுத்தப்பட்டுள்ளது). <strong>படி 2 – எண்ணிக்கை:</strong> 12 பெறுமதிகள். <strong>படி 3 – ஆழம்:</strong> 12 / 3 = <strong>ஒரு தொட்டிக்கு 4 பெறுமதிகள்</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>தொட்டி</th>
+<th>பெறுமதிகள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>தொட்டி 1</td>
+<td>4, 8, 9, 15</td>
+</tr>
+<tr>
+<td>தொட்டி 2</td>
+<td>21, 21, 24, 25</td>
+</tr>
+<tr>
+<td>தொட்டி 3</td>
+<td>26, 28, 29, 34</td>
+</tr>
+</tbody>
+</table></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Smoothing noisy data with bins"><span class="num">8</span>Smoothing noisy data with bins</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s8 en-s8" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s8" lang="ta" hidden><h3>Bin-களால் Noise குறைத்தல்</h3><p>ஒரு bin-இல் உள்ள எண்களை அதன் mean, median அல்லது அருகிலுள்ள boundary-ஆல் மாற்றலாம். Mean-இல் எல்லா எண்களும் ஒரே மதிப்பாகும்; boundaries-இல் இரண்டு முனைகளில் ஒன்றாக மாறும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
+<p>மேலுள்ள மூன்று bins-க்கு <strong>means 9,22.75,29.25</strong>. பாடத்தில் integers-க்கு round செய்தால்23,29; கணக்கில் exact mean-ஐயும் காட்டுங்கள். <strong>Medians 8.5,22.5,28.5</strong>. Boundary outputs <strong>4,4,4,15 |21,21,25,25 |26,26,26,34</strong>. Mean/median/boundary மூன்றையும் கலக்காதீர்கள். Equidistant boundary இருந்தால் tie rule குறிப்பிடவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s8" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s8" lang="en"><div class="hci-en"><p>Data can contain <strong>noise</strong> (random errors). After binning, we can <strong>smooth</strong> each bin <a class="ts" href="#" data-v="0" data-t="256">04:16</a>. Using the price bins above:</p>
 <h3 id="1-smoothing-by-bin-means-0430">1. Smoothing by bin means <a class="ts" href="#" data-v="0" data-t="270">04:30</a></h3>
 <p>Replace <strong>every value in a bin by the bin's mean</strong>.</p>
 <table>
@@ -755,8 +1116,102 @@ function run(){
 R.addEventListener('input',run);run();
 })();
 </script></div>
-<div class="call exam"><div class="ct">Exam focus</div><p>This exact style of question (sort → partition into equal-depth bins → smooth by means / boundaries) is very common. Always <strong>show the sorted data, the depth calculation, each bin, and the replaced values</strong>. If a value is exactly in the middle, state which boundary you chose.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s9"><h2 id="s9" data-t="Histogram partitioning — a full worked example"><span class="num">9</span>Histogram partitioning — a full worked example</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s9 en-s9" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s9" lang="ta" hidden><h3>Histogram எடுத்துக்காட்டைப் புரிதல்</h3><p>முதலில் interval எல்லைகளைத் தீர்மானித்து ஒவ்வொன்றிலும் எத்தனை பதிவுகள் என்று எண்ணுங்கள். மிகப் பெரிய bin நுணுக்கத்தை மறைக்கும்; மிகச் சிறிய bin noise-ஐ மறைக்காது. கேள்வியின் partition விதியைப் பின்பற்றுங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>20 ages13…70-க்கு 3 equal-width bins→W=19; counts <strong>11,7,2</strong>. Equal-depth→<strong>7,7,6</strong> என்ற பகிர்வு. MaxDiff-க்கு இரண்டு பெரிய gaps: <strong>52→70=18</strong>, <strong>46→52=6</strong>; bins <strong>13…46 |52 |70</strong>. <strong>V-optimal</strong> இதே gap rule அல்ல; fixed bucket count-இல் total within-bucket squared deviation குறையும் partition தேடும்.</p></div><button type="button" class="native-reference" aria-controls="en-s9" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s9" lang="en"><p>The video then applies the histogram rules <a class="ts" href="#" data-v="0" data-t="389">06:29</a>. Equal-width and equal-frequency work exactly like the binning above; <strong>V-Optimal</strong> chooses the partition with the <strong>least histogram variance</strong>; <strong>MaxDiff</strong> cuts at the <strong>β − 1 largest adjacent differences</strong> <a class="ts" href="#" data-v="0" data-t="441">07:21</a>.</p>
+<div class="call exam"><div class="ct">Exam focus</div><p>This exact style of question (sort → partition into equal-depth bins → smooth by means / boundaries) is very common. Always <strong>show the sorted data, the depth calculation, each bin, and the replaced values</strong>. If a value is exactly in the middle, state which boundary you chose.</p></div></div><div class="hci-ta" lang="ta" hidden data-title="தொட்டிகளால் இரைச்சலுள்ள தரவைச் சீராக்குதல்"><p>தரவில் <strong>இரைச்சல்</strong> (சீரற்ற பிழைகள்) இருக்கலாம். தொட்டிகளாகப் பிரித்தபின் ஒவ்வொரு தொட்டியையும் <strong>சீராக்கலாம்</strong> <a class="ts" href="#" data-v="0" data-t="256">04:16</a>. மேலுள்ள விலைத் தொட்டிகளைப் பயன்படுத்தி:</p>
+<h3>1. தொட்டிச் சராசரிகளால் சீராக்குதல் <a class="ts" href="#" data-v="0" data-t="270">04:30</a></h3>
+<p><strong>தொட்டியின் ஒவ்வொரு பெறுமதியையும் அதன் சராசரியால்</strong> மாற்றவும்.</p>
+<table>
+<thead>
+<tr>
+<th>தொட்டி</th>
+<th>பெறுமதிகள்</th>
+<th>சராசரி</th>
+<th>சீராக்கப்பட்டவை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>4, 8, 9, 15</td>
+<td>36/4 = <strong>9</strong></td>
+<td>9, 9, 9, 9</td>
+</tr>
+<tr>
+<td>2</td>
+<td>21, 21, 24, 25</td>
+<td>91/4 = 22.75 ≈ <strong>23</strong></td>
+<td>23, 23, 23, 23</td>
+</tr>
+<tr>
+<td>3</td>
+<td>26, 28, 29, 34</td>
+<td>117/4 = 29.25 ≈ <strong>29</strong></td>
+<td>29, 29, 29, 29</td>
+</tr>
+</tbody>
+</table>
+<h3>2. தொட்டி இடைநிலைகளால் சீராக்குதல் <a class="ts" href="#" data-v="0" data-t="307">05:07</a></h3>
+<p>அதே கருத்து; ஆனால் <strong>இடைநிலையால்</strong> மாற்றவும்.</p>
+<table>
+<thead>
+<tr>
+<th>தொட்டி</th>
+<th>இடைநிலை</th>
+<th>சீராக்கப்பட்டவை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>(8+9)/2 = <strong>8.5</strong></td>
+<td>8.5, 8.5, 8.5, 8.5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>(21+24)/2 = <strong>22.5</strong></td>
+<td>22.5, 22.5, 22.5, 22.5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>(28+29)/2 = <strong>28.5</strong></td>
+<td>28.5, 28.5, 28.5, 28.5</td>
+</tr>
+</tbody>
+</table>
+<h3>3. தொட்டி எல்லைகளால் சீராக்குதல் <a class="ts" href="#" data-v="0" data-t="318">05:18</a></h3>
+<p>ஒவ்வொரு தொட்டியின் <strong>குறைந்தபட்சமும் அதிகபட்சமும்</strong> அதன் <strong>எல்லைகள்</strong>. ஒவ்வொரு பெறுமதியும் <strong>அருகிலுள்ள எல்லையால்</strong> மாற்றப்படுகிறது; எல்லைகள் மாறுவதில்லை.</p>
+<table>
+<thead>
+<tr>
+<th>தொட்டி</th>
+<th>எல்லைகள்</th>
+<th>காரணம்</th>
+<th>சீராக்கப்பட்டவை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>4 மற்றும் 15</td>
+<td>8 → 4-க்கு அருகில் (4 இடைவெளி; மற்றது 7); 9 → 4-க்கு அருகில் (5 மற்றும் 6)</td>
+<td><strong>4, 4, 4, 15</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>21 மற்றும் 25</td>
+<td>21 மாறாது; 24 → 25-க்கு அருகில்</td>
+<td><strong>21, 21, 25, 25</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>26 மற்றும் 34</td>
+<td>28 → 26 (2 மற்றும் 6); 29 → 26 (3 மற்றும் 5)</td>
+<td><strong>26, 26, 26, 34</strong></td>
+</tr>
+</tbody>
+</table>
+<p><div data-ta-tool="bin1"></div></p>
+<div class="call exam"><div class="ct">Exam focus</div><p>இந்த வகைக் கேள்வி (வரிசைப்படுத்து → சம ஆழத் தொட்டிகளாகப் பிரி → சராசரிகள் / எல்லைகளால் சீராக்கு) மிகவும் பொதுவானது. எப்போதும் <strong>வரிசைப்படுத்தப்பட்ட தரவு, ஆழக் கணக்கீடு, ஒவ்வொரு தொட்டி, மாற்றப்பட்ட பெறுமதிகள்</strong> ஆகியவற்றைக் காட்டவும். ஒரு பெறுமதி சரியாக நடுவில் இருந்தால் எந்த எல்லையைத் தேர்ந்தெடுத்தீர்கள் என்பதைக் கூறவும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s9"><h2 id="s9" data-t="Histogram partitioning — a full worked example"><span class="num">9</span>Histogram partitioning — a full worked example</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s9 en-s9" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s9" lang="ta" hidden><h3>Histogram எடுத்துக்காட்டைப் புரிதல்</h3><p>முதலில் interval எல்லைகளைத் தீர்மானித்து ஒவ்வொன்றிலும் எத்தனை பதிவுகள் என்று எண்ணுங்கள். மிகப் பெரிய bin நுணுக்கத்தை மறைக்கும்; மிகச் சிறிய bin noise-ஐ மறைக்காது. கேள்வியின் partition விதியைப் பின்பற்றுங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
+<p>20 ages13…70-க்கு 3 equal-width bins→W=19; counts <strong>11,7,2</strong>. Equal-depth→<strong>7,7,6</strong> என்ற பகிர்வு. MaxDiff-க்கு இரண்டு பெரிய gaps: <strong>52→70=18</strong>, <strong>46→52=6</strong>; bins <strong>13…46 |52 |70</strong>. <strong>V-optimal</strong> இதே gap rule அல்ல; fixed bucket count-இல் total within-bucket squared deviation குறையும் partition தேடும்.</p></div><button type="button" class="native-reference" aria-controls="en-s9" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s9" lang="en"><div class="hci-en"><p>The video then applies the histogram rules <a class="ts" href="#" data-v="0" data-t="389">06:29</a>. Equal-width and equal-frequency work exactly like the binning above; <strong>V-Optimal</strong> chooses the partition with the <strong>least histogram variance</strong>; <strong>MaxDiff</strong> cuts at the <strong>β − 1 largest adjacent differences</strong> <a class="ts" href="#" data-v="0" data-t="441">07:21</a>.</p>
 <div class="call example"><div class="ct">Ages into 3 buckets (β = 3) <a class="ts" href="#" data-v="0" data-t="474">07:54</a></div><p>Ages (sorted, 20 values): 13, 15, 16, 16, 19, 20, 21, 22, 22, 25, 30, 33, 35, 35, 36, 40, 45, 46, 52, 70</p>
 <p><strong>(a) Equal-width:</strong> W = (70 − 13) / 3 = 57 / 3 = <strong>19</strong></p>
 <table>
@@ -834,11 +1289,89 @@ R.addEventListener('input',run);run();
 </tbody>
 </table>
 <p>MaxDiff isolates the unusual values (52 and 70) — the cuts go where the data has natural <strong>gaps</strong>.</p></div>
-<div class="call video"><div class="ct">How the lecturer finds MaxDiff values <a class="ts" href="#" data-v="0" data-t="545">09:05</a></div><p>"For each pair of data elements we take the difference… out of this we select the 2 maximum differences." In the lecturer's own dataset the two largest gaps were <strong>55 → 62 (7)</strong> and <strong>29 → 35 (6)</strong>, giving buckets ending at 29, then 35–55, then 62–65 <a class="ts" href="#" data-v="0" data-t="600">10:00</a>.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s10"><h2 id="s10" data-t="Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule"><span class="num">10</span>Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s10 en-s10" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s10" lang="ta" hidden><h3>Entropy மற்றும் 3-4-5 விதி</h3><p><strong>Entropy split</strong> class-கள் தெளிவாகப் பிரியும் எல்லையைத் தேர்வு செய்யும். குறைந்த weighted entropy நல்ல split. <strong>3-4-5 rule</strong> முக்கிய இலக்கங்களின் பரப்பைப் பார்த்து புரியக்கூடிய வட்டமான intervals உருவாக்கும் வேறு முறை.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Entropy split:</strong> I(S,T)=(|S₁|/|S|)Ent(S₁)+(|S₂|/|S|)Ent(S₂); Ent=−Σp log₂p. குறைந்த I, அதிக information gain தரும். Class pure என்றால் entropy 0.
+<div class="call video"><div class="ct">How the lecturer finds MaxDiff values <a class="ts" href="#" data-v="0" data-t="545">09:05</a></div><p>"For each pair of data elements we take the difference… out of this we select the 2 maximum differences." In the lecturer's own dataset the two largest gaps were <strong>55 → 62 (7)</strong> and <strong>29 → 35 (6)</strong>, giving buckets ending at 29, then 35–55, then 62–65 <a class="ts" href="#" data-v="0" data-t="600">10:00</a>.</p></div></div><div class="hci-ta" lang="ta" hidden data-title="அலைவெண் செவ்வகப் பிரித்தல் — முழுமையான செய்முறை எடுத்துக்காட்டு"><p>அடுத்து அலைவெண் செவ்வக விதிகளை காணொளி பயன்படுத்துகிறது <a class="ts" href="#" data-v="0" data-t="389">06:29</a>. சம அகலமும் சம அதிர்வெண்ணும் மேலுள்ள தொட்டிப் பிரித்தல் போலவே செயல்படுகின்றன; <strong>V-Optimal</strong>, <strong>குறைந்த அலைவெண் செவ்வக மாறுபாடுள்ள</strong> பிரிவைத் தேர்ந்தெடுக்கிறது; <strong>MaxDiff</strong>, <strong>β − 1 மிகப்பெரிய அடுத்தடுத்த வேறுபாடுகளில்</strong> வெட்டுகிறது <a class="ts" href="#" data-v="0" data-t="441">07:21</a>.</p>
+<div class="call example"><div class="ct">வயதுகளை 3 வாளிகளாக்குதல் (β = 3) <a class="ts" href="#" data-v="0" data-t="474">07:54</a></div><p>வயதுகள் (வரிசைப்படுத்தப்பட்ட 20 பெறுமதிகள்): 13, 15, 16, 16, 19, 20, 21, 22, 22, 25, 30, 33, 35, 35, 36, 40, 45, 46, 52, 70</p>
+<p><strong>(a) சம அகலம்:</strong> W = (70 − 13) / 3 = 57 / 3 = <strong>19</strong></p>
+<table>
+<thead>
+<tr>
+<th>வாளி</th>
+<th>பெறுமதிகள்</th>
+<th style="text-align: right;">எண்ணிக்கை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13 – &lt;32</td>
+<td>13, 15, 16, 16, 19, 20, 21, 22, 22, 25, 30</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr>
+<td>32 – &lt;51</td>
+<td>33, 35, 35, 36, 40, 45, 46</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td>51 – 70</td>
+<td>52, 70</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>(b) சம ஆழம்:</strong> 20 / 3 ≈ <strong>ஒரு வாளிக்கு 7</strong> பெறுமதிகள்</p>
+<table>
+<thead>
+<tr>
+<th>வாளி</th>
+<th>பெறுமதிகள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>13, 15, 16, 16, 19, 20, 21</td>
+</tr>
+<tr>
+<td>2</td>
+<td>22, 22, 25, 30, 33, 35, 35</td>
+</tr>
+<tr>
+<td>3</td>
+<td>36, 40, 45, 46, 52, 70</td>
+</tr>
+</tbody>
+</table>
+<p><strong>(c) MaxDiff:</strong> β − 1 = <strong>2</strong> மிகப்பெரிய அடுத்தடுத்த வேறுபாடுகள் தேவை.</p>
+<p>அயல் பெறுமதிகளின் வேறுபாடுகள்: 15−13=2, 16−15=1, 0, 3, 1, 1, 1, 0, 3, <strong>5</strong> (25→30), 3, 2, 0, 1, 4, 5, 1, <strong>6</strong> (46→52), <strong>18</strong> (52→70)</p>
+<p>மிகப்பெரிய இரண்டு: <strong>18</strong> (52-க்கும் 70-க்கும் இடையில்), <strong>6</strong> (46-க்கும் 52-க்கும் இடையில்) → அங்கு வெட்டவும்.</p>
+<table>
+<thead>
+<tr>
+<th>வாளி</th>
+<th>பெறுமதிகள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>13 … 46 (18 பெறுமதிகள்)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>52</td>
+</tr>
+<tr>
+<td>3</td>
+<td>70</td>
+</tr>
+</tbody>
+</table>
+<p>MaxDiff வழக்கமற்ற பெறுமதிகளை (52, 70) தனிமைப்படுத்துகிறது — தரவில் இயற்கையான <strong>இடைவெளிகள்</strong> உள்ள இடங்களில் வெட்டுகள் அமைகின்றன.</p></div>
+<div class="call video"><div class="ct">விரிவுரையாளர் MaxDiff பெறுமதிகளைக் கண்டறிவது எவ்வாறு <a class="ts" href="#" data-v="0" data-t="545">09:05</a></div><p>"ஒவ்வொரு தரவுக் கூறுச் சோடிக்கும் வேறுபாட்டை எடுக்கிறோம்… இவற்றிலிருந்து 2 அதிகபட்ச வேறுபாடுகளைத் தேர்ந்தெடுக்கிறோம்." விரிவுரையாளரின் தரவுத்தொகுப்பில் இரு மிகப்பெரிய இடைவெளிகள் <strong>55 → 62 (7)</strong>, <strong>29 → 35 (6)</strong>; இதனால் 29-இல் முடியும் வாளியும், பின்னர் 35–55, பின்னர் 62–65 வாளிகளும் கிடைக்கின்றன <a class="ts" href="#" data-v="0" data-t="600">10:00</a>.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s10"><h2 id="s10" data-t="Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule"><span class="num">10</span>Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s10 en-s10" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s10" lang="ta" hidden><h3>Entropy மற்றும் 3-4-5 விதி</h3><p><strong>Entropy split</strong> class-கள் தெளிவாகப் பிரியும் எல்லையைத் தேர்வு செய்யும். குறைந்த weighted entropy நல்ல split. <strong>3-4-5 rule</strong> முக்கிய இலக்கங்களின் பரப்பைப் பார்த்து புரியக்கூடிய வட்டமான intervals உருவாக்கும் வேறு முறை.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Entropy split:</strong> I(S,T)=(|S₁|/|S|)Ent(S₁)+(|S₂|/|S|)Ent(S₂); Ent=−Σp log₂p. குறைந்த I, அதிக information gain தரும். Class pure என்றால் entropy 0.
 <strong>3–4–5 rule:</strong> distinct most-significant-digit values எண்ணிக்கை 3/6/7/9 என்றால் 3 intervals (7-க்கு 2–3–2); 2/4/8 என்றால் 4; 1/5/10 என்றால் 5. எல்லா datasets-க்கும் 3, பிறகு 4, பிறகு 5 bins என்று பொருள் அல்ல.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
 <p><strong>Entropy discretisation:</strong> labels21N,25N,30Y,35Y,40Y,45N; parent entropy1. Threshold27.5→left2N pure; right3Y1N entropy≈0.8113; weighted entropy4/6×0.8113≈<strong>0.5409</strong>; gain≈<strong>0.4591</strong>. Best candidate-ஐத் தேர்ந்து stopping criterion வரை recurse.</p>
-<p><strong>3-4-5 rule:</strong> most-significant-digit interval count3/6/7/9→3 parts (7க்கு2–3–2 widths); 2/4/8→4;1/5/10→5. இது entropy/class-based split அல்ல; human-readable natural partitioning heuristic. Outlier percentile range, outward rounded bounds, actual min/max coverage, recursive subdivision ஆகிய steps-ஐக் குறிப்பிடவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s10" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s10" lang="en"><p>These two methods <strong>aren't in this week's PDF</strong>, but the 2024 cohort's <strong>Self-Assessment 4</strong> asked about them (they're from the Han &amp; Kamber textbook). Learn the idea and one example of each.</p>
+<p><strong>3-4-5 rule:</strong> most-significant-digit interval count3/6/7/9→3 parts (7க்கு2–3–2 widths); 2/4/8→4;1/5/10→5. இது entropy/class-based split அல்ல; human-readable natural partitioning heuristic. Outlier percentile range, outward rounded bounds, actual min/max coverage, recursive subdivision ஆகிய steps-ஐக் குறிப்பிடவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s10" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s10" lang="en"><div class="hci-en"><p>These two methods <strong>aren't in this week's PDF</strong>, but the 2024 cohort's <strong>Self-Assessment 4</strong> asked about them (they're from the Han &amp; Kamber textbook). Learn the idea and one example of each.</p>
 <h3 id="entropy-based-discretization-supervised">Entropy-based discretization (supervised)</h3>
 <div class="call key"><div class="ct">Idea</div><p>Use the <strong>class labels</strong> to choose the split point <strong>T</strong> that makes the two intervals as <strong>pure</strong> as possible, i.e. the one with the <strong>lowest expected information</strong> (equivalently, the <strong>highest information gain</strong>):</p>
 <p>I(S, T) = (|S₁| / |S|)·Ent(S₁) + (|S₂| / |S|)·Ent(S₂), where Ent(S) = −Σ pᵢ log₂ pᵢ</p>
@@ -917,10 +1450,89 @@ R.addEventListener('input',run);run();
 <li>That covers <strong>3</strong> distinct msd values (−1, 0, 1 million), so make <strong>3 intervals</strong>: (−1M, 0], (0, 1M], (1M, 2M].</li>
 <li>Adjust to the real min and max: the first interval shrinks to <strong>(−400,000, 0]</strong>, and a new interval <strong>(2M, 5M]</strong> is added to cover the maximum.</li>
 <li>Repeat inside each interval. For example, at the 100,000s digit, (0, 1M] covers <strong>10</strong> distinct values, so split it into <strong>5</strong> intervals of 200,000: (0, 200k], (200k, 400k], …, (800k, 1M].</li>
-</ol></div></div><button class="done-btn"></button></section><section class="card" data-sec="s11"><h2 id="s11" data-t="Self-assignment (2024): binning in practice"><span class="num">11</span>Self-assignment (2024): binning in practice</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s11 en-s11" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s11" lang="ta" hidden><h3>வயது Binning பயிற்சி</h3><p>27 பதிவுகளை 3 equal-depth bins-ஆகப் பிரித்தால் ஒவ்வொன்றிலும் 9 மதிப்புகள். Mean-ஐ அந்த bin-இன் எல்லா இடங்களிலும் எழுதுங்கள். 70 outlier-ஆ என்று IQR போன்ற விதியால் சோதிக்க வேண்டும்; பெரிதாக இருப்பதால் மட்டும் நீக்காதீர்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>மூன்று bin means <strong>18, 28.11, 43.78</strong>; rounding அனுமதித்தால் 18,28,44. Median smoothing values <strong>19,25,40</strong>. Mean மற்றும் median-ஐக் கலக்காதீர்கள்.
+</ol></div></div><div class="hci-ta" lang="ta" hidden data-title="சுயமதிப்பீடுகளிலும் கேட்கப்படுபவை: என்ட்ரோப்பி சார்ந்த தனித்துண்டாக்கலும் 3-4-5 விதியும்"><p>இரு முறைகளும் <strong>இந்த வார PDF-இல் இல்லை</strong>; ஆனால் 2024 குழுவின் <strong>சுயமதிப்பீடு 4</strong> இவற்றைக் கேட்டது (Han &amp; Kamber பாடநூலிலிருந்து). ஒவ்வொன்றின் கருத்தையும் ஓர் எடுத்துக்காட்டையும் கற்கவும்.</p>
+<h3>என்ட்ரோப்பி சார்ந்த தனித்துண்டாக்கல் (மேற்பார்வையுள்ளது)</h3>
+<div class="call key"><div class="ct">கருத்து</div><p><strong>வகுப்பு அடையாளங்களைப்</strong> பயன்படுத்தி, இரு இடைவெளிகளையும் இயன்றவரை <strong>தூய்மையாக்கும்</strong> பிரிப்புப் புள்ளி <strong>T</strong>-ஐத் தேர்ந்தெடுக்கவும்; அதாவது <strong>குறைந்த எதிர்பார்க்கப்படும் தகவலுள்ளதை</strong> (அல்லது <strong>அதிக தகவல் ஆதாயமுள்ளதை</strong>):</p>
+<p>I(S, T) = (|S₁| / |S|)·Ent(S₁) + (|S₂| / |S|)·Ent(S₂), இங்கு Ent(S) = −Σ pᵢ log₂ pᵢ</p>
+<p>ஆதாயம் மிகவும் சிறியதாகும் வரை (வரம்புக்குக் கீழ்) ஒவ்வொரு இடைவெளியையும் <strong>மறுசுழற்சியாக</strong> மீண்டும் பிரிக்கவும்.</p></div>
+<div class="call example"><div class="ct">"வாங்குகிறார்" என்ற வகுப்புடன் வயதுகள்</div><p>தரவு: 21 N · 25 N · 30 Y · 35 Y · 40 Y · 45 N. முழுத் தொகுப்பின் Ent(S) = 1.000 (3 Y மற்றும் 3 N).</p>
+<table>
+<thead>
+<tr>
+<th>சாத்தியமான T (நடுப்புள்ளி)</th>
+<th>இடது / வலது</th>
+<th>I(S, T)</th>
+<th>ஆதாயம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>23</td>
+<td N="N" N_="N," Y_="Y,">{N} /</td>
+<td>0.809</td>
+<td>0.191</td>
+</tr>
+<tr>
+<td><strong>27.5</strong></td>
+<td><strong>{N, N} / {Y, Y, Y, N}</strong></td>
+<td><strong>0.541</strong></td>
+<td><strong>0.459</strong> ← சிறந்தது</td>
+</tr>
+<tr>
+<td>32.5</td>
+<td N="N" Y_="Y,">{N, N, Y} /</td>
+<td>0.918</td>
+<td>0.082</td>
+</tr>
+<tr>
+<td>37.5</td>
+<td N="N" Y_="Y,">{N, N, Y, Y} /</td>
+<td>1.000</td>
+<td>0</td>
+</tr>
+<tr>
+<td>42.5</td>
+<td N="N">{N, N, Y, Y, Y} /</td>
+<td>0.809</td>
+<td>0.191</td>
+</tr>
+</tbody>
+</table>
+<p>எனவே முதல் பிரிப்பு <strong>வயது ≤ 27.5 மற்றும் வயது &gt; 27.5</strong>.</p></div>
+<h3>3-4-5 விதி (இயற்கைப் பிரித்தல்)</h3>
+<div class="call key"><div class="ct">விதி</div><p>வீச்சின் <strong>மிக முக்கிய இலக்கத்தை (msd)</strong> பார்த்து, வீச்சு உள்ளடக்கும் <strong>வேறுபட்ட msd பெறுமதிகள்</strong> எத்தனை என எண்ணவும்:</p>
+<table>
+<thead>
+<tr>
+<th>உள்ளடக்கப்படும் வேறுபட்ட msd பெறுமதிகள்</th>
+<th>இவ்வாறு பிரிக்கவும்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>3, 6, 7 அல்லது 9</strong></td>
+<td><strong>3</strong> இடைவெளிகள் (3, 6 அல்லது 9-க்கு சம அகலம்; 7-க்கு 2-3-2 அகலங்கள்)</td>
+</tr>
+<tr>
+<td><strong>2, 4 அல்லது 8</strong></td>
+<td><strong>4</strong> இடைவெளிகள்</td>
+</tr>
+<tr>
+<td><strong>1, 5 அல்லது 10</strong></td>
+<td><strong>5</strong> இடைவெளிகள்</td>
+</tr>
+</tbody>
+</table>
+<p>ஒவ்வொரு இடைவெளிக்கும் <strong>மறுசுழற்சியாகப்</strong> பயன்படுத்தவும். மக்கள் எளிதில் வாசிக்கக்கூடிய "இயற்கையான", முழுமைப்படுத்தப்பட்ட எல்லைகளை இது வழங்குகிறது.</p></div>
+<div class="call example"><div class="ct">இலாபம் −ரூ. 351,976 முதல் ரூ. 4,700,896 வரை (பாடநூல் எடுத்துக்காட்டு)</div><ol>
+<li>புறநிலைகளைத் தவிர்க்க 5-ஆவது முதல் 95-ஆவது சதமானக வீச்சை (−159,876 முதல் 1,838,761 வரை) பயன்படுத்தவும். msd <strong>1,000,000</strong>; எனவே வெளிப்புறமாக முழுமைப்படுத்தி <strong>Low = −1,000,000</strong>, <strong>High = 2,000,000</strong> என எடுக்கவும்.</li>
+<li>இது <strong>3</strong> வேறுபட்ட msd பெறுமதிகளை (−1, 0, 1 மில்லியன்) உள்ளடக்குவதால், <strong>3 இடைவெளிகளை</strong> உருவாக்கவும்: (−1M, 0], (0, 1M], (1M, 2M].</li>
+<li>உண்மையான குறைந்தபட்சம், அதிகபட்சத்துக்கு ஏற்ப மாற்றவும்: முதல் இடைவெளி <strong>(−400,000, 0]</strong> எனச் சுருங்குகிறது; அதிகபட்சத்தை உள்ளடக்கப் புதிய <strong>(2M, 5M]</strong> இடைவெளி சேர்க்கப்படுகிறது.</li>
+<li>ஒவ்வொரு இடைவெளிக்குள்ளும் மீண்டும் செய்யவும். எ.கா. 100,000-களின் இலக்கத்தில் (0, 1M] <strong>10</strong> வேறுபட்ட பெறுமதிகளை உள்ளடக்குவதால், 200,000 அகலமுள்ள <strong>5</strong> இடைவெளிகளாக்கவும்: (0, 200k], (200k, 400k], …, (800k, 1M].</li>
+</ol></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s11"><h2 id="s11" data-t="Self-assignment (2024): binning in practice"><span class="num">11</span>Self-assignment (2024): binning in practice</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s11 en-s11" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s11" lang="ta" hidden><h3>வயது Binning பயிற்சி</h3><p>27 பதிவுகளை 3 equal-depth bins-ஆகப் பிரித்தால் ஒவ்வொன்றிலும் 9 மதிப்புகள். Mean-ஐ அந்த bin-இன் எல்லா இடங்களிலும் எழுதுங்கள். 70 outlier-ஆ என்று IQR போன்ற விதியால் சோதிக்க வேண்டும்; பெரிதாக இருப்பதால் மட்டும் நீக்காதீர்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>மூன்று bin means <strong>18, 28.11, 43.78</strong>; rounding அனுமதித்தால் 18,28,44. Median smoothing values <strong>19,25,40</strong>. Mean மற்றும் median-ஐக் கலக்காதீர்கள்.
 IQR எடுத்துக்காட்டில் Q1=20, Q3=35; upper fence=35+1.5×15=<strong>57.5</strong>; 70 அதற்கு வெளியே உள்ளது. Quartile convention வேறானால் working-ஐச் சொல்லுங்கள்; outlier இருப்பது தவறான data என்பதற்கு தானியங்குச் சான்றல்ல.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>27 ages→மூன்று bins தலா9. Sums <strong>162,253,394</strong>; means <strong>18,28.111…,43.777…</strong>; medians <strong>19,25,40</strong>. Boundaries அருகிலுள்ள min/max-க்கு மாற்றப்படும்; mean substitute செய்யாதீர்கள். IQR convention Q1=20,Q3=35 என்றால் upper fence <strong>57.5</strong>;70 candidate outlier. z-score-க்கு sample/population σ வேறுபாடு வரும்; எந்த convention என்பதைச் சொல்லுங்கள். Outlier இருப்பதை clustering/boxplot மூலம் ஆராயலாம்; காரணமறியாமல் delete செய்யாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s11" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s11" lang="en"><div class="call example"><div class="ct">Ages: 13, 15, 16, 16, 19, 20, 20, 21, 22, 22, 25, 25, 25, 25, 30, 33, 33, 35, 35, 35, 35, 36, 40, 45, 46, 52, 70</div><p><strong>a) Three equal-depth bins</strong> (27 values, so 9 per bin), smoothed by bin means:</p>
+<p>27 ages→மூன்று bins தலா9. Sums <strong>162,253,394</strong>; means <strong>18,28.111…,43.777…</strong>; medians <strong>19,25,40</strong>. Boundaries அருகிலுள்ள min/max-க்கு மாற்றப்படும்; mean substitute செய்யாதீர்கள். IQR convention Q1=20,Q3=35 என்றால் upper fence <strong>57.5</strong>;70 candidate outlier. z-score-க்கு sample/population σ வேறுபாடு வரும்; எந்த convention என்பதைச் சொல்லுங்கள். Outlier இருப்பதை clustering/boxplot மூலம் ஆராயலாம்; காரணமறியாமல் delete செய்யாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s11" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s11" lang="en"><div class="hci-en"><div class="call example"><div class="ct">Ages: 13, 15, 16, 16, 19, 20, 20, 21, 22, 22, 25, 25, 25, 25, 30, 33, 33, 35, 35, 35, 35, 36, 40, 45, 46, 52, 70</div><p><strong>a) Three equal-depth bins</strong> (27 values, so 9 per bin), smoothed by bin means:</p>
 <table>
 <thead>
 <tr>
@@ -962,7 +1574,49 @@ IQR எடுத்துக்காட்டில் Q1=20, Q3=35; upper fenc
 <li><strong>Clustering:</strong> 70 sits far from every cluster.</li>
 <li><strong>Boxplots:</strong> 70 shows as a point beyond the whisker.</li>
 </ul>
-<p><strong>c) Other smoothing methods:</strong> bin <strong>medians</strong> (19, 25, 40), bin <strong>boundaries</strong>, <strong>regression</strong>, <strong>clustering</strong>, moving averages.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s12"><h2 id="s12" data-t="Quick revision sheet"><span class="num">12</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s12 en-s12" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s12" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>குறைந்த தரவில் அதே பயன்</h4><p>முழுத் தரவும் மிகப் பெரியதாக இருந்தால் கணக்கிட நேரம் அதிகம். முக்கியத் தகவலை அதிகமாக இழக்காமல் அளவைக் குறைப்பதே <strong>Data reduction</strong>. சுருக்கம் பயனுள்ள முடிவை வைத்திருக்கிறதா என்று பார்க்க வேண்டும்.</p>
+<p><strong>c) Other smoothing methods:</strong> bin <strong>medians</strong> (19, 25, 40), bin <strong>boundaries</strong>, <strong>regression</strong>, <strong>clustering</strong>, moving averages.</p></div></div><div class="hci-ta" lang="ta" hidden data-title="சுயப் பயிற்சி (2024): நடைமுறையில் தொட்டிப் பிரித்தல்"><div class="call example"><div class="ct">வயதுகள்: 13, 15, 16, 16, 19, 20, 20, 21, 22, 22, 25, 25, 25, 25, 30, 33, 33, 35, 35, 35, 35, 36, 40, 45, 46, 52, 70</div><p><strong>a) மூன்று சம ஆழத் தொட்டிகள்</strong> (27 பெறுமதிகள்; எனவே ஒரு தொட்டிக்கு 9), தொட்டிச் சராசரிகளால் சீராக்கப்பட்டவை:</p>
+<table>
+<thead>
+<tr>
+<th>தொட்டி</th>
+<th>பெறுமதிகள்</th>
+<th>சராசரி</th>
+<th>சீராக்கப்பட்டவை (சராசரிகள்)</th>
+<th>சீராக்கப்பட்டவை (எல்லைகள்)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>13 15 16 16 19 20 20 21 22</td>
+<td>162 / 9 = <strong>18</strong></td>
+<td>18 × 9</td>
+<td>13 13 13 13 22 22 22 22 22</td>
+</tr>
+<tr>
+<td>2</td>
+<td>22 25 25 25 25 30 33 33 35</td>
+<td>253 / 9 = <strong>28.11</strong></td>
+<td>28.11 × 9</td>
+<td>22 22 22 22 22 35 35 35 35</td>
+</tr>
+<tr>
+<td>3</td>
+<td>35 35 35 36 40 45 46 52 70</td>
+<td>394 / 9 = <strong>43.78</strong></td>
+<td>43.78 × 9</td>
+<td>35 35 35 35 35 35 35 35 70</td>
+</tr>
+</tbody>
+</table>
+<p><strong>b) புறநிலைகளைக் கண்டறிதல்:</strong></p>
+<ul>
+<li><strong>IQR விதி:</strong> Q1 = 20, Q3 = 35; எனவே மேல் வேலி = 35 + 1.5 × 15 = <strong>57.5</strong>; <strong>70 ஒரு புறநிலை</strong>.</li>
+<li><strong>Z-மதிப்பெண்:</strong> (70 − 29.96) / 12.70 = <strong>3.15 &gt; 3</strong>.</li>
+<li><strong>குழுமமாக்கல்:</strong> 70 ஒவ்வொரு குழுமத்திலிருந்தும் தொலைவில் உள்ளது.</li>
+<li><strong>பெட்டி விளக்கப்படங்கள்:</strong> மீசைக்கு அப்பாலுள்ள புள்ளியாக 70 தெரிகிறது.</li>
+</ul>
+<p><strong>c) பிற சீராக்கல் முறைகள்:</strong> தொட்டி <strong>இடைநிலைகள்</strong> (19, 25, 40), தொட்டி <strong>எல்லைகள்</strong>, <strong>பின்னடைவு</strong>, <strong>குழுமமாக்கல்</strong>, நகரும் சராசரிகள்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s12"><h2 id="s12" data-t="Quick revision sheet"><span class="num">12</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s12 en-s12" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s12" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>குறைந்த தரவில் அதே பயன்</h4><p>முழுத் தரவும் மிகப் பெரியதாக இருந்தால் கணக்கிட நேரம் அதிகம். முக்கியத் தகவலை அதிகமாக இழக்காமல் அளவைக் குறைப்பதே <strong>Data reduction</strong>. சுருக்கம் பயனுள்ள முடிவை வைத்திருக்கிறதா என்று பார்க்க வேண்டும்.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
 <p>பெரிய data-வைச் சிறு representation-ஆக மாற்றியும் analysis-க்கு தேவையான தகவலைப் பாதுகாப்பதே reduction. <strong>ஐந்து strategies:</strong> cube aggregation; attribute subset; dimensionality reduction; numerosity reduction; discretisation/concept hierarchy. அளவு குறைந்தது மட்டும் வெற்றி அல்ல; original data-இன் task result-க்கு போதுமான ஒற்றுமை இருக்கிறதா சோதிக்கவேண்டும்.</p></div><div class="ta-recap-item"><h4>விவரங்களை மொத்தங்களாகச் சுருக்குதல்</h4><p>தினசரி விற்பனையை மாத மொத்தமாகச் சேர்த்தால் குறைந்த பதிவுகளில் போக்கைக் காணலாம். இதுதான் <strong>Aggregation</strong>. ஆனால் மாத மொத்தத்தில் எந்த நாளில் திடீர் விற்பனை நடந்தது என்ற நுணுக்கம் மறையலாம்.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
@@ -999,7 +1653,7 @@ Concept hierarchy numeric intervals-ஆகவோ city→country போன்ற 
 <p>மூன்று bin means <strong>18, 28.11, 43.78</strong>; rounding அனுமதித்தால் 18,28,44. Median smoothing values <strong>19,25,40</strong>. Mean மற்றும் median-ஐக் கலக்காதீர்கள்.
 IQR எடுத்துக்காட்டில் Q1=20, Q3=35; upper fence=35+1.5×15=<strong>57.5</strong>; 70 அதற்கு வெளியே உள்ளது. Quartile convention வேறானால் working-ஐச் சொல்லுங்கள்; outlier இருப்பது தவறான data என்பதற்கு தானியங்குச் சான்றல்ல.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>27 ages→மூன்று bins தலா9. Sums <strong>162,253,394</strong>; means <strong>18,28.111…,43.777…</strong>; medians <strong>19,25,40</strong>. Boundaries அருகிலுள்ள min/max-க்கு மாற்றப்படும்; mean substitute செய்யாதீர்கள். IQR convention Q1=20,Q3=35 என்றால் upper fence <strong>57.5</strong>;70 candidate outlier. z-score-க்கு sample/population σ வேறுபாடு வரும்; எந்த convention என்பதைச் சொல்லுங்கள். Outlier இருப்பதை clustering/boxplot மூலம் ஆராயலாம்; காரணமறியாமல் delete செய்யாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s12" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s12" lang="en"><table>
+<p>27 ages→மூன்று bins தலா9. Sums <strong>162,253,394</strong>; means <strong>18,28.111…,43.777…</strong>; medians <strong>19,25,40</strong>. Boundaries அருகிலுள்ள min/max-க்கு மாற்றப்படும்; mean substitute செய்யாதீர்கள். IQR convention Q1=20,Q3=35 என்றால் upper fence <strong>57.5</strong>;70 candidate outlier. z-score-க்கு sample/population σ வேறுபாடு வரும்; எந்த convention என்பதைச் சொல்லுங்கள். Outlier இருப்பதை clustering/boxplot மூலம் ஆராயலாம்; காரணமறியாமல் delete செய்யாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s12" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s12" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>
@@ -1064,7 +1718,72 @@ IQR எடுத்துக்காட்டில் Q1=20, Q3=35; upper fenc
 <td>Recursive discretization: age → youth / middle-aged / senior; done <strong>before</strong> mining</td>
 </tr>
 </tbody>
-</table></div><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">11 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="dm-Week04" data-pick="0"><script type="application/json" class="qdata">[{"q": "Which is <strong>not<\/strong> one of the five data reduction strategies?", "o": ["Data cube aggregation", "Attribute subset selection", "Numerosity reduction", "Data cleaning"], "e": "The five are cube aggregation, attribute subset selection, dimensionality reduction, numerosity reduction and discretisation. ", "a": 3, "w": "Week 04"}, {"q": "To predict whether a customer will buy a CD, which attribute is <strong>irrelevant<\/strong>?", "o": ["Age", "Music taste", "Telephone number", "Past purchases"], "e": "Attribute subset selection removes irrelevant attributes. ", "a": 2, "w": "Week 04"}, {"q": "Which is a <strong>greedy<\/strong> attribute-selection method?", "o": ["Stepwise forward selection", "Wavelet transform", "Equal-width binning", "Z-score"], "e": "Others: backward elimination, a combination of the two, and decision-tree induction. ", "a": 0, "w": "Week 04"}, {"q": "Wavelet transforms and PCA are examples of:", "o": ["Lossy dimensionality reduction", "Lossless compression", "Parametric numerosity reduction", "Data cleaning"], "e": "Lossy means the original can only be approximated. ", "a": 0, "w": "Week 04"}, {"q": "Storing only regression parameters (y = wx + b) instead of the data is:", "o": ["Parametric numerosity reduction", "Non-parametric numerosity reduction", "Discretisation", "Data cube aggregation"], "e": "Histograms, clustering and sampling are non-parametric. ", "a": 0, "w": "Week 04"}, {"q": "Temperatures range from 64 to 85, with 7 equal-width bins. What is the bin width?", "e": "W = (85 − 64) ÷ 7 = 3. ", "n": 3.0, "w": "Week 04"}, {"q": "12 sorted prices split into 3 equal-depth (equal-frequency) bins. How many values go in each bin?", "e": "Depth = 12 ÷ 3 = 4. ", "n": 4.0, "w": "Week 04"}, {"q": "A weakness of <strong>equal-width<\/strong> binning is that:", "o": ["Outliers can stretch the range, leaving most values in a few bins and some bins empty", "It needs class labels", "It always gives the same count per bin", "It can't be computed"], "e": "Equal-depth bins avoid this by holding the same number of values each. ", "a": 0, "w": "Week 04"}, {"q": "With β buckets, the MaxDiff histogram places boundaries at:", "o": ["The β − 1 largest differences between adjacent values", "Every value", "Equal widths", "The mean and median"], "e": "V-Optimal minimises the variance within buckets. ", "a": 0, "w": "Week 04"}, {"q": "Discretisation that uses class labels is called:", "o": ["Supervised", "Unsupervised", "Top-down", "Lossless"], "e": "Top-down (splitting) and bottom-up (merging) describe the direction instead. ", "a": 0, "w": "Week 04"}, {"q": "A concept hierarchy for age (youth / middle-aged / senior) is an example of:", "o": ["Recursive discretisation, replacing low-level values with higher-level concepts", "Normalisation", "Sampling", "Correlation analysis"], "e": "It's done before mining, giving concise, knowledge-level results. ", "a": 0, "w": "Week 04"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2003/Week%2003%20-%20Study%20Guide.html"><small>← Previous</small>Data Preprocessing — Cleaning, Integration &amp; Transformation</a><a class="nx" href="../Week%2005/Week%2005%20-%20Study%20Guide.html"><small>Next →</small>Introduction to Data Warehousing</a></div></main></div>
+</table></div><div class="hci-ta" lang="ta" hidden data-title="விரைவு மீளாய்வுத் தாள்"><table>
+<thead>
+<tr>
+<th>கருத்து</th>
+<th>இவ்வாறு நினைவில் கொள்ளவும்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>தரவுக் குறைப்பு</td>
+<td>சிறிய தரவு, (ஏறத்தாழ) அதே முடிவுகள்; நேரத்தையும் நினைவகத்தையும் சேமிக்கிறது</td>
+</tr>
+<tr>
+<td>5 உத்திகள்</td>
+<td>கனசதுரத் திரட்டல் · பண்புக்கூறு உட்கணத் தேர்வு · பரிமாணக் குறைப்பு · எண்ணிக்கைக் குறைப்பு · தனித்துண்டாக்கல்</td>
+</tr>
+<tr>
+<td>பண்புக்கூறு உட்கண இலக்கு</td>
+<td>குறைந்தபட்சப் பண்புக்கூறுகள், வகுப்புப் பகிர்வு ≈ மூலப் பகிர்வு</td>
+</tr>
+<tr>
+<td>பேராசை முறைகள்</td>
+<td>முன்னோக்குத் தேர்வு · பின்னோக்கு நீக்கம் · இணைந்தது · முடிவெடுக்கும் மர உருவாக்கம்</td>
+</tr>
+<tr>
+<td>இழப்பற்றது மற்றும் இழப்புள்ளது</td>
+<td>துல்லிய மீளமைப்பு மற்றும் தோராயம் (சிற்றலை, PCA)</td>
+</tr>
+<tr>
+<td>அளவுரு சார்ந்த எண்ணிக்கைக் குறைப்பு</td>
+<td>மாதிரி அளவுருக்களைச் சேமி: பின்னடைவு <em>y = wx + b</em>, மடக்கை-நேரியல்</td>
+</tr>
+<tr>
+<td>அளவுரு சாராத எண்ணிக்கைக் குறைப்பு</td>
+<td>அலைவெண் செவ்வகங்கள், குழுமமாக்கல், மாதிரியெடுத்தல்</td>
+</tr>
+<tr>
+<td>அலைவெண் செவ்வக விதிகள்</td>
+<td>சம அகலம் · சம அதிர்வெண் · V-Optimal (குறைந்த மாறுபாடு) · MaxDiff (β − 1 மிகப்பெரிய இடைவெளிகள்)</td>
+</tr>
+<tr>
+<td>சம அகலச் சூத்திரம்</td>
+<td>W = (B − A) / N — புறநிலைகளால் பாதிக்கப்படுகிறது</td>
+</tr>
+<tr>
+<td>சம ஆழம்</td>
+<td>ஒவ்வொரு தொட்டியிலும் ஒரே எண்ணிக்கை — முதலில் வரிசைப்படுத்து; ஆழம் = n / N</td>
+</tr>
+<tr>
+<td>சீராக்கல்</td>
+<td>சராசரிகளால் · இடைநிலைகளால் · எல்லைகளால் (குறைந்தபட்சம்/அதிகபட்சத்தில் அருகிலுள்ளது)</td>
+</tr>
+<tr>
+<td>மேற்பார்வையுள்ளது மற்றும் மேற்பார்வையற்றது</td>
+<td>வகுப்பு அடையாளங்களைப் பயன்படுத்துகிறதா இல்லையா</td>
+</tr>
+<tr>
+<td>மேலிருந்து கீழ் மற்றும் கீழிருந்து மேல்</td>
+<td>வெட்டுப் புள்ளிகளில் பிரித்தல் மற்றும் அயல்களை இணைத்தல்</td>
+</tr>
+<tr>
+<td>கருத்துப் படிநிலை</td>
+<td>மறுசுழற்சித் தனித்துண்டாக்கல்: வயது → இளைஞர் / நடுத்தர வயது / முதியவர்; சுரங்கத்துக்கு <strong>முன்</strong> செய்யப்படுகிறது</td>
+</tr>
+</tbody>
+</table></div></div><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">11 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="dm-Week04" data-pick="0"><script type="application/json" class="qdata">[{"q": "Which is <strong>not<\/strong> one of the five data reduction strategies?", "o": ["Data cube aggregation", "Attribute subset selection", "Numerosity reduction", "Data cleaning"], "e": "The five are cube aggregation, attribute subset selection, dimensionality reduction, numerosity reduction and discretisation. ", "a": 3, "w": "Week 04"}, {"q": "To predict whether a customer will buy a CD, which attribute is <strong>irrelevant<\/strong>?", "o": ["Age", "Music taste", "Telephone number", "Past purchases"], "e": "Attribute subset selection removes irrelevant attributes. ", "a": 2, "w": "Week 04"}, {"q": "Which is a <strong>greedy<\/strong> attribute-selection method?", "o": ["Stepwise forward selection", "Wavelet transform", "Equal-width binning", "Z-score"], "e": "Others: backward elimination, a combination of the two, and decision-tree induction. ", "a": 0, "w": "Week 04"}, {"q": "Wavelet transforms and PCA are examples of:", "o": ["Lossy dimensionality reduction", "Lossless compression", "Parametric numerosity reduction", "Data cleaning"], "e": "Lossy means the original can only be approximated. ", "a": 0, "w": "Week 04"}, {"q": "Storing only regression parameters (y = wx + b) instead of the data is:", "o": ["Parametric numerosity reduction", "Non-parametric numerosity reduction", "Discretisation", "Data cube aggregation"], "e": "Histograms, clustering and sampling are non-parametric. ", "a": 0, "w": "Week 04"}, {"q": "Temperatures range from 64 to 85, with 7 equal-width bins. What is the bin width?", "e": "W = (85 − 64) ÷ 7 = 3. ", "n": 3.0, "w": "Week 04"}, {"q": "12 sorted prices split into 3 equal-depth (equal-frequency) bins. How many values go in each bin?", "e": "Depth = 12 ÷ 3 = 4. ", "n": 4.0, "w": "Week 04"}, {"q": "A weakness of <strong>equal-width<\/strong> binning is that:", "o": ["Outliers can stretch the range, leaving most values in a few bins and some bins empty", "It needs class labels", "It always gives the same count per bin", "It can't be computed"], "e": "Equal-depth bins avoid this by holding the same number of values each. ", "a": 0, "w": "Week 04"}, {"q": "With β buckets, the MaxDiff histogram places boundaries at:", "o": ["The β − 1 largest differences between adjacent values", "Every value", "Equal widths", "The mean and median"], "e": "V-Optimal minimises the variance within buckets. ", "a": 0, "w": "Week 04"}, {"q": "Discretisation that uses class labels is called:", "o": ["Supervised", "Unsupervised", "Top-down", "Lossless"], "e": "Top-down (splitting) and bottom-up (merging) describe the direction instead. ", "a": 0, "w": "Week 04"}, {"q": "A concept hierarchy for age (youth / middle-aged / senior) is an example of:", "o": ["Recursive discretisation, replacing low-level values with higher-level concepts", "Normalisation", "Sampling", "Correlation analysis"], "e": "It's done before mining, giving concise, knowledge-level results. ", "a": 0, "w": "Week 04"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2003/Week%2003%20-%20Study%20Guide.html"><small>← Previous</small>Data Preprocessing — Cleaning, Integration &amp; Transformation</a><a class="nx" href="../Week%2005/Week%2005%20-%20Study%20Guide.html"><small>Next →</small>Introduction to Data Warehousing</a></div></main></div>
 <script type="application/json" id="study-data">[{"key": "bpas", "name": "Business Processes & Accounting Systems", "exam": ["2026-11-15", "11:00", "14:00"], "url": "Business%20Processes%20and%20Accounting%20Systems/Study%20Guide%20-%20Index.html", "weeks": [{"key": "bpas-Week01", "label": "Week 01", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Business processes"}, {"id": "s2", "title": "Accounting information and its users"}, {"id": "s3", "title": "What is an Accounting Information System?"}, {"id": "s4", "title": "The five components of a computerised AIS"}, {"id": "s5", "title": "Internal control & security"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week02", "label": "Week 02", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is accounting?"}, {"id": "s2", "title": "Stakeholders and what they need"}, {"id": "s3", "title": "The Conceptual Framework for financial reporting"}, {"id": "s4", "title": "Debit & credit rules and the accounting equation"}, {"id": "s5", "title": "The T-account & balancing"}, {"id": "s6", "title": "Source documents & primary books"}, {"id": "s7", "title": "The four day books (primary entry journals)"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week03", "label": "Week 03", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where these books fit"}, {"id": "s2", "title": "The cash book"}, {"id": "s3", "title": "The petty cash book & imprest system"}, {"id": "s4", "title": "The general journal"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week04", "label": "Week 04", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Capital vs revenue expenditure"}, {"id": "s2", "title": "The general ledger"}, {"id": "s3", "title": "The trial balance"}, {"id": "s4", "title": "Worked example: posting to the ledger and extracting a TB"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week05", "label": "Week 05", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From trial balance to financial statements"}, {"id": "s2", "title": "The trading account → gross profit"}, {"id": "s3", "title": "The income statement → net profit"}, {"id": "s4", "title": "LKAS 1 / IAS 1 — Presentation of Financial Statements"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week06", "label": "Week 06", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The statement of financial position (SFP)"}, {"id": "s2", "title": "Adjustment 1: closing inventory"}, {"id": "s3", "title": "LKAS 16 — Property, Plant & Equipment"}, {"id": "s4", "title": "Adjustment 2: depreciation"}, {"id": "s5", "title": "Disposal of PPE"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week07", "label": "Week 07", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The accrual concept"}, {"id": "s2", "title": "Accrued & prepaid expenses"}, {"id": "s3", "title": "Income receivable & income received in advance"}, {"id": "s4", "title": "Bad debts (irrecoverable debts)"}, {"id": "s5", "title": "Provision for impairment of receivables"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week08", "label": "Week 08", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Inventory & LKAS 2"}, {"id": "s2", "title": "Function 1: managing purchases"}, {"id": "s3", "title": "Function 2: storing materials & stock levels"}, {"id": "s4", "title": "Function 3: pricing material issues — FIFO & weighted average"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week09", "label": "Week 09", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct vs indirect labour"}, {"id": "s2", "title": "Time keeping & time booking"}, {"id": "s3", "title": "Methods of remuneration"}, {"id": "s4", "title": "The salary sheet, EPF & ETF"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week10", "label": "Week 10", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is overhead?"}, {"id": "s2", "title": "Cost centres, allocation & apportionment"}, {"id": "s3", "title": "Re-apportioning service department costs"}, {"id": "s4", "title": "Overhead absorption"}, {"id": "s5", "title": "Under- and over-absorption"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week11", "label": "Week 11", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why price matters"}, {"id": "s2", "title": "The pricing policy: six factors"}, {"id": "s3", "title": "Markup vs margin"}, {"id": "s4", "title": "Pricing methods"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week12", "label": "Week 12", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why ratio analysis?"}, {"id": "s2", "title": "1. Liquidity ratios"}, {"id": "s3", "title": "2. Gearing (capital structure) ratios"}, {"id": "s4", "title": "3. Financial efficiency (activity) ratios"}, {"id": "s5", "title": "4. Profitability ratios"}, {"id": "s6", "title": "5. Shareholder (market test) ratios"}, {"id": "s7", "title": "Benefits & limitations"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week13", "label": "Week 13", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is project appraisal?"}, {"id": "s2", "title": "Non-discounting methods"}, {"id": "s3", "title": "Time value of money"}, {"id": "s4", "title": "Net present value (NPV)"}, {"id": "s5", "title": "Internal rate of return (IRR)"}, {"id": "s6", "title": "Which method is best?"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week14", "label": "Week 14", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a budget?"}, {"id": "s2", "title": "Types of budgets"}, {"id": "s3", "title": "The functional budgets: formats"}, {"id": "s4", "title": "Full worked example: LFT company"}, {"id": "s5", "title": "The cash budget: rules"}, {"id": "s6", "title": "Limitations of budgeting [[36:08]]"}, {"id": "s7", "title": "Practice questions (course paper)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week15", "label": "Week 15", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Standard cost & standard costing"}, {"id": "s2", "title": "Setting standards"}, {"id": "s3", "title": "Types of standards"}, {"id": "s4", "title": "Standard cost card"}, {"id": "s5", "title": "The variance tree"}, {"id": "s6", "title": "Variance formulas"}, {"id": "s7", "title": "Advantages & limitations"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-papers", "label": "Past papers", "url": "Business%20Processes%20and%20Accounting%20Systems/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Q1: Financial statements (40 marks)"}, {"id": "s3", "title": "January 2023 — Q2: Inventory, petty cash, framework (20 marks)"}, {"id": "s4", "title": "January 2023 — Q3: Primary entry books and NPV (20 marks)"}, {"id": "s5", "title": "January 2023 — Q4: Cash budget and sales variances (20 marks)"}, {"id": "s6", "title": "January 2023 — Q5: Overheads (20 marks)"}, {"id": "s7", "title": "August 2020 — what's different"}, {"id": "s8", "title": "November 2019 — Section A, Q1: 20 MCQs"}, {"id": "s9", "title": "November 2019 — Section A, Q2: Araliya Traders (Rs. '000)"}, {"id": "s10", "title": "November 2019 — Section B"}, {"id": "s11", "title": "2024 and 2025 — topic lists to practise"}]}]}, {"key": "dm", "name": "Data Mining", "exam": ["2026-11-22", "11:30", "14:30"], "url": "Data%20Mining/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dm-Week01", "label": "Week 01", "url": "Data%20Mining/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What data mining is about"}, {"id": "s2", "title": "Why data mining is required"}, {"id": "s3", "title": "Big Data and the 5 V's"}, {"id": "s4", "title": "Defining data mining properly"}, {"id": "s5", "title": "Applications of data mining"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week02", "label": "Week 02", "url": "Data%20Mining/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Data mining = \"knowledge mining from data\""}, {"id": "s2", "title": "The 7 steps of the KDD process"}, {"id": "s3", "title": "Architecture of a typical data mining system"}, {"id": "s4", "title": "What kinds of data can be mined?"}, {"id": "s5", "title": "Data mining task primitives"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week03", "label": "Week 03", "url": "Data%20Mining/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why preprocessing is needed"}, {"id": "s2", "title": "Data cleaning — handling missing values"}, {"id": "s3", "title": "Noisy data and smoothing"}, {"id": "s4", "title": "Data cleaning as a process"}, {"id": "s5", "title": "Data integration"}, {"id": "s6", "title": "Data transformation"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week04", "label": "Week 04", "url": "Data%20Mining/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why reduce data at all?"}, {"id": "s2", "title": "Data cube aggregation"}, {"id": "s3", "title": "Attribute subset selection"}, {"id": "s4", "title": "Dimensionality reduction"}, {"id": "s5", "title": "Numerosity reduction"}, {"id": "s6", "title": "Discretization & concept hierarchies"}, {"id": "s7", "title": "Binning: equal-width vs equal-depth"}, {"id": "s8", "title": "Smoothing noisy data with bins"}, {"id": "s9", "title": "Histogram partitioning — a full worked example"}, {"id": "s10", "title": "Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule"}, {"id": "s11", "title": "Self-assignment (2024): binning in practice"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week05", "label": "Week 05", "url": "Data%20Mining/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why data warehouses matter"}, {"id": "s2", "title": "What is a data warehouse?"}, {"id": "s3", "title": "OLTP vs OLAP"}, {"id": "s4", "title": "Why keep the warehouse separate?"}, {"id": "s5", "title": "The multidimensional data model"}, {"id": "s6", "title": "Lattice of cuboids"}, {"id": "s7", "title": "Weka — the tool used in this course"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week06", "label": "Week 06", "url": "Data%20Mining/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why a different schema for warehouses?"}, {"id": "s2", "title": "Star schema"}, {"id": "s3", "title": "Snowflake schema"}, {"id": "s4", "title": "Fact constellation (galaxy schema)"}, {"id": "s5", "title": "Data warehouse vs data mart"}, {"id": "s6", "title": "Defining cubes with DMQL"}, {"id": "s7", "title": "Concept hierarchies"}, {"id": "s8", "title": "Weka 1.2 — Exploring the Explorer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week07", "label": "Week 07", "url": "Data%20Mining/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why build a data warehouse?"}, {"id": "s2", "title": "The four views of warehouse design"}, {"id": "s3", "title": "Design approaches & methodology"}, {"id": "s4", "title": "The 4-step warehouse design process"}, {"id": "s5", "title": "Three-tier data warehouse architecture"}, {"id": "s6", "title": "The metadata repository"}, {"id": "s7", "title": "OLAP server models: ROLAP, MOLAP, HOLAP"}, {"id": "s8", "title": "Weka 1.3 — Exploring datasets"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week08", "label": "Week 08", "url": "Data%20Mining/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why compute cubes efficiently?"}, {"id": "s2", "title": "Cube materialization: cells and cuboids"}, {"id": "s3", "title": "Full cube vs iceberg cube"}, {"id": "s4", "title": "MultiWay array aggregation"}, {"id": "s5", "title": "BUC — Bottom-Up Computation"}, {"id": "s6", "title": "Star attributes, star-nodes and star-trees"}, {"id": "s7", "title": "Attribute-oriented induction (AOI)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week09", "label": "Week 09", "url": "Data%20Mining/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Frequent patterns"}, {"id": "s2", "title": "Market basket analysis"}, {"id": "s3", "title": "Association rules, support and confidence"}, {"id": "s4", "title": "The Apriori algorithm"}, {"id": "s5", "title": "Full worked example (|D| = 9, min_sup = 2)"}, {"id": "s6", "title": "Generating strong association rules"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week10", "label": "Week 10", "url": "Data%20Mining/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why not just use Apriori?"}, {"id": "s2", "title": "FP-growth: the idea"}, {"id": "s3", "title": "Worked example (min_sup = 3)"}, {"id": "s4", "title": "Mining the FP-tree"}, {"id": "s5", "title": "Multilevel association rules"}, {"id": "s6", "title": "Multidimensional association rules"}, {"id": "s7", "title": "Constraint-based association mining"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week11", "label": "Week 11", "url": "Data%20Mining/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Classification vs prediction"}, {"id": "s2", "title": "The two-step classification process"}, {"id": "s3", "title": "Preparing data & comparing methods"}, {"id": "s4", "title": "Decision trees & their history"}, {"id": "s5", "title": "Attribute selection measures"}, {"id": "s6", "title": "Worked example — buys_computer (14 tuples)"}, {"id": "s7", "title": "Weka: J48, filters and visualisation"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week12", "label": "Week 12", "url": "Data%20Mining/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Bayesian classifiers — overview"}, {"id": "s2", "title": "Bayes' theorem"}, {"id": "s3", "title": "The naïve Bayesian classifier"}, {"id": "s4", "title": "Worked example — will X buy a computer?"}, {"id": "s5", "title": "Rule-based classification"}, {"id": "s6", "title": "Extracting rules from a decision tree"}, {"id": "s7", "title": "Weka: training and testing"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week13", "label": "Week 13", "url": "Data%20Mining/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is cluster analysis?"}, {"id": "s2", "title": "Requirements of clustering in data mining"}, {"id": "s3", "title": "Types of clustering methods"}, {"id": "s4", "title": "Clustering by k-means"}, {"id": "s5", "title": "Weka: baseline accuracy and cross-validation"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week14", "label": "Week 14", "url": "Data%20Mining/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why k-medoids?"}, {"id": "s2", "title": "k-medoids and PAM"}, {"id": "s3", "title": "Worked example (from the lesson)"}, {"id": "s4", "title": "Hierarchical clustering"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week15", "label": "Week 15", "url": "Data%20Mining/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Overview"}, {"id": "s2", "title": "Financial data analysis"}, {"id": "s3", "title": "Retail industry"}, {"id": "s4", "title": "Telecommunication industry"}, {"id": "s5", "title": "Biological data analysis"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}]}, {"key": "dmath", "name": "Discrete Mathematics", "exam": ["2026-11-21", "08:30", "11:30"], "url": "Discrete%20Mathematics/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dmath-Week01", "label": "Week 01", "url": "Discrete%20Mathematics/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From propositions to predicates"}, {"id": "s2", "title": "Propositional functions"}, {"id": "s3", "title": "Compound expressions"}, {"id": "s4", "title": "Quantifiers: ∀, ∃, ∃!"}, {"id": "s5", "title": "Negating quantified expressions"}, {"id": "s6", "title": "Translating English into logic"}, {"id": "s7", "title": "Introduction to proofs — direct proof"}, {"id": "s8", "title": "Assignment 1: worked answers"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week02", "label": "Week 02", "url": "Discrete%20Mathematics/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Set terminology & notation"}, {"id": "s2", "title": "Equality, subsets & disjoint sets"}, {"id": "s3", "title": "Venn diagrams"}, {"id": "s4", "title": "Set operations"}, {"id": "s5", "title": "Set laws"}, {"id": "s6", "title": "Number of elements — inclusion–exclusion"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week03", "label": "Week 03", "url": "Discrete%20Mathematics/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a function?"}, {"id": "s2", "title": "One-to-one (injective)"}, {"id": "s3", "title": "Onto (surjective) & bijection"}, {"id": "s4", "title": "Inverse functions"}, {"id": "s5", "title": "Composition of functions"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week04", "label": "Week 04", "url": "Discrete%20Mathematics/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Sequences"}, {"id": "s2", "title": "Geometric & arithmetic progressions"}, {"id": "s3", "title": "Summation notation (Σ)"}, {"id": "s4", "title": "Geometric series (Theorem 1)"}, {"id": "s5", "title": "Infinite series (Theorem 2)"}, {"id": "s6", "title": "Double sums"}, {"id": "s7", "title": "Useful closed forms (Table 2)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week05", "label": "Week 05", "url": "Discrete%20Mathematics/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Matrices represent data"}, {"id": "s2", "title": "Matrix addition"}, {"id": "s3", "title": "Matrix multiplication"}, {"id": "s4", "title": "Identity, powers, transpose & symmetric"}, {"id": "s5", "title": "Zero–one matrices: join and meet"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week06", "label": "Week 06", "url": "Discrete%20Mathematics/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Divisibility"}, {"id": "s2", "title": "The division algorithm"}, {"id": "s3", "title": "Modular arithmetic & congruence"}, {"id": "s4", "title": "Primes"}, {"id": "s5", "title": "Cryptography — Caesar's cipher"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week07", "label": "Week 07", "url": "Discrete%20Mathematics/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why induction?"}, {"id": "s2", "title": "Worked induction proofs"}, {"id": "s3", "title": "The well-ordering property"}, {"id": "s4", "title": "Recursion"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week08", "label": "Week 08", "url": "Discrete%20Mathematics/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why counting?"}, {"id": "s2", "title": "The product rule (\"AND\", then multiply)"}, {"id": "s3", "title": "The sum rule (\"OR\", then add)"}, {"id": "s4", "title": "Tree diagrams"}, {"id": "s5", "title": "Combinations — order doesn't matter"}, {"id": "s6", "title": "Permutations — order matters"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week09", "label": "Week 09", "url": "Discrete%20Mathematics/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Binary relations"}, {"id": "s2", "title": "Functions as relations"}, {"id": "s3", "title": "Relations on a set"}, {"id": "s4", "title": "Properties: reflexive, symmetric, transitive"}, {"id": "s5", "title": "Equivalence relations"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week10", "label": "Week 10", "url": "Discrete%20Mathematics/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From pairs to n-tuples"}, {"id": "s2", "title": "Databases & the relational data model"}, {"id": "s3", "title": "Primary keys, composite keys, extension & intension"}, {"id": "s4", "title": "Operations: selection, projection, join"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week11", "label": "Week 11", "url": "Discrete%20Mathematics/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why graphs?"}, {"id": "s2", "title": "The birth of graph theory — Königsberg"}, {"id": "s3", "title": "What is a graph?"}, {"id": "s4", "title": "The six types of graphs"}, {"id": "s5", "title": "Graph models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week12", "label": "Week 12", "url": "Discrete%20Mathematics/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Trees"}, {"id": "s2", "title": "Rooted trees & terminology"}, {"id": "s3", "title": "Ordered rooted trees & binary trees"}, {"id": "s4", "title": "Binary search trees (BST)"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week13", "label": "Week 13", "url": "Discrete%20Mathematics/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Decision trees"}, {"id": "s2", "title": "Tree traversal"}, {"id": "s3", "title": "Spanning trees"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-papers", "label": "Past papers", "url": "Discrete%20Mathematics/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Question 1"}, {"id": "s3", "title": "January 2023 — Question 2 (number theory)"}, {"id": "s4", "title": "January 2023 — Question 3"}, {"id": "s5", "title": "January 2023 — Question 4 (graphs)"}, {"id": "s6", "title": "July 2023"}, {"id": "s7", "title": "October 2019"}, {"id": "s8", "title": "Model questions (official sample problems)"}]}]}, {"key": "hci", "name": "Human Computer Interaction", "exam": ["2026-11-22", "08:30", "11:30"], "url": "Human%20Computer%20Interaction/Study%20Guide%20-%20Index.html", "weeks": [{"key": "hci-Week01", "label": "Week 01", "url": "Human%20Computer%20Interaction/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "History of HCI"}, {"id": "s2", "title": "HCI is multi-disciplinary"}, {"id": "s3", "title": "Computers today: ubiquitous computing"}, {"id": "s4", "title": "Humans and perception"}, {"id": "s5", "title": "Interaction: two-way and task-centred"}, {"id": "s6", "title": "The HCI space"}, {"id": "s7", "title": "Applications of HCI — three pillars"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week02", "label": "Week 02", "url": "Human%20Computer%20Interaction/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is interaction?"}, {"id": "s2", "title": "Donald Norman's model — 7 stages"}, {"id": "s3", "title": "The two gulfs"}, {"id": "s4", "title": "Human errors: slips vs mistakes"}, {"id": "s5", "title": "The Abowd & Beale framework"}, {"id": "s6", "title": "Ergonomics"}, {"id": "s7", "title": "Direct vs indirect manipulation"}, {"id": "s8", "title": "Interaction styles"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week03", "label": "Week 03", "url": "Human%20Computer%20Interaction/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The human as an information processing machine"}, {"id": "s2", "title": "The senses in UI design"}, {"id": "s3", "title": "Human memory: three stores"}, {"id": "s4", "title": "Chunking & semantic networks"}, {"id": "s5", "title": "Cognitive load"}, {"id": "s6", "title": "Attention: selective vs divided"}, {"id": "s7", "title": "Motor skills & physical ergonomics"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week04", "label": "Week 04", "url": "Human%20Computer%20Interaction/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Design for tasks, not interfaces"}, {"id": "s2", "title": "The three contexts of \"use\": useful, usable, used"}, {"id": "s3", "title": "Three perspectives of the user"}, {"id": "s4", "title": "The in-car GPS turn example"}, {"id": "s5", "title": "UX beyond interaction"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week05", "label": "Week 05", "url": "Human%20Computer%20Interaction/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Action, interaction, effect, feedback"}, {"id": "s2", "title": "Feedback cycles are everywhere"}, {"id": "s3", "title": "Norman's model revisited: the two bridges"}, {"id": "s4", "title": "The 7 questions — designer & user perspectives"}, {"id": "s5", "title": "Norman's three levels of design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week06", "label": "Week 06", "url": "Human%20Computer%20Interaction/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct manipulation"}, {"id": "s2", "title": "The desktop metaphor vs the command line"}, {"id": "s3", "title": "Metaphorical vs literal invisibility — good vs bad design"}, {"id": "s4", "title": "Where direct manipulation is still lacking"}, {"id": "s5", "title": "Invisibility by learning vs by design"}, {"id": "s6", "title": "Five tips for invisible interfaces"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week07", "label": "Week 07", "url": "Human%20Computer%20Interaction/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Principles, guidelines and standards"}, {"id": "s2", "title": "Classic design frameworks"}, {"id": "s3", "title": "The 15 universal design principles"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week08", "label": "Week 08", "url": "Human%20Computer%20Interaction/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Mental models"}, {"id": "s2", "title": "Representations"}, {"id": "s3", "title": "Four traits of good representations"}, {"id": "s4", "title": "Full error taxonomy: slips vs mistakes"}, {"id": "s5", "title": "Learned helplessness & expert blindness"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week09", "label": "Week 09", "url": "Human%20Computer%20Interaction/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Task analysis & cognitive modelling"}, {"id": "s2", "title": "The GOMS framework"}, {"id": "s3", "title": "Keystroke-Level Model (KLM)"}, {"id": "s4", "title": "Fitts's law"}, {"id": "s5", "title": "Strengths and limits of predictive models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week10", "label": "Week 10", "url": "Human%20Computer%20Interaction/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Processor- vs predictor-oriented models"}, {"id": "s2", "title": "Cognitive Task Analysis (CTA) — 5 steps"}, {"id": "s3", "title": "Case study: the customer feedback thought stream"}, {"id": "s4", "title": "Hierarchical Task Analysis (HTA)"}, {"id": "s5", "title": "Modularity & divide and conquer"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week11", "label": "Week 11", "url": "Human%20Computer%20Interaction/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is user-centred design (UCD)?"}, {"id": "s2", "title": "The 8 user characteristics"}, {"id": "s3", "title": "ISO 9241-210: the 6 UCD principles"}, {"id": "s4", "title": "The 4-phase interaction design life cycle"}, {"id": "s5", "title": "Stakeholder-centred design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week12", "label": "Week 12", "url": "Human%20Computer%20Interaction/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where needfinding fits"}, {"id": "s2", "title": "The seven questions"}, {"id": "s3", "title": "Biases in needfinding"}, {"id": "s4", "title": "Needfinding methods"}, {"id": "s5", "title": "Representing the needs"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week13", "label": "Week 13", "url": "Human%20Computer%20Interaction/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where evaluation fits"}, {"id": "s2", "title": "Match the evaluation to the prototype"}, {"id": "s3", "title": "Evaluation across the design life cycle"}, {"id": "s4", "title": "Three types of evaluation"}, {"id": "s5", "title": "Four key terms"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-papers", "label": "Past papers", "url": "Human%20Computer%20Interaction/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what to focus on"}, {"id": "s2", "title": "ITE 3752 — Question 1: User-centred design (25 marks)"}, {"id": "s3", "title": "ITE 3752 — Question 2: Norman's model (25 marks)"}, {"id": "s4", "title": "ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)"}, {"id": "s5", "title": "ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)"}, {"id": "s6", "title": "Older ITE 3603 papers — outline answers"}]}]}, {"key": "mkt", "name": "Marketing", "exam": ["2026-11-22", "14:45", "17:45"], "url": "Marketing/Study%20Guide%20-%20Index.html", "weeks": [{"key": "mkt-Week01", "label": "Week 01", "url": "Marketing/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is marketing?"}, {"id": "s2", "title": "Marketing vs selling — the iceberg"}, {"id": "s3", "title": "Why marketing matters"}, {"id": "s4", "title": "Core concepts of marketing"}, {"id": "s5", "title": "Objectives of marketing"}, {"id": "s6", "title": "Quiz 01: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week02", "label": "Week 02", "url": "Marketing/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing has a history"}, {"id": "s2", "title": "1. Production concept"}, {"id": "s3", "title": "2. Product concept & marketing myopia"}, {"id": "s4", "title": "3. Selling concept"}, {"id": "s5", "title": "4. Marketing concept"}, {"id": "s6", "title": "5. Societal marketing concept"}, {"id": "s7", "title": "6. Holistic marketing concept"}, {"id": "s8", "title": "Quiz 02: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week03", "label": "Week 03", "url": "Marketing/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why scan the environment?"}, {"id": "s2", "title": "The three layers of the environment"}, {"id": "s3", "title": "Internal environment — 5 Ms & 7S"}, {"id": "s4", "title": "Micro environment (task environment)"}, {"id": "s5", "title": "Macro environment (DENTPC)"}, {"id": "s6", "title": "Responding to the environment"}, {"id": "s7", "title": "Marketing information system (MIS) & planning"}, {"id": "s8", "title": "Quiz 03: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week04", "label": "Week 04", "url": "Marketing/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Customer-driven marketing strategy"}, {"id": "s2", "title": "Market segmentation — four bases"}, {"id": "s3", "title": "Market targeting & Porter's five forces"}, {"id": "s4", "title": "Five patterns of target-market selection"}, {"id": "s5", "title": "Differentiation"}, {"id": "s6", "title": "Positioning & perceptual maps"}, {"id": "s7", "title": "Quiz 04: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week05", "label": "Week 05", "url": "Marketing/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why study consumer behaviour?"}, {"id": "s2", "title": "Consumer markets"}, {"id": "s3", "title": "The black box model (stimulus → response)"}, {"id": "s4", "title": "Factors influencing consumer behaviour"}, {"id": "s5", "title": "The buyer decision process — 5 stages"}, {"id": "s6", "title": "Four types of buying behaviour"}, {"id": "s7", "title": "Contemporary trends — Sri Lanka & global"}, {"id": "s8", "title": "Quiz 05: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week06", "label": "Week 06", "url": "Marketing/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a business market?"}, {"id": "s2", "title": "How business markets differ from consumer markets"}, {"id": "s3", "title": "Buying situations"}, {"id": "s4", "title": "Systems buying & selling"}, {"id": "s5", "title": "The buying centre — seven roles"}, {"id": "s6", "title": "Procurement: orientations & Kraljic's four product types"}, {"id": "s7", "title": "The 8 buy phases (Robinson et al.)"}, {"id": "s8", "title": "Business-to-business relationships"}, {"id": "s9", "title": "Quiz 06: model answer"}, {"id": "s10", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week07", "label": "Week 07", "url": "Marketing/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why marketing information matters"}, {"id": "s2", "title": "Three types of marketing data"}, {"id": "s3", "title": "The marketing information system (MIS)"}, {"id": "s4", "title": "Types of marketing research"}, {"id": "s5", "title": "The marketing research process"}, {"id": "s6", "title": "Why marketing research fails"}, {"id": "s7", "title": "Quiz 07: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week08", "label": "Week 08", "url": "Marketing/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is digital marketing?"}, {"id": "s2", "title": "Objectives of digital marketing"}, {"id": "s3", "title": "Why people go online"}, {"id": "s4", "title": "Key components of a digital marketing strategy"}, {"id": "s5", "title": "Strategy & measurement"}, {"id": "s6", "title": "Quiz 08: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week09", "label": "Week 09", "url": "Marketing/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why new products matter"}, {"id": "s2", "title": "Why develop new products, and why they fail"}, {"id": "s3", "title": "The 8-stage new product development process"}, {"id": "s4", "title": "The product life cycle (PLC)"}, {"id": "s5", "title": "Characteristics of each PLC stage"}, {"id": "s6", "title": "Marketing-mix strategies across the PLC"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week10", "label": "Week 10", "url": "Marketing/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Product strategy"}, {"id": "s2", "title": "Three levels of a product"}, {"id": "s3", "title": "Product classifications"}, {"id": "s4", "title": "Product mix and product line decisions"}, {"id": "s5", "title": "Brands, brand meaning and brand equity"}, {"id": "s6", "title": "Branding decisions"}, {"id": "s7", "title": "Packaging & labelling"}, {"id": "s8", "title": "Quiz 10: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week11", "label": "Week 11", "url": "Marketing/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Price: the revenue P"}, {"id": "s2", "title": "Factors affecting pricing decisions"}, {"id": "s3", "title": "The 6-step pricing process"}, {"id": "s4", "title": "New-product pricing: skimming vs penetration"}, {"id": "s5", "title": "Seven price-adjustment strategies"}, {"id": "s6", "title": "Price changes & reactions"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week12", "label": "Week 12", "url": "Marketing/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Before promoting"}, {"id": "s2", "title": "Integrated marketing communication (IMC)"}, {"id": "s3", "title": "Promotion objectives"}, {"id": "s4", "title": "The promotion mix"}, {"id": "s5", "title": "Advertising"}, {"id": "s6", "title": "Message strategy"}, {"id": "s7", "title": "Public relations"}, {"id": "s8", "title": "Sales promotion"}, {"id": "s9", "title": "Push vs pull channel policies"}, {"id": "s10", "title": "Socially responsible marketing communication"}, {"id": "s11", "title": "Quiz 12: model answer"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week13", "label": "Week 13", "url": "Marketing/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is \"place\"?"}, {"id": "s2", "title": "The nature of marketing channels"}, {"id": "s3", "title": "Push and pull strategies"}, {"id": "s4", "title": "How channel members add value"}, {"id": "s5", "title": "Channel levels"}, {"id": "s6", "title": "Channel behaviour and conflict"}, {"id": "s7", "title": "Conventional vs vertical marketing systems"}, {"id": "s8", "title": "Designing a marketing channel"}, {"id": "s9", "title": "Managing the marketing channel"}, {"id": "s10", "title": "Marketing logistics and supply chain management"}, {"id": "s11", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week14", "label": "Week 14", "url": "Marketing/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing planning"}, {"id": "s2", "title": "Purpose of marketing planning"}, {"id": "s3", "title": "Importance of marketing planning"}, {"id": "s4", "title": "Components of a marketing plan"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}]}]</script>
 <script>(function(){
   var KEY = document.body.getAttribute('data-key');
@@ -1494,4 +2213,203 @@ IQR எடுத்துக்காட்டில் Q1=20, Q3=35; upper fenc
   function allowed(k){return /^sg-done-(bpas|dm|dmath|hci|mkt)-(Week\d{2}|papers)$/.test(k)||/^sg-quiz-(bpas|dm|dmath|hci|mkt)-(Week\d{2}|mixed)$/.test(k)||/^sg-plan-(settings|events|time|reviews|baseline)$/.test(k);}
   render();setInterval(function(){if(!document.hidden&&!panel?.contains(document.activeElement))render();},60000);
 })(typeof window!=='undefined'?window:globalThis);
+</script><script type="application/json" id="hci-tamil-data">{"strings": {"Self-check quiz": "சுய பரிசோதனை வினாடிவினா", "Check my answers": "என் விடைகளைச் சரிபார்", "Try again (new order)": "மீண்டும் முயல்க (புதிய வரிசை)", "New random exam": "புதிய சீரற்ற தேர்வு", "All answered": "அனைத்துக்கும் விடையளிக்கப்பட்டது", "✓ Correct.": "✓ சரி.", "✗ Not quite.": "✗ முழுவதும் சரியில்லை.", "Excellent — you know this well": "மிகச் சிறப்பு — இதை நன்றாக அறிந்திருக்கிறீர்கள்", "Good — revise the ones you missed": "நன்று — தவறவிட்டவற்றை மீளாய்வு செய்யுங்கள்", "Getting there — reread the weak sections": "முன்னேறுகிறீர்கள் — பலவீனமான பகுதிகளை மீண்டும் வாசியுங்கள்", "Needs revision — go through the notes again": "மீளாய்வு தேவை — குறிப்புகளை மீண்டும் படியுங்கள்", "Lecture videos": "விரிவுரைக் காணொளிகள்", "▶ Lecture videos": "▶ விரிவுரைக் காணொளிகள்", "Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.": "இங்கோ குறிப்புகளுக்குள்ளோ உள்ள நேரக் குறியீட்டைச் சொடுக்கினால் காணொளி அந்த நேரத்துக்குச் செல்லும். நீங்கள் பார்த்த இடம் நினைவில் வைக்கப்படும்.", "Open in Google Drive ↗": "Google Drive-இல் திறக்கவும் ↗", "ON THIS PAGE": "இந்தப் பக்கத்தில்", "On this page": "இந்தப் பக்கத்தில்", "← Previous": "← முந்தையது", "Next →": "அடுத்தது →", "NEXT →": "அடுத்தது →", "Mark this section as understood": "இந்தப் பகுதியைப் புரிந்துகொண்டதாகக் குறிக்கவும்", "✓ Understood": "✓ புரிந்துகொண்டேன்", "Understood — click to undo": "புரிந்துகொண்டேன் — செயல்தவிர்க்கச் சொடுக்கவும்", "Type a number": "ஓர் எண்ணை உள்ளிடவும்", "Type what you remember…": "நினைவிருப்பதைத் தட்டச்சு செய்யுங்கள்…", "Answer:": "விடை:", "Best": "சிறந்தது", "Last": "கடைசி", "Attempts": "முயற்சிகள்", "Attempt": "முயற்சி", "today": "இன்று", "yesterday": "நேற்று", "Mixed practice exam": "கலப்புப் பயிற்சித் தேர்வு", "? Self-check quiz": "? சுய பரிசோதனை வினாடிவினா", "★ Mixed practice exam": "★ கலப்புப் பயிற்சித் தேர்வு", "📊 Your knowledge in this subject": "📊 இந்தப் பாடத்தில் உங்கள் அறிவு", "Overall knowledge": "ஒட்டுமொத்த அறிவு", "Weeks quizzed": "வினாடிவினா முயன்ற வாரங்கள்", "Average best score": "சிறந்த மதிப்பெண்களின் சராசரி", "on the weeks you tried": "நீங்கள் முயன்ற வாரங்களில்", "— average best score × weeks covered": "— சிறந்த மதிப்பெண்களின் சராசரி × முயன்ற வாரங்களின் விகிதம்", "Mixed exam best": "கலப்புத் தேர்வின் சிறந்த மதிப்பெண்", "Exam practice": "தேர்வுப் பயிற்சி", "Past papers with worked answers": "தீர்வுகளுடன் கடந்தகால வினாத்தாள்கள்", "Real exam questions from previous years, fully solved, plus which topics come up most.": "முந்தைய ஆண்டுகளின் உண்மையான தேர்வுக் கேள்விகளுக்கான முழுத் தீர்வுகளும் அதிகம் இடம்பெறும் தலைப்புகளும்.", "Offline study guides — one per week, built from the lecture notes and lecture videos. Green bar = sections you marked as understood.": "விரிவுரைக் குறிப்புகளையும் காணொளிகளையும் கொண்டு உருவாக்கப்பட்ட இணையமில்லா கற்றல் வழிகாட்டிகள் — வாரத்துக்கு ஒன்று. பச்சைப் பட்டை = நீங்கள் புரிந்துகொண்டதாகக் குறித்த பகுதிகள்.", "Take the": "நீங்கள் பல வாரங்களைப் படித்த பின், கீழேயுள்ள", "mixed practice exam": "கலப்புப் பயிற்சித் தேர்வை", "at the bottom when you have covered several weeks.": "முயலுங்கள்.", "📄 Lecture videos (no PDF for this week)": "📄 விரிவுரைக் காணொளிகள் (இந்த வாரத்துக்கு PDF இல்லை)", "📄 Lecture video (no PDF for this week)": "📄 விரிவுரைக் காணொளி (இந்த வாரத்துக்கு PDF இல்லை)", "✓ Understood — click to unmark": "✓ புரிந்துகொண்டேன் — குறியை நீக்கச் சொடுக்கவும்", "Data Mining": "தரவுச் சுரங்கம்", "data preprocessing": "தரவு முன்செயலாக்கம்", "Data Reduction & Discretization": "தரவுக் குறைப்பும் தனித்துண்டாக்கலும்", "Make the dataset smaller without changing what it tells you — cubes, attribute selection, compression, histograms, binning and concept hierarchies.": "தரவு தெரிவிக்கும் தகவலை மாற்றாமல் தரவுத்தொகுப்பைச் சிறிதாக்குதல் — கனசதுரங்கள், பண்புக்கூறுத் தேர்வு, சுருக்கம், அலைவெண் செவ்வகங்கள், தொட்டிப் பிரித்தல், கருத்துப் படிநிலைகள்.", "Data Discretization": "தரவுத் தனித்துண்டாக்கல்", "Equal-width vs equal-depth binning, smoothing by bin means / medians / boundaries, and histogram partitioning (equal-width, equal-frequency, V-Optimal, MaxDiff) — all with worked examples.": "சம அகல மற்றும் சம ஆழத் தொட்டிப் பிரித்தல், தொட்டிச் சராசரிகள் / இடைநிலைகள் / எல்லைகளால் சீராக்கல், அலைவெண் செவ்வகப் பிரித்தல் (சம அகலம், சம அதிர்வெண், V-Optimal, MaxDiff) — அனைத்தும் செய்முறை எடுத்துக்காட்டுகளுடன்.", "Why discretize? Large ranges hide frequent patterns": "ஏன் தனித்துண்டாக்க வேண்டும்? பெரிய வீச்சுகள் அடிக்கடி நிகழும் வடிவங்களை மறைக்கின்றன", "Equal-width partitioning and the formula W = (B − A) / N": "சம அகலப் பிரித்தலும் W = (B − A) / N சூத்திரமும்", "Problem: outliers distort equal-width bins": "சிக்கல்: புறநிலைகள் சம அகலத் தொட்டிகளைச் சிதைக்கின்றன", "Equal-depth (equal-frequency) partitioning": "சம ஆழ (சம அதிர்வெண்) பிரித்தல்", "Example: temperatures into 7 equal-width bins": "எடுத்துக்காட்டு: வெப்பநிலைகளை 7 சம அகலத் தொட்டிகளாக்குதல்", "Example: prices into 3 equal-depth bins": "எடுத்துக்காட்டு: விலைகளை 3 சம ஆழத் தொட்டிகளாக்குதல்", "Smoothing noise: by bin means and medians": "இரைச்சலைச் சீராக்குதல்: தொட்டிச் சராசரிகளாலும் இடைநிலைகளாலும்", "Smoothing by bin boundaries": "தொட்டி எல்லைகளால் சீராக்குதல்", "Discretization using histograms": "அலைவெண் செவ்வகங்களால் தனித்துண்டாக்கல்", "MaxDiff histograms (β − 1 largest gaps)": "MaxDiff அலைவெண் செவ்வகங்கள் (β − 1 மிகப்பெரிய இடைவெளிகள்)", "Example: ages — equal-width, equal-depth and MaxDiff": "எடுத்துக்காட்டு: வயதுகள் — சம அகலம், சம ஆழம், MaxDiff", "Binning & smoothing lab": "தொட்டிப் பிரித்தல் மற்றும் சீராக்கல் ஆய்வகம்", "Data values (comma separated)": "தரவுப் பெறுமதிகள் (காற்புள்ளியால் பிரிக்கப்பட்டவை)", "Bins": "தொட்டிகள்", "Partition": "பிரித்தல்", "Equal-depth (frequency)": "சம ஆழம் (அதிர்வெண்)", "Equal-width": "சம அகலம்", "Smooth by": "சீராக்கும் முறை", "— none —": "— எதுவுமில்லை —", "Bin means": "தொட்டிச் சராசரிகள்", "Bin medians": "தொட்டி இடைநிலைகள்", "Bin boundaries": "தொட்டி எல்லைகள்", "Change anything — the bins, the calculation steps and the smoothed values update instantly. Try adding an outlier like 300 with equal-width to see why outliers are a problem.": "எதையும் மாற்றுங்கள் — தொட்டிகள், கணக்கீட்டுப் படிகள், சீராக்கப்பட்ட பெறுமதிகள் உடனடியாகப் புதுப்பிக்கப்படும். புறநிலைகள் ஏன் சிக்கல் என்பதைப் பார்க்க சம அகல முறையில் 300 போன்ற புறநிலையைச் சேர்க்கவும்.", "Enter some numbers.": "சில எண்களை உள்ளிடவும்.", "Bin": "தொட்டி", "Range": "வீச்சு", "Values": "பெறுமதிகள்", "Count": "எண்ணிக்கை", "Smoothed": "சீராக்கப்பட்டவை", "empty": "வெற்று", "Adjacent gaps:": "அடுத்தடுத்த இடைவெளிகள்:", "🧪 Try it — Binning & smoothing lab": "🧪 முயன்று பாருங்கள் — தொட்டிப் பிரித்தல் மற்றும் சீராக்கல் ஆய்வகம்", "Introduction to Data Mining & Big Data": "தரவுச் சுரங்கம் மற்றும் பெருந்தரவு அறிமுகம்", "Why we need data mining, what it is, the 5 V's of big data, and where data mining is used — banking, health and the public sector.": "தரவுச் சுரங்கம் ஏன் தேவை, அது என்ன, பெருந்தரவின் 5 V-கள், தரவுச் சுரங்கம் பயன்படுத்தப்படும் இடங்கள் — வங்கித்துறை, சுகாதாரம், பொதுத்துறை.", "The Knowledge Discovery (KDD) Process": "அறிவுக் கண்டறிதல் (KDD) செயல்முறை", "The 7 steps from raw data to knowledge, the architecture of a data-mining system, the kinds of data we can mine, and the five task primitives.": "மூலத் தரவிலிருந்து அறிவை அடையும் 7 படிகள், தரவுச் சுரங்க முறைமையின் கட்டமைப்பு, சுரங்கம் செய்யக்கூடிய தரவு வகைகள், ஐந்து பணி அடிப்படைக் கூறுகள்.", "Data Preprocessing — Cleaning, Integration & Transformation": "தரவு முன்செயலாக்கம் — தூய்மைப்படுத்தல், ஒருங்கிணைப்பு, உருமாற்றம்", "Why real data is dirty, how to fill missing values and smooth noise, cleaning as a process, integrating sources with correlation analysis, and normalization.": "உண்மையான தரவு ஏன் தூய்மையற்றது, விடுபட்ட பெறுமதிகளை நிரப்புவதும் இரைச்சலைச் சீராக்குவதும், தூய்மைப்படுத்தல் செயல்முறை, ஒட்டுறவுப் பகுப்பாய்வுடன் மூலங்களை ஒருங்கிணைத்தல், இயல்பாக்கம்.", "Data cube aggregation": "தரவுக் கனசதுரத் திரட்டல்", "Attribute subset selection": "பண்புக்கூறு உட்கணத் தேர்வு", "Numerosity reduction": "எண்ணிக்கைக் குறைப்பு", "Data cleaning": "தரவுத் தூய்மைப்படுத்தல்", "The five are cube aggregation, attribute subset selection, dimensionality reduction, numerosity reduction and discretisation.": "ஐந்தும்: கனசதுரத் திரட்டல், பண்புக்கூறு உட்கணத் தேர்வு, பரிமாணக் குறைப்பு, எண்ணிக்கைக் குறைப்பு, தனித்துண்டாக்கல்.", "Age": "வயது", "Music taste": "இசை விருப்பம்", "Telephone number": "தொலைபேசி எண்", "Past purchases": "முந்தைய கொள்வனவுகள்", "Attribute subset selection removes irrelevant attributes.": "பண்புக்கூறு உட்கணத் தேர்வு பொருத்தமற்ற பண்புக்கூறுகளை நீக்குகிறது.", "Stepwise forward selection": "படிப்படியான முன்னோக்குத் தேர்வு", "Wavelet transform": "சிற்றலை உருமாற்றம்", "Equal-width binning": "சம அகலத் தொட்டிப் பிரித்தல்", "Z-score": "Z-மதிப்பெண்", "Others: backward elimination, a combination of the two, and decision-tree induction.": "மற்றவை: பின்னோக்கு நீக்கம், இரண்டின் இணைப்பு, முடிவெடுக்கும் மர உருவாக்கம்.", "Wavelet transforms and PCA are examples of:": "சிற்றலை உருமாற்றங்களும் PCA-வும் எவற்றுக்கு எடுத்துக்காட்டுகள்?", "Lossy dimensionality reduction": "இழப்புள்ள பரிமாணக் குறைப்பு", "Lossless compression": "இழப்பற்ற சுருக்கம்", "Parametric numerosity reduction": "அளவுரு சார்ந்த எண்ணிக்கைக் குறைப்பு", "Lossy means the original can only be approximated.": "இழப்புள்ளது எனில் மூலத்தைத் தோராயமாக மட்டுமே மீளமைக்க முடியும்.", "Storing only regression parameters (y = wx + b) instead of the data is:": "தரவுக்குப் பதிலாக பின்னடைவு அளவுருக்களை (y = wx + b) மட்டும் சேமிப்பது:", "Non-parametric numerosity reduction": "அளவுரு சாராத எண்ணிக்கைக் குறைப்பு", "Discretisation": "தனித்துண்டாக்கல்", "Histograms, clustering and sampling are non-parametric.": "அலைவெண் செவ்வகங்கள், குழுமமாக்கல், மாதிரியெடுத்தல் ஆகியவை அளவுரு சாராதவை.", "Temperatures range from 64 to 85, with 7 equal-width bins. What is the bin width?": "வெப்பநிலைகள் 64 முதல் 85 வரை; 7 சம அகலத் தொட்டிகள் உள்ளன. தொட்டி அகலம் என்ன?", "W = (85 − 64) ÷ 7 = 3.": "W = (85 − 64) ÷ 7 = 3.", "12 sorted prices split into 3 equal-depth (equal-frequency) bins. How many values go in each bin?": "வரிசைப்படுத்தப்பட்ட 12 விலைகள் 3 சம ஆழ (சம அதிர்வெண்) தொட்டிகளாகப் பிரிக்கப்படுகின்றன. ஒவ்வொன்றிலும் எத்தனை பெறுமதிகள்?", "Depth = 12 ÷ 3 = 4.": "ஆழம் = 12 ÷ 3 = 4.", "Outliers can stretch the range, leaving most values in a few bins and some bins empty": "புறநிலைகள் வீச்சை நீட்டித்து, பெரும்பாலான பெறுமதிகளைச் சில தொட்டிகளில் விட்டு, சிலவற்றை வெற்றாக்கலாம்", "It needs class labels": "அதற்கு வகுப்பு அடையாளங்கள் தேவை", "It always gives the same count per bin": "ஒவ்வொரு தொட்டிக்கும் எப்போதும் ஒரே எண்ணிக்கையை வழங்குகிறது", "It can't be computed": "அதைக் கணக்கிட முடியாது", "Equal-depth bins avoid this by holding the same number of values each.": "சம ஆழத் தொட்டிகள் ஒவ்வொன்றிலும் ஒரே எண்ணிக்கையான பெறுமதிகளை வைத்திருப்பதன் மூலம் இதைத் தவிர்க்கின்றன.", "With β buckets, the MaxDiff histogram places boundaries at:": "β வாளிகளுடன் MaxDiff அலைவெண் செவ்வகம் எல்லைகளை எங்கு வைக்கிறது?", "The β − 1 largest differences between adjacent values": "அடுத்தடுத்த பெறுமதிகளின் β − 1 மிகப்பெரிய வேறுபாடுகளில்", "Every value": "ஒவ்வொரு பெறுமதியிலும்", "Equal widths": "சம அகலங்களில்", "The mean and median": "சராசரியிலும் இடைநிலையிலும்", "V-Optimal minimises the variance within buckets.": "V-Optimal வாளிகளுக்குள்ளான மாறுபாட்டைக் குறைக்கிறது.", "Discretisation that uses class labels is called:": "வகுப்பு அடையாளங்களைப் பயன்படுத்தும் தனித்துண்டாக்கல்:", "Supervised": "மேற்பார்வையுள்ளது", "Unsupervised": "மேற்பார்வையற்றது", "Top-down": "மேலிருந்து கீழ்", "Lossless": "இழப்பற்றது", "Top-down (splitting) and bottom-up (merging) describe the direction instead.": "மேலிருந்து கீழ் (பிரித்தல்), கீழிருந்து மேல் (இணைத்தல்) ஆகியவை திசையையே விவரிக்கின்றன.", "A concept hierarchy for age (youth / middle-aged / senior) is an example of:": "வயதுக்கான கருத்துப் படிநிலை (இளைஞர் / நடுத்தர வயது / முதியவர்) எதற்கு எடுத்துக்காட்டு?", "Recursive discretisation, replacing low-level values with higher-level concepts": "கீழ்நிலைப் பெறுமதிகளை உயர்நிலைக் கருத்துகளால் மாற்றும் மறுசுழற்சித் தனித்துண்டாக்கல்", "Normalisation": "இயல்பாக்கம்", "Sampling": "மாதிரியெடுத்தல்", "Correlation analysis": "ஒட்டுறவுப் பகுப்பாய்வு", "It's done before mining, giving concise, knowledge-level results.": "இது சுரங்கத்துக்கு முன் செய்யப்பட்டு, சுருக்கமான அறிவு-நிலை முடிவுகளை வழங்குகிறது."}, "markup": {"Which is <strong>not<\/strong> one of the five data reduction strategies?": "பின்வருவனவற்றில் எது ஐந்து தரவுக் குறைப்பு உத்திகளில் <strong>ஒன்றல்ல<\/strong>?", "Data cube aggregation": "தரவுக் கனசதுரத் திரட்டல்", "Attribute subset selection": "பண்புக்கூறு உட்கணத் தேர்வு", "Numerosity reduction": "எண்ணிக்கைக் குறைப்பு", "Data cleaning": "தரவுத் தூய்மைப்படுத்தல்", "The five are cube aggregation, attribute subset selection, dimensionality reduction, numerosity reduction and discretisation.": "ஐந்தும்: கனசதுரத் திரட்டல், பண்புக்கூறு உட்கணத் தேர்வு, பரிமாணக் குறைப்பு, எண்ணிக்கைக் குறைப்பு, தனித்துண்டாக்கல்.", "To predict whether a customer will buy a CD, which attribute is <strong>irrelevant<\/strong>?": "வாடிக்கையாளர் CD வாங்குவாரா என முன்னறிவிக்க எந்தப் பண்புக்கூறு <strong>பொருத்தமற்றது<\/strong>?", "Age": "வயது", "Music taste": "இசை விருப்பம்", "Telephone number": "தொலைபேசி எண்", "Past purchases": "முந்தைய கொள்வனவுகள்", "Attribute subset selection removes irrelevant attributes.": "பண்புக்கூறு உட்கணத் தேர்வு பொருத்தமற்ற பண்புக்கூறுகளை நீக்குகிறது.", "Which is a <strong>greedy<\/strong> attribute-selection method?": "<strong>பேராசை<\/strong> பண்புக்கூறுத் தேர்வு முறை எது?", "Stepwise forward selection": "படிப்படியான முன்னோக்குத் தேர்வு", "Wavelet transform": "சிற்றலை உருமாற்றம்", "Equal-width binning": "சம அகலத் தொட்டிப் பிரித்தல்", "Z-score": "Z-மதிப்பெண்", "Others: backward elimination, a combination of the two, and decision-tree induction.": "மற்றவை: பின்னோக்கு நீக்கம், இரண்டின் இணைப்பு, முடிவெடுக்கும் மர உருவாக்கம்.", "Wavelet transforms and PCA are examples of:": "சிற்றலை உருமாற்றங்களும் PCA-வும் எவற்றுக்கு எடுத்துக்காட்டுகள்?", "Lossy dimensionality reduction": "இழப்புள்ள பரிமாணக் குறைப்பு", "Lossless compression": "இழப்பற்ற சுருக்கம்", "Parametric numerosity reduction": "அளவுரு சார்ந்த எண்ணிக்கைக் குறைப்பு", "Lossy means the original can only be approximated.": "இழப்புள்ளது எனில் மூலத்தைத் தோராயமாக மட்டுமே மீளமைக்க முடியும்.", "Storing only regression parameters (y = wx + b) instead of the data is:": "தரவுக்குப் பதிலாக பின்னடைவு அளவுருக்களை (y = wx + b) மட்டும் சேமிப்பது:", "Non-parametric numerosity reduction": "அளவுரு சாராத எண்ணிக்கைக் குறைப்பு", "Discretisation": "தனித்துண்டாக்கல்", "Histograms, clustering and sampling are non-parametric.": "அலைவெண் செவ்வகங்கள், குழுமமாக்கல், மாதிரியெடுத்தல் ஆகியவை அளவுரு சாராதவை.", "Temperatures range from 64 to 85, with 7 equal-width bins. What is the bin width?": "வெப்பநிலைகள் 64 முதல் 85 வரை; 7 சம அகலத் தொட்டிகள் உள்ளன. தொட்டி அகலம் என்ன?", "W = (85 − 64) ÷ 7 = 3.": "W = (85 − 64) ÷ 7 = 3.", "12 sorted prices split into 3 equal-depth (equal-frequency) bins. How many values go in each bin?": "வரிசைப்படுத்தப்பட்ட 12 விலைகள் 3 சம ஆழ (சம அதிர்வெண்) தொட்டிகளாகப் பிரிக்கப்படுகின்றன. ஒவ்வொன்றிலும் எத்தனை பெறுமதிகள்?", "Depth = 12 ÷ 3 = 4.": "ஆழம் = 12 ÷ 3 = 4.", "A weakness of <strong>equal-width<\/strong> binning is that:": "<strong>சம அகலத்<\/strong> தொட்டிப் பிரித்தலின் பலவீனம்:", "Outliers can stretch the range, leaving most values in a few bins and some bins empty": "புறநிலைகள் வீச்சை நீட்டித்து, பெரும்பாலான பெறுமதிகளைச் சில தொட்டிகளில் விட்டு, சிலவற்றை வெற்றாக்கலாம்", "It needs class labels": "அதற்கு வகுப்பு அடையாளங்கள் தேவை", "It always gives the same count per bin": "ஒவ்வொரு தொட்டிக்கும் எப்போதும் ஒரே எண்ணிக்கையை வழங்குகிறது", "It can't be computed": "அதைக் கணக்கிட முடியாது", "Equal-depth bins avoid this by holding the same number of values each.": "சம ஆழத் தொட்டிகள் ஒவ்வொன்றிலும் ஒரே எண்ணிக்கையான பெறுமதிகளை வைத்திருப்பதன் மூலம் இதைத் தவிர்க்கின்றன.", "With β buckets, the MaxDiff histogram places boundaries at:": "β வாளிகளுடன் MaxDiff அலைவெண் செவ்வகம் எல்லைகளை எங்கு வைக்கிறது?", "The β − 1 largest differences between adjacent values": "அடுத்தடுத்த பெறுமதிகளின் β − 1 மிகப்பெரிய வேறுபாடுகளில்", "Every value": "ஒவ்வொரு பெறுமதியிலும்", "Equal widths": "சம அகலங்களில்", "The mean and median": "சராசரியிலும் இடைநிலையிலும்", "V-Optimal minimises the variance within buckets.": "V-Optimal வாளிகளுக்குள்ளான மாறுபாட்டைக் குறைக்கிறது.", "Discretisation that uses class labels is called:": "வகுப்பு அடையாளங்களைப் பயன்படுத்தும் தனித்துண்டாக்கல்:", "Supervised": "மேற்பார்வையுள்ளது", "Unsupervised": "மேற்பார்வையற்றது", "Top-down": "மேலிருந்து கீழ்", "Lossless": "இழப்பற்றது", "Top-down (splitting) and bottom-up (merging) describe the direction instead.": "மேலிருந்து கீழ் (பிரித்தல்), கீழிருந்து மேல் (இணைத்தல்) ஆகியவை திசையையே விவரிக்கின்றன.", "A concept hierarchy for age (youth / middle-aged / senior) is an example of:": "வயதுக்கான கருத்துப் படிநிலை (இளைஞர் / நடுத்தர வயது / முதியவர்) எதற்கு எடுத்துக்காட்டு?", "Recursive discretisation, replacing low-level values with higher-level concepts": "கீழ்நிலைப் பெறுமதிகளை உயர்நிலைக் கருத்துகளால் மாற்றும் மறுசுழற்சித் தனித்துண்டாக்கல்", "Normalisation": "இயல்பாக்கம்", "Sampling": "மாதிரியெடுத்தல்", "Correlation analysis": "ஒட்டுறவுப் பகுப்பாய்வு", "It's done before mining, giving concise, knowledge-level results.": "இது சுரங்கத்துக்கு முன் செய்யப்பட்டு, சுருக்கமான அறிவு-நிலை முடிவுகளை வழங்குகிறது."}, "patterns": [{"pattern": "^(\\d+) unanswered$", "replacement": "$1 விடையளிக்கப்படவில்லை"}, {"pattern": "^(\\d+) / (\\d+) sections understood$", "replacement": "$1 / $2 பகுதிகள் புரிந்துகொள்ளப்பட்டன"}, {"pattern": "^Week (\\d+)$", "replacement": "வாரம் $1"}, {"pattern": "^(\\d+) days ago$", "replacement": "$1 நாட்களுக்கு முன்"}, {"pattern": "^\\((\\d+) of (\\d+)\\)$", "replacement": "($2இல் $1)"}, {"pattern": "^\\((\\d+) attempts?\\)$", "replacement": "($1 முயற்சிகள்)"}, {"pattern": "^(\\d+) videos? · (\\d+) min$", "replacement": "$1 காணொளிகள் · $2 நிமிடம்"}, {"pattern": "^Quiz: not tried \\((\\d+) Qs\\)$", "replacement": "வினாடிவினா: முயலவில்லை ($1 கேள்விகள்)"}, {"pattern": "^Best (\\d+)% · last (\\d+)%$", "replacement": "சிறந்தது $1% · கடைசி $2%"}, {"pattern": "^(\\d+) questions on this week\\. Answer them all, then press$", "replacement": "இந்த வாரத்தில் $1 கேள்விகள். அனைத்துக்கும் விடையளித்துவிட்டுப் பின்னர் அழுத்துங்கள்:"}, {"pattern": "^\\. Your best and latest scores are saved and shown on the subject page\\.$", "replacement": ". உங்கள் சிறந்த மற்றும் சமீபத்திய மதிப்பெண்கள் சேமிக்கப்பட்டுப் பாடப் பக்கத்தில் காட்டப்படும்."}, {"pattern": "^Data Mining · Week (\\d+)$", "replacement": "தரவுச் சுரங்கம் · வாரம் $1"}, {"pattern": "^(\\d+) random questions drawn from all (\\d+) weeks \\((\\d+) in the bank\\)\\. Every attempt is a new mix — a good way to test whole-subject knowledge before the exam\\.$", "replacement": "அனைத்து $2 வாரங்களிலிருந்தும் சீரற்ற முறையில் தேர்ந்தெடுக்கப்படும் $1 கேள்விகள் (தொகுப்பில் $3 உள்ளன). ஒவ்வொரு முயற்சியிலும் புதிய கலவை — தேர்வுக்கு முன் முழுப் பாட அறிவையும் சோதிக்கச் சிறந்த வழி."}, {"pattern": "^›\\s*Week (\\d+)$", "replacement": "› வாரம் $1"}, {"pattern": "Sorted:", "replacement": "வரிசைப்படுத்தப்பட்டவை:"}, {"pattern": "Depth =", "replacement": "ஆழம் ="}, {"pattern": " values / ", "replacement": " பெறுமதிகள் / "}, {"pattern": " bins ≈ ", "replacement": " தொட்டிகள் ≈ "}, {"pattern": " values per bin", "replacement": " ஒரு தொட்டிக்கான பெறுமதிகள்"}, {"pattern": "Adjacent gaps:", "replacement": "அடுத்தடுத்த இடைவெளிகள்:"}, {"pattern": "Cut at the <b>(\\d+)<\/b> largest gaps \\(highlighted\\)\\.", "replacement": "மிகப்பெரிய <b>$1<\/b> இடைவெளிகளில் வெட்டவும் (சுட்டிக்காட்டப்பட்டவை)."}, {"pattern": "\\(mean ([\\d.,−-]+)\\)", "replacement": "(சராசரி $1)"}, {"pattern": "\\(median ([\\d.,−-]+)\\)", "replacement": "(இடைநிலை $1)"}, {"pattern": "\\(boundaries ([\\d.,−-]+) / ([\\d.,−-]+)\\)", "replacement": "(எல்லைகள் $1 / $2)"}]}</script><style>.hci-language{position:fixed;right:16px;bottom:calc(100px + env(safe-area-inset-bottom));z-index:70;border:1px solid var(--line);border-radius:28px;background:var(--panel);color:var(--ink);box-shadow:var(--shadow);padding:12px 20px;font:inherit;font-weight:700;cursor:pointer;min-height:48px}
+.hci-language:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.hci-en[hidden],.hci-ta[hidden]{display:none!important}
+.hci-ta{line-height:1.9}
+@media(max-width:760px){.hci-language{bottom:calc(100px + env(safe-area-inset-bottom));right:10px}}
+@media print{.hci-language{display:none}}
+</style><script>// Authored, offline Tamil translations. No network requests or external translator.
+(function () {
+  'use strict';
+  var sections = Array.from(document.querySelectorAll('section[data-sec]'));
+  if (!document.getElementById('hci-tamil-data') || sections.some(function (s) { return !s.querySelector('.hci-ta'); })) return;
+  var button = document.createElement('button');
+  button.type = 'button'; button.className = 'hci-language'; button.lang = 'ta';
+  button.textContent = 'தமிழ்'; button.setAttribute('aria-label', 'Read the Tamil translation');
+  button.setAttribute('aria-pressed', 'false'); document.body.appendChild(button);
+  // Keep source values stable when options use their visible text as their value.
+  document.querySelectorAll('.tool option:not([value])').forEach(function (option) { option.value = option.textContent; });
+  var tamil = false;
+  var tools = [];
+  sections.forEach(function (section) {
+    var heading = section.querySelector('h2');
+    heading.dataset.english = heading.innerHTML;
+    var explanationButton = section.querySelector('.native-toggle');
+    var explanation = section.querySelector('.tamil-native');
+    var content = section.querySelector('.section-english');
+    var reference = section.querySelector('.native-reference');
+    function explanationLabels() {
+      if (!explanationButton) return;
+      explanationButton.textContent = explanation.hidden ? 'தமிழில் புரிந்துகொள்ள' : (tamil ? 'மொழிபெயர்ப்புக்குத் திரும்பு' : 'English-இல் படிக்க');
+      if (reference) reference.textContent = !content.hidden ? 'முழு விவரத்தை மறைக்க' : (tamil ? 'முழு விவரம் · தமிழ் மொழிபெயர்ப்பு' : 'முழு விவரம், கணக்கு, படம், கருவிகள் · English');
+    }
+    if (explanationButton) explanationButton.onclick = function () {
+      var show = explanation.hidden;
+      explanation.hidden = !show; content.hidden = show;
+      content.classList.remove('reference-open');
+      section.classList.toggle('show-tamil', show);
+      explanationButton.setAttribute('aria-expanded', String(show));
+      if (reference) reference.setAttribute('aria-expanded', 'false');
+      explanationLabels(); window.dispatchEvent(new Event('resize'));
+    };
+    if (reference) reference.onclick = function () {
+      content.hidden = !content.hidden;
+      content.classList.toggle('reference-open', !content.hidden);
+      reference.setAttribute('aria-expanded', String(!content.hidden));
+      explanationLabels(); window.dispatchEvent(new Event('resize'));
+    };
+
+    var englishHeads = section.querySelectorAll('.hci-en h3[id]');
+    section.querySelectorAll('.hci-ta h3').forEach(function (h, index) {
+      var english = englishHeads[index];
+      if (!english) return;
+      h.id = 'ta-' + english.id;
+      h.dataset.englishId = english.id;
+      h.dataset.englishText = english.textContent;
+    });
+    section.querySelectorAll('[data-ta-tool]').forEach(function (slot) {
+      var live = document.getElementById(slot.dataset.taTool);
+      if (!live) throw new Error('Missing shared tool: ' + slot.dataset.taTool);
+      var tool = live.closest('.tool');
+      var home = document.createElement('span');
+      tool.before(home); tools.push({tool:tool, home:home, slot:slot});
+    });
+  });
+  var data = JSON.parse(document.getElementById('hci-tamil-data').textContent);
+  var patterns = (data.patterns || []).map(function (p) { return {regex:new RegExp(p.pattern, p.flags || ''), replacement:p.replacement}; });
+  var textState = new WeakMap(), htmlState = new WeakMap(), attributeState = new WeakMap();
+  function fitTamilDiagrams() {
+    document.querySelectorAll('.tool svg:has(foreignObject)').forEach(function (svg) {
+      if (!svg.dataset.hciViewbox) svg.dataset.hciViewbox = svg.getAttribute('viewBox');
+      var box = svg.dataset.hciViewbox.split(/\s+/).map(Number);
+      svg.setAttribute('viewBox', tamil ? [box[0],box[1],box[2],box[3]*2].join(' ') : svg.dataset.hciViewbox);
+      svg.querySelectorAll('[y],[y1],[y2],[cy],[height]').forEach(function (el) {
+        ['y','y1','y2','cy','height'].forEach(function (attr) {
+          if (!el.hasAttribute(attr)) return;
+          var saved = 'data-hci-' + attr;
+          if (!el.hasAttribute(saved)) el.setAttribute(saved, el.getAttribute(attr));
+          var original = el.getAttribute(saved);
+          if (!isNaN(Number(original))) el.setAttribute(attr, tamil ? Number(original)*2 : original);
+        });
+      });
+    });
+  }
+  function translateLiveContent() {
+    fitTamilDiagrams();
+    document.querySelectorAll('.qt,.qe,.qo span,.tool p,.tool .out,.tool h4,.tool td,.tool th,.tool text,.tool foreignObject div').forEach(function (el) {
+      var current = el.innerHTML, saved = htmlState.get(el);
+      if (saved && !tamil) { el.innerHTML = saved.en; return; }
+      if (saved && current === saved.ta) return;
+      if (!tamil) return;
+      var prefix = '', suffix = '', content = current.trim();
+      if (el.matches('.qt')) {
+        var week = content.match(/(\s*<span class="qw">[\s\S]*?<\/span>)$/);
+        if (week) { suffix = week[1]; content = content.slice(0, -suffix.length).trim(); }
+      }
+      if (el.matches('.qt,.qe')) {
+        var parts = content.match(/^(<b>.*?<\/b>\s*)([\s\S]*)$/);
+        if (parts) { prefix = parts[1]; content = parts[2].trim(); }
+      }
+      if (Object.prototype.hasOwnProperty.call(data.markup, content)) {
+        var translated = prefix + data.markup[content] + suffix;
+        htmlState.set(el, {en:current, ta:translated}); el.innerHTML = translated;
+      }
+    });
+    document.querySelectorAll('[placeholder],[title],[aria-label]').forEach(function (el) {
+      if (el === button) return;
+      var saved = attributeState.get(el) || {};
+      ['placeholder','title','aria-label'].forEach(function (attr) {
+        var current = el.getAttribute(attr); if (!current) return;
+        if (saved[attr] && current === saved[attr].ta) {
+          if (!tamil) el.setAttribute(attr, saved[attr].en);
+          return;
+        }
+        if (tamil && data.strings[current]) {
+          saved[attr] = {en:current, ta:data.strings[current]}; el.setAttribute(attr, saved[attr].ta);
+        }
+      });
+      attributeState.set(el, saved);
+    });
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) {
+      if (!node.parentElement || node.parentElement.closest('script,style,.hci-language')) continue;
+      var value = node.nodeValue, saved = textState.get(node);
+      if (saved && value === saved.ta) {
+        if (!tamil) node.nodeValue = saved.en;
+        continue;
+      }
+      if (!tamil) continue;
+      var key = value.trim(), translated = data.strings[key];
+      if (!translated && /^\d+ unanswered$/.test(key)) translated = key.split(' ')[0] + ' விடையளிக்கப்படவில்லை';
+      if (!translated) {
+        var numbered = key.match(/^(\d+\.\s+)(.*)$/);
+        if (numbered && data.strings[numbered[2]]) translated = numbered[1] + data.strings[numbered[2]];
+      }
+      if (!translated) {
+        var video = key.match(/^(\d+\.\s+)(.*?) · (\d+) min$/);
+        if (video && data.strings[video[2]]) translated = video[1] + data.strings[video[2]] + ' · ' + video[3] + ' நிமிடம்';
+      }
+      var patterned = translated || key;
+      patterns.forEach(function (p) { p.regex.lastIndex = 0; patterned = patterned.replace(p.regex, p.replacement); });
+      if (patterned !== key) translated = patterned;
+      if (!translated) continue;
+      var output = value.replace(key, translated);
+      if (output !== value) { textState.set(node, {en:value, ta:output}); node.nodeValue = output; }
+    }
+  }
+  document.addEventListener('click', function (event) {
+    var item = event.target.closest('.tool .ml li');
+    if (!tamil || !item) return;
+    var walker = document.createTreeWalker(item, NodeFilter.SHOW_TEXT), node;
+    while ((node = walker.nextNode())) {
+      var saved = textState.get(node);
+      if (saved && node.nodeValue === saved.ta) node.nodeValue = saved.en;
+    }
+  }, true);
+  var observer = new MutationObserver(function () { if (tamil) translateLiveContent(); });
+  observer.observe(document.body, {subtree:true, childList:true, characterData:true});
+  button.onclick = function () {
+    tamil = !tamil;
+    sections.forEach(function (section) {
+      var explanation = section.querySelector('.tamil-native');
+      var content = section.querySelector('.section-english');
+      var toggle = section.querySelector('.native-toggle');
+      var reference = section.querySelector('.native-reference');
+      if (explanation) explanation.hidden = true;
+      if (content) { content.hidden = false; content.classList.remove('reference-open'); }
+      section.classList.remove('show-tamil');
+      if (toggle) { toggle.setAttribute('aria-expanded','false'); toggle.textContent='தமிழில் புரிந்துகொள்ள'; }
+      if (reference) { reference.setAttribute('aria-expanded','false'); reference.textContent = tamil ? 'முழு விவரம் · தமிழ் மொழிபெயர்ப்பு' : 'முழு விவரம், கணக்கு, படம், கருவிகள் · English'; }
+    });
+    tools.forEach(function (item) {
+      if (tamil) item.slot.appendChild(item.tool);
+      else item.home.after(item.tool);
+    });
+    sections.forEach(function (section) {
+      var en = section.querySelector('.hci-en'), ta = section.querySelector('.hci-ta');
+      en.hidden = tamil; ta.hidden = !tamil;
+      var h = section.querySelector('h2'), number = h.querySelector('.num').outerHTML;
+      if (tamil) { h.innerHTML = number; h.appendChild(document.createTextNode(ta.dataset.title)); }
+      else h.innerHTML = h.dataset.english;
+      section.querySelectorAll('.hci-ta h3[data-english-id]').forEach(function (subheading) {
+        var target = tamil ? subheading.dataset.englishId : subheading.id;
+        var link = document.querySelector('#toc a[href="#' + target + '"]');
+        if (link) {
+          link.href = '#' + (tamil ? subheading.id : subheading.dataset.englishId);
+          link.lastElementChild.textContent = tamil ? subheading.textContent : subheading.dataset.englishText;
+        }
+      });
+      var toc = document.querySelector('#toc a[href="#' + h.id + '"]');
+      if (toc && toc.lastElementChild) toc.lastElementChild.textContent = tamil ? ta.dataset.title : h.dataset.t;
+    });
+    document.documentElement.lang = tamil ? 'ta' : 'en';
+    button.textContent = tamil ? 'English' : 'தமிழ்'; button.lang = tamil ? 'en' : 'ta';
+    button.setAttribute('aria-label', tamil ? 'Read original English' : 'Read the Tamil translation');
+    button.setAttribute('aria-pressed', String(tamil));
+    translateLiveContent();
+    window.dispatchEvent(new Event('resize'));
+  };
+})();
 </script></body></html>

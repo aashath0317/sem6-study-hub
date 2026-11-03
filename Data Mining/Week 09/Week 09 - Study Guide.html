@@ -248,7 +248,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
 <div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 09</div><h1>Frequent Patterns &amp; the Apriori Algorithm</h1><p>Market basket analysis, support and confidence, the Apriori property, the join and prune steps, a full worked example, and generating strong association rules.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">2 videos · 11 min</span><span class="chip">📄 week 9.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Apriori Algorithm · 11 min</button><button>2. Animation on Apriori (no narration) · 1 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Apriori.mp4" data-drive="1GhLe6AgMs0nIFGS6AbUsuhK7ueDgZQDF"><source src="Apriori.mp4"></video></div><div class="chap"><p class="vt">Apriori Algorithm</p><p class="vs">Step-by-step Apriori on a transaction database.</p><a href="#" data-v="0" data-t="2"><b>00:02</b><span>Support and confidence</span></a><a href="#" data-v="0" data-t="52"><b>00:52</b><span>Example: shirt and tie, 13.5% support</span></a><a href="#" data-v="0" data-t="99"><b>01:39</b><span>Example: rules from the frequent itemset ABE</span></a><a href="#" data-v="0" data-t="290"><b>04:50</b><span>The Apriori algorithm: the idea</span></a><a href="#" data-v="0" data-t="338"><b>05:38</b><span>Generating (k+1) candidates from frequent k-itemsets</span></a><a href="#" data-v="0" data-t="385"><b>06:25</b><span>Worked example: minimum support and level-wise passes</span></a><a href="#" data-v="0" data-t="573"><b>09:33</b><span>Apriori pruning: infrequent subsets → infrequent supersets</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Animation on Apriori Algorithm.mp4" data-drive="1HN-GNJ4H4aQ8C8slq0zrMm7VrpggX0fu"><source src="Animation%20on%20Apriori%20Algorithm.mp4"></video></div><div class="chap"><p class="vt">Animation on Apriori (no narration)</p><p class="vs">Short silent animation of the level-wise search.</p></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Frequent patterns"><span class="num">1</span>Frequent patterns</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>மீண்டும் மீண்டும் வரும் Pattern</h3><p>பல transactions-இல் திரும்ப வரும் item group <strong>Frequent itemset</strong>. எவ்வளவு அடிக்கடி வர வேண்டும் என்ற minimum support-ஐ முன்பே நிர்ணயிப்போம். அரிதான முக்கிய நிகழ்வுகளை இது தவறவிடலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Frequent itemset</strong> items சேர்ந்து வருவது; <strong>sequential pattern</strong> order-உடன் வருவது; <strong>structured pattern</strong> graph/tree போன்ற அமைப்பு மீண்டும் வருவது. Basket-இல் A,B இருப்பது மட்டும் A வாங்கியபிறகு B வாங்கினார் என்று sequence உறுதி செய்யாது.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Itemset</strong> ஒரே transaction-இல் சேர்வது; <strong>sequence</strong> காலவரிசை; <strong>substructure</strong> graph/tree வடிவம். Frequent என்பது user minimum support-ஐ meet செய்வது. Buying bread+milk co-occurrence மற்றும் PC→camera என்ற later purchase sequence வேறு mining tasks; order இல்லாத basket-ஐ time sequence என்று கருதாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><p><strong>Frequent patterns</strong> are patterns that <strong>appear in a dataset frequently</strong>. There are three kinds:</p>
+<p><strong>Itemset</strong> ஒரே transaction-இல் சேர்வது; <strong>sequence</strong> காலவரிசை; <strong>substructure</strong> graph/tree வடிவம். Frequent என்பது user minimum support-ஐ meet செய்வது. Buying bread+milk co-occurrence மற்றும் PC→camera என்ற later purchase sequence வேறு mining tasks; order இல்லாத basket-ஐ time sequence என்று கருதாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p><strong>Frequent patterns</strong> are patterns that <strong>appear in a dataset frequently</strong>. There are three kinds:</p>
 <table>
 <thead>
 <tr>
@@ -271,8 +271,31 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 </tr>
 </tbody>
 </table>
-<p>Finding frequent patterns is essential for mining <strong>associations and correlations</strong>. It also helps <strong>classification and clustering</strong>. This lesson focuses on <strong>frequent itemset mining</strong>.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Market basket analysis"><span class="num">2</span>Market basket analysis</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>ஒரே கூடையில் வாங்கும் பொருட்கள்</h3><p>வாடிக்கையாளர் வாங்கிய ஒவ்வொரு கூடையையும் transaction-ஆகக் கொள்ளுங்கள். பாணுடன் பால் அடிக்கடி வாங்கப்படுகிறதா என்பதே கேள்வி. Customer பெயர் இல்லாமல்கூட item co-occurrence-ஐ ஆய்வு செய்ய முடியும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Basket analysis எந்த items ஒன்றாக வாங்கப்படுகின்றன என்று ஆராயும். Layout அருகில் வைத்து convenience அல்லது தொலைவில் வைத்து exposure; bundle/promotion; cross-marketing/catalogue decisions. கண்ட association வைத்து ஒரு strategy முன்மொழியலாம்; அது sales உயர்த்தியது என்று causal முடிவு செய்ய controlled comparison/கூடுதல் evidence தேவை.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><p><strong>Market basket analysis</strong> analyses customer buying habits by finding <strong>associations between items placed in "shopping baskets"</strong>. <em>If customers buy milk, how likely are they to buy bread (and which bread) on the same trip?</em></p>
+<p>Finding frequent patterns is essential for mining <strong>associations and correlations</strong>. It also helps <strong>classification and clustering</strong>. This lesson focuses on <strong>frequent itemset mining</strong>.</p></div><div class="hci-ta" lang="ta" hidden data-title="அடிக்கடி நிகழும் வடிவங்கள்"><p><strong>அடிக்கடி நிகழும் வடிவங்கள்</strong> என்பது <strong>தரவுத்தொகுப்பில் அடிக்கடி தோன்றும்</strong> வடிவங்கள். மூன்று வகைகள் உள்ளன:</p>
+<table>
+<thead>
+<tr>
+<th>வகை</th>
+<th>எடுத்துக்காட்டு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>அடிக்கடி நிகழும் பொருட்கணம்</strong></td>
+<td>{பால், பாண்} அடிக்கடி ஒன்றாக வாங்கப்படுதல்</td>
+</tr>
+<tr>
+<td><strong>அடிக்கடி நிகழும் தொடர்வடிவம்</strong> (உட்தொடர்)</td>
+<td><strong>கணினி → பின்னர் இலக்கமுறைப் புகைப்படக்கருவி → பின்னர் நினைவக அட்டை</strong> வாங்குதல்</td>
+</tr>
+<tr>
+<td><strong>அடிக்கடி நிகழும் கட்டமைப்பு வடிவம்</strong> (உட்கட்டமைப்பு)</td>
+<td>அடிக்கடி நிகழும் <strong>உள்வரைபுகள், உட்மரங்கள், உட்பின்னல்கள்</strong></td>
+</tr>
+</tbody>
+</table>
+<p>அடிக்கடி நிகழும் வடிவங்களைக் கண்டறிதல், <strong>தொடர்பு விதிகளையும் ஒட்டுறவுகளையும்</strong> சுரங்கம் செய்வதற்கு இன்றியமையாதது. <strong>வகைப்படுத்தலுக்கும் குழுமமாக்கலுக்கும்</strong> உதவுகிறது. இந்தப் பாடம் <strong>அடிக்கடி நிகழும் பொருட்கணச் சுரங்கத்தில்</strong> கவனம் செலுத்துகிறது.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Market basket analysis"><span class="num">2</span>Market basket analysis</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>ஒரே கூடையில் வாங்கும் பொருட்கள்</h3><p>வாடிக்கையாளர் வாங்கிய ஒவ்வொரு கூடையையும் transaction-ஆகக் கொள்ளுங்கள். பாணுடன் பால் அடிக்கடி வாங்கப்படுகிறதா என்பதே கேள்வி. Customer பெயர் இல்லாமல்கூட item co-occurrence-ஐ ஆய்வு செய்ய முடியும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
+<p>Basket analysis எந்த items ஒன்றாக வாங்கப்படுகின்றன என்று ஆராயும். Layout அருகில் வைத்து convenience அல்லது தொலைவில் வைத்து exposure; bundle/promotion; cross-marketing/catalogue decisions. கண்ட association வைத்து ஒரு strategy முன்மொழியலாம்; அது sales உயர்த்தியது என்று causal முடிவு செய்ய controlled comparison/கூடுதல் evidence தேவை.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p><strong>Market basket analysis</strong> analyses customer buying habits by finding <strong>associations between items placed in "shopping baskets"</strong>. <em>If customers buy milk, how likely are they to buy bread (and which bread) on the same trip?</em></p>
 <p>How retailers use the results:</p>
 <table>
 <thead>
@@ -299,10 +322,37 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <td>Which products to advertise together</td>
 </tr>
 </tbody>
-</table></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Association rules, support and confidence"><span class="num">3</span>Association rules, support and confidence</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Support மற்றும் Confidence</h3><p>A, B இரண்டும் உள்ள baskets ÷ எல்லா baskets என்பது <strong>Support</strong>. A உள்ளவர்களில் B-யும் உள்ளவர்கள் எத்தனை என்பது <strong>Confidence A→B</strong>. Confidence அதிகம் என்பதால் மட்டும் A வாங்குவது B வாங்கக் காரணம் அல்ல.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>support(A→B)=count(A∪B)/N</strong>; <strong>confidence(A→B)=count(A∪B)/count(A)</strong>. Union இங்கு transactions-இல் A,B எல்லா items-உம் சேர்ந்து உள்ளதை எண்ணுகிறது.
+</table></div><div class="hci-ta" lang="ta" hidden data-title="சந்தைக் கூடைப் பகுப்பாய்வு"><p><strong>சந்தைக் கூடைப் பகுப்பாய்வு</strong>, <strong>"கொள்வனவுக் கூடைகளில்" வைக்கப்படும் பொருட்களுக்கிடையிலான தொடர்புகளைக்</strong> கண்டறிந்து வாடிக்கையாளர்களின் கொள்வனவுப் பழக்கங்களைப் பகுப்பாய்வு செய்கிறது. <em>வாடிக்கையாளர்கள் பால் வாங்கினால், அதே பயணத்தில் பாண் வாங்கும் சாத்தியம் எவ்வளவு (எந்தப் பாண்)?</em></p>
+<p>சில்லறை விற்பனையாளர்கள் முடிவுகளைப் பயன்படுத்துவது:</p>
+<table>
+<thead>
+<tr>
+<th>பயன்பாடு</th>
+<th>எடுத்துக்காட்டு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>கடை அமைப்பு</strong>: தொடர்புடைய பொருட்களை அருகில் வைத்தல்</td>
+<td>கணினிக் காட்சியை வைரஸ் தடுப்பு மென்பொருள் காட்சிக்கு <strong>அருகில்</strong> வைத்தல்</td>
+</tr>
+<tr>
+<td><strong>கடை அமைப்பு</strong>: தொலைவில் வைத்தல்</td>
+<td>(மாற்றாக) கொள்வனவாளர்கள் மேலும் பல தயாரிப்புகளைக் கடந்து செல்லும்படி பிரித்து வைத்தல்</td>
+</tr>
+<tr>
+<td><strong>விற்பனைச் சலுகைகளும் தள்ளுபடிகளும்</strong></td>
+<td>வாடிக்கையாளர்கள் <strong>கணினிகளையும் அச்சுப்பொறிகளையும்</strong> ஒன்றாக வாங்குகின்றனர் → <strong>அச்சுப்பொறிச் சலுகை</strong> இரண்டையும் அதிகரிக்கிறது</td>
+</tr>
+<tr>
+<td><strong>பட்டியல் வடிவமைப்பு, குறுக்குச் சந்தைப்படுத்தல், நடத்தைப் பகுப்பாய்வு</strong></td>
+<td>எந்தத் தயாரிப்புகளை ஒன்றாக விளம்பரப்படுத்துவது</td>
+</tr>
+</tbody>
+</table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Association rules, support and confidence"><span class="num">3</span>Association rules, support and confidence</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Support மற்றும் Confidence</h3><p>A, B இரண்டும் உள்ள baskets ÷ எல்லா baskets என்பது <strong>Support</strong>. A உள்ளவர்களில் B-யும் உள்ளவர்கள் எத்தனை என்பது <strong>Confidence A→B</strong>. Confidence அதிகம் என்பதால் மட்டும் A வாங்குவது B வாங்கக் காரணம் அல்ல.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>support(A→B)=count(A∪B)/N</strong>; <strong>confidence(A→B)=count(A∪B)/count(A)</strong>. Union இங்கு transactions-இல் A,B எல்லா items-உம் சேர்ந்து உள்ளதை எண்ணுகிறது.
 100 baskets; A 20; A,B சேர்ந்து 10 என்றால் support <strong>10%</strong>, confidence <strong>50%</strong>. B மிகவும் பொதுவானால் confidence அதிகமாக இருந்தாலும் சிறப்பு தொடர்பு இல்லாமலும் இருக்கலாம்; lift போன்ற கூடுதல் மதிப்பீடு உதவலாம்.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Support(A⇒B)=count(A∪B)/N</strong>: A/B itemsets-இன் எல்லா items-உம் உள்ள baskets விகிதம். இது probability events-இன் “A OR B” union அல்ல; <strong>P(A AND B)</strong>. <strong>Confidence=count(A∪B)/count(A)</strong>: A உள்ளவற்றில் B-உம் எத்தனை. min_sup+min_conf இரண்டும் வேண்டும்; high confidence மட்டும் unusual/useful association நிரூபிக்காது. A,B disjoint/nonempty என்று rule அமைக்கவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><p>Patterns are written as <strong>association rules</strong>:</p>
+<p><strong>Support(A⇒B)=count(A∪B)/N</strong>: A/B itemsets-இன் எல்லா items-உம் உள்ள baskets விகிதம். இது probability events-இன் “A OR B” union அல்ல; <strong>P(A AND B)</strong>. <strong>Confidence=count(A∪B)/count(A)</strong>: A உள்ளவற்றில் B-உம் எத்தனை. min_sup+min_conf இரண்டும் வேண்டும்; high confidence மட்டும் unusual/useful association நிரூபிக்காது. A,B disjoint/nonempty என்று rule அமைக்கவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><p>Patterns are written as <strong>association rules</strong>:</p>
 <div class="formula">computer ⇒ antivirus_software   [support = 2%, confidence = 60%]</div>
 <table>
 <thead>
@@ -334,10 +384,42 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <li><strong>Generate strong association rules</strong> from them: rules satisfying <strong>min_sup and min_conf</strong>.</li>
 </ol>
 <p>Step 1 is the expensive part.</p></div>
-<div class="call warn"><div class="ct">The challenge</div><p>Mining often produces a <strong>huge number</strong> of frequent itemsets, especially with a <strong>low min_sup</strong>, because <strong>every subset of a frequent itemset is also frequent</strong>. A frequent 100-itemset has 2¹⁰⁰ − 1 frequent subsets.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="The Apriori algorithm"><span class="num">4</span>The Apriori algorithm</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Apriori தர்க்கம்</h3><p>ஒரு பெரிய itemset அடிக்கடி வந்தால் அதன் எல்லா சிறு subsets-உம் அடிக்கடி வந்திருக்க வேண்டும். அதனால் frequent அல்லாத subset உள்ள candidate-ஐ நீக்கலாம். <strong>Generate → count → prune</strong> எனப் படிப்படியாகச் செல்லும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Join:</strong> Lₖ₋₁-இன் compatible frequent itemsets சேர்த்து Cₖ உருவாக்கு. <strong>Prune:</strong> ஏதேனும் (k−1)-subset frequent அல்ல என்றால் candidate நீக்கு. அடுத்து database scan செய்து survivors counts எடு.
+<div class="call warn"><div class="ct">The challenge</div><p>Mining often produces a <strong>huge number</strong> of frequent itemsets, especially with a <strong>low min_sup</strong>, because <strong>every subset of a frequent itemset is also frequent</strong>. A frequent 100-itemset has 2¹⁰⁰ − 1 frequent subsets.</p></div></div><div class="hci-ta" lang="ta" hidden data-title="தொடர்பு விதிகள், ஆதரவு, நம்பிக்கை"><p>வடிவங்கள் <strong>தொடர்பு விதிகளாக</strong> எழுதப்படுகின்றன:</p>
+<div class="formula">கணினி ⇒ வைரஸ்_தடுப்பு_மென்பொருள்   [ஆதரவு = 2%, நம்பிக்கை = 60%]</div>
+<table>
+<thead>
+<tr>
+<th>அளவை</th>
+<th>பிரதிபலிப்பது</th>
+<th>எடுத்துக்காட்டில் பொருள்</th>
+<th>சூத்திரம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ஆதரவு</strong></td>
+<td><strong>பயன்</strong></td>
+<td><strong>அனைத்துப் பரிவர்த்தனைகளில் 2%</strong>, கணினியையும் வைரஸ் தடுப்பையும் கொண்டுள்ளன</td>
+<td>support(A⇒B) = count(A ∪ B) / மொத்தப் பரிவர்த்தனைகள்; இங்கு ∪ பொருட்கணங்களை இணைப்பதால் நிகழ்வு <strong>A AND B</strong>; A OR B அல்ல</td>
+</tr>
+<tr>
+<td><strong>நம்பிக்கை</strong></td>
+<td><strong>உறுதி</strong></td>
+<td><strong>கணினி வாங்கிய வாடிக்கையாளர்களில் 60%</strong>, வைரஸ் தடுப்பும் வாங்கினர்</td>
+<td>confidence(A⇒B) = P(B | A) = support_count(A ∪ B) / support_count(A)</td>
+</tr>
+</tbody>
+</table>
+<p>பயனர்களோ துறை நிபுணர்களோ அமைக்கும் <strong>குறைந்தபட்ச ஆதரவு</strong>, <strong>குறைந்தபட்ச நம்பிக்கை</strong> ஆகிய <strong>இரு</strong> வரம்புகளையும் நிறைவேற்றினால் விதி <strong>சுவாரசியமானது (வலுவானது)</strong>.</p>
+<div class="call key"><div class="ct">தொடர்பு விதிச் சுரங்கம் = 2 படிகள்</div><ol>
+<li><strong>அனைத்து அடிக்கடி நிகழும் பொருட்கணங்களையும் கண்டறி</strong>: ஒவ்வொன்றும் குறைந்தது <strong>min_sup</strong> தடவைகள் நிகழ்கிறது.</li>
+<li>அவற்றிலிருந்து <strong>வலுவான தொடர்பு விதிகளை உருவாக்கு</strong>: <strong>min_sup, min_conf</strong> ஆகியவற்றை நிறைவேற்றும் விதிகள்.</li>
+</ol>
+<p>படி 1 அதிகச் செலவுடைய பகுதி.</p></div>
+<div class="call warn"><div class="ct">சவால்</div><p>குறிப்பாக <strong>குறைந்த min_sup</strong> இருந்தால், சுரங்கம் பெரும்பாலும் <strong>மிகப்பெரும் எண்ணிக்கையான</strong> அடிக்கடி நிகழும் பொருட்கணங்களை உருவாக்குகிறது; ஏனெனில் <strong>அடிக்கடி நிகழும் பொருட்கணத்தின் ஒவ்வொரு உட்கணமும் அடிக்கடி நிகழும்</strong>. அடிக்கடி நிகழும் 100-பொருட்கணத்துக்கு 2¹⁰⁰ − 1 அடிக்கடி நிகழும் உட்கணங்கள் உள்ளன.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="The Apriori algorithm"><span class="num">4</span>The Apriori algorithm</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Apriori தர்க்கம்</h3><p>ஒரு பெரிய itemset அடிக்கடி வந்தால் அதன் எல்லா சிறு subsets-உம் அடிக்கடி வந்திருக்க வேண்டும். அதனால் frequent அல்லாத subset உள்ள candidate-ஐ நீக்கலாம். <strong>Generate → count → prune</strong> எனப் படிப்படியாகச் செல்லும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Join:</strong> Lₖ₋₁-இன் compatible frequent itemsets சேர்த்து Cₖ உருவாக்கு. <strong>Prune:</strong> ஏதேனும் (k−1)-subset frequent அல்ல என்றால் candidate நீக்கு. அடுத்து database scan செய்து survivors counts எடு.
 Frequent subset இருந்ததால் எல்லா பெரிய supersets-உம் frequent என்று சொல்ல முடியாது. Apriori property ஒரு வழியில்தான் pruning உறுதி தருகிறது.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Lₖ</strong> frequent sets; <strong>Cₖ</strong> candidate sets. Sorted(k−1)-sets-இன் முதல் k−2 items ஒரேபடி இருந்தால் join; எந்த(k−1)-subset frequent இல்லாவிட்டால் prune; மீதியை DB scan count செய்து threshold meet செய்பவை Lₖ. <strong>Apriori property:</strong> frequent set-இன் subsets frequent; infrequent set-இன் supersets infrequent. இது support-க்கு; confidence-க்கு பொதுவான downward closure என்று பயன்படுத்தாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><ul>
+<p><strong>Lₖ</strong> frequent sets; <strong>Cₖ</strong> candidate sets. Sorted(k−1)-sets-இன் முதல் k−2 items ஒரேபடி இருந்தால் join; எந்த(k−1)-subset frequent இல்லாவிட்டால் prune; மீதியை DB scan count செய்து threshold meet செய்பவை Lₖ. <strong>Apriori property:</strong> frequent set-இன் subsets frequent; infrequent set-இன் supersets infrequent. இது support-க்கு; confidence-க்கு பொதுவான downward closure என்று பயன்படுத்தாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><ul>
 <li><strong>Proposed by R. Agrawal and R. Srikant (1994)</strong> for mining frequent itemsets for <strong>Boolean</strong> association rules.</li>
 <li><strong>Name:</strong> it uses <strong>prior knowledge</strong> of frequent-itemset properties.</li>
 <li><strong>Level-wise search:</strong> frequent k-itemsets are used to explore (k+1)-itemsets.</li>
@@ -350,8 +432,21 @@ Frequent subset இருந்ததால் எல்லா பெரிய s
 <div class="grid2"><div><p><strong>1. Join step</strong></p>
 <p>Build <strong>Cₖ</strong> (candidates) by joining <strong>Lₖ₋₁ ⋈ Lₖ₋₁</strong>. Two (k−1)-itemsets are joined if their <strong>first k−2 items are the same</strong>.</p></div><div><p><strong>2. Prune step</strong></p>
 <p>Remove any candidate in Cₖ that has a <strong>(k−1)-subset not in Lₖ₋₁</strong>. By the Apriori property it can't be frequent. Then <strong>scan the DB</strong> to count the survivors and keep those ≥ min_sup → <strong>Lₖ</strong>.</p></div></div>
-<div class="flow"><span>Scan → C₁ → L₁</span><span>Join → C₂ → prune → scan → L₂</span><span>Join → C₃ → prune → scan → L₃</span><span>… until Cₖ = ∅</span></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Full worked example (|D| = 9, min_sup = 2)"><span class="num">5</span>Full worked example (|D| = 9, min_sup = 2)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>ஒன்பது Transactions எடுத்துக்காட்டு</h3><p>முதலில் single items count; பிறகு pairs; அடுத்து triples கணக்கிடுங்கள். ஒவ்வொரு நிலையிலும் min_sup தாண்டியவற்றை மட்டும் வைத்திருக்க வேண்டும். முதல் படியில் ஒரு item விட்டுப்போனால் அடுத்த படி முழுவதும் மாறும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>9 transactions,min count2:</strong> L1 counts I1=6,I2=7,I3=6,I4=2,I5=2. L2:12=4,13=4,15=2,23=4,24=2,25=2. Join triples <strong>123,125,135,234,235,245</strong>;35/34/45 infrequent subsets கொண்டவை prune; remaining123=2,125=2. Candidate1235-இல்235 infrequent→prune→stop. Count2 என்பது <strong>2/9≈22.22%</strong>;2% அல்ல. Candidate table-இல் காணாத counts-ஐ ஊகிக்காமல் transactions-இலிருந்து எண்ணவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><table>
+<div class="flow"><span>Scan → C₁ → L₁</span><span>Join → C₂ → prune → scan → L₂</span><span>Join → C₃ → prune → scan → L₃</span><span>… until Cₖ = ∅</span></div></div><div class="hci-ta" lang="ta" hidden data-title="Apriori படிமுறை"><ul>
+<li><strong>பூலியன்</strong> தொடர்பு விதிகளுக்கான அடிக்கடி நிகழும் பொருட்கணச் சுரங்கத்துக்காக <strong>R. Agrawal, R. Srikant (1994) முன்மொழிந்தனர்</strong>.</li>
+<li><strong>பெயர்:</strong> அடிக்கடி நிகழும் பொருட்கணப் பண்புகளின் <strong>முன் அறிவைப்</strong> பயன்படுத்துகிறது.</li>
+<li><strong>நிலைவாரித் தேடல்:</strong> அடிக்கடி நிகழும் k-பொருட்கணங்கள், (k+1)-பொருட்கணங்களை ஆராயப் பயன்படுகின்றன.</li>
+<li>தரவுத்தளத்தை ஸ்கேன் செய் → <strong>L₁</strong> (அடிக்கடி நிகழும் 1-பொருட்கணங்கள்) → L₁ மூலம் <strong>L₂</strong>-ஐக் கண்டறி → L₃ … மேலும் கிடைக்காதவரை.</li>
+<li><strong>ஒவ்வொரு Lₖ-க்கும் ஒரு முழுத் தரவுத்தள ஸ்கேன் தேவை.</strong></li>
+</ul>
+<div class="call key"><div class="ct">Apriori பண்பு (எதிர்-ஒருதிசைத்தன்மை)</div><p><strong>அடிக்கடி நிகழும் பொருட்கணத்தின் வெற்றல்லாத அனைத்து உட்கணங்களும் அடிக்கடி நிகழ வேண்டும்.</strong></p>
+<p>அதற்குச் சமமாக, <strong>பொருட்கணம் அடிக்கடி நிகழாவிட்டால் அதன் அனைத்து மேற்கணங்களும் அடிக்கடி நிகழாது</strong>. I பொருட்கணத்தில் A பொருளைச் சேர்ப்பதால் அது <em>மேலும்</em> அடிக்கடி நிகழ முடியாது: P(I ∪ A) ≤ P(I) &lt; min_sup.</p></div>
+<h3>ஒவ்வொரு நிலையிலும் இரு படிகள்</h3>
+<div class="grid2"><div><p><strong>1. இணைப்புப் படி</strong></p>
+<p><strong>Lₖ₋₁ ⋈ Lₖ₋₁</strong>-ஐ இணைத்து <strong>Cₖ</strong> (வேட்பாளர்கள்) உருவாக்கவும். இரு (k−1)-பொருட்கணங்களின் <strong>முதல் k−2 பொருட்கள் ஒரே மாதிரியாக</strong> இருந்தால் இணைக்கப்படுகின்றன.</p></div><div><p><strong>2. கிளை வெட்டுப் படி</strong></p>
+<p><strong>Lₖ₋₁-இல் இல்லாத (k−1)-உட்கணத்தைக்</strong> கொண்ட Cₖ வேட்பாளரை நீக்கவும். Apriori பண்பின்படி அது அடிக்கடி நிகழ முடியாது. பின்னர் மீதமுள்ளவற்றை எண்ண <strong>தரவுத்தளத்தை ஸ்கேன் செய்து</strong>, ≥ min_sup உள்ளவற்றை வைத்திருங்கள் → <strong>Lₖ</strong>.</p></div></div>
+<div class="flow"><span>ஸ்கேன் → C₁ → L₁</span><span>இணை → C₂ → கிளை வெட்டு → ஸ்கேன் → L₂</span><span>இணை → C₃ → கிளை வெட்டு → ஸ்கேன் → L₃</span><span>… Cₖ = ∅ ஆகும்வரை</span></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Full worked example (|D| = 9, min_sup = 2)"><span class="num">5</span>Full worked example (|D| = 9, min_sup = 2)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>ஒன்பது Transactions எடுத்துக்காட்டு</h3><p>முதலில் single items count; பிறகு pairs; அடுத்து triples கணக்கிடுங்கள். ஒவ்வொரு நிலையிலும் min_sup தாண்டியவற்றை மட்டும் வைத்திருக்க வேண்டும். முதல் படியில் ஒரு item விட்டுப்போனால் அடுத்த படி முழுவதும் மாறும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
+<p><strong>9 transactions,min count2:</strong> L1 counts I1=6,I2=7,I3=6,I4=2,I5=2. L2:12=4,13=4,15=2,23=4,24=2,25=2. Join triples <strong>123,125,135,234,235,245</strong>;35/34/45 infrequent subsets கொண்டவை prune; remaining123=2,125=2. Candidate1235-இல்235 infrequent→prune→stop. Count2 என்பது <strong>2/9≈22.22%</strong>;2% அல்ல. Candidate table-இல் காணாத counts-ஐ ஊகிக்காமல் transactions-இலிருந்து எண்ணவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>TID</th>
@@ -509,10 +604,168 @@ Frequent subset இருந்ததால் எல்லா பெரிய s
 <li><strong>C₃ after prune</strong> = { {I1,I2,I3}, {I1,I2,I5} }. Scanning gives counts <strong>2 and 2</strong>, so both go into <strong>L₃</strong>.</li>
 </ul>
 <p><strong>Level 4.</strong> L₃ ⋈ L₃ = { {I1,I2,I3,I5} }. Its subset {I2,I3,I5} is not frequent, so it is <strong>pruned</strong>. <strong>C₄ = ∅ and the algorithm terminates.</strong></p>
-<div class="call tip"><div class="ct">Why only (k−1)-subsets are checked</div><p>Apriori is level-wise, so all smaller subsets were already checked at earlier levels. Checking the (k−1)-subsets is enough.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Generating strong association rules"><span class="num">6</span>Generating strong association rules</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>Strong rule உருவாக்குதல்</h3><p>Frequent itemset-இலிருந்து விதியை உருவாக்கி support, confidence இரண்டையும் சோதியுங்கள். <strong>A→B</strong> மற்றும் <strong>B→A</strong>-க்கு support ஒன்று; confidence பொதுவாக வேறு. Denominator எது என்று முதலில் எழுதுங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Rule confidence denominator <strong>antecedent</strong> count. I1,I2→I5-க்கு count(I1,I2); I5→I1,I2-க்கு count(I5). இரண்டிற்கும் ஒரே numerator இருந்தாலும் confidence மாறலாம்.
+<div class="call tip"><div class="ct">Why only (k−1)-subsets are checked</div><p>Apriori is level-wise, so all smaller subsets were already checked at earlier levels. Checking the (k−1)-subsets is enough.</p></div></div><div class="hci-ta" lang="ta" hidden data-title="முழுமையான செய்முறை எடுத்துக்காட்டு (|D| = 9, min_sup = 2)"><table>
+<thead>
+<tr>
+<th>TID</th>
+<th>பொருட்கள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T100</td>
+<td>I1, I2, I5</td>
+</tr>
+<tr>
+<td>T200</td>
+<td>I2, I4</td>
+</tr>
+<tr>
+<td>T300</td>
+<td>I2, I3</td>
+</tr>
+<tr>
+<td>T400</td>
+<td>I1, I2, I4</td>
+</tr>
+<tr>
+<td>T500</td>
+<td>I1, I3</td>
+</tr>
+<tr>
+<td>T600</td>
+<td>I2, I3</td>
+</tr>
+<tr>
+<td>T700</td>
+<td>I1, I3</td>
+</tr>
+<tr>
+<td>T800</td>
+<td>I1, I2, I3, I5</td>
+</tr>
+<tr>
+<td>T900</td>
+<td>I1, I2, I3</td>
+</tr>
+</tbody>
+</table>
+<p>min_sup = 2 என்பது <strong>தனி ஆதரவு</strong> (எண்ணிக்கை). சார்பு ஆதரவு 2/9 ≈ <strong>22.22%</strong>.</p>
+<p><strong>நிலை 1</strong></p>
+<table>
+<thead>
+<tr>
+<th>C₁ பொருட்கணம்</th>
+<th style="text-align: right;">எண்ணிக்கை</th>
+<th>L₁-இல் உள்ளதா?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{I1}</td>
+<td style="text-align: right;">6</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I2}</td>
+<td style="text-align: right;">7</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I3}</td>
+<td style="text-align: right;">6</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I4}</td>
+<td style="text-align: right;">2</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I5}</td>
+<td style="text-align: right;">2</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p>ஐந்து பொருட்களும் அடிக்கடி நிகழ்கின்றன.</p>
+<p><strong>நிலை 2.</strong> C₂ = L₁ ⋈ L₁ அனைத்து 10 சோடிகளையும் வழங்குகிறது. ஒவ்வொரு 1-உட்கணமும் அடிக்கடி நிகழ்வதால் எதுவும் கிளை வெட்டப்படுவதில்லை.</p>
+<table>
+<thead>
+<tr>
+<th>C₂ பொருட்கணம்</th>
+<th style="text-align: right;">எண்ணிக்கை</th>
+<th>L₂-இல் உள்ளதா?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{I1, I2}</td>
+<td style="text-align: right;">4</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I1, I3}</td>
+<td style="text-align: right;">4</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I1, I4}</td>
+<td style="text-align: right;">1</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>{I1, I5}</td>
+<td style="text-align: right;">2</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I2, I3}</td>
+<td style="text-align: right;">4</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I2, I4}</td>
+<td style="text-align: right;">2</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I2, I5}</td>
+<td style="text-align: right;">2</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I3, I4}</td>
+<td style="text-align: right;">0</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>{I3, I5}</td>
+<td style="text-align: right;">1</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>{I4, I5}</td>
+<td style="text-align: right;">0</td>
+<td>✗</td>
+</tr>
+</tbody>
+</table>
+<p><strong>நிலை 3.</strong></p>
+<ul>
+<li><strong>இணைப்பு:</strong> L₂ ⋈ L₂ = { {I1,I2,I3}, {I1,I2,I5}, {I1,I3,I5}, {I2,I3,I4}, {I2,I3,I5}, {I2,I4,I5} }</li>
+<li><strong>கிளை வெட்டு:</strong></li>
+<li>{I1,I3,I5}-இன் {I3,I5} உட்கணம் அடிக்கடி நிகழாததால் → ✗</li>
+<li>{I2,I3,I4}-இல் {I3,I4} உட்கணம் உள்ளது → ✗</li>
+<li>{I2,I3,I5}-இல் {I3,I5} உட்கணம் உள்ளது → ✗</li>
+<li>{I2,I4,I5}-இல் {I4,I5} உட்கணம் உள்ளது → ✗</li>
+<li><strong>கிளை வெட்டியபின் C₃</strong> = { {I1,I2,I3}, {I1,I2,I5} }. ஸ்கேன் செய்தால் <strong>2, 2</strong> எண்ணிக்கைகள் கிடைப்பதால் இரண்டும் <strong>L₃</strong>-இல் செல்கின்றன.</li>
+</ul>
+<p><strong>நிலை 4.</strong> L₃ ⋈ L₃ = { {I1,I2,I3,I5} }. அதன் {I2,I3,I5} உட்கணம் அடிக்கடி நிகழாததால் அது <strong>கிளை வெட்டப்படுகிறது</strong>. <strong>C₄ = ∅; படிமுறை முடிகிறது.</strong></p>
+<div class="call tip"><div class="ct">(k−1)-உட்கணங்கள் மட்டும் ஏன் சரிபார்க்கப்படுகின்றன</div><p>Apriori நிலைவாரியானதால் சிறிய உட்கணங்கள் அனைத்தும் ஏற்கெனவே முந்தைய நிலைகளில் சரிபார்க்கப்பட்டன. (k−1)-உட்கணங்களைச் சரிபார்ப்பது போதும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Generating strong association rules"><span class="num">6</span>Generating strong association rules</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>Strong rule உருவாக்குதல்</h3><p>Frequent itemset-இலிருந்து விதியை உருவாக்கி support, confidence இரண்டையும் சோதியுங்கள். <strong>A→B</strong> மற்றும் <strong>B→A</strong>-க்கு support ஒன்று; confidence பொதுவாக வேறு. Denominator எது என்று முதலில் எழுதுங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Rule confidence denominator <strong>antecedent</strong> count. I1,I2→I5-க்கு count(I1,I2); I5→I1,I2-க்கு count(I5). இரண்டிற்கும் ஒரே numerator இருந்தாலும் confidence மாறலாம்.
 Min support ஏற்கெனவே frequent itemset மூலம் பூர்த்தியாகினாலும் min confidence தனியாகச் சோதிக்க வேண்டும். Threshold-ஐ percent-ஆ அல்லது absolute count-ஆ கொடுத்துள்ளார்களா பாருங்கள்.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Frequent l=125(count2)-இன் nonempty proper s ஒவ்வொன்றுக்கும் s⇒l−s. Confidences <strong>12⇒5:2/4=50%;15⇒2:2/2=100%;25⇒1:100%;1⇒25:2/6=33.33%;2⇒15:2/7=28.57%;5⇒12:100%</strong>. min_conf70%-இல் மூன்று100% rules pass. Support எல்லாவற்றுக்கும்2/9 ஏற்கெனவே pass. RHS-இல் பல items association rules-க்கு சாத்தியம்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><p>For each frequent itemset <strong>l</strong>, take <strong>every non-empty proper subset s</strong> and form the rule <strong>s ⇒ (l − s)</strong>. Output it if:</p>
+<p>Frequent l=125(count2)-இன் nonempty proper s ஒவ்வொன்றுக்கும் s⇒l−s. Confidences <strong>12⇒5:2/4=50%;15⇒2:2/2=100%;25⇒1:100%;1⇒25:2/6=33.33%;2⇒15:2/7=28.57%;5⇒12:100%</strong>. min_conf70%-இல் மூன்று100% rules pass. Support எல்லாவற்றுக்கும்2/9 ஏற்கெனவே pass. RHS-இல் பல items association rules-க்கு சாத்தியம்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p>For each frequent itemset <strong>l</strong>, take <strong>every non-empty proper subset s</strong> and form the rule <strong>s ⇒ (l − s)</strong>. Output it if:</p>
 <div class="formula">confidence = support_count(l) / support_count(s)  ≥  min_conf</div>
 <p>Since l is frequent, <strong>support is automatically satisfied</strong>. Only confidence needs checking.</p>
 <div class="call example"><div class="ct">Rules from l = {I1, I2, I5} (support count 2)</div><p>Non-empty proper subsets: {I1,I2}, {I1,I5}, {I2,I5}, {I1}, {I2}, {I5}</p>
@@ -596,7 +849,55 @@ o+='<h4>Association rules (from every frequent itemset of size ≥ 2)</h4><table
 R.querySelector('.out').innerHTML=o}
 R.querySelector('.go').onclick=run;R.querySelector('.ms').oninput=run;R.querySelector('.mc').oninput=run;run();})();
 </script></div>
-<div class="call exam"><div class="ct">Exam focus</div><p>Apriori calculations are an important practice topic; the exact exam content is not guaranteed. Show <strong>C₁/L₁, C₂/L₂, the join result for C₃, which candidates are pruned and why</strong>, the final L₃, and then the rules with confidence fractions. Use the machine above to check your own practice answers.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Quick revision sheet"><span class="num">7</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>மீண்டும் மீண்டும் வரும் Pattern</h4><p>பல transactions-இல் திரும்ப வரும் item group <strong>Frequent itemset</strong>. எவ்வளவு அடிக்கடி வர வேண்டும் என்ற minimum support-ஐ முன்பே நிர்ணயிப்போம். அரிதான முக்கிய நிகழ்வுகளை இது தவறவிடலாம்.</p>
+<div class="call exam"><div class="ct">Exam focus</div><p>Apriori calculations are an important practice topic; the exact exam content is not guaranteed. Show <strong>C₁/L₁, C₂/L₂, the join result for C₃, which candidates are pruned and why</strong>, the final L₃, and then the rules with confidence fractions. Use the machine above to check your own practice answers.</p></div></div><div class="hci-ta" lang="ta" hidden data-title="வலுவான தொடர்பு விதிகளை உருவாக்குதல்"><p>அடிக்கடி நிகழும் ஒவ்வொரு பொருட்கணம் <strong>l</strong>-க்கும், <strong>வெற்றல்லாத ஒவ்வொரு முறையான உட்கணம் s</strong>-ஐ எடுத்து <strong>s ⇒ (l − s)</strong> விதியை உருவாக்கவும். பின்வருவது உண்மையானால் வெளியிடவும்:</p>
+<div class="formula">நம்பிக்கை = support_count(l) / support_count(s)  ≥  min_conf</div>
+<p>l அடிக்கடி நிகழ்வதால் <strong>ஆதரவு தானாகவே நிறைவேறுகிறது</strong>. நம்பிக்கையை மட்டும் சரிபார்க்க வேண்டும்.</p>
+<div class="call example"><div class="ct">l = {I1, I2, I5}-இலிருந்து விதிகள் (ஆதரவு எண்ணிக்கை 2)</div><p>வெற்றல்லாத முறையான உட்கணங்கள்: {I1,I2}, {I1,I5}, {I2,I5}, {I1}, {I2}, {I5}</p>
+<table>
+<thead>
+<tr>
+<th>விதி</th>
+<th>நம்பிக்கை</th>
+<th>70%-இல் வலுவானதா?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I1 ∧ I2 ⇒ I5</td>
+<td>2/4 = 50%</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>I1 ∧ I5 ⇒ I2</td>
+<td>2/2 = <strong>100%</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>I2 ∧ I5 ⇒ I1</td>
+<td>2/2 = <strong>100%</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>I1 ⇒ I2 ∧ I5</td>
+<td>2/6 = 33%</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>I2 ⇒ I1 ∧ I5</td>
+<td>2/7 = 29%</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>I5 ⇒ I1 ∧ I2</td>
+<td>2/2 = <strong>100%</strong></td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p>min_conf = 70% எனில் <strong>2-ஆவது, 3-ஆவது, இறுதி</strong> விதிகள் மட்டுமே வலுவானவை.</p></div>
+<div class="call tip"><div class="ct">வகைப்படுத்தல் விதிகளைப் போலல்லாமல்</div><p>தொடர்பு விதிகளின் <strong>வலப்பக்கத்தில் ஒன்றுக்கு மேற்பட்ட பொருட்கள் இருக்கலாம்</strong>; எ.கா. I5 ⇒ I1 ∧ I2.</p></div>
+<p><div data-ta-tool="apr"></div></p>
+<div class="call exam"><div class="ct">Exam focus</div><p>Apriori கணக்கீடுகள் முக்கிய பயிற்சித் தலைப்பு; தேர்வின் துல்லிய உள்ளடக்கம் உறுதியல்ல. <strong>C₁/L₁, C₂/L₂, C₃-க்கான இணைப்பு முடிவு, எந்த வேட்பாளர்கள் ஏன் கிளை வெட்டப்படுகின்றனர்</strong>, இறுதி L₃, பின்னர் நம்பிக்கைப் பின்னங்களுடன் விதிகள் ஆகியவற்றைக் காட்டவும். உங்கள் பயிற்சி விடைகளைச் சரிபார்க்க மேலுள்ள இயந்திரத்தைப் பயன்படுத்தவும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Quick revision sheet"><span class="num">7</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>மீண்டும் மீண்டும் வரும் Pattern</h4><p>பல transactions-இல் திரும்ப வரும் item group <strong>Frequent itemset</strong>. எவ்வளவு அடிக்கடி வர வேண்டும் என்ற minimum support-ஐ முன்பே நிர்ணயிப்போம். அரிதான முக்கிய நிகழ்வுகளை இது தவறவிடலாம்.</p>
 <p><strong>Frequent itemset</strong> items சேர்ந்து வருவது; <strong>sequential pattern</strong> order-உடன் வருவது; <strong>structured pattern</strong> graph/tree போன்ற அமைப்பு மீண்டும் வருவது. Basket-இல் A,B இருப்பது மட்டும் A வாங்கியபிறகு B வாங்கினார் என்று sequence உறுதி செய்யாது.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
 <p><strong>Itemset</strong> ஒரே transaction-இல் சேர்வது; <strong>sequence</strong> காலவரிசை; <strong>substructure</strong> graph/tree வடிவம். Frequent என்பது user minimum support-ஐ meet செய்வது. Buying bread+milk co-occurrence மற்றும் PC→camera என்ற later purchase sequence வேறு mining tasks; order இல்லாத basket-ஐ time sequence என்று கருதாதீர்கள்.</p></div><div class="ta-recap-item"><h4>ஒரே கூடையில் வாங்கும் பொருட்கள்</h4><p>வாடிக்கையாளர் வாங்கிய ஒவ்வொரு கூடையையும் transaction-ஆகக் கொள்ளுங்கள். பாணுடன் பால் அடிக்கடி வாங்கப்படுகிறதா என்பதே கேள்வி. Customer பெயர் இல்லாமல்கூட item co-occurrence-ஐ ஆய்வு செய்ய முடியும்.</p>
@@ -615,7 +916,7 @@ Frequent subset இருந்ததால் எல்லா பெரிய s
 <p>Rule confidence denominator <strong>antecedent</strong> count. I1,I2→I5-க்கு count(I1,I2); I5→I1,I2-க்கு count(I5). இரண்டிற்கும் ஒரே numerator இருந்தாலும் confidence மாறலாம்.
 Min support ஏற்கெனவே frequent itemset மூலம் பூர்த்தியாகினாலும் min confidence தனியாகச் சோதிக்க வேண்டும். Threshold-ஐ percent-ஆ அல்லது absolute count-ஆ கொடுத்துள்ளார்களா பாருங்கள்.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Frequent l=125(count2)-இன் nonempty proper s ஒவ்வொன்றுக்கும் s⇒l−s. Confidences <strong>12⇒5:2/4=50%;15⇒2:2/2=100%;25⇒1:100%;1⇒25:2/6=33.33%;2⇒15:2/7=28.57%;5⇒12:100%</strong>. min_conf70%-இல் மூன்று100% rules pass. Support எல்லாவற்றுக்கும்2/9 ஏற்கெனவே pass. RHS-இல் பல items association rules-க்கு சாத்தியம்.</p></div><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><table>
+<p>Frequent l=125(count2)-இன் nonempty proper s ஒவ்வொன்றுக்கும் s⇒l−s. Confidences <strong>12⇒5:2/4=50%;15⇒2:2/2=100%;25⇒1:100%;1⇒25:2/6=33.33%;2⇒15:2/7=28.57%;5⇒12:100%</strong>. min_conf70%-இல் மூன்று100% rules pass. Support எல்லாவற்றுக்கும்2/9 ஏற்கெனவே pass. RHS-இல் பல items association rules-க்கு சாத்தியம்.</p></div><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>
@@ -672,7 +973,64 @@ Min support ஏற்கெனவே frequent itemset மூலம் பூர�
 <td>L₃ = {I1,I2,I3}, {I1,I2,I5}; C₄ pruned</td>
 </tr>
 </tbody>
-</table></div><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">11 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="dm-Week09" data-pick="0"><script type="application/json" class="qdata">[{"q": "Support of a rule A ⇒ B is:", "o": ["The % of all transactions containing both A and B", "The % of transactions containing A that also contain B", "The number of items in A", "Always 100%"], "e": "Support measures usefulness. Confidence measures certainty. ", "a": 0, "w": "Week 09"}, {"q": "Confidence of A ⇒ B is:", "o": ["count(A ∪ B) ÷ count(A)", "count(A ∪ B) ÷ total transactions", "count(B) ÷ count(A)", "count(A) ÷ count(B)"], "e": "It's P(B | A). ", "a": 0, "w": "Week 09"}, {"q": "20% of transactions contain shirt and tie together; 40% contain shirt. What is the confidence (%) of shirt ⇒ tie?", "e": "20 ÷ 40 = 50%. ", "n": 50.0, "w": "Week 09"}, {"q": "A rule is <strong>strong<\/strong> when it:", "o": ["Meets both minimum support and minimum confidence", "Has 100% confidence", "Has the most items", "Meets minimum support only"], "e": "Mining has two steps: find frequent itemsets, then generate strong rules. ", "a": 0, "w": "Week 09"}, {"q": "The Apriori property states that:", "o": ["All non-empty subsets of a frequent itemset must also be frequent", "All supersets of a frequent itemset are frequent", "Frequent itemsets always have 2 items", "Support increases as itemsets grow"], "e": "Equivalently, any superset of an infrequent itemset is infrequent. ", "a": 0, "w": "Week 09"}, {"q": "In Apriori, a candidate in C₃ is pruned when:", "o": ["Any of its 2-item subsets is not in L₂", "Its support is too high", "It contains item I1", "It was generated by the join"], "e": "Pruning happens before counting support. ", "a": 0, "w": "Week 09"}, {"q": "The join Lₖ₋₁ ⋈ Lₖ₋₁ combines two itemsets when:", "o": ["Their first k−2 items match", "They have no items in common", "Their supports are equal", "They are in different transactions"], "e": "E.g. {I1,I2} and {I1,I3} join to give {I1,I2,I3}. ", "a": 0, "w": "Week 09"}, {"q": "sup{I1,I2,I5} = 2 and sup{I1,I5} = 2. What is the confidence (%) of I1 ∧ I5 ⇒ I2?", "e": "2 ÷ 2 = 100%. ", "n": 100.0, "w": "Week 09"}, {"q": "sup{I1,I2,I5} = 2 and sup{I1} = 6. What is the confidence (%) of I1 ⇒ I2 ∧ I5 (nearest whole number)?", "e": "2 ÷ 6 = 33%, which is not strong at min_conf 70%. ", "n": 33.0, "t": 0.5, "w": "Week 09"}, {"q": "Apriori was proposed by:", "o": ["Agrawal and Srikant, 1994", "Han and Kamber, 2006", "Quinlan, 1986", "Inmon, 1992"], "e": "It's a level-wise algorithm with one database scan per level. ", "a": 0, "w": "Week 09"}, {"q": "Market basket analysis is used for:", "o": ["Store layout, cross-marketing, catalogue design and promotions", "Predicting continuous prices", "Data cleaning", "Building data cubes"], "e": "It finds items that are frequently bought together. ", "a": 0, "w": "Week 09"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2008/Week%2008%20-%20Study%20Guide.html"><small>← Previous</small>Data Cube Computation &amp; Data Generalization</a><a class="nx" href="../Week%2010/Week%2010%20-%20Study%20Guide.html"><small>Next →</small>FP-Growth &amp; Kinds of Association Rules</a></div></main></div>
+</table></div><div class="hci-ta" lang="ta" hidden data-title="விரைவு மீளாய்வுத் தாள்"><table>
+<thead>
+<tr>
+<th>கருத்து</th>
+<th>இவ்வாறு நினைவில் கொள்ளவும்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>அடிக்கடி நிகழும் வடிவ வகைகள்</td>
+<td>பொருட்கணங்கள் · தொடர்வடிவங்கள் · கட்டமைப்பு வடிவங்கள்</td>
+</tr>
+<tr>
+<td>சந்தைக் கூடைப் பகுப்பாய்வு</td>
+<td>ஒன்றாக வாங்கப்படும் பொருட்கள் → அமைப்பு, விற்பனைச் சலுகைகள், பட்டியல், குறுக்குச் சந்தைப்படுத்தல்</td>
+</tr>
+<tr>
+<td>ஆதரவு</td>
+<td>பயன்; A ∪ B கொண்ட அனைத்துப் பரிவர்த்தனைகளின் %</td>
+</tr>
+<tr>
+<td>நம்பிக்கை</td>
+<td>உறுதி; P(B | A) = count(A ∪ B) / count(A)</td>
+</tr>
+<tr>
+<td>வலுவான விதி</td>
+<td>≥ min_sup <strong>மற்றும்</strong> ≥ min_conf</td>
+</tr>
+<tr>
+<td>2-படிச் சுரங்கம்</td>
+<td>அடிக்கடி நிகழும் பொருட்கணங்களைக் கண்டறி → வலுவான விதிகளை உருவாக்கு</td>
+</tr>
+<tr>
+<td>Apriori</td>
+<td>Agrawal &amp; Srikant 1994; நிலைவாரி; நிலைக்கு ஒரு தரவுத்தள ஸ்கேன்</td>
+</tr>
+<tr>
+<td>Apriori பண்பு</td>
+<td>அடிக்கடி நிகழும் பொருட்கணத்தின் ஒவ்வொரு உட்கணமும் அடிக்கடி நிகழும்; அடிக்கடி நிகழாதது ⇒ மேற்கணங்களும் அடிக்கடி நிகழாது</td>
+</tr>
+<tr>
+<td>இணைப்பு</td>
+<td>முதல் k−2 பொருட்கள் பொருந்தும் Lₖ₋₁ ⋈ Lₖ₋₁</td>
+</tr>
+<tr>
+<td>கிளை வெட்டு</td>
+<td>அடிக்கடி நிகழாத (k−1)-உட்கணமுள்ள வேட்பாளர்களை நீக்கு</td>
+</tr>
+<tr>
+<td>விதிகள்</td>
+<td>s ⇒ (l − s), நம்பிக்கை = sup(l)/sup(s)</td>
+</tr>
+<tr>
+<td>வழக்கமான எடுத்துக்காட்டு முடிவு</td>
+<td>L₃ = {I1,I2,I3}, {I1,I2,I5}; C₄ கிளை வெட்டப்பட்டது</td>
+</tr>
+</tbody>
+</table></div></div><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">11 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="dm-Week09" data-pick="0"><script type="application/json" class="qdata">[{"q": "Support of a rule A ⇒ B is:", "o": ["The % of all transactions containing both A and B", "The % of transactions containing A that also contain B", "The number of items in A", "Always 100%"], "e": "Support measures usefulness. Confidence measures certainty. ", "a": 0, "w": "Week 09"}, {"q": "Confidence of A ⇒ B is:", "o": ["count(A ∪ B) ÷ count(A)", "count(A ∪ B) ÷ total transactions", "count(B) ÷ count(A)", "count(A) ÷ count(B)"], "e": "It's P(B | A). ", "a": 0, "w": "Week 09"}, {"q": "20% of transactions contain shirt and tie together; 40% contain shirt. What is the confidence (%) of shirt ⇒ tie?", "e": "20 ÷ 40 = 50%. ", "n": 50.0, "w": "Week 09"}, {"q": "A rule is <strong>strong<\/strong> when it:", "o": ["Meets both minimum support and minimum confidence", "Has 100% confidence", "Has the most items", "Meets minimum support only"], "e": "Mining has two steps: find frequent itemsets, then generate strong rules. ", "a": 0, "w": "Week 09"}, {"q": "The Apriori property states that:", "o": ["All non-empty subsets of a frequent itemset must also be frequent", "All supersets of a frequent itemset are frequent", "Frequent itemsets always have 2 items", "Support increases as itemsets grow"], "e": "Equivalently, any superset of an infrequent itemset is infrequent. ", "a": 0, "w": "Week 09"}, {"q": "In Apriori, a candidate in C₃ is pruned when:", "o": ["Any of its 2-item subsets is not in L₂", "Its support is too high", "It contains item I1", "It was generated by the join"], "e": "Pruning happens before counting support. ", "a": 0, "w": "Week 09"}, {"q": "The join Lₖ₋₁ ⋈ Lₖ₋₁ combines two itemsets when:", "o": ["Their first k−2 items match", "They have no items in common", "Their supports are equal", "They are in different transactions"], "e": "E.g. {I1,I2} and {I1,I3} join to give {I1,I2,I3}. ", "a": 0, "w": "Week 09"}, {"q": "sup{I1,I2,I5} = 2 and sup{I1,I5} = 2. What is the confidence (%) of I1 ∧ I5 ⇒ I2?", "e": "2 ÷ 2 = 100%. ", "n": 100.0, "w": "Week 09"}, {"q": "sup{I1,I2,I5} = 2 and sup{I1} = 6. What is the confidence (%) of I1 ⇒ I2 ∧ I5 (nearest whole number)?", "e": "2 ÷ 6 = 33%, which is not strong at min_conf 70%. ", "n": 33.0, "t": 0.5, "w": "Week 09"}, {"q": "Apriori was proposed by:", "o": ["Agrawal and Srikant, 1994", "Han and Kamber, 2006", "Quinlan, 1986", "Inmon, 1992"], "e": "It's a level-wise algorithm with one database scan per level. ", "a": 0, "w": "Week 09"}, {"q": "Market basket analysis is used for:", "o": ["Store layout, cross-marketing, catalogue design and promotions", "Predicting continuous prices", "Data cleaning", "Building data cubes"], "e": "It finds items that are frequently bought together. ", "a": 0, "w": "Week 09"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2008/Week%2008%20-%20Study%20Guide.html"><small>← Previous</small>Data Cube Computation &amp; Data Generalization</a><a class="nx" href="../Week%2010/Week%2010%20-%20Study%20Guide.html"><small>Next →</small>FP-Growth &amp; Kinds of Association Rules</a></div></main></div>
 <script type="application/json" id="study-data">[{"key": "bpas", "name": "Business Processes & Accounting Systems", "exam": ["2026-11-15", "11:00", "14:00"], "url": "Business%20Processes%20and%20Accounting%20Systems/Study%20Guide%20-%20Index.html", "weeks": [{"key": "bpas-Week01", "label": "Week 01", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Business processes"}, {"id": "s2", "title": "Accounting information and its users"}, {"id": "s3", "title": "What is an Accounting Information System?"}, {"id": "s4", "title": "The five components of a computerised AIS"}, {"id": "s5", "title": "Internal control & security"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week02", "label": "Week 02", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is accounting?"}, {"id": "s2", "title": "Stakeholders and what they need"}, {"id": "s3", "title": "The Conceptual Framework for financial reporting"}, {"id": "s4", "title": "Debit & credit rules and the accounting equation"}, {"id": "s5", "title": "The T-account & balancing"}, {"id": "s6", "title": "Source documents & primary books"}, {"id": "s7", "title": "The four day books (primary entry journals)"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week03", "label": "Week 03", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where these books fit"}, {"id": "s2", "title": "The cash book"}, {"id": "s3", "title": "The petty cash book & imprest system"}, {"id": "s4", "title": "The general journal"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week04", "label": "Week 04", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Capital vs revenue expenditure"}, {"id": "s2", "title": "The general ledger"}, {"id": "s3", "title": "The trial balance"}, {"id": "s4", "title": "Worked example: posting to the ledger and extracting a TB"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week05", "label": "Week 05", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From trial balance to financial statements"}, {"id": "s2", "title": "The trading account → gross profit"}, {"id": "s3", "title": "The income statement → net profit"}, {"id": "s4", "title": "LKAS 1 / IAS 1 — Presentation of Financial Statements"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week06", "label": "Week 06", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The statement of financial position (SFP)"}, {"id": "s2", "title": "Adjustment 1: closing inventory"}, {"id": "s3", "title": "LKAS 16 — Property, Plant & Equipment"}, {"id": "s4", "title": "Adjustment 2: depreciation"}, {"id": "s5", "title": "Disposal of PPE"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week07", "label": "Week 07", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The accrual concept"}, {"id": "s2", "title": "Accrued & prepaid expenses"}, {"id": "s3", "title": "Income receivable & income received in advance"}, {"id": "s4", "title": "Bad debts (irrecoverable debts)"}, {"id": "s5", "title": "Provision for impairment of receivables"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week08", "label": "Week 08", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Inventory & LKAS 2"}, {"id": "s2", "title": "Function 1: managing purchases"}, {"id": "s3", "title": "Function 2: storing materials & stock levels"}, {"id": "s4", "title": "Function 3: pricing material issues — FIFO & weighted average"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week09", "label": "Week 09", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct vs indirect labour"}, {"id": "s2", "title": "Time keeping & time booking"}, {"id": "s3", "title": "Methods of remuneration"}, {"id": "s4", "title": "The salary sheet, EPF & ETF"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week10", "label": "Week 10", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is overhead?"}, {"id": "s2", "title": "Cost centres, allocation & apportionment"}, {"id": "s3", "title": "Re-apportioning service department costs"}, {"id": "s4", "title": "Overhead absorption"}, {"id": "s5", "title": "Under- and over-absorption"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week11", "label": "Week 11", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why price matters"}, {"id": "s2", "title": "The pricing policy: six factors"}, {"id": "s3", "title": "Markup vs margin"}, {"id": "s4", "title": "Pricing methods"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week12", "label": "Week 12", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why ratio analysis?"}, {"id": "s2", "title": "1. Liquidity ratios"}, {"id": "s3", "title": "2. Gearing (capital structure) ratios"}, {"id": "s4", "title": "3. Financial efficiency (activity) ratios"}, {"id": "s5", "title": "4. Profitability ratios"}, {"id": "s6", "title": "5. Shareholder (market test) ratios"}, {"id": "s7", "title": "Benefits & limitations"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week13", "label": "Week 13", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is project appraisal?"}, {"id": "s2", "title": "Non-discounting methods"}, {"id": "s3", "title": "Time value of money"}, {"id": "s4", "title": "Net present value (NPV)"}, {"id": "s5", "title": "Internal rate of return (IRR)"}, {"id": "s6", "title": "Which method is best?"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week14", "label": "Week 14", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a budget?"}, {"id": "s2", "title": "Types of budgets"}, {"id": "s3", "title": "The functional budgets: formats"}, {"id": "s4", "title": "Full worked example: LFT company"}, {"id": "s5", "title": "The cash budget: rules"}, {"id": "s6", "title": "Limitations of budgeting [[36:08]]"}, {"id": "s7", "title": "Practice questions (course paper)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week15", "label": "Week 15", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Standard cost & standard costing"}, {"id": "s2", "title": "Setting standards"}, {"id": "s3", "title": "Types of standards"}, {"id": "s4", "title": "Standard cost card"}, {"id": "s5", "title": "The variance tree"}, {"id": "s6", "title": "Variance formulas"}, {"id": "s7", "title": "Advantages & limitations"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-papers", "label": "Past papers", "url": "Business%20Processes%20and%20Accounting%20Systems/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Q1: Financial statements (40 marks)"}, {"id": "s3", "title": "January 2023 — Q2: Inventory, petty cash, framework (20 marks)"}, {"id": "s4", "title": "January 2023 — Q3: Primary entry books and NPV (20 marks)"}, {"id": "s5", "title": "January 2023 — Q4: Cash budget and sales variances (20 marks)"}, {"id": "s6", "title": "January 2023 — Q5: Overheads (20 marks)"}, {"id": "s7", "title": "August 2020 — what's different"}, {"id": "s8", "title": "November 2019 — Section A, Q1: 20 MCQs"}, {"id": "s9", "title": "November 2019 — Section A, Q2: Araliya Traders (Rs. '000)"}, {"id": "s10", "title": "November 2019 — Section B"}, {"id": "s11", "title": "2024 and 2025 — topic lists to practise"}]}]}, {"key": "dm", "name": "Data Mining", "exam": ["2026-11-22", "11:30", "14:30"], "url": "Data%20Mining/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dm-Week01", "label": "Week 01", "url": "Data%20Mining/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What data mining is about"}, {"id": "s2", "title": "Why data mining is required"}, {"id": "s3", "title": "Big Data and the 5 V's"}, {"id": "s4", "title": "Defining data mining properly"}, {"id": "s5", "title": "Applications of data mining"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week02", "label": "Week 02", "url": "Data%20Mining/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Data mining = \"knowledge mining from data\""}, {"id": "s2", "title": "The 7 steps of the KDD process"}, {"id": "s3", "title": "Architecture of a typical data mining system"}, {"id": "s4", "title": "What kinds of data can be mined?"}, {"id": "s5", "title": "Data mining task primitives"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week03", "label": "Week 03", "url": "Data%20Mining/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why preprocessing is needed"}, {"id": "s2", "title": "Data cleaning — handling missing values"}, {"id": "s3", "title": "Noisy data and smoothing"}, {"id": "s4", "title": "Data cleaning as a process"}, {"id": "s5", "title": "Data integration"}, {"id": "s6", "title": "Data transformation"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week04", "label": "Week 04", "url": "Data%20Mining/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why reduce data at all?"}, {"id": "s2", "title": "Data cube aggregation"}, {"id": "s3", "title": "Attribute subset selection"}, {"id": "s4", "title": "Dimensionality reduction"}, {"id": "s5", "title": "Numerosity reduction"}, {"id": "s6", "title": "Discretization & concept hierarchies"}, {"id": "s7", "title": "Binning: equal-width vs equal-depth"}, {"id": "s8", "title": "Smoothing noisy data with bins"}, {"id": "s9", "title": "Histogram partitioning — a full worked example"}, {"id": "s10", "title": "Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule"}, {"id": "s11", "title": "Self-assignment (2024): binning in practice"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week05", "label": "Week 05", "url": "Data%20Mining/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why data warehouses matter"}, {"id": "s2", "title": "What is a data warehouse?"}, {"id": "s3", "title": "OLTP vs OLAP"}, {"id": "s4", "title": "Why keep the warehouse separate?"}, {"id": "s5", "title": "The multidimensional data model"}, {"id": "s6", "title": "Lattice of cuboids"}, {"id": "s7", "title": "Weka — the tool used in this course"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week06", "label": "Week 06", "url": "Data%20Mining/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why a different schema for warehouses?"}, {"id": "s2", "title": "Star schema"}, {"id": "s3", "title": "Snowflake schema"}, {"id": "s4", "title": "Fact constellation (galaxy schema)"}, {"id": "s5", "title": "Data warehouse vs data mart"}, {"id": "s6", "title": "Defining cubes with DMQL"}, {"id": "s7", "title": "Concept hierarchies"}, {"id": "s8", "title": "Weka 1.2 — Exploring the Explorer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week07", "label": "Week 07", "url": "Data%20Mining/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why build a data warehouse?"}, {"id": "s2", "title": "The four views of warehouse design"}, {"id": "s3", "title": "Design approaches & methodology"}, {"id": "s4", "title": "The 4-step warehouse design process"}, {"id": "s5", "title": "Three-tier data warehouse architecture"}, {"id": "s6", "title": "The metadata repository"}, {"id": "s7", "title": "OLAP server models: ROLAP, MOLAP, HOLAP"}, {"id": "s8", "title": "Weka 1.3 — Exploring datasets"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week08", "label": "Week 08", "url": "Data%20Mining/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why compute cubes efficiently?"}, {"id": "s2", "title": "Cube materialization: cells and cuboids"}, {"id": "s3", "title": "Full cube vs iceberg cube"}, {"id": "s4", "title": "MultiWay array aggregation"}, {"id": "s5", "title": "BUC — Bottom-Up Computation"}, {"id": "s6", "title": "Star attributes, star-nodes and star-trees"}, {"id": "s7", "title": "Attribute-oriented induction (AOI)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week09", "label": "Week 09", "url": "Data%20Mining/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Frequent patterns"}, {"id": "s2", "title": "Market basket analysis"}, {"id": "s3", "title": "Association rules, support and confidence"}, {"id": "s4", "title": "The Apriori algorithm"}, {"id": "s5", "title": "Full worked example (|D| = 9, min_sup = 2)"}, {"id": "s6", "title": "Generating strong association rules"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week10", "label": "Week 10", "url": "Data%20Mining/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why not just use Apriori?"}, {"id": "s2", "title": "FP-growth: the idea"}, {"id": "s3", "title": "Worked example (min_sup = 3)"}, {"id": "s4", "title": "Mining the FP-tree"}, {"id": "s5", "title": "Multilevel association rules"}, {"id": "s6", "title": "Multidimensional association rules"}, {"id": "s7", "title": "Constraint-based association mining"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week11", "label": "Week 11", "url": "Data%20Mining/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Classification vs prediction"}, {"id": "s2", "title": "The two-step classification process"}, {"id": "s3", "title": "Preparing data & comparing methods"}, {"id": "s4", "title": "Decision trees & their history"}, {"id": "s5", "title": "Attribute selection measures"}, {"id": "s6", "title": "Worked example — buys_computer (14 tuples)"}, {"id": "s7", "title": "Weka: J48, filters and visualisation"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week12", "label": "Week 12", "url": "Data%20Mining/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Bayesian classifiers — overview"}, {"id": "s2", "title": "Bayes' theorem"}, {"id": "s3", "title": "The naïve Bayesian classifier"}, {"id": "s4", "title": "Worked example — will X buy a computer?"}, {"id": "s5", "title": "Rule-based classification"}, {"id": "s6", "title": "Extracting rules from a decision tree"}, {"id": "s7", "title": "Weka: training and testing"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week13", "label": "Week 13", "url": "Data%20Mining/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is cluster analysis?"}, {"id": "s2", "title": "Requirements of clustering in data mining"}, {"id": "s3", "title": "Types of clustering methods"}, {"id": "s4", "title": "Clustering by k-means"}, {"id": "s5", "title": "Weka: baseline accuracy and cross-validation"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week14", "label": "Week 14", "url": "Data%20Mining/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why k-medoids?"}, {"id": "s2", "title": "k-medoids and PAM"}, {"id": "s3", "title": "Worked example (from the lesson)"}, {"id": "s4", "title": "Hierarchical clustering"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week15", "label": "Week 15", "url": "Data%20Mining/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Overview"}, {"id": "s2", "title": "Financial data analysis"}, {"id": "s3", "title": "Retail industry"}, {"id": "s4", "title": "Telecommunication industry"}, {"id": "s5", "title": "Biological data analysis"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}]}, {"key": "dmath", "name": "Discrete Mathematics", "exam": ["2026-11-21", "08:30", "11:30"], "url": "Discrete%20Mathematics/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dmath-Week01", "label": "Week 01", "url": "Discrete%20Mathematics/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From propositions to predicates"}, {"id": "s2", "title": "Propositional functions"}, {"id": "s3", "title": "Compound expressions"}, {"id": "s4", "title": "Quantifiers: ∀, ∃, ∃!"}, {"id": "s5", "title": "Negating quantified expressions"}, {"id": "s6", "title": "Translating English into logic"}, {"id": "s7", "title": "Introduction to proofs — direct proof"}, {"id": "s8", "title": "Assignment 1: worked answers"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week02", "label": "Week 02", "url": "Discrete%20Mathematics/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Set terminology & notation"}, {"id": "s2", "title": "Equality, subsets & disjoint sets"}, {"id": "s3", "title": "Venn diagrams"}, {"id": "s4", "title": "Set operations"}, {"id": "s5", "title": "Set laws"}, {"id": "s6", "title": "Number of elements — inclusion–exclusion"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week03", "label": "Week 03", "url": "Discrete%20Mathematics/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a function?"}, {"id": "s2", "title": "One-to-one (injective)"}, {"id": "s3", "title": "Onto (surjective) & bijection"}, {"id": "s4", "title": "Inverse functions"}, {"id": "s5", "title": "Composition of functions"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week04", "label": "Week 04", "url": "Discrete%20Mathematics/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Sequences"}, {"id": "s2", "title": "Geometric & arithmetic progressions"}, {"id": "s3", "title": "Summation notation (Σ)"}, {"id": "s4", "title": "Geometric series (Theorem 1)"}, {"id": "s5", "title": "Infinite series (Theorem 2)"}, {"id": "s6", "title": "Double sums"}, {"id": "s7", "title": "Useful closed forms (Table 2)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week05", "label": "Week 05", "url": "Discrete%20Mathematics/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Matrices represent data"}, {"id": "s2", "title": "Matrix addition"}, {"id": "s3", "title": "Matrix multiplication"}, {"id": "s4", "title": "Identity, powers, transpose & symmetric"}, {"id": "s5", "title": "Zero–one matrices: join and meet"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week06", "label": "Week 06", "url": "Discrete%20Mathematics/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Divisibility"}, {"id": "s2", "title": "The division algorithm"}, {"id": "s3", "title": "Modular arithmetic & congruence"}, {"id": "s4", "title": "Primes"}, {"id": "s5", "title": "Cryptography — Caesar's cipher"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week07", "label": "Week 07", "url": "Discrete%20Mathematics/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why induction?"}, {"id": "s2", "title": "Worked induction proofs"}, {"id": "s3", "title": "The well-ordering property"}, {"id": "s4", "title": "Recursion"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week08", "label": "Week 08", "url": "Discrete%20Mathematics/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why counting?"}, {"id": "s2", "title": "The product rule (\"AND\", then multiply)"}, {"id": "s3", "title": "The sum rule (\"OR\", then add)"}, {"id": "s4", "title": "Tree diagrams"}, {"id": "s5", "title": "Combinations — order doesn't matter"}, {"id": "s6", "title": "Permutations — order matters"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week09", "label": "Week 09", "url": "Discrete%20Mathematics/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Binary relations"}, {"id": "s2", "title": "Functions as relations"}, {"id": "s3", "title": "Relations on a set"}, {"id": "s4", "title": "Properties: reflexive, symmetric, transitive"}, {"id": "s5", "title": "Equivalence relations"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week10", "label": "Week 10", "url": "Discrete%20Mathematics/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From pairs to n-tuples"}, {"id": "s2", "title": "Databases & the relational data model"}, {"id": "s3", "title": "Primary keys, composite keys, extension & intension"}, {"id": "s4", "title": "Operations: selection, projection, join"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week11", "label": "Week 11", "url": "Discrete%20Mathematics/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why graphs?"}, {"id": "s2", "title": "The birth of graph theory — Königsberg"}, {"id": "s3", "title": "What is a graph?"}, {"id": "s4", "title": "The six types of graphs"}, {"id": "s5", "title": "Graph models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week12", "label": "Week 12", "url": "Discrete%20Mathematics/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Trees"}, {"id": "s2", "title": "Rooted trees & terminology"}, {"id": "s3", "title": "Ordered rooted trees & binary trees"}, {"id": "s4", "title": "Binary search trees (BST)"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week13", "label": "Week 13", "url": "Discrete%20Mathematics/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Decision trees"}, {"id": "s2", "title": "Tree traversal"}, {"id": "s3", "title": "Spanning trees"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-papers", "label": "Past papers", "url": "Discrete%20Mathematics/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Question 1"}, {"id": "s3", "title": "January 2023 — Question 2 (number theory)"}, {"id": "s4", "title": "January 2023 — Question 3"}, {"id": "s5", "title": "January 2023 — Question 4 (graphs)"}, {"id": "s6", "title": "July 2023"}, {"id": "s7", "title": "October 2019"}, {"id": "s8", "title": "Model questions (official sample problems)"}]}]}, {"key": "hci", "name": "Human Computer Interaction", "exam": ["2026-11-22", "08:30", "11:30"], "url": "Human%20Computer%20Interaction/Study%20Guide%20-%20Index.html", "weeks": [{"key": "hci-Week01", "label": "Week 01", "url": "Human%20Computer%20Interaction/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "History of HCI"}, {"id": "s2", "title": "HCI is multi-disciplinary"}, {"id": "s3", "title": "Computers today: ubiquitous computing"}, {"id": "s4", "title": "Humans and perception"}, {"id": "s5", "title": "Interaction: two-way and task-centred"}, {"id": "s6", "title": "The HCI space"}, {"id": "s7", "title": "Applications of HCI — three pillars"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week02", "label": "Week 02", "url": "Human%20Computer%20Interaction/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is interaction?"}, {"id": "s2", "title": "Donald Norman's model — 7 stages"}, {"id": "s3", "title": "The two gulfs"}, {"id": "s4", "title": "Human errors: slips vs mistakes"}, {"id": "s5", "title": "The Abowd & Beale framework"}, {"id": "s6", "title": "Ergonomics"}, {"id": "s7", "title": "Direct vs indirect manipulation"}, {"id": "s8", "title": "Interaction styles"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week03", "label": "Week 03", "url": "Human%20Computer%20Interaction/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The human as an information processing machine"}, {"id": "s2", "title": "The senses in UI design"}, {"id": "s3", "title": "Human memory: three stores"}, {"id": "s4", "title": "Chunking & semantic networks"}, {"id": "s5", "title": "Cognitive load"}, {"id": "s6", "title": "Attention: selective vs divided"}, {"id": "s7", "title": "Motor skills & physical ergonomics"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week04", "label": "Week 04", "url": "Human%20Computer%20Interaction/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Design for tasks, not interfaces"}, {"id": "s2", "title": "The three contexts of \"use\": useful, usable, used"}, {"id": "s3", "title": "Three perspectives of the user"}, {"id": "s4", "title": "The in-car GPS turn example"}, {"id": "s5", "title": "UX beyond interaction"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week05", "label": "Week 05", "url": "Human%20Computer%20Interaction/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Action, interaction, effect, feedback"}, {"id": "s2", "title": "Feedback cycles are everywhere"}, {"id": "s3", "title": "Norman's model revisited: the two bridges"}, {"id": "s4", "title": "The 7 questions — designer & user perspectives"}, {"id": "s5", "title": "Norman's three levels of design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week06", "label": "Week 06", "url": "Human%20Computer%20Interaction/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct manipulation"}, {"id": "s2", "title": "The desktop metaphor vs the command line"}, {"id": "s3", "title": "Metaphorical vs literal invisibility — good vs bad design"}, {"id": "s4", "title": "Where direct manipulation is still lacking"}, {"id": "s5", "title": "Invisibility by learning vs by design"}, {"id": "s6", "title": "Five tips for invisible interfaces"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week07", "label": "Week 07", "url": "Human%20Computer%20Interaction/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Principles, guidelines and standards"}, {"id": "s2", "title": "Classic design frameworks"}, {"id": "s3", "title": "The 15 universal design principles"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week08", "label": "Week 08", "url": "Human%20Computer%20Interaction/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Mental models"}, {"id": "s2", "title": "Representations"}, {"id": "s3", "title": "Four traits of good representations"}, {"id": "s4", "title": "Full error taxonomy: slips vs mistakes"}, {"id": "s5", "title": "Learned helplessness & expert blindness"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week09", "label": "Week 09", "url": "Human%20Computer%20Interaction/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Task analysis & cognitive modelling"}, {"id": "s2", "title": "The GOMS framework"}, {"id": "s3", "title": "Keystroke-Level Model (KLM)"}, {"id": "s4", "title": "Fitts's law"}, {"id": "s5", "title": "Strengths and limits of predictive models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week10", "label": "Week 10", "url": "Human%20Computer%20Interaction/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Processor- vs predictor-oriented models"}, {"id": "s2", "title": "Cognitive Task Analysis (CTA) — 5 steps"}, {"id": "s3", "title": "Case study: the customer feedback thought stream"}, {"id": "s4", "title": "Hierarchical Task Analysis (HTA)"}, {"id": "s5", "title": "Modularity & divide and conquer"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week11", "label": "Week 11", "url": "Human%20Computer%20Interaction/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is user-centred design (UCD)?"}, {"id": "s2", "title": "The 8 user characteristics"}, {"id": "s3", "title": "ISO 9241-210: the 6 UCD principles"}, {"id": "s4", "title": "The 4-phase interaction design life cycle"}, {"id": "s5", "title": "Stakeholder-centred design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week12", "label": "Week 12", "url": "Human%20Computer%20Interaction/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where needfinding fits"}, {"id": "s2", "title": "The seven questions"}, {"id": "s3", "title": "Biases in needfinding"}, {"id": "s4", "title": "Needfinding methods"}, {"id": "s5", "title": "Representing the needs"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week13", "label": "Week 13", "url": "Human%20Computer%20Interaction/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where evaluation fits"}, {"id": "s2", "title": "Match the evaluation to the prototype"}, {"id": "s3", "title": "Evaluation across the design life cycle"}, {"id": "s4", "title": "Three types of evaluation"}, {"id": "s5", "title": "Four key terms"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-papers", "label": "Past papers", "url": "Human%20Computer%20Interaction/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what to focus on"}, {"id": "s2", "title": "ITE 3752 — Question 1: User-centred design (25 marks)"}, {"id": "s3", "title": "ITE 3752 — Question 2: Norman's model (25 marks)"}, {"id": "s4", "title": "ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)"}, {"id": "s5", "title": "ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)"}, {"id": "s6", "title": "Older ITE 3603 papers — outline answers"}]}]}, {"key": "mkt", "name": "Marketing", "exam": ["2026-11-22", "14:45", "17:45"], "url": "Marketing/Study%20Guide%20-%20Index.html", "weeks": [{"key": "mkt-Week01", "label": "Week 01", "url": "Marketing/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is marketing?"}, {"id": "s2", "title": "Marketing vs selling — the iceberg"}, {"id": "s3", "title": "Why marketing matters"}, {"id": "s4", "title": "Core concepts of marketing"}, {"id": "s5", "title": "Objectives of marketing"}, {"id": "s6", "title": "Quiz 01: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week02", "label": "Week 02", "url": "Marketing/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing has a history"}, {"id": "s2", "title": "1. Production concept"}, {"id": "s3", "title": "2. Product concept & marketing myopia"}, {"id": "s4", "title": "3. Selling concept"}, {"id": "s5", "title": "4. Marketing concept"}, {"id": "s6", "title": "5. Societal marketing concept"}, {"id": "s7", "title": "6. Holistic marketing concept"}, {"id": "s8", "title": "Quiz 02: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week03", "label": "Week 03", "url": "Marketing/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why scan the environment?"}, {"id": "s2", "title": "The three layers of the environment"}, {"id": "s3", "title": "Internal environment — 5 Ms & 7S"}, {"id": "s4", "title": "Micro environment (task environment)"}, {"id": "s5", "title": "Macro environment (DENTPC)"}, {"id": "s6", "title": "Responding to the environment"}, {"id": "s7", "title": "Marketing information system (MIS) & planning"}, {"id": "s8", "title": "Quiz 03: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week04", "label": "Week 04", "url": "Marketing/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Customer-driven marketing strategy"}, {"id": "s2", "title": "Market segmentation — four bases"}, {"id": "s3", "title": "Market targeting & Porter's five forces"}, {"id": "s4", "title": "Five patterns of target-market selection"}, {"id": "s5", "title": "Differentiation"}, {"id": "s6", "title": "Positioning & perceptual maps"}, {"id": "s7", "title": "Quiz 04: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week05", "label": "Week 05", "url": "Marketing/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why study consumer behaviour?"}, {"id": "s2", "title": "Consumer markets"}, {"id": "s3", "title": "The black box model (stimulus → response)"}, {"id": "s4", "title": "Factors influencing consumer behaviour"}, {"id": "s5", "title": "The buyer decision process — 5 stages"}, {"id": "s6", "title": "Four types of buying behaviour"}, {"id": "s7", "title": "Contemporary trends — Sri Lanka & global"}, {"id": "s8", "title": "Quiz 05: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week06", "label": "Week 06", "url": "Marketing/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a business market?"}, {"id": "s2", "title": "How business markets differ from consumer markets"}, {"id": "s3", "title": "Buying situations"}, {"id": "s4", "title": "Systems buying & selling"}, {"id": "s5", "title": "The buying centre — seven roles"}, {"id": "s6", "title": "Procurement: orientations & Kraljic's four product types"}, {"id": "s7", "title": "The 8 buy phases (Robinson et al.)"}, {"id": "s8", "title": "Business-to-business relationships"}, {"id": "s9", "title": "Quiz 06: model answer"}, {"id": "s10", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week07", "label": "Week 07", "url": "Marketing/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why marketing information matters"}, {"id": "s2", "title": "Three types of marketing data"}, {"id": "s3", "title": "The marketing information system (MIS)"}, {"id": "s4", "title": "Types of marketing research"}, {"id": "s5", "title": "The marketing research process"}, {"id": "s6", "title": "Why marketing research fails"}, {"id": "s7", "title": "Quiz 07: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week08", "label": "Week 08", "url": "Marketing/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is digital marketing?"}, {"id": "s2", "title": "Objectives of digital marketing"}, {"id": "s3", "title": "Why people go online"}, {"id": "s4", "title": "Key components of a digital marketing strategy"}, {"id": "s5", "title": "Strategy & measurement"}, {"id": "s6", "title": "Quiz 08: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week09", "label": "Week 09", "url": "Marketing/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why new products matter"}, {"id": "s2", "title": "Why develop new products, and why they fail"}, {"id": "s3", "title": "The 8-stage new product development process"}, {"id": "s4", "title": "The product life cycle (PLC)"}, {"id": "s5", "title": "Characteristics of each PLC stage"}, {"id": "s6", "title": "Marketing-mix strategies across the PLC"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week10", "label": "Week 10", "url": "Marketing/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Product strategy"}, {"id": "s2", "title": "Three levels of a product"}, {"id": "s3", "title": "Product classifications"}, {"id": "s4", "title": "Product mix and product line decisions"}, {"id": "s5", "title": "Brands, brand meaning and brand equity"}, {"id": "s6", "title": "Branding decisions"}, {"id": "s7", "title": "Packaging & labelling"}, {"id": "s8", "title": "Quiz 10: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week11", "label": "Week 11", "url": "Marketing/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Price: the revenue P"}, {"id": "s2", "title": "Factors affecting pricing decisions"}, {"id": "s3", "title": "The 6-step pricing process"}, {"id": "s4", "title": "New-product pricing: skimming vs penetration"}, {"id": "s5", "title": "Seven price-adjustment strategies"}, {"id": "s6", "title": "Price changes & reactions"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week12", "label": "Week 12", "url": "Marketing/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Before promoting"}, {"id": "s2", "title": "Integrated marketing communication (IMC)"}, {"id": "s3", "title": "Promotion objectives"}, {"id": "s4", "title": "The promotion mix"}, {"id": "s5", "title": "Advertising"}, {"id": "s6", "title": "Message strategy"}, {"id": "s7", "title": "Public relations"}, {"id": "s8", "title": "Sales promotion"}, {"id": "s9", "title": "Push vs pull channel policies"}, {"id": "s10", "title": "Socially responsible marketing communication"}, {"id": "s11", "title": "Quiz 12: model answer"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week13", "label": "Week 13", "url": "Marketing/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is \"place\"?"}, {"id": "s2", "title": "The nature of marketing channels"}, {"id": "s3", "title": "Push and pull strategies"}, {"id": "s4", "title": "How channel members add value"}, {"id": "s5", "title": "Channel levels"}, {"id": "s6", "title": "Channel behaviour and conflict"}, {"id": "s7", "title": "Conventional vs vertical marketing systems"}, {"id": "s8", "title": "Designing a marketing channel"}, {"id": "s9", "title": "Managing the marketing channel"}, {"id": "s10", "title": "Marketing logistics and supply chain management"}, {"id": "s11", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week14", "label": "Week 14", "url": "Marketing/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing planning"}, {"id": "s2", "title": "Purpose of marketing planning"}, {"id": "s3", "title": "Importance of marketing planning"}, {"id": "s4", "title": "Components of a marketing plan"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}]}]</script>
 <script>(function(){
   var KEY = document.body.getAttribute('data-key');
@@ -1102,4 +1460,203 @@ Min support ஏற்கெனவே frequent itemset மூலம் பூர�
   function allowed(k){return /^sg-done-(bpas|dm|dmath|hci|mkt)-(Week\d{2}|papers)$/.test(k)||/^sg-quiz-(bpas|dm|dmath|hci|mkt)-(Week\d{2}|mixed)$/.test(k)||/^sg-plan-(settings|events|time|reviews|baseline)$/.test(k);}
   render();setInterval(function(){if(!document.hidden&&!panel?.contains(document.activeElement))render();},60000);
 })(typeof window!=='undefined'?window:globalThis);
+</script><script type="application/json" id="hci-tamil-data">{"strings": {"Self-check quiz": "சுய பரிசோதனை வினாடிவினா", "Check my answers": "என் விடைகளைச் சரிபார்", "Try again (new order)": "மீண்டும் முயல்க (புதிய வரிசை)", "New random exam": "புதிய சீரற்ற தேர்வு", "All answered": "அனைத்துக்கும் விடையளிக்கப்பட்டது", "✓ Correct.": "✓ சரி.", "✗ Not quite.": "✗ முழுவதும் சரியில்லை.", "Excellent — you know this well": "மிகச் சிறப்பு — இதை நன்றாக அறிந்திருக்கிறீர்கள்", "Good — revise the ones you missed": "நன்று — தவறவிட்டவற்றை மீளாய்வு செய்யுங்கள்", "Getting there — reread the weak sections": "முன்னேறுகிறீர்கள் — பலவீனமான பகுதிகளை மீண்டும் வாசியுங்கள்", "Needs revision — go through the notes again": "மீளாய்வு தேவை — குறிப்புகளை மீண்டும் படியுங்கள்", "Lecture videos": "விரிவுரைக் காணொளிகள்", "▶ Lecture videos": "▶ விரிவுரைக் காணொளிகள்", "Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.": "இங்கோ குறிப்புகளுக்குள்ளோ உள்ள நேரக் குறியீட்டைச் சொடுக்கினால் காணொளி அந்த நேரத்துக்குச் செல்லும். நீங்கள் பார்த்த இடம் நினைவில் வைக்கப்படும்.", "Open in Google Drive ↗": "Google Drive-இல் திறக்கவும் ↗", "ON THIS PAGE": "இந்தப் பக்கத்தில்", "On this page": "இந்தப் பக்கத்தில்", "← Previous": "← முந்தையது", "Next →": "அடுத்தது →", "NEXT →": "அடுத்தது →", "Mark this section as understood": "இந்தப் பகுதியைப் புரிந்துகொண்டதாகக் குறிக்கவும்", "✓ Understood": "✓ புரிந்துகொண்டேன்", "Understood — click to undo": "புரிந்துகொண்டேன் — செயல்தவிர்க்கச் சொடுக்கவும்", "Type a number": "ஓர் எண்ணை உள்ளிடவும்", "Type what you remember…": "நினைவிருப்பதைத் தட்டச்சு செய்யுங்கள்…", "Answer:": "விடை:", "Best": "சிறந்தது", "Last": "கடைசி", "Attempts": "முயற்சிகள்", "Attempt": "முயற்சி", "today": "இன்று", "yesterday": "நேற்று", "Mixed practice exam": "கலப்புப் பயிற்சித் தேர்வு", "? Self-check quiz": "? சுய பரிசோதனை வினாடிவினா", "★ Mixed practice exam": "★ கலப்புப் பயிற்சித் தேர்வு", "📊 Your knowledge in this subject": "📊 இந்தப் பாடத்தில் உங்கள் அறிவு", "Overall knowledge": "ஒட்டுமொத்த அறிவு", "Weeks quizzed": "வினாடிவினா முயன்ற வாரங்கள்", "Average best score": "சிறந்த மதிப்பெண்களின் சராசரி", "on the weeks you tried": "நீங்கள் முயன்ற வாரங்களில்", "— average best score × weeks covered": "— சிறந்த மதிப்பெண்களின் சராசரி × முயன்ற வாரங்களின் விகிதம்", "Mixed exam best": "கலப்புத் தேர்வின் சிறந்த மதிப்பெண்", "Exam practice": "தேர்வுப் பயிற்சி", "Past papers with worked answers": "தீர்வுகளுடன் கடந்தகால வினாத்தாள்கள்", "Real exam questions from previous years, fully solved, plus which topics come up most.": "முந்தைய ஆண்டுகளின் உண்மையான தேர்வுக் கேள்விகளுக்கான முழுத் தீர்வுகளும் அதிகம் இடம்பெறும் தலைப்புகளும்.", "Offline study guides — one per week, built from the lecture notes and lecture videos. Green bar = sections you marked as understood.": "விரிவுரைக் குறிப்புகளையும் காணொளிகளையும் கொண்டு உருவாக்கப்பட்ட இணையமில்லா கற்றல் வழிகாட்டிகள் — வாரத்துக்கு ஒன்று. பச்சைப் பட்டை = நீங்கள் புரிந்துகொண்டதாகக் குறித்த பகுதிகள்.", "Take the": "நீங்கள் பல வாரங்களைப் படித்த பின், கீழேயுள்ள", "mixed practice exam": "கலப்புப் பயிற்சித் தேர்வை", "at the bottom when you have covered several weeks.": "முயலுங்கள்.", "📄 Lecture videos (no PDF for this week)": "📄 விரிவுரைக் காணொளிகள் (இந்த வாரத்துக்கு PDF இல்லை)", "📄 Lecture video (no PDF for this week)": "📄 விரிவுரைக் காணொளி (இந்த வாரத்துக்கு PDF இல்லை)", "✓ Understood — click to unmark": "✓ புரிந்துகொண்டேன் — குறியை நீக்கச் சொடுக்கவும்", "Data Mining": "தரவுச் சுரங்கம்", "data preprocessing": "தரவு முன்செயலாக்கம்", "Frequent Patterns & the Apriori Algorithm": "அடிக்கடி நிகழும் வடிவங்களும் Apriori படிமுறையும்", "Market basket analysis, support and confidence, the Apriori property, the join and prune steps, a full worked example, and generating strong association rules.": "சந்தைக் கூடைப் பகுப்பாய்வு, ஆதரவும் நம்பிக்கையும், Apriori பண்பு, இணைப்பு மற்றும் கிளை வெட்டுப் படிகள், முழுச் செய்முறை எடுத்துக்காட்டு, வலுவான தொடர்பு விதிகளை உருவாக்குதல்.", "Apriori Algorithm": "Apriori படிமுறை", "Step-by-step Apriori on a transaction database.": "பரிவர்த்தனைத் தரவுத்தளத்தில் படிப்படியான Apriori.", "Support and confidence": "ஆதரவும் நம்பிக்கையும்", "Example: shirt and tie, 13.5% support": "எடுத்துக்காட்டு: சட்டையும் கழுத்துப்பட்டியும், 13.5% ஆதரவு", "Example: rules from the frequent itemset ABE": "எடுத்துக்காட்டு: அடிக்கடி நிகழும் ABE பொருட்கணத்திலிருந்து விதிகள்", "The Apriori algorithm: the idea": "Apriori படிமுறை: கருத்து", "Generating (k+1) candidates from frequent k-itemsets": "அடிக்கடி நிகழும் k-பொருட்கணங்களிலிருந்து (k+1) வேட்பாளர்களை உருவாக்குதல்", "Worked example: minimum support and level-wise passes": "செய்முறை எடுத்துக்காட்டு: குறைந்தபட்ச ஆதரவும் நிலைவாரிச் சுற்றுகளும்", "Apriori pruning: infrequent subsets → infrequent supersets": "Apriori கிளை வெட்டல்: அடிக்கடி நிகழாத உட்கணங்கள் → அடிக்கடி நிகழாத மேற்கணங்கள்", "Animation on Apriori (no narration)": "Apriori இயங்குபடம் (பேச்சுரை இல்லை)", "Short silent animation of the level-wise search.": "நிலைவாரித் தேடலின் குறுகிய அமைதி இயங்குபடம்.", "Apriori step-by-step machine": "Apriori இயந்திரம்", "Transactions (one per line, items separated by commas)": "பரிவர்த்தனைகள் (வரிக்கு ஒன்று, பொருட்கள் காற்புள்ளியால் பிரிக்கப்பட்டவை)", "min_sup (count)": "min_sup (எண்ணிக்கை)", "min_conf %": "min_conf (%)", "Run Apriori": "Apriori-ஐ இயக்கு", "Join": "இணைப்பு", "Prune": "கிளை வெட்டு", "stop": "நிறுத்து", "algorithm terminates": "படிமுறை முடிகிறது", "nothing removed.": "எதுவும் நீக்கப்படவில்லை.", "Association rules (from every frequent itemset of size ≥ 2)": "தொடர்பு விதிகள் (அளவு ≥ 2 உடைய அடிக்கடி நிகழும் ஒவ்வொரு பொருட்கணத்திலிருந்தும்)", "Rule": "விதி", "Confidence": "நம்பிக்கை", "Strong?": "வலுவானதா?", "✓ strong": "✓ வலுவானது", "🧪 Try it — Apriori step-by-step machine": "🧪 முயன்று பாருங்கள் — Apriori இயந்திரம்", "Introduction to Data Mining & Big Data": "தரவுச் சுரங்கம் மற்றும் பெருந்தரவு அறிமுகம்", "Why we need data mining, what it is, the 5 V's of big data, and where data mining is used — banking, health and the public sector.": "தரவுச் சுரங்கம் ஏன் தேவை, அது என்ன, பெருந்தரவின் 5 V-கள், தரவுச் சுரங்கம் பயன்படுத்தப்படும் இடங்கள் — வங்கித்துறை, சுகாதாரம், பொதுத்துறை.", "The Knowledge Discovery (KDD) Process": "அறிவுக் கண்டறிதல் (KDD) செயல்முறை", "The 7 steps from raw data to knowledge, the architecture of a data-mining system, the kinds of data we can mine, and the five task primitives.": "மூலத் தரவிலிருந்து அறிவை அடையும் 7 படிகள், தரவுச் சுரங்க முறைமையின் கட்டமைப்பு, சுரங்கம் செய்யக்கூடிய தரவு வகைகள், ஐந்து பணி அடிப்படைக் கூறுகள்.", "Data Preprocessing — Cleaning, Integration & Transformation": "தரவு முன்செயலாக்கம் — தூய்மைப்படுத்தல், ஒருங்கிணைப்பு, உருமாற்றம்", "Why real data is dirty, how to fill missing values and smooth noise, cleaning as a process, integrating sources with correlation analysis, and normalization.": "உண்மையான தரவு ஏன் தூய்மையற்றது, விடுபட்ட பெறுமதிகளை நிரப்புவதும் இரைச்சலைச் சீராக்குவதும், தூய்மைப்படுத்தல் செயல்முறை, ஒட்டுறவுப் பகுப்பாய்வுடன் மூலங்களை ஒருங்கிணைத்தல், இயல்பாக்கம்.", "Data Reduction & Discretization": "தரவுக் குறைப்பும் தனித்துண்டாக்கலும்", "Make the dataset smaller without changing what it tells you — cubes, attribute selection, compression, histograms, binning and concept hierarchies.": "தரவு தெரிவிக்கும் தகவலை மாற்றாமல் தரவுத்தொகுப்பைச் சிறிதாக்குதல் — கனசதுரங்கள், பண்புக்கூறுத் தேர்வு, சுருக்கம், அலைவெண் செவ்வகங்கள், தொட்டிப் பிரித்தல், கருத்துப் படிநிலைகள்.", "Introduction to Data Warehousing": "தரவுக் கிடங்காக்கல் அறிமுகம்", "What a data warehouse is (Inmon's 4 keywords), OLTP vs OLAP, why keep it separate, and the multidimensional data model — cubes, facts, dimensions and the lattice of cuboids.": "தரவுக் கிடங்கு என்றால் என்ன (இன்மனின் 4 முக்கிய சொற்கள்), OLTP மற்றும் OLAP, தனியாக வைத்திருப்பதன் காரணம், பல்பரிமாணத் தரவு மாதிரி — கனசதுரங்கள், உண்மைகள், பரிமாணங்கள், கனச்செவ்வகங்களின் பின்னல்.", "Schemas for the Multidimensional Model": "பல்பரிமாண மாதிரிக்கான திட்டவடிவங்கள்", "Star, snowflake and fact constellation schemas, data warehouse vs data mart, defining cubes with DMQL, and concept hierarchies.": "நட்சத்திரம், பனித்துகள், உண்மை விண்மீன்கூட்டத் திட்டவடிவங்கள், தரவுக் கிடங்கு மற்றும் தரவுச் சந்தை, DMQL-ஆல் கனசதுரங்களை வரையறுத்தல், கருத்துப் படிநிலைகள்.", "Design of a Data Warehouse": "தரவுக் கிடங்கின் வடிவமைப்பு", "Benefits, the four design views, top-down vs bottom-up, the 4-step design process, three-tier architecture, the metadata repository, and ROLAP / MOLAP / HOLAP servers.": "நன்மைகள், நான்கு வடிவமைப்புப் பார்வைகள், மேலிருந்து கீழ் மற்றும் கீழிருந்து மேல், 4-படி வடிவமைப்புச் செயல்முறை, மூன்றடுக்குக் கட்டமைப்பு, மேல்தரவுச் சேமிப்பகம், ROLAP / MOLAP / HOLAP சேவையகங்கள்.", "Data Cube Computation & Data Generalization": "தரவுக் கனசதுரக் கணக்கீடும் தரவுப் பொதுமைப்படுத்தலும்", "Materializing cubes, base vs aggregate cells, iceberg cubes, MultiWay array aggregation, BUC, star-nodes and star-trees, and attribute-oriented induction (AOI).": "கனசதுரப் பொருளாக்கம், அடிப்படை மற்றும் திரட்டுக் கலங்கள், பனிப்பாறைக் கனசதுரங்கள், MultiWay அணித் திரட்டல், BUC, நட்சத்திரக் கணுக்களும் மரங்களும், பண்புக்கூறு நோக்கிய தூண்டல் (AOI).", "Support of a rule A ⇒ B is:": "A ⇒ B விதியின் ஆதரவு:", "The % of all transactions containing both A and B": "A, B இரண்டையும் கொண்ட அனைத்துப் பரிவர்த்தனைகளின் %", "The % of transactions containing A that also contain B": "A கொண்ட பரிவர்த்தனைகளில் B-யும் கொண்டவற்றின் %", "The number of items in A": "A-இலுள்ள பொருட்களின் எண்ணிக்கை", "Always 100%": "எப்போதும் 100%", "Support measures usefulness. Confidence measures certainty.": "ஆதரவு பயனை அளவிடுகிறது. நம்பிக்கை உறுதியை அளவிடுகிறது.", "Confidence of A ⇒ B is:": "A ⇒ B-இன் நம்பிக்கை:", "count(A ∪ B) ÷ count(A)": "count(A ∪ B) ÷ count(A)", "count(A ∪ B) ÷ total transactions": "count(A ∪ B) ÷ மொத்தப் பரிவர்த்தனைகள்", "count(B) ÷ count(A)": "count(B) ÷ count(A)", "count(A) ÷ count(B)": "count(A) ÷ count(B)", "It's P(B | A).": "அது P(B | A).", "20% of transactions contain shirt and tie together; 40% contain shirt. What is the confidence (%) of shirt ⇒ tie?": "பரிவர்த்தனைகளில் 20% சட்டையையும் கழுத்துப்பட்டியையும் ஒன்றாகக் கொண்டுள்ளன; 40% சட்டையைக் கொண்டுள்ளன. சட்டை ⇒ கழுத்துப்பட்டி என்பதன் நம்பிக்கை (%) என்ன?", "20 ÷ 40 = 50%.": "20 ÷ 40 = 50%.", "Meets both minimum support and minimum confidence": "குறைந்தபட்ச ஆதரவையும் குறைந்தபட்ச நம்பிக்கையையும் நிறைவேற்றும்போது", "Has 100% confidence": "100% நம்பிக்கை இருந்தால்", "Has the most items": "அதிகப் பொருட்களைக் கொண்டிருந்தால்", "Meets minimum support only": "குறைந்தபட்ச ஆதரவை மட்டும் நிறைவேற்றினால்", "Mining has two steps: find frequent itemsets, then generate strong rules.": "சுரங்கத்துக்கு இரு படிகள்: அடிக்கடி நிகழும் பொருட்கணங்களைக் கண்டறிந்து, பின்னர் வலுவான விதிகளை உருவாக்குதல்.", "The Apriori property states that:": "Apriori பண்பு கூறுவது:", "All non-empty subsets of a frequent itemset must also be frequent": "அடிக்கடி நிகழும் பொருட்கணத்தின் வெற்றல்லாத அனைத்து உட்கணங்களும் அடிக்கடி நிகழ வேண்டும்", "All supersets of a frequent itemset are frequent": "அடிக்கடி நிகழும் பொருட்கணத்தின் அனைத்து மேற்கணங்களும் அடிக்கடி நிகழும்", "Frequent itemsets always have 2 items": "அடிக்கடி நிகழும் பொருட்கணங்களில் எப்போதும் 2 பொருட்கள் உள்ளன", "Support increases as itemsets grow": "பொருட்கணங்கள் வளரும்போது ஆதரவு அதிகரிக்கிறது", "Equivalently, any superset of an infrequent itemset is infrequent.": "அதற்குச் சமமாக, அடிக்கடி நிகழாத பொருட்கணத்தின் எந்த மேற்கணமும் அடிக்கடி நிகழாது.", "In Apriori, a candidate in C₃ is pruned when:": "Apriori-இல் C₃ வேட்பாளர் கிளை வெட்டப்படுவது:", "Any of its 2-item subsets is not in L₂": "அதன் ஏதாவது 2-பொருள் உட்கணம் L₂-இல் இல்லாதபோது", "Its support is too high": "அதன் ஆதரவு மிக அதிகமாக இருக்கும்போது", "It contains item I1": "அதில் I1 பொருள் இருக்கும்போது", "It was generated by the join": "இணைப்பால் அது உருவாக்கப்பட்டபோது", "Pruning happens before counting support.": "ஆதரவை எண்ணுவதற்கு முன் கிளை வெட்டல் நிகழ்கிறது.", "The join Lₖ₋₁ ⋈ Lₖ₋₁ combines two itemsets when:": "Lₖ₋₁ ⋈ Lₖ₋₁ இணைப்பு இரு பொருட்கணங்களை இணைக்கும் நிபந்தனை:", "Their first k−2 items match": "அவற்றின் முதல் k−2 பொருட்கள் பொருந்துதல்", "They have no items in common": "பொதுவான பொருட்கள் எதுவும் இல்லாதிருத்தல்", "Their supports are equal": "அவற்றின் ஆதரவுகள் சமமாக இருத்தல்", "They are in different transactions": "அவை வெவ்வேறு பரிவர்த்தனைகளில் இருத்தல்", "E.g. {I1,I2} and {I1,I3} join to give {I1,I2,I3}.": "எ.கா. {I1,I2}, {I1,I3} இணைந்து {I1,I2,I3} தருகின்றன.", "sup{I1,I2,I5} = 2 and sup{I1,I5} = 2. What is the confidence (%) of I1 ∧ I5 ⇒ I2?": "sup{I1,I2,I5} = 2, sup{I1,I5} = 2. I1 ∧ I5 ⇒ I2-இன் நம்பிக்கை (%) என்ன?", "2 ÷ 2 = 100%.": "2 ÷ 2 = 100%.", "sup{I1,I2,I5} = 2 and sup{I1} = 6. What is the confidence (%) of I1 ⇒ I2 ∧ I5 (nearest whole number)?": "sup{I1,I2,I5} = 2, sup{I1} = 6. I1 ⇒ I2 ∧ I5-இன் நம்பிக்கை (%) என்ன (அருகிலுள்ள முழு எண்ணுக்கு)?", "2 ÷ 6 = 33%, which is not strong at min_conf 70%.": "2 ÷ 6 = 33%; min_conf 70%-இல் இது வலுவானதல்ல.", "Apriori was proposed by:": "Apriori-ஐ முன்மொழிந்தவர்கள்:", "Agrawal and Srikant, 1994": "Agrawal மற்றும் Srikant, 1994", "Han and Kamber, 2006": "Han மற்றும் Kamber, 2006", "Quinlan, 1986": "Quinlan, 1986", "Inmon, 1992": "Inmon, 1992", "It's a level-wise algorithm with one database scan per level.": "நிலைக்கு ஒரு தரவுத்தள ஸ்கேனுடன் இயங்கும் நிலைவாரிப் படிமுறை.", "Market basket analysis is used for:": "சந்தைக் கூடைப் பகுப்பாய்வு பயன்படுத்தப்படுவது:", "Store layout, cross-marketing, catalogue design and promotions": "கடை அமைப்பு, குறுக்குச் சந்தைப்படுத்தல், பட்டியல் வடிவமைப்பு, விற்பனை ஊக்குவிப்பு", "Predicting continuous prices": "தொடர்ச்சியான விலைகளை முன்னறிவித்தல்", "Data cleaning": "தரவுத் தூய்மைப்படுத்தல்", "Building data cubes": "தரவுக் கனசதுரங்களை உருவாக்குதல்", "It finds items that are frequently bought together.": "அடிக்கடி ஒன்றாக வாங்கப்படும் பொருட்களைக் கண்டறிகிறது."}, "markup": {"Support of a rule A ⇒ B is:": "A ⇒ B விதியின் ஆதரவு:", "The % of all transactions containing both A and B": "A, B இரண்டையும் கொண்ட அனைத்துப் பரிவர்த்தனைகளின் %", "The % of transactions containing A that also contain B": "A கொண்ட பரிவர்த்தனைகளில் B-யும் கொண்டவற்றின் %", "The number of items in A": "A-இலுள்ள பொருட்களின் எண்ணிக்கை", "Always 100%": "எப்போதும் 100%", "Support measures usefulness. Confidence measures certainty.": "ஆதரவு பயனை அளவிடுகிறது. நம்பிக்கை உறுதியை அளவிடுகிறது.", "Confidence of A ⇒ B is:": "A ⇒ B-இன் நம்பிக்கை:", "count(A ∪ B) ÷ count(A)": "count(A ∪ B) ÷ count(A)", "count(A ∪ B) ÷ total transactions": "count(A ∪ B) ÷ மொத்தப் பரிவர்த்தனைகள்", "count(B) ÷ count(A)": "count(B) ÷ count(A)", "count(A) ÷ count(B)": "count(A) ÷ count(B)", "It's P(B | A).": "அது P(B | A).", "20% of transactions contain shirt and tie together; 40% contain shirt. What is the confidence (%) of shirt ⇒ tie?": "பரிவர்த்தனைகளில் 20% சட்டையையும் கழுத்துப்பட்டியையும் ஒன்றாகக் கொண்டுள்ளன; 40% சட்டையைக் கொண்டுள்ளன. சட்டை ⇒ கழுத்துப்பட்டி என்பதன் நம்பிக்கை (%) என்ன?", "20 ÷ 40 = 50%.": "20 ÷ 40 = 50%.", "A rule is <strong>strong<\/strong> when it:": "விதி <strong>வலுவானதாக<\/strong> இருப்பது:", "Meets both minimum support and minimum confidence": "குறைந்தபட்ச ஆதரவையும் குறைந்தபட்ச நம்பிக்கையையும் நிறைவேற்றும்போது", "Has 100% confidence": "100% நம்பிக்கை இருந்தால்", "Has the most items": "அதிகப் பொருட்களைக் கொண்டிருந்தால்", "Meets minimum support only": "குறைந்தபட்ச ஆதரவை மட்டும் நிறைவேற்றினால்", "Mining has two steps: find frequent itemsets, then generate strong rules.": "சுரங்கத்துக்கு இரு படிகள்: அடிக்கடி நிகழும் பொருட்கணங்களைக் கண்டறிந்து, பின்னர் வலுவான விதிகளை உருவாக்குதல்.", "The Apriori property states that:": "Apriori பண்பு கூறுவது:", "All non-empty subsets of a frequent itemset must also be frequent": "அடிக்கடி நிகழும் பொருட்கணத்தின் வெற்றல்லாத அனைத்து உட்கணங்களும் அடிக்கடி நிகழ வேண்டும்", "All supersets of a frequent itemset are frequent": "அடிக்கடி நிகழும் பொருட்கணத்தின் அனைத்து மேற்கணங்களும் அடிக்கடி நிகழும்", "Frequent itemsets always have 2 items": "அடிக்கடி நிகழும் பொருட்கணங்களில் எப்போதும் 2 பொருட்கள் உள்ளன", "Support increases as itemsets grow": "பொருட்கணங்கள் வளரும்போது ஆதரவு அதிகரிக்கிறது", "Equivalently, any superset of an infrequent itemset is infrequent.": "அதற்குச் சமமாக, அடிக்கடி நிகழாத பொருட்கணத்தின் எந்த மேற்கணமும் அடிக்கடி நிகழாது.", "In Apriori, a candidate in C₃ is pruned when:": "Apriori-இல் C₃ வேட்பாளர் கிளை வெட்டப்படுவது:", "Any of its 2-item subsets is not in L₂": "அதன் ஏதாவது 2-பொருள் உட்கணம் L₂-இல் இல்லாதபோது", "Its support is too high": "அதன் ஆதரவு மிக அதிகமாக இருக்கும்போது", "It contains item I1": "அதில் I1 பொருள் இருக்கும்போது", "It was generated by the join": "இணைப்பால் அது உருவாக்கப்பட்டபோது", "Pruning happens before counting support.": "ஆதரவை எண்ணுவதற்கு முன் கிளை வெட்டல் நிகழ்கிறது.", "The join Lₖ₋₁ ⋈ Lₖ₋₁ combines two itemsets when:": "Lₖ₋₁ ⋈ Lₖ₋₁ இணைப்பு இரு பொருட்கணங்களை இணைக்கும் நிபந்தனை:", "Their first k−2 items match": "அவற்றின் முதல் k−2 பொருட்கள் பொருந்துதல்", "They have no items in common": "பொதுவான பொருட்கள் எதுவும் இல்லாதிருத்தல்", "Their supports are equal": "அவற்றின் ஆதரவுகள் சமமாக இருத்தல்", "They are in different transactions": "அவை வெவ்வேறு பரிவர்த்தனைகளில் இருத்தல்", "E.g. {I1,I2} and {I1,I3} join to give {I1,I2,I3}.": "எ.கா. {I1,I2}, {I1,I3} இணைந்து {I1,I2,I3} தருகின்றன.", "sup{I1,I2,I5} = 2 and sup{I1,I5} = 2. What is the confidence (%) of I1 ∧ I5 ⇒ I2?": "sup{I1,I2,I5} = 2, sup{I1,I5} = 2. I1 ∧ I5 ⇒ I2-இன் நம்பிக்கை (%) என்ன?", "2 ÷ 2 = 100%.": "2 ÷ 2 = 100%.", "sup{I1,I2,I5} = 2 and sup{I1} = 6. What is the confidence (%) of I1 ⇒ I2 ∧ I5 (nearest whole number)?": "sup{I1,I2,I5} = 2, sup{I1} = 6. I1 ⇒ I2 ∧ I5-இன் நம்பிக்கை (%) என்ன (அருகிலுள்ள முழு எண்ணுக்கு)?", "2 ÷ 6 = 33%, which is not strong at min_conf 70%.": "2 ÷ 6 = 33%; min_conf 70%-இல் இது வலுவானதல்ல.", "Apriori was proposed by:": "Apriori-ஐ முன்மொழிந்தவர்கள்:", "Agrawal and Srikant, 1994": "Agrawal மற்றும் Srikant, 1994", "Han and Kamber, 2006": "Han மற்றும் Kamber, 2006", "Quinlan, 1986": "Quinlan, 1986", "Inmon, 1992": "Inmon, 1992", "It's a level-wise algorithm with one database scan per level.": "நிலைக்கு ஒரு தரவுத்தள ஸ்கேனுடன் இயங்கும் நிலைவாரிப் படிமுறை.", "Market basket analysis is used for:": "சந்தைக் கூடைப் பகுப்பாய்வு பயன்படுத்தப்படுவது:", "Store layout, cross-marketing, catalogue design and promotions": "கடை அமைப்பு, குறுக்குச் சந்தைப்படுத்தல், பட்டியல் வடிவமைப்பு, விற்பனை ஊக்குவிப்பு", "Predicting continuous prices": "தொடர்ச்சியான விலைகளை முன்னறிவித்தல்", "Data cleaning": "தரவுத் தூய்மைப்படுத்தல்", "Building data cubes": "தரவுக் கனசதுரங்களை உருவாக்குதல்", "It finds items that are frequently bought together.": "அடிக்கடி ஒன்றாக வாங்கப்படும் பொருட்களைக் கண்டறிகிறது."}, "patterns": [{"pattern": "^(\\d+) unanswered$", "replacement": "$1 விடையளிக்கப்படவில்லை"}, {"pattern": "^(\\d+) / (\\d+) sections understood$", "replacement": "$1 / $2 பகுதிகள் புரிந்துகொள்ளப்பட்டன"}, {"pattern": "^Week (\\d+)$", "replacement": "வாரம் $1"}, {"pattern": "^(\\d+) days ago$", "replacement": "$1 நாட்களுக்கு முன்"}, {"pattern": "^\\((\\d+) of (\\d+)\\)$", "replacement": "($2இல் $1)"}, {"pattern": "^\\((\\d+) attempts?\\)$", "replacement": "($1 முயற்சிகள்)"}, {"pattern": "^(\\d+) videos? · (\\d+) min$", "replacement": "$1 காணொளிகள் · $2 நிமிடம்"}, {"pattern": "^Quiz: not tried \\((\\d+) Qs\\)$", "replacement": "வினாடிவினா: முயலவில்லை ($1 கேள்விகள்)"}, {"pattern": "^Best (\\d+)% · last (\\d+)%$", "replacement": "சிறந்தது $1% · கடைசி $2%"}, {"pattern": "^(\\d+) questions on this week\\. Answer them all, then press$", "replacement": "இந்த வாரத்தில் $1 கேள்விகள். அனைத்துக்கும் விடையளித்துவிட்டுப் பின்னர் அழுத்துங்கள்:"}, {"pattern": "^\\. Your best and latest scores are saved and shown on the subject page\\.$", "replacement": ". உங்கள் சிறந்த மற்றும் சமீபத்திய மதிப்பெண்கள் சேமிக்கப்பட்டுப் பாடப் பக்கத்தில் காட்டப்படும்."}, {"pattern": "^Data Mining · Week (\\d+)$", "replacement": "தரவுச் சுரங்கம் · வாரம் $1"}, {"pattern": "^(\\d+) random questions drawn from all (\\d+) weeks \\((\\d+) in the bank\\)\\. Every attempt is a new mix — a good way to test whole-subject knowledge before the exam\\.$", "replacement": "அனைத்து $2 வாரங்களிலிருந்தும் சீரற்ற முறையில் தேர்ந்தெடுக்கப்படும் $1 கேள்விகள் (தொகுப்பில் $3 உள்ளன). ஒவ்வொரு முயற்சியிலும் புதிய கலவை — தேர்வுக்கு முன் முழுப் பாட அறிவையும் சோதிக்கச் சிறந்த வழி."}, {"pattern": "^›\\s*Week (\\d+)$", "replacement": "› வாரம் $1"}, {"pattern": "Level (\\d+):", "replacement": "நிலை $1:", "flags": "g"}, {"pattern": "L(\\d+) is empty → stop\\.", "replacement": "L$1 வெற்று → நிறுத்து.", "flags": "g"}, {"pattern": "Join L(\\d+) ⋈ L(\\d+) produces no candidates →", "replacement": "L$1 ⋈ L$2 இணைப்பு வேட்பாளர்களை உருவாக்கவில்லை →", "flags": "g"}, {"pattern": " because \\{([^}]+)\\} is not frequent", "replacement": " ஏனெனில் {$1} அடிக்கடி நிகழவில்லை", "flags": "g"}, {"pattern": ": nothing removed\\.", "replacement": ": எதுவும் நீக்கப்படவில்லை.", "flags": "g"}]}</script><style>.hci-language{position:fixed;right:16px;bottom:calc(100px + env(safe-area-inset-bottom));z-index:70;border:1px solid var(--line);border-radius:28px;background:var(--panel);color:var(--ink);box-shadow:var(--shadow);padding:12px 20px;font:inherit;font-weight:700;cursor:pointer;min-height:48px}
+.hci-language:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.hci-en[hidden],.hci-ta[hidden]{display:none!important}
+.hci-ta{line-height:1.9}
+@media(max-width:760px){.hci-language{bottom:calc(100px + env(safe-area-inset-bottom));right:10px}}
+@media print{.hci-language{display:none}}
+</style><script>// Authored, offline Tamil translations. No network requests or external translator.
+(function () {
+  'use strict';
+  var sections = Array.from(document.querySelectorAll('section[data-sec]'));
+  if (!document.getElementById('hci-tamil-data') || sections.some(function (s) { return !s.querySelector('.hci-ta'); })) return;
+  var button = document.createElement('button');
+  button.type = 'button'; button.className = 'hci-language'; button.lang = 'ta';
+  button.textContent = 'தமிழ்'; button.setAttribute('aria-label', 'Read the Tamil translation');
+  button.setAttribute('aria-pressed', 'false'); document.body.appendChild(button);
+  // Keep source values stable when options use their visible text as their value.
+  document.querySelectorAll('.tool option:not([value])').forEach(function (option) { option.value = option.textContent; });
+  var tamil = false;
+  var tools = [];
+  sections.forEach(function (section) {
+    var heading = section.querySelector('h2');
+    heading.dataset.english = heading.innerHTML;
+    var explanationButton = section.querySelector('.native-toggle');
+    var explanation = section.querySelector('.tamil-native');
+    var content = section.querySelector('.section-english');
+    var reference = section.querySelector('.native-reference');
+    function explanationLabels() {
+      if (!explanationButton) return;
+      explanationButton.textContent = explanation.hidden ? 'தமிழில் புரிந்துகொள்ள' : (tamil ? 'மொழிபெயர்ப்புக்குத் திரும்பு' : 'English-இல் படிக்க');
+      if (reference) reference.textContent = !content.hidden ? 'முழு விவரத்தை மறைக்க' : (tamil ? 'முழு விவரம் · தமிழ் மொழிபெயர்ப்பு' : 'முழு விவரம், கணக்கு, படம், கருவிகள் · English');
+    }
+    if (explanationButton) explanationButton.onclick = function () {
+      var show = explanation.hidden;
+      explanation.hidden = !show; content.hidden = show;
+      content.classList.remove('reference-open');
+      section.classList.toggle('show-tamil', show);
+      explanationButton.setAttribute('aria-expanded', String(show));
+      if (reference) reference.setAttribute('aria-expanded', 'false');
+      explanationLabels(); window.dispatchEvent(new Event('resize'));
+    };
+    if (reference) reference.onclick = function () {
+      content.hidden = !content.hidden;
+      content.classList.toggle('reference-open', !content.hidden);
+      reference.setAttribute('aria-expanded', String(!content.hidden));
+      explanationLabels(); window.dispatchEvent(new Event('resize'));
+    };
+
+    var englishHeads = section.querySelectorAll('.hci-en h3[id]');
+    section.querySelectorAll('.hci-ta h3').forEach(function (h, index) {
+      var english = englishHeads[index];
+      if (!english) return;
+      h.id = 'ta-' + english.id;
+      h.dataset.englishId = english.id;
+      h.dataset.englishText = english.textContent;
+    });
+    section.querySelectorAll('[data-ta-tool]').forEach(function (slot) {
+      var live = document.getElementById(slot.dataset.taTool);
+      if (!live) throw new Error('Missing shared tool: ' + slot.dataset.taTool);
+      var tool = live.closest('.tool');
+      var home = document.createElement('span');
+      tool.before(home); tools.push({tool:tool, home:home, slot:slot});
+    });
+  });
+  var data = JSON.parse(document.getElementById('hci-tamil-data').textContent);
+  var patterns = (data.patterns || []).map(function (p) { return {regex:new RegExp(p.pattern, p.flags || ''), replacement:p.replacement}; });
+  var textState = new WeakMap(), htmlState = new WeakMap(), attributeState = new WeakMap();
+  function fitTamilDiagrams() {
+    document.querySelectorAll('.tool svg:has(foreignObject)').forEach(function (svg) {
+      if (!svg.dataset.hciViewbox) svg.dataset.hciViewbox = svg.getAttribute('viewBox');
+      var box = svg.dataset.hciViewbox.split(/\s+/).map(Number);
+      svg.setAttribute('viewBox', tamil ? [box[0],box[1],box[2],box[3]*2].join(' ') : svg.dataset.hciViewbox);
+      svg.querySelectorAll('[y],[y1],[y2],[cy],[height]').forEach(function (el) {
+        ['y','y1','y2','cy','height'].forEach(function (attr) {
+          if (!el.hasAttribute(attr)) return;
+          var saved = 'data-hci-' + attr;
+          if (!el.hasAttribute(saved)) el.setAttribute(saved, el.getAttribute(attr));
+          var original = el.getAttribute(saved);
+          if (!isNaN(Number(original))) el.setAttribute(attr, tamil ? Number(original)*2 : original);
+        });
+      });
+    });
+  }
+  function translateLiveContent() {
+    fitTamilDiagrams();
+    document.querySelectorAll('.qt,.qe,.qo span,.tool p,.tool .out,.tool h4,.tool td,.tool th,.tool text,.tool foreignObject div').forEach(function (el) {
+      var current = el.innerHTML, saved = htmlState.get(el);
+      if (saved && !tamil) { el.innerHTML = saved.en; return; }
+      if (saved && current === saved.ta) return;
+      if (!tamil) return;
+      var prefix = '', suffix = '', content = current.trim();
+      if (el.matches('.qt')) {
+        var week = content.match(/(\s*<span class="qw">[\s\S]*?<\/span>)$/);
+        if (week) { suffix = week[1]; content = content.slice(0, -suffix.length).trim(); }
+      }
+      if (el.matches('.qt,.qe')) {
+        var parts = content.match(/^(<b>.*?<\/b>\s*)([\s\S]*)$/);
+        if (parts) { prefix = parts[1]; content = parts[2].trim(); }
+      }
+      if (Object.prototype.hasOwnProperty.call(data.markup, content)) {
+        var translated = prefix + data.markup[content] + suffix;
+        htmlState.set(el, {en:current, ta:translated}); el.innerHTML = translated;
+      }
+    });
+    document.querySelectorAll('[placeholder],[title],[aria-label]').forEach(function (el) {
+      if (el === button) return;
+      var saved = attributeState.get(el) || {};
+      ['placeholder','title','aria-label'].forEach(function (attr) {
+        var current = el.getAttribute(attr); if (!current) return;
+        if (saved[attr] && current === saved[attr].ta) {
+          if (!tamil) el.setAttribute(attr, saved[attr].en);
+          return;
+        }
+        if (tamil && data.strings[current]) {
+          saved[attr] = {en:current, ta:data.strings[current]}; el.setAttribute(attr, saved[attr].ta);
+        }
+      });
+      attributeState.set(el, saved);
+    });
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) {
+      if (!node.parentElement || node.parentElement.closest('script,style,.hci-language')) continue;
+      var value = node.nodeValue, saved = textState.get(node);
+      if (saved && value === saved.ta) {
+        if (!tamil) node.nodeValue = saved.en;
+        continue;
+      }
+      if (!tamil) continue;
+      var key = value.trim(), translated = data.strings[key];
+      if (!translated && /^\d+ unanswered$/.test(key)) translated = key.split(' ')[0] + ' விடையளிக்கப்படவில்லை';
+      if (!translated) {
+        var numbered = key.match(/^(\d+\.\s+)(.*)$/);
+        if (numbered && data.strings[numbered[2]]) translated = numbered[1] + data.strings[numbered[2]];
+      }
+      if (!translated) {
+        var video = key.match(/^(\d+\.\s+)(.*?) · (\d+) min$/);
+        if (video && data.strings[video[2]]) translated = video[1] + data.strings[video[2]] + ' · ' + video[3] + ' நிமிடம்';
+      }
+      var patterned = translated || key;
+      patterns.forEach(function (p) { p.regex.lastIndex = 0; patterned = patterned.replace(p.regex, p.replacement); });
+      if (patterned !== key) translated = patterned;
+      if (!translated) continue;
+      var output = value.replace(key, translated);
+      if (output !== value) { textState.set(node, {en:value, ta:output}); node.nodeValue = output; }
+    }
+  }
+  document.addEventListener('click', function (event) {
+    var item = event.target.closest('.tool .ml li');
+    if (!tamil || !item) return;
+    var walker = document.createTreeWalker(item, NodeFilter.SHOW_TEXT), node;
+    while ((node = walker.nextNode())) {
+      var saved = textState.get(node);
+      if (saved && node.nodeValue === saved.ta) node.nodeValue = saved.en;
+    }
+  }, true);
+  var observer = new MutationObserver(function () { if (tamil) translateLiveContent(); });
+  observer.observe(document.body, {subtree:true, childList:true, characterData:true});
+  button.onclick = function () {
+    tamil = !tamil;
+    sections.forEach(function (section) {
+      var explanation = section.querySelector('.tamil-native');
+      var content = section.querySelector('.section-english');
+      var toggle = section.querySelector('.native-toggle');
+      var reference = section.querySelector('.native-reference');
+      if (explanation) explanation.hidden = true;
+      if (content) { content.hidden = false; content.classList.remove('reference-open'); }
+      section.classList.remove('show-tamil');
+      if (toggle) { toggle.setAttribute('aria-expanded','false'); toggle.textContent='தமிழில் புரிந்துகொள்ள'; }
+      if (reference) { reference.setAttribute('aria-expanded','false'); reference.textContent = tamil ? 'முழு விவரம் · தமிழ் மொழிபெயர்ப்பு' : 'முழு விவரம், கணக்கு, படம், கருவிகள் · English'; }
+    });
+    tools.forEach(function (item) {
+      if (tamil) item.slot.appendChild(item.tool);
+      else item.home.after(item.tool);
+    });
+    sections.forEach(function (section) {
+      var en = section.querySelector('.hci-en'), ta = section.querySelector('.hci-ta');
+      en.hidden = tamil; ta.hidden = !tamil;
+      var h = section.querySelector('h2'), number = h.querySelector('.num').outerHTML;
+      if (tamil) { h.innerHTML = number; h.appendChild(document.createTextNode(ta.dataset.title)); }
+      else h.innerHTML = h.dataset.english;
+      section.querySelectorAll('.hci-ta h3[data-english-id]').forEach(function (subheading) {
+        var target = tamil ? subheading.dataset.englishId : subheading.id;
+        var link = document.querySelector('#toc a[href="#' + target + '"]');
+        if (link) {
+          link.href = '#' + (tamil ? subheading.id : subheading.dataset.englishId);
+          link.lastElementChild.textContent = tamil ? subheading.textContent : subheading.dataset.englishText;
+        }
+      });
+      var toc = document.querySelector('#toc a[href="#' + h.id + '"]');
+      if (toc && toc.lastElementChild) toc.lastElementChild.textContent = tamil ? ta.dataset.title : h.dataset.t;
+    });
+    document.documentElement.lang = tamil ? 'ta' : 'en';
+    button.textContent = tamil ? 'English' : 'தமிழ்'; button.lang = tamil ? 'en' : 'ta';
+    button.setAttribute('aria-label', tamil ? 'Read original English' : 'Read the Tamil translation');
+    button.setAttribute('aria-pressed', String(tamil));
+    translateLiveContent();
+    window.dispatchEvent(new Event('resize'));
+  };
+})();
 </script></body></html>

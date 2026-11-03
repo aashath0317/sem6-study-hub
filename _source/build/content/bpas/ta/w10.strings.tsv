@@ -1,0 +1,45 @@
+Overhead Costing — Allocation, Apportionment, Re-apportionment & Absorption	மேலதிகச் செலவிடல் — ஒதுக்கீடு, பகிர்ந்தளித்தல், மறுபகிர்வு, உள்ளீர்ப்பு
+What overheads are and how they're classified, cost centres, allocation vs apportionment and the bases used, re-apportioning service departments (direct, step-down, reciprocal), overhead absorption rates (actual vs predetermined, six methods, blanket vs departmental), and under/over absorption.	மேலதிகச் செலவுகளும் அவற்றின் வகைப்பாடும், செலவு மையங்கள், ஒதுக்கீடு/பகிர்ந்தளித்தல் மற்றும் அடிப்படைகள், சேவைத் துறை மறுபகிர்வு (நேரடி, படிநிலை, பரஸ்பரம்), மேலதிகச் செலவு உள்ளீர்ப்பு விகிதங்கள் (உண்மை/முன்தீர்மானிப்பு, ஆறு முறைகள், பொது/துறைவாரி), குறை/மிகை உள்ளீர்ப்பு.
+Overhead Costing	மேலதிகச் செலவிடல்
+A complete worked example through a biscuit manufacturer: allocation → apportionment → re-apportionment → absorption → under/over absorption.	பிஸ்கட் உற்பத்தியாளர் மூலம் முழுமையான கணக்கீட்டு எடுத்துக்காட்டு: ஒதுக்கீடு → பகிர்ந்தளித்தல் → மறுபகிர்வு → உள்ளீர்ப்பு → குறை/மிகை உள்ளீர்ப்பு.
+Introduction and colour code of the slides	அறிமுகமும் விளக்கத் திரைகளின் நிறக் குறியீடும்
+What overhead is: direct vs indirect cost (biscuit example)	மேலதிகச் செலவு என்றால் என்ன: நேரடி/மறைமுகச் செலவு (பிஸ்கட் எடுத்துக்காட்டு)
+Classification: indirect material, labour, expenses; production, selling, admin	வகைப்பாடு: மறைமுகப் பொருள், உழைப்பு, செலவுகள்; உற்பத்தி, விற்பனை, நிர்வாகம்
+Step 1: allocation to cost centres (departments)	படி 1: செலவு மையங்களுக்கு (துறைகளுக்கு) ஒதுக்கீடு
+Allocation example: Depts A, B and maintenance	ஒதுக்கீட்டு எடுத்துக்காட்டு: A, B மற்றும் பராமரிப்புத் துறைகள்
+Step 2: apportionment on a fair basis	படி 2: நியாயமான அடிப்படையில் பகிர்ந்தளித்தல்
+Apportionment example: electricity, rent, insurance, depreciation	பகிர்ந்தளித்தல் எடுத்துக்காட்டு: மின்சாரம், வாடகை, காப்புறுதி, தேய்மானம்
+Department totals after primary apportionment	முதற்கட்டப் பகிர்ந்தளித்தலுக்குப் பிந்தைய துறை மொத்தங்கள்
+Step 3: re-apportioning service departments	படி 3: சேவைத் துறைகளை மறுபகிர்வு செய்தல்
+Maintenance shared 3:2 by maintenance hours	பராமரிப்பு மணிநேரங்களால் 3:2இல் பராமரிப்பைப் பகிர்தல்
+Step 4: absorption into products	படி 4: பொருட்களில் உள்ளீர்ப்பு
+Labour-intensive vs machine-intensive bases	உழைப்பு அதிகமுள்ள/இயந்திரப் பயன்பாடு அதிகமுள்ள அடிப்படைகள்
+Dept A: 267,800 ÷ 4,000 labour hours = Rs 66.95/hour	A துறை: 267,800 ÷ 4,000 உழைப்பு மணிநேரங்கள் = மணிக்கு ரூ. 66.95
+Dept B: 324,200 ÷ 2,000 machine hours	B துறை: 324,200 ÷ 2,000 இயந்திர மணிநேரங்கள்
+Predetermined (budgeted) rates	முன்தீர்மானித்த (வரவுசெலவுத் திட்ட) விகிதங்கள்
+Over- and under-absorption	மிகை மற்றும் குறை உள்ளீர்ப்பு
+🧪 Try it — Overhead costing workbench	🧪 முயன்று பாருங்கள் — மேலதிகச் செலவிடல் பணிமேடை
+Defaults reproduce the video's biscuit company (A 267,800 → Rs 66.95/hr; B 324,200 → Rs 162.10/hr). Edit any figure. A and B are production departments; S is the maintenance service department.	இயல்புநிலைகள் காணொளியின் பிஸ்கட் நிறுவனத்தை மீளுருவாக்குகின்றன (A 267,800 → ரூ. 66.95/hr; B 324,200 → ரூ. 162.10/hr). எந்த எண்ணையும் திருத்தலாம். A, B உற்பத்தித் துறைகள்; S பராமரிப்புச் சேவைத் துறை.
+Allocated A	Aக்கு ஒதுக்கியது
+Rent	வாடகை
+Floor area A:B:S	தரைப் பரப்பு A:B:S
+Electricity	மின்சாரம்
+kW A:B:S	kW A:B:S
+Machine ins. + dep.	இயந்திரக் காப்புறுதி + தேய்மானம்
+Machine value A:B:S	இயந்திர மதிப்பு A:B:S
+Re-apportion S by A:B	A:B மூலம் Sஐ மறுபகிர்
+Budget labour hrs A	A வரவுசெலவுத் திட்ட உழைப்பு மணிகள்
+Budget machine hrs B	B வரவுசெலவுத் திட்ட இயந்திர மணிகள்
+Actual OH A	A உண்மையான OH
+Actual labour hrs A	A உண்மையான உழைப்பு மணிகள்
+Dept A	A துறை
+Dept B	B துறை
+Service S	சேவை S
+Basis	அடிப்படை
+Allocated	ஒதுக்கியது
+direct	நேரடி
+floor area	தரைப் பரப்பு
+machine value	இயந்திர மதிப்பு
+Primary total	முதற்கட்ட மொத்தம்
+Re-apportion S	Sஐ மறுபகிர்
+Final	இறுதி

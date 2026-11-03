@@ -1,0 +1,56 @@
+Project Appraisal — Payback, ARR, Time Value of Money, NPV & IRR	திட்ட மதிப்பீடு — மீளப்பெறும் காலம், ARR, பணத்தின் காலப் பெறுமதி, NPV, IRR
+What project appraisal is and its key issues, non-discounting methods (payback, ARR), the time value of money and discounting, NPV with the four-project example, IRR by interpolation (23.38%), and which method is best.	திட்ட மதிப்பீடும் அதன் முக்கிய விடயங்களும், கழித்தொதுக்காத முறைகள் (மீளப்பெறும் காலம், ARR), பணத்தின் காலப் பெறுமதியும் கழித்தொதுக்கலும், நான்கு திட்ட எடுத்துக்காட்டுடன் NPV, இடைச்செருகல் மூலம் IRR (23.38%), சிறந்த முறை எது என்பதும்.
+Project Appraisal: Part 1	திட்ட மதிப்பீடு: பகுதி 1
+Project appraisal, its key issues, and the non-discounting methods: payback period and accounting rate of return.	திட்ட மதிப்பீடு, அதன் முக்கிய விடயங்கள், கழித்தொதுக்காத முறைகளான மீளப்பெறும் காலமும் கணக்கியல் வருவாய் வீதமும்.
+Introduction and lecture outcomes	அறிமுகமும் விரிவுரையின் பெறுபேறுகளும்
+What project appraisal is (the Hambantota Port example)	திட்ட மதிப்பீடு என்றால் என்ன (அம்பாந்தோட்டைத் துறைமுக எடுத்துக்காட்டு)
+Goal: maximise the firm's wealth	இலக்கு: நிறுவனத்தின் செல்வத்தை அதிகரித்தல்
+Discounting vs non-discounting techniques	கழித்தொதுக்கும் மற்றும் கழித்தொதுக்காத நுட்பங்கள்
+Payback period: definition and acceptance criteria	மீளப்பெறும் காலம்: வரையறையும் ஏற்றுக்கொள்ளும் நிபந்தனைகளும்
+Example: project A ($900k) vs project B ($1m)	எடுத்துக்காட்டு: திட்டம் A ($900k), திட்டம் B ($1m)
+Payback advantages	மீளப்பெறும் கால முறையின் நன்மைகள்
+Payback disadvantages	மீளப்பெறும் கால முறையின் தீமைகள்
+Discounted payback period at 20%	20%இல் கழித்தொதுக்கிய மீளப்பெறும் காலம்
+Project A 3.3 years vs project B 2.96 years	திட்டம் A 3.3 ஆண்டுகள், திட்டம் B 2.96 ஆண்டுகள்
+Accounting rate of return (ARR)	கணக்கியல் வருவாய் வீதம் (ARR)
+ARR acceptance criteria	ARR ஏற்றுக்கொள்ளும் நிபந்தனைகள்
+ARR example: $400k machine → 31.875%	ARR எடுத்துக்காட்டு: $400k இயந்திரம் → 31.875%
+ARR advantages and disadvantages	ARRஇன் நன்மைகளும் தீமைகளும்
+Project Appraisal: Part 2	திட்ட மதிப்பீடு: பகுதி 2
+Time value of money, discounting, NPV (four-project example) and IRR (interpolation example).	பணத்தின் காலப் பெறுமதி, கழித்தொதுக்கல், NPV (நான்கு திட்ட எடுத்துக்காட்டு), IRR (இடைச்செருகல் எடுத்துக்காட்டு).
+Lecture outcomes: NPV and IRR	விரிவுரைப் பெறுபேறுகள்: NPV, IRR
+Why time matters: project A ($110 in year 1) vs B ($121 in year 2)	காலம் ஏன் முக்கியம்: திட்டம் A (ஆண்டு 1இல் $110), B (ஆண்டு 2இல் $121)
+Three reasons for the time value of money	பணத்தின் காலப் பெறுமதிக்கான மூன்று காரணங்கள்
+Opportunity cost	அமையச் செலவு
+Inflation	பணவீக்கம்
+Uncertainty and risk (risk premium)	நிச்சயமின்மையும் இடரும் (இடர் மேலதிக வருமானம்)
+Discounting: PV = FV ÷ (1 + r)ⁿ	கழித்தொதுக்கல்: PV = FV ÷ (1 + r)ⁿ
+Example: 3,000 today vs 1,100 + 1,210 + 1,331	எடுத்துக்காட்டு: இன்று 3,000 அல்லது 1,100 + 1,210 + 1,331
+The NPV method and its steps	NPV முறையும் அதன் படிகளும்
+NPV decision rules	NPV முடிவு விதிகள்
+Example: four projects at 12%	எடுத்துக்காட்டு: 12%இல் நான்கு திட்டங்கள்
+Limited resources: choose the highest NPV	வரம்புடைய வளங்கள்: மிக உயர்ந்த NPVஐத் தேர்ந்தெடுக்கவும்
+Advantages of NPV	NPVஇன் நன்மைகள்
+IRR: definition	IRR: வரையறை
+Calculating IRR by trial and interpolation	முயற்சி மற்றும் இடைச்செருகல் மூலம் IRR கணக்கிடுதல்
+Example: $400k, $200k a year for 3 years → IRR 23.38%	எடுத்துக்காட்டு: $400k, 3 ஆண்டுகளுக்கு ஆண்டுக்கு $200k → IRR 23.38%
+Comparing the four techniques: NPV is best	நான்கு நுட்பங்களின் ஒப்பீடு: NPV சிறந்தது
+🧪 Try it — NPV · IRR · payback lab	🧪 முயன்று பாருங்கள் — NPV · IRR · மீளப்பெறும் கால ஆய்வகம்
+Initial investment	ஆரம்ப முதலீடு
+Discount rate %	கழித்தொதுக்கல் வீதம் %
+Benchmark payback (yrs)	ஒப்பீட்டு மீளப்பெறும் காலம் (ஆண்டுகள்)
+Cash flows yr 1…n (comma-separated)	ஆண்டு 1…n பணப்பாய்வுகள் (காற்புள்ளியால் பிரிக்கவும்)
+Project A (video)	திட்டம் A (காணொளி)
+IRR example	IRR எடுத்துக்காட்டு
+TVM example	காலப் பெறுமதி எடுத்துக்காட்டு
+Year	ஆண்டு
+Cash flow	பணப்பாய்வு
+Cumulative (undiscounted)	திரட்டியது (கழித்தொதுக்கப்படாதது)
+accept	ஏற்கவும்
+reject	நிராகரிக்கவும்
+indifferent	நடுநிலை
+Payback =	மீளப்பெறும் காலம் =
+not within the project life	திட்ட ஆயுட்காலத்துக்குள் இல்லை
+within	உட்பட்டது
+exceeds	மீறுகிறது
+No IRR found (cash flows never turn NPV negative or positive).	IRR கிடைக்கவில்லை (பணப்பாய்வுகள் NPVஐ எதிர்மறையாகவோ நேர்மறையாகவோ மாற்றுவதில்லை).

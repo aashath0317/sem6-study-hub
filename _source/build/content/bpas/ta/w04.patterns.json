@@ -1,0 +1,5 @@
+[
+ {"pattern":"^✗ Difference Rs ([\\d,.-]+)$","replacement":"✗ வேறுபாடு ரூ. $1"},
+ {"pattern":"^\\(Cr side\\)\\.$","replacement":"(வரவுப் பக்கம்)."},
+ {"pattern":"^\\(Dr side\\)\\.$","replacement":"(பற்றுப் பக்கம்)."}
+]

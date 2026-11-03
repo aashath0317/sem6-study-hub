@@ -1,0 +1,10 @@
+[
+ {"pattern":"^Profit \\((.*)% of price\\)$","replacement":"இலாபம் (விலையின் $1%)"},
+ {"pattern":"^Profit \\((.*)% of cost\\)$","replacement":"இலாபம் (செலவின் $1%)"},
+ {"pattern":"^Margin (.*)% = markup (.*)%\\. Price = cost ÷ \\(1 − margin\\)\\. The marginal price must still cover the fixed costs from its contribution\\.$","replacement":"விலைமேல் இலாப விகிதம் $1% = செலவுமேல் இலாபக் கூட்டு $2%. விலை = செலவு ÷ (1 − விலைமேல் இலாப விகிதம்). எல்லைச் செலவு விலை தனது பங்களிப்பிலிருந்து நிலையான செலவுகளையும் ஈடுசெய்ய வேண்டும்."},
+ {"pattern":"^Markup (.*)% = margin (.*)%\\. Price = cost × \\(1 \\+ markup\\)\\. The marginal price must still cover the fixed costs from its contribution\\.$","replacement":"செலவுமேல் இலாபக் கூட்டு $1% = விலைமேல் இலாப விகிதம் $2%. விலை = செலவு × (1 + செலவுமேல் இலாபக் கூட்டு). எல்லைச் செலவு விலை தனது பங்களிப்பிலிருந்து நிலையான செலவுகளையும் ஈடுசெய்ய வேண்டும்."},
+ {"pattern":"^\\((.*?)\\): high launch price, lowered later; recovers the investment$","replacement":"($1): உயர்ந்த அறிமுக விலை; பின்னர் குறைக்கப்படுகிறது; முதலீட்டை மீட்கிறது"},
+ {"pattern":"^\\((.*?)\\): low launch price for reach and word of mouth; deters entrants; watch supply$","replacement":"($1): அணுகலுக்கும் வாய்மொழிப் பரவலுக்கும் குறைந்த அறிமுக விலை; புதிய நுழைவோரைத் தடுக்கிறது; வழங்கலைக் கவனிக்கவும்"},
+ {"pattern":"^\\((.*?)\\): match competitors so you don't lose customers on price$","replacement":"($1): விலையால் வாடிக்கையாளர்களை இழக்காமல் போட்டியாளர்களுடன் பொருந்துங்கள்"},
+ {"pattern":"^\\((.*?)\\): price on the customer's perceived value, not on cost$","replacement":"($1): செலவில் அல்ல; வாடிக்கையாளர் உணரும் மதிப்பில் விலையிடுங்கள்"}
+]

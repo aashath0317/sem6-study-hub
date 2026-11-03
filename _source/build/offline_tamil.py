@@ -85,8 +85,8 @@ def translated_body(body, key, here, render):
             value = re.search(r'^' + label + r': (.+)$', metadata, re.M)
             if value and value[1] in mapping:
                 strings[value[1]] = mapping[value[1]]
-    # The mixed exam on the HCI index uses all the weekly translations.
-    quiz_stems = ['w' + str(i).zfill(2) for i in range(1, 14)] if stem == 'index' else [stem]
+    # Mixed practice exams use every translated weekly question for this subject.
+    quiz_stems = sorted(name[:-5] for name in os.listdir(directory) if re.fullmatch(r'w\d+\.quiz', name)) if stem == 'index' else [stem]
     for quiz_stem in quiz_stems:
         quiz_path = os.path.join(directory, quiz_stem + '.quiz')
         if not os.path.isfile(quiz_path):

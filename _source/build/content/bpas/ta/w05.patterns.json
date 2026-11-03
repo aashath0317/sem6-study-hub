@@ -1,0 +1,6 @@
+[
+  {
+    "pattern": "^Gross margin = (.+)% · Net margin = (.+)%$",
+    "replacement": "மொத்த இலாப வீதம் = $1% · தேறிய இலாப வீதம் = $2%"
+  }
+]

@@ -1,0 +1,55 @@
+Material Costing & LKAS 2 Inventories	பொருட் செலவிடலும் LKAS 2 சரக்குகளும்
+Inventory types, the cost of inventory and NRV (LKAS 2), the purchase function (centralised vs decentralised, purchase procedure, material cost), storing materials (stock levels, EOQ), and pricing issues with FIFO and weighted average — with every lecture example solved.	சரக்கு வகைகள், சரக்குச் செலவும் NRVஉம் (LKAS 2), கொள்வனவுப் பணி (மையப்படுத்தப்பட்டதும் மையப்படுத்தப்படாததும், கொள்வனவு நடைமுறை, பொருட் செலவு), பொருட்களைச் சேமித்தல் (சரக்கு மட்டங்கள், EOQ), FIFO மற்றும் நிறையிட்ட சராசரி மூலம் வழங்கல்களுக்கு விலையிடல் — ஒவ்வொரு விரிவுரை எடுத்துக்காட்டின் தீர்வுடனும்.
+Inventory Costing	சரக்குச் செலவிடல்
+Lecture on inventory and material costing.	சரக்கு மற்றும் பொருட் செலவிடல் பற்றிய விரிவுரை.
+Learning outcomes: what inventories are and why systems matter	கற்றல் பெறுபேறுகள்: சரக்குகள் என்றால் என்ன, முறைமைகள் ஏன் முக்கியம்
+Key features of an inventory system	சரக்கு முறைமையின் முக்கிய பண்புகள்
+Why hold inventory: independence of operations	சரக்கு வைத்திருப்பது ஏன்: செயற்பாடுகளின் சுயாதீனம்
+Flexibility in production scheduling	உற்பத்தி அட்டவணையிடலில் நெகிழ்வுத்தன்மை
+Economic purchase orders and discounts	சிக்கனமான கொள்வனவுக் கட்டளைகளும் கழிவுகளும்
+Inventory costs: ordering cost	சரக்குச் செலவுகள்: கட்டளைச் செலவு
+Set-up costs (e.g. switching car models)	தயார்நிலை அமைப்புச் செலவுகள் (எ.கா. கார் மாதிரிகளை மாற்றுதல்)
+Stock-out costs (e.g. a phone launch)	சரக்குத் தீர்வுச் செலவுகள் (எ.கா. தொலைபேசி அறிமுகம்)
+Objectives of stock control	சரக்குக் கட்டுப்பாட்டின் நோக்கங்கள்
+Stock levels	சரக்கு மட்டங்கள்
+Reorder level formula	மீள்கட்டளை மட்டச் சூத்திரம்
+Minimum stock level (buffer stock)	குறைந்தபட்ச சரக்கு மட்டம் (பாதுகாப்புச் சரக்கு)
+Maximum stock level	அதிகபட்ச சரக்கு மட்டம்
+Worked example: stock levels	தீர்வுடன் எடுத்துக்காட்டு: சரக்கு மட்டங்கள்
+EOQ: minimising total cost	EOQ: மொத்தச் செலவைக் குறைத்தல்
+Holding cost per unit per year	ஆண்டுக்கு அலகொன்றின் பேணற் செலவு
+FIFO valuation	FIFO மதிப்பீடு
+Example: FIFO and weighted average cost (WAC)	எடுத்துக்காட்டு: FIFO மற்றும் நிறையிட்ட சராசரிச் செலவு (WAC)
+FIFO in inflation: higher profit and stock value	பணவீக்கத்தில் FIFO: அதிக இலாபமும் சரக்குப் பெறுமதியும்
+WAC smooths out price changes	WAC விலை மாற்றங்களைச் சீராக்குகிறது
+Summary: FIFO vs WAC	சுருக்கம்: FIFO மற்றும் WAC
+🧪 Try it — EOQ & stock-level calculator	🧪 முயன்று பாருங்கள் — EOQ மற்றும் சரக்கு மட்டக் கணிப்பான்
+Annual demand D	வருடாந்தக் கேள்வி D
+Order cost Co	கட்டளைச் செலவு Co
+Unit price	அலகு விலை
+Holding %	பேணற் செலவு %
+total cost	மொத்தச் செலவு
+ordering cost	கட்டளைச் செலவு
+holding cost	பேணற் செலவு
+order quantity →	கட்டளை அளவு →
+At the EOQ, ordering cost = holding cost. That is the bottom of the total-cost curve.	EOQஇல் கட்டளைச் செலவு = பேணற் செலவு. அது மொத்தச் செலவு வளைகோட்டின் அடிப்பகுதி.
+🧪 Try it — Stores ledger builder (FIFO vs weighted average)	🧪 முயன்று பாருங்கள் — களஞ்சியப் பேரேடு உருவாக்கி (FIFO மற்றும் நிறையிட்ட சராசரி)
+Method	முறை
+Weighted average	நிறையிட்ட சராசரி
+Transaction	பரிவர்த்தனை
+Issued as	வழங்கிய விதம்
+Value	பெறுமதி
+Balance units	மீதி அலகுகள்
+Balance value	மீதிப் பெறுமதி
+Total issues (to production / COGS) =	மொத்த வழங்கல்கள் (உற்பத்திக்கு / விற்ற பொருட்களின் செலவுக்கு) =
+· Closing stock =	· இறுதிச் சரக்கு =
+🧪 Try it — EOQ calculator	🧪 முயன்று பாருங்கள் — EOQ கணிப்பான்
+Annual demand	வருடாந்தக் கேள்வி
+Cost per order	கட்டளையொன்றின் செலவு
+Holding cost / unit / year	பேணற் செலவு / அலகு / ஆண்டு
+units	அலகுகள்
+Orders a year	ஆண்டுக்கான கட்டளைகள்
+· time between orders	· கட்டளைகளுக்கு இடையிலான காலம்
+· total cost	· மொத்தச் செலவு
+(ordering = holding)	(கட்டளைச் செலவு = பேணற் செலவு)
+Enter a holding cost above 0.	0ஐவிட அதிகமான பேணற் செலவை உள்ளிடவும்.

@@ -1,0 +1,11 @@
+[
+ {"pattern":"^([\\d.,-]+) units$","replacement":"$1 அலகுகள்"},
+ {"pattern":"Orders per year","replacement":"ஆண்டுக்கான கட்டளைகள்","flags":"g"},
+ {"pattern":"Ordering cost","replacement":"கட்டளைச் செலவு","flags":"g"},
+ {"pattern":"Holding cost","replacement":"பேணற் செலவு","flags":"g"},
+ {"pattern":"^Total = ","replacement":"மொத்தம் = "},
+ {"pattern":"^Receipt ([\\d.,+-]+) @ ([\\d.,+-]+)$","replacement":"பெறுதல் $1 @ $2"},
+ {"pattern":"^Issue ([\\d.,+-]+)$","replacement":"வழங்கல் $1"},
+ {"pattern":"^([\\d.,-]+) months$","replacement":"$1 மாதங்கள்"},
+ {"pattern":"^Rs\\. ([\\d.,-]+)$","replacement":"ரூ. $1"}
+]

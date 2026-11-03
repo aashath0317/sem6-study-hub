@@ -11,8 +11,8 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
 (async () => {
   let totalSections=0, totalQuestions=0, totalTools=0;
   const untranslated = [];
-  const pages = files(directory).filter(file => !business || /Week 0[123]\//.test(file));
-  assert.equal(pages.length,business ? 3 : 15);
+  const pages = files(directory);
+  assert.equal(pages.length,business ? 17 : 15);
   for (const file of pages) {
     const errors = [];
     const vc = new VirtualConsole();
@@ -85,11 +85,25 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     // Exercise every tool's alternatives, including content created after the toggle.
     for(const tool of tools) {
       for(const select of tool.querySelectorAll('select')) {
-        for(const option of [...select.options]) { select.value=option.value; select.dispatchEvent(new dom.window.Event('change',{bubbles:true})); await tick(); scan(); }
+        for(const option of [...select.options]) { select.value=option.value; select.dispatchEvent(new dom.window.Event('input',{bubbles:true})); select.dispatchEvent(new dom.window.Event('change',{bubbles:true})); await tick(); scan(); }
       }
       for(const checkbox of tool.querySelectorAll('input[type=checkbox]')) { checkbox.checked=!checkbox.checked; checkbox.dispatchEvent(new dom.window.Event('change',{bubbles:true})); await tick(); scan(); }
       for(const action of [...tool.querySelectorAll('button')]) { if(!action.isConnected) continue; action.click(); await tick(); scan(); }
     }
+    // Financial controls must keep their edited values and numeric results when labels change.
+    const editedInputs = [...d.querySelectorAll('.tool input[type=number],.tool input[type=range]')];
+    if(business) {
+      for(const el of editedInputs) {
+        const value=Number(el.value); if(!Number.isFinite(value)) continue;
+        el.value=String(value===0 ? 1 : value*1.1);
+        el.dispatchEvent(new dom.window.Event('input',{bubbles:true}));
+        el.dispatchEvent(new dom.window.Event('change',{bubbles:true}));
+      }
+      await tick();
+    }
+    const editedValues=editedInputs.map(el=>el.value);
+    const numericOutputs=()=>[...d.querySelectorAll('.tool .out')].map(el=>(el.textContent.match(/\d+(?:[,.]\d+)*/g)||[]).sort().join('|'));
+    const tamilNumbers=business ? numericOutputs() : null;
     // A tool that reads a translated label must still retain its source-language state.
     const principle = d.querySelector('#pr .ps');
     let deletedLabel = null;
@@ -106,6 +120,8 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     assert.equal(d.documentElement.lang,'en');
     if(deletedLabel) assert.ok(d.querySelector('#pr .msg').textContent.includes(deletedLabel),'Tool captured translated label as source state');
     if(input) assert.equal(input.checked,true,'Quiz answer lost');
+    assert.deepEqual(editedInputs.map(el=>el.value),editedValues,'Edited tool values lost');
+    if(business) assert.deepEqual(numericOutputs(),tamilNumbers,'Language toggle changed financial results');
     tools.forEach(tool=> assert.ok(tool.closest('.hci-en'),'Live tool not returned'));
     for(const tool of tools) assert.ok(d.contains(tool),'Live tool replaced');
     assert.equal(d.querySelectorAll('.quiz input[type=radio]:checked').length,input?1:0);

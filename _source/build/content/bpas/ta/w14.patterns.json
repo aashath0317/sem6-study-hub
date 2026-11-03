@@ -1,0 +1,46 @@
+[
+  {
+    "pattern": "Rs ([-\\d.]+)m",
+    "replacement": "ரூ. $1m",
+    "flags": "g"
+  },
+  {
+    "pattern": "([\\d,]+) boards",
+    "replacement": "$1 பலகைகள்",
+    "flags": "g"
+  },
+  {
+    "pattern": "([\\d,]+) hrs",
+    "replacement": "$1 மணிகள்",
+    "flags": "g"
+  },
+  {
+    "pattern": "^Opening ",
+    "replacement": "ஆரம்பம் "
+  },
+  {
+    "pattern": " \\+ receipts ",
+    "replacement": " + பெறுதல்கள் ",
+    "flags": "g"
+  },
+  {
+    "pattern": " − payments ",
+    "replacement": " − கொடுப்பனவுகள் ",
+    "flags": "g"
+  },
+  {
+    "pattern": " wood ",
+    "replacement": " மரம் ",
+    "flags": "g"
+  },
+  {
+    "pattern": " labour ",
+    "replacement": " உழைப்பு ",
+    "flags": "g"
+  },
+  {
+    "pattern": " other\\)",
+    "replacement": " ஏனையவை)",
+    "flags": "g"
+  }
+]

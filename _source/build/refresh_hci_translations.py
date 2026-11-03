@@ -49,9 +49,19 @@ if __name__ == '__main__':
         key = re.search(r'<body data-key="([^"]*)"', text)[1]
         if subject == 'bpas':
             week = re.fullmatch(r'bpas-Week(\d+)', key)
-            if not week or not (HERE/'content'/'bpas'/'ta'/('w' + week[1] + '.md')).exists():
+            directory = HERE/'content'/'bpas'/'ta'
+            if week:
+                if not (directory/('w' + week[1] + '.md')).exists():
+                    continue
+            elif key.endswith('-papers'):
+                if not (directory/'papers.md').exists():
+                    continue
+            elif not key:
+                if not all((directory/('w' + str(i).zfill(2) + '.quiz')).exists() for i in range(1,16)):
+                    continue
+            else:
                 continue
-        key = key or 'hci-index'
+        key = key or subject + '-index'
         prepared.append((path, refresh(text, key)))
     for path, text in prepared:
         path.write_text(text, encoding='utf-8')

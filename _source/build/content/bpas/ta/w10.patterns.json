@@ -1,0 +1,38 @@
+[
+  {
+    "pattern": "^OAR A = (.*) labour hrs =$",
+    "replacement": "OAR A = $1 உழைப்பு மணிகள் = "
+  },
+  {
+    "pattern": "^· OAR B = (.*) machine hrs =$",
+    "replacement": " · OAR B = $1 இயந்திர மணிகள் = "
+  },
+  {
+    "pattern": "^Rs (.*)/labour hr$",
+    "replacement": "ரூ. $1/உழைப்பு மணி"
+  },
+  {
+    "pattern": "^Rs (.*)/machine hr$",
+    "replacement": "ரூ. $1/இயந்திர மணி"
+  },
+  {
+    "pattern": "^Dept A absorbed = ([+\\-−]?(?:\\d[\\d,]*(?:\\.\\d+)?(?:[eE][+\\-]?\\d+)?|Infinity|∞)|NaN) × ([+\\-−]?(?:\\d[\\d,]*(?:\\.\\d+)?(?:[eE][+\\-]?\\d+)?|Infinity|∞)|NaN) actual hrs = ([+\\-−]?(?:\\d[\\d,]*(?:\\.\\d+)?(?:[eE][+\\-]?\\d+)?|Infinity|∞)|NaN) vs actual ([+\\-−]?(?:\\d[\\d,]*(?:\\.\\d+)?(?:[eE][+\\-]?\\d+)?|Infinity|∞)|NaN) →$",
+    "replacement": "A துறை உள்ளீர்த்தது = $1 × $2 உண்மையான மணிகள் = $3; உண்மையானது $4 →"
+  },
+  {
+    "pattern": "^over-absorbed by Rs (.*)$",
+    "replacement": "ரூ. $1 மிகை உள்ளீர்ப்பு"
+  },
+  {
+    "pattern": "^under-absorbed by Rs (.*)$",
+    "replacement": "ரூ. $1 குறை உள்ளீர்ப்பு"
+  },
+  {
+    "pattern": "^\\(credit to the P&L\\)$",
+    "replacement": " (இலாப நட்டக் கணக்கில் வரவு)"
+  },
+  {
+    "pattern": "^\\(debit to the P&L\\)$",
+    "replacement": " (இலாப நட்டக் கணக்கில் பற்று)"
+  }
+]

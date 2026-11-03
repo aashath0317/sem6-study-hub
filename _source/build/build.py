@@ -268,7 +268,7 @@ def study_data():
 
 def page(title, body, key="", crumbs=""):
     body = native_sections(body, key)
-    translation_key = "hci-index" if not key and title.startswith("Human Computer Interaction") else key
+    translation_key = next((s[0] + "-index" for s in SUBJECTS if not key and title.startswith(s[3])), key)
     body, is_hci = translated_body(body, translation_key, HERE, md)
     translation = ""
     if is_hci:

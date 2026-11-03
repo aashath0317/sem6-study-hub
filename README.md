@@ -62,8 +62,19 @@ node _source/build/tests/hci-translation.test.cjs
 
 The test exercises Tamil/English switching, dynamic tool branches, answer selection and quiz grading without fetching external resources.
 
-## Business Tamil translations — current progress
+## Business Tamil translations
 
-Business Processes and Accounting Systems **Weeks 01–03** have both the original Tamil explanation buttons and the floating Tamil/English button for authored direct translations. These three weeks include 21 note sections, 33 quiz questions and five interactive tools. Original English notes, numerical examples, answers and explanation content are preserved. Lecture-video titles, descriptions and chapter captions remain English in these weeks. Weeks 04–15 retain their original explanation buttons; their direct translations are pending.
+All **15 Business Processes and Accounting Systems weeks**, past papers and the subject index now include authored offline Tamil translations through the right-side **தமிழ் / English** button. Original per-section **தமிழில் புரிந்துகொள்ள** explanations remain available alongside it.
 
-Refresh completed Business translations with `python _source/build/refresh_hci_translations.py bpas`. Run their integration checks with `STUDY_TRANSLATION_SUBJECT=bpas node _source/build/tests/hci-translation.test.cjs`.
+Coverage: **114 note/past-paper sections, 168 weekly quiz questions and 24 live tools**, including worked examples, tables and all video titles, descriptions and chapter captions. English content, financial values, quiz answers and original explanation content are preserved. Labels embedded in original images/video players and editable source data remain unchanged.
+
+Refresh: `python _source/build/refresh_hci_translations.py bpas`.
+
+Checks (Node.js integration requires `jsdom`):
+
+```sh
+python _source/build/tests/tamil-source.test.py
+STUDY_TRANSLATION_SUBJECT=bpas node _source/build/tests/hci-translation.test.cjs
+```
+
+These checks cover numeric/source parity, metadata coverage, both Tamil options, tool branches, edited financial inputs/results, quiz selections and grading.

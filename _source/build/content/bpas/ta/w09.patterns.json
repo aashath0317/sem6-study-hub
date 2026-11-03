@@ -1,0 +1,11 @@
+[
+ {"pattern":"^Time saved = (.*)$","replacement":"சேமித்த நேரம் = $1"},
+ {"pattern":"\\bRs ","replacement":"ரூ. ","flags":"g"},
+ {"pattern":"\\bHalsey\\b","replacement":"ஹால்சி","flags":"g"},
+ {"pattern":"\\bRowan\\b","replacement":"ரோவன்","flags":"g"},
+ {"pattern":"^Effective hourly rate: (.*)\\. Bonus schemes reward efficiency while guaranteeing the time wage\\.$","replacement":"பயனுறு மணிநேர விகிதம்: $1. நேரக்கூலியை உறுதிசெய்தபடி ஊக்கத்தொகைத் திட்டங்கள் செயல்திறனுக்குப் பிரதிபலன் தருகின்றன."},
+ {"pattern":"^Overtime \\((.*)\\)$","replacement":"மேலதிக நேரம் ($1)"},
+ {"pattern":"\\bunits\\b","replacement":"அலகுகள்","flags":"g"},
+ {"pattern":" h saved","replacement":" மணி சேமித்தது","flags":"g"},
+ {"pattern":"\\bh\\b","replacement":"மணி","flags":"g"}
+]

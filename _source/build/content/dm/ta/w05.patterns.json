@@ -1,0 +1,47 @@
+[
+  {
+    "pattern": "(\\d+)-D cuboid",
+    "replacement": "$1-D கனச்செவ்வகம்",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\(base cuboid\\)",
+    "replacement": "(அடிப்படைக் கனச்செவ்வகம்)",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\(apex cuboid \"all\"\\)",
+    "replacement": "(உச்சிக் கனச்செவ்வகம் \"அனைத்தும்\")",
+    "flags": "g"
+  },
+  {
+    "pattern": "(\\d+) cells?",
+    "replacement": "$1 கலங்கள்",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\btim\\b",
+    "replacement": "கா",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\bitem\\b",
+    "replacement": "பொ",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\bloc\\b",
+    "replacement": "இ",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\bsup\\b",
+    "replacement": "வ",
+    "flags": "g"
+  },
+  {
+    "pattern": "home ent.",
+    "replacement": "வீட்டுப் பொழுதுபோக்கு",
+    "flags": "g"
+  }
+]

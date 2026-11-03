@@ -1,0 +1,20 @@
+Schemas for the Multidimensional Model	பல்பரிமாண மாதிரிக்கான திட்டவடிவங்கள்
+Star, snowflake and fact constellation schemas, data warehouse vs data mart, defining cubes with DMQL, and concept hierarchies.	நட்சத்திரம், பனித்துகள், உண்மை விண்மீன்கூட்டத் திட்டவடிவங்கள், தரவுக் கிடங்கு மற்றும் தரவுச் சந்தை, DMQL-ஆல் கனசதுரங்களை வரையறுத்தல், கருத்துப் படிநிலைகள்.
+Weka 1.2 – Exploring the Explorer	Weka 1.2 – Explorer-ஐ ஆராய்தல்
+A tour of Weka's Explorer interface: opening a dataset, the Preprocess panel, attributes and instances.	Weka Explorer இடைமுகச் சுற்றுப்பயணம்: தரவுத்தொகுப்பைத் திறத்தல், Preprocess பலகம், பண்புக்கூறுகள், நிகழ்வுகள்.
+Introduction	அறிமுகம்
+Downloading and installing Weka	Weka-வைப் பதிவிறக்கி நிறுவுதல்
+Opening the Explorer and its panels	Explorer-ஐயும் அதன் பலகங்களையும் திறத்தல்
+Preprocess panel: loading the weather data	Preprocess பலகம்: வானிலைத் தரவை ஏற்றுதல்
+Instances, attributes and the class	நிகழ்வுகள், பண்புக்கூறுகள், வகுப்பு
+Attribute statistics and histograms	பண்புக்கூறுப் புள்ளிவிவரங்களும் அலைவெண் செவ்வகங்களும்
+Editing and saving the dataset	தரவுத்தொகுப்பைத் திருத்திச் சேமித்தல்
+Schema viewer	திட்டவடிவப் பார்வையாளர்
+Star	நட்சத்திரம்
+Snowflake	பனித்துகள்
+Fact constellation	உண்மை விண்மீன்கூட்டம்
+One fact table and ONE table per dimension. Location repeats province/country, so there is redundancy.	ஒரு உண்மை அட்டவணையும் பரிமாணத்துக்கு ஓர் அட்டவணையும். Location-இல் மாகாணம்/நாடு மீண்டும் வருவதால் மிகைமை உள்ளது.
+The item and location dimensions are normalised into extra tables (supplier, city). Less redundancy, but queries need more joins.	item, location பரிமாணங்கள் கூடுதல் அட்டவணைகளாக (supplier, city) இயல்பாக்கப்பட்டுள்ளன. மிகைமை குறைவு; ஆனால் வினவல்களுக்கு அதிக இணைப்புகள் தேவை.
+SALES (fact)	விற்பனை (உண்மை)
+SHIPPING (fact)	அனுப்புதல் (உண்மை)
+Two fact tables (sales, shipping) share the time, item and location dimension tables.	இரு உண்மை அட்டவணைகள் (sales, shipping), time, item, location பரிமாண அட்டவணைகளைப் பகிர்கின்றன.

@@ -13,6 +13,11 @@ ROOT = HERE.parent.parent
 
 
 def refresh(text, key):
+    # Keep the already published explanation markup byte-for-byte. Markdown
+    # versions can otherwise render emphasis in formulas differently.
+    explanation_pattern = r'(<section class="card" data-sec="(s\d+)"><h2\b[^>]*>.*?</h2>)(.*?)(<div class="section-english" id="en-s\d+" lang="en">)'
+    explanations = {m[2]: m[3] for m in re.finditer(explanation_pattern, text, re.S)
+                    if 'class="tamil-native"' in m[3]}
     # Discard only the prior generated translation assets/panels.
     text = re.sub(r'<style>\s*\.hci-language\{.*?</style>', '', text, flags=re.S)
     text = re.sub(r'<script>// Authored, offline Tamil translations\..*?</script>', '', text, flags=re.S)
@@ -30,6 +35,8 @@ def refresh(text, key):
         return start + contents + end
     text = re.sub(r'(<section class="card" data-sec="s\d+"><h2\b[^>]*>.*?</h2>)(.*?)(</section>)', english_section, text, flags=re.S)
     text = native_sections(text, key)
+    text = re.sub(explanation_pattern,
+                  lambda m: m[1] + explanations.get(m[2], m[3]) + m[4], text, flags=re.S)
     text, ready = translated_body(text, key, str(HERE), md)
     if not ready:
         raise ValueError('Missing complete authored Tamil translation: ' + key)

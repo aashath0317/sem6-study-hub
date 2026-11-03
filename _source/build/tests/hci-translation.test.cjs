@@ -14,6 +14,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
   const untranslated = [];
   const pages = files(directory).filter(file => !dataMining || fs.readFileSync(file,"utf8").includes('id="hci-tamil-data"'));
   if (!dataMining) assert.equal(pages.length,business ? 17 : 15);
+  else if(process.env.STUDY_TRANSLATION_REQUIRE_COMPLETE) assert.equal(pages.length,16);
   else assert.ok(pages.length > 0);
   for (const file of pages) {
     const errors = [];

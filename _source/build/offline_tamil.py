@@ -72,6 +72,12 @@ def translated_body(body, key, here, render):
     markup.update(_json(path.replace('.md', '.markup.json'), {}))
     patterns = _json(os.path.join(directory, 'common.patterns.json'), [])
     patterns += _json(path.replace('.md', '.patterns.json'), [])
+    # Tool captions add a shared prefix around the authored title.
+    for title in re.findall(r'<div class="tt">[^<]*?Try it [^<]*?</div>', body):
+        label = html.unescape(re.sub('<[^>]+>', '', title)).strip()
+        prefix = '\U0001f9ea Try it \u2014 '
+        if label.startswith(prefix) and label[len(prefix):] in strings:
+            strings[label] = '\U0001f9ea \u0bae\u0bc1\u0baf\u0ba9\u0bcd\u0bb1\u0bc1 \u0baa\u0bbe\u0bb0\u0bc1\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u2014 ' + strings[label[len(prefix):]]
     # Navigation and week cards share the corresponding translated title/lead.
     for name in sorted(os.listdir(directory)):
         if not re.fullmatch(r'w\d+\.strings.tsv', name):

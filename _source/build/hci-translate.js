@@ -76,7 +76,7 @@
   }
   function translateLiveContent() {
     fitTamilDiagrams();
-    document.querySelectorAll('.qt,.qe,.qo span,.tool p,.tool h4,.tool td,.tool th,.tool text,.tool foreignObject div').forEach(function (el) {
+    document.querySelectorAll('.qt,.qe,.qo span,.tool p,.tool .out,.tool h4,.tool td,.tool th,.tool text,.tool foreignObject div').forEach(function (el) {
       var current = el.innerHTML, saved = htmlState.get(el);
       if (saved && !tamil) { el.innerHTML = saved.en; return; }
       if (saved && current === saved.ta) return;

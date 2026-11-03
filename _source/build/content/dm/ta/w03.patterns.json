@@ -1,0 +1,26 @@
+[
+  {
+    "pattern": "\\((above|below) the mean by ([\\d.,−-]+) standard deviations\\)",
+    "replacement": "(சராசரியிலிருந்து $2 நியம விலகல்கள் $1)"
+  },
+  {
+    "pattern": "above",
+    "replacement": "மேலே"
+  },
+  {
+    "pattern": "below",
+    "replacement": "கீழே"
+  },
+  {
+    "pattern": "one attribute may be redundant",
+    "replacement": "ஒரு பண்புக்கூறு மிகையானதாக இருக்கலாம்"
+  },
+  {
+    "pattern": "strong positive",
+    "replacement": "வலுவான நேர்மறை"
+  },
+  {
+    "pattern": "strong negative",
+    "replacement": "வலுவான எதிர்மறை"
+  }
+]

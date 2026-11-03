@@ -1,0 +1,53 @@
+Data Preprocessing — Cleaning, Integration & Transformation	தரவு முன்செயலாக்கம் — தூய்மைப்படுத்தல், ஒருங்கிணைப்பு, உருமாற்றம்
+Why real data is dirty, how to fill missing values and smooth noise, cleaning as a process, integrating sources with correlation analysis, and normalization.	உண்மையான தரவு ஏன் தூய்மையற்றது, விடுபட்ட பெறுமதிகளை நிரப்புவதும் இரைச்சலைச் சீராக்குவதும், தூய்மைப்படுத்தல் செயல்முறை, ஒட்டுறவுப் பகுப்பாய்வுடன் மூலங்களை ஒருங்கிணைத்தல், இயல்பாக்கம்.
+Introduction to Data Preprocessing	தரவு முன்செயலாக்க அறிமுகம்
+Overview of why preprocessing is needed and the main preprocessing tasks.	முன்செயலாக்கம் ஏன் தேவை, முக்கிய முன்செயலாக்கப் பணிகள் ஆகியவற்றின் கண்ணோட்டம்.
+Why data preprocessing is needed	தரவு முன்செயலாக்கம் ஏன் தேவை
+Dirty data: errors, inconsistent codes (1-2-3 vs A-B-C)	தூய்மையற்ற தரவு: பிழைகள், முரண்பாடான குறியீடுகள் (1-2-3 மற்றும் A-B-C)
+Why data is dirty: entry, transmission, multiple sources	தரவு ஏன் தூய்மையற்றது: உள்ளீடு, பரிமாற்றம், பல மூலங்கள்
+Cleaning: inconsistencies, missing values, noise	தூய்மைப்படுத்தல்: முரண்பாடுகள், விடுபட்ட பெறுமதிகள், இரைச்சல்
+Preprocessing in the knowledge discovery (KDD) process	அறிவுக் கண்டறிதல் (KDD) செயல்முறையில் முன்செயலாக்கம்
+Major tasks: cleaning, integration, reduction, transformation	முக்கிய பணிகள்: தூய்மைப்படுத்தல், ஒருங்கிணைப்பு, குறைப்பு, உருமாற்றம்
+Data reduction and summarisation	தரவுக் குறைப்பும் சுருக்கமும்
+Missing-value filler	விடுபட்ட பெறுமதி நிரப்பி
+Income is missing for customer C5. Choose a method and see what value is filled in.	C5 வாடிக்கையாளரின் வருமானம் விடுபட்டுள்ளது. ஒரு முறையைத் தேர்ந்தெடுத்து நிரப்பப்படும் பெறுமதியைப் பார்க்கவும்.
+Cust	வாடிக்கையாளர்
+Credit risk	கடன் இடர்
+Income (Rs)	வருமானம் (ரூ.)
+Low	குறைவு
+High	அதிகம்
+Ignore tuple	வரிசையைப் புறக்கணி
+Global constant	உலகளாவிய மாறிலி
+Attribute mean	பண்புக்கூறுச் சராசரி
+Class mean	வகுப்புச் சராசரி
+Most probable	அதிக சாத்தியம்
+"Unknown"	"தெரியாது"
+C5 is removed from the dataset. We lose all of C5's other data too.	தரவுத்தொகுப்பிலிருந்து C5 நீக்கப்படுகிறது. C5-இன் பிற அனைத்துத் தரவுகளையும் இழக்கிறோம்.
+Every missing income becomes "Unknown". The algorithm may wrongly treat "Unknown" as a real group.	விடுபட்ட ஒவ்வொரு வருமானமும் "தெரியாது" ஆகிறது. படிமுறை "தெரியாது" என்பதைத் தவறாக உண்மையான குழுவாகக் கருதலாம்.
+A regression or decision tree trained on the other attributes (age, job, risk…) predicts about 76,000. This is an illustrative placeholder, not a value computed by a fitted model on this page.	பிற பண்புக்கூறுகளில் (வயது, வேலை, இடர்…) பயிற்றுவிக்கப்பட்ட பின்னடைவு அல்லது முடிவெடுக்கும் மரம் ஏறத்தாழ 76,000 என முன்னறிவிக்கிறது. இது விளக்கத்துக்கான இடநிரப்பி; இப்பக்கத்தில் பொருத்தப்பட்ட மாதிரியால் கணக்கிடப்பட்ட பெறுமதி அல்ல.
+Correlation explorer	ஒட்டுறவு ஆராய்வுக் கருவி
+A values	A பெறுமதிகள்
+B values	B பெறுமதிகள்
+Positive example	நேர்மறை எடுத்துக்காட்டு
+Negative example	எதிர்மறை எடுத்துக்காட்டு
+No correlation	ஒட்டுறவு இல்லை
+Need at least 2 pairs.	குறைந்தது 2 சோடிகள் தேவை.
+undefined	வரையறுக்கப்படவில்லை
+one attribute is constant	ஒரு பண்புக்கூறு மாறிலியாக உள்ளது
+strong positive	வலுவான நேர்மறை
+one attribute may be redundant	ஒரு பண்புக்கூறு மிகையானதாக இருக்கலாம்
+weak positive	பலவீனமான நேர்மறை
+strong negative	வலுவான எதிர்மறை
+weak negative	பலவீனமான எதிர்மறை
+no linear correlation	நேரியல் ஒட்டுறவு இல்லை
+Normalization calculator	இயல்பாக்கக் கணிப்பான்
+Value v	பெறுமதி v
+min	குறைந்தபட்சம்
+max	அதிகபட்சம்
+new min	புதிய குறைந்தபட்சம்
+new max	புதிய அதிகபட்சம்
+mean	சராசரி
+std dev	நியம விலகல்
+Min-max:	குறைந்தபட்ச-அதிகபட்சம்:
+Z-score:	Z-மதிப்பெண்:
+Decimal scaling:	தசம அளவுமாற்றம்:

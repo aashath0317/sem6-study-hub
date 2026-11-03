@@ -4,15 +4,16 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { JSDOM, VirtualConsole } = require('jsdom');
 const root = path.resolve(__dirname, '../../..');
+const dataMining = process.env.STUDY_TRANSLATION_SUBJECT === 'dm';
 const business = process.env.STUDY_TRANSLATION_SUBJECT === 'bpas';
-const directory = path.join(root, business ? 'Business Processes and Accounting Systems' : 'Human Computer Interaction');
+const directory = path.join(root, dataMining ? 'Data Mining' : business ? 'Business Processes and Accounting Systems' : 'Human Computer Interaction');
 function files(dir) { return fs.readdirSync(dir, {withFileTypes:true}).flatMap(e => e.isDirectory() ? files(path.join(dir,e.name)) : e.name.endsWith('.html') ? [path.join(dir,e.name)] : []); }
 const tick = () => new Promise(resolve => setTimeout(resolve, 0));
 (async () => {
   let totalSections=0, totalQuestions=0, totalTools=0;
   const untranslated = [];
-  const pages = files(directory);
-  assert.equal(pages.length,business ? 17 : 15);
+  const pages = files(directory).filter(file => !dataMining || file.includes("Week 01/"));
+  assert.equal(pages.length,dataMining ? 1 : business ? 17 : 15);
   for (const file of pages) {
     const errors = [];
     const vc = new VirtualConsole();

@@ -39,17 +39,17 @@ def refresh(text, key):
 
 if __name__ == '__main__':
     subject = sys.argv[1] if len(sys.argv) > 1 else 'hci'
-    folders = {'hci':'Human Computer Interaction', 'bpas':'Business Processes and Accounting Systems'}
+    folders = {'hci':'Human Computer Interaction', 'bpas':'Business Processes and Accounting Systems', 'dm':'Data Mining'}
     if subject not in folders:
-        raise SystemExit('Supported subjects: hci, bpas')
+        raise SystemExit('Supported subjects: hci, bpas, dm')
     files = sorted((ROOT/folders[subject]).rglob('*.html'))
     prepared = []
     for path in files:
         text = path.read_text(encoding='utf-8')
         key = re.search(r'<body data-key="([^"]*)"', text)[1]
-        if subject == 'bpas':
-            week = re.fullmatch(r'bpas-Week(\d+)', key)
-            directory = HERE/'content'/'bpas'/'ta'
+        if subject in ('bpas', 'dm'):
+            week = re.fullmatch(subject + r'-Week(\d+)', key)
+            directory = HERE/'content'/subject/'ta'
             if week:
                 if not (directory/('w' + week[1] + '.md')).exists():
                     continue

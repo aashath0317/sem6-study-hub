@@ -1,0 +1,50 @@
+Designing for Users — Tasks, Contexts of Use & User Perspectives	பயனர்களுக்காக வடிவமைத்தல் — பணிகள், பயன்பாட்டுச் சூழல்கள், பயனர் கண்ணோட்டங்கள்
+Design for the task, not the interface; useful, usable and used; the user as processor, predictor and participant; the GPS turn example; UX beyond interaction.	இடைமுகத்துக்காக அல்ல, பணிக்காக வடிவமைத்தல்; பயனுள்ளது, பயன்படுத்த எளிதானது, பயன்படுத்தப்படுவது; செயலாக்கி, முன்கணிப்பாளர், பங்கேற்பாளர் ஆகியவையாகப் பயனர்; GPS திருப்ப எடுத்துக்காட்டு; இடைவினைக்கு அப்பாற்பட்ட UX.
+🧪 Try it — Is it a success? Combine the three	🧪 முயன்று பாருங்கள் — இது வெற்றியா? மூன்றையும் இணைத்துப் பாருங்கள்
+Useful	பயனுள்ளது
+Usable	பயன்படுத்த எளிதானது
+Used	பயன்படுத்தப்படுவது
+🏆 Successful interface	🏆 வெற்றிகரமான இடைமுகம்
+It does the job, is pleasant and error-free, and people keep coming back. This is the target.	பணியைச் செய்கிறது; மகிழ்ச்சியானது, பிழையற்றது; மக்கள் தொடர்ந்து மீண்டும் வருகிறார்கள். இதுவே இலக்கு.
+Useful + usable, but not used	பயனுள்ளது + பயன்படுத்த எளிதானது; ஆனால் பயன்படுத்தப்படவில்லை
+Works and is easy, yet people don't adopt it (habit, a competitor, no real need, poor reach). Still a failure in the end.	செயல்படுகிறது, எளிதானது; ஆனாலும் மக்கள் ஏற்றுக்கொள்ளவில்லை (பழக்கம், போட்டியாளர், உண்மையான தேவை இன்மை, குறைந்த சென்றடைதல்). இறுதியில் தோல்வியே.
+Useful + used, but not usable	பயனுள்ளது + பயன்படுத்தப்படுகிறது; ஆனால் பயன்படுத்த எளிதல்ல
+People are forced to use it (e.g. a mandatory old government portal) but it is painful and error-prone.	மக்கள் பயன்படுத்தக் கட்டாயப்படுத்தப்படுகிறார்கள் (எ.கா. கட்டாயமான பழைய அரசுத் தளம்); ஆனால் அது சிரமமானதும் பிழைகள் ஏற்படக்கூடியதுமாக உள்ளது.
+Only useful	பயனுள்ளது மட்டும்
+It can do the task, but it's hard to use and nobody sticks with it.	பணியைச் செய்ய முடியும்; ஆனால் பயன்படுத்தக் கடினமாக இருப்பதால் யாரும் தொடர்ந்து பயன்படுத்துவதில்லை.
+Not useful	பயனில்லை
+If it doesn't help achieve a task, usability or popularity can't save it for long (like a pretty app with no purpose).	ஒரு பணியை அடைய உதவாவிட்டால், பயன்பாட்டுத் திறனோ பிரபலமோ நீண்டகாலம் காப்பாற்றாது (நோக்கமில்லாத அழகான செயலி போல).
+Nothing	எதுவுமில்லை
+Start by making it useful.	முதலில் பயனுள்ளதாக்குவதிலிருந்து தொடங்குங்கள்.
+🧪 Try it — GPS turn simulator	🧪 முயன்று பாருங்கள் — GPS திருப்ப உருவகப்படுத்தல்
+⏱ Processor	⏱ செயலாக்கி
+🧠 Predictor	🧠 முன்கணிப்பாளர்
+🚗 Participant	🚗 பங்கேற்பாளர்
+"Turn left in 2 seconds"	“2 நொடிகளில் இடப்பக்கம் திரும்புங்கள்”
+"Turn left in 10 seconds"	“10 நொடிகளில் இடப்பக்கம் திரும்புங்கள்”
+"Turn left in 500 m" + more alerts	“500 மீட்டரில் இடப்பக்கம் திரும்புங்கள்” + கூடுதல் எச்சரிக்கைகள்
+Assumes raw reaction time is under 1 s, so a prompt just before the junction is "enough".	எதிர்வினை நேரம் 1 நொடிக்குக் குறைவு என்று கருதுவதால், சந்திப்புக்கு உடனடியாக முன் அறிவிப்பது “போதும்” எனக் கருதுகிறது.
+High risk of missing the turn or crashing.	திருப்பத்தைத் தவறவிடும் அல்லது விபத்துக்குள்ளாகும் ஆபத்து அதிகம்.
+Allows for the driver's mental planning: checking mirrors, lane awareness, signalling, a smooth turn.	ஓட்டுநரின் மனத் திட்டமிடலுக்கு இடமளிக்கிறது: கண்ணாடிகளைப் பார்த்தல், பாதை விழிப்புணர்வு, சைகை செய்தல், சீராகத் திரும்புதல்.
+Allows for crying children, loud radio, heavy rain and blind spots:	அழும் குழந்தைகள், சத்தமான வானொலி, கடும் மழை, மறைப்புள்ளிகள் ஆகியவற்றுக்கு இடமளிக்கிறது:
+progressive	படிப்படியான
+visual HUD cues and audio chimes well in advance.	முன்னோக்குத் திரைக் காட்சிக் குறிப்புகளும் ஒலி எச்சரிக்கைகளும் போதிய நேரத்துக்கு முன்னரே வழங்கப்படுகின்றன.
+first alert	முதல் எச்சரிக்கை
+alert 2	எச்சரிக்கை 2
+alert 3	எச்சரிக்கை 3
+turn	திருப்பம்
+Overview – Designing for the User	மேலோட்டம் – பயனருக்காக வடிவமைத்தல்
+Why you must understand tasks first, illustrated with Google Maps navigation and automatic rerouting.	முதலில் பணிகளைப் புரிந்துகொள்ள வேண்டியதன் காரணம், Google Maps வழிசெலுத்தல் மற்றும் தானியங்கி வழிமாற்றம் மூலம் விளக்கப்படுகிறது.
+Topic: designing for the user	தலைப்பு: பயனருக்காக வடிவமைத்தல்
+Understand the tasks before designing interfaces	இடைமுகங்களை வடிவமைக்குமுன் பணிகளைப் புரிந்துகொள்ளுங்கள்
+Premature design → poor interfaces (deviate from the task, make it hard)	முதிர்ச்சியற்ற வடிவமைப்பு → மோசமான இடைமுகங்கள் (பணியிலிருந்து விலகுதல், அதைச் சிரமமாக்குதல்)
+Example: Google Maps navigation	எடுத்துக்காட்டு: Google Maps வழிசெலுத்தல்
+Missing a turn and what happens next	திருப்பத்தைத் தவறவிடுவதும் அதன் பின் நிகழ்வதும்
+Automatic rerouting vs turning back	தானியங்கி வழிமாற்றமும் திரும்பிச் செல்லுதலும்
+Think about the driver's individual tasks and context	ஓட்டுநரின் தனித்தனிப் பணிகளையும் சூழலையும் சிந்தியுங்கள்
+Contexts of "Use"	“பயன்பாட்டின்” சூழல்கள்
+Useful, usable and used, and why a successful interface needs all three.	பயனுள்ளது, பயன்படுத்த எளிதானது, பயன்படுத்தப்படுவது ஆகியவையும் வெற்றிகரமான இடைமுகத்துக்கு மூன்றும் தேவைப்படுவதன் காரணமும்.
+Three forms: useful, usable, used	மூன்று வடிவங்கள்: பயனுள்ளது, பயன்படுத்த எளிதானது, பயன்படுத்தப்படுவது
+Useful: lets the user achieve a task	பயனுள்ளது: பணியை அடையப் பயனரை அனுமதிக்கிறது
+Usable: pleasurable, effective, without fear of failure	பயன்படுத்த எளிதானது: மகிழ்ச்சியானது, விளைவுள்ளது, தோல்வி அச்சமற்றது
+Used: used again and again, which means acceptance	பயன்படுத்தப்படுவது: மீண்டும் மீண்டும் பயன்படுத்தப்படுகிறது; அதாவது ஏற்றுக்கொள்ளுதல்

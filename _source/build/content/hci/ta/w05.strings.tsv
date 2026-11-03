@@ -1,0 +1,118 @@
+Feedback Cycles & Levels of Design	பின்னூட்டச் சுழற்சிகளும் வடிவமைப்பு நிலைகளும்
+Action, interaction, effect and feedback; feedback cycles everywhere; the bridges of execution and evaluation; Norman's 7 questions from the designer's and user's side; visceral, behavioural and reflective design.	செயல், இடைவினை, விளைவு, பின்னூட்டம்; எங்குமுள்ள பின்னூட்டச் சுழற்சிகள்; செயலாக்க மற்றும் மதிப்பீட்டுப் பாலங்கள்; வடிவமைப்பாளர் மற்றும் பயனர் கண்ணோட்டங்களில் நார்மனின் 7 கேள்விகள்; உடனுணர்வு, நடத்தை, பிரதிபலிப்பு வடிவமைப்பு.
+🧪 Try it — Trace a feedback cycle	🧪 முயன்று பாருங்கள் — பின்னூட்டச் சுழற்சியைப் பின்தொடருங்கள்
+🫖 Kettle	🫖 கெண்டி
+🔊 Volume	🔊 ஒலியளவு
+🏦 Bank transfer	🏦 வங்கிப் பணமாற்றம்
+🏧 ATM	🏧 ATM
+🤖 Robot	🤖 ரோபோ
+Action / interaction	செயல் / இடைவினை
+Effect	விளைவு
+Feedback	பின்னூட்டம்
+Learning	கற்றல்
+Switch the kettle on	கெண்டியை இயக்குங்கள்
+Water heats and boils	நீர் சூடாகிக் கொதிக்கிறது
+Whistle, steam, the switch clicks off	விசில், நீராவி, சுவிட்ச் ஒலியுடன் அணைகிறது
+You learn the water is ready (and how long it takes)	நீர் தயாராக இருப்பதை (அதற்கு எவ்வளவு நேரம் தேவை என்பதையும்) அறிகிறீர்கள்
+Press volume + on the remote	தொலைவியக்கியில் ஒலியளவு + அழுத்துங்கள்
+Sound level increases	ஒலியளவு அதிகரிக்கிறது
+You hear the louder sound	அதிக ஒலியைக் கேட்கிறீர்கள்
+You learn how many presses give a comfortable level	வசதியான ஒலியளவுக்கு எத்தனை முறை அழுத்த வேண்டும் என்பதை அறிகிறீர்கள்
+Enter amount and account, click Transfer	தொகையையும் கணக்கையும் உள்ளிட்டு, பணமாற்று என்பதைச் சொடுக்குங்கள்
+Debit one account, credit the other	ஒரு கணக்கில் பற்று, மற்றொன்றில் வரவு வைக்கப்படுகிறது
+"Transfer successful" or "Transfer failed"	“பணமாற்றம் வெற்றி” அல்லது “பணமாற்றம் தோல்வி”
+Success confirms the steps; an error teaches you something was wrong	வெற்றி படிகளை உறுதிப்படுத்துகிறது; பிழை ஏதோ தவறு நடந்ததைக் கற்பிக்கிறது
+Card → PIN → withdrawal	அட்டை → இரகசிய எண் → பணம் எடுத்தல்
+Balance checked, cash prepared	இருப்பு சரிபார்க்கப்பட்டு, பணம் தயாராகிறது
+Cash dispensed, or an error receipt	பணம் வழங்கப்படுகிறது அல்லது பிழை ரசீது கிடைக்கிறது
+You learn the flow and the limits	செயல்முறையையும் வரம்புகளையும் அறிகிறீர்கள்
+Robot actuates its motors	ரோபோ அதன் மோட்டார்களை இயக்குகிறது
+Its position changes	அதன் நிலை மாறுகிறது
+Sensors read new spatial data	உணரிகள் புதிய இடவெளித் தரவைப் பெறுகின்றன
+The path is adapted continuously	பாதை தொடர்ந்து மாற்றியமைக்கப்படுகிறது
+Feedback (highlighted) is what closes the loop. It makes learning possible, so the next interaction is better.	முன்னிலைப்படுத்தப்பட்ட பின்னூட்டமே சுழற்சியை நிறைவுசெய்கிறது. அது கற்றலைச் சாத்தியமாக்குவதால் அடுத்த இடைவினை சிறப்பாகிறது.
+🧪 Try it — Audit a device with the 7 questions	🧪 முயன்று பாருங்கள் — 7 கேள்விகளால் சாதனத்தை ஆய்வு செய்யுங்கள்
+Device	சாதனம்
+Old microwave (unlabelled buttons)	பழைய நுண்ணலை அடுப்பு (பெயரிடப்படாத பொத்தான்கள்)
+Phone camera app	தொலைபேசி ஒளிப்படக்கருவிச் செயலி
+Online bank transfer	இணையவழி வங்கிப் பணமாற்றம்
+Goal: determine function	இலக்கு: செயல்பாட்டைக் கண்டறிதல்
+Plan: tell possible actions	திட்டம்: சாத்தியமான செயல்களை அறிதல்
+Specify: intent → control mapping	குறிப்பிடுதல்: எண்ணம் → கட்டுப்பாட்டுப் பொருத்தம்
+Execute: perform the action	செயலாக்கம்: செயலை நிறைவேற்றுதல்
+Perceive: state change visible	உணர்தல்: நிலை மாற்றம் தெரிகிறது
+Interpret: meaning of the state	பொருள் கொள்ளுதல்: நிலையின் பொருள்
+Evaluate: goal met?	மதிப்பீடு: இலக்கு அடையப்பட்டதா?
+Question	கேள்வி
+Verdict	தீர்ப்பு
+Why	ஏன்
+Obviously heats food	உணவைச் சூடாக்குவது தெளிவாகத் தெரிகிறது
+10 identical buttons: which ones can I use?	ஒரே மாதிரியான 10 பொத்தான்கள்: எவற்றைப் பயன்படுத்தலாம்?
+Is "reheat 1 min" P2 or the clock button?	“1 நிமிடம் மீண்டும் சூடாக்கு” என்பது P2ஆ அல்லது கடிகாரப் பொத்தானா?
+Pressing is easy	அழுத்துவது எளிது
+Only a faint beep	மெல்லிய ஒலி மட்டுமே
+"E3" on the display: what does that mean?	திரையில் “E3”: அதன் பொருள் என்ன?
+Food is hot or not	உணவு சூடாக உள்ளதா, இல்லையா
+Obviously takes photos	புகைப்படம் எடுப்பது தெளிவாகத் தெரிகிறது
+Shutter, mode carousel and flip button all visible	படமெடுக்கும் பொத்தான், முறைத் தெரிவுச் சுழலி, திருப்புப் பொத்தான் அனைத்தும் தெரிகின்றன
+Big round shutter = take photo	பெரிய வட்டப் பொத்தான் = புகைப்படம் எடு
+One tap	ஒரு தொடுதல்
+Shutter sound and flash animation	படமெடுக்கும் ஒலியும் ஒளிப்பாய்ச்சல் அசைவூட்டமும்
+Thumbnail appears in the corner	மூலையில் சிறுபடம் தோன்றுகிறது
+Tap the thumbnail to check the photo	புகைப்படத்தைச் சரிபார்க்கச் சிறுபடத்தைத் தொடுங்கள்
+"Transfer" is clearly labelled	“பணமாற்று” தெளிவாகப் பெயரிடப்பட்டுள்ளது
+Form fields shown	படிவப் புலங்கள் காட்டப்பட்டுள்ளன
+Fields match the mental model: amount, account	புலங்கள் மன மாதிரியுடன் பொருந்துகின்றன: தொகை, கணக்கு
+Type and press Submit	தட்டச்சு செய்து சமர்ப்பி என்பதை அழுத்துங்கள்
+Spinner forever, no message	சுழலி தொடர்ந்து சுழல்கிறது; செய்தி இல்லை
+Did it go through? Unknown	நிறைவேறியதா? தெரியவில்லை
+Have to check the balance later	பின்னர் இருப்பைச் சரிபார்க்க வேண்டும்
+Wide	பெரிய
+wide	பெரிய
+Wide gulf of execution	பெரிய செயலாக்க இடைவெளி
+gulf of execution	செயலாக்க இடைவெளி
+gulf of evaluation	மதிப்பீட்டு இடைவெளி
+Both gulfs bridged: excellent design.	இரண்டு இடைவெளிகளும் இணைக்கப்பட்டுள்ளன: சிறந்த வடிவமைப்பு.
+Feedback Cycles	பின்னூட்டச் சுழற்சிகள்
+What a feedback cycle is, with the kettle, volume and bank-transfer examples, and why we learn through feedback.	கெண்டி, ஒலியளவு, வங்கிப் பணமாற்ற எடுத்துக்காட்டுகளுடன் பின்னூட்டச் சுழற்சி என்றால் என்ன என்பதும், அதன் மூலம் நாம் கற்பதன் காரணமும்.
+Feedback cycles form when people interact with the world	மக்கள் உலகுடன் இடைவினையாற்றும்போது பின்னூட்டச் சுழற்சிகள் உருவாகின்றன
+Feedback on the effect, not the effect itself	விளைவு பற்றிய பின்னூட்டம்; விளைவே அல்ல
+Example 1: boiling water in a kettle	எடுத்துக்காட்டு 1: கெண்டியில் நீர் கொதித்தல்
+Example 2: adjusting the sound-system volume	எடுத்துக்காட்டு 2: ஒலி அமைப்பின் ஒலியளவைச் சரிசெய்தல்
+Example 3: online bank money transfer	எடுத்துக்காட்டு 3: இணையவழி வங்கிப் பணமாற்றம்
+Ubiquitous: everywhere and almost invisible	எங்கும் நிறைந்தது: எங்கும், ஏறத்தாழப் புலப்படாமல்
+Why feedback cycles matter: we learn through them	பின்னூட்டச் சுழற்சிகள் ஏன் முக்கியம்: அவற்றின் மூலம் நாம் கற்கிறோம்
+Effect of Actions	செயல்களின் விளைவு
+Action vs interaction, effects on both parties, and missing feedback in an online lecture.	செயலும் இடைவினையும், இரு தரப்புகளிலும் விளைவுகள், இணையவழி விரிவுரையில் கிடைக்காத பின்னூட்டம்.
+What is feedback? A response to an action or interaction	பின்னூட்டம் என்றால் என்ன? செயல் அல்லது இடைவினைக்கான பதில்
+Interaction = the effect of an action between two or more objects	இடைவினை = இரண்டு அல்லது அதற்கு மேற்பட்ட பொருட்களுக்கிடையிலான செயலின் விளைவு
+Example: the lecturer talking to students	எடுத்துக்காட்டு: விரிவுரையாளர் மாணவர்களிடம் பேசுதல்
+"Causes effect on one another"	“ஒன்றிலொன்று விளைவை ஏற்படுத்துகிறது”
+No feedback in an online lecture (mics muted, cameras off)	இணையவழி விரிவுரையில் பின்னூட்டம் இல்லை (ஒலிவாங்கிகள் அமைதியாக்கம், ஒளிப்படக்கருவிகள் அணைப்பு)
+Why feedback is important: did my intention succeed?	பின்னூட்டம் ஏன் முக்கியம்: எனது எண்ணம் வெற்றி பெற்றதா?
+The 7 Questions – Designer's Perspective	7 கேள்விகள் – வடிவமைப்பாளரின் கண்ணோட்டம்
+The seven diagnostic questions a designer asks.	வடிவமைப்பாளர் கேட்கும் ஏழு குறைகாண் கேள்விகள்.
+Feedback cycles and learning	பின்னூட்டச் சுழற்சிகளும் கற்றலும்
+Perceive, interpret, compare with the goal	உணர், பொருள் கொள், இலக்குடன் ஒப்பிடு
+Gulf of Execution	செயலாக்க இடைவெளி
+Gulf of Evaluation	மதிப்பீட்டு இடைவெளி
+Why feedback cycles matter: bridging the gulfs	பின்னூட்டச் சுழற்சிகள் ஏன் முக்கியம்: இடைவெளிகளை இணைத்தல்
+The designer designs, users use	வடிவமைப்பாளர் வடிவமைக்கிறார்; பயனர்கள் பயன்படுத்துகிறார்கள்
+Design should guide the user	வடிவமைப்பு பயனரை வழிநடத்த வேண்டும்
+Norman's seven questions for designers	வடிவமைப்பாளர்களுக்கான நார்மனின் ஏழு கேள்விகள்
+What actions are possible? Mapping from intention to action	என்ன செயல்கள் சாத்தியம்? எண்ணத்திலிருந்து செயலுக்குப் பொருத்துதல்
+Mapping from system state to interpretation	முறைமை நிலையிலிருந்து பொருள் கொள்ளுதலுக்குப் பொருத்துதல்
+The 7 Questions – User's Perspective	7 கேள்விகள் – பயனரின் கண்ணோட்டம்
+The same seven stages as questions in the user's mind.	அதே ஏழு நிலைகள் பயனரின் மனதிலுள்ள கேள்விகளாக.
+End of designer's questions: interpret and compare with goal	வடிவமைப்பாளரின் இறுதிக் கேள்விகள்: பொருள் கொண்டு இலக்குடன் ஒப்பிடுதல்
+User's perspective: What do I want to do?	பயனரின் கண்ணோட்டம்: நான் என்ன செய்ய விரும்புகிறேன்?
+What alternatives are there? What can I do?	என்ன மாற்று வழிகள் உள்ளன? என்னால் என்ன செய்ய முடியும்?
+How do I do it? What happened? What does it mean?	இதை எப்படிச் செய்வது? என்ன நடந்தது? அதன் பொருள் என்ன?
+Is it okay? These questions help both users and designers	இது சரியா? இந்தக் கேள்விகள் பயனர்களுக்கும் வடிவமைப்பாளர்களுக்கும் உதவுகின்றன
+Levels of Design	வடிவமைப்பு நிலைகள்
+Visceral, behavioural and reflective levels and how sensory input flows through them.	உடனுணர்வு, நடத்தை, பிரதிபலிப்பு நிலைகளும் அவற்றின் வழியே புலன் உள்ளீடு பாயும் விதமும்.
+Norman's three levels of design	நார்மனின் மூன்று வடிவமைப்பு நிலைகள்
+Visceral: closest to physical action and senses	உடனுணர்வு: உடல் செயல்களுக்கும் புலன்களுக்கும் மிக அருகிலுள்ளது
+Behavioural is interpretative; reflective is high-level thought	நடத்தை பொருள் கொள்ளும் தன்மையுள்ளது; பிரதிபலிப்பு உயர்நிலைச் சிந்தனை
+Flow from sensory input to motor output	புலன் உள்ளீட்டிலிருந்து இயக்க வெளியீட்டுக்கான பாய்வு
+Reflective isn't directly bound to sensory input or motor output	பிரதிபலிப்பு புலன் உள்ளீட்டுடனோ இயக்க வெளியீட்டுடனோ நேரடியாகப் பிணைக்கப்படவில்லை

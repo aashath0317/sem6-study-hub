@@ -1,0 +1,113 @@
+Cognitive Modelling — GOMS, KLM & Fitts's Law	அறிவாற்றல் மாதிரியாக்கம் — GOMS, KLM, ஃபிட்ஸின் விதி
+Predicting user performance before building anything: task analysis, the GOMS framework, keystroke-level model timings, Fitts's law, and the strengths and limits of predictive models.	எதையும் உருவாக்குமுன் பயனர் செயல்திறனை முன்கணித்தல்: பணி ஆய்வு, GOMS கட்டமைப்பு, விசைஅழுத்த நிலை மாதிரி நேரங்கள், ஃபிட்ஸின் விதி, முன்கணிப்பு மாதிரிகளின் பலங்களும் வரம்புகளும்.
+🧪 Try it — KLM task-time calculator	🧪 முயன்று பாருங்கள் — KLM பணி நேரக் கணிப்பான்
+Click operators to build the sequence (click a chip to remove it). A preset fills in a typical task.	வரிசையை உருவாக்க அடிப்படைச் செயல்களைச் சொடுக்குங்கள் (நீக்க ஒரு குறியைச் சொடுக்குங்கள்). முன் அமைப்பு ஒரு வழக்கமான பணியை நிரப்புகிறது.
+Presets	முன் அமைப்புகள்
+Save a file with the mouse (File ▸ Save)	சுட்டியால் கோப்பைச் சேமித்தல் (கோப்பு ▸ சேமி)
+Save with Ctrl+S (hands on keyboard)	Ctrl+S மூலம் சேமித்தல் (கைகள் விசைப்பலகையில்)
+Delete a word: point, double-click, Del	சொல்லை நீக்குதல்: சுட்டு, இரட்டைச் சொடுக்கு, Del
+R (system wait, s)	R (முறைமைக் காத்திருப்பு, நொடி)
+Clear	அழி
+K · Keystroke (0.2s)	K · விசை அழுத்தம் (0.2 நொடி)
+P · Point (1.1s)	P · சுட்டுதல் (1.1 நொடி)
+H · Home hands (0.4s)	H · கைமாற்றம் (0.4 நொடி)
+M · Mental prep (1.35s)	M · மனத் தயாரிப்பு (1.35 நொடி)
+B · Mouse button press/release (0.1s)	B · சுட்டிப் பொத்தான் அழுத்தம்/விடுதல் (0.1 நொடி)
+execute	செயலாக்கம்
+🧪 Try it — Fitts's law lab — feel it, then measure it	🧪 முயன்று பாருங்கள் — ஃபிட்ஸின் விதி ஆய்வகம் — உணர்ந்து, பின்னர் அளவிடுங்கள்
+Distance D	தொலைவு D
+Width W	அகலம் W
+START	தொடங்கு
+Your trials (click START then the target):	உங்கள் முயற்சிகள் (தொடங்கு என்பதைச் சொடுக்கிப் பின்னர் இலக்கைச் சொடுக்குங்கள்):
+Make the target narrow and far, then wide and near. Your times follow the law.	இலக்கைக் குறுகலாகவும் தொலைவிலும் வைத்து, பின்னர் அகலமாகவும் அருகிலும் வையுங்கள். உங்கள் நேரங்கள் விதியைப் பின்பற்றுகின்றன.
+Click START, then the blue target, as fast as you can. Try different D and W.	தொடங்கு என்பதைச் சொடுக்கிப் பின்னர் நீல இலக்கை இயன்றவரை விரைவாகச் சொடுக்குங்கள். வெவ்வேறு D மற்றும் W மதிப்புகளை முயலுங்கள்.
+Cognitive Modelling	அறிவாற்றல் மாதிரியாக்கம்
+What cognitive models are, why they don't need prototypes, and the GOMS / KLM / Fitts / MHP family.	அறிவாற்றல் மாதிரிகள் என்றால் என்ன, அவற்றுக்கு முன்மாதிரிகள் ஏன் தேவையில்லை, GOMS / KLM / ஃபிட்ஸ் / MHP குடும்பம்.
+Cognitive modelling: predicting how users perform	அறிவாற்றல் மாதிரியாக்கம்: பயனர்கள் எப்படிச் செயல்படுவார்கள் என்பதை முன்கணித்தல்
+Related to task analysis: tasks → sub-tasks	பணி ஆய்வுடன் தொடர்புடையது: பணிகள் → துணைப் பணிகள்
+Theoretical roots in the 1970s–80s	1970–80களில் உள்ள கோட்பாட்டு வேர்கள்
+Advantages: no prototype or real users needed	நன்மைகள்: முன்மாதிரியோ உண்மையான பயனர்களோ தேவையில்லை
+KLM: the lowest, operational level	KLM: மிகத் தாழ்ந்த செயல்பாட்டு நிலை
+GOMS: the umbrella (Goals, Operators, Methods, Selection rules)	GOMS: குடை (இலக்குகள், அடிப்படைச் செயல்கள், முறைகள், தெரிவு விதிகள்)
+Fitts's law: time to reach and act on a target	ஃபிட்ஸின் விதி: இலக்கை அடைந்து அதில் செயல்படும் நேரம்
+Model Human Processor (MHP) underlies them all	மனிதச் செயலாக்கி மாதிரி (MHP) அனைத்துக்கும் அடிப்படை
+GOMS Model	GOMS மாதிரி
+Goals, operators, methods and selection rules in detail.	இலக்குகள், அடிப்படைச் செயல்கள், முறைகள், தெரிவு விதிகள் பற்றிய விவரங்கள்.
+GOMS: the model underlying the earlier theories	GOMS: முந்தைய கோட்பாடுகளுக்கு அடிப்படையான மாதிரி
+GOMS as a description of knowledge	அறிவின் விளக்கமாக GOMS
+Goals, Operators, Methods, Selection rules	இலக்குகள், அடிப்படைச் செயல்கள், முறைகள், தெரிவு விதிகள்
+GOMS models expert users	GOMS வல்லுநர் பயனர்களை மாதிரியாக்குகிறது
+Analysing tasks at a very detailed level	மிக விரிவான நிலையில் பணிகளை ஆய்வுசெய்தல்
+Worked example: methods and selection rules	செய்துகாட்டிய எடுத்துக்காட்டு: முறைகளும் தெரிவு விதிகளும்
+"Unless other rules apply"	“வேறு விதிகள் பொருந்தாதவரை”
+Keystroke-Level Model (KLM)	விசைஅழுத்த நிலை மாதிரி (KLM)
+Operators, their times, and how to add up a task.	அடிப்படைச் செயல்கள், அவற்றின் நேரங்கள், ஒரு பணிக்கான நேரத்தைக் கூட்டுதல்.
+The Keystroke-Level Model (KLM)	விசைஅழுத்த நிலை மாதிரி (KLM)
+Operators tied to the human motor system	மனித இயக்க முறைமையுடன் தொடர்புடைய அடிப்படைச் செயல்கள்
+Three categories of operators: physical, mental, system response	மூன்று செயல் வகைகள்: உடல்சார், மனம்சார், முறைமைப் பதில்
+Execution time = pointing + homing + keystrokes + mental…	செயலாக்க நேரம் = சுட்டுதல் + கைமாற்றம் + விசை அழுத்தங்கள் + மனச் செயல்…
+Pointing time (Fitts' law)	சுட்டும் நேரம் (ஃபிட்ஸின் விதி)
+Operator times table (M = 1.35 s…)	செயல் நேரங்களின் அட்டவணை (M = 1.35 நொடி…)
+Worked example: adding up the operators	செய்துகாட்டிய எடுத்துக்காட்டு: செயல் நேரங்களைக் கூட்டுதல்
+Why shortcuts help expert users	விசைப்பலகைக் குறுக்குவழிகள் வல்லுநர்களுக்கு ஏன் உதவுகின்றன?
+Different users, different experience levels	வெவ்வேறு பயனர்கள், வெவ்வேறு அனுபவ நிலைகள்
+Second example: inserting text	இரண்டாவது எடுத்துக்காட்டு: உரையைச் சேர்த்தல்
+Fitts's Law	ஃபிட்ஸின் விதி
+Placing M operators, then Fitts's law, the speed–accuracy trade-off and mobile-button examples.	M செயல்களை வைத்தல், பின்னர் ஃபிட்ஸின் விதி, வேகம்–துல்லியச் சமநிலை, கைப்பேசிப் பொத்தான் எடுத்துக்காட்டுகள்.
+KLM: insert an M before every P that selects a command	KLM: கட்டளையைத் தேர்ந்தெடுக்கும் ஒவ்வொரு P-க்கும் முன் M சேர்த்தல்
+Too many choices = too many M operators = slow	அதிகத் தெரிவுகள் = அதிக M செயல்கள் = மெதுவானது
+Fitts's law: time to move a pointer to a target	ஃபிட்ஸின் விதி: சுட்டியை இலக்குக்கு நகர்த்தும் நேரம்
+Distance and target width	தொலைவும் இலக்கின் அகலமும்
+MT = a + b·log₂(D/W + 1), a linear regression model	MT = a + b·log₂(D/W + 1), நேரியல் பின்னடைவு மாதிரி
+Speed–accuracy trade-off	வேகம்–துல்லியச் சமநிலை
+Mobile phone: call and cut buttons are large	கைப்பேசி: அழைப்பை ஏற்கும் மற்றும் முடிக்கும் பொத்தான்கள் பெரிதாக உள்ளன
+Applies to rapid pointing, not continuous movement	விரைவான சுட்டுதலுக்குப் பொருந்தும்; தொடர்ச்சியான நகர்வுக்கு அல்ல
+GOMS (extra)	GOMS (கூடுதல்)
+Additional explanation of GOMS.	GOMS பற்றிய கூடுதல் விளக்கம்.
+Introduction to GOMS	GOMS அறிமுகம்
+Why GOMS: predicting task time	ஏன் GOMS: பணி நேரத்தை முன்கணித்தல்
+Goals and subgoals	இலக்குகளும் துணை இலக்குகளும்
+Methods: alternative ways (cab late → take a train)	முறைகள்: மாற்று வழிகள் (வாடகை வண்டி தாமதம் → தொடருந்தில் செல்லுதல்)
+Example: sending a video message	எடுத்துக்காட்டு: காணொளிச் செய்தி அனுப்புதல்
+Operators: basic actions (typing, tapping)	அடிப்படைச் செயல்கள் (தட்டச்சு, தட்டுதல்)
+Selection rules; assumes expert, error-free use	தெரிவு விதிகள்; வல்லுநரின் பிழையற்ற பயன்பாட்டை அனுமானிக்கிறது
+00:00 Cognitive modelling: predicting how users perform	00:00 அறிவாற்றல் மாதிரியாக்கம்: பயனர்கள் எப்படிச் செயல்படுவார்கள் என்பதை முன்கணித்தல்
+01:01 Related to task analysis: tasks → sub-tasks	01:01 பணி ஆய்வுடன் தொடர்புடையது: பணிகள் → துணைப் பணிகள்
+02:00 Theoretical roots in the 1970s–80s	02:00 1970–80களில் உள்ள கோட்பாட்டு வேர்கள்
+02:46 Advantages: no prototype or real users needed	02:46 நன்மைகள்: முன்மாதிரியோ உண்மையான பயனர்களோ தேவையில்லை
+04:09 KLM: the lowest, operational level	04:09 KLM: மிகத் தாழ்ந்த செயல்பாட்டு நிலை
+04:41 GOMS: the umbrella (Goals, Operators, Methods, Selection rules)	04:41 GOMS: குடை (இலக்குகள், அடிப்படைச் செயல்கள், முறைகள், தெரிவு விதிகள்)
+05:39 Fitts's law: time to reach and act on a target	05:39 ஃபிட்ஸின் விதி: இலக்கை அடைந்து அதில் செயல்படும் நேரம்
+06:25 Model Human Processor (MHP) underlies them all	06:25 மனிதச் செயலாக்கி மாதிரி (MHP) அனைத்துக்கும் அடிப்படை
+00:00 GOMS: the model underlying the earlier theories	00:00 GOMS: முந்தைய கோட்பாடுகளுக்கு அடிப்படையான மாதிரி
+01:35 GOMS as a description of knowledge	01:35 அறிவின் விளக்கமாக GOMS
+02:29 Goals, Operators, Methods, Selection rules	02:29 இலக்குகள், அடிப்படைச் செயல்கள், முறைகள், தெரிவு விதிகள்
+03:55 GOMS models expert users	03:55 GOMS வல்லுநர் பயனர்களை மாதிரியாக்குகிறது
+07:56 Analysing tasks at a very detailed level	07:56 மிக விரிவான நிலையில் பணிகளை ஆய்வுசெய்தல்
+09:40 Worked example: methods and selection rules	09:40 செய்துகாட்டிய எடுத்துக்காட்டு: முறைகளும் தெரிவு விதிகளும்
+11:57 "Unless other rules apply"	11:57 “வேறு விதிகள் பொருந்தாதவரை”
+00:00 The Keystroke-Level Model (KLM)	00:00 விசைஅழுத்த நிலை மாதிரி (KLM)
+00:45 Operators tied to the human motor system	00:45 மனித இயக்க முறைமையுடன் தொடர்புடைய அடிப்படைச் செயல்கள்
+02:17 Three categories of operators: physical, mental, system response	02:17 மூன்று செயல் வகைகள்: உடல்சார், மனம்சார், முறைமைப் பதில்
+03:55 Execution time = pointing + homing + keystrokes + mental…	03:55 செயலாக்க நேரம் = சுட்டுதல் + கைமாற்றம் + விசை அழுத்தங்கள் + மனச் செயல்…
+04:40 Pointing time (Fitts' law)	04:40 சுட்டும் நேரம் (ஃபிட்ஸின் விதி)
+06:19 Operator times table (M = 1.35 s…)	06:19 செயல் நேரங்களின் அட்டவணை (M = 1.35 நொடி…)
+07:55 Worked example: adding up the operators	07:55 செய்துகாட்டிய எடுத்துக்காட்டு: செயல் நேரங்களைக் கூட்டுதல்
+10:14 Why shortcuts help expert users	10:14 விசைப்பலகைக் குறுக்குவழிகள் வல்லுநர்களுக்கு ஏன் உதவுகின்றன?
+12:31 Different users, different experience levels	12:31 வெவ்வேறு பயனர்கள், வெவ்வேறு அனுபவ நிலைகள்
+14:06 Second example: inserting text	14:06 இரண்டாவது எடுத்துக்காட்டு: உரையைச் சேர்த்தல்
+00:00 KLM: insert an M before every P that selects a command	00:00 KLM: கட்டளையைத் தேர்ந்தெடுக்கும் ஒவ்வொரு P-க்கும் முன் M சேர்த்தல்
+01:04 Too many choices = too many M operators = slow	01:04 அதிகத் தெரிவுகள் = அதிக M செயல்கள் = மெதுவானது
+03:38 Fitts's law: time to move a pointer to a target	03:38 ஃபிட்ஸின் விதி: சுட்டியை இலக்குக்கு நகர்த்தும் நேரம்
+04:39 Distance and target width	04:39 தொலைவும் இலக்கின் அகலமும்
+05:47 MT = a + b·log₂(D/W + 1), a linear regression model	05:47 MT = a + b·log₂(D/W + 1), நேரியல் பின்னடைவு மாதிரி
+06:44 Speed–accuracy trade-off	06:44 வேகம்–துல்லியச் சமநிலை
+07:51 Mobile phone: call and cut buttons are large	07:51 கைப்பேசி: அழைப்பை ஏற்கும் மற்றும் முடிக்கும் பொத்தான்கள் பெரிதாக உள்ளன
+08:58 Applies to rapid pointing, not continuous movement	08:58 விரைவான சுட்டுதலுக்குப் பொருந்தும்; தொடர்ச்சியான நகர்வுக்கு அல்ல
+00:00 Introduction to GOMS	00:00 GOMS அறிமுகம்
+00:46 Why GOMS: predicting task time	00:46 ஏன் GOMS: பணி நேரத்தை முன்கணித்தல்
+01:36 Goals and subgoals	01:36 இலக்குகளும் துணை இலக்குகளும்
+03:10 Methods: alternative ways (cab late → take a train)	03:10 முறைகள்: மாற்று வழிகள் (வாடகை வண்டி தாமதம் → தொடருந்தில் செல்லுதல்)
+03:57 Example: sending a video message	03:57 எடுத்துக்காட்டு: காணொளிச் செய்தி அனுப்புதல்
+04:49 Operators: basic actions (typing, tapping)	04:49 அடிப்படைச் செயல்கள் (தட்டச்சு, தட்டுதல்)
+05:36 Selection rules; assumes expert, error-free use	05:36 தெரிவு விதிகள்; வல்லுநரின் பிழையற்ற பயன்பாட்டை அனுமானிக்கிறது

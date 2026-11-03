@@ -1,0 +1,87 @@
+Humans, Computers & Interactions	மனிதர்கள், கணினிகள், இடைவினைகள்
+Where HCI came from, why it's multi-disciplinary, ubiquitous computing, human perception, two-way task-centred interaction, the HCI space, and its applications.	HCI தோன்றிய விதம், அதன் பல்துறைச் சார்புக்கான காரணம், எங்கும் நிறைந்த கணிப்பீடு, மனிதப் புலனுணர்வு, இருவழிப் பணிமைய இடைவினை, HCI-இன் பரப்பு, அதன் பயன்பாடுகள்.
+🧪 Try it — Same word, different meaning — the "credit" case study	🧪 முயன்று பாருங்கள் — ஒரே சொல், வெவ்வேறு பொருள் — “credit” பற்றிய ஆய்வு
+Statement 1	கூற்று 1
+Statement 2	கூற்று 2
+Statement 3	கூற்று 3
+→ Interpreted as:	→ இதற்குக் கொடுக்கப்படும் பொருள்:
+💰 Financial deposit: bank balance increases	💰 நிதி வைப்பு: வங்கிக் கணக்கின் இருப்பு அதிகரிக்கிறது
+Context: banking SMS. The ear receives the same sound; the brain uses context to give it a meaning.	சூழல்: வங்கிக் குறுஞ்செய்தி. காது ஒரே ஒலியைப் பெறுகிறது; மூளை சூழலைப் பயன்படுத்தி அதற்குப் பொருள் கொடுக்கிறது.
+🏆 Social recognition: praise or authorship	🏆 சமூக அங்கீகாரம்: பாராட்டு அல்லது படைப்பாளிக்கான அங்கீகாரம்
+Context: conversation about an achievement. The ear receives the same sound; the brain uses context to give it a meaning.	சூழல்: ஒரு சாதனையைப் பற்றிய உரையாடல். காது ஒரே ஒலியைப் பெறுகிறது; மூளை சூழலைப் பயன்படுத்தி அதற்குப் பொருள் கொடுக்கிறது.
+🎓 Academic course weight or units	🎓 கல்விப் பாடத்தின் மதிப்பீட்டு நிறை அல்லது அலகுகள்
+Context: university course. The ear receives the same sound; the brain uses context to give it a meaning.	சூழல்: பல்கலைக்கழகப் பாடம். காது ஒரே ஒலியைப் பெறுகிறது; மூளை சூழலைப் பயன்படுத்தி அதற்குப் பொருள் கொடுக்கிறது.
+🧪 Try it — Explore the three pillars	🧪 முயன்று பாருங்கள் — மூன்று தூண்களையும் ஆராயுங்கள்
+🛠 Technologies	🛠 தொழில்நுட்பங்கள்
+💡 Ideas & paradigms	💡 கருத்துகளும் அணுகுமுறைகளும்
+🏥 Domains	🏥 பயன்பாட்டுத் துறைகள்
+Virtual Reality (VR)	மெய்நிகர் நிஜம் (VR)
+Fully computer-simulated environment. The user is isolated from physical reality and immersed in 3-D space.	முழுவதும் கணினியால் உருவகப்படுத்தப்பட்ட சூழல். பயனர் இயற்பொருள் உலகிலிருந்து பிரிக்கப்பட்டு முப்பரிமாண வெளிக்குள் ஆழ்த்தப்படுகிறார்.
+Augmented Reality (AR)	மிகை நிஜம் (AR)
+Digital overlays and sensor data blended with the real world (HUDs, AR glasses).	எண்ணிம மேலடுக்குகளும் உணரித் தரவுகளும் நிஜ உலகுடன் கலக்கப்படுகின்றன (HUDகள், AR கண்ணாடிகள்).
+Ubiquitous & wearables	எங்கும் நிறைந்த கணிப்பீடும் அணியக்கூடிய சாதனங்களும்
+Computing embedded in clothes, smart bands and environmental sensors for passive, always-available interaction.	செயல்படத் தனிக் கட்டளை தேவையில்லாத, எப்போதும் கிடைக்கக்கூடிய இடைவினைக்காக ஆடைகள், திறன் கைக்கட்டுகள், சூழல் உணரிகள் ஆகியவற்றில் கணிப்பீடு உட்பொதிக்கப்படுகிறது.
+Human-Robot Interaction (HRI)	மனித–ரோபோ இடைவினை (HRI)
+Safe, intuitive communication and physical interaction between humans and autonomous robots.	மனிதர்களுக்கும் தன்னிச்சையாக இயங்கும் ரோபோக்களுக்கும் இடையிலான பாதுகாப்பான, இயல்பாகப் புரிந்துகொள்ளக்கூடிய தகவல் தொடர்பும் உடல்சார் இடைவினையும்.
+Mobile computing	நகர்வுக் கணிப்பீடு
+Touch, motion sensors, geo-location and portability. It transformed everyday digital use.	தொடுதல், இயக்க உணரிகள், புவியியல் இருப்பிட அறிதல், எடுத்துச் செல்லும் வசதி. இது அன்றாட எண்ணிமப் பயன்பாட்டை மாற்றியது.
+Social computing	சமூகக் கணிப்பீடு
+Supporting human social communication and shared spaces: Twitter, Facebook, Instagram.	மனிதர்களின் சமூகத் தொடர்பையும் பகிரப்பட்ட வெளிகளையும் ஆதரித்தல்: Twitter, Facebook, Instagram.
+Affective computing	உணர்ச்சிசார் கணிப்பீடு
+Detecting and responding to human emotions (stress, satisfaction, frustration) from how people interact.	மக்கள் இடைவினையாற்றும் விதத்திலிருந்து மனித உணர்ச்சிகளை (மன அழுத்தம், திருப்தி, விரக்தி) கண்டறிந்து அவற்றுக்கு எதிர்வினையாற்றுதல்.
+Context-sensitive computing	சூழலுக்கேற்பக் கணிப்பீடு
+Adapting behaviour to location, lighting, time and environment.	இருப்பிடம், வெளிச்சம், நேரம், சூழல் ஆகியவற்றுக்கு ஏற்ப நடத்தையை மாற்றியமைத்தல்.
+Gesture, pen & touch UI	சைகை, பேனா, தொடு இடைமுகம்
+Direct, natural manipulation with hand gestures, sign language, styluses and multi-touch.	கைச் சைகைகள், சைகை மொழி, எழுதுகோல்கள், பல்தொடுதல் ஆகியவற்றின் மூலம் நேரடியாகவும் இயல்பாகவும் கையாளுதல்.
+Information visualization	தகவல் காட்சிப்படுத்தல்
+Presenting data visually. A popular emerging idea mentioned in the video.	தரவைக் காட்சி வடிவில் வழங்குதல். காணொளியில் குறிப்பிடப்பட்டுள்ள, வளர்ந்துவரும் ஒரு பிரபலமான கருத்து.
+CSCW (groupware)	CSCW (குழுப்பணி மென்பொருள்)
+Computer-Supported Cooperative Work: tools for remote multi-user collaboration.	கணினி ஆதரவுள்ள கூட்டுப்பணி: பல பயனர்கள் தொலைவிலிருந்து ஒத்துழைப்பதற்கான கருவிகள்.
+♿ Special needs & accessibility	♿ சிறப்புத் தேவைகளும் அணுகல்தன்மையும்
+Screen readers, voice navigation, eye-tracking, adaptive switches. E.g. a blind person finding their way with Google Maps.	திரை வாசிப்பான்கள், குரல்வழி வழிசெலுத்தல், கண் அசைவுக் கண்காணிப்பு, தேவைக்கேற்ப மாற்றப்படும் சுவிட்சுகள். எ.கா. பார்வையற்ற ஒருவர் Google Maps மூலம் வழியைக் கண்டுபிடித்தல்.
+🎓 Education & e-learning	🎓 கல்வியும் மின்வழிக் கற்றலும்
+Simulations, feedback systems, gamified learning. This course itself is an example.	உருவகப்படுத்தல்கள், பின்னூட்ட முறைமைகள், விளையாட்டுமயமாக்கப்பட்ட கற்றல். இந்தப் பாடமே ஓர் எடுத்துக்காட்டு.
+🏥 Healthcare	🏥 சுகாதாரம்
+ICU monitoring displays, surgical robots, health records, prediction models.	தீவிர சிகிச்சைப் பிரிவு கண்காணிப்புத் திரைகள், அறுவைச் சிகிச்சை ரோபோக்கள், சுகாதாரப் பதிவுகள், முன்கணிப்பு மாதிரிகள்.
+🛡 Security & biometrics	🛡 பாதுகாப்பும் உயிரளவியல் அடையாளமும்
+Iris and fingerprint scanners, intelligent CCTV, face verification gates (often with GIS).	கருவிழி மற்றும் கைரேகை வருடிகள், நுண்ணறிவு CCTV, முகத்தைச் சரிபார்க்கும் நுழைவாயில்கள் (பெரும்பாலும் GIS உடன்).
+🎮 Games & entertainment	🎮 விளையாட்டுகளும் பொழுதுபோக்கும்
+High immersion, real-time haptics, low-latency control, adaptive stories.	ஆழ்ந்த மூழ்குணர்வு, நிகழ்நேரத் தொடுபின்னூட்டம், குறைந்த தாமதமுள்ள கட்டுப்பாடு, தகவமைக்கும் கதைகள்.
+Check my answers	என் விடைகளைச் சரிபார்
+Try again (new order)	மீண்டும் முயல்க (புதிய வரிசை)
+All answered	அனைத்துக்கும் விடையளிக்கப்பட்டது
+✓ Correct.	✓ சரி.
+✗ Not quite.	✗ முழுவதும் சரியில்லை.
+Excellent — you know this well	மிகச் சிறப்பு — இதை நன்றாக அறிந்திருக்கிறீர்கள்
+Good — revise the ones you missed	நன்று — தவறவிட்டவற்றை மீளாய்வு செய்யுங்கள்
+Getting there — reread the weak sections	முன்னேறுகிறீர்கள் — பலவீனமான பகுதிகளை மீண்டும் வாசியுங்கள்
+Needs revision — go through the notes again	மீளாய்வு தேவை — குறிப்புகளை மீண்டும் படியுங்கள்
+Self-check quiz	சுய பரிசோதனை வினாடிவினா
+Computers, Humans and Interactions	கணினிகள், மனிதர்கள், இடைவினைகள்
+The three words in "HCI": what a computer is today, how humans perceive, and what interaction means.	“HCI” என்பதிலுள்ள மூன்று சொற்கள்: இன்றைய கணினி என்றால் என்ன, மனிதர்கள் எவ்வாறு புலனுணர்கிறார்கள், இடைவினை என்றால் என்ன.
+The components: computers, humans, interaction	கூறுகள்: கணினிகள், மனிதர்கள், இடைவினை
+Computers are everywhere: the interfaces we use	கணினிகள் எங்கும் உள்ளன: நாம் பயன்படுத்தும் இடைமுகங்கள்
+Humans: senses and perception	மனிதர்கள்: புலன்களும் புலனுணர்வும்
+The same word means different things ("credit")	ஒரே சொல் வெவ்வேறு பொருள்களைத் தருகிறது (“credit”)
+People perceive differently; design must support the right perception	மக்கள் வெவ்வேறாகப் புலனுணர்கிறார்கள்; சரியான புலனுணர்வை வடிவமைப்பு ஆதரிக்க வேண்டும்
+Exercise: how do you perceive "apple"? Context matters	பயிற்சி: “apple” என்பதை எப்படி உணர்கிறீர்கள்? சூழல் முக்கியம்
+Designing for many people who perceive differently	வெவ்வேறாகப் புலனுணரும் பலருக்காக வடிவமைத்தல்
+Interaction as a two-way process	இருவழிச் செயல்முறையாக இடைவினை
+Intentional vs unintentional interaction	நோக்கமுள்ள மற்றும் நோக்கமற்ற இடைவினை
+HCI Map	HCI வரைபடம்
+The map of topics covered in this module.	இந்தப் பாடத்தொகுதியில் இடம்பெறும் தலைப்புகளின் வரைபடம்.
+Introduction: the HCI map	அறிமுகம்: HCI வரைபடம்
+User and context of use	பயனரும் பயன்பாட்டுச் சூழலும்
+Interaction between human and computer	மனிதருக்கும் கணினிக்கும் இடையிலான இடைவினை
+Why study HCI: complex computers, limited humans	HCI-ஐ ஏன் கற்க வேண்டும்: சிக்கலான கணினிகள், வரம்புகளுள்ள மனிதர்கள்
+Human limitations and the cost of bad design (time, money)	மனித வரம்புகளும் மோசமான வடிவமைப்பின் செலவும் (நேரம், பணம்)
+HCI as a multidisciplinary discipline	பல்துறைகளை இணைக்கும் துறையாக HCI
+HCI Space	HCI பரப்பு
+Where HCI sits under Human Factors Engineering, and the technologies, ideas and domains where HCI applies.	மனிதக் காரணிகள் பொறியியலின் கீழ் HCI அமையும் இடமும் HCI பயன்படும் தொழில்நுட்பங்கள், கருத்துகள், துறைகளும்.
+Why the scope of HCI is confusing — so many related terms	HCI-இன் வரம்பு ஏன் குழப்பமாக உள்ளது — பல தொடர்புடைய சொற்கள்
+Human Factors Engineering umbrella: industrial design, product design, HCI	மனிதக் காரணிகள் பொறியியல் குடை: தொழில்துறை வடிவமைப்பு, தயாரிப்பு வடிவமைப்பு, HCI
+Inside HCI: UI design, UX design, interaction design	HCI-க்குள்: UI வடிவமைப்பு, UX வடிவமைப்பு, இடைவினை வடிவமைப்பு
+HCI is more than usability and interface design	HCI பயன்பாட்டுத் திறனையும் இடைமுக வடிவமைப்பையும் விட விரிவானது
+Applications in 3 groups: technologies, ideas, domains	3 குழுக்களில் பயன்பாடுகள்: தொழில்நுட்பங்கள், கருத்துகள், துறைகள்
+Ideas: social, affective, context-sensitive, gesture/touch, info-vis, CSCW	கருத்துகள்: சமூக, உணர்ச்சிசார், சூழல்சார், சைகை/தொடுதல், தகவல் காட்சிப்படுத்தல், CSCW
+Domains: special needs, education, healthcare, security, games	துறைகள்: சிறப்புத் தேவைகள், கல்வி, சுகாதாரம், பாதுகாப்பு, விளையாட்டுகள்

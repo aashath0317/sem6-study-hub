@@ -41,3 +41,23 @@ Planner checks (Node.js, no extra packages):
 node _source/build/tests/study-plan.test.cjs
 node _source/build/tests/study-timer.test.cjs
 ```
+
+## HCI authored Tamil translations
+
+All 13 HCI weeks, past papers and the subject index have a floating **தமிழ் / English** button. Tamil is an authored translation of the existing English notes, tables, examples, quizzes and interactive-tool text, saved locally. It does not use Google Translate, an API or a translation service. Switching retains quiz answers and live tool state. The original labels inside figure images and embedded video players remain unchanged; captions and chapter descriptions are translated.
+
+Translation sources live in `_source/build/content/hci/ta/`. The original English note files and quiz answers remain unchanged. `source-manifest.json` detects changes to the English source that require a translation review. Never substitute the earlier explanatory summaries for these translations. The older `HCI_TAMIL_REVIEW.md` documents the previous explanation feature.
+
+To refresh only the HCI translations while preserving the existing English pages and video metadata:
+
+```sh
+python _source/build/refresh_hci_translations.py
+```
+
+The regular builder also embeds these translations. Translation checks cover all 15 HCI pages, 90 note/past-paper sections, 145 weekly questions and 24 live tools. Run the DOM integration test with Node.js and `jsdom` installed:
+
+```sh
+node _source/build/tests/hci-translation.test.cjs
+```
+
+The test exercises Tamil/English switching, dynamic tool branches, answer selection and quiz grading without fetching external resources.

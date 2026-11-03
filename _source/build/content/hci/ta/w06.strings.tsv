@@ -1,0 +1,60 @@
+Direct Manipulation & Invisible Interfaces	நேரடிக் கையாளுதலும் புலப்படாத இடைமுகங்களும்
+Direct manipulation, the desktop metaphor vs the CLI, metaphorical vs literal invisibility, good vs bad design, invisibility by learning vs by design, and five tips for invisible interfaces.	நேரடிக் கையாளுதல், மேசை உருவகமும் CLI-யும், உருவகமான மற்றும் நேரடியான புலப்படாமை, நல்ல மற்றும் மோசமான வடிவமைப்பு, கற்றலால் மற்றும் வடிவமைப்பால் புலப்படாமை, புலப்படாத இடைமுகங்களுக்கான ஐந்து குறிப்புகள்.
+6.1 Direct and Indirect Manipulations	6.1 நேரடி மற்றும் மறைமுகக் கையாளுதல்கள்
+Direct manipulation: acting on the task object itself.	நேரடிக் கையாளுதல்: பணிப் பொருளின்மீதே செயல்படுதல்.
+Designing tasks: feedback cycles and invisible interfaces	பணிகளை வடிவமைத்தல்: பின்னூட்டச் சுழற்சிகளும் புலப்படாத இடைமுகங்களும்
+Direct manipulation: no feeling of an intermediate interface	நேரடிக் கையாளுதல்: இடையில் ஓர் இடைமுகம் இருப்பதாக உணரப்படுவதில்லை
+Example: laptop touchpad vs touch screen	எடுத்துக்காட்டு: மடிக்கணினித் தொடுதளமும் தொடுதிரையும்
+Indirect manipulation: searching for menu options	மறைமுகக் கையாளுதல்: பட்டித் தெரிவுகளைத் தேடுதல்
+How the user feels about the task	பணியைப் பற்றிப் பயனர் எப்படி உணர்கிறார்
+Example: zooming an image, then and now	எடுத்துக்காட்டு: அன்றும் இன்றும் படத்தைப் பெரிதாக்குதல்
+Invisible interfaces: users think about the task, not the interface	புலப்படாத இடைமுகங்கள்: இடைமுகத்தை அல்ல, பணியைப் பற்றிப் பயனர்கள் சிந்திக்கிறார்கள்
+Direct manipulation reduces the gulf of execution	நேரடிக் கையாளுதல் செயலாக்க இடைவெளியைக் குறைக்கிறது
+Good Designs and Bad Designs	நல்ல வடிவமைப்புகளும் மோசமான வடிவமைப்புகளும்
+Metaphorically invisible vs literally invisible interfaces.	உருவகமாகப் புலப்படாத மற்றும் நேரடியாகப் புலப்படாத இடைமுகங்கள்.
+What good and bad design mean for interfaces	இடைமுகங்களில் நல்ல மற்றும் மோசமான வடிவமைப்பின் பொருள்
+Good design: metaphorically invisible, literally present	நல்ல வடிவமைப்பு: உருவகமாகப் புலப்படாதது; நேரடியாக இருக்கிறது
+Bad design: literally invisible, so there's no feedback	மோசமான வடிவமைப்பு: நேரடியாகப் புலப்படாததால் பின்னூட்டமில்லை
+Summary of the difference	வேறுபாட்டின் சுருக்கம்
+Invisibility by Learning & by Design	கற்றலாலும் வடிவமைப்பாலும் புலப்படாமை
+Two ways an interface becomes invisible, and why designing for invisibility is so hard.	இடைமுகம் புலப்படாமல் போகும் இரண்டு வழிகளும் புலப்படாமைக்காக வடிவமைப்பது ஏன் மிகவும் கடினம் என்பதும்.
+Two routes to invisibility	புலப்படாமைக்கான இரண்டு வழிகள்
+By learning: the interface fades with practice (video games)	கற்றலால்: பயிற்சியுடன் இடைமுகம் மறைகிறது (காணொளி விளையாட்டுகள்)
+By design: invisible from the very first moment	வடிவமைப்பால்: முதல் கணத்திலிருந்தே புலப்படாதது
+Very challenging, hard to achieve 100%	மிகவும் சவாலானது; 100% அடைவது கடினம்
+The thinking is done by the designer, not the user	சிந்தனையைச் செய்வது வடிவமைப்பாளர்; பயனர் அல்ல
+Designer effort is commonly underestimated	வடிவமைப்பாளரின் முயற்சி பொதுவாகக் குறைத்து மதிப்பிடப்படுகிறது
+Invisible Interface Design Tips	புலப்படாத இடைமுக வடிவமைப்புக் குறிப்புகள்
+Five tips: affordance, know your user, differentiate users, let the interface teach, talk to users.	ஐந்து குறிப்புகள்: செயல்வாய்ப்பு, பயனரை அறிதல், பயனர்களை வேறுபடுத்தல், இடைமுகமே கற்பித்தல், பயனர்களுடன் பேசுதல்.
+Tip 1: affordances, and why controls are placed where they are	குறிப்பு 1: செயல்வாய்ப்புகளும் கட்டுப்பாடுகள் அவற்றின் இடங்களில் அமைவதற்கான காரணமும்
+Tip 2: know your user (novice = ease, expert = efficiency)	குறிப்பு 2: பயனரை அறிக (புதியவர் = எளிமை, வல்லுநர் = செயல்திறன்)
+Tip 3: differentiate users, with many ways to do the same thing (MS Word)	குறிப்பு 3: ஒரே செயலைச் செய்யப் பல வழிகளுடன் பயனர்களை வேறுபடுத்திப் பாருங்கள் (MS Word)
+Tip 4: let the interface teach	குறிப்பு 4: இடைமுகமே கற்பிக்கட்டும்
+Tip 5: talk to your users	குறிப்பு 5: பயனர்களுடன் பேசுங்கள்
+Summary: direct manipulation + invisibility = usable systems	சுருக்கம்: நேரடிக் கையாளுதல் + புலப்படாமை = பயன்படுத்த எளிதான முறைமைகள்
+🧪 Try it — Feel the difference: zoom two ways	🧪 முயன்று பாருங்கள் — வேறுபாட்டை உணருங்கள்: இரண்டு முறைகளில் பெரிதாக்குதல்
+Indirect (menu + typed %)	மறைமுகம் (பட்டி + தட்டச்சு செய்த %)
+View ▸ Zoom ▸	காட்சி ▸ பெரிதாக்கு ▸
+Apply	பயன்படுத்து
+Direct (drag the slider on the picture)	நேரடி (படத்தின்மீது நகர்த்தியை இழுங்கள்)
+Steps: 0	படிகள்: 0
+On a touch screen the right-hand version would be a pinch. Count your steps and notice where your attention goes: to the control, or to the picture?	தொடுதிரையில் வலப்பக்க வடிவம் விரல்களை விரிப்பதாக இருக்கும். உங்கள் படிகளை எண்ணி, கவனம் எங்கே செல்கிறது என்பதைக் கவனியுங்கள்: கட்டுப்பாட்டுக்கா, படத்துக்கா?
+Steps: 1 continuous gesture, with live feedback	படிகள்: நேரடிப் பின்னூட்டத்துடன் 1 தொடர்ச்சியான சைகை
+🧪 Try it — The five tips, explained	🧪 முயன்று பாருங்கள் — ஐந்து குறிப்புகளின் விளக்கம்
+Use natural affordances	இயல்பான செயல்வாய்ப்புகளைப் பயன்படுத்துங்கள்
+Know your user	உங்கள் பயனரை அறியுங்கள்
+Differentiate your users	உங்கள் பயனர்களை வேறுபடுத்திப் பாருங்கள்
+Let the interface teach	இடைமுகமே கற்பிக்கட்டும்
+Talk to (and observe) your users	பயனர்களுடன் பேசுங்கள் (அவர்களைக் கவனியுங்கள்)
+1. Use natural affordances	1. இயல்பான செயல்வாய்ப்புகளைப் பயன்படுத்துங்கள்
+2. Know your user	2. உங்கள் பயனரை அறியுங்கள்
+3. Differentiate your users	3. உங்கள் பயனர்களை வேறுபடுத்திப் பாருங்கள்
+4. Let the interface teach	4. இடைமுகமே கற்பிக்கட்டும்
+5. Talk to (and observe) your users	5. பயனர்களுடன் பேசுங்கள் (அவர்களைக் கவனியுங்கள்)
+Design controls that show how they work: buttons look pressable, sliders slide, switches flip. Placement matters too. There is a reason OK/Cancel sit at the bottom in a set order and Delete is where it is.	செயல்படும் விதத்தைக் காட்டும் கட்டுப்பாடுகளை வடிவமையுங்கள்: பொத்தான்கள் அழுத்தக்கூடியவையாகத் தெரியும், நகர்த்திகள் நகரும், நிலைமாற்றிகள் மாறும். இடமும் முக்கியம். சரி/ரத்துசெய் கீழே குறிப்பிட்ட வரிசையில் இருப்பதற்கும் நீக்கு அதற்குரிய இடத்தில் இருப்பதற்கும் காரணம் உள்ளது.
+Example: A flat, unlabelled rectangle that is secretly a button means no affordance.	எடுத்துக்காட்டு: உண்மையில் பொத்தானாக இருந்தும் பெயரிடப்படாத தட்டையான செவ்வகம் செயல்வாய்ப்பைக் காட்டுவதில்லை.
+Example: A wizard is perfect for a first-time user and painfully slow for a daily power user.	எடுத்துக்காட்டு: முதன்முறைப் பயனருக்கு வழிகாட்டி மிகப் பொருத்தமானது; தினசரி தீவிரப் பயனருக்குத் தாங்கமுடியாத அளவு மெதுவானது.
+Example: The tooltip on the Bold button shows "Ctrl+B", so beginners discover the expert shortcut.	எடுத்துக்காட்டு: தடித்த எழுத்துப் பொத்தானின் கருவிக்குறிப்பு “Ctrl+B” என்பதைக் காட்டுவதால், தொடக்கநிலையினர் வல்லுநருக்கான குறுக்குவழியைக் கண்டறிகிறார்கள்.
+Talking to users reveals ideas you never thought of. Real people act with emotions, feelings, experiences and preferences. They are not robots following a rule set. Run usability walkthroughs: are they thinking about the task, or fighting the widgets?	பயனர்களுடன் பேசுவது நீங்கள் நினைத்துப் பார்க்காத கருத்துகளை வெளிப்படுத்துகிறது. உண்மையான மக்கள் உணர்ச்சிகள், உணர்வுகள், அனுபவங்கள், விருப்பங்களுடன் செயல்படுகிறார்கள். விதித் தொகுப்பைப் பின்பற்றும் ரோபோக்கள் அல்ல. பயன்பாட்டுத் திறன் வழிநடை ஆய்வுகளை நடத்துங்கள்: பணியைப் பற்றிச் சிந்திக்கிறார்களா அல்லது கூறுகளுடன் போராடுகிறார்களா?
+Example: Watching five users struggle with one hidden menu tells you more than a week of guessing.	எடுத்துக்காட்டு: மறைந்த ஒரு பட்டியுடன் ஐந்து பயனர்கள் போராடுவதைப் பார்ப்பது, ஒரு வாரம் ஊகிப்பதைவிட அதிகம் தெரிவிக்கிறது.
+hear it in the lecture	விரிவுரையில் கேளுங்கள்

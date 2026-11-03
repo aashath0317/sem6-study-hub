@@ -1,0 +1,102 @@
+// Run with Node.js and jsdom available (npm install --no-save jsdom).
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const { JSDOM, VirtualConsole } = require('jsdom');
+const root = path.resolve(__dirname, '../../..');
+const directory = path.join(root, 'Human Computer Interaction');
+function files(dir) { return fs.readdirSync(dir, {withFileTypes:true}).flatMap(e => e.isDirectory() ? files(path.join(dir,e.name)) : e.name.endsWith('.html') ? [path.join(dir,e.name)] : []); }
+const tick = () => new Promise(resolve => setTimeout(resolve, 0));
+(async () => {
+  let totalSections=0, totalQuestions=0, totalTools=0;
+  const untranslated = [];
+  assert.equal(files(directory).length,15);
+  for (const file of files(directory)) {
+    const errors = [];
+    const vc = new VirtualConsole();
+    vc.on('jsdomError', e => errors.push(e.cause?.stack || e.message));
+    const dom = new JSDOM(fs.readFileSync(file,'utf8'), {
+      url:'https://offline-hci.test/' + encodeURI(path.relative(root,file)), runScripts:'dangerously', pretendToBeVisual:true, virtualConsole:vc,
+      beforeParse(w) {
+        w.matchMedia = () => ({matches:false,addListener(){},removeListener(){},addEventListener(){},removeEventListener(){}});
+        w.HTMLElement.prototype.scrollIntoView = function(){};
+        w.confirm = () => true;
+        w.HTMLMediaElement.prototype.pause = function(){};
+        w.HTMLMediaElement.prototype.play = function(){return Promise.resolve();};
+      }
+    });
+    const {document:d} = dom.window;
+    await tick();
+    const button = d.querySelector('.hci-language');
+    assert.ok(button, 'Missing Tamil floating button: ' + file);
+    const sections = [...d.querySelectorAll('section[data-sec]')];
+    totalSections+=sections.length;
+    totalQuestions+=d.querySelectorAll('.qq').length;
+    totalTools+=d.querySelectorAll('.tool').length;
+    assert.equal(d.querySelectorAll('.native-toggle,.tamil-native').length,0,'Old explanation panels remain');
+    const ids = [...d.querySelectorAll('[id]')].map(el=>el.id);
+    assert.equal(new Set(ids).size, ids.length,'Duplicate IDs: '+file);
+    const tools = [...d.querySelectorAll('.tool')];
+    const input = d.querySelector('.quiz input[type=radio]');
+    if(input) { input.checked=true; input.dispatchEvent(new dom.window.Event('change',{bubbles:true})); }
+    button.click(); await tick();
+    assert.equal(d.documentElement.lang,'ta');
+    assert.equal(button.textContent,'English');
+    const translationData = JSON.parse(d.querySelector('#hci-tamil-data').textContent);
+    const plain = html => { const el=d.createElement('div');el.innerHTML=html;return el.textContent.trim(); };
+    const expectedQuestions = new Set(Object.values(translationData.markup).map(plain));
+    d.querySelectorAll('.qt').forEach(q => {
+      const copy=q.cloneNode(true);copy.querySelector('b').remove();copy.querySelector('.qw')?.remove();
+      assert.ok(expectedQuestions.has(copy.textContent.trim()),'Question not translated: '+copy.textContent);
+    });
+    sections.forEach(s => { assert.equal(s.querySelector('.hci-en').hidden,true); assert.equal(s.querySelector('.hci-ta').hidden,false); });
+    tools.forEach(tool => assert.ok(tool.closest('.hci-ta'),'Live tool did not move to Tamil panel'));
+    const scan = () => {
+      const walker=d.createTreeWalker(d.querySelector('main'),dom.window.NodeFilter.SHOW_TEXT);
+      let node;
+      while((node=walker.nextNode())) {
+        if(node.parentElement.closest('script,style,.hci-en,svg') || node.parentElement.closest('[hidden]'))continue;
+        const text=node.nodeValue.trim();
+        if((text.match(/[a-zA-Z]{3,}/g)||[]).length>=5) untranslated.push({file:path.relative(directory,file),text});
+      }
+    };
+    scan();
+    // Exercise every tool's alternatives, including content created after the toggle.
+    for(const tool of tools) {
+      for(const select of tool.querySelectorAll('select')) {
+        for(const option of [...select.options]) { select.value=option.value; select.dispatchEvent(new dom.window.Event('change',{bubbles:true})); await tick(); scan(); }
+      }
+      for(const checkbox of tool.querySelectorAll('input[type=checkbox]')) { checkbox.checked=!checkbox.checked; checkbox.dispatchEvent(new dom.window.Event('change',{bubbles:true})); await tick(); scan(); }
+      for(const action of [...tool.querySelectorAll('button')]) { if(!action.isConnected) continue; action.click(); await tick(); scan(); }
+    }
+    // A tool that reads a translated label must still retain its source-language state.
+    const principle = d.querySelector('#pr .ps');
+    let deletedLabel = null;
+    if(principle) {
+      principle.value='tol';
+      d.querySelector('#pr .good').checked=true;
+      principle.dispatchEvent(new dom.window.Event('change',{bubbles:true})); await tick();
+      const item=d.querySelector('#pr .ml li');
+      item.click(); await tick();
+      deletedLabel='📧 Meeting notes';
+    }
+    // Toggle twice: selected answers, control objects and tool event handlers must survive.
+    button.click(); await tick();
+    assert.equal(d.documentElement.lang,'en');
+    if(deletedLabel) assert.ok(d.querySelector('#pr .msg').textContent.includes(deletedLabel),'Tool captured translated label as source state');
+    if(input) assert.equal(input.checked,true,'Quiz answer lost');
+    tools.forEach(tool=> assert.ok(tool.closest('.hci-en'),'Live tool not returned'));
+    for(const tool of tools) assert.ok(d.contains(tool),'Live tool replaced');
+    assert.equal(d.querySelectorAll('.quiz input[type=radio]:checked').length,input?1:0);
+    button.click(); await tick();
+    const check = d.querySelector('.qcheck');
+    if(check) { check.click(); await tick(); assert.ok(d.querySelector('.qres .qscore'),'Quiz grading failed'); }
+    if(errors.length && process.env.HCI_TRANSLATION_REPORT) fs.writeFileSync(process.env.HCI_TRANSLATION_REPORT,JSON.stringify(untranslated,null,2));
+    assert.deepEqual(errors,[],'Script errors: '+file);
+    dom.window.close();
+    console.log('PASS',path.relative(directory,file));
+  }
+  const report = [...new Map(untranslated.map(x=>[x.file+'|'+x.text,x])).values()];
+  if(process.env.HCI_TRANSLATION_REPORT) fs.writeFileSync(process.env.HCI_TRANSLATION_REPORT,JSON.stringify(report,null,2));
+  console.log(`PASS: 15 pages, ${totalSections} sections, ${totalQuestions} rendered questions, ${totalTools} live tools; toggles, tool branches, quiz selections and grading.`);
+})().catch(e=>{console.error(e);process.exit(1);});

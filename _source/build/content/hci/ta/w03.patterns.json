@@ -1,0 +1,26 @@
+[
+  {
+    "pattern": "^(\\d+)% used$",
+    "replacement": "$1% பயன்படுத்தப்பட்டது"
+  },
+  {
+    "pattern": "^(\\d+) chunks$",
+    "replacement": "$1 தொகுதிகள்"
+  },
+  {
+    "pattern": "^(\\d+) items →$",
+    "replacement": "$1 உருப்படிகள் →"
+  },
+  {
+    "pattern": "^· OVERLOAD: errors spike and performance collapses$",
+    "replacement": "· அதிகச் சுமை: பிழைகள் உயர்ந்து செயல்திறன் சரிகிறது"
+  },
+  {
+    "pattern": "^· UNDERLOAD: boredom and a wandering mind$",
+    "replacement": "· குறைந்த சுமை: சலிப்பும் அலைபாயும் மனமும்"
+  },
+  {
+    "pattern": "^· Healthy load: focused and productive$",
+    "replacement": "· சீரான சுமை: கவனமும் பயனுள்ள செயல்பாடும்"
+  }
+]

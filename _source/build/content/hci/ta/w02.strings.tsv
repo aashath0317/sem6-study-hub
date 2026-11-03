@@ -1,0 +1,104 @@
+Interaction Models, Ergonomics & Styles	இடைவினை மாதிரிகள், உடலியக்கவியல், பாணிகள்
+Domain–goal–task, Norman's 7 stages and the two gulfs, slips vs mistakes, the Abowd & Beale framework, ergonomics, direct vs indirect manipulation, and interaction styles.	பயன்பாட்டுத் துறை–இலக்கு–பணி, நார்மனின் 7 நிலைகளும் இரண்டு இடைவெளிகளும், செயல் வழுவல்களும் தவறான திட்டங்களும், அபௌட்–பீல் கட்டமைப்பு, உடலியக்கவியல், நேரடி மற்றும் மறைமுகக் கையாளுதல், இடைவினைப் பாணிகள்.
+🧪 Try it — Walk Norman's action cycle	🧪 முயன்று பாருங்கள் — நார்மனின் செயல் சுழற்சி
+Situation	சூழ்நிலை
+Remote within reach	தொலைவியக்கி கைக்கு எட்டும் தொலைவில்
+Remote near another person	தொலைவியக்கி மற்றொருவருக்கு அருகில்
+Remote across the room, you're alone	தொலைவியக்கி அறையின் மறுபுறத்தில்; நீங்கள் தனியாக இருக்கிறீர்கள்
+AC is broken	குளிரூட்டி பழுதடைந்துள்ளது
+◀ Back	◀ பின்னால்
+Next stage ▶	அடுத்த நிலை ▶
+Goal	இலக்கு
+Intention	எண்ணம்
+Action specification	செயலைக் குறிப்பிடுதல்
+Execution	செயலாக்கம்
+Perception	புலனுணர்வு
+Interpretation	பொருள் கொள்ளுதல்
+Evaluation	மதிப்பீடு
+Make the room cooler	அறையை மேலும் குளிராக்குதல்
+Reduce the AC temperature	குளிரூட்டியின் வெப்பநிலையைக் குறைத்தல்
+Pick up the remote and press temperature-down	தொலைவியக்கியை எடுத்து வெப்பநிலையைக் குறைக்கும் பொத்தானை அழுத்துதல்
+Press the button	பொத்தானை அழுத்துதல்
+Ask the other person to lower the AC	குளிரூட்டியின் வெப்பநிலையைக் குறைக்க மற்றவரிடம் கேட்டல்
+Say it out loud	உரக்கச் சொல்லுதல்
+Stand up, walk across, pick up the remote, adjust	எழுந்து, மறுபுறம் நடந்து சென்று, தொலைவியக்கியை எடுத்து, சரிசெய்தல்
+Walk and press	நடந்து சென்று அழுத்துதல்
+No beep, display unchanged, no cool air	ஒலி இல்லை; திரை மாறவில்லை; குளிர்ந்த காற்று இல்லை
+Beep, display changes, cool air flows	ஒலி கேட்கிறது; திரை மாறுகிறது; குளிர்ந்த காற்று வருகிறது
+"The AC isn't responding"	“குளிரூட்டி பதிலளிக்கவில்லை”
+"The AC now reads 22 °C"	“குளிரூட்டி இப்போது 22 °C காட்டுகிறது”
+✗ Goal NOT met → back to Goal: new intention, e.g. switch on the fan or move rooms	✗ இலக்கு அடையப்படவில்லை → மீண்டும் இலக்குக்குச் செல்க: புதிய எண்ணம், எ.கா. மின்விசிறியை இயக்குதல் அல்லது அறை மாறுதல்
+✓ The room is cooler: goal achieved	✓ அறை குளிர்ந்துள்ளது: இலக்கு அடையப்பட்டது
+Execution: stages 2–4	செயலாக்கம்: நிலைகள் 2–4
+Evaluation: stages 5–7	மதிப்பீடு: நிலைகள் 5–7
+🧪 Try it — Animate the Abowd & Beale cycle	🧪 முயன்று பாருங்கள் — அபௌட்–பீல் சுழற்சியை இயக்குங்கள்
+Next translation ▶	அடுத்த மாற்றம் ▶
+Novice user	புதிய பயனர்
+System (core)	முறைமை (மையம்)
+Output	வெளியீடு
+User (task)	பயனர் (பணி)
+Input	உள்ளீடு
+Articulation	வெளிப்படுத்தல்
+Performance	செயற்படுத்தல்
+Presentation	வழங்கல்
+Observation	அவதானித்தல்
+User puts the task into the input language, e.g. selects text and presses Ctrl+B.	பயனர் பணியை உள்ளீட்டு மொழியில் வெளிப்படுத்துகிறார்; எ.கா. உரையைத் தேர்ந்தெடுத்து Ctrl+B அழுத்துகிறார்.
+The interface must help a novice turn what they want into input (labels, menus, guidance).	புதிய பயனர் விரும்புவதை உள்ளீடாக மாற்ற இடைமுகம் உதவ வேண்டும் (பெயர்கள், பட்டிகள், வழிகாட்டல்).
+An experienced user needs little support; shortcuts are fine.	அனுபவமுள்ள பயனருக்குக் குறைந்த ஆதரவு போதும்; குறுக்குவழிகள் பொருத்தமானவை.
+The input is translated into the core language and the system state changes (the text becomes bold in the document model).	உள்ளீடு மைய மொழியாக மாற்றப்பட்டு முறைமை நிலை மாறுகிறது (ஆவண மாதிரியில் உரை தடித்த எழுத்தாகிறது).
+Design must make sure input maps cleanly onto system operations.	உள்ளீடு முறைமைச் செயல்பாடுகளுடன் தெளிவாகப் பொருந்துவதை வடிவமைப்பு உறுதிசெய்ய வேண்டும்.
+Same: a clean mapping from input to operation.	அதே: உள்ளீட்டிலிருந்து செயல்பாட்டுக்குத் தெளிவான பொருத்தம்.
+The new state is rendered as output: the word appears bold on screen.	புதிய நிலை வெளியீடாகக் காட்டப்படுகிறது: சொல் திரையில் தடித்த எழுத்தாகத் தெரிகிறது.
+Output must be presented so it is easy to understand.	எளிதாகப் புரிந்துகொள்ளும் வகையில் வெளியீடு வழங்கப்பட வேண்டும்.
+Same.	அதே.
+The user perceives the output and compares it with the goal: "Yes, it is bold."	பயனர் வெளியீட்டை உணர்ந்து இலக்குடன் ஒப்பிடுகிறார்: “ஆம், அது தடித்த எழுத்தாக உள்ளது.”
+A novice needs interpretation support from the interface.	புதிய பயனருக்குப் பொருள் கொள்ள இடைமுகத்தின் ஆதரவு தேவை.
+Familiarity grows with use, so experienced users interpret output easily.	பயன்பாட்டுடன் பரிச்சயம் வளர்வதால் அனுபவமுள்ள பயனர்கள் வெளியீட்டுக்கு எளிதாகப் பொருள் கொடுக்கிறார்கள்.
+Execution cycle	செயலாக்கச் சுழற்சி
+Evaluation cycle	மதிப்பீட்டுச் சுழற்சி
+Interactions	இடைவினைகள்
+What interaction is: domain, goal and tasks.	இடைவினை என்றால் என்ன: பயன்பாட்டுத் துறை, இலக்கு, பணிகள்.
+What interaction is: communication between user and system	இடைவினை என்றால் என்ன: பயனருக்கும் முறைமைக்கும் இடையிலான தகவல் தொடர்பு
+Input: natural language vs computer language	உள்ளீடு: இயல்பான மொழியும் கணினி மொழியும்
+Many ways to interact: typing, voice, camera, sensors	இடைவினைக்கு பல வழிகள்: தட்டச்சு, குரல், ஒளிப்படக்கருவி, உணரிகள்
+Feedback as assurance	உறுதிப்படுத்தலாகப் பின்னூட்டம்
+Why modelling interaction is hard: varied users and contexts	இடைவினையை மாதிரியாக்குவது ஏன் கடினம்: மாறுபட்ட பயனர்களும் சூழல்களும்
+Physical design: the mouse and the hand	உடல்சார் வடிவமைப்பு: சுட்டியும் கையும்
+Interaction as user, system and task	பயனர், முறைமை, பணி ஆகியவையாக இடைவினை
+Example: booking a taxi through an app	எடுத்துக்காட்டு: செயலி மூலம் வாடகைக் காரைப் பதிவு செய்தல்
+Even simple interactions have many stages	எளிய இடைவினைகளில்கூட பல நிலைகள் உள்ளன
+Everyday example: tying a shoelace while running	அன்றாட எடுத்துக்காட்டு: ஓடும்போது காலணிக் கயிற்றைக் கட்டுதல்
+Breaking an interaction into basic artifacts	இடைவினையை அடிப்படைக் கூறுகளாகப் பிரித்தல்
+Donald Norman's Model	டொனால்ட் நார்மனின் மாதிரி
+The 7 stages of action, execution and evaluation.	செயல், செயலாக்கம், மதிப்பீடு ஆகியவற்றின் 7 நிலைகள்.
+Introduction: goals, actions, system state	அறிமுகம்: இலக்குகள், செயல்கள், முறைமை நிலை
+The elaborated seven-stage view	விரிவான ஏழுநிலைப் பார்வை
+Example: joining an online lecture	எடுத்துக்காட்டு: இணையவழி விரிவுரையில் இணைதல்
+Perceiving and interpreting the new system state	புதிய முறைமை நிலையை உணர்ந்து பொருள் கொள்ளுதல்
+Preconceptions and evaluation	முன்கருத்துகளும் மதிப்பீடும்
+Execution cycle and evaluation cycle	செயலாக்கச் சுழற்சியும் மதிப்பீட்டுச் சுழற்சியும்
+Mismatches between execution and evaluation	செயலாக்கத்துக்கும் மதிப்பீட்டுக்கும் இடையிலான பொருந்தாமைகள்
+Gulf of Execution and Gulf of Evaluation	செயலாக்க இடைவெளியும் மதிப்பீட்டு இடைவெளியும்
+Slips and Mistakes	செயல் வழுவல்களும் தவறான திட்டங்களும்
+Two kinds of human error and how each is fixed.	இரண்டு வகை மனிதப் பிழைகளும் ஒவ்வொன்றையும் சரிசெய்வதும்.
+Two types of error: slips and mistakes	இரண்டு பிழை வகைகள்: செயல் வழுவல்கள், தவறான திட்டங்கள்
+Slip example: pressing the wrong arrow button	செயல் வழுவல் எடுத்துக்காட்டு: தவறான அம்புப் பொத்தானை அழுத்துதல்
+Mistakes: the user doesn't know what to do (wrong goal)	தவறான திட்டங்கள்: என்ன செய்ய வேண்டும் என்பது பயனருக்குத் தெரியவில்லை (தவறான இலக்கு)
+Slips are fixed by design, mistakes by educating the user	செயல் வழுவல்கள் வடிவமைப்பாலும் தவறான திட்டங்கள் பயனருக்குக் கற்பிப்பதாலும் சரிசெய்யப்படுகின்றன
+Abowd & Beale Framework	அபௌட்–பீல் கட்டமைப்பு
+User, Input, System, Output, and the four translations in the execution and evaluation cycles.	பயனர், உள்ளீடு, முறைமை, வெளியீடு மற்றும் செயலாக்க–மதிப்பீட்டுச் சுழற்சிகளின் நான்கு மாற்றங்கள்.
+User articulates action as input; system presents output	பயனர் செயலை உள்ளீடாக வெளிப்படுத்துகிறார்; முறைமை வெளியீட்டை வழங்குகிறது
+Articulation, performance, presentation, observation	வெளிப்படுத்தல், செயற்படுத்தல், வழங்கல், அவதானித்தல்
+Novice users need more support than experienced users	அனுபவமுள்ளவர்களைவிடப் புதிய பயனர்களுக்கு அதிக ஆதரவு தேவை
+Execution cycle vs evaluation cycle	செயலாக்கச் சுழற்சியும் மதிப்பீட்டுச் சுழற்சியும்
+Ergonomics	உடலியக்கவியல்
+Physical characteristics of interaction: placing controls, environment, health, colours.	இடைவினையின் உடல்சார் பண்புகள்: கட்டுப்பாடுகளின் இடம், சூழல், உடல்நலம், நிறங்கள்.
+Ergonomics = the physical characteristics of interaction	உடலியக்கவியல் = இடைவினையின் உடல்சார் பண்புகள்
+Why each button and textbox is where it is	ஒவ்வொரு பொத்தானும் உரைப்பெட்டியும் அந்தந்த இடத்தில் இருப்பது ஏன்
+Environment, health, hot vs cool colours, colour blindness	சூழல், உடல்நலம், வெப்ப மற்றும் குளிர் நிறங்கள், நிறக்குருடு நிலை
+Web-safe colours	வலைப் பாதுகாப்பான நிறங்கள்
+Direct & Indirect Manipulation	நேரடி மற்றும் மறைமுகக் கையாளுதல்
+Bolding a word vs painting a real wall through a simulator.	ஒரு சொல்லைத் தடித்த எழுத்தாக்குதலும் உருவகப்படுத்தல் மூலம் உண்மையான சுவருக்கு வர்ணம் பூசுதலும்.
+Direct manipulation: select a word, click Bold	நேரடிக் கையாளுதல்: சொல்லைத் தேர்ந்தெடுத்து தடித்த எழுத்துப் பொத்தானைச் சொடுக்குதல்
+Indirect manipulation: the painting-simulator example	மறைமுகக் கையாளுதல்: வர்ணம் பூசும் உருவகப்படுத்தல் எடுத்துக்காட்டு
+Interaction styles overview	இடைவினைப் பாணிகளின் மேலோட்டம்

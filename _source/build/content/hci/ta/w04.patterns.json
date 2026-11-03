@@ -1,0 +1,1 @@
+[{"pattern":"^Warning distance before the turn: (\\d+)% of the road shown\\.$","replacement":"திருப்பத்துக்கு முந்தைய எச்சரிக்கைத் தொலைவு: காட்டப்பட்ட சாலையின் $1%."}]

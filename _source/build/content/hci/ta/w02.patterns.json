@@ -1,0 +1,9 @@
+[
+ {"pattern":"^Stage ([1-7]) – Goal:$","replacement":"நிலை $1 – இலக்கு:"},
+ {"pattern":"^Stage ([1-7]) – Intention:$","replacement":"நிலை $1 – எண்ணம்:"},
+ {"pattern":"^Stage ([1-7]) – Action specification:$","replacement":"நிலை $1 – செயலைக் குறிப்பிடுதல்:"},
+ {"pattern":"^Stage ([1-7]) – Execution:$","replacement":"நிலை $1 – செயலாக்கம்:"},
+ {"pattern":"^Stage ([1-7]) – Perception:$","replacement":"நிலை $1 – புலனுணர்வு:"},
+ {"pattern":"^Stage ([1-7]) – Interpretation:$","replacement":"நிலை $1 – பொருள் கொள்ளுதல்:"},
+ {"pattern":"^Stage ([1-7]) – Evaluation:$","replacement":"நிலை $1 – மதிப்பீடு:"}
+]

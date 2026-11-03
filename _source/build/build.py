@@ -1,6 +1,7 @@
 import os, re, sys, html, json, struct, datetime
 from urllib.parse import quote
 import markdown
+from offline_tamil import translated_body
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = "D:/Study/SEM 6"
@@ -195,6 +196,10 @@ def native_tables(tables):
 
 
 def native_sections(body, key):
+    hci_match = re.fullmatch(r"hci-(?:Week(\d+)|(papers))", key)
+    ta_stem = ("w" + hci_match[1]) if hci_match and hci_match[1] else "papers"
+    if hci_match and os.path.isfile(os.path.join(HERE, "content", "hci", "ta", ta_stem + ".md")):
+        return body
     match = re.fullmatch(r"([a-z]+)-(?:Week(\d+)|(papers))", key)
     if not match:
         return body
@@ -267,6 +272,11 @@ def study_data():
 
 def page(title, body, key="", crumbs=""):
     body = native_sections(body, key)
+    translation_key = "hci-index" if not key and title.startswith("Human Computer Interaction") else key
+    body, is_hci = translated_body(body, translation_key, HERE, md)
+    translation = ""
+    if is_hci:
+        translation = '<style>' + open(os.path.join(HERE, "hci-translate.css"), encoding="utf-8").read() + '</style><script>' + open(os.path.join(HERE, "hci-translate.js"), encoding="utf-8").read() + '</script>'
     home = ("../../" if re.fullmatch(r"[a-z]+-Week\d+", key) else "../" if key.endswith("-papers") or 'href="../SEM 6' in crumbs else "") + "SEM%206%20Study%20Hub.html#study-plan"
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -276,7 +286,7 @@ def page(title, body, key="", crumbs=""):
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
 {body}
 <script type="application/json" id="study-data">{study_data()}</script>
-<script>{JS}</script></body></html>"""
+<script>{JS}</script>{translation}</body></html>"""
 
 
 def build_week(skey, wfile, prev, nxt):
@@ -409,7 +419,7 @@ def build_hub():
     for skey, folder, code, sname in SUBJECTS:
         n = len(weeks_of(skey))
         if not n: continue
-        keys = ",".join(f"{skey}-Week{re.search(r'(\d+)', f).group(1).zfill(2)}" for f in weeks_of(skey) if os.path.exists(os.path.join(HERE, "content", skey, f[:-3] + ".quiz")))
+        keys = ",".join(f"{skey}-Week{re.search('[0-9]+', f).group(0).zfill(2)}" for f in weeks_of(skey) if os.path.exists(os.path.join(HERE, "content", skey, f[:-3] + ".quiz")))
         ex = EXAMS.get(skey)
         exl = f'<em class="exd" data-exam="{ex[0]}T{ex[1]}+05:30">Exam: {datetime.date.fromisoformat(ex[0]).strftime("%a %d %b")}, {ex[1]}–{ex[2]}</em>' if ex else ""
         cards.append(f'<a href="{quote(folder)}/{quote("Study Guide - Index.html")}" data-qkeys="{keys}" data-skey="{skey}"><small>{code}</small><span>{html.escape(sname)}</span><em>{n} weekly study guides</em>{exl}'

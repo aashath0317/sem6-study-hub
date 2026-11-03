@@ -1,0 +1,104 @@
+User-Centred Design & the Design Life Cycle	பயனர்மைய வடிவமைப்பும் வடிவமைப்பு வாழ்க்கைச் சுழற்சியும்
+UCD vs specification-driven design, the 8 user characteristics, ISO 9241-210's 6 principles, the 4-phase iterative life cycle, and stakeholder-centred design (primary, secondary, tertiary).	UCD மற்றும் விவரக்குறிப்பு சார்ந்த வடிவமைப்பு, 8 பயனர் பண்புகள், ISO 9241-210-இன் 6 கொள்கைகள், 4 கட்ட மீள்முறை வாழ்க்கைச் சுழற்சி, பங்குதாரர்மைய வடிவமைப்பு (முதன்மை, இரண்டாம் நிலை, மூன்றாம் நிலை).
+🧪 Try it — Navigate the life cycle	🧪 முயன்று பாருங்கள் — வாழ்க்கைச் சுழற்சியில் பயணம்
+1. Establish requirements	1. தேவைகளை நிறுவு
+2. Design alternatives	2. மாற்றுகளை வடிவமை
+3. Prototype	3. முன்மாதிரி
+4. Evaluate	4. மதிப்பிடு
+✅ Final product	✅ இறுதித் தயாரிப்பு
+Requirements gathered with users. Next?	பயனர்களுடன் தேவைகள் சேகரிக்கப்பட்டன. அடுத்து?
+Design several alternatives	பல மாற்று வடிவமைப்புகளை உருவாக்கு
+Alternatives designed. Is there enough information to design well?	மாற்றுகள் வடிவமைக்கப்பட்டன. நன்றாக வடிவமைக்கப் போதிய தகவல் உள்ளதா?
+Yes, prototype them	ஆம், அவற்றை முன்மாதிரியாக்கு
+No, back to requirements (the lecture's loop)	இல்லை, தேவைகளுக்குத் திரும்பு (விரிவுரையின் சுழற்சி)
+Prototyping. Can the suggested designs actually be prototyped?	முன்மாதிரி உருவாக்கம். பரிந்துரைக்கப்பட்ட வடிவமைப்புகளை உண்மையில் முன்மாதிரியாக்க முடியுமா?
+Yes, send for evaluation	ஆம், மதிப்பீட்டுக்கு அனுப்பு
+Too hard, revise the design alternative	மிகக் கடினம்; மாற்று வடிவமைப்பைத் திருத்து
+Users evaluated the prototype. Result?	பயனர்கள் முன்மாதிரியை மதிப்பிட்டனர். முடிவு?
+Satisfied, develop the final product	திருப்தி; இறுதித் தயாரிப்பை உருவாக்கு
+Designs inadequate, back to alternatives	வடிவமைப்புகள் போதவில்லை; மாற்றுகளுக்குத் திரும்பு
+Things missing, back to requirements	சிலவை விடுபட்டுள்ளன; தேவைகளுக்குத் திரும்பு
+Done. User involvement continues into the final product and documentation.	முடிந்தது. இறுதித் தயாரிப்பிலும் ஆவணங்களிலும் பயனர் பங்கேற்பு தொடர்கிறது.
+Start a new release cycle	புதிய வெளியீட்டுச் சுழற்சியைத் தொடங்கு
+🧪 Try it — Stakeholder rings — Municipal Council waste SMS system	🧪 முயன்று பாருங்கள் — பங்குதாரர் வளையங்கள் — மாநகர சபைக் கழிவகற்றல் குறுஞ்செய்தி முறைமை
+Primary	முதன்மை
+Secondary	இரண்டாம் நிலை
+Tertiary	மூன்றாம் நிலை
+← click a ring	← ஒரு வளையத்தைச் சொடுக்குங்கள்
+Primary: 🧑‍💼 Clerical officers	முதன்மை: 🧑‍💼 அலுவலக அலுவலர்கள்
+Secondary: 🏠 Residents	இரண்டாம் நிலை: 🏠 குடியிருப்பாளர்கள்
+Tertiary: 🚛 Truck drivers & sanitation workers	மூன்றாம் நிலை: 🚛 வண்டி ஓட்டுநர்களும் துப்புரவுத் தொழிலாளர்களும்
+Use the admin dashboard to enter collection rosters and schedules.	சேகரிப்புப் பணிப் பட்டியல்களையும் கால அட்டவணைகளையும் உள்ளிட நிர்வாகத் தகவல் பலகையைப் பயன்படுத்துகிறார்கள்.
+Get the reminder SMS a day before collection. They never open the admin panel.	சேகரிப்புக்கு ஒரு நாள் முன்பு நினைவூட்டல் குறுஞ்செய்தியைப் பெறுகிறார்கள். நிர்வாகப் பலகையை ஒருபோதும் திறப்பதில்லை.
+Never touch the software or receive an SMS. But because residents now remember collection day, curbside waste surges, causing exhaustion and overloaded trucks.	மென்பொருளைப் பயன்படுத்துவதுமில்லை, குறுஞ்செய்தி பெறுவதுமில்லை. ஆனால் இப்போது குடியிருப்பாளர்கள் சேகரிப்பு நாளை நினைவில் வைத்திருப்பதால் சாலையோரக் கழிவு அதிகரித்து சோர்வையும் அதிகச் சுமையுள்ள வண்டிகளையும் ஏற்படுத்துகிறது.
+Design goal: Fast, foolproof data entry.	வடிவமைப்பு இலக்கு: விரைவான, தவறுக்கு இடமளிக்காத தரவு உள்ளீடு.
+Design goal: Clear timing, actionable instructions, no spam.	வடிவமைப்பு இலக்கு: தெளிவான நேரம், செயல்படுத்தக்கூடிய அறிவுறுத்தல்கள், தேவையற்ற செய்திகள் இல்லாமை.
+Design goal: Load-balancing routes and schedules to protect workers from burnout.	வடிவமைப்பு இலக்கு: தொழிலாளர்களைக் கடும் சோர்விலிருந்து பாதுகாக்கப் பாதைகளிலும் கால அட்டவணைகளிலும் சுமையைச் சமப்படுத்துதல்.
+User Centred Design – Basics	பயனர்மைய வடிவமைப்பு — அடிப்படைகள்
+What UCD is and why users must be involved.	UCD என்றால் என்ன, பயனர்கள் ஏன் ஈடுபட வேண்டும்.
+Introduction to user-centred design (UCD)	பயனர்மைய வடிவமைப்பு (UCD) அறிமுகம்
+Why UCD: designing for users' tasks	ஏன் UCD: பயனர் பணிகளுக்காக வடிவமைத்தல்
+Example: Facebook mimicking real-world social behaviour	எடுத்துக்காட்டு: நிஜ உலகச் சமூக நடத்தையைப் பின்பற்றும் Facebook
+The problem with new designs	புதிய வடிவமைப்புகளின் சிக்கல்
+Evaluate, improve, repeat	மதிப்பிடு, மேம்படுத்து, மீண்டும் செய்
+What makes UCD specific: involving users throughout	UCD-இன் தனித்தன்மை: பயனர்களை முழுவதும் ஈடுபடுத்துதல்
+Recognise what we don't know about the user	பயனரைப் பற்றி நமக்குத் தெரியாதவற்றை உணர்ந்துகொள்ளுதல்
+Requirements → development → evaluation with users	தேவைகள் → உருவாக்கம் → பயனர்களுடன் மதிப்பீடு
+Keep an open mind; get user feedback	திறந்த மனதுடன் இருங்கள்; பயனர் பின்னூட்டத்தைப் பெறுங்கள்
+User Centred Design – Principles	பயனர்மைய வடிவமைப்பு — கொள்கைகள்
+The principles that guide UCD.	UCD-ஐ வழிநடத்தும் கொள்கைகள்.
+UCD principles: user variability	UCD கொள்கைகள்: பயனர் வேறுபாடுகள்
+Principle 5: multidisciplinary teams	கொள்கை 5: பல்துறைக் குழுக்கள்
+Understanding users, tasks and context	பயனர்கள், பணிகள், சூழலைப் புரிந்துகொள்ளுதல்
+Involving real users (interviews), not fake ones	போலியானவர்களை அல்ல, உண்மையான பயனர்களை ஈடுபடுத்துதல் (நேர்காணல்கள்)
+Iteration: no interface is perfect at release	மீள்முறை: வெளியிடும்போதே எந்த இடைமுகமும் முழுமையானதல்ல
+Know what users do and expect	பயனர்கள் செய்வதையும் எதிர்பார்ப்பதையும் அறிந்துகொள்ளுங்கள்
+Characteristics of the User	பயனரின் பண்புகள்
+The eight user characteristics and why the test group must be diverse.	எட்டு பயனர் பண்புகளும், சோதனைக் குழு ஏன் பல்வகையானதாக இருக்க வேண்டும் என்பதும்.
+Iterate until the user is satisfied; test with real users	பயனர் திருப்தியடையும்வரை மீண்டும் செய்; உண்மையான பயனர்களுடன் சோதி
+Role and age	பங்கும் வயதும்
+Gender and education level	பாலினமும் கல்வி நிலையும்
+Cultural background and interests	பண்பாட்டுப் பின்னணியும் ஆர்வங்களும்
+Professional level and computer skills	தொழில்முறை நிலையும் கணினித் திறன்களும்
+Involve a diverse blend of users at every step	ஒவ்வொரு படியிலும் பல்வகைப் பயனர்களை ஈடுபடுத்துங்கள்
+Design Life Cycle – in Brief	வடிவமைப்பு வாழ்க்கைச் சுழற்சி — சுருக்கமாக
+Requirements → alternatives → prototype → evaluate, and the loops back.	தேவைகள் → மாற்றுகள் → முன்மாதிரி → மதிப்பீடு; பின்னோக்கிச் சுழற்சிகளும்.
+Establish requirements, then design alternatives	தேவைகளை நிறுவி, பின்னர் மாற்றுகளை வடிவமைத்தல்
+Not enough information? Go back to requirements	போதிய தகவல் இல்லையா? தேவைகளுக்குத் திரும்புங்கள்
+Hard to prototype? Revise the design alternative	முன்மாதிரியாக்குவது கடினமா? மாற்று வடிவமைப்பைத் திருத்துங்கள்
+Evaluation satisfied → final product; users involved at every stage	மதிப்பீட்டில் திருப்தி → இறுதித் தயாரிப்பு; ஒவ்வொரு நிலையிலும் பயனர் பங்கேற்பு
+Stakeholder-Centred Design	பங்குதாரர்மைய வடிவமைப்பு
+From users to stakeholders: primary, secondary, tertiary (with the Moodle example).	பயனர்களிலிருந்து பங்குதாரர்களுக்கு: முதன்மை, இரண்டாம் நிலை, மூன்றாம் நிலை (Moodle எடுத்துக்காட்டுடன்).
+Stakeholders: anyone impacted by the design	பங்குதாரர்கள்: வடிவமைப்பால் பாதிக்கப்படும் எவரும்
+Primary stakeholders = direct users	முதன்மைப் பங்குதாரர்கள் = நேரடிப் பயனர்கள்
+Secondary: interact with the output (Moodle → photocopy shop)	இரண்டாம் நிலை: வெளியீட்டுடன் இடைவினையாற்றுகிறார்கள் (Moodle → நகலெடுக்கும் கடை)
+Tertiary: never touch the system or its output	மூன்றாம் நிலை: முறைமையையோ அதன் வெளியீட்டையோ ஒருபோதும் தொடுவதில்லை
+00:02 Introduction to user-centred design (UCD)	00:02 பயனர்மைய வடிவமைப்பு (UCD) அறிமுகம்
+00:48 Why UCD: designing for users' tasks	00:48 ஏன் UCD: பயனர் பணிகளுக்காக வடிவமைத்தல்
+03:12 Example: Facebook mimicking real-world social behaviour	03:12 எடுத்துக்காட்டு: நிஜ உலகச் சமூக நடத்தையைப் பின்பற்றும் Facebook
+04:02 The problem with new designs	04:02 புதிய வடிவமைப்புகளின் சிக்கல்
+04:53 Evaluate, improve, repeat	04:53 மதிப்பிடு, மேம்படுத்து, மீண்டும் செய்
+05:46 What makes UCD specific: involving users throughout	05:46 UCD-இன் தனித்தன்மை: பயனர்களை முழுவதும் ஈடுபடுத்துதல்
+07:25 Recognise what we don't know about the user	07:25 பயனரைப் பற்றி நமக்குத் தெரியாதவற்றை உணர்ந்துகொள்ளுதல்
+09:59 Requirements → development → evaluation with users	09:59 தேவைகள் → உருவாக்கம் → பயனர்களுடன் மதிப்பீடு
+10:51 Keep an open mind; get user feedback	10:51 திறந்த மனதுடன் இருங்கள்; பயனர் பின்னூட்டத்தைப் பெறுங்கள்
+00:00 UCD principles: user variability	00:00 UCD கொள்கைகள்: பயனர் வேறுபாடுகள்
+01:32 Principle 5: multidisciplinary teams	01:32 கொள்கை 5: பல்துறைக் குழுக்கள்
+03:13 Understanding users, tasks and context	03:13 பயனர்கள், பணிகள், சூழலைப் புரிந்துகொள்ளுதல்
+04:56 Involving real users (interviews), not fake ones	04:56 போலியானவர்களை அல்ல, உண்மையான பயனர்களை ஈடுபடுத்துதல் (நேர்காணல்கள்)
+06:39 Iteration: no interface is perfect at release	06:39 மீள்முறை: வெளியிடும்போதே எந்த இடைமுகமும் முழுமையானதல்ல
+08:15 Know what users do and expect	08:15 பயனர்கள் செய்வதையும் எதிர்பார்ப்பதையும் அறிந்துகொள்ளுங்கள்
+00:00 Iterate until the user is satisfied; test with real users	00:00 பயனர் திருப்தியடையும்வரை மீண்டும் செய்; உண்மையான பயனர்களுடன் சோதி
+01:22 Role and age	01:22 பங்கும் வயதும்
+02:12 Gender and education level	02:12 பாலினமும் கல்வி நிலையும்
+03:04 Cultural background and interests	03:04 பண்பாட்டுப் பின்னணியும் ஆர்வங்களும்
+04:43 Professional level and computer skills	04:43 தொழில்முறை நிலையும் கணினித் திறன்களும்
+05:29 Involve a diverse blend of users at every step	05:29 ஒவ்வொரு படியிலும் பல்வகைப் பயனர்களை ஈடுபடுத்துங்கள்
+00:07 Establish requirements, then design alternatives	00:07 தேவைகளை நிறுவி, பின்னர் மாற்றுகளை வடிவமைத்தல்
+01:22 Not enough information? Go back to requirements	01:22 போதிய தகவல் இல்லையா? தேவைகளுக்குத் திரும்புங்கள்
+02:27 Hard to prototype? Revise the design alternative	02:27 முன்மாதிரியாக்குவது கடினமா? மாற்று வடிவமைப்பைத் திருத்துங்கள்
+03:22 Evaluation satisfied → final product; users involved at every stage	03:22 மதிப்பீட்டில் திருப்தி → இறுதித் தயாரிப்பு; ஒவ்வொரு நிலையிலும் பயனர் பங்கேற்பு
+00:47 Stakeholders: anyone impacted by the design	00:47 பங்குதாரர்கள்: வடிவமைப்பால் பாதிக்கப்படும் எவரும்
+02:38 Primary stakeholders = direct users	02:38 முதன்மைப் பங்குதாரர்கள் = நேரடிப் பயனர்கள்
+03:37 Secondary: interact with the output (Moodle → photocopy shop)	03:37 இரண்டாம் நிலை: வெளியீட்டுடன் இடைவினையாற்றுகிறார்கள் (Moodle → நகலெடுக்கும் கடை)
+04:33 Tertiary: never touch the system or its output	04:33 மூன்றாம் நிலை: முறைமையையோ அதன் வெளியீட்டையோ ஒருபோதும் தொடுவதில்லை

@@ -11,8 +11,8 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
 (async () => {
   let totalSections=0, totalQuestions=0, totalTools=0;
   const untranslated = [];
-  const pages = files(directory).filter(file => !business || /Week 0[12]\//.test(file));
-  assert.equal(pages.length,business ? 2 : 15);
+  const pages = files(directory).filter(file => !business || /Week 0[123]\//.test(file));
+  assert.equal(pages.length,business ? 3 : 15);
   for (const file of pages) {
     const errors = [];
     const vc = new VirtualConsole();
@@ -63,6 +63,15 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     });
     sections.forEach(s => { assert.equal(s.querySelector('.hci-en').hidden,true); assert.equal(s.querySelector('.hci-ta').hidden,false); });
     tools.forEach(tool => assert.ok(tool.closest('.hci-ta'),'Live tool did not move to Tamil panel'));
+    const pettyCategory = d.querySelector('#pcb .ct');
+    if(pettyCategory) {
+      pettyCategory.value='Postage';
+      d.querySelector('#pcb .ad').click(); await tick();
+      const row=d.querySelectorAll('#pcb .out tr')[2];
+      assert.equal(row.children[6].textContent,'850','Translated category value broke petty-cash allocation');
+      assert.equal(row.children[4].textContent,'');
+      d.querySelector('#pcb .rs').click(); await tick();
+    }
     const scan = () => {
       const walker=d.createTreeWalker(d.querySelector('main'),dom.window.NodeFilter.SHOW_TEXT);
       let node;

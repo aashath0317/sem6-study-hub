@@ -7,6 +7,8 @@
   button.type = 'button'; button.className = 'hci-language'; button.lang = 'ta';
   button.textContent = 'தமிழ்'; button.setAttribute('aria-label', 'Read the Tamil translation');
   button.setAttribute('aria-pressed', 'false'); document.body.appendChild(button);
+  // Keep source values stable when options use their visible text as their value.
+  document.querySelectorAll('.tool option:not([value])').forEach(function (option) { option.value = option.textContent; });
   var tamil = false;
   var tools = [];
   sections.forEach(function (section) {

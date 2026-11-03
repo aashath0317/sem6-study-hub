@@ -1,0 +1,91 @@
+[
+  {
+    "pattern": "^, which restores the float to Rs ([\\d,.-]+)\\.$",
+    "replacement": ", இதனால் நிலையான முற்பணம் ரூ. $1 ஆக மீட்டமைக்கப்படுகிறது."
+  },
+  {
+    "pattern": "\\(impossible:\\ cash\\ can't\\ be\\ negative!\\)",
+    "replacement": "(சாத்தியமில்லை: காசு எதிர்மறையாக இருக்க முடியாது!)",
+    "flags": "g"
+  },
+  {
+    "pattern": ",\\ which\\ restores\\ the\\ float\\ to\\ Rs\\ ",
+    "replacement": ", இது நிலையான முற்பணத்தை ரூ. ",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\.\\ Discount\\ allowed\\ total\\ ",
+    "replacement": ". கொடுத்த கழிவின் மொத்தம் ",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\ Discount\\ received\\ total\\ ",
+    "replacement": " பெற்ற கழிவின் மொத்தம் ",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\ →\\ Cr\\ Discount\\ received\\.",
+    "replacement": " → வரவு பெற்ற கழிவு.",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\ →\\ Dr\\ Discount\\ allowed\\.",
+    "replacement": " → பற்று கொடுத்த கழிவு.",
+    "flags": "g"
+  },
+  {
+    "pattern": "Dr\\ ledger\\ accounts\\ ",
+    "replacement": "பற்று பேரேட்டுக் கணக்குகள் ",
+    "flags": "g"
+  },
+  {
+    "pattern": "Ledger\\ postings:\\ ",
+    "replacement": "பேரேட்டுப் பதிவுகள்: ",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\ /\\ Cr\\ Petty\\ cash\\ ",
+    "replacement": " / வரவு சிறுகாசு ",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\(credit\\ balance\\)",
+    "replacement": "(வரவு மீதி)",
+    "flags": "g"
+  },
+  {
+    "pattern": "Dr\\ Stationery\\ ",
+    "replacement": "பற்று எழுதுபொருட்கள் ",
+    "flags": "g"
+  },
+  {
+    "pattern": "Dr\\ Travelling\\ ",
+    "replacement": "பற்று பயணம் ",
+    "flags": "g"
+  },
+  {
+    "pattern": "Cash\\ balance",
+    "replacement": "காசு மீதி",
+    "flags": "g"
+  },
+  {
+    "pattern": "Dr\\ Postage\\ ",
+    "replacement": "பற்று அஞ்சல் ",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\ ·\\ Bank\\ ",
+    "replacement": " · வங்கி ",
+    "flags": "g"
+  },
+  {
+    "pattern": "balance\\ ",
+    "replacement": "மீதி ",
+    "flags": "g"
+  },
+  {
+    "pattern": "Rs\\ ",
+    "replacement": "ரூ. ",
+    "flags": "g"
+  }
+]

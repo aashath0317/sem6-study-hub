@@ -33,13 +33,23 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     totalSections+=sections.length;
     totalQuestions+=d.querySelectorAll('.qq').length;
     totalTools+=d.querySelectorAll('.tool').length;
-    assert.equal(d.querySelectorAll('.native-toggle,.tamil-native').length,0,'Old explanation panels remain');
+    assert.equal(d.querySelectorAll('.native-toggle').length,sections.length,'Missing original explanation buttons');
+    assert.equal(d.querySelectorAll('.tamil-native').length,sections.length,'Missing original explanations');
     const ids = [...d.querySelectorAll('[id]')].map(el=>el.id);
     assert.equal(new Set(ids).size, ids.length,'Duplicate IDs: '+file);
     const tools = [...d.querySelectorAll('.tool')];
     const input = d.querySelector('.quiz input[type=radio]');
     if(input) { input.checked=true; input.dispatchEvent(new dom.window.Event('change',{bubbles:true})); }
+    const explanationButton = d.querySelector('.native-toggle');
+    if(explanationButton) {
+      explanationButton.click();
+      assert.equal(d.querySelector('.tamil-native').hidden,false);
+      assert.equal(d.querySelector('.section-english').hidden,true);
+      d.querySelector('.native-reference').click();
+      assert.equal(d.querySelector('.section-english').hidden,false);
+    }
     button.click(); await tick();
+    if(explanationButton) assert.equal(d.querySelector('.tamil-native').hidden,true);
     assert.equal(d.documentElement.lang,'ta');
     assert.equal(button.textContent,'English');
     const translationData = JSON.parse(d.querySelector('#hci-tamil-data').textContent);

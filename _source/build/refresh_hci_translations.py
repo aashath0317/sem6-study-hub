@@ -5,7 +5,7 @@ Requires the same `markdown` package as build.py.
 """
 from pathlib import Path
 import re
-from build import md
+from build import md, native_sections
 from offline_tamil import translated_body
 
 HERE = Path(__file__).resolve().parent
@@ -23,12 +23,13 @@ def refresh(text, key):
     def english_section(match):
         start, contents, end = match.groups()
         if '<div class="hci-en">' in contents:
-            contents = re.match(r'<div class="hci-en">(.*?)</div><div class="hci-ta".*', contents, re.S).group(1) + '<button class="done-btn"></button>'
+            contents = re.search(r'<div class="hci-en">(.*?)</div><div class="hci-ta".*', contents, re.S).group(1) + '<button class="done-btn"></button>'
         else:
             contents = re.sub(r'^<div class="section-english" id="en-s\d+" lang="en">(.*?)</div>(<button class="done-btn"></button>)?$',
                               lambda m: m[1] + (m[2] or ''), contents, flags=re.S)
         return start + contents + end
     text = re.sub(r'(<section class="card" data-sec="s\d+"><h2\b[^>]*>.*?</h2>)(.*?)(</section>)', english_section, text, flags=re.S)
+    text = native_sections(text, key)
     text, ready = translated_body(text, key, str(HERE), md)
     if not ready:
         raise ValueError('Missing complete authored Tamil translation: ' + key)

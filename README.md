@@ -46,7 +46,7 @@ node _source/build/tests/study-timer.test.cjs
 
 All 13 HCI weeks, past papers and the subject index have a floating **தமிழ் / English** button. Tamil is an authored translation of the existing English notes, tables, examples, quizzes and interactive-tool text, saved locally. It does not use Google Translate, an API or a translation service. Switching retains quiz answers and live tool state. The original labels inside figure images and embedded video players remain unchanged; captions and chapter descriptions are translated.
 
-Translation sources live in `_source/build/content/hci/ta/`. The original English note files and quiz answers remain unchanged. `source-manifest.json` detects changes to the English source that require a translation review. Never substitute the earlier explanatory summaries for these translations. The older `HCI_TAMIL_REVIEW.md` documents the previous explanation feature.
+Translation sources live in `_source/build/content/hci/ta/`. The original English note files and quiz answers remain unchanged. `source-manifest.json` detects changes to the English source that require a translation review. Never substitute the earlier explanatory summaries for these translations. The original per-section **தமிழில் புரிந்துகொள்ள** explanation buttons are also available alongside the floating translation button. `HCI_TAMIL_REVIEW.md` documents those authored explanations.
 
 To refresh only the HCI translations while preserving the existing English pages and video metadata:
 

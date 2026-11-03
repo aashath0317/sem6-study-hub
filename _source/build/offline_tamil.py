@@ -21,18 +21,19 @@ def _strings(path):
 
 
 def translated_body(body, key, here, render):
-    match = re.fullmatch(r'hci-(?:Week(\d+)|(papers)|(index))', key)
+    match = re.fullmatch(r'(hci|bpas)-(?:Week(\d+)|(papers)|(index))', key)
     if not match:
         return body, False
-    stem = 'w' + match[1] if match[1] else 'papers' if match[2] else 'index'
-    directory = os.path.join(here, 'content', 'hci', 'ta')
+    subject = match[1]
+    stem = 'w' + match[2] if match[2] else 'papers' if match[3] else 'index'
+    directory = os.path.join(here, 'content', subject, 'ta')
     path = os.path.join(directory, stem + '.md')
     if stem != 'index' and not os.path.isfile(path):
         return body, False
     manifest = _json(os.path.join(directory, 'source-manifest.json'), {})
     for source_stem in (manifest if stem == 'index' else [stem]):
         for extension, expected in manifest.get(source_stem, {}).items():
-            source = os.path.join(here, 'content', 'hci', source_stem + '.' + extension)
+            source = os.path.join(here, 'content', subject, source_stem + '.' + extension)
             with open(source, 'rb') as file:
                 actual = hashlib.sha256(file.read()).hexdigest()
             if actual != expected:
@@ -49,6 +50,11 @@ def translated_body(body, key, here, render):
     def replace(m):
         start, sid, english, end = m.groups()
         title, tamil = translations[int(sid[1:])-1]
+        explanation = ''
+        native = re.match(r'(.*)<div class="section-english" id="(en-s\d+)" lang="en">(.*)</div>(<button class="done-btn"></button>)?$', english, re.S)
+        if native:
+            explanation = native[1]
+            english = native[3] + (native[4] or '')
         tamil = re.sub(r'(<h[3-6]) id="[^"]*"', r'\1', tamil)
         tamil = re.sub(r'\{\{tool:([\w-]+)\}\}', r'<div data-ta-tool="\1"></div>', tamil)
         expected = re.findall(r'data-ta-tool="([^"]+)"', tamil)
@@ -57,8 +63,8 @@ def translated_body(body, key, here, render):
         done = '<button class="done-btn"></button>'
         had_done = done in english
         english = english.replace(done, '')
-        return (start + '<div class="hci-en">' + english + '</div><div class="hci-ta" lang="ta" hidden data-title="' +
-                html.escape(title, quote=True) + '">' + tamil + '</div>' + (done if had_done else '') + end)
+        return (start + explanation + '<div class="section-english" id="en-' + sid + '" lang="en"><div class="hci-en">' + english + '</div><div class="hci-ta" lang="ta" hidden data-title="' +
+                html.escape(title, quote=True) + '">' + tamil + '</div></div>' + (done if had_done else '') + end)
 
     strings = _strings(os.path.join(directory, 'common.strings.tsv'))
     strings.update(_strings(path.replace('.md', '.strings.tsv')))
@@ -71,7 +77,7 @@ def translated_body(body, key, here, render):
         if not re.fullmatch(r'w\d+\.strings.tsv', name):
             continue
         week_stem = name.split('.')[0]
-        source = os.path.join(here, 'content', 'hci', week_stem + '.md')
+        source = os.path.join(here, 'content', subject, week_stem + '.md')
         with open(source, encoding='utf-8') as file:
             metadata = re.search(r'^---\n(.*?)\n---', file.read(), re.S).group(1)
         mapping = _strings(os.path.join(directory, name))
@@ -85,7 +91,7 @@ def translated_body(body, key, here, render):
         quiz_path = os.path.join(directory, quiz_stem + '.quiz')
         if not os.path.isfile(quiz_path):
             continue
-        original_quiz = os.path.join(here, 'content', 'hci', quiz_stem + '.quiz')
+        original_quiz = os.path.join(here, 'content', subject, quiz_stem + '.quiz')
         with open(original_quiz, encoding='utf-8') as file:
             en_lines = [l.strip() for l in file if l[:1] in '?+-=#']
         with open(quiz_path, encoding='utf-8') as file:

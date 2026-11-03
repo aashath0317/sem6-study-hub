@@ -696,6 +696,31 @@ mark{background:#ffe680;color:#000;border-radius:3px}
   sections.forEach(function (section) {
     var heading = section.querySelector('h2');
     heading.dataset.english = heading.innerHTML;
+    var explanationButton = section.querySelector('.native-toggle');
+    var explanation = section.querySelector('.tamil-native');
+    var content = section.querySelector('.section-english');
+    var reference = section.querySelector('.native-reference');
+    function explanationLabels() {
+      if (!explanationButton) return;
+      explanationButton.textContent = explanation.hidden ? 'தமிழில் புரிந்துகொள்ள' : (tamil ? 'மொழிபெயர்ப்புக்குத் திரும்பு' : 'English-இல் படிக்க');
+      if (reference) reference.textContent = !content.hidden ? 'முழு விவரத்தை மறைக்க' : (tamil ? 'முழு விவரம் · தமிழ் மொழிபெயர்ப்பு' : 'முழு விவரம், கணக்கு, படம், கருவிகள் · English');
+    }
+    if (explanationButton) explanationButton.onclick = function () {
+      var show = explanation.hidden;
+      explanation.hidden = !show; content.hidden = show;
+      content.classList.remove('reference-open');
+      section.classList.toggle('show-tamil', show);
+      explanationButton.setAttribute('aria-expanded', String(show));
+      if (reference) reference.setAttribute('aria-expanded', 'false');
+      explanationLabels(); window.dispatchEvent(new Event('resize'));
+    };
+    if (reference) reference.onclick = function () {
+      content.hidden = !content.hidden;
+      content.classList.toggle('reference-open', !content.hidden);
+      reference.setAttribute('aria-expanded', String(!content.hidden));
+      explanationLabels(); window.dispatchEvent(new Event('resize'));
+    };
+
     var englishHeads = section.querySelectorAll('.hci-en h3[id]');
     section.querySelectorAll('.hci-ta h3').forEach(function (h, index) {
       var english = englishHeads[index];
@@ -808,6 +833,17 @@ mark{background:#ffe680;color:#000;border-radius:3px}
   observer.observe(document.body, {subtree:true, childList:true, characterData:true});
   button.onclick = function () {
     tamil = !tamil;
+    sections.forEach(function (section) {
+      var explanation = section.querySelector('.tamil-native');
+      var content = section.querySelector('.section-english');
+      var toggle = section.querySelector('.native-toggle');
+      var reference = section.querySelector('.native-reference');
+      if (explanation) explanation.hidden = true;
+      if (content) { content.hidden = false; content.classList.remove('reference-open'); }
+      section.classList.remove('show-tamil');
+      if (toggle) { toggle.setAttribute('aria-expanded','false'); toggle.textContent='தமிழில் புரிந்துகொள்ள'; }
+      if (reference) { reference.setAttribute('aria-expanded','false'); reference.textContent = tamil ? 'முழு விவரம் · தமிழ் மொழிபெயர்ப்பு' : 'முழு விவரம், கணக்கு, படம், கருவிகள் · English'; }
+    });
     tools.forEach(function (item) {
       if (tamil) item.slot.appendChild(item.tool);
       else item.home.after(item.tool);

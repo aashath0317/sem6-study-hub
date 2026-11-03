@@ -196,10 +196,6 @@ def native_tables(tables):
 
 
 def native_sections(body, key):
-    hci_match = re.fullmatch(r"hci-(?:Week(\d+)|(papers))", key)
-    ta_stem = ("w" + hci_match[1]) if hci_match and hci_match[1] else "papers"
-    if hci_match and os.path.isfile(os.path.join(HERE, "content", "hci", "ta", ta_stem + ".md")):
-        return body
     match = re.fullmatch(r"([a-z]+)-(?:Week(\d+)|(papers))", key)
     if not match:
         return body

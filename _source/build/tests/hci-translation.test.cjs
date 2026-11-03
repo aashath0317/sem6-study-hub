@@ -12,8 +12,9 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
 (async () => {
   let totalSections=0, totalQuestions=0, totalTools=0;
   const untranslated = [];
-  const pages = files(directory).filter(file => !dataMining || file.includes("Week 01/"));
-  assert.equal(pages.length,dataMining ? 1 : business ? 17 : 15);
+  const pages = files(directory).filter(file => !dataMining || fs.readFileSync(file,"utf8").includes('id="hci-tamil-data"'));
+  if (!dataMining) assert.equal(pages.length,business ? 17 : 15);
+  else assert.ok(pages.length > 0);
   for (const file of pages) {
     const errors = [];
     const vc = new VirtualConsole();
@@ -90,6 +91,10 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
       }
       for(const checkbox of tool.querySelectorAll('input[type=checkbox]')) { checkbox.checked=!checkbox.checked; checkbox.dispatchEvent(new dom.window.Event('change',{bubbles:true})); await tick(); scan(); }
       for(const action of [...tool.querySelectorAll('button')]) { if(!action.isConnected) continue; action.click(); await tick(); scan(); }
+    }
+    // KDD is a multi-step demonstration: visit every stage, not just the next button once.
+    if(dataMining && d.querySelector('#kdd')) {
+      for(const stage of d.querySelectorAll('#kdd .row .pill')) { stage.click(); await tick(); scan(); }
     }
     // Financial controls must keep their edited values and numeric results when labels change.
     const editedInputs = [...d.querySelectorAll('.tool input[type=number],.tool input[type=range]')];

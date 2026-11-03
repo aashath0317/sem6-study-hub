@@ -3,14 +3,17 @@ Run: python _source/build/tests/tamil-source.test.py
 """
 from pathlib import Path
 from collections import Counter
-import re, json, hashlib
+import re, json, hashlib, os
 
-BASE = Path(__file__).resolve().parents[1] / 'content' / 'bpas'
+SUBJECT = os.environ.get('STUDY_TRANSLATION_SUBJECT', 'bpas')
+BASE = Path(__file__).resolve().parents[1] / 'content' / SUBJECT
 TA = BASE / 'ta'
 manifest = json.loads((TA / 'source-manifest.json').read_text())
 sections = questions = 0
 for source in sorted(BASE.glob('*.md')):
     target = TA / source.name
+    if SUBJECT == 'dm' and source.stem not in manifest:
+        continue
     assert target.exists(), f'Missing translation: {source.name}'
     raw = source.read_text()
     metadata, english = re.match(r'^---\n(.*?)\n---\n(.*)$', raw, re.S).groups()
@@ -46,4 +49,4 @@ for source in sorted(BASE.glob('*.md')):
         assert [line[0] for line in en] == [line[0] for line in ta], f'Quiz order: {source.stem}'
         assert [line for line in en if line[0]=='#'] == [line for line in ta if line[0]=='#'], f'Numeric quiz answers: {source.stem}'
         questions += sum(line[0]=='?' for line in en)
-print(f'PASS: {sections} Business sections, {questions} questions; numeric examples, structure, tools, images, timestamps and metadata coverage.')
+print(f'PASS: {sections} {SUBJECT.upper()} sections, {questions} questions; numeric examples, structure, tools, images, timestamps and metadata coverage.')

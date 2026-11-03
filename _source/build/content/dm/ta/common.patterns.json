@@ -44,8 +44,8 @@
     "replacement": ". உங்கள் சிறந்த மற்றும் சமீபத்திய மதிப்பெண்கள் சேமிக்கப்பட்டுப் பாடப் பக்கத்தில் காட்டப்படும்."
   },
   {
-    "pattern": "^Business Processes & Accounting Systems · Week (\\d+)$",
-    "replacement": "வணிகச் செயல்முறைகளும் கணக்கியல் முறைமைகளும் · வாரம் $1"
+    "pattern": "^Data Mining · Week (\\d+)$",
+    "replacement": "தரவுச் சுரங்கம் · வாரம் $1"
   },
   {
     "pattern": "^(\\d+) random questions drawn from all (\\d+) weeks \\((\\d+) in the bank\\)\\. Every attempt is a new mix — a good way to test whole-subject knowledge before the exam\\.$",

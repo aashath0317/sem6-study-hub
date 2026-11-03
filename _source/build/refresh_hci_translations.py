@@ -51,7 +51,7 @@ if __name__ == '__main__':
             week = re.fullmatch(subject + r'-Week(\d+)', key)
             directory = HERE/'content'/subject/'ta'
             if week:
-                if not (directory/('w' + week[1] + '.md')).exists():
+                if not all((directory/('w' + week[1] + '.' + ext)).exists() for ext in ('md', 'quiz', 'strings.tsv')):
                     continue
             elif key.endswith('-papers'):
                 if not (directory/'papers.md').exists():

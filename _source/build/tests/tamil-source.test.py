@@ -1,5 +1,5 @@
-"""Check Business Tamil coverage independently of the generated pages.
-Run: python _source/build/tests/tamil-source.test.py
+"""Check authored Tamil coverage independently of the generated pages.
+Run: STUDY_TRANSLATION_SUBJECT=bpas python _source/build/tests/tamil-source.test.py
 """
 from pathlib import Path
 from collections import Counter

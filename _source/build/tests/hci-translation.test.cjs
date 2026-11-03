@@ -101,6 +101,11 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
       for(const stage of d.querySelectorAll('#kdd .row .pill')) { stage.click(); await tick(); scan(); }
     }
     if(dataMining) {
+      if(d.querySelector('#cv .k')) {
+        d.querySelector('#cv .k').value='15';
+        d.querySelector('#cv .k').dispatchEvent(new dom.window.Event('input',{bubbles:true}));
+        await tick(); scan();
+      }
       for(const selector of ['#km .st','#ag .st']) {
         for(let step=0; step<25; step++) {
           const action=d.querySelector(selector);
@@ -125,7 +130,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     const editedValues=editedInputs.map(el=>el.value);
     const currentTextValues=textInputs.map(el=>el.value);
     const numericOutputs=()=>[...d.querySelectorAll('.tool .out')].map(el=>(el.textContent.match(/\d+(?:[,.]\d+)*/g)||[]).sort().join('|'));
-    const tamilNumbers=business ? numericOutputs() : null;
+    const tamilNumbers=(business || dataMining) ? numericOutputs() : null;
     // A tool that reads a translated label must still retain its source-language state.
     const principle = d.querySelector('#pr .ps');
     let deletedLabel = null;
@@ -144,7 +149,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     if(input) assert.equal(input.checked,true,'Quiz answer lost');
     assert.deepEqual(editedInputs.map(el=>el.value),editedValues,'Edited tool values lost');
     assert.deepEqual(textInputs.map(el=>el.value),currentTextValues,'Edited datasets lost on English restore');
-    if(business) assert.deepEqual(numericOutputs(),tamilNumbers,'Language toggle changed financial results');
+    if(business || dataMining) assert.deepEqual(numericOutputs(),tamilNumbers,'Language toggle changed calculated results');
     tools.forEach(tool=> assert.ok(tool.closest('.hci-en'),'Live tool not returned'));
     for(const tool of tools) assert.ok(d.contains(tool),'Live tool replaced');
     assert.equal(d.querySelectorAll('.quiz input[type=radio]:checked').length,input?1:0);

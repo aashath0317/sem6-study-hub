@@ -1,6 +1,6 @@
-"""Update only HCI translations, keeping published English/media metadata intact.
+"""Refresh authored offline translations, preserving published English and explanations.
 
-Usage: python _source/build/refresh_hci_translations.py
+Usage: python _source/build/refresh_hci_translations.py [hci|bpas|dm]
 Requires the same `markdown` package as build.py.
 """
 from pathlib import Path

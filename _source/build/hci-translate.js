@@ -76,8 +76,10 @@
   }
   function translateLiveContent() {
     fitTamilDiagrams();
-    document.querySelectorAll('.qt,.qe,.qo span,.tool p,.tool .out,.tool h4,.tool td,.tool th,.tool text,.tool foreignObject div').forEach(function (el) {
+    var markupElements = document.querySelectorAll('.qt,.qe,.qo span,.tool p,.tool .out,.tool h4,.tool td,.tool th,.tool text,.tool foreignObject div');
+    markupElements.forEach(function (el) {
       var current = el.innerHTML, saved = htmlState.get(el);
+      if (saved && current !== saved.ta) { htmlState.delete(el); saved = null; }
       if (saved && !tamil) { el.innerHTML = saved.en; return; }
       if (saved && current === saved.ta) return;
       if (!tamil) return;
@@ -137,6 +139,10 @@
       var output = value.replace(key, translated);
       if (output !== value) { textState.set(node, {en:value, ta:output}); node.nodeValue = output; }
     }
+    if (tamil) markupElements.forEach(function (el) {
+      var saved = htmlState.get(el);
+      if (saved) saved.ta = el.innerHTML;
+    });
   }
   document.addEventListener('click', function (event) {
     var item = event.target.closest('.tool .ml li');

@@ -1,0 +1,56 @@
+Cluster Analysis & k-means	குழுமப் பகுப்பாய்வும் k-means-உம்
+What clustering is and why it's useful, the nine requirements of clustering in data mining, the five families of clustering methods (partitioning, hierarchical, density-, grid- and model-based), and the k-means algorithm worked step by step.	குழுமமாக்கல் என்றால் என்ன, அதன் பயன், தரவுச் சுரங்கத்தில் குழுமமாக்கலின் ஒன்பது தேவைகள், ஐந்து முறை குடும்பங்கள் (பிரிவாக்கம், படிநிலை, அடர்த்தி, கட்டம், மாதிரி சார்ந்தவை), படிப்படியான k-means செய்முறை.
+Clustering & k-means	குழுமமாக்கலும் k-means-உம்
+Good clustering, distance functions (Minkowski, Manhattan, Euclidean), and the lesson's k-means example worked through.	நல்ல குழுமமாக்கல், தொலைவுச் சார்புகள் (மின்கோவ்ஸ்கி, மன்ஹாட்டன், யூக்ளிடியன்), பாடத்தின் k-means எடுத்துக்காட்டுச் செய்முறை.
+Good clustering: high intra-class, low inter-class similarity	நல்ல குழுமமாக்கல்: வகுப்பிற்குள் அதிக, வகுப்புகளுக்கிடையே குறைந்த ஒற்றுமை
+Distance functions return one number per pair	தொலைவுச் சார்புகள் சோடிக்கு ஓர் எண்ணை வழங்குகின்றன
+Minkowski distance: q = 1 Manhattan, q = 2 Euclidean	மின்கோவ்ஸ்கி தொலைவு: q = 1 மன்ஹாட்டன், q = 2 யூக்ளிடியன்
+k-means: the four steps	k-means: நான்கு படிகள்
+Example: initial centres A1, A4, A7	எடுத்துக்காட்டு: ஆரம்ப மையங்கள் A1, A4, A7
+Iteration 1: distance table A1–A8	மறு செய்கை 1: A1–A8 தொலைவு அட்டவணை
+New centres from the cluster means	குழுமச் சராசரிகளிலிருந்து புதிய மையங்கள்
+Recalculate until the centres are stable	மையங்கள் நிலையாகும்வரை மீள்கணக்கிடுதல்
+k-means animation	k-means இயங்குபடம்
+A short silent animation of k-means assigning points and moving the centres.	புள்ளிகளை ஒதுக்கி மையங்களை நகர்த்தும் குறுகிய அமைதி k-means இயங்குபடம்.
+Weka 2.4 – Baseline accuracy	Weka 2.4 – அடிப்படைத் துல்லியம்
+Always compare against ZeroR, the classifier that just guesses the most popular class.	மிக அதிகம் நிகழும் வகுப்பையே ஊகிக்கும் ZeroR வகைப்படுத்தியுடன் எப்போதும் ஒப்பிடவும்.
+Introduction: baseline accuracy	அறிமுகம்: அடிப்படைத் துல்லியம்
+The diabetes data set (Pima Indians)	diabetes தரவுத்தொகுப்பு (Pima Indians)
+J48, Naive Bayes, IBk and PART compared	J48, Naive Bayes, IBk, PART ஒப்பீடு
+Is 76% good? 500 of 768 are negative	76% நல்லதா? 768-இல் 500 எதிர்மறை
+ZeroR: always guess the most popular class (65%)	ZeroR: மிக அதிகம் நிகழும் வகுப்பை எப்போதும் ஊகித்தல் (65%)
+Supermarket data: the baseline beats every scheme	Supermarket தரவு: அடிப்படை ஒவ்வொரு திட்டத்தையும் வெல்கிறது
+Lessons: try ZeroR first, simplicity is best	கற்றல்கள்: முதலில் ZeroR முயல்க, எளிமையே சிறந்தது
+Weka 2.5 – Cross-validation	Weka 2.5 – குறுக்கு உறுதிப்படுத்தல்
+The standard evaluation method: 10-fold and stratified cross-validation.	வழக்கமான மதிப்பீட்டு முறை: 10-மடங்கு மற்றும் படையாக்கப்பட்ட குறுக்கு உறுதிப்படுத்தல்.
+Introduction: the standard way to evaluate	அறிமுகம்: மதிப்பிடும் வழக்கமான முறை
+Cross-validation improves on repeated holdout	மீண்டும் ஒதுக்கீட்டைவிடக் குறுக்கு உறுதிப்படுத்தல் மேம்படுகிறது
+10-fold cross-validation: divide once into 10 folds	10-மடங்கு குறுக்கு உறுதிப்படுத்தல்: ஒருமுறை 10 மடிப்புகளாகப் பிரித்தல்
+Stratified cross-validation	படையாக்கப்பட்ட குறுக்கு உறுதிப்படுத்தல்
+Weka runs the algorithm an 11th time on all the data	Weka, முழுத் தரவிலும் படிமுறையை 11-ஆவது முறை இயக்குகிறது
+Rule of thumb: lots of data → percentage split; otherwise 10-fold	நடைமுறை விதி: அதிகத் தரவு → சதவீதப் பிரிப்பு; இல்லாவிட்டால் 10-மடங்கு
+Weka 2.6 – Cross-validation results	Weka 2.6 – குறுக்கு உறுதிப்படுத்தல் முடிவுகள்
+Cross-validation vs repeated holdout on the diabetes data: same mean, much smaller variance.	diabetes தரவில் குறுக்கு உறுதிப்படுத்தலும் மீண்டும் ஒதுக்கீடும்: அதே சராசரி, மிகச்சிறிய மாறுபாடு.
+Introduction: cross-validation results	அறிமுகம்: குறுக்கு உறுதிப்படுத்தல் முடிவுகள்
+Baseline on diabetes: 65.1%	diabetes-இல் அடிப்படை: 65.1%
+J48 with 10-fold cross-validation: 73.8%, 75%, 75.5%…	10-மடங்கு குறுக்கு உறுதிப்படுத்தலுடன் J48: 73.8%, 75%, 75.5%…
+Mean 74.5%, standard deviation 0.9%	சராசரி 74.5%, நியம விலகல் 0.9%
+Repeated holdout: mean 74.8%, standard deviation 4.6%	மீண்டும் ஒதுக்கீடு: சராசரி 74.8%, நியம விலகல் 4.6%
+Why 10 folds and not 20?	ஏன் 10 மடிப்புகள்; 20 அல்ல?
+Cross-validation reduces the variance of the estimate	குறுக்கு உறுதிப்படுத்தல் மதிப்பீட்டின் மாறுபாட்டைக் குறைக்கிறது
+Distance calculator	தொலைவுக் கணிப்பான்
+k-means stepper (Manhattan distance)	k-means படிக்கருவி (மன்ஹாட்டன் தொலைவு)
+Cross-validation fold viewer	குறுக்கு உறுதிப்படுத்தல் மடிப்புப் பார்வையாளர்
+Instances	நிகழ்வுகள்
+Folds k	மடிப்புகள் k
+Point	புள்ளி
+Cluster	குழுமம்
+Next iteration	அடுத்த மறு செய்கை
+Reset	மீட்டமை
+Starting centres:	ஆரம்ப மையங்கள்:
+New centres:	புதிய மையங்கள்:
+converged: no point changed cluster	ஒருங்கியது: எந்தப் புள்ளியும் குழுமம் மாறவில்லை
+Points A1–A8 from the lesson. Pick the three starting centres, then step through the iterations.	பாடத்தின் A1–A8 புள்ளிகள். மூன்று ஆரம்ப மையங்களைத் தேர்ந்தெடுத்து, மறு செய்கைகளைப் படிப்படியாகப் பார்க்கவும்.
+Centre 1	மையம் 1
+Centre 2	மையம் 2
+Centre 3	மையம் 3

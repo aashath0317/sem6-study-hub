@@ -247,7 +247,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 13</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
 <div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 13</div><h1>Cluster Analysis &amp; k-means</h1><p>What clustering is and why it's useful, the nine requirements of clustering in data mining, the five families of clustering methods (partitioning, hierarchical, density-, grid- and model-based), and the k-means algorithm worked step by step.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">5 videos · 31 min</span><span class="chip">📄 week 13.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Clustering &amp; k-means · 8 min</button><button>2. k-means animation · 1 min</button><button>3. Weka 2.4 – Baseline accuracy · 8 min</button><button>4. Weka 2.5 – Cross-validation · 7 min</button><button>5. Weka 2.6 – Cross-validation results · 7 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="k-means.mp4" data-drive="1H_uW4vR-6hJRFzjlz68rGq7oQCTdtC4A"><source src="k-means.mp4"></video></div><div class="chap"><p class="vt">Clustering &amp; k-means</p><p class="vs">Good clustering, distance functions (Minkowski, Manhattan, Euclidean), and the lesson's k-means example worked through.</p><a href="#" data-v="0" data-t="1"><b>00:01</b><span>Good clustering: high intra-class, low inter-class similarity</span></a><a href="#" data-v="0" data-t="47"><b>00:47</b><span>Distance functions return one number per pair</span></a><a href="#" data-v="0" data-t="111"><b>01:51</b><span>Minkowski distance: q = 1 Manhattan, q = 2 Euclidean</span></a><a href="#" data-v="0" data-t="170"><b>02:50</b><span>k-means: the four steps</span></a><a href="#" data-v="0" data-t="261"><b>04:21</b><span>Example: initial centres A1, A4, A7</span></a><a href="#" data-v="0" data-t="294"><b>04:54</b><span>Iteration 1: distance table A1–A8</span></a><a href="#" data-v="0" data-t="390"><b>06:30</b><span>New centres from the cluster means</span></a><a href="#" data-v="0" data-t="423"><b>07:03</b><span>Recalculate until the centres are stable</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="KM.mp4" data-drive="18ehRMmuptWuvZODuuz95-Ol8KhevAxWE"><source src="KM.mp4"></video></div><div class="chap"><p class="vt">k-means animation</p><p class="vs">A short silent animation of k-means assigning points and moving the centres.</p></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Data Mining with Weka (2.4_ Baseline accuracy).mp4" data-drive="1iZbZ486nrpt0Bb4yCoK2ZtjkcO7kqvHB"><source src="Data%20Mining%20with%20Weka%20%282.4_%20Baseline%20accuracy%29.mp4"></video></div><div class="chap"><p class="vt">Weka 2.4 – Baseline accuracy</p><p class="vs">Always compare against ZeroR, the classifier that just guesses the most popular class.</p><a href="#" data-v="2" data-t="15"><b>00:15</b><span>Introduction: baseline accuracy</span></a><a href="#" data-v="2" data-t="24"><b>00:24</b><span>The diabetes data set (Pima Indians)</span></a><a href="#" data-v="2" data-t="94"><b>01:34</b><span>J48, Naive Bayes, IBk and PART compared</span></a><a href="#" data-v="2" data-t="190"><b>03:10</b><span>Is 76% good? 500 of 768 are negative</span></a><a href="#" data-v="2" data-t="227"><b>03:47</b><span>ZeroR: always guess the most popular class (65%)</span></a><a href="#" data-v="2" data-t="300"><b>05:00</b><span>Supermarket data: the baseline beats every scheme</span></a><a href="#" data-v="2" data-t="401"><b>06:41</b><span>Lessons: try ZeroR first, simplicity is best</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Data Mining with Weka (2.5_ Cross-validation).mp4" data-drive="1a9zQjIDGMb0GQgMbm-C7kJtxGrwprTYT"><source src="Data%20Mining%20with%20Weka%20%282.5_%20Cross-validation%29.mp4"></video></div><div class="chap"><p class="vt">Weka 2.5 – Cross-validation</p><p class="vs">The standard evaluation method: 10-fold and stratified cross-validation.</p><a href="#" data-v="3" data-t="16"><b>00:16</b><span>Introduction: the standard way to evaluate</span></a><a href="#" data-v="3" data-t="62"><b>01:02</b><span>Cross-validation improves on repeated holdout</span></a><a href="#" data-v="3" data-t="136"><b>02:16</b><span>10-fold cross-validation: divide once into 10 folds</span></a><a href="#" data-v="3" data-t="197"><b>03:17</b><span>Stratified cross-validation</span></a><a href="#" data-v="3" data-t="231"><b>03:51</b><span>Weka runs the algorithm an 11th time on all the data</span></a><a href="#" data-v="3" data-t="287"><b>04:47</b><span>Rule of thumb: lots of data → percentage split; otherwise 10-fold</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Data Mining with Weka (2.6_ Cross-validation results).mp4" data-drive="1xW_XPk-umJwmtLd07DwaRx39_EBST5Xc"><source src="Data%20Mining%20with%20Weka%20%282.6_%20Cross-validation%20results%29.mp4"></video></div><div class="chap"><p class="vt">Weka 2.6 – Cross-validation results</p><p class="vs">Cross-validation vs repeated holdout on the diabetes data: same mean, much smaller variance.</p><a href="#" data-v="4" data-t="73"><b>01:13</b><span>Introduction: cross-validation results</span></a><a href="#" data-v="4" data-t="115"><b>01:55</b><span>Baseline on diabetes: 65.1%</span></a><a href="#" data-v="4" data-t="151"><b>02:31</b><span>J48 with 10-fold cross-validation: 73.8%, 75%, 75.5%…</span></a><a href="#" data-v="4" data-t="212"><b>03:32</b><span>Mean 74.5%, standard deviation 0.9%</span></a><a href="#" data-v="4" data-t="225"><b>03:45</b><span>Repeated holdout: mean 74.8%, standard deviation 4.6%</span></a><a href="#" data-v="4" data-t="268"><b>04:28</b><span>Why 10 folds and not 20?</span></a><a href="#" data-v="4" data-t="360"><b>06:00</b><span>Cross-validation reduces the variance of the estimate</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What is cluster analysis?"><span class="num">1</span>What is cluster analysis?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>Clustering என்றால் என்ன?</h3><p>Labels முன்பே தெரியாத records-ஐ ஒற்றுமையின்படி குழுவாக்குவது <strong>Clustering</strong>. ஒரே group-க்குள் அதிக similarity; groups இடையே குறைந்த similarity வேண்டும். இது தெரிந்த class கற்ற classification-இலிருந்து வேறு.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Clustering</strong> labels இல்லாமல் similarity groups; classification pre-labelled target கற்கும். Customer segmentation, images, compression, anomaly candidates பயன்பாடுகள். Similarity choice/scaling-ஐப் பொறுத்து groups மாறும்; found cluster தானாக real-world class அல்ல. Outlier fraud-க்கு signal ஆகலாம்; fraud proof அல்ல. “பின்னர் labels” என்பது analyst interpretation, training labels இருந்தது என்று அர்த்தமில்லை.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="call key"><div class="ct">Clustering</div><p><strong>Clustering</strong> is grouping a set of physical or abstract objects into <strong>classes of similar objects</strong>.</p>
+<p><strong>Clustering</strong> labels இல்லாமல் similarity groups; classification pre-labelled target கற்கும். Customer segmentation, images, compression, anomaly candidates பயன்பாடுகள். Similarity choice/scaling-ஐப் பொறுத்து groups மாறும்; found cluster தானாக real-world class அல்ல. Outlier fraud-க்கு signal ஆகலாம்; fraud proof அல்ல. “பின்னர் labels” என்பது analyst interpretation, training labels இருந்தது என்று அர்த்தமில்லை.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Clustering</div><p><strong>Clustering</strong> is grouping a set of physical or abstract objects into <strong>classes of similar objects</strong>.</p>
 <p>A <strong>cluster</strong> is a collection of data objects that are <strong>similar to one another within the same cluster</strong> and <strong>dissimilar to objects in other clusters</strong>.</p></div>
 <ul>
 <li>A cluster can be treated as <strong>one group</strong>, so clustering is also a form of <strong>data compression</strong>.</li>
@@ -284,10 +284,47 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 </tr>
 </tbody>
 </table>
-<p>By automated clustering we can find <strong>dense and sparse regions</strong> in the object space and so discover <strong>overall distribution patterns</strong> and correlations among attributes.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Requirements of clustering in data mining"><span class="num">2</span>Requirements of clustering in data mining</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>நல்ல Clustering-க்கு என்ன தேவை?</h3><p>பெரிய data-வில் இயங்குதல், பல data types, வேறுவடிவ clusters, noise ஆகியவற்றைக் கையாள வேண்டும். எல்லாக் குழுக்களும் வட்டமாக இருக்கும் என்று கருதும் முறை எல்லாத் தரவுக்கும் பொருந்தாது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>ஒன்பது தேவைகள்: பெரிய data-வில் scalability; கலந்த attribute types; arbitrary cluster shapes; குறைந்த parameter/domain assumptions; noise; incremental data/order effects; high dimensionality; user constraints; புரியக்கூடிய result.
+<p>By automated clustering we can find <strong>dense and sparse regions</strong> in the object space and so discover <strong>overall distribution patterns</strong> and correlations among attributes.</p></div><div class="hci-ta" lang="ta" hidden data-title="குழுமப் பகுப்பாய்வு என்றால் என்ன?"><div class="call key"><div class="ct">குழுமமாக்கல்</div><p><strong>குழுமமாக்கல்</strong> என்பது உடல்சார் அல்லது அருவப் பொருட்களின் தொகுப்பை <strong>ஒத்த பொருட்களின் வகுப்புகளாகத்</strong> தொகுத்தல்.</p>
+<p><strong>குழுமம்</strong> என்பது <strong>ஒரே குழுமத்திற்குள் ஒன்றுக்கொன்று ஒத்தவையாகவும்</strong>, <strong>மற்ற குழுமப் பொருட்களிலிருந்து வேறுபட்டவையாகவும்</strong> உள்ள தரவுப் பொருட்களின் தொகுப்பு.</p></div>
+<ul>
+<li>குழுமத்தை <strong>ஒரு குழுவாகக்</strong> கருதலாம்; எனவே குழுமமாக்கலும் <strong>தரவுச் சுருக்கத்தின்</strong> ஒரு வடிவம்.</li>
+<li><strong>வகைப்படுத்தலுக்கு</strong> அதிகச் செலவுடைய, <strong>அடையாளமிடப்பட்ட</strong> பயிற்சித் தொகுப்பு தேவை. குழுமமாக்கல் <strong>எதிர் வழியில்</strong> செல்கிறது: முதலில் ஒற்றுமைப்படி தரவைக் குழுக்களாகப் பிரித்து, <strong>பின்னர்</strong> அந்தக் குறைந்த எண்ணிக்கையான குழுக்களுக்கு அடையாளமிடுகிறது.</li>
+<li>கூடுதல் நன்மைகள்: <strong>மாற்றங்களுக்கேற்ப மாறுகிறது</strong>; குழுக்களை வேறுபடுத்தும் <strong>அம்சங்களைத் தனித்துக் கண்டறிய</strong> உதவுகிறது.</li>
+</ul>
+<div class="grid2"><div><p><strong>வகைப்படுத்தல் (மேற்பார்வையுள்ளது)</strong></p>
+<p>வகுப்புகள் முன்னரே தெரியும்; அடையாளமிட்ட வரிசைகளிலிருந்து கற்கவும்.</p></div><div><p><strong>குழுமமாக்கல் (மேற்பார்வையற்றது)</strong></p>
+<p>வகுப்பு அடையாளங்கள் இல்லை; தரவிலிருந்தே குழுக்களைக் கண்டறியவும்.</p></div></div>
+<h3>குழுமமாக்கல் பயன்படும் இடங்கள்</h3>
+<table>
+<thead>
+<tr>
+<th>பயன்பாடு</th>
+<th>எடுத்துக்காட்டு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>சந்தை ஆய்வு / வணிகம்</strong></td>
+<td>கொள்வனவு வடிவங்களிலிருந்து வேறுபட்ட <strong>வாடிக்கையாளர் குழுக்களைக்</strong> கண்டறிதல்</td>
+</tr>
+<tr>
+<td><strong>வடிவ அறிதல், படச் செயலாக்கம்</strong></td>
+<td>ஒத்த பிக்சல்கள் அல்லது வடிவங்களைத் தொகுத்தல்</td>
+</tr>
+<tr>
+<td><strong>தரவுப் பிரிவாக்கம்</strong></td>
+<td>பெரிய தரவுத்தொகுப்பை ஒத்த குழுக்களாகப் பிரித்தல்</td>
+</tr>
+<tr>
+<td><strong>புறநிலை கண்டறிதல்</strong></td>
+<td>ஒவ்வொரு குழுமத்திலிருந்தும் "வெகு தொலைவிலுள்ள" பெறுமதிகள்; எ.கா. <strong>கடன் அட்டை மோசடி</strong>, மின்னணு வணிகத்தில் குற்றச் செயற்பாடு</td>
+</tr>
+</tbody>
+</table>
+<p>தானியங்கிக் குழுமமாக்கலால் பொருள் வெளியில் <strong>அடர்த்தியான மற்றும் அரிதான பகுதிகளைக்</strong> கண்டறிந்து, <strong>ஒட்டுமொத்தப் பகிர்வு வடிவங்களையும்</strong> பண்புக்கூறுகளுக்கிடையிலான ஒட்டுறவுகளையும் அறியலாம்.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Requirements of clustering in data mining"><span class="num">2</span>Requirements of clustering in data mining</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>நல்ல Clustering-க்கு என்ன தேவை?</h3><p>பெரிய data-வில் இயங்குதல், பல data types, வேறுவடிவ clusters, noise ஆகியவற்றைக் கையாள வேண்டும். எல்லாக் குழுக்களும் வட்டமாக இருக்கும் என்று கருதும் முறை எல்லாத் தரவுக்கும் பொருந்தாது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>ஒன்பது தேவைகள்: பெரிய data-வில் scalability; கலந்த attribute types; arbitrary cluster shapes; குறைந்த parameter/domain assumptions; noise; incremental data/order effects; high dimensionality; user constraints; புரியக்கூடிய result.
 Distance measure-ஐத் தேர்வுசெய்வதும் quality-ஐப் பாதிக்கும். Scale, missing data, categorical fields ஆகியவற்றை கையாளாமல் raw numbers-ஐ distance-ஆகப் பயன்படுத்த வேண்டாம்.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>ஒன்பது requirements:</strong> scalability; mixed attribute types; arbitrary shapes; minimal domain parameters; noise/missing tolerance; incremental/order stability; high-dimensional handling; real constraints; interpretability/usability. பாட lead-இல் eight என்று இருந்தும் table9; table-இன் ஒன்பதையும் படிக்கவும். எந்த ஒரே algorithm-உம் எல்லா requirements-ஐயும் ஒரே அளவில் நிறைவேற்றாது; application trade-offs சொல்லுங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><table>
+<p><strong>ஒன்பது requirements:</strong> scalability; mixed attribute types; arbitrary shapes; minimal domain parameters; noise/missing tolerance; incremental/order stability; high-dimensional handling; real constraints; interpretability/usability. பாட lead-இல் eight என்று இருந்தும் table9; table-இன் ஒன்பதையும் படிக்கவும். எந்த ஒரே algorithm-உம் எல்லா requirements-ஐயும் ஒரே அளவில் நிறைவேற்றாது; application trade-offs சொல்லுங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Requirement</th>
@@ -333,10 +370,56 @@ Distance measure-ஐத் தேர்வுசெய்வதும் quality
 </tr>
 </tbody>
 </table>
-<div class="call tip"><div class="ct">Remember them</div><p><strong>S</strong>calable · <strong>T</strong>ypes of data · <strong>A</strong>rbitrary shape · <strong>P</strong>arameters (minimal) · <strong>N</strong>oise · <strong>I</strong>ncremental/order · <strong>H</strong>igh dimensions · <strong>C</strong>onstraints · <strong>I</strong>nterpretable</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Types of clustering methods"><span class="num">3</span>Types of clustering methods</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Clustering வகைகள்</h3><p>Partitioning நேரடியாக groups கொடுக்கும்; hierarchical ஒரு மரம் உருவாக்கும்; density-based அடர்ந்த பகுதிகளைத் தேடும். தரவின் வடிவத்திற்கும் நோக்கத்திற்கும் ஏற்ற முறையைத் தேர்ந்தெடுக்க வேண்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Partitioning:</strong> k groups; <strong>hierarchical:</strong> merge/split tree; <strong>density-based:</strong> அடர்ந்த பகுதிகளை noise-இலிருந்து பிரித்தல்; <strong>grid-based:</strong> cells-இன் density; <strong>model-based:</strong> data ஒரு model-இலிருந்து வந்ததாகக் கருதுதல்.
+<div class="call tip"><div class="ct">Remember them</div><p><strong>S</strong>calable · <strong>T</strong>ypes of data · <strong>A</strong>rbitrary shape · <strong>P</strong>arameters (minimal) · <strong>N</strong>oise · <strong>I</strong>ncremental/order · <strong>H</strong>igh dimensions · <strong>C</strong>onstraints · <strong>I</strong>nterpretable</p></div></div><div class="hci-ta" lang="ta" hidden data-title="தரவுச் சுரங்கத்தில் குழுமமாக்கலுக்கான தேவைகள்"><table>
+<thead>
+<tr>
+<th>தேவை</th>
+<th>பொருள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>அளவீட்டுத்திறன்</strong></td>
+<td>சில நூறு மட்டுமல்லாமல் மில்லியன் கணக்கான பொருட்களில் இயங்குதல். ஒரு <strong>மாதிரியை</strong> மட்டும் குழுமமாக்குவது <strong>சார்பான</strong> முடிவுகளை வழங்கலாம்</td>
+</tr>
+<tr>
+<td><strong>வெவ்வேறு பண்புக்கூறு வகைகளைக் கையாளும் திறன்</strong></td>
+<td>எண்ணியல் (இடைவெளி சார்ந்த) தரவு மட்டுமல்லாமல் இருமம், வகைசார் (பெயரளவு), வரிசையளவு மற்றும் கலவைகள்</td>
+</tr>
+<tr>
+<td><strong>எந்த வடிவமுள்ள குழுமங்களையும் கண்டறிதல்</strong></td>
+<td>வழக்கமான k-means போன்ற மையப்புள்ளி முறைகள் அடக்கமான குழுமங்களை விரும்புகின்றன; தொலைவளவை மட்டும் குழும வடிவத்தை நிர்ணயிப்பதில்லை; உண்மைக் குழுமங்கள் <strong>எந்த வடிவிலும்</strong> இருக்கலாம்</td>
+</tr>
+<tr>
+<td><strong>உள்ளீட்டு அளவுருக்களுக்குக் குறைந்த துறைசார் அறிவு</strong></td>
+<td>உயர் பரிமாணத் தரவுக்குத் தேர்ந்தெடுக்கக் கடினமான <strong>k</strong> போன்ற அளவுருக்களால் முடிவுகள் மிகவும் பாதிக்கப்படலாம்</td>
+</tr>
+<tr>
+<td><strong>இரைச்சலுள்ள தரவைக் கையாளும் திறன்</strong></td>
+<td>உண்மையான தரவுத்தளங்களில் புறநிலைகளும் விடுபட்ட, தெரியாத அல்லது தவறான பெறுமதிகளும் உள்ளன</td>
+</tr>
+<tr>
+<td><strong>அதிகரிப்புக் குழுமமாக்கலும் உள்ளீட்டு வரிசையால் பாதிக்கப்படாமையும்</strong></td>
+<td>ஆரம்பத்திலிருந்து தொடங்காமல் புதிய தரவை ஏற்றல்; பதிவுகளின் வரிசை எதுவாயினும் அதே குழுமங்களை வழங்குதல்</td>
+</tr>
+<tr>
+<td><strong>உயர் பரிமாணம்</strong></td>
+<td>2–3 மட்டுமல்லாமல் பல பண்புக்கூறுகளைக் கையாளுதல் (மனிதக் கண்கள் 3 வரைதான் மதிப்பிடும்)</td>
+</tr>
+<tr>
+<td><strong>கட்டுப்பாடு சார்ந்த குழுமமாக்கல்</strong></td>
+<td>உண்மை உலகக் கட்டுப்பாடுகளின்கீழ் குழுமமாக்குதல்; எ.கா. ஆறுகளையும் நெடுஞ்சாலை வலையமைப்புகளையும் கருத்தில்கொண்டு புதிய <strong>ATM-களை</strong> அமைத்தல்</td>
+</tr>
+<tr>
+<td><strong>விளக்கத்தன்மையும் பயன்பாட்டுத்தன்மையும்</strong></td>
+<td>பயன்பாட்டின் இலக்குக்கு முடிவுகள் புரிந்துகொள்ளக்கூடியவையாகவும் பயன்படுத்தக்கூடியவையாகவும் இருக்க வேண்டும்</td>
+</tr>
+</tbody>
+</table>
+<div class="call tip"><div class="ct">நினைவில் கொள்ளவும்</div><p><strong>S</strong>calable — அளவீட்டுத்திறன் · <strong>T</strong>ypes of data — தரவு வகைகள் · <strong>A</strong>rbitrary shape — எந்த வடிவமும் · <strong>P</strong>arameters — குறைந்த அளவுருக்கள் · <strong>N</strong>oise — இரைச்சல் · <strong>I</strong>ncremental/order — அதிகரிப்பு/வரிசை · <strong>H</strong>igh dimensions — உயர் பரிமாணங்கள் · <strong>C</strong>onstraints — கட்டுப்பாடுகள் · <strong>I</strong>nterpretable — விளக்கத்தன்மை</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Types of clustering methods"><span class="num">3</span>Types of clustering methods</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Clustering வகைகள்</h3><p>Partitioning நேரடியாக groups கொடுக்கும்; hierarchical ஒரு மரம் உருவாக்கும்; density-based அடர்ந்த பகுதிகளைத் தேடும். தரவின் வடிவத்திற்கும் நோக்கத்திற்கும் ஏற்ற முறையைத் தேர்ந்தெடுக்க வேண்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Partitioning:</strong> k groups; <strong>hierarchical:</strong> merge/split tree; <strong>density-based:</strong> அடர்ந்த பகுதிகளை noise-இலிருந்து பிரித்தல்; <strong>grid-based:</strong> cells-இன் density; <strong>model-based:</strong> data ஒரு model-இலிருந்து வந்ததாகக் கருதுதல்.
 பாட உதாரணங்கள் <strong>EM</strong> probability model, <strong>COBWEB</strong> conceptual hierarchy, <strong>SOM</strong> neural-map அணுகுமுறை. எல்லா clustering method-க்கும் முன்பே k தேவை என்று சொல்ல முடியாது.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>ஐந்து families:</strong> partitioning(k-means/medoids); hierarchy(AGNES/DIANA,BIRCH/Chameleon); density(DBSCAN/OPTICS/DENCLUE); grid(STING/WaveCluster); model(EM/COBWEB/SOM). Hard partition ஒவ்வொன்றும் ஒரு group; fuzzy membership பல groups-க்கு fractional ஆகலாம். Hierarchical irreversible choices; density arbitrary-shape connectivity; grid cell processing வேகம் (initial data scan இன்னும் தேவை); model fitting-க்கு assumptions/parameters தேவை. Distance பயன்படுத்துகிற எல்லா method-உம் spherical-only அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><table>
+<p><strong>ஐந்து families:</strong> partitioning(k-means/medoids); hierarchy(AGNES/DIANA,BIRCH/Chameleon); density(DBSCAN/OPTICS/DENCLUE); grid(STING/WaveCluster); model(EM/COBWEB/SOM). Hard partition ஒவ்வொன்றும் ஒரு group; fuzzy membership பல groups-க்கு fractional ஆகலாம். Hierarchical irreversible choices; density arbitrary-shape connectivity; grid cell processing வேகம் (initial data scan இன்னும் தேவை); model fitting-க்கு assumptions/parameters தேவை. Distance பயன்படுத்துகிற எல்லா method-உம் spherical-only அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Method</th>
@@ -433,11 +516,108 @@ Distance measure-ஐத் தேர்வுசெய்வதும் quality
 <td><strong>Self-organising feature map</strong>: a neural network mapping high-dimensional data onto a 2-D or 3-D map (good for visualisation)</td>
 </tr>
 </tbody>
-</table></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Clustering by k-means"><span class="num">4</span>Clustering by k-means</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>k-means படிகள்</h3><p>k centres தேர்வு → ஒவ்வொரு point-ஐ அருகிலுள்ள centre-க்கு ஒதுக்கு → group mean-ஆல் centre புதுப்பி → மீண்டும் செய். ஆரம்ப centres மாறினால் முடிவு மாறலாம். Outlier mean-ஐ வலுவாக இழுக்கலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Manhattan distance = Σ|xᵢ−yᵢ|</strong>; <strong>Euclidean = √Σ(xᵢ−yᵢ)²</strong>; Minkowski q=1,2 இவற்றைத் தரும். பாடத்தின் worked allocation Manhattan distances பயன்படுத்துகிறது; assignment கேட்கும் distance-ஐ மாற்றாதீர்கள்.
+</table></div><div class="hci-ta" lang="ta" hidden data-title="குழுமமாக்கல் முறைகளின் வகைகள்"><table>
+<thead>
+<tr>
+<th>முறை</th>
+<th>கருத்து</th>
+<th>எடுத்துக்காட்டுகள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>பிரிவாக்கம்</strong></td>
+<td><strong>k பிரிவுகளை</strong> (k ≤ n) உருவாக்கி <strong>மீண்டும் மீண்டும் இடமாற்றுவதால்</strong> மேம்படுத்துதல்</td>
+<td><strong>k-means</strong>, <strong>k-medoids</strong></td>
+</tr>
+<tr>
+<td><strong>படிநிலை</strong></td>
+<td><strong>படிநிலைப் பிரிப்பை</strong> உருவாக்குதல்: கீழிருந்து மேலாக இணைத்தல் அல்லது மேலிருந்து கீழாகப் பிரித்தல்</td>
+<td><strong>Chameleon</strong>, <strong>BIRCH</strong></td>
+</tr>
+<tr>
+<td><strong>அடர்த்தி சார்ந்தது</strong></td>
+<td><strong>அயலிட அடர்த்தி</strong> வரம்பை மீறும்வரை குழுமத்தை <strong>வளர்த்துக்கொண்டிருத்தல்</strong></td>
+<td><strong>DBSCAN</strong>, <strong>OPTICS</strong>, <strong>DENCLUE</strong></td>
+</tr>
+<tr>
+<td><strong>கட்டம் சார்ந்தது</strong></td>
+<td>வெளியை வரையறுக்கப்பட்ட <strong>கலங்களின் கட்டமாக அளவுருப்படுத்தி</strong>, கலங்களைக் குழுமமாக்குதல்</td>
+<td><strong>STING</strong>, <strong>WaveCluster</strong></td>
+</tr>
+<tr>
+<td><strong>மாதிரி சார்ந்தது</strong></td>
+<td>ஒவ்வொரு குழுமத்துக்கும் <strong>மாதிரியைக்</strong> கருதி சிறந்த பொருத்தத்தைக் கண்டறிதல்</td>
+<td><strong>EM</strong>, <strong>COBWEB</strong>, <strong>SOM</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>பிரிவாக்க முறைகள்</h3>
+<p>n பொருட்கள் கொடுக்கப்பட்டால், ஒவ்வொன்றும் ஒரு குழுமமாக <strong>k பிரிவுகளை</strong> உருவாக்கவும்; <strong>k ≤ n</strong>:</p>
+<ul>
+<li><strong>ஒவ்வொரு குழுவிலும் குறைந்தது ஒரு பொருள் இருக்க வேண்டும்</strong>, மேலும்</li>
+<li><strong>ஒவ்வொரு பொருளும் துல்லியமாக ஒரு குழுவைச் சார்ந்திருக்க வேண்டும்</strong> (<strong>தெளிவற்ற</strong> பிரிவாக்கத்தில் தளர்த்தப்படுகிறது).</li>
+</ul>
+<p>ஆரம்பப் பிரிவாக்கத்துடன் தொடங்கி, <strong>மீண்டும் மீண்டும் இடமாற்றவும்</strong>: ஒரே குழுமப் பொருட்கள் "அருகிலும்", வெவ்வேறு குழுமப் பொருட்கள் "தொலைவிலும்" இருக்கும்படி குழுக்களுக்கிடையே பொருட்களை நகர்த்தவும்.</p>
+<p>உலகளாவிய உகந்ததன்மைக்கு <strong>சாத்தியமான ஒவ்வொரு பிரிவும்</strong> தேவைப்படுவதால் அனுபவவழிகள் பயன்படுகின்றன:</p>
+<div class="grid2"><div><p><strong>k-means</strong></p>
+<p>ஒவ்வொரு குழுமமும் அதன் பொருட்களின் <strong>சராசரிப் பெறுமதியால்</strong> பிரதிநிதித்துவப்படுத்தப்படுகிறது.</p></div><div><p><strong>k-medoids</strong></p>
+<p>ஒவ்வொரு குழுமமும் மையத்துக்கு அருகிலுள்ள <strong>உண்மைப் பொருட்களில் ஒன்றால்</strong> பிரதிநிதித்துவப்படுத்தப்படுகிறது.</p></div></div>
+<p>இரண்டும் <strong>சிறிய முதல் நடுத்தர</strong> தரவுத்தளங்களில் <strong>கோள வடிவக்</strong> குழுமங்களுக்கு நன்றாகச் செயல்படுகின்றன.</p>
+<h3>படிநிலை முறைகள்</h3>
+<div class="grid2"><div><p><strong>திரட்டல் (கீழிருந்து மேல்)</strong></p>
+<p><strong>ஒவ்வொரு பொருளையும் தனிக் குழுவாகக்</strong> கொண்டு தொடங்கி, ஒரு குழு மீதமாகும்வரை (அல்லது நிறுத்தல் நிபந்தனை உண்மையாகும்வரை) அருகிலுள்ள குழுக்களைத் தொடர்ந்து <strong>இணைக்கவும்</strong>.</p></div><div><p><strong>பிரித்தல் (மேலிருந்து கீழ்)</strong></p>
+<p><strong>அனைத்துப் பொருட்களையும் ஒரு குழுமமாகக்</strong> கொண்டு தொடங்கி, ஒவ்வொன்றும் தனிக் குழுமமாகும்வரை (அல்லது நிறுத்தல் நிபந்தனை உண்மையாகும்வரை) தொடர்ந்து <strong>பிரிக்கவும்</strong>.</p></div></div>
+<div class="call warn"><div class="ct">பலவீனம்</div><p>இணைத்தலோ பிரித்தலோ செய்தபின் <strong>ஒருபோதும் செயல்தவிர்க்க முடியாது</strong>. இதனால் கணக்கீடு மலிவாகிறது; ஆனால் தவறான முடிவுகளைத் <strong>திருத்த முடியாது</strong>.</p></div>
+<p>தரத்தை மேம்படுத்தும் இரு வழிகள்:</p>
+<ul>
+<li><strong>Chameleon</strong> போல ஒவ்வொரு படியிலும் பொருட்களின் <strong>இணைப்புகளை</strong> கவனமாகப் பகுப்பாய்வு செய்தல்.</li>
+<li><strong>BIRCH</strong> போல முதலில் படிநிலையாகப் பொருட்களை <strong>நுண்குழுமங்களாக்கி</strong>, பின்னர் வேறொரு முறையால் (எ.கா. மீளிடமாற்றம்) <strong>பெருங்குழுமங்களாக்குதல்</strong>.</li>
+</ul>
+<h3>அடர்த்தி சார்ந்த முறைகள்</h3>
+<ul>
+<li>வழக்கமான k-means அடக்கமான குழுமங்களை விரும்புகிறது; ஆனால் <strong>தொலைவு அடிப்படையிலான ஒவ்வொரு முறையும் கோள வடிவங்களுக்கு மட்டுப்பட்டதல்ல</strong>.</li>
+<li><strong>கொடுக்கப்பட்ட ஆரையுள்ள அயலிடத்தில்</strong> குறைந்தது <strong>குறைந்தபட்சப் புள்ளி எண்ணிக்கை</strong> இருக்கும்வரை அடர்த்தி சார்ந்த முறைகள் குழுமத்தை வளர்க்கின்றன.</li>
+<li>அவை <strong>இரைச்சலை (புறநிலைகளை) வடிகட்டி</strong>, <strong>எந்த வடிவமுள்ள</strong> குழுமங்களையும் கண்டறிகின்றன.</li>
+<li><strong>DBSCAN</strong>, அதன் விரிவாக்கம் <strong>OPTICS</strong> ஆகியவை அடர்த்தி சார்ந்த இணைப்பால் குழுமங்களை வளர்க்கின்றன; <strong>DENCLUE</strong>, <strong>அடர்த்திச் சார்புகளின்</strong> பகிர்வைப் பகுப்பாய்வு செய்கிறது.</li>
+</ul>
+<h3>கட்டம் சார்ந்த முறைகள்</h3>
+<ul>
+<li>பொருள் வெளியை <strong>வரையறுக்கப்பட்ட கலங்களாக</strong> (கட்டம்) அளவுருப்படுத்தி, அனைத்து குழுமமாக்கலையும் கட்டத்தில் செய்யவும்.</li>
+<li>முக்கிய நன்மை: <strong>உருவாக்கியபின் கட்டக் கலங்களில் விரைவான செயலாக்கம்</strong>. தரவை வாசிப்பதும் கட்டத்தை உருவாக்குவதும் இன்னும் உள்ளீட்டு அளவைச் சார்ந்தவை.</li>
+<li><strong>STING</strong> வழக்கமானது; <strong>WaveCluster</strong>, <strong>சிற்றலை உருமாற்றத்தைப்</strong> பயன்படுத்துகிறது; அது கட்டம் மற்றும் அடர்த்தி இரண்டும் சார்ந்தது.</li>
+</ul>
+<h3>மாதிரி சார்ந்த முறைகள்</h3>
+<ul>
+<li>ஒவ்வொரு குழுமத்துக்கும் <strong>மாதிரியைக்</strong> கருதி, தரவின் <strong>சிறந்த பொருத்தத்தைக்</strong> கண்டறியவும்.</li>
+<li>தரவின் இடம்சார் பகிர்வின் <strong>அடர்த்திச் சார்பை</strong> உருவாக்கலாம்; இரைச்சலைக் கையாளும்போதே புள்ளிவிவரங்களால் <strong>குழும எண்ணிக்கையைத் தானாக நிர்ணயிக்கலாம்</strong>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>படிமுறை</th>
+<th>அணுகுமுறை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EM</strong></td>
+<td>புள்ளிவிவர மாதிரியாக்கம் சார்ந்த <strong>எதிர்பார்ப்பு-அதிகபட்சமாக்கல்</strong></td>
+</tr>
+<tr>
+<td><strong>COBWEB</strong></td>
+<td><strong>நிகழ்தகவுப் பகுப்பாய்வைப்</strong> பயன்படுத்தும் கருத்துக் கற்றல்</td>
+</tr>
+<tr>
+<td><strong>SOM</strong></td>
+<td><strong>தன்னொழுங்கமைப்பு அம்ச வரைபடம்</strong>: உயர் பரிமாணத் தரவை 2-D அல்லது 3-D வரைபடத்தில் பொருத்தும் நரம்பியல் வலையமைப்பு (காட்சிப்படுத்தலுக்கு நல்லது)</td>
+</tr>
+</tbody>
+</table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Clustering by k-means"><span class="num">4</span>Clustering by k-means</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>k-means படிகள்</h3><p>k centres தேர்வு → ஒவ்வொரு point-ஐ அருகிலுள்ள centre-க்கு ஒதுக்கு → group mean-ஆல் centre புதுப்பி → மீண்டும் செய். ஆரம்ப centres மாறினால் முடிவு மாறலாம். Outlier mean-ஐ வலுவாக இழுக்கலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Manhattan distance = Σ|xᵢ−yᵢ|</strong>; <strong>Euclidean = √Σ(xᵢ−yᵢ)²</strong>; Minkowski q=1,2 இவற்றைத் தரும். பாடத்தின் worked allocation Manhattan distances பயன்படுத்துகிறது; assignment கேட்கும் distance-ஐ மாற்றாதீர்கள்.
 Centroid coordinates ஒவ்வொரு group-இன் coordinate means. Iteration 2 centres <strong>(3,9.5), (6.5,5.25), (1.5,3.5)</strong>. Cluster membership மாறினால் அடுத்த means புதுப்பிக்க வேண்டும். Standard k-means squared Euclidean objective-ஐ நோக்கும்; Manhattan-க்கு mean update பொதுவாக optimal அல்ல என்பதை வேறுபடுத்திக் கற்கவும்.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
 <p><strong>Standard k-means</strong> squared Euclidean objective-க்கு mean update பயன்படுத்தும். இந்த lesson exercise <strong>Manhattan assignment+mean update</strong> என்ற course variant; அதை standard objective-உடன் கலக்காதீர்கள். Manhattan(L1) cost-ஐ minimise செய்ய coordinate medians பொருத்தமானவை.</p>
-<p>Course initial A1(2,10),A4(5,8),A7(1,2). Iteration1 clusters <strong>{A1};{A3,A4,A5,A6,A8};{A2,A7}</strong>→means <strong>(2,10),(6,6),(1.5,3.5)</strong>. Iteration2 A8 cluster1→<strong>(3,9.5),(6.5,5.25),(1.5,3.5)</strong>. Iteration3 A4 joins1→<strong>(11/3,9),(7,13/3),(1.5,3.5)</strong>;then stable in this example. A8→third centre distance<strong>8</strong>,not6. Minkowski q1 Manhattan,q2 Euclidean; q≥1. Scaling, seeds,k,outliers affect results.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><p>The <strong>k-means</strong> algorithm takes the parameter <strong>k</strong> and partitions n objects into <strong>k clusters</strong> so that <strong>intracluster similarity is high</strong> and <strong>intercluster similarity is low</strong>. Similarity is measured against the cluster's <strong>mean</strong>: its <strong>centroid</strong> or centre of gravity.</p>
+<p>Course initial A1(2,10),A4(5,8),A7(1,2). Iteration1 clusters <strong>{A1};{A3,A4,A5,A6,A8};{A2,A7}</strong>→means <strong>(2,10),(6,6),(1.5,3.5)</strong>. Iteration2 A8 cluster1→<strong>(3,9.5),(6.5,5.25),(1.5,3.5)</strong>. Iteration3 A4 joins1→<strong>(11/3,9),(7,13/3),(1.5,3.5)</strong>;then stable in this example. A8→third centre distance<strong>8</strong>,not6. Minkowski q1 Manhattan,q2 Euclidean; q≥1. Scaling, seeds,k,outliers affect results.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>The <strong>k-means</strong> algorithm takes the parameter <strong>k</strong> and partitions n objects into <strong>k clusters</strong> so that <strong>intracluster similarity is high</strong> and <strong>intercluster similarity is low</strong>. Similarity is measured against the cluster's <strong>mean</strong>: its <strong>centroid</strong> or centre of gravity.</p>
 <div class="flow"><span><ol>
 <li>Randomly select <strong>k objects</strong> as the initial cluster centres</li>
 </ol></span><span><ol start="2">
@@ -703,11 +883,246 @@ R.querySelector('.st').onclick=step;R.querySelector('.rs').onclick=reset;reset()
 <li>The <strong>cluster</strong> each point joins</li>
 <li>The <strong>new means</strong>, with the arithmetic</li>
 <li>Repeat for the iterations asked, and say when it <strong>converges</strong></li>
-</ol></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Weka: baseline accuracy and cross-validation"><span class="num">5</span>Weka: baseline accuracy and cross-validation</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>Baseline மற்றும் Cross-validation</h3><p>எப்போதும் அதிகம் வரும் class-ஐச் சொல்வது <strong>ZeroR baseline</strong>. உங்கள் model அதைவிட உதவுகிறதா பாருங்கள். 10-fold CV-இல் ஒவ்வொரு record-உம் ஒருமுறை test ஆகும்; அது எதிர்கால accuracy-க்கு ஒரு மதிப்பீடு மட்டுமே.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Diabetes dataset: 500 negative, 268 positive → ZeroR baseline <strong>500/768≈65.1%</strong>. Model 76% என்றால் baseline-ஐவிட சுமார் 10.9 percentage points மேல்; 76 என்பது தனியாக நல்லதா முடிவு செய்யப் போதாது.
+</ol></div></div><div class="hci-ta" lang="ta" hidden data-title="k-means மூலம் குழுமமாக்கல்"><p><strong>k-means</strong> படிமுறை <strong>k</strong> அளவுருவை எடுத்துக்கொண்டு, <strong>குழுமத்திற்குள் ஒற்றுமை அதிகமாகவும்</strong>, <strong>குழுமங்களுக்கிடையே ஒற்றுமை குறைவாகவும்</strong> இருக்கும்படி n பொருட்களை <strong>k குழுமங்களாகப்</strong> பிரிக்கிறது. குழுமத்தின் <strong>சராசரியான மையப்புள்ளி</strong> அல்லது ஈர்ப்பு மையத்துடன் ஒற்றுமை அளவிடப்படுகிறது.</p>
+<div class="flow"><span><ol>
+<li>ஆரம்பக் குழும மையங்களாக <strong>k பொருட்களைச்</strong> சீரற்ற முறையில் தேர்ந்தெடு</li>
+</ol></span><span><ol start="2">
+<li>ஒவ்வொரு பொருளையும் <strong>அருகிலுள்ள</strong> மையத்துக்கு ஒதுக்கு</li>
+</ol></span><span><ol start="3">
+<li>ஒவ்வொரு குழுமத்தின் <strong>சராசரியை</strong> மீண்டும் கணக்கிடு</li>
+</ol></span><span><ol start="4">
+<li>ஒதுக்கீடுகள் <strong>மாறுவது நிற்கும்வரை</strong> 2–3-ஐ மீண்டும் செய்</li>
+</ol></span></div>
+<h3>தொலைவுச் சார்புகள்</h3>
+<p>குழுமமாக்கலின் தரம் <strong>ஒற்றுமை அளவையைச்</strong> சார்ந்தது. எத்தனை பண்புக்கூறுகள் இருந்தாலும், இரு தரவுக் கூறுகளின் தொலைவுக்கு <strong>ஒரு எண்ணை</strong> <strong>தொலைவுச் சார்பு</strong> வழங்குகிறது. ஒவ்வொரு கூறும் <strong>குறைந்தபட்சத் தொலைவிலுள்ள</strong> குழுமத்தில் இணைகிறது <a class="ts" href="#" data-v="0" data-t="47">00:47</a>.</p>
+<div class="formula"><strong>மின்கோவ்ஸ்கி தொலைவு:</strong> d(i, j) = ( |xᵢ₁ − xⱼ₁|^q + |xᵢ₂ − xⱼ₂|^q + … + |xᵢₚ − xⱼₚ|^q )^(1/q)</div>
+<table>
+<thead>
+<tr>
+<th>q</th>
+<th>பெயர்</th>
+<th>2-D வடிவம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>மன்ஹாட்டன்</strong> தொலைவு</td>
+<td>|x₂ − x₁| + |y₂ − y₁|</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>யூக்ளிடியன்</strong> தொலைவு (மிகவும் பிரபலமானது)</td>
+<td>√((x₂ − x₁)² + (y₂ − y₁)²)</td>
+</tr>
+</tbody>
+</table>
+<p><a class="ts" href="#" data-v="0" data-t="111">01:51</a></p>
+<p><div data-ta-tool="dc"></div></p>
+<p>இந்தப் பாட எடுத்துக்காட்டில் <strong>ஒதுக்கீட்டுக்கு மன்ஹாட்டன் தொலைவும், புதுப்பிப்புகளுக்குக் கூட்டுச்சராசரிகளும்</strong> பயன்படுகின்றன. வர்க்க யூக்ளிடியன் தொலைவுகளைக் குறைக்கும் <strong>வழக்கமான k-means</strong>-இலிருந்து இந்தப் பயிற்சியை வேறுபடுத்தவும்; L1 இலக்கு பொதுவாக ஆயத்தொலைவு-இடைநிலைப் புதுப்பிப்புகளுடன் தொடர்புடையது. <a href="https://scikit-learn.org/stable/modules/clustering#k-means">k-means ஆவணத்தைப்</a> பார்க்கவும். கீழுள்ள படிக்கருவி பாடத்தின் கூறப்பட்ட மரபைப் பின்பற்றுகிறது.</p>
+<h3>செய்முறை எடுத்துக்காட்டு (பாடத்திலிருந்து)</h3>
+<p>மன்ஹாட்டன் தொலைவைப் பயன்படுத்தி எட்டுப் புள்ளிகளை <strong>3 குழுமங்களாகக்</strong> குழுமமாக்கவும்:</p>
+<p><strong>A1(2, 10) · A2(2, 5) · A3(8, 4) · A4(5, 8) · A5(7, 5) · A6(6, 4) · A7(1, 2) · A8(4, 9)</strong></p>
+<p>ஆரம்ப மையங்கள்: <strong>A1(2, 10)</strong>, <strong>A4(5, 8)</strong>, <strong>A7(1, 2)</strong>.</p>
+<p><strong>மறு செய்கை 1</strong>: ஆரம்ப மையங்களுக்கான தொலைவுகள்</p>
+<table>
+<thead>
+<tr>
+<th>புள்ளி</th>
+<th>மையம் (2, 10)</th>
+<th>மையம் (5, 8)</th>
+<th>மையம் (1, 2)</th>
+<th>குழுமம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1 (2, 10)</td>
+<td><strong>0</strong></td>
+<td>5</td>
+<td>9</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A2 (2, 5)</td>
+<td>5</td>
+<td>6</td>
+<td><strong>4</strong></td>
+<td>3</td>
+</tr>
+<tr>
+<td>A3 (8, 4)</td>
+<td>12</td>
+<td><strong>7</strong></td>
+<td>9</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A4 (5, 8)</td>
+<td>5</td>
+<td><strong>0</strong></td>
+<td>10</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A5 (7, 5)</td>
+<td>10</td>
+<td><strong>5</strong></td>
+<td>9</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6 (6, 4)</td>
+<td>10</td>
+<td><strong>5</strong></td>
+<td>7</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A7 (1, 2)</td>
+<td>9</td>
+<td>10</td>
+<td><strong>0</strong></td>
+<td>3</td>
+</tr>
+<tr>
+<td>A8 (4, 9)</td>
+<td>3</td>
+<td><strong>2</strong></td>
+<td>10</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>புதிய மையங்கள் (சராசரிகள்):</p>
+<ul>
+<li>குழுமம் 1 = {A1} → <strong>(2, 10)</strong></li>
+<li>குழுமம் 2 = {A3, A4, A5, A6, A8} → ((8+5+7+6+4)/5, (4+8+5+4+9)/5) = <strong>(6, 6)</strong></li>
+<li>குழுமம் 3 = {A2, A7} → ((2+1)/2, (5+2)/2) = <strong>(1.5, 3.5)</strong></li>
+</ul>
+<p><strong>மறு செய்கை 2</strong>: புதிய மையங்களுக்கான தொலைவுகள்</p>
+<table>
+<thead>
+<tr>
+<th>புள்ளி</th>
+<th>மையம் (2, 10)</th>
+<th>மையம் (6, 6)</th>
+<th>மையம் (1.5, 3.5)</th>
+<th>குழுமம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1 (2, 10)</td>
+<td><strong>0</strong></td>
+<td>8</td>
+<td>7</td>
+<td>1</td>
+</tr>
+<tr>
+<td>A2 (2, 5)</td>
+<td>5</td>
+<td>5</td>
+<td><strong>2</strong></td>
+<td>3</td>
+</tr>
+<tr>
+<td>A3 (8, 4)</td>
+<td>12</td>
+<td><strong>4</strong></td>
+<td>7</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A4 (5, 8)</td>
+<td>5</td>
+<td><strong>3</strong></td>
+<td>8</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A5 (7, 5)</td>
+<td>10</td>
+<td><strong>2</strong></td>
+<td>7</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A6 (6, 4)</td>
+<td>10</td>
+<td><strong>2</strong></td>
+<td>5</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A7 (1, 2)</td>
+<td>9</td>
+<td>9</td>
+<td><strong>2</strong></td>
+<td>3</td>
+</tr>
+<tr>
+<td>A8 (4, 9)</td>
+<td><strong>3</strong></td>
+<td>5</td>
+<td>8</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div class="call warn"><div class="ct">PDF திருத்தம்</div><p>அட்டவணை 13-3, A8-இலிருந்து (1.5, 3.5) வரையான தொலைவை 6 என்கிறது. உண்மையில் |4 − 1.5| + |9 − 3.5| = 2.5 + 5.5 = <strong>8</strong>. A8 இன்னும் குழுமம் 1-க்கே செல்வதால் முடிவு மாறுவதில்லை.</p></div>
+<p><strong>இரண்டாவது மறு செய்கைக்குப் பின் மையங்கள்</strong> (கேள்விக்கான விடை):</p>
+<ul>
+<li>குழுமம் 1 = {A1, A8} → <strong>(3, 9.5)</strong></li>
+<li>குழுமம் 2 = {A3, A4, A5, A6} → <strong>(6.5, 5.25)</strong></li>
+<li>குழுமம் 3 = {A2, A7} → <strong>(1.5, 3.5)</strong></li>
+</ul>
+<div class="call example"><div class="ct">ஒருங்கும்வரை தொடர்தல்</div><p><strong>மறு செய்கை 3:</strong> A4(5, 8), இப்போது (6.5, 5.25)-ஐவிட (தொலைவு 4.25) (3, 9.5)-க்கு (தொலைவு 3.5) அருகில் இருப்பதால் குழுமம் 1-க்கு நகர்கிறது. மையங்கள் <strong>(3.67, 9)</strong>, <strong>(7, 4.33)</strong>, <strong>(1.5, 3.5)</strong> ஆகின்றன.</p>
+<p><strong>மறு செய்கை 4:</strong> எந்தப் புள்ளியும் குழுமம் மாறாததால் k-means <strong>ஒருங்கியுள்ளது</strong>:</p>
+<ul>
+<li>குழுமம் 1 = {A1, A4, A8}</li>
+<li>குழுமம் 2 = {A3, A5, A6}</li>
+<li>குழுமம் 3 = {A2, A7}</li>
+</ul></div>
+<p><div data-ta-tool="km"></div></p>
+<h3>k-means-இன் வலிமைகளும் பலவீனங்களும்</h3>
+<table>
+<thead>
+<tr>
+<th>வலிமைகள்</th>
+<th>பலவீனங்கள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>எளிமையானதும் ஒப்பீட்டளவில் திறமையானதும்</td>
+<td><strong>k</strong>-ஐ முன்னரே தேர்ந்தெடுக்க வேண்டும்</td>
+</tr>
+<tr>
+<td>அடக்கமான, <strong>கோள வடிவக்</strong> குழுமங்களுக்கு நன்றாக இயங்குகிறது</td>
+<td>முடிவு <strong>ஆரம்ப மையங்களைச்</strong> சார்ந்தது</td>
+</tr>
+<tr>
+<td>சிறிய–நடுத்தர தரவுக்கு விரிவாக்கமடைகிறது</td>
+<td><strong>இரைச்சலாலும் புறநிலைகளாலும் பாதிக்கப்படுகிறது</strong> (அவை சராசரியை இழுக்கின்றன)</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>எந்த வடிவமுள்ள</strong> குழுமங்களையும் கண்டறிய முடியாது</td>
+</tr>
+</tbody>
+</table>
+<div class="call exam"><div class="ct">Exam focus</div><p>k-means கேள்விக்குக் காட்ட வேண்டியவை:</p>
+<ol>
+<li>ஒவ்வொரு புள்ளிக்கும் ஒவ்வொரு மையத்துடனான <strong>தொலைவு அட்டவணை</strong></li>
+<li>ஒவ்வொரு புள்ளியும் இணையும் <strong>குழுமம்</strong></li>
+<li>கணக்கீட்டுடன் <strong>புதிய சராசரிகள்</strong></li>
+<li>கேட்கப்பட்ட மறு செய்கைகளுக்குத் தொடரவும்; எப்போது <strong>ஒருங்குகிறது</strong> எனக் கூறவும்</li>
+</ol></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Weka: baseline accuracy and cross-validation"><span class="num">5</span>Weka: baseline accuracy and cross-validation</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>Baseline மற்றும் Cross-validation</h3><p>எப்போதும் அதிகம் வரும் class-ஐச் சொல்வது <strong>ZeroR baseline</strong>. உங்கள் model அதைவிட உதவுகிறதா பாருங்கள். 10-fold CV-இல் ஒவ்வொரு record-உம் ஒருமுறை test ஆகும்; அது எதிர்கால accuracy-க்கு ஒரு மதிப்பீடு மட்டுமே.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Diabetes dataset: 500 negative, 268 positive → ZeroR baseline <strong>500/768≈65.1%</strong>. Model 76% என்றால் baseline-ஐவிட சுமார் 10.9 percentage points மேல்; 76 என்பது தனியாக நல்லதா முடிவு செய்யப் போதாது.
 10-fold CV: ஒவ்வொரு record test-ஆக ஒருமுறை, training-ஆக ஒன்பது முறை. Weka displayed full-data model-உடன் learner <strong>11</strong> முறை இயங்கலாம். Fold scores மிகவும் ஒன்றுபோல் இருந்தாலும் எதிர்கால performance உறுதி அல்ல; mean-உடன் variation பார்க்கவும்.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
 <p><strong>ZeroR classification</strong> majority class:500/768≈<strong>65.1%</strong>. J48≈74.5% என்பது dataset/video example; universal score அல்ல. k-fold CV:ஒவ்வொரு sample ஒருமுறை test,k−1முறை training; folds sizes remainder இருந்தால் சுமார் சமம். Stratified class proportions காக்கும். Weka displayed final model முழு data-இல் train ஆகலாம்; அதன் training predictions அல்ல CV score.</p>
-<p>Video comparison CV mean74.5%,SD0.9 vs repeated holdout74.8%,SD4.6; இதிலிருந்து எல்லா dataset-க்கும் CV variance எப்போதும் குறைவு என முடிவுசெய்யாதீர்கள். Time-series/grouped users-க்கு leakage தவிர்க்க appropriate splits தேவை. 10-fold practical convention; fixed data-count threshold சட்டம் அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><h3 id="24-baseline-accuracy">2.4 Baseline accuracy</h3>
+<p>Video comparison CV mean74.5%,SD0.9 vs repeated holdout74.8%,SD4.6; இதிலிருந்து எல்லா dataset-க்கும் CV variance எப்போதும் குறைவு என முடிவுசெய்யாதீர்கள். Time-series/grouped users-க்கு leakage தவிர்க்க appropriate splits தேவை. 10-fold practical convention; fixed data-count threshold சட்டம் அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><h3 id="24-baseline-accuracy">2.4 Baseline accuracy</h3>
 <p>On the <strong>diabetes</strong> data set (Pima Indians; tested_negative / tested_positive) with a percentage split <a class="ts" href="#" data-v="2" data-t="94">01:34</a>:</p>
 <table>
 <thead>
@@ -798,7 +1213,89 @@ R.querySelector('.out').innerHTML=h}R.addEventListener('input',run);run();})();
 </tbody>
 </table>
 <div class="call key"><div class="ct">Result</div><p>Both give about the <strong>same mean</strong>, but cross-validation has a <strong>much smaller variance</strong>. So J48 scores about <strong>74.5% (roughly 73.5%–75.5%)</strong>, well above the 65.1% baseline <a class="ts" href="#" data-v="4" data-t="360">06:00</a>.</p></div>
-<p><strong>Why 10 folds, not 20?</strong> <a class="ts" href="#" data-v="4" data-t="268">04:28</a> More folds train on more data (95% vs 90%), but each test fold gets smaller (a weaker statistical sample) and it takes twice as long. There's no perfect answer; <strong>10-fold is the standard</strong> and Weka's default.</p></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>Clustering என்றால் என்ன?</h4><p>Labels முன்பே தெரியாத records-ஐ ஒற்றுமையின்படி குழுவாக்குவது <strong>Clustering</strong>. ஒரே group-க்குள் அதிக similarity; groups இடையே குறைந்த similarity வேண்டும். இது தெரிந்த class கற்ற classification-இலிருந்து வேறு.</p>
+<p><strong>Why 10 folds, not 20?</strong> <a class="ts" href="#" data-v="4" data-t="268">04:28</a> More folds train on more data (95% vs 90%), but each test fold gets smaller (a weaker statistical sample) and it takes twice as long. There's no perfect answer; <strong>10-fold is the standard</strong> and Weka's default.</p></div><div class="hci-ta" lang="ta" hidden data-title="Weka: அடிப்படைத் துல்லியமும் குறுக்கு உறுதிப்படுத்தலும்"><h3>2.4 அடிப்படைத் துல்லியம்</h3>
+<p>சதவீதப் பிரிப்புடன் <strong>diabetes</strong> தரவுத்தொகுப்பில் (Pima Indians; tested_negative / tested_positive) <a class="ts" href="#" data-v="2" data-t="94">01:34</a>:</p>
+<table>
+<thead>
+<tr>
+<th>வகைப்படுத்தி</th>
+<th>துல்லியம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J48 (மரங்கள்)</td>
+<td>76%</td>
+</tr>
+<tr>
+<td>NaiveBayes (பேய்ச்)</td>
+<td>77%</td>
+</tr>
+<tr>
+<td>IBk (சோம்பல்)</td>
+<td>73%</td>
+</tr>
+<tr>
+<td>PART (விதிகள்)</td>
+<td>74%</td>
+</tr>
+<tr>
+<td><strong>ZeroR (அடிப்படை)</strong></td>
+<td><strong>65%</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="call key"><div class="ct">அடிப்படை: ZeroR</div><p><strong>ZeroR</strong>, ஒவ்வொரு முறையும் <strong>மிக அதிகம் நிகழும் வகுப்பையே</strong> முன்னறிவிக்கிறது. diabetes-இல் <strong>768 நிகழ்வுகளில் 500</strong> எதிர்மறையானவை; எனவே <strong>500/768 = 65%</strong> தடவைகள் சரியானது <a class="ts" href="#" data-v="2" data-t="227">03:47</a>. J48-இன் 76% அடிப்படையைவிடத் தெளிவாக அதிகம்; ஆனால் மிகப்பெரிய வேறுபாடு அல்ல.</p></div>
+<div class="call warn"><div class="ct">அடிப்படை வெல்லவும் முடியும்</div><p><strong>supermarket</strong> தரவுத்தொகுப்பில் ZeroR ஏறத்தாழ 64%, J48, NaiveBayes, PART ஏறத்தாழ 63%, IBk வெறும் <strong>38%</strong> பெறுகின்றன <a class="ts" href="#" data-v="2" data-t="300">05:00</a>. அங்குள்ள பண்புக்கூறுகள் தகவல் வழங்குபவை அல்ல.</p></div>
+<div class="call tip"><div class="ct">2.4-இலிருந்து கற்றல்கள் <a class="ts" href="#" data-v="2" data-t="401">06:41</a></div><ul>
+<li>மற்ற அனைத்துக்கும் முன் <strong>எப்போதும் ZeroR-ஐ முதலில் முயலவும்</strong>.</li>
+<li><strong>எளிமையே சிறந்தது</strong>: சிக்கலானவற்றுக்கு முன் எளிய வகைப்படுத்திகளை முயலவும்.</li>
+<li>சிறிய வேறுபாடுகள் (1% போன்றவை) <strong>குறிப்பிடத்தக்கவையா</strong> எனக் கேட்கவும்.</li>
+<li><strong>Weka-வைக் கண்மூடித்தனமாகப் பயன்படுத்த வேண்டாம்</strong>: தரவைப் புரிந்துகொள்ளவும்.</li>
+</ul></div>
+<h3>2.5 குறுக்கு உறுதிப்படுத்தல்</h3>
+<p>இதுவரையான மதிப்பீட்டு விருப்பங்கள்: <strong>சுயாதீனச் சோதனைத் தொகுப்பு</strong>, <strong>பயிற்சித் தொகுப்பு</strong> (வேண்டாம்!), <strong>ஒதுக்கீடு</strong> (சதவீதப் பிரிப்பு, மீண்டும் செய்யலாம்). நான்காவது <strong>குறுக்கு உறுதிப்படுத்தல்</strong> <a class="ts" href="#" data-v="3" data-t="52">00:52</a>.</p>
+<div class="call key"><div class="ct">k-மடங்கு குறுக்கு உறுதிப்படுத்தல்</div><p>தரவை <strong>ஒருமுறை</strong>, <strong>k சம மடிப்புகளாகப்</strong> பிரிக்கவும் (பொதுவாக <strong>10</strong>). <strong>ஒவ்வொரு மடிப்பையும் மாறிமாறிச்</strong> சோதனைக்காக ஒதுக்கி, மற்ற k − 1-இல் பயிற்றுவித்து, பின்னர் k முடிவுகளின் <strong>சராசரியை</strong> எடுக்கவும் <a class="ts" href="#" data-v="3" data-t="136">02:16</a>. ஒவ்வொரு நிகழ்வும் <strong>சோதனைக்கு ஒருமுறையும்</strong>, <strong>பயிற்சிக்கு k − 1 முறையும்</strong> பயன்படுகிறது.</p></div>
+<ul>
+<li><strong>படையாக்கப்பட்ட</strong> குறுக்கு உறுதிப்படுத்தல், ஒவ்வொரு மடிப்பிலும் <strong>ஒவ்வொரு வகுப்பின் சரியான விகிதம்</strong> ஏறத்தாழ இருக்கும்படி செய்கிறது. மாறுபாட்டை மேலும் குறைக்கிறது; இதுவே <strong>Weka-வின் இயல்புநிலை</strong> <a class="ts" href="#" data-v="3" data-t="197">03:17</a>.</li>
+<li>10-மடங்கு குறுக்கு உறுதிப்படுத்தலில் Weka படிமுறையை <strong>11 தடவைகள்</strong> இயக்குகிறது: மடிப்புக்கு ஒருமுறை; பயன்படுத்தப்போகும் வகைப்படுத்தியை உருவாக்க <strong>முழுத் தரவுத்தொகுப்பிலும் இறுதியாக ஒருமுறை</strong> <a class="ts" href="#" data-v="3" data-t="231">03:51</a>.</li>
+</ul>
+<p><div data-ta-tool="cv"></div></p>
+<div class="call tip"><div class="ct">நடைமுறை விதி <a class="ts" href="#" data-v="3" data-t="287">04:47</a></div><ul>
+<li><strong>அதிகத் தரவு</strong> (எ.கா. இரு-வகுப்புப் பிரச்சினையில் 10,000+ நிகழ்வுகள்) → ஒருமுறை மதிப்பிடப்பட்ட <strong>சதவீதப் பிரிப்பு</strong> போதும்.</li>
+<li><strong>குறைந்த தரவு</strong> (ஏறத்தாழ 1,000-க்குக் கீழ்) → <strong>படையாக்கப்பட்ட 10-மடங்கு குறுக்கு உறுதிப்படுத்தல்</strong> பயன்படுத்தவும்.</li>
+<li>ஒவ்வொரு வகுப்புக்கும் நியாயமான பிரதிநிதித்துவம் கிடைக்க <strong>அதிக வகுப்புகளுக்கு அதிகத் தரவு</strong> தேவை.</li>
+</ul></div>
+<h3>2.6 குறுக்கு உறுதிப்படுத்தல் முடிவுகள்</h3>
+<p>10 வெவ்வேறு சீரற்ற விதைகளுடன் diabetes-இல் J48 <a class="ts" href="#" data-v="4" data-t="151">02:31</a>:</p>
+<table>
+<thead>
+<tr>
+<th>முறை</th>
+<th>சராசரித் துல்லியம்</th>
+<th>நியம விலகல்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>10-மடங்கு குறுக்கு உறுதிப்படுத்தல்</strong></td>
+<td><strong>74.5%</strong></td>
+<td><strong>0.9%</strong></td>
+</tr>
+<tr>
+<td>மீண்டும் ஒதுக்கீடு (90/10, 10 தடவைகள்)</td>
+<td>74.8%</td>
+<td>4.6%</td>
+</tr>
+<tr>
+<td>ZeroR அடிப்படை</td>
+<td>65.1%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="call key"><div class="ct">முடிவு</div><p>இரண்டும் ஏறத்தாழ <strong>அதே சராசரியை</strong> வழங்கினாலும் குறுக்கு உறுதிப்படுத்தலின் <strong>மாறுபாடு மிகக்குறைவு</strong>. எனவே J48 ஏறத்தாழ <strong>74.5% (சுமார் 73.5%–75.5%)</strong> பெறுகிறது; 65.1% அடிப்படையைவிட நன்கு அதிகம் <a class="ts" href="#" data-v="4" data-t="360">06:00</a>.</p></div>
+<p><strong>ஏன் 10 மடிப்புகள்; 20 அல்ல?</strong> <a class="ts" href="#" data-v="4" data-t="268">04:28</a> அதிக மடிப்புகள் அதிகத் தரவில் பயிற்றுவிக்கின்றன (95% மற்றும் 90%); ஆனால் ஒவ்வொரு சோதனை மடிப்பும் சிறிதாகிறது (பலவீனமான புள்ளிவிவர மாதிரி); இருமடங்கு நேரமும் எடுக்கிறது. முழுமையான விடை இல்லை; <strong>10-மடங்கு வழக்கமானது</strong>, Weka-வின் இயல்புநிலையும் அதுவே.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>Clustering என்றால் என்ன?</h4><p>Labels முன்பே தெரியாத records-ஐ ஒற்றுமையின்படி குழுவாக்குவது <strong>Clustering</strong>. ஒரே group-க்குள் அதிக similarity; groups இடையே குறைந்த similarity வேண்டும். இது தெரிந்த class கற்ற classification-இலிருந்து வேறு.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
 <p><strong>Clustering</strong> labels இல்லாமல் similarity groups; classification pre-labelled target கற்கும். Customer segmentation, images, compression, anomaly candidates பயன்பாடுகள். Similarity choice/scaling-ஐப் பொறுத்து groups மாறும்; found cluster தானாக real-world class அல்ல. Outlier fraud-க்கு signal ஆகலாம்; fraud proof அல்ல. “பின்னர் labels” என்பது analyst interpretation, training labels இருந்தது என்று அர்த்தமில்லை.</p></div><div class="ta-recap-item"><h4>நல்ல Clustering-க்கு என்ன தேவை?</h4><p>பெரிய data-வில் இயங்குதல், பல data types, வேறுவடிவ clusters, noise ஆகியவற்றைக் கையாள வேண்டும். எல்லாக் குழுக்களும் வட்டமாக இருக்கும் என்று கருதும் முறை எல்லாத் தரவுக்கும் பொருந்தாது.</p>
 <p>ஒன்பது தேவைகள்: பெரிய data-வில் scalability; கலந்த attribute types; arbitrary cluster shapes; குறைந்த parameter/domain assumptions; noise; incremental data/order effects; high dimensionality; user constraints; புரியக்கூடிய result.
@@ -818,7 +1315,7 @@ Centroid coordinates ஒவ்வொரு group-இன் coordinate means. Ite
 10-fold CV: ஒவ்வொரு record test-ஆக ஒருமுறை, training-ஆக ஒன்பது முறை. Weka displayed full-data model-உடன் learner <strong>11</strong> முறை இயங்கலாம். Fold scores மிகவும் ஒன்றுபோல் இருந்தாலும் எதிர்கால performance உறுதி அல்ல; mean-உடன் variation பார்க்கவும்.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
 <p><strong>ZeroR classification</strong> majority class:500/768≈<strong>65.1%</strong>. J48≈74.5% என்பது dataset/video example; universal score அல்ல. k-fold CV:ஒவ்வொரு sample ஒருமுறை test,k−1முறை training; folds sizes remainder இருந்தால் சுமார் சமம். Stratified class proportions காக்கும். Weka displayed final model முழு data-இல் train ஆகலாம்; அதன் training predictions அல்ல CV score.</p>
-<p>Video comparison CV mean74.5%,SD0.9 vs repeated holdout74.8%,SD4.6; இதிலிருந்து எல்லா dataset-க்கும் CV variance எப்போதும் குறைவு என முடிவுசெய்யாதீர்கள். Time-series/grouped users-க்கு leakage தவிர்க்க appropriate splits தேவை. 10-fold practical convention; fixed data-count threshold சட்டம் அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><table>
+<p>Video comparison CV mean74.5%,SD0.9 vs repeated holdout74.8%,SD4.6; இதிலிருந்து எல்லா dataset-க்கும் CV variance எப்போதும் குறைவு என முடிவுசெய்யாதீர்கள். Time-series/grouped users-க்கு leakage தவிர்க்க appropriate splits தேவை. 10-fold practical convention; fixed data-count threshold சட்டம் அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>
@@ -891,7 +1388,80 @@ Centroid coordinates ஒவ்வொரு group-இன் coordinate means. Ite
 <td>Same mean (74.5% vs 74.8%), smaller SD (0.9% vs 4.6%)</td>
 </tr>
 </tbody>
-</table></div><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">23 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="dm-Week13" data-pick="0"><script type="application/json" class="qdata">[{"q": "A cluster is a collection of data objects that are:", "o": ["Similar within the same cluster and dissimilar to objects in other clusters", "Labelled with known classes before mining", "Always spherical and the same size", "Randomly grouped"], "e": "High intracluster similarity, low intercluster similarity. ", "a": 0, "w": "Week 13"}, {"q": "How does clustering differ from classification?", "o": ["Clustering doesn't need labelled training data; groups are found first and labelled afterwards", "Clustering needs a larger labelled training set", "They are the same thing", "Classification never uses training data"], "e": "Clustering is unsupervised; classification is supervised. ", "a": 0, "w": "Week 13"}, {"q": "Detecting credit card fraud as values \"far away\" from any cluster is called:", "o": ["Outlier detection", "Data compression", "Grid quantisation", "Rule extraction"], "e": "Outliers can be more interesting than the common cases. ", "a": 0, "w": "Week 13"}, {"q": "Ordinary k-means tends to work best with clusters that are:", "o": ["Compact, roughly spherical, and of comparable scale", "Any arbitrary shape", "Always one cluster", "Hierarchical"], "e": "This is a limitation of the centroid-based method, not a restriction on every algorithm using a distance metric. ", "a": 0, "w": "Week 13"}, {"q": "Clustering households to place new ATMs while respecting rivers and highways illustrates:", "o": ["Constraint-based clustering", "High dimensionality", "Incremental clustering", "Grid-based clustering"], "e": "Real applications often cluster under constraints. ", "a": 0, "w": "Week 13"}, {"q": "In a partitioning method, which requirement can be relaxed in fuzzy partitioning?", "o": ["Each object must belong to exactly one group", "Each group must contain at least one object", "k must be at most n", "Clusters must be close together"], "e": "In fuzzy partitioning an object can belong to several groups. ", "a": 0, "w": "Week 13"}, {"q": "k-means represents each cluster by:", "o": ["The mean value of the objects in the cluster", "One actual object near the centre", "The first object chosen", "A grid cell"], "e": "k-medoids uses a representative object instead. ", "a": 0, "w": "Week 13"}, {"q": "The agglomerative hierarchical approach:", "o": ["Starts with each object as its own group and merges the closest groups", "Starts with one cluster and splits it", "Uses a grid of cells", "Fits a statistical model"], "e": "Agglomerative is bottom-up; divisive is top-down. ", "a": 0, "w": "Week 13"}, {"q": "A main weakness of hierarchical methods is that:", "o": ["A merge or split can never be undone", "They only work on grids", "They need labelled data", "They are always slower than k-means"], "e": "Rigidity keeps computation cheap but erroneous decisions can't be corrected. ", "a": 0, "w": "Week 13"}, {"q": "Which method grows a cluster while its neighbourhood density exceeds a threshold?", "o": ["DBSCAN (density-based)", "STING (grid-based)", "k-medoids (partitioning)", "COBWEB (model-based)"], "e": "Density-based methods find arbitrary shapes and filter out noise. ", "a": 0, "w": "Week 13"}, {"q": "The main advantage of grid-based methods is:", "o": ["After grid construction, clustering operates on cells, which can make it fast", "They find the exact global optimum", "They need no parameters at all", "They can undo merges"], "e": "STING is a typical example. Reading data and constructing the grid still depends on the input size. ", "a": 0, "w": "Week 13"}, {"q": "Which is a model-based clustering algorithm?", "o": ["EM (expectation-maximisation)", "BIRCH", "DBSCAN", "WaveCluster"], "e": "Other model-based examples: COBWEB and SOM. ", "a": 0, "w": "Week 13"}, {"q": "With Manhattan distance, what is the distance between (8, 4) and (2, 10)?", "e": "|8 − 2| + |4 − 10| = 6 + 6 = 12. ", "n": 12.0, "w": "Week 13"}, {"q": "Cluster 2 contains (8,4), (5,8), (7,5), (6,4) and (4,9). What is the x-coordinate of its new mean?", "e": "(8 + 5 + 7 + 6 + 4) / 5 = 30 / 5 = 6. The new centre is (6, 6). ", "n": 6.0, "w": "Week 13"}, {"q": "In the lesson example, which point moves from cluster 2 to cluster 1 in the second iteration?", "o": ["A8 (4, 9)", "A4 (5, 8)", "A2 (2, 5)", "A3 (8, 4)"], "e": "A8 is 3 from (2, 10) but 5 from (6, 6). ", "a": 0, "w": "Week 13"}, {"q": "What is a key weakness of k-means?", "o": ["You must choose k in advance, and outliers pull the means", "It can't handle numeric data", "It always finds arbitrary-shaped clusters", "It never converges"], "e": "Its result also depends on the initial centres. ", "a": 0, "w": "Week 13"}, {"q": "With q = 2, the Minkowski distance becomes:", "o": ["Euclidean distance", "Manhattan distance", "Cosine similarity", "Hamming distance"], "e": "q = 1 gives Manhattan distance. ", "a": 0, "w": "Week 13"}, {"q": "The ZeroR classifier:", "o": ["Always predicts the most popular class", "Builds the deepest possible tree", "Uses 10-fold cross-validation internally", "Picks a random class each time"], "e": "It's the baseline you should always try first. ", "a": 0, "w": "Week 13"}, {"q": "The diabetes data has 500 negative and 268 positive instances. What percentage accuracy does ZeroR get?", "e": "500 / 768 = 65.1%. ", "n": 65.0, "t": 0.5, "w": "Week 13"}, {"q": "In 10-fold cross-validation, each instance is used for testing:", "o": ["Exactly once", "Ten times", "Never", "Nine times"], "e": "It's used for training nine times. ", "a": 0, "w": "Week 13"}, {"q": "Stratified cross-validation ensures that:", "o": ["Each fold has about the right proportion of each class", "Each fold has exactly one instance", "The folds overlap", "Only the training set is used"], "e": "It reduces the variance of the estimate further, and it's Weka's default. ", "a": 0, "w": "Week 13"}, {"q": "With 10-fold cross-validation, how many times does Weka run the learning algorithm?", "e": "Once per fold, plus a final time on the whole data set. ", "n": 11.0, "w": "Week 13"}, {"q": "Compared with repeated holdout, 10-fold cross-validation on the diabetes data gave:", "o": ["About the same mean but a much smaller standard deviation", "A much higher mean", "A larger standard deviation", "Exactly the baseline accuracy"], "e": "74.5% ± 0.9% vs 74.8% ± 4.6%. ", "a": 0, "w": "Week 13"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2012/Week%2012%20-%20Study%20Guide.html"><small>← Previous</small>Bayesian &amp; Rule-Based Classification</a><a class="nx" href="../Week%2014/Week%2014%20-%20Study%20Guide.html"><small>Next →</small>k-Medoids &amp; Hierarchical Clustering</a></div></main></div>
+</table></div><div class="hci-ta" lang="ta" hidden data-title="விரைவு மீளாய்வுத் தாள்"><table>
+<thead>
+<tr>
+<th>கருத்து</th>
+<th>இவ்வாறு நினைவில் கொள்ளவும்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>குழுமமாக்கல்</td>
+<td>ஒத்த பொருட்களைத் தொகுத்தல்; குழுமத்திற்குள் அதிக, குழுமங்களுக்கிடையே குறைந்த ஒற்றுமை</td>
+</tr>
+<tr>
+<td>வகைப்படுத்தலுடன் ஒப்பீடு</td>
+<td>மேற்பார்வையற்றது: அடையாளங்கள் தேவையில்லை; பின்னர் குழுக்களுக்கு அடையாளமிடவும்</td>
+</tr>
+<tr>
+<td>பயன்பாடுகள்</td>
+<td>வாடிக்கையாளர் குழுக்கள், படச் செயலாக்கம், தரவுப் பிரிவாக்கம், <strong>புறநிலை கண்டறிதல்</strong> (மோசடி)</td>
+</tr>
+<tr>
+<td>தேவைகள்</td>
+<td>அளவீட்டுத்திறன், வகைகள், எந்த வடிவமும், சில அளவுருக்கள், இரைச்சல், அதிகரிப்பு/வரிசை, உயர் பரிமாணம், கட்டுப்பாடுகள், விளக்கத்தன்மை</td>
+</tr>
+<tr>
+<td>பிரிவாக்கம்</td>
+<td>k குழுக்கள், ஒவ்வொன்றிலும் ≥ 1 பொருள், ஒவ்வொரு பொருளும் துல்லியமாக 1-இல்; k-means, k-medoids</td>
+</tr>
+<tr>
+<td>படிநிலை</td>
+<td>திரட்டல் (கீழிருந்து மேல்) / பிரித்தல் (மேலிருந்து கீழ்); செயல்தவிர்க்க முடியாது; Chameleon, BIRCH</td>
+</tr>
+<tr>
+<td>அடர்த்தி சார்ந்தது</td>
+<td>அயலிடம் அடர்த்தியாக இருக்கும்வரை வளர்; எந்த வடிவமும், இரைச்சலை வடிகட்டுகிறது; DBSCAN, OPTICS, DENCLUE</td>
+</tr>
+<tr>
+<td>கட்டம் சார்ந்தது</td>
+<td>கலங்கள்; வேகமானது, கல எண்ணிக்கையைச் சார்ந்தது; STING, WaveCluster</td>
+</tr>
+<tr>
+<td>மாதிரி சார்ந்தது</td>
+<td>குழுமத்துக்கு ஒரு மாதிரியைப் பொருத்து; EM, COBWEB, SOM</td>
+</tr>
+<tr>
+<td>k-means</td>
+<td>k மையங்களைத் தேர்ந்தெடு → அருகிலுள்ளதற்கு ஒதுக்கு → சராசரிகளை மீள்கணக்கிடு → மீண்டும் செய்</td>
+</tr>
+<tr>
+<td>எடுத்துக்காட்டு விடை</td>
+<td>மறு செய்கை 2-க்குப் பின்: (3, 9.5), (6.5, 5.25), (1.5, 3.5)</td>
+</tr>
+<tr>
+<td>தொலைவுகள்</td>
+<td>மின்கோவ்ஸ்கி: q = 1 மன்ஹாட்டன், q = 2 யூக்ளிடியன்</td>
+</tr>
+<tr>
+<td>அடிப்படை</td>
+<td><strong>ZeroR</strong> = எப்போதும் பெரும்பான்மை வகுப்பை ஊகி; diabetes 500/768 = 65%</td>
+</tr>
+<tr>
+<td>குறுக்கு உறுதிப்படுத்தல்</td>
+<td>k மடிப்புகள்; ஒவ்வொன்றும் ஒருமுறை சோதிக்கப்படும்; சராசரி; படையாக்கப்பட்டது = வகுப்பு விகிதங்கள் பேணப்படுகின்றன</td>
+</tr>
+<tr>
+<td>Weka இயக்கங்கள்</td>
+<td>k + 1 தடவைகள் (மடிப்புகள் + இறுதி மாதிரி)</td>
+</tr>
+<tr>
+<td>CV மற்றும் ஒதுக்கீடு</td>
+<td>அதே சராசரி (74.5% மற்றும் 74.8%), குறைந்த நியம விலகல் (0.9% மற்றும் 4.6%)</td>
+</tr>
+</tbody>
+</table></div></div><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">23 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="dm-Week13" data-pick="0"><script type="application/json" class="qdata">[{"q": "A cluster is a collection of data objects that are:", "o": ["Similar within the same cluster and dissimilar to objects in other clusters", "Labelled with known classes before mining", "Always spherical and the same size", "Randomly grouped"], "e": "High intracluster similarity, low intercluster similarity. ", "a": 0, "w": "Week 13"}, {"q": "How does clustering differ from classification?", "o": ["Clustering doesn't need labelled training data; groups are found first and labelled afterwards", "Clustering needs a larger labelled training set", "They are the same thing", "Classification never uses training data"], "e": "Clustering is unsupervised; classification is supervised. ", "a": 0, "w": "Week 13"}, {"q": "Detecting credit card fraud as values \"far away\" from any cluster is called:", "o": ["Outlier detection", "Data compression", "Grid quantisation", "Rule extraction"], "e": "Outliers can be more interesting than the common cases. ", "a": 0, "w": "Week 13"}, {"q": "Ordinary k-means tends to work best with clusters that are:", "o": ["Compact, roughly spherical, and of comparable scale", "Any arbitrary shape", "Always one cluster", "Hierarchical"], "e": "This is a limitation of the centroid-based method, not a restriction on every algorithm using a distance metric. ", "a": 0, "w": "Week 13"}, {"q": "Clustering households to place new ATMs while respecting rivers and highways illustrates:", "o": ["Constraint-based clustering", "High dimensionality", "Incremental clustering", "Grid-based clustering"], "e": "Real applications often cluster under constraints. ", "a": 0, "w": "Week 13"}, {"q": "In a partitioning method, which requirement can be relaxed in fuzzy partitioning?", "o": ["Each object must belong to exactly one group", "Each group must contain at least one object", "k must be at most n", "Clusters must be close together"], "e": "In fuzzy partitioning an object can belong to several groups. ", "a": 0, "w": "Week 13"}, {"q": "k-means represents each cluster by:", "o": ["The mean value of the objects in the cluster", "One actual object near the centre", "The first object chosen", "A grid cell"], "e": "k-medoids uses a representative object instead. ", "a": 0, "w": "Week 13"}, {"q": "The agglomerative hierarchical approach:", "o": ["Starts with each object as its own group and merges the closest groups", "Starts with one cluster and splits it", "Uses a grid of cells", "Fits a statistical model"], "e": "Agglomerative is bottom-up; divisive is top-down. ", "a": 0, "w": "Week 13"}, {"q": "A main weakness of hierarchical methods is that:", "o": ["A merge or split can never be undone", "They only work on grids", "They need labelled data", "They are always slower than k-means"], "e": "Rigidity keeps computation cheap but erroneous decisions can't be corrected. ", "a": 0, "w": "Week 13"}, {"q": "Which method grows a cluster while its neighbourhood density exceeds a threshold?", "o": ["DBSCAN (density-based)", "STING (grid-based)", "k-medoids (partitioning)", "COBWEB (model-based)"], "e": "Density-based methods find arbitrary shapes and filter out noise. ", "a": 0, "w": "Week 13"}, {"q": "The main advantage of grid-based methods is:", "o": ["After grid construction, clustering operates on cells, which can make it fast", "They find the exact global optimum", "They need no parameters at all", "They can undo merges"], "e": "STING is a typical example. Reading data and constructing the grid still depends on the input size. ", "a": 0, "w": "Week 13"}, {"q": "Which is a model-based clustering algorithm?", "o": ["EM (expectation-maximisation)", "BIRCH", "DBSCAN", "WaveCluster"], "e": "Other model-based examples: COBWEB and SOM. ", "a": 0, "w": "Week 13"}, {"q": "With Manhattan distance, what is the distance between (8, 4) and (2, 10)?", "e": "|8 − 2| + |4 − 10| = 6 + 6 = 12. ", "n": 12.0, "w": "Week 13"}, {"q": "Cluster 2 contains (8,4), (5,8), (7,5), (6,4) and (4,9). What is the x-coordinate of its new mean?", "e": "(8 + 5 + 7 + 6 + 4) / 5 = 30 / 5 = 6. The new centre is (6, 6). ", "n": 6.0, "w": "Week 13"}, {"q": "In the lesson example, which point moves from cluster 2 to cluster 1 in the second iteration?", "o": ["A8 (4, 9)", "A4 (5, 8)", "A2 (2, 5)", "A3 (8, 4)"], "e": "A8 is 3 from (2, 10) but 5 from (6, 6). ", "a": 0, "w": "Week 13"}, {"q": "What is a key weakness of k-means?", "o": ["You must choose k in advance, and outliers pull the means", "It can't handle numeric data", "It always finds arbitrary-shaped clusters", "It never converges"], "e": "Its result also depends on the initial centres. ", "a": 0, "w": "Week 13"}, {"q": "With q = 2, the Minkowski distance becomes:", "o": ["Euclidean distance", "Manhattan distance", "Cosine similarity", "Hamming distance"], "e": "q = 1 gives Manhattan distance. ", "a": 0, "w": "Week 13"}, {"q": "The ZeroR classifier:", "o": ["Always predicts the most popular class", "Builds the deepest possible tree", "Uses 10-fold cross-validation internally", "Picks a random class each time"], "e": "It's the baseline you should always try first. ", "a": 0, "w": "Week 13"}, {"q": "The diabetes data has 500 negative and 268 positive instances. What percentage accuracy does ZeroR get?", "e": "500 / 768 = 65.1%. ", "n": 65.0, "t": 0.5, "w": "Week 13"}, {"q": "In 10-fold cross-validation, each instance is used for testing:", "o": ["Exactly once", "Ten times", "Never", "Nine times"], "e": "It's used for training nine times. ", "a": 0, "w": "Week 13"}, {"q": "Stratified cross-validation ensures that:", "o": ["Each fold has about the right proportion of each class", "Each fold has exactly one instance", "The folds overlap", "Only the training set is used"], "e": "It reduces the variance of the estimate further, and it's Weka's default. ", "a": 0, "w": "Week 13"}, {"q": "With 10-fold cross-validation, how many times does Weka run the learning algorithm?", "e": "Once per fold, plus a final time on the whole data set. ", "n": 11.0, "w": "Week 13"}, {"q": "Compared with repeated holdout, 10-fold cross-validation on the diabetes data gave:", "o": ["About the same mean but a much smaller standard deviation", "A much higher mean", "A larger standard deviation", "Exactly the baseline accuracy"], "e": "74.5% ± 0.9% vs 74.8% ± 4.6%. ", "a": 0, "w": "Week 13"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2012/Week%2012%20-%20Study%20Guide.html"><small>← Previous</small>Bayesian &amp; Rule-Based Classification</a><a class="nx" href="../Week%2014/Week%2014%20-%20Study%20Guide.html"><small>Next →</small>k-Medoids &amp; Hierarchical Clustering</a></div></main></div>
 <script type="application/json" id="study-data">[{"key": "bpas", "name": "Business Processes & Accounting Systems", "exam": ["2026-11-15", "11:00", "14:00"], "url": "Business%20Processes%20and%20Accounting%20Systems/Study%20Guide%20-%20Index.html", "weeks": [{"key": "bpas-Week01", "label": "Week 01", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Business processes"}, {"id": "s2", "title": "Accounting information and its users"}, {"id": "s3", "title": "What is an Accounting Information System?"}, {"id": "s4", "title": "The five components of a computerised AIS"}, {"id": "s5", "title": "Internal control & security"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week02", "label": "Week 02", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is accounting?"}, {"id": "s2", "title": "Stakeholders and what they need"}, {"id": "s3", "title": "The Conceptual Framework for financial reporting"}, {"id": "s4", "title": "Debit & credit rules and the accounting equation"}, {"id": "s5", "title": "The T-account & balancing"}, {"id": "s6", "title": "Source documents & primary books"}, {"id": "s7", "title": "The four day books (primary entry journals)"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week03", "label": "Week 03", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where these books fit"}, {"id": "s2", "title": "The cash book"}, {"id": "s3", "title": "The petty cash book & imprest system"}, {"id": "s4", "title": "The general journal"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week04", "label": "Week 04", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Capital vs revenue expenditure"}, {"id": "s2", "title": "The general ledger"}, {"id": "s3", "title": "The trial balance"}, {"id": "s4", "title": "Worked example: posting to the ledger and extracting a TB"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week05", "label": "Week 05", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From trial balance to financial statements"}, {"id": "s2", "title": "The trading account → gross profit"}, {"id": "s3", "title": "The income statement → net profit"}, {"id": "s4", "title": "LKAS 1 / IAS 1 — Presentation of Financial Statements"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week06", "label": "Week 06", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The statement of financial position (SFP)"}, {"id": "s2", "title": "Adjustment 1: closing inventory"}, {"id": "s3", "title": "LKAS 16 — Property, Plant & Equipment"}, {"id": "s4", "title": "Adjustment 2: depreciation"}, {"id": "s5", "title": "Disposal of PPE"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week07", "label": "Week 07", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The accrual concept"}, {"id": "s2", "title": "Accrued & prepaid expenses"}, {"id": "s3", "title": "Income receivable & income received in advance"}, {"id": "s4", "title": "Bad debts (irrecoverable debts)"}, {"id": "s5", "title": "Provision for impairment of receivables"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week08", "label": "Week 08", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Inventory & LKAS 2"}, {"id": "s2", "title": "Function 1: managing purchases"}, {"id": "s3", "title": "Function 2: storing materials & stock levels"}, {"id": "s4", "title": "Function 3: pricing material issues — FIFO & weighted average"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week09", "label": "Week 09", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct vs indirect labour"}, {"id": "s2", "title": "Time keeping & time booking"}, {"id": "s3", "title": "Methods of remuneration"}, {"id": "s4", "title": "The salary sheet, EPF & ETF"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week10", "label": "Week 10", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is overhead?"}, {"id": "s2", "title": "Cost centres, allocation & apportionment"}, {"id": "s3", "title": "Re-apportioning service department costs"}, {"id": "s4", "title": "Overhead absorption"}, {"id": "s5", "title": "Under- and over-absorption"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week11", "label": "Week 11", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why price matters"}, {"id": "s2", "title": "The pricing policy: six factors"}, {"id": "s3", "title": "Markup vs margin"}, {"id": "s4", "title": "Pricing methods"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week12", "label": "Week 12", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why ratio analysis?"}, {"id": "s2", "title": "1. Liquidity ratios"}, {"id": "s3", "title": "2. Gearing (capital structure) ratios"}, {"id": "s4", "title": "3. Financial efficiency (activity) ratios"}, {"id": "s5", "title": "4. Profitability ratios"}, {"id": "s6", "title": "5. Shareholder (market test) ratios"}, {"id": "s7", "title": "Benefits & limitations"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week13", "label": "Week 13", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is project appraisal?"}, {"id": "s2", "title": "Non-discounting methods"}, {"id": "s3", "title": "Time value of money"}, {"id": "s4", "title": "Net present value (NPV)"}, {"id": "s5", "title": "Internal rate of return (IRR)"}, {"id": "s6", "title": "Which method is best?"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week14", "label": "Week 14", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a budget?"}, {"id": "s2", "title": "Types of budgets"}, {"id": "s3", "title": "The functional budgets: formats"}, {"id": "s4", "title": "Full worked example: LFT company"}, {"id": "s5", "title": "The cash budget: rules"}, {"id": "s6", "title": "Limitations of budgeting [[36:08]]"}, {"id": "s7", "title": "Practice questions (course paper)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week15", "label": "Week 15", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Standard cost & standard costing"}, {"id": "s2", "title": "Setting standards"}, {"id": "s3", "title": "Types of standards"}, {"id": "s4", "title": "Standard cost card"}, {"id": "s5", "title": "The variance tree"}, {"id": "s6", "title": "Variance formulas"}, {"id": "s7", "title": "Advantages & limitations"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-papers", "label": "Past papers", "url": "Business%20Processes%20and%20Accounting%20Systems/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Q1: Financial statements (40 marks)"}, {"id": "s3", "title": "January 2023 — Q2: Inventory, petty cash, framework (20 marks)"}, {"id": "s4", "title": "January 2023 — Q3: Primary entry books and NPV (20 marks)"}, {"id": "s5", "title": "January 2023 — Q4: Cash budget and sales variances (20 marks)"}, {"id": "s6", "title": "January 2023 — Q5: Overheads (20 marks)"}, {"id": "s7", "title": "August 2020 — what's different"}, {"id": "s8", "title": "November 2019 — Section A, Q1: 20 MCQs"}, {"id": "s9", "title": "November 2019 — Section A, Q2: Araliya Traders (Rs. '000)"}, {"id": "s10", "title": "November 2019 — Section B"}, {"id": "s11", "title": "2024 and 2025 — topic lists to practise"}]}]}, {"key": "dm", "name": "Data Mining", "exam": ["2026-11-22", "11:30", "14:30"], "url": "Data%20Mining/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dm-Week01", "label": "Week 01", "url": "Data%20Mining/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What data mining is about"}, {"id": "s2", "title": "Why data mining is required"}, {"id": "s3", "title": "Big Data and the 5 V's"}, {"id": "s4", "title": "Defining data mining properly"}, {"id": "s5", "title": "Applications of data mining"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week02", "label": "Week 02", "url": "Data%20Mining/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Data mining = \"knowledge mining from data\""}, {"id": "s2", "title": "The 7 steps of the KDD process"}, {"id": "s3", "title": "Architecture of a typical data mining system"}, {"id": "s4", "title": "What kinds of data can be mined?"}, {"id": "s5", "title": "Data mining task primitives"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week03", "label": "Week 03", "url": "Data%20Mining/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why preprocessing is needed"}, {"id": "s2", "title": "Data cleaning — handling missing values"}, {"id": "s3", "title": "Noisy data and smoothing"}, {"id": "s4", "title": "Data cleaning as a process"}, {"id": "s5", "title": "Data integration"}, {"id": "s6", "title": "Data transformation"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week04", "label": "Week 04", "url": "Data%20Mining/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why reduce data at all?"}, {"id": "s2", "title": "Data cube aggregation"}, {"id": "s3", "title": "Attribute subset selection"}, {"id": "s4", "title": "Dimensionality reduction"}, {"id": "s5", "title": "Numerosity reduction"}, {"id": "s6", "title": "Discretization & concept hierarchies"}, {"id": "s7", "title": "Binning: equal-width vs equal-depth"}, {"id": "s8", "title": "Smoothing noisy data with bins"}, {"id": "s9", "title": "Histogram partitioning — a full worked example"}, {"id": "s10", "title": "Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule"}, {"id": "s11", "title": "Self-assignment (2024): binning in practice"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week05", "label": "Week 05", "url": "Data%20Mining/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why data warehouses matter"}, {"id": "s2", "title": "What is a data warehouse?"}, {"id": "s3", "title": "OLTP vs OLAP"}, {"id": "s4", "title": "Why keep the warehouse separate?"}, {"id": "s5", "title": "The multidimensional data model"}, {"id": "s6", "title": "Lattice of cuboids"}, {"id": "s7", "title": "Weka — the tool used in this course"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week06", "label": "Week 06", "url": "Data%20Mining/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why a different schema for warehouses?"}, {"id": "s2", "title": "Star schema"}, {"id": "s3", "title": "Snowflake schema"}, {"id": "s4", "title": "Fact constellation (galaxy schema)"}, {"id": "s5", "title": "Data warehouse vs data mart"}, {"id": "s6", "title": "Defining cubes with DMQL"}, {"id": "s7", "title": "Concept hierarchies"}, {"id": "s8", "title": "Weka 1.2 — Exploring the Explorer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week07", "label": "Week 07", "url": "Data%20Mining/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why build a data warehouse?"}, {"id": "s2", "title": "The four views of warehouse design"}, {"id": "s3", "title": "Design approaches & methodology"}, {"id": "s4", "title": "The 4-step warehouse design process"}, {"id": "s5", "title": "Three-tier data warehouse architecture"}, {"id": "s6", "title": "The metadata repository"}, {"id": "s7", "title": "OLAP server models: ROLAP, MOLAP, HOLAP"}, {"id": "s8", "title": "Weka 1.3 — Exploring datasets"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week08", "label": "Week 08", "url": "Data%20Mining/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why compute cubes efficiently?"}, {"id": "s2", "title": "Cube materialization: cells and cuboids"}, {"id": "s3", "title": "Full cube vs iceberg cube"}, {"id": "s4", "title": "MultiWay array aggregation"}, {"id": "s5", "title": "BUC — Bottom-Up Computation"}, {"id": "s6", "title": "Star attributes, star-nodes and star-trees"}, {"id": "s7", "title": "Attribute-oriented induction (AOI)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week09", "label": "Week 09", "url": "Data%20Mining/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Frequent patterns"}, {"id": "s2", "title": "Market basket analysis"}, {"id": "s3", "title": "Association rules, support and confidence"}, {"id": "s4", "title": "The Apriori algorithm"}, {"id": "s5", "title": "Full worked example (|D| = 9, min_sup = 2)"}, {"id": "s6", "title": "Generating strong association rules"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week10", "label": "Week 10", "url": "Data%20Mining/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why not just use Apriori?"}, {"id": "s2", "title": "FP-growth: the idea"}, {"id": "s3", "title": "Worked example (min_sup = 3)"}, {"id": "s4", "title": "Mining the FP-tree"}, {"id": "s5", "title": "Multilevel association rules"}, {"id": "s6", "title": "Multidimensional association rules"}, {"id": "s7", "title": "Constraint-based association mining"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week11", "label": "Week 11", "url": "Data%20Mining/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Classification vs prediction"}, {"id": "s2", "title": "The two-step classification process"}, {"id": "s3", "title": "Preparing data & comparing methods"}, {"id": "s4", "title": "Decision trees & their history"}, {"id": "s5", "title": "Attribute selection measures"}, {"id": "s6", "title": "Worked example — buys_computer (14 tuples)"}, {"id": "s7", "title": "Weka: J48, filters and visualisation"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week12", "label": "Week 12", "url": "Data%20Mining/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Bayesian classifiers — overview"}, {"id": "s2", "title": "Bayes' theorem"}, {"id": "s3", "title": "The naïve Bayesian classifier"}, {"id": "s4", "title": "Worked example — will X buy a computer?"}, {"id": "s5", "title": "Rule-based classification"}, {"id": "s6", "title": "Extracting rules from a decision tree"}, {"id": "s7", "title": "Weka: training and testing"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week13", "label": "Week 13", "url": "Data%20Mining/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is cluster analysis?"}, {"id": "s2", "title": "Requirements of clustering in data mining"}, {"id": "s3", "title": "Types of clustering methods"}, {"id": "s4", "title": "Clustering by k-means"}, {"id": "s5", "title": "Weka: baseline accuracy and cross-validation"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week14", "label": "Week 14", "url": "Data%20Mining/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why k-medoids?"}, {"id": "s2", "title": "k-medoids and PAM"}, {"id": "s3", "title": "Worked example (from the lesson)"}, {"id": "s4", "title": "Hierarchical clustering"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week15", "label": "Week 15", "url": "Data%20Mining/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Overview"}, {"id": "s2", "title": "Financial data analysis"}, {"id": "s3", "title": "Retail industry"}, {"id": "s4", "title": "Telecommunication industry"}, {"id": "s5", "title": "Biological data analysis"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}]}, {"key": "dmath", "name": "Discrete Mathematics", "exam": ["2026-11-21", "08:30", "11:30"], "url": "Discrete%20Mathematics/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dmath-Week01", "label": "Week 01", "url": "Discrete%20Mathematics/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From propositions to predicates"}, {"id": "s2", "title": "Propositional functions"}, {"id": "s3", "title": "Compound expressions"}, {"id": "s4", "title": "Quantifiers: ∀, ∃, ∃!"}, {"id": "s5", "title": "Negating quantified expressions"}, {"id": "s6", "title": "Translating English into logic"}, {"id": "s7", "title": "Introduction to proofs — direct proof"}, {"id": "s8", "title": "Assignment 1: worked answers"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week02", "label": "Week 02", "url": "Discrete%20Mathematics/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Set terminology & notation"}, {"id": "s2", "title": "Equality, subsets & disjoint sets"}, {"id": "s3", "title": "Venn diagrams"}, {"id": "s4", "title": "Set operations"}, {"id": "s5", "title": "Set laws"}, {"id": "s6", "title": "Number of elements — inclusion–exclusion"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week03", "label": "Week 03", "url": "Discrete%20Mathematics/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a function?"}, {"id": "s2", "title": "One-to-one (injective)"}, {"id": "s3", "title": "Onto (surjective) & bijection"}, {"id": "s4", "title": "Inverse functions"}, {"id": "s5", "title": "Composition of functions"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week04", "label": "Week 04", "url": "Discrete%20Mathematics/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Sequences"}, {"id": "s2", "title": "Geometric & arithmetic progressions"}, {"id": "s3", "title": "Summation notation (Σ)"}, {"id": "s4", "title": "Geometric series (Theorem 1)"}, {"id": "s5", "title": "Infinite series (Theorem 2)"}, {"id": "s6", "title": "Double sums"}, {"id": "s7", "title": "Useful closed forms (Table 2)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week05", "label": "Week 05", "url": "Discrete%20Mathematics/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Matrices represent data"}, {"id": "s2", "title": "Matrix addition"}, {"id": "s3", "title": "Matrix multiplication"}, {"id": "s4", "title": "Identity, powers, transpose & symmetric"}, {"id": "s5", "title": "Zero–one matrices: join and meet"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week06", "label": "Week 06", "url": "Discrete%20Mathematics/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Divisibility"}, {"id": "s2", "title": "The division algorithm"}, {"id": "s3", "title": "Modular arithmetic & congruence"}, {"id": "s4", "title": "Primes"}, {"id": "s5", "title": "Cryptography — Caesar's cipher"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week07", "label": "Week 07", "url": "Discrete%20Mathematics/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why induction?"}, {"id": "s2", "title": "Worked induction proofs"}, {"id": "s3", "title": "The well-ordering property"}, {"id": "s4", "title": "Recursion"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week08", "label": "Week 08", "url": "Discrete%20Mathematics/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why counting?"}, {"id": "s2", "title": "The product rule (\"AND\", then multiply)"}, {"id": "s3", "title": "The sum rule (\"OR\", then add)"}, {"id": "s4", "title": "Tree diagrams"}, {"id": "s5", "title": "Combinations — order doesn't matter"}, {"id": "s6", "title": "Permutations — order matters"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week09", "label": "Week 09", "url": "Discrete%20Mathematics/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Binary relations"}, {"id": "s2", "title": "Functions as relations"}, {"id": "s3", "title": "Relations on a set"}, {"id": "s4", "title": "Properties: reflexive, symmetric, transitive"}, {"id": "s5", "title": "Equivalence relations"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week10", "label": "Week 10", "url": "Discrete%20Mathematics/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From pairs to n-tuples"}, {"id": "s2", "title": "Databases & the relational data model"}, {"id": "s3", "title": "Primary keys, composite keys, extension & intension"}, {"id": "s4", "title": "Operations: selection, projection, join"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week11", "label": "Week 11", "url": "Discrete%20Mathematics/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why graphs?"}, {"id": "s2", "title": "The birth of graph theory — Königsberg"}, {"id": "s3", "title": "What is a graph?"}, {"id": "s4", "title": "The six types of graphs"}, {"id": "s5", "title": "Graph models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week12", "label": "Week 12", "url": "Discrete%20Mathematics/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Trees"}, {"id": "s2", "title": "Rooted trees & terminology"}, {"id": "s3", "title": "Ordered rooted trees & binary trees"}, {"id": "s4", "title": "Binary search trees (BST)"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week13", "label": "Week 13", "url": "Discrete%20Mathematics/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Decision trees"}, {"id": "s2", "title": "Tree traversal"}, {"id": "s3", "title": "Spanning trees"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-papers", "label": "Past papers", "url": "Discrete%20Mathematics/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Question 1"}, {"id": "s3", "title": "January 2023 — Question 2 (number theory)"}, {"id": "s4", "title": "January 2023 — Question 3"}, {"id": "s5", "title": "January 2023 — Question 4 (graphs)"}, {"id": "s6", "title": "July 2023"}, {"id": "s7", "title": "October 2019"}, {"id": "s8", "title": "Model questions (official sample problems)"}]}]}, {"key": "hci", "name": "Human Computer Interaction", "exam": ["2026-11-22", "08:30", "11:30"], "url": "Human%20Computer%20Interaction/Study%20Guide%20-%20Index.html", "weeks": [{"key": "hci-Week01", "label": "Week 01", "url": "Human%20Computer%20Interaction/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "History of HCI"}, {"id": "s2", "title": "HCI is multi-disciplinary"}, {"id": "s3", "title": "Computers today: ubiquitous computing"}, {"id": "s4", "title": "Humans and perception"}, {"id": "s5", "title": "Interaction: two-way and task-centred"}, {"id": "s6", "title": "The HCI space"}, {"id": "s7", "title": "Applications of HCI — three pillars"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week02", "label": "Week 02", "url": "Human%20Computer%20Interaction/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is interaction?"}, {"id": "s2", "title": "Donald Norman's model — 7 stages"}, {"id": "s3", "title": "The two gulfs"}, {"id": "s4", "title": "Human errors: slips vs mistakes"}, {"id": "s5", "title": "The Abowd & Beale framework"}, {"id": "s6", "title": "Ergonomics"}, {"id": "s7", "title": "Direct vs indirect manipulation"}, {"id": "s8", "title": "Interaction styles"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week03", "label": "Week 03", "url": "Human%20Computer%20Interaction/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The human as an information processing machine"}, {"id": "s2", "title": "The senses in UI design"}, {"id": "s3", "title": "Human memory: three stores"}, {"id": "s4", "title": "Chunking & semantic networks"}, {"id": "s5", "title": "Cognitive load"}, {"id": "s6", "title": "Attention: selective vs divided"}, {"id": "s7", "title": "Motor skills & physical ergonomics"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week04", "label": "Week 04", "url": "Human%20Computer%20Interaction/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Design for tasks, not interfaces"}, {"id": "s2", "title": "The three contexts of \"use\": useful, usable, used"}, {"id": "s3", "title": "Three perspectives of the user"}, {"id": "s4", "title": "The in-car GPS turn example"}, {"id": "s5", "title": "UX beyond interaction"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week05", "label": "Week 05", "url": "Human%20Computer%20Interaction/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Action, interaction, effect, feedback"}, {"id": "s2", "title": "Feedback cycles are everywhere"}, {"id": "s3", "title": "Norman's model revisited: the two bridges"}, {"id": "s4", "title": "The 7 questions — designer & user perspectives"}, {"id": "s5", "title": "Norman's three levels of design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week06", "label": "Week 06", "url": "Human%20Computer%20Interaction/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct manipulation"}, {"id": "s2", "title": "The desktop metaphor vs the command line"}, {"id": "s3", "title": "Metaphorical vs literal invisibility — good vs bad design"}, {"id": "s4", "title": "Where direct manipulation is still lacking"}, {"id": "s5", "title": "Invisibility by learning vs by design"}, {"id": "s6", "title": "Five tips for invisible interfaces"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week07", "label": "Week 07", "url": "Human%20Computer%20Interaction/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Principles, guidelines and standards"}, {"id": "s2", "title": "Classic design frameworks"}, {"id": "s3", "title": "The 15 universal design principles"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week08", "label": "Week 08", "url": "Human%20Computer%20Interaction/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Mental models"}, {"id": "s2", "title": "Representations"}, {"id": "s3", "title": "Four traits of good representations"}, {"id": "s4", "title": "Full error taxonomy: slips vs mistakes"}, {"id": "s5", "title": "Learned helplessness & expert blindness"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week09", "label": "Week 09", "url": "Human%20Computer%20Interaction/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Task analysis & cognitive modelling"}, {"id": "s2", "title": "The GOMS framework"}, {"id": "s3", "title": "Keystroke-Level Model (KLM)"}, {"id": "s4", "title": "Fitts's law"}, {"id": "s5", "title": "Strengths and limits of predictive models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week10", "label": "Week 10", "url": "Human%20Computer%20Interaction/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Processor- vs predictor-oriented models"}, {"id": "s2", "title": "Cognitive Task Analysis (CTA) — 5 steps"}, {"id": "s3", "title": "Case study: the customer feedback thought stream"}, {"id": "s4", "title": "Hierarchical Task Analysis (HTA)"}, {"id": "s5", "title": "Modularity & divide and conquer"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week11", "label": "Week 11", "url": "Human%20Computer%20Interaction/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is user-centred design (UCD)?"}, {"id": "s2", "title": "The 8 user characteristics"}, {"id": "s3", "title": "ISO 9241-210: the 6 UCD principles"}, {"id": "s4", "title": "The 4-phase interaction design life cycle"}, {"id": "s5", "title": "Stakeholder-centred design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week12", "label": "Week 12", "url": "Human%20Computer%20Interaction/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where needfinding fits"}, {"id": "s2", "title": "The seven questions"}, {"id": "s3", "title": "Biases in needfinding"}, {"id": "s4", "title": "Needfinding methods"}, {"id": "s5", "title": "Representing the needs"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week13", "label": "Week 13", "url": "Human%20Computer%20Interaction/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where evaluation fits"}, {"id": "s2", "title": "Match the evaluation to the prototype"}, {"id": "s3", "title": "Evaluation across the design life cycle"}, {"id": "s4", "title": "Three types of evaluation"}, {"id": "s5", "title": "Four key terms"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-papers", "label": "Past papers", "url": "Human%20Computer%20Interaction/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what to focus on"}, {"id": "s2", "title": "ITE 3752 — Question 1: User-centred design (25 marks)"}, {"id": "s3", "title": "ITE 3752 — Question 2: Norman's model (25 marks)"}, {"id": "s4", "title": "ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)"}, {"id": "s5", "title": "ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)"}, {"id": "s6", "title": "Older ITE 3603 papers — outline answers"}]}]}, {"key": "mkt", "name": "Marketing", "exam": ["2026-11-22", "14:45", "17:45"], "url": "Marketing/Study%20Guide%20-%20Index.html", "weeks": [{"key": "mkt-Week01", "label": "Week 01", "url": "Marketing/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is marketing?"}, {"id": "s2", "title": "Marketing vs selling — the iceberg"}, {"id": "s3", "title": "Why marketing matters"}, {"id": "s4", "title": "Core concepts of marketing"}, {"id": "s5", "title": "Objectives of marketing"}, {"id": "s6", "title": "Quiz 01: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week02", "label": "Week 02", "url": "Marketing/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing has a history"}, {"id": "s2", "title": "1. Production concept"}, {"id": "s3", "title": "2. Product concept & marketing myopia"}, {"id": "s4", "title": "3. Selling concept"}, {"id": "s5", "title": "4. Marketing concept"}, {"id": "s6", "title": "5. Societal marketing concept"}, {"id": "s7", "title": "6. Holistic marketing concept"}, {"id": "s8", "title": "Quiz 02: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week03", "label": "Week 03", "url": "Marketing/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why scan the environment?"}, {"id": "s2", "title": "The three layers of the environment"}, {"id": "s3", "title": "Internal environment — 5 Ms & 7S"}, {"id": "s4", "title": "Micro environment (task environment)"}, {"id": "s5", "title": "Macro environment (DENTPC)"}, {"id": "s6", "title": "Responding to the environment"}, {"id": "s7", "title": "Marketing information system (MIS) & planning"}, {"id": "s8", "title": "Quiz 03: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week04", "label": "Week 04", "url": "Marketing/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Customer-driven marketing strategy"}, {"id": "s2", "title": "Market segmentation — four bases"}, {"id": "s3", "title": "Market targeting & Porter's five forces"}, {"id": "s4", "title": "Five patterns of target-market selection"}, {"id": "s5", "title": "Differentiation"}, {"id": "s6", "title": "Positioning & perceptual maps"}, {"id": "s7", "title": "Quiz 04: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week05", "label": "Week 05", "url": "Marketing/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why study consumer behaviour?"}, {"id": "s2", "title": "Consumer markets"}, {"id": "s3", "title": "The black box model (stimulus → response)"}, {"id": "s4", "title": "Factors influencing consumer behaviour"}, {"id": "s5", "title": "The buyer decision process — 5 stages"}, {"id": "s6", "title": "Four types of buying behaviour"}, {"id": "s7", "title": "Contemporary trends — Sri Lanka & global"}, {"id": "s8", "title": "Quiz 05: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week06", "label": "Week 06", "url": "Marketing/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a business market?"}, {"id": "s2", "title": "How business markets differ from consumer markets"}, {"id": "s3", "title": "Buying situations"}, {"id": "s4", "title": "Systems buying & selling"}, {"id": "s5", "title": "The buying centre — seven roles"}, {"id": "s6", "title": "Procurement: orientations & Kraljic's four product types"}, {"id": "s7", "title": "The 8 buy phases (Robinson et al.)"}, {"id": "s8", "title": "Business-to-business relationships"}, {"id": "s9", "title": "Quiz 06: model answer"}, {"id": "s10", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week07", "label": "Week 07", "url": "Marketing/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why marketing information matters"}, {"id": "s2", "title": "Three types of marketing data"}, {"id": "s3", "title": "The marketing information system (MIS)"}, {"id": "s4", "title": "Types of marketing research"}, {"id": "s5", "title": "The marketing research process"}, {"id": "s6", "title": "Why marketing research fails"}, {"id": "s7", "title": "Quiz 07: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week08", "label": "Week 08", "url": "Marketing/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is digital marketing?"}, {"id": "s2", "title": "Objectives of digital marketing"}, {"id": "s3", "title": "Why people go online"}, {"id": "s4", "title": "Key components of a digital marketing strategy"}, {"id": "s5", "title": "Strategy & measurement"}, {"id": "s6", "title": "Quiz 08: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week09", "label": "Week 09", "url": "Marketing/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why new products matter"}, {"id": "s2", "title": "Why develop new products, and why they fail"}, {"id": "s3", "title": "The 8-stage new product development process"}, {"id": "s4", "title": "The product life cycle (PLC)"}, {"id": "s5", "title": "Characteristics of each PLC stage"}, {"id": "s6", "title": "Marketing-mix strategies across the PLC"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week10", "label": "Week 10", "url": "Marketing/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Product strategy"}, {"id": "s2", "title": "Three levels of a product"}, {"id": "s3", "title": "Product classifications"}, {"id": "s4", "title": "Product mix and product line decisions"}, {"id": "s5", "title": "Brands, brand meaning and brand equity"}, {"id": "s6", "title": "Branding decisions"}, {"id": "s7", "title": "Packaging & labelling"}, {"id": "s8", "title": "Quiz 10: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week11", "label": "Week 11", "url": "Marketing/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Price: the revenue P"}, {"id": "s2", "title": "Factors affecting pricing decisions"}, {"id": "s3", "title": "The 6-step pricing process"}, {"id": "s4", "title": "New-product pricing: skimming vs penetration"}, {"id": "s5", "title": "Seven price-adjustment strategies"}, {"id": "s6", "title": "Price changes & reactions"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week12", "label": "Week 12", "url": "Marketing/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Before promoting"}, {"id": "s2", "title": "Integrated marketing communication (IMC)"}, {"id": "s3", "title": "Promotion objectives"}, {"id": "s4", "title": "The promotion mix"}, {"id": "s5", "title": "Advertising"}, {"id": "s6", "title": "Message strategy"}, {"id": "s7", "title": "Public relations"}, {"id": "s8", "title": "Sales promotion"}, {"id": "s9", "title": "Push vs pull channel policies"}, {"id": "s10", "title": "Socially responsible marketing communication"}, {"id": "s11", "title": "Quiz 12: model answer"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week13", "label": "Week 13", "url": "Marketing/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is \"place\"?"}, {"id": "s2", "title": "The nature of marketing channels"}, {"id": "s3", "title": "Push and pull strategies"}, {"id": "s4", "title": "How channel members add value"}, {"id": "s5", "title": "Channel levels"}, {"id": "s6", "title": "Channel behaviour and conflict"}, {"id": "s7", "title": "Conventional vs vertical marketing systems"}, {"id": "s8", "title": "Designing a marketing channel"}, {"id": "s9", "title": "Managing the marketing channel"}, {"id": "s10", "title": "Marketing logistics and supply chain management"}, {"id": "s11", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week14", "label": "Week 14", "url": "Marketing/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing planning"}, {"id": "s2", "title": "Purpose of marketing planning"}, {"id": "s3", "title": "Importance of marketing planning"}, {"id": "s4", "title": "Components of a marketing plan"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}]}]</script>
 <script>(function(){
   var KEY = document.body.getAttribute('data-key');
@@ -1321,4 +1891,209 @@ Centroid coordinates ஒவ்வொரு group-இன் coordinate means. Ite
   function allowed(k){return /^sg-done-(bpas|dm|dmath|hci|mkt)-(Week\d{2}|papers)$/.test(k)||/^sg-quiz-(bpas|dm|dmath|hci|mkt)-(Week\d{2}|mixed)$/.test(k)||/^sg-plan-(settings|events|time|reviews|baseline)$/.test(k);}
   render();setInterval(function(){if(!document.hidden&&!panel?.contains(document.activeElement))render();},60000);
 })(typeof window!=='undefined'?window:globalThis);
+</script><script type="application/json" id="hci-tamil-data">{"strings": {"Self-check quiz": "சுய பரிசோதனை வினாடிவினா", "Check my answers": "என் விடைகளைச் சரிபார்", "Try again (new order)": "மீண்டும் முயல்க (புதிய வரிசை)", "New random exam": "புதிய சீரற்ற தேர்வு", "All answered": "அனைத்துக்கும் விடையளிக்கப்பட்டது", "✓ Correct.": "✓ சரி.", "✗ Not quite.": "✗ முழுவதும் சரியில்லை.", "Excellent — you know this well": "மிகச் சிறப்பு — இதை நன்றாக அறிந்திருக்கிறீர்கள்", "Good — revise the ones you missed": "நன்று — தவறவிட்டவற்றை மீளாய்வு செய்யுங்கள்", "Getting there — reread the weak sections": "முன்னேறுகிறீர்கள் — பலவீனமான பகுதிகளை மீண்டும் வாசியுங்கள்", "Needs revision — go through the notes again": "மீளாய்வு தேவை — குறிப்புகளை மீண்டும் படியுங்கள்", "Lecture videos": "விரிவுரைக் காணொளிகள்", "▶ Lecture videos": "▶ விரிவுரைக் காணொளிகள்", "Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.": "இங்கோ குறிப்புகளுக்குள்ளோ உள்ள நேரக் குறியீட்டைச் சொடுக்கினால் காணொளி அந்த நேரத்துக்குச் செல்லும். நீங்கள் பார்த்த இடம் நினைவில் வைக்கப்படும்.", "Open in Google Drive ↗": "Google Drive-இல் திறக்கவும் ↗", "ON THIS PAGE": "இந்தப் பக்கத்தில்", "On this page": "இந்தப் பக்கத்தில்", "← Previous": "← முந்தையது", "Next →": "அடுத்தது →", "NEXT →": "அடுத்தது →", "Mark this section as understood": "இந்தப் பகுதியைப் புரிந்துகொண்டதாகக் குறிக்கவும்", "✓ Understood": "✓ புரிந்துகொண்டேன்", "Understood — click to undo": "புரிந்துகொண்டேன் — செயல்தவிர்க்கச் சொடுக்கவும்", "Type a number": "ஓர் எண்ணை உள்ளிடவும்", "Type what you remember…": "நினைவிருப்பதைத் தட்டச்சு செய்யுங்கள்…", "Answer:": "விடை:", "Best": "சிறந்தது", "Last": "கடைசி", "Attempts": "முயற்சிகள்", "Attempt": "முயற்சி", "today": "இன்று", "yesterday": "நேற்று", "Mixed practice exam": "கலப்புப் பயிற்சித் தேர்வு", "? Self-check quiz": "? சுய பரிசோதனை வினாடிவினா", "★ Mixed practice exam": "★ கலப்புப் பயிற்சித் தேர்வு", "📊 Your knowledge in this subject": "📊 இந்தப் பாடத்தில் உங்கள் அறிவு", "Overall knowledge": "ஒட்டுமொத்த அறிவு", "Weeks quizzed": "வினாடிவினா முயன்ற வாரங்கள்", "Average best score": "சிறந்த மதிப்பெண்களின் சராசரி", "on the weeks you tried": "நீங்கள் முயன்ற வாரங்களில்", "— average best score × weeks covered": "— சிறந்த மதிப்பெண்களின் சராசரி × முயன்ற வாரங்களின் விகிதம்", "Mixed exam best": "கலப்புத் தேர்வின் சிறந்த மதிப்பெண்", "Exam practice": "தேர்வுப் பயிற்சி", "Past papers with worked answers": "தீர்வுகளுடன் கடந்தகால வினாத்தாள்கள்", "Real exam questions from previous years, fully solved, plus which topics come up most.": "முந்தைய ஆண்டுகளின் உண்மையான தேர்வுக் கேள்விகளுக்கான முழுத் தீர்வுகளும் அதிகம் இடம்பெறும் தலைப்புகளும்.", "Offline study guides — one per week, built from the lecture notes and lecture videos. Green bar = sections you marked as understood.": "விரிவுரைக் குறிப்புகளையும் காணொளிகளையும் கொண்டு உருவாக்கப்பட்ட இணையமில்லா கற்றல் வழிகாட்டிகள் — வாரத்துக்கு ஒன்று. பச்சைப் பட்டை = நீங்கள் புரிந்துகொண்டதாகக் குறித்த பகுதிகள்.", "Take the": "நீங்கள் பல வாரங்களைப் படித்த பின், கீழேயுள்ள", "mixed practice exam": "கலப்புப் பயிற்சித் தேர்வை", "at the bottom when you have covered several weeks.": "முயலுங்கள்.", "📄 Lecture videos (no PDF for this week)": "📄 விரிவுரைக் காணொளிகள் (இந்த வாரத்துக்கு PDF இல்லை)", "📄 Lecture video (no PDF for this week)": "📄 விரிவுரைக் காணொளி (இந்த வாரத்துக்கு PDF இல்லை)", "✓ Understood — click to unmark": "✓ புரிந்துகொண்டேன் — குறியை நீக்கச் சொடுக்கவும்", "Data Mining": "தரவுச் சுரங்கம்", "data preprocessing": "தரவு முன்செயலாக்கம்", "Cluster Analysis & k-means": "குழுமப் பகுப்பாய்வும் k-means-உம்", "What clustering is and why it's useful, the nine requirements of clustering in data mining, the five families of clustering methods (partitioning, hierarchical, density-, grid- and model-based), and the k-means algorithm worked step by step.": "குழுமமாக்கல் என்றால் என்ன, அதன் பயன், தரவுச் சுரங்கத்தில் குழுமமாக்கலின் ஒன்பது தேவைகள், ஐந்து முறை குடும்பங்கள் (பிரிவாக்கம், படிநிலை, அடர்த்தி, கட்டம், மாதிரி சார்ந்தவை), படிப்படியான k-means செய்முறை.", "Clustering & k-means": "குழுமமாக்கலும் k-means-உம்", "Good clustering, distance functions (Minkowski, Manhattan, Euclidean), and the lesson's k-means example worked through.": "நல்ல குழுமமாக்கல், தொலைவுச் சார்புகள் (மின்கோவ்ஸ்கி, மன்ஹாட்டன், யூக்ளிடியன்), பாடத்தின் k-means எடுத்துக்காட்டுச் செய்முறை.", "Good clustering: high intra-class, low inter-class similarity": "நல்ல குழுமமாக்கல்: வகுப்பிற்குள் அதிக, வகுப்புகளுக்கிடையே குறைந்த ஒற்றுமை", "Distance functions return one number per pair": "தொலைவுச் சார்புகள் சோடிக்கு ஓர் எண்ணை வழங்குகின்றன", "Minkowski distance: q = 1 Manhattan, q = 2 Euclidean": "மின்கோவ்ஸ்கி தொலைவு: q = 1 மன்ஹாட்டன், q = 2 யூக்ளிடியன்", "k-means: the four steps": "k-means: நான்கு படிகள்", "Example: initial centres A1, A4, A7": "எடுத்துக்காட்டு: ஆரம்ப மையங்கள் A1, A4, A7", "Iteration 1: distance table A1–A8": "மறு செய்கை 1: A1–A8 தொலைவு அட்டவணை", "New centres from the cluster means": "குழுமச் சராசரிகளிலிருந்து புதிய மையங்கள்", "Recalculate until the centres are stable": "மையங்கள் நிலையாகும்வரை மீள்கணக்கிடுதல்", "k-means animation": "k-means இயங்குபடம்", "A short silent animation of k-means assigning points and moving the centres.": "புள்ளிகளை ஒதுக்கி மையங்களை நகர்த்தும் குறுகிய அமைதி k-means இயங்குபடம்.", "Weka 2.4 – Baseline accuracy": "Weka 2.4 – அடிப்படைத் துல்லியம்", "Always compare against ZeroR, the classifier that just guesses the most popular class.": "மிக அதிகம் நிகழும் வகுப்பையே ஊகிக்கும் ZeroR வகைப்படுத்தியுடன் எப்போதும் ஒப்பிடவும்.", "Introduction: baseline accuracy": "அறிமுகம்: அடிப்படைத் துல்லியம்", "The diabetes data set (Pima Indians)": "diabetes தரவுத்தொகுப்பு (Pima Indians)", "J48, Naive Bayes, IBk and PART compared": "J48, Naive Bayes, IBk, PART ஒப்பீடு", "Is 76% good? 500 of 768 are negative": "76% நல்லதா? 768-இல் 500 எதிர்மறை", "ZeroR: always guess the most popular class (65%)": "ZeroR: மிக அதிகம் நிகழும் வகுப்பை எப்போதும் ஊகித்தல் (65%)", "Supermarket data: the baseline beats every scheme": "Supermarket தரவு: அடிப்படை ஒவ்வொரு திட்டத்தையும் வெல்கிறது", "Lessons: try ZeroR first, simplicity is best": "கற்றல்கள்: முதலில் ZeroR முயல்க, எளிமையே சிறந்தது", "Weka 2.5 – Cross-validation": "Weka 2.5 – குறுக்கு உறுதிப்படுத்தல்", "The standard evaluation method: 10-fold and stratified cross-validation.": "வழக்கமான மதிப்பீட்டு முறை: 10-மடங்கு மற்றும் படையாக்கப்பட்ட குறுக்கு உறுதிப்படுத்தல்.", "Introduction: the standard way to evaluate": "அறிமுகம்: மதிப்பிடும் வழக்கமான முறை", "Cross-validation improves on repeated holdout": "மீண்டும் ஒதுக்கீட்டைவிடக் குறுக்கு உறுதிப்படுத்தல் மேம்படுகிறது", "10-fold cross-validation: divide once into 10 folds": "10-மடங்கு குறுக்கு உறுதிப்படுத்தல்: ஒருமுறை 10 மடிப்புகளாகப் பிரித்தல்", "Stratified cross-validation": "படையாக்கப்பட்ட குறுக்கு உறுதிப்படுத்தல்", "Weka runs the algorithm an 11th time on all the data": "Weka, முழுத் தரவிலும் படிமுறையை 11-ஆவது முறை இயக்குகிறது", "Rule of thumb: lots of data → percentage split; otherwise 10-fold": "நடைமுறை விதி: அதிகத் தரவு → சதவீதப் பிரிப்பு; இல்லாவிட்டால் 10-மடங்கு", "Weka 2.6 – Cross-validation results": "Weka 2.6 – குறுக்கு உறுதிப்படுத்தல் முடிவுகள்", "Cross-validation vs repeated holdout on the diabetes data: same mean, much smaller variance.": "diabetes தரவில் குறுக்கு உறுதிப்படுத்தலும் மீண்டும் ஒதுக்கீடும்: அதே சராசரி, மிகச்சிறிய மாறுபாடு.", "Introduction: cross-validation results": "அறிமுகம்: குறுக்கு உறுதிப்படுத்தல் முடிவுகள்", "Baseline on diabetes: 65.1%": "diabetes-இல் அடிப்படை: 65.1%", "J48 with 10-fold cross-validation: 73.8%, 75%, 75.5%…": "10-மடங்கு குறுக்கு உறுதிப்படுத்தலுடன் J48: 73.8%, 75%, 75.5%…", "Mean 74.5%, standard deviation 0.9%": "சராசரி 74.5%, நியம விலகல் 0.9%", "Repeated holdout: mean 74.8%, standard deviation 4.6%": "மீண்டும் ஒதுக்கீடு: சராசரி 74.8%, நியம விலகல் 4.6%", "Why 10 folds and not 20?": "ஏன் 10 மடிப்புகள்; 20 அல்ல?", "Cross-validation reduces the variance of the estimate": "குறுக்கு உறுதிப்படுத்தல் மதிப்பீட்டின் மாறுபாட்டைக் குறைக்கிறது", "Distance calculator": "தொலைவுக் கணிப்பான்", "k-means stepper (Manhattan distance)": "k-means படிக்கருவி (மன்ஹாட்டன் தொலைவு)", "Cross-validation fold viewer": "குறுக்கு உறுதிப்படுத்தல் மடிப்புப் பார்வையாளர்", "Instances": "நிகழ்வுகள்", "Folds k": "மடிப்புகள் k", "Point": "புள்ளி", "Cluster": "குழுமம்", "Next iteration": "அடுத்த மறு செய்கை", "Reset": "மீட்டமை", "Starting centres:": "ஆரம்ப மையங்கள்:", "New centres:": "புதிய மையங்கள்:", "converged: no point changed cluster": "ஒருங்கியது: எந்தப் புள்ளியும் குழுமம் மாறவில்லை", "Points A1–A8 from the lesson. Pick the three starting centres, then step through the iterations.": "பாடத்தின் A1–A8 புள்ளிகள். மூன்று ஆரம்ப மையங்களைத் தேர்ந்தெடுத்து, மறு செய்கைகளைப் படிப்படியாகப் பார்க்கவும்.", "Centre 1": "மையம் 1", "Centre 2": "மையம் 2", "Centre 3": "மையம் 3", "🧪 Try it — Distance calculator": "🧪 முயன்று பாருங்கள் — தொலைவுக் கணிப்பான்", "🧪 Try it — k-means stepper (Manhattan distance)": "🧪 முயன்று பாருங்கள் — k-means படிக்கருவி (மன்ஹாட்டன் தொலைவு)", "🧪 Try it — Cross-validation fold viewer": "🧪 முயன்று பாருங்கள் — குறுக்கு உறுதிப்படுத்தல் மடிப்புப் பார்வையாளர்", "Introduction to Data Mining & Big Data": "தரவுச் சுரங்கம் மற்றும் பெருந்தரவு அறிமுகம்", "Why we need data mining, what it is, the 5 V's of big data, and where data mining is used — banking, health and the public sector.": "தரவுச் சுரங்கம் ஏன் தேவை, அது என்ன, பெருந்தரவின் 5 V-கள், தரவுச் சுரங்கம் பயன்படுத்தப்படும் இடங்கள் — வங்கித்துறை, சுகாதாரம், பொதுத்துறை.", "The Knowledge Discovery (KDD) Process": "அறிவுக் கண்டறிதல் (KDD) செயல்முறை", "The 7 steps from raw data to knowledge, the architecture of a data-mining system, the kinds of data we can mine, and the five task primitives.": "மூலத் தரவிலிருந்து அறிவை அடையும் 7 படிகள், தரவுச் சுரங்க முறைமையின் கட்டமைப்பு, சுரங்கம் செய்யக்கூடிய தரவு வகைகள், ஐந்து பணி அடிப்படைக் கூறுகள்.", "Data Preprocessing — Cleaning, Integration & Transformation": "தரவு முன்செயலாக்கம் — தூய்மைப்படுத்தல், ஒருங்கிணைப்பு, உருமாற்றம்", "Why real data is dirty, how to fill missing values and smooth noise, cleaning as a process, integrating sources with correlation analysis, and normalization.": "உண்மையான தரவு ஏன் தூய்மையற்றது, விடுபட்ட பெறுமதிகளை நிரப்புவதும் இரைச்சலைச் சீராக்குவதும், தூய்மைப்படுத்தல் செயல்முறை, ஒட்டுறவுப் பகுப்பாய்வுடன் மூலங்களை ஒருங்கிணைத்தல், இயல்பாக்கம்.", "Data Reduction & Discretization": "தரவுக் குறைப்பும் தனித்துண்டாக்கலும்", "Make the dataset smaller without changing what it tells you — cubes, attribute selection, compression, histograms, binning and concept hierarchies.": "தரவு தெரிவிக்கும் தகவலை மாற்றாமல் தரவுத்தொகுப்பைச் சிறிதாக்குதல் — கனசதுரங்கள், பண்புக்கூறுத் தேர்வு, சுருக்கம், அலைவெண் செவ்வகங்கள், தொட்டிப் பிரித்தல், கருத்துப் படிநிலைகள்.", "Introduction to Data Warehousing": "தரவுக் கிடங்காக்கல் அறிமுகம்", "What a data warehouse is (Inmon's 4 keywords), OLTP vs OLAP, why keep it separate, and the multidimensional data model — cubes, facts, dimensions and the lattice of cuboids.": "தரவுக் கிடங்கு என்றால் என்ன (இன்மனின் 4 முக்கிய சொற்கள்), OLTP மற்றும் OLAP, தனியாக வைத்திருப்பதன் காரணம், பல்பரிமாணத் தரவு மாதிரி — கனசதுரங்கள், உண்மைகள், பரிமாணங்கள், கனச்செவ்வகங்களின் பின்னல்.", "Schemas for the Multidimensional Model": "பல்பரிமாண மாதிரிக்கான திட்டவடிவங்கள்", "Star, snowflake and fact constellation schemas, data warehouse vs data mart, defining cubes with DMQL, and concept hierarchies.": "நட்சத்திரம், பனித்துகள், உண்மை விண்மீன்கூட்டத் திட்டவடிவங்கள், தரவுக் கிடங்கு மற்றும் தரவுச் சந்தை, DMQL-ஆல் கனசதுரங்களை வரையறுத்தல், கருத்துப் படிநிலைகள்.", "Design of a Data Warehouse": "தரவுக் கிடங்கின் வடிவமைப்பு", "Benefits, the four design views, top-down vs bottom-up, the 4-step design process, three-tier architecture, the metadata repository, and ROLAP / MOLAP / HOLAP servers.": "நன்மைகள், நான்கு வடிவமைப்புப் பார்வைகள், மேலிருந்து கீழ் மற்றும் கீழிருந்து மேல், 4-படி வடிவமைப்புச் செயல்முறை, மூன்றடுக்குக் கட்டமைப்பு, மேல்தரவுச் சேமிப்பகம், ROLAP / MOLAP / HOLAP சேவையகங்கள்.", "Data Cube Computation & Data Generalization": "தரவுக் கனசதுரக் கணக்கீடும் தரவுப் பொதுமைப்படுத்தலும்", "Materializing cubes, base vs aggregate cells, iceberg cubes, MultiWay array aggregation, BUC, star-nodes and star-trees, and attribute-oriented induction (AOI).": "கனசதுரப் பொருளாக்கம், அடிப்படை மற்றும் திரட்டுக் கலங்கள், பனிப்பாறைக் கனசதுரங்கள், MultiWay அணித் திரட்டல், BUC, நட்சத்திரக் கணுக்களும் மரங்களும், பண்புக்கூறு நோக்கிய தூண்டல் (AOI).", "Frequent Patterns & the Apriori Algorithm": "அடிக்கடி நிகழும் வடிவங்களும் Apriori படிமுறையும்", "Market basket analysis, support and confidence, the Apriori property, the join and prune steps, a full worked example, and generating strong association rules.": "சந்தைக் கூடைப் பகுப்பாய்வு, ஆதரவும் நம்பிக்கையும், Apriori பண்பு, இணைப்பு மற்றும் கிளை வெட்டுப் படிகள், முழுச் செய்முறை எடுத்துக்காட்டு, வலுவான தொடர்பு விதிகளை உருவாக்குதல்.", "FP-Growth & Kinds of Association Rules": "FP-Growth மற்றும் தொடர்பு விதிகளின் வகைகள்", "Mining frequent patterns without candidate generation (FP-tree + conditional pattern bases), multilevel and multidimensional rules, and constraint-based mining.": "வேட்பாளர் உருவாக்கமின்றி அடிக்கடி நிகழும் வடிவங்களைச் சுரங்கம் செய்தல் (FP-tree + நிபந்தனை வடிவத் தளங்கள்), பல்நிலை மற்றும் பல்பரிமாண விதிகள், கட்டுப்பாடு சார்ந்த சுரங்கம்.", "Classification & Decision Tree Induction": "வகைப்படுத்தலும் முடிவெடுக்கும் மர உருவாக்கமும்", "Classification vs prediction, the two-step process, preparing data, comparing classifiers, and building decision trees with information gain, gain ratio and the Gini index.": "வகைப்படுத்தல் மற்றும் முன்னறிவிப்பு, இரு-படிச் செயல்முறை, தரவுத் தயாரிப்பு, வகைப்படுத்திகளை ஒப்பிடுதல், தகவல் ஆதாயம், ஆதாய விகிதம், ஜினி சுட்டெண்ணால் முடிவெடுக்கும் மரங்களை உருவாக்குதல்.", "Bayesian & Rule-Based Classification": "பேய்சியன் மற்றும் விதி சார்ந்த வகைப்படுத்தல்", "Bayes' theorem, the naïve Bayesian classifier (categorical and Gaussian), rule-based classifiers with coverage and accuracy, extracting rules from a decision tree, and Weka's training/testing.": "பேய்சின் தேற்றம், எளிமைப் பேய்சியன் வகைப்படுத்தி (வகைசார், கௌசியன்), உள்ளடக்கம் மற்றும் துல்லியத்துடன் விதி சார்ந்த வகைப்படுத்திகள், மரத்திலிருந்து விதிகளைப் பிரித்தெடுத்தல், Weka பயிற்சி/சோதனை.", "k-Medoids & Hierarchical Clustering": "k-Medoids மற்றும் படிநிலைக் குழுமமாக்கல்", "The k-medoids method and the PAM algorithm with its swap cost, the lesson's worked example (cost 23 vs 16), agglomerative (AGNES) and divisive (DIANA) hierarchical clustering, and the four cluster-distance measures behind single, complete and average linkage.": "k-medoids முறையும் பரிமாற்றச் செலவுடன் PAM படிமுறையும், பாடத்தின் செய்முறை எடுத்துக்காட்டு (செலவு 23 மற்றும் 16), திரட்டல் (AGNES), பிரித்தல் (DIANA) படிநிலைக் குழுமமாக்கல், ஒற்றை, முழு, சராசரி இணைப்புகளுக்குப் பின்னுள்ள நான்கு குழுமத் தொலைவு அளவைகள்.", "A cluster is a collection of data objects that are:": "குழுமம் என்பது பின்வரும் தன்மையுள்ள தரவுப் பொருட்களின் தொகுப்பு:", "Similar within the same cluster and dissimilar to objects in other clusters": "ஒரே குழுமத்திற்குள் ஒத்தவையும் பிற குழுமப் பொருட்களிலிருந்து வேறுபட்டவையும்", "Labelled with known classes before mining": "சுரங்கத்துக்கு முன் அறியப்பட்ட வகுப்புகளால் அடையாளமிடப்பட்டவை", "Always spherical and the same size": "எப்போதும் கோள வடிவமும் ஒரே அளவும் கொண்டவை", "Randomly grouped": "சீரற்ற முறையில் தொகுக்கப்பட்டவை", "High intracluster similarity, low intercluster similarity.": "குழுமத்திற்குள் அதிக ஒற்றுமை; குழுமங்களுக்கிடையே குறைந்த ஒற்றுமை.", "How does clustering differ from classification?": "குழுமமாக்கல் வகைப்படுத்தலிலிருந்து எவ்வாறு வேறுபடுகிறது?", "Clustering doesn't need labelled training data; groups are found first and labelled afterwards": "அடையாளமிட்ட பயிற்சித் தரவு தேவையில்லை; முதலில் குழுக்கள் கண்டறியப்பட்டுப் பின்னர் அடையாளமிடப்படுகின்றன", "Clustering needs a larger labelled training set": "பெரிய அடையாளமிட்ட பயிற்சித் தொகுப்பு தேவை", "They are the same thing": "இரண்டும் ஒன்றே", "Classification never uses training data": "வகைப்படுத்தல் ஒருபோதும் பயிற்சித் தரவைப் பயன்படுத்தாது", "Clustering is unsupervised; classification is supervised.": "குழுமமாக்கல் மேற்பார்வையற்றது; வகைப்படுத்தல் மேற்பார்வையுள்ளது.", "Detecting credit card fraud as values \"far away\" from any cluster is called:": "எந்தக் குழுமத்திலிருந்தும் \"வெகு தொலைவிலுள்ள\" பெறுமதிகளாகக் கடன் அட்டை மோசடியைக் கண்டறிவது:", "Outlier detection": "புறநிலை கண்டறிதல்", "Data compression": "தரவுச் சுருக்கம்", "Grid quantisation": "கட்ட அளவுருப்படுத்தல்", "Rule extraction": "விதிப் பிரித்தெடுப்பு", "Outliers can be more interesting than the common cases.": "பொதுவான நிகழ்வுகளைவிடப் புறநிலைகள் சுவாரசியமானவையாக இருக்கலாம்.", "Ordinary k-means tends to work best with clusters that are:": "வழக்கமான k-means மிகச்சிறப்பாக இயங்கும் குழுமங்கள்:", "Compact, roughly spherical, and of comparable scale": "அடக்கமானவை, ஏறத்தாழ கோள வடிவமானவை, ஒப்பிடத்தக்க அளவுள்ளவை", "Any arbitrary shape": "எந்த வடிவமும் கொண்டவை", "Always one cluster": "எப்போதும் ஒரே குழுமம்", "Hierarchical": "படிநிலையானவை", "This is a limitation of the centroid-based method, not a restriction on every algorithm using a distance metric.": "இது மையப்புள்ளி சார்ந்த முறையின் வரம்பு; தொலைவளவையைப் பயன்படுத்தும் ஒவ்வொரு படிமுறைக்கும் விதிக்கப்பட்ட கட்டுப்பாடு அல்ல.", "Clustering households to place new ATMs while respecting rivers and highways illustrates:": "ஆறுகளையும் நெடுஞ்சாலைகளையும் கருத்தில்கொண்டு புதிய ATM-களை அமைக்கக் குடும்பங்களைக் குழுமமாக்குவது காட்டுவது:", "Constraint-based clustering": "கட்டுப்பாடு சார்ந்த குழுமமாக்கல்", "High dimensionality": "உயர் பரிமாணம்", "Incremental clustering": "அதிகரிப்புக் குழுமமாக்கல்", "Grid-based clustering": "கட்டம் சார்ந்த குழுமமாக்கல்", "Real applications often cluster under constraints.": "உண்மைப் பயன்பாடுகள் பெரும்பாலும் கட்டுப்பாடுகளின்கீழ் குழுமமாக்குகின்றன.", "In a partitioning method, which requirement can be relaxed in fuzzy partitioning?": "பிரிவாக்க முறையில் எந்தத் தேவையைத் தெளிவற்ற பிரிவாக்கத்தில் தளர்த்தலாம்?", "Each object must belong to exactly one group": "ஒவ்வொரு பொருளும் துல்லியமாக ஒரு குழுவைச் சார்ந்திருக்க வேண்டும்", "Each group must contain at least one object": "ஒவ்வொரு குழுவிலும் குறைந்தது ஒரு பொருள் இருக்க வேண்டும்", "k must be at most n": "k அதிகபட்சம் n ஆக இருக்க வேண்டும்", "Clusters must be close together": "குழுமங்கள் அருகில் இருக்க வேண்டும்", "In fuzzy partitioning an object can belong to several groups.": "தெளிவற்ற பிரிவாக்கத்தில் ஒரு பொருள் பல குழுக்களைச் சாரலாம்.", "k-means represents each cluster by:": "k-means ஒவ்வொரு குழுமத்தையும் பிரதிநிதித்துவப்படுத்துவது:", "The mean value of the objects in the cluster": "குழுமத்தின் பொருட்களின் சராசரிப் பெறுமதியால்", "One actual object near the centre": "மையத்துக்கு அருகிலுள்ள ஓர் உண்மைப் பொருளால்", "The first object chosen": "முதலில் தேர்ந்தெடுக்கப்பட்ட பொருளால்", "A grid cell": "கட்டக் கலத்தால்", "k-medoids uses a representative object instead.": "k-medoids அதற்குப் பதிலாக பிரதிநிதிப் பொருளைப் பயன்படுத்துகிறது.", "The agglomerative hierarchical approach:": "திரட்டல் படிநிலை அணுகுமுறை:", "Starts with each object as its own group and merges the closest groups": "ஒவ்வொரு பொருளையும் தனிக் குழுவாகக் கொண்டு தொடங்கி அருகிலுள்ள குழுக்களை இணைக்கிறது", "Starts with one cluster and splits it": "ஒரே குழுமத்துடன் தொடங்கி அதைப் பிரிக்கிறது", "Uses a grid of cells": "கலங்களின் கட்டத்தைப் பயன்படுத்துகிறது", "Fits a statistical model": "புள்ளிவிவர மாதிரியைப் பொருத்துகிறது", "Agglomerative is bottom-up; divisive is top-down.": "திரட்டல் கீழிருந்து மேல்; பிரித்தல் மேலிருந்து கீழ்.", "A main weakness of hierarchical methods is that:": "படிநிலை முறைகளின் முக்கிய பலவீனம்:", "A merge or split can never be undone": "இணைப்பையோ பிரிப்பையோ ஒருபோதும் செயல்தவிர்க்க முடியாது", "They only work on grids": "அவை கட்டங்களில் மட்டுமே இயங்கும்", "They need labelled data": "அவற்றுக்கு அடையாளமிட்ட தரவு தேவை", "They are always slower than k-means": "அவை எப்போதும் k-means-ஐவிட மெதுவானவை", "Rigidity keeps computation cheap but erroneous decisions can't be corrected.": "மாற்ற முடியாமை கணக்கீட்டை மலிவாக்கினாலும் தவறான முடிவுகளைத் திருத்த முடியாது.", "Which method grows a cluster while its neighbourhood density exceeds a threshold?": "அயலிட அடர்த்தி வரம்பை மீறும்வரை குழுமத்தை வளர்க்கும் முறை எது?", "DBSCAN (density-based)": "DBSCAN (அடர்த்தி சார்ந்தது)", "STING (grid-based)": "STING (கட்டம் சார்ந்தது)", "k-medoids (partitioning)": "k-medoids (பிரிவாக்கம்)", "COBWEB (model-based)": "COBWEB (மாதிரி சார்ந்தது)", "Density-based methods find arbitrary shapes and filter out noise.": "அடர்த்தி சார்ந்த முறைகள் எந்த வடிவங்களையும் கண்டறிந்து இரைச்சலை வடிகட்டுகின்றன.", "The main advantage of grid-based methods is:": "கட்டம் சார்ந்த முறைகளின் முக்கிய நன்மை:", "After grid construction, clustering operates on cells, which can make it fast": "கட்ட உருவாக்கத்துக்குப் பின் குழுமமாக்கல் கலங்களில் செயல்படுவதால் வேகமாக இருக்கலாம்", "They find the exact global optimum": "துல்லியமான உலகளாவிய உகந்த தீர்வைக் கண்டறிகின்றன", "They need no parameters at all": "எந்த அளவுருவும் தேவையில்லை", "They can undo merges": "இணைப்புகளைச் செயல்தவிர்க்கலாம்", "STING is a typical example. Reading data and constructing the grid still depends on the input size.": "STING வழக்கமான எடுத்துக்காட்டு. தரவு வாசிப்பும் கட்ட உருவாக்கமும் இன்னும் உள்ளீட்டு அளவைச் சார்ந்தவை.", "Which is a model-based clustering algorithm?": "மாதிரி சார்ந்த குழுமமாக்கல் படிமுறை எது?", "EM (expectation-maximisation)": "EM (எதிர்பார்ப்பு-அதிகபட்சமாக்கல்)", "BIRCH": "BIRCH", "DBSCAN": "DBSCAN", "WaveCluster": "WaveCluster", "Other model-based examples: COBWEB and SOM.": "பிற மாதிரி சார்ந்த எடுத்துக்காட்டுகள்: COBWEB, SOM.", "With Manhattan distance, what is the distance between (8, 4) and (2, 10)?": "மன்ஹாட்டன் தொலைவில் (8, 4), (2, 10) இடையிலான தொலைவு என்ன?", "|8 − 2| + |4 − 10| = 6 + 6 = 12.": "|8 − 2| + |4 − 10| = 6 + 6 = 12.", "Cluster 2 contains (8,4), (5,8), (7,5), (6,4) and (4,9). What is the x-coordinate of its new mean?": "குழுமம் 2-இல் (8,4), (5,8), (7,5), (6,4), (4,9) உள்ளன. அதன் புதிய சராசரியின் x-ஆயத்தொலைவு என்ன?", "(8 + 5 + 7 + 6 + 4) / 5 = 30 / 5 = 6. The new centre is (6, 6).": "(8 + 5 + 7 + 6 + 4) / 5 = 30 / 5 = 6. புதிய மையம் (6, 6).", "In the lesson example, which point moves from cluster 2 to cluster 1 in the second iteration?": "பாட எடுத்துக்காட்டின் இரண்டாவது மறு செய்கையில் குழுமம் 2-இலிருந்து குழுமம் 1-க்கு நகரும் புள்ளி எது?", "A8 (4, 9)": "A8 (4, 9)", "A4 (5, 8)": "A4 (5, 8)", "A2 (2, 5)": "A2 (2, 5)", "A3 (8, 4)": "A3 (8, 4)", "A8 is 3 from (2, 10) but 5 from (6, 6).": "A8, (2, 10)-இலிருந்து 3 தொலைவிலும் (6, 6)-இலிருந்து 5 தொலைவிலும் உள்ளது.", "What is a key weakness of k-means?": "k-means-இன் முக்கிய பலவீனம் என்ன?", "You must choose k in advance, and outliers pull the means": "k-ஐ முன்னரே தேர்ந்தெடுக்க வேண்டும்; புறநிலைகள் சராசரிகளை இழுக்கின்றன", "It can't handle numeric data": "எண்ணியல் தரவைக் கையாள முடியாது", "It always finds arbitrary-shaped clusters": "எப்போதும் எந்த வடிவக் குழுமங்களையும் கண்டறிகிறது", "It never converges": "ஒருபோதும் ஒருங்காது", "Its result also depends on the initial centres.": "அதன் முடிவு ஆரம்ப மையங்களையும் சார்ந்தது.", "With q = 2, the Minkowski distance becomes:": "q = 2 எனில் மின்கோவ்ஸ்கி தொலைவு ஆவது:", "Euclidean distance": "யூக்ளிடியன் தொலைவு", "Manhattan distance": "மன்ஹாட்டன் தொலைவு", "Cosine similarity": "கோசைன் ஒற்றுமை", "Hamming distance": "ஹாமிங் தொலைவு", "q = 1 gives Manhattan distance.": "q = 1 மன்ஹாட்டன் தொலைவை வழங்குகிறது.", "The ZeroR classifier:": "ZeroR வகைப்படுத்தி:", "Always predicts the most popular class": "எப்போதும் மிக அதிகம் நிகழும் வகுப்பை முன்னறிவிக்கிறது", "Builds the deepest possible tree": "இயன்றவரை ஆழமான மரத்தை உருவாக்குகிறது", "Uses 10-fold cross-validation internally": "உட்புறமாக 10-மடங்கு குறுக்கு உறுதிப்படுத்தலைப் பயன்படுத்துகிறது", "Picks a random class each time": "ஒவ்வொரு முறையும் சீரற்ற வகுப்பைத் தேர்ந்தெடுக்கிறது", "It's the baseline you should always try first.": "முதலில் எப்போதும் முயல வேண்டிய அடிப்படை இதுவே.", "The diabetes data has 500 negative and 268 positive instances. What percentage accuracy does ZeroR get?": "diabetes தரவில் 500 எதிர்மறை, 268 நேர்மறை நிகழ்வுகள் உள்ளன. ZeroR பெறும் சதவீதத் துல்லியம் என்ன?", "500 / 768 = 65.1%.": "500 / 768 = 65.1%.", "In 10-fold cross-validation, each instance is used for testing:": "10-மடங்கு குறுக்கு உறுதிப்படுத்தலில் ஒவ்வொரு நிகழ்வும் சோதனைக்குப் பயன்படுவது:", "Exactly once": "துல்லியமாக ஒருமுறை", "Ten times": "பத்துமுறை", "Never": "ஒருபோதும் இல்லை", "Nine times": "ஒன்பதுமுறை", "It's used for training nine times.": "பயிற்சிக்கு ஒன்பதுமுறை பயன்படுகிறது.", "Stratified cross-validation ensures that:": "படையாக்கப்பட்ட குறுக்கு உறுதிப்படுத்தல் உறுதிசெய்வது:", "Each fold has about the right proportion of each class": "ஒவ்வொரு மடிப்பிலும் ஏறத்தாழ ஒவ்வொரு வகுப்பின் சரியான விகிதம் இருப்பதை", "Each fold has exactly one instance": "ஒவ்வொரு மடிப்பிலும் துல்லியமாக ஒரு நிகழ்வு இருப்பதை", "The folds overlap": "மடிப்புகள் ஒன்றன்மேல் ஒன்று படிவதை", "Only the training set is used": "பயிற்சித் தொகுப்பு மட்டுமே பயன்படுத்தப்படுவதை", "It reduces the variance of the estimate further, and it's Weka's default.": "மதிப்பீட்டின் மாறுபாட்டை மேலும் குறைக்கிறது; Weka-வின் இயல்புநிலையும் இதுவே.", "With 10-fold cross-validation, how many times does Weka run the learning algorithm?": "10-மடங்கு குறுக்கு உறுதிப்படுத்தலுடன் Weka கற்றல் படிமுறையை எத்தனைமுறை இயக்குகிறது?", "Once per fold, plus a final time on the whole data set.": "மடிப்புக்கு ஒருமுறை; பின்னர் முழுத் தரவுத்தொகுப்பில் இறுதியாக ஒருமுறை.", "Compared with repeated holdout, 10-fold cross-validation on the diabetes data gave:": "மீண்டும் ஒதுக்கீட்டுடன் ஒப்பிடும்போது diabetes தரவில் 10-மடங்கு குறுக்கு உறுதிப்படுத்தல் வழங்கியது:", "About the same mean but a much smaller standard deviation": "ஏறத்தாழ அதே சராசரி; ஆனால் மிகக்குறைந்த நியம விலகல்", "A much higher mean": "மிக அதிக சராசரி", "A larger standard deviation": "பெரிய நியம விலகல்", "Exactly the baseline accuracy": "துல்லியமாக அடிப்படைத் துல்லியம்", "74.5% ± 0.9% vs 74.8% ± 4.6%.": "74.5% ± 0.9% மற்றும் 74.8% ± 4.6%."}, "markup": {"A cluster is a collection of data objects that are:": "குழுமம் என்பது பின்வரும் தன்மையுள்ள தரவுப் பொருட்களின் தொகுப்பு:", "Similar within the same cluster and dissimilar to objects in other clusters": "ஒரே குழுமத்திற்குள் ஒத்தவையும் பிற குழுமப் பொருட்களிலிருந்து வேறுபட்டவையும்", "Labelled with known classes before mining": "சுரங்கத்துக்கு முன் அறியப்பட்ட வகுப்புகளால் அடையாளமிடப்பட்டவை", "Always spherical and the same size": "எப்போதும் கோள வடிவமும் ஒரே அளவும் கொண்டவை", "Randomly grouped": "சீரற்ற முறையில் தொகுக்கப்பட்டவை", "High intracluster similarity, low intercluster similarity.": "குழுமத்திற்குள் அதிக ஒற்றுமை; குழுமங்களுக்கிடையே குறைந்த ஒற்றுமை.", "How does clustering differ from classification?": "குழுமமாக்கல் வகைப்படுத்தலிலிருந்து எவ்வாறு வேறுபடுகிறது?", "Clustering doesn't need labelled training data; groups are found first and labelled afterwards": "அடையாளமிட்ட பயிற்சித் தரவு தேவையில்லை; முதலில் குழுக்கள் கண்டறியப்பட்டுப் பின்னர் அடையாளமிடப்படுகின்றன", "Clustering needs a larger labelled training set": "பெரிய அடையாளமிட்ட பயிற்சித் தொகுப்பு தேவை", "They are the same thing": "இரண்டும் ஒன்றே", "Classification never uses training data": "வகைப்படுத்தல் ஒருபோதும் பயிற்சித் தரவைப் பயன்படுத்தாது", "Clustering is unsupervised; classification is supervised.": "குழுமமாக்கல் மேற்பார்வையற்றது; வகைப்படுத்தல் மேற்பார்வையுள்ளது.", "Detecting credit card fraud as values \"far away\" from any cluster is called:": "எந்தக் குழுமத்திலிருந்தும் \"வெகு தொலைவிலுள்ள\" பெறுமதிகளாகக் கடன் அட்டை மோசடியைக் கண்டறிவது:", "Outlier detection": "புறநிலை கண்டறிதல்", "Data compression": "தரவுச் சுருக்கம்", "Grid quantisation": "கட்ட அளவுருப்படுத்தல்", "Rule extraction": "விதிப் பிரித்தெடுப்பு", "Outliers can be more interesting than the common cases.": "பொதுவான நிகழ்வுகளைவிடப் புறநிலைகள் சுவாரசியமானவையாக இருக்கலாம்.", "Ordinary k-means tends to work best with clusters that are:": "வழக்கமான k-means மிகச்சிறப்பாக இயங்கும் குழுமங்கள்:", "Compact, roughly spherical, and of comparable scale": "அடக்கமானவை, ஏறத்தாழ கோள வடிவமானவை, ஒப்பிடத்தக்க அளவுள்ளவை", "Any arbitrary shape": "எந்த வடிவமும் கொண்டவை", "Always one cluster": "எப்போதும் ஒரே குழுமம்", "Hierarchical": "படிநிலையானவை", "This is a limitation of the centroid-based method, not a restriction on every algorithm using a distance metric.": "இது மையப்புள்ளி சார்ந்த முறையின் வரம்பு; தொலைவளவையைப் பயன்படுத்தும் ஒவ்வொரு படிமுறைக்கும் விதிக்கப்பட்ட கட்டுப்பாடு அல்ல.", "Clustering households to place new ATMs while respecting rivers and highways illustrates:": "ஆறுகளையும் நெடுஞ்சாலைகளையும் கருத்தில்கொண்டு புதிய ATM-களை அமைக்கக் குடும்பங்களைக் குழுமமாக்குவது காட்டுவது:", "Constraint-based clustering": "கட்டுப்பாடு சார்ந்த குழுமமாக்கல்", "High dimensionality": "உயர் பரிமாணம்", "Incremental clustering": "அதிகரிப்புக் குழுமமாக்கல்", "Grid-based clustering": "கட்டம் சார்ந்த குழுமமாக்கல்", "Real applications often cluster under constraints.": "உண்மைப் பயன்பாடுகள் பெரும்பாலும் கட்டுப்பாடுகளின்கீழ் குழுமமாக்குகின்றன.", "In a partitioning method, which requirement can be relaxed in fuzzy partitioning?": "பிரிவாக்க முறையில் எந்தத் தேவையைத் தெளிவற்ற பிரிவாக்கத்தில் தளர்த்தலாம்?", "Each object must belong to exactly one group": "ஒவ்வொரு பொருளும் துல்லியமாக ஒரு குழுவைச் சார்ந்திருக்க வேண்டும்", "Each group must contain at least one object": "ஒவ்வொரு குழுவிலும் குறைந்தது ஒரு பொருள் இருக்க வேண்டும்", "k must be at most n": "k அதிகபட்சம் n ஆக இருக்க வேண்டும்", "Clusters must be close together": "குழுமங்கள் அருகில் இருக்க வேண்டும்", "In fuzzy partitioning an object can belong to several groups.": "தெளிவற்ற பிரிவாக்கத்தில் ஒரு பொருள் பல குழுக்களைச் சாரலாம்.", "k-means represents each cluster by:": "k-means ஒவ்வொரு குழுமத்தையும் பிரதிநிதித்துவப்படுத்துவது:", "The mean value of the objects in the cluster": "குழுமத்தின் பொருட்களின் சராசரிப் பெறுமதியால்", "One actual object near the centre": "மையத்துக்கு அருகிலுள்ள ஓர் உண்மைப் பொருளால்", "The first object chosen": "முதலில் தேர்ந்தெடுக்கப்பட்ட பொருளால்", "A grid cell": "கட்டக் கலத்தால்", "k-medoids uses a representative object instead.": "k-medoids அதற்குப் பதிலாக பிரதிநிதிப் பொருளைப் பயன்படுத்துகிறது.", "The agglomerative hierarchical approach:": "திரட்டல் படிநிலை அணுகுமுறை:", "Starts with each object as its own group and merges the closest groups": "ஒவ்வொரு பொருளையும் தனிக் குழுவாகக் கொண்டு தொடங்கி அருகிலுள்ள குழுக்களை இணைக்கிறது", "Starts with one cluster and splits it": "ஒரே குழுமத்துடன் தொடங்கி அதைப் பிரிக்கிறது", "Uses a grid of cells": "கலங்களின் கட்டத்தைப் பயன்படுத்துகிறது", "Fits a statistical model": "புள்ளிவிவர மாதிரியைப் பொருத்துகிறது", "Agglomerative is bottom-up; divisive is top-down.": "திரட்டல் கீழிருந்து மேல்; பிரித்தல் மேலிருந்து கீழ்.", "A main weakness of hierarchical methods is that:": "படிநிலை முறைகளின் முக்கிய பலவீனம்:", "A merge or split can never be undone": "இணைப்பையோ பிரிப்பையோ ஒருபோதும் செயல்தவிர்க்க முடியாது", "They only work on grids": "அவை கட்டங்களில் மட்டுமே இயங்கும்", "They need labelled data": "அவற்றுக்கு அடையாளமிட்ட தரவு தேவை", "They are always slower than k-means": "அவை எப்போதும் k-means-ஐவிட மெதுவானவை", "Rigidity keeps computation cheap but erroneous decisions can't be corrected.": "மாற்ற முடியாமை கணக்கீட்டை மலிவாக்கினாலும் தவறான முடிவுகளைத் திருத்த முடியாது.", "Which method grows a cluster while its neighbourhood density exceeds a threshold?": "அயலிட அடர்த்தி வரம்பை மீறும்வரை குழுமத்தை வளர்க்கும் முறை எது?", "DBSCAN (density-based)": "DBSCAN (அடர்த்தி சார்ந்தது)", "STING (grid-based)": "STING (கட்டம் சார்ந்தது)", "k-medoids (partitioning)": "k-medoids (பிரிவாக்கம்)", "COBWEB (model-based)": "COBWEB (மாதிரி சார்ந்தது)", "Density-based methods find arbitrary shapes and filter out noise.": "அடர்த்தி சார்ந்த முறைகள் எந்த வடிவங்களையும் கண்டறிந்து இரைச்சலை வடிகட்டுகின்றன.", "The main advantage of grid-based methods is:": "கட்டம் சார்ந்த முறைகளின் முக்கிய நன்மை:", "After grid construction, clustering operates on cells, which can make it fast": "கட்ட உருவாக்கத்துக்குப் பின் குழுமமாக்கல் கலங்களில் செயல்படுவதால் வேகமாக இருக்கலாம்", "They find the exact global optimum": "துல்லியமான உலகளாவிய உகந்த தீர்வைக் கண்டறிகின்றன", "They need no parameters at all": "எந்த அளவுருவும் தேவையில்லை", "They can undo merges": "இணைப்புகளைச் செயல்தவிர்க்கலாம்", "STING is a typical example. Reading data and constructing the grid still depends on the input size.": "STING வழக்கமான எடுத்துக்காட்டு. தரவு வாசிப்பும் கட்ட உருவாக்கமும் இன்னும் உள்ளீட்டு அளவைச் சார்ந்தவை.", "Which is a model-based clustering algorithm?": "மாதிரி சார்ந்த குழுமமாக்கல் படிமுறை எது?", "EM (expectation-maximisation)": "EM (எதிர்பார்ப்பு-அதிகபட்சமாக்கல்)", "BIRCH": "BIRCH", "DBSCAN": "DBSCAN", "WaveCluster": "WaveCluster", "Other model-based examples: COBWEB and SOM.": "பிற மாதிரி சார்ந்த எடுத்துக்காட்டுகள்: COBWEB, SOM.", "With Manhattan distance, what is the distance between (8, 4) and (2, 10)?": "மன்ஹாட்டன் தொலைவில் (8, 4), (2, 10) இடையிலான தொலைவு என்ன?", "|8 − 2| + |4 − 10| = 6 + 6 = 12.": "|8 − 2| + |4 − 10| = 6 + 6 = 12.", "Cluster 2 contains (8,4), (5,8), (7,5), (6,4) and (4,9). What is the x-coordinate of its new mean?": "குழுமம் 2-இல் (8,4), (5,8), (7,5), (6,4), (4,9) உள்ளன. அதன் புதிய சராசரியின் x-ஆயத்தொலைவு என்ன?", "(8 + 5 + 7 + 6 + 4) / 5 = 30 / 5 = 6. The new centre is (6, 6).": "(8 + 5 + 7 + 6 + 4) / 5 = 30 / 5 = 6. புதிய மையம் (6, 6).", "In the lesson example, which point moves from cluster 2 to cluster 1 in the second iteration?": "பாட எடுத்துக்காட்டின் இரண்டாவது மறு செய்கையில் குழுமம் 2-இலிருந்து குழுமம் 1-க்கு நகரும் புள்ளி எது?", "A8 (4, 9)": "A8 (4, 9)", "A4 (5, 8)": "A4 (5, 8)", "A2 (2, 5)": "A2 (2, 5)", "A3 (8, 4)": "A3 (8, 4)", "A8 is 3 from (2, 10) but 5 from (6, 6).": "A8, (2, 10)-இலிருந்து 3 தொலைவிலும் (6, 6)-இலிருந்து 5 தொலைவிலும் உள்ளது.", "What is a key weakness of k-means?": "k-means-இன் முக்கிய பலவீனம் என்ன?", "You must choose k in advance, and outliers pull the means": "k-ஐ முன்னரே தேர்ந்தெடுக்க வேண்டும்; புறநிலைகள் சராசரிகளை இழுக்கின்றன", "It can't handle numeric data": "எண்ணியல் தரவைக் கையாள முடியாது", "It always finds arbitrary-shaped clusters": "எப்போதும் எந்த வடிவக் குழுமங்களையும் கண்டறிகிறது", "It never converges": "ஒருபோதும் ஒருங்காது", "Its result also depends on the initial centres.": "அதன் முடிவு ஆரம்ப மையங்களையும் சார்ந்தது.", "With q = 2, the Minkowski distance becomes:": "q = 2 எனில் மின்கோவ்ஸ்கி தொலைவு ஆவது:", "Euclidean distance": "யூக்ளிடியன் தொலைவு", "Manhattan distance": "மன்ஹாட்டன் தொலைவு", "Cosine similarity": "கோசைன் ஒற்றுமை", "Hamming distance": "ஹாமிங் தொலைவு", "q = 1 gives Manhattan distance.": "q = 1 மன்ஹாட்டன் தொலைவை வழங்குகிறது.", "The ZeroR classifier:": "ZeroR வகைப்படுத்தி:", "Always predicts the most popular class": "எப்போதும் மிக அதிகம் நிகழும் வகுப்பை முன்னறிவிக்கிறது", "Builds the deepest possible tree": "இயன்றவரை ஆழமான மரத்தை உருவாக்குகிறது", "Uses 10-fold cross-validation internally": "உட்புறமாக 10-மடங்கு குறுக்கு உறுதிப்படுத்தலைப் பயன்படுத்துகிறது", "Picks a random class each time": "ஒவ்வொரு முறையும் சீரற்ற வகுப்பைத் தேர்ந்தெடுக்கிறது", "It's the baseline you should always try first.": "முதலில் எப்போதும் முயல வேண்டிய அடிப்படை இதுவே.", "The diabetes data has 500 negative and 268 positive instances. What percentage accuracy does ZeroR get?": "diabetes தரவில் 500 எதிர்மறை, 268 நேர்மறை நிகழ்வுகள் உள்ளன. ZeroR பெறும் சதவீதத் துல்லியம் என்ன?", "500 / 768 = 65.1%.": "500 / 768 = 65.1%.", "In 10-fold cross-validation, each instance is used for testing:": "10-மடங்கு குறுக்கு உறுதிப்படுத்தலில் ஒவ்வொரு நிகழ்வும் சோதனைக்குப் பயன்படுவது:", "Exactly once": "துல்லியமாக ஒருமுறை", "Ten times": "பத்துமுறை", "Never": "ஒருபோதும் இல்லை", "Nine times": "ஒன்பதுமுறை", "It's used for training nine times.": "பயிற்சிக்கு ஒன்பதுமுறை பயன்படுகிறது.", "Stratified cross-validation ensures that:": "படையாக்கப்பட்ட குறுக்கு உறுதிப்படுத்தல் உறுதிசெய்வது:", "Each fold has about the right proportion of each class": "ஒவ்வொரு மடிப்பிலும் ஏறத்தாழ ஒவ்வொரு வகுப்பின் சரியான விகிதம் இருப்பதை", "Each fold has exactly one instance": "ஒவ்வொரு மடிப்பிலும் துல்லியமாக ஒரு நிகழ்வு இருப்பதை", "The folds overlap": "மடிப்புகள் ஒன்றன்மேல் ஒன்று படிவதை", "Only the training set is used": "பயிற்சித் தொகுப்பு மட்டுமே பயன்படுத்தப்படுவதை", "It reduces the variance of the estimate further, and it's Weka's default.": "மதிப்பீட்டின் மாறுபாட்டை மேலும் குறைக்கிறது; Weka-வின் இயல்புநிலையும் இதுவே.", "With 10-fold cross-validation, how many times does Weka run the learning algorithm?": "10-மடங்கு குறுக்கு உறுதிப்படுத்தலுடன் Weka கற்றல் படிமுறையை எத்தனைமுறை இயக்குகிறது?", "Once per fold, plus a final time on the whole data set.": "மடிப்புக்கு ஒருமுறை; பின்னர் முழுத் தரவுத்தொகுப்பில் இறுதியாக ஒருமுறை.", "Compared with repeated holdout, 10-fold cross-validation on the diabetes data gave:": "மீண்டும் ஒதுக்கீட்டுடன் ஒப்பிடும்போது diabetes தரவில் 10-மடங்கு குறுக்கு உறுதிப்படுத்தல் வழங்கியது:", "About the same mean but a much smaller standard deviation": "ஏறத்தாழ அதே சராசரி; ஆனால் மிகக்குறைந்த நியம விலகல்", "A much higher mean": "மிக அதிக சராசரி", "A larger standard deviation": "பெரிய நியம விலகல்", "Exactly the baseline accuracy": "துல்லியமாக அடிப்படைத் துல்லியம்", "74.5% ± 0.9% vs 74.8% ± 4.6%.": "74.5% ± 0.9% மற்றும் 74.8% ± 4.6%."}, "patterns": [{"pattern": "^(\\d+) unanswered$", "replacement": "$1 விடையளிக்கப்படவில்லை"}, {"pattern": "^(\\d+) / (\\d+) sections understood$", "replacement": "$1 / $2 பகுதிகள் புரிந்துகொள்ளப்பட்டன"}, {"pattern": "^Week (\\d+)$", "replacement": "வாரம் $1"}, {"pattern": "^(\\d+) days ago$", "replacement": "$1 நாட்களுக்கு முன்"}, {"pattern": "^\\((\\d+) of (\\d+)\\)$", "replacement": "($2இல் $1)"}, {"pattern": "^\\((\\d+) attempts?\\)$", "replacement": "($1 முயற்சிகள்)"}, {"pattern": "^(\\d+) videos? · (\\d+) min$", "replacement": "$1 காணொளிகள் · $2 நிமிடம்"}, {"pattern": "^Quiz: not tried \\((\\d+) Qs\\)$", "replacement": "வினாடிவினா: முயலவில்லை ($1 கேள்விகள்)"}, {"pattern": "^Best (\\d+)% · last (\\d+)%$", "replacement": "சிறந்தது $1% · கடைசி $2%"}, {"pattern": "^(\\d+) questions on this week\\. Answer them all, then press$", "replacement": "இந்த வாரத்தில் $1 கேள்விகள். அனைத்துக்கும் விடையளித்துவிட்டுப் பின்னர் அழுத்துங்கள்:"}, {"pattern": "^\\. Your best and latest scores are saved and shown on the subject page\\.$", "replacement": ". உங்கள் சிறந்த மற்றும் சமீபத்திய மதிப்பெண்கள் சேமிக்கப்பட்டுப் பாடப் பக்கத்தில் காட்டப்படும்."}, {"pattern": "^Data Mining · Week (\\d+)$", "replacement": "தரவுச் சுரங்கம் · வாரம் $1"}, {"pattern": "^(\\d+) random questions drawn from all (\\d+) weeks \\((\\d+) in the bank\\)\\. Every attempt is a new mix — a good way to test whole-subject knowledge before the exam\\.$", "replacement": "அனைத்து $2 வாரங்களிலிருந்தும் சீரற்ற முறையில் தேர்ந்தெடுக்கப்படும் $1 கேள்விகள் (தொகுப்பில் $3 உள்ளன). ஒவ்வொரு முயற்சியிலும் புதிய கலவை — தேர்வுக்கு முன் முழுப் பாட அறிவையும் சோதிக்கச் சிறந்த வழி."}, {"pattern": "^›\\s*Week (\\d+)$", "replacement": "› வாரம் $1"}, {"pattern": "Manhattan =", "replacement": "மன்ஹாட்டன் =", "flags": "g", "selector": ".tool"}, {"pattern": "Euclidean =", "replacement": "யூக்ளிடியன் =", "flags": "g", "selector": ".tool"}, {"pattern": "Minkowski \\(q =", "replacement": "மின்கோவ்ஸ்கி (q =", "flags": "g", "selector": ".tool"}, {"pattern": "Iteration (\\d+)", "replacement": "மறு செய்கை $1", "flags": "g", "selector": ".tool"}, {"pattern": "to \\(", "replacement": "மையம் (", "flags": "g", "selector": ".tool"}, {"pattern": "Starting centres:", "replacement": "ஆரம்ப மையங்கள்:", "flags": "g", "selector": ".tool"}, {"pattern": "New centres:", "replacement": "புதிய மையங்கள்:", "flags": "g", "selector": ".tool"}, {"pattern": "Showing the first 12 of (\\d+) rounds\\.", "replacement": "$1 சுற்றுகளில் முதல் 12 காட்டப்படுகின்றன.", "flags": "g", "selector": ".tool"}, {"pattern": "Each round: train on ≈", "replacement": "ஒவ்வொரு சுற்றிலும்: பயிற்சி ≈", "flags": "g", "selector": ".tool"}, {"pattern": "test on ≈", "replacement": "சோதனை ≈", "flags": "g", "selector": ".tool"}, {"pattern": "\\(red fold\\) · Weka runs the learner", "replacement": "(சிவப்பு மடிப்பு) · Weka கற்றல் படிமுறையை இயக்குவது", "flags": "g", "selector": ".tool"}, {"pattern": "times \\((\\d+) folds \\+ 1 on all data\\)\\.", "replacement": "தடவைகள் ($1 மடிப்புகள் + முழுத் தரவில் 1).", "flags": "g", "selector": ".tool"}]}</script><style>.hci-language{position:fixed;right:16px;bottom:calc(100px + env(safe-area-inset-bottom));z-index:70;border:1px solid var(--line);border-radius:28px;background:var(--panel);color:var(--ink);box-shadow:var(--shadow);padding:12px 20px;font:inherit;font-weight:700;cursor:pointer;min-height:48px}
+.hci-language:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.hci-en[hidden],.hci-ta[hidden]{display:none!important}
+.hci-ta{line-height:1.9}
+@media(max-width:760px){.hci-language{bottom:calc(100px + env(safe-area-inset-bottom));right:10px}}
+@media print{.hci-language{display:none}}
+</style><script>// Authored, offline Tamil translations. No network requests or external translator.
+(function () {
+  'use strict';
+  var sections = Array.from(document.querySelectorAll('section[data-sec]'));
+  if (!document.getElementById('hci-tamil-data') || sections.some(function (s) { return !s.querySelector('.hci-ta'); })) return;
+  var button = document.createElement('button');
+  button.type = 'button'; button.className = 'hci-language'; button.lang = 'ta';
+  button.textContent = 'தமிழ்'; button.setAttribute('aria-label', 'Read the Tamil translation');
+  button.setAttribute('aria-pressed', 'false'); document.body.appendChild(button);
+  // Keep source values stable when options use their visible text as their value.
+  document.querySelectorAll('.tool option:not([value])').forEach(function (option) { option.value = option.textContent; });
+  var tamil = false;
+  var tools = [];
+  sections.forEach(function (section) {
+    var heading = section.querySelector('h2');
+    heading.dataset.english = heading.innerHTML;
+    var explanationButton = section.querySelector('.native-toggle');
+    var explanation = section.querySelector('.tamil-native');
+    var content = section.querySelector('.section-english');
+    var reference = section.querySelector('.native-reference');
+    function explanationLabels() {
+      if (!explanationButton) return;
+      explanationButton.textContent = explanation.hidden ? 'தமிழில் புரிந்துகொள்ள' : (tamil ? 'மொழிபெயர்ப்புக்குத் திரும்பு' : 'English-இல் படிக்க');
+      if (reference) reference.textContent = !content.hidden ? 'முழு விவரத்தை மறைக்க' : (tamil ? 'முழு விவரம் · தமிழ் மொழிபெயர்ப்பு' : 'முழு விவரம், கணக்கு, படம், கருவிகள் · English');
+    }
+    if (explanationButton) explanationButton.onclick = function () {
+      var show = explanation.hidden;
+      explanation.hidden = !show; content.hidden = show;
+      content.classList.remove('reference-open');
+      section.classList.toggle('show-tamil', show);
+      explanationButton.setAttribute('aria-expanded', String(show));
+      if (reference) reference.setAttribute('aria-expanded', 'false');
+      explanationLabels(); window.dispatchEvent(new Event('resize'));
+    };
+    if (reference) reference.onclick = function () {
+      content.hidden = !content.hidden;
+      content.classList.toggle('reference-open', !content.hidden);
+      reference.setAttribute('aria-expanded', String(!content.hidden));
+      explanationLabels(); window.dispatchEvent(new Event('resize'));
+    };
+
+    var englishHeads = section.querySelectorAll('.hci-en h3[id]');
+    section.querySelectorAll('.hci-ta h3').forEach(function (h, index) {
+      var english = englishHeads[index];
+      if (!english) return;
+      h.id = 'ta-' + english.id;
+      h.dataset.englishId = english.id;
+      h.dataset.englishText = english.textContent;
+    });
+    section.querySelectorAll('[data-ta-tool]').forEach(function (slot) {
+      var live = document.getElementById(slot.dataset.taTool);
+      if (!live) throw new Error('Missing shared tool: ' + slot.dataset.taTool);
+      var tool = live.closest('.tool');
+      var home = document.createElement('span');
+      tool.before(home); tools.push({tool:tool, home:home, slot:slot});
+    });
+  });
+  var data = JSON.parse(document.getElementById('hci-tamil-data').textContent);
+  var patterns = (data.patterns || []).map(function (p) { return {regex:new RegExp(p.pattern, p.flags || ''), replacement:p.replacement, selector:p.selector || null}; });
+  var textState = new WeakMap(), htmlState = new WeakMap(), attributeState = new WeakMap();
+  function fitTamilDiagrams() {
+    document.querySelectorAll('.tool svg:has(foreignObject)').forEach(function (svg) {
+      if (!svg.dataset.hciViewbox) svg.dataset.hciViewbox = svg.getAttribute('viewBox');
+      var box = svg.dataset.hciViewbox.split(/\s+/).map(Number);
+      svg.setAttribute('viewBox', tamil ? [box[0],box[1],box[2],box[3]*2].join(' ') : svg.dataset.hciViewbox);
+      svg.querySelectorAll('[y],[y1],[y2],[cy],[height]').forEach(function (el) {
+        ['y','y1','y2','cy','height'].forEach(function (attr) {
+          if (!el.hasAttribute(attr)) return;
+          var saved = 'data-hci-' + attr;
+          if (!el.hasAttribute(saved)) el.setAttribute(saved, el.getAttribute(attr));
+          var original = el.getAttribute(saved);
+          if (!isNaN(Number(original))) el.setAttribute(attr, tamil ? Number(original)*2 : original);
+        });
+      });
+    });
+  }
+  function translateLiveContent() {
+    fitTamilDiagrams();
+    var markupElements = document.querySelectorAll('.qt,.qe,.qo span,.tool p,.tool .out,.tool h4,.tool td,.tool th,.tool text,.tool foreignObject div');
+    markupElements.forEach(function (el) {
+      var current = el.innerHTML, saved = htmlState.get(el);
+      if (saved && current !== saved.ta) { htmlState.delete(el); saved = null; }
+      if (saved && !tamil) { el.innerHTML = saved.en; return; }
+      if (saved && current === saved.ta) return;
+      if (!tamil) return;
+      var prefix = '', suffix = '', content = current.trim();
+      if (el.matches('.qt')) {
+        var week = content.match(/(\s*<span class="qw">[\s\S]*?<\/span>)$/);
+        if (week) { suffix = week[1]; content = content.slice(0, -suffix.length).trim(); }
+      }
+      if (el.matches('.qt,.qe')) {
+        var parts = content.match(/^(<b>.*?<\/b>\s*)([\s\S]*)$/);
+        if (parts) { prefix = parts[1]; content = parts[2].trim(); }
+      }
+      if (Object.prototype.hasOwnProperty.call(data.markup, content)) {
+        var translated = prefix + data.markup[content] + suffix;
+        htmlState.set(el, {en:current, ta:translated}); el.innerHTML = translated;
+      }
+    });
+    document.querySelectorAll('[placeholder],[title],[aria-label]').forEach(function (el) {
+      if (el === button) return;
+      var saved = attributeState.get(el) || {};
+      ['placeholder','title','aria-label'].forEach(function (attr) {
+        var current = el.getAttribute(attr); if (!current) return;
+        if (saved[attr] && current === saved[attr].ta) {
+          if (!tamil) el.setAttribute(attr, saved[attr].en);
+          return;
+        }
+        if (tamil && data.strings[current]) {
+          saved[attr] = {en:current, ta:data.strings[current]}; el.setAttribute(attr, saved[attr].ta);
+        }
+      });
+      attributeState.set(el, saved);
+    });
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) {
+      if (!node.parentElement || node.parentElement.closest('script,style,textarea,.hci-language')) continue;
+      var value = node.nodeValue, saved = textState.get(node);
+      if (saved && value === saved.ta) {
+        if (!tamil) node.nodeValue = saved.en;
+        continue;
+      }
+      if (!tamil) continue;
+      var key = value.trim(), translated = data.strings[key];
+      if (!translated && /^\d+ unanswered$/.test(key)) translated = key.split(' ')[0] + ' விடையளிக்கப்படவில்லை';
+      if (!translated) {
+        var numbered = key.match(/^(\d+\.\s+)(.*)$/);
+        if (numbered && data.strings[numbered[2]]) translated = numbered[1] + data.strings[numbered[2]];
+      }
+      if (!translated) {
+        var video = key.match(/^(\d+\.\s+)(.*?) · (\d+) min$/);
+        if (video && data.strings[video[2]]) translated = video[1] + data.strings[video[2]] + ' · ' + video[3] + ' நிமிடம்';
+      }
+      var patterned = translated || key;
+      patterns.forEach(function (p) { if (p.selector && !node.parentElement.closest(p.selector)) return; p.regex.lastIndex = 0; patterned = patterned.replace(p.regex, p.replacement); });
+      if (patterned !== key) translated = patterned;
+      if (!translated) continue;
+      var output = value.replace(key, translated);
+      if (output !== value) { textState.set(node, {en:value, ta:output}); node.nodeValue = output; }
+    }
+    if (tamil) markupElements.forEach(function (el) {
+      var saved = htmlState.get(el);
+      if (saved) saved.ta = el.innerHTML;
+    });
+  }
+  document.addEventListener('click', function (event) {
+    var item = event.target.closest('.tool .ml li');
+    if (!tamil || !item) return;
+    var walker = document.createTreeWalker(item, NodeFilter.SHOW_TEXT), node;
+    while ((node = walker.nextNode())) {
+      var saved = textState.get(node);
+      if (saved && node.nodeValue === saved.ta) node.nodeValue = saved.en;
+    }
+  }, true);
+  var observer = new MutationObserver(function () { if (tamil) translateLiveContent(); });
+  observer.observe(document.body, {subtree:true, childList:true, characterData:true});
+  button.onclick = function () {
+    tamil = !tamil;
+    sections.forEach(function (section) {
+      var explanation = section.querySelector('.tamil-native');
+      var content = section.querySelector('.section-english');
+      var toggle = section.querySelector('.native-toggle');
+      var reference = section.querySelector('.native-reference');
+      if (explanation) explanation.hidden = true;
+      if (content) { content.hidden = false; content.classList.remove('reference-open'); }
+      section.classList.remove('show-tamil');
+      if (toggle) { toggle.setAttribute('aria-expanded','false'); toggle.textContent='தமிழில் புரிந்துகொள்ள'; }
+      if (reference) { reference.setAttribute('aria-expanded','false'); reference.textContent = tamil ? 'முழு விவரம் · தமிழ் மொழிபெயர்ப்பு' : 'முழு விவரம், கணக்கு, படம், கருவிகள் · English'; }
+    });
+    tools.forEach(function (item) {
+      if (tamil) item.slot.appendChild(item.tool);
+      else item.home.after(item.tool);
+    });
+    sections.forEach(function (section) {
+      var en = section.querySelector('.hci-en'), ta = section.querySelector('.hci-ta');
+      en.hidden = tamil; ta.hidden = !tamil;
+      var h = section.querySelector('h2'), number = h.querySelector('.num').outerHTML;
+      if (tamil) { h.innerHTML = number; h.appendChild(document.createTextNode(ta.dataset.title)); }
+      else h.innerHTML = h.dataset.english;
+      section.querySelectorAll('.hci-ta h3[data-english-id]').forEach(function (subheading) {
+        var target = tamil ? subheading.dataset.englishId : subheading.id;
+        var link = document.querySelector('#toc a[href="#' + target + '"]');
+        if (link) {
+          link.href = '#' + (tamil ? subheading.id : subheading.dataset.englishId);
+          link.lastElementChild.textContent = tamil ? subheading.textContent : subheading.dataset.englishText;
+        }
+      });
+      var toc = document.querySelector('#toc a[href="#' + h.id + '"]');
+      if (toc && toc.lastElementChild) toc.lastElementChild.textContent = tamil ? ta.dataset.title : h.dataset.t;
+    });
+    document.documentElement.lang = tamil ? 'ta' : 'en';
+    button.textContent = tamil ? 'English' : 'தமிழ்'; button.lang = tamil ? 'en' : 'ta';
+    button.setAttribute('aria-label', tamil ? 'Read original English' : 'Read the Tamil translation');
+    button.setAttribute('aria-pressed', String(tamil));
+    translateLiveContent();
+    window.dispatchEvent(new Event('resize'));
+  };
+})();
 </script></body></html>

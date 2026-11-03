@@ -1,0 +1,37 @@
+[
+  {
+    "pattern": "Data mart → a <b>star</b> \\(or snowflake\\) schema",
+    "replacement": "தரவுச் சந்தை → <b>நட்சத்திர</b> (அல்லது பனித்துகள்) திட்டவடிவம்",
+    "flags": "g"
+  },
+  {
+    "pattern": "Data warehouse → often a <b>fact constellation</b> \\(several fact tables sharing dimensions\\)",
+    "replacement": "தரவுக் கிடங்கு → பொதுவாக <b>உண்மை விண்மீன்கூட்டம்</b> (பரிமாணங்களைப் பகிரும் பல உண்மை அட்டவணைகள்)",
+    "flags": "g"
+  },
+  {
+    "pattern": "one fact row per individual transaction",
+    "replacement": "ஒவ்வொரு தனிப் பரிவர்த்தனைக்கும் ஓர் உண்மை வரிசை",
+    "flags": "g"
+  },
+  {
+    "pattern": "one fact row per daily snapshot",
+    "replacement": "ஒவ்வொரு அன்றாட நிலைப்பதிவுக்கும் ஓர் உண்மை வரிசை",
+    "flags": "g"
+  },
+  {
+    "pattern": "one fact row per monthly summary",
+    "replacement": "ஒவ்வொரு மாதச் சுருக்கத்துக்கும் ஓர் உண்மை வரிசை",
+    "flags": "g"
+  },
+  {
+    "pattern": " fact",
+    "replacement": " உண்மை",
+    "flags": "g"
+  },
+  {
+    "pattern": " dimension table",
+    "replacement": " பரிமாண அட்டவணை",
+    "flags": "g"
+  }
+]

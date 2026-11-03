@@ -1,0 +1,51 @@
+Bayesian & Rule-Based Classification	பேய்சியன் மற்றும் விதி சார்ந்த வகைப்படுத்தல்
+Bayes' theorem, the naïve Bayesian classifier (categorical and Gaussian), rule-based classifiers with coverage and accuracy, extracting rules from a decision tree, and Weka's training/testing.	பேய்சின் தேற்றம், எளிமைப் பேய்சியன் வகைப்படுத்தி (வகைசார், கௌசியன்), உள்ளடக்கம் மற்றும் துல்லியத்துடன் விதி சார்ந்த வகைப்படுத்திகள், மரத்திலிருந்து விதிகளைப் பிரித்தெடுத்தல், Weka பயிற்சி/சோதனை.
+Support Lecture – Bayesian & Rule-Based Classification	ஆதரவு விரிவுரை – பேய்சியன் மற்றும் விதி சார்ந்த வகைப்படுத்தல்
+Support lecture for this week's topics.	இந்த வாரத் தலைப்புகளுக்கான ஆதரவு விரிவுரை.
+Naive Bayes: derived from Bayes' theorem	எளிமைப் பேய்ச்: பேய்சின் தேற்றத்திலிருந்து பெறப்பட்டது
+Bayes' equation: posterior, likelihood, prior	பேய்சின் சமன்பாடு: பின்னர் நிகழ்தகவு, வாய்ப்புத்தன்மை, முன் நிகழ்தகவு
+Example: P(meningitis | stiff neck)	எடுத்துக்காட்டு: P(மூளையுறை அழற்சி | கழுத்து விறைப்பு)
+Multiple attributes: the conditional independence assumption	பல பண்புக்கூறுகள்: நிபந்தனைச் சுயாதீன அனுமானம்
+Comparing classes: drop the common denominator	வகுப்புகளை ஒப்பிடுதல்: பொதுவான பகுதியை நீக்குதல்
+Worked example: Refund, Marital status, Income → Evade	செய்முறை எடுத்துக்காட்டு: பணத்திருப்பல், மணநிலை, வருமானம் → வரிஏய்ப்பு
+Zero counts and the Laplace correction	பூச்சிய எண்ணிக்கைகளும் லப்ளாஸ் திருத்தமும்
+Computing the class probabilities and deciding	வகுப்பு நிகழ்தகவுகளைக் கணக்கிட்டு முடிவெடுத்தல்
+Second example: buys_computer	இரண்டாவது எடுத்துக்காட்டு: buys_computer
+Rule-based classification: rules from a decision tree	விதி சார்ந்த வகைப்படுத்தல்: முடிவெடுக்கும் மரத்திலிருந்து விதிகள்
+Using a rule base for prediction	முன்னறிவிப்புக்கு விதித் தளத்தைப் பயன்படுத்துதல்
+Weka 2.1 – Be a classifier!	Weka 2.1 – வகைப்படுத்தியாகுங்கள்!
+Building a tree by hand with Weka's UserClassifier.	Weka UserClassifier-ஆல் கைமுறையில் மரத்தை உருவாக்குதல்.
+Introduction: build a classifier by hand (User Classifier)	அறிமுகம்: கைமுறையில் வகைப்படுத்தியை உருவாக்குதல் (User Classifier)
+The segment dataset (image analysis)	segment தரவுத்தொகுப்பு (படப் பகுப்பாய்வு)
+Setting the test set; the scatter plot	சோதனைத் தொகுப்பை அமைத்தல்; சிதறல் வரைபு
+Selecting regions with rectangles to make nodes	கணுக்களை உருவாக்கச் செவ்வகங்களால் பகுதிகளைத் தேர்ந்தெடுத்தல்
+Accepting the tree	மரத்தை ஏற்றுக்கொள்ளுதல்
+Evaluating on the test set	சோதனைத் தொகுப்பில் மதிப்பிடுதல்
+Weka 2.2 – Training and testing	Weka 2.2 – பயிற்சியும் சோதனையும்
+Why you must evaluate on independent test data.	சுயாதீனச் சோதனைத் தரவில் ஏன் மதிப்பிட வேண்டும்.
+Introduction: why training and test sets must differ	அறிமுகம்: பயிற்சி, சோதனைத் தொகுப்புகள் ஏன் வேறுபட வேண்டும்
+Segment-challenge: J48 with a separate test set	Segment-challenge: தனிச் சோதனைத் தொகுப்புடன் J48
+Evaluating on the training set (over-optimistic)	பயிற்சித் தொகுப்பில் மதிப்பிடுதல் (மிகையான நம்பிக்கை)
+Percentage split; independent sampling	சதவீதப் பிரிப்பு; சுயாதீன மாதிரியெடுத்தல்
+Weka 2.3 – Repeated training and testing	Weka 2.3 – மீண்டும் பயிற்சியும் சோதனையும்
+Repeating holdout with different random splits and averaging.	வெவ்வேறு சீரற்ற பிரிப்புகளுடன் ஒதுக்கீட்டை மீண்டும் செய்து சராசரியெடுத்தல்.
+Introduction: the random seed	அறிமுகம்: சீரற்ற விதை
+Changing the seed changes the result	விதையை மாற்றுவது முடிவை மாற்றுகிறது
+Repeating with different seeds (94%, 95%…)	வெவ்வேறு விதைகளுடன் மீண்டும் செய்தல் (94%, 95%…)
+Mean and standard deviation of accuracy	துல்லியத்தின் சராசரியும் நியம விலகலும்
+Result: about 95% ± 2%	முடிவு: ஏறத்தாழ 95% ± 2%
+Bayes' theorem calculator	பேய்சின் தேற்றக் கணிப்பான்
+(> 1: these inputs are inconsistent)	(> 1: இந்த உள்ளீடுகள் முரண்பாடானவை)
+Naïve Bayes classifier (buys_computer data)	எளிமைப் பேய்ச் வகைப்படுத்தி (buys_computer தரவு)
+Use Laplacian correction (add 1 to each count, which avoids zero probabilities)	லப்ளாசியன் திருத்தத்தைப் பயன்படுத்து (ஒவ்வொரு எண்ணிக்கைக்கும் 1 சேர்த்தல் பூச்சிய நிகழ்தகவுகளைத் தவிர்க்கிறது)
+Prediction:	முன்னறிவிப்பு:
+A zero count wiped out the whole product. Tick the Laplacian correction to fix this.	பூச்சிய எண்ணிக்கை முழுப் பெருக்கலையும் அழித்துவிட்டது. திருத்த லப்ளாசியன் திருத்தத்தைத் தெரிவுசெய்யவும்.
+Rule evaluator	விதி மதிப்பீட்டி
+Build a rule antecedent (leave "any" to skip an attribute) and choose the consequent.	விதி முன்னுறுப்பை உருவாக்கி (பண்புக்கூற்றைத் தவிர்க்க "எதுவும்" என விடவும்), பின்னுறுப்பைத் தேர்ந்தெடுக்கவும்.
+IF	எனில்
+AND	மற்றும்
+THEN	அப்போது
+THEN buys_computer =	அப்போது கணினி_வாங்குவார் =
+any	எதுவும்
+none	எதுவுமில்லை
+(true)	(உண்மை)

@@ -1,0 +1,122 @@
+[
+  {
+    "pattern": "class =",
+    "replacement": "வகுப்பு =",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Normalised:",
+    "replacement": "இயல்பாக்கப்பட்டது:",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Covers RIDs:",
+    "replacement": "உள்ளடக்கும் RID-கள்:",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "coverage =",
+    "replacement": "உள்ளடக்கம் =",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "accuracy =",
+    "replacement": "துல்லியம் =",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\bcredit_rating\\b",
+    "replacement": "கடன்_மதிப்பீடு",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\bbuys_computer\\b",
+    "replacement": "கணினி_வாங்குவார்",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\bmiddle_aged\\b",
+    "replacement": "நடுத்தர_வயது",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\bstudent\\b",
+    "replacement": "மாணவர்",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\bincome\\b",
+    "replacement": "வருமானம்",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\bsenior\\b",
+    "replacement": "முதியவர்",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\byouth\\b",
+    "replacement": "இளைஞர்",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\bexcellent\\b",
+    "replacement": "மிகச்சிறப்பு",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\bmedium\\b",
+    "replacement": "நடுத்தரம்",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\bhigh\\b",
+    "replacement": "அதிகம்",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\blow\\b",
+    "replacement": "குறைவு",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\bfair\\b",
+    "replacement": "நியாயம்",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\bage\\b",
+    "replacement": "வயது",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\byes\\b",
+    "replacement": "ஆம்",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\bno\\b",
+    "replacement": "இல்லை",
+    "flags": "g",
+    "selector": ".tool"
+  }
+]

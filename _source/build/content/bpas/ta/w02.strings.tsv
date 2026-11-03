@@ -1,0 +1,66 @@
+Accounting Process, Double Entry & Primary Entry Journals	கணக்கியல் செயல்முறை, இரட்டைப் பதிவு, ஆரம்பப் பதிவேடுகள்
+What accounting is, the entity concept, stakeholders and their needs, the Conceptual Framework (objective, qualitative characteristics, elements, recognition, measurement), debit and credit rules, the accounting equation, T-accounts and balancing, source documents, and the four day books.	கணக்கியல் என்றால் என்ன, தனித்துவக் கருத்து, அக்கறைதாரர்களும் தேவைகளும், கருத்தியல் கட்டமைப்பு (நோக்கம், தரப் பண்புகள், கூறுகள், அங்கீகாரம், அளவீடு), பற்று–வரவு விதிகள், கணக்கியல் சமன்பாடு, T-கணக்குகளும் மீதிகட்டுதலும், மூல ஆவணங்கள், நான்கு நாளேடுகள்.
+🧪 Try it — Double-entry simulator (Mr. Isuru's business)	🧪 முயன்று பாருங்கள் — இரட்டைப் பதிவு உருவகப்படுத்தல் (திரு. இசுருவின் வணிகம்)
+Transaction	பரிவர்த்தனை
+Owner invests cash (capital)	உரிமையாளர் காசை முதலீடு செய்கிறார் (மூலதனம்)
+Obtain a bank loan	வங்கிக் கடன் பெறுதல்
+Buy a motor vehicle for cash	காசுக்கு மோட்டார் வாகனம் வாங்குதல்
+Buy goods on credit	கடனுக்குப் பொருட்கள் வாங்குதல்
+Buy goods for cash	காசுக்குப் பொருட்கள் வாங்குதல்
+Sell goods on credit	கடனுக்குப் பொருட்கள் விற்றல்
+Sell goods for cash	காசுக்குப் பொருட்கள் விற்றல்
+Pay rent	வாடகை செலுத்துதல்
+Customer pays what they owe	வாடிக்கையாளர் செலுத்தவேண்டியதைச் செலுத்துகிறார்
+Pay a supplier	வழங்குநருக்குப் பணம் செலுத்துதல்
+Owner takes cash for personal use	உரிமையாளர் தனிப்பட்ட பயன்பாட்டுக்குக் காசு எடுத்தல்
+Amount Rs	தொகை ரூ.
+Post it	பதிக
+Reset	மீட்டமை
+Cash	காசு
+Capital	மூலதனம்
+Bank loan	வங்கிக் கடன்
+Motor vehicle	மோட்டார் வாகனம்
+Purchases	கொள்வனவுகள்
+Creditors	கடன்கொடுநர்கள்
+Debtors	கடன்படுநர்கள்
+Sales	விற்பனைகள்
+Rent expense	வாடகைச் செலவு
+Drawings	எடுப்பனவுகள்
+Dr	பற்று
+/ Cr	/ வரவு
+Assets + Expenses + Drawings	சொத்துகள் + செலவுகள் + எடுப்பனவுகள்
+Capital + Income + Liabilities	மூலதனம் + வருமானம் + பொறுப்புகள்
+✓ balances	✓ சமநிலைப்படுகிறது
+Post a few transactions. Every one updates two T-accounts, and the accounting equation always balances.	சில பரிவர்த்தனைகளைப் பதியுங்கள். ஒவ்வொன்றும் இரண்டு T-கணக்குகளைப் புதுப்பிக்கிறது; கணக்கியல் சமன்பாடு எப்போதும் சமநிலைப்படுகிறது.
+🧪 Try it — Which book does it go in?	🧪 முயன்று பாருங்கள் — எந்தப் பதிவேட்டில் பதியப்படும்?
+Bought goods on credit from ABC Ltd	ABC Ltd நிறுவனத்திடமிருந்து கடனுக்குப் பொருட்கள் வாங்கியது
+Bought goods for cash	காசுக்குப் பொருட்கள் வாங்கியது
+Bought a computer on credit (fixed asset)	கடனுக்குக் கணினி வாங்கியது (நிலையான சொத்து)
+Returned faulty goods to ABC Ltd	குறைபாடுள்ள பொருட்களை ABC Ltd நிறுவனத்துக்குத் திருப்பியது
+Sold goods on credit to Kamal	கமலுக்குக் கடனுக்குப் பொருட்கள் விற்றது
+Kamal returned damaged goods	கமல் சேதமடைந்த பொருட்களைத் திருப்பினார்
+Sold goods for cash	காசுக்குப் பொருட்கள் விற்றது
+Primary book	ஆரம்பப் பதிவேடு
+Source document	மூல ஆவணம்
+Double entry	இரட்டைப் பதிவு
+Purchase journal	கொள்வனவு நாளேடு
+Purchase invoice	கொள்வனவு விலைப்பட்டியல்
+Dr Purchases / Cr Creditors (ABC Ltd)	பற்று கொள்வனவுகள் / வரவு கடன்கொடுநர்கள் (ABC Ltd)
+Cash book (not the purchase journal)	காசேடு (கொள்வனவு நாளேடு அல்ல)
+Payment voucher / receipt	கொடுப்பனவுச் சான்று / ரசீது
+Dr Purchases / Cr Cash	பற்று கொள்வனவுகள் / வரவு காசு
+General journal (not the purchase journal: it's a fixed asset)	பொது நாளேடு (கொள்வனவு நாளேடு அல்ல: இது நிலையான சொத்து)
+Purchase invoice + journal voucher	கொள்வனவு விலைப்பட்டியல் + நாளேட்டுச் சான்று
+Dr Computer equipment / Cr Creditor	பற்று கணினிச் சாதனங்கள் / வரவு கடன்கொடுநர்
+Purchase return journal (returns outwards)	கொள்வனவுத் திருப்ப நாளேடு (வெளித்திருப்பம்)
+Debit note (sent to ABC Ltd)	பற்றுக் குறிப்பு (ABC Ltd நிறுவனத்துக்கு அனுப்பியது)
+Dr Creditors (ABC Ltd) / Cr Purchase returns	பற்று கடன்கொடுநர்கள் (ABC Ltd) / வரவு கொள்வனவுத் திருப்பங்கள்
+Sales journal	விற்பனை நாளேடு
+Sales invoice	விற்பனை விலைப்பட்டியல்
+Dr Debtors (Kamal) / Cr Sales	பற்று கடன்படுநர்கள் (கமல்) / வரவு விற்பனைகள்
+Sales return journal (returns inwards)	விற்பனைத் திருப்ப நாளேடு (உள்திருப்பம்)
+Credit note (issued to Kamal)	வரவுக் குறிப்பு (கமலுக்கு வழங்கியது)
+Dr Sales returns / Cr Debtors (Kamal)	பற்று விற்பனைத் திருப்பங்கள் / வரவு கடன்படுநர்கள் (கமல்)
+Cash book (not the sales journal)	காசேடு (விற்பனை நாளேடு அல்ல)
+Receipt	ரசீது
+Dr Cash / Cr Sales	பற்று காசு / வரவு விற்பனைகள்

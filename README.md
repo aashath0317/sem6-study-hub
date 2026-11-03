@@ -61,3 +61,9 @@ node _source/build/tests/hci-translation.test.cjs
 ```
 
 The test exercises Tamil/English switching, dynamic tool branches, answer selection and quiz grading without fetching external resources.
+
+## Business Tamil translations — current progress
+
+Business Processes and Accounting Systems **Weeks 01–02** have both the original Tamil explanation buttons and the floating Tamil/English button for authored direct translations. These two weeks include 15 note sections, 23 quiz questions and three interactive tools. Original English notes, numerical examples, answers and explanation content are preserved. Lecture-video titles, descriptions and chapter captions remain English in these weeks. Weeks 03–15 retain their original explanation buttons; their direct translations are pending.
+
+Refresh completed Business translations with `python _source/build/refresh_hci_translations.py bpas`. Run their integration checks with `STUDY_TRANSLATION_SUBJECT=bpas node _source/build/tests/hci-translation.test.cjs`.

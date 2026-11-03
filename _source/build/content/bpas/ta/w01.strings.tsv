@@ -1,0 +1,42 @@
+Business Processes & Accounting Information Systems (AIS)	வணிகச் செயல்முறைகளும் கணக்கியல் தகவல் முறைமைகளும் (AIS)
+What a business process is, the three core business processes and Porter's value chain, accounting information and its users, what an AIS is and why it matters, its five components, AIS principles, and internal control.	வணிகச் செயல்முறை என்றால் என்ன, மூன்று மைய வணிகச் செயல்முறைகளும் போர்ட்டரின் பெறுமதிச் சங்கிலியும், கணக்கியல் தகவலும் பயனர்களும், AIS என்றால் என்ன மற்றும் அதன் முக்கியத்துவம், ஐந்து கூறுகள், AIS கொள்கைகள், அகக் கட்டுப்பாடு.
+🧪 Try it — Follow a business through its three processes	🧪 முயன்று பாருங்கள் — வணிகத்தின் மூன்று செயல்முறைகளையும் பின்தொடருங்கள்
+Business	வணிகம்
+Bakery	வெதுப்பகம்
+Software company	மென்பொருள் நிறுவனம்
+Garment factory	ஆடைத் தொழிற்சாலை
+Process	செயல்முறை
+Activities	நடவடிக்கைகள்
+Source documents	மூல ஆவணங்கள்
+Accounts affected (data for the AIS)	பாதிக்கப்படும் கணக்குகள் (AIS-க்கான தரவு)
+1. Acquire & pay	1. பெற்று பணம் செலுத்துதல்
+2. Convert	2. மாற்றுதல்
+3. Sell & collect	3. விற்று வசூலித்தல்
+Buy flour, sugar, eggs, gas; pay bakers' wages	மா, சீனி, முட்டை, எரிவாயு வாங்குதல்; வெதுப்பகப் பணியாளர்களின் ஊதியத்தைச் செலுத்துதல்
+Purchase order → goods received note → supplier invoice → payment voucher	கொள்வனவுக் கட்டளை → பொருள் பெறுதல் குறிப்பு → வழங்குநர் விலைப்பட்டியல் → கொடுப்பனவுச் சான்று
+Purchases, accounts payable, cash/bank, payroll	கொள்வனவுகள், செலுத்தவேண்டிய கணக்குகள், காசு/வங்கி, ஊதியப்பட்டியல்
+Mix, bake and pack bread and cakes	பாண் மற்றும் கேக்குகளைக் கலந்து, சுட்டு, பொதியிடுதல்
+Production schedule, materials issue note	உற்பத்தி அட்டவணை, பொருள் வழங்கல் குறிப்பு
+Inventory: raw materials → finished goods	சரக்கு: மூலப்பொருட்கள் → முடிவுற்ற பொருட்கள்
+Sell to shops and walk-in customers; collect cash or credit	கடைகளுக்கும் நேரில் வரும் வாடிக்கையாளர்களுக்கும் விற்றல்; காசு அல்லது கடன் வசூலித்தல்
+Sales order → delivery note → sales invoice → receipt	விற்பனைக் கட்டளை → விநியோகக் குறிப்பு → விற்பனை விலைப்பட்டியல் → ரசீது
+Sales, accounts receivable, cash/bank	விற்பனைகள், பெறவேண்டிய கணக்குகள், காசு/வங்கி
+Hire developers, buy laptops and cloud servers	மென்பொருள் உருவாக்குநர்களை வேலைக்கமர்த்துதல்; மடிக்கணினிகளும் மேகச் சேவையகங்களும் வாங்குதல்
+Employment contracts, purchase invoices	வேலை ஒப்பந்தங்கள், கொள்வனவு விலைப்பட்டியல்கள்
+Payroll, fixed assets, accounts payable	ஊதியப்பட்டியல், நிலையான சொத்துகள், செலுத்தவேண்டிய கணக்குகள்
+Develop and test the software product	மென்பொருள் தயாரிப்பை உருவாக்கிச் சோதித்தல்
+Timesheets, project records	நேரப்பதிவுத் தாள்கள், திட்டப் பதிவுகள்
+Work-in-progress / development costs	நடைபெறும் வேலை / உருவாக்கச் செலவுகள்
+Sell licences and subscriptions; collect monthly fees	உரிமங்களும் சந்தாக்களும் விற்றல்; மாதாந்தக் கட்டணங்களை வசூலித்தல்
+Contracts, subscription invoices, receipts	ஒப்பந்தங்கள், சந்தா விலைப்பட்டியல்கள், ரசீதுகள்
+Revenue, receivables, bank	வருவாய், பெறவேண்டியவை, வங்கி
+Buy fabric, thread, machines; pay machine operators	துணி, நூல், இயந்திரங்கள் வாங்குதல்; இயந்திர இயக்குநர்களுக்குச் சம்பளம் செலுத்துதல்
+Purchase requisition → PO → GRN → invoice	கொள்வனவுக் கோரிக்கை → கொள்வனவுக் கட்டளை → பொருள் பெறுதல் குறிப்பு → விலைப்பட்டியல்
+Purchases, inventory, payables, payroll	கொள்வனவுகள், சரக்கு, செலுத்தவேண்டியவை, ஊதியப்பட்டியல்
+Cut, sew, finish and pack garments	ஆடைகளை வெட்டி, தைத்து, நிறைவுசெய்து, பொதியிடுதல்
+Job cards, material requisitions	வேலை அட்டைகள், பொருள் கோரிக்கைகள்
+Raw materials → WIP → finished goods	மூலப்பொருட்கள் → நடைபெறும் வேலை → முடிவுற்ற பொருட்கள்
+Export to buyers; collect payment by letter of credit	வாங்குநர்களுக்கு ஏற்றுமதி செய்தல்; கடன் கடிதம் மூலம் பணம் பெறுதல்
+Commercial invoice, shipping documents	வர்த்தக விலைப்பட்டியல், கப்பல் சரக்கு ஆவணங்கள்
+Sales, receivables, foreign currency bank	விற்பனைகள், பெறவேண்டியவை, வெளிநாட்டு நாணய வங்கிக் கணக்கு
+Every row produces accounting data, and the AIS captures all of it.	ஒவ்வொரு வரியும் கணக்கியல் தரவை உருவாக்குகிறது; AIS அனைத்தையும் பதிவு செய்கிறது.

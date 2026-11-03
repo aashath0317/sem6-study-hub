@@ -4,7 +4,7 @@ Usage: python _source/build/refresh_hci_translations.py
 Requires the same `markdown` package as build.py.
 """
 from pathlib import Path
-import re
+import re, sys
 from build import md, native_sections
 from offline_tamil import translated_body
 
@@ -38,12 +38,21 @@ def refresh(text, key):
 
 
 if __name__ == '__main__':
-    files = sorted((ROOT/'Human Computer Interaction').rglob('*.html'))
+    subject = sys.argv[1] if len(sys.argv) > 1 else 'hci'
+    folders = {'hci':'Human Computer Interaction', 'bpas':'Business Processes and Accounting Systems'}
+    if subject not in folders:
+        raise SystemExit('Supported subjects: hci, bpas')
+    files = sorted((ROOT/folders[subject]).rglob('*.html'))
     prepared = []
     for path in files:
         text = path.read_text(encoding='utf-8')
-        key = re.search(r'<body data-key="([^"]*)"', text)[1] or 'hci-index'
+        key = re.search(r'<body data-key="([^"]*)"', text)[1]
+        if subject == 'bpas':
+            week = re.fullmatch(r'bpas-Week(\d+)', key)
+            if not week or not (HERE/'content'/'bpas'/'ta'/('w' + week[1] + '.md')).exists():
+                continue
+        key = key or 'hci-index'
         prepared.append((path, refresh(text, key)))
     for path, text in prepared:
         path.write_text(text, encoding='utf-8')
-    print('Updated', len(prepared), 'HCI pages; other subjects unchanged.')
+    print('Updated', len(prepared), subject.upper(), 'pages; other subjects unchanged.')

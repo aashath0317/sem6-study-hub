@@ -4,14 +4,16 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { JSDOM, VirtualConsole } = require('jsdom');
 const root = path.resolve(__dirname, '../../..');
-const directory = path.join(root, 'Human Computer Interaction');
+const business = process.env.STUDY_TRANSLATION_SUBJECT === 'bpas';
+const directory = path.join(root, business ? 'Business Processes and Accounting Systems' : 'Human Computer Interaction');
 function files(dir) { return fs.readdirSync(dir, {withFileTypes:true}).flatMap(e => e.isDirectory() ? files(path.join(dir,e.name)) : e.name.endsWith('.html') ? [path.join(dir,e.name)] : []); }
 const tick = () => new Promise(resolve => setTimeout(resolve, 0));
 (async () => {
   let totalSections=0, totalQuestions=0, totalTools=0;
   const untranslated = [];
-  assert.equal(files(directory).length,15);
-  for (const file of files(directory)) {
+  const pages = files(directory).filter(file => !business || /Week 0[12]\//.test(file));
+  assert.equal(pages.length,business ? 2 : 15);
+  for (const file of pages) {
     const errors = [];
     const vc = new VirtualConsole();
     vc.on('jsdomError', e => errors.push(e.cause?.stack || e.message));
@@ -108,5 +110,5 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
   }
   const report = [...new Map(untranslated.map(x=>[x.file+'|'+x.text,x])).values()];
   if(process.env.HCI_TRANSLATION_REPORT) fs.writeFileSync(process.env.HCI_TRANSLATION_REPORT,JSON.stringify(report,null,2));
-  console.log(`PASS: 15 pages, ${totalSections} sections, ${totalQuestions} rendered questions, ${totalTools} live tools; toggles, tool branches, quiz selections and grading.`);
+  console.log(`PASS: ${pages.length} pages, ${totalSections} sections, ${totalQuestions} rendered questions, ${totalTools} live tools; toggles, tool branches, quiz selections and grading.`);
 })().catch(e=>{console.error(e);process.exit(1);});

@@ -4,7 +4,7 @@ Usage: python _source/build/refresh_hci_translations.py
 Requires the same `markdown` package as build.py.
 """
 from pathlib import Path
-import re, sys
+import re, sys, json
 from build import md, native_sections
 from offline_tamil import translated_body
 
@@ -58,6 +58,8 @@ if __name__ == '__main__':
             week = re.fullmatch(subject + r'-Week(\d+)', key)
             directory = HERE/'content'/subject/'ta'
             if week:
+                if subject == 'dm' and 'w' + week[1] not in json.loads((directory/'source-manifest.json').read_text()):
+                    continue
                 if not all((directory/('w' + week[1] + '.' + ext)).exists() for ext in ('md', 'quiz', 'strings.tsv')):
                     continue
             elif key.endswith('-papers'):

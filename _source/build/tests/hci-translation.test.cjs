@@ -43,6 +43,8 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     const ids = [...d.querySelectorAll('[id]')].map(el=>el.id);
     assert.equal(new Set(ids).size, ids.length,'Duplicate IDs: '+file);
     const tools = [...d.querySelectorAll('.tool')];
+    const textInputs=[...d.querySelectorAll('.tool textarea,.tool input[type=text]')];
+    const initialTextValues=textInputs.map(el=>el.value);
     const input = d.querySelector('.quiz input[type=radio]');
     if(input) { input.checked=true; input.dispatchEvent(new dom.window.Event('change',{bubbles:true})); }
     const explanationButton = d.querySelector('.native-toggle');
@@ -55,6 +57,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     }
     button.click(); await tick();
     if(explanationButton) assert.equal(d.querySelector('.tamil-native').hidden,true);
+    assert.deepEqual(textInputs.map(el=>el.value),initialTextValues,'Source dataset changed on Tamil toggle');
     assert.equal(d.documentElement.lang,'ta');
     assert.equal(button.textContent,'English');
     const translationData = JSON.parse(d.querySelector('#hci-tamil-data').textContent);
@@ -120,6 +123,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
       await tick();
     }
     const editedValues=editedInputs.map(el=>el.value);
+    const currentTextValues=textInputs.map(el=>el.value);
     const numericOutputs=()=>[...d.querySelectorAll('.tool .out')].map(el=>(el.textContent.match(/\d+(?:[,.]\d+)*/g)||[]).sort().join('|'));
     const tamilNumbers=business ? numericOutputs() : null;
     // A tool that reads a translated label must still retain its source-language state.
@@ -139,6 +143,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     if(deletedLabel) assert.ok(d.querySelector('#pr .msg').textContent.includes(deletedLabel),'Tool captured translated label as source state');
     if(input) assert.equal(input.checked,true,'Quiz answer lost');
     assert.deepEqual(editedInputs.map(el=>el.value),editedValues,'Edited tool values lost');
+    assert.deepEqual(textInputs.map(el=>el.value),currentTextValues,'Edited datasets lost on English restore');
     if(business) assert.deepEqual(numericOutputs(),tamilNumbers,'Language toggle changed financial results');
     tools.forEach(tool=> assert.ok(tool.closest('.hci-en'),'Live tool not returned'));
     for(const tool of tools) assert.ok(d.contains(tool),'Live tool replaced');

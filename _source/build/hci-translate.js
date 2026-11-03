@@ -56,7 +56,7 @@
     });
   });
   var data = JSON.parse(document.getElementById('hci-tamil-data').textContent);
-  var patterns = (data.patterns || []).map(function (p) { return {regex:new RegExp(p.pattern, p.flags || ''), replacement:p.replacement}; });
+  var patterns = (data.patterns || []).map(function (p) { return {regex:new RegExp(p.pattern, p.flags || ''), replacement:p.replacement, selector:p.selector || null}; });
   var textState = new WeakMap(), htmlState = new WeakMap(), attributeState = new WeakMap();
   function fitTamilDiagrams() {
     document.querySelectorAll('.tool svg:has(foreignObject)').forEach(function (svg) {
@@ -113,7 +113,7 @@
     var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     var node;
     while ((node = walker.nextNode())) {
-      if (!node.parentElement || node.parentElement.closest('script,style,.hci-language')) continue;
+      if (!node.parentElement || node.parentElement.closest('script,style,textarea,.hci-language')) continue;
       var value = node.nodeValue, saved = textState.get(node);
       if (saved && value === saved.ta) {
         if (!tamil) node.nodeValue = saved.en;
@@ -131,7 +131,7 @@
         if (video && data.strings[video[2]]) translated = video[1] + data.strings[video[2]] + ' · ' + video[3] + ' நிமிடம்';
       }
       var patterned = translated || key;
-      patterns.forEach(function (p) { p.regex.lastIndex = 0; patterned = patterned.replace(p.regex, p.replacement); });
+      patterns.forEach(function (p) { if (p.selector && !node.parentElement.closest(p.selector)) return; p.regex.lastIndex = 0; patterned = patterned.replace(p.regex, p.replacement); });
       if (patterned !== key) translated = patterned;
       if (!translated) continue;
       var output = value.replace(key, translated);

@@ -1,0 +1,134 @@
+[
+  {
+    "pattern": "Keep columns:",
+    "replacement": "பேண வேண்டிய நிரல்கள்:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " with C:",
+    "replacement": " C உடன்:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Result \\((\\d+) tuples?\\):",
+    "replacement": "முடிவு ($1 உறுப்புச் சோடிகள்):",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "(\\d+) rows",
+    "replacement": "$1 நிரைகள்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\(duplicates merged\\)",
+    "replacement": "(நகல்கள் இணைக்கப்பட்டன)",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Area =",
+    "replacement": "துறை =",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\(composite\\)",
+    "replacement": "(கூட்டு)",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\(primary\\)",
+    "replacement": "(முதன்மை)",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\bStudent_name\\b",
+    "replacement": "மாணவர்_பெயர்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\bStudent\\b",
+    "replacement": "மாணவர்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\bIndex\\b",
+    "replacement": "சுட்டெண்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\bArea\\b",
+    "replacement": "துறை",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\bCourse_code\\b",
+    "replacement": "பாடக்குறியீடு",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\bCourse\\b",
+    "replacement": "பாடம்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\bDepartment\\b",
+    "replacement": "துறை",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\bLecturer\\b",
+    "replacement": "விரிவுரையாளர்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\bVenue\\b",
+    "replacement": "இடம்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\bTime\\b",
+    "replacement": "நேரம்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Computer Science",
+    "replacement": "கணினி அறிவியல்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Mathematics",
+    "replacement": "கணிதம்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Physics",
+    "replacement": "இயற்பியல்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Psychology",
+    "replacement": "உளவியல்",
+    "selector": ".tool",
+    "flags": "g"
+  }
+]

@@ -1,0 +1,82 @@
+n-ary Relations & Relational Databases	n-உறுப்புத் தொடர்புகளும் தொடர்புநிலைத் தரவுத்தளங்களும்
+n-ary relations, domains and degree, the relational data model, records and fields, primary and composite keys, extension vs intension, and the selection, projection and join operators.	n-உறுப்புத் தொடர்புகள், ஆட்களங்களும் படியும், தொடர்புநிலைத் தரவு மாதிரி, பதிவுகளும் புலங்களும், முதன்மை மற்றும் கூட்டுச் சாவிகள், விரிவும் உள்நோக்கமும், தேர்வு, வீழ்த்தல், இணைப்புச் செயற்குறிகள்.
+Introduction to n-ary Relations	n-உறுப்புத் தொடர்புகளுக்கான அறிமுகம்
+From pairs to n-tuples: the "sum to" relation and the phone contacts example.	சோடிகளிலிருந்து n-உறுப்புச் சோடிகளுக்கு: "கூட்டினால் கிடைக்கும்" தொடர்பும் தொலைபேசித் தொடர்பு எடுத்துக்காட்டும்.
+n-ary relations extend binary relations; the foundation of relational databases	n-உறுப்புத் தொடர்புகள் இருமத் தொடர்புகளை விரிவாக்குகின்றன; தொடர்புநிலைத் தரவுத்தளங்களின் அடித்தளம்
+Binary recap: "less than" as a set of pairs	இரும மீள்நினைவு: சோடிகளின் கணமாக "சிறியது"
+A triple relation: "sum to" (a + b = c)	மூன்றுறுப்புத் தொடர்பு: "கூட்டினால் கிடைக்கும்" (a + b = c)
+Every tuple in a relation has the same length; n-ary relations and n-tuples	தொடர்பின் ஒவ்வொரு உறுப்புச் சோடியும் ஒரே நீளம்; n-உறுப்புத் தொடர்புகளும் சோடிகளும்
+Tuples can come from different sets (names × phone numbers)	உறுப்புச் சோடிகள் வெவ்வேறு கணங்களிலிருந்து வரலாம் (பெயர்கள் × தொலைபேசி எண்கள்)
+Key idea: a set of n-tuples from a cross product of n sets	முக்கிய கருத்து: n கணங்களின் குறுக்குப் பெருக்கலிலிருந்து n-உறுப்புச் சோடிகளின் கணம்
+Lesson 10 – n-ary Relations	பாடம் 10 – n-உறுப்புத் தொடர்புகள்
+Main lesson.	முக்கிய பாடம்.
+Definition 1: n-ary relations	வரையறை 1: n-உறுப்புத் தொடர்புகள்
+Example 10.1.2	எடுத்துக்காட்டு 10.1.2
+Example 10.1.3	எடுத்துக்காட்டு 10.1.3
+The relational data model	தொடர்புநிலைத் தரவு மாதிரி
+Extension and intension of a database	தரவுத்தளத்தின் விரிவும் உள்நோக்கமும்
+Primary keys: student names as identifiers	முதன்மைச் சாவிகள்: அடையாளங்களாக மாணவர் பெயர்கள்
+Example 10.2.2: composite keys	எடுத்துக்காட்டு 10.2.2: கூட்டுச் சாவிகள்
+Definition 2: the selection operator	வரையறை 2: தேர்வுச் செயற்குறி
+Definition 3: projection	வரையறை 3: வீழ்த்தல்
+Example 10.3.2: projection P1,3	எடுத்துக்காட்டு 10.3.2: P1,3 வீழ்த்தல்
+Example 10.3.3	எடுத்துக்காட்டு 10.3.3
+Example 10.3.4	எடுத்துக்காட்டு 10.3.4
+Example 10.3.5: the join operator	எடுத்துக்காட்டு 10.3.5: இணைப்புச் செயற்குறி
+Self-assessment exercises	சுயமதிப்பீட்டுப் பயிற்சிகள்
+Video Lecture 1	காணொளி விரிவுரை 1
+Lecture part 1.	விரிவுரைப் பகுதி 1.
+Introduction: from binary to n-ary relations	அறிமுகம்: இருமத்திலிருந்து n-உறுப்புத் தொடர்புகளுக்கு
+n can be any natural number	n எந்த இயல் எண்ணாகவும் இருக்கலாம்
+Definition of an n-ary relation, its domains and degree	n-உறுப்புத் தொடர்பின் வரையறை, அதன் ஆட்களங்களும் படியும்
+A three-ary relation: degree 3	மூன்றுறுப்புத் தொடர்பு: படி 3
+Example 10.1.4: a relation of degree 6	எடுத்துக்காட்டு 10.1.4: படி 6 உடைய தொடர்பு
+Video Lecture 2	காணொளி விரிவுரை 2
+Lecture part 2.	விரிவுரைப் பகுதி 2.
+Databases: records and fields	தரவுத்தளங்கள்: பதிவுகளும் புலங்களும்
+The students database as a table	அட்டவணையாக மாணவர் தரவுத்தளம்
+Primary keys	முதன்மைச் சாவிகள்
+Adding records: does the key still work?	பதிவுகளைச் சேர்த்தல்: சாவி இன்னும் செயல்படுகிறதா?
+Example 10.2.1	எடுத்துக்காட்டு 10.2.1
+Video Lecture 3	காணொளி விரிவுரை 3
+Lecture part 3.	விரிவுரைப் பகுதி 3.
+The selection operator	தேர்வுச் செயற்குறி
+Definition 2	வரையறை 2
+Selection example	தேர்வு எடுத்துக்காட்டு
+Example 10.3.2	எடுத்துக்காட்டு 10.3.2
+Keeping only the first and third fields	முதல், மூன்றாவது புலங்களை மட்டும் பேணுதல்
+Projection on a four-field table	நான்கு புல அட்டவணையில் வீழ்த்தல்
+Relational algebra playground	தொடர்புநிலை இயற்கணிதப் பயிற்சித்தளம்
+σ Selection	σ தேர்வு
+π Projection	π வீழ்த்தல்
+⋈ Join	⋈ இணைப்பு
+🔑 Key finder	🔑 சாவி கண்டறிதல்
+Student_name	மாணவர்_பெயர்
+Index	சுட்டெண்
+Area	துறை
+Student	மாணவர்
+Course	பாடம்
+Lecturer	விரிவுரையாளர்
+Department	துறை
+Course_code	பாடக்குறியீடு
+Venue	இடம்
+Time	நேரம்
+Computer Science	கணினி அறிவியல்
+Mathematics	கணிதம்
+Physics	இயற்பியல்
+Psychology	உளவியல்
+Biology	உயிரியல்
+Zoology	விலங்கியல்
+Area =	துறை =
+(any)	(எதுவும்)
+Table	அட்டவணை
+10.2.1 Students	10.2.1 மாணவர்கள்
+10.3.2 Enrolments	10.3.2 சேர்க்கைகள்
+10.3.4 Teaching	10.3.4 கற்பித்தல்
+10.3.5 Schedule	10.3.5 அட்டவணை
+Joining Teaching_assignments (10.3.4) with Class_schedule (10.3.5) on Department + Course_code.	துறை + பாடக்குறியீட்டில் கற்பித்தல்_ஒதுக்கீடுகளை (10.3.4), வகுப்பு_அட்டவணையுடன் (10.3.5) இணைத்தல்.
+Outlined rows have no match and are dropped (e.g. Grammer, Physics 551).	வெளிக்கோடிட்ட நிரைகளுக்குப் பொருத்தம் இல்லை; நீக்கப்படுகின்றன (எ.கா. Grammer, இயற்பியல் 551).
+Mathematics 611 has no lecturer, so it is dropped.	கணிதம் 611-க்கு விரிவுரையாளர் இல்லை; எனவே நீக்கப்படுகிறது.
+Join result (Table 10.3.6):	இணைப்பு முடிவு (அட்டவணை 10.3.6):
+Minimal keys in this extension:	இந்த விரிவின் குறைந்தபட்சச் சாவிகள்:
+Valid for these rows only. A real key must also suit the intension (future records).	இந்த நிரைகளுக்கு மட்டுமே செல்லுபடியாகும். உண்மையான சாவி உள்நோக்கத்துக்கும் (எதிர்காலப் பதிவுகள்) பொருந்த வேண்டும்.

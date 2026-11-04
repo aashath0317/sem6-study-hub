@@ -43,7 +43,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     const ids = [...d.querySelectorAll('[id]')].map(el=>el.id);
     assert.equal(new Set(ids).size, ids.length,'Duplicate IDs: '+file);
     const tools = [...d.querySelectorAll('.tool')];
-    const textInputs=[...d.querySelectorAll('.tool textarea,.tool input[type=text]')];
+    const textInputs=[...d.querySelectorAll('.tool textarea,.tool input[type=text],.tool input:not([type])')];
     const initialTextValues=textInputs.map(el=>el.value);
     const input = d.querySelector('.quiz input[type=radio]');
     if(input) { input.checked=true; input.dispatchEvent(new dom.window.Event('change',{bubbles:true})); }
@@ -101,6 +101,13 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
       for(const stage of d.querySelectorAll('#kdd .row .pill')) { stage.click(); await tick(); scan(); }
     }
     if(dataMining) {
+      if(d.querySelector('#sc')) {
+        for(const values of [[1200,1850,1000],[1200,1000,1350],[0,1,0],[1200,1850,1350]]) {
+          ['b','d','a'].forEach((name,index)=>d.querySelector('#sc .'+name).value=values[index]);
+          d.querySelector('#sc .d').dispatchEvent(new dom.window.Event('input',{bubbles:true}));
+          await tick(); scan();
+        }
+      }
       if(d.querySelector('#cv .k')) {
         d.querySelector('#cv .k').value='15';
         d.querySelector('#cv .k').dispatchEvent(new dom.window.Event('input',{bubbles:true}));

@@ -1,0 +1,32 @@
+[
+  {
+    "pattern": "\\bto A(\\d+)",
+    "replacement": "மெடாய்டு A$1",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Total cost =",
+    "replacement": "மொத்தச் செலவு =",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Compared with A1, A4, A7 \\(cost (\\d+)\\):",
+    "replacement": "A1, A4, A7 உடன் ஒப்பிடும்போது (செலவு $1):",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Clusters:",
+    "replacement": "குழுமங்கள்:",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": " at distance ",
+    "replacement": " தொலைவில் ",
+    "flags": "g",
+    "selector": ".tool"
+  }
+]

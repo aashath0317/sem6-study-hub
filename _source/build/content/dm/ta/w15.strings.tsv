@@ -1,0 +1,20 @@
+Applications & Trends in Data Mining	தரவுச் சுரங்கத்தின் பயன்பாடுகளும் போக்குகளும்
+How data mining is applied in four key domains: financial data analysis (warehouses, loan prediction, money laundering), retail (multidimensional analysis, campaign effectiveness), telecommunications (traffic analysis, fraud, sequential patterns) and biological data (integration, sequence alignment with BLAST/FASTA, protein networks).	நான்கு முக்கியத் துறைகளில் தரவுச் சுரங்கம் பயன்படுத்தப்படும் விதம்: நிதித் தரவுப் பகுப்பாய்வு (கிடங்குகள், கடன் முன்னறிவிப்பு, பணச் சலவை), சில்லறை வணிகம் (பல்பரிமாணப் பகுப்பாய்வு, விளம்பர இயக்கப் பயன்திறன்), தொலைத்தொடர்பு (தொடர்பாடல் போக்குப் பகுப்பாய்வு, மோசடி, தொடர் வடிவங்கள்), உயிரியல் தரவுகள் (ஒருங்கிணைப்பு, BLAST/FASTA மூலம் தொடர் சீரமைப்பு, புரத வலையமைப்புகள்).
+Campaign effectiveness check	விளம்பர இயக்கப் பயன்திறன் பரிசோதனை
+Transactions with the item, 4 weeks before	பொருளைக் கொண்ட பரிவர்த்தனைகள், 4 வாரங்களுக்கு முன்
+during the campaign	விளம்பர இயக்கம் நடைபெறும் காலத்தில்
+4 weeks after	4 வாரங்களுக்குப் பின்
+During vs before:	நடைபெறும் காலம் மற்றும் முன்பு:
+· After vs before:	· பின்பு மற்றும் முன்பு:
+Sales were higher during and after the campaign; this comparison alone does not establish causation.	விளம்பர இயக்கம் நடைபெறும் காலத்திலும் அதற்குப் பின்னரும் விற்பனை அதிகமாக இருந்தது; இந்த ஒப்பீடு மட்டும் காரணத் தொடர்பை நிறுவுவதில்லை.
+Sales rose during the campaign and fell back afterwards; investigate seasonality and other causes before attributing an effect.	விளம்பர இயக்கத்தின்போது விற்பனை உயர்ந்து பின்னர் மீண்டும் குறைந்தது; ஒரு விளைவை அதற்குக் காரணப்படுத்தும் முன் பருவகாலத் தன்மையையும் பிற காரணங்களையும் ஆராயவும்.
+No observed increase during this period; a causal assessment needs a suitable comparison.	இந்தக் காலத்தில் அதிகரிப்பு அவதானிக்கப்படவில்லை; காரணத் தொடர்பை மதிப்பிடப் பொருத்தமான ஒப்பீடு தேவை.
+Sequence alignment with gaps (toy example)	இடைவெளிகளுடன் தொடர் சீரமைப்பு (எளிய எடுத்துக்காட்டு)
+Sequence 1	தொடர் 1
+Sequence 2	தொடர் 2
+Matches	பொருத்தங்கள்
+· mismatches	· பொருத்தமின்மைகள்
+· gaps	· இடைவெளிகள்
+· score	· மதிப்பெண்
+Scoring: match +1, mismatch −1, gap −1. Gaps (−) stand for insertions or deletions; mismatches (·) stand for mutations. This is a toy global-alignment dynamic program. BLAST/FASTA use different sequence-search methods; BLAST seeks local alignments.	மதிப்பிடல்: பொருத்தம் +1, பொருத்தமின்மை −1, இடைவெளி −1. இடைவெளிகள் (−) செருகல்கள் அல்லது நீக்கல்களைக் குறிக்கின்றன; பொருத்தமின்மைகள் (·) திடீர்மாற்றங்களைக் குறிக்கின்றன. இது ஓர் எளிய முழுத்தொடர் சீரமைப்பு இயக்கநிலை நிரல். BLAST/FASTA வெவ்வேறு தொடர் தேடல் முறைகளைப் பயன்படுத்துகின்றன; BLAST உள்ளகச் சீரமைப்புகளைத் தேடுகிறது.
+📄 week 15.pdf (in the Week 14 folder)	📄 week 15.pdf (வாரம் 14 கோப்புறையில்)

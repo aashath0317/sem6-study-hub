@@ -1,0 +1,50 @@
+[
+  {
+    "pattern": "Terms:",
+    "replacement": "உறுப்புகள்:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Direct sum Σ =",
+    "replacement": "நேரடிக் கூட்டுத்தொகை Σ =",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Formula:",
+    "replacement": "சூத்திரம்:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Infinite sum \\(\\|r\\| (?:<|&lt;) 1\\):",
+    "replacement": "முடிவற்ற கூட்டுத்தொகை (|r| < 1):",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": ". The partial sums approach this.",
+    "replacement": ". பகுதிக் கூட்டுத்தொகைகள் இதை அணுகுகின்றன.",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "first \\+ last",
+    "replacement": "முதல் + இறுதி",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\((\\d+) terms\\)",
+    "replacement": "($1 உறுப்புகள்)",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Closed form:",
+    "replacement": "மூடிய வடிவம்:",
+    "selector": ".tool",
+    "flags": "g"
+  }
+]

@@ -30,7 +30,7 @@ for source in sorted(BASE.glob('*.md')):
     sections += len(en_sections)
     for number, (en, ta) in enumerate(zip(en_sections, ta_sections), 1):
         # Numeric literals must not be lost or invented in translated worked examples.
-        for pattern in [r'\d+(?:[,.]\d+)*', r'^### ', r'^\|', r'^- ', r'^\d+\. ']:
+        for pattern in [r'\d+(?:[,.]\d+)*', r'^### ', r'^\|(?=[^\n]*\|[ \t]*$)', r'^- ', r'^\d+\. ']:
             a, b = Counter(re.findall(pattern,en,re.M)), Counter(re.findall(pattern,ta,re.M))
             assert a == b, (source.name, number, pattern, a-b, b-a)
         for pattern in [r'\[\[(?:v\d+\s+)?\d[^]]*\]\]', r'<img[^>]*src="([^"]+)"']:

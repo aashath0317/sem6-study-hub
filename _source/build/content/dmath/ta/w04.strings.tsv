@@ -1,0 +1,42 @@
+Sequences & Summations	தொடரிகளும் கூட்டுத்தொகைகளும்
+Sequence notation, geometric and arithmetic progressions, strings, finding formulas for sequences, Σ notation and its laws, the geometric series theorem, infinite series, double sums, and the standard closed forms.	தொடரிக் குறியீடு, பெருக்குத் தொடரிகளும் கூட்டுத் தொடரிகளும், சரங்கள், தொடரிச் சூத்திரங்களைக் கண்டறிதல், Σ குறியீடும் விதிகளும், பெருக்குத் தொடர் தேற்றம், முடிவற்ற தொடர்கள், இரட்டைக் கூட்டுத்தொகைகள், வழக்கமான மூடிய வடிவங்கள்.
+Sequences & Summations – Part I	தொடரிகளும் கூட்டுத்தொகைகளும் – பகுதி I
+Sequences, progressions and finding formulas.	தொடரிகள், விருத்திகள், சூத்திரங்களைக் கண்டறிதல்.
+Lesson 4: sequences and summations	பாடம் 4: தொடரிகளும் கூட்டுத்தொகைகளும்
+Sequences as a data structure; finite and infinite	தரவுக் கட்டமைப்பாகத் தொடரிகள்; முடிவுள்ளதும் முடிவற்றதும்
+The nth term: n/(n + 1)	n-ஆவது உறுப்பு: n/(n + 1)
+Geometric progression: a, ar, ar², …	பெருக்குத் தொடரி: a, ar, ar², …
+Arithmetic progression: a, a + d, a + 2d, …	கூட்டுத் தொடரி: a, a + d, a + 2d, …
+Example: sₙ = −1 + 4n	எடுத்துக்காட்டு: sₙ = −1 + 4n
+Strings: finite sequences	சரங்கள்: முடிவுள்ள தொடரிகள்
+Finding formulas for sequences	தொடரிகளுக்கான சூத்திரங்களைக் கண்டறிதல்
+Useful integer sequences: n², n³, n⁴, 2ⁿ, 3ⁿ, n!	பயனுள்ள முழு எண் தொடரிகள்: n², n³, n⁴, 2ⁿ, 3ⁿ, n!
+Summation (Σ) notation	கூட்டுத்தொகைக் (Σ) குறியீடு
+Laws of summation: linearity	கூட்டுத்தொகை விதிகள்: நேரியல்தன்மை
+Example 4.1.2: Σ 1/j for j = 1…100	எடுத்துக்காட்டு 4.1.2: j = 1…100-க்கு Σ 1/j
+Sequences & Summations – Part II	தொடரிகளும் கூட்டுத்தொகைகளும் – பகுதி II
+Summation notation, geometric series and closed forms.	கூட்டுத்தொகைக் குறியீடு, பெருக்குத் தொடர்கள், மூடிய வடிவங்கள்.
+Geometric series overview	பெருக்குத் தொடர் கண்ணோட்டம்
+Sum of a geometric series: r = 1 and r ≠ 1	பெருக்குத் தொடரின் கூட்டுத்தொகை: r = 1, r ≠ 1
+Deriving the formula: multiply by r and subtract	சூத்திரத்தைப் பெறுதல்: r-ஆல் பெருக்கிக் கழித்தல்
+Worked sum: S = 19,682	செய்முறைக் கூட்டுத்தொகை: S = 19,682
+Finite geometric series in sigma notation	சிக்மா குறியீட்டில் முடிவுள்ள பெருக்குத் தொடர்கள்
+Example 4.2.2: an infinite geometric series	எடுத்துக்காட்டு 4.2.2: முடிவற்ற பெருக்குத் தொடர்
+Example 4.2.3: a double sum	எடுத்துக்காட்டு 4.2.3: இரட்டைக் கூட்டுத்தொகை
+Recap: inner sum first, then outer sum	மீள்நினைவு: முதலில் உட்கூட்டுத்தொகை, பின்னர் வெளிக்கூட்டுத்தொகை
+Useful summation formulas (geometric, n, n², n³)	பயனுள்ள கூட்டுத்தொகைச் சூத்திரங்கள் (பெருக்குத் தொடர், n, n², n³)
+Example 4.2.4	எடுத்துக்காட்டு 4.2.4
+Suggested reading	பரிந்துரைக்கப்பட்ட வாசிப்பு
+Sequence & series explorer	தொடரி மற்றும் தொடர் ஆராய்வுக் கருவி
+Type	வகை
+Geometric (×r)	பெருக்குத் தொடரி (×r)
+Arithmetic (+d)	கூட்டுத் தொடரி (+d)
+terms n+1 (j = 0…n): n =	உறுப்புகள் n+1 (j = 0…n): n =
+Σ calculator (any expression in k)	Σ கணிப்பான் (k-இல் எந்தக் கோவையும்)
+term (in k)	உறுப்பு (k-இல்)
+k from	k தொடக்கம்
+to	முடிவு
+Example 4.2.1	எடுத்துக்காட்டு 4.2.1
+Range too large.	வீச்சு மிகப்பெரியது.
+Check the expression (use k, ^, *, /).	கோவையைச் சரிபார்க்கவும் (k, ^, *, / பயன்படுத்தவும்).
+|r| ≥ 1, so the infinite series does not converge.	|r| ≥ 1; எனவே முடிவற்ற தொடர் ஒருங்காது.

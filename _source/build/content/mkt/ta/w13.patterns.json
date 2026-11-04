@@ -1,0 +1,27 @@
+[
+  {
+    "pattern": " channel \\(",
+    "replacement": " வழி (",
+    "selector": ".tool"
+  },
+  {
+    "pattern": " intermediaries\\)\\.",
+    "replacement": " இடைத்தரகர்கள்).",
+    "selector": ".tool"
+  },
+  {
+    "pattern": " intermediary\\)\\.",
+    "replacement": " இடைத்தரகர்).",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "^This is a $",
+    "replacement": "இது ஒரு ",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "^ channel: direct marketing\\.$",
+    "replacement": " வழி: நேரடிச் சந்தைப்படுத்தல்.",
+    "selector": ".tool"
+  }
+]

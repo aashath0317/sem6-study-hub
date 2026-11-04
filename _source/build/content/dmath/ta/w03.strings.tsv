@@ -1,0 +1,33 @@
+Functions	சார்புகள்
+Definition of a function, domain, codomain and range, finding domains, one-to-one (injective), onto (surjective) and bijective functions, inverses, and composition.	சார்பின் வரையறை, ஆட்களம், துணை ஆட்களம், வீச்சு, ஆட்களங்களைக் கண்டறிதல், ஒன்றுக்கொன்று (உட்சார்பு), மேல் சார்பு, இருவழிச் சார்புகள், நேர்மாறுகள், தொகுப்பு.
+Lesson 3 – Functions	பாடம் 3 – சார்புகள்
+Functions, their properties, inverses and composition.	சார்புகள், அவற்றின் பண்புகள், நேர்மாறுகள், தொகுப்பு.
+Lesson 3: functions and learning outcomes	பாடம் 3: சார்புகளும் கற்றல் விளைவுகளும்
+Real-life functions: learning time vs vocabulary	நிஜவாழ்க்கைச் சார்புகள்: கற்றல் நேரமும் சொற்களஞ்சியமும்
+Domain, codomain, image and pre-image	ஆட்களம், துணை ஆட்களம், படிமம், முன்படிமம்
+f(x) = x² on the integers: range = perfect squares	முழு எண்களில் f(x) = x²: வீச்சு = முழுவர்க்கங்கள்
+Domain of f(x) = √(x − 1)	f(x) = √(x − 1)-இன் ஆட்களம்
+Domain when the denominator is x² − 4	பகுதி x² − 4 ஆக இருக்கும்போது ஆட்களம்
+One-to-one (injective) functions	ஒன்றுக்கொன்றான (உட்சார்பு) சார்புகள்
+Is f(x) = 3x − 5 one-to-one?	f(x) = 3x − 5 ஒன்றுக்கொன்றானதா?
+Is f(x) = x² one-to-one?	f(x) = x² ஒன்றுக்கொன்றானதா?
+Onto (surjective) functions	மேல் சார்புகள்
+Is f(x) = 3x − 5 onto?	f(x) = 3x − 5 மேல் சார்பா?
+Is f(x) = x² onto?	f(x) = x² மேல் சார்பா?
+The identity function and bijections	சமனிச் சார்பும் இருவழிச் சார்புகளும்
+One-to-one / onto arrow-diagram examples	ஒன்றுக்கொன்று / மேல் சார்பு அம்பு வரைபட எடுத்துக்காட்டுகள்
+Inverse functions need a bijection	நேர்மாறுச் சார்புகளுக்கு இருவழிச் சார்பு தேவை
+Inverse of f(x) = 3x − 5	f(x) = 3x − 5-இன் நேர்மாறு
+Composition of functions: f ∘ g vs g ∘ f	சார்புகளின் தொகுப்பு: f ∘ g மற்றும் g ∘ f
+Function mapping lab (finite sets)	சார்புப் பொருத்துதல் ஆய்வகம் (முடிவுள்ள கணங்கள்)
+Composition calculator	தொகுப்புக் கணிப்பான்
+undefined	வரையறுக்கப்படவில்லை
+Check the formula.	சூத்திரத்தைச் சரிபார்க்கவும்.
+Equal at this x (try another x).	இந்த x-இல் சமம் (வேறொரு x-ஐ முயலவும்).
+Different: f∘g ≠ g∘f.	வேறுபட்டவை: f∘g ≠ g∘f.
+Use ^ for powers and sqrt( ) for roots.	அடுக்குகளுக்கு ^, மூலங்களுக்கு sqrt( ) பயன்படுத்தவும்.
+|A| > |B|, so it can never be one-to-one (pigeonhole).	|A| > |B|; எனவே ஒருபோதும் ஒன்றுக்கொன்றாக முடியாது (புறாக்கூட்டுக் கொள்கை).
+|A| < |B|, so it can never be onto.	|A| < |B|; எனவே ஒருபோதும் மேல் சார்பாக முடியாது.
+Choose where each element of A goes. The diagram and classification update instantly. Change the sizes to see why a bijection needs |A| = |B|.	A-இன் ஒவ்வொரு மூலகமும் எங்கு செல்கிறது எனத் தேர்ந்தெடுக்கவும். வரைபடமும் வகைப்பாடும் உடனடியாகப் புதுப்பிக்கப்படும். இருவழிச் சார்புக்கு |A| = |B| ஏன் தேவை எனப் பார்க்க அளவுகளை மாற்றவும்.
+Different: f∘g ≠ g∘f. Use ^ for powers and sqrt( ) for roots.	வேறுபடுகின்றன: f∘g ≠ g∘f. அடுக்குகளுக்கு ^, வர்க்கமூலங்களுக்கு sqrt( ) பயன்படுத்தவும்.
+Equal at this x (try another x). Use ^ for powers and sqrt( ) for roots.	இந்த x-இல் சமம் (வேறொரு x-ஐ முயலவும்). அடுக்குகளுக்கு ^, வர்க்கமூலங்களுக்கு sqrt( ) பயன்படுத்தவும்.

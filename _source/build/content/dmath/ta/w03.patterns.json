@@ -1,0 +1,56 @@
+[
+  {
+    "pattern": "Range =",
+    "replacement": "வீச்சு =",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Codomain =",
+    "replacement": "துணை ஆட்களம் =",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "✓ one-to-one",
+    "replacement": "✓ ஒன்றுக்கொன்று",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "✗ not one-to-one",
+    "replacement": "✗ ஒன்றுக்கொன்றல்ல",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " hit twice",
+    "replacement": " இருமுறை அடையப்பட்டது",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "✓ onto",
+    "replacement": "✓ மேல் சார்பு",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "✗ not onto",
+    "replacement": "✗ மேல் சார்பல்ல",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " missed, shown red",
+    "replacement": " விடுபட்டது, சிவப்பில் காட்டப்படுகிறது",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "BIJECTION → f⁻¹ exists:",
+    "replacement": "இருவழிச் சார்பு → f⁻¹ உள்ளது:",
+    "selector": ".tool",
+    "flags": "g"
+  }
+]

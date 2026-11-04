@@ -1,0 +1,5 @@
+{
+  "Without the <b>basis step</b> nothing starts falling. The chain reaction is never triggered, so nothing is proved.": "<b>அடிப்படைப் படி</b> இல்லாமல் எதுவும் விழத் தொடங்காது. சங்கிலி வினை தொடங்காததால் எதுவும் நிறுவப்படுவதில்லை.",
+  "Domino 1 falls, but without the <b>inductive step</b> there's no guarantee it knocks the next one. Only P(1) is proved.": "டொமினோ 1 விழுகிறது; ஆனால் <b>தொகுத்தறிதல் படி</b> இல்லாமல் அது அடுத்ததை விழுத்தும் என உறுதியில்லை. P(1) மட்டுமே நிறுவப்படுகிறது.",
+  "Checking examples is <b>not a proof</b>: it only builds confidence. Induction proves it for <i>every</i> n.": "எடுத்துக்காட்டுகளைச் சரிபார்ப்பது <b>நிறுவல் அல்ல</b>: நம்பிக்கையை மட்டுமே வளர்க்கிறது. தொகுத்தறிதல் <i>ஒவ்வொரு</i> n-க்கும் நிறுவுகிறது."
+}

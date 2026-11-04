@@ -1,0 +1,58 @@
+The Foundations — Predicate Logic, Quantifiers & Direct Proofs	அடித்தளங்கள் — பயனிலைத் தர்க்கம், அளவைக்குறிகள், நேரடி நிறுவல்கள்
+Predicates and propositional functions, compound expressions, ∀ / ∃ / ∃!, negating quantifiers, translating English into logic, and constructing direct proofs.	பயனிலைகளும் கூற்றுச் சார்புகளும், சேர்மக் கோவைகள், ∀ / ∃ / ∃!, அளவைக்குறிகளை மறுத்தல், ஆங்கிலத்தைத் தர்க்கமாக மொழிபெயர்த்தல், நேரடி நிறுவல்களை அமைத்தல்.
+Logic & Proofs – Part I	தர்க்கமும் நிறுவல்களும் – பகுதி I
+Propositions vs predicates, propositional functions, and compound expressions.	கூற்றுகள் மற்றும் பயனிலைகள், கூற்றுச் சார்புகள், சேர்மக் கோவைகள்.
+Lesson 1: the foundations of logic and proofs	பாடம் 1: தர்க்கத்தினதும் நிறுவல்களினதும் அடித்தளங்கள்
+Propositions: "2 + 1 = 5" is false	கூற்றுகள்: "2 + 1 = 5" பொய்
+Predicates: the subject and the predicate	பயனிலைகள்: எழுவாயும் பயனிலையும்
+Notation: P(x)	குறியீடு: P(x)
+Evaluating P(2) and other values	P(2), பிற பெறுமதிகளை மதிப்பிடுதல்
+Predicates with more than one variable: P(x, y, z)	ஒன்றுக்கு மேற்பட்ட மாறிகளுள்ள பயனிலைகள்: P(x, y, z)
+Compound expressions	சேர்மக் கோவைகள்
+Combining with ∧, ∨ and ¬	∧, ∨, ¬-உடன் இணைத்தல்
+Next: quantifiers	அடுத்து: அளவைக்குறிகள்
+Logic & Proofs – Part II	தர்க்கமும் நிறுவல்களும் – பகுதி II
+Quantifiers, negating quantified statements, and translating English into logic.	அளவைக்குறிகள், அளவைக்குறியிட்ட வாக்கியங்களை மறுத்தல், ஆங்கிலத்தைத் தர்க்கமாக மொழிபெயர்த்தல்.
+Section 2: quantifiers	பகுதி 2: அளவைக்குறிகள்
+The universal quantifier ∀	அனைத்தளவைக்குறி ∀
+When ∀x P(x) is false: counterexamples	∀x P(x) எப்போது பொய்: எதிர் எடுத்துக்காட்டுகள்
+The existential quantifier ∃	இருத்தளவைக்குறி ∃
+The uniqueness quantifier ∃!	தனித்துவ அளவைக்குறி ∃!
+Examples with several quantifiers	பல அளவைக்குறிகளுடன் எடுத்துக்காட்டுகள்
+Truth depends on the domain: x < 2	உண்மை ஆட்களத்தைச் சார்ந்தது: x < 2
+Negating quantified expressions (De Morgan)	அளவைக்குறியிட்ட கோவைகளை மறுத்தல் (டி மோர்கன்)
+Translating English into logic	ஆங்கிலத்தைத் தர்க்கமாக மொழிபெயர்த்தல்
+Example: speeding tickets	எடுத்துக்காட்டு: வேகமீறல் அபராதச் சீட்டுகள்
+Translation with propositional functions and quantifiers	கூற்றுச் சார்புகளாலும் அளவைக்குறிகளாலும் மொழிபெயர்த்தல்
+Next: direct proofs	அடுத்து: நேரடி நிறுவல்கள்
+Logic & Proofs – Part III	தர்க்கமும் நிறுவல்களும் – பகுதி III
+Direct proofs: the two examples and the even/odd definitions.	நேரடி நிறுவல்கள்: இரு எடுத்துக்காட்டுகளும் இரட்டை/ஒற்றை வரையறைகளும்.
+Section 3: introduction to proofs	பகுதி 3: நிறுவல்களுக்கு அறிமுகம்
+Direct proofs: assume P, show Q	நேரடி நிறுவல்கள்: P-ஐ அனுமானித்து Q-ஐக் காட்டு
+Example: the sum of consecutive integers is odd	எடுத்துக்காட்டு: அடுத்தடுத்த முழு எண்களின் கூட்டுத்தொகை ஒற்றை
+Example: if n is odd, then n² is odd	எடுத்துக்காட்டு: n ஒற்றை எனில் n² ஒற்றை
+Using 2k and 2k + 1 for even and odd numbers	இரட்டை, ஒற்றை எண்களுக்கு 2k, 2k + 1 பயன்படுத்துதல்
+Summary of Lesson 1	பாடம் 1 சுருக்கம்
+Truth table generator	உண்மை அட்டவணை உருவாக்கி
+Expression (use p q r s, ¬ or ~ or !, ∧ or &, ∨ or |, ⇒ or ->, ⇔ or <->, brackets)	கோவை (p q r s, ¬ அல்லது ~ அல்லது !, ∧ அல்லது &, ∨ அல்லது |, ⇒ அல்லது ->, ⇔ அல்லது <->, அடைப்புக்குறிகளைப் பயன்படுத்தவும்)
+De Morgan	டி மோர்கன்
+Transitivity	கடத்தற்பண்பு
+Quantifier evaluator	அளவைக்குறி மதிப்பீட்டி
+x is even	x இரட்டை
+Domain U	ஆட்களம் U
+finite sample of integers: −10…10	முழு எண்களின் முடிவுள்ள மாதிரி: −10…10
+finite positive sample: 1…20	முடிவுள்ள நேர்மறை மாதிரி: 1…20
+finite negative sample: −20…−1	முடிவுள்ள எதிர்மறை மாதிரி: −20…−1
+Statement	வாக்கியம்
+Value	பெறுமதி
+Reason	காரணம்
+Values below apply to the displayed finite sample, not a proof about an infinite domain.	கீழுள்ள பெறுமதிகள் காட்டப்படும் முடிவுள்ள மாதிரிக்குப் பொருந்தும்; முடிவற்ற ஆட்களம் பற்றிய நிறுவல் அல்ல.
+true for every x shown	காட்டப்பட்ட ஒவ்வொரு x-க்கும் உண்மை
+no x works	எந்த x-உம் பொருந்தாது
+a false case exists?	பொய்யான நிகழ்வு உள்ளதா?
+Infinite domains are sampled here. The real answer reasons about all values (e.g. x² + 1 > 0 holds for every integer).	முடிவற்ற ஆட்களங்கள் இங்கு மாதிரியெடுக்கப்படுகின்றன. உண்மையான விடை அனைத்துப் பெறுமதிகளையும் ஆராய்கிறது (எ.கா. ஒவ்வொரு முழு எண்ணுக்கும் x² + 1 > 0).
+Tautology	மெய்ம்மை
+Contradiction	முரண்பாடு
+Contingency: sometimes true, sometimes false.	தற்செயல்நிலை: சிலவேளை உண்மை, சிலவேளை பொய்.
+always true.	எப்போதும் உண்மை.
+always false.	எப்போதும் பொய்.

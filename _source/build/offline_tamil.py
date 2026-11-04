@@ -21,7 +21,7 @@ def _strings(path):
 
 
 def translated_body(body, key, here, render):
-    match = re.fullmatch(r'(hci|bpas|dm)-(?:Week(\d+)|(papers)|(index))', key)
+    match = re.fullmatch(r'(hci|bpas|dm|dmath)-(?:Week(\d+)|(papers)|(index))', key)
     if not match:
         return body, False
     subject = match[1]

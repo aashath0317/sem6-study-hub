@@ -4,17 +4,19 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { JSDOM, VirtualConsole } = require('jsdom');
 const root = path.resolve(__dirname, '../../..');
+const discreteMath = process.env.STUDY_TRANSLATION_SUBJECT === 'dmath';
+const partialSubject = discreteMath || process.env.STUDY_TRANSLATION_SUBJECT === 'dm';
 const dataMining = process.env.STUDY_TRANSLATION_SUBJECT === 'dm';
 const business = process.env.STUDY_TRANSLATION_SUBJECT === 'bpas';
-const directory = path.join(root, dataMining ? 'Data Mining' : business ? 'Business Processes and Accounting Systems' : 'Human Computer Interaction');
+const directory = path.join(root, discreteMath ? 'Discrete Mathematics' : dataMining ? 'Data Mining' : business ? 'Business Processes and Accounting Systems' : 'Human Computer Interaction');
 function files(dir) { return fs.readdirSync(dir, {withFileTypes:true}).flatMap(e => e.isDirectory() ? files(path.join(dir,e.name)) : e.name.endsWith('.html') ? [path.join(dir,e.name)] : []); }
 const tick = () => new Promise(resolve => setTimeout(resolve, 0));
 (async () => {
   let totalSections=0, totalQuestions=0, totalTools=0;
   const untranslated = [];
-  const pages = files(directory).filter(file => !dataMining || fs.readFileSync(file,"utf8").includes('id="hci-tamil-data"'));
-  if (!dataMining) assert.equal(pages.length,business ? 17 : 15);
-  else if(process.env.STUDY_TRANSLATION_REQUIRE_COMPLETE) assert.equal(pages.length,16);
+  const pages = files(directory).filter(file => !partialSubject || fs.readFileSync(file,"utf8").includes('id="hci-tamil-data"'));
+  if (!partialSubject) assert.equal(pages.length,business ? 17 : 15);
+  else if(process.env.STUDY_TRANSLATION_REQUIRE_COMPLETE) assert.equal(pages.length,discreteMath ? 15 : 16);
   else assert.ok(pages.length > 0);
   for (const file of pages) {
     const errors = [];
@@ -137,7 +139,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     const editedValues=editedInputs.map(el=>el.value);
     const currentTextValues=textInputs.map(el=>el.value);
     const numericOutputs=()=>[...d.querySelectorAll('.tool .out')].map(el=>(el.textContent.match(/\d+(?:[,.]\d+)*/g)||[]).sort().join('|'));
-    const tamilNumbers=(business || dataMining) ? numericOutputs() : null;
+    const tamilNumbers=(business || partialSubject) ? numericOutputs() : null;
     // A tool that reads a translated label must still retain its source-language state.
     const principle = d.querySelector('#pr .ps');
     let deletedLabel = null;
@@ -156,7 +158,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     if(input) assert.equal(input.checked,true,'Quiz answer lost');
     assert.deepEqual(editedInputs.map(el=>el.value),editedValues,'Edited tool values lost');
     assert.deepEqual(textInputs.map(el=>el.value),currentTextValues,'Edited datasets lost on English restore');
-    if(business || dataMining) assert.deepEqual(numericOutputs(),tamilNumbers,'Language toggle changed calculated results');
+    if(business || partialSubject) assert.deepEqual(numericOutputs(),tamilNumbers,'Language toggle changed calculated results');
     tools.forEach(tool=> assert.ok(tool.closest('.hci-en'),'Live tool not returned'));
     for(const tool of tools) assert.ok(d.contains(tool),'Live tool replaced');
     assert.equal(d.querySelectorAll('.quiz input[type=radio]:checked').length,input?1:0);

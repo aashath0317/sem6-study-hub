@@ -12,7 +12,7 @@ manifest = json.loads((TA / 'source-manifest.json').read_text())
 sections = questions = 0
 for source in sorted(BASE.glob('*.md')):
     target = TA / source.name
-    if SUBJECT == 'dm' and not os.environ.get('STUDY_TRANSLATION_REQUIRE_COMPLETE') and source.stem not in manifest:
+    if SUBJECT in ('dm','dmath') and not os.environ.get('STUDY_TRANSLATION_REQUIRE_COMPLETE') and source.stem not in manifest:
         continue
     assert target.exists(), f'Missing translation: {source.name}'
     raw = source.read_text()

@@ -1,6 +1,6 @@
 """Refresh authored offline translations, preserving published English and explanations.
 
-Usage: python _source/build/refresh_hci_translations.py [hci|bpas|dm]
+Usage: python _source/build/refresh_hci_translations.py [hci|bpas|dm|dmath]
 Requires the same `markdown` package as build.py.
 """
 from pathlib import Path
@@ -46,27 +46,29 @@ def refresh(text, key):
 
 if __name__ == '__main__':
     subject = sys.argv[1] if len(sys.argv) > 1 else 'hci'
-    folders = {'hci':'Human Computer Interaction', 'bpas':'Business Processes and Accounting Systems', 'dm':'Data Mining'}
+    folders = {'hci':'Human Computer Interaction', 'bpas':'Business Processes and Accounting Systems', 'dm':'Data Mining', 'dmath':'Discrete Mathematics'}
     if subject not in folders:
-        raise SystemExit('Supported subjects: hci, bpas, dm')
+        raise SystemExit('Supported subjects: hci, bpas, dm, dmath')
     files = sorted((ROOT/folders[subject]).rglob('*.html'))
     prepared = []
     for path in files:
         text = path.read_text(encoding='utf-8')
         key = re.search(r'<body data-key="([^"]*)"', text)[1]
-        if subject in ('bpas', 'dm'):
+        if subject in ('bpas', 'dm', 'dmath'):
             week = re.fullmatch(subject + r'-Week(\d+)', key)
             directory = HERE/'content'/subject/'ta'
             if week:
-                if subject == 'dm' and 'w' + week[1] not in json.loads((directory/'source-manifest.json').read_text()):
+                if subject in ('dm','dmath') and 'w' + week[1] not in json.loads((directory/'source-manifest.json').read_text()):
                     continue
                 if not all((directory/('w' + week[1] + '.' + ext)).exists() for ext in ('md', 'quiz', 'strings.tsv')):
                     continue
             elif key.endswith('-papers'):
+                if subject == 'dmath' and 'papers' not in json.loads((directory/'source-manifest.json').read_text()):
+                    continue
                 if not (directory/'papers.md').exists():
                     continue
             elif not key:
-                if not all((directory/('w' + str(i).zfill(2) + '.quiz')).exists() for i in range(1,16)):
+                if not all((directory/('w' + str(i).zfill(2) + '.quiz')).exists() for i in range(1,14 if subject == 'dmath' else 16)):
                     continue
             else:
                 continue

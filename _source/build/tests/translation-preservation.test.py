@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 root = Path(__file__).resolve().parents[3]
 subject = sys.argv[1] if len(sys.argv) > 1 else 'dm'
 folder = {'dm': 'Data Mining', 'bpas': 'Business Processes and Accounting Systems',
-          'hci': 'Human Computer Interaction'}[subject]
+          'dmath': 'Discrete Mathematics', 'hci': 'Human Computer Interaction'}[subject]
 baseline = '4def5a9'
 count = 0
 for page in sorted((root / folder).rglob('*.html')):

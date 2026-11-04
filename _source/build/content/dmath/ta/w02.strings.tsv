@@ -1,0 +1,50 @@
+Sets & Set Operations	கணங்களும் கணச் செயல்பாடுகளும்
+Set terminology and notation, the number systems, equality, subsets and proper subsets, disjoint sets, Venn diagrams, union, intersection, complement and difference, set laws, De Morgan's laws, and inclusion–exclusion.	கணச் சொற்களும் குறியீடும், எண் முறைமைகள், சமத்துவம், உட்கணங்களும் முறையான உட்கணங்களும், வெட்டாத கணங்கள், வென் வரைபடங்கள், சேர்ப்பு, வெட்டு, நிரப்பு, வேறுபாடு, கண விதிகள், டி மோர்கன் விதிகள், உள்ளடக்கல்–விலக்கல்.
+Sets & Set Operations – Part I	கணங்களும் கணச் செயல்பாடுகளும் – பகுதி I
+Set terminology, notation, subsets and Venn diagrams.	கணச் சொற்கள், குறியீடு, உட்கணங்கள், வென் வரைபடங்கள்.
+Lesson 2: sets and learning outcomes	பாடம் 2: கணங்களும் கற்றல் விளைவுகளும்
+Elements and the "not an element" notation	மூலகங்களும் "மூலகமல்ல" என்ற குறியீடும்
+Roster (tabular) form: odd positive integers < 10	பட்டியல் (அட்டவணை) வடிவம்: ஒற்றை நேர்மறை முழு எண்கள் < 10
+Set-builder notation	கணம் அமைக்கும் குறியீடு
+The empty (null) set	வெற்றுக் கணம்
+Number sets: N, Z, Q, R	எண் கணங்கள்: N, Z, Q, R
+Rational numbers: p/q with q ≠ 0	விகிதமுறு எண்கள்: q ≠ 0 உடன் p/q
+Equal sets: order and repetition don't matter	சம கணங்கள்: வரிசையும் மீளுருவும் முக்கியமல்ல
+Subsets	உட்கணங்கள்
+Proper subsets	முறையான உட்கணங்கள்
+Listing all subsets: 8 subsets of a 3-element set	அனைத்து உட்கணங்களையும் பட்டியலிடுதல்: 3-மூலகக் கணத்தின் 8 உட்கணங்கள்
+Disjoint sets	வெட்டாத கணங்கள்
+Venn diagrams	வென் வரைபடங்கள்
+Sets & Set Operations – Part II	கணங்களும் கணச் செயல்பாடுகளும் – பகுதி II
+Set operations, laws and counting elements.	கணச் செயல்பாடுகள், விதிகள், மூலகங்களை எண்ணுதல்.
+Set union	கணச் சேர்ப்பு
+Set intersection	கண வெட்டு
+Complement	நிரப்பு
+Set difference	கண வேறுபாடு
+Worked example: union, intersection, complement, difference	செய்முறை எடுத்துக்காட்டு: சேர்ப்பு, வெட்டு, நிரப்பு, வேறுபாடு
+Complementation rules	நிரப்பு விதிகள்
+Properties: commutative, associative, distributive laws	பண்புகள்: பரிமாற்று, சேர்ப்பு, பங்கீட்டு விதிகள்
+De Morgan's law worked with U = {1, …, 10}	U = {1, …, 10} உடன் டி மோர்கன் விதிச் செய்முறை
+Cars example: transmission, air conditioning, side airbags	கார் எடுத்துக்காட்டு: பற்சக்கர மாற்று, குளிரூட்டி, பக்கக் காற்றுப்பைகள்
+Finite sets and cardinality	முடிவுள்ள கணங்களும் மூலக எண்ணிக்கையும்
+Inclusion–exclusion: n(A ∪ B)	உள்ளடக்கல்–விலக்கல்: n(A ∪ B)
+Coffee drinkers: sugar and cream example	கோப்பி அருந்துவோர்: சீனி, கிரீம் எடுத்துக்காட்டு
+Venn diagram shader (3 sets)	வென் வரைபட நிழலிடும் கருவி (3 கணங்கள்)
+Set expression (A B C, ∪ or + or |, ∩ or & or ., complement ' or ᶜ, difference \ or −, brackets)	கணக் கோவை (A B C, ∪ அல்லது + அல்லது |, ∩ அல்லது & அல்லது ., நிரப்பு ' அல்லது ᶜ, வேறுபாடு \ அல்லது −, அடைப்புக்குறிகள்)
+Exactly one	துல்லியமாக ஒன்று
+Auto + airbags, no AC	தானியங்கி + காற்றுப்பைகள், குளிரூட்டி இல்லை
+A only	A மட்டும்
+B only	B மட்டும்
+C only	C மட்டும்
+A∩B only	A∩B மட்டும்
+A∩C only	A∩C மட்டும்
+B∩C only	B∩C மட்டும்
+outside all	அனைத்துக்கும் வெளியே
+Set operations calculator	கணச் செயல்பாட்டுக் கணிப்பான்
+disjoint	வெட்டாதவை
+Subsets?	உட்கணங்களா?
+yes	ஆம்
+no	இல்லை
+✓ De Morgan holds	✓ டி மோர்கன் பொருந்துகிறது
+Inclusion–exclusion calculator	உள்ளடக்கல்–விலக்கல் கணிப்பான்
+These numbers are impossible (a region would be negative).	இந்த எண்கள் சாத்தியமற்றவை (ஒரு பகுதி எதிர்மறையாக இருக்கும்).

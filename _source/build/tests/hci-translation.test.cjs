@@ -28,6 +28,21 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
         w.matchMedia = () => ({matches:false,addListener(){},removeListener(){},addEventListener(){},removeEventListener(){}});
         w.HTMLElement.prototype.scrollIntoView = function(){};
         w.confirm = () => true;
+        // Exercise the original Venn membership/pixel algorithm without a native canvas dependency.
+        w.HTMLCanvasElement.prototype.getContext = function() {
+          const canvas=this;
+          return this._testContext ||= {
+            fillStyle:'#000',
+            createImageData:(width,height)=>({width,height,data:new Uint8ClampedArray(width*height*4)}),
+            putImageData:image=>{canvas._testImageData=image.data.slice();},
+            getImageData() {
+              let hex=this.fillStyle.replace('#','');
+              if(hex.length===3)hex=hex.split('').map(x=>x+x).join('');
+              return {data:Uint8ClampedArray.from([parseInt(hex.slice(0,2),16),parseInt(hex.slice(2,4),16),parseInt(hex.slice(4,6),16),255])};
+            },
+            fillRect(){},strokeRect(){},beginPath(){},arc(){},stroke(){},fillText(){}
+          };
+        };
         w.HTMLMediaElement.prototype.pause = function(){};
         w.HTMLMediaElement.prototype.play = function(){return Promise.resolve();};
       }
@@ -47,6 +62,8 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     const tools = [...d.querySelectorAll('.tool')];
     const textInputs=[...d.querySelectorAll('.tool textarea,.tool input[type=text],.tool input:not([type])')];
     const initialTextValues=textInputs.map(el=>el.value);
+    const canvasPixels=()=>[...d.querySelectorAll('canvas')].map(el=>el._testImageData ? require('node:crypto').createHash('sha256').update(el._testImageData).digest('hex') : null);
+    const initialCanvasPixels=canvasPixels();
     const input = d.querySelector('.quiz input[type=radio]');
     if(input) { input.checked=true; input.dispatchEvent(new dom.window.Event('change',{bubbles:true})); }
     const explanationButton = d.querySelector('.native-toggle');
@@ -60,6 +77,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     button.click(); await tick();
     if(explanationButton) assert.equal(d.querySelector('.tamil-native').hidden,true);
     assert.deepEqual(textInputs.map(el=>el.value),initialTextValues,'Source dataset changed on Tamil toggle');
+    assert.deepEqual(canvasPixels(),initialCanvasPixels,'Diagram shading changed on Tamil toggle');
     assert.equal(d.documentElement.lang,'ta');
     assert.equal(button.textContent,'English');
     const translationData = JSON.parse(d.querySelector('#hci-tamil-data').textContent);
@@ -138,6 +156,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     }
     const editedValues=editedInputs.map(el=>el.value);
     const currentTextValues=textInputs.map(el=>el.value);
+    const currentCanvasPixels=canvasPixels();
     const numericOutputs=()=>[...d.querySelectorAll('.tool .out')].map(el=>(el.textContent.match(/\d+(?:[,.]\d+)*/g)||[]).sort().join('|'));
     const tamilNumbers=(business || partialSubject) ? numericOutputs() : null;
     // A tool that reads a translated label must still retain its source-language state.
@@ -158,6 +177,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     if(input) assert.equal(input.checked,true,'Quiz answer lost');
     assert.deepEqual(editedInputs.map(el=>el.value),editedValues,'Edited tool values lost');
     assert.deepEqual(textInputs.map(el=>el.value),currentTextValues,'Edited datasets lost on English restore');
+    assert.deepEqual(canvasPixels(),currentCanvasPixels,'Diagram shading changed on English restore');
     if(business || partialSubject) assert.deepEqual(numericOutputs(),tamilNumbers,'Language toggle changed calculated results');
     tools.forEach(tool=> assert.ok(tool.closest('.hci-en'),'Live tool not returned'));
     for(const tool of tools) assert.ok(d.contains(tool),'Live tool replaced');

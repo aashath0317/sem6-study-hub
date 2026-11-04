@@ -1,0 +1,44 @@
+[
+  {
+    "pattern": "Zero–one matrix",
+    "replacement": "பூச்சியம்–ஒன்று அணி",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "missing ",
+    "replacement": "விடுபட்டது ",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " is in R but ",
+    "replacement": " என்பது R-இல் உள்ளது; ஆனால் ",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " are in R but ",
+    "replacement": " ஆகியவை R-இல் உள்ளன; ஆனால் ",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " is not",
+    "replacement": " இல்லை",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "both ",
+    "replacement": "இரண்டும் ",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " and ",
+    "replacement": " மற்றும் ",
+    "selector": ".tool",
+    "flags": "g"
+  }
+]

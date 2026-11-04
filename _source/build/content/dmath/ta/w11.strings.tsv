@@ -1,0 +1,78 @@
+Graphs & Graph Models	வரைபுகளும் வரைபு மாதிரிகளும்
+What a graph is, the Königsberg bridge problem, finite vs infinite graphs, the six graph types (simple, multigraph, pseudograph, simple directed, directed multigraph, mixed), and graph models for social, information, transport and tournament problems.	வரைபு என்றால் என்ன, கோனிக்ஸ்பெர்க் பாலப் பிரச்சினை, முடிவுள்ள மற்றும் முடிவற்ற வரைபுகள், ஆறு வரைபு வகைகள் (எளிய, பல்வரைபு, போலி, எளிய திசை, திசைப் பல்வரைபு, கலப்பு), சமூக, தகவல், போக்குவரத்து, போட்டிப் பிரச்சினைகளுக்கான வரைபு மாதிரிகள்.
+Lesson 11 – Graphs & Graph Models	பாடம் 11 – வரைபுகளும் வரைபு மாதிரிகளும்
+Main lesson video.	முக்கிய பாடக் காணொளி.
+Lesson 11: graphs and graph models	பாடம் 11: வரைபுகளும் வரைபு மாதிரிகளும்
+Where graphs are used: tournaments, networks	வரைபுகள் பயன்படும் இடங்கள்: போட்டிகள், வலையமைப்புகள்
+The Königsberg bridge problem	கோனிக்ஸ்பெர்க் பாலப் பிரச்சினை
+Definition of a graph: vertices and edges	வரைபின் வரையறை: முனைகளும் விளிம்புகளும்
+Example: a computer network of data centres	எடுத்துக்காட்டு: தரவு மையங்களின் கணினி வலையமைப்பு
+Multigraphs	பல்வரைபுகள்
+Pseudographs (loops)	போலி வரைபுகள் (வளையங்கள்)
+Directed graphs	திசைவரைபுகள்
+Directed multigraphs	திசைப் பல்வரைபுகள்
+Self-assessment: choose the right graph type	சுயமதிப்பீடு: சரியான வரைபு வகையைத் தேர்ந்தெடுத்தல்
+Graph models: acquaintanceship graphs	வரைபு மாதிரிகள்: பரிச்சய வரைபுகள்
+Influence graphs	செல்வாக்கு வரைபுகள்
+The web graph	வலை வரைபு
+Road maps: one-way and two-way roads	சாலை வரைபடங்கள்: ஒருவழி, இருவழிச் சாலைகள்
+Round-robin tournaments	சுற்றுமுறைப் போட்டிகள்
+Video Lecture 1 – Introduction & Königsberg	காணொளி விரிவுரை 1 – அறிமுகமும் கோனிக்ஸ்பெர்க்கும்
+Introduction to graph theory and the Königsberg bridge problem.	வரைபுக் கோட்பாட்டுக்கும் கோனிக்ஸ்பெர்க் பாலப் பிரச்சினைக்கும் அறிமுகம்.
+Introduction: what a graph is	அறிமுகம்: வரைபு என்றால் என்ன
+Vertices (nodes) and edges	முனைகள் (கணுக்கள்), விளிம்புகள்
+Graph models: road maps, assigning jobs to employees	வரைபு மாதிரிகள்: சாலை வரைபடங்கள், ஊழியர்களுக்கு வேலை ஒதுக்குதல்
+Video: the Seven Bridges of Königsberg	காணொளி: கோனிக்ஸ்பெர்க்கின் ஏழு பாலங்கள்
+Can you cross every bridge exactly once?	ஒவ்வொரு பாலத்தையும் துல்லியமாக ஒருமுறை கடக்க முடியுமா?
+Euler's insight: a new kind of geometry	ஆய்லரின் நுண்ணறிவு: புதிய வகை வடிவியல்
+Simplifying to a graph; counting degrees	வரைபாக எளிமைப்படுத்துதல்; படிகளை எண்ணுதல்
+Start and end are the only exceptions	தொடக்கமும் முடிவுமே விதிவிலக்குகள்
+Euler path condition: exactly 0 or 2 odd-degree nodes	ஆய்லர் பாதை நிபந்தனை: துல்லியமாக 0 அல்லது 2 ஒற்றைப் படிக் கணுக்கள்
+Epilogue: the bridges destroyed in World War II	பின்னுரை: இரண்டாம் உலகப் போரில் அழிந்த பாலங்கள்
+Video Lecture 2 – Types of graphs (I)	காணொளி விரிவுரை 2 – வரைபு வகைகள் (I)
+Finite vs infinite; simple graphs, multigraphs and multiplicity.	முடிவுள்ளதும் முடிவற்றதும்; எளிய வரைபுகள், பல்வரைபுகள், பன்மடங்கு.
+Recap: a graph = (V, E); vertices (nodes) and edges	மீள்நினைவு: வரைபு = (V, E); முனைகள் (கணுக்கள்), விளிம்புகள்
+Infinite vs finite graphs (we use finite)	முடிவற்ற மற்றும் முடிவுள்ள வரைபுகள் (நாம் முடிவுள்ளவற்றைப் பயன்படுத்துகிறோம்)
+The six types we'll study	நாம் கற்கும் ஆறு வகைகள்
+Simple graph: no multiple edges, no loops	எளிய வரைபு: பல்விளிம்புகளும் வளையங்களும் இல்லை
+Multiple edges and loops explained	பல்விளிம்புகளும் வளையங்களும் விளக்கம்
+Multigraph: multiple edges, no loops	பல்வரைபு: பல்விளிம்புகள், வளையங்கள் இல்லை
+Edge of multiplicity m	பன்மடங்கு m உடைய விளிம்பு
+Pseudographs begin	போலி வரைபுகள் தொடங்குகின்றன
+Video Lecture 3 – Types of graphs (II)	காணொளி விரிவுரை 3 – வரைபு வகைகள் (II)
+Pseudographs, directed graphs, ordered vs unordered pairs, and the summary table.	போலி வரைபுகள், திசைவரைபுகள், வரிசைப்படுத்தப்பட்ட மற்றும் வரிசையற்ற சோடிகள், சுருக்க அட்டவணை.
+Pseudograph: multiple edges and loops	போலி வரைபு: பல்விளிம்புகளும் வளையங்களும்
+Directed graphs (digraphs): arrows show direction	திசைவரைபுகள்: அம்புகள் திசையைக் காட்டுகின்றன
+Ordered pair (u, v) vs unordered pair {u, v}	வரிசைச் சோடி (u, v), வரிசையற்ற சோடி {u, v}
+Simple directed graph vs directed multigraph	எளிய திசைவரைபும் திசைப் பல்வரைபும்
+The summary table of all types	அனைத்து வகைகளின் சுருக்க அட்டவணை
+Mixed graph	கலப்பு வரைபு
+Video Lecture 4 – Exercise hints	காணொளி விரிவுரை 4 – பயிற்சிக் குறிப்புகள்
+How to classify given graphs, and the airline routes exercise.	கொடுக்கப்பட்ட வரைபுகளை வகைப்படுத்துவதும் விமானப் பாதைப் பயிற்சியும்.
+Classifying graphs: arrows? multiple edges? loops?	வரைபுகளை வகைப்படுத்துதல்: அம்புகளா? பல்விளிம்புகளா? வளையங்களா?
+Airline exercise: simple graph → multigraph → pseudograph	விமானப் பயிற்சி: எளிய வரைபு → பல்வரைபு → போலி வரைபு
+Video Lecture 5 – Graph models	காணொளி விரிவுரை 5 – வரைபு மாதிரிகள்
+Social networks, information networks, transportation networks and tournaments.	சமூக, தகவல், போக்குவரத்து வலையமைப்புகளும் போட்டிகளும்.
+Social networks: acquaintanceship graphs (Facebook)	சமூக வலையமைப்புகள்: பரிச்சய வரைபுகள் (Facebook)
+Influence graphs (directed)	செல்வாக்கு வரைபுகள் (திசையுள்ளவை)
+Information networks: web graph, citation graph	தகவல் வலையமைப்புகள்: வலை வரைபு, மேற்கோள் வரைபு
+Transportation: roadmaps and airline routes (directed multigraph)	போக்குவரத்து: சாலை வரைபடங்கள், விமானப் பாதைகள் (திசைப் பல்வரைபு)
+Tournaments: round robin, single elimination	போட்டிகள்: சுற்றுமுறை, ஒற்றை நீக்கம்
+Graph builder & classifier	வரைபு உருவாக்கியும் வகைப்படுத்தியும்
+Simple	எளியது
+Multigraph	பல்வரைபு
+Pseudograph	போலி வரைபு
+Simple directed	எளிய திசைவரைபு
+Directed multigraph	திசைப் பல்வரைபு
+Mixed	கலப்பு
+Königsberg	கோனிக்ஸ்பெர்க்
+Simple graph	எளிய வரைபு
+Simple directed graph	எளிய திசைவரைபு
+yes	ஆம்
+no	இல்லை
+some	சில
+All even, so a closed walk using every edge once is possible (if connected).	அனைத்தும் இரட்டை; எனவே ஒவ்வொரு விளிம்பையும் ஒருமுறை பயன்படுத்தும் மூடிய நடை சாத்தியம் (இணைந்திருந்தால்).
+Edges:	விளிம்புகள்:
+undirected,	திசையற்றது,
+directed,	திசையுள்ளது,
+loop (separate with commas)	வளையம் (காற்புள்ளிகளால் பிரிக்கவும்)

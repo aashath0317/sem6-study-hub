@@ -112,6 +112,13 @@ def translated_body(body, key, here, render):
             markup[a] = b
             if '<' not in a:
                 strings[a] = re.sub('<[^>]+>', '', b)
+            # Published quiz banks keep fill-in-the-blank underscores literal.
+            if re.search(r'_{2,}', en[1:]):
+                literal = lambda value: re.sub(r'_{2,}', lambda m: '\\_' * len(m[0]), value)
+                plain_en = re.sub(r'^<p>|</p>$', '', render(literal(en[1:].strip())).strip())
+                plain_ta = re.sub(r'^<p>|</p>$', '', render(literal(ta[1:].strip())).strip())
+                markup[plain_en] = plain_ta
+
     data = json.dumps({'strings': strings, 'markup': markup, 'patterns': patterns}, ensure_ascii=False).replace('</', '<\\/')
     data_tag = '<script type="application/json" id="hci-tamil-data">' + data + '</script>'
     body = body.replace('</body>', data_tag + '</body>') if '</body>' in body else body + data_tag

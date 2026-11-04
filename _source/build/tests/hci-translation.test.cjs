@@ -115,6 +115,9 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
       }
       for(const checkbox of tool.querySelectorAll('input[type=checkbox]')) { checkbox.checked=!checkbox.checked; checkbox.dispatchEvent(new dom.window.Event('change',{bubbles:true})); await tick(); scan(); }
       for(const action of [...tool.querySelectorAll('button')]) { if(!action.isConnected) continue; action.click(); await tick(); scan(); }
+      if(discreteMath && file.includes('Week 05/')) {
+        for(const cell of tool.querySelectorAll('td[data-i]')) { cell.click(); await tick(); scan(); }
+      }
     }
     // KDD is a multi-step demonstration: visit every stage, not just the next button once.
     if(dataMining && d.querySelector('#kdd')) {

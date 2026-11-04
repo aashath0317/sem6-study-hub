@@ -1,0 +1,27 @@
+Matrices	அணிகள்
+Matrices to represent data, size, square and equal matrices, rows, columns and entries, addition, multiplication and its algorithm, non-commutativity, identity, powers, transpose, symmetric matrices, and zero–one matrices (join and meet).	தரவைப் பிரதிநிதித்துவப்படுத்தும் அணிகள், அளவு, சதுர மற்றும் சம அணிகள், நிரைகள், நிரல்கள், உறுப்புகள், கூட்டல், பெருக்கலும் அதன் படிமுறையும், பரிமாற்றுப் பண்பின்மை, சமனி, அடுக்குகள், இடமாற்று, சமச்சீர் அணிகள், பூச்சியம்–ஒன்று அணிகள் (சேர்வும் சந்திப்பும்).
+Lesson 5 – Matrices	பாடம் 5 – அணிகள்
+Matrix definitions, arithmetic and zero–one matrices.	அணி வரையறைகள், எண்கணிதம், பூச்சியம்–ஒன்று அணிகள்.
+Lesson 5: matrices	பாடம் 5: அணிகள்
+Why matrices: organising large amounts of data	ஏன் அணிகள்: பெருமளவு தரவை ஒழுங்கமைத்தல்
+Elements, rows, columns and order m × n	உறுப்புகள், நிரைகள், நிரல்கள், m × n வரிசை
+Square matrices	சதுர அணிகள்
+Notation: A = [aᵢⱼ]	குறியீடு: A = [aᵢⱼ]
+Matrix addition and subtraction	அணிக் கூட்டலும் கழித்தலும்
+Matrix multiplication step by step	படிப்படியான அணிப் பெருக்கல்
+Matrix multiplication is not commutative	அணிப் பெருக்கல் பரிமாற்றுப் பண்புடையதல்ல
+Identity matrix and powers of matrices	சமனி அணியும் அணிகளின் அடுக்குகளும்
+Transpose	இடமாற்று
+Symmetric matrices	சமச்சீர் அணிகள்
+Zero–one matrices: join and meet	பூச்சியம்–ஒன்று அணிகள்: சேர்வும் சந்திப்பும்
+Matrix calculator (click a cell of AB to see its working)	அணிக் கணிப்பான் (செய்முறையைப் பார்க்க AB-இன் கலத்தைச் சொடுக்கவும்)
+A (rows on lines, numbers separated by spaces)	A (வரிகளாக நிரைகள், இடைவெளிகளால் பிரிக்கப்பட்ட எண்கள்)
+AB ≠ BA example	AB ≠ BA எடுத்துக்காட்டு
+Zero–one example	பூச்சியம்–ஒன்று எடுத்துக்காட்டு
+Addition example	கூட்டல் எடுத்துக்காட்டு
+Power r for Aʳ	Aʳ-க்கான அடுக்கு r
+Each matrix needs rows of equal length.	ஒவ்வொரு அணிக்கும் சம நீளமான நிரைகள் தேவை.
+not defined (sizes differ)	வரையறுக்கப்படவில்லை (அளவுகள் வேறுபடுகின்றன)
+A is symmetric	A சமச்சீரானது
+Join A ∨ B	சேர்வு A ∨ B
+Meet A ∧ B	சந்திப்பு A ∧ B

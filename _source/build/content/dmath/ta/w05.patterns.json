@@ -1,0 +1,32 @@
+[
+  {
+    "pattern": "A is ",
+    "replacement": "A-இன் அளவு ",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": ", B is ",
+    "replacement": ", B-இன் அளவு ",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "not defined: inner sizes ",
+    "replacement": "வரையறுக்கப்படவில்லை: உள் அளவுகள் ",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Click a cell.",
+    "replacement": "ஒரு கலத்தைச் சொடுக்கவும்.",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "row (\\d+) of A · column (\\d+) of B",
+    "replacement": "A-இன் நிரை $1 · B-இன் நிரல் $2",
+    "selector": ".tool",
+    "flags": "g"
+  }
+]

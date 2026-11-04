@@ -1,0 +1,134 @@
+[
+  {
+    "pattern": "\\(a tree would need (\\d+)\\)",
+    "replacement": "(மரத்துக்கு $1 தேவை)",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Connected\\?",
+    "replacement": "இணைந்துள்ளதா?",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Simple circuit\\?",
+    "replacement": "எளிய சுற்றா?",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "no \\((\\d+) components\\)",
+    "replacement": "இல்லை ($1 கூறுகள்)",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "yes \\(edge ([^)]+) closes a circuit\\)",
+    "replacement": "ஆம் ($1 விளிம்பு சுற்றை மூடுகிறது)",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": ", root",
+    "replacement": ", வேர்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\(subtree in green\\)",
+    "replacement": "(உட்மரம் பச்சையில்)",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Whole tree. Internal:",
+    "replacement": "முழு மரம். உள்முனைகள்:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Leaves:",
+    "replacement": "இலைகள்:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "empty tree →",
+    "replacement": "வெற்று மரம் →",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " becomes the root",
+    "replacement": " வேராகிறது",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": ": already in the tree",
+    "replacement": ": ஏற்கெனவே மரத்தில் உள்ளது",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " → left",
+    "replacement": " → இடது",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " → right",
+    "replacement": " → வலது",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "no left child → insert",
+    "replacement": "இடது பிள்ளை இல்லை → செருகு",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "no right child → insert",
+    "replacement": "வலது பிள்ளை இல்லை → செருகு",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " as left child of ",
+    "replacement": " என்பதன் இடது பிள்ளையாக ",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " as right child of ",
+    "replacement": " என்பதன் வலது பிள்ளையாக ",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Inserting \"([^\"]+)\" \\(Algorithm 1\\):",
+    "replacement": "\"$1\" செருகப்படுகிறது (படிமுறை 1):",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Reading left to right \\(in-order\\) gives the sorted list:",
+    "replacement": "இடமிருந்து வலமாக (இடைவரிசை) வாசிப்பது வரிசைப்படுத்தப்பட்ட பட்டியலைத் தருகிறது:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\byes\\b",
+    "replacement": "ஆம்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\bno\\b",
+    "replacement": "இல்லை",
+    "selector": ".tool",
+    "flags": "g"
+  }
+]

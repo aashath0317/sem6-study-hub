@@ -1,0 +1,29 @@
+Fundamentals of Digital Marketing	எண்ணிமச் சந்தைப்படுத்தலின் அடிப்படைகள்
+What digital marketing is (and isn't), its four objectives, why people go online, the seven key components (website, SEO/SEM, social, paid ads, remarketing, affiliate, email), Kaushik's measurement model, and metrics vs KPIs.	எண்ணிமச் சந்தைப்படுத்தல் என்றால் என்ன (எது அல்ல), அதன் நான்கு நோக்கங்கள், மக்கள் இணையத்தைப் பயன்படுத்தும் காரணங்கள், ஏழு முக்கியக் கூறுகள் (இணையத்தளம், SEO/SEM, சமூக, கட்டண விளம்பரங்கள், மீள்சந்தைப்படுத்தல், இணைச் சந்தையாளர், மின்னஞ்சல்), Kaushik இன் அளவீட்டு மாதிரி, அளவீடுகளும் KPI களும்.
+Campaign KPI calculator	பிரசார KPI கணிப்பான்
+Ad spend (Rs)	விளம்பரச் செலவு (Rs)
+Impressions	காட்சிகள்
+Clicks	சொடுக்கல்கள்
+Leads	சாத்திய வாடிக்கையாளர் தொடர்புகள்
+Sales	விற்பனைகள்
+Attributed revenue (Rs)	ஒதுக்கப்பட்ட வருவாய் (Rs)
+Contribution margin before marketing %	சந்தைப்படுத்தலுக்கு முந்தைய பங்களிப்பு விகிதம் %
+Enter non-negative amounts/counts and a margin between 0 and 100%.	எதிர்மறையல்லாத தொகைகள்/எண்ணிக்கைகளையும் 0 முதல் 100% வரையான விகிதத்தையும் உள்ளிடவும்.
+Measure	அளவீடு
+Formula	சூத்திரம்
+Value	மதிப்பு
+Type	வகை
+clicks ÷ impressions	சொடுக்கல்கள் ÷ காட்சிகள்
+spend ÷ clicks	செலவு ÷ சொடுக்கல்கள்
+metric	அளவீடு
+Cost per lead	தொடர்பொன்றிற்கான செலவு
+spend ÷ leads	செலவு ÷ தொடர்புகள்
+Lead-to-sale conversion	தொடர்பு–விற்பனை மாற்றம்
+sales ÷ leads	விற்பனைகள் ÷ தொடர்புகள்
+Cost per recorded sale	பதிவான விற்பனை ஒன்றிற்கான செலவு
+spend ÷ sales	செலவு ÷ விற்பனைகள்
+attributed revenue ÷ ad spend	ஒதுக்கப்பட்ட வருவாய் ÷ விளம்பரச் செலவு
+objective-dependent KPI	நோக்கத்தைச் சார்ந்த KPI
+Contribution-based marketing return	பங்களிப்பு அடிப்படையிலான சந்தைப்படுத்தல் ஈட்டம்
+(revenue × margin − spend) ÷ spend	(வருவாய் × விகிதம் − செலவு) ÷ செலவு
+Margin is an illustrative assumption: contribution after product/fulfilment costs, before marketing. ROAS measures attributed revenue, not profit. This simplified return is not causal incremental ROMI; acquisition cost also requires identifying new customers. Metrics become KPIs according to the objective.	விகிதம் விளக்கத்திற்கான அனுமானம்: தயாரிப்பு/நிறைவேற்றல் செலவுகளுக்குப் பின், சந்தைப்படுத்தலுக்கு முந்தைய பங்களிப்பு. ROAS ஒதுக்கப்பட்ட வருவாயை அளவிடுகிறது; இலாபத்தை அல்ல. இந்த எளிமைப்படுத்தப்பட்ட ஈட்டம் காரணசார் கூடுதல் ROMI அல்ல; பெறுகைச் செலவிற்குப் புதிய வாடிக்கையாளர்களையும் அடையாளம் காண வேண்டும். நோக்கத்திற்கு ஏற்ப அளவீடுகள் KPI களாகின்றன.

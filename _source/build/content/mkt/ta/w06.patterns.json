@@ -1,0 +1,12 @@
+[
+  {
+    "pattern": "Consumer demand ",
+    "replacement": "நுகர்வோர் கேள்வி ",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "% → demand for machines ",
+    "replacement": "% → இயந்திரங்களுக்கான கேள்வி ",
+    "selector": ".tool"
+  }
+]

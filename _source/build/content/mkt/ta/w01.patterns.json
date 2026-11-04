@@ -1,0 +1,7 @@
+[
+  {
+    "pattern": "Customer perceived value = ",
+    "replacement": "வாடிக்கையாளர் உணரும் மதிப்பு = ",
+    "selector": ".tool"
+  }
+]

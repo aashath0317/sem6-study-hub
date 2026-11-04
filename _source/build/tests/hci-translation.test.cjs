@@ -4,11 +4,12 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { JSDOM, VirtualConsole } = require('jsdom');
 const root = path.resolve(__dirname, '../../..');
+const marketing = process.env.STUDY_TRANSLATION_SUBJECT === 'mkt';
 const discreteMath = process.env.STUDY_TRANSLATION_SUBJECT === 'dmath';
-const partialSubject = discreteMath || process.env.STUDY_TRANSLATION_SUBJECT === 'dm';
+const partialSubject = marketing || discreteMath || process.env.STUDY_TRANSLATION_SUBJECT === 'dm';
 const dataMining = process.env.STUDY_TRANSLATION_SUBJECT === 'dm';
 const business = process.env.STUDY_TRANSLATION_SUBJECT === 'bpas';
-const directory = path.join(root, discreteMath ? 'Discrete Mathematics' : dataMining ? 'Data Mining' : business ? 'Business Processes and Accounting Systems' : 'Human Computer Interaction');
+const directory = path.join(root, marketing ? 'Marketing' : discreteMath ? 'Discrete Mathematics' : dataMining ? 'Data Mining' : business ? 'Business Processes and Accounting Systems' : 'Human Computer Interaction');
 function files(dir) { return fs.readdirSync(dir, {withFileTypes:true}).flatMap(e => e.isDirectory() ? files(path.join(dir,e.name)) : e.name.endsWith('.html') ? [path.join(dir,e.name)] : []); }
 const tick = () => new Promise(resolve => setTimeout(resolve, 0));
 (async () => {
@@ -16,7 +17,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
   const untranslated = [];
   const pages = files(directory).filter(file => !partialSubject || fs.readFileSync(file,"utf8").includes('id="hci-tamil-data"'));
   if (!partialSubject) assert.equal(pages.length,business ? 17 : 15);
-  else if(process.env.STUDY_TRANSLATION_REQUIRE_COMPLETE) assert.equal(pages.length,discreteMath ? 15 : 16);
+  else if(process.env.STUDY_TRANSLATION_REQUIRE_COMPLETE) assert.equal(pages.length,marketing || discreteMath ? 15 : 16);
   else assert.ok(pages.length > 0);
   for (const file of pages) {
     const errors = [];

@@ -1,0 +1,56 @@
+[
+  {
+    "pattern": "The success probabilities add up to ([\\d.]+), not 1\\.",
+    "replacement": "வெற்றி நிகழ்தகவுகளின் கூட்டுத்தொகை $1; 1 அல்ல.",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "EV\\(success\\)",
+    "replacement": "EV(வெற்றி)",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "EV\\(failure\\)",
+    "replacement": "EV(தோல்வி)",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "EV\\(launch\\)",
+    "replacement": "EV(அறிமுகம்)",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Net =",
+    "replacement": "நிகரம் =",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "With fewer than n − 1 = (\\d+) edges the graph can\\x27t be connected, so it has no spanning tree\\.",
+    "replacement": "n − 1 = $1-ஐவிடக் குறைந்த விளிம்புகளுடன் வரைபு இணைந்திருக்க முடியாது; எனவே படரும் மரம் இல்லை.",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Spanning tree has n − 1 =",
+    "replacement": "படரும் மரத்துக்கு n − 1 =",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " edges → remove m − n \\+ 1 =",
+    "replacement": " விளிம்புகள் → நீக்கு m − n + 1 =",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " edges? \\(one per independent circuit\\)\\.",
+    "replacement": " விளிம்புகள் (சுயாதீனச் சுற்றுக்கு ஒன்று).",
+    "selector": ".tool",
+    "flags": "g"
+  }
+]

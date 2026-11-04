@@ -1,0 +1,48 @@
+Decision Trees, Tree Traversal & Spanning Trees	முடிவெடுக்கும் மரங்கள், மரச் சுற்றல், படரும் மரங்கள்
+Decision trees as maps of choices and outcomes (drawing, evaluating with expected values, pros and cons), preorder and postorder traversal of ordered rooted trees, and spanning trees with their use in IP multicasting.	தேர்வுகளும் விளைவுகளும் குறித்த வரைபடங்களாக முடிவெடுக்கும் மரங்கள் (வரைதல், எதிர்பார்க்கப்படும் மதிப்புகளால் மதிப்பிடுதல், நன்மை தீமைகள்), வரிசைப்படுத்தப்பட்ட வேருள்ள மரங்களின் முன்வரிசை மற்றும் பின்வரிசைச் சுற்றல், படரும் மரங்களும் IP பல்பரப்பில் அவற்றின் பயன்பாடும்.
+Video Lecture 1 – Decision trees	காணொளி விரிவுரை 1 – முடிவெடுக்கும் மரங்கள்
+What a decision tree is, the buy-a-car example, drawing with squares and circles, extra advantages, disadvantages and applications, and the badminton tree.	முடிவெடுக்கும் மரம் என்றால் என்ன, கார் வாங்குதல் எடுத்துக்காட்டு, சதுரங்கள் மற்றும் வட்டங்களால் வரைதல், கூடுதல் நன்மைகள், தீமைகள், பயன்பாடுகள், பூப்பந்து மரம்.
+Lesson 12.2: decision trees, traversal, spanning trees	பாடம் 12.2: முடிவெடுக்கும் மரங்கள், சுற்றல், படரும் மரங்கள்
+A decision tree weighs possible actions	முடிவெடுக்கும் மரம் சாத்தியமான நடவடிக்கைகளை மதிப்பிடுகிறது
+Informal example: should I buy a car?	முறைசாரா எடுத்துக்காட்டு: நான் கார் வாங்க வேண்டுமா?
+Definition: rooted tree, internal vertex = decision	வரையறை: வேருள்ள மரம், உள்முனை = முடிவு
+Drawing: lines = options, squares = decisions, circles = uncertainty	வரைதல்: கோடுகள் = விருப்பங்கள், சதுரங்கள் = முடிவுகள், வட்டங்கள் = நிச்சயமின்மை
+Seven extra advantages	ஏழு கூடுதல் நன்மைகள்
+Disadvantages: overfitting, instability, many classes	தீமைகள்: மிகைப்பொருத்தம், நிலையின்மை, பல வகுப்புகள்
+When to use decision trees, and application areas	முடிவெடுக்கும் மரங்களை எப்போது பயன்படுத்துவது, பயன்பாட்டுத் துறைகள்
+Example: play badminton?	எடுத்துக்காட்டு: பூப்பந்து விளையாடலாமா?
+Video Lecture 2 – Expected values, traversal & spanning trees	காணொளி விரிவுரை 2 – எதிர்பார்க்கப்படும் மதிப்புகள், சுற்றல், படரும் மரங்கள்
+The new-product expected-value exercise, preorder and postorder traversal, and spanning trees.	புதிய தயாரிப்பின் எதிர்பார்க்கப்படும் மதிப்புப் பயிற்சி, முன்வரிசை, பின்வரிசைச் சுற்றல், படரும் மரங்கள்.
+Self-assessment 2: launch a new product?	சுயமதிப்பீடு 2: புதிய தயாரிப்பை அறிமுகப்படுத்தலாமா?
+Draw the decision tree: develop or not	முடிவெடுக்கும் மரத்தை வரைதல்: உருவாக்குவதா இல்லையா
+EV at A = $780,000; EV at C = 0.7 × A + 0.3 × B	A-இல் EV = $780,000; C-இல் EV = 0.7 × A + 0.3 × B
+Tree traversal: visit every node exactly once	மரச் சுற்றல்: ஒவ்வொரு கணுவையும் துல்லியமாக ஒருமுறை அணுகுதல்
+Preorder: start with the root	முன்வரிசை: வேருடன் தொடங்குதல்
+Postorder: subtrees first, root last	பின்வரிசை: முதலில் உட்மரங்கள், இறுதியில் வேர்
+Spanning trees: G is connected	படரும் மரங்கள்: G இணைந்துள்ளது
+Connected ⇔ has a spanning tree	இணைந்துள்ளது ⇔ படரும் மரம் உள்ளது
+Expected value calculator	எதிர்பார்க்கப்படும் மதிப்புக் கணிப்பான்
+R&D cost	ஆய்வு–உருவாக்கச் செலவு
+P(success)	P(வெற்றி)
+Years	ஆண்டுகள்
+High p	அதிகம் p
+Medium p	நடுத்தரம் p
+Low p	குறைவு p
+profit/yr	இலாபம்/ஆண்டு
+If failed: P(sell)	தோல்வியடைந்தால்: P(விற்பனை)
+sale value	விற்பனை மதிப்பு
+launch	அறிமுகப்படுத்து
+don't launch	அறிமுகப்படுத்த வேண்டாம்
+Traversal explorer (tree T from Example 13.2.1)	சுற்றல் ஆராய்வுக் கருவி (எடுத்துக்காட்டு 13.2.1-இன் மரம் T)
+Preorder	முன்வரிசை
+Postorder	பின்வரிசை
+Preorder:	முன்வரிசை:
+Postorder:	பின்வரிசை:
+Next vertex ▸	அடுத்த முனை ▸
+press Next	அடுத்து என்பதை அழுத்தவும்
+(done)	(முடிந்தது)
+Edges to remove	நீக்க வேண்டிய விளிம்புகள்
+Vertices n	முனைகள் n
+Edges m	விளிம்புகள் m
+edges (one per independent circuit).	விளிம்புகள் (ஒவ்வொரு சார்பற்ற சுற்றுக்கும் ஒன்று).
+edge (one per independent circuit).	விளிம்பு (ஒவ்வொரு சார்பற்ற சுற்றுக்கும் ஒன்று).

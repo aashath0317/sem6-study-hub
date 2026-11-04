@@ -1,0 +1,22 @@
+[
+  {
+    "pattern": "variable \\+ fixed ÷ units = ",
+    "replacement": "மாறும் செலவு + நிலையான செலவு ÷ அலகுகள் = ",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "unit cost × ",
+    "replacement": "அலகுச் செலவு × ",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "unit cost \\+ ",
+    "replacement": "அலகுச் செலவு + ",
+    "selector": ".tool"
+  },
+  {
+    "pattern": " units$",
+    "replacement": " அலகுகள்",
+    "selector": ".tool"
+  }
+]

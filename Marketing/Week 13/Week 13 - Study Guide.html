@@ -157,13 +157,32 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .gp-bar{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;flex-wrap:wrap}
 .gp-bar i{flex:1;min-width:80px;height:8px;background:var(--line);border-radius:6px;overflow:hidden;display:block}
 .gp-bar b{display:block;height:100%;background:var(--tip)}
-.gp-done{font-size:14px;margin:12px 0;padding-left:24px;max-height:220px;overflow:auto}
-.gp-done li{margin:3px 0}.gp-muted{color:var(--muted);font-size:13px}
+.gp-done{font-size:14px;margin:12px 0;padding-left:24px}
+.gp-done li{margin:3px 0}.gp-muted{color:var(--muted);font-size:13px;font-weight:400}
 .gp-tx{background:var(--accent-soft);color:var(--ink);padding:10px 12px;border-radius:8px;margin:12px 0 8px;font-weight:600}
+.gp-howto,.gp-q{font-size:15px;margin:8px 0}
+.gp-tablewrap{margin:10px 0}
+.gp-scroll{overflow-x:auto}
+.tool table.gp-table,table.gp-table{display:table;width:100%;max-width:none;overflow:visible;max-height:none;border-collapse:collapse;font-size:14.5px;table-layout:auto;margin:0}
+.gp-table th,.gp-table td{border:1px solid var(--line);padding:6px 8px;text-align:left;background:var(--panel);color:var(--ink)}
+.gp-table th{background:var(--accent-soft);font-weight:700;font-size:13px}
+.gp-table .r{text-align:right}
+.gp-col-date{width:70px}.gp-col-amt{width:22%}
+.gp-table .gp-credit{padding-left:26px}
+.gp-table tfoot td,.gp-row-total td{font-weight:700;background:var(--bg)}
+.gp-row-next td{height:32px;background:var(--bg)}
+.gp-table td.gp-now,.gp-now td{background:var(--key-bg);padding:4px}
+.gp-table input{font:inherit;width:100%;box-sizing:border-box;padding:5px 6px;border:1px solid var(--accent);border-radius:6px;background:var(--panel);color:var(--ink)}
+.gp-dr,.gp-cr{text-align:right}
+.gp-cell-acct{position:relative;min-width:110px}
+@media (max-width:600px){.gp-col-date{width:44px}.gp-table th,.gp-table td{padding:4px;font-size:13px}.gp-table input{padding:4px;min-width:0}.gp-col-amt{width:24%}}
+.gp-list{position:absolute;left:4px;right:4px;top:calc(100% - 2px);z-index:20;background:var(--panel);border:1px solid var(--accent);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.18);max-height:220px;overflow:auto}
+.gp-item,.gp-none{padding:7px 10px;font-size:14px}
+.gp-item{cursor:pointer}.gp-item:hover,.gp-item.on{background:var(--accent);color:#fff}
+.gp-none{color:var(--muted)}
 .gp-opts{display:flex;flex-wrap:wrap;margin:6px 0 10px}
-.tool button.gp-opt.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .gp-label{font-size:14px;font-weight:600}
-.gp-amt{font:inherit;width:150px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);margin-left:6px}
+.gp-amt-free{font:inherit;width:150px;padding:6px 8px;border:1px solid var(--accent);border-radius:8px;background:var(--panel);color:var(--ink);margin-left:6px}
 .gp-fb{margin-top:12px;padding:10px 12px;border-radius:8px;font-size:15px;border-left:4px solid var(--line)}
 .gp-fb p{margin:8px 0 6px}.gp-fb button{display:block;margin-top:10px}
 .gp-ok{background:var(--tip-bg);border-left-color:var(--tip)}
@@ -1595,45 +1614,45 @@ Functions warehouse, inventory, transport, order process, packaging, information
   }
 })();
 ;
-// Answer-it-yourself practice: one step at a time, with an explanation for each wrong answer.
+// Answer-it-yourself practice: fill in a real table one line at a time, with an explanation for each wrong answer.
 (function(){
   var RULE = {Dr:'A debit records an asset, expense or drawings going up, or a liability, income or capital going down.',
               Cr:'A credit records a liability, income or capital going up, or an asset, expense or drawings going down.'};
   var TYPE = {asset:['an asset','debit'],expense:['an expense','debit'],drawings:['drawings','debit'],liability:['a liability','credit'],income:['income','credit'],capital:['capital','credit']};
-  var NTH = ['1st','2nd','3rd','4th','5th'];
   function load(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
   function save(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
   function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
   function money(n){ return Number(n).toLocaleString('en-US',{maximumFractionDigits:2}); }
   function parse(s){ var v = parseFloat(String(s).replace(/[,\s]|Rs\.?/gi,'')); return isNaN(v) ? null : v; }
+  function dateOf(tx){ var m = /^([^:]{1,12}):/.exec(tx.tx); return m ? m[1] : ''; }
 
   document.querySelectorAll('.gp').forEach(function(root){
-    var data = JSON.parse(root.querySelector('script').textContent), steps = [], key = 'sg-gp-' + root.id;
+    var data = JSON.parse(root.querySelector('script').textContent), steps = [], key = 'sg-gp-' + root.id, accounts = Object.keys(data.accts || {});
     data.steps.forEach(function(item){
       if (item.e) item.e.forEach(function(entry, i){ steps.push({type:'entry', tx:item, entry:entry, n:i}); });
       else steps.push(item);
     });
-    var state = load(key) || {i:0, first:0}, tries = 0, picked = null;
+    var state = load(key) || {i:0, first:0}, tries = 0;
     if (state.i > steps.length) state = {i:0, first:0};
     var box = document.createElement('div'); root.appendChild(box);
 
     function doneLine(s){
-      if (s.type === 'entry') return (s.entry.s === 'Dr' ? 'Debit ' : 'Credit ') + esc(s.entry.a) + ' ' + money(s.entry.amt) + ' <span class="gp-muted">(' + esc(s.tx.tx) + ')</span>';
       if (s.type === 'num') return esc(s.q) + ' <b>' + money(s.a) + '</b>';
       return esc(s.q) + ' <b>' + esc(s.opts.filter(function(o){ return o.ok; })[0].t) + '</b>';
     }
     function advance(firstTry){
       if (firstTry) state.first++;
-      state.i++; tries = 0; picked = null; save(key, state); render();
-      var focus = box.querySelector('input,.gp-opt'); if (focus) focus.focus({preventScroll:true});
+      state.i++; tries = 0; save(key, state); render();
+      var focus = box.querySelector('.gp-acct,.gp-amt,.gp-opt'); if (focus) focus.focus({preventScroll:true});
     }
     function feedback(kind, html, cont){
       var f = box.querySelector('.gp-fb');
       f.className = 'gp-fb ' + kind; f.innerHTML = html; f.hidden = false;
       if (cont) {
-        var b = document.createElement('button'); b.type = 'button'; b.textContent = state.i + 1 < steps.length ? 'Next step →' : 'Finish';
+        var b = document.createElement('button'); b.type = 'button'; b.textContent = state.i + 1 < steps.length ? 'Next →' : 'Finish';
         b.onclick = function(){ advance(cont.first); }; f.appendChild(b);
-        box.querySelectorAll('.gp-cur input,.gp-cur .gp-opt,.gp-check').forEach(function(el){ el.disabled = true; });
+        box.querySelectorAll('.gp-now input,.gp-opt,.gp-check').forEach(function(el){ el.disabled = true; });
+        var list = box.querySelector('.gp-list'); if (list) list.hidden = true;
         b.focus({preventScroll:true});
       } else if (tries >= 2) {
         var r = document.createElement('button'); r.type = 'button'; r.className = 'alt'; r.textContent = 'Show me the answer';
@@ -1642,26 +1661,38 @@ Functions warehouse, inventory, transport, order process, packaging, information
     }
     function reveal(){
       var s = steps[state.i], text;
-      if (s.type === 'entry') text = (s.entry.s === 'Dr' ? 'Debit ' : 'Credit ') + '<b>' + esc(s.entry.a) + '</b> with <b>Rs. ' + money(s.entry.amt) + '</b>. ' + esc(s.entry.w);
+      if (s.type === 'entry') text = 'Write <b>' + esc(s.entry.a) + '</b> with <b>Rs. ' + money(s.entry.amt) + '</b> in the <b>' + (s.entry.s === 'Dr' ? 'Debit' : 'Credit') + '</b> column. ' + esc(s.entry.w);
       else if (s.type === 'num') text = 'The answer is <b>' + money(s.a) + '</b>. ' + esc(s.why || s.think);
       else text = 'The answer is <b>' + esc(s.opts.filter(function(o){ return o.ok; })[0].t) + '</b>. ' + esc(s.why || '');
-      feedback('gp-show', text + ' <p class="gp-muted">Read why, then try this step type again on the next one.</p>', {first:false});
+      feedback('gp-show', text + '<p class="gp-muted">Read the reason. It will help on the next line.</p>', {first:false});
     }
     function checkEntry(s){
-      var amount = parse(box.querySelector('.gp-amt').value), e = s.entry, side = e.s === 'Dr' ? 'debit' : 'credit';
-      if (!picked) return feedback('gp-hint', 'First choose the account for this entry.');
-      if (picked !== e.a) {
+      var typed = box.querySelector('.gp-acct').value.trim(), e = s.entry, sideName = e.s === 'Dr' ? 'Debit' : 'Credit';
+      var dr = box.querySelector('.gp-dr').value.trim(), cr = box.querySelector('.gp-cr').value.trim();
+      var pick = accounts.filter(function(a){ return a.toLowerCase() === typed.toLowerCase(); })[0];
+      if (!typed) return feedback('gp-hint', 'Start with the Account cell. Click it to see the available accounts.');
+      if (!pick) return feedback('gp-hint', '"' + esc(typed) + '" is not one of the accounts here. Click the Account cell and choose from the list.');
+      if (!dr && !cr) return feedback('gp-hint', 'Now type the amount in the column you think is right: Debit or Credit.');
+      if (dr && cr) return feedback('gp-hint', 'One line has only one amount. Keep it in one column and clear the other.');
+      var side = dr ? 'Dr' : 'Cr', amount = parse(dr || cr);
+      if (amount === null) return feedback('gp-hint', 'The amount must be a number. Commas are fine.');
+      var other = s.tx.e.filter(function(x){ return x.a === pick && x.a !== e.a; })[0];
+      if (pick !== e.a) {
+        if (other && other.s === side && s.tx.e.indexOf(other) > s.n) return feedback('gp-hint', '<b>Good thinking.</b> ' + esc(pick) + ' does go in the ' + (side === 'Dr' ? 'Debit' : 'Credit') + ' column here. But a journal entry lists debits before credits, and this line comes first. Enter it on its own line next.');
         tries++;
-        var other = s.tx.e.filter(function(x){ return x.a === picked && x.s !== e.s; })[0], type = TYPE[data.accts[picked]], msg;
-        if (other) msg = '<b>' + esc(picked) + '</b> is part of this transaction, but it belongs on the other side. ' + esc(other.w);
-        else if (s.tx.e.some(function(x){ return x.a === picked; })) msg = '<b>' + esc(picked) + '</b> is on this side too, but it is a different line of this entry. Choose the one for this line.';
-        else msg = '<b>' + esc(picked) + '</b> does not change in this transaction, so it gets no entry.' + (type ? ' It is ' + type[0] + ', which increases on the ' + type[1] + ' side.' : '');
-        return feedback('gp-bad', '<b>Not quite.</b> ' + msg + '<p><b>How to think:</b> ' + esc(s.tx.think) + ' ' + RULE[e.s] + ' Which account fits the ' + side + ' side?</p>');
+        var type = TYPE[data.accts[pick]], msg;
+        if (other && other.s !== side) msg = '<b>' + esc(pick) + '</b> is part of this transaction, but not in the ' + (side === 'Dr' ? 'Debit' : 'Credit') + ' column. ' + esc(other.w);
+        else if (other) msg = '<b>' + esc(pick) + '</b> is part of this transaction, but this line is for a different account.';
+        else msg = '<b>' + esc(pick) + '</b> does not change in this transaction, so it gets no entry.' + (type ? ' It is ' + type[0] + ', which increases on the ' + type[1] + ' side.' : '');
+        return feedback('gp-bad', '<b>Not quite.</b> ' + msg + '<p><b>How to think:</b> ' + esc(s.tx.think) + ' ' + RULE[e.s] + ' Which account fits this ' + sideName.toLowerCase() + ' line?</p>');
       }
-      if (amount === null) return feedback('gp-hint', 'Good account. Now type the amount in rupees.');
+      if (side !== e.s) {
+        tries++;
+        return feedback('gp-bad', '<b>Right account, wrong column.</b> ' + esc(pick) + ' belongs in the ' + sideName + ' column, not ' + (side === 'Dr' ? 'Debit' : 'Credit') + '. ' + esc(e.w) + '<p><b>How to think:</b> did this account go up or down? ' + RULE[e.s] + '</p>');
+      }
       if (Math.abs(amount - e.amt) > 0.01) {
         tries++;
-        return feedback('gp-bad', '<b>The account is right, but the amount is not.</b><p><b>How to think:</b> read the transaction again and find the rupee value of this one line. Do not add other transactions to it.' + (s.tx.e.length > 2 ? ' This transaction has several lines, so each line has its own amount.' : ' Debit and credit are always the same amount.') + '</p>');
+        return feedback('gp-bad', '<b>The account and column are right, but the amount is not.</b><p><b>How to think:</b> read the transaction again and find the rupee value of this one line. Do not add other transactions to it.' + (s.tx.e.length > 2 ? ' This transaction has several lines, so each line has its own amount, and total debits must equal total credits.' : ' The debit and credit of a transaction are always the same amount.') + '</p>');
       }
       feedback('gp-ok', '<b>Correct.</b> ' + esc(e.w), {first:tries === 0});
     }
@@ -1673,37 +1704,97 @@ Functions warehouse, inventory, transport, order process, packaging, information
       var known = (s.mistakes || {})[String(v)];
       feedback('gp-bad', '<b>Not quite.</b> ' + (known ? esc(known) : 'You typed ' + money(v) + '.') + '<p><b>How to think:</b> ' + esc(s.think) + '</p>');
     }
+    function journal(s){
+      var entries = steps.filter(function(x){ return x.type === 'entry'; });
+      if (!entries.length) return '';
+      var done = steps.slice(0, state.i).filter(function(x){ return x.type === 'entry'; }), dr = 0, cr = 0, last = null, rows = '';
+      done.forEach(function(x){
+        var isDr = x.entry.s === 'Dr'; if (isDr) dr += x.entry.amt; else cr += x.entry.amt;
+        rows += '<tr class="gp-row-done"><td>' + (x.tx !== last ? esc(dateOf(x.tx)) : '') + '</td><td' + (isDr ? '' : ' class="gp-credit"') + '>' + esc(x.entry.a) + '</td><td class="r">' + (isDr ? money(x.entry.amt) : '') + '</td><td class="r">' + (isDr ? '' : money(x.entry.amt)) + '</td></tr>';
+        last = x.tx;
+      });
+      if (s && s.type === 'entry') {
+        rows += '<tr class="gp-now"><td>' + (s.tx !== last ? esc(dateOf(s.tx)) : '') + '</td><td class="gp-cell-acct"><input class="gp-acct" placeholder="Click to choose" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Account"><div class="gp-list" role="listbox" hidden></div></td><td><input class="gp-dr" inputmode="decimal" autocomplete="off" aria-label="Debit amount"></td><td><input class="gp-cr" inputmode="decimal" autocomplete="off" aria-label="Credit amount"></td></tr>';
+        s.tx.e.slice(s.n + 1).forEach(function(){ rows += '<tr class="gp-row-next"><td></td><td></td><td></td><td></td></tr>'; });
+      }
+      return '<div class="gp-tablewrap"><table class="gp-table"><thead><tr><th class="gp-col-date">Date</th><th>Account</th><th class="r gp-col-amt">Debit (Rs.)</th><th class="r gp-col-amt">Credit (Rs.)</th></tr></thead><tbody>' + rows + '</tbody>' +
+        (done.length ? '<tfoot><tr><td></td><td>Total so far</td><td class="r">' + money(dr) + '</td><td class="r">' + money(cr) + '</td></tr></tfoot>' : '') + '</table></div>';
+    }
+    function grid(s){
+      if (!data.table) return '';
+      var values = {};
+      steps.slice(0, state.i).forEach(function(x){ if (x.fill) values[x.fill.join()] = money(x.a); });
+      var head = data.table.cols.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('');
+      var body = data.table.rows.map(function(row, r){
+        return '<tr' + (row.total ? ' class="gp-row-total"' : '') + '>' + (row.cells || row).map(function(cell, c){
+          var id = r + ',' + c;
+          if (s && s.fill && s.fill.join() === id) return '<td class="gp-now"><input class="gp-amt" inputmode="decimal" autocomplete="off" aria-label="' + esc(data.table.cols[c]) + '"></td>';
+          return '<td>' + esc(values[id] !== undefined ? values[id] : cell) + '</td>';
+        }).join('') + '</tr>';
+      }).join('');
+      return '<div class="gp-tablewrap gp-scroll"><table class="gp-table"><thead><tr>' + head + '</tr></thead><tbody>' + body + '</tbody></table></div>';
+    }
     function render(){
-      var pct = Math.round(state.i / steps.length * 100), html = '<div class="gp-bar"><span>' + (state.i < steps.length ? 'Step ' + (state.i + 1) + ' of ' + steps.length : 'Finished') + '</span><i><b style="width:' + pct + '%"></b></i><button type="button" class="alt gp-reset">Start again</button></div>';
-      if (state.i) html += '<ol class="gp-done">' + steps.slice(0, state.i).map(function(s){ return '<li>' + doneLine(s) + '</li>'; }).join('') + '</ol>';
-      var s = steps[state.i];
+      var pct = Math.round(state.i / steps.length * 100), s = steps[state.i], html = '<div class="gp-bar"><span>' + (s ? 'Step ' + (state.i + 1) + ' of ' + steps.length : 'Finished') + '</span><i><b style="width:' + pct + '%"></b></i><button type="button" class="alt gp-reset">Start again</button></div>';
+      var notes = steps.slice(0, state.i).filter(function(x){ return x.type !== 'entry' && !x.fill; });
+      if (notes.length) html += '<ol class="gp-done">' + notes.map(function(x){ return '<li>' + doneLine(x) + '</li>'; }).join('') + '</ol>';
       if (!s) {
-        html += '<div class="gp-fb gp-ok"><b>You finished this question.</b> ' + state.first + ' of ' + steps.length + ' steps were right on the first try. Open the full answer below to compare the layout.' + (data.end ? ' ' + esc(data.end) : '') + '</div>';
+        html += journal() + grid() + '<div class="gp-fb gp-ok"><b>You finished this question.</b> ' + state.first + ' of ' + steps.length + ' steps were right on the first try. Open the full answer below to compare.' + (data.end ? ' ' + esc(data.end) : '') + '</div>';
       } else if (s.type === 'entry') {
-        var count = s.tx.e.length;
-        html += '<div class="gp-cur"><p class="gp-tx">' + esc(s.tx.tx) + '</p><p><b>' + NTH[s.n] + ' entry of ' + count + ': which account is ' + (s.entry.s === 'Dr' ? 'debited' : 'credited') + '?</b></p><div class="gp-opts">' +
-          Object.keys(data.accts).map(function(a){ return '<button type="button" class="alt gp-opt" data-a="' + esc(a) + '">' + esc(a) + '</button>'; }).join('') +
-          '</div><label class="gp-label">Amount (Rs.) <input class="gp-amt" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></div>';
+        html += '<p class="gp-tx">' + esc(s.tx.tx) + '</p><p class="gp-howto"><b>Line ' + (s.n + 1) + ' of ' + s.tx.e.length + ' for this transaction.</b> Click the Account cell and choose an account. Then type the amount in the Debit or the Credit column. Debit lines come first.</p>' + journal(s) + '<button type="button" class="gp-check">Check this line</button><div class="gp-fb" aria-live="polite" hidden></div>';
       } else if (s.type === 'num') {
-        html += '<div class="gp-cur">' + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p><b>' + esc(s.q) + '</b></p><label class="gp-label">Your answer <input class="gp-amt" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></div>';
+        html += journal() + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p class="gp-q"><b>' + esc(s.q) + '</b>' + (s.fill ? ' <span class="gp-muted">Type it in the highlighted cell.</span>' : '') + '</p>' + grid(s) +
+          (s.fill ? '' : '<label class="gp-label">Your answer <input class="gp-amt gp-amt-free gp-now-input" inputmode="decimal" autocomplete="off"></label> ') + '<button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div>';
       } else {
-        html += '<div class="gp-cur">' + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p><b>' + esc(s.q) + '</b></p><div class="gp-opts">' +
-          s.opts.map(function(o, i){ return '<button type="button" class="alt gp-opt" data-i="' + i + '">' + esc(o.t) + '</button>'; }).join('') + '</div><div class="gp-fb" aria-live="polite" hidden></div></div>';
+        html += journal() + grid(s) + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p class="gp-q"><b>' + esc(s.q) + '</b></p><div class="gp-opts">' +
+          s.opts.map(function(o, i){ return '<button type="button" class="alt gp-opt" data-i="' + i + '">' + esc(o.t) + '</button>'; }).join('') + '</div><div class="gp-fb" aria-live="polite" hidden></div>';
       }
       box.innerHTML = html;
-      box.querySelector('.gp-reset').onclick = function(){ state = {i:0, first:0}; tries = 0; picked = null; save(key, state); render(); };
+      box.querySelector('.gp-reset').onclick = function(){ state = {i:0, first:0}; tries = 0; save(key, state); render(); };
       box.querySelectorAll('.gp-opt').forEach(function(b){
         b.onclick = function(){
-          if (s.type === 'entry') { picked = b.dataset.a; box.querySelectorAll('.gp-opt').forEach(function(x){ x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', x === b); }); return; }
           var o = s.opts[+b.dataset.i];
           if (o.ok) return feedback('gp-ok', '<b>Correct.</b> ' + esc(s.why || o.why || ''), {first:tries === 0});
           tries++; feedback('gp-bad', '<b>Not quite.</b> ' + esc(o.why) + (s.think ? '<p><b>How to think:</b> ' + esc(s.think) + '</p>' : ''));
         };
       });
-      var c = box.querySelector('.gp-check');
-      if (c) c.onclick = function(){ s.type === 'entry' ? checkEntry(s) : checkNum(s); };
-      var input = box.querySelector('.gp-amt');
-      if (input) input.onkeydown = function(ev){ if (ev.key === 'Enter') { ev.preventDefault(); c.click(); } };
+      var check = box.querySelector('.gp-check');
+      if (check) check.onclick = function(){ s.type === 'entry' ? checkEntry(s) : checkNum(s); };
+      box.querySelectorAll('.gp-amt,.gp-dr,.gp-cr').forEach(function(input){
+        input.onkeydown = function(ev){ if (ev.key === 'Enter') { ev.preventDefault(); check.click(); } };
+      });
+      if (s && s.type === 'entry') accountPicker();
+    }
+    function accountPicker(){
+      var input = box.querySelector('.gp-acct'), list = box.querySelector('.gp-list'), active = -1;
+      function show(all){
+        var q = input.value.trim().toLowerCase();
+        var match = accounts.filter(function(a){ return all || a.toLowerCase().indexOf(q) > -1; });
+        list.innerHTML = match.length ? match.map(function(a){ return '<div class="gp-item" role="option" data-a="' + esc(a) + '">' + esc(a) + '</div>'; }).join('') : '<div class="gp-none">No account with that name</div>';
+        list.hidden = false; active = -1; input.setAttribute('aria-expanded', 'true');
+      }
+      function hide(){ list.hidden = true; input.setAttribute('aria-expanded', 'false'); }
+      function choose(a){ input.value = a; hide(); box.querySelector('.gp-dr').focus({preventScroll:true}); }
+      input.onfocus = function(){ show(true); };
+      input.onclick = function(){ show(true); };
+      input.oninput = function(){ show(false); };
+      input.onblur = function(){ setTimeout(hide, 120); };
+      list.onmousedown = function(ev){ var item = ev.target.closest('.gp-item'); if (item) { ev.preventDefault(); choose(item.dataset.a); } };
+      input.onkeydown = function(ev){
+        var items = list.querySelectorAll('.gp-item');
+        if (ev.key === 'ArrowDown' || ev.key === 'ArrowUp') {
+          ev.preventDefault(); if (list.hidden) show(true);
+          items = list.querySelectorAll('.gp-item'); if (!items.length) return;
+          active = (active + (ev.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length;
+          items.forEach(function(x, i){ x.classList.toggle('on', i === active); });
+          items[active].scrollIntoView({block:'nearest'});
+        } else if (ev.key === 'Enter') {
+          ev.preventDefault();
+          if (!list.hidden && active > -1) choose(items[active].dataset.a);
+          else if (!list.hidden && items.length === 1) choose(items[0].dataset.a);
+          else box.querySelector('.gp-check').click();
+        } else if (ev.key === 'Escape') hide();
+      };
     }
     render();
   });

@@ -157,13 +157,32 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .gp-bar{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;flex-wrap:wrap}
 .gp-bar i{flex:1;min-width:80px;height:8px;background:var(--line);border-radius:6px;overflow:hidden;display:block}
 .gp-bar b{display:block;height:100%;background:var(--tip)}
-.gp-done{font-size:14px;margin:12px 0;padding-left:24px;max-height:220px;overflow:auto}
-.gp-done li{margin:3px 0}.gp-muted{color:var(--muted);font-size:13px}
+.gp-done{font-size:14px;margin:12px 0;padding-left:24px}
+.gp-done li{margin:3px 0}.gp-muted{color:var(--muted);font-size:13px;font-weight:400}
 .gp-tx{background:var(--accent-soft);color:var(--ink);padding:10px 12px;border-radius:8px;margin:12px 0 8px;font-weight:600}
+.gp-howto,.gp-q{font-size:15px;margin:8px 0}
+.gp-tablewrap{margin:10px 0}
+.gp-scroll{overflow-x:auto}
+.tool table.gp-table,table.gp-table{display:table;width:100%;max-width:none;overflow:visible;max-height:none;border-collapse:collapse;font-size:14.5px;table-layout:auto;margin:0}
+.gp-table th,.gp-table td{border:1px solid var(--line);padding:6px 8px;text-align:left;background:var(--panel);color:var(--ink)}
+.gp-table th{background:var(--accent-soft);font-weight:700;font-size:13px}
+.gp-table .r{text-align:right}
+.gp-col-date{width:70px}.gp-col-amt{width:22%}
+.gp-table .gp-credit{padding-left:26px}
+.gp-table tfoot td,.gp-row-total td{font-weight:700;background:var(--bg)}
+.gp-row-next td{height:32px;background:var(--bg)}
+.gp-table td.gp-now,.gp-now td{background:var(--key-bg);padding:4px}
+.gp-table input{font:inherit;width:100%;box-sizing:border-box;padding:5px 6px;border:1px solid var(--accent);border-radius:6px;background:var(--panel);color:var(--ink)}
+.gp-dr,.gp-cr{text-align:right}
+.gp-cell-acct{position:relative;min-width:110px}
+@media (max-width:600px){.gp-col-date{width:44px}.gp-table th,.gp-table td{padding:4px;font-size:13px}.gp-table input{padding:4px;min-width:0}.gp-col-amt{width:24%}}
+.gp-list{position:absolute;left:4px;right:4px;top:calc(100% - 2px);z-index:20;background:var(--panel);border:1px solid var(--accent);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.18);max-height:220px;overflow:auto}
+.gp-item,.gp-none{padding:7px 10px;font-size:14px}
+.gp-item{cursor:pointer}.gp-item:hover,.gp-item.on{background:var(--accent);color:#fff}
+.gp-none{color:var(--muted)}
 .gp-opts{display:flex;flex-wrap:wrap;margin:6px 0 10px}
-.tool button.gp-opt.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .gp-label{font-size:14px;font-weight:600}
-.gp-amt{font:inherit;width:150px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);margin-left:6px}
+.gp-amt-free{font:inherit;width:150px;padding:6px 8px;border:1px solid var(--accent);border-radius:8px;background:var(--panel);color:var(--ink);margin-left:6px}
 .gp-fb{margin-top:12px;padding:10px 12px;border-radius:8px;font-size:15px;border-left:4px solid var(--line)}
 .gp-fb p{margin:8px 0 6px}.gp-fb button{display:block;margin-top:10px}
 .gp-ok{background:var(--tip-bg);border-left-color:var(--tip)}
@@ -1109,7 +1128,7 @@ function run(){var j=J[+R.querySelector('.t').value];R.querySelector('.out').inn
 <li>இரட்டைப் பதிவுடன் <strong>மூல ஆவணங்களும் எந்த நாளேடு எதைப் பதிகிறது என்பதும்</strong></li>
 <li><strong>பயிற்சி:</strong> பரிவர்த்தனைப் பட்டியலிலிருந்து கொள்வனவு, விற்பனை, திருப்ப நாளேடுகளைத் தயாரித்து மொத்தங்களைப் பதிதல்</li>
 </ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Practice questions (course paper)"><span class="num">8</span>Practice questions (course paper)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s8 en-s8" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s8" lang="ta" hidden><h3>பயிற்சியை எப்படிச் செய்வது?</h3><p>முதலில் பரிவர்த்தனை பணமா, கடனா என்று பாருங்கள். பிறகு சரக்கா, நீண்டகாலச் சொத்தா என்று பிரியுங்கள். <strong>Trade discount</strong> கழித்த தொகையைப் பதிவு செய்யுங்கள். இரண்டு பக்கப் பதிவையும் சமமாக வைத்துப் பிறகு விடையுடன் ஒப்பிடுங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>மாதிரிக் கணக்கு:</strong> Kumara-விடமிருந்து gross கொள்வனவு 32,000; trade discount 10% = 3,200; பதிவு 28,800. Naleen 105,000 − 5% = 99,750. Purchases journal total <strong>128,550</strong>.
-Goods return-க்கும் உரிய discount கழிக்க வேண்டும்: Kumara 7,000 − 10% = 6,300; Naleen 9,000 − 5% = 8,550; total <strong>14,850</strong>. வியாபாரப் பயன்பாட்டிற்கான tables 80,000 சரக்கு அல்ல; General journal-இல் furniture மற்றும் creditor பதிவு செய்யுங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s8" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s8" lang="en"><div class="hci-en"><p>These are the questions from <strong>both Week 2 practice PDFs</strong>, in the PDF's order. Answer each question in its box, one step at a time. A wrong answer tells you why it is wrong and how to think about it, so you can try again. After two wrong tries you can ask to see the answer. Your place in each question is saved in this browser. The full answer sits under each box. No accounting knowledge is assumed.</p>
+Goods return-க்கும் உரிய discount கழிக்க வேண்டும்: Kumara 7,000 − 10% = 6,300; Naleen 9,000 − 5% = 8,550; total <strong>14,850</strong>. வியாபாரப் பயன்பாட்டிற்கான tables 80,000 சரக்கு அல்ல; General journal-இல் furniture மற்றும் creditor பதிவு செய்யுங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s8" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s8" lang="en"><div class="hci-en"><p>These are the questions from <strong>both Week 2 practice PDFs</strong>, in the PDF's order. Fill in the table in each box, one line at a time, like a real journal. A wrong answer tells you why it is wrong and how to think about it, so you can try again. After two wrong tries you can ask to see the answer. Your place in each question is saved in this browser. The full answer sits under each box. No accounting knowledge is assumed.</p>
 <p><strong>The only rule you need first</strong></p>
 <table>
 <thead>
@@ -1441,7 +1460,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <li><strong>Jan 7</strong>, goods on credit from Naleen (invoice 101): 50 T-shirts @ Rs. 500, 100 shirts @ Rs. 800. Trade discount 5%.</li>
 <li><strong>Jan 15</strong>, bought 4 tables on credit @ Rs. 20,000 each from Saman Enterprises for business use (not for selling).</li>
 </ul>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q1" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "Kumara's invoice before discount: 100 kg × 130, plus 50 kg × 60, plus 200 packets × 80. What is the total?", "a": 32000, "think": "Multiply quantity by price for each item, then add the three answers.", "why": "13,000 + 3,000 + 16,000 = 32,000."}, {"type": "num", "q": "Take off Kumara's 10% trade discount. What net amount is recorded?", "a": 28800, "think": "10% of 32,000 is the discount. Subtract it from 32,000, because only the net amount is recorded.", "why": "32,000 − 3,200 = 28,800.", "mistakes": {"3200": "3,200 is the discount itself. The question asks for what is left after taking it off.", "35200": "You added the discount. A discount makes the price lower, so subtract it.", "32000": "That is the price before the discount."}}, {"type": "num", "q": "Naleen's invoice before discount: 50 × 500, plus 100 × 800. What is the total?", "a": 105000, "think": "Multiply quantity by price for each item, then add.", "why": "25,000 + 80,000 = 105,000."}, {"type": "num", "q": "Take off Naleen's 5% trade discount. What net amount is recorded?", "a": 99750, "think": "5% of 105,000 is the discount. Subtract it from 105,000.", "why": "105,000 − 5,250 = 99,750.", "mistakes": {"5250": "5,250 is the discount itself. Subtract it from 105,000.", "110250": "You added the discount. Subtract it.", "94500": "That uses 10%. Naleen's discount is 5%."}}, {"type": "choice", "q": "The 4 tables are for business use, on credit. Which book do they go in?", "opts": [{"t": "Cash book", "why": "The cash book is for cash or cheque payments. These tables were bought on credit."}, {"t": "General journal", "ok": true}, {"t": "Purchase journal", "why": "The purchase journal is only for goods you will resell. These tables are kept and used."}, {"t": "Sales journal", "why": "The sales journal is for goods you sell. Here the business is buying."}], "why": "A non-current asset bought on credit goes in the general journal: Dr Furniture 80,000 / Cr Saman Enterprises 80,000.", "think": "Ask two questions: is it for resale, and did cash move today?"}, {"type": "num", "q": "What is the purchase journal total posted to Purchases?", "a": 128550, "think": "Add only the two goods-for-resale invoices, using the net amounts. The tables are not included.", "why": "28,800 + 99,750 = 128,550.", "mistakes": {"208550": "You included the 80,000 tables, which belong in the general journal."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q1" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "Kumara's invoice before discount: 100 kg × 130, plus 50 kg × 60, plus 200 packets × 80. What is the total?", "a": 32000, "think": "Multiply quantity by price for each item, then add the three answers.", "why": "13,000 + 3,000 + 16,000 = 32,000.", "fill": [0, 3]}, {"type": "num", "q": "Take off Kumara's 10% trade discount. What net amount is recorded?", "a": 28800, "think": "10% of 32,000 is the discount. Subtract it from 32,000, because only the net amount is recorded.", "why": "32,000 − 3,200 = 28,800.", "mistakes": {"3200": "3,200 is the discount itself. The question asks for what is left after taking it off.", "35200": "You added the discount. A discount makes the price lower, so subtract it.", "32000": "That is the price before the discount."}, "fill": [0, 4]}, {"type": "num", "q": "Naleen's invoice before discount: 50 × 500, plus 100 × 800. What is the total?", "a": 105000, "think": "Multiply quantity by price for each item, then add.", "why": "25,000 + 80,000 = 105,000.", "fill": [1, 3]}, {"type": "num", "q": "Take off Naleen's 5% trade discount. What net amount is recorded?", "a": 99750, "think": "5% of 105,000 is the discount. Subtract it from 105,000.", "why": "105,000 − 5,250 = 99,750.", "mistakes": {"5250": "5,250 is the discount itself. Subtract it from 105,000.", "110250": "You added the discount. Subtract it.", "94500": "That uses 10%. Naleen's discount is 5%."}, "fill": [1, 4]}, {"type": "choice", "q": "The 4 tables are for business use, on credit. Which book do they go in?", "opts": [{"t": "Cash book", "why": "The cash book is for cash or cheque payments. These tables were bought on credit."}, {"t": "General journal", "ok": true}, {"t": "Purchase journal", "why": "The purchase journal is only for goods you will resell. These tables are kept and used."}, {"t": "Sales journal", "why": "The sales journal is for goods you sell. Here the business is buying."}], "why": "A non-current asset bought on credit goes in the general journal: Dr Furniture 80,000 / Cr Saman Enterprises 80,000.", "think": "Ask two questions: is it for resale, and did cash move today?"}, {"type": "num", "q": "What is the purchase journal total posted to Purchases?", "a": 128550, "think": "Add only the two goods-for-resale invoices, using the net amounts. The tables are not included.", "why": "28,800 + 99,750 = 128,550.", "mistakes": {"208550": "You included the 80,000 tables, which belong in the general journal."}, "fill": [2, 4]}], "table": {"cols": ["Date", "Supplier", "Invoice", "Before discount", "Net amount"], "rows": [["Jan 5", "Kumara", "100", "", ""], ["Jan 7", "Naleen", "101", "", ""], {"cells": ["", "Total to Purchases", "", "", ""], "total": true}]}}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q1</summary>
 <p><strong>Step 1 — Multiply out each invoice.</strong> Kumara: 100 × 130 = 13,000; 50 × 60 = 3,000; 200 × 80 = 16,000; total 32,000. Naleen: 50 × 500 = 25,000; 100 × 800 = 80,000; total 105,000.</p>
@@ -1522,7 +1541,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <li><strong>Jan 6</strong>, goods returned to Kumara: sugar 40 kg, salt 30 kg.</li>
 <li><strong>Jan 10</strong>, goods returned to Naleen with debit note 1000: T-shirts 10, shirts 5.</li>
 </ul>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q2" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "Kumara returns before discount: 40 kg × 130, plus 30 kg × 60. What is the total?", "a": 7000, "think": "Use the same prices as the original invoice.", "why": "5,200 + 1,800 = 7,000."}, {"type": "num", "q": "Take off Kumara's 10%. How much is the return worth?", "a": 6300, "think": "You were charged the discounted price, so you get back the discounted price.", "why": "7,000 − 700 = 6,300.", "mistakes": {"7000": "That is before discount. You never paid the full price, so you cannot get the full price back."}}, {"type": "num", "q": "Naleen returns before discount: 10 × 500, plus 5 × 800. What is the total?", "a": 9000, "think": "Use the same prices as the original invoice.", "why": "5,000 + 4,000 = 9,000."}, {"type": "num", "q": "Take off Naleen's 5%. How much is the return worth?", "a": 8550, "think": "Use the same 5% discount as the original invoice.", "why": "9,000 − 450 = 8,550."}, {"type": "num", "q": "What is the purchase returns journal total?", "a": 14850, "think": "Add the two net return values.", "why": "6,300 + 8,550 = 14,850."}, {"type": "choice", "q": "Goods went back to Kumara. Which side of Kumara's account is the 6,300 on?", "opts": [{"t": "Credit", "why": "A credit would mean you owe Kumara more. Sending goods back means you owe less."}, {"t": "Debit", "ok": true}], "why": "Kumara is a creditor, a liability. You now owe less, and a liability decreases on the debit side.", "think": "Did the amount you owe Kumara go up or down?"}, {"type": "num", "q": "How much is still owed to Kumara?", "a": 22500, "think": "Start with the 28,800 from Q1, then subtract the return.", "why": "28,800 − 6,300 = 22,500."}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q2" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "Kumara returns before discount: 40 kg × 130, plus 30 kg × 60. What is the total?", "a": 7000, "think": "Use the same prices as the original invoice.", "why": "5,200 + 1,800 = 7,000.", "fill": [0, 3]}, {"type": "num", "q": "Take off Kumara's 10%. How much is the return worth?", "a": 6300, "think": "You were charged the discounted price, so you get back the discounted price.", "why": "7,000 − 700 = 6,300.", "mistakes": {"7000": "That is before discount. You never paid the full price, so you cannot get the full price back."}, "fill": [0, 4]}, {"type": "num", "q": "Naleen returns before discount: 10 × 500, plus 5 × 800. What is the total?", "a": 9000, "think": "Use the same prices as the original invoice.", "why": "5,000 + 4,000 = 9,000.", "fill": [1, 3]}, {"type": "num", "q": "Take off Naleen's 5%. How much is the return worth?", "a": 8550, "think": "Use the same 5% discount as the original invoice.", "why": "9,000 − 450 = 8,550.", "fill": [1, 4]}, {"type": "num", "q": "What is the purchase returns journal total?", "a": 14850, "think": "Add the two net return values.", "why": "6,300 + 8,550 = 14,850.", "fill": [2, 4]}, {"type": "choice", "q": "Goods went back to Kumara. Which side of Kumara's account is the 6,300 on?", "opts": [{"t": "Credit", "why": "A credit would mean you owe Kumara more. Sending goods back means you owe less."}, {"t": "Debit", "ok": true}], "why": "Kumara is a creditor, a liability. You now owe less, and a liability decreases on the debit side.", "think": "Did the amount you owe Kumara go up or down?"}, {"type": "num", "q": "How much is still owed to Kumara?", "a": 22500, "think": "Start with the 28,800 from Q1, then subtract the return.", "why": "28,800 − 6,300 = 22,500."}], "table": {"cols": ["Date", "Supplier", "Note", "Before discount", "Net amount"], "rows": [["Jan 6", "Kumara", "", "", ""], ["Jan 10", "Naleen", "DN 1000", "", ""], {"cells": ["", "Total to Returns outwards", "", "", ""], "total": true}]}}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q2</summary>
 <p><strong>Step 1 — Value the returns at the original price.</strong> Kumara: 40 × 130 = 5,200; 30 × 60 = 1,800; total 7,000. Naleen: 10 × 500 = 5,000; 5 × 800 = 4,000; total 9,000.</p>
@@ -1567,7 +1586,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <li>Feb 15: credit purchase from Sudath Rs. 80,000, trade discount 10% (invoice 002)</li>
 <li>Feb 20: credit purchase from Sunil Rs. 150,000 (invoice 003)</li>
 </ul>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q3" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "Feb 10: cash purchase from Nimal, Rs. 20,000. Which book does it go in?", "opts": [{"t": "Cash book", "ok": true}, {"t": "General journal", "why": "The general journal is for items with no book of their own. Cash payments have the cash book."}, {"t": "Purchase journal", "why": "The purchase journal is only for credit purchases. Nimal was paid in cash."}], "why": "Cash was paid, so it goes in the cash book: Dr Purchases 20,000 / Cr Cash 20,000.", "think": "Did cash move today?"}, {"type": "num", "q": "Feb 15: Sudath Rs. 80,000 less 10% trade discount. What amount is recorded?", "a": 72000, "think": "Find 10% of 80,000 and subtract it.", "why": "80,000 − 8,000 = 72,000.", "mistakes": {"8000": "8,000 is the discount itself. Subtract it from 80,000.", "80000": "That is before the trade discount, and only the net amount is recorded."}}, {"type": "num", "q": "What is the purchase journal total?", "a": 272000, "think": "Add the credit purchases only: Kamal, Sudath's net amount and Sunil.", "why": "50,000 + 72,000 + 150,000 = 272,000.", "mistakes": {"292000": "You included Nimal's 20,000, which was paid in cash.", "280000": "You used Sudath's price before discount."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q3" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "Feb 10: cash purchase from Nimal, Rs. 20,000. Which book does it go in?", "opts": [{"t": "Cash book", "ok": true}, {"t": "General journal", "why": "The general journal is for items with no book of their own. Cash payments have the cash book."}, {"t": "Purchase journal", "why": "The purchase journal is only for credit purchases. Nimal was paid in cash."}], "why": "Cash was paid, so it goes in the cash book: Dr Purchases 20,000 / Cr Cash 20,000.", "think": "Did cash move today?"}, {"type": "num", "q": "Feb 15: Sudath Rs. 80,000 less 10% trade discount. What amount is recorded?", "a": 72000, "think": "Find 10% of 80,000 and subtract it.", "why": "80,000 − 8,000 = 72,000.", "mistakes": {"8000": "8,000 is the discount itself. Subtract it from 80,000.", "80000": "That is before the trade discount, and only the net amount is recorded."}, "fill": [1, 3]}, {"type": "num", "q": "What is the purchase journal total?", "a": 272000, "think": "Add the credit purchases only: Kamal, Sudath's net amount and Sunil.", "why": "50,000 + 72,000 + 150,000 = 272,000.", "mistakes": {"292000": "You included Nimal's 20,000, which was paid in cash.", "280000": "You used Sudath's price before discount."}, "fill": [3, 3]}], "table": {"cols": ["Date", "Supplier", "Invoice", "Rs."], "rows": [["Feb 5", "Kamal", "001", "50,000"], ["Feb 15", "Sudath", "002", ""], ["Feb 20", "Sunil", "003", "150,000"], {"cells": ["", "Total to Purchases", "", ""], "total": true}]}}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q3</summary>
 <p><strong>Step 1 — Remove the cash purchase.</strong> Nimal was paid in cash, so that goes in the <strong>cash book</strong>: Dr Purchases 20,000 / Cr Cash 20,000. It does not go in the purchase journal.</p>
@@ -1612,7 +1631,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <p><strong>Final check:</strong> 50,000 + 72,000 + 150,000 = 272,000. ✓ With the cash purchase, the Purchases account totals 292,000.</p>
 </details>
 <p><strong>Q4. Question:</strong> Based on Q3, record in the purchase returns journal and post the ledger: Feb 6, trading goods returned to Kamal Rs. 20,000; Feb 12, goods returned to Sudath Rs. 30,000.</p>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q4" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "What is the purchase returns journal total?", "a": 50000, "think": "Add the two returns.", "why": "20,000 + 30,000 = 50,000."}, {"type": "num", "q": "How much is still owed to Kamal?", "a": 30000, "think": "Start with what you owed from Q3, then subtract the return.", "why": "50,000 − 20,000 = 30,000."}, {"type": "num", "q": "How much is still owed to Sudath?", "a": 42000, "think": "Sudath's invoice was recorded at the net 72,000, not 80,000.", "why": "72,000 − 30,000 = 42,000.", "mistakes": {"50000": "You started from 80,000. The invoice was recorded after discount, at 72,000."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q4" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "What is the purchase returns journal total?", "a": 50000, "think": "Add the two returns.", "why": "20,000 + 30,000 = 50,000."}, {"type": "num", "q": "How much is still owed to Kamal?", "a": 30000, "think": "Start with what you owed from Q3, then subtract the return.", "why": "50,000 − 20,000 = 30,000.", "fill": [0, 4]}, {"type": "num", "q": "How much is still owed to Sudath?", "a": 42000, "think": "Sudath's invoice was recorded at the net 72,000, not 80,000.", "why": "72,000 − 30,000 = 42,000.", "mistakes": {"50000": "You started from 80,000. The invoice was recorded after discount, at 72,000."}, "fill": [1, 4]}], "table": {"cols": ["Date", "Supplier", "Originally owed", "Returned", "Still owed"], "rows": [["Feb 6", "Kamal", "50,000", "20,000", ""], ["Feb 12", "Sudath", "72,000", "30,000", ""]]}}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q4</summary>
 <p><strong>Step 1 — Decide the value.</strong> The PDF gives a money amount, not a quantity, so these are taken as the net amounts to record.</p>
@@ -1651,7 +1670,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <li><strong>Apr 10</strong>, on credit to Kumari (invoice 70): 500 pillow covers @ Rs. 300, 1,000 pillows @ Rs. 500. Trade discount 5%.</li>
 <li><strong>Apr 20</strong>, pillows sold for cash to Sudath, Rs. 50,000.</li>
 </ul>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q5" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "Gayan before discount: 200 × 500, plus 250 × 700. What is the total?", "a": 275000, "think": "Multiply quantity by price for each item, then add.", "why": "100,000 + 175,000 = 275,000."}, {"type": "num", "q": "Take off Gayan's 10% trade discount.", "a": 247500, "think": "10% of 275,000 is 27,500. Subtract it.", "why": "275,000 − 27,500 = 247,500.", "mistakes": {"27500": "27,500 is the discount itself. Subtract it from 275,000."}}, {"type": "num", "q": "Kumari before discount: 500 × 300, plus 1,000 × 500. What is the total?", "a": 650000, "think": "Multiply quantity by price for each item, then add.", "why": "150,000 + 500,000 = 650,000."}, {"type": "num", "q": "Take off Kumari's 5% trade discount.", "a": 617500, "think": "5% of 650,000 is 32,500. Subtract it.", "why": "650,000 − 32,500 = 617,500.", "mistakes": {"32500": "32,500 is the discount itself. Subtract it from 650,000."}}, {"type": "num", "q": "What is the sales journal total?", "a": 865000, "think": "Add only the credit sales. Sudath's cash sale is not included.", "why": "247,500 + 617,500 = 865,000.", "mistakes": {"915000": "You included Sudath's 50,000 cash sale, which goes in the cash book."}}, {"type": "choice", "q": "Apr 20: pillows sold for cash to Sudath. Which book does it go in?", "opts": [{"t": "Cash book", "ok": true}, {"t": "General journal", "why": "Cash received has its own book, so the general journal is not used."}, {"t": "Sales journal", "why": "The sales journal is only for credit sales. Sudath paid in cash."}], "why": "Cash was received, so it goes in the cash book: Dr Cash 50,000 / Cr Sales 50,000.", "think": "Did cash move today?"}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q5" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "Gayan before discount: 200 × 500, plus 250 × 700. What is the total?", "a": 275000, "think": "Multiply quantity by price for each item, then add.", "why": "100,000 + 175,000 = 275,000.", "fill": [0, 3]}, {"type": "num", "q": "Take off Gayan's 10% trade discount.", "a": 247500, "think": "10% of 275,000 is 27,500. Subtract it.", "why": "275,000 − 27,500 = 247,500.", "mistakes": {"27500": "27,500 is the discount itself. Subtract it from 275,000."}, "fill": [0, 4]}, {"type": "num", "q": "Kumari before discount: 500 × 300, plus 1,000 × 500. What is the total?", "a": 650000, "think": "Multiply quantity by price for each item, then add.", "why": "150,000 + 500,000 = 650,000.", "fill": [1, 3]}, {"type": "num", "q": "Take off Kumari's 5% trade discount.", "a": 617500, "think": "5% of 650,000 is 32,500. Subtract it.", "why": "650,000 − 32,500 = 617,500.", "mistakes": {"32500": "32,500 is the discount itself. Subtract it from 650,000."}, "fill": [1, 4]}, {"type": "num", "q": "What is the sales journal total?", "a": 865000, "think": "Add only the credit sales. Sudath's cash sale is not included.", "why": "247,500 + 617,500 = 865,000.", "mistakes": {"915000": "You included Sudath's 50,000 cash sale, which goes in the cash book."}, "fill": [2, 4]}, {"type": "choice", "q": "Apr 20: pillows sold for cash to Sudath. Which book does it go in?", "opts": [{"t": "Cash book", "ok": true}, {"t": "General journal", "why": "Cash received has its own book, so the general journal is not used."}, {"t": "Sales journal", "why": "The sales journal is only for credit sales. Sudath paid in cash."}], "why": "Cash was received, so it goes in the cash book: Dr Cash 50,000 / Cr Sales 50,000.", "think": "Did cash move today?"}], "table": {"cols": ["Date", "Customer", "Invoice", "Before discount", "Net amount"], "rows": [["Apr 5", "Gayan", "60", "", ""], ["Apr 10", "Kumari", "70", "", ""], {"cells": ["", "Total to Sales", "", "", ""], "total": true}]}}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q5</summary>
 <p><strong>Step 1 — Multiply out.</strong> Gayan: 200 × 500 = 100,000; 250 × 700 = 175,000; total 275,000. Kumari: 500 × 300 = 150,000; 1,000 × 500 = 500,000; total 650,000.</p>
@@ -1692,7 +1711,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 </details>
 <p><strong>Q6. Question:</strong> Based on Q5, customers returned goods: Apr 10, Gayan (credit note 76), 50 pillows and 100 bed sheets; Apr 15, Kumari (credit note 66), 60 pillow covers. Record these returns inwards.</p>
 <p>The PDF has an empty bullet under Kumari, so 60 pillow covers is taken as Kumari's whole return.</p>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q6" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "Gayan's returns before discount: 50 × 500, plus 100 × 700.", "a": 95000, "think": "Use the selling prices from Q5.", "why": "25,000 + 70,000 = 95,000."}, {"type": "num", "q": "Take off Gayan's 10%. How much is the return worth?", "a": 85500, "think": "He paid the discounted price, so he gets credit for the discounted price.", "why": "95,000 − 9,500 = 85,500.", "mistakes": {"95000": "That is before discount. Gayan never paid the full price."}}, {"type": "num", "q": "Kumari's return: 60 pillow covers × 300, less 5%.", "a": 17100, "think": "60 × 300 = 18,000. Then take off 5%.", "why": "18,000 − 900 = 17,100.", "mistakes": {"18000": "That is before Kumari's 5% discount."}}, {"type": "num", "q": "What is the sales returns journal total?", "a": 102600, "think": "Add the two net return values.", "why": "85,500 + 17,100 = 102,600."}, {"type": "choice", "q": "Goods came back from Gayan. Which side of Gayan's account is the 85,500 on?", "opts": [{"t": "Credit", "ok": true}, {"t": "Debit", "why": "A debit would mean Gayan owes you more. Returning goods means Gayan owes less."}], "why": "Gayan is a debtor, an asset. The amount owed to you fell, and an asset decreases on the credit side.", "think": "Did the amount Gayan owes go up or down?"}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q6" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "Gayan's returns before discount: 50 × 500, plus 100 × 700.", "a": 95000, "think": "Use the selling prices from Q5.", "why": "25,000 + 70,000 = 95,000.", "fill": [0, 3]}, {"type": "num", "q": "Take off Gayan's 10%. How much is the return worth?", "a": 85500, "think": "He paid the discounted price, so he gets credit for the discounted price.", "why": "95,000 − 9,500 = 85,500.", "mistakes": {"95000": "That is before discount. Gayan never paid the full price."}, "fill": [0, 4]}, {"type": "num", "q": "Kumari's return: 60 pillow covers × 300, less 5%.", "a": 17100, "think": "60 × 300 = 18,000. Then take off 5%.", "why": "18,000 − 900 = 17,100.", "mistakes": {"18000": "That is before Kumari's 5% discount."}, "fill": [1, 4]}, {"type": "num", "q": "What is the sales returns journal total?", "a": 102600, "think": "Add the two net return values.", "why": "85,500 + 17,100 = 102,600.", "fill": [2, 4]}, {"type": "choice", "q": "Goods came back from Gayan. Which side of Gayan's account is the 85,500 on?", "opts": [{"t": "Credit", "ok": true}, {"t": "Debit", "why": "A debit would mean Gayan owes you more. Returning goods means Gayan owes less."}], "why": "Gayan is a debtor, an asset. The amount owed to you fell, and an asset decreases on the credit side.", "think": "Did the amount Gayan owes go up or down?"}], "table": {"cols": ["Date", "Customer", "Credit note", "Before discount", "Net amount"], "rows": [["Apr 10", "Gayan", "76", "", ""], ["Apr 15", "Kumari", "66", "18,000", ""], {"cells": ["", "Total to Returns inwards", "", "", ""], "total": true}]}}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q6</summary>
 <p><strong>Step 1 — Value at the selling price.</strong> Gayan: 50 × 500 = 25,000; 100 × 700 = 70,000; total 95,000. Kumari: 60 × 300 = 18,000.</p>
@@ -1772,7 +1791,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q7" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "What is the sales journal total?", "a": 600, "think": "Add the three credit sales only.", "why": "100 + 200 + 300 = 600."}, {"type": "num", "q": "What is the sales returns journal total?", "a": 60, "think": "Add the three returns only.", "why": "10 + 20 + 30 = 60."}, {"type": "num", "q": "How much does X still owe?", "a": 90, "think": "Take X's sale and subtract X's return.", "why": "100 − 10 = 90.", "mistakes": {"110": "You added the return. A return reduces what the customer owes."}}, {"type": "num", "q": "How much does Y still owe?", "a": 180, "think": "Take Y's sale and subtract Y's return.", "why": "200 − 20 = 180."}, {"type": "num", "q": "How much does Z still owe?", "a": 270, "think": "Take Z's sale and subtract Z's return.", "why": "300 − 30 = 270."}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q7" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "What is the sales journal total?", "a": 600, "think": "Add the three credit sales only.", "why": "100 + 200 + 300 = 600.", "fill": [3, 1]}, {"type": "num", "q": "What is the sales returns journal total?", "a": 60, "think": "Add the three returns only.", "why": "10 + 20 + 30 = 60.", "fill": [3, 2]}, {"type": "num", "q": "How much does X still owe?", "a": 90, "think": "Take X's sale and subtract X's return.", "why": "100 − 10 = 90.", "mistakes": {"110": "You added the return. A return reduces what the customer owes."}, "fill": [0, 3]}, {"type": "num", "q": "How much does Y still owe?", "a": 180, "think": "Take Y's sale and subtract Y's return.", "why": "200 − 20 = 180.", "fill": [1, 3]}, {"type": "num", "q": "How much does Z still owe?", "a": 270, "think": "Take Z's sale and subtract Z's return.", "why": "300 − 30 = 270.", "fill": [2, 3]}], "table": {"cols": ["Customer", "Sale", "Return", "Still owes"], "rows": [["X", "100", "10", ""], ["Y", "200", "20", ""], ["Z", "300", "30", ""], {"cells": ["Total", "", "", ""], "total": true}]}}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q7</summary>
 <p><strong>Step 1 — Separate sales from returns.</strong> Sales go in the sales journal. Returned goods go in the sales returns journal.</p>
@@ -1850,7 +1869,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 </table>
 <p><strong>Final check:</strong> 90 + 180 + 270 = 540, and sales 600 − returns 60 = 540. ✓</p>
 </details></div><div class="hci-ta" lang="ta" hidden data-title="பயிற்சிக் கேள்விகள் (பாட வினாத்தாள்)"><p><strong>இந்தப் பகுதி இன்னும் தமிழில் மொழிபெயர்க்கப்படவில்லை; தற்போது ஆங்கிலத்தில் மட்டும் உள்ளது.</strong></p>
-<p>These are the questions from <strong>both Week 2 practice PDFs</strong>, in the PDF's order. Answer each question in its box, one step at a time. A wrong answer tells you why it is wrong and how to think about it, so you can try again. After two wrong tries you can ask to see the answer. Your place in each question is saved in this browser. The full answer sits under each box. No accounting knowledge is assumed.</p>
+<p>These are the questions from <strong>both Week 2 practice PDFs</strong>, in the PDF's order. Fill in the table in each box, one line at a time, like a real journal. A wrong answer tells you why it is wrong and how to think about it, so you can try again. After two wrong tries you can ask to see the answer. Your place in each question is saved in this browser. The full answer sits under each box. No accounting knowledge is assumed.</p>
 <p><strong>The only rule you need first</strong></p>
 <table>
 <thead>
@@ -3151,45 +3170,45 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
   }
 })();
 ;
-// Answer-it-yourself practice: one step at a time, with an explanation for each wrong answer.
+// Answer-it-yourself practice: fill in a real table one line at a time, with an explanation for each wrong answer.
 (function(){
   var RULE = {Dr:'A debit records an asset, expense or drawings going up, or a liability, income or capital going down.',
               Cr:'A credit records a liability, income or capital going up, or an asset, expense or drawings going down.'};
   var TYPE = {asset:['an asset','debit'],expense:['an expense','debit'],drawings:['drawings','debit'],liability:['a liability','credit'],income:['income','credit'],capital:['capital','credit']};
-  var NTH = ['1st','2nd','3rd','4th','5th'];
   function load(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
   function save(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
   function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
   function money(n){ return Number(n).toLocaleString('en-US',{maximumFractionDigits:2}); }
   function parse(s){ var v = parseFloat(String(s).replace(/[,\s]|Rs\.?/gi,'')); return isNaN(v) ? null : v; }
+  function dateOf(tx){ var m = /^([^:]{1,12}):/.exec(tx.tx); return m ? m[1] : ''; }
 
   document.querySelectorAll('.gp').forEach(function(root){
-    var data = JSON.parse(root.querySelector('script').textContent), steps = [], key = 'sg-gp-' + root.id;
+    var data = JSON.parse(root.querySelector('script').textContent), steps = [], key = 'sg-gp-' + root.id, accounts = Object.keys(data.accts || {});
     data.steps.forEach(function(item){
       if (item.e) item.e.forEach(function(entry, i){ steps.push({type:'entry', tx:item, entry:entry, n:i}); });
       else steps.push(item);
     });
-    var state = load(key) || {i:0, first:0}, tries = 0, picked = null;
+    var state = load(key) || {i:0, first:0}, tries = 0;
     if (state.i > steps.length) state = {i:0, first:0};
     var box = document.createElement('div'); root.appendChild(box);
 
     function doneLine(s){
-      if (s.type === 'entry') return (s.entry.s === 'Dr' ? 'Debit ' : 'Credit ') + esc(s.entry.a) + ' ' + money(s.entry.amt) + ' <span class="gp-muted">(' + esc(s.tx.tx) + ')</span>';
       if (s.type === 'num') return esc(s.q) + ' <b>' + money(s.a) + '</b>';
       return esc(s.q) + ' <b>' + esc(s.opts.filter(function(o){ return o.ok; })[0].t) + '</b>';
     }
     function advance(firstTry){
       if (firstTry) state.first++;
-      state.i++; tries = 0; picked = null; save(key, state); render();
-      var focus = box.querySelector('input,.gp-opt'); if (focus) focus.focus({preventScroll:true});
+      state.i++; tries = 0; save(key, state); render();
+      var focus = box.querySelector('.gp-acct,.gp-amt,.gp-opt'); if (focus) focus.focus({preventScroll:true});
     }
     function feedback(kind, html, cont){
       var f = box.querySelector('.gp-fb');
       f.className = 'gp-fb ' + kind; f.innerHTML = html; f.hidden = false;
       if (cont) {
-        var b = document.createElement('button'); b.type = 'button'; b.textContent = state.i + 1 < steps.length ? 'Next step →' : 'Finish';
+        var b = document.createElement('button'); b.type = 'button'; b.textContent = state.i + 1 < steps.length ? 'Next →' : 'Finish';
         b.onclick = function(){ advance(cont.first); }; f.appendChild(b);
-        box.querySelectorAll('.gp-cur input,.gp-cur .gp-opt,.gp-check').forEach(function(el){ el.disabled = true; });
+        box.querySelectorAll('.gp-now input,.gp-opt,.gp-check').forEach(function(el){ el.disabled = true; });
+        var list = box.querySelector('.gp-list'); if (list) list.hidden = true;
         b.focus({preventScroll:true});
       } else if (tries >= 2) {
         var r = document.createElement('button'); r.type = 'button'; r.className = 'alt'; r.textContent = 'Show me the answer';
@@ -3198,26 +3217,38 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
     }
     function reveal(){
       var s = steps[state.i], text;
-      if (s.type === 'entry') text = (s.entry.s === 'Dr' ? 'Debit ' : 'Credit ') + '<b>' + esc(s.entry.a) + '</b> with <b>Rs. ' + money(s.entry.amt) + '</b>. ' + esc(s.entry.w);
+      if (s.type === 'entry') text = 'Write <b>' + esc(s.entry.a) + '</b> with <b>Rs. ' + money(s.entry.amt) + '</b> in the <b>' + (s.entry.s === 'Dr' ? 'Debit' : 'Credit') + '</b> column. ' + esc(s.entry.w);
       else if (s.type === 'num') text = 'The answer is <b>' + money(s.a) + '</b>. ' + esc(s.why || s.think);
       else text = 'The answer is <b>' + esc(s.opts.filter(function(o){ return o.ok; })[0].t) + '</b>. ' + esc(s.why || '');
-      feedback('gp-show', text + ' <p class="gp-muted">Read why, then try this step type again on the next one.</p>', {first:false});
+      feedback('gp-show', text + '<p class="gp-muted">Read the reason. It will help on the next line.</p>', {first:false});
     }
     function checkEntry(s){
-      var amount = parse(box.querySelector('.gp-amt').value), e = s.entry, side = e.s === 'Dr' ? 'debit' : 'credit';
-      if (!picked) return feedback('gp-hint', 'First choose the account for this entry.');
-      if (picked !== e.a) {
+      var typed = box.querySelector('.gp-acct').value.trim(), e = s.entry, sideName = e.s === 'Dr' ? 'Debit' : 'Credit';
+      var dr = box.querySelector('.gp-dr').value.trim(), cr = box.querySelector('.gp-cr').value.trim();
+      var pick = accounts.filter(function(a){ return a.toLowerCase() === typed.toLowerCase(); })[0];
+      if (!typed) return feedback('gp-hint', 'Start with the Account cell. Click it to see the available accounts.');
+      if (!pick) return feedback('gp-hint', '"' + esc(typed) + '" is not one of the accounts here. Click the Account cell and choose from the list.');
+      if (!dr && !cr) return feedback('gp-hint', 'Now type the amount in the column you think is right: Debit or Credit.');
+      if (dr && cr) return feedback('gp-hint', 'One line has only one amount. Keep it in one column and clear the other.');
+      var side = dr ? 'Dr' : 'Cr', amount = parse(dr || cr);
+      if (amount === null) return feedback('gp-hint', 'The amount must be a number. Commas are fine.');
+      var other = s.tx.e.filter(function(x){ return x.a === pick && x.a !== e.a; })[0];
+      if (pick !== e.a) {
+        if (other && other.s === side && s.tx.e.indexOf(other) > s.n) return feedback('gp-hint', '<b>Good thinking.</b> ' + esc(pick) + ' does go in the ' + (side === 'Dr' ? 'Debit' : 'Credit') + ' column here. But a journal entry lists debits before credits, and this line comes first. Enter it on its own line next.');
         tries++;
-        var other = s.tx.e.filter(function(x){ return x.a === picked && x.s !== e.s; })[0], type = TYPE[data.accts[picked]], msg;
-        if (other) msg = '<b>' + esc(picked) + '</b> is part of this transaction, but it belongs on the other side. ' + esc(other.w);
-        else if (s.tx.e.some(function(x){ return x.a === picked; })) msg = '<b>' + esc(picked) + '</b> is on this side too, but it is a different line of this entry. Choose the one for this line.';
-        else msg = '<b>' + esc(picked) + '</b> does not change in this transaction, so it gets no entry.' + (type ? ' It is ' + type[0] + ', which increases on the ' + type[1] + ' side.' : '');
-        return feedback('gp-bad', '<b>Not quite.</b> ' + msg + '<p><b>How to think:</b> ' + esc(s.tx.think) + ' ' + RULE[e.s] + ' Which account fits the ' + side + ' side?</p>');
+        var type = TYPE[data.accts[pick]], msg;
+        if (other && other.s !== side) msg = '<b>' + esc(pick) + '</b> is part of this transaction, but not in the ' + (side === 'Dr' ? 'Debit' : 'Credit') + ' column. ' + esc(other.w);
+        else if (other) msg = '<b>' + esc(pick) + '</b> is part of this transaction, but this line is for a different account.';
+        else msg = '<b>' + esc(pick) + '</b> does not change in this transaction, so it gets no entry.' + (type ? ' It is ' + type[0] + ', which increases on the ' + type[1] + ' side.' : '');
+        return feedback('gp-bad', '<b>Not quite.</b> ' + msg + '<p><b>How to think:</b> ' + esc(s.tx.think) + ' ' + RULE[e.s] + ' Which account fits this ' + sideName.toLowerCase() + ' line?</p>');
       }
-      if (amount === null) return feedback('gp-hint', 'Good account. Now type the amount in rupees.');
+      if (side !== e.s) {
+        tries++;
+        return feedback('gp-bad', '<b>Right account, wrong column.</b> ' + esc(pick) + ' belongs in the ' + sideName + ' column, not ' + (side === 'Dr' ? 'Debit' : 'Credit') + '. ' + esc(e.w) + '<p><b>How to think:</b> did this account go up or down? ' + RULE[e.s] + '</p>');
+      }
       if (Math.abs(amount - e.amt) > 0.01) {
         tries++;
-        return feedback('gp-bad', '<b>The account is right, but the amount is not.</b><p><b>How to think:</b> read the transaction again and find the rupee value of this one line. Do not add other transactions to it.' + (s.tx.e.length > 2 ? ' This transaction has several lines, so each line has its own amount.' : ' Debit and credit are always the same amount.') + '</p>');
+        return feedback('gp-bad', '<b>The account and column are right, but the amount is not.</b><p><b>How to think:</b> read the transaction again and find the rupee value of this one line. Do not add other transactions to it.' + (s.tx.e.length > 2 ? ' This transaction has several lines, so each line has its own amount, and total debits must equal total credits.' : ' The debit and credit of a transaction are always the same amount.') + '</p>');
       }
       feedback('gp-ok', '<b>Correct.</b> ' + esc(e.w), {first:tries === 0});
     }
@@ -3229,37 +3260,97 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
       var known = (s.mistakes || {})[String(v)];
       feedback('gp-bad', '<b>Not quite.</b> ' + (known ? esc(known) : 'You typed ' + money(v) + '.') + '<p><b>How to think:</b> ' + esc(s.think) + '</p>');
     }
+    function journal(s){
+      var entries = steps.filter(function(x){ return x.type === 'entry'; });
+      if (!entries.length) return '';
+      var done = steps.slice(0, state.i).filter(function(x){ return x.type === 'entry'; }), dr = 0, cr = 0, last = null, rows = '';
+      done.forEach(function(x){
+        var isDr = x.entry.s === 'Dr'; if (isDr) dr += x.entry.amt; else cr += x.entry.amt;
+        rows += '<tr class="gp-row-done"><td>' + (x.tx !== last ? esc(dateOf(x.tx)) : '') + '</td><td' + (isDr ? '' : ' class="gp-credit"') + '>' + esc(x.entry.a) + '</td><td class="r">' + (isDr ? money(x.entry.amt) : '') + '</td><td class="r">' + (isDr ? '' : money(x.entry.amt)) + '</td></tr>';
+        last = x.tx;
+      });
+      if (s && s.type === 'entry') {
+        rows += '<tr class="gp-now"><td>' + (s.tx !== last ? esc(dateOf(s.tx)) : '') + '</td><td class="gp-cell-acct"><input class="gp-acct" placeholder="Click to choose" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Account"><div class="gp-list" role="listbox" hidden></div></td><td><input class="gp-dr" inputmode="decimal" autocomplete="off" aria-label="Debit amount"></td><td><input class="gp-cr" inputmode="decimal" autocomplete="off" aria-label="Credit amount"></td></tr>';
+        s.tx.e.slice(s.n + 1).forEach(function(){ rows += '<tr class="gp-row-next"><td></td><td></td><td></td><td></td></tr>'; });
+      }
+      return '<div class="gp-tablewrap"><table class="gp-table"><thead><tr><th class="gp-col-date">Date</th><th>Account</th><th class="r gp-col-amt">Debit (Rs.)</th><th class="r gp-col-amt">Credit (Rs.)</th></tr></thead><tbody>' + rows + '</tbody>' +
+        (done.length ? '<tfoot><tr><td></td><td>Total so far</td><td class="r">' + money(dr) + '</td><td class="r">' + money(cr) + '</td></tr></tfoot>' : '') + '</table></div>';
+    }
+    function grid(s){
+      if (!data.table) return '';
+      var values = {};
+      steps.slice(0, state.i).forEach(function(x){ if (x.fill) values[x.fill.join()] = money(x.a); });
+      var head = data.table.cols.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('');
+      var body = data.table.rows.map(function(row, r){
+        return '<tr' + (row.total ? ' class="gp-row-total"' : '') + '>' + (row.cells || row).map(function(cell, c){
+          var id = r + ',' + c;
+          if (s && s.fill && s.fill.join() === id) return '<td class="gp-now"><input class="gp-amt" inputmode="decimal" autocomplete="off" aria-label="' + esc(data.table.cols[c]) + '"></td>';
+          return '<td>' + esc(values[id] !== undefined ? values[id] : cell) + '</td>';
+        }).join('') + '</tr>';
+      }).join('');
+      return '<div class="gp-tablewrap gp-scroll"><table class="gp-table"><thead><tr>' + head + '</tr></thead><tbody>' + body + '</tbody></table></div>';
+    }
     function render(){
-      var pct = Math.round(state.i / steps.length * 100), html = '<div class="gp-bar"><span>' + (state.i < steps.length ? 'Step ' + (state.i + 1) + ' of ' + steps.length : 'Finished') + '</span><i><b style="width:' + pct + '%"></b></i><button type="button" class="alt gp-reset">Start again</button></div>';
-      if (state.i) html += '<ol class="gp-done">' + steps.slice(0, state.i).map(function(s){ return '<li>' + doneLine(s) + '</li>'; }).join('') + '</ol>';
-      var s = steps[state.i];
+      var pct = Math.round(state.i / steps.length * 100), s = steps[state.i], html = '<div class="gp-bar"><span>' + (s ? 'Step ' + (state.i + 1) + ' of ' + steps.length : 'Finished') + '</span><i><b style="width:' + pct + '%"></b></i><button type="button" class="alt gp-reset">Start again</button></div>';
+      var notes = steps.slice(0, state.i).filter(function(x){ return x.type !== 'entry' && !x.fill; });
+      if (notes.length) html += '<ol class="gp-done">' + notes.map(function(x){ return '<li>' + doneLine(x) + '</li>'; }).join('') + '</ol>';
       if (!s) {
-        html += '<div class="gp-fb gp-ok"><b>You finished this question.</b> ' + state.first + ' of ' + steps.length + ' steps were right on the first try. Open the full answer below to compare the layout.' + (data.end ? ' ' + esc(data.end) : '') + '</div>';
+        html += journal() + grid() + '<div class="gp-fb gp-ok"><b>You finished this question.</b> ' + state.first + ' of ' + steps.length + ' steps were right on the first try. Open the full answer below to compare.' + (data.end ? ' ' + esc(data.end) : '') + '</div>';
       } else if (s.type === 'entry') {
-        var count = s.tx.e.length;
-        html += '<div class="gp-cur"><p class="gp-tx">' + esc(s.tx.tx) + '</p><p><b>' + NTH[s.n] + ' entry of ' + count + ': which account is ' + (s.entry.s === 'Dr' ? 'debited' : 'credited') + '?</b></p><div class="gp-opts">' +
-          Object.keys(data.accts).map(function(a){ return '<button type="button" class="alt gp-opt" data-a="' + esc(a) + '">' + esc(a) + '</button>'; }).join('') +
-          '</div><label class="gp-label">Amount (Rs.) <input class="gp-amt" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></div>';
+        html += '<p class="gp-tx">' + esc(s.tx.tx) + '</p><p class="gp-howto"><b>Line ' + (s.n + 1) + ' of ' + s.tx.e.length + ' for this transaction.</b> Click the Account cell and choose an account. Then type the amount in the Debit or the Credit column. Debit lines come first.</p>' + journal(s) + '<button type="button" class="gp-check">Check this line</button><div class="gp-fb" aria-live="polite" hidden></div>';
       } else if (s.type === 'num') {
-        html += '<div class="gp-cur">' + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p><b>' + esc(s.q) + '</b></p><label class="gp-label">Your answer <input class="gp-amt" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></div>';
+        html += journal() + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p class="gp-q"><b>' + esc(s.q) + '</b>' + (s.fill ? ' <span class="gp-muted">Type it in the highlighted cell.</span>' : '') + '</p>' + grid(s) +
+          (s.fill ? '' : '<label class="gp-label">Your answer <input class="gp-amt gp-amt-free gp-now-input" inputmode="decimal" autocomplete="off"></label> ') + '<button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div>';
       } else {
-        html += '<div class="gp-cur">' + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p><b>' + esc(s.q) + '</b></p><div class="gp-opts">' +
-          s.opts.map(function(o, i){ return '<button type="button" class="alt gp-opt" data-i="' + i + '">' + esc(o.t) + '</button>'; }).join('') + '</div><div class="gp-fb" aria-live="polite" hidden></div></div>';
+        html += journal() + grid(s) + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p class="gp-q"><b>' + esc(s.q) + '</b></p><div class="gp-opts">' +
+          s.opts.map(function(o, i){ return '<button type="button" class="alt gp-opt" data-i="' + i + '">' + esc(o.t) + '</button>'; }).join('') + '</div><div class="gp-fb" aria-live="polite" hidden></div>';
       }
       box.innerHTML = html;
-      box.querySelector('.gp-reset').onclick = function(){ state = {i:0, first:0}; tries = 0; picked = null; save(key, state); render(); };
+      box.querySelector('.gp-reset').onclick = function(){ state = {i:0, first:0}; tries = 0; save(key, state); render(); };
       box.querySelectorAll('.gp-opt').forEach(function(b){
         b.onclick = function(){
-          if (s.type === 'entry') { picked = b.dataset.a; box.querySelectorAll('.gp-opt').forEach(function(x){ x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', x === b); }); return; }
           var o = s.opts[+b.dataset.i];
           if (o.ok) return feedback('gp-ok', '<b>Correct.</b> ' + esc(s.why || o.why || ''), {first:tries === 0});
           tries++; feedback('gp-bad', '<b>Not quite.</b> ' + esc(o.why) + (s.think ? '<p><b>How to think:</b> ' + esc(s.think) + '</p>' : ''));
         };
       });
-      var c = box.querySelector('.gp-check');
-      if (c) c.onclick = function(){ s.type === 'entry' ? checkEntry(s) : checkNum(s); };
-      var input = box.querySelector('.gp-amt');
-      if (input) input.onkeydown = function(ev){ if (ev.key === 'Enter') { ev.preventDefault(); c.click(); } };
+      var check = box.querySelector('.gp-check');
+      if (check) check.onclick = function(){ s.type === 'entry' ? checkEntry(s) : checkNum(s); };
+      box.querySelectorAll('.gp-amt,.gp-dr,.gp-cr').forEach(function(input){
+        input.onkeydown = function(ev){ if (ev.key === 'Enter') { ev.preventDefault(); check.click(); } };
+      });
+      if (s && s.type === 'entry') accountPicker();
+    }
+    function accountPicker(){
+      var input = box.querySelector('.gp-acct'), list = box.querySelector('.gp-list'), active = -1;
+      function show(all){
+        var q = input.value.trim().toLowerCase();
+        var match = accounts.filter(function(a){ return all || a.toLowerCase().indexOf(q) > -1; });
+        list.innerHTML = match.length ? match.map(function(a){ return '<div class="gp-item" role="option" data-a="' + esc(a) + '">' + esc(a) + '</div>'; }).join('') : '<div class="gp-none">No account with that name</div>';
+        list.hidden = false; active = -1; input.setAttribute('aria-expanded', 'true');
+      }
+      function hide(){ list.hidden = true; input.setAttribute('aria-expanded', 'false'); }
+      function choose(a){ input.value = a; hide(); box.querySelector('.gp-dr').focus({preventScroll:true}); }
+      input.onfocus = function(){ show(true); };
+      input.onclick = function(){ show(true); };
+      input.oninput = function(){ show(false); };
+      input.onblur = function(){ setTimeout(hide, 120); };
+      list.onmousedown = function(ev){ var item = ev.target.closest('.gp-item'); if (item) { ev.preventDefault(); choose(item.dataset.a); } };
+      input.onkeydown = function(ev){
+        var items = list.querySelectorAll('.gp-item');
+        if (ev.key === 'ArrowDown' || ev.key === 'ArrowUp') {
+          ev.preventDefault(); if (list.hidden) show(true);
+          items = list.querySelectorAll('.gp-item'); if (!items.length) return;
+          active = (active + (ev.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length;
+          items.forEach(function(x, i){ x.classList.toggle('on', i === active); });
+          items[active].scrollIntoView({block:'nearest'});
+        } else if (ev.key === 'Enter') {
+          ev.preventDefault();
+          if (!list.hidden && active > -1) choose(items[active].dataset.a);
+          else if (!list.hidden && items.length === 1) choose(items[0].dataset.a);
+          else box.querySelector('.gp-check').click();
+        } else if (ev.key === 'Escape') hide();
+      };
     }
     render();
   });

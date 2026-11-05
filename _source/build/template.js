@@ -39,7 +39,23 @@
     a.onclick = function(){ var english=h.closest('.section-english'); if(english && english.hidden){ var toggle=h.closest('section').querySelector('.native-toggle'); if(toggle) toggle.click(); } toc.classList.remove('open'); };
   });
   var tbtn = document.getElementById('tocbtn');
-  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+  if (tbtn && !toc) tbtn.style.display = 'none';
+  if (tbtn && toc) {
+    var isPhone = function(){ return window.matchMedia('(max-width:900px)').matches; };
+    var showToc = function(){
+      var hidden = document.body.classList.contains('toc-hidden');
+      tbtn.textContent = isPhone() ? '☰ Menu' : hidden ? '☰ Show menu' : '✕ Hide menu';
+      tbtn.setAttribute('aria-expanded', isPhone() ? String(toc.classList.contains('open')) : String(!hidden));
+    };
+    if (load('sg-toc-hidden', false)) document.body.classList.add('toc-hidden');
+    tbtn.onclick = function(){
+      if (isPhone()) toc.classList.toggle('open');
+      else save('sg-toc-hidden', document.body.classList.toggle('toc-hidden'));
+      showToc();
+    };
+    window.addEventListener('resize', showToc);
+    showToc();
+  }
 
   // done state
   var done = load('sg-done-' + KEY, {});

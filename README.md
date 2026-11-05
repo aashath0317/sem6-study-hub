@@ -88,3 +88,7 @@ These checks cover numeric/source parity, metadata coverage, both Tamil options,
 ## Business sections awaiting Tamil
 
 Beginner practice and rewritten course-paper practice sections show English under a Tamil notice until they are translated. After changing them, run `python _source/build/tamil_english_fallback.py`, then rebuild.
+
+## Answer-it-yourself practice
+
+Week pages can include step-by-step answer boxes (`_source/build/practice.js`). A wrong answer explains why and how to think about it. Add one in a week's `.md` with a `:::tool` block holding `<div id="gp-wNN-qN" class="gp"><script type="application/json">…</script></div>`; see `content/bpas/w02.md` for examples. The `tests/translation-preservation.test.py` script check compares against an old baseline, so it reports a change whenever shared page scripts change on purpose.

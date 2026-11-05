@@ -149,7 +149,28 @@ mark{background:#ffe680;color:#000;border-radius:3px}
   section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
   .hero h1{font-size:26px}
 }
-@media (min-width:901px){#tocbtn{display:none}}
+@media (min-width:901px){
+  body.toc-hidden .layout{grid-template-columns:minmax(0,1fr);max-width:1000px}
+  body.toc-hidden nav.toc{display:none}
+}
+#tocbtn{white-space:nowrap;flex:none}
+.gp-bar{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;flex-wrap:wrap}
+.gp-bar i{flex:1;min-width:80px;height:8px;background:var(--line);border-radius:6px;overflow:hidden;display:block}
+.gp-bar b{display:block;height:100%;background:var(--tip)}
+.gp-done{font-size:14px;margin:12px 0;padding-left:24px;max-height:220px;overflow:auto}
+.gp-done li{margin:3px 0}.gp-muted{color:var(--muted);font-size:13px}
+.gp-tx{background:var(--accent-soft);color:var(--ink);padding:10px 12px;border-radius:8px;margin:12px 0 8px;font-weight:600}
+.gp-opts{display:flex;flex-wrap:wrap;margin:6px 0 10px}
+.tool button.gp-opt.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.gp-label{font-size:14px;font-weight:600}
+.gp-amt{font:inherit;width:150px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);margin-left:6px}
+.gp-fb{margin-top:12px;padding:10px 12px;border-radius:8px;font-size:15px;border-left:4px solid var(--line)}
+.gp-fb p{margin:8px 0 6px}.gp-fb button{display:block;margin-top:10px}
+.gp-ok{background:var(--tip-bg);border-left-color:var(--tip)}
+.gp-bad{background:var(--warn-bg);border-left-color:var(--warn)}
+.gp-hint{background:var(--key-bg);border-left-color:var(--key)}
+.gp-show{background:var(--ex-bg);border-left-color:var(--ex)}
+.tool button:disabled{opacity:.55;cursor:default}
 @media print{
   .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
   .layout{display:block;padding:0}
@@ -251,7 +272,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 @media print{.study-dock,.sp-settings,.sp-backup,#sp-log{display:none}.sp-blocks{max-height:none}}
 </style></head>
 <body data-key="bpas-Week07" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
-<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Business Processes &amp; Accounting Systems</a> › Week 07</div>
+<div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Business Processes &amp; Accounting Systems</a> › Week 07</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
 <div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Business Processes &amp; Accounting Systems · Week 07</div><h1>Year-End Adjustments — Accruals, Prepayments, Bad Debts &amp; Impairment Provisions</h1><p><a href="#s8">Start beginner practice: two questions with step-by-step answers</a></p><p>The accrual concept and the four timing adjustments (accrued and prepaid expenses, income receivable and income in advance), bad debts, and the provision for impairment of receivables (new, increased and decreased), with their effects on the P&amp;L and the SFP.</p><div class="meta"><span class="chip">ITE3622</span><span class="chip">📄 Financial statements with adjustments - Session 07.pdf</span><span class="chip">📄 Practice questions for session 7.pdf</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="The accrual concept"><span class="num">1</span>The accrual concept</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>பணம் வரும் நாளா, சம்பாதித்த காலமா?</h3><p><strong>Accrual</strong> முறையில் வருமானம் சம்பாதித்த காலத்தையும் செலவு ஏற்பட்ட காலத்தையும் கணக்கிடுவோம். டிசம்பர் மின்சாரக் கட்டணத்தை ஜனவரியில் செலுத்தினாலும் அது டிசம்பர் செலவுதான்.</p><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Definition</div><p>Under the <strong>accrual concept</strong>, each item of <strong>income or expense is recorded when it is earned or incurred</strong>, <strong>regardless of when cash is received or paid</strong>.</p></div>
 <p>The trial balance shows what was <strong>paid or received</strong>. Year-end adjustments correct it to what <strong>belongs to this period</strong>.</p>
@@ -1321,7 +1342,23 @@ R.querySelector('.out').innerHTML='<table><tr><td>1. Write off bad debts</td><td
     a.onclick = function(){ var english=h.closest('.section-english'); if(english && english.hidden){ var toggle=h.closest('section').querySelector('.native-toggle'); if(toggle) toggle.click(); } toc.classList.remove('open'); };
   });
   var tbtn = document.getElementById('tocbtn');
-  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+  if (tbtn && !toc) tbtn.style.display = 'none';
+  if (tbtn && toc) {
+    var isPhone = function(){ return window.matchMedia('(max-width:900px)').matches; };
+    var showToc = function(){
+      var hidden = document.body.classList.contains('toc-hidden');
+      tbtn.textContent = isPhone() ? '☰ Menu' : hidden ? '☰ Show menu' : '✕ Hide menu';
+      tbtn.setAttribute('aria-expanded', isPhone() ? String(toc.classList.contains('open')) : String(!hidden));
+    };
+    if (load('sg-toc-hidden', false)) document.body.classList.add('toc-hidden');
+    tbtn.onclick = function(){
+      if (isPhone()) toc.classList.toggle('open');
+      else save('sg-toc-hidden', document.body.classList.toggle('toc-hidden'));
+      showToc();
+    };
+    window.addEventListener('resize', showToc);
+    showToc();
+  }
 
   // done state
   var done = load('sg-done-' + KEY, {});
@@ -1545,6 +1582,120 @@ R.querySelector('.out').innerHTML='<table><tr><td>1. Write off bad debts</td><td
     if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
       '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
   }
+})();
+;
+// Answer-it-yourself practice: one step at a time, with an explanation for each wrong answer.
+(function(){
+  var RULE = {Dr:'A debit records an asset, expense or drawings going up, or a liability, income or capital going down.',
+              Cr:'A credit records a liability, income or capital going up, or an asset, expense or drawings going down.'};
+  var TYPE = {asset:['an asset','debit'],expense:['an expense','debit'],drawings:['drawings','debit'],liability:['a liability','credit'],income:['income','credit'],capital:['capital','credit']};
+  var NTH = ['1st','2nd','3rd','4th','5th'];
+  function load(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
+  function save(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function money(n){ return Number(n).toLocaleString('en-US',{maximumFractionDigits:2}); }
+  function parse(s){ var v = parseFloat(String(s).replace(/[,\s]|Rs\.?/gi,'')); return isNaN(v) ? null : v; }
+
+  document.querySelectorAll('.gp').forEach(function(root){
+    var data = JSON.parse(root.querySelector('script').textContent), steps = [], key = 'sg-gp-' + root.id;
+    data.steps.forEach(function(item){
+      if (item.e) item.e.forEach(function(entry, i){ steps.push({type:'entry', tx:item, entry:entry, n:i}); });
+      else steps.push(item);
+    });
+    var state = load(key) || {i:0, first:0}, tries = 0, picked = null;
+    if (state.i > steps.length) state = {i:0, first:0};
+    var box = document.createElement('div'); root.appendChild(box);
+
+    function doneLine(s){
+      if (s.type === 'entry') return (s.entry.s === 'Dr' ? 'Debit ' : 'Credit ') + esc(s.entry.a) + ' ' + money(s.entry.amt) + ' <span class="gp-muted">(' + esc(s.tx.tx) + ')</span>';
+      if (s.type === 'num') return esc(s.q) + ' <b>' + money(s.a) + '</b>';
+      return esc(s.q) + ' <b>' + esc(s.opts.filter(function(o){ return o.ok; })[0].t) + '</b>';
+    }
+    function advance(firstTry){
+      if (firstTry) state.first++;
+      state.i++; tries = 0; picked = null; save(key, state); render();
+      var focus = box.querySelector('input,.gp-opt'); if (focus) focus.focus({preventScroll:true});
+    }
+    function feedback(kind, html, cont){
+      var f = box.querySelector('.gp-fb');
+      f.className = 'gp-fb ' + kind; f.innerHTML = html; f.hidden = false;
+      if (cont) {
+        var b = document.createElement('button'); b.type = 'button'; b.textContent = state.i + 1 < steps.length ? 'Next step →' : 'Finish';
+        b.onclick = function(){ advance(cont.first); }; f.appendChild(b);
+        box.querySelectorAll('.gp-cur input,.gp-cur .gp-opt,.gp-check').forEach(function(el){ el.disabled = true; });
+        b.focus({preventScroll:true});
+      } else if (tries >= 2) {
+        var r = document.createElement('button'); r.type = 'button'; r.className = 'alt'; r.textContent = 'Show me the answer';
+        r.onclick = reveal; f.appendChild(r);
+      }
+    }
+    function reveal(){
+      var s = steps[state.i], text;
+      if (s.type === 'entry') text = (s.entry.s === 'Dr' ? 'Debit ' : 'Credit ') + '<b>' + esc(s.entry.a) + '</b> with <b>Rs. ' + money(s.entry.amt) + '</b>. ' + esc(s.entry.w);
+      else if (s.type === 'num') text = 'The answer is <b>' + money(s.a) + '</b>. ' + esc(s.why || s.think);
+      else text = 'The answer is <b>' + esc(s.opts.filter(function(o){ return o.ok; })[0].t) + '</b>. ' + esc(s.why || '');
+      feedback('gp-show', text + ' <p class="gp-muted">Read why, then try this step type again on the next one.</p>', {first:false});
+    }
+    function checkEntry(s){
+      var amount = parse(box.querySelector('.gp-amt').value), e = s.entry, side = e.s === 'Dr' ? 'debit' : 'credit';
+      if (!picked) return feedback('gp-hint', 'First choose the account for this entry.');
+      if (picked !== e.a) {
+        tries++;
+        var other = s.tx.e.filter(function(x){ return x.a === picked && x.s !== e.s; })[0], type = TYPE[data.accts[picked]], msg;
+        if (other) msg = '<b>' + esc(picked) + '</b> is part of this transaction, but it belongs on the other side. ' + esc(other.w);
+        else if (s.tx.e.some(function(x){ return x.a === picked; })) msg = '<b>' + esc(picked) + '</b> is on this side too, but it is a different line of this entry. Choose the one for this line.';
+        else msg = '<b>' + esc(picked) + '</b> does not change in this transaction, so it gets no entry.' + (type ? ' It is ' + type[0] + ', which increases on the ' + type[1] + ' side.' : '');
+        return feedback('gp-bad', '<b>Not quite.</b> ' + msg + '<p><b>How to think:</b> ' + esc(s.tx.think) + ' ' + RULE[e.s] + ' Which account fits the ' + side + ' side?</p>');
+      }
+      if (amount === null) return feedback('gp-hint', 'Good account. Now type the amount in rupees.');
+      if (Math.abs(amount - e.amt) > 0.01) {
+        tries++;
+        return feedback('gp-bad', '<b>The account is right, but the amount is not.</b><p><b>How to think:</b> read the transaction again and find the rupee value of this one line. Do not add other transactions to it.' + (s.tx.e.length > 2 ? ' This transaction has several lines, so each line has its own amount.' : ' Debit and credit are always the same amount.') + '</p>');
+      }
+      feedback('gp-ok', '<b>Correct.</b> ' + esc(e.w), {first:tries === 0});
+    }
+    function checkNum(s){
+      var v = parse(box.querySelector('.gp-amt').value);
+      if (v === null) return feedback('gp-hint', 'Type a number first. Commas are fine.');
+      if (Math.abs(v - s.a) <= (s.tol || 0.01)) return feedback('gp-ok', '<b>Correct.</b> ' + esc(s.why || ''), {first:tries === 0});
+      tries++;
+      var known = (s.mistakes || {})[String(v)];
+      feedback('gp-bad', '<b>Not quite.</b> ' + (known ? esc(known) : 'You typed ' + money(v) + '.') + '<p><b>How to think:</b> ' + esc(s.think) + '</p>');
+    }
+    function render(){
+      var pct = Math.round(state.i / steps.length * 100), html = '<div class="gp-bar"><span>' + (state.i < steps.length ? 'Step ' + (state.i + 1) + ' of ' + steps.length : 'Finished') + '</span><i><b style="width:' + pct + '%"></b></i><button type="button" class="alt gp-reset">Start again</button></div>';
+      if (state.i) html += '<ol class="gp-done">' + steps.slice(0, state.i).map(function(s){ return '<li>' + doneLine(s) + '</li>'; }).join('') + '</ol>';
+      var s = steps[state.i];
+      if (!s) {
+        html += '<div class="gp-fb gp-ok"><b>You finished this question.</b> ' + state.first + ' of ' + steps.length + ' steps were right on the first try. Open the full answer below to compare the layout.' + (data.end ? ' ' + esc(data.end) : '') + '</div>';
+      } else if (s.type === 'entry') {
+        var count = s.tx.e.length;
+        html += '<div class="gp-cur"><p class="gp-tx">' + esc(s.tx.tx) + '</p><p><b>' + NTH[s.n] + ' entry of ' + count + ': which account is ' + (s.entry.s === 'Dr' ? 'debited' : 'credited') + '?</b></p><div class="gp-opts">' +
+          Object.keys(data.accts).map(function(a){ return '<button type="button" class="alt gp-opt" data-a="' + esc(a) + '">' + esc(a) + '</button>'; }).join('') +
+          '</div><label class="gp-label">Amount (Rs.) <input class="gp-amt" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></div>';
+      } else if (s.type === 'num') {
+        html += '<div class="gp-cur">' + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p><b>' + esc(s.q) + '</b></p><label class="gp-label">Your answer <input class="gp-amt" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></div>';
+      } else {
+        html += '<div class="gp-cur">' + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p><b>' + esc(s.q) + '</b></p><div class="gp-opts">' +
+          s.opts.map(function(o, i){ return '<button type="button" class="alt gp-opt" data-i="' + i + '">' + esc(o.t) + '</button>'; }).join('') + '</div><div class="gp-fb" aria-live="polite" hidden></div></div>';
+      }
+      box.innerHTML = html;
+      box.querySelector('.gp-reset').onclick = function(){ state = {i:0, first:0}; tries = 0; picked = null; save(key, state); render(); };
+      box.querySelectorAll('.gp-opt').forEach(function(b){
+        b.onclick = function(){
+          if (s.type === 'entry') { picked = b.dataset.a; box.querySelectorAll('.gp-opt').forEach(function(x){ x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', x === b); }); return; }
+          var o = s.opts[+b.dataset.i];
+          if (o.ok) return feedback('gp-ok', '<b>Correct.</b> ' + esc(s.why || o.why || ''), {first:tries === 0});
+          tries++; feedback('gp-bad', '<b>Not quite.</b> ' + esc(o.why) + (s.think ? '<p><b>How to think:</b> ' + esc(s.think) + '</p>' : ''));
+        };
+      });
+      var c = box.querySelector('.gp-check');
+      if (c) c.onclick = function(){ s.type === 'entry' ? checkEntry(s) : checkNum(s); };
+      var input = box.querySelector('.gp-amt');
+      if (input) input.onkeydown = function(ev){ if (ev.key === 'Enter') { ev.preventDefault(); c.click(); } };
+    }
+    render();
+  });
 })();
 ;
 (function(global){

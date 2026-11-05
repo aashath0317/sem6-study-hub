@@ -9,7 +9,7 @@ ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
 _dp = os.path.join(HERE, "drive_ids.json")
 DRIVE = json.load(open(_dp, encoding="utf-8")) if os.path.exists(_dp) else {}
 CSS = open(os.path.join(HERE, "template.css"), encoding="utf-8").read() + "\n" + open(os.path.join(HERE, "study-plan.css"), encoding="utf-8").read()
-JS = open(os.path.join(HERE, "template.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "quiz.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "study-plan.js"), encoding="utf-8").read()
+JS = open(os.path.join(HERE, "template.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "quiz.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "practice.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "study-plan.js"), encoding="utf-8").read()
 OUTNAME = "{week} - Study Guide.html"
 SUBJECTS = [
     ("bpas", "Business Processes and Accounting Systems", "ITE3622", "Business Processes & Accounting Systems"),
@@ -278,7 +278,7 @@ def page(title, body, key="", crumbs=""):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title><style>{CSS}</style></head>
 <body data-key="{key}" data-study-home="{home}">
-<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb">{crumbs}</div>
+<div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb">{crumbs}</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
 {body}
 <script type="application/json" id="study-data">{study_data()}</script>

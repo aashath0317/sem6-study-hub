@@ -149,7 +149,28 @@ mark{background:#ffe680;color:#000;border-radius:3px}
   section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
   .hero h1{font-size:26px}
 }
-@media (min-width:901px){#tocbtn{display:none}}
+@media (min-width:901px){
+  body.toc-hidden .layout{grid-template-columns:minmax(0,1fr);max-width:1000px}
+  body.toc-hidden nav.toc{display:none}
+}
+#tocbtn{white-space:nowrap;flex:none}
+.gp-bar{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;flex-wrap:wrap}
+.gp-bar i{flex:1;min-width:80px;height:8px;background:var(--line);border-radius:6px;overflow:hidden;display:block}
+.gp-bar b{display:block;height:100%;background:var(--tip)}
+.gp-done{font-size:14px;margin:12px 0;padding-left:24px;max-height:220px;overflow:auto}
+.gp-done li{margin:3px 0}.gp-muted{color:var(--muted);font-size:13px}
+.gp-tx{background:var(--accent-soft);color:var(--ink);padding:10px 12px;border-radius:8px;margin:12px 0 8px;font-weight:600}
+.gp-opts{display:flex;flex-wrap:wrap;margin:6px 0 10px}
+.tool button.gp-opt.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.gp-label{font-size:14px;font-weight:600}
+.gp-amt{font:inherit;width:150px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);margin-left:6px}
+.gp-fb{margin-top:12px;padding:10px 12px;border-radius:8px;font-size:15px;border-left:4px solid var(--line)}
+.gp-fb p{margin:8px 0 6px}.gp-fb button{display:block;margin-top:10px}
+.gp-ok{background:var(--tip-bg);border-left-color:var(--tip)}
+.gp-bad{background:var(--warn-bg);border-left-color:var(--warn)}
+.gp-hint{background:var(--key-bg);border-left-color:var(--key)}
+.gp-show{background:var(--ex-bg);border-left-color:var(--ex)}
+.tool button:disabled{opacity:.55;cursor:default}
 @media print{
   .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
   .layout{display:block;padding:0}
@@ -251,7 +272,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 @media print{.study-dock,.sp-settings,.sp-backup,#sp-log{display:none}.sp-blocks{max-height:none}}
 </style></head>
 <body data-key="bpas-Week13" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
-<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Business Processes &amp; Accounting Systems</a> › Week 13</div>
+<div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Business Processes &amp; Accounting Systems</a> › Week 13</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
 <div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Business Processes &amp; Accounting Systems · Week 13</div><h1>Project Appraisal — Payback, ARR, Time Value of Money, NPV &amp; IRR</h1><p><a href="#s8">Start beginner practice: two questions with step-by-step answers</a></p><p>What project appraisal is and its key issues, non-discounting methods (payback, ARR), the time value of money and discounting, NPV with the four-project example, IRR by interpolation (23.38%), and which method is best.</p><div class="meta"><span class="chip">ITE3622</span><span class="chip">2 videos · 74 min</span><span class="chip">📄 Project appraisal - Session 13.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Project Appraisal: Part 1 · 39 min</button><button>2. Project Appraisal: Part 2 · 34 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Project Appraisal - Part 1.mp4" data-drive="12gmiX0Dbiav_5JG6RKv89yrNq0zpes7l"><source src="Project%20Appraisal%20-%20Part%201.mp4"></video></div><div class="chap"><p class="vt">Project Appraisal: Part 1</p><p class="vs">Project appraisal, its key issues, and the non-discounting methods: payback period and accounting rate of return.</p><a href="#" data-v="0" data-t="4"><b>00:04</b><span>Introduction and lecture outcomes</span></a><a href="#" data-v="0" data-t="118"><b>01:58</b><span>What project appraisal is (the Hambantota Port example)</span></a><a href="#" data-v="0" data-t="221"><b>03:41</b><span>Goal: maximise the firm's wealth</span></a><a href="#" data-v="0" data-t="281"><b>04:41</b><span>Discounting vs non-discounting techniques</span></a><a href="#" data-v="0" data-t="387"><b>06:27</b><span>Payback period: definition and acceptance criteria</span></a><a href="#" data-v="0" data-t="487"><b>08:07</b><span>Example: project A ($900k) vs project B ($1m)</span></a><a href="#" data-v="0" data-t="811"><b>13:31</b><span>Payback advantages</span></a><a href="#" data-v="0" data-t="878"><b>14:38</b><span>Payback disadvantages</span></a><a href="#" data-v="0" data-t="1136"><b>18:56</b><span>Discounted payback period at 20%</span></a><a href="#" data-v="0" data-t="1519"><b>25:19</b><span>Project A 3.3 years vs project B 2.96 years</span></a><a href="#" data-v="0" data-t="1659"><b>27:39</b><span>Accounting rate of return (ARR)</span></a><a href="#" data-v="0" data-t="1806"><b>30:06</b><span>ARR acceptance criteria</span></a><a href="#" data-v="0" data-t="1948"><b>32:28</b><span>ARR example: $400k machine → 31.875%</span></a><a href="#" data-v="0" data-t="2170"><b>36:10</b><span>ARR advantages and disadvantages</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Project Appraisal - Part 2.mp4" data-drive="1NTylXs1XHc6gjBORFwh4Y2FxaSyusYoC"><source src="Project%20Appraisal%20-%20Part%202.mp4"></video></div><div class="chap"><p class="vt">Project Appraisal: Part 2</p><p class="vs">Time value of money, discounting, NPV (four-project example) and IRR (interpolation example).</p><a href="#" data-v="1" data-t="48"><b>00:48</b><span>Lecture outcomes: NPV and IRR</span></a><a href="#" data-v="1" data-t="145"><b>02:25</b><span>Why time matters: project A ($110 in year 1) vs B ($121 in year 2)</span></a><a href="#" data-v="1" data-t="288"><b>04:48</b><span>Three reasons for the time value of money</span></a><a href="#" data-v="1" data-t="329"><b>05:29</b><span>Opportunity cost</span></a><a href="#" data-v="1" data-t="468"><b>07:48</b><span>Inflation</span></a><a href="#" data-v="1" data-t="587"><b>09:47</b><span>Uncertainty and risk (risk premium)</span></a><a href="#" data-v="1" data-t="779"><b>12:59</b><span>Discounting: PV = FV ÷ (1 + r)ⁿ</span></a><a href="#" data-v="1" data-t="817"><b>13:37</b><span>Example: 3,000 today vs 1,100 + 1,210 + 1,331</span></a><a href="#" data-v="1" data-t="936"><b>15:36</b><span>The NPV method and its steps</span></a><a href="#" data-v="1" data-t="1065"><b>17:45</b><span>NPV decision rules</span></a><a href="#" data-v="1" data-t="1181"><b>19:41</b><span>Example: four projects at 12%</span></a><a href="#" data-v="1" data-t="1411"><b>23:31</b><span>Limited resources: choose the highest NPV</span></a><a href="#" data-v="1" data-t="1496"><b>24:56</b><span>Advantages of NPV</span></a><a href="#" data-v="1" data-t="1582"><b>26:22</b><span>IRR: definition</span></a><a href="#" data-v="1" data-t="1664"><b>27:44</b><span>Calculating IRR by trial and interpolation</span></a><a href="#" data-v="1" data-t="1826"><b>30:26</b><span>Example: $400k, $200k a year for 3 years → IRR 23.38%</span></a><a href="#" data-v="1" data-t="2002"><b>33:22</b><span>Comparing the four techniques: NPV is best</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What is project appraisal?"><span class="num">1</span>What is project appraisal?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>இந்த முதலீடு செய்யலாமா?</h3><p>புதிய இயந்திரத்தில் இப்போது பணம் செலவிட்டு எதிர்காலத்தில் பயன் பெறுவோம். அந்தப் பயன் செலவிற்கும் ஆபத்திற்கும் தகுமா என்று மதிப்பிடுவது <strong>Project appraisal</strong>. இலாபமும் cash flow-வும் ஒன்றல்ல.</p><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Definition</div><p><strong>Project appraisal</strong> is the process of <strong>assessing and questioning proposals before resources are committed</strong>. It evaluates <strong>whether an investment project is worthwhile</strong>.</p></div>
 <p><strong>Key issues of project appraisal:</strong></p>
@@ -1467,7 +1488,23 @@ R.addEventListener('input',run);R.querySelectorAll('button').forEach(function(b)
     a.onclick = function(){ var english=h.closest('.section-english'); if(english && english.hidden){ var toggle=h.closest('section').querySelector('.native-toggle'); if(toggle) toggle.click(); } toc.classList.remove('open'); };
   });
   var tbtn = document.getElementById('tocbtn');
-  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+  if (tbtn && !toc) tbtn.style.display = 'none';
+  if (tbtn && toc) {
+    var isPhone = function(){ return window.matchMedia('(max-width:900px)').matches; };
+    var showToc = function(){
+      var hidden = document.body.classList.contains('toc-hidden');
+      tbtn.textContent = isPhone() ? '☰ Menu' : hidden ? '☰ Show menu' : '✕ Hide menu';
+      tbtn.setAttribute('aria-expanded', isPhone() ? String(toc.classList.contains('open')) : String(!hidden));
+    };
+    if (load('sg-toc-hidden', false)) document.body.classList.add('toc-hidden');
+    tbtn.onclick = function(){
+      if (isPhone()) toc.classList.toggle('open');
+      else save('sg-toc-hidden', document.body.classList.toggle('toc-hidden'));
+      showToc();
+    };
+    window.addEventListener('resize', showToc);
+    showToc();
+  }
 
   // done state
   var done = load('sg-done-' + KEY, {});
@@ -1691,6 +1728,120 @@ R.addEventListener('input',run);R.querySelectorAll('button').forEach(function(b)
     if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
       '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
   }
+})();
+;
+// Answer-it-yourself practice: one step at a time, with an explanation for each wrong answer.
+(function(){
+  var RULE = {Dr:'A debit records an asset, expense or drawings going up, or a liability, income or capital going down.',
+              Cr:'A credit records a liability, income or capital going up, or an asset, expense or drawings going down.'};
+  var TYPE = {asset:['an asset','debit'],expense:['an expense','debit'],drawings:['drawings','debit'],liability:['a liability','credit'],income:['income','credit'],capital:['capital','credit']};
+  var NTH = ['1st','2nd','3rd','4th','5th'];
+  function load(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
+  function save(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function money(n){ return Number(n).toLocaleString('en-US',{maximumFractionDigits:2}); }
+  function parse(s){ var v = parseFloat(String(s).replace(/[,\s]|Rs\.?/gi,'')); return isNaN(v) ? null : v; }
+
+  document.querySelectorAll('.gp').forEach(function(root){
+    var data = JSON.parse(root.querySelector('script').textContent), steps = [], key = 'sg-gp-' + root.id;
+    data.steps.forEach(function(item){
+      if (item.e) item.e.forEach(function(entry, i){ steps.push({type:'entry', tx:item, entry:entry, n:i}); });
+      else steps.push(item);
+    });
+    var state = load(key) || {i:0, first:0}, tries = 0, picked = null;
+    if (state.i > steps.length) state = {i:0, first:0};
+    var box = document.createElement('div'); root.appendChild(box);
+
+    function doneLine(s){
+      if (s.type === 'entry') return (s.entry.s === 'Dr' ? 'Debit ' : 'Credit ') + esc(s.entry.a) + ' ' + money(s.entry.amt) + ' <span class="gp-muted">(' + esc(s.tx.tx) + ')</span>';
+      if (s.type === 'num') return esc(s.q) + ' <b>' + money(s.a) + '</b>';
+      return esc(s.q) + ' <b>' + esc(s.opts.filter(function(o){ return o.ok; })[0].t) + '</b>';
+    }
+    function advance(firstTry){
+      if (firstTry) state.first++;
+      state.i++; tries = 0; picked = null; save(key, state); render();
+      var focus = box.querySelector('input,.gp-opt'); if (focus) focus.focus({preventScroll:true});
+    }
+    function feedback(kind, html, cont){
+      var f = box.querySelector('.gp-fb');
+      f.className = 'gp-fb ' + kind; f.innerHTML = html; f.hidden = false;
+      if (cont) {
+        var b = document.createElement('button'); b.type = 'button'; b.textContent = state.i + 1 < steps.length ? 'Next step →' : 'Finish';
+        b.onclick = function(){ advance(cont.first); }; f.appendChild(b);
+        box.querySelectorAll('.gp-cur input,.gp-cur .gp-opt,.gp-check').forEach(function(el){ el.disabled = true; });
+        b.focus({preventScroll:true});
+      } else if (tries >= 2) {
+        var r = document.createElement('button'); r.type = 'button'; r.className = 'alt'; r.textContent = 'Show me the answer';
+        r.onclick = reveal; f.appendChild(r);
+      }
+    }
+    function reveal(){
+      var s = steps[state.i], text;
+      if (s.type === 'entry') text = (s.entry.s === 'Dr' ? 'Debit ' : 'Credit ') + '<b>' + esc(s.entry.a) + '</b> with <b>Rs. ' + money(s.entry.amt) + '</b>. ' + esc(s.entry.w);
+      else if (s.type === 'num') text = 'The answer is <b>' + money(s.a) + '</b>. ' + esc(s.why || s.think);
+      else text = 'The answer is <b>' + esc(s.opts.filter(function(o){ return o.ok; })[0].t) + '</b>. ' + esc(s.why || '');
+      feedback('gp-show', text + ' <p class="gp-muted">Read why, then try this step type again on the next one.</p>', {first:false});
+    }
+    function checkEntry(s){
+      var amount = parse(box.querySelector('.gp-amt').value), e = s.entry, side = e.s === 'Dr' ? 'debit' : 'credit';
+      if (!picked) return feedback('gp-hint', 'First choose the account for this entry.');
+      if (picked !== e.a) {
+        tries++;
+        var other = s.tx.e.filter(function(x){ return x.a === picked && x.s !== e.s; })[0], type = TYPE[data.accts[picked]], msg;
+        if (other) msg = '<b>' + esc(picked) + '</b> is part of this transaction, but it belongs on the other side. ' + esc(other.w);
+        else if (s.tx.e.some(function(x){ return x.a === picked; })) msg = '<b>' + esc(picked) + '</b> is on this side too, but it is a different line of this entry. Choose the one for this line.';
+        else msg = '<b>' + esc(picked) + '</b> does not change in this transaction, so it gets no entry.' + (type ? ' It is ' + type[0] + ', which increases on the ' + type[1] + ' side.' : '');
+        return feedback('gp-bad', '<b>Not quite.</b> ' + msg + '<p><b>How to think:</b> ' + esc(s.tx.think) + ' ' + RULE[e.s] + ' Which account fits the ' + side + ' side?</p>');
+      }
+      if (amount === null) return feedback('gp-hint', 'Good account. Now type the amount in rupees.');
+      if (Math.abs(amount - e.amt) > 0.01) {
+        tries++;
+        return feedback('gp-bad', '<b>The account is right, but the amount is not.</b><p><b>How to think:</b> read the transaction again and find the rupee value of this one line. Do not add other transactions to it.' + (s.tx.e.length > 2 ? ' This transaction has several lines, so each line has its own amount.' : ' Debit and credit are always the same amount.') + '</p>');
+      }
+      feedback('gp-ok', '<b>Correct.</b> ' + esc(e.w), {first:tries === 0});
+    }
+    function checkNum(s){
+      var v = parse(box.querySelector('.gp-amt').value);
+      if (v === null) return feedback('gp-hint', 'Type a number first. Commas are fine.');
+      if (Math.abs(v - s.a) <= (s.tol || 0.01)) return feedback('gp-ok', '<b>Correct.</b> ' + esc(s.why || ''), {first:tries === 0});
+      tries++;
+      var known = (s.mistakes || {})[String(v)];
+      feedback('gp-bad', '<b>Not quite.</b> ' + (known ? esc(known) : 'You typed ' + money(v) + '.') + '<p><b>How to think:</b> ' + esc(s.think) + '</p>');
+    }
+    function render(){
+      var pct = Math.round(state.i / steps.length * 100), html = '<div class="gp-bar"><span>' + (state.i < steps.length ? 'Step ' + (state.i + 1) + ' of ' + steps.length : 'Finished') + '</span><i><b style="width:' + pct + '%"></b></i><button type="button" class="alt gp-reset">Start again</button></div>';
+      if (state.i) html += '<ol class="gp-done">' + steps.slice(0, state.i).map(function(s){ return '<li>' + doneLine(s) + '</li>'; }).join('') + '</ol>';
+      var s = steps[state.i];
+      if (!s) {
+        html += '<div class="gp-fb gp-ok"><b>You finished this question.</b> ' + state.first + ' of ' + steps.length + ' steps were right on the first try. Open the full answer below to compare the layout.' + (data.end ? ' ' + esc(data.end) : '') + '</div>';
+      } else if (s.type === 'entry') {
+        var count = s.tx.e.length;
+        html += '<div class="gp-cur"><p class="gp-tx">' + esc(s.tx.tx) + '</p><p><b>' + NTH[s.n] + ' entry of ' + count + ': which account is ' + (s.entry.s === 'Dr' ? 'debited' : 'credited') + '?</b></p><div class="gp-opts">' +
+          Object.keys(data.accts).map(function(a){ return '<button type="button" class="alt gp-opt" data-a="' + esc(a) + '">' + esc(a) + '</button>'; }).join('') +
+          '</div><label class="gp-label">Amount (Rs.) <input class="gp-amt" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></div>';
+      } else if (s.type === 'num') {
+        html += '<div class="gp-cur">' + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p><b>' + esc(s.q) + '</b></p><label class="gp-label">Your answer <input class="gp-amt" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></div>';
+      } else {
+        html += '<div class="gp-cur">' + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p><b>' + esc(s.q) + '</b></p><div class="gp-opts">' +
+          s.opts.map(function(o, i){ return '<button type="button" class="alt gp-opt" data-i="' + i + '">' + esc(o.t) + '</button>'; }).join('') + '</div><div class="gp-fb" aria-live="polite" hidden></div></div>';
+      }
+      box.innerHTML = html;
+      box.querySelector('.gp-reset').onclick = function(){ state = {i:0, first:0}; tries = 0; picked = null; save(key, state); render(); };
+      box.querySelectorAll('.gp-opt').forEach(function(b){
+        b.onclick = function(){
+          if (s.type === 'entry') { picked = b.dataset.a; box.querySelectorAll('.gp-opt').forEach(function(x){ x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', x === b); }); return; }
+          var o = s.opts[+b.dataset.i];
+          if (o.ok) return feedback('gp-ok', '<b>Correct.</b> ' + esc(s.why || o.why || ''), {first:tries === 0});
+          tries++; feedback('gp-bad', '<b>Not quite.</b> ' + esc(o.why) + (s.think ? '<p><b>How to think:</b> ' + esc(s.think) + '</p>' : ''));
+        };
+      });
+      var c = box.querySelector('.gp-check');
+      if (c) c.onclick = function(){ s.type === 'entry' ? checkEntry(s) : checkNum(s); };
+      var input = box.querySelector('.gp-amt');
+      if (input) input.onkeydown = function(ev){ if (ev.key === 'Enter') { ev.preventDefault(); c.click(); } };
+    }
+    render();
+  });
 })();
 ;
 (function(global){

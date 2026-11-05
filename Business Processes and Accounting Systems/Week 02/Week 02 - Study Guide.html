@@ -149,7 +149,28 @@ mark{background:#ffe680;color:#000;border-radius:3px}
   section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
   .hero h1{font-size:26px}
 }
-@media (min-width:901px){#tocbtn{display:none}}
+@media (min-width:901px){
+  body.toc-hidden .layout{grid-template-columns:minmax(0,1fr);max-width:1000px}
+  body.toc-hidden nav.toc{display:none}
+}
+#tocbtn{white-space:nowrap;flex:none}
+.gp-bar{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;flex-wrap:wrap}
+.gp-bar i{flex:1;min-width:80px;height:8px;background:var(--line);border-radius:6px;overflow:hidden;display:block}
+.gp-bar b{display:block;height:100%;background:var(--tip)}
+.gp-done{font-size:14px;margin:12px 0;padding-left:24px;max-height:220px;overflow:auto}
+.gp-done li{margin:3px 0}.gp-muted{color:var(--muted);font-size:13px}
+.gp-tx{background:var(--accent-soft);color:var(--ink);padding:10px 12px;border-radius:8px;margin:12px 0 8px;font-weight:600}
+.gp-opts{display:flex;flex-wrap:wrap;margin:6px 0 10px}
+.tool button.gp-opt.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.gp-label{font-size:14px;font-weight:600}
+.gp-amt{font:inherit;width:150px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);margin-left:6px}
+.gp-fb{margin-top:12px;padding:10px 12px;border-radius:8px;font-size:15px;border-left:4px solid var(--line)}
+.gp-fb p{margin:8px 0 6px}.gp-fb button{display:block;margin-top:10px}
+.gp-ok{background:var(--tip-bg);border-left-color:var(--tip)}
+.gp-bad{background:var(--warn-bg);border-left-color:var(--warn)}
+.gp-hint{background:var(--key-bg);border-left-color:var(--key)}
+.gp-show{background:var(--ex-bg);border-left-color:var(--ex)}
+.tool button:disabled{opacity:.55;cursor:default}
 @media print{
   .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
   .layout{display:block;padding:0}
@@ -251,7 +272,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 @media print{.study-dock,.sp-settings,.sp-backup,#sp-log{display:none}.sp-blocks{max-height:none}}
 </style></head>
 <body data-key="bpas-Week02" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
-<div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Business Processes &amp; Accounting Systems</a> › Week 02</div>
+<div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Business Processes &amp; Accounting Systems</a> › Week 02</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
 <div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Business Processes &amp; Accounting Systems · Week 02</div><h1>Accounting Process, Double Entry &amp; Primary Entry Journals</h1><p><a href="#s10">Start beginner practice: two questions with step-by-step answers</a></p><p>What accounting is, the entity concept, stakeholders and their needs, the Conceptual Framework (objective, qualitative characteristics, elements, recognition, measurement), debit and credit rules, the accounting equation, T-accounts and balancing, source documents, and the four day books.</p><div class="meta"><span class="chip">ITE3622</span><span class="chip">4 videos · 95 min</span><span class="chip">📄 Introduction to accounting processes.pdf</span><span class="chip">📄 Accouting processes - Primary Entry journals.pdf</span><span class="chip">📄 Conceptual framework for financial reporting from Delotte.pdf</span><span class="chip">📄 Practice questions (2 papers)</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Accounting Process – Part I · 23 min</button><button>2. Accounting Process – Part II · 25 min</button><button>3. Accounting Process – Part III · 29 min</button><button>4. Accounting Process – Part IV · 19 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3622-25S2- Accounting process -Part I - CODL-UOM.mp4" data-drive="1mNTrOfl4OA8tioxAHZnrhn1j9fE9FYCI"><source src="ITE3622-25S2-%20Accounting%20process%20-Part%20I%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Accounting Process – Part I</p><p class="vs">Accounting process lecture, part 1.</p><a href="#" data-v="0" data-t="2"><b>00:02</b><span>Introduction: double-entry system</span></a><a href="#" data-v="0" data-t="76"><b>01:16</b><span>What a T-account is</span></a><a href="#" data-v="0" data-t="139"><b>02:19</b><span>Asset accounts: debit increases</span></a><a href="#" data-v="0" data-t="202"><b>03:22</b><span>Liability accounts: credit increases</span></a><a href="#" data-v="0" data-t="271"><b>04:31</b><span>Owner's equity accounts</span></a><a href="#" data-v="0" data-t="329"><b>05:29</b><span>Real example with T-accounts</span></a><a href="#" data-v="0" data-t="593"><b>09:53</b><span>The accounting equation: equal impact on both sides</span></a><a href="#" data-v="0" data-t="704"><b>11:44</b><span>What double-entry bookkeeping is</span></a><a href="#" data-v="0" data-t="737"><b>12:17</b><span>Receiver debit, giver credit</span></a><a href="#" data-v="0" data-t="767"><b>12:47</b><span>Key characteristics of double entry</span></a><a href="#" data-v="0" data-t="869"><b>14:29</b><span>Worked transactions and the accounting equation</span></a><a href="#" data-v="0" data-t="1315"><b>21:55</b><span>The final balanced equation and summary</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3622-25S2- Accounting process -Part II - CODL-UOM.mp4" data-drive="18QT-LWrZ1GDFdAhMwzX8i1C9e4fDqkBw"><source src="ITE3622-25S2-%20Accounting%20process%20-Part%20II%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Accounting Process – Part II</p><p class="vs">Part 2.</p><a href="#" data-v="1" data-t="3"><b>00:03</b><span>Introduction</span></a><a href="#" data-v="1" data-t="69"><b>01:09</b><span>The accounting cycle, step by step</span></a><a href="#" data-v="1" data-t="101"><b>01:41</b><span>Transaction → journals → ledger → trial balance → statements</span></a><a href="#" data-v="1" data-t="412"><b>06:52</b><span>Source documents</span></a><a href="#" data-v="1" data-t="504"><b>08:24</b><span>Source-document examples</span></a><a href="#" data-v="1" data-t="615"><b>10:15</b><span>The cash book as a book of prime entry</span></a><a href="#" data-v="1" data-t="694"><b>11:34</b><span>Types of cash book: single, two-column, three-column</span></a><a href="#" data-v="1" data-t="861"><b>14:21</b><span>Cash receipt journal format</span></a><a href="#" data-v="1" data-t="950"><b>15:50</b><span>The petty cash book</span></a><a href="#" data-v="1" data-t="994"><b>16:34</b><span>Advantages of a petty cash book</span></a><a href="#" data-v="1" data-t="1259"><b>20:59</b><span>The imprest system</span></a><a href="#" data-v="1" data-t="1364"><b>22:44</b><span>Imprest example</span></a><a href="#" data-v="1" data-t="1434"><b>23:54</b><span>Petty cash payment journal format</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3622-25S2- Accounting process -Part III - CODL-UOM.mp4" data-drive="1Y3Eyxyh2K5V2rZYcanxz1XBWezFN4EDH"><source src="ITE3622-25S2-%20Accounting%20process%20-Part%20III%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Accounting Process – Part III</p><p class="vs">Part 3.</p><a href="#" data-v="2" data-t="5"><b>00:05</b><span>Introduction</span></a><a href="#" data-v="2" data-t="67"><b>01:07</b><span>Purchase journal: credit purchases of goods only</span></a><a href="#" data-v="2" data-t="216"><b>03:36</b><span>Source document: purchase invoice</span></a><a href="#" data-v="2" data-t="272"><b>04:32</b><span>Returns: reasons (quality, damage, wrong goods)</span></a><a href="#" data-v="2" data-t="550"><b>09:10</b><span>Return outwards journal and the debit note</span></a><a href="#" data-v="2" data-t="707"><b>11:47</b><span>Sales journal</span></a><a href="#" data-v="2" data-t="833"><b>13:53</b><span>Sales journal format</span></a><a href="#" data-v="2" data-t="888"><b>14:48</b><span>Return inwards journal and the credit note</span></a><a href="#" data-v="2" data-t="1020"><b>17:00</b><span>The general journal (journal proper)</span></a><a href="#" data-v="2" data-t="1239"><b>20:39</b><span>Opening entries</span></a><a href="#" data-v="2" data-t="1281"><b>21:21</b><span>Purchase of non-current assets on credit</span></a><a href="#" data-v="2" data-t="1360"><b>22:40</b><span>Capital introduced in kind</span></a><a href="#" data-v="2" data-t="1450"><b>24:10</b><span>Sale of non-current assets on credit</span></a><a href="#" data-v="2" data-t="1580"><b>26:20</b><span>Drawings of assets other than cash</span></a><a href="#" data-v="2" data-t="1618"><b>26:58</b><span>Correction of errors and adjusting entries</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3622-25S2- Accounting process -Part IV - CODL-UOM.mp4" data-drive="1SD1ZqIIAMt3KTaNIUQVZ4sYBI2Hg8X-r"><source src="ITE3622-25S2-%20Accounting%20process%20-Part%20IV%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Accounting Process – Part IV</p><p class="vs">Part 4.</p><a href="#" data-v="3" data-t="2"><b>00:02</b><span>Introduction and lecture outcomes</span></a><a href="#" data-v="3" data-t="69"><b>01:09</b><span>Capital vs revenue expenditure</span></a><a href="#" data-v="3" data-t="194"><b>03:14</b><span>Capital expenditure: examples and characteristics</span></a><a href="#" data-v="3" data-t="381"><b>06:21</b><span>Revenue expenditure: characteristics and examples</span></a><a href="#" data-v="3" data-t="552"><b>09:12</b><span>Ledger accounts</span></a><a href="#" data-v="3" data-t="660"><b>11:00</b><span>The trial balance</span></a><a href="#" data-v="3" data-t="696"><b>11:36</b><span>Purposes of a trial balance</span></a><a href="#" data-v="3" data-t="1003"><b>16:43</b><span>Limitations of a trial balance</span></a><a href="#" data-v="3" data-t="1078"><b>17:58</b><span>Summary</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="What is accounting?"><span class="num">1</span>What is accounting?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>கணக்கியல் எதற்காக?</h3><p>பணம் எங்கிருந்து வந்தது, எதற்குச் சென்றது என்பதைப் பதிவு செய்து அறிக்கையாகக் காட்டுவதுதான் <strong>Accounting</strong>. விற்பனை அதிகம் என்பதாலேயே இலாபம் அதிகம் என்று முடிவு செய்ய முடியாது; செலவையும் பார்க்க வேண்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>வியாபாரம் தனி அமைப்பு (Business entity):</strong> உரிமையாளர் வைத்த ரூ.50,000 என்பது வியாபார வருமானம் அல்ல; capital. அவர் சொந்தச் செலவிற்கு எடுத்தது business expense அல்ல; drawings.
 Accounting-இன் வேலைகள்: transactions கண்டறிதல் → அளத்தல் → பதிவு/சுருக்கம் → பயனருக்குத் தகவல் கொடுத்தல். சொத்துக்களைக் காப்பது, இலாபமும் நிதிநிலையும் அறிதல், நியாயமான முடிவு ஆகியவை நோக்கங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Definitions</div><ul>
@@ -1088,7 +1109,7 @@ function run(){var j=J[+R.querySelector('.t').value];R.querySelector('.out').inn
 <li>இரட்டைப் பதிவுடன் <strong>மூல ஆவணங்களும் எந்த நாளேடு எதைப் பதிகிறது என்பதும்</strong></li>
 <li><strong>பயிற்சி:</strong> பரிவர்த்தனைப் பட்டியலிலிருந்து கொள்வனவு, விற்பனை, திருப்ப நாளேடுகளைத் தயாரித்து மொத்தங்களைப் பதிதல்</li>
 </ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Practice questions (course paper)"><span class="num">8</span>Practice questions (course paper)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s8 en-s8" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s8" lang="ta" hidden><h3>பயிற்சியை எப்படிச் செய்வது?</h3><p>முதலில் பரிவர்த்தனை பணமா, கடனா என்று பாருங்கள். பிறகு சரக்கா, நீண்டகாலச் சொத்தா என்று பிரியுங்கள். <strong>Trade discount</strong> கழித்த தொகையைப் பதிவு செய்யுங்கள். இரண்டு பக்கப் பதிவையும் சமமாக வைத்துப் பிறகு விடையுடன் ஒப்பிடுங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>மாதிரிக் கணக்கு:</strong> Kumara-விடமிருந்து gross கொள்வனவு 32,000; trade discount 10% = 3,200; பதிவு 28,800. Naleen 105,000 − 5% = 99,750. Purchases journal total <strong>128,550</strong>.
-Goods return-க்கும் உரிய discount கழிக்க வேண்டும்: Kumara 7,000 − 10% = 6,300; Naleen 9,000 − 5% = 8,550; total <strong>14,850</strong>. வியாபாரப் பயன்பாட்டிற்கான tables 80,000 சரக்கு அல்ல; General journal-இல் furniture மற்றும் creditor பதிவு செய்யுங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s8" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s8" lang="en"><div class="hci-en"><p>These are the questions from <strong>both Week 2 practice PDFs</strong>, in the PDF's order. Try each one first, then open its answer. No accounting knowledge is assumed.</p>
+Goods return-க்கும் உரிய discount கழிக்க வேண்டும்: Kumara 7,000 − 10% = 6,300; Naleen 9,000 − 5% = 8,550; total <strong>14,850</strong>. வியாபாரப் பயன்பாட்டிற்கான tables 80,000 சரக்கு அல்ல; General journal-இல் furniture மற்றும் creditor பதிவு செய்யுங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s8" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s8" lang="en"><div class="hci-en"><p>These are the questions from <strong>both Week 2 practice PDFs</strong>, in the PDF's order. Answer each question in its box, one step at a time. A wrong answer tells you why it is wrong and how to think about it, so you can try again. After two wrong tries you can ask to see the answer. Your place in each question is saved in this browser. The full answer sits under each box. No accounting knowledge is assumed.</p>
 <p><strong>The only rule you need first</strong></p>
 <table>
 <thead>
@@ -1179,6 +1200,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 </tr>
 </tbody>
 </table>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p1q1" class="gp"><script type="application/json">{"accts": {"Cash": "asset", "Capital": "capital", "Loan": "liability", "Insurance expense": "expense", "Purchases": "expense", "Sales": "income", "Drawings": "drawings"}, "steps": [{"tx": "Jan 1: Mr. Kumara invested Rs. 100,000 in the business.", "think": "Two things changed: the business received cash, and the owner's investment grew.", "e": [{"s": "Dr", "a": "Cash", "amt": 100000, "w": "Cash came in. Cash is an asset, and an asset increases on the debit side."}, {"s": "Cr", "a": "Capital", "amt": 100000, "w": "The owner's investment grew. Capital increases on the credit side."}]}, {"tx": "Jan 2: The company obtained a loan of Rs. 600,000.", "think": "Two things changed: cash came in, and the business now owes more money.", "e": [{"s": "Dr", "a": "Cash", "amt": 600000, "w": "Cash came in. Cash is an asset, and an asset increases on the debit side."}, {"s": "Cr", "a": "Loan", "amt": 600000, "w": "The business owes more. A loan is a liability, and a liability increases on the credit side."}]}, {"tx": "Jan 8: Paid insurance bill Rs. 7,000.", "think": "Two things changed: a cost was paid for, and cash went out.", "e": [{"s": "Dr", "a": "Insurance expense", "amt": 7000, "w": "This is a cost of running the business. An expense increases on the debit side."}, {"s": "Cr", "a": "Cash", "amt": 7000, "w": "Cash went out. Cash is an asset, and an asset decreases on the credit side."}]}, {"tx": "Jan 10: Loan repayment Rs. 150,000.", "think": "Two things changed: the business owes less, and cash went out. Repaying a loan is not an expense.", "e": [{"s": "Dr", "a": "Loan", "amt": 150000, "w": "The business owes less. A liability decreases on the debit side."}, {"s": "Cr", "a": "Cash", "amt": 150000, "w": "Cash went out. Cash is an asset, and an asset decreases on the credit side."}]}, {"tx": "Jan 15: Purchases on cash Rs. 60,000.", "think": "Two things changed: goods for resale were bought, and cash went out.", "e": [{"s": "Dr", "a": "Purchases", "amt": 60000, "w": "Goods bought for resale are recorded in Purchases, which increases on the debit side."}, {"s": "Cr", "a": "Cash", "amt": 60000, "w": "Cash went out. Cash is an asset, and an asset decreases on the credit side."}]}, {"tx": "Jan 20: Sales on cash Rs. 100,000.", "think": "Two things changed: cash came in, and the business earned income.", "e": [{"s": "Dr", "a": "Cash", "amt": 100000, "w": "Cash came in. Cash is an asset, and an asset increases on the debit side."}, {"s": "Cr", "a": "Sales", "amt": 100000, "w": "The business earned income. Income increases on the credit side."}]}, {"tx": "Jan 25: Mr. Kumara invested an additional Rs. 200,000.", "think": "This is the same kind of event as Jan 1. It is the owner's money, so it is not income.", "e": [{"s": "Dr", "a": "Cash", "amt": 200000, "w": "Cash came in. Cash is an asset, and an asset increases on the debit side."}, {"s": "Cr", "a": "Capital", "amt": 200000, "w": "The owner's investment grew. Capital increases on the credit side."}]}, {"tx": "Jan 30: Mr. Kumara took Rs. 10,000 for his personal use.", "think": "The owner took money for himself, so this is not a business expense. Cash went out.", "e": [{"s": "Dr", "a": "Drawings", "amt": 10000, "w": "Money the owner takes out goes to Drawings, which increases on the debit side."}, {"s": "Cr", "a": "Cash", "amt": 10000, "w": "Cash went out. Cash is an asset, and an asset decreases on the credit side."}]}, {"type": "num", "q": "Now add it up: what is the closing cash balance?", "a": 773000, "think": "Add all the cash debits, then subtract all the cash credits. Money in: 100,000 + 600,000 + 100,000 + 200,000. Money out: 7,000 + 150,000 + 60,000 + 10,000.", "why": "1,000,000 in − 227,000 out = 773,000."}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 1, Q1</summary>
 <p><strong>Step 1 — Ask two questions for each transaction.</strong> Which two accounts changed? Did each one go up or down? Then use the rule table above. The PDF does not say the money went through a bank, so all of it is treated as cash.</p>
@@ -1298,6 +1320,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 </tr>
 </tbody>
 </table>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p1q2" class="gp"><script type="application/json">{"accts": {"Cash": "asset", "Motor vehicle": "asset", "Capital": "capital", "Creditor – Nimal": "liability", "Purchases": "expense", "Insurance": "expense", "Rent": "expense", "Sales": "income", "Rent income": "income", "Drawings": "drawings"}, "steps": [{"tx": "Apr 1: Mrs. Kalyani started the business with Rs. 500,000 cash and a motor vehicle worth Rs. 700,000.", "think": "The business received two assets, and the owner's investment grew by their total. So there are two debits and one credit.", "e": [{"s": "Dr", "a": "Cash", "amt": 500000, "w": "Cash came in. Cash is an asset, and an asset increases on the debit side."}, {"s": "Dr", "a": "Motor vehicle", "amt": 700000, "w": "The business now owns a vehicle. An asset increases on the debit side."}, {"s": "Cr", "a": "Capital", "amt": 1200000, "w": "The owner invested both items: 500,000 + 700,000 = 1,200,000. Capital increases on the credit side."}]}, {"tx": "Apr 3: Purchase on cash Rs. 50,000.", "think": "Goods for resale were bought, and cash went out.", "e": [{"s": "Dr", "a": "Purchases", "amt": 50000, "w": "Goods for resale go to Purchases, which increases on the debit side."}, {"s": "Cr", "a": "Cash", "amt": 50000, "w": "Cash went out. Cash is an asset, and an asset decreases on the credit side."}]}, {"tx": "Apr 5: Additional capital invested by Mrs. Kalyani Rs. 300,000.", "think": "The owner put in more money. Cash came in and capital grew.", "e": [{"s": "Dr", "a": "Cash", "amt": 300000, "w": "Cash came in. Cash is an asset, and an asset increases on the debit side."}, {"s": "Cr", "a": "Capital", "amt": 300000, "w": "The owner's investment grew. Capital increases on the credit side."}]}, {"tx": "Apr 10: Sales on cash Rs. 150,000.", "think": "Cash came in, and the business earned income.", "e": [{"s": "Dr", "a": "Cash", "amt": 150000, "w": "Cash came in. Cash is an asset, and an asset increases on the debit side."}, {"s": "Cr", "a": "Sales", "amt": 150000, "w": "Income increases on the credit side."}]}, {"tx": "Apr 13: Mrs. Kalyani withdrew Rs. 5,000 for personal use.", "think": "The owner took money for herself, so this is not a business expense.", "e": [{"s": "Dr", "a": "Drawings", "amt": 5000, "w": "Money the owner takes out goes to Drawings, which increases on the debit side."}, {"s": "Cr", "a": "Cash", "amt": 5000, "w": "Cash went out. Cash is an asset, and an asset decreases on the credit side."}]}, {"tx": "Apr 16: Insurance Rs. 8,000 and rent Rs. 4,000 were paid.", "think": "Two different expenses went up and one cash payment went out. So there are two debits and one credit.", "e": [{"s": "Dr", "a": "Insurance", "amt": 8000, "w": "Insurance is an expense, which increases on the debit side."}, {"s": "Dr", "a": "Rent", "amt": 4000, "w": "Rent paid is an expense, which increases on the debit side."}, {"s": "Cr", "a": "Cash", "amt": 12000, "w": "Cash went out for both: 8,000 + 4,000 = 12,000. An asset decreases on the credit side."}]}, {"tx": "Apr 23: Credit purchase Rs. 80,000 from Mr. Nimal.", "think": "\"On credit\" means no cash moved today. Goods came in, and the business now owes Nimal.", "e": [{"s": "Dr", "a": "Purchases", "amt": 80000, "w": "Goods for resale go to Purchases, which increases on the debit side."}, {"s": "Cr", "a": "Creditor – Nimal", "amt": 80000, "w": "The business owes Nimal. A creditor is a liability, which increases on the credit side."}]}, {"tx": "Apr 28: Sales on cash Rs. 150,000.", "think": "Cash came in, and the business earned income.", "e": [{"s": "Dr", "a": "Cash", "amt": 150000, "w": "Cash came in. Cash is an asset, and an asset increases on the debit side."}, {"s": "Cr", "a": "Sales", "amt": 150000, "w": "Income increases on the credit side."}]}, {"tx": "Apr 30: Received rent income Rs. 40,000.", "think": "The word \"received\" matters. The business earned rent here, so it is income and not the Rent expense.", "e": [{"s": "Dr", "a": "Cash", "amt": 40000, "w": "Cash came in. Cash is an asset, and an asset increases on the debit side."}, {"s": "Cr", "a": "Rent income", "amt": 40000, "w": "Rent received is income, which increases on the credit side."}]}, {"type": "num", "q": "Now add it up: what is the closing cash balance?", "a": 1073000, "think": "Money in: 500,000 + 300,000 + 150,000 + 150,000 + 40,000. Money out: 50,000 + 5,000 + 12,000.", "why": "1,140,000 in − 67,000 out = 1,073,000."}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 1, Q2</summary>
 <p><strong>Step 1 — Record the opening capital.</strong> The owner gave two things, so there are two debits and one credit: Dr Cash 500,000, Dr Motor vehicle 700,000, Cr Capital 1,200,000.</p>
@@ -1418,6 +1441,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <li><strong>Jan 7</strong>, goods on credit from Naleen (invoice 101): 50 T-shirts @ Rs. 500, 100 shirts @ Rs. 800. Trade discount 5%.</li>
 <li><strong>Jan 15</strong>, bought 4 tables on credit @ Rs. 20,000 each from Saman Enterprises for business use (not for selling).</li>
 </ul>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q1" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "Kumara's invoice before discount: 100 kg × 130, plus 50 kg × 60, plus 200 packets × 80. What is the total?", "a": 32000, "think": "Multiply quantity by price for each item, then add the three answers.", "why": "13,000 + 3,000 + 16,000 = 32,000."}, {"type": "num", "q": "Take off Kumara's 10% trade discount. What net amount is recorded?", "a": 28800, "think": "10% of 32,000 is the discount. Subtract it from 32,000, because only the net amount is recorded.", "why": "32,000 − 3,200 = 28,800.", "mistakes": {"3200": "3,200 is the discount itself. The question asks for what is left after taking it off.", "35200": "You added the discount. A discount makes the price lower, so subtract it.", "32000": "That is the price before the discount."}}, {"type": "num", "q": "Naleen's invoice before discount: 50 × 500, plus 100 × 800. What is the total?", "a": 105000, "think": "Multiply quantity by price for each item, then add.", "why": "25,000 + 80,000 = 105,000."}, {"type": "num", "q": "Take off Naleen's 5% trade discount. What net amount is recorded?", "a": 99750, "think": "5% of 105,000 is the discount. Subtract it from 105,000.", "why": "105,000 − 5,250 = 99,750.", "mistakes": {"5250": "5,250 is the discount itself. Subtract it from 105,000.", "110250": "You added the discount. Subtract it.", "94500": "That uses 10%. Naleen's discount is 5%."}}, {"type": "choice", "q": "The 4 tables are for business use, on credit. Which book do they go in?", "opts": [{"t": "Cash book", "why": "The cash book is for cash or cheque payments. These tables were bought on credit."}, {"t": "General journal", "ok": true}, {"t": "Purchase journal", "why": "The purchase journal is only for goods you will resell. These tables are kept and used."}, {"t": "Sales journal", "why": "The sales journal is for goods you sell. Here the business is buying."}], "why": "A non-current asset bought on credit goes in the general journal: Dr Furniture 80,000 / Cr Saman Enterprises 80,000.", "think": "Ask two questions: is it for resale, and did cash move today?"}, {"type": "num", "q": "What is the purchase journal total posted to Purchases?", "a": 128550, "think": "Add only the two goods-for-resale invoices, using the net amounts. The tables are not included.", "why": "28,800 + 99,750 = 128,550.", "mistakes": {"208550": "You included the 80,000 tables, which belong in the general journal."}}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q1</summary>
 <p><strong>Step 1 — Multiply out each invoice.</strong> Kumara: 100 × 130 = 13,000; 50 × 60 = 3,000; 200 × 80 = 16,000; total 32,000. Naleen: 50 × 500 = 25,000; 100 × 800 = 80,000; total 105,000.</p>
@@ -1498,6 +1522,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <li><strong>Jan 6</strong>, goods returned to Kumara: sugar 40 kg, salt 30 kg.</li>
 <li><strong>Jan 10</strong>, goods returned to Naleen with debit note 1000: T-shirts 10, shirts 5.</li>
 </ul>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q2" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "Kumara returns before discount: 40 kg × 130, plus 30 kg × 60. What is the total?", "a": 7000, "think": "Use the same prices as the original invoice.", "why": "5,200 + 1,800 = 7,000."}, {"type": "num", "q": "Take off Kumara's 10%. How much is the return worth?", "a": 6300, "think": "You were charged the discounted price, so you get back the discounted price.", "why": "7,000 − 700 = 6,300.", "mistakes": {"7000": "That is before discount. You never paid the full price, so you cannot get the full price back."}}, {"type": "num", "q": "Naleen returns before discount: 10 × 500, plus 5 × 800. What is the total?", "a": 9000, "think": "Use the same prices as the original invoice.", "why": "5,000 + 4,000 = 9,000."}, {"type": "num", "q": "Take off Naleen's 5%. How much is the return worth?", "a": 8550, "think": "Use the same 5% discount as the original invoice.", "why": "9,000 − 450 = 8,550."}, {"type": "num", "q": "What is the purchase returns journal total?", "a": 14850, "think": "Add the two net return values.", "why": "6,300 + 8,550 = 14,850."}, {"type": "choice", "q": "Goods went back to Kumara. Which side of Kumara's account is the 6,300 on?", "opts": [{"t": "Credit", "why": "A credit would mean you owe Kumara more. Sending goods back means you owe less."}, {"t": "Debit", "ok": true}], "why": "Kumara is a creditor, a liability. You now owe less, and a liability decreases on the debit side.", "think": "Did the amount you owe Kumara go up or down?"}, {"type": "num", "q": "How much is still owed to Kumara?", "a": 22500, "think": "Start with the 28,800 from Q1, then subtract the return.", "why": "28,800 − 6,300 = 22,500."}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q2</summary>
 <p><strong>Step 1 — Value the returns at the original price.</strong> Kumara: 40 × 130 = 5,200; 30 × 60 = 1,800; total 7,000. Naleen: 10 × 500 = 5,000; 5 × 800 = 4,000; total 9,000.</p>
@@ -1542,6 +1567,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <li>Feb 15: credit purchase from Sudath Rs. 80,000, trade discount 10% (invoice 002)</li>
 <li>Feb 20: credit purchase from Sunil Rs. 150,000 (invoice 003)</li>
 </ul>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q3" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "Feb 10: cash purchase from Nimal, Rs. 20,000. Which book does it go in?", "opts": [{"t": "Cash book", "ok": true}, {"t": "General journal", "why": "The general journal is for items with no book of their own. Cash payments have the cash book."}, {"t": "Purchase journal", "why": "The purchase journal is only for credit purchases. Nimal was paid in cash."}], "why": "Cash was paid, so it goes in the cash book: Dr Purchases 20,000 / Cr Cash 20,000.", "think": "Did cash move today?"}, {"type": "num", "q": "Feb 15: Sudath Rs. 80,000 less 10% trade discount. What amount is recorded?", "a": 72000, "think": "Find 10% of 80,000 and subtract it.", "why": "80,000 − 8,000 = 72,000.", "mistakes": {"8000": "8,000 is the discount itself. Subtract it from 80,000.", "80000": "That is before the trade discount, and only the net amount is recorded."}}, {"type": "num", "q": "What is the purchase journal total?", "a": 272000, "think": "Add the credit purchases only: Kamal, Sudath's net amount and Sunil.", "why": "50,000 + 72,000 + 150,000 = 272,000.", "mistakes": {"292000": "You included Nimal's 20,000, which was paid in cash.", "280000": "You used Sudath's price before discount."}}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q3</summary>
 <p><strong>Step 1 — Remove the cash purchase.</strong> Nimal was paid in cash, so that goes in the <strong>cash book</strong>: Dr Purchases 20,000 / Cr Cash 20,000. It does not go in the purchase journal.</p>
@@ -1586,6 +1612,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <p><strong>Final check:</strong> 50,000 + 72,000 + 150,000 = 272,000. ✓ With the cash purchase, the Purchases account totals 292,000.</p>
 </details>
 <p><strong>Q4. Question:</strong> Based on Q3, record in the purchase returns journal and post the ledger: Feb 6, trading goods returned to Kamal Rs. 20,000; Feb 12, goods returned to Sudath Rs. 30,000.</p>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q4" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "What is the purchase returns journal total?", "a": 50000, "think": "Add the two returns.", "why": "20,000 + 30,000 = 50,000."}, {"type": "num", "q": "How much is still owed to Kamal?", "a": 30000, "think": "Start with what you owed from Q3, then subtract the return.", "why": "50,000 − 20,000 = 30,000."}, {"type": "num", "q": "How much is still owed to Sudath?", "a": 42000, "think": "Sudath's invoice was recorded at the net 72,000, not 80,000.", "why": "72,000 − 30,000 = 42,000.", "mistakes": {"50000": "You started from 80,000. The invoice was recorded after discount, at 72,000."}}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q4</summary>
 <p><strong>Step 1 — Decide the value.</strong> The PDF gives a money amount, not a quantity, so these are taken as the net amounts to record.</p>
@@ -1624,6 +1651,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <li><strong>Apr 10</strong>, on credit to Kumari (invoice 70): 500 pillow covers @ Rs. 300, 1,000 pillows @ Rs. 500. Trade discount 5%.</li>
 <li><strong>Apr 20</strong>, pillows sold for cash to Sudath, Rs. 50,000.</li>
 </ul>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q5" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "Gayan before discount: 200 × 500, plus 250 × 700. What is the total?", "a": 275000, "think": "Multiply quantity by price for each item, then add.", "why": "100,000 + 175,000 = 275,000."}, {"type": "num", "q": "Take off Gayan's 10% trade discount.", "a": 247500, "think": "10% of 275,000 is 27,500. Subtract it.", "why": "275,000 − 27,500 = 247,500.", "mistakes": {"27500": "27,500 is the discount itself. Subtract it from 275,000."}}, {"type": "num", "q": "Kumari before discount: 500 × 300, plus 1,000 × 500. What is the total?", "a": 650000, "think": "Multiply quantity by price for each item, then add.", "why": "150,000 + 500,000 = 650,000."}, {"type": "num", "q": "Take off Kumari's 5% trade discount.", "a": 617500, "think": "5% of 650,000 is 32,500. Subtract it.", "why": "650,000 − 32,500 = 617,500.", "mistakes": {"32500": "32,500 is the discount itself. Subtract it from 650,000."}}, {"type": "num", "q": "What is the sales journal total?", "a": 865000, "think": "Add only the credit sales. Sudath's cash sale is not included.", "why": "247,500 + 617,500 = 865,000.", "mistakes": {"915000": "You included Sudath's 50,000 cash sale, which goes in the cash book."}}, {"type": "choice", "q": "Apr 20: pillows sold for cash to Sudath. Which book does it go in?", "opts": [{"t": "Cash book", "ok": true}, {"t": "General journal", "why": "Cash received has its own book, so the general journal is not used."}, {"t": "Sales journal", "why": "The sales journal is only for credit sales. Sudath paid in cash."}], "why": "Cash was received, so it goes in the cash book: Dr Cash 50,000 / Cr Sales 50,000.", "think": "Did cash move today?"}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q5</summary>
 <p><strong>Step 1 — Multiply out.</strong> Gayan: 200 × 500 = 100,000; 250 × 700 = 175,000; total 275,000. Kumari: 500 × 300 = 150,000; 1,000 × 500 = 500,000; total 650,000.</p>
@@ -1664,6 +1692,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 </details>
 <p><strong>Q6. Question:</strong> Based on Q5, customers returned goods: Apr 10, Gayan (credit note 76), 50 pillows and 100 bed sheets; Apr 15, Kumari (credit note 66), 60 pillow covers. Record these returns inwards.</p>
 <p>The PDF has an empty bullet under Kumari, so 60 pillow covers is taken as Kumari's whole return.</p>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q6" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "Gayan's returns before discount: 50 × 500, plus 100 × 700.", "a": 95000, "think": "Use the selling prices from Q5.", "why": "25,000 + 70,000 = 95,000."}, {"type": "num", "q": "Take off Gayan's 10%. How much is the return worth?", "a": 85500, "think": "He paid the discounted price, so he gets credit for the discounted price.", "why": "95,000 − 9,500 = 85,500.", "mistakes": {"95000": "That is before discount. Gayan never paid the full price."}}, {"type": "num", "q": "Kumari's return: 60 pillow covers × 300, less 5%.", "a": 17100, "think": "60 × 300 = 18,000. Then take off 5%.", "why": "18,000 − 900 = 17,100.", "mistakes": {"18000": "That is before Kumari's 5% discount."}}, {"type": "num", "q": "What is the sales returns journal total?", "a": 102600, "think": "Add the two net return values.", "why": "85,500 + 17,100 = 102,600."}, {"type": "choice", "q": "Goods came back from Gayan. Which side of Gayan's account is the 85,500 on?", "opts": [{"t": "Credit", "ok": true}, {"t": "Debit", "why": "A debit would mean Gayan owes you more. Returning goods means Gayan owes less."}], "why": "Gayan is a debtor, an asset. The amount owed to you fell, and an asset decreases on the credit side.", "think": "Did the amount Gayan owes go up or down?"}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q6</summary>
 <p><strong>Step 1 — Value at the selling price.</strong> Gayan: 50 × 500 = 25,000; 100 × 700 = 70,000; total 95,000. Kumari: 60 × 300 = 18,000.</p>
@@ -1743,6 +1772,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 </tr>
 </tbody>
 </table>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w02-p2q7" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "q": "What is the sales journal total?", "a": 600, "think": "Add the three credit sales only.", "why": "100 + 200 + 300 = 600."}, {"type": "num", "q": "What is the sales returns journal total?", "a": 60, "think": "Add the three returns only.", "why": "10 + 20 + 30 = 60."}, {"type": "num", "q": "How much does X still owe?", "a": 90, "think": "Take X's sale and subtract X's return.", "why": "100 − 10 = 90.", "mistakes": {"110": "You added the return. A return reduces what the customer owes."}}, {"type": "num", "q": "How much does Y still owe?", "a": 180, "think": "Take Y's sale and subtract Y's return.", "why": "200 − 20 = 180."}, {"type": "num", "q": "How much does Z still owe?", "a": 270, "think": "Take Z's sale and subtract Z's return.", "why": "300 − 30 = 270."}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q7</summary>
 <p><strong>Step 1 — Separate sales from returns.</strong> Sales go in the sales journal. Returned goods go in the sales returns journal.</p>
@@ -1820,7 +1850,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 </table>
 <p><strong>Final check:</strong> 90 + 180 + 270 = 540, and sales 600 − returns 60 = 540. ✓</p>
 </details></div><div class="hci-ta" lang="ta" hidden data-title="பயிற்சிக் கேள்விகள் (பாட வினாத்தாள்)"><p><strong>இந்தப் பகுதி இன்னும் தமிழில் மொழிபெயர்க்கப்படவில்லை; தற்போது ஆங்கிலத்தில் மட்டும் உள்ளது.</strong></p>
-<p>These are the questions from <strong>both Week 2 practice PDFs</strong>, in the PDF's order. Try each one first, then open its answer. No accounting knowledge is assumed.</p>
+<p>These are the questions from <strong>both Week 2 practice PDFs</strong>, in the PDF's order. Answer each question in its box, one step at a time. A wrong answer tells you why it is wrong and how to think about it, so you can try again. After two wrong tries you can ask to see the answer. Your place in each question is saved in this browser. The full answer sits under each box. No accounting knowledge is assumed.</p>
 <p><strong>The only rule you need first</strong></p>
 <table>
 <thead>
@@ -1911,6 +1941,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 </tr>
 </tbody>
 </table>
+<div data-ta-tool="gp-w02-p1q1"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 1, Q1</summary>
 <p><strong>Step 1 — Ask two questions for each transaction.</strong> Which two accounts changed? Did each one go up or down? Then use the rule table above. The PDF does not say the money went through a bank, so all of it is treated as cash.</p>
@@ -2030,6 +2061,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 </tr>
 </tbody>
 </table>
+<div data-ta-tool="gp-w02-p1q2"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 1, Q2</summary>
 <p><strong>Step 1 — Record the opening capital.</strong> The owner gave two things, so there are two debits and one credit: Dr Cash 500,000, Dr Motor vehicle 700,000, Cr Capital 1,200,000.</p>
@@ -2150,6 +2182,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <li><strong>Jan 7</strong>, goods on credit from Naleen (invoice 101): 50 T-shirts @ Rs. 500, 100 shirts @ Rs. 800. Trade discount 5%.</li>
 <li><strong>Jan 15</strong>, bought 4 tables on credit @ Rs. 20,000 each from Saman Enterprises for business use (not for selling).</li>
 </ul>
+<div data-ta-tool="gp-w02-p2q1"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q1</summary>
 <p><strong>Step 1 — Multiply out each invoice.</strong> Kumara: 100 × 130 = 13,000; 50 × 60 = 3,000; 200 × 80 = 16,000; total 32,000. Naleen: 50 × 500 = 25,000; 100 × 800 = 80,000; total 105,000.</p>
@@ -2230,6 +2263,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <li><strong>Jan 6</strong>, goods returned to Kumara: sugar 40 kg, salt 30 kg.</li>
 <li><strong>Jan 10</strong>, goods returned to Naleen with debit note 1000: T-shirts 10, shirts 5.</li>
 </ul>
+<div data-ta-tool="gp-w02-p2q2"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q2</summary>
 <p><strong>Step 1 — Value the returns at the original price.</strong> Kumara: 40 × 130 = 5,200; 30 × 60 = 1,800; total 7,000. Naleen: 10 × 500 = 5,000; 5 × 800 = 4,000; total 9,000.</p>
@@ -2274,6 +2308,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <li>Feb 15: credit purchase from Sudath Rs. 80,000, trade discount 10% (invoice 002)</li>
 <li>Feb 20: credit purchase from Sunil Rs. 150,000 (invoice 003)</li>
 </ul>
+<div data-ta-tool="gp-w02-p2q3"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q3</summary>
 <p><strong>Step 1 — Remove the cash purchase.</strong> Nimal was paid in cash, so that goes in the <strong>cash book</strong>: Dr Purchases 20,000 / Cr Cash 20,000. It does not go in the purchase journal.</p>
@@ -2318,6 +2353,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <p><strong>Final check:</strong> 50,000 + 72,000 + 150,000 = 272,000. ✓ With the cash purchase, the Purchases account totals 292,000.</p>
 </details>
 <p><strong>Q4. Question:</strong> Based on Q3, record in the purchase returns journal and post the ledger: Feb 6, trading goods returned to Kamal Rs. 20,000; Feb 12, goods returned to Sudath Rs. 30,000.</p>
+<div data-ta-tool="gp-w02-p2q4"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q4</summary>
 <p><strong>Step 1 — Decide the value.</strong> The PDF gives a money amount, not a quantity, so these are taken as the net amounts to record.</p>
@@ -2356,6 +2392,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 <li><strong>Apr 10</strong>, on credit to Kumari (invoice 70): 500 pillow covers @ Rs. 300, 1,000 pillows @ Rs. 500. Trade discount 5%.</li>
 <li><strong>Apr 20</strong>, pillows sold for cash to Sudath, Rs. 50,000.</li>
 </ul>
+<div data-ta-tool="gp-w02-p2q5"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q5</summary>
 <p><strong>Step 1 — Multiply out.</strong> Gayan: 200 × 500 = 100,000; 250 × 700 = 175,000; total 275,000. Kumari: 500 × 300 = 150,000; 1,000 × 500 = 500,000; total 650,000.</p>
@@ -2396,6 +2433,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 </details>
 <p><strong>Q6. Question:</strong> Based on Q5, customers returned goods: Apr 10, Gayan (credit note 76), 50 pillows and 100 bed sheets; Apr 15, Kumari (credit note 66), 60 pillow covers. Record these returns inwards.</p>
 <p>The PDF has an empty bullet under Kumari, so 60 pillow covers is taken as Kumari's whole return.</p>
+<div data-ta-tool="gp-w02-p2q6"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q6</summary>
 <p><strong>Step 1 — Value at the selling price.</strong> Gayan: 50 × 500 = 25,000; 100 × 700 = 70,000; total 95,000. Kumari: 60 × 300 = 18,000.</p>
@@ -2475,6 +2513,7 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
 </tr>
 </tbody>
 </table>
+<div data-ta-tool="gp-w02-p2q7"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Paper 2, Q7</summary>
 <p><strong>Step 1 — Separate sales from returns.</strong> Sales go in the sales journal. Returned goods go in the sales returns journal.</p>
@@ -2870,7 +2909,23 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
     a.onclick = function(){ var english=h.closest('.section-english'); if(english && english.hidden){ var toggle=h.closest('section').querySelector('.native-toggle'); if(toggle) toggle.click(); } toc.classList.remove('open'); };
   });
   var tbtn = document.getElementById('tocbtn');
-  if (tbtn) tbtn.onclick = function(){ toc.classList.toggle('open'); };
+  if (tbtn && !toc) tbtn.style.display = 'none';
+  if (tbtn && toc) {
+    var isPhone = function(){ return window.matchMedia('(max-width:900px)').matches; };
+    var showToc = function(){
+      var hidden = document.body.classList.contains('toc-hidden');
+      tbtn.textContent = isPhone() ? '☰ Menu' : hidden ? '☰ Show menu' : '✕ Hide menu';
+      tbtn.setAttribute('aria-expanded', isPhone() ? String(toc.classList.contains('open')) : String(!hidden));
+    };
+    if (load('sg-toc-hidden', false)) document.body.classList.add('toc-hidden');
+    tbtn.onclick = function(){
+      if (isPhone()) toc.classList.toggle('open');
+      else save('sg-toc-hidden', document.body.classList.toggle('toc-hidden'));
+      showToc();
+    };
+    window.addEventListener('resize', showToc);
+    showToc();
+  }
 
   // done state
   var done = load('sg-done-' + KEY, {});
@@ -3094,6 +3149,120 @@ Goods return-க்கும் உரிய discount கழிக்க வே�
     if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
       '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
   }
+})();
+;
+// Answer-it-yourself practice: one step at a time, with an explanation for each wrong answer.
+(function(){
+  var RULE = {Dr:'A debit records an asset, expense or drawings going up, or a liability, income or capital going down.',
+              Cr:'A credit records a liability, income or capital going up, or an asset, expense or drawings going down.'};
+  var TYPE = {asset:['an asset','debit'],expense:['an expense','debit'],drawings:['drawings','debit'],liability:['a liability','credit'],income:['income','credit'],capital:['capital','credit']};
+  var NTH = ['1st','2nd','3rd','4th','5th'];
+  function load(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
+  function save(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function money(n){ return Number(n).toLocaleString('en-US',{maximumFractionDigits:2}); }
+  function parse(s){ var v = parseFloat(String(s).replace(/[,\s]|Rs\.?/gi,'')); return isNaN(v) ? null : v; }
+
+  document.querySelectorAll('.gp').forEach(function(root){
+    var data = JSON.parse(root.querySelector('script').textContent), steps = [], key = 'sg-gp-' + root.id;
+    data.steps.forEach(function(item){
+      if (item.e) item.e.forEach(function(entry, i){ steps.push({type:'entry', tx:item, entry:entry, n:i}); });
+      else steps.push(item);
+    });
+    var state = load(key) || {i:0, first:0}, tries = 0, picked = null;
+    if (state.i > steps.length) state = {i:0, first:0};
+    var box = document.createElement('div'); root.appendChild(box);
+
+    function doneLine(s){
+      if (s.type === 'entry') return (s.entry.s === 'Dr' ? 'Debit ' : 'Credit ') + esc(s.entry.a) + ' ' + money(s.entry.amt) + ' <span class="gp-muted">(' + esc(s.tx.tx) + ')</span>';
+      if (s.type === 'num') return esc(s.q) + ' <b>' + money(s.a) + '</b>';
+      return esc(s.q) + ' <b>' + esc(s.opts.filter(function(o){ return o.ok; })[0].t) + '</b>';
+    }
+    function advance(firstTry){
+      if (firstTry) state.first++;
+      state.i++; tries = 0; picked = null; save(key, state); render();
+      var focus = box.querySelector('input,.gp-opt'); if (focus) focus.focus({preventScroll:true});
+    }
+    function feedback(kind, html, cont){
+      var f = box.querySelector('.gp-fb');
+      f.className = 'gp-fb ' + kind; f.innerHTML = html; f.hidden = false;
+      if (cont) {
+        var b = document.createElement('button'); b.type = 'button'; b.textContent = state.i + 1 < steps.length ? 'Next step →' : 'Finish';
+        b.onclick = function(){ advance(cont.first); }; f.appendChild(b);
+        box.querySelectorAll('.gp-cur input,.gp-cur .gp-opt,.gp-check').forEach(function(el){ el.disabled = true; });
+        b.focus({preventScroll:true});
+      } else if (tries >= 2) {
+        var r = document.createElement('button'); r.type = 'button'; r.className = 'alt'; r.textContent = 'Show me the answer';
+        r.onclick = reveal; f.appendChild(r);
+      }
+    }
+    function reveal(){
+      var s = steps[state.i], text;
+      if (s.type === 'entry') text = (s.entry.s === 'Dr' ? 'Debit ' : 'Credit ') + '<b>' + esc(s.entry.a) + '</b> with <b>Rs. ' + money(s.entry.amt) + '</b>. ' + esc(s.entry.w);
+      else if (s.type === 'num') text = 'The answer is <b>' + money(s.a) + '</b>. ' + esc(s.why || s.think);
+      else text = 'The answer is <b>' + esc(s.opts.filter(function(o){ return o.ok; })[0].t) + '</b>. ' + esc(s.why || '');
+      feedback('gp-show', text + ' <p class="gp-muted">Read why, then try this step type again on the next one.</p>', {first:false});
+    }
+    function checkEntry(s){
+      var amount = parse(box.querySelector('.gp-amt').value), e = s.entry, side = e.s === 'Dr' ? 'debit' : 'credit';
+      if (!picked) return feedback('gp-hint', 'First choose the account for this entry.');
+      if (picked !== e.a) {
+        tries++;
+        var other = s.tx.e.filter(function(x){ return x.a === picked && x.s !== e.s; })[0], type = TYPE[data.accts[picked]], msg;
+        if (other) msg = '<b>' + esc(picked) + '</b> is part of this transaction, but it belongs on the other side. ' + esc(other.w);
+        else if (s.tx.e.some(function(x){ return x.a === picked; })) msg = '<b>' + esc(picked) + '</b> is on this side too, but it is a different line of this entry. Choose the one for this line.';
+        else msg = '<b>' + esc(picked) + '</b> does not change in this transaction, so it gets no entry.' + (type ? ' It is ' + type[0] + ', which increases on the ' + type[1] + ' side.' : '');
+        return feedback('gp-bad', '<b>Not quite.</b> ' + msg + '<p><b>How to think:</b> ' + esc(s.tx.think) + ' ' + RULE[e.s] + ' Which account fits the ' + side + ' side?</p>');
+      }
+      if (amount === null) return feedback('gp-hint', 'Good account. Now type the amount in rupees.');
+      if (Math.abs(amount - e.amt) > 0.01) {
+        tries++;
+        return feedback('gp-bad', '<b>The account is right, but the amount is not.</b><p><b>How to think:</b> read the transaction again and find the rupee value of this one line. Do not add other transactions to it.' + (s.tx.e.length > 2 ? ' This transaction has several lines, so each line has its own amount.' : ' Debit and credit are always the same amount.') + '</p>');
+      }
+      feedback('gp-ok', '<b>Correct.</b> ' + esc(e.w), {first:tries === 0});
+    }
+    function checkNum(s){
+      var v = parse(box.querySelector('.gp-amt').value);
+      if (v === null) return feedback('gp-hint', 'Type a number first. Commas are fine.');
+      if (Math.abs(v - s.a) <= (s.tol || 0.01)) return feedback('gp-ok', '<b>Correct.</b> ' + esc(s.why || ''), {first:tries === 0});
+      tries++;
+      var known = (s.mistakes || {})[String(v)];
+      feedback('gp-bad', '<b>Not quite.</b> ' + (known ? esc(known) : 'You typed ' + money(v) + '.') + '<p><b>How to think:</b> ' + esc(s.think) + '</p>');
+    }
+    function render(){
+      var pct = Math.round(state.i / steps.length * 100), html = '<div class="gp-bar"><span>' + (state.i < steps.length ? 'Step ' + (state.i + 1) + ' of ' + steps.length : 'Finished') + '</span><i><b style="width:' + pct + '%"></b></i><button type="button" class="alt gp-reset">Start again</button></div>';
+      if (state.i) html += '<ol class="gp-done">' + steps.slice(0, state.i).map(function(s){ return '<li>' + doneLine(s) + '</li>'; }).join('') + '</ol>';
+      var s = steps[state.i];
+      if (!s) {
+        html += '<div class="gp-fb gp-ok"><b>You finished this question.</b> ' + state.first + ' of ' + steps.length + ' steps were right on the first try. Open the full answer below to compare the layout.' + (data.end ? ' ' + esc(data.end) : '') + '</div>';
+      } else if (s.type === 'entry') {
+        var count = s.tx.e.length;
+        html += '<div class="gp-cur"><p class="gp-tx">' + esc(s.tx.tx) + '</p><p><b>' + NTH[s.n] + ' entry of ' + count + ': which account is ' + (s.entry.s === 'Dr' ? 'debited' : 'credited') + '?</b></p><div class="gp-opts">' +
+          Object.keys(data.accts).map(function(a){ return '<button type="button" class="alt gp-opt" data-a="' + esc(a) + '">' + esc(a) + '</button>'; }).join('') +
+          '</div><label class="gp-label">Amount (Rs.) <input class="gp-amt" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></div>';
+      } else if (s.type === 'num') {
+        html += '<div class="gp-cur">' + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p><b>' + esc(s.q) + '</b></p><label class="gp-label">Your answer <input class="gp-amt" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></div>';
+      } else {
+        html += '<div class="gp-cur">' + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p><b>' + esc(s.q) + '</b></p><div class="gp-opts">' +
+          s.opts.map(function(o, i){ return '<button type="button" class="alt gp-opt" data-i="' + i + '">' + esc(o.t) + '</button>'; }).join('') + '</div><div class="gp-fb" aria-live="polite" hidden></div></div>';
+      }
+      box.innerHTML = html;
+      box.querySelector('.gp-reset').onclick = function(){ state = {i:0, first:0}; tries = 0; picked = null; save(key, state); render(); };
+      box.querySelectorAll('.gp-opt').forEach(function(b){
+        b.onclick = function(){
+          if (s.type === 'entry') { picked = b.dataset.a; box.querySelectorAll('.gp-opt').forEach(function(x){ x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', x === b); }); return; }
+          var o = s.opts[+b.dataset.i];
+          if (o.ok) return feedback('gp-ok', '<b>Correct.</b> ' + esc(s.why || o.why || ''), {first:tries === 0});
+          tries++; feedback('gp-bad', '<b>Not quite.</b> ' + esc(o.why) + (s.think ? '<p><b>How to think:</b> ' + esc(s.think) + '</p>' : ''));
+        };
+      });
+      var c = box.querySelector('.gp-check');
+      if (c) c.onclick = function(){ s.type === 'entry' ? checkEntry(s) : checkNum(s); };
+      var input = box.querySelector('.gp-amt');
+      if (input) input.onkeydown = function(ev){ if (ev.key === 'Enter') { ev.preventDefault(); c.click(); } };
+    }
+    render();
+  });
 })();
 ;
 (function(global){

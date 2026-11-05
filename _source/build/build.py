@@ -3,7 +3,7 @@ from urllib.parse import quote
 import markdown
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = "D:/Study/SEM 6"
+ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
 # Google Drive file IDs of the uploaded videos ("Folder/Week NN/file" -> id), used by the online copy
 _dp = os.path.join(HERE, "drive_ids.json")
 DRIVE = json.load(open(_dp, encoding="utf-8")) if os.path.exists(_dp) else {}
@@ -286,6 +286,13 @@ def build_week(skey, wfile, prev, nxt):
     wdir = os.path.join(ROOT, folder, week)
     # videos
     vt, vp, total = [], [], 0
+    # Keep published duration labels when raw lecture files/transcripts are absent.
+    prior_path = os.path.join(wdir, OUTNAME.format(week=week))
+    prior = open(prior_path, encoding="utf-8").read() if os.path.exists(prior_path) else ""
+    prior_tabs = re.search(r'<div class="vtabs">(.*?)</div>', prior, re.S)
+    prior_labels = re.findall(r'<button>(.*?)</button>', prior_tabs.group(1)) if prior_tabs else []
+    prior_chip = re.search(r'<span class="chip">\d+ videos? · \d+ min</span>', prior)
+    kept_duration = False
     for i, v in enumerate(meta["videos"]):
         fp = os.path.join(wdir, v["file"])
         d = mp4dur(fp) if v["file"].lower().endswith(".mp4") else None
@@ -294,6 +301,11 @@ def build_week(skey, wfile, prev, nxt):
             if os.path.exists(tp):
                 ts = re.findall(r"^\[(\d+):(\d+)\]", open(tp, encoding="utf-8").read(), re.M)
                 if ts: d = int(ts[-1][0]) * 60 + int(ts[-1][1]) + 10
+        if not d and i < len(prior_labels):
+            label = re.fullmatch(re.escape(f"{i+1}. " + html.escape(v["title"])) + r" · (\d+) min", prior_labels[i])
+            if label:
+                d = int(label.group(1)) * 60
+                kept_duration = True
         if d: total += d
         exists = os.path.exists(fp)
         vt.append(f'<button>{i+1}. {html.escape(v["title"])}{" · " + str(round(d/60)) + " min" if d else ""}</button>')
@@ -327,10 +339,17 @@ def build_week(skey, wfile, prev, nxt):
                          + quiz_block(f"{skey}-{week.replace(' ', '')}", qs) + '</section>')
     chips = [f'<span class="chip">{code}</span>']
     if meta["videos"]: chips.append(f'<span class="chip">{len(meta["videos"])} video{"s" if len(meta["videos"])>1 else ""}{" · " + str(round(total/60)) + " min" if total else ""}</span>')
+    if kept_duration and prior_chip:
+        chips[-1] = prior_chip.group(0)
     chips += [f'<span class="chip">📄 {html.escape(s)}</span>' for s in meta["sources"]]
     chips.append('<span class="chip" id="donecount"></span>')
     hero = (f'<div class="hero"><div class="sub">{html.escape(sname)} · {week}</div><h1>{md_inline(meta["title"])}</h1>'
             f'<p>{md_inline(meta.get("lead", ""))}</p>{md(intro) if intro else ""}<div class="meta">{"".join(chips)}</div></div>')
+    if skey == "bpas":
+        practice = next((i // 2 + 1 for i in range(1, len(parts), 2)
+                         if parts[i].strip() == "Beginner practice — questions and step-by-step answers"), None)
+        if practice:
+            hero = hero.replace('</h1>', '</h1><p><a href="#s' + str(practice) + '">Start beginner practice: two questions with step-by-step answers</a></p>', 1)
     navf = '<div class="navfoot">'
     navf += f'<a href="../{quote(prev[0])}/{quote(OUTNAME.format(week=prev[0]))}"><small>← Previous</small>{html.escape(prev[1])}</a>' if prev else "<span></span>"
     navf += f'<a class="nx" href="../{quote(nxt[0])}/{quote(OUTNAME.format(week=nxt[0]))}"><small>Next →</small>{html.escape(nxt[1])}</a>' if nxt else "<span></span>"
@@ -399,6 +418,8 @@ def build_subject(skey):
                f'<p style="color:var(--muted)">20 random questions drawn from all {len(files)} weeks ({len(allq)} in the bank). Every attempt is a new mix — '
                f'a good way to test whole-subject knowledge before the exam.</p>' + quiz_block(f"{skey}-mixed", allq, pick=20) + '</section>' if allq else "")
             + '</main></div>')
+    if skey == "bpas":
+        body = body.replace('<div class="wk">', '<section class="card"><h2>New to accounting? Start here</h2><p>Begin with Week 01, then Week 02 for debit and credit. Every week now includes two beginner practice questions with expandable, step-by-step answers and a final check. These 30 learning exercises are separate from the existing course-paper examples.</p><p>Open a week and choose <b>Start beginner practice</b> near the top. Try each question before revealing its answer, then take the weekly self-check quiz.</p></section><div class="wk">', 1)
     open(os.path.join(ROOT, folder, "Study Guide - Index.html"), "w", encoding="utf-8").write(
         page(f"{sname} — Study Guides", body, crumbs=f'<a href="../SEM 6 Study Hub.html">SEM 6</a> › {html.escape(sname)}'))
     return len(files), sum(1 for f in files if os.path.exists(os.path.join(HERE, "content", skey, f[:-3] + ".quiz")))
@@ -409,7 +430,7 @@ def build_hub():
     for skey, folder, code, sname in SUBJECTS:
         n = len(weeks_of(skey))
         if not n: continue
-        keys = ",".join(f"{skey}-Week{re.search(r'(\d+)', f).group(1).zfill(2)}" for f in weeks_of(skey) if os.path.exists(os.path.join(HERE, "content", skey, f[:-3] + ".quiz")))
+        keys = ",".join(f"{skey}-Week{f[1:-3].zfill(2)}" for f in weeks_of(skey) if os.path.exists(os.path.join(HERE, "content", skey, f[:-3] + ".quiz")))
         ex = EXAMS.get(skey)
         exl = f'<em class="exd" data-exam="{ex[0]}T{ex[1]}+05:30">Exam: {datetime.date.fromisoformat(ex[0]).strftime("%a %d %b")}, {ex[1]}–{ex[2]}</em>' if ex else ""
         cards.append(f'<a href="{quote(folder)}/{quote("Study Guide - Index.html")}" data-qkeys="{keys}" data-skey="{skey}"><small>{code}</small><span>{html.escape(sname)}</span><em>{n} weekly study guides</em>{exl}'
@@ -428,8 +449,30 @@ def build_hub():
         '<meta http-equiv="refresh" content="0; url=SEM%206%20Study%20Hub.html"><a href="SEM%206%20Study%20Hub.html">Open the SEM 6 Study Hub</a>')
 
 
+def sync_study_catalog():
+    """Keep the shared planner consistent after rebuilding just one subject."""
+    catalog = study_data()
+    pattern = r'(<script type="application/json" id="study-data">).*?(</script>)'
+    for _, folder, _, _ in SUBJECTS:
+        subject_dir = os.path.join(ROOT, folder)
+        if not os.path.isdir(subject_dir):
+            continue
+        for directory, _, files in os.walk(subject_dir):
+            for filename in files:
+                if not filename.endswith(".html"):
+                    continue
+                path = os.path.join(directory, filename)
+                with open(path, encoding="utf-8") as source:
+                    previous = source.read()
+                updated = re.sub(pattern, lambda m: m.group(1) + catalog + m.group(2), previous, flags=re.S)
+                if updated != previous:
+                    with open(path, "w", encoding="utf-8") as output:
+                        output.write(updated)
+
+
 if __name__ == "__main__":
     keys = sys.argv[1:] or [s[0] for s in SUBJECTS]
     for k in keys:
         if weeks_of(k): print(k, "weeks/quizzes:", *build_subject(k))
     build_hub()
+    sync_study_catalog()

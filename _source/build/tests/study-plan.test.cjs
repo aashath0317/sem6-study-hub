@@ -36,7 +36,11 @@ m=model([subject('a','2026-11-01')]);assert.equal(m.remaining,0);assert.equal(m.
 const html=fs.readFileSync(path.resolve(__dirname,'../../..','SEM 6 Study Hub.html'),'utf8');
 const cat=JSON.parse(html.match(/<script type="application\/json" id="study-data">([\s\S]*?)<\/script>/)[1]);
 assert.equal(cat.length,5);assert.equal(cat.flatMap(s=>s.weeks).filter(w=>!w.paper).length,70);assert.equal(cat.flatMap(s=>s.weeks).filter(w=>w.paper).length,3);
-m=model(cat);assert.equal(m.subjects.reduce((a,s)=>a+s.total,0),523);assert.ok(m.remaining>0);assert.ok(m.todayPlan.blocks.length);
+m=model(cat);assert.equal(m.subjects.reduce((a,s)=>a+s.total,0),538);assert.ok(m.remaining>0);assert.ok(m.todayPlan.blocks.length);
+// Every BPAS week includes a new practice section without removing existing sections.
+const bpas=cat.find(s=>s.key==='bpas').weeks.filter(w=>!w.paper);
+assert.equal(bpas.length,15);
+assert.ok(bpas.every(w=>w.sections.filter(s=>s.title==='Beginner practice — questions and step-by-step answers').length===1));
 let all={};cat.forEach(s=>{s.weeks.forEach(w=>{all['sg-done-'+w.key]=Object.fromEntries(w.sections.map(x=>[x.id,true]));if(w.quiz)all['sg-quiz-'+w.key]={last:90,best:90,ts:now};});all['sg-quiz-'+s.key+'-mixed']={last:90,ts:now};});
 m=model(cat,all);assert.equal(m.remaining,0);assert.equal(m.shortfalls.length,0);assert.ok(m.subjects.every(s=>s.ready));
 // Focus history is only called observed pace once there is enough new evidence.

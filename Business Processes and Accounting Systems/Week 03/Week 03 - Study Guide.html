@@ -233,6 +233,13 @@ mark{background:#ffe680;color:#000;border-radius:3px}
  .ta-readable-table .ta-cell-label{display:block;font-weight:700;color:var(--accent-ink);font-size:.9em;margin-bottom:4px}
 }
 
+/* Beginner practice: native details works online and offline, including keyboard use. */
+.beginner-answer{border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:16px 0 26px;background:var(--panel)}
+.beginner-answer summary{cursor:pointer;font-weight:700;color:var(--accent);line-height:1.6}
+.beginner-answer summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+.beginner-answer[open] summary{margin-bottom:16px}
+.beginner-answer li{margin-bottom:10px}
+
 .study-plan{margin:24px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow);scroll-margin-top:80px}
 .sp-heading,.sp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.sp-heading h2{margin:2px 0 8px}.sp-heading p{font-size:15px;color:var(--muted)}
 .sp-pill{display:inline-block;white-space:nowrap;padding:5px 10px;border-radius:20px;font-size:12px}.sp-bad{background:var(--warn-bg);color:var(--warn)}.sp-good{background:var(--tip-bg);color:var(--tip)}
@@ -246,7 +253,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="bpas-Week03" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
 <div class="topbar"><button id="tocbtn" aria-label="Contents">☰</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Business Processes &amp; Accounting Systems</a> › Week 03</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Business Processes &amp; Accounting Systems · Week 03</div><h1>Cash Book, Petty Cash Book &amp; General Journal</h1><p>The cash book as both a day book and a ledger account; one-, two- and three-column cash books (contra entries, discounts allowed and received); the petty cash book and the imprest system; and the general journal for everything else.</p><div class="meta"><span class="chip">ITE3622</span><span class="chip">📄 Accounting process - Session 03.pdf</span><span class="chip">📄 Practice questions for lesson 3.pdf</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Where these books fit"><span class="num">1</span>Where these books fit</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>புத்தகங்களின் தொடர்பு</h3><p>ரசீது அல்லது பில்லிலிருந்து தகவல் முதலில் நாள் புத்தகத்திற்கும், பின்னர் <strong>Ledger</strong> கணக்குகளுக்கும் செல்கிறது. எந்தப் பரிவர்த்தனை எந்தப் புத்தகத்தில் தொடங்குகிறது என்பதை முதலில் தீர்மானியுங்கள்.</p><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="flow"><span>Source documents</span><span>Primary books</span><span>Ledger</span><span>Trial balance</span><span>Financial statements</span></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Business Processes &amp; Accounting Systems · Week 03</div><h1>Cash Book, Petty Cash Book &amp; General Journal</h1><p><a href="#s7">Start beginner practice: two questions with step-by-step answers</a></p><p>The cash book as both a day book and a ledger account; one-, two- and three-column cash books (contra entries, discounts allowed and received); the petty cash book and the imprest system; and the general journal for everything else.</p><div class="meta"><span class="chip">ITE3622</span><span class="chip">📄 Accounting process - Session 03.pdf</span><span class="chip">📄 Practice questions for lesson 3.pdf</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Where these books fit"><span class="num">1</span>Where these books fit</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>புத்தகங்களின் தொடர்பு</h3><p>ரசீது அல்லது பில்லிலிருந்து தகவல் முதலில் நாள் புத்தகத்திற்கும், பின்னர் <strong>Ledger</strong> கணக்குகளுக்கும் செல்கிறது. எந்தப் பரிவர்த்தனை எந்தப் புத்தகத்தில் தொடங்குகிறது என்பதை முதலில் தீர்மானியுங்கள்.</p><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="flow"><span>Source documents</span><span>Primary books</span><span>Ledger</span><span>Trial balance</span><span>Financial statements</span></div>
 <p>This week covers the remaining primary books:</p>
 <ul>
 <li>the <strong>cash book</strong>, from <strong>receipts</strong> (Dr side) and <strong>payment vouchers</strong> (Cr side)</li>
@@ -607,14 +614,134 @@ Opening entry-இல் assets Debit; liabilities Credit; மீதமுள்�
 <li><strong>General journal entries with narrations</strong> for the six types of transaction</li>
 </ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Practice questions (course paper)"><span class="num">5</span>Practice questions (course paper)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>பயிற்சியில் கவனிக்க வேண்டியது</h3><p>வாடிக்கையாளருக்கு வழங்கிய தள்ளுபடி நமக்கு செலவு; சப்ளையர் வழங்கிய தள்ளுபடி நமக்கு பயன். பணம், வங்கி, தள்ளுபடிக் கட்டங்களைத் தனித்தனியாகக் கூட்டுங்கள். Petty cash-இல் செலவுகளின் மொத்தம் மீளளிப்புடன் பொருந்துகிறதா பாருங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>படிப்படியான பயிற்சி:</strong> cash/bank opening balances எழுதுதல் → receipts, payments பிரித்தல் → contra entries இணைத்தல் → discounts தனியாகக் கூட்டுதல் → closing balances.
 Namal petty cash பயிற்சியில் travel 305 + stationery 610 + postage 256 + ledger 200 + sundry 369 = <strong>1,740</strong> செலவு. அதே அளவு வழக்கமான float-ஐ நிரப்பும் தொகை.
-Q6-இல் items total 621; float 600. இந்த முரண்பாட்டை மறைத்து negative petty cash-ஐ வழக்கமான நிலை எனக் காட்டாதீர்கள். Q7 போன்ற சரியான தரவால் முறையைப் பழகுங்கள். முழு cash books-இன் ஒவ்வொரு தேதிப் பதிவும் கீழுள்ள English workings-இல் உள்ளது.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><p>Worked answers to the Session 3 practice paper. Each one gives the key entries and the closing balances so you can check your own cash book.</p>
-<h3 id="two-column-cash-books">Two-column cash books</h3>
-<div class="call example"><div class="ct">Q1: Kamal Business, May 2019</div><p>Cheques received on May 4 and 7 are held as cash until they're <strong>deposited on May 8</strong> (a contra entry).</p>
+Q6-இல் items total 621; float 600. இந்த முரண்பாட்டை மறைத்து negative petty cash-ஐ வழக்கமான நிலை எனக் காட்டாதீர்கள். Q7 போன்ற சரியான தரவால் முறையைப் பழகுங்கள். முழு cash books-இன் ஒவ்வொரு தேதிப் பதிவும் கீழுள்ள English workings-இல் உள்ளது.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><p>These are all 12 questions from the <strong>Session 3 practice PDF</strong>. Try each one first, then open its answer.</p>
+<p><strong>Words you need</strong></p>
 <table>
 <thead>
 <tr>
-<th>Date</th>
-<th>Item</th>
+<th>Word</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cash book</td>
+<td>The book for all cash and bank money. Money in goes on the <strong>receipts (Dr) side</strong>. Money out goes on the <strong>payments (Cr) side</strong></td>
+</tr>
+<tr>
+<td>Two-column cash book</td>
+<td>Has one column for cash and one for bank</td>
+</tr>
+<tr>
+<td>Three-column cash book</td>
+<td>Also has a discount column on each side</td>
+</tr>
+<tr>
+<td>Contra entry (C)</td>
+<td>Money moving between cash and bank. It appears on <strong>both</strong> sides, because the business has not gained or lost anything</td>
+</tr>
+<tr>
+<td>Discount allowed</td>
+<td>Given by you to a customer who pays early. It is an <strong>expense</strong></td>
+</tr>
+<tr>
+<td>Discount received</td>
+<td>Given to you by a supplier when you pay early. It is <strong>income</strong></td>
+</tr>
+<tr>
+<td>Balance c/d</td>
+<td>"Carried down": the amount left at the end of the month</td>
+</tr>
+<tr>
+<td>Petty cash</td>
+<td>A small cash fund for small payments</td>
+</tr>
+<tr>
+<td>Imprest (float)</td>
+<td>The fixed amount petty cash starts with each period. Top-up = amount spent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="two-column-cash-books">Two-column cash books</h3>
+<p><strong>How to balance:</strong> add each column on the bigger side, then write the difference on the smaller side as balance c/d. Both sides must then show the same totals. Keep the cash and bank columns separate.</p>
+<p><strong>Q1. Question:</strong> Write up a two-column cash book for Kamal Business from these details and balance it off at the end of the month.</p>
+<table>
+<thead>
+<tr>
+<th>2019 May</th>
+<th>Transaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Started in business with capital in cash Rs. 1,000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Paid rent by cash Rs. 230</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Obtained a bank loan Rs. 2,000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Received a cheque from Kumari Rs. 190</td>
+</tr>
+<tr>
+<td>7</td>
+<td>F Sunil paid us by cheque Rs. 34</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Cheques received from Kumari and F Sunil were deposited in the bank</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Paid to Gayan in cash Rs. 92</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Kusun paid us in cash Rs. 96</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Repaid bank loan Rs. 500 by cheque</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Cash sales Rs. 122</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Cash deposited in the bank Rs. 50</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Paid motor expenses by cheque Rs. 75</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Withdrew Rs. 200 cash from the bank for business use</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Paid wages in cash Rs. 320</td>
+</tr>
+</tbody>
+</table>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q1</summary>
+<p><strong>Step 1 — Decide the side.</strong> Money coming in goes on the receipts side. Money going out goes on the payments side.</p>
+<p><strong>Step 2 — Decide the column.</strong> A cheque we receive is not in the bank until deposited, so Kumari's and Sunil's cheques start in the <strong>cash</strong> column. The loan is taken as paid straight into the bank.</p>
+<p><strong>Step 3 — Mark the contra entries.</strong> May 8, 24 and 30 only move money between cash and bank, so each appears on both sides.</p>
+<p><strong>Receipts side (Dr)</strong></p>
+<table>
+<thead>
+<tr>
+<th>May</th>
+<th>Details</th>
 <th>Cash</th>
 <th>Bank</th>
 </tr>
@@ -623,524 +750,2427 @@ Q6-இல் items total 621; float 600. இந்த முரண்பாட�
 <tr>
 <td>1</td>
 <td>Capital</td>
-<td>+1,000</td>
-<td></td>
-</tr>
-<tr>
-<td>2</td>
-<td>Rent</td>
-<td>−230</td>
+<td>1,000</td>
 <td></td>
 </tr>
 <tr>
 <td>3</td>
 <td>Bank loan</td>
 <td></td>
-<td>+2,000</td>
+<td>2,000</td>
 </tr>
 <tr>
-<td>4, 7</td>
-<td>Cheques: Kumari 190, F Sunil 34</td>
-<td>+224</td>
+<td>4</td>
+<td>Kumari</td>
+<td>190</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>F Sunil</td>
+<td>34</td>
 <td></td>
 </tr>
 <tr>
 <td>8</td>
-<td>Deposited (contra ¢)</td>
-<td>−224</td>
-<td>+224</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Paid Gayan</td>
-<td>−92</td>
+<td>Cash (C)</td>
 <td></td>
+<td>224</td>
 </tr>
 <tr>
 <td>11</td>
-<td>Kusun paid us</td>
-<td>+96</td>
+<td>Kusun</td>
+<td>96</td>
 <td></td>
-</tr>
-<tr>
-<td>16</td>
-<td>Repaid loan</td>
-<td></td>
-<td>−500</td>
 </tr>
 <tr>
 <td>22</td>
-<td>Cash sales</td>
-<td>+122</td>
+<td>Sales</td>
+<td>122</td>
 <td></td>
 </tr>
 <tr>
 <td>24</td>
-<td>Cash deposited (contra)</td>
-<td>−50</td>
-<td>+50</td>
+<td>Cash (C)</td>
+<td></td>
+<td>50</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Bank (C)</td>
+<td>200</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Total</strong></td>
+<td><strong>1,642</strong></td>
+<td><strong>2,274</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Payments side (Cr)</strong></p>
+<table>
+<thead>
+<tr>
+<th>May</th>
+<th>Details</th>
+<th>Cash</th>
+<th>Bank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>Rent</td>
+<td>230</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Bank (C)</td>
+<td>224</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Gayan</td>
+<td>92</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Bank loan</td>
+<td></td>
+<td>500</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Bank (C)</td>
+<td>50</td>
+<td></td>
 </tr>
 <tr>
 <td>26</td>
 <td>Motor expenses</td>
 <td></td>
-<td>−75</td>
+<td>75</td>
 </tr>
 <tr>
 <td>30</td>
-<td>Withdrew for business (contra)</td>
-<td>+200</td>
-<td>−200</td>
+<td>Cash (C)</td>
+<td></td>
+<td>200</td>
 </tr>
 <tr>
 <td>31</td>
 <td>Wages</td>
-<td>−320</td>
+<td>320</td>
 <td></td>
 </tr>
 <tr>
-<td></td>
+<td>31</td>
 <td><strong>Balance c/d</strong></td>
 <td><strong>726</strong></td>
 <td><strong>1,499</strong></td>
 </tr>
+<tr>
+<td></td>
+<td><strong>Total</strong></td>
+<td><strong>1,642</strong></td>
+<td><strong>2,274</strong></td>
+</tr>
 </tbody>
-</table></div>
-<div class="call example"><div class="ct">Q2: Kasun bookshop, November 2018</div><p>Key point: Nuwan's cheque (194) is <strong>dishonoured</strong> on Nov 8. Credit the bank column and <strong>debit Nuwan</strong> again.</p>
+</table>
+<p><strong>Step 4 — Balance.</strong> Cash payments total 916, so 1,642 − 916 = <strong>726</strong>. Bank payments total 775, so 2,274 − 775 = <strong>1,499</strong>.</p>
+<p><strong>Final check:</strong> both sides show 1,642 and 2,274. ✓ The balances are brought down on the receipts side on June 1.</p>
+</details>
+<p><strong>Q2. Question:</strong> Write up a two-column cash book for Kasun bookshop.</p>
 <table>
 <thead>
 <tr>
-<th></th>
+<th>2018 Nov</th>
+<th>Transaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Balance brought forward: cash Rs. 295, bank Rs. 4,240</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cash sales Rs. 310</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Nuwan paid us by cheque Rs. 194</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Deposited the above cheque to the bank account</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Paid for postage stamps in cash Rs. 80</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Bought office equipment by cheque Rs. 310</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Paid L Prabath by cheque Rs. 94</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Cheque deposited on Nov 4 is dishonoured by the bank (debtor is Nuwan)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Withdrew Rs. 150 from the bank for business use</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Paid wages in cash Rs. 400</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Cash sales Rs. 430</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Paid motor expenses by cheque Rs. 81</td>
+</tr>
+<tr>
+<td>20</td>
+<td>K Sudath paid us by cheque Rs. 174</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Deposited the above cheque to the bank account</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Paid general expenses in cash Rs. 35</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Paid insurance by cheque Rs. 320</td>
+</tr>
+</tbody>
+</table>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q2</summary>
+<p><strong>Step 1 — Enter the opening balances</strong> on the receipts side.</p>
+<p><strong>Step 2 — Understand "dishonoured".</strong> The bank refused Nuwan's cheque, so the 194 is taken back out of the bank. Enter it on the <strong>payments side, bank column</strong>. In the ledger, debit Nuwan again, because he owes the money once more.</p>
+<p><strong>Step 3 — Enter everything else,</strong> marking the contra entries on Nov 4, 11 and 22.</p>
+<p><strong>Receipts side (Dr)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Nov</th>
+<th>Details</th>
 <th>Cash</th>
 <th>Bank</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Opening balance</td>
+<td>1</td>
+<td>Balance b/d</td>
 <td>295</td>
 <td>4,240</td>
 </tr>
 <tr>
-<td>Receipts: cash sales 310 + 430; cheques Nuwan 194, Sudath 174 (both later deposited); withdrawal 150</td>
-<td>+1,258</td>
-<td>+368</td>
-</tr>
-<tr>
-<td>Contras out (deposits of the two cheques)</td>
-<td>−368</td>
+<td>2</td>
+<td>Sales</td>
+<td>310</td>
 <td></td>
 </tr>
 <tr>
-<td>Payments: postage 80, wages 400, general 35</td>
-<td>−515</td>
+<td>3</td>
+<td>Nuwan</td>
+<td>194</td>
 <td></td>
 </tr>
 <tr>
-<td>Payments: equipment 310, Prabath 94, dishonoured 194, withdrawal 150, motor 81, insurance 320</td>
+<td>4</td>
+<td>Cash (C)</td>
 <td></td>
-<td>−1,149</td>
+<td>194</td>
 </tr>
 <tr>
+<td>11</td>
+<td>Bank (C)</td>
+<td>150</td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>Sales</td>
+<td>430</td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>K Sudath</td>
+<td>174</td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td>Cash (C)</td>
+<td></td>
+<td>174</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Total</strong></td>
+<td><strong>1,553</strong></td>
+<td><strong>4,608</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Payments side (Cr)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Nov</th>
+<th>Details</th>
+<th>Cash</th>
+<th>Bank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>Bank (C)</td>
+<td>194</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Postage</td>
+<td>80</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Office equipment</td>
+<td></td>
+<td>310</td>
+</tr>
+<tr>
+<td>7</td>
+<td>L Prabath</td>
+<td></td>
+<td>94</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Nuwan (dishonoured cheque)</td>
+<td></td>
+<td>194</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Cash (C)</td>
+<td></td>
+<td>150</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Wages</td>
+<td>400</td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>Motor expenses</td>
+<td></td>
+<td>81</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Bank (C)</td>
+<td>174</td>
+<td></td>
+</tr>
+<tr>
+<td>28</td>
+<td>General expenses</td>
+<td>35</td>
+<td></td>
+</tr>
+<tr>
+<td>30</td>
+<td>Insurance</td>
+<td></td>
+<td>320</td>
+</tr>
+<tr>
+<td>30</td>
 <td><strong>Balance c/d</strong></td>
 <td><strong>670</strong></td>
 <td><strong>3,459</strong></td>
 </tr>
+<tr>
+<td></td>
+<td><strong>Total</strong></td>
+<td><strong>1,553</strong></td>
+<td><strong>4,608</strong></td>
+</tr>
 </tbody>
-</table></div>
-<h3 id="three-column-cash-books-with-discounts">Three-column cash books (with discounts)</h3>
-<div class="call tip"><div class="ct">Pre- vs post-discount</div><ul>
-<li>"<strong>Pre-discount</strong>" amount × 5% = the discount, and the cheque is the rest (260 → discount 13, cheque 247).</li>
-<li>"<strong>Post-discount</strong>" amount is the cheque itself, so gross = cheque ÷ 0.95 (475 → gross 500, discount 25).</li>
-</ul></div>
-<div class="call example"><div class="ct">Q3: Wine wholesaler, January</div><table>
+</table>
+<p><strong>Step 4 — Balance.</strong> Cash: 1,553 − 883 = <strong>670</strong>. Bank: 4,608 − 1,149 = <strong>3,459</strong>.</p>
+<p><strong>Final check:</strong> both sides show 1,553 and 4,608. ✓</p>
+</details>
+<h3 id="three-column-cash-books">Three-column cash books</h3>
+<p><strong>Pre-discount or post-discount?</strong></p>
+<table>
 <thead>
 <tr>
-<th>Item</th>
-<th>Disc. allowed</th>
-<th>Cash</th>
-<th>Bank</th>
-<th>Disc. received</th>
+<th>PDF says</th>
+<th>Meaning</th>
+<th>Example at 5%</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Opening balances</td>
+<td>Pre-discount</td>
+<td>The amount is the full debt. Discount = amount × rate</td>
+<td>260: discount 13, cheque 247</td>
+</tr>
+<tr>
+<td>Post-discount</td>
+<td>The amount is the cheque itself. Full debt = cheque ÷ (1 − rate)</td>
+<td>475: full debt 500, discount 25</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The discount columns are not added to cash or bank.</strong> No money moves for a discount. Each column is simply totalled and posted to the ledger.</p>
+<p><strong>Q3. Question:</strong> Write up a three-column cash book for a wine wholesaler, balance it off, and show the discount accounts in the general ledger.</p>
+<table>
+<thead>
+<tr>
+<th>Jan</th>
+<th>Transaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Balances brought forward: cash Rs. 620, bank Rs. 7,142</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Debtors paid by cheque, each deducting 5% cash discount: G Dasun Rs. 260, P Gihan Rs. 320 (pre-discount). All cheques deposited the same date</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Paid rent by cheque Rs. 430</td>
+</tr>
+<tr>
+<td>10</td>
+<td>The company paid by cheque, each deducting 5% cash discount: R Sumudu Rs. 475, G Green Rs. 855 (post-discount)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Paid motor expenses in cash Rs. 81</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Naleen pays his account of Rs. 90 by cash Rs. 88, deducting Rs. 2 cash discount</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Paid wages in cash Rs. 580</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Debtors paid by cheque, each deducting 4% cash discount: A Lalith Rs. 768, B Dhanapala &amp; Sons Rs. 384 (post-discount). All cheques deposited the same date</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Cash drawings Rs. 200</td>
+</tr>
+<tr>
+<td>25</td>
+<td>W Kamal paid his account of Rs. 160 by cash Rs. 155, having deducted Rs. 5 cash discount</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Bought fixtures paying by cheque Rs. 720</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Received commission by cheque Rs. 120, deposited the same date</td>
+</tr>
+</tbody>
+</table>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q3</summary>
+<p><strong>Step 1 — Work out the discounts.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Person</th>
+<th>Working</th>
+<th>Discount</th>
+<th>Cheque or cash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dasun (pre, 5%)</td>
+<td>260 × 5%</td>
+<td>13</td>
+<td>247</td>
+</tr>
+<tr>
+<td>Gihan (pre, 5%)</td>
+<td>320 × 5%</td>
+<td>16</td>
+<td>304</td>
+</tr>
+<tr>
+<td>Sumudu (post, 5%)</td>
+<td>475 ÷ 0.95 = 500</td>
+<td>25</td>
+<td>475</td>
+</tr>
+<tr>
+<td>Green (post, 5%)</td>
+<td>855 ÷ 0.95 = 900</td>
+<td>45</td>
+<td>855</td>
+</tr>
+<tr>
+<td>Lalith (post, 4%)</td>
+<td>768 ÷ 0.96 = 800</td>
+<td>32</td>
+<td>768</td>
+</tr>
+<tr>
+<td>Dhanapala (post, 4%)</td>
+<td>384 ÷ 0.96 = 400</td>
+<td>16</td>
+<td>384</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 2 — Enter the receipts and payments.</strong> Customer discounts go in the receipts-side discount column. Supplier discounts go in the payments-side discount column.</p>
+<p><strong>Receipts side (Dr)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Jan</th>
+<th>Details</th>
+<th>Discount allowed</th>
+<th>Cash</th>
+<th>Bank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Balance b/d</td>
 <td></td>
 <td>620</td>
 <td>7,142</td>
-<td></td>
 </tr>
 <tr>
-<td>Dasun 260 / Gihan 320 (pre, 5%)</td>
-<td>13 + 16 = 29</td>
+<td>3</td>
+<td>G Dasun</td>
+<td>13</td>
 <td></td>
-<td>+551</td>
-<td></td>
+<td>247</td>
 </tr>
 <tr>
-<td>Rent</td>
+<td>3</td>
+<td>P Gihan</td>
+<td>16</td>
 <td></td>
-<td></td>
-<td>−430</td>
-<td></td>
+<td>304</td>
 </tr>
 <tr>
-<td>Sumudu 475 / Green 855 (post, 5%)</td>
-<td></td>
-<td></td>
-<td>−1,330</td>
-<td>25 + 45 = 70</td>
-</tr>
-<tr>
-<td>Motor expenses</td>
-<td></td>
-<td>−81</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
+<td>14</td>
 <td>Naleen</td>
 <td>2</td>
-<td>+88</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Wages</td>
-<td></td>
-<td>−580</td>
-<td></td>
+<td>88</td>
 <td></td>
 </tr>
 <tr>
-<td>Lalith 768 / Dhanapala 384 (post, 4%)</td>
-<td>32 + 16 = 48</td>
+<td>20</td>
+<td>A Lalith</td>
+<td>32</td>
 <td></td>
-<td>+1,152</td>
-<td></td>
+<td>768</td>
 </tr>
 <tr>
-<td>Drawings</td>
+<td>20</td>
+<td>B Dhanapala &amp; Sons</td>
+<td>16</td>
 <td></td>
-<td>−200</td>
-<td></td>
-<td></td>
+<td>384</td>
 </tr>
 <tr>
+<td>25</td>
 <td>W Kamal</td>
 <td>5</td>
-<td>+155</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Fixtures</td>
-<td></td>
-<td></td>
-<td>−720</td>
+<td>155</td>
 <td></td>
 </tr>
 <tr>
+<td>30</td>
 <td>Commission</td>
 <td></td>
 <td></td>
-<td>+120</td>
-<td></td>
+<td>120</td>
 </tr>
 <tr>
-<td><strong>Totals / balance c/d</strong></td>
+<td></td>
+<td><strong>Total</strong></td>
 <td><strong>84</strong></td>
-<td><strong>2</strong></td>
-<td><strong>6,485</strong></td>
-<td><strong>70</strong></td>
+<td><strong>863</strong></td>
+<td><strong>8,965</strong></td>
 </tr>
 </tbody>
 </table>
-<p>General ledger: <strong>Discount allowed Dr 84</strong> (expense) · <strong>Discount received Cr 70</strong> (income).</p></div>
-<div class="call example"><div class="ct">Q4: Office supply shop, February</div><table>
+<p><strong>Payments side (Cr)</strong></p>
+<table>
 <thead>
 <tr>
-<th>Item</th>
-<th>Disc. allowed</th>
+<th>Jan</th>
+<th>Details</th>
+<th>Discount received</th>
 <th>Cash</th>
 <th>Bank</th>
-<th>Disc. received</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Opening</td>
+<td>4</td>
+<td>Rent</td>
+<td></td>
+<td></td>
+<td>430</td>
+</tr>
+<tr>
+<td>10</td>
+<td>R Sumudu</td>
+<td>25</td>
+<td></td>
+<td>475</td>
+</tr>
+<tr>
+<td>10</td>
+<td>G Green</td>
+<td>45</td>
+<td></td>
+<td>855</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Motor expenses</td>
+<td></td>
+<td>81</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Wages</td>
+<td></td>
+<td>580</td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td>Drawings</td>
+<td></td>
+<td>200</td>
+<td></td>
+</tr>
+<tr>
+<td>27</td>
+<td>Fixtures</td>
+<td></td>
+<td></td>
+<td>720</td>
+</tr>
+<tr>
+<td>31</td>
+<td><strong>Balance c/d</strong></td>
+<td></td>
+<td><strong>2</strong></td>
+<td><strong>6,485</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Total</strong></td>
+<td><strong>70</strong></td>
+<td><strong>863</strong></td>
+<td><strong>8,965</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 3 — Post the discount totals to the general ledger.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Debit</th>
+<th>Credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Discount allowed (expense)</td>
+<td>Total from cash book 84</td>
+<td></td>
+</tr>
+<tr>
+<td>Discount received (income)</td>
+<td></td>
+<td>Total from cash book 70</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final check:</strong> cash 863 − 861 = 2 and bank 8,965 − 2,480 = 6,485. ✓</p>
+<p><strong>Problem in the PDF's figures:</strong> the cash column reaches −153 after the drawings on Jan 22. Real cash cannot be negative, but the closing balance of 2 is still the correct answer from the figures given.</p>
+</details>
+<p><strong>Q4. Question:</strong> Enter these in the three-column cash book of an office supply shop. Balance it off at the end of the month and show the discount accounts in the general ledger.</p>
+<table>
+<thead>
+<tr>
+<th>Feb</th>
+<th>Transaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Balances brought forward: cash Rs. 420, bank Rs. 4,940</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Debtors paid by cheque, each deducting 5% cash discount: S Nilani Rs. 820, Diliani Rs. 320 (pre-discount). All cheques deposited into the current account the same date</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Cash sales Rs. 740</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Paid rent by cash Rs. 340</td>
+</tr>
+<tr>
+<td>10</td>
+<td>The company paid creditors by cheque, each deducting 6% cash discount: M Kasun Rs. 470, G Gunapala Rs. 846 (post-discount)</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Withdrew cash from the bank for business use Rs. 400</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Withdrew cash from the bank for the owner's personal use Rs. 800</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Paid wages by cash Rs. 540</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Bought fixtures by cheque Rs. 4,320</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Bought furniture paying by cheque Rs. 14,300</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Received Rs. 324 cheque from A Kanthi, deposited the same date</td>
+</tr>
+</tbody>
+</table>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q4</summary>
+<p><strong>Step 1 — Work out the discounts.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Person</th>
+<th>Working</th>
+<th>Discount</th>
+<th>Cheque</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S Nilani (pre, 5%)</td>
+<td>820 × 5%</td>
+<td>41</td>
+<td>779</td>
+</tr>
+<tr>
+<td>Diliani (pre, 5%)</td>
+<td>320 × 5%</td>
+<td>16</td>
+<td>304</td>
+</tr>
+<tr>
+<td>M Kasun (post, 6%)</td>
+<td>470 ÷ 0.94 = 500</td>
+<td>30</td>
+<td>470</td>
+</tr>
+<tr>
+<td>G Gunapala (post, 6%)</td>
+<td>846 ÷ 0.94 = 900</td>
+<td>54</td>
+<td>846</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 2 — Spot the two withdrawals.</strong> Feb 15 stays in the business, so it is a <strong>contra entry</strong>. Feb 20 leaves the business, so it is <strong>drawings</strong> and appears only on the payments side.</p>
+<p><strong>Receipts side (Dr)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feb</th>
+<th>Details</th>
+<th>Discount allowed</th>
+<th>Cash</th>
+<th>Bank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Balance b/d</td>
 <td></td>
 <td>420</td>
 <td>4,940</td>
+</tr>
+<tr>
+<td>2</td>
+<td>S Nilani</td>
+<td>41</td>
+<td></td>
+<td>779</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Diliani</td>
+<td>16</td>
+<td></td>
+<td>304</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sales</td>
+<td></td>
+<td>740</td>
 <td></td>
 </tr>
 <tr>
-<td>Nilani 820 / Diliani 320 (pre, 5%)</td>
-<td>41 + 16 = 57</td>
+<td>15</td>
+<td>Bank (C)</td>
 <td></td>
-<td>+1,083</td>
-<td></td>
-</tr>
-<tr>
-<td>Cash sales</td>
-<td></td>
-<td>+740</td>
-<td></td>
+<td>400</td>
 <td></td>
 </tr>
 <tr>
-<td>Rent</td>
-<td></td>
-<td>−340</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Kasun 470 / Gunapala 846 (post, 6%)</td>
-<td></td>
-<td></td>
-<td>−1,316</td>
-<td>30 + 54 = 84</td>
-</tr>
-<tr>
-<td>Withdrawn for business (contra)</td>
-<td></td>
-<td>+400</td>
-<td>−400</td>
-<td></td>
-</tr>
-<tr>
-<td>Withdrawn for owner (drawings)</td>
-<td></td>
-<td></td>
-<td>−800</td>
-<td></td>
-</tr>
-<tr>
-<td>Wages</td>
-<td></td>
-<td>−540</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Fixtures / furniture</td>
-<td></td>
-<td></td>
-<td>−4,320 / −14,300</td>
-<td></td>
-</tr>
-<tr>
+<td>28</td>
 <td>A Kanthi</td>
 <td></td>
 <td></td>
-<td>+324</td>
+<td>324</td>
+</tr>
+<tr>
+<td>28</td>
+<td><strong>Balance c/d (overdraft)</strong></td>
+<td></td>
+<td></td>
+<td><strong>14,789</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Total</strong></td>
+<td><strong>57</strong></td>
+<td><strong>1,560</strong></td>
+<td><strong>21,136</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Payments side (Cr)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feb</th>
+<th>Details</th>
+<th>Discount received</th>
+<th>Cash</th>
+<th>Bank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>Rent</td>
+<td></td>
+<td>340</td>
 <td></td>
 </tr>
 <tr>
-<td><strong>Balance</strong></td>
-<td><strong>57</strong></td>
+<td>10</td>
+<td>M Kasun</td>
+<td>30</td>
+<td></td>
+<td>470</td>
+</tr>
+<tr>
+<td>10</td>
+<td>G Gunapala</td>
+<td>54</td>
+<td></td>
+<td>846</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Cash (C)</td>
+<td></td>
+<td></td>
+<td>400</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Drawings</td>
+<td></td>
+<td></td>
+<td>800</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Wages</td>
+<td></td>
+<td>540</td>
+<td></td>
+</tr>
+<tr>
+<td>26</td>
+<td>Fixtures</td>
+<td></td>
+<td></td>
+<td>4,320</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Furniture</td>
+<td></td>
+<td></td>
+<td>14,300</td>
+</tr>
+<tr>
+<td>28</td>
+<td><strong>Balance c/d</strong></td>
+<td></td>
 <td><strong>680</strong></td>
-<td><strong>−14,789</strong></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Total</strong></td>
 <td><strong>84</strong></td>
+<td><strong>1,560</strong></td>
+<td><strong>21,136</strong></td>
 </tr>
 </tbody>
 </table>
-<p>The bank balance is <strong>negative</strong>, so it's a <strong>bank overdraft of Rs. 14,789</strong>: a <strong>credit</strong> balance brought down, shown as a current liability.</p></div>
-<h3 id="petty-cash-imprest-system">Petty cash (imprest system)</h3>
-<div class="call example"><div class="ct">Q5: Jothipala Ltd, May 2019 (float 3,000)</div><table>
+<p><strong>Step 3 — Understand the bank balance.</strong> Bank payments of 21,136 are more than receipts of 6,347. The difference of <strong>14,789</strong> is a <strong>bank overdraft</strong>: the business owes the bank, so it is a current liability. The balancing figure goes on the receipts side.</p>
+<p><strong>Step 4 — Post the discount totals.</strong> Discount allowed: Dr 57. Discount received: Cr 84.</p>
+<p><strong>Final check:</strong> cash closes at <strong>680</strong> and the bank is overdrawn by <strong>14,789</strong>. Both sides show 1,560 and 21,136. ✓</p>
+</details>
+<h3 id="petty-cash-books">Petty cash books</h3>
+<p><strong>How a petty cash book works:</strong> money received goes on the left. Each payment goes in the Total column and again in one analysis column. At the end, the analysis columns must add up to the Total column.</p>
+<p><strong>Q5. Question:</strong> The following is a summary of the petty cash transactions of Jothipala Ltd for May 2019. May 1: received Rs. 3,000 from the main cash controller as the petty cash float.</p>
+<p>Payments: May 2 postage 180 · 3 travelling 120 · 4 cleaning 150 · 7 petrol for delivery van 220 · 8 travelling 250 · 9 stationery 170 · 11 cleaning 180 · 14 postage 50 · 15 travelling 80 · 18 stationery 90 · 18 cleaning 230 · 20 postage 130 · 24 delivery van 5,000-mile service 430 · 26 petrol 180 · 27 cleaning 210 · 29 postage 50 · 30 petrol 140.</p>
+<p>(a) Rule up a petty cash book with analysis columns for cleaning, motor expenses, postage, stationery and travelling. (b) Enter the month's transactions. (c) Enter the receipt needed to restore the imprest and carry down the balance for the next month.</p>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q5</summary>
+<p><strong>Step 1 — Choose the column.</strong> Petrol and the van service both go under <strong>motor expenses</strong>.</p>
+<p><strong>Step 2 — Enter each payment twice:</strong> in Total and in its analysis column.</p>
+<table>
 <thead>
 <tr>
+<th>May</th>
+<th>Details</th>
+<th>Received</th>
+<th>Total paid</th>
 <th>Cleaning</th>
-<th>Motor (petrol + service)</th>
+<th>Motor</th>
 <th>Postage</th>
 <th>Stationery</th>
 <th>Travelling</th>
-<th><strong>Total</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>770</td>
-<td>970</td>
-<td>410</td>
-<td>260</td>
-<td>450</td>
+<td>1</td>
+<td>Main cash</td>
+<td>3,000</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Postage</td>
+<td></td>
+<td>180</td>
+<td></td>
+<td></td>
+<td>180</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Travelling</td>
+<td></td>
+<td>120</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>120</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Cleaning</td>
+<td></td>
+<td>150</td>
+<td>150</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Petrol</td>
+<td></td>
+<td>220</td>
+<td></td>
+<td>220</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Travelling</td>
+<td></td>
+<td>250</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>250</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Stationery</td>
+<td></td>
+<td>170</td>
+<td></td>
+<td></td>
+<td></td>
+<td>170</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Cleaning</td>
+<td></td>
+<td>180</td>
+<td>180</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>Postage</td>
+<td></td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>50</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Travelling</td>
+<td></td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>80</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Stationery</td>
+<td></td>
+<td>90</td>
+<td></td>
+<td></td>
+<td></td>
+<td>90</td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td>Cleaning</td>
+<td></td>
+<td>230</td>
+<td>230</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>Postage</td>
+<td></td>
+<td>130</td>
+<td></td>
+<td></td>
+<td>130</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td>Van service</td>
+<td></td>
+<td>430</td>
+<td></td>
+<td>430</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>26</td>
+<td>Petrol</td>
+<td></td>
+<td>180</td>
+<td></td>
+<td>180</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>27</td>
+<td>Cleaning</td>
+<td></td>
+<td>210</td>
+<td>210</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>29</td>
+<td>Postage</td>
+<td></td>
+<td>50</td>
+<td></td>
+<td></td>
+<td>50</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>30</td>
+<td>Petrol</td>
+<td></td>
+<td>140</td>
+<td></td>
+<td>140</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Totals</strong></td>
+<td><strong>3,000</strong></td>
 <td><strong>2,860</strong></td>
+<td><strong>770</strong></td>
+<td><strong>970</strong></td>
+<td><strong>410</strong></td>
+<td><strong>260</strong></td>
+<td><strong>450</strong></td>
+</tr>
+<tr>
+<td>31</td>
+<td>Main cash (restore)</td>
+<td>2,860</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>31</td>
+<td>Balance c/d</td>
+<td></td>
+<td>3,000</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Grand total</strong></td>
+<td><strong>5,860</strong></td>
+<td><strong>5,860</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>Balance left = 3,000 − 2,860 = 140. <strong>Restore the imprest:</strong> receive <strong>2,860</strong> from the main cashier, and carry down <strong>3,000</strong> for June.</p></div>
-<div class="call example"><div class="ct">Q6: Petty cash book, June 2018 (float 600)</div><table>
+<p><strong>Step 3 — Restore the imprest.</strong> Cash left = 3,000 − 2,860 = 140. The top-up equals the amount spent, <strong>2,860</strong>, which brings petty cash back to <strong>3,000</strong>.</p>
+<p><strong>Final check:</strong> 770 + 970 + 410 + 260 + 450 = 2,860. ✓</p>
+</details>
+<p><strong>Q6. Question:</strong> Rule up a petty cash book with analysis columns for office expenses, motor expenses, cleaning expenses and casual labour. The cash float is Rs. 600 and the amount spent is reimbursed on 30 June.</p>
+<p>2018 June payments: 1 Gayan, casual labour 18 · 2 letterheadings 41 · 2 Ananda Motors, motor repairs 67 · 3 cleaning materials 4 · 6 envelopes 11 · 8 petrol 22 · 11 Priyantha, casual labour 16 · 12 Tilan, cleaner 8 · 12 paper clips 3 · 14 petrol 19 · 16 adhesive tape 3 · 16 petrol 27 · 21 motor taxation 95 · 22 Pasan, casual labour 19 · 23 Tiron, cleaner 14 · 24 Janith, casual labour 27 · 25 copy paper 10 · 26 Lively Cars, motor repairs 80 · 29 petrol 90 · 30 Fayas, casual labour 47.</p>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q6</summary>
+<p><strong>Step 1 — Choose the column.</strong> Paper, envelopes, clips and tape are office expenses. Petrol, repairs and motor tax are motor expenses. A cleaner's pay and cleaning materials are cleaning expenses.</p>
+<table>
 <thead>
 <tr>
-<th>Office expenses</th>
-<th>Motor expenses</th>
+<th>June</th>
+<th>Details</th>
+<th>Total paid</th>
+<th>Office</th>
+<th>Motor</th>
 <th>Cleaning</th>
 <th>Casual labour</th>
-<th><strong>Total</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>68</td>
-<td>400</td>
+<td>1</td>
+<td>Gayan</td>
+<td>18</td>
+<td></td>
+<td></td>
+<td></td>
+<td>18</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Letterheadings</td>
+<td>41</td>
+<td>41</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ananda Motors</td>
+<td>67</td>
+<td></td>
+<td>67</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Cleaning materials</td>
+<td>4</td>
+<td></td>
+<td></td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Envelopes</td>
+<td>11</td>
+<td>11</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Petrol</td>
+<td>22</td>
+<td></td>
+<td>22</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Priyantha</td>
+<td>16</td>
+<td></td>
+<td></td>
+<td></td>
+<td>16</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Tilan</td>
+<td>8</td>
+<td></td>
+<td></td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Paper clips</td>
+<td>3</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>Petrol</td>
+<td>19</td>
+<td></td>
+<td>19</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Adhesive tape</td>
+<td>3</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Petrol</td>
+<td>27</td>
+<td></td>
+<td>27</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>21</td>
+<td>Motor taxation</td>
+<td>95</td>
+<td></td>
+<td>95</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td>Pasan</td>
+<td>19</td>
+<td></td>
+<td></td>
+<td></td>
+<td>19</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Tiron</td>
+<td>14</td>
+<td></td>
+<td></td>
+<td>14</td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td>Janith</td>
+<td>27</td>
+<td></td>
+<td></td>
+<td></td>
+<td>27</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Copy paper</td>
+<td>10</td>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>26</td>
-<td>127</td>
+<td>Lively Cars</td>
+<td>80</td>
+<td></td>
+<td>80</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>29</td>
+<td>Petrol</td>
+<td>90</td>
+<td></td>
+<td>90</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>30</td>
+<td>Fayas</td>
+<td>47</td>
+<td></td>
+<td></td>
+<td></td>
+<td>47</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Totals</strong></td>
 <td><strong>621</strong></td>
+<td><strong>68</strong></td>
+<td><strong>400</strong></td>
+<td><strong>26</strong></td>
+<td><strong>127</strong></td>
 </tr>
 </tbody>
-</table></div>
-<div class="call warn"><div class="ct">Q6: check the figures</div><p>The items add up to <strong>621</strong>, which is <strong>more than the 600 float</strong>, so the paper's numbers can't all be right. The method still holds: reimburse the amount spent on 30 June to restore the float.</p></div>
-<div class="call example"><div class="ct">Q7: Osada Printing, May 2019 (float 5,000)</div><table>
+</table>
+<p><strong>Step 2 — Reimburse on 30 June.</strong> Received: opening float 600 + reimbursement 621 = 1,221. Paid: 621. Balance carried down = 1,221 − 621 = <strong>600</strong>.</p>
+<p><strong>Final check:</strong> 68 + 400 + 26 + 127 = 621. ✓</p>
+<p><strong>Problem in the PDF's figures:</strong> the payments total 621, which is 21 more than the 600 float. A real petty cash box could not pay this without extra money. The method and totals are still correct, and it is worth mentioning this in your answer.</p>
+</details>
+<p><strong>Q7. Question:</strong> Osada Printing Ltd operates petty cash on the imprest system with a float of Rs. 5,000. Record these May 2019 transactions in the petty cash book and post the balances in the ledger at the end of the month.</p>
+<p>May 1 cash received from the main cash controller · 1 bus fares 40 · 2 stationery 60 · 4 bus fares 120 · 7 postage stamps 60 · 7 paid to creditor X 200 · 8 bus fares 80 · 11 Tippex 50 · 12 typewriter ribbons 90 · 14 parcel postage 120 · 15 paperclips 15 · 15 newspapers 70 · 16 photocopier repair 130 · 19 postage stamps 76 · 20 drawing pins 70 · 21 train fare 65 · 22 photocopier paper 175 · 23 display decorations 80 · 23 Tippex 50 · 25 wrapping paper 89 · 27 Sellotape 40 · 30 pens 60.</p>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q7</summary>
+<p><strong>Step 1 — Choose the columns.</strong> The PDF does not name any, so these are chosen: travel, stationery, postage, sundry and ledger. "Ledger" holds a payment to a creditor, which is not an expense.</p>
+<table>
 <thead>
 <tr>
+<th>May</th>
+<th>Details</th>
+<th>Total paid</th>
 <th>Travel</th>
 <th>Stationery</th>
 <th>Postage</th>
-<th>Sundry (newspapers, repairs, display, wrapping)</th>
-<th>Ledger (creditor X)</th>
-<th><strong>Total</strong></th>
+<th>Sundry</th>
+<th>Ledger</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>305</td>
-<td>610</td>
-<td>256</td>
-<td>369</td>
+<td>1</td>
+<td>Bus fares</td>
+<td>40</td>
+<td>40</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Stationery</td>
+<td>60</td>
+<td></td>
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Bus fares</td>
+<td>120</td>
+<td>120</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Postage stamps</td>
+<td>60</td>
+<td></td>
+<td></td>
+<td>60</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Creditor X</td>
 <td>200</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>200</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Bus fares</td>
+<td>80</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Tippex</td>
+<td>50</td>
+<td></td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Typewriter ribbons</td>
+<td>90</td>
+<td></td>
+<td>90</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>Parcel postage</td>
+<td>120</td>
+<td></td>
+<td></td>
+<td>120</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Paperclips</td>
+<td>15</td>
+<td></td>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Newspapers</td>
+<td>70</td>
+<td></td>
+<td></td>
+<td></td>
+<td>70</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Photocopier repair</td>
+<td>130</td>
+<td></td>
+<td></td>
+<td></td>
+<td>130</td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>Postage stamps</td>
+<td>76</td>
+<td></td>
+<td></td>
+<td>76</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>Drawing pins</td>
+<td>70</td>
+<td></td>
+<td>70</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>21</td>
+<td>Train fare</td>
+<td>65</td>
+<td>65</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td>Photocopier paper</td>
+<td>175</td>
+<td></td>
+<td>175</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>23</td>
+<td>Display decorations</td>
+<td>80</td>
+<td></td>
+<td></td>
+<td></td>
+<td>80</td>
+<td></td>
+</tr>
+<tr>
+<td>23</td>
+<td>Tippex</td>
+<td>50</td>
+<td></td>
+<td>50</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>25</td>
+<td>Wrapping paper</td>
+<td>89</td>
+<td></td>
+<td></td>
+<td></td>
+<td>89</td>
+<td></td>
+</tr>
+<tr>
+<td>27</td>
+<td>Sellotape</td>
+<td>40</td>
+<td></td>
+<td>40</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>30</td>
+<td>Pens</td>
+<td>60</td>
+<td></td>
+<td>60</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Totals</strong></td>
 <td><strong>1,740</strong></td>
+<td><strong>305</strong></td>
+<td><strong>610</strong></td>
+<td><strong>256</strong></td>
+<td><strong>369</strong></td>
+<td><strong>200</strong></td>
 </tr>
 </tbody>
 </table>
-<p>Balance 3,260, reimbursed 1,740 → <strong>5,000</strong> carried down. Post each column total to its expense account, and the 200 to <strong>creditor X (Dr)</strong>.</p></div>
-<h3 id="opening-entries-and-the-general-journal">Opening entries and the general journal</h3>
-<div class="call example"><div class="ct">Q8: Araliya Enterprises, opening balances 1 Jan 2019</div><p>Assets: land 800,000 + building 400,000 + debtors 70,000 + cash 60,000 + bank 30,000 = <strong>1,360,000</strong>. Liabilities: creditors 70,000 + bank loan 120,000 = 190,000.</p>
-<p><strong>Capital (the balancing figure) = 1,170,000.</strong> Record it in the <strong>general journal</strong> (opening entry): debit each asset, and credit each liability and capital.</p></div>
-<div class="call example"><div class="ct">Q9: Mora Enterprises</div><p>Opening capital = 700,000 + 200,000 + 300,000 − 100,000 − 30,000 = <strong>1,070,000</strong>.</p>
+<p><strong>Step 2 — Balance.</strong> Cash left = 5,000 − 1,740 = 3,260. The main cash controller reimburses <strong>1,740</strong>, so <strong>5,000</strong> is carried down.</p>
+<p><strong>Step 3 — Post to the ledger.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Debit</th>
+<th>Credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Travel expense</td>
+<td>305</td>
+<td></td>
+</tr>
+<tr>
+<td>Stationery expense</td>
+<td>610</td>
+<td></td>
+</tr>
+<tr>
+<td>Postage expense</td>
+<td>256</td>
+<td></td>
+</tr>
+<tr>
+<td>Sundry expense</td>
+<td>369</td>
+<td></td>
+</tr>
+<tr>
+<td>Creditor X (reduces what is owed)</td>
+<td>200</td>
+<td></td>
+</tr>
+<tr>
+<td>Petty cash</td>
+<td></td>
+<td>1,740</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final check:</strong> debits 305 + 610 + 256 + 369 + 200 = 1,740, equal to the credit. ✓</p>
+</details>
+<h3 id="opening-balances-and-the-general-journal">Opening balances and the general journal</h3>
+<p><strong>Opening entry:</strong> debit every asset and credit every liability. Capital is never given, so work it out: <strong>capital = assets − liabilities</strong>.</p>
+<p><strong>Which book?</strong> A non-current asset (land, machine, vehicle, furniture) bought or sold on credit goes in the <strong>general journal</strong>. Goods for resale on credit go in the <strong>purchase journal</strong>. Anything paid in cash goes in the <strong>cash book</strong>.</p>
+<p><strong>Q8. Question:</strong> Araliya Enterprises had these opening balances at 1 January 2019: land 800,000; building 400,000; debtor Kumara 30,000; debtor Nuwan 40,000; creditor Sandun 50,000; creditor Kasun 20,000; cash 60,000; bank 30,000; bank loan 120,000. Record them in the relevant primary entry book and post into the ledger.</p>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q8</summary>
+<p><strong>Step 1 — Find capital.</strong> Assets: 800,000 + 400,000 + 30,000 + 40,000 + 60,000 + 30,000 = 1,360,000. Liabilities: 50,000 + 20,000 + 120,000 = 190,000. Capital = <strong>1,170,000</strong>.</p>
+<p><strong>Step 2 — Write the opening entry in the general journal.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Dr (Rs.)</th>
+<th>Cr (Rs.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Land</td>
+<td>800,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Building</td>
+<td>400,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Debtor – Kumara</td>
+<td>30,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Debtor – Nuwan</td>
+<td>40,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Cash</td>
+<td>60,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Bank</td>
+<td>30,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Creditor – Sandun</td>
+<td></td>
+<td>50,000</td>
+</tr>
+<tr>
+<td>Creditor – Kasun</td>
+<td></td>
+<td>20,000</td>
+</tr>
+<tr>
+<td>Bank loan</td>
+<td></td>
+<td>120,000</td>
+</tr>
+<tr>
+<td>Capital</td>
+<td></td>
+<td>1,170,000</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>1,360,000</strong></td>
+<td><strong>1,360,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Being the opening balances at 1 January 2019.</em></p>
+<p><strong>Step 3 — Post to the ledger.</strong> Open one account for each line. Debit lines go on the debit side as "Balance b/d", and credit lines on the credit side. Cash and bank are entered as opening balances in the cash book.</p>
+<p><strong>Final check:</strong> debits and credits both total 1,360,000. ✓</p>
+</details>
+<p><strong>Q9. Question:</strong> Mora Enterprises had these figures at 1 April 2019: land and building 700,000; debtors 200,000; machineries 300,000; creditors 100,000; payables 30,000. On 2 April it purchased 2 machineries at 300,000 each on credit from Kalthota Enterprises. On 22 April it purchased furniture on credit from ABC Co. for Rs. 550,000. Record the opening balances and transactions in the relevant primary entry books and post into the ledger.</p>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q9</summary>
+<p><strong>Step 1 — Find capital.</strong> Assets 700,000 + 200,000 + 300,000 = 1,200,000. Liabilities 100,000 + 30,000 = 130,000. Capital = <strong>1,070,000</strong>.</p>
+<p><strong>Step 2 — General journal.</strong> Machinery and furniture are not for resale, so both go here.</p>
 <table>
 <thead>
 <tr>
 <th>Date</th>
-<th>Dr</th>
-<th>Cr</th>
-<th>Rs.</th>
+<th>Account</th>
+<th>Dr (Rs.)</th>
+<th>Cr (Rs.)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Apr 2</td>
+<td>Apr 1</td>
+<td>Land and building</td>
+<td>700,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Debtors</td>
+<td>200,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
 <td>Machinery</td>
+<td>300,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Creditors</td>
+<td></td>
+<td>100,000</td>
+</tr>
+<tr>
+<td></td>
+<td>Payables</td>
+<td></td>
+<td>30,000</td>
+</tr>
+<tr>
+<td></td>
+<td>Capital</td>
+<td></td>
+<td>1,070,000</td>
+</tr>
+<tr>
+<td>Apr 2</td>
+<td>Machinery (2 × 300,000)</td>
+<td>600,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
 <td>Kalthota Enterprises</td>
+<td></td>
 <td>600,000</td>
 </tr>
 <tr>
 <td>Apr 22</td>
 <td>Furniture</td>
+<td>550,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
 <td>ABC Co.</td>
+<td></td>
 <td>550,000</td>
 </tr>
 </tbody>
-</table></div>
-<div class="call example"><div class="ct">Q10: Kalyana Enterprises, January 2019</div><table>
+</table>
+<p><strong>Step 3 — Ledger balances.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Dr (Rs.)</th>
+<th>Cr (Rs.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Land and building</td>
+<td>700,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Debtors</td>
+<td>200,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Machinery (300,000 + 600,000)</td>
+<td>900,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Furniture</td>
+<td>550,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Creditors</td>
+<td></td>
+<td>100,000</td>
+</tr>
+<tr>
+<td>Payables</td>
+<td></td>
+<td>30,000</td>
+</tr>
+<tr>
+<td>Kalthota Enterprises</td>
+<td></td>
+<td>600,000</td>
+</tr>
+<tr>
+<td>ABC Co.</td>
+<td></td>
+<td>550,000</td>
+</tr>
+<tr>
+<td>Capital</td>
+<td></td>
+<td>1,070,000</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>2,350,000</strong></td>
+<td><strong>2,350,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final check:</strong> both columns total 2,350,000. ✓</p>
+</details>
+<p><strong>Q10. Question:</strong> Kalyana Enterprises made these transactions in January 2019. Prepare the general journal and post into the ledger.</p>
+<ul>
+<li>6 Jan: purchased a motor vehicle on credit from Indra Traders Ltd for Rs. 1,800,000.</li>
+<li>8 Jan: purchased goods for re-selling for Rs. 50,000 on credit from Sunimal Enterprises.</li>
+<li>14 Jan: purchased furniture worth 200,000 for business use from Swarnapal and Sons on credit.</li>
+<li>25 Jan: purchased machinery worth 500,000 from Rajapaksha &amp; Sons on cash basis.</li>
+</ul>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q10</summary>
+<p><strong>Step 1 — Choose the book for each item.</strong> This is the point of the question: only two of the four belong in the general journal.</p>
+<table>
 <thead>
 <tr>
 <th>Date</th>
 <th>Book</th>
-<th>Entry</th>
+<th>Why</th>
+<th>Debit</th>
+<th>Credit</th>
+<th>Rs.</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Jan 6</td>
 <td>General journal</td>
-<td>Dr Motor vehicle 1,800,000 / Cr Indra Traders</td>
+<td>Non-current asset on credit</td>
+<td>Motor vehicle</td>
+<td>Indra Traders Ltd</td>
+<td>1,800,000</td>
 </tr>
 <tr>
 <td>Jan 8</td>
-<td><strong>Purchase journal</strong> (goods for resale)</td>
-<td>Dr Purchases 50,000 / Cr Sunimal</td>
+<td>Purchase journal</td>
+<td>Goods for resale on credit</td>
+<td>Purchases</td>
+<td>Sunimal Enterprises</td>
+<td>50,000</td>
 </tr>
 <tr>
 <td>Jan 14</td>
 <td>General journal</td>
-<td>Dr Furniture 200,000 / Cr Swarnapal &amp; Sons</td>
+<td>Non-current asset on credit</td>
+<td>Furniture</td>
+<td>Swarnapal and Sons</td>
+<td>200,000</td>
 </tr>
 <tr>
 <td>Jan 25</td>
-<td><strong>Cash book</strong> (paid cash)</td>
-<td>Dr Machinery 500,000 / Cr Cash</td>
+<td>Cash book</td>
+<td>Paid in cash</td>
+<td>Machinery</td>
+<td>Cash</td>
+<td>500,000</td>
 </tr>
 </tbody>
-</table></div>
-<div class="call example"><div class="ct">Q11: Nuwana Enterprises (disposals on credit)</div><p>Opening capital = 400,000 + 400,000 + 234,000 + 50,000 − 150,000 = <strong>934,000</strong>.</p>
+</table>
+<p><strong>Step 2 — Post to the ledger.</strong></p>
 <table>
 <thead>
 <tr>
-<th>Date</th>
-<th>Dr</th>
-<th>Cr</th>
+<th>Account</th>
+<th>Dr (Rs.)</th>
+<th>Cr (Rs.)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>Motor vehicle</td>
+<td>1,800,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Purchases</td>
+<td>50,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Furniture</td>
+<td>200,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Machinery</td>
+<td>500,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Indra Traders Ltd</td>
+<td></td>
+<td>1,800,000</td>
+</tr>
+<tr>
+<td>Sunimal Enterprises</td>
+<td></td>
+<td>50,000</td>
+</tr>
+<tr>
+<td>Swarnapal and Sons</td>
+<td></td>
+<td>200,000</td>
+</tr>
+<tr>
+<td>Cash</td>
+<td></td>
+<td>500,000</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>2,550,000</strong></td>
+<td><strong>2,550,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final check:</strong> both columns total 2,550,000. ✓ The PDF gives no opening balances, so the 500,000 cash shows only the payment.</p>
+</details>
+<p><strong>Q11. Question:</strong> Nuwana Enterprises had these figures at 1 April 2019: land 400,000; building 400,000; debtors 234,000; furniture 50,000; creditors 150,000. On 6 April it sold the furniture to Kamal on credit for Rs. 75,000. On 17 April it sold half the land on credit to Gihan for Rs. 300,000. Prepare the general journal and post into the ledger.</p>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q11</summary>
+<p><strong>Step 1 — Find capital.</strong> Assets 400,000 + 400,000 + 234,000 + 50,000 = 1,084,000. Liabilities 150,000. Capital = <strong>934,000</strong>.</p>
+<p><strong>Step 2 — Work out each profit.</strong> Profit = selling price − book value of what was sold. Furniture: 75,000 − 50,000 = <strong>25,000</strong>. Half the land: 300,000 − 200,000 = <strong>100,000</strong>.</p>
+<p><strong>Step 3 — General journal.</strong> Sold assets are not "sales", because Sales is only for goods you trade in. Debit the buyer, credit the asset at its book value, and credit the profit.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Account</th>
+<th>Dr (Rs.)</th>
+<th>Cr (Rs.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apr 1</td>
+<td>Land</td>
+<td>400,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Building</td>
+<td>400,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Debtors</td>
+<td>234,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Furniture</td>
+<td>50,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Creditors</td>
+<td></td>
+<td>150,000</td>
+</tr>
+<tr>
+<td></td>
+<td>Capital</td>
+<td></td>
+<td>934,000</td>
+</tr>
+<tr>
 <td>Apr 6</td>
-<td>Kamal 75,000</td>
-<td>Furniture 50,000 · <strong>Profit on disposal 25,000</strong></td>
+<td>Kamal</td>
+<td>75,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Furniture</td>
+<td></td>
+<td>50,000</td>
+</tr>
+<tr>
+<td></td>
+<td>Profit on disposal</td>
+<td></td>
+<td>25,000</td>
 </tr>
 <tr>
 <td>Apr 17</td>
-<td>Gihan 300,000</td>
-<td>Land 200,000 (half of 400,000) · <strong>Profit on disposal 100,000</strong></td>
+<td>Gihan</td>
+<td>300,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Land</td>
+<td></td>
+<td>200,000</td>
+</tr>
+<tr>
+<td></td>
+<td>Profit on disposal</td>
+<td></td>
+<td>100,000</td>
 </tr>
 </tbody>
-</table></div>
-<div class="call example"><div class="ct">Q12: Opening balances and January 2019 entries</div><p>Opening capital = 1,000,000 + 500,000 + 30,000 + 80,000 − 50,000 − 150,000 = <strong>1,410,000</strong>.</p>
+</table>
+<p><strong>Step 4 — Ledger balances.</strong></p>
 <table>
 <thead>
 <tr>
-<th>Date</th>
-<th>Dr</th>
-<th>Cr</th>
-<th>Rs.</th>
+<th>Account</th>
+<th>Dr (Rs.)</th>
+<th>Cr (Rs.)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>Land (400,000 − 200,000)</td>
+<td>200,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Building</td>
+<td>400,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Debtors</td>
+<td>234,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Furniture (50,000 − 50,000)</td>
+<td>nil</td>
+<td></td>
+</tr>
+<tr>
+<td>Kamal</td>
+<td>75,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Gihan</td>
+<td>300,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Creditors</td>
+<td></td>
+<td>150,000</td>
+</tr>
+<tr>
+<td>Capital</td>
+<td></td>
+<td>934,000</td>
+</tr>
+<tr>
+<td>Profit on disposal (25,000 + 100,000)</td>
+<td></td>
+<td>125,000</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>1,209,000</strong></td>
+<td><strong>1,209,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final check:</strong> both columns total 1,209,000. ✓</p>
+</details>
+<p><strong>Q12. Question:</strong> Show the journal entries for the following, then record them in the relevant primary entry books and post into the ledger.</p>
+<p>Opening balances at 1 January 2019: land 1,000,000; building 500,000; debtor Kumara 30,000; creditor Sandun 50,000; cash and bank 80,000; bank loan 150,000.</p>
+<p>January 2019 transactions:</p>
+<ul>
+<li>5 Jan: furniture worth 500,000 purchased on credit from AB Co Ltd.</li>
+<li>14 Jan: land worth 700,000 purchased on cash from XY Co. Ltd.</li>
+<li>20 Jan: motor vehicles worth 800,000 invested in the business as capital by the owner.</li>
+<li>30 Jan: building sold for 700,000 on credit to Jusmin.</li>
+<li>31 Jan: owner withdrew furniture worth 50,000 from the business.</li>
+</ul>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q12</summary>
+<p><strong>Step 1 — Find capital.</strong> Assets 1,000,000 + 500,000 + 30,000 + 80,000 = 1,610,000. Liabilities 50,000 + 150,000 = 200,000. Capital = <strong>1,410,000</strong>.</p>
+<p><strong>Step 2 — Think through the unusual items.</strong> On Jan 20 the owner gave a vehicle instead of money, but it is still capital. On Jan 30 the profit is 700,000 − 500,000 = 200,000. On Jan 31 the owner took furniture instead of money, but it is still drawings.</p>
+<p><strong>Step 3 — Journal entries.</strong> Jan 14 is paid in cash, so its book is the cash book. The rest go in the general journal.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Account</th>
+<th>Dr (Rs.)</th>
+<th>Cr (Rs.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jan 1</td>
+<td>Land</td>
+<td>1,000,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Building</td>
+<td>500,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Debtor – Kumara</td>
+<td>30,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Cash and bank</td>
+<td>80,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Creditor – Sandun</td>
+<td></td>
+<td>50,000</td>
+</tr>
+<tr>
+<td></td>
+<td>Bank loan</td>
+<td></td>
+<td>150,000</td>
+</tr>
+<tr>
+<td></td>
+<td>Capital</td>
+<td></td>
+<td>1,410,000</td>
+</tr>
+<tr>
 <td>Jan 5</td>
 <td>Furniture</td>
+<td>500,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
 <td>AB Co Ltd</td>
+<td></td>
 <td>500,000</td>
 </tr>
 <tr>
 <td>Jan 14</td>
 <td>Land</td>
-<td>Cash (cash book)</td>
+<td>700,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Cash and bank</td>
+<td></td>
 <td>700,000</td>
 </tr>
 <tr>
 <td>Jan 20</td>
 <td>Motor vehicles</td>
-<td><strong>Capital</strong></td>
+<td>800,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Capital</td>
+<td></td>
 <td>800,000</td>
 </tr>
 <tr>
 <td>Jan 30</td>
-<td>Jusmin 700,000</td>
-<td>Building 500,000 · Profit on disposal 200,000</td>
+<td>Jusmin</td>
+<td>700,000</td>
 <td></td>
 </tr>
 <tr>
+<td></td>
+<td>Building</td>
+<td></td>
+<td>500,000</td>
+</tr>
+<tr>
+<td></td>
+<td>Profit on disposal</td>
+<td></td>
+<td>200,000</td>
+</tr>
+<tr>
 <td>Jan 31</td>
-<td><strong>Drawings</strong></td>
+<td>Drawings</td>
+<td>50,000</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
 <td>Furniture</td>
+<td></td>
 <td>50,000</td>
 </tr>
 </tbody>
-</table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>புத்தகங்களின் தொடர்பு</h4><p>ரசீது அல்லது பில்லிலிருந்து தகவல் முதலில் நாள் புத்தகத்திற்கும், பின்னர் <strong>Ledger</strong> கணக்குகளுக்கும் செல்கிறது. எந்தப் பரிவர்த்தனை எந்தப் புத்தகத்தில் தொடங்குகிறது என்பதை முதலில் தீர்மானியுங்கள்.</p></div><div class="ta-recap-item"><h4>Cash book என்றால் என்ன?</h4><p>பணம் அல்லது வங்கி வழியாக வந்ததும் சென்றதும் <strong>Cash book</strong>-இல் பதிவு செய்வோம். Cash-இலிருந்து Bank-க்கு பணம் மாற்றுவது வியாபாரத்தின் உள்ளேயான மாற்றம் (<strong>Contra entry</strong>); அது வருமானம் அல்ல.</p></div><div class="ta-recap-item"><h4>சிறு செலவுப் பணம்</h4><p>தபால், பேருந்துக் கட்டணம் போன்ற சிறு செலவுகளுக்குத் தனிப் பணம் வைப்போம். <strong>Imprest</strong> முறையில் செலவான அளவையே மீண்டும் கொடுத்து தொடக்க நிதியை நிரப்புவோம். ரூ.1,000-இல் ரூ.300 செலவானால் மீளளிப்பு ரூ.300.</p></div><div class="ta-recap-item"><h4>General journal எப்போது?</h4><p>வழக்கமான கொள்வனவு அல்லது விற்பனைப் புத்தகத்திற்குப் பொருந்தாத பதிவுகள் <strong>General journal</strong>-இல் வரும். தொடக்கப் பதிவு, பிழை திருத்தம் போன்றவற்றில் Debit, Credit, காரணம் ஆகியவற்றைத் தெளிவாக எழுத வேண்டும்.</p></div><div class="ta-recap-item"><h4>பயிற்சியில் கவனிக்க வேண்டியது</h4><p>வாடிக்கையாளருக்கு வழங்கிய தள்ளுபடி நமக்கு செலவு; சப்ளையர் வழங்கிய தள்ளுபடி நமக்கு பயன். பணம், வங்கி, தள்ளுபடிக் கட்டங்களைத் தனித்தனியாகக் கூட்டுங்கள். Petty cash-இல் செலவுகளின் மொத்தம் மீளளிப்புடன் பொருந்துகிறதா பாருங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><table>
+</table>
+<p><strong>Step 4 — Ledger balances.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Dr (Rs.)</th>
+<th>Cr (Rs.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Land (1,000,000 + 700,000)</td>
+<td>1,700,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Building (500,000 − 500,000)</td>
+<td>nil</td>
+<td></td>
+</tr>
+<tr>
+<td>Debtor – Kumara</td>
+<td>30,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Furniture (500,000 − 50,000)</td>
+<td>450,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Motor vehicles</td>
+<td>800,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Jusmin</td>
+<td>700,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Drawings</td>
+<td>50,000</td>
+<td></td>
+</tr>
+<tr>
+<td>Cash and bank (80,000 − 700,000)</td>
+<td></td>
+<td>620,000</td>
+</tr>
+<tr>
+<td>Creditor – Sandun</td>
+<td></td>
+<td>50,000</td>
+</tr>
+<tr>
+<td>Bank loan</td>
+<td></td>
+<td>150,000</td>
+</tr>
+<tr>
+<td>AB Co Ltd</td>
+<td></td>
+<td>500,000</td>
+</tr>
+<tr>
+<td>Capital (1,410,000 + 800,000)</td>
+<td></td>
+<td>2,210,000</td>
+</tr>
+<tr>
+<td>Profit on disposal</td>
+<td></td>
+<td>200,000</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>3,730,000</strong></td>
+<td><strong>3,730,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final check:</strong> both columns total 3,730,000. ✓</p>
+<p><strong>Problem in the PDF's figures:</strong> the business pays 700,000 for land but has only 80,000 in cash and bank, leaving a credit balance of 620,000. That could only be a bank overdraft. The entries are still correct as the question states them.</p>
+</details></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>புத்தகங்களின் தொடர்பு</h4><p>ரசீது அல்லது பில்லிலிருந்து தகவல் முதலில் நாள் புத்தகத்திற்கும், பின்னர் <strong>Ledger</strong> கணக்குகளுக்கும் செல்கிறது. எந்தப் பரிவர்த்தனை எந்தப் புத்தகத்தில் தொடங்குகிறது என்பதை முதலில் தீர்மானியுங்கள்.</p></div><div class="ta-recap-item"><h4>Cash book என்றால் என்ன?</h4><p>பணம் அல்லது வங்கி வழியாக வந்ததும் சென்றதும் <strong>Cash book</strong>-இல் பதிவு செய்வோம். Cash-இலிருந்து Bank-க்கு பணம் மாற்றுவது வியாபாரத்தின் உள்ளேயான மாற்றம் (<strong>Contra entry</strong>); அது வருமானம் அல்ல.</p></div><div class="ta-recap-item"><h4>சிறு செலவுப் பணம்</h4><p>தபால், பேருந்துக் கட்டணம் போன்ற சிறு செலவுகளுக்குத் தனிப் பணம் வைப்போம். <strong>Imprest</strong> முறையில் செலவான அளவையே மீண்டும் கொடுத்து தொடக்க நிதியை நிரப்புவோம். ரூ.1,000-இல் ரூ.300 செலவானால் மீளளிப்பு ரூ.300.</p></div><div class="ta-recap-item"><h4>General journal எப்போது?</h4><p>வழக்கமான கொள்வனவு அல்லது விற்பனைப் புத்தகத்திற்குப் பொருந்தாத பதிவுகள் <strong>General journal</strong>-இல் வரும். தொடக்கப் பதிவு, பிழை திருத்தம் போன்றவற்றில் Debit, Credit, காரணம் ஆகியவற்றைத் தெளிவாக எழுத வேண்டும்.</p></div><div class="ta-recap-item"><h4>பயிற்சியில் கவனிக்க வேண்டியது</h4><p>வாடிக்கையாளருக்கு வழங்கிய தள்ளுபடி நமக்கு செலவு; சப்ளையர் வழங்கிய தள்ளுபடி நமக்கு பயன். பணம், வங்கி, தள்ளுபடிக் கட்டங்களைத் தனித்தனியாகக் கூட்டுங்கள். Petty cash-இல் செலவுகளின் மொத்தம் மீளளிப்புடன் பொருந்துகிறதா பாருங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><table>
 <thead>
 <tr>
 <th>Concept</th>
@@ -1201,8 +3231,39 @@ Q6-இல் items total 621; float 600. இந்த முரண்பாட�
 <td>"Being…" explanation under each journal entry</td>
 </tr>
 </tbody>
-</table></div><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">10 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="bpas-Week03" data-pick="0"><script type="application/json" class="qdata">[{"q": "Why is the cash book special?", "o": ["It's both a book of prime entry and a ledger account", "It records only credit transactions", "It's prepared only once a year", "It replaces the trial balance"], "e": "Because of this dual purpose, cash book entries don't need a separate cash ledger account. ", "a": 0, "w": "Week 03"}, {"q": "A three-column cash book has columns for:", "o": ["Cash, sales and purchases", "Cash, bank and discount", "Debit, credit and balance only", "Petty cash, bank and VAT"], "e": "Two-column = cash + bank; three-column adds discount. ", "a": 1, "w": "Week 03"}, {"q": "Cash deposited into the bank is a <strong>contra entry<\/strong>. It is recorded:", "o": ["On both sides of the cash book: credit the cash column and debit the bank column, marked \"C\"", "Only in the general journal", "Only in the bank column", "In the sales journal"], "e": "A contra is a movement between cash and bank, so both entries are in the cash book. ", "a": 0, "w": "Week 03"}, {"q": "Discount <strong>allowed<\/strong> to customers appears on which side of the cash book, and what is it?", "o": ["Debit side; an expense", "Credit side; an income", "Debit side; an income", "It's never recorded"], "e": "Discount received is on the credit side and is income. ", "a": 0, "w": "Week 03"}, {"q": "Trade discount is:", "o": ["Recorded in the discount column", "Not recorded in the books at all", "Recorded as income", "Recorded in the general journal"], "e": "Trade discount is deducted on the invoice before recording. ", "a": 1, "w": "Week 03"}, {"q": "A <strong>credit<\/strong> balance in the bank column means:", "o": ["Cash at bank (an asset)", "A bank overdraft (a liability)", "An error that must be corrected", "Interest received"], "e": "Payments from the bank exceeded receipts. ", "a": 1, "w": "Week 03"}, {"q": "Under the imprest system with a float of Rs 10,000, the petty cashier spends Rs 7,350. How much is the top-up at the end of the period?", "e": "The top-up equals the amount spent, restoring the fixed float. ", "n": 7350.0, "w": "Week 03"}, {"q": "Which transaction is recorded in the <strong>general journal<\/strong>?", "o": ["A cash sale", "A credit purchase of goods for resale", "Owner withdrawing office equipment for personal use", "Paying a supplier by cheque"], "e": "Others include opening entries, credit asset purchases and sales, corrections and adjustments. ", "a": 2, "w": "Week 03"}, {"q": "A \"narration\" in the general journal is:", "o": ["A short explanation under the entry, starting \"Being…\"", "The ledger folio number", "The total of the debit column", "A type of source document"], "e": "Each journal entry needs a narration. ", "a": 0, "w": "Week 03"}, {"q": "Which is an advantage of a petty cash book?", "o": ["It eliminates the need for receipts", "It keeps small expenses out of the main cash book and allows delegation to a petty cashier", "It records large capital expenditure", "It replaces the bank reconciliation"], "e": "It also improves control and record keeping for small items. ", "a": 1, "w": "Week 03"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2002/Week%2002%20-%20Study%20Guide.html"><small>← Previous</small>Accounting Process, Double Entry &amp; Primary Entry Journals</a><a class="nx" href="../Week%2004/Week%2004%20-%20Study%20Guide.html"><small>Next →</small>Capital vs Revenue Expenditure, the Ledger &amp; the Trial Balance</a></div></main></div>
-<script type="application/json" id="study-data">[{"key": "bpas", "name": "Business Processes & Accounting Systems", "exam": ["2026-11-15", "11:00", "14:00"], "url": "Business%20Processes%20and%20Accounting%20Systems/Study%20Guide%20-%20Index.html", "weeks": [{"key": "bpas-Week01", "label": "Week 01", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Business processes"}, {"id": "s2", "title": "Accounting information and its users"}, {"id": "s3", "title": "What is an Accounting Information System?"}, {"id": "s4", "title": "The five components of a computerised AIS"}, {"id": "s5", "title": "Internal control & security"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week02", "label": "Week 02", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is accounting?"}, {"id": "s2", "title": "Stakeholders and what they need"}, {"id": "s3", "title": "The Conceptual Framework for financial reporting"}, {"id": "s4", "title": "Debit & credit rules and the accounting equation"}, {"id": "s5", "title": "The T-account & balancing"}, {"id": "s6", "title": "Source documents & primary books"}, {"id": "s7", "title": "The four day books (primary entry journals)"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week03", "label": "Week 03", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where these books fit"}, {"id": "s2", "title": "The cash book"}, {"id": "s3", "title": "The petty cash book & imprest system"}, {"id": "s4", "title": "The general journal"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week04", "label": "Week 04", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Capital vs revenue expenditure"}, {"id": "s2", "title": "The general ledger"}, {"id": "s3", "title": "The trial balance"}, {"id": "s4", "title": "Worked example: posting to the ledger and extracting a TB"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week05", "label": "Week 05", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From trial balance to financial statements"}, {"id": "s2", "title": "The trading account → gross profit"}, {"id": "s3", "title": "The income statement → net profit"}, {"id": "s4", "title": "LKAS 1 / IAS 1 — Presentation of Financial Statements"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week06", "label": "Week 06", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The statement of financial position (SFP)"}, {"id": "s2", "title": "Adjustment 1: closing inventory"}, {"id": "s3", "title": "LKAS 16 — Property, Plant & Equipment"}, {"id": "s4", "title": "Adjustment 2: depreciation"}, {"id": "s5", "title": "Disposal of PPE"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week07", "label": "Week 07", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The accrual concept"}, {"id": "s2", "title": "Accrued & prepaid expenses"}, {"id": "s3", "title": "Income receivable & income received in advance"}, {"id": "s4", "title": "Bad debts (irrecoverable debts)"}, {"id": "s5", "title": "Provision for impairment of receivables"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week08", "label": "Week 08", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Inventory & LKAS 2"}, {"id": "s2", "title": "Function 1: managing purchases"}, {"id": "s3", "title": "Function 2: storing materials & stock levels"}, {"id": "s4", "title": "Function 3: pricing material issues — FIFO & weighted average"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week09", "label": "Week 09", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct vs indirect labour"}, {"id": "s2", "title": "Time keeping & time booking"}, {"id": "s3", "title": "Methods of remuneration"}, {"id": "s4", "title": "The salary sheet, EPF & ETF"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week10", "label": "Week 10", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is overhead?"}, {"id": "s2", "title": "Cost centres, allocation & apportionment"}, {"id": "s3", "title": "Re-apportioning service department costs"}, {"id": "s4", "title": "Overhead absorption"}, {"id": "s5", "title": "Under- and over-absorption"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week11", "label": "Week 11", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why price matters"}, {"id": "s2", "title": "The pricing policy: six factors"}, {"id": "s3", "title": "Markup vs margin"}, {"id": "s4", "title": "Pricing methods"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week12", "label": "Week 12", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why ratio analysis?"}, {"id": "s2", "title": "1. Liquidity ratios"}, {"id": "s3", "title": "2. Gearing (capital structure) ratios"}, {"id": "s4", "title": "3. Financial efficiency (activity) ratios"}, {"id": "s5", "title": "4. Profitability ratios"}, {"id": "s6", "title": "5. Shareholder (market test) ratios"}, {"id": "s7", "title": "Benefits & limitations"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week13", "label": "Week 13", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is project appraisal?"}, {"id": "s2", "title": "Non-discounting methods"}, {"id": "s3", "title": "Time value of money"}, {"id": "s4", "title": "Net present value (NPV)"}, {"id": "s5", "title": "Internal rate of return (IRR)"}, {"id": "s6", "title": "Which method is best?"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week14", "label": "Week 14", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a budget?"}, {"id": "s2", "title": "Types of budgets"}, {"id": "s3", "title": "The functional budgets: formats"}, {"id": "s4", "title": "Full worked example: LFT company"}, {"id": "s5", "title": "The cash budget: rules"}, {"id": "s6", "title": "Limitations of budgeting [[36:08]]"}, {"id": "s7", "title": "Practice questions (course paper)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-Week15", "label": "Week 15", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Standard cost & standard costing"}, {"id": "s2", "title": "Setting standards"}, {"id": "s3", "title": "Types of standards"}, {"id": "s4", "title": "Standard cost card"}, {"id": "s5", "title": "The variance tree"}, {"id": "s6", "title": "Variance formulas"}, {"id": "s7", "title": "Advantages & limitations"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "bpas-papers", "label": "Past papers", "url": "Business%20Processes%20and%20Accounting%20Systems/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Q1: Financial statements (40 marks)"}, {"id": "s3", "title": "January 2023 — Q2: Inventory, petty cash, framework (20 marks)"}, {"id": "s4", "title": "January 2023 — Q3: Primary entry books and NPV (20 marks)"}, {"id": "s5", "title": "January 2023 — Q4: Cash budget and sales variances (20 marks)"}, {"id": "s6", "title": "January 2023 — Q5: Overheads (20 marks)"}, {"id": "s7", "title": "August 2020 — what's different"}, {"id": "s8", "title": "November 2019 — Section A, Q1: 20 MCQs"}, {"id": "s9", "title": "November 2019 — Section A, Q2: Araliya Traders (Rs. '000)"}, {"id": "s10", "title": "November 2019 — Section B"}, {"id": "s11", "title": "2024 and 2025 — topic lists to practise"}]}]}, {"key": "dm", "name": "Data Mining", "exam": ["2026-11-22", "11:30", "14:30"], "url": "Data%20Mining/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dm-Week01", "label": "Week 01", "url": "Data%20Mining/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What data mining is about"}, {"id": "s2", "title": "Why data mining is required"}, {"id": "s3", "title": "Big Data and the 5 V's"}, {"id": "s4", "title": "Defining data mining properly"}, {"id": "s5", "title": "Applications of data mining"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week02", "label": "Week 02", "url": "Data%20Mining/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Data mining = \"knowledge mining from data\""}, {"id": "s2", "title": "The 7 steps of the KDD process"}, {"id": "s3", "title": "Architecture of a typical data mining system"}, {"id": "s4", "title": "What kinds of data can be mined?"}, {"id": "s5", "title": "Data mining task primitives"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week03", "label": "Week 03", "url": "Data%20Mining/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why preprocessing is needed"}, {"id": "s2", "title": "Data cleaning — handling missing values"}, {"id": "s3", "title": "Noisy data and smoothing"}, {"id": "s4", "title": "Data cleaning as a process"}, {"id": "s5", "title": "Data integration"}, {"id": "s6", "title": "Data transformation"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week04", "label": "Week 04", "url": "Data%20Mining/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why reduce data at all?"}, {"id": "s2", "title": "Data cube aggregation"}, {"id": "s3", "title": "Attribute subset selection"}, {"id": "s4", "title": "Dimensionality reduction"}, {"id": "s5", "title": "Numerosity reduction"}, {"id": "s6", "title": "Discretization & concept hierarchies"}, {"id": "s7", "title": "Binning: equal-width vs equal-depth"}, {"id": "s8", "title": "Smoothing noisy data with bins"}, {"id": "s9", "title": "Histogram partitioning — a full worked example"}, {"id": "s10", "title": "Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule"}, {"id": "s11", "title": "Self-assignment (2024): binning in practice"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week05", "label": "Week 05", "url": "Data%20Mining/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why data warehouses matter"}, {"id": "s2", "title": "What is a data warehouse?"}, {"id": "s3", "title": "OLTP vs OLAP"}, {"id": "s4", "title": "Why keep the warehouse separate?"}, {"id": "s5", "title": "The multidimensional data model"}, {"id": "s6", "title": "Lattice of cuboids"}, {"id": "s7", "title": "Weka — the tool used in this course"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week06", "label": "Week 06", "url": "Data%20Mining/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why a different schema for warehouses?"}, {"id": "s2", "title": "Star schema"}, {"id": "s3", "title": "Snowflake schema"}, {"id": "s4", "title": "Fact constellation (galaxy schema)"}, {"id": "s5", "title": "Data warehouse vs data mart"}, {"id": "s6", "title": "Defining cubes with DMQL"}, {"id": "s7", "title": "Concept hierarchies"}, {"id": "s8", "title": "Weka 1.2 — Exploring the Explorer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week07", "label": "Week 07", "url": "Data%20Mining/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why build a data warehouse?"}, {"id": "s2", "title": "The four views of warehouse design"}, {"id": "s3", "title": "Design approaches & methodology"}, {"id": "s4", "title": "The 4-step warehouse design process"}, {"id": "s5", "title": "Three-tier data warehouse architecture"}, {"id": "s6", "title": "The metadata repository"}, {"id": "s7", "title": "OLAP server models: ROLAP, MOLAP, HOLAP"}, {"id": "s8", "title": "Weka 1.3 — Exploring datasets"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week08", "label": "Week 08", "url": "Data%20Mining/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why compute cubes efficiently?"}, {"id": "s2", "title": "Cube materialization: cells and cuboids"}, {"id": "s3", "title": "Full cube vs iceberg cube"}, {"id": "s4", "title": "MultiWay array aggregation"}, {"id": "s5", "title": "BUC — Bottom-Up Computation"}, {"id": "s6", "title": "Star attributes, star-nodes and star-trees"}, {"id": "s7", "title": "Attribute-oriented induction (AOI)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week09", "label": "Week 09", "url": "Data%20Mining/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Frequent patterns"}, {"id": "s2", "title": "Market basket analysis"}, {"id": "s3", "title": "Association rules, support and confidence"}, {"id": "s4", "title": "The Apriori algorithm"}, {"id": "s5", "title": "Full worked example (|D| = 9, min_sup = 2)"}, {"id": "s6", "title": "Generating strong association rules"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week10", "label": "Week 10", "url": "Data%20Mining/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why not just use Apriori?"}, {"id": "s2", "title": "FP-growth: the idea"}, {"id": "s3", "title": "Worked example (min_sup = 3)"}, {"id": "s4", "title": "Mining the FP-tree"}, {"id": "s5", "title": "Multilevel association rules"}, {"id": "s6", "title": "Multidimensional association rules"}, {"id": "s7", "title": "Constraint-based association mining"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week11", "label": "Week 11", "url": "Data%20Mining/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Classification vs prediction"}, {"id": "s2", "title": "The two-step classification process"}, {"id": "s3", "title": "Preparing data & comparing methods"}, {"id": "s4", "title": "Decision trees & their history"}, {"id": "s5", "title": "Attribute selection measures"}, {"id": "s6", "title": "Worked example — buys_computer (14 tuples)"}, {"id": "s7", "title": "Weka: J48, filters and visualisation"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week12", "label": "Week 12", "url": "Data%20Mining/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Bayesian classifiers — overview"}, {"id": "s2", "title": "Bayes' theorem"}, {"id": "s3", "title": "The naïve Bayesian classifier"}, {"id": "s4", "title": "Worked example — will X buy a computer?"}, {"id": "s5", "title": "Rule-based classification"}, {"id": "s6", "title": "Extracting rules from a decision tree"}, {"id": "s7", "title": "Weka: training and testing"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week13", "label": "Week 13", "url": "Data%20Mining/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is cluster analysis?"}, {"id": "s2", "title": "Requirements of clustering in data mining"}, {"id": "s3", "title": "Types of clustering methods"}, {"id": "s4", "title": "Clustering by k-means"}, {"id": "s5", "title": "Weka: baseline accuracy and cross-validation"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week14", "label": "Week 14", "url": "Data%20Mining/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why k-medoids?"}, {"id": "s2", "title": "k-medoids and PAM"}, {"id": "s3", "title": "Worked example (from the lesson)"}, {"id": "s4", "title": "Hierarchical clustering"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week15", "label": "Week 15", "url": "Data%20Mining/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Overview"}, {"id": "s2", "title": "Financial data analysis"}, {"id": "s3", "title": "Retail industry"}, {"id": "s4", "title": "Telecommunication industry"}, {"id": "s5", "title": "Biological data analysis"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}]}, {"key": "dmath", "name": "Discrete Mathematics", "exam": ["2026-11-21", "08:30", "11:30"], "url": "Discrete%20Mathematics/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dmath-Week01", "label": "Week 01", "url": "Discrete%20Mathematics/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From propositions to predicates"}, {"id": "s2", "title": "Propositional functions"}, {"id": "s3", "title": "Compound expressions"}, {"id": "s4", "title": "Quantifiers: ∀, ∃, ∃!"}, {"id": "s5", "title": "Negating quantified expressions"}, {"id": "s6", "title": "Translating English into logic"}, {"id": "s7", "title": "Introduction to proofs — direct proof"}, {"id": "s8", "title": "Assignment 1: worked answers"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week02", "label": "Week 02", "url": "Discrete%20Mathematics/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Set terminology & notation"}, {"id": "s2", "title": "Equality, subsets & disjoint sets"}, {"id": "s3", "title": "Venn diagrams"}, {"id": "s4", "title": "Set operations"}, {"id": "s5", "title": "Set laws"}, {"id": "s6", "title": "Number of elements — inclusion–exclusion"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week03", "label": "Week 03", "url": "Discrete%20Mathematics/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a function?"}, {"id": "s2", "title": "One-to-one (injective)"}, {"id": "s3", "title": "Onto (surjective) & bijection"}, {"id": "s4", "title": "Inverse functions"}, {"id": "s5", "title": "Composition of functions"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week04", "label": "Week 04", "url": "Discrete%20Mathematics/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Sequences"}, {"id": "s2", "title": "Geometric & arithmetic progressions"}, {"id": "s3", "title": "Summation notation (Σ)"}, {"id": "s4", "title": "Geometric series (Theorem 1)"}, {"id": "s5", "title": "Infinite series (Theorem 2)"}, {"id": "s6", "title": "Double sums"}, {"id": "s7", "title": "Useful closed forms (Table 2)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week05", "label": "Week 05", "url": "Discrete%20Mathematics/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Matrices represent data"}, {"id": "s2", "title": "Matrix addition"}, {"id": "s3", "title": "Matrix multiplication"}, {"id": "s4", "title": "Identity, powers, transpose & symmetric"}, {"id": "s5", "title": "Zero–one matrices: join and meet"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week06", "label": "Week 06", "url": "Discrete%20Mathematics/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Divisibility"}, {"id": "s2", "title": "The division algorithm"}, {"id": "s3", "title": "Modular arithmetic & congruence"}, {"id": "s4", "title": "Primes"}, {"id": "s5", "title": "Cryptography — Caesar's cipher"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week07", "label": "Week 07", "url": "Discrete%20Mathematics/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why induction?"}, {"id": "s2", "title": "Worked induction proofs"}, {"id": "s3", "title": "The well-ordering property"}, {"id": "s4", "title": "Recursion"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week08", "label": "Week 08", "url": "Discrete%20Mathematics/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why counting?"}, {"id": "s2", "title": "The product rule (\"AND\", then multiply)"}, {"id": "s3", "title": "The sum rule (\"OR\", then add)"}, {"id": "s4", "title": "Tree diagrams"}, {"id": "s5", "title": "Combinations — order doesn't matter"}, {"id": "s6", "title": "Permutations — order matters"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week09", "label": "Week 09", "url": "Discrete%20Mathematics/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Binary relations"}, {"id": "s2", "title": "Functions as relations"}, {"id": "s3", "title": "Relations on a set"}, {"id": "s4", "title": "Properties: reflexive, symmetric, transitive"}, {"id": "s5", "title": "Equivalence relations"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week10", "label": "Week 10", "url": "Discrete%20Mathematics/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From pairs to n-tuples"}, {"id": "s2", "title": "Databases & the relational data model"}, {"id": "s3", "title": "Primary keys, composite keys, extension & intension"}, {"id": "s4", "title": "Operations: selection, projection, join"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week11", "label": "Week 11", "url": "Discrete%20Mathematics/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why graphs?"}, {"id": "s2", "title": "The birth of graph theory — Königsberg"}, {"id": "s3", "title": "What is a graph?"}, {"id": "s4", "title": "The six types of graphs"}, {"id": "s5", "title": "Graph models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week12", "label": "Week 12", "url": "Discrete%20Mathematics/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Trees"}, {"id": "s2", "title": "Rooted trees & terminology"}, {"id": "s3", "title": "Ordered rooted trees & binary trees"}, {"id": "s4", "title": "Binary search trees (BST)"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week13", "label": "Week 13", "url": "Discrete%20Mathematics/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Decision trees"}, {"id": "s2", "title": "Tree traversal"}, {"id": "s3", "title": "Spanning trees"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-papers", "label": "Past papers", "url": "Discrete%20Mathematics/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Question 1"}, {"id": "s3", "title": "January 2023 — Question 2 (number theory)"}, {"id": "s4", "title": "January 2023 — Question 3"}, {"id": "s5", "title": "January 2023 — Question 4 (graphs)"}, {"id": "s6", "title": "July 2023"}, {"id": "s7", "title": "October 2019"}, {"id": "s8", "title": "Model questions (official sample problems)"}]}]}, {"key": "hci", "name": "Human Computer Interaction", "exam": ["2026-11-22", "08:30", "11:30"], "url": "Human%20Computer%20Interaction/Study%20Guide%20-%20Index.html", "weeks": [{"key": "hci-Week01", "label": "Week 01", "url": "Human%20Computer%20Interaction/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "History of HCI"}, {"id": "s2", "title": "HCI is multi-disciplinary"}, {"id": "s3", "title": "Computers today: ubiquitous computing"}, {"id": "s4", "title": "Humans and perception"}, {"id": "s5", "title": "Interaction: two-way and task-centred"}, {"id": "s6", "title": "The HCI space"}, {"id": "s7", "title": "Applications of HCI — three pillars"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week02", "label": "Week 02", "url": "Human%20Computer%20Interaction/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is interaction?"}, {"id": "s2", "title": "Donald Norman's model — 7 stages"}, {"id": "s3", "title": "The two gulfs"}, {"id": "s4", "title": "Human errors: slips vs mistakes"}, {"id": "s5", "title": "The Abowd & Beale framework"}, {"id": "s6", "title": "Ergonomics"}, {"id": "s7", "title": "Direct vs indirect manipulation"}, {"id": "s8", "title": "Interaction styles"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week03", "label": "Week 03", "url": "Human%20Computer%20Interaction/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The human as an information processing machine"}, {"id": "s2", "title": "The senses in UI design"}, {"id": "s3", "title": "Human memory: three stores"}, {"id": "s4", "title": "Chunking & semantic networks"}, {"id": "s5", "title": "Cognitive load"}, {"id": "s6", "title": "Attention: selective vs divided"}, {"id": "s7", "title": "Motor skills & physical ergonomics"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week04", "label": "Week 04", "url": "Human%20Computer%20Interaction/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Design for tasks, not interfaces"}, {"id": "s2", "title": "The three contexts of \"use\": useful, usable, used"}, {"id": "s3", "title": "Three perspectives of the user"}, {"id": "s4", "title": "The in-car GPS turn example"}, {"id": "s5", "title": "UX beyond interaction"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week05", "label": "Week 05", "url": "Human%20Computer%20Interaction/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Action, interaction, effect, feedback"}, {"id": "s2", "title": "Feedback cycles are everywhere"}, {"id": "s3", "title": "Norman's model revisited: the two bridges"}, {"id": "s4", "title": "The 7 questions — designer & user perspectives"}, {"id": "s5", "title": "Norman's three levels of design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week06", "label": "Week 06", "url": "Human%20Computer%20Interaction/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct manipulation"}, {"id": "s2", "title": "The desktop metaphor vs the command line"}, {"id": "s3", "title": "Metaphorical vs literal invisibility — good vs bad design"}, {"id": "s4", "title": "Where direct manipulation is still lacking"}, {"id": "s5", "title": "Invisibility by learning vs by design"}, {"id": "s6", "title": "Five tips for invisible interfaces"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week07", "label": "Week 07", "url": "Human%20Computer%20Interaction/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Principles, guidelines and standards"}, {"id": "s2", "title": "Classic design frameworks"}, {"id": "s3", "title": "The 15 universal design principles"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week08", "label": "Week 08", "url": "Human%20Computer%20Interaction/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Mental models"}, {"id": "s2", "title": "Representations"}, {"id": "s3", "title": "Four traits of good representations"}, {"id": "s4", "title": "Full error taxonomy: slips vs mistakes"}, {"id": "s5", "title": "Learned helplessness & expert blindness"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week09", "label": "Week 09", "url": "Human%20Computer%20Interaction/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Task analysis & cognitive modelling"}, {"id": "s2", "title": "The GOMS framework"}, {"id": "s3", "title": "Keystroke-Level Model (KLM)"}, {"id": "s4", "title": "Fitts's law"}, {"id": "s5", "title": "Strengths and limits of predictive models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week10", "label": "Week 10", "url": "Human%20Computer%20Interaction/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Processor- vs predictor-oriented models"}, {"id": "s2", "title": "Cognitive Task Analysis (CTA) — 5 steps"}, {"id": "s3", "title": "Case study: the customer feedback thought stream"}, {"id": "s4", "title": "Hierarchical Task Analysis (HTA)"}, {"id": "s5", "title": "Modularity & divide and conquer"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week11", "label": "Week 11", "url": "Human%20Computer%20Interaction/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is user-centred design (UCD)?"}, {"id": "s2", "title": "The 8 user characteristics"}, {"id": "s3", "title": "ISO 9241-210: the 6 UCD principles"}, {"id": "s4", "title": "The 4-phase interaction design life cycle"}, {"id": "s5", "title": "Stakeholder-centred design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week12", "label": "Week 12", "url": "Human%20Computer%20Interaction/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where needfinding fits"}, {"id": "s2", "title": "The seven questions"}, {"id": "s3", "title": "Biases in needfinding"}, {"id": "s4", "title": "Needfinding methods"}, {"id": "s5", "title": "Representing the needs"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week13", "label": "Week 13", "url": "Human%20Computer%20Interaction/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where evaluation fits"}, {"id": "s2", "title": "Match the evaluation to the prototype"}, {"id": "s3", "title": "Evaluation across the design life cycle"}, {"id": "s4", "title": "Three types of evaluation"}, {"id": "s5", "title": "Four key terms"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-papers", "label": "Past papers", "url": "Human%20Computer%20Interaction/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what to focus on"}, {"id": "s2", "title": "ITE 3752 — Question 1: User-centred design (25 marks)"}, {"id": "s3", "title": "ITE 3752 — Question 2: Norman's model (25 marks)"}, {"id": "s4", "title": "ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)"}, {"id": "s5", "title": "ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)"}, {"id": "s6", "title": "Older ITE 3603 papers — outline answers"}]}]}, {"key": "mkt", "name": "Marketing", "exam": ["2026-11-22", "14:45", "17:45"], "url": "Marketing/Study%20Guide%20-%20Index.html", "weeks": [{"key": "mkt-Week01", "label": "Week 01", "url": "Marketing/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is marketing?"}, {"id": "s2", "title": "Marketing vs selling — the iceberg"}, {"id": "s3", "title": "Why marketing matters"}, {"id": "s4", "title": "Core concepts of marketing"}, {"id": "s5", "title": "Objectives of marketing"}, {"id": "s6", "title": "Quiz 01: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week02", "label": "Week 02", "url": "Marketing/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing has a history"}, {"id": "s2", "title": "1. Production concept"}, {"id": "s3", "title": "2. Product concept & marketing myopia"}, {"id": "s4", "title": "3. Selling concept"}, {"id": "s5", "title": "4. Marketing concept"}, {"id": "s6", "title": "5. Societal marketing concept"}, {"id": "s7", "title": "6. Holistic marketing concept"}, {"id": "s8", "title": "Quiz 02: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week03", "label": "Week 03", "url": "Marketing/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why scan the environment?"}, {"id": "s2", "title": "The three layers of the environment"}, {"id": "s3", "title": "Internal environment — 5 Ms & 7S"}, {"id": "s4", "title": "Micro environment (task environment)"}, {"id": "s5", "title": "Macro environment (DENTPC)"}, {"id": "s6", "title": "Responding to the environment"}, {"id": "s7", "title": "Marketing information system (MIS) & planning"}, {"id": "s8", "title": "Quiz 03: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week04", "label": "Week 04", "url": "Marketing/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Customer-driven marketing strategy"}, {"id": "s2", "title": "Market segmentation — four bases"}, {"id": "s3", "title": "Market targeting & Porter's five forces"}, {"id": "s4", "title": "Five patterns of target-market selection"}, {"id": "s5", "title": "Differentiation"}, {"id": "s6", "title": "Positioning & perceptual maps"}, {"id": "s7", "title": "Quiz 04: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week05", "label": "Week 05", "url": "Marketing/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why study consumer behaviour?"}, {"id": "s2", "title": "Consumer markets"}, {"id": "s3", "title": "The black box model (stimulus → response)"}, {"id": "s4", "title": "Factors influencing consumer behaviour"}, {"id": "s5", "title": "The buyer decision process — 5 stages"}, {"id": "s6", "title": "Four types of buying behaviour"}, {"id": "s7", "title": "Contemporary trends — Sri Lanka & global"}, {"id": "s8", "title": "Quiz 05: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week06", "label": "Week 06", "url": "Marketing/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a business market?"}, {"id": "s2", "title": "How business markets differ from consumer markets"}, {"id": "s3", "title": "Buying situations"}, {"id": "s4", "title": "Systems buying & selling"}, {"id": "s5", "title": "The buying centre — seven roles"}, {"id": "s6", "title": "Procurement: orientations & Kraljic's four product types"}, {"id": "s7", "title": "The 8 buy phases (Robinson et al.)"}, {"id": "s8", "title": "Business-to-business relationships"}, {"id": "s9", "title": "Quiz 06: model answer"}, {"id": "s10", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week07", "label": "Week 07", "url": "Marketing/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why marketing information matters"}, {"id": "s2", "title": "Three types of marketing data"}, {"id": "s3", "title": "The marketing information system (MIS)"}, {"id": "s4", "title": "Types of marketing research"}, {"id": "s5", "title": "The marketing research process"}, {"id": "s6", "title": "Why marketing research fails"}, {"id": "s7", "title": "Quiz 07: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week08", "label": "Week 08", "url": "Marketing/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is digital marketing?"}, {"id": "s2", "title": "Objectives of digital marketing"}, {"id": "s3", "title": "Why people go online"}, {"id": "s4", "title": "Key components of a digital marketing strategy"}, {"id": "s5", "title": "Strategy & measurement"}, {"id": "s6", "title": "Quiz 08: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week09", "label": "Week 09", "url": "Marketing/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why new products matter"}, {"id": "s2", "title": "Why develop new products, and why they fail"}, {"id": "s3", "title": "The 8-stage new product development process"}, {"id": "s4", "title": "The product life cycle (PLC)"}, {"id": "s5", "title": "Characteristics of each PLC stage"}, {"id": "s6", "title": "Marketing-mix strategies across the PLC"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week10", "label": "Week 10", "url": "Marketing/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Product strategy"}, {"id": "s2", "title": "Three levels of a product"}, {"id": "s3", "title": "Product classifications"}, {"id": "s4", "title": "Product mix and product line decisions"}, {"id": "s5", "title": "Brands, brand meaning and brand equity"}, {"id": "s6", "title": "Branding decisions"}, {"id": "s7", "title": "Packaging & labelling"}, {"id": "s8", "title": "Quiz 10: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week11", "label": "Week 11", "url": "Marketing/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Price: the revenue P"}, {"id": "s2", "title": "Factors affecting pricing decisions"}, {"id": "s3", "title": "The 6-step pricing process"}, {"id": "s4", "title": "New-product pricing: skimming vs penetration"}, {"id": "s5", "title": "Seven price-adjustment strategies"}, {"id": "s6", "title": "Price changes & reactions"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week12", "label": "Week 12", "url": "Marketing/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Before promoting"}, {"id": "s2", "title": "Integrated marketing communication (IMC)"}, {"id": "s3", "title": "Promotion objectives"}, {"id": "s4", "title": "The promotion mix"}, {"id": "s5", "title": "Advertising"}, {"id": "s6", "title": "Message strategy"}, {"id": "s7", "title": "Public relations"}, {"id": "s8", "title": "Sales promotion"}, {"id": "s9", "title": "Push vs pull channel policies"}, {"id": "s10", "title": "Socially responsible marketing communication"}, {"id": "s11", "title": "Quiz 12: model answer"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week13", "label": "Week 13", "url": "Marketing/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is \"place\"?"}, {"id": "s2", "title": "The nature of marketing channels"}, {"id": "s3", "title": "Push and pull strategies"}, {"id": "s4", "title": "How channel members add value"}, {"id": "s5", "title": "Channel levels"}, {"id": "s6", "title": "Channel behaviour and conflict"}, {"id": "s7", "title": "Conventional vs vertical marketing systems"}, {"id": "s8", "title": "Designing a marketing channel"}, {"id": "s9", "title": "Managing the marketing channel"}, {"id": "s10", "title": "Marketing logistics and supply chain management"}, {"id": "s11", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week14", "label": "Week 14", "url": "Marketing/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing planning"}, {"id": "s2", "title": "Purpose of marketing planning"}, {"id": "s3", "title": "Importance of marketing planning"}, {"id": "s4", "title": "Components of a marketing plan"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}]}]</script>
+</table></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Beginner practice — questions and step-by-step answers"><span class="num">7</span>Beginner practice — questions and step-by-step answers</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>அடிப்படையிலிருந்து பயிற்சி செய்வோம்</h3><p>Cash மற்றும் Bank இடையே பணம் மாற்றுவது புதிய வருமானம் அல்ல. Petty cash செலவுச் சீட்டுகளும் மீதிப் பணமும் சேர்ந்தால் ஆரம்ப float கிடைக்க வேண்டும்.</p>
+<p>கீழே உள்ள English பகுதியில் முழுக் கேள்விகளும் படிப்படியான விடைகளும் உள்ளன. முதலில் நீங்களே முயற்சி செய்து, பிறகு <strong>Show step-by-step answer</strong> என்பதைத் திறந்து சரிபார்க்கவும். இறுதிச் சரிபார்ப்பு உங்கள் தவறைக் கண்டுபிடிக்க உதவும்.</p><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><p><strong>Week 03 learning path:</strong> Week 03: The cash book → Petty cash book &amp; imprest system.</p>
+<p><strong>Start from zero:</strong> A cash book records cash/bank receipts and payments. A contra entry transfers money between the business’s own cash and bank. Petty cash is a small fund for minor expenses; an imprest is its agreed fixed amount.</p>
+<p>These are <strong>new beginner learning questions</strong>, not official past-paper questions or a replacement for the course-paper practice above. All amounts are in Sri Lankan rupees (Rs) unless stated otherwise.</p>
+<p><strong>How to practise:</strong> read the question, write your own attempt, then open the worked answer. Follow the reason for each step. Use the final check to find mistakes; mark this section understood only when you can explain the method.</p>
+<h3 id="practice-031-balance-a-two-column-cash-book">Practice 03.1 — Balance a two-column cash book</h3>
+<p><strong>Question:</strong> Opening cash is Rs 5,000 and bank is Rs 20,000. Receive Rs 8,000 cash sales, bank Rs 6,000 of that cash, and pay a supplier Rs 4,000 by bank. Find closing cash and bank.</p>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Practice 03.1</summary>
+<ol>
+<li><strong>Cash receipts side:</strong> opening balance 5,000 + sales 8,000 = <strong>13,000</strong>.</li>
+<li><strong>Cash payments side:</strong> cash deposited into bank = 6,000. Closing cash = 13,000 − 6,000 = <strong>Rs 7,000</strong>.</li>
+<li><strong>Bank receipts side:</strong> opening 20,000 + cash deposited 6,000 = <strong>26,000</strong>.</li>
+<li><strong>Bank payments side:</strong> supplier 4,000. Closing bank = 26,000 − 4,000 = <strong>Rs 22,000</strong>.</li>
+<li>The deposit is <strong>Dr Bank 6,000 / Cr Cash 6,000</strong>, marked contra in both columns. It is not another sale.</li>
+<li>To balance, enter cash balance c/d 7,000 and bank balance c/d 22,000 on the payments side; bring them down on the next period’s receipts side.</li>
+</ol>
+<p><strong>Check:</strong> combined opening funds 25,000 + external receipts 8,000 − external payments 4,000 = <strong>29,000</strong> = cash 7,000 + bank 22,000.</p>
+</details>
+<h3 id="practice-032-restore-an-imprest">Practice 03.2 — Restore an imprest</h3>
+<p><strong>Question:</strong> A petty cashier receives a Rs 3,000 float. Vouchers show postage Rs 450, travel Rs 700 and stationery Rs 350. Find spending, cash remaining and reimbursement needed.</p>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Practice 03.2</summary>
+<ol>
+<li>Add supported expenses: 450 + 700 + 350 = <strong>Rs 1,500</strong>.</li>
+<li>Cash remaining = original float 3,000 − spending 1,500 = <strong>Rs 1,500</strong>.</li>
+<li>Reimbursement = target float 3,000 − cash remaining 1,500 = <strong>Rs 1,500</strong>.</li>
+<li>Record the expenses by category and the reimbursement from bank: Dr Petty cash 1,500 / Cr Bank 1,500. The expenses were recorded when spent; do not record them twice.</li>
+</ol>
+<p><strong>Check:</strong> before reimbursement, vouchers 1,500 + cash 1,500 = float 3,000. Afterwards petty cash again holds 3,000.</p>
+</details>
+<p><strong>Next step:</strong> close the answers and solve both questions again. Then try this week’s self-check quiz. If a step is unclear, revisit the topic named in the learning path above.</p></div><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">10 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="bpas-Week03" data-pick="0"><script type="application/json" class="qdata">[{"q": "Why is the cash book special?", "o": ["It's both a book of prime entry and a ledger account", "It records only credit transactions", "It's prepared only once a year", "It replaces the trial balance"], "e": "Because of this dual purpose, cash book entries don't need a separate cash ledger account. ", "a": 0, "w": "Week 03"}, {"q": "A three-column cash book has columns for:", "o": ["Cash, sales and purchases", "Cash, bank and discount", "Debit, credit and balance only", "Petty cash, bank and VAT"], "e": "Two-column = cash + bank; three-column adds discount. ", "a": 1, "w": "Week 03"}, {"q": "Cash deposited into the bank is a <strong>contra entry<\/strong>. It is recorded:", "o": ["On both sides of the cash book: credit the cash column and debit the bank column, marked \"C\"", "Only in the general journal", "Only in the bank column", "In the sales journal"], "e": "A contra is a movement between cash and bank, so both entries are in the cash book. ", "a": 0, "w": "Week 03"}, {"q": "Discount <strong>allowed<\/strong> to customers appears on which side of the cash book, and what is it?", "o": ["Debit side; an expense", "Credit side; an income", "Debit side; an income", "It's never recorded"], "e": "Discount received is on the credit side and is income. ", "a": 0, "w": "Week 03"}, {"q": "Trade discount is:", "o": ["Recorded in the discount column", "Not recorded in the books at all", "Recorded as income", "Recorded in the general journal"], "e": "Trade discount is deducted on the invoice before recording. ", "a": 1, "w": "Week 03"}, {"q": "A <strong>credit<\/strong> balance in the bank column means:", "o": ["Cash at bank (an asset)", "A bank overdraft (a liability)", "An error that must be corrected", "Interest received"], "e": "Payments from the bank exceeded receipts. ", "a": 1, "w": "Week 03"}, {"q": "Under the imprest system with a float of Rs 10,000, the petty cashier spends Rs 7,350. How much is the top-up at the end of the period?", "e": "The top-up equals the amount spent, restoring the fixed float. ", "n": 7350.0, "w": "Week 03"}, {"q": "Which transaction is recorded in the <strong>general journal<\/strong>?", "o": ["A cash sale", "A credit purchase of goods for resale", "Owner withdrawing office equipment for personal use", "Paying a supplier by cheque"], "e": "Others include opening entries, credit asset purchases and sales, corrections and adjustments. ", "a": 2, "w": "Week 03"}, {"q": "A \"narration\" in the general journal is:", "o": ["A short explanation under the entry, starting \"Being…\"", "The ledger folio number", "The total of the debit column", "A type of source document"], "e": "Each journal entry needs a narration. ", "a": 0, "w": "Week 03"}, {"q": "Which is an advantage of a petty cash book?", "o": ["It eliminates the need for receipts", "It keeps small expenses out of the main cash book and allows delegation to a petty cashier", "It records large capital expenditure", "It replaces the bank reconciliation"], "e": "It also improves control and record keeping for small items. ", "a": 1, "w": "Week 03"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2002/Week%2002%20-%20Study%20Guide.html"><small>← Previous</small>Accounting Process, Double Entry &amp; Primary Entry Journals</a><a class="nx" href="../Week%2004/Week%2004%20-%20Study%20Guide.html"><small>Next →</small>Capital vs Revenue Expenditure, the Ledger &amp; the Trial Balance</a></div></main></div>
+<script type="application/json" id="study-data">[{"key": "bpas", "name": "Business Processes & Accounting Systems", "exam": ["2026-11-15", "11:00", "14:00"], "url": "Business%20Processes%20and%20Accounting%20Systems/Study%20Guide%20-%20Index.html", "weeks": [{"key": "bpas-Week01", "label": "Week 01", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Business processes"}, {"id": "s2", "title": "Accounting information and its users"}, {"id": "s3", "title": "What is an Accounting Information System?"}, {"id": "s4", "title": "The five components of a computerised AIS"}, {"id": "s5", "title": "Internal control & security"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week02", "label": "Week 02", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is accounting?"}, {"id": "s2", "title": "Stakeholders and what they need"}, {"id": "s3", "title": "The Conceptual Framework for financial reporting"}, {"id": "s4", "title": "Debit & credit rules and the accounting equation"}, {"id": "s5", "title": "The T-account & balancing"}, {"id": "s6", "title": "Source documents & primary books"}, {"id": "s7", "title": "The four day books (primary entry journals)"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}, {"id": "s10", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week03", "label": "Week 03", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where these books fit"}, {"id": "s2", "title": "The cash book"}, {"id": "s3", "title": "The petty cash book & imprest system"}, {"id": "s4", "title": "The general journal"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week04", "label": "Week 04", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Capital vs revenue expenditure"}, {"id": "s2", "title": "The general ledger"}, {"id": "s3", "title": "The trial balance"}, {"id": "s4", "title": "Worked example: posting to the ledger and extracting a TB"}, {"id": "s5", "title": "Quick revision sheet"}, {"id": "s6", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week05", "label": "Week 05", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From trial balance to financial statements"}, {"id": "s2", "title": "The trading account → gross profit"}, {"id": "s3", "title": "The income statement → net profit"}, {"id": "s4", "title": "LKAS 1 / IAS 1 — Presentation of Financial Statements"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week06", "label": "Week 06", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The statement of financial position (SFP)"}, {"id": "s2", "title": "Adjustment 1: closing inventory"}, {"id": "s3", "title": "LKAS 16 — Property, Plant & Equipment"}, {"id": "s4", "title": "Adjustment 2: depreciation"}, {"id": "s5", "title": "Disposal of PPE"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week07", "label": "Week 07", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The accrual concept"}, {"id": "s2", "title": "Accrued & prepaid expenses"}, {"id": "s3", "title": "Income receivable & income received in advance"}, {"id": "s4", "title": "Bad debts (irrecoverable debts)"}, {"id": "s5", "title": "Provision for impairment of receivables"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week08", "label": "Week 08", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Inventory & LKAS 2"}, {"id": "s2", "title": "Function 1: managing purchases"}, {"id": "s3", "title": "Function 2: storing materials & stock levels"}, {"id": "s4", "title": "Function 3: pricing material issues — FIFO & weighted average"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week09", "label": "Week 09", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct vs indirect labour"}, {"id": "s2", "title": "Time keeping & time booking"}, {"id": "s3", "title": "Methods of remuneration"}, {"id": "s4", "title": "The salary sheet, EPF & ETF"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week10", "label": "Week 10", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is overhead?"}, {"id": "s2", "title": "Cost centres, allocation & apportionment"}, {"id": "s3", "title": "Re-apportioning service department costs"}, {"id": "s4", "title": "Overhead absorption"}, {"id": "s5", "title": "Under- and over-absorption"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week11", "label": "Week 11", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why price matters"}, {"id": "s2", "title": "The pricing policy: six factors"}, {"id": "s3", "title": "Markup vs margin"}, {"id": "s4", "title": "Pricing methods"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week12", "label": "Week 12", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why ratio analysis?"}, {"id": "s2", "title": "1. Liquidity ratios"}, {"id": "s3", "title": "2. Gearing (capital structure) ratios"}, {"id": "s4", "title": "3. Financial efficiency (activity) ratios"}, {"id": "s5", "title": "4. Profitability ratios"}, {"id": "s6", "title": "5. Shareholder (market test) ratios"}, {"id": "s7", "title": "Benefits & limitations"}, {"id": "s8", "title": "Quick revision sheet"}, {"id": "s9", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week13", "label": "Week 13", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is project appraisal?"}, {"id": "s2", "title": "Non-discounting methods"}, {"id": "s3", "title": "Time value of money"}, {"id": "s4", "title": "Net present value (NPV)"}, {"id": "s5", "title": "Internal rate of return (IRR)"}, {"id": "s6", "title": "Which method is best?"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week14", "label": "Week 14", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a budget?"}, {"id": "s2", "title": "Types of budgets"}, {"id": "s3", "title": "The functional budgets: formats"}, {"id": "s4", "title": "Full worked example: LFT company"}, {"id": "s5", "title": "The cash budget: rules"}, {"id": "s6", "title": "Limitations of budgeting [[36:08]]"}, {"id": "s7", "title": "Practice questions (course paper)"}, {"id": "s8", "title": "Quick revision sheet"}, {"id": "s9", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week15", "label": "Week 15", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Standard cost & standard costing"}, {"id": "s2", "title": "Setting standards"}, {"id": "s3", "title": "Types of standards"}, {"id": "s4", "title": "Standard cost card"}, {"id": "s5", "title": "The variance tree"}, {"id": "s6", "title": "Variance formulas"}, {"id": "s7", "title": "Advantages & limitations"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}, {"id": "s10", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-papers", "label": "Past papers", "url": "Business%20Processes%20and%20Accounting%20Systems/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Q1: Financial statements (40 marks)"}, {"id": "s3", "title": "January 2023 — Q2: Inventory, petty cash, framework (20 marks)"}, {"id": "s4", "title": "January 2023 — Q3: Primary entry books and NPV (20 marks)"}, {"id": "s5", "title": "January 2023 — Q4: Cash budget and sales variances (20 marks)"}, {"id": "s6", "title": "January 2023 — Q5: Overheads (20 marks)"}, {"id": "s7", "title": "August 2020 — what's different"}, {"id": "s8", "title": "November 2019 — Section A, Q1: 20 MCQs"}, {"id": "s9", "title": "November 2019 — Section A, Q2: Araliya Traders (Rs. '000)"}, {"id": "s10", "title": "November 2019 — Section B"}, {"id": "s11", "title": "2024 and 2025 — topic lists to practise"}]}]}, {"key": "dm", "name": "Data Mining", "exam": ["2026-11-22", "11:30", "14:30"], "url": "Data%20Mining/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dm-Week01", "label": "Week 01", "url": "Data%20Mining/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What data mining is about"}, {"id": "s2", "title": "Why data mining is required"}, {"id": "s3", "title": "Big Data and the 5 V's"}, {"id": "s4", "title": "Defining data mining properly"}, {"id": "s5", "title": "Applications of data mining"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week02", "label": "Week 02", "url": "Data%20Mining/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Data mining = \"knowledge mining from data\""}, {"id": "s2", "title": "The 7 steps of the KDD process"}, {"id": "s3", "title": "Architecture of a typical data mining system"}, {"id": "s4", "title": "What kinds of data can be mined?"}, {"id": "s5", "title": "Data mining task primitives"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week03", "label": "Week 03", "url": "Data%20Mining/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why preprocessing is needed"}, {"id": "s2", "title": "Data cleaning — handling missing values"}, {"id": "s3", "title": "Noisy data and smoothing"}, {"id": "s4", "title": "Data cleaning as a process"}, {"id": "s5", "title": "Data integration"}, {"id": "s6", "title": "Data transformation"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week04", "label": "Week 04", "url": "Data%20Mining/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why reduce data at all?"}, {"id": "s2", "title": "Data cube aggregation"}, {"id": "s3", "title": "Attribute subset selection"}, {"id": "s4", "title": "Dimensionality reduction"}, {"id": "s5", "title": "Numerosity reduction"}, {"id": "s6", "title": "Discretization & concept hierarchies"}, {"id": "s7", "title": "Binning: equal-width vs equal-depth"}, {"id": "s8", "title": "Smoothing noisy data with bins"}, {"id": "s9", "title": "Histogram partitioning — a full worked example"}, {"id": "s10", "title": "Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule"}, {"id": "s11", "title": "Self-assignment (2024): binning in practice"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week05", "label": "Week 05", "url": "Data%20Mining/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why data warehouses matter"}, {"id": "s2", "title": "What is a data warehouse?"}, {"id": "s3", "title": "OLTP vs OLAP"}, {"id": "s4", "title": "Why keep the warehouse separate?"}, {"id": "s5", "title": "The multidimensional data model"}, {"id": "s6", "title": "Lattice of cuboids"}, {"id": "s7", "title": "Weka — the tool used in this course"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week06", "label": "Week 06", "url": "Data%20Mining/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why a different schema for warehouses?"}, {"id": "s2", "title": "Star schema"}, {"id": "s3", "title": "Snowflake schema"}, {"id": "s4", "title": "Fact constellation (galaxy schema)"}, {"id": "s5", "title": "Data warehouse vs data mart"}, {"id": "s6", "title": "Defining cubes with DMQL"}, {"id": "s7", "title": "Concept hierarchies"}, {"id": "s8", "title": "Weka 1.2 — Exploring the Explorer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week07", "label": "Week 07", "url": "Data%20Mining/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why build a data warehouse?"}, {"id": "s2", "title": "The four views of warehouse design"}, {"id": "s3", "title": "Design approaches & methodology"}, {"id": "s4", "title": "The 4-step warehouse design process"}, {"id": "s5", "title": "Three-tier data warehouse architecture"}, {"id": "s6", "title": "The metadata repository"}, {"id": "s7", "title": "OLAP server models: ROLAP, MOLAP, HOLAP"}, {"id": "s8", "title": "Weka 1.3 — Exploring datasets"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week08", "label": "Week 08", "url": "Data%20Mining/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why compute cubes efficiently?"}, {"id": "s2", "title": "Cube materialization: cells and cuboids"}, {"id": "s3", "title": "Full cube vs iceberg cube"}, {"id": "s4", "title": "MultiWay array aggregation"}, {"id": "s5", "title": "BUC — Bottom-Up Computation"}, {"id": "s6", "title": "Star attributes, star-nodes and star-trees"}, {"id": "s7", "title": "Attribute-oriented induction (AOI)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week09", "label": "Week 09", "url": "Data%20Mining/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Frequent patterns"}, {"id": "s2", "title": "Market basket analysis"}, {"id": "s3", "title": "Association rules, support and confidence"}, {"id": "s4", "title": "The Apriori algorithm"}, {"id": "s5", "title": "Full worked example (|D| = 9, min_sup = 2)"}, {"id": "s6", "title": "Generating strong association rules"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week10", "label": "Week 10", "url": "Data%20Mining/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why not just use Apriori?"}, {"id": "s2", "title": "FP-growth: the idea"}, {"id": "s3", "title": "Worked example (min_sup = 3)"}, {"id": "s4", "title": "Mining the FP-tree"}, {"id": "s5", "title": "Multilevel association rules"}, {"id": "s6", "title": "Multidimensional association rules"}, {"id": "s7", "title": "Constraint-based association mining"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week11", "label": "Week 11", "url": "Data%20Mining/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Classification vs prediction"}, {"id": "s2", "title": "The two-step classification process"}, {"id": "s3", "title": "Preparing data & comparing methods"}, {"id": "s4", "title": "Decision trees & their history"}, {"id": "s5", "title": "Attribute selection measures"}, {"id": "s6", "title": "Worked example — buys_computer (14 tuples)"}, {"id": "s7", "title": "Weka: J48, filters and visualisation"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week12", "label": "Week 12", "url": "Data%20Mining/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Bayesian classifiers — overview"}, {"id": "s2", "title": "Bayes' theorem"}, {"id": "s3", "title": "The naïve Bayesian classifier"}, {"id": "s4", "title": "Worked example — will X buy a computer?"}, {"id": "s5", "title": "Rule-based classification"}, {"id": "s6", "title": "Extracting rules from a decision tree"}, {"id": "s7", "title": "Weka: training and testing"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week13", "label": "Week 13", "url": "Data%20Mining/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is cluster analysis?"}, {"id": "s2", "title": "Requirements of clustering in data mining"}, {"id": "s3", "title": "Types of clustering methods"}, {"id": "s4", "title": "Clustering by k-means"}, {"id": "s5", "title": "Weka: baseline accuracy and cross-validation"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week14", "label": "Week 14", "url": "Data%20Mining/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why k-medoids?"}, {"id": "s2", "title": "k-medoids and PAM"}, {"id": "s3", "title": "Worked example (from the lesson)"}, {"id": "s4", "title": "Hierarchical clustering"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week15", "label": "Week 15", "url": "Data%20Mining/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Overview"}, {"id": "s2", "title": "Financial data analysis"}, {"id": "s3", "title": "Retail industry"}, {"id": "s4", "title": "Telecommunication industry"}, {"id": "s5", "title": "Biological data analysis"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}]}, {"key": "dmath", "name": "Discrete Mathematics", "exam": ["2026-11-21", "08:30", "11:30"], "url": "Discrete%20Mathematics/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dmath-Week01", "label": "Week 01", "url": "Discrete%20Mathematics/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From propositions to predicates"}, {"id": "s2", "title": "Propositional functions"}, {"id": "s3", "title": "Compound expressions"}, {"id": "s4", "title": "Quantifiers: ∀, ∃, ∃!"}, {"id": "s5", "title": "Negating quantified expressions"}, {"id": "s6", "title": "Translating English into logic"}, {"id": "s7", "title": "Introduction to proofs — direct proof"}, {"id": "s8", "title": "Assignment 1: worked answers"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week02", "label": "Week 02", "url": "Discrete%20Mathematics/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Set terminology & notation"}, {"id": "s2", "title": "Equality, subsets & disjoint sets"}, {"id": "s3", "title": "Venn diagrams"}, {"id": "s4", "title": "Set operations"}, {"id": "s5", "title": "Set laws"}, {"id": "s6", "title": "Number of elements — inclusion–exclusion"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week03", "label": "Week 03", "url": "Discrete%20Mathematics/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a function?"}, {"id": "s2", "title": "One-to-one (injective)"}, {"id": "s3", "title": "Onto (surjective) & bijection"}, {"id": "s4", "title": "Inverse functions"}, {"id": "s5", "title": "Composition of functions"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week04", "label": "Week 04", "url": "Discrete%20Mathematics/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Sequences"}, {"id": "s2", "title": "Geometric & arithmetic progressions"}, {"id": "s3", "title": "Summation notation (Σ)"}, {"id": "s4", "title": "Geometric series (Theorem 1)"}, {"id": "s5", "title": "Infinite series (Theorem 2)"}, {"id": "s6", "title": "Double sums"}, {"id": "s7", "title": "Useful closed forms (Table 2)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week05", "label": "Week 05", "url": "Discrete%20Mathematics/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Matrices represent data"}, {"id": "s2", "title": "Matrix addition"}, {"id": "s3", "title": "Matrix multiplication"}, {"id": "s4", "title": "Identity, powers, transpose & symmetric"}, {"id": "s5", "title": "Zero–one matrices: join and meet"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week06", "label": "Week 06", "url": "Discrete%20Mathematics/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Divisibility"}, {"id": "s2", "title": "The division algorithm"}, {"id": "s3", "title": "Modular arithmetic & congruence"}, {"id": "s4", "title": "Primes"}, {"id": "s5", "title": "Cryptography — Caesar's cipher"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week07", "label": "Week 07", "url": "Discrete%20Mathematics/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why induction?"}, {"id": "s2", "title": "Worked induction proofs"}, {"id": "s3", "title": "The well-ordering property"}, {"id": "s4", "title": "Recursion"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week08", "label": "Week 08", "url": "Discrete%20Mathematics/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why counting?"}, {"id": "s2", "title": "The product rule (\"AND\", then multiply)"}, {"id": "s3", "title": "The sum rule (\"OR\", then add)"}, {"id": "s4", "title": "Tree diagrams"}, {"id": "s5", "title": "Combinations — order doesn't matter"}, {"id": "s6", "title": "Permutations — order matters"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week09", "label": "Week 09", "url": "Discrete%20Mathematics/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Binary relations"}, {"id": "s2", "title": "Functions as relations"}, {"id": "s3", "title": "Relations on a set"}, {"id": "s4", "title": "Properties: reflexive, symmetric, transitive"}, {"id": "s5", "title": "Equivalence relations"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week10", "label": "Week 10", "url": "Discrete%20Mathematics/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From pairs to n-tuples"}, {"id": "s2", "title": "Databases & the relational data model"}, {"id": "s3", "title": "Primary keys, composite keys, extension & intension"}, {"id": "s4", "title": "Operations: selection, projection, join"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week11", "label": "Week 11", "url": "Discrete%20Mathematics/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why graphs?"}, {"id": "s2", "title": "The birth of graph theory — Königsberg"}, {"id": "s3", "title": "What is a graph?"}, {"id": "s4", "title": "The six types of graphs"}, {"id": "s5", "title": "Graph models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week12", "label": "Week 12", "url": "Discrete%20Mathematics/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Trees"}, {"id": "s2", "title": "Rooted trees & terminology"}, {"id": "s3", "title": "Ordered rooted trees & binary trees"}, {"id": "s4", "title": "Binary search trees (BST)"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week13", "label": "Week 13", "url": "Discrete%20Mathematics/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Decision trees"}, {"id": "s2", "title": "Tree traversal"}, {"id": "s3", "title": "Spanning trees"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-papers", "label": "Past papers", "url": "Discrete%20Mathematics/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Question 1"}, {"id": "s3", "title": "January 2023 — Question 2 (number theory)"}, {"id": "s4", "title": "January 2023 — Question 3"}, {"id": "s5", "title": "January 2023 — Question 4 (graphs)"}, {"id": "s6", "title": "July 2023"}, {"id": "s7", "title": "October 2019"}, {"id": "s8", "title": "Model questions (official sample problems)"}]}]}, {"key": "hci", "name": "Human Computer Interaction", "exam": ["2026-11-22", "08:30", "11:30"], "url": "Human%20Computer%20Interaction/Study%20Guide%20-%20Index.html", "weeks": [{"key": "hci-Week01", "label": "Week 01", "url": "Human%20Computer%20Interaction/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "History of HCI"}, {"id": "s2", "title": "HCI is multi-disciplinary"}, {"id": "s3", "title": "Computers today: ubiquitous computing"}, {"id": "s4", "title": "Humans and perception"}, {"id": "s5", "title": "Interaction: two-way and task-centred"}, {"id": "s6", "title": "The HCI space"}, {"id": "s7", "title": "Applications of HCI — three pillars"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week02", "label": "Week 02", "url": "Human%20Computer%20Interaction/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is interaction?"}, {"id": "s2", "title": "Donald Norman's model — 7 stages"}, {"id": "s3", "title": "The two gulfs"}, {"id": "s4", "title": "Human errors: slips vs mistakes"}, {"id": "s5", "title": "The Abowd & Beale framework"}, {"id": "s6", "title": "Ergonomics"}, {"id": "s7", "title": "Direct vs indirect manipulation"}, {"id": "s8", "title": "Interaction styles"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week03", "label": "Week 03", "url": "Human%20Computer%20Interaction/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The human as an information processing machine"}, {"id": "s2", "title": "The senses in UI design"}, {"id": "s3", "title": "Human memory: three stores"}, {"id": "s4", "title": "Chunking & semantic networks"}, {"id": "s5", "title": "Cognitive load"}, {"id": "s6", "title": "Attention: selective vs divided"}, {"id": "s7", "title": "Motor skills & physical ergonomics"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week04", "label": "Week 04", "url": "Human%20Computer%20Interaction/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Design for tasks, not interfaces"}, {"id": "s2", "title": "The three contexts of \"use\": useful, usable, used"}, {"id": "s3", "title": "Three perspectives of the user"}, {"id": "s4", "title": "The in-car GPS turn example"}, {"id": "s5", "title": "UX beyond interaction"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week05", "label": "Week 05", "url": "Human%20Computer%20Interaction/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Action, interaction, effect, feedback"}, {"id": "s2", "title": "Feedback cycles are everywhere"}, {"id": "s3", "title": "Norman's model revisited: the two bridges"}, {"id": "s4", "title": "The 7 questions — designer & user perspectives"}, {"id": "s5", "title": "Norman's three levels of design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week06", "label": "Week 06", "url": "Human%20Computer%20Interaction/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct manipulation"}, {"id": "s2", "title": "The desktop metaphor vs the command line"}, {"id": "s3", "title": "Metaphorical vs literal invisibility — good vs bad design"}, {"id": "s4", "title": "Where direct manipulation is still lacking"}, {"id": "s5", "title": "Invisibility by learning vs by design"}, {"id": "s6", "title": "Five tips for invisible interfaces"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week07", "label": "Week 07", "url": "Human%20Computer%20Interaction/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Principles, guidelines and standards"}, {"id": "s2", "title": "Classic design frameworks"}, {"id": "s3", "title": "The 15 universal design principles"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week08", "label": "Week 08", "url": "Human%20Computer%20Interaction/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Mental models"}, {"id": "s2", "title": "Representations"}, {"id": "s3", "title": "Four traits of good representations"}, {"id": "s4", "title": "Full error taxonomy: slips vs mistakes"}, {"id": "s5", "title": "Learned helplessness & expert blindness"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week09", "label": "Week 09", "url": "Human%20Computer%20Interaction/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Task analysis & cognitive modelling"}, {"id": "s2", "title": "The GOMS framework"}, {"id": "s3", "title": "Keystroke-Level Model (KLM)"}, {"id": "s4", "title": "Fitts's law"}, {"id": "s5", "title": "Strengths and limits of predictive models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week10", "label": "Week 10", "url": "Human%20Computer%20Interaction/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Processor- vs predictor-oriented models"}, {"id": "s2", "title": "Cognitive Task Analysis (CTA) — 5 steps"}, {"id": "s3", "title": "Case study: the customer feedback thought stream"}, {"id": "s4", "title": "Hierarchical Task Analysis (HTA)"}, {"id": "s5", "title": "Modularity & divide and conquer"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week11", "label": "Week 11", "url": "Human%20Computer%20Interaction/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is user-centred design (UCD)?"}, {"id": "s2", "title": "The 8 user characteristics"}, {"id": "s3", "title": "ISO 9241-210: the 6 UCD principles"}, {"id": "s4", "title": "The 4-phase interaction design life cycle"}, {"id": "s5", "title": "Stakeholder-centred design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week12", "label": "Week 12", "url": "Human%20Computer%20Interaction/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where needfinding fits"}, {"id": "s2", "title": "The seven questions"}, {"id": "s3", "title": "Biases in needfinding"}, {"id": "s4", "title": "Needfinding methods"}, {"id": "s5", "title": "Representing the needs"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week13", "label": "Week 13", "url": "Human%20Computer%20Interaction/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where evaluation fits"}, {"id": "s2", "title": "Match the evaluation to the prototype"}, {"id": "s3", "title": "Evaluation across the design life cycle"}, {"id": "s4", "title": "Three types of evaluation"}, {"id": "s5", "title": "Four key terms"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-papers", "label": "Past papers", "url": "Human%20Computer%20Interaction/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what to focus on"}, {"id": "s2", "title": "ITE 3752 — Question 1: User-centred design (25 marks)"}, {"id": "s3", "title": "ITE 3752 — Question 2: Norman's model (25 marks)"}, {"id": "s4", "title": "ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)"}, {"id": "s5", "title": "ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)"}, {"id": "s6", "title": "Older ITE 3603 papers — outline answers"}]}]}, {"key": "mkt", "name": "Marketing", "exam": ["2026-11-22", "14:45", "17:45"], "url": "Marketing/Study%20Guide%20-%20Index.html", "weeks": [{"key": "mkt-Week01", "label": "Week 01", "url": "Marketing/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is marketing?"}, {"id": "s2", "title": "Marketing vs selling — the iceberg"}, {"id": "s3", "title": "Why marketing matters"}, {"id": "s4", "title": "Core concepts of marketing"}, {"id": "s5", "title": "Objectives of marketing"}, {"id": "s6", "title": "Quiz 01: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week02", "label": "Week 02", "url": "Marketing/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing has a history"}, {"id": "s2", "title": "1. Production concept"}, {"id": "s3", "title": "2. Product concept & marketing myopia"}, {"id": "s4", "title": "3. Selling concept"}, {"id": "s5", "title": "4. Marketing concept"}, {"id": "s6", "title": "5. Societal marketing concept"}, {"id": "s7", "title": "6. Holistic marketing concept"}, {"id": "s8", "title": "Quiz 02: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week03", "label": "Week 03", "url": "Marketing/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why scan the environment?"}, {"id": "s2", "title": "The three layers of the environment"}, {"id": "s3", "title": "Internal environment — 5 Ms & 7S"}, {"id": "s4", "title": "Micro environment (task environment)"}, {"id": "s5", "title": "Macro environment (DENTPC)"}, {"id": "s6", "title": "Responding to the environment"}, {"id": "s7", "title": "Marketing information system (MIS) & planning"}, {"id": "s8", "title": "Quiz 03: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week04", "label": "Week 04", "url": "Marketing/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Customer-driven marketing strategy"}, {"id": "s2", "title": "Market segmentation — four bases"}, {"id": "s3", "title": "Market targeting & Porter's five forces"}, {"id": "s4", "title": "Five patterns of target-market selection"}, {"id": "s5", "title": "Differentiation"}, {"id": "s6", "title": "Positioning & perceptual maps"}, {"id": "s7", "title": "Quiz 04: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week05", "label": "Week 05", "url": "Marketing/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why study consumer behaviour?"}, {"id": "s2", "title": "Consumer markets"}, {"id": "s3", "title": "The black box model (stimulus → response)"}, {"id": "s4", "title": "Factors influencing consumer behaviour"}, {"id": "s5", "title": "The buyer decision process — 5 stages"}, {"id": "s6", "title": "Four types of buying behaviour"}, {"id": "s7", "title": "Contemporary trends — Sri Lanka & global"}, {"id": "s8", "title": "Quiz 05: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week06", "label": "Week 06", "url": "Marketing/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a business market?"}, {"id": "s2", "title": "How business markets differ from consumer markets"}, {"id": "s3", "title": "Buying situations"}, {"id": "s4", "title": "Systems buying & selling"}, {"id": "s5", "title": "The buying centre — seven roles"}, {"id": "s6", "title": "Procurement: orientations & Kraljic's four product types"}, {"id": "s7", "title": "The 8 buy phases (Robinson et al.)"}, {"id": "s8", "title": "Business-to-business relationships"}, {"id": "s9", "title": "Quiz 06: model answer"}, {"id": "s10", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week07", "label": "Week 07", "url": "Marketing/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why marketing information matters"}, {"id": "s2", "title": "Three types of marketing data"}, {"id": "s3", "title": "The marketing information system (MIS)"}, {"id": "s4", "title": "Types of marketing research"}, {"id": "s5", "title": "The marketing research process"}, {"id": "s6", "title": "Why marketing research fails"}, {"id": "s7", "title": "Quiz 07: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week08", "label": "Week 08", "url": "Marketing/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is digital marketing?"}, {"id": "s2", "title": "Objectives of digital marketing"}, {"id": "s3", "title": "Why people go online"}, {"id": "s4", "title": "Key components of a digital marketing strategy"}, {"id": "s5", "title": "Strategy & measurement"}, {"id": "s6", "title": "Quiz 08: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week09", "label": "Week 09", "url": "Marketing/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why new products matter"}, {"id": "s2", "title": "Why develop new products, and why they fail"}, {"id": "s3", "title": "The 8-stage new product development process"}, {"id": "s4", "title": "The product life cycle (PLC)"}, {"id": "s5", "title": "Characteristics of each PLC stage"}, {"id": "s6", "title": "Marketing-mix strategies across the PLC"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week10", "label": "Week 10", "url": "Marketing/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Product strategy"}, {"id": "s2", "title": "Three levels of a product"}, {"id": "s3", "title": "Product classifications"}, {"id": "s4", "title": "Product mix and product line decisions"}, {"id": "s5", "title": "Brands, brand meaning and brand equity"}, {"id": "s6", "title": "Branding decisions"}, {"id": "s7", "title": "Packaging & labelling"}, {"id": "s8", "title": "Quiz 10: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week11", "label": "Week 11", "url": "Marketing/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Price: the revenue P"}, {"id": "s2", "title": "Factors affecting pricing decisions"}, {"id": "s3", "title": "The 6-step pricing process"}, {"id": "s4", "title": "New-product pricing: skimming vs penetration"}, {"id": "s5", "title": "Seven price-adjustment strategies"}, {"id": "s6", "title": "Price changes & reactions"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week12", "label": "Week 12", "url": "Marketing/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Before promoting"}, {"id": "s2", "title": "Integrated marketing communication (IMC)"}, {"id": "s3", "title": "Promotion objectives"}, {"id": "s4", "title": "The promotion mix"}, {"id": "s5", "title": "Advertising"}, {"id": "s6", "title": "Message strategy"}, {"id": "s7", "title": "Public relations"}, {"id": "s8", "title": "Sales promotion"}, {"id": "s9", "title": "Push vs pull channel policies"}, {"id": "s10", "title": "Socially responsible marketing communication"}, {"id": "s11", "title": "Quiz 12: model answer"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week13", "label": "Week 13", "url": "Marketing/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is \"place\"?"}, {"id": "s2", "title": "The nature of marketing channels"}, {"id": "s3", "title": "Push and pull strategies"}, {"id": "s4", "title": "How channel members add value"}, {"id": "s5", "title": "Channel levels"}, {"id": "s6", "title": "Channel behaviour and conflict"}, {"id": "s7", "title": "Conventional vs vertical marketing systems"}, {"id": "s8", "title": "Designing a marketing channel"}, {"id": "s9", "title": "Managing the marketing channel"}, {"id": "s10", "title": "Marketing logistics and supply chain management"}, {"id": "s11", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week14", "label": "Week 14", "url": "Marketing/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing planning"}, {"id": "s2", "title": "Purpose of marketing planning"}, {"id": "s3", "title": "Importance of marketing planning"}, {"id": "s4", "title": "Components of a marketing plan"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}]}]</script>
 <script>(function(){
   var KEY = document.body.getAttribute('data-key');
   function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }

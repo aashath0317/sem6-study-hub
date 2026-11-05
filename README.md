@@ -14,6 +14,12 @@ Start at **`SEM 6 Study Hub.html`**, or the GitHub Pages site for this repositor
 
 Lecture videos and PDFs are **not** stored in this repository. Online players use the linked Google Drive recordings; offline players use local recordings when present.
 
+## Beginner accounting practice
+
+Business Processes & Accounting Systems has two new beginner exercises in each of its 15 weeks (30 total). Open a week and choose **Start beginner practice** near the top. Each exercise states its inputs and includes an expandable answer with numbered steps, explanations and a final check. Tamil introductions explain the basic idea. Existing course-paper examples remain separate; the new questions are learning examples, not official exam questions.
+
+Start with Week 01 for business processes and AIS, then Week 02 for debit and credit. Attempt each question before opening its answer, then complete the weekly quiz. Practice sections count separately in the study planner and preserve previous section completion IDs.
+
 ## Rebuilding
 
 The pages are generated from `_source/build/content/` (`wNN.md` for notes, `wNN.quiz` for quizzes):

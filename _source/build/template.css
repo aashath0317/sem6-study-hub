@@ -230,3 +230,10 @@ mark{background:#ffe680;color:#000;border-radius:3px}
  .ta-readable-table tbody td:last-child{border-bottom:0}
  .ta-readable-table .ta-cell-label{display:block;font-weight:700;color:var(--accent-ink);font-size:.9em;margin-bottom:4px}
 }
+
+/* Beginner practice: native details works online and offline, including keyboard use. */
+.beginner-answer{border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:16px 0 26px;background:var(--panel)}
+.beginner-answer summary{cursor:pointer;font-weight:700;color:var(--accent);line-height:1.6}
+.beginner-answer summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+.beginner-answer[open] summary{margin-bottom:16px}
+.beginner-answer li{margin-bottom:10px}

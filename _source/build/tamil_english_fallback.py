@@ -14,7 +14,7 @@ NOTE = "**இந்தப் பகுதி இன்னும் தமிழ�
 BEGINNER = "Beginner practice — questions and step-by-step answers"
 BEGINNER_TA = "தொடக்கநிலைப் பயிற்சி — கேள்விகளும் படிப்படியான விடைகளும்"
 PRACTICE = "Practice questions (course paper)"
-REWRITTEN = {"w02", "w03", "w05", "w09"}
+REWRITTEN = {"w02", "w03", "w04", "w05", "w06", "w07", "w08", "w09", "w10", "w11", "w14", "w15"}
 
 
 def split(text):

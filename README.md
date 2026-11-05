@@ -16,7 +16,7 @@ Lecture videos and PDFs are **not** stored in this repository. Online players us
 
 ## Beginner accounting practice
 
-Business Processes & Accounting Systems has two new beginner exercises in each of its 15 weeks (30 total). Open a week and choose **Start beginner practice** near the top. Each exercise states its inputs and includes an expandable answer with numbered steps, explanations and a final check. Tamil introductions explain the basic idea. Existing course-paper examples remain separate; the new questions are learning examples, not official exam questions.
+Business Processes & Accounting Systems has two new beginner exercises in each of its 15 weeks (30 total). Open a week and choose **Start beginner practice** near the top. Each exercise states its inputs and includes an expandable answer with numbered steps, explanations and a final check. Tamil introductions explain the basic idea. Course-paper practice remains separate: all 84 PDF questions now have interactive answer boxes and complete stepped answers, including requested journals, ledger accounts and financial statements. Week 04 also has an original full-cycle capstone labelled “Extra practice, not from the PDF”. Weeks 01, 12 and 13 have no practice paper. The original 30 beginner exercises and the capstone are learning examples, not official exam questions. The course provides no official answer key; answers are checked against the lecture notes and independently recalculated.
 
 Start with Week 01 for business processes and AIS, then Week 02 for debit and credit. Attempt each question before opening its answer, then complete the weekly quiz. Practice sections count separately in the study planner and preserve previous section completion IDs.
 

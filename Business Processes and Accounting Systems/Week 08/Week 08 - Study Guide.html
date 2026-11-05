@@ -1253,24 +1253,58 @@ R.querySelector('.out').innerHTML='<table><tr><th>Transaction</th><th>Issued as<
 <li>ஊகங்களுடன் <strong>EOQ</strong></li>
 <li><strong>FIFO, WAC முறைகளில் களஞ்சியப் பேரேடு</strong></li>
 </ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Practice questions (course paper)"><span class="num">5</span>Practice questions (course paper)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>சரக்குக் கணக்குப் பயிற்சி</h3><p>Stores ledger-இல் ஒவ்வொரு வரவுக்கும் செலவுக்கும் பிறகு மீதியைப் புதுப்பியுங்கள். EOQ-இல் Demand, ordering cost, holding cost மூன்றும் ஒரே கால அடிப்படையில் இருக்க வேண்டும். வருடத் தேவையுடன் மாத holding cost-ஐ நேரடியாகப் பயன்படுத்தாதீர்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Stores ledger Q9-இன் closing quantity <strong>779 units</strong>. FIFO value <strong>32,660</strong>; moving WAC சுமார் <strong>31,474.01</strong>. Quantity ஒன்றே; cost allocation முறை மாறுவதால் value வேறு.
-EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 = <strong>1.5</strong>; interval = 12/1.5 = <strong>8 months</strong>. Ordering+holding வருடச் செலவு 120+120=240; purchase cost கேட்டால் தனியாகச் சேர்க்க வேண்டும்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><div class="call example"><div class="ct">Q1: Cost of purchased materials</div><table>
+EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 = <strong>1.5</strong>; interval = 12/1.5 = <strong>8 months</strong>. Ordering+holding வருடச் செலவு 120+120=240; purchase cost கேட்டால் தனியாகச் சேர்க்க வேண்டும்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><p>All 15 questions from the material-costing paper are included. Use the compact working table or select the option; full ledger cards are in Q9. The original EOQ calculator follows the questions.</p>
+<p><strong>Read the verbs:</strong> underline every action word in the Required part (identify, record, post, prepare, calculate) and answer each one, in that order.</p>
+<p><strong>Rules you need</strong></p>
+<table>
 <thead>
 <tr>
-<th></th>
-<th>Rs.</th>
+<th>Rule</th>
+<th>Plain meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Purchase price 300,000 − trade discount 10%</td>
-<td>270,000</td>
+<td>Inventory cost</td>
+<td>Net price + attributable delivery/tax costs; exclude recoverable tax.</td>
+</tr>
+<tr>
+<td>NRV</td>
+<td>Estimated selling price less costs to sell; carry inventory at lower of cost and NRV.</td>
+</tr>
+<tr>
+<td>EOQ</td>
+<td>√(2 × annual demand × ordering cost ÷ annual holding cost per unit).</td>
+</tr>
+<tr>
+<td>Reorder level</td>
+<td>Maximum usage × maximum delivery time.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Q1. Question:</strong> Araliya Enterprises has purchased goods on 1 April 2019. Purchase details are given below (LKR). Calculate the purchase price of the raw materials.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Amount / detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purchase price</td>
+<td>300,000</td>
+</tr>
+<tr>
+<td>Trade discount</td>
+<td>10% on purchase price</td>
 </tr>
 <tr>
 <td>Carriage inwards</td>
 <td>50,000</td>
 </tr>
 <tr>
-<td>Import tax</td>
+<td>Import tax (printed “Impart tax”)</td>
 <td>20,000</td>
 </tr>
 <tr>
@@ -1278,62 +1312,99 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 <td>15,000</td>
 </tr>
 <tr>
-<td>Non-recoverable VAT: 60% × 10,000</td>
-<td>6,000</td>
-</tr>
-<tr>
-<td><strong>Cost</strong></td>
-<td><strong>361,000</strong></td>
+<td>VAT</td>
+<td>10,000 (40% recoverable)</td>
 </tr>
 </tbody>
-</table></div>
-<div class="call example"><div class="ct">Q2: Net realisable value (NRV = selling price − selling cost)</div><table>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q1" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Net purchase price",""],["Non-recoverable VAT",""],["Raw material cost",""]]},"steps":[{"type":"choice","q":"The entity buys raw materials. Is this a transaction to identify?","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"Yes — a measurable business amount changes","ok":true},{"t":"No — there must be a cash payment first","why":"Credit purchases, accruals, depreciation and write-offs can be transactions without any immediate cash payment."}],"why":"A change in assets, liabilities, owner equity, income or expenses is a transaction even when no cash moves today."},{"type":"num","q":"Net purchase price — enter the number","a":270000,"think":"Deduct trade discount.","why":"300,000 × 90% = 270,000.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Deduct trade discount."}},{"type":"num","q":"Non-recoverable VAT — enter the number","a":6000,"think":"Only the 60% not recoverable is part of inventory cost.","why":"10,000 × 60% = 6,000.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Only the 60% not recoverable is part of inventory cost."}},{"type":"num","q":"Raw material cost — enter the number","a":361000,"think":"Add costs of bringing materials to their location and condition.","why":"270,000 + 50,000 + 20,000 + 15,000 + 6,000 = 361,000.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Add costs of bringing materials to their location and condition."}}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q1</summary>
+<p><strong>Step 1 — Deduct trade discount.</strong> 300,000 − 30,000 = 270,000.</p>
+<p><strong>Step 2 — Identify attributable costs.</strong> Freight 50,000, import tax 20,000, clearing 15,000 and non-recoverable VAT 6,000 are included. Recoverable VAT 4,000 is excluded.</p>
+<p><strong>Final check:</strong> 270,000 + 50,000 + 20,000 + 15,000 + 6,000 = <strong>361,000</strong>.</p>
+</details>
+<p><strong>Q2. Question:</strong> Calculate net realisable value on the following inventory items.</p>
+<table>
+<thead>
+<tr>
+<th>Inventory item</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost per unit</td>
+<td>100</td>
+<td>120</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Estimated selling price</td>
+<td>120</td>
+<td>150</td>
+<td>305</td>
+</tr>
+<tr>
+<td>Estimated selling cost</td>
+<td>30</td>
+<td>20</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q2" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["NRV per unit: A",""],["NRV per unit: B",""],["NRV per unit: C",""]]},"steps":[{"type":"num","q":"NRV per unit: A — enter the number","a":90,"think":"NRV is estimated selling price less costs to sell, not the lower-of-cost figure.","why":"120 − 30 = 90.","fill":[0,1],"mistakes":{"0":"This is not a zero result. NRV is estimated selling price less costs to sell, not the lower-of-cost figure."}},{"type":"num","q":"NRV per unit: B — enter the number","a":130,"think":"NRV is estimated selling price less costs to sell, not the lower-of-cost figure.","why":"150 − 20 = 130.","fill":[1,1],"mistakes":{"0":"This is not a zero result. NRV is estimated selling price less costs to sell, not the lower-of-cost figure."}},{"type":"num","q":"NRV per unit: C — enter the number","a":290,"think":"NRV is estimated selling price less costs to sell, not the lower-of-cost figure.","why":"305 − 15 = 290.","fill":[2,1],"mistakes":{"0":"This is not a zero result. NRV is estimated selling price less costs to sell, not the lower-of-cost figure."}}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q2</summary>
+<p><strong>Step 1 — Calculate NRV.</strong> Net realisable value is the amount expected after selling costs.</p>
+<table>
 <thead>
 <tr>
 <th>Item</th>
-<th>Cost</th>
-<th>Selling price</th>
-<th>Selling cost</th>
+<th>Selling price − selling cost</th>
 <th>NRV</th>
-<th>Value at (lower of cost and NRV)</th>
+<th>Cost</th>
+<th>Inventory value: lower of cost/NRV</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>A</td>
-<td>100</td>
-<td>120</td>
-<td>30</td>
+<td>120 − 30</td>
 <td>90</td>
-<td><strong>90</strong></td>
+<td>100</td>
+<td>90</td>
 </tr>
 <tr>
 <td>B</td>
-<td>120</td>
-<td>150</td>
-<td>20</td>
+<td>150 − 20</td>
 <td>130</td>
-<td><strong>120</strong></td>
+<td>120</td>
+<td>120</td>
 </tr>
 <tr>
 <td>C</td>
-<td>300</td>
-<td>305</td>
-<td>15</td>
+<td>305 − 15</td>
 <td>290</td>
-<td><strong>290</strong></td>
+<td>300</td>
+<td>290</td>
 </tr>
 </tbody>
-</table></div>
-<div class="call example"><div class="ct">Q3: Item method vs batch method</div><table>
+</table>
+<p><strong>Step 2 — Keep NRV distinct from carrying value.</strong> B has NRV 130 but is carried at cost 120. No unrealised gain is added.</p>
+<p><strong>Final check:</strong> NRVs total 90 + 130 + 290 = <strong>510</strong> for one unit of each; inventory values total 90 + 120 + 290 = <strong>500</strong>.</p>
+</details>
+<p><strong>Q3. Question:</strong> You are required to calculate the net realisable value on the following methods: item method and batch method.</p>
+<table>
 <thead>
 <tr>
 <th>Batch</th>
 <th>Item</th>
-<th>Cost</th>
-<th>NRV</th>
-<th>Units</th>
-<th>Item method (lower × units)</th>
+<th>Cost per unit</th>
+<th>NRV per unit</th>
+<th>Closing units</th>
 </tr>
 </thead>
 <tbody>
@@ -1343,7 +1414,6 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 <td>35</td>
 <td>30</td>
 <td>200</td>
-<td>6,000</td>
 </tr>
 <tr>
 <td>Soap</td>
@@ -1351,7 +1421,6 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 <td>40</td>
 <td>41</td>
 <td>150</td>
-<td>6,000</td>
 </tr>
 <tr>
 <td>Toothpaste</td>
@@ -1359,157 +1428,622 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 <td>120</td>
 <td>110</td>
 <td>100</td>
-<td>11,000</td>
 </tr>
 <tr>
 <td>Toothpaste</td>
-<td>Supiriwiki</td>
+<td>Supiriviki</td>
 <td>100</td>
 <td>95</td>
 <td>60</td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q3" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Item-method inventory value",""],["Batch-method inventory value",""]]},"steps":[{"type":"num","q":"Item-method inventory value — enter the number","a":28700,"think":"Compare cost with NRV separately for each item, multiply by units, then add.","why":"6,000 + 6,000 + 11,000 + 5,700 = 28,700.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Compare cost with NRV separately for each item, multiply by units, then add."}},{"type":"num","q":"Batch-method inventory value — enter the number","a":28850,"think":"Compare aggregate cost and aggregate NRV within each named batch.","why":"Soap min(13,000,12,150) + toothpaste min(18,000,16,700) = 28,850.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Compare aggregate cost and aggregate NRV within each named batch."}}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q3</summary>
+<p><strong>Step 1 — Interpret the requested methods.</strong> NRV itself is given per unit. Item and batch methods here mean applying the lower-of-cost-and-NRV valuation rule individually or to the two named groups.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Total cost</th>
+<th>Total NRV</th>
+<th>Item-method carrying value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lux</td>
+<td>7,000</td>
+<td>6,000</td>
+<td>6,000</td>
+</tr>
+<tr>
+<td>Rani</td>
+<td>6,000</td>
+<td>6,150</td>
+<td>6,000</td>
+</tr>
+<tr>
+<td>Signal</td>
+<td>12,000</td>
+<td>11,000</td>
+<td>11,000</td>
+</tr>
+<tr>
+<td>Supiriviki</td>
+<td>6,000</td>
+<td>5,700</td>
 <td>5,700</td>
 </tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><strong>28,700</strong></td>
-</tr>
 </tbody>
 </table>
-<p><strong>Batch method:</strong></p>
-<ul>
-<li>Soap: cost 13,000 vs NRV 12,150 → <strong>12,150</strong></li>
-<li>Toothpaste: cost 18,000 vs NRV 16,700 → <strong>16,700</strong></li>
-<li>Total <strong>28,850</strong></li>
-</ul>
-<p>The table columns are jumbled in the PDF; this is the reading that fits them.</p></div>
-<div class="call example"><div class="ct">Q4 to Q8: Multiple choice</div><table>
-<thead>
-<tr>
-<th>Q</th>
-<th>Answer</th>
-<th>Why</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>4</td>
-<td><strong>(d) all of the above</strong></td>
-<td>Maximum, minimum and re-order levels all guide requisitioning</td>
-</tr>
-<tr>
-<td>5</td>
-<td><strong>(d) stock-out costs</strong></td>
-<td>The lecture's formula is minimum stock = re-order level − (average consumption × average lead time). It uses options (a), (b) and (c), but not stock-out costs</td>
-</tr>
-<tr>
-<td>6</td>
-<td><strong>(c) EOQ</strong></td>
-<td>It balances ordering and holding costs</td>
-</tr>
-<tr>
-<td>7</td>
-<td><strong>(b) 2,100</strong></td>
-<td>ROL = max usage × max lead time = 700 × 3</td>
-</tr>
-<tr>
-<td>8</td>
-<td><strong>(a) LIFO</strong></td>
-<td>Issues are charged at the latest (higher) prices. LKAS 2 doesn't allow LIFO in financial statements, but it's the textbook answer</td>
-</tr>
-</tbody>
-</table></div>
-<div class="call example"><div class="ct">Q9: Stores ledger, FIFO vs weighted average</div><p>Opening 545 @ 35. Receipts: 444 @ 37.50 (Jan) · 500 @ 40 (Feb) · 750 @ 42 (Mar). Issues: 400 · 610 · 450.</p>
+<p><strong>Step 2 — Group the batches.</strong> Soap cost = 7,000 + 6,000 = 13,000; NRV = 6,000 + 6,150 = 12,150. Toothpaste cost = 12,000 + 6,000 = 18,000; NRV = 11,000 + 5,700 = 16,700.</p>
+<p><strong>Final check:</strong> item carrying value <strong>28,700</strong>; batch carrying value <strong>28,850</strong>. The difference 150 comes from offsetting Rani’s NRV above cost against Lux’s loss within the soap group. Total raw NRV is 28,850 under either grouping; the item carrying amount is lower.</p>
+</details>
+<p><strong>Q4. Question:</strong> The guiding factors for stores requisitioning are:</p>
 <table>
 <thead>
 <tr>
-<th>Issue</th>
-<th>FIFO</th>
-<th>WAC (rate)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Jan 400</td>
-<td>400 @ 35 = <strong>14,000</strong></td>
-<td>@ 36.12 = <strong>14,448.94</strong></td>
-</tr>
-<tr>
-<td>Feb 610</td>
-<td>145 @ 35 + 444 @ 37.50 + 21 @ 40 = <strong>22,565</strong></td>
-<td>@ 37.90 = <strong>23,120.66</strong></td>
-</tr>
-<tr>
-<td>Mar 450</td>
-<td>450 @ 40 = <strong>18,000</strong></td>
-<td>@ 40.40 = <strong>18,181.39</strong></td>
-</tr>
-<tr>
-<td><strong>Closing 779 units</strong></td>
-<td>29 @ 40 + 750 @ 42 = <strong>32,660</strong></td>
-<td><strong>31,474.01</strong></td>
-</tr>
-</tbody>
-</table>
-<p>If a physical count differs from the card, adjust the card to the count, and write off the shortage at the issue rate as a material loss.</p></div>
-<div class="call example"><div class="ct">Q10 to Q15: EOQ and stock levels</div><p><strong>Q10 (Swarnahansa):</strong></p>
-<ul>
-<li><strong>EOQ</strong> = √(2 × 600 × 80 / 0.60) = <strong>400 units</strong></li>
-<li>Orders a year = 600 / 400 = <strong>1.5</strong></li>
-<li>Minimum yearly cost = 1.5 × 80 + (400 / 2) × 0.60 = 120 + 120 = <strong>Rs. 240</strong></li>
-<li>Supply period = 12 / 1.5 = <strong>8 months</strong></li>
-</ul>
-<p><strong>Q11 (Sachin Ltd):</strong> annual usage 1,200; carrying cost = 25% × 4 quarters × 40 = Rs. 40 per unit per year.</p>
-<ul>
-<li><strong>EOQ</strong> = √(2 × 1,200 × 600 / 40) ≈ <strong>190 units</strong></li>
-<li>Orders ≈ <strong>6.3 a year</strong></li>
-</ul>
-<p><strong>Q12 (product X):</strong> annual usage 60 × 52 = 3,120.</p>
-<table>
-<thead>
-<tr>
-<th>Measure</th>
-<th>Formula</th>
+<th>Option</th>
 <th>Answer</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Re-order quantity (EOQ)</td>
-<td>√(2 × 3,120 × 120 / 12)</td>
-<td><strong>≈ 250</strong></td>
+<td>a</td>
+<td>Maximum stock level</td>
 </tr>
 <tr>
+<td>b</td>
+<td>Minimum stock level</td>
+</tr>
+<tr>
+<td>c</td>
 <td>Re-order level</td>
-<td>max usage × max lead time = 90 × 6</td>
-<td><strong>540</strong></td>
 </tr>
 <tr>
-<td>Minimum level</td>
-<td>ROL − normal usage × normal lead time = 540 − 60 × 5</td>
-<td><strong>240</strong></td>
-</tr>
-<tr>
-<td>Maximum level</td>
-<td>ROL + ROQ − min usage × min lead time = 540 + 250 − 30 × 4</td>
-<td><strong>670</strong></td>
-</tr>
-<tr>
-<td>Average level</td>
-<td>(min + max) / 2</td>
-<td><strong>455</strong></td>
+<td>d</td>
+<td>All of the above</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Q13 to Q15:</strong> annual usage 250 × 12 = 3,000.</p>
-<ul>
-<li><strong>Q13:</strong> EOQ = √(2 × 3,000 × 30 / 0.5) = <strong>600 (c)</strong></li>
-<li><strong>Q14:</strong> orders = 3,000 / 600 = <strong>5 (a)</strong></li>
-<li><strong>Q15:</strong> time between orders = 12 / 5 = <strong>2.4 months (c)</strong></li>
-</ul></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q4" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"The guiding factors for stores requisitioning are:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(d) All of the above","ok":true},{"t":"(a) Maximum stock level","why":"This is not the course answer. All three control levels guide stock replenishment and requisitioning."},{"t":"(b) Minimum stock level","why":"This is not the course answer. All three control levels guide stock replenishment and requisitioning."},{"t":"(c) Re-order level","why":"This is not the course answer. All three control levels guide stock replenishment and requisitioning."}],"why":"All three control levels guide stock replenishment and requisitioning."}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q4</summary>
+<p><strong>Step 1 — Choose the rule.</strong> All three control levels guide stock replenishment and requisitioning.</p>
+<p><strong>Step 2 — Select the option.</strong> <strong>(d) All of the above</strong>.</p>
+<p><strong>Final check:</strong> All three control levels guide stock replenishment and requisitioning.</p>
+</details>
+<p><strong>Q5. Question:</strong> Minimum or safety stock level is fixed after considering the following factors except:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>Average rate of consumption</td>
+</tr>
+<tr>
+<td>b</td>
+<td>Re-order level</td>
+</tr>
+<tr>
+<td>c</td>
+<td>Lead time</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Stock-out costs</td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q5" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"Minimum or safety stock level is fixed after considering the following factors except:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(d) Stock-out costs","ok":true},{"t":"(a) Average rate of consumption","why":"This is not the course answer. The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula."},{"t":"(b) Re-order level","why":"This is not the course answer. The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula."},{"t":"(c) Lead time","why":"This is not the course answer. The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula."}],"why":"The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula."}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q5</summary>
+<p><strong>Step 1 — Choose the rule.</strong> The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula.</p>
+<p><strong>Step 2 — Select the option.</strong> <strong>(d) Stock-out costs</strong>.</p>
+<p><strong>Final check:</strong> The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula.</p>
+</details>
+<p><strong>Q6. Question:</strong> The most advantageous buying pattern to adopt is found by computing the:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>Re-order level</td>
+</tr>
+<tr>
+<td>b</td>
+<td>Optimum stock level</td>
+</tr>
+<tr>
+<td>c</td>
+<td>Economic order quantity</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Lead time</td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q6" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"The most advantageous buying pattern to adopt is found by computing the:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(c) Economic order quantity","ok":true},{"t":"(a) Re-order level","why":"This is not the course answer. EOQ balances annual ordering cost with annual holding cost."},{"t":"(b) Optimum stock level","why":"This is not the course answer. EOQ balances annual ordering cost with annual holding cost."},{"t":"(d) Lead time","why":"This is not the course answer. EOQ balances annual ordering cost with annual holding cost."}],"why":"EOQ balances annual ordering cost with annual holding cost."}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q6</summary>
+<p><strong>Step 1 — Choose the rule.</strong> EOQ balances annual ordering cost with annual holding cost.</p>
+<p><strong>Step 2 — Select the option.</strong> <strong>(c) Economic order quantity</strong>.</p>
+<p><strong>Final check:</strong> EOQ balances annual ordering cost with annual holding cost.</p>
+</details>
+<p><strong>Q7. Question:</strong> The safety stock is 750 units; the supplier quotes a delivery delay of two to three weeks; the factory uses 400 to 700 units a week according to activity levels. The re-order level is:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>1,000</td>
+</tr>
+<tr>
+<td>b</td>
+<td>2,100</td>
+</tr>
+<tr>
+<td>c</td>
+<td>1,600</td>
+</tr>
+<tr>
+<td>d</td>
+<td>1,400</td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q7" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"The safety stock is 750 units; the supplier quotes a delivery delay of two to three weeks; the factory uses 400 to 700 units a week according to activity levels. The re-order level is:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(b) 2,100","ok":true},{"t":"(a) 1,000","why":"This is not the course answer. Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention."},{"t":"(c) 1,600","why":"This is not the course answer. Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention."},{"t":"(d) 1,400","why":"This is not the course answer. Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention."}],"why":"Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention."}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q7</summary>
+<p><strong>Step 1 — Choose the rule.</strong> Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention.</p>
+<p><strong>Step 2 — Select the option.</strong> <strong>(b) 2,100</strong>.</p>
+<p><strong>Final check:</strong> Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention.</p>
+</details>
+<p><strong>Q8. Question:</strong> In case of rise in price levels, the most suitable method for valuing materials issued is:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>LIFO</td>
+</tr>
+<tr>
+<td>b</td>
+<td>FIFO</td>
+</tr>
+<tr>
+<td>c</td>
+<td>Simple average</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Weighted average</td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q8" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"In case of rise in price levels, the most suitable method for valuing materials issued is:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(a) LIFO","ok":true},{"t":"(b) FIFO","why":"This is not the course answer. The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation."},{"t":"(c) Simple average","why":"This is not the course answer. The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation."},{"t":"(d) Weighted average","why":"This is not the course answer. The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation."}],"why":"The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation."}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q8</summary>
+<p><strong>Step 1 — Choose the rule.</strong> The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation.</p>
+<p><strong>Step 2 — Select the option.</strong> <strong>(a) LIFO</strong>.</p>
+<p><strong>Final check:</strong> The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation.</p>
+</details>
+<p><strong>Q9. Question:</strong> On 1 January the stock of a component in the stores was 545 units at Rs. 35 per unit. During the three months, receipts and issues were as follows.</p>
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Purchases at beginning</th>
+<th>Issues at end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>January</td>
+<td>444 units @ Rs. 37.50</td>
+<td>400 units</td>
+</tr>
+<tr>
+<td>February</td>
+<td>500 units @ Rs. 40.00</td>
+<td>610 units</td>
+</tr>
+<tr>
+<td>March</td>
+<td>750 units @ Rs. 42.00</td>
+<td>450 units</td>
+</tr>
+</tbody>
+</table>
+<p>Prepare stores ledger cards under FIFO and WAC methods and show how you would deal with the discrepancy.</p>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q9" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["FIFO February issue",""],["FIFO closing value",""],["WAC closing value",""],["Valuation difference",""]]},"steps":[{"type":"num","q":"FIFO February issue — enter the number","a":22565,"think":"Use the remaining old layers before the February receipt.","why":"145 × 35 + 444 × 37.50 + 21 × 40 = 22,565.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Use the remaining old layers before the February receipt."}},{"type":"num","q":"FIFO closing value — enter the number","a":32660,"think":"Keep the final unsold layers.","why":"29 × 40 + 750 × 42 = 32,660.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Keep the final unsold layers."}},{"type":"num","q":"WAC closing value — enter the number","a":31474.01,"think":"Recompute average after each receipt and deduct actual issues at that average.","why":"779 units × unrounded March moving average = 31,474.01.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Recompute average after each receipt and deduct actual issues at that average."}},{"type":"num","q":"Valuation difference — enter the number","a":1185.99,"think":"FIFO value minus WAC value; it is not a count loss.","why":"32,660 − 31,474.01 = 1,185.99.","fill":[3,1],"mistakes":{"0":"This is not a zero result. FIFO value minus WAC value; it is not a count loss."}}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q9</summary>
+<p><strong>Step 1 — Name the methods.</strong> FIFO means first in, first out: issue the oldest layer first. Moving weighted average (WAC) recomputes value ÷ units after every receipt; keep that rate until the next receipt. Assume receipts precede issues exactly as stated. Keep full precision in WAC calculations and round money for display.</p>
+<p><strong>Step 2 — Full FIFO stores ledger.</strong> Each balance names every remaining price layer.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Receipts: qty × rate = value</th>
+<th>Issues: qty × rate = value</th>
+<th>Balance layers</th>
+<th>Balance Rs.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jan 1</td>
+<td>Opening: 545 @ 35</td>
+<td></td>
+<td>545 @ 35</td>
+<td>19,075</td>
+</tr>
+<tr>
+<td>Jan beginning</td>
+<td>444 @ 37.5 = 16,650</td>
+<td></td>
+<td>545 @ 35; 444 @ 37.5</td>
+<td>35,725</td>
+</tr>
+<tr>
+<td>Jan end</td>
+<td></td>
+<td>400 @ 35 = 14,000</td>
+<td>145 @ 35; 444 @ 37.5</td>
+<td>21,725</td>
+</tr>
+<tr>
+<td>Feb beginning</td>
+<td>500 @ 40 = 20,000</td>
+<td></td>
+<td>145 @ 35; 444 @ 37.5; 500 @ 40</td>
+<td>41,725</td>
+</tr>
+<tr>
+<td>Feb end</td>
+<td></td>
+<td>145 @ 35 + 444 @ 37.5 + 21 @ 40 = 22,565</td>
+<td>479 @ 40</td>
+<td>19,160</td>
+</tr>
+<tr>
+<td>Mar beginning</td>
+<td>750 @ 42 = 31,500</td>
+<td></td>
+<td>479 @ 40; 750 @ 42</td>
+<td>50,660</td>
+</tr>
+<tr>
+<td>Mar end</td>
+<td></td>
+<td>450 @ 40 = 18,000</td>
+<td>29 @ 40; 750 @ 42</td>
+<td>32,660</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 3 — Full moving-WAC stores ledger.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Receipts: qty × rate = value</th>
+<th>Issues: qty × rate = value</th>
+<th>Balance qty × average</th>
+<th>Balance Rs.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jan 1</td>
+<td>Opening: 545 @ 35</td>
+<td></td>
+<td>545 @ 35</td>
+<td>19,075</td>
+</tr>
+<tr>
+<td>Jan beginning</td>
+<td>444 @ 37.5 = 16,650</td>
+<td></td>
+<td>989 @ 36.12234580</td>
+<td>35,725</td>
+</tr>
+<tr>
+<td>Jan end</td>
+<td></td>
+<td>400 @ 36.12234580 = 14,448.94</td>
+<td>589 @ 36.12234580</td>
+<td>21,276.06</td>
+</tr>
+<tr>
+<td>Feb beginning</td>
+<td>500 @ 40 = 20,000</td>
+<td></td>
+<td>1089 @ 37.90271963</td>
+<td>41,276.06</td>
+</tr>
+<tr>
+<td>Feb end</td>
+<td></td>
+<td>610 @ 37.90271963 = 23,120.66</td>
+<td>479 @ 37.90271963</td>
+<td>18,155.4</td>
+</tr>
+<tr>
+<td>Mar beginning</td>
+<td>750 @ 42 = 31,500</td>
+<td></td>
+<td>1229 @ 40.40309414</td>
+<td>49,655.4</td>
+</tr>
+<tr>
+<td>Mar end</td>
+<td></td>
+<td>450 @ 40.40309414 = 18,181.39</td>
+<td>779 @ 40.40309414</td>
+<td>31,474.01</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 4 — Explain “discrepancy”.</strong> Both methods leave <strong>779 units</strong>, but FIFO values them at 32,660 and WAC at 31,474.01. The <strong>1,185.99</strong> difference is a valuation-method difference, not missing physical stock; do not write it off as a shortage. If an actual count finds fewer than 779 units, investigate, document and authorise the shortage, then Dr Inventory loss / Cr Inventory at the chosen method’s appropriate carrying cost. No count or quantity shortage is provided, so no numerical shortage entry can be calculated.</p>
+<p><strong>Final check:</strong> opening and receipts = 19,075 + 16,650 + 20,000 + 31,500 = <strong>87,225</strong>. FIFO: 14,000 + 22,565 + 18,000 + 32,660 = 87,225. WAC: 14,448.94 + 23,120.66 + 18,181.39 + 31,474.01 = 87,225.</p>
+</details>
+<p><strong>Q10. Question:</strong> Swarnahansa has to supply to his customers 600 units per year. “Storage is not allowed” (wording printed in the paper) and inventory carrying cost is Rs. 0.60 per unit per year. Set-up cost per run is Rs. 80. Find (i) economic order quantity, (ii) optimum orders per year, (iii) minimum average yearly cost and (iv) optimum supply period per order in months.</p>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q10" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["EOQ, units",""],["Orders per year",""],["Annual ordering plus holding cost",""],["Months per supply cycle",""]]},"steps":[{"type":"num","q":"EOQ, units — enter the number","a":400,"think":"Use annual demand and annual holding cost.","why":"√(2 × 600 × 80 ÷ 0.60) = 400.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Use annual demand and annual holding cost."}},{"type":"num","q":"Orders per year — enter the number","a":1.5,"think":"Annual demand divided by EOQ.","why":"600 ÷ 400 = 1.5.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Annual demand divided by EOQ."}},{"type":"num","q":"Annual ordering plus holding cost — enter the number","a":240,"think":"Demand/EOQ × ordering cost + EOQ/2 × holding cost.","why":"1.5 × 80 + 200 × 0.60 = 240.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Demand/EOQ × ordering cost + EOQ/2 × holding cost."}},{"type":"num","q":"Months per supply cycle — enter the number","a":8,"think":"Divide 12 by orders per year.","why":"12 ÷ 1.5 = 8.","fill":[3,1],"mistakes":{"0":"This is not a zero result. Divide 12 by orders per year."}}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q10</summary>
+<p><strong>Step 1 — State the wording assumption.</strong> “Storage is not allowed” conflicts with a positive holding cost and the requested EOQ model. Interpret this as the usual <strong>shortages not allowed</strong> assumption, subject to confirmation; EOQ requires storage. No production rate is supplied, so use instantaneous replenishment rather than a finite-production model.</p>
+<p><strong>Step 2 — Calculate EOQ.</strong> √(2DS/H) = √(2 × 600 × 80 / 0.60) = 400 units.</p>
+<p><strong>Step 3 — Complete all four outputs.</strong> Orders = 600/400 = 1.5; annual ordering cost = 120 and holding cost = 120; cycle = 12/1.5 = 8 months. Fractional orders are a long-run annual average. “Minimum cost” here means relevant ordering plus holding costs; purchase cost cannot be included without a unit price.</p>
+<p><strong>Final check:</strong> ordering cost <strong>120</strong> = holding cost <strong>120</strong> at the optimum; total <strong>240</strong>.</p>
+</details>
+<p><strong>Q11. Question:</strong> Sachin Ltd furnishes: (i) consumption 300 units per quarter; (ii) unit cost Rs. 40; (iii) processing cost per order Rs. 600; (iv) inventory insurance 25% per quarter. Compute (i) EOQ and (ii) number of orders per year.</p>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q11" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Annual demand, units",""],["Annual carrying cost per unit",""],["EOQ, units",""],["Orders per year",""]]},"steps":[{"type":"num","q":"Annual demand, units — enter the number","a":1200,"think":"Four quarters in one year.","why":"300 × 4 = 1,200.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Four quarters in one year."}},{"type":"num","q":"Annual carrying cost per unit — enter the number","a":40,"think":"Apply each quarter’s 25% insurance to unit cost, then multiply by four.","why":"40 × 25% × 4 = 40.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Apply each quarter’s 25% insurance to unit cost, then multiply by four."}},{"type":"num","q":"EOQ, units — enter the number","a":189.74,"think":"Use matching annual time units in the square-root formula.","why":"√(2 × 1,200 × 600 ÷ 40) = 189.7367 ≈ 189.74.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Use matching annual time units in the square-root formula."}},{"type":"num","q":"Orders per year — enter the number","a":6.32,"think":"Use unrounded EOQ before rounding the final result.","why":"1,200 ÷ 189.7367 = 6.3246 ≈ 6.32.","fill":[3,1],"mistakes":{"0":"This is not a zero result. Use unrounded EOQ before rounding the final result."}}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q11</summary>
+<p><strong>Step 1 — Annualise both inputs.</strong> Demand = 300 × 4 = 1,200; insurance holding cost = 40 × 25% × 4 = 40 per unit per year. Use simple annualisation, not compound interest, because this is a carrying-cost rate.</p>
+<p><strong>Step 2 — EOQ and orders.</strong> EOQ = √36,000 = <strong>189.74 units</strong>, operationally about 190. Orders/year = <strong>6.32</strong> using unrounded EOQ, or 1,200/190 = 6.3158 if a whole-unit policy is used.</p>
+<p><strong>Final check:</strong> at unrounded EOQ, ordering and holding each equal about <strong>3,794.73</strong> annually.</p>
+</details>
+<p><strong>Q12. Question:</strong> A manufacturing company produces a special product “X”. The material particulars are:</p>
+<table>
+<thead>
+<tr>
+<th>Particular</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost per order</td>
+<td>Rs. 120</td>
+</tr>
+<tr>
+<td>Annual carrying cost/unit</td>
+<td>Rs. 12</td>
+</tr>
+<tr>
+<td>Normal weekly usage</td>
+<td>60 units</td>
+</tr>
+<tr>
+<td>Minimum weekly usage</td>
+<td>30 units</td>
+</tr>
+<tr>
+<td>Maximum weekly usage</td>
+<td>90 units</td>
+</tr>
+<tr>
+<td>Delivery period</td>
+<td>4 to 6 weeks</td>
+</tr>
+</tbody>
+</table>
+<p>Compute (i) reorder quantity, (ii) reorder level, (iii) minimum stock, (iv) maximum stock and (v) average stock.</p>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q12" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Reorder quantity, rounded units",""],["Reorder level, units",""],["Minimum stock, units",""],["Maximum stock, units",""],["Average stock, units",""]]},"steps":[{"type":"num","q":"Reorder quantity, rounded units — enter the number","a":250,"think":"Assume 52 weeks; round the computed EOQ to a whole unit before the stock-level policy calculations.","why":"√(2 × 3,120 × 120 ÷ 12) = 249.7999 ≈ 250.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Assume 52 weeks; round the computed EOQ to a whole unit before the stock-level policy calculations."}},{"type":"num","q":"Reorder level, units — enter the number","a":540,"think":"Maximum usage times maximum lead time.","why":"90 × 6 = 540.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Maximum usage times maximum lead time."}},{"type":"num","q":"Minimum stock, units — enter the number","a":240,"think":"Reorder level less normal consumption during normal lead time (five weeks).","why":"540 − 60 × 5 = 240.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Reorder level less normal consumption during normal lead time (five weeks)."}},{"type":"num","q":"Maximum stock, units — enter the number","a":670,"think":"Reorder level + rounded order − minimum usage during minimum delivery.","why":"540 + 250 − 30 × 4 = 670.","fill":[3,1],"mistakes":{"0":"This is not a zero result. Reorder level + rounded order − minimum usage during minimum delivery."}},{"type":"num","q":"Average stock, units — enter the number","a":455,"think":"Use the midpoint of the computed minimum and maximum for this answer.","why":"(240 + 670) ÷ 2 = 455.","fill":[4,1],"mistakes":{"0":"This is not a zero result. Use the midpoint of the computed minimum and maximum for this answer."}}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q12</summary>
+<p><strong>Step 1 — EOQ.</strong> Demand 60 × 52 = 3,120; EOQ = √62,400 = 249.7999, rounded <strong>250</strong>.</p>
+<p><strong>Step 2 — Apply the stock-level formulas.</strong> Reorder 90 × 6 = <strong>540</strong>; normal lead time (4+6)/2 = 5; minimum 540 − 60 × 5 = <strong>240</strong>; maximum 540 + 250 − 30 × 4 = <strong>670</strong>.</p>
+<p><strong>Step 3 — State the average convention.</strong> Midpoint of minimum and maximum = <strong>455</strong>. Another common convention, minimum + half reorder quantity, gives 240 + 125 = <strong>365</strong>. These formulas describe different stock assumptions; state which is used. Without whole-unit EOQ rounding, maximum is 669.7999 and midpoint is 454.89996.</p>
+<p><strong>Final check:</strong> (240 + 670)/2 = <strong>455</strong>, while the alternative 240 + 250/2 = <strong>365</strong>.</p>
+</details>
+<p><strong>Q13. Question:</strong> Use the following information in respect of materials used by a manufacturing firm.</p>
+<table>
+<thead>
+<tr>
+<th>Shared data for Q13–Q15</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monthly consumption</td>
+<td>250 units</td>
+</tr>
+<tr>
+<td>Cost per order</td>
+<td>Rs. 30</td>
+</tr>
+<tr>
+<td>Carrying cost</td>
+<td>Rs. 0.50 (assumed per unit per year)</td>
+</tr>
+</tbody>
+</table>
+<p>The Economic Order Quantity is:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>500 units</td>
+</tr>
+<tr>
+<td>b</td>
+<td>550 units</td>
+</tr>
+<tr>
+<td>c</td>
+<td>600 units</td>
+</tr>
+<tr>
+<td>d</td>
+<td>650 units</td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q13" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"The Economic Order Quantity is:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(c) 600 units","ok":true},{"t":"(a) 500 units","why":"Check annualisation and the required output. Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units."},{"t":"(b) 550 units","why":"Check annualisation and the required output. Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units."},{"t":"(d) 650 units","why":"Check annualisation and the required output. Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units."}],"why":"Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units."}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q13</summary>
+<p><strong>Step 1 — Match the time units.</strong> Carrying cost 0.50 is assumed annual per unit, although the paper omits its time basis. That convention fits the offered answers.</p>
+<p><strong>Step 2 — Calculate the requested result.</strong> Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units.</p>
+<p><strong>Final check:</strong> 5 × 600 = 3,000 annual units and 5 × 2.4 = 12 months. Correct option <strong>(c)</strong>.</p>
+</details>
+<p><strong>Q14. Question:</strong> Use the following information in respect of materials used by a manufacturing firm.</p>
+<table>
+<thead>
+<tr>
+<th>Shared data for Q13–Q15</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monthly consumption</td>
+<td>250 units</td>
+</tr>
+<tr>
+<td>Cost per order</td>
+<td>Rs. 30</td>
+</tr>
+<tr>
+<td>Carrying cost</td>
+<td>Rs. 0.50 (assumed per unit per year)</td>
+</tr>
+</tbody>
+</table>
+<p>Number of orders per annum is:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>5</td>
+</tr>
+<tr>
+<td>b</td>
+<td>6</td>
+</tr>
+<tr>
+<td>c</td>
+<td>6.5</td>
+</tr>
+<tr>
+<td>d</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q14" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"Number of orders per annum is:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(a) 5","ok":true},{"t":"(b) 6","why":"Check annualisation and the required output. Annual demand 3,000 ÷ EOQ 600 = 5 orders."},{"t":"(c) 6.5","why":"Check annualisation and the required output. Annual demand 3,000 ÷ EOQ 600 = 5 orders."},{"t":"(d) 7","why":"Check annualisation and the required output. Annual demand 3,000 ÷ EOQ 600 = 5 orders."}],"why":"Annual demand 3,000 ÷ EOQ 600 = 5 orders."}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q14</summary>
+<p><strong>Step 1 — Match the time units.</strong> Carrying cost 0.50 is assumed annual per unit, although the paper omits its time basis. That convention fits the offered answers.</p>
+<p><strong>Step 2 — Calculate the requested result.</strong> Annual demand 3,000 ÷ EOQ 600 = 5 orders.</p>
+<p><strong>Final check:</strong> 5 × 600 = 3,000 annual units and 5 × 2.4 = 12 months. Correct option <strong>(a)</strong>.</p>
+</details>
+<p><strong>Q15. Question:</strong> Use the following information in respect of materials used by a manufacturing firm.</p>
+<table>
+<thead>
+<tr>
+<th>Shared data for Q13–Q15</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monthly consumption</td>
+<td>250 units</td>
+</tr>
+<tr>
+<td>Cost per order</td>
+<td>Rs. 30</td>
+</tr>
+<tr>
+<td>Carrying cost</td>
+<td>Rs. 0.50 (assumed per unit per year)</td>
+</tr>
+</tbody>
+</table>
+<p>The time between two orders is:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>3 months</td>
+</tr>
+<tr>
+<td>b</td>
+<td>2.5 months</td>
+</tr>
+<tr>
+<td>c</td>
+<td>2.4 months</td>
+</tr>
+<tr>
+<td>d</td>
+<td>2.6 months</td>
+</tr>
+</tbody>
+</table>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q15" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"The time between two orders is:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(c) 2.4 months","ok":true},{"t":"(a) 3 months","why":"Check annualisation and the required output. 12 months ÷ 5 annual orders = 2.4 months."},{"t":"(b) 2.5 months","why":"Check annualisation and the required output. 12 months ÷ 5 annual orders = 2.4 months."},{"t":"(d) 2.6 months","why":"Check annualisation and the required output. 12 months ÷ 5 annual orders = 2.4 months."}],"why":"12 months ÷ 5 annual orders = 2.4 months."}]}</script></div></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q15</summary>
+<p><strong>Step 1 — Match the time units.</strong> Carrying cost 0.50 is assumed annual per unit, although the paper omits its time basis. That convention fits the offered answers.</p>
+<p><strong>Step 2 — Calculate the requested result.</strong> 12 months ÷ 5 annual orders = 2.4 months.</p>
+<p><strong>Final check:</strong> 5 × 600 = 3,000 annual units and 5 × 2.4 = 12 months. Correct option <strong>(c)</strong>.</p>
+</details>
 <div class="tool"><div class="tt">🧪 Try it — EOQ calculator</div><div id="eoqp">
 <div class="row"><label>Annual demand <input type="number" class="d" value="600" style="width:90px"></label><label>Cost per order <input type="number" class="o" value="80" style="width:80px"></label><label>Holding cost / unit / year <input type="number" class="h" value="0.6" step="0.1" style="width:80px"></label></div>
 <div class="out"></div>
@@ -1518,263 +2052,798 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 (function(){var R=document.getElementById('eoqp');function g(c){return +R.querySelector('.'+c).value}
 function run(){var D=g('d'),O=g('o'),H=g('h'),q=Math.sqrt(2*D*O/H),n=D/q;R.querySelector('.out').innerHTML=H>0?'<p style="font-size:19px">EOQ = √(2 × '+D+' × '+O+' / '+H+') = <b>'+(+q.toFixed(1))+'</b> units</p><p>Orders a year <b>'+(+n.toFixed(2))+'</b> · time between orders <b>'+(+(12/n).toFixed(2))+' months</b> · total cost <b>Rs. '+(+(n*O+q/2*H).toFixed(2))+'</b> (ordering = holding)</p>':'<p>Enter a holding cost above 0.</p>'}
 R.addEventListener('input',run);run();})();
-</script></div></div><div class="hci-ta" lang="ta" hidden data-title="பயிற்சிக் கேள்விகள் (பாட வினாத்தாள்)"><div class="call example"><div class="ct">Q1: வாங்கிய மூலப்பொருட்களின் கிரயம்</div><table>
+</script></div></div><div class="hci-ta" lang="ta" hidden data-title="பயிற்சிக் கேள்விகள் (பாட வினாத்தாள்)"><p><strong>இந்தப் பகுதி இன்னும் தமிழில் மொழிபெயர்க்கப்படவில்லை; தற்போது ஆங்கிலத்தில் மட்டும் உள்ளது.</strong></p>
+<p>All 15 questions from the material-costing paper are included. Use the compact working table or select the option; full ledger cards are in Q9. The original EOQ calculator follows the questions.</p>
+<p><strong>Read the verbs:</strong> underline every action word in the Required part (identify, record, post, prepare, calculate) and answer each one, in that order.</p>
+<p><strong>Rules you need</strong></p>
+<table>
 <thead>
 <tr>
-<th></th>
-<th>ரூ.</th>
+<th>Rule</th>
+<th>Plain meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>கொள்வனவு விலை 300,000 − வியாபாரக் கழிவு 10%</td>
-<td>270,000</td>
+<td>Inventory cost</td>
+<td>Net price + attributable delivery/tax costs; exclude recoverable tax.</td>
 </tr>
 <tr>
-<td>உள்நோக்கிய ஏற்றிச்செல்லல்</td>
+<td>NRV</td>
+<td>Estimated selling price less costs to sell; carry inventory at lower of cost and NRV.</td>
+</tr>
+<tr>
+<td>EOQ</td>
+<td>√(2 × annual demand × ordering cost ÷ annual holding cost per unit).</td>
+</tr>
+<tr>
+<td>Reorder level</td>
+<td>Maximum usage × maximum delivery time.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Q1. Question:</strong> Araliya Enterprises has purchased goods on 1 April 2019. Purchase details are given below (LKR). Calculate the purchase price of the raw materials.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Amount / detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purchase price</td>
+<td>300,000</td>
+</tr>
+<tr>
+<td>Trade discount</td>
+<td>10% on purchase price</td>
+</tr>
+<tr>
+<td>Carriage inwards</td>
 <td>50,000</td>
 </tr>
 <tr>
-<td>இறக்குமதி வரி</td>
+<td>Import tax (printed “Impart tax”)</td>
 <td>20,000</td>
 </tr>
 <tr>
-<td>சுங்க விடுவிப்புக் கட்டணங்கள்</td>
+<td>Clearing charges</td>
 <td>15,000</td>
 </tr>
 <tr>
-<td>மீளப்பெற முடியாத VAT: 60% × 10,000</td>
-<td>6,000</td>
-</tr>
-<tr>
-<td><strong>கிரயம்</strong></td>
-<td><strong>361,000</strong></td>
+<td>VAT</td>
+<td>10,000 (40% recoverable)</td>
 </tr>
 </tbody>
-</table></div>
-<div class="call example"><div class="ct">Q2: தேறிய தேறற்பெறுமதி (NRV = விற்பனை விலை − விற்பனைச் செலவு)</div><table>
+</table>
+<div data-ta-tool="gp-w08-q1"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q1</summary>
+<p><strong>Step 1 — Deduct trade discount.</strong> 300,000 − 30,000 = 270,000.</p>
+<p><strong>Step 2 — Identify attributable costs.</strong> Freight 50,000, import tax 20,000, clearing 15,000 and non-recoverable VAT 6,000 are included. Recoverable VAT 4,000 is excluded.</p>
+<p><strong>Final check:</strong> 270,000 + 50,000 + 20,000 + 15,000 + 6,000 = <strong>361,000</strong>.</p>
+</details>
+<p><strong>Q2. Question:</strong> Calculate net realisable value on the following inventory items.</p>
+<table>
 <thead>
 <tr>
-<th>உருப்படி</th>
-<th>கிரயம்</th>
-<th>விற்பனை விலை</th>
-<th>விற்பனைச் செலவு</th>
+<th>Inventory item</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost per unit</td>
+<td>100</td>
+<td>120</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Estimated selling price</td>
+<td>120</td>
+<td>150</td>
+<td>305</td>
+</tr>
+<tr>
+<td>Estimated selling cost</td>
+<td>30</td>
+<td>20</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<div data-ta-tool="gp-w08-q2"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q2</summary>
+<p><strong>Step 1 — Calculate NRV.</strong> Net realisable value is the amount expected after selling costs.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Selling price − selling cost</th>
 <th>NRV</th>
-<th>பெறுமதி (கிரயம், NRVஇல் குறைந்தது)</th>
+<th>Cost</th>
+<th>Inventory value: lower of cost/NRV</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>A</td>
-<td>100</td>
-<td>120</td>
-<td>30</td>
+<td>120 − 30</td>
 <td>90</td>
-<td><strong>90</strong></td>
+<td>100</td>
+<td>90</td>
 </tr>
 <tr>
 <td>B</td>
-<td>120</td>
-<td>150</td>
-<td>20</td>
+<td>150 − 20</td>
 <td>130</td>
-<td><strong>120</strong></td>
+<td>120</td>
+<td>120</td>
 </tr>
 <tr>
 <td>C</td>
-<td>300</td>
-<td>305</td>
-<td>15</td>
+<td>305 − 15</td>
 <td>290</td>
-<td><strong>290</strong></td>
+<td>300</td>
+<td>290</td>
 </tr>
 </tbody>
-</table></div>
-<div class="call example"><div class="ct">Q3: உருப்படி முறையும் தொகுதி முறையும்</div><table>
+</table>
+<p><strong>Step 2 — Keep NRV distinct from carrying value.</strong> B has NRV 130 but is carried at cost 120. No unrealised gain is added.</p>
+<p><strong>Final check:</strong> NRVs total 90 + 130 + 290 = <strong>510</strong> for one unit of each; inventory values total 90 + 120 + 290 = <strong>500</strong>.</p>
+</details>
+<p><strong>Q3. Question:</strong> You are required to calculate the net realisable value on the following methods: item method and batch method.</p>
+<table>
 <thead>
 <tr>
-<th>தொகுதி</th>
-<th>உருப்படி</th>
-<th>கிரயம்</th>
-<th>NRV</th>
-<th>அலகுகள்</th>
-<th>உருப்படி முறை (குறைந்த பெறுமதி × அலகுகள்)</th>
+<th>Batch</th>
+<th>Item</th>
+<th>Cost per unit</th>
+<th>NRV per unit</th>
+<th>Closing units</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>சவர்க்காரம்</td>
+<td>Soap</td>
 <td>Lux</td>
 <td>35</td>
 <td>30</td>
 <td>200</td>
-<td>6,000</td>
 </tr>
 <tr>
-<td>சவர்க்காரம்</td>
+<td>Soap</td>
 <td>Rani</td>
 <td>40</td>
 <td>41</td>
 <td>150</td>
-<td>6,000</td>
 </tr>
 <tr>
-<td>பற்பசை</td>
+<td>Toothpaste</td>
 <td>Signal</td>
 <td>120</td>
 <td>110</td>
 <td>100</td>
-<td>11,000</td>
 </tr>
 <tr>
-<td>பற்பசை</td>
-<td>Supiriwiki</td>
+<td>Toothpaste</td>
+<td>Supiriviki</td>
 <td>100</td>
 <td>95</td>
 <td>60</td>
+</tr>
+</tbody>
+</table>
+<div data-ta-tool="gp-w08-q3"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q3</summary>
+<p><strong>Step 1 — Interpret the requested methods.</strong> NRV itself is given per unit. Item and batch methods here mean applying the lower-of-cost-and-NRV valuation rule individually or to the two named groups.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Total cost</th>
+<th>Total NRV</th>
+<th>Item-method carrying value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lux</td>
+<td>7,000</td>
+<td>6,000</td>
+<td>6,000</td>
+</tr>
+<tr>
+<td>Rani</td>
+<td>6,000</td>
+<td>6,150</td>
+<td>6,000</td>
+</tr>
+<tr>
+<td>Signal</td>
+<td>12,000</td>
+<td>11,000</td>
+<td>11,000</td>
+</tr>
+<tr>
+<td>Supiriviki</td>
+<td>6,000</td>
+<td>5,700</td>
 <td>5,700</td>
 </tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><strong>28,700</strong></td>
-</tr>
 </tbody>
 </table>
-<p><strong>தொகுதி முறை:</strong></p>
-<ul>
-<li>சவர்க்காரம்: கிரயம் 13,000, NRV 12,150 → <strong>12,150</strong></li>
-<li>பற்பசை: கிரயம் 18,000, NRV 16,700 → <strong>16,700</strong></li>
-<li>மொத்தம் <strong>28,850</strong></li>
-</ul>
-<p>PDFஇல் அட்டவணைப் பத்திகள் குழம்பியுள்ளன; இது அவற்றுக்குப் பொருந்தும் வாசிப்பு.</p></div>
-<div class="call example"><div class="ct">Q4 முதல் Q8 வரை: பல்தேர்வு</div><table>
+<p><strong>Step 2 — Group the batches.</strong> Soap cost = 7,000 + 6,000 = 13,000; NRV = 6,000 + 6,150 = 12,150. Toothpaste cost = 12,000 + 6,000 = 18,000; NRV = 11,000 + 5,700 = 16,700.</p>
+<p><strong>Final check:</strong> item carrying value <strong>28,700</strong>; batch carrying value <strong>28,850</strong>. The difference 150 comes from offsetting Rani’s NRV above cost against Lux’s loss within the soap group. Total raw NRV is 28,850 under either grouping; the item carrying amount is lower.</p>
+</details>
+<p><strong>Q4. Question:</strong> The guiding factors for stores requisitioning are:</p>
+<table>
 <thead>
 <tr>
-<th>Q</th>
-<th>விடை</th>
-<th>ஏன்?</th>
+<th>Option</th>
+<th>Answer</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>4</td>
-<td><strong>(d) மேலுள்ள அனைத்தும்</strong></td>
-<td>அதிகபட்சம், குறைந்தபட்சம், மீள்கட்டளை மட்டங்கள் அனைத்தும் வேண்டுகோள் எழுப்ப வழிகாட்டுகின்றன</td>
+<td>a</td>
+<td>Maximum stock level</td>
 </tr>
 <tr>
+<td>b</td>
+<td>Minimum stock level</td>
+</tr>
+<tr>
+<td>c</td>
+<td>Re-order level</td>
+</tr>
+<tr>
+<td>d</td>
+<td>All of the above</td>
+</tr>
+</tbody>
+</table>
+<div data-ta-tool="gp-w08-q4"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q4</summary>
+<p><strong>Step 1 — Choose the rule.</strong> All three control levels guide stock replenishment and requisitioning.</p>
+<p><strong>Step 2 — Select the option.</strong> <strong>(d) All of the above</strong>.</p>
+<p><strong>Final check:</strong> All three control levels guide stock replenishment and requisitioning.</p>
+</details>
+<p><strong>Q5. Question:</strong> Minimum or safety stock level is fixed after considering the following factors except:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>Average rate of consumption</td>
+</tr>
+<tr>
+<td>b</td>
+<td>Re-order level</td>
+</tr>
+<tr>
+<td>c</td>
+<td>Lead time</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Stock-out costs</td>
+</tr>
+</tbody>
+</table>
+<div data-ta-tool="gp-w08-q5"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q5</summary>
+<p><strong>Step 1 — Choose the rule.</strong> The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula.</p>
+<p><strong>Step 2 — Select the option.</strong> <strong>(d) Stock-out costs</strong>.</p>
+<p><strong>Final check:</strong> The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula.</p>
+</details>
+<p><strong>Q6. Question:</strong> The most advantageous buying pattern to adopt is found by computing the:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>Re-order level</td>
+</tr>
+<tr>
+<td>b</td>
+<td>Optimum stock level</td>
+</tr>
+<tr>
+<td>c</td>
+<td>Economic order quantity</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Lead time</td>
+</tr>
+</tbody>
+</table>
+<div data-ta-tool="gp-w08-q6"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q6</summary>
+<p><strong>Step 1 — Choose the rule.</strong> EOQ balances annual ordering cost with annual holding cost.</p>
+<p><strong>Step 2 — Select the option.</strong> <strong>(c) Economic order quantity</strong>.</p>
+<p><strong>Final check:</strong> EOQ balances annual ordering cost with annual holding cost.</p>
+</details>
+<p><strong>Q7. Question:</strong> The safety stock is 750 units; the supplier quotes a delivery delay of two to three weeks; the factory uses 400 to 700 units a week according to activity levels. The re-order level is:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>1,000</td>
+</tr>
+<tr>
+<td>b</td>
+<td>2,100</td>
+</tr>
+<tr>
+<td>c</td>
+<td>1,600</td>
+</tr>
+<tr>
+<td>d</td>
+<td>1,400</td>
+</tr>
+</tbody>
+</table>
+<div data-ta-tool="gp-w08-q7"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q7</summary>
+<p><strong>Step 1 — Choose the rule.</strong> Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention.</p>
+<p><strong>Step 2 — Select the option.</strong> <strong>(b) 2,100</strong>.</p>
+<p><strong>Final check:</strong> Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention.</p>
+</details>
+<p><strong>Q8. Question:</strong> In case of rise in price levels, the most suitable method for valuing materials issued is:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>LIFO</td>
+</tr>
+<tr>
+<td>b</td>
+<td>FIFO</td>
+</tr>
+<tr>
+<td>c</td>
+<td>Simple average</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Weighted average</td>
+</tr>
+</tbody>
+</table>
+<div data-ta-tool="gp-w08-q8"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q8</summary>
+<p><strong>Step 1 — Choose the rule.</strong> The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation.</p>
+<p><strong>Step 2 — Select the option.</strong> <strong>(a) LIFO</strong>.</p>
+<p><strong>Final check:</strong> The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation.</p>
+</details>
+<p><strong>Q9. Question:</strong> On 1 January the stock of a component in the stores was 545 units at Rs. 35 per unit. During the three months, receipts and issues were as follows.</p>
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Purchases at beginning</th>
+<th>Issues at end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>January</td>
+<td>444 units @ Rs. 37.50</td>
+<td>400 units</td>
+</tr>
+<tr>
+<td>February</td>
+<td>500 units @ Rs. 40.00</td>
+<td>610 units</td>
+</tr>
+<tr>
+<td>March</td>
+<td>750 units @ Rs. 42.00</td>
+<td>450 units</td>
+</tr>
+</tbody>
+</table>
+<p>Prepare stores ledger cards under FIFO and WAC methods and show how you would deal with the discrepancy.</p>
+<div data-ta-tool="gp-w08-q9"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q9</summary>
+<p><strong>Step 1 — Name the methods.</strong> FIFO means first in, first out: issue the oldest layer first. Moving weighted average (WAC) recomputes value ÷ units after every receipt; keep that rate until the next receipt. Assume receipts precede issues exactly as stated. Keep full precision in WAC calculations and round money for display.</p>
+<p><strong>Step 2 — Full FIFO stores ledger.</strong> Each balance names every remaining price layer.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Receipts: qty × rate = value</th>
+<th>Issues: qty × rate = value</th>
+<th>Balance layers</th>
+<th>Balance Rs.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jan 1</td>
+<td>Opening: 545 @ 35</td>
+<td></td>
+<td>545 @ 35</td>
+<td>19,075</td>
+</tr>
+<tr>
+<td>Jan beginning</td>
+<td>444 @ 37.5 = 16,650</td>
+<td></td>
+<td>545 @ 35; 444 @ 37.5</td>
+<td>35,725</td>
+</tr>
+<tr>
+<td>Jan end</td>
+<td></td>
+<td>400 @ 35 = 14,000</td>
+<td>145 @ 35; 444 @ 37.5</td>
+<td>21,725</td>
+</tr>
+<tr>
+<td>Feb beginning</td>
+<td>500 @ 40 = 20,000</td>
+<td></td>
+<td>145 @ 35; 444 @ 37.5; 500 @ 40</td>
+<td>41,725</td>
+</tr>
+<tr>
+<td>Feb end</td>
+<td></td>
+<td>145 @ 35 + 444 @ 37.5 + 21 @ 40 = 22,565</td>
+<td>479 @ 40</td>
+<td>19,160</td>
+</tr>
+<tr>
+<td>Mar beginning</td>
+<td>750 @ 42 = 31,500</td>
+<td></td>
+<td>479 @ 40; 750 @ 42</td>
+<td>50,660</td>
+</tr>
+<tr>
+<td>Mar end</td>
+<td></td>
+<td>450 @ 40 = 18,000</td>
+<td>29 @ 40; 750 @ 42</td>
+<td>32,660</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 3 — Full moving-WAC stores ledger.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Receipts: qty × rate = value</th>
+<th>Issues: qty × rate = value</th>
+<th>Balance qty × average</th>
+<th>Balance Rs.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jan 1</td>
+<td>Opening: 545 @ 35</td>
+<td></td>
+<td>545 @ 35</td>
+<td>19,075</td>
+</tr>
+<tr>
+<td>Jan beginning</td>
+<td>444 @ 37.5 = 16,650</td>
+<td></td>
+<td>989 @ 36.12234580</td>
+<td>35,725</td>
+</tr>
+<tr>
+<td>Jan end</td>
+<td></td>
+<td>400 @ 36.12234580 = 14,448.94</td>
+<td>589 @ 36.12234580</td>
+<td>21,276.06</td>
+</tr>
+<tr>
+<td>Feb beginning</td>
+<td>500 @ 40 = 20,000</td>
+<td></td>
+<td>1089 @ 37.90271963</td>
+<td>41,276.06</td>
+</tr>
+<tr>
+<td>Feb end</td>
+<td></td>
+<td>610 @ 37.90271963 = 23,120.66</td>
+<td>479 @ 37.90271963</td>
+<td>18,155.4</td>
+</tr>
+<tr>
+<td>Mar beginning</td>
+<td>750 @ 42 = 31,500</td>
+<td></td>
+<td>1229 @ 40.40309414</td>
+<td>49,655.4</td>
+</tr>
+<tr>
+<td>Mar end</td>
+<td></td>
+<td>450 @ 40.40309414 = 18,181.39</td>
+<td>779 @ 40.40309414</td>
+<td>31,474.01</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 4 — Explain “discrepancy”.</strong> Both methods leave <strong>779 units</strong>, but FIFO values them at 32,660 and WAC at 31,474.01. The <strong>1,185.99</strong> difference is a valuation-method difference, not missing physical stock; do not write it off as a shortage. If an actual count finds fewer than 779 units, investigate, document and authorise the shortage, then Dr Inventory loss / Cr Inventory at the chosen method’s appropriate carrying cost. No count or quantity shortage is provided, so no numerical shortage entry can be calculated.</p>
+<p><strong>Final check:</strong> opening and receipts = 19,075 + 16,650 + 20,000 + 31,500 = <strong>87,225</strong>. FIFO: 14,000 + 22,565 + 18,000 + 32,660 = 87,225. WAC: 14,448.94 + 23,120.66 + 18,181.39 + 31,474.01 = 87,225.</p>
+</details>
+<p><strong>Q10. Question:</strong> Swarnahansa has to supply to his customers 600 units per year. “Storage is not allowed” (wording printed in the paper) and inventory carrying cost is Rs. 0.60 per unit per year. Set-up cost per run is Rs. 80. Find (i) economic order quantity, (ii) optimum orders per year, (iii) minimum average yearly cost and (iv) optimum supply period per order in months.</p>
+<div data-ta-tool="gp-w08-q10"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q10</summary>
+<p><strong>Step 1 — State the wording assumption.</strong> “Storage is not allowed” conflicts with a positive holding cost and the requested EOQ model. Interpret this as the usual <strong>shortages not allowed</strong> assumption, subject to confirmation; EOQ requires storage. No production rate is supplied, so use instantaneous replenishment rather than a finite-production model.</p>
+<p><strong>Step 2 — Calculate EOQ.</strong> √(2DS/H) = √(2 × 600 × 80 / 0.60) = 400 units.</p>
+<p><strong>Step 3 — Complete all four outputs.</strong> Orders = 600/400 = 1.5; annual ordering cost = 120 and holding cost = 120; cycle = 12/1.5 = 8 months. Fractional orders are a long-run annual average. “Minimum cost” here means relevant ordering plus holding costs; purchase cost cannot be included without a unit price.</p>
+<p><strong>Final check:</strong> ordering cost <strong>120</strong> = holding cost <strong>120</strong> at the optimum; total <strong>240</strong>.</p>
+</details>
+<p><strong>Q11. Question:</strong> Sachin Ltd furnishes: (i) consumption 300 units per quarter; (ii) unit cost Rs. 40; (iii) processing cost per order Rs. 600; (iv) inventory insurance 25% per quarter. Compute (i) EOQ and (ii) number of orders per year.</p>
+<div data-ta-tool="gp-w08-q11"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q11</summary>
+<p><strong>Step 1 — Annualise both inputs.</strong> Demand = 300 × 4 = 1,200; insurance holding cost = 40 × 25% × 4 = 40 per unit per year. Use simple annualisation, not compound interest, because this is a carrying-cost rate.</p>
+<p><strong>Step 2 — EOQ and orders.</strong> EOQ = √36,000 = <strong>189.74 units</strong>, operationally about 190. Orders/year = <strong>6.32</strong> using unrounded EOQ, or 1,200/190 = 6.3158 if a whole-unit policy is used.</p>
+<p><strong>Final check:</strong> at unrounded EOQ, ordering and holding each equal about <strong>3,794.73</strong> annually.</p>
+</details>
+<p><strong>Q12. Question:</strong> A manufacturing company produces a special product “X”. The material particulars are:</p>
+<table>
+<thead>
+<tr>
+<th>Particular</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost per order</td>
+<td>Rs. 120</td>
+</tr>
+<tr>
+<td>Annual carrying cost/unit</td>
+<td>Rs. 12</td>
+</tr>
+<tr>
+<td>Normal weekly usage</td>
+<td>60 units</td>
+</tr>
+<tr>
+<td>Minimum weekly usage</td>
+<td>30 units</td>
+</tr>
+<tr>
+<td>Maximum weekly usage</td>
+<td>90 units</td>
+</tr>
+<tr>
+<td>Delivery period</td>
+<td>4 to 6 weeks</td>
+</tr>
+</tbody>
+</table>
+<p>Compute (i) reorder quantity, (ii) reorder level, (iii) minimum stock, (iv) maximum stock and (v) average stock.</p>
+<div data-ta-tool="gp-w08-q12"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q12</summary>
+<p><strong>Step 1 — EOQ.</strong> Demand 60 × 52 = 3,120; EOQ = √62,400 = 249.7999, rounded <strong>250</strong>.</p>
+<p><strong>Step 2 — Apply the stock-level formulas.</strong> Reorder 90 × 6 = <strong>540</strong>; normal lead time (4+6)/2 = 5; minimum 540 − 60 × 5 = <strong>240</strong>; maximum 540 + 250 − 30 × 4 = <strong>670</strong>.</p>
+<p><strong>Step 3 — State the average convention.</strong> Midpoint of minimum and maximum = <strong>455</strong>. Another common convention, minimum + half reorder quantity, gives 240 + 125 = <strong>365</strong>. These formulas describe different stock assumptions; state which is used. Without whole-unit EOQ rounding, maximum is 669.7999 and midpoint is 454.89996.</p>
+<p><strong>Final check:</strong> (240 + 670)/2 = <strong>455</strong>, while the alternative 240 + 250/2 = <strong>365</strong>.</p>
+</details>
+<p><strong>Q13. Question:</strong> Use the following information in respect of materials used by a manufacturing firm.</p>
+<table>
+<thead>
+<tr>
+<th>Shared data for Q13–Q15</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monthly consumption</td>
+<td>250 units</td>
+</tr>
+<tr>
+<td>Cost per order</td>
+<td>Rs. 30</td>
+</tr>
+<tr>
+<td>Carrying cost</td>
+<td>Rs. 0.50 (assumed per unit per year)</td>
+</tr>
+</tbody>
+</table>
+<p>The Economic Order Quantity is:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>500 units</td>
+</tr>
+<tr>
+<td>b</td>
+<td>550 units</td>
+</tr>
+<tr>
+<td>c</td>
+<td>600 units</td>
+</tr>
+<tr>
+<td>d</td>
+<td>650 units</td>
+</tr>
+</tbody>
+</table>
+<div data-ta-tool="gp-w08-q13"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q13</summary>
+<p><strong>Step 1 — Match the time units.</strong> Carrying cost 0.50 is assumed annual per unit, although the paper omits its time basis. That convention fits the offered answers.</p>
+<p><strong>Step 2 — Calculate the requested result.</strong> Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units.</p>
+<p><strong>Final check:</strong> 5 × 600 = 3,000 annual units and 5 × 2.4 = 12 months. Correct option <strong>(c)</strong>.</p>
+</details>
+<p><strong>Q14. Question:</strong> Use the following information in respect of materials used by a manufacturing firm.</p>
+<table>
+<thead>
+<tr>
+<th>Shared data for Q13–Q15</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monthly consumption</td>
+<td>250 units</td>
+</tr>
+<tr>
+<td>Cost per order</td>
+<td>Rs. 30</td>
+</tr>
+<tr>
+<td>Carrying cost</td>
+<td>Rs. 0.50 (assumed per unit per year)</td>
+</tr>
+</tbody>
+</table>
+<p>Number of orders per annum is:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
 <td>5</td>
-<td><strong>(d) சரக்குத் தீர்வுச் செலவுகள் (stock-out costs)</strong></td>
-<td>விரிவுரைச் சூத்திரம்: குறைந்தபட்சச் சரக்கு = மீள்கட்டளை மட்டம் − (சராசரி நுகர்வு × சராசரி முன்னோடிக் காலம்). இதில் (a), (b), (c) பயன்படுகின்றன; stock-out costs பயன்படுவதில்லை</td>
 </tr>
 <tr>
+<td>b</td>
 <td>6</td>
-<td><strong>(c) EOQ</strong></td>
-<td>கட்டளையிடும் செலவையும் வைத்திருக்கும் செலவையும் சமநிலைப்படுத்துகிறது</td>
 </tr>
 <tr>
+<td>c</td>
+<td>6.5</td>
+</tr>
+<tr>
+<td>d</td>
 <td>7</td>
-<td><strong>(b) 2,100</strong></td>
-<td>ROL = அதிகபட்சப் பயன்பாடு × அதிகபட்ச முன்னோடிக் காலம் = 700 × 3</td>
-</tr>
-<tr>
-<td>8</td>
-<td><strong>(a) LIFO</strong></td>
-<td>வழங்கல்கள் அண்மைய (அதிக) விலைகளில் செலவிடப்படுகின்றன. நிதிக் கூற்றுகளில் LKAS 2, LIFOஐ அனுமதிக்காவிட்டாலும் இதுவே பாடநூல் விடை</td>
 </tr>
 </tbody>
-</table></div>
-<div class="call example"><div class="ct">Q9: களஞ்சியப் பேரேடு, FIFO மற்றும் நிறையிட்ட சராசரி</div><p>ஆரம்பம் 545 @ 35. பெறுதல்கள்: 444 @ 37.50 (ஜனவரி) · 500 @ 40 (பிப்ரவரி) · 750 @ 42 (மார்ச்). வழங்கல்கள்: 400 · 610 · 450.</p>
+</table>
+<div data-ta-tool="gp-w08-q14"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q14</summary>
+<p><strong>Step 1 — Match the time units.</strong> Carrying cost 0.50 is assumed annual per unit, although the paper omits its time basis. That convention fits the offered answers.</p>
+<p><strong>Step 2 — Calculate the requested result.</strong> Annual demand 3,000 ÷ EOQ 600 = 5 orders.</p>
+<p><strong>Final check:</strong> 5 × 600 = 3,000 annual units and 5 × 2.4 = 12 months. Correct option <strong>(a)</strong>.</p>
+</details>
+<p><strong>Q15. Question:</strong> Use the following information in respect of materials used by a manufacturing firm.</p>
 <table>
 <thead>
 <tr>
-<th>வழங்கல்</th>
-<th>FIFO</th>
-<th>WAC (வீதம்)</th>
+<th>Shared data for Q13–Q15</th>
+<th>Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>ஜனவரி 400</td>
-<td>400 @ 35 = <strong>14,000</strong></td>
-<td>@ 36.12 = <strong>14,448.94</strong></td>
+<td>Monthly consumption</td>
+<td>250 units</td>
 </tr>
 <tr>
-<td>பிப்ரவரி 610</td>
-<td>145 @ 35 + 444 @ 37.50 + 21 @ 40 = <strong>22,565</strong></td>
-<td>@ 37.90 = <strong>23,120.66</strong></td>
+<td>Cost per order</td>
+<td>Rs. 30</td>
 </tr>
 <tr>
-<td>மார்ச் 450</td>
-<td>450 @ 40 = <strong>18,000</strong></td>
-<td>@ 40.40 = <strong>18,181.39</strong></td>
-</tr>
-<tr>
-<td><strong>இறுதி 779 அலகுகள்</strong></td>
-<td>29 @ 40 + 750 @ 42 = <strong>32,660</strong></td>
-<td><strong>31,474.01</strong></td>
+<td>Carrying cost</td>
+<td>Rs. 0.50 (assumed per unit per year)</td>
 </tr>
 </tbody>
 </table>
-<p>நேரடி எண்ணிக்கை அட்டையிலிருந்து வேறுபட்டால், அட்டையை எண்ணிக்கைக்குச் சீராக்கி, பற்றாக்குறையை வழங்கல் வீதத்தில் மூலப்பொருள் நட்டமாக நீக்கவும்.</p></div>
-<div class="call example"><div class="ct">Q10 முதல் Q15 வரை: EOQ மற்றும் சரக்கு மட்டங்கள்</div><p><strong>Q10 (ஸ்வர்ணஹன்ச):</strong></p>
-<ul>
-<li><strong>EOQ</strong> = √(2 × 600 × 80 / 0.60) = <strong>400 அலகுகள்</strong></li>
-<li>வருடாந்தக் கட்டளைகள் = 600 / 400 = <strong>1.5</strong></li>
-<li>குறைந்தபட்ச வருடாந்தச் செலவு = 1.5 × 80 + (400 / 2) × 0.60 = 120 + 120 = <strong>ரூ. 240</strong></li>
-<li>வழங்கல் காலம் = 12 / 1.5 = <strong>8 மாதங்கள்</strong></li>
-</ul>
-<p><strong>Q11 (Sachin Ltd):</strong> வருடாந்தப் பயன்பாடு 1,200; வைத்திருக்கும் செலவு = 25% × 4 காலாண்டுகள் × 40 = அலகுக்கு வருடத்துக்கு ரூ. 40.</p>
-<ul>
-<li><strong>EOQ</strong> = √(2 × 1,200 × 600 / 40) ≈ <strong>190 அலகுகள்</strong></li>
-<li>கட்டளைகள் ≈ <strong>வருடத்துக்கு 6.3</strong></li>
-</ul>
-<p><strong>Q12 (பொருள் X):</strong> வருடாந்தப் பயன்பாடு 60 × 52 = 3,120.</p>
+<p>The time between two orders is:</p>
 <table>
 <thead>
 <tr>
-<th>அளவீடு</th>
-<th>சூத்திரம்</th>
-<th>விடை</th>
+<th>Option</th>
+<th>Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>மீள்கட்டளை அளவு (EOQ)</td>
-<td>√(2 × 3,120 × 120 / 12)</td>
-<td><strong>≈ 250</strong></td>
+<td>a</td>
+<td>3 months</td>
 </tr>
 <tr>
-<td>மீள்கட்டளை மட்டம்</td>
-<td>அதிகபட்சப் பயன்பாடு × அதிகபட்ச முன்னோடிக் காலம் = 90 × 6</td>
-<td><strong>540</strong></td>
+<td>b</td>
+<td>2.5 months</td>
 </tr>
 <tr>
-<td>குறைந்தபட்ச மட்டம்</td>
-<td>ROL − வழமையான பயன்பாடு × வழமையான முன்னோடிக் காலம் = 540 − 60 × 5</td>
-<td><strong>240</strong></td>
+<td>c</td>
+<td>2.4 months</td>
 </tr>
 <tr>
-<td>அதிகபட்ச மட்டம்</td>
-<td>ROL + ROQ − குறைந்தபட்சப் பயன்பாடு × குறைந்தபட்ச முன்னோடிக் காலம் = 540 + 250 − 30 × 4</td>
-<td><strong>670</strong></td>
-</tr>
-<tr>
-<td>சராசரி மட்டம்</td>
-<td>(குறைந்தபட்சம் + அதிகபட்சம்) / 2</td>
-<td><strong>455</strong></td>
+<td>d</td>
+<td>2.6 months</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Q13 முதல் Q15:</strong> வருடாந்தப் பயன்பாடு 250 × 12 = 3,000.</p>
-<ul>
-<li><strong>Q13:</strong> EOQ = √(2 × 3,000 × 30 / 0.5) = <strong>600 (c)</strong></li>
-<li><strong>Q14:</strong> கட்டளைகள் = 3,000 / 600 = <strong>5 (a)</strong></li>
-<li><strong>Q15:</strong> கட்டளைகளுக்கிடையிலான காலம் = 12 / 5 = <strong>2.4 மாதங்கள் (c)</strong></li>
-</ul></div>
+<div data-ta-tool="gp-w08-q15"></div>
+<details class="beginner-answer">
+<summary>Show step-by-step answer — Q15</summary>
+<p><strong>Step 1 — Match the time units.</strong> Carrying cost 0.50 is assumed annual per unit, although the paper omits its time basis. That convention fits the offered answers.</p>
+<p><strong>Step 2 — Calculate the requested result.</strong> 12 months ÷ 5 annual orders = 2.4 months.</p>
+<p><strong>Final check:</strong> 5 × 600 = 3,000 annual units and 5 × 2.4 = 12 months. Correct option <strong>(c)</strong>.</p>
+</details>
 <div data-ta-tool="eoqp"></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>சரக்கின் மதிப்பு</h4><p><strong>LKAS 2</strong> படி சரக்கை Cost அல்லது விற்றால் கிடைக்கும் நிகரத் தொகை (<strong>NRV</strong>) இவற்றில் குறைந்ததில் காட்டுவோம். NRV என்பது விற்பனை விலை மட்டும் அல்ல; முடிக்கவும் விற்கவும் இன்னும் செய்ய வேண்டிய செலவுகளை கழிக்க வேண்டும்.</p></div><div class="ta-recap-item"><h4>சரக்கு வாங்கும் நடைமுறை</h4><p>என்ன தேவை என்று கோரிக்கை, கொள்வனவு ஆணை, பொருள் பெற்ற சான்று, பில், பணம் செலுத்தல் எனச் சான்றுகளை இணைத்துப் பாருங்கள். ஆணையிட்டது வந்ததா, விலையும் அளவும் சரியா என்பதை இதனால் சரிபார்க்க முடியும்.</p></div><div class="ta-recap-item"><h4>எப்போது மீண்டும் வாங்குவது?</h4><p>சரக்கு முடிந்த பிறகு ஆணையிட்டால் வேலை நின்றுவிடும். <strong>Reorder level</strong> வந்ததும் வாங்கத் தொடங்குவோம்; <strong>Lead time</strong> என்பது பொருள் வந்து சேரும் தாமதம். EOQ வாங்கும் செலவும் சேமிப்புச் செலவும் சேர்ந்து குறையும் அளவு.</p></div><div class="ta-recap-item"><h4>FIFO மற்றும் சராசரிச் செலவு</h4><p><strong>FIFO</strong>-இல் முதலில் வந்த சரக்கின் செலவை முதலில் வழங்குவோம். <strong>Weighted average</strong>-இல் மொத்த மதிப்பு ÷ மொத்த அளவு செய்து ஒரு அலகின் சராசரிச் செலவைப் பெறுவோம். இரண்டிலும் மீதமுள்ள சரக்கின் அளவு ஒன்றாக இருந்தாலும் மதிப்பு மாறலாம்.</p></div><div class="ta-recap-item"><h4>சரக்குக் கணக்குப் பயிற்சி</h4><p>Stores ledger-இல் ஒவ்வொரு வரவுக்கும் செலவுக்கும் பிறகு மீதியைப் புதுப்பியுங்கள். EOQ-இல் Demand, ordering cost, holding cost மூன்றும் ஒரே கால அடிப்படையில் இருக்க வேண்டும். வருடத் தேவையுடன் மாத holding cost-ஐ நேரடியாகப் பயன்படுத்தாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
@@ -1966,7 +3035,7 @@ R.addEventListener('input',run);run();})();
 <p><strong>Check:</strong> do not use the Rs 90 selling price as NRV. Costs still necessary to sell must be deducted.</p>
 </details>
 <p><strong>Next step:</strong> close the answers and solve both questions again. Then try this week’s self-check quiz. If a step is unclear, revisit the topic named in the learning path above.</p></div></div><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">11 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="bpas-Week08" data-pick="0"><script type="application/json" class="qdata">[{"q": "LKAS 2 requires inventories to be measured at:", "o": ["The lower of cost and net realisable value", "Market value", "Selling price", "The higher of cost and NRV"], "e": "NRV = estimated selling price − costs of completion − selling costs. ", "a": 0, "w": "Week 08"}, {"q": "Which cost is <strong>excluded<\/strong> from the cost of inventory under LKAS 2?", "o": ["Purchase price net of trade discounts", "Import duties (non-refundable)", "Carriage inwards", "Storage costs and selling costs"], "e": "Also excluded: abnormal waste, unrelated admin overheads, FX differences, interest on deferred terms. ", "a": 3, "w": "Week 08"}, {"q": "Which cost formula is <strong>not<\/strong> allowed by LKAS 2?", "o": ["FIFO", "Weighted average cost", "LIFO", "Specific identification for unique items"], "e": "LIFO is prohibited. ", "a": 2, "w": "Week 08"}, {"q": "Item cost 800 and NRV 650. At what value is it carried?", "e": "The lower of cost and NRV, item by item. ", "n": 650.0, "w": "Week 08"}, {"q": "6,000 units at Rs 4 less 25% trade discount, plus Rs 200 freight, plus net container cost Rs 12. Ignoring the cash discount, what is the total material cost?", "e": "24,000 − 6,000 + 200 + 12 = 18,212. ", "n": 18212.0, "w": "Week 08"}, {"q": "Annual demand 3,000 units, ordering cost Rs 30 per order, holding cost Rs 0.50 per unit. What is the EOQ (units)?", "e": "√(2 × 3,000 × 30 ÷ 0.5) = √360,000 = 600. ", "n": 600.0, "w": "Week 08"}, {"q": "Maximum consumption 9,000 a month, maximum lead time 4 months. What is the re-order level (units)?", "e": "ROL = maximum usage × maximum lead time. ", "n": 36000.0, "w": "Week 08"}, {"q": "The correct order of the purchase documents is:", "o": ["Purchase requisition → purchase order → goods received note → invoice", "Invoice → GRN → purchase order → requisition", "Purchase order → requisition → invoice → GRN", "GRN → invoice → requisition → order"], "e": "The GRN is the basis for stores ledger entries. ", "a": 0, "w": "Week 08"}, {"q": "An advantage of <strong>centralised<\/strong> purchasing is:", "o": ["Better control and concentration of expert buying staff", "Lower transport costs", "Faster local settlement of shortages", "Benefits from local seasonal prices"], "e": "Those other three are advantages of decentralised buying. ", "a": 0, "w": "Week 08"}, {"q": "200 units at Rs 500 are in stock; 300 units are bought at Rs 600. 250 units are issued. Using <strong>FIFO<\/strong>, what is the issue value?", "e": "200 × 500 + 50 × 600 = 130,000. ", "n": 130000.0, "w": "Week 08"}, {"q": "A cash discount (e.g. 5% for paying within 10 days) is treated in material cost as:", "o": ["A reduction of material cost", "Ignored: it's a financing benefit, not part of material cost", "An addition to cost", "A trade discount"], "e": "Only trade discounts reduce the purchase cost. ", "a": 1, "w": "Week 08"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2007/Week%2007%20-%20Study%20Guide.html"><small>← Previous</small>Year-End Adjustments — Accruals, Prepayments, Bad Debts &amp; Impairment Provisions</a><a class="nx" href="../Week%2009/Week%2009%20-%20Study%20Guide.html"><small>Next →</small>Labour Costing — Time Keeping, Remuneration, Salary Sheet, EPF &amp; ETF</a></div></main></div><script type="application/json" id="hci-tamil-data">{"strings": {"Self-check quiz": "சுய பரிசோதனை வினாடிவினா", "Check my answers": "என் விடைகளைச் சரிபார்", "Try again (new order)": "மீண்டும் முயல்க (புதிய வரிசை)", "New random exam": "புதிய சீரற்ற தேர்வு", "All answered": "அனைத்துக்கும் விடையளிக்கப்பட்டது", "✓ Correct.": "✓ சரி.", "✗ Not quite.": "✗ முழுவதும் சரியில்லை.", "Excellent — you know this well": "மிகச் சிறப்பு — இதை நன்றாக அறிந்திருக்கிறீர்கள்", "Good — revise the ones you missed": "நன்று — தவறவிட்டவற்றை மீளாய்வு செய்யுங்கள்", "Getting there — reread the weak sections": "முன்னேறுகிறீர்கள் — பலவீனமான பகுதிகளை மீண்டும் வாசியுங்கள்", "Needs revision — go through the notes again": "மீளாய்வு தேவை — குறிப்புகளை மீண்டும் படியுங்கள்", "Lecture videos": "விரிவுரைக் காணொளிகள்", "▶ Lecture videos": "▶ விரிவுரைக் காணொளிகள்", "Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.": "இங்கோ குறிப்புகளுக்குள்ளோ உள்ள நேரக் குறியீட்டைச் சொடுக்கினால் காணொளி அந்த நேரத்துக்குச் செல்லும். நீங்கள் பார்த்த இடம் நினைவில் வைக்கப்படும்.", "Open in Google Drive ↗": "Google Drive-இல் திறக்கவும் ↗", "ON THIS PAGE": "இந்தப் பக்கத்தில்", "On this page": "இந்தப் பக்கத்தில்", "← Previous": "← முந்தையது", "Next →": "அடுத்தது →", "NEXT →": "அடுத்தது →", "Mark this section as understood": "இந்தப் பகுதியைப் புரிந்துகொண்டதாகக் குறிக்கவும்", "✓ Understood": "✓ புரிந்துகொண்டேன்", "Understood — click to undo": "புரிந்துகொண்டேன் — செயல்தவிர்க்கச் சொடுக்கவும்", "Type a number": "ஓர் எண்ணை உள்ளிடவும்", "Type what you remember…": "நினைவிருப்பதைத் தட்டச்சு செய்யுங்கள்…", "Answer:": "விடை:", "Best": "சிறந்தது", "Last": "கடைசி", "Attempts": "முயற்சிகள்", "Attempt": "முயற்சி", "today": "இன்று", "yesterday": "நேற்று", "Mixed practice exam": "கலப்புப் பயிற்சித் தேர்வு", "? Self-check quiz": "? சுய பரிசோதனை வினாடிவினா", "★ Mixed practice exam": "★ கலப்புப் பயிற்சித் தேர்வு", "📊 Your knowledge in this subject": "📊 இந்தப் பாடத்தில் உங்கள் அறிவு", "Overall knowledge": "ஒட்டுமொத்த அறிவு", "Weeks quizzed": "வினாடிவினா முயன்ற வாரங்கள்", "Average best score": "சிறந்த மதிப்பெண்களின் சராசரி", "on the weeks you tried": "நீங்கள் முயன்ற வாரங்களில்", "— average best score × weeks covered": "— சிறந்த மதிப்பெண்களின் சராசரி × முயன்ற வாரங்களின் விகிதம்", "Mixed exam best": "கலப்புத் தேர்வின் சிறந்த மதிப்பெண்", "Exam practice": "தேர்வுப் பயிற்சி", "Past papers with worked answers": "தீர்வுகளுடன் கடந்தகால வினாத்தாள்கள்", "Real exam questions from previous years, fully solved, plus which topics come up most.": "முந்தைய ஆண்டுகளின் உண்மையான தேர்வுக் கேள்விகளுக்கான முழுத் தீர்வுகளும் அதிகம் இடம்பெறும் தலைப்புகளும்.", "Offline study guides — one per week, built from the lecture notes and lecture videos. Green bar = sections you marked as understood.": "விரிவுரைக் குறிப்புகளையும் காணொளிகளையும் கொண்டு உருவாக்கப்பட்ட இணையமில்லா கற்றல் வழிகாட்டிகள் — வாரத்துக்கு ஒன்று. பச்சைப் பட்டை = நீங்கள் புரிந்துகொண்டதாகக் குறித்த பகுதிகள்.", "Take the": "நீங்கள் பல வாரங்களைப் படித்த பின், கீழேயுள்ள", "mixed practice exam": "கலப்புப் பயிற்சித் தேர்வை", "at the bottom when you have covered several weeks.": "முயலுங்கள்.", "📄 Lecture videos (no PDF for this week)": "📄 விரிவுரைக் காணொளிகள் (இந்த வாரத்துக்கு PDF இல்லை)", "📄 Lecture video (no PDF for this week)": "📄 விரிவுரைக் காணொளி (இந்த வாரத்துக்கு PDF இல்லை)", "✓ Understood — click to unmark": "✓ புரிந்துகொண்டேன் — குறியை நீக்கச் சொடுக்கவும்", "Business Processes & Accounting Systems": "வணிகச் செயல்முறைகளும் கணக்கியல் முறைமைகளும்", "Business Processes & Accounting Systems · Past papers": "வணிகச் செயல்முறைகளும் கணக்கியல் முறைமைகளும் · கடந்தகால வினாத்தாள்கள்", "Material Costing & LKAS 2 Inventories": "பொருட் செலவிடலும் LKAS 2 சரக்குகளும்", "Inventory types, the cost of inventory and NRV (LKAS 2), the purchase function (centralised vs decentralised, purchase procedure, material cost), storing materials (stock levels, EOQ), and pricing issues with FIFO and weighted average — with every lecture example solved.": "சரக்கு வகைகள், சரக்குச் செலவும் NRVஉம் (LKAS 2), கொள்வனவுப் பணி (மையப்படுத்தப்பட்டதும் மையப்படுத்தப்படாததும், கொள்வனவு நடைமுறை, பொருட் செலவு), பொருட்களைச் சேமித்தல் (சரக்கு மட்டங்கள், EOQ), FIFO மற்றும் நிறையிட்ட சராசரி மூலம் வழங்கல்களுக்கு விலையிடல் — ஒவ்வொரு விரிவுரை எடுத்துக்காட்டின் தீர்வுடனும்.", "Inventory Costing": "சரக்குச் செலவிடல்", "Lecture on inventory and material costing.": "சரக்கு மற்றும் பொருட் செலவிடல் பற்றிய விரிவுரை.", "Learning outcomes: what inventories are and why systems matter": "கற்றல் பெறுபேறுகள்: சரக்குகள் என்றால் என்ன, முறைமைகள் ஏன் முக்கியம்", "Key features of an inventory system": "சரக்கு முறைமையின் முக்கிய பண்புகள்", "Why hold inventory: independence of operations": "சரக்கு வைத்திருப்பது ஏன்: செயற்பாடுகளின் சுயாதீனம்", "Flexibility in production scheduling": "உற்பத்தி அட்டவணையிடலில் நெகிழ்வுத்தன்மை", "Economic purchase orders and discounts": "சிக்கனமான கொள்வனவுக் கட்டளைகளும் கழிவுகளும்", "Inventory costs: ordering cost": "சரக்குச் செலவுகள்: கட்டளைச் செலவு", "Set-up costs (e.g. switching car models)": "தயார்நிலை அமைப்புச் செலவுகள் (எ.கா. கார் மாதிரிகளை மாற்றுதல்)", "Stock-out costs (e.g. a phone launch)": "சரக்குத் தீர்வுச் செலவுகள் (எ.கா. தொலைபேசி அறிமுகம்)", "Objectives of stock control": "சரக்குக் கட்டுப்பாட்டின் நோக்கங்கள்", "Stock levels": "சரக்கு மட்டங்கள்", "Reorder level formula": "மீள்கட்டளை மட்டச் சூத்திரம்", "Minimum stock level (buffer stock)": "குறைந்தபட்ச சரக்கு மட்டம் (பாதுகாப்புச் சரக்கு)", "Maximum stock level": "அதிகபட்ச சரக்கு மட்டம்", "Worked example: stock levels": "தீர்வுடன் எடுத்துக்காட்டு: சரக்கு மட்டங்கள்", "EOQ: minimising total cost": "EOQ: மொத்தச் செலவைக் குறைத்தல்", "Holding cost per unit per year": "ஆண்டுக்கு அலகொன்றின் பேணற் செலவு", "FIFO valuation": "FIFO மதிப்பீடு", "Example: FIFO and weighted average cost (WAC)": "எடுத்துக்காட்டு: FIFO மற்றும் நிறையிட்ட சராசரிச் செலவு (WAC)", "FIFO in inflation: higher profit and stock value": "பணவீக்கத்தில் FIFO: அதிக இலாபமும் சரக்குப் பெறுமதியும்", "WAC smooths out price changes": "WAC விலை மாற்றங்களைச் சீராக்குகிறது", "Summary: FIFO vs WAC": "சுருக்கம்: FIFO மற்றும் WAC", "🧪 Try it — EOQ & stock-level calculator": "🧪 முயன்று பாருங்கள் — EOQ மற்றும் சரக்கு மட்டக் கணிப்பான்", "Annual demand D": "வருடாந்தக் கேள்வி D", "Order cost Co": "கட்டளைச் செலவு Co", "Unit price": "அலகு விலை", "Holding %": "பேணற் செலவு %", "total cost": "மொத்தச் செலவு", "ordering cost": "கட்டளைச் செலவு", "holding cost": "பேணற் செலவு", "order quantity →": "கட்டளை அளவு →", "At the EOQ, ordering cost = holding cost. That is the bottom of the total-cost curve.": "EOQஇல் கட்டளைச் செலவு = பேணற் செலவு. அது மொத்தச் செலவு வளைகோட்டின் அடிப்பகுதி.", "🧪 Try it — Stores ledger builder (FIFO vs weighted average)": "🧪 முயன்று பாருங்கள் — களஞ்சியப் பேரேடு உருவாக்கி (FIFO மற்றும் நிறையிட்ட சராசரி)", "Method": "முறை", "Weighted average": "நிறையிட்ட சராசரி", "Transaction": "பரிவர்த்தனை", "Issued as": "வழங்கிய விதம்", "Value": "பெறுமதி", "Balance units": "மீதி அலகுகள்", "Balance value": "மீதிப் பெறுமதி", "Total issues (to production / COGS) =": "மொத்த வழங்கல்கள் (உற்பத்திக்கு / விற்ற பொருட்களின் செலவுக்கு) =", "· Closing stock =": "· இறுதிச் சரக்கு =", "🧪 Try it — EOQ calculator": "🧪 முயன்று பாருங்கள் — EOQ கணிப்பான்", "Annual demand": "வருடாந்தக் கேள்வி", "Cost per order": "கட்டளையொன்றின் செலவு", "Holding cost / unit / year": "பேணற் செலவு / அலகு / ஆண்டு", "units": "அலகுகள்", "Orders a year": "ஆண்டுக்கான கட்டளைகள்", "· time between orders": "· கட்டளைகளுக்கு இடையிலான காலம்", "· total cost": "· மொத்தச் செலவு", "(ordering = holding)": "(கட்டளைச் செலவு = பேணற் செலவு)", "Enter a holding cost above 0.": "0ஐவிட அதிகமான பேணற் செலவை உள்ளிடவும்.", "Business Processes & Accounting Information Systems (AIS)": "வணிகச் செயல்முறைகளும் கணக்கியல் தகவல் முறைமைகளும் (AIS)", "What a business process is, the three core business processes and Porter's value chain, accounting information and its users, what an AIS is and why it matters, its five components, AIS principles, and internal control.": "வணிகச் செயல்முறை என்றால் என்ன, மூன்று மைய வணிகச் செயல்முறைகளும் போர்ட்டரின் பெறுமதிச் சங்கிலியும், கணக்கியல் தகவலும் பயனர்களும், AIS என்றால் என்ன மற்றும் அதன் முக்கியத்துவம், ஐந்து கூறுகள், AIS கொள்கைகள், அகக் கட்டுப்பாடு.", "Accounting Process, Double Entry & Primary Entry Journals": "கணக்கியல் செயல்முறை, இரட்டைப் பதிவு, ஆரம்பப் பதிவேடுகள்", "What accounting is, the entity concept, stakeholders and their needs, the Conceptual Framework (objective, qualitative characteristics, elements, recognition, measurement), debit and credit rules, the accounting equation, T-accounts and balancing, source documents, and the four day books.": "கணக்கியல் என்றால் என்ன, தனித்துவக் கருத்து, அக்கறைதாரர்களும் தேவைகளும், கருத்தியல் கட்டமைப்பு (நோக்கம், தரப் பண்புகள், கூறுகள், அங்கீகாரம், அளவீடு), பற்று–வரவு விதிகள், கணக்கியல் சமன்பாடு, T-கணக்குகளும் மீதிகட்டுதலும், மூல ஆவணங்கள், நான்கு நாளேடுகள்.", "Cash Book, Petty Cash Book & General Journal": "காசேடு, சிறுகாசேடு, பொது நாளேடு", "The cash book as both a day book and a ledger account; one-, two- and three-column cash books (contra entries, discounts allowed and received); the petty cash book and the imprest system; and the general journal for everything else.": "ஆரம்பப் பதிவேடாகவும் பேரேட்டுக் கணக்காகவும் காசேடு; ஒற்றை, இரட்டை, மூன்று பத்திக் காசேடுகள் (எதிர்ப் பதிவுகள், கொடுத்த மற்றும் பெற்ற கழிவுகள்); சிறுகாசேடும் முற்பண முறைமையும்; ஏனையவற்றுக்கான பொது நாளேடு.", "Capital vs Revenue Expenditure, the Ledger & the Trial Balance": "மூலதன மற்றும் வருவாய்ச் செலவினங்கள், பேரேடு, சோதனை மீதி", "Telling capital expenditure from revenue expenditure, the general ledger and its classification, posting and balancing ledger accounts, preparing a trial balance, its purposes and its limitations (errors it can't detect), with a full worked example.": "மூலதன மற்றும் வருவாய்ச் செலவினங்களை வேறுபடுத்துதல், பொதுப் பேரேடும் வகைப்பாடும், பேரேட்டுக் கணக்குகளைப் பதிந்து மீதிகட்டுதல், சோதனை மீதி தயாரித்தல், நோக்கங்களும் வரம்புகளும் (கண்டறிய முடியாத பிழைகள்), முழுமையான தீர்வுடன் எடுத்துக்காட்டு.", "Financial Statements I — Trading Account, Income Statement & LKAS 1": "நிதிக் கூற்றுகள் I — வியாபாரக் கணக்கு, வருமானக் கூற்று, LKAS 1", "Gross profit via the trading account (cost of sales), net profit via the comprehensive income statement (admin, distribution, finance expenses), and LKAS 1 / IAS 1: components, fair presentation, going concern, accruals, consistency, materiality, offsetting, comparatives, current vs non-current, OCI.": "வியாபாரக் கணக்கின் மூலம் மொத்த இலாபம் (விற்பனைக் கிரயம்), விரிவான வருமானக் கூற்றின் மூலம் தேறிய இலாபம் (நிர்வாக, விநியோக, நிதிச் செலவுகள்), LKAS 1 / IAS 1: கூறுகள், நியாயமான வழங்கல், தொடர்ந்து இயங்குதல், திரண்ட அடிப்படை, ஒரேமாதிரித்தன்மை, முக்கியத்துவம், ஈடுசெய்தல், ஒப்பீடுகள், நடைமுறை மற்றும் நடைமுறையல்லாதவை, OCI.", "Statement of Financial Position, Closing Inventory, Depreciation & LKAS 16": "நிதிநிலைக் கூற்று, இறுதிச் சரக்கு, தேய்மானம், LKAS 16", "Preparing the statement of financial position, the closing inventory adjustment (lower of cost and NRV), LKAS 16 PPE (definition, recognition, cost, cost vs revaluation model), straight-line and reducing-balance depreciation, and disposals.": "நிதிநிலைக் கூற்றைத் தயாரித்தல், இறுதிச் சரக்குச் சீராக்கம் (கிரயம், NRVஇல் குறைந்தது), LKAS 16 PPE (வரையறை, இனங்காணல், கிரயம், கிரய மற்றும் மீள்மதிப்பீட்டு மாதிரிகள்), நேர்கோட்டு மற்றும் குறைந்துசெல்லும் மீதித் தேய்மானம், அகற்றல்கள்.", "Year-End Adjustments — Accruals, Prepayments, Bad Debts & Impairment Provisions": "வருட இறுதிச் சீராக்கங்கள் — திரண்டவை, முற்பணங்கள், அறவிடமுடியாக் கடன்கள், பெறுமதிக்குறைவு ஏற்பாடுகள்", "The accrual concept and the four timing adjustments (accrued and prepaid expenses, income receivable and income in advance), bad debts, and the provision for impairment of receivables (new, increased and decreased), with their effects on the P&L and the SFP.": "திரண்ட எண்ணக்கருவும் நான்கு காலச் சீராக்கங்களும் (திரண்ட மற்றும் முற்பணச் செலவுகள், பெறத்தக்க வருமானம், முன்கூட்டிப் பெற்ற வருமானம்), அறவிடமுடியாக் கடன்கள், பெறத்தக்கவைகளின் பெறுமதிக்குறைவு ஏற்பாடு (புதியது, அதிகரித்தது, குறைந்தது), அவற்றின் P&L மற்றும் SFP விளைவுகளுடன்.", "Labour Costing — Time Keeping, Remuneration, Salary Sheet, EPF & ETF": "உழைப்புச் செலவிடல் — வருகை நேரப் பதிவு, ஊதியம், சம்பளத் தாள், EPF மற்றும் ETF", "Direct vs indirect labour, time keeping and time booking, job cards, job evaluation, time rates (with overtime), piece rates and bonus schemes, the salary sheet, and Sri Lanka's EPF (12% + 8%) and ETF (3%).": "நேரடி மற்றும் மறைமுக உழைப்பு, வருகை நேரப் பதிவும் பணி நேரப் பதிவும், பணி அட்டைகள், பணி மதிப்பீடு, நேர விகிதங்கள் (மேலதிக நேரத்துடன்), உற்பத்தி அலகு விகிதங்களும் ஊக்கத்தொகைத் திட்டங்களும், சம்பளத் தாள், இலங்கையின் EPF (12% + 8%) மற்றும் ETF (3%).", "Overhead Costing — Allocation, Apportionment, Re-apportionment & Absorption": "மேலதிகச் செலவிடல் — ஒதுக்கீடு, பகிர்ந்தளித்தல், மறுபகிர்வு, உள்ளீர்ப்பு", "What overheads are and how they're classified, cost centres, allocation vs apportionment and the bases used, re-apportioning service departments (direct, step-down, reciprocal), overhead absorption rates (actual vs predetermined, six methods, blanket vs departmental), and under/over absorption.": "மேலதிகச் செலவுகளும் அவற்றின் வகைப்பாடும், செலவு மையங்கள், ஒதுக்கீடு/பகிர்ந்தளித்தல் மற்றும் அடிப்படைகள், சேவைத் துறை மறுபகிர்வு (நேரடி, படிநிலை, பரஸ்பரம்), மேலதிகச் செலவு உள்ளீர்ப்பு விகிதங்கள் (உண்மை/முன்தீர்மானிப்பு, ஆறு முறைகள், பொது/துறைவாரி), குறை/மிகை உள்ளீர்ப்பு.", "Pricing — Objectives, Demand & Elasticity, Cost-plus (Markup vs Margin) and Pricing Strategies": "விலையிடல் — நோக்கங்கள், கேள்வியும் நெகிழ்ச்சியும், செலவு-கூட்டல் (Markup மற்றும் Margin), விலையிடல் உத்திகள்", "Why price matters, when a price must be set, the six-step pricing policy, pricing objectives, demand and price elasticity, markup vs margin, full-cost vs marginal-cost plus pricing, target return, value-based, psychological, geographical, skimming, penetration, status quo, discounts and discriminatory pricing.": "விலையின் முக்கியத்துவம், எப்போது நிர்ணயிக்க வேண்டும், ஆறு படி விலைக் கொள்கை, நோக்கங்கள், கேள்வியும் விலை நெகிழ்ச்சியும், செலவுமேல் இலாபக் கூட்டு/விலைமேல் இலாப விகிதம், முழுச் செலவு/எல்லைச் செலவு-கூட்டல், இலக்கு வருமானம், மதிப்புசார், உளவியல்சார், புவியியல்சார், உயர்விலைச் சுரண்டல், ஊடுருவல், நடப்பு நிலை, தள்ளுபடிகள், வேறுபடுத்தப்பட்ட விலையிடல்.", "Ratio Analysis — Liquidity, Gearing, Efficiency, Profitability & Shareholder Ratios": "விகிதப் பகுப்பாய்வு — நீர்மை, கடன்பங்கு, செயல்திறன், இலாபத்தன்மை, பங்குதாரர் விகிதங்கள்", "Why we use ratios, the five families of ratios with every formula and how to interpret high and low values, benefits and limitations, plus a live ratio calculator built from a mini set of financial statements.": "விகிதங்களைப் பயன்படுத்தும் காரணங்கள், ஒவ்வொரு சூத்திரத்துடனும் ஐந்து விகித வகைகள், அதிக/குறைந்த மதிப்புகளுக்குப் பொருள் கொள்ளுதல், நன்மைகள் மற்றும் வரம்புகள்; சிறிய நிதிநிலை அறிக்கைத் தொகுப்பிலிருந்து நிகழ்நேர விகிதக் கணக்கிடும் கருவி.", "Project Appraisal — Payback, ARR, Time Value of Money, NPV & IRR": "திட்ட மதிப்பீடு — மீளப்பெறும் காலம், ARR, பணத்தின் காலப் பெறுமதி, NPV, IRR", "What project appraisal is and its key issues, non-discounting methods (payback, ARR), the time value of money and discounting, NPV with the four-project example, IRR by interpolation (23.38%), and which method is best.": "திட்ட மதிப்பீடும் அதன் முக்கிய விடயங்களும், கழித்தொதுக்காத முறைகள் (மீளப்பெறும் காலம், ARR), பணத்தின் காலப் பெறுமதியும் கழித்தொதுக்கலும், நான்கு திட்ட எடுத்துக்காட்டுடன் NPV, இடைச்செருகல் மூலம் IRR (23.38%), சிறந்த முறை எது என்பதும்.", "Budgeting — Purposes, Budgetary Control, the Master Budget & Functional Budgets to the Cash Budget": "வரவுசெலவுத் திட்டமிடல் — நோக்கங்கள், கட்டுப்பாடு, முதன்மைத் திட்டம், தொழிற்பாட்டுத் திட்டங்களிலிருந்து காசுத் திட்டம் வரை", "What a budget is, its purposes and functions, steps in budgetary control, types of budgets and master budget components, sales forecasting, and the full LFT chain (sales → production → material usage → material purchases → labour → cash budget), plus limitations.": "வரவுசெலவுத் திட்டம், அதன் நோக்கங்களும் பணிகளும், கட்டுப்பாட்டுப் படிகள், திட்ட வகைகளும் முதன்மைத் திட்டக் கூறுகளும், விற்பனை முன்கணிப்பு, முழு LFT தொடர் (விற்பனை → உற்பத்தி → பொருள் பயன்பாடு → பொருள் கொள்வனவுகள் → உழைப்பு → காசுத் திட்டம்), வரம்புகள்.", "Standard Costing & Variance Analysis": "நியமச் செலவிடலும் விலகல் பகுப்பாய்வும்", "Standard cost vs budgeted cost, setting material, labour and overhead standards, the four types of standards, the standard cost card (Rs 134 example), the variance tree with every formula (material, labour, variable and fixed overhead, sales), a full worked variance example, and the advantages and limitations.": "நியமச் செலவும் திட்டமிட்ட செலவும், பொருள்–உழைப்பு–மேந்தலை நியமங்களை நிர்ணயித்தல், நான்கு நியம வகைகள், நியமச் செலவு அட்டை (ரூ. 134 எடுத்துக்காட்டு), அனைத்துச் சூத்திரங்களுடன் விலகல் மரம் (பொருள், உழைப்பு, மாறும் மற்றும் நிலையான மேந்தலை, விற்பனை), முழு விலகல் கணக்கீட்டு எடுத்துக்காட்டு, நன்மைகளும் வரம்புகளும்.", "LKAS 2 requires inventories to be measured at:": "LKAS 2இன்படி சரக்குகள் அளவிடப்பட வேண்டியது:", "The lower of cost and net realisable value": "செலவுக்கும் நிகரத் தேறக்கூடிய பெறுமதிக்கும் இடையிலான குறைந்த பெறுமதியில்", "Market value": "சந்தைப் பெறுமதியில்", "Selling price": "விற்பனை விலையில்", "The higher of cost and NRV": "செலவுக்கும் NRVக்கும் இடையிலான அதிகப் பெறுமதியில்", "NRV = estimated selling price − costs of completion − selling costs.": "NRV = மதிப்பிடப்பட்ட விற்பனை விலை − முடிவுறுத்தல் செலவுகள் − விற்பனைச் செலவுகள்.", "Purchase price net of trade discounts": "வர்த்தகக் கழிவுகளைக் கழித்த கொள்வனவு விலை", "Import duties (non-refundable)": "இறக்குமதித் தீர்வைகள் (மீளப்பெற முடியாதவை)", "Carriage inwards": "உள்வரும் ஏற்றிச்செல்லல்", "Storage costs and selling costs": "சேமிப்புச் செலவுகளும் விற்பனைச் செலவுகளும்", "Also excluded: abnormal waste, unrelated admin overheads, FX differences, interest on deferred terms.": "அசாதாரண விரயம், தொடர்பற்ற நிர்வாக மேந்தலைகள், அந்நியச் செலாவணி வேறுபாடுகள், ஒத்திவைத்த கொடுப்பனவு நிபந்தனைகளின் வட்டி ஆகியவையும் விலக்கப்படுகின்றன.", "FIFO": "FIFO", "Weighted average cost": "நிறையிட்ட சராசரிச் செலவு", "LIFO": "LIFO", "Specific identification for unique items": "தனித்துவமான உருப்படிகளுக்குக் குறிப்பான அடையாளம் காணல்", "LIFO is prohibited.": "LIFO தடைசெய்யப்பட்டுள்ளது.", "Item cost 800 and NRV 650. At what value is it carried?": "உருப்படியின் செலவு 800, NRV 650. அது எந்தப் பெறுமதியில் கொண்டுசெல்லப்படும்?", "The lower of cost and NRV, item by item.": "உருப்படிவாரியாகச் செலவுக்கும் NRVக்கும் இடையிலான குறைந்த பெறுமதி.", "6,000 units at Rs 4 less 25% trade discount, plus Rs 200 freight, plus net container cost Rs 12. Ignoring the cash discount, what is the total material cost?": "ரூ. 4 வீதம் 6,000 அலகுகள்; 25% வர்த்தகக் கழிவு; மேலதிகமாக ரூ. 200 சரக்குக் கட்டணமும் ரூ. 12 நிகரக் கொள்கலன் செலவும். காசுக் கழிவைப் புறக்கணித்தால் மொத்தப் பொருட் செலவு என்ன?", "24,000 − 6,000 + 200 + 12 = 18,212.": "24,000 − 6,000 + 200 + 12 = 18,212.", "Annual demand 3,000 units, ordering cost Rs 30 per order, holding cost Rs 0.50 per unit. What is the EOQ (units)?": "வருடாந்தக் கேள்வி 3,000 அலகுகள், கட்டளையொன்றின் செலவு ரூ. 30, அலகொன்றின் பேணற் செலவு ரூ. 0.50. EOQ எத்தனை அலகுகள்?", "√(2 × 3,000 × 30 ÷ 0.5) = √360,000 = 600.": "√(2 × 3,000 × 30 ÷ 0.5) = √360,000 = 600.", "Maximum consumption 9,000 a month, maximum lead time 4 months. What is the re-order level (units)?": "அதிகபட்ச நுகர்வு மாதத்துக்கு 9,000; அதிகபட்ச வழங்கல் காலம் 4 மாதங்கள். மீள்கட்டளை மட்டம் எத்தனை அலகுகள்?", "ROL = maximum usage × maximum lead time.": "ROL = அதிகபட்ச பயன்பாடு × அதிகபட்ச வழங்கல் காலம்.", "The correct order of the purchase documents is:": "கொள்வனவு ஆவணங்களின் சரியான வரிசை:", "Purchase requisition → purchase order → goods received note → invoice": "கொள்வனவுக் கோரிக்கை → கொள்வனவுக் கட்டளை → பொருள் பெறுதல் குறிப்பு → விலைப்பட்டியல்", "Invoice → GRN → purchase order → requisition": "விலைப்பட்டியல் → GRN → கொள்வனவுக் கட்டளை → கோரிக்கை", "Purchase order → requisition → invoice → GRN": "கொள்வனவுக் கட்டளை → கோரிக்கை → விலைப்பட்டியல் → GRN", "GRN → invoice → requisition → order": "GRN → விலைப்பட்டியல் → கோரிக்கை → கட்டளை", "The GRN is the basis for stores ledger entries.": "களஞ்சியப் பேரேட்டுப் பதிவுகளுக்கு GRN அடிப்படையாக உள்ளது.", "Better control and concentration of expert buying staff": "சிறந்த கட்டுப்பாடும் நிபுணத்துவக் கொள்வனவுப் பணியாளர்களை ஒருங்கிணைத்தலும்", "Lower transport costs": "குறைந்த போக்குவரத்துச் செலவு", "Faster local settlement of shortages": "பற்றாக்குறைகளை உள்ளூரில் விரைவாகத் தீர்த்தல்", "Benefits from local seasonal prices": "உள்ளூர்ப் பருவகால விலைகளின் நன்மைகள்", "Those other three are advantages of decentralised buying.": "ஏனைய மூன்றும் மையப்படுத்தப்படாத கொள்வனவின் நன்மைகள்.", "200 × 500 + 50 × 600 = 130,000.": "200 × 500 + 50 × 600 = 130,000.", "A cash discount (e.g. 5% for paying within 10 days) is treated in material cost as:": "காசுக் கழிவு (எ.கா. 10 நாட்களுக்குள் செலுத்தினால் 5%) பொருட் செலவில் எவ்வாறு கையாளப்படுகிறது?", "A reduction of material cost": "பொருட் செலவின் குறைப்பாக", "Ignored: it's a financing benefit, not part of material cost": "புறக்கணிக்கப்படுகிறது: இது நிதியளிப்பு நன்மை; பொருட் செலவின் பகுதி அல்ல", "An addition to cost": "செலவின் அதிகரிப்பாக", "A trade discount": "வர்த்தகக் கழிவாக", "Only trade discounts reduce the purchase cost.": "வர்த்தகக் கழிவுகள் மட்டுமே கொள்வனவுச் செலவைக் குறைக்கின்றன."}, "markup": {"One per line: <code>R qty price<\/code> for a receipt, <code>I qty<\/code> for an issue. The first line can be the opening balance as a receipt.": "வரிக்கு ஒன்று: பெறுதலுக்கு <code>R அளவு விலை<\/code>, வழங்கலுக்கு <code>I அளவு<\/code>. முதல் வரியில் ஆரம்ப மீதியைப் பெறுதலாக இடலாம்.", "LKAS 2 requires inventories to be measured at:": "LKAS 2இன்படி சரக்குகள் அளவிடப்பட வேண்டியது:", "The lower of cost and net realisable value": "செலவுக்கும் நிகரத் தேறக்கூடிய பெறுமதிக்கும் இடையிலான குறைந்த பெறுமதியில்", "Market value": "சந்தைப் பெறுமதியில்", "Selling price": "விற்பனை விலையில்", "The higher of cost and NRV": "செலவுக்கும் NRVக்கும் இடையிலான அதிகப் பெறுமதியில்", "NRV = estimated selling price − costs of completion − selling costs.": "NRV = மதிப்பிடப்பட்ட விற்பனை விலை − முடிவுறுத்தல் செலவுகள் − விற்பனைச் செலவுகள்.", "Which cost is <strong>excluded<\/strong> from the cost of inventory under LKAS 2?": "LKAS 2இன்படி சரக்குச் செலவிலிருந்து <strong>விலக்கப்படும்<\/strong> செலவு எது?", "Purchase price net of trade discounts": "வர்த்தகக் கழிவுகளைக் கழித்த கொள்வனவு விலை", "Import duties (non-refundable)": "இறக்குமதித் தீர்வைகள் (மீளப்பெற முடியாதவை)", "Carriage inwards": "உள்வரும் ஏற்றிச்செல்லல்", "Storage costs and selling costs": "சேமிப்புச் செலவுகளும் விற்பனைச் செலவுகளும்", "Also excluded: abnormal waste, unrelated admin overheads, FX differences, interest on deferred terms.": "அசாதாரண விரயம், தொடர்பற்ற நிர்வாக மேந்தலைகள், அந்நியச் செலாவணி வேறுபாடுகள், ஒத்திவைத்த கொடுப்பனவு நிபந்தனைகளின் வட்டி ஆகியவையும் விலக்கப்படுகின்றன.", "Which cost formula is <strong>not<\/strong> allowed by LKAS 2?": "LKAS 2 அனுமதிக்காத செலவுச் சூத்திரம் எது?", "FIFO": "FIFO", "Weighted average cost": "நிறையிட்ட சராசரிச் செலவு", "LIFO": "LIFO", "Specific identification for unique items": "தனித்துவமான உருப்படிகளுக்குக் குறிப்பான அடையாளம் காணல்", "LIFO is prohibited.": "LIFO தடைசெய்யப்பட்டுள்ளது.", "Item cost 800 and NRV 650. At what value is it carried?": "உருப்படியின் செலவு 800, NRV 650. அது எந்தப் பெறுமதியில் கொண்டுசெல்லப்படும்?", "The lower of cost and NRV, item by item.": "உருப்படிவாரியாகச் செலவுக்கும் NRVக்கும் இடையிலான குறைந்த பெறுமதி.", "6,000 units at Rs 4 less 25% trade discount, plus Rs 200 freight, plus net container cost Rs 12. Ignoring the cash discount, what is the total material cost?": "ரூ. 4 வீதம் 6,000 அலகுகள்; 25% வர்த்தகக் கழிவு; மேலதிகமாக ரூ. 200 சரக்குக் கட்டணமும் ரூ. 12 நிகரக் கொள்கலன் செலவும். காசுக் கழிவைப் புறக்கணித்தால் மொத்தப் பொருட் செலவு என்ன?", "24,000 − 6,000 + 200 + 12 = 18,212.": "24,000 − 6,000 + 200 + 12 = 18,212.", "Annual demand 3,000 units, ordering cost Rs 30 per order, holding cost Rs 0.50 per unit. What is the EOQ (units)?": "வருடாந்தக் கேள்வி 3,000 அலகுகள், கட்டளையொன்றின் செலவு ரூ. 30, அலகொன்றின் பேணற் செலவு ரூ. 0.50. EOQ எத்தனை அலகுகள்?", "√(2 × 3,000 × 30 ÷ 0.5) = √360,000 = 600.": "√(2 × 3,000 × 30 ÷ 0.5) = √360,000 = 600.", "Maximum consumption 9,000 a month, maximum lead time 4 months. What is the re-order level (units)?": "அதிகபட்ச நுகர்வு மாதத்துக்கு 9,000; அதிகபட்ச வழங்கல் காலம் 4 மாதங்கள். மீள்கட்டளை மட்டம் எத்தனை அலகுகள்?", "ROL = maximum usage × maximum lead time.": "ROL = அதிகபட்ச பயன்பாடு × அதிகபட்ச வழங்கல் காலம்.", "The correct order of the purchase documents is:": "கொள்வனவு ஆவணங்களின் சரியான வரிசை:", "Purchase requisition → purchase order → goods received note → invoice": "கொள்வனவுக் கோரிக்கை → கொள்வனவுக் கட்டளை → பொருள் பெறுதல் குறிப்பு → விலைப்பட்டியல்", "Invoice → GRN → purchase order → requisition": "விலைப்பட்டியல் → GRN → கொள்வனவுக் கட்டளை → கோரிக்கை", "Purchase order → requisition → invoice → GRN": "கொள்வனவுக் கட்டளை → கோரிக்கை → விலைப்பட்டியல் → GRN", "GRN → invoice → requisition → order": "GRN → விலைப்பட்டியல் → கோரிக்கை → கட்டளை", "The GRN is the basis for stores ledger entries.": "களஞ்சியப் பேரேட்டுப் பதிவுகளுக்கு GRN அடிப்படையாக உள்ளது.", "An advantage of <strong>centralised<\/strong> purchasing is:": "<strong>மையப்படுத்தப்பட்ட<\/strong> கொள்வனவின் நன்மை:", "Better control and concentration of expert buying staff": "சிறந்த கட்டுப்பாடும் நிபுணத்துவக் கொள்வனவுப் பணியாளர்களை ஒருங்கிணைத்தலும்", "Lower transport costs": "குறைந்த போக்குவரத்துச் செலவு", "Faster local settlement of shortages": "பற்றாக்குறைகளை உள்ளூரில் விரைவாகத் தீர்த்தல்", "Benefits from local seasonal prices": "உள்ளூர்ப் பருவகால விலைகளின் நன்மைகள்", "Those other three are advantages of decentralised buying.": "ஏனைய மூன்றும் மையப்படுத்தப்படாத கொள்வனவின் நன்மைகள்.", "200 units at Rs 500 are in stock; 300 units are bought at Rs 600. 250 units are issued. Using <strong>FIFO<\/strong>, what is the issue value?": "சரக்கில் ரூ. 500 வீதம் 200 அலகுகள் உள்ளன; ரூ. 600 வீதம் 300 அலகுகள் வாங்கப்படுகின்றன. 250 அலகுகள் வழங்கப்படுகின்றன. <strong>FIFO<\/strong> பயன்படுத்தினால் வழங்கல் பெறுமதி என்ன?", "200 × 500 + 50 × 600 = 130,000.": "200 × 500 + 50 × 600 = 130,000.", "A cash discount (e.g. 5% for paying within 10 days) is treated in material cost as:": "காசுக் கழிவு (எ.கா. 10 நாட்களுக்குள் செலுத்தினால் 5%) பொருட் செலவில் எவ்வாறு கையாளப்படுகிறது?", "A reduction of material cost": "பொருட் செலவின் குறைப்பாக", "Ignored: it's a financing benefit, not part of material cost": "புறக்கணிக்கப்படுகிறது: இது நிதியளிப்பு நன்மை; பொருட் செலவின் பகுதி அல்ல", "An addition to cost": "செலவின் அதிகரிப்பாக", "A trade discount": "வர்த்தகக் கழிவாக", "Only trade discounts reduce the purchase cost.": "வர்த்தகக் கழிவுகள் மட்டுமே கொள்வனவுச் செலவைக் குறைக்கின்றன."}, "patterns": [{"pattern": "^(\\d+) unanswered$", "replacement": "$1 விடையளிக்கப்படவில்லை"}, {"pattern": "^(\\d+) / (\\d+) sections understood$", "replacement": "$1 / $2 பகுதிகள் புரிந்துகொள்ளப்பட்டன"}, {"pattern": "^Week (\\d+)$", "replacement": "வாரம் $1"}, {"pattern": "^(\\d+) days ago$", "replacement": "$1 நாட்களுக்கு முன்"}, {"pattern": "^\\((\\d+) of (\\d+)\\)$", "replacement": "($2இல் $1)"}, {"pattern": "^\\((\\d+) attempts?\\)$", "replacement": "($1 முயற்சிகள்)"}, {"pattern": "^(\\d+) videos? · (\\d+) min$", "replacement": "$1 காணொளிகள் · $2 நிமிடம்"}, {"pattern": "^Quiz: not tried \\((\\d+) Qs\\)$", "replacement": "வினாடிவினா: முயலவில்லை ($1 கேள்விகள்)"}, {"pattern": "^Best (\\d+)% · last (\\d+)%$", "replacement": "சிறந்தது $1% · கடைசி $2%"}, {"pattern": "^(\\d+) questions on this week\\. Answer them all, then press$", "replacement": "இந்த வாரத்தில் $1 கேள்விகள். அனைத்துக்கும் விடையளித்துவிட்டுப் பின்னர் அழுத்துங்கள்:"}, {"pattern": "^\\. Your best and latest scores are saved and shown on the subject page\\.$", "replacement": ". உங்கள் சிறந்த மற்றும் சமீபத்திய மதிப்பெண்கள் சேமிக்கப்பட்டுப் பாடப் பக்கத்தில் காட்டப்படும்."}, {"pattern": "^Business Processes & Accounting Systems · Week (\\d+)$", "replacement": "வணிகச் செயல்முறைகளும் கணக்கியல் முறைமைகளும் · வாரம் $1"}, {"pattern": "^(\\d+) random questions drawn from all (\\d+) weeks \\((\\d+) in the bank\\)\\. Every attempt is a new mix — a good way to test whole-subject knowledge before the exam\\.$", "replacement": "அனைத்து $2 வாரங்களிலிருந்தும் சீரற்ற முறையில் தேர்ந்தெடுக்கப்படும் $1 கேள்விகள் (தொகுப்பில் $3 உள்ளன). ஒவ்வொரு முயற்சியிலும் புதிய கலவை — தேர்வுக்கு முன் முழுப் பாட அறிவையும் சோதிக்கச் சிறந்த வழி."}, {"pattern": "^›\\s*Week (\\d+)$", "replacement": "› வாரம் $1"}, {"pattern": "^([\\d.,-]+) units$", "replacement": "$1 அலகுகள்"}, {"pattern": "Orders per year", "replacement": "ஆண்டுக்கான கட்டளைகள்", "flags": "g"}, {"pattern": "Ordering cost", "replacement": "கட்டளைச் செலவு", "flags": "g"}, {"pattern": "Holding cost", "replacement": "பேணற் செலவு", "flags": "g"}, {"pattern": "^Total = ", "replacement": "மொத்தம் = "}, {"pattern": "^Receipt ([\\d.,+-]+) @ ([\\d.,+-]+)$", "replacement": "பெறுதல் $1 @ $2"}, {"pattern": "^Issue ([\\d.,+-]+)$", "replacement": "வழங்கல் $1"}, {"pattern": "^([\\d.,-]+) months$", "replacement": "$1 மாதங்கள்"}, {"pattern": "^Rs\\. ([\\d.,-]+)$", "replacement": "ரூ. $1"}]}</script>
-<script type="application/json" id="study-data">[{"key": "bpas", "name": "Business Processes & Accounting Systems", "exam": ["2026-11-15", "11:00", "14:00"], "url": "Business%20Processes%20and%20Accounting%20Systems/Study%20Guide%20-%20Index.html", "weeks": [{"key": "bpas-Week01", "label": "Week 01", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Business processes"}, {"id": "s2", "title": "Accounting information and its users"}, {"id": "s3", "title": "What is an Accounting Information System?"}, {"id": "s4", "title": "The five components of a computerised AIS"}, {"id": "s5", "title": "Internal control & security"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week02", "label": "Week 02", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is accounting?"}, {"id": "s2", "title": "Stakeholders and what they need"}, {"id": "s3", "title": "The Conceptual Framework for financial reporting"}, {"id": "s4", "title": "Debit & credit rules and the accounting equation"}, {"id": "s5", "title": "The T-account & balancing"}, {"id": "s6", "title": "Source documents & primary books"}, {"id": "s7", "title": "The four day books (primary entry journals)"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}, {"id": "s10", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week03", "label": "Week 03", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where these books fit"}, {"id": "s2", "title": "The cash book"}, {"id": "s3", "title": "The petty cash book & imprest system"}, {"id": "s4", "title": "The general journal"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week04", "label": "Week 04", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Capital vs revenue expenditure"}, {"id": "s2", "title": "The general ledger"}, {"id": "s3", "title": "The trial balance"}, {"id": "s4", "title": "Worked example: posting to the ledger and extracting a TB"}, {"id": "s5", "title": "Quick revision sheet"}, {"id": "s6", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week05", "label": "Week 05", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From trial balance to financial statements"}, {"id": "s2", "title": "The trading account → gross profit"}, {"id": "s3", "title": "The income statement → net profit"}, {"id": "s4", "title": "LKAS 1 / IAS 1 — Presentation of Financial Statements"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week06", "label": "Week 06", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The statement of financial position (SFP)"}, {"id": "s2", "title": "Adjustment 1: closing inventory"}, {"id": "s3", "title": "LKAS 16 — Property, Plant & Equipment"}, {"id": "s4", "title": "Adjustment 2: depreciation"}, {"id": "s5", "title": "Disposal of PPE"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week07", "label": "Week 07", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The accrual concept"}, {"id": "s2", "title": "Accrued & prepaid expenses"}, {"id": "s3", "title": "Income receivable & income received in advance"}, {"id": "s4", "title": "Bad debts (irrecoverable debts)"}, {"id": "s5", "title": "Provision for impairment of receivables"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week08", "label": "Week 08", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Inventory & LKAS 2"}, {"id": "s2", "title": "Function 1: managing purchases"}, {"id": "s3", "title": "Function 2: storing materials & stock levels"}, {"id": "s4", "title": "Function 3: pricing material issues — FIFO & weighted average"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week09", "label": "Week 09", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct vs indirect labour"}, {"id": "s2", "title": "Time keeping & time booking"}, {"id": "s3", "title": "Methods of remuneration"}, {"id": "s4", "title": "The salary sheet, EPF & ETF"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week10", "label": "Week 10", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is overhead?"}, {"id": "s2", "title": "Cost centres, allocation & apportionment"}, {"id": "s3", "title": "Re-apportioning service department costs"}, {"id": "s4", "title": "Overhead absorption"}, {"id": "s5", "title": "Under- and over-absorption"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week11", "label": "Week 11", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why price matters"}, {"id": "s2", "title": "The pricing policy: six factors"}, {"id": "s3", "title": "Markup vs margin"}, {"id": "s4", "title": "Pricing methods"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week12", "label": "Week 12", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why ratio analysis?"}, {"id": "s2", "title": "1. Liquidity ratios"}, {"id": "s3", "title": "2. Gearing (capital structure) ratios"}, {"id": "s4", "title": "3. Financial efficiency (activity) ratios"}, {"id": "s5", "title": "4. Profitability ratios"}, {"id": "s6", "title": "5. Shareholder (market test) ratios"}, {"id": "s7", "title": "Benefits & limitations"}, {"id": "s8", "title": "Quick revision sheet"}, {"id": "s9", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week13", "label": "Week 13", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is project appraisal?"}, {"id": "s2", "title": "Non-discounting methods"}, {"id": "s3", "title": "Time value of money"}, {"id": "s4", "title": "Net present value (NPV)"}, {"id": "s5", "title": "Internal rate of return (IRR)"}, {"id": "s6", "title": "Which method is best?"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week14", "label": "Week 14", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a budget?"}, {"id": "s2", "title": "Types of budgets"}, {"id": "s3", "title": "The functional budgets: formats"}, {"id": "s4", "title": "Full worked example: LFT company"}, {"id": "s5", "title": "The cash budget: rules"}, {"id": "s6", "title": "Limitations of budgeting [[36:08]]"}, {"id": "s7", "title": "Practice questions (course paper)"}, {"id": "s8", "title": "Quick revision sheet"}, {"id": "s9", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week15", "label": "Week 15", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Standard cost & standard costing"}, {"id": "s2", "title": "Setting standards"}, {"id": "s3", "title": "Types of standards"}, {"id": "s4", "title": "Standard cost card"}, {"id": "s5", "title": "The variance tree"}, {"id": "s6", "title": "Variance formulas"}, {"id": "s7", "title": "Advantages & limitations"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}, {"id": "s10", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-papers", "label": "Past papers", "url": "Business%20Processes%20and%20Accounting%20Systems/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Q1: Financial statements (40 marks)"}, {"id": "s3", "title": "January 2023 — Q2: Inventory, petty cash, framework (20 marks)"}, {"id": "s4", "title": "January 2023 — Q3: Primary entry books and NPV (20 marks)"}, {"id": "s5", "title": "January 2023 — Q4: Cash budget and sales variances (20 marks)"}, {"id": "s6", "title": "January 2023 — Q5: Overheads (20 marks)"}, {"id": "s7", "title": "August 2020 — what's different"}, {"id": "s8", "title": "November 2019 — Section A, Q1: 20 MCQs"}, {"id": "s9", "title": "November 2019 — Section A, Q2: Araliya Traders (Rs. '000)"}, {"id": "s10", "title": "November 2019 — Section B"}, {"id": "s11", "title": "2024 and 2025 — topic lists to practise"}]}]}, {"key": "dm", "name": "Data Mining", "exam": ["2026-11-22", "11:30", "14:30"], "url": "Data%20Mining/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dm-Week01", "label": "Week 01", "url": "Data%20Mining/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What data mining is about"}, {"id": "s2", "title": "Why data mining is required"}, {"id": "s3", "title": "Big Data and the 5 V's"}, {"id": "s4", "title": "Defining data mining properly"}, {"id": "s5", "title": "Applications of data mining"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week02", "label": "Week 02", "url": "Data%20Mining/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Data mining = \"knowledge mining from data\""}, {"id": "s2", "title": "The 7 steps of the KDD process"}, {"id": "s3", "title": "Architecture of a typical data mining system"}, {"id": "s4", "title": "What kinds of data can be mined?"}, {"id": "s5", "title": "Data mining task primitives"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week03", "label": "Week 03", "url": "Data%20Mining/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why preprocessing is needed"}, {"id": "s2", "title": "Data cleaning — handling missing values"}, {"id": "s3", "title": "Noisy data and smoothing"}, {"id": "s4", "title": "Data cleaning as a process"}, {"id": "s5", "title": "Data integration"}, {"id": "s6", "title": "Data transformation"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week04", "label": "Week 04", "url": "Data%20Mining/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why reduce data at all?"}, {"id": "s2", "title": "Data cube aggregation"}, {"id": "s3", "title": "Attribute subset selection"}, {"id": "s4", "title": "Dimensionality reduction"}, {"id": "s5", "title": "Numerosity reduction"}, {"id": "s6", "title": "Discretization & concept hierarchies"}, {"id": "s7", "title": "Binning: equal-width vs equal-depth"}, {"id": "s8", "title": "Smoothing noisy data with bins"}, {"id": "s9", "title": "Histogram partitioning — a full worked example"}, {"id": "s10", "title": "Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule"}, {"id": "s11", "title": "Self-assignment (2024): binning in practice"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week05", "label": "Week 05", "url": "Data%20Mining/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why data warehouses matter"}, {"id": "s2", "title": "What is a data warehouse?"}, {"id": "s3", "title": "OLTP vs OLAP"}, {"id": "s4", "title": "Why keep the warehouse separate?"}, {"id": "s5", "title": "The multidimensional data model"}, {"id": "s6", "title": "Lattice of cuboids"}, {"id": "s7", "title": "Weka — the tool used in this course"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week06", "label": "Week 06", "url": "Data%20Mining/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why a different schema for warehouses?"}, {"id": "s2", "title": "Star schema"}, {"id": "s3", "title": "Snowflake schema"}, {"id": "s4", "title": "Fact constellation (galaxy schema)"}, {"id": "s5", "title": "Data warehouse vs data mart"}, {"id": "s6", "title": "Defining cubes with DMQL"}, {"id": "s7", "title": "Concept hierarchies"}, {"id": "s8", "title": "Weka 1.2 — Exploring the Explorer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week07", "label": "Week 07", "url": "Data%20Mining/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why build a data warehouse?"}, {"id": "s2", "title": "The four views of warehouse design"}, {"id": "s3", "title": "Design approaches & methodology"}, {"id": "s4", "title": "The 4-step warehouse design process"}, {"id": "s5", "title": "Three-tier data warehouse architecture"}, {"id": "s6", "title": "The metadata repository"}, {"id": "s7", "title": "OLAP server models: ROLAP, MOLAP, HOLAP"}, {"id": "s8", "title": "Weka 1.3 — Exploring datasets"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week08", "label": "Week 08", "url": "Data%20Mining/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why compute cubes efficiently?"}, {"id": "s2", "title": "Cube materialization: cells and cuboids"}, {"id": "s3", "title": "Full cube vs iceberg cube"}, {"id": "s4", "title": "MultiWay array aggregation"}, {"id": "s5", "title": "BUC — Bottom-Up Computation"}, {"id": "s6", "title": "Star attributes, star-nodes and star-trees"}, {"id": "s7", "title": "Attribute-oriented induction (AOI)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week09", "label": "Week 09", "url": "Data%20Mining/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Frequent patterns"}, {"id": "s2", "title": "Market basket analysis"}, {"id": "s3", "title": "Association rules, support and confidence"}, {"id": "s4", "title": "The Apriori algorithm"}, {"id": "s5", "title": "Full worked example (|D| = 9, min_sup = 2)"}, {"id": "s6", "title": "Generating strong association rules"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week10", "label": "Week 10", "url": "Data%20Mining/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why not just use Apriori?"}, {"id": "s2", "title": "FP-growth: the idea"}, {"id": "s3", "title": "Worked example (min_sup = 3)"}, {"id": "s4", "title": "Mining the FP-tree"}, {"id": "s5", "title": "Multilevel association rules"}, {"id": "s6", "title": "Multidimensional association rules"}, {"id": "s7", "title": "Constraint-based association mining"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week11", "label": "Week 11", "url": "Data%20Mining/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Classification vs prediction"}, {"id": "s2", "title": "The two-step classification process"}, {"id": "s3", "title": "Preparing data & comparing methods"}, {"id": "s4", "title": "Decision trees & their history"}, {"id": "s5", "title": "Attribute selection measures"}, {"id": "s6", "title": "Worked example — buys_computer (14 tuples)"}, {"id": "s7", "title": "Weka: J48, filters and visualisation"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week12", "label": "Week 12", "url": "Data%20Mining/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Bayesian classifiers — overview"}, {"id": "s2", "title": "Bayes' theorem"}, {"id": "s3", "title": "The naïve Bayesian classifier"}, {"id": "s4", "title": "Worked example — will X buy a computer?"}, {"id": "s5", "title": "Rule-based classification"}, {"id": "s6", "title": "Extracting rules from a decision tree"}, {"id": "s7", "title": "Weka: training and testing"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week13", "label": "Week 13", "url": "Data%20Mining/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is cluster analysis?"}, {"id": "s2", "title": "Requirements of clustering in data mining"}, {"id": "s3", "title": "Types of clustering methods"}, {"id": "s4", "title": "Clustering by k-means"}, {"id": "s5", "title": "Weka: baseline accuracy and cross-validation"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week14", "label": "Week 14", "url": "Data%20Mining/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why k-medoids?"}, {"id": "s2", "title": "k-medoids and PAM"}, {"id": "s3", "title": "Worked example (from the lesson)"}, {"id": "s4", "title": "Hierarchical clustering"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week15", "label": "Week 15", "url": "Data%20Mining/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Overview"}, {"id": "s2", "title": "Financial data analysis"}, {"id": "s3", "title": "Retail industry"}, {"id": "s4", "title": "Telecommunication industry"}, {"id": "s5", "title": "Biological data analysis"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}]}, {"key": "dmath", "name": "Discrete Mathematics", "exam": ["2026-11-21", "08:30", "11:30"], "url": "Discrete%20Mathematics/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dmath-Week01", "label": "Week 01", "url": "Discrete%20Mathematics/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From propositions to predicates"}, {"id": "s2", "title": "Propositional functions"}, {"id": "s3", "title": "Compound expressions"}, {"id": "s4", "title": "Quantifiers: ∀, ∃, ∃!"}, {"id": "s5", "title": "Negating quantified expressions"}, {"id": "s6", "title": "Translating English into logic"}, {"id": "s7", "title": "Introduction to proofs — direct proof"}, {"id": "s8", "title": "Assignment 1: worked answers"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week02", "label": "Week 02", "url": "Discrete%20Mathematics/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Set terminology & notation"}, {"id": "s2", "title": "Equality, subsets & disjoint sets"}, {"id": "s3", "title": "Venn diagrams"}, {"id": "s4", "title": "Set operations"}, {"id": "s5", "title": "Set laws"}, {"id": "s6", "title": "Number of elements — inclusion–exclusion"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week03", "label": "Week 03", "url": "Discrete%20Mathematics/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a function?"}, {"id": "s2", "title": "One-to-one (injective)"}, {"id": "s3", "title": "Onto (surjective) & bijection"}, {"id": "s4", "title": "Inverse functions"}, {"id": "s5", "title": "Composition of functions"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week04", "label": "Week 04", "url": "Discrete%20Mathematics/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Sequences"}, {"id": "s2", "title": "Geometric & arithmetic progressions"}, {"id": "s3", "title": "Summation notation (Σ)"}, {"id": "s4", "title": "Geometric series (Theorem 1)"}, {"id": "s5", "title": "Infinite series (Theorem 2)"}, {"id": "s6", "title": "Double sums"}, {"id": "s7", "title": "Useful closed forms (Table 2)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week05", "label": "Week 05", "url": "Discrete%20Mathematics/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Matrices represent data"}, {"id": "s2", "title": "Matrix addition"}, {"id": "s3", "title": "Matrix multiplication"}, {"id": "s4", "title": "Identity, powers, transpose & symmetric"}, {"id": "s5", "title": "Zero–one matrices: join and meet"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week06", "label": "Week 06", "url": "Discrete%20Mathematics/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Divisibility"}, {"id": "s2", "title": "The division algorithm"}, {"id": "s3", "title": "Modular arithmetic & congruence"}, {"id": "s4", "title": "Primes"}, {"id": "s5", "title": "Cryptography — Caesar's cipher"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week07", "label": "Week 07", "url": "Discrete%20Mathematics/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why induction?"}, {"id": "s2", "title": "Worked induction proofs"}, {"id": "s3", "title": "The well-ordering property"}, {"id": "s4", "title": "Recursion"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week08", "label": "Week 08", "url": "Discrete%20Mathematics/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why counting?"}, {"id": "s2", "title": "The product rule (\"AND\", then multiply)"}, {"id": "s3", "title": "The sum rule (\"OR\", then add)"}, {"id": "s4", "title": "Tree diagrams"}, {"id": "s5", "title": "Combinations — order doesn't matter"}, {"id": "s6", "title": "Permutations — order matters"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week09", "label": "Week 09", "url": "Discrete%20Mathematics/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Binary relations"}, {"id": "s2", "title": "Functions as relations"}, {"id": "s3", "title": "Relations on a set"}, {"id": "s4", "title": "Properties: reflexive, symmetric, transitive"}, {"id": "s5", "title": "Equivalence relations"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week10", "label": "Week 10", "url": "Discrete%20Mathematics/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From pairs to n-tuples"}, {"id": "s2", "title": "Databases & the relational data model"}, {"id": "s3", "title": "Primary keys, composite keys, extension & intension"}, {"id": "s4", "title": "Operations: selection, projection, join"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week11", "label": "Week 11", "url": "Discrete%20Mathematics/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why graphs?"}, {"id": "s2", "title": "The birth of graph theory — Königsberg"}, {"id": "s3", "title": "What is a graph?"}, {"id": "s4", "title": "The six types of graphs"}, {"id": "s5", "title": "Graph models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week12", "label": "Week 12", "url": "Discrete%20Mathematics/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Trees"}, {"id": "s2", "title": "Rooted trees & terminology"}, {"id": "s3", "title": "Ordered rooted trees & binary trees"}, {"id": "s4", "title": "Binary search trees (BST)"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week13", "label": "Week 13", "url": "Discrete%20Mathematics/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Decision trees"}, {"id": "s2", "title": "Tree traversal"}, {"id": "s3", "title": "Spanning trees"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-papers", "label": "Past papers", "url": "Discrete%20Mathematics/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Question 1"}, {"id": "s3", "title": "January 2023 — Question 2 (number theory)"}, {"id": "s4", "title": "January 2023 — Question 3"}, {"id": "s5", "title": "January 2023 — Question 4 (graphs)"}, {"id": "s6", "title": "July 2023"}, {"id": "s7", "title": "October 2019"}, {"id": "s8", "title": "Model questions (official sample problems)"}]}]}, {"key": "hci", "name": "Human Computer Interaction", "exam": ["2026-11-22", "08:30", "11:30"], "url": "Human%20Computer%20Interaction/Study%20Guide%20-%20Index.html", "weeks": [{"key": "hci-Week01", "label": "Week 01", "url": "Human%20Computer%20Interaction/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "History of HCI"}, {"id": "s2", "title": "HCI is multi-disciplinary"}, {"id": "s3", "title": "Computers today: ubiquitous computing"}, {"id": "s4", "title": "Humans and perception"}, {"id": "s5", "title": "Interaction: two-way and task-centred"}, {"id": "s6", "title": "The HCI space"}, {"id": "s7", "title": "Applications of HCI — three pillars"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week02", "label": "Week 02", "url": "Human%20Computer%20Interaction/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is interaction?"}, {"id": "s2", "title": "Donald Norman's model — 7 stages"}, {"id": "s3", "title": "The two gulfs"}, {"id": "s4", "title": "Human errors: slips vs mistakes"}, {"id": "s5", "title": "The Abowd & Beale framework"}, {"id": "s6", "title": "Ergonomics"}, {"id": "s7", "title": "Direct vs indirect manipulation"}, {"id": "s8", "title": "Interaction styles"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week03", "label": "Week 03", "url": "Human%20Computer%20Interaction/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The human as an information processing machine"}, {"id": "s2", "title": "The senses in UI design"}, {"id": "s3", "title": "Human memory: three stores"}, {"id": "s4", "title": "Chunking & semantic networks"}, {"id": "s5", "title": "Cognitive load"}, {"id": "s6", "title": "Attention: selective vs divided"}, {"id": "s7", "title": "Motor skills & physical ergonomics"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week04", "label": "Week 04", "url": "Human%20Computer%20Interaction/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Design for tasks, not interfaces"}, {"id": "s2", "title": "The three contexts of \"use\": useful, usable, used"}, {"id": "s3", "title": "Three perspectives of the user"}, {"id": "s4", "title": "The in-car GPS turn example"}, {"id": "s5", "title": "UX beyond interaction"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week05", "label": "Week 05", "url": "Human%20Computer%20Interaction/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Action, interaction, effect, feedback"}, {"id": "s2", "title": "Feedback cycles are everywhere"}, {"id": "s3", "title": "Norman's model revisited: the two bridges"}, {"id": "s4", "title": "The 7 questions — designer & user perspectives"}, {"id": "s5", "title": "Norman's three levels of design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week06", "label": "Week 06", "url": "Human%20Computer%20Interaction/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct manipulation"}, {"id": "s2", "title": "The desktop metaphor vs the command line"}, {"id": "s3", "title": "Metaphorical vs literal invisibility — good vs bad design"}, {"id": "s4", "title": "Where direct manipulation is still lacking"}, {"id": "s5", "title": "Invisibility by learning vs by design"}, {"id": "s6", "title": "Five tips for invisible interfaces"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week07", "label": "Week 07", "url": "Human%20Computer%20Interaction/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Principles, guidelines and standards"}, {"id": "s2", "title": "Classic design frameworks"}, {"id": "s3", "title": "The 15 universal design principles"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week08", "label": "Week 08", "url": "Human%20Computer%20Interaction/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Mental models"}, {"id": "s2", "title": "Representations"}, {"id": "s3", "title": "Four traits of good representations"}, {"id": "s4", "title": "Full error taxonomy: slips vs mistakes"}, {"id": "s5", "title": "Learned helplessness & expert blindness"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week09", "label": "Week 09", "url": "Human%20Computer%20Interaction/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Task analysis & cognitive modelling"}, {"id": "s2", "title": "The GOMS framework"}, {"id": "s3", "title": "Keystroke-Level Model (KLM)"}, {"id": "s4", "title": "Fitts's law"}, {"id": "s5", "title": "Strengths and limits of predictive models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week10", "label": "Week 10", "url": "Human%20Computer%20Interaction/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Processor- vs predictor-oriented models"}, {"id": "s2", "title": "Cognitive Task Analysis (CTA) — 5 steps"}, {"id": "s3", "title": "Case study: the customer feedback thought stream"}, {"id": "s4", "title": "Hierarchical Task Analysis (HTA)"}, {"id": "s5", "title": "Modularity & divide and conquer"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week11", "label": "Week 11", "url": "Human%20Computer%20Interaction/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is user-centred design (UCD)?"}, {"id": "s2", "title": "The 8 user characteristics"}, {"id": "s3", "title": "ISO 9241-210: the 6 UCD principles"}, {"id": "s4", "title": "The 4-phase interaction design life cycle"}, {"id": "s5", "title": "Stakeholder-centred design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week12", "label": "Week 12", "url": "Human%20Computer%20Interaction/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where needfinding fits"}, {"id": "s2", "title": "The seven questions"}, {"id": "s3", "title": "Biases in needfinding"}, {"id": "s4", "title": "Needfinding methods"}, {"id": "s5", "title": "Representing the needs"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week13", "label": "Week 13", "url": "Human%20Computer%20Interaction/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where evaluation fits"}, {"id": "s2", "title": "Match the evaluation to the prototype"}, {"id": "s3", "title": "Evaluation across the design life cycle"}, {"id": "s4", "title": "Three types of evaluation"}, {"id": "s5", "title": "Four key terms"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-papers", "label": "Past papers", "url": "Human%20Computer%20Interaction/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what to focus on"}, {"id": "s2", "title": "ITE 3752 — Question 1: User-centred design (25 marks)"}, {"id": "s3", "title": "ITE 3752 — Question 2: Norman's model (25 marks)"}, {"id": "s4", "title": "ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)"}, {"id": "s5", "title": "ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)"}, {"id": "s6", "title": "Older ITE 3603 papers — outline answers"}]}]}, {"key": "mkt", "name": "Marketing", "exam": ["2026-11-22", "14:45", "17:45"], "url": "Marketing/Study%20Guide%20-%20Index.html", "weeks": [{"key": "mkt-Week01", "label": "Week 01", "url": "Marketing/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is marketing?"}, {"id": "s2", "title": "Marketing vs selling — the iceberg"}, {"id": "s3", "title": "Why marketing matters"}, {"id": "s4", "title": "Core concepts of marketing"}, {"id": "s5", "title": "Objectives of marketing"}, {"id": "s6", "title": "Quiz 01: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week02", "label": "Week 02", "url": "Marketing/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing has a history"}, {"id": "s2", "title": "1. Production concept"}, {"id": "s3", "title": "2. Product concept & marketing myopia"}, {"id": "s4", "title": "3. Selling concept"}, {"id": "s5", "title": "4. Marketing concept"}, {"id": "s6", "title": "5. Societal marketing concept"}, {"id": "s7", "title": "6. Holistic marketing concept"}, {"id": "s8", "title": "Quiz 02: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week03", "label": "Week 03", "url": "Marketing/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why scan the environment?"}, {"id": "s2", "title": "The three layers of the environment"}, {"id": "s3", "title": "Internal environment — 5 Ms & 7S"}, {"id": "s4", "title": "Micro environment (task environment)"}, {"id": "s5", "title": "Macro environment (DENTPC)"}, {"id": "s6", "title": "Responding to the environment"}, {"id": "s7", "title": "Marketing information system (MIS) & planning"}, {"id": "s8", "title": "Quiz 03: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week04", "label": "Week 04", "url": "Marketing/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Customer-driven marketing strategy"}, {"id": "s2", "title": "Market segmentation — four bases"}, {"id": "s3", "title": "Market targeting & Porter's five forces"}, {"id": "s4", "title": "Five patterns of target-market selection"}, {"id": "s5", "title": "Differentiation"}, {"id": "s6", "title": "Positioning & perceptual maps"}, {"id": "s7", "title": "Quiz 04: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week05", "label": "Week 05", "url": "Marketing/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why study consumer behaviour?"}, {"id": "s2", "title": "Consumer markets"}, {"id": "s3", "title": "The black box model (stimulus → response)"}, {"id": "s4", "title": "Factors influencing consumer behaviour"}, {"id": "s5", "title": "The buyer decision process — 5 stages"}, {"id": "s6", "title": "Four types of buying behaviour"}, {"id": "s7", "title": "Contemporary trends — Sri Lanka & global"}, {"id": "s8", "title": "Quiz 05: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week06", "label": "Week 06", "url": "Marketing/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a business market?"}, {"id": "s2", "title": "How business markets differ from consumer markets"}, {"id": "s3", "title": "Buying situations"}, {"id": "s4", "title": "Systems buying & selling"}, {"id": "s5", "title": "The buying centre — seven roles"}, {"id": "s6", "title": "Procurement: orientations & Kraljic's four product types"}, {"id": "s7", "title": "The 8 buy phases (Robinson et al.)"}, {"id": "s8", "title": "Business-to-business relationships"}, {"id": "s9", "title": "Quiz 06: model answer"}, {"id": "s10", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week07", "label": "Week 07", "url": "Marketing/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why marketing information matters"}, {"id": "s2", "title": "Three types of marketing data"}, {"id": "s3", "title": "The marketing information system (MIS)"}, {"id": "s4", "title": "Types of marketing research"}, {"id": "s5", "title": "The marketing research process"}, {"id": "s6", "title": "Why marketing research fails"}, {"id": "s7", "title": "Quiz 07: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week08", "label": "Week 08", "url": "Marketing/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is digital marketing?"}, {"id": "s2", "title": "Objectives of digital marketing"}, {"id": "s3", "title": "Why people go online"}, {"id": "s4", "title": "Key components of a digital marketing strategy"}, {"id": "s5", "title": "Strategy & measurement"}, {"id": "s6", "title": "Quiz 08: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week09", "label": "Week 09", "url": "Marketing/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why new products matter"}, {"id": "s2", "title": "Why develop new products, and why they fail"}, {"id": "s3", "title": "The 8-stage new product development process"}, {"id": "s4", "title": "The product life cycle (PLC)"}, {"id": "s5", "title": "Characteristics of each PLC stage"}, {"id": "s6", "title": "Marketing-mix strategies across the PLC"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week10", "label": "Week 10", "url": "Marketing/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Product strategy"}, {"id": "s2", "title": "Three levels of a product"}, {"id": "s3", "title": "Product classifications"}, {"id": "s4", "title": "Product mix and product line decisions"}, {"id": "s5", "title": "Brands, brand meaning and brand equity"}, {"id": "s6", "title": "Branding decisions"}, {"id": "s7", "title": "Packaging & labelling"}, {"id": "s8", "title": "Quiz 10: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week11", "label": "Week 11", "url": "Marketing/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Price: the revenue P"}, {"id": "s2", "title": "Factors affecting pricing decisions"}, {"id": "s3", "title": "The 6-step pricing process"}, {"id": "s4", "title": "New-product pricing: skimming vs penetration"}, {"id": "s5", "title": "Seven price-adjustment strategies"}, {"id": "s6", "title": "Price changes & reactions"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week12", "label": "Week 12", "url": "Marketing/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Before promoting"}, {"id": "s2", "title": "Integrated marketing communication (IMC)"}, {"id": "s3", "title": "Promotion objectives"}, {"id": "s4", "title": "The promotion mix"}, {"id": "s5", "title": "Advertising"}, {"id": "s6", "title": "Message strategy"}, {"id": "s7", "title": "Public relations"}, {"id": "s8", "title": "Sales promotion"}, {"id": "s9", "title": "Push vs pull channel policies"}, {"id": "s10", "title": "Socially responsible marketing communication"}, {"id": "s11", "title": "Quiz 12: model answer"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week13", "label": "Week 13", "url": "Marketing/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is \"place\"?"}, {"id": "s2", "title": "The nature of marketing channels"}, {"id": "s3", "title": "Push and pull strategies"}, {"id": "s4", "title": "How channel members add value"}, {"id": "s5", "title": "Channel levels"}, {"id": "s6", "title": "Channel behaviour and conflict"}, {"id": "s7", "title": "Conventional vs vertical marketing systems"}, {"id": "s8", "title": "Designing a marketing channel"}, {"id": "s9", "title": "Managing the marketing channel"}, {"id": "s10", "title": "Marketing logistics and supply chain management"}, {"id": "s11", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week14", "label": "Week 14", "url": "Marketing/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing planning"}, {"id": "s2", "title": "Purpose of marketing planning"}, {"id": "s3", "title": "Importance of marketing planning"}, {"id": "s4", "title": "Components of a marketing plan"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}]}]</script>
+<script type="application/json" id="study-data">[{"key": "bpas", "name": "Business Processes & Accounting Systems", "exam": ["2026-11-15", "11:00", "14:00"], "url": "Business%20Processes%20and%20Accounting%20Systems/Study%20Guide%20-%20Index.html", "weeks": [{"key": "bpas-Week01", "label": "Week 01", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Business processes"}, {"id": "s2", "title": "Accounting information and its users"}, {"id": "s3", "title": "What is an Accounting Information System?"}, {"id": "s4", "title": "The five components of a computerised AIS"}, {"id": "s5", "title": "Internal control & security"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week02", "label": "Week 02", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is accounting?"}, {"id": "s2", "title": "Stakeholders and what they need"}, {"id": "s3", "title": "The Conceptual Framework for financial reporting"}, {"id": "s4", "title": "Debit & credit rules and the accounting equation"}, {"id": "s5", "title": "The T-account & balancing"}, {"id": "s6", "title": "Source documents & primary books"}, {"id": "s7", "title": "The four day books (primary entry journals)"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}, {"id": "s10", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week03", "label": "Week 03", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where these books fit"}, {"id": "s2", "title": "The cash book"}, {"id": "s3", "title": "The petty cash book & imprest system"}, {"id": "s4", "title": "The general journal"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week04", "label": "Week 04", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Capital vs revenue expenditure"}, {"id": "s2", "title": "The general ledger"}, {"id": "s3", "title": "The trial balance"}, {"id": "s4", "title": "Worked example: posting to the ledger and extracting a TB"}, {"id": "s5", "title": "Quick revision sheet"}, {"id": "s6", "title": "Beginner practice — questions and step-by-step answers"}, {"id": "s7", "title": "Practice questions (course paper)"}], "quiz": true}, {"key": "bpas-Week05", "label": "Week 05", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From trial balance to financial statements"}, {"id": "s2", "title": "The trading account → gross profit"}, {"id": "s3", "title": "The income statement → net profit"}, {"id": "s4", "title": "LKAS 1 / IAS 1 — Presentation of Financial Statements"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week06", "label": "Week 06", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The statement of financial position (SFP)"}, {"id": "s2", "title": "Adjustment 1: closing inventory"}, {"id": "s3", "title": "LKAS 16 — Property, Plant & Equipment"}, {"id": "s4", "title": "Adjustment 2: depreciation"}, {"id": "s5", "title": "Disposal of PPE"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week07", "label": "Week 07", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The accrual concept"}, {"id": "s2", "title": "Accrued & prepaid expenses"}, {"id": "s3", "title": "Income receivable & income received in advance"}, {"id": "s4", "title": "Bad debts (irrecoverable debts)"}, {"id": "s5", "title": "Provision for impairment of receivables"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week08", "label": "Week 08", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Inventory & LKAS 2"}, {"id": "s2", "title": "Function 1: managing purchases"}, {"id": "s3", "title": "Function 2: storing materials & stock levels"}, {"id": "s4", "title": "Function 3: pricing material issues — FIFO & weighted average"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week09", "label": "Week 09", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct vs indirect labour"}, {"id": "s2", "title": "Time keeping & time booking"}, {"id": "s3", "title": "Methods of remuneration"}, {"id": "s4", "title": "The salary sheet, EPF & ETF"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week10", "label": "Week 10", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is overhead?"}, {"id": "s2", "title": "Cost centres, allocation & apportionment"}, {"id": "s3", "title": "Re-apportioning service department costs"}, {"id": "s4", "title": "Overhead absorption"}, {"id": "s5", "title": "Under- and over-absorption"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week11", "label": "Week 11", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why price matters"}, {"id": "s2", "title": "The pricing policy: six factors"}, {"id": "s3", "title": "Markup vs margin"}, {"id": "s4", "title": "Pricing methods"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week12", "label": "Week 12", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why ratio analysis?"}, {"id": "s2", "title": "1. Liquidity ratios"}, {"id": "s3", "title": "2. Gearing (capital structure) ratios"}, {"id": "s4", "title": "3. Financial efficiency (activity) ratios"}, {"id": "s5", "title": "4. Profitability ratios"}, {"id": "s6", "title": "5. Shareholder (market test) ratios"}, {"id": "s7", "title": "Benefits & limitations"}, {"id": "s8", "title": "Quick revision sheet"}, {"id": "s9", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week13", "label": "Week 13", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is project appraisal?"}, {"id": "s2", "title": "Non-discounting methods"}, {"id": "s3", "title": "Time value of money"}, {"id": "s4", "title": "Net present value (NPV)"}, {"id": "s5", "title": "Internal rate of return (IRR)"}, {"id": "s6", "title": "Which method is best?"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week14", "label": "Week 14", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a budget?"}, {"id": "s2", "title": "Types of budgets"}, {"id": "s3", "title": "The functional budgets: formats"}, {"id": "s4", "title": "Full worked example: LFT company"}, {"id": "s5", "title": "The cash budget: rules"}, {"id": "s6", "title": "Limitations of budgeting [[36:08]]"}, {"id": "s7", "title": "Practice questions (course paper)"}, {"id": "s8", "title": "Quick revision sheet"}, {"id": "s9", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week15", "label": "Week 15", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Standard cost & standard costing"}, {"id": "s2", "title": "Setting standards"}, {"id": "s3", "title": "Types of standards"}, {"id": "s4", "title": "Standard cost card"}, {"id": "s5", "title": "The variance tree"}, {"id": "s6", "title": "Variance formulas"}, {"id": "s7", "title": "Advantages & limitations"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}, {"id": "s10", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-papers", "label": "Past papers", "url": "Business%20Processes%20and%20Accounting%20Systems/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Q1: Financial statements (40 marks)"}, {"id": "s3", "title": "January 2023 — Q2: Inventory, petty cash, framework (20 marks)"}, {"id": "s4", "title": "January 2023 — Q3: Primary entry books and NPV (20 marks)"}, {"id": "s5", "title": "January 2023 — Q4: Cash budget and sales variances (20 marks)"}, {"id": "s6", "title": "January 2023 — Q5: Overheads (20 marks)"}, {"id": "s7", "title": "August 2020 — what's different"}, {"id": "s8", "title": "November 2019 — Section A, Q1: 20 MCQs"}, {"id": "s9", "title": "November 2019 — Section A, Q2: Araliya Traders (Rs. '000)"}, {"id": "s10", "title": "November 2019 — Section B"}, {"id": "s11", "title": "2024 and 2025 — topic lists to practise"}]}]}, {"key": "dm", "name": "Data Mining", "exam": ["2026-11-22", "11:30", "14:30"], "url": "Data%20Mining/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dm-Week01", "label": "Week 01", "url": "Data%20Mining/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What data mining is about"}, {"id": "s2", "title": "Why data mining is required"}, {"id": "s3", "title": "Big Data and the 5 V's"}, {"id": "s4", "title": "Defining data mining properly"}, {"id": "s5", "title": "Applications of data mining"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week02", "label": "Week 02", "url": "Data%20Mining/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Data mining = \"knowledge mining from data\""}, {"id": "s2", "title": "The 7 steps of the KDD process"}, {"id": "s3", "title": "Architecture of a typical data mining system"}, {"id": "s4", "title": "What kinds of data can be mined?"}, {"id": "s5", "title": "Data mining task primitives"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week03", "label": "Week 03", "url": "Data%20Mining/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why preprocessing is needed"}, {"id": "s2", "title": "Data cleaning — handling missing values"}, {"id": "s3", "title": "Noisy data and smoothing"}, {"id": "s4", "title": "Data cleaning as a process"}, {"id": "s5", "title": "Data integration"}, {"id": "s6", "title": "Data transformation"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week04", "label": "Week 04", "url": "Data%20Mining/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why reduce data at all?"}, {"id": "s2", "title": "Data cube aggregation"}, {"id": "s3", "title": "Attribute subset selection"}, {"id": "s4", "title": "Dimensionality reduction"}, {"id": "s5", "title": "Numerosity reduction"}, {"id": "s6", "title": "Discretization & concept hierarchies"}, {"id": "s7", "title": "Binning: equal-width vs equal-depth"}, {"id": "s8", "title": "Smoothing noisy data with bins"}, {"id": "s9", "title": "Histogram partitioning — a full worked example"}, {"id": "s10", "title": "Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule"}, {"id": "s11", "title": "Self-assignment (2024): binning in practice"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week05", "label": "Week 05", "url": "Data%20Mining/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why data warehouses matter"}, {"id": "s2", "title": "What is a data warehouse?"}, {"id": "s3", "title": "OLTP vs OLAP"}, {"id": "s4", "title": "Why keep the warehouse separate?"}, {"id": "s5", "title": "The multidimensional data model"}, {"id": "s6", "title": "Lattice of cuboids"}, {"id": "s7", "title": "Weka — the tool used in this course"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week06", "label": "Week 06", "url": "Data%20Mining/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why a different schema for warehouses?"}, {"id": "s2", "title": "Star schema"}, {"id": "s3", "title": "Snowflake schema"}, {"id": "s4", "title": "Fact constellation (galaxy schema)"}, {"id": "s5", "title": "Data warehouse vs data mart"}, {"id": "s6", "title": "Defining cubes with DMQL"}, {"id": "s7", "title": "Concept hierarchies"}, {"id": "s8", "title": "Weka 1.2 — Exploring the Explorer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week07", "label": "Week 07", "url": "Data%20Mining/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why build a data warehouse?"}, {"id": "s2", "title": "The four views of warehouse design"}, {"id": "s3", "title": "Design approaches & methodology"}, {"id": "s4", "title": "The 4-step warehouse design process"}, {"id": "s5", "title": "Three-tier data warehouse architecture"}, {"id": "s6", "title": "The metadata repository"}, {"id": "s7", "title": "OLAP server models: ROLAP, MOLAP, HOLAP"}, {"id": "s8", "title": "Weka 1.3 — Exploring datasets"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week08", "label": "Week 08", "url": "Data%20Mining/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why compute cubes efficiently?"}, {"id": "s2", "title": "Cube materialization: cells and cuboids"}, {"id": "s3", "title": "Full cube vs iceberg cube"}, {"id": "s4", "title": "MultiWay array aggregation"}, {"id": "s5", "title": "BUC — Bottom-Up Computation"}, {"id": "s6", "title": "Star attributes, star-nodes and star-trees"}, {"id": "s7", "title": "Attribute-oriented induction (AOI)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week09", "label": "Week 09", "url": "Data%20Mining/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Frequent patterns"}, {"id": "s2", "title": "Market basket analysis"}, {"id": "s3", "title": "Association rules, support and confidence"}, {"id": "s4", "title": "The Apriori algorithm"}, {"id": "s5", "title": "Full worked example (|D| = 9, min_sup = 2)"}, {"id": "s6", "title": "Generating strong association rules"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week10", "label": "Week 10", "url": "Data%20Mining/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why not just use Apriori?"}, {"id": "s2", "title": "FP-growth: the idea"}, {"id": "s3", "title": "Worked example (min_sup = 3)"}, {"id": "s4", "title": "Mining the FP-tree"}, {"id": "s5", "title": "Multilevel association rules"}, {"id": "s6", "title": "Multidimensional association rules"}, {"id": "s7", "title": "Constraint-based association mining"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week11", "label": "Week 11", "url": "Data%20Mining/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Classification vs prediction"}, {"id": "s2", "title": "The two-step classification process"}, {"id": "s3", "title": "Preparing data & comparing methods"}, {"id": "s4", "title": "Decision trees & their history"}, {"id": "s5", "title": "Attribute selection measures"}, {"id": "s6", "title": "Worked example — buys_computer (14 tuples)"}, {"id": "s7", "title": "Weka: J48, filters and visualisation"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week12", "label": "Week 12", "url": "Data%20Mining/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Bayesian classifiers — overview"}, {"id": "s2", "title": "Bayes' theorem"}, {"id": "s3", "title": "The naïve Bayesian classifier"}, {"id": "s4", "title": "Worked example — will X buy a computer?"}, {"id": "s5", "title": "Rule-based classification"}, {"id": "s6", "title": "Extracting rules from a decision tree"}, {"id": "s7", "title": "Weka: training and testing"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week13", "label": "Week 13", "url": "Data%20Mining/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is cluster analysis?"}, {"id": "s2", "title": "Requirements of clustering in data mining"}, {"id": "s3", "title": "Types of clustering methods"}, {"id": "s4", "title": "Clustering by k-means"}, {"id": "s5", "title": "Weka: baseline accuracy and cross-validation"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week14", "label": "Week 14", "url": "Data%20Mining/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why k-medoids?"}, {"id": "s2", "title": "k-medoids and PAM"}, {"id": "s3", "title": "Worked example (from the lesson)"}, {"id": "s4", "title": "Hierarchical clustering"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week15", "label": "Week 15", "url": "Data%20Mining/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Overview"}, {"id": "s2", "title": "Financial data analysis"}, {"id": "s3", "title": "Retail industry"}, {"id": "s4", "title": "Telecommunication industry"}, {"id": "s5", "title": "Biological data analysis"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}]}, {"key": "dmath", "name": "Discrete Mathematics", "exam": ["2026-11-21", "08:30", "11:30"], "url": "Discrete%20Mathematics/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dmath-Week01", "label": "Week 01", "url": "Discrete%20Mathematics/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From propositions to predicates"}, {"id": "s2", "title": "Propositional functions"}, {"id": "s3", "title": "Compound expressions"}, {"id": "s4", "title": "Quantifiers: ∀, ∃, ∃!"}, {"id": "s5", "title": "Negating quantified expressions"}, {"id": "s6", "title": "Translating English into logic"}, {"id": "s7", "title": "Introduction to proofs — direct proof"}, {"id": "s8", "title": "Assignment 1: worked answers"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week02", "label": "Week 02", "url": "Discrete%20Mathematics/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Set terminology & notation"}, {"id": "s2", "title": "Equality, subsets & disjoint sets"}, {"id": "s3", "title": "Venn diagrams"}, {"id": "s4", "title": "Set operations"}, {"id": "s5", "title": "Set laws"}, {"id": "s6", "title": "Number of elements — inclusion–exclusion"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week03", "label": "Week 03", "url": "Discrete%20Mathematics/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a function?"}, {"id": "s2", "title": "One-to-one (injective)"}, {"id": "s3", "title": "Onto (surjective) & bijection"}, {"id": "s4", "title": "Inverse functions"}, {"id": "s5", "title": "Composition of functions"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week04", "label": "Week 04", "url": "Discrete%20Mathematics/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Sequences"}, {"id": "s2", "title": "Geometric & arithmetic progressions"}, {"id": "s3", "title": "Summation notation (Σ)"}, {"id": "s4", "title": "Geometric series (Theorem 1)"}, {"id": "s5", "title": "Infinite series (Theorem 2)"}, {"id": "s6", "title": "Double sums"}, {"id": "s7", "title": "Useful closed forms (Table 2)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week05", "label": "Week 05", "url": "Discrete%20Mathematics/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Matrices represent data"}, {"id": "s2", "title": "Matrix addition"}, {"id": "s3", "title": "Matrix multiplication"}, {"id": "s4", "title": "Identity, powers, transpose & symmetric"}, {"id": "s5", "title": "Zero–one matrices: join and meet"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week06", "label": "Week 06", "url": "Discrete%20Mathematics/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Divisibility"}, {"id": "s2", "title": "The division algorithm"}, {"id": "s3", "title": "Modular arithmetic & congruence"}, {"id": "s4", "title": "Primes"}, {"id": "s5", "title": "Cryptography — Caesar's cipher"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week07", "label": "Week 07", "url": "Discrete%20Mathematics/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why induction?"}, {"id": "s2", "title": "Worked induction proofs"}, {"id": "s3", "title": "The well-ordering property"}, {"id": "s4", "title": "Recursion"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week08", "label": "Week 08", "url": "Discrete%20Mathematics/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why counting?"}, {"id": "s2", "title": "The product rule (\"AND\", then multiply)"}, {"id": "s3", "title": "The sum rule (\"OR\", then add)"}, {"id": "s4", "title": "Tree diagrams"}, {"id": "s5", "title": "Combinations — order doesn't matter"}, {"id": "s6", "title": "Permutations — order matters"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week09", "label": "Week 09", "url": "Discrete%20Mathematics/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Binary relations"}, {"id": "s2", "title": "Functions as relations"}, {"id": "s3", "title": "Relations on a set"}, {"id": "s4", "title": "Properties: reflexive, symmetric, transitive"}, {"id": "s5", "title": "Equivalence relations"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week10", "label": "Week 10", "url": "Discrete%20Mathematics/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From pairs to n-tuples"}, {"id": "s2", "title": "Databases & the relational data model"}, {"id": "s3", "title": "Primary keys, composite keys, extension & intension"}, {"id": "s4", "title": "Operations: selection, projection, join"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week11", "label": "Week 11", "url": "Discrete%20Mathematics/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why graphs?"}, {"id": "s2", "title": "The birth of graph theory — Königsberg"}, {"id": "s3", "title": "What is a graph?"}, {"id": "s4", "title": "The six types of graphs"}, {"id": "s5", "title": "Graph models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week12", "label": "Week 12", "url": "Discrete%20Mathematics/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Trees"}, {"id": "s2", "title": "Rooted trees & terminology"}, {"id": "s3", "title": "Ordered rooted trees & binary trees"}, {"id": "s4", "title": "Binary search trees (BST)"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week13", "label": "Week 13", "url": "Discrete%20Mathematics/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Decision trees"}, {"id": "s2", "title": "Tree traversal"}, {"id": "s3", "title": "Spanning trees"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-papers", "label": "Past papers", "url": "Discrete%20Mathematics/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Question 1"}, {"id": "s3", "title": "January 2023 — Question 2 (number theory)"}, {"id": "s4", "title": "January 2023 — Question 3"}, {"id": "s5", "title": "January 2023 — Question 4 (graphs)"}, {"id": "s6", "title": "July 2023"}, {"id": "s7", "title": "October 2019"}, {"id": "s8", "title": "Model questions (official sample problems)"}]}]}, {"key": "hci", "name": "Human Computer Interaction", "exam": ["2026-11-22", "08:30", "11:30"], "url": "Human%20Computer%20Interaction/Study%20Guide%20-%20Index.html", "weeks": [{"key": "hci-Week01", "label": "Week 01", "url": "Human%20Computer%20Interaction/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "History of HCI"}, {"id": "s2", "title": "HCI is multi-disciplinary"}, {"id": "s3", "title": "Computers today: ubiquitous computing"}, {"id": "s4", "title": "Humans and perception"}, {"id": "s5", "title": "Interaction: two-way and task-centred"}, {"id": "s6", "title": "The HCI space"}, {"id": "s7", "title": "Applications of HCI — three pillars"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week02", "label": "Week 02", "url": "Human%20Computer%20Interaction/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is interaction?"}, {"id": "s2", "title": "Donald Norman's model — 7 stages"}, {"id": "s3", "title": "The two gulfs"}, {"id": "s4", "title": "Human errors: slips vs mistakes"}, {"id": "s5", "title": "The Abowd & Beale framework"}, {"id": "s6", "title": "Ergonomics"}, {"id": "s7", "title": "Direct vs indirect manipulation"}, {"id": "s8", "title": "Interaction styles"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week03", "label": "Week 03", "url": "Human%20Computer%20Interaction/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The human as an information processing machine"}, {"id": "s2", "title": "The senses in UI design"}, {"id": "s3", "title": "Human memory: three stores"}, {"id": "s4", "title": "Chunking & semantic networks"}, {"id": "s5", "title": "Cognitive load"}, {"id": "s6", "title": "Attention: selective vs divided"}, {"id": "s7", "title": "Motor skills & physical ergonomics"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week04", "label": "Week 04", "url": "Human%20Computer%20Interaction/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Design for tasks, not interfaces"}, {"id": "s2", "title": "The three contexts of \"use\": useful, usable, used"}, {"id": "s3", "title": "Three perspectives of the user"}, {"id": "s4", "title": "The in-car GPS turn example"}, {"id": "s5", "title": "UX beyond interaction"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week05", "label": "Week 05", "url": "Human%20Computer%20Interaction/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Action, interaction, effect, feedback"}, {"id": "s2", "title": "Feedback cycles are everywhere"}, {"id": "s3", "title": "Norman's model revisited: the two bridges"}, {"id": "s4", "title": "The 7 questions — designer & user perspectives"}, {"id": "s5", "title": "Norman's three levels of design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week06", "label": "Week 06", "url": "Human%20Computer%20Interaction/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct manipulation"}, {"id": "s2", "title": "The desktop metaphor vs the command line"}, {"id": "s3", "title": "Metaphorical vs literal invisibility — good vs bad design"}, {"id": "s4", "title": "Where direct manipulation is still lacking"}, {"id": "s5", "title": "Invisibility by learning vs by design"}, {"id": "s6", "title": "Five tips for invisible interfaces"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week07", "label": "Week 07", "url": "Human%20Computer%20Interaction/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Principles, guidelines and standards"}, {"id": "s2", "title": "Classic design frameworks"}, {"id": "s3", "title": "The 15 universal design principles"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week08", "label": "Week 08", "url": "Human%20Computer%20Interaction/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Mental models"}, {"id": "s2", "title": "Representations"}, {"id": "s3", "title": "Four traits of good representations"}, {"id": "s4", "title": "Full error taxonomy: slips vs mistakes"}, {"id": "s5", "title": "Learned helplessness & expert blindness"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week09", "label": "Week 09", "url": "Human%20Computer%20Interaction/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Task analysis & cognitive modelling"}, {"id": "s2", "title": "The GOMS framework"}, {"id": "s3", "title": "Keystroke-Level Model (KLM)"}, {"id": "s4", "title": "Fitts's law"}, {"id": "s5", "title": "Strengths and limits of predictive models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week10", "label": "Week 10", "url": "Human%20Computer%20Interaction/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Processor- vs predictor-oriented models"}, {"id": "s2", "title": "Cognitive Task Analysis (CTA) — 5 steps"}, {"id": "s3", "title": "Case study: the customer feedback thought stream"}, {"id": "s4", "title": "Hierarchical Task Analysis (HTA)"}, {"id": "s5", "title": "Modularity & divide and conquer"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week11", "label": "Week 11", "url": "Human%20Computer%20Interaction/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is user-centred design (UCD)?"}, {"id": "s2", "title": "The 8 user characteristics"}, {"id": "s3", "title": "ISO 9241-210: the 6 UCD principles"}, {"id": "s4", "title": "The 4-phase interaction design life cycle"}, {"id": "s5", "title": "Stakeholder-centred design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week12", "label": "Week 12", "url": "Human%20Computer%20Interaction/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where needfinding fits"}, {"id": "s2", "title": "The seven questions"}, {"id": "s3", "title": "Biases in needfinding"}, {"id": "s4", "title": "Needfinding methods"}, {"id": "s5", "title": "Representing the needs"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week13", "label": "Week 13", "url": "Human%20Computer%20Interaction/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where evaluation fits"}, {"id": "s2", "title": "Match the evaluation to the prototype"}, {"id": "s3", "title": "Evaluation across the design life cycle"}, {"id": "s4", "title": "Three types of evaluation"}, {"id": "s5", "title": "Four key terms"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-papers", "label": "Past papers", "url": "Human%20Computer%20Interaction/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what to focus on"}, {"id": "s2", "title": "ITE 3752 — Question 1: User-centred design (25 marks)"}, {"id": "s3", "title": "ITE 3752 — Question 2: Norman's model (25 marks)"}, {"id": "s4", "title": "ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)"}, {"id": "s5", "title": "ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)"}, {"id": "s6", "title": "Older ITE 3603 papers — outline answers"}]}]}, {"key": "mkt", "name": "Marketing", "exam": ["2026-11-22", "14:45", "17:45"], "url": "Marketing/Study%20Guide%20-%20Index.html", "weeks": [{"key": "mkt-Week01", "label": "Week 01", "url": "Marketing/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is marketing?"}, {"id": "s2", "title": "Marketing vs selling — the iceberg"}, {"id": "s3", "title": "Why marketing matters"}, {"id": "s4", "title": "Core concepts of marketing"}, {"id": "s5", "title": "Objectives of marketing"}, {"id": "s6", "title": "Quiz 01: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week02", "label": "Week 02", "url": "Marketing/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing has a history"}, {"id": "s2", "title": "1. Production concept"}, {"id": "s3", "title": "2. Product concept & marketing myopia"}, {"id": "s4", "title": "3. Selling concept"}, {"id": "s5", "title": "4. Marketing concept"}, {"id": "s6", "title": "5. Societal marketing concept"}, {"id": "s7", "title": "6. Holistic marketing concept"}, {"id": "s8", "title": "Quiz 02: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week03", "label": "Week 03", "url": "Marketing/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why scan the environment?"}, {"id": "s2", "title": "The three layers of the environment"}, {"id": "s3", "title": "Internal environment — 5 Ms & 7S"}, {"id": "s4", "title": "Micro environment (task environment)"}, {"id": "s5", "title": "Macro environment (DENTPC)"}, {"id": "s6", "title": "Responding to the environment"}, {"id": "s7", "title": "Marketing information system (MIS) & planning"}, {"id": "s8", "title": "Quiz 03: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week04", "label": "Week 04", "url": "Marketing/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Customer-driven marketing strategy"}, {"id": "s2", "title": "Market segmentation — four bases"}, {"id": "s3", "title": "Market targeting & Porter's five forces"}, {"id": "s4", "title": "Five patterns of target-market selection"}, {"id": "s5", "title": "Differentiation"}, {"id": "s6", "title": "Positioning & perceptual maps"}, {"id": "s7", "title": "Quiz 04: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week05", "label": "Week 05", "url": "Marketing/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why study consumer behaviour?"}, {"id": "s2", "title": "Consumer markets"}, {"id": "s3", "title": "The black box model (stimulus → response)"}, {"id": "s4", "title": "Factors influencing consumer behaviour"}, {"id": "s5", "title": "The buyer decision process — 5 stages"}, {"id": "s6", "title": "Four types of buying behaviour"}, {"id": "s7", "title": "Contemporary trends — Sri Lanka & global"}, {"id": "s8", "title": "Quiz 05: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week06", "label": "Week 06", "url": "Marketing/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a business market?"}, {"id": "s2", "title": "How business markets differ from consumer markets"}, {"id": "s3", "title": "Buying situations"}, {"id": "s4", "title": "Systems buying & selling"}, {"id": "s5", "title": "The buying centre — seven roles"}, {"id": "s6", "title": "Procurement: orientations & Kraljic's four product types"}, {"id": "s7", "title": "The 8 buy phases (Robinson et al.)"}, {"id": "s8", "title": "Business-to-business relationships"}, {"id": "s9", "title": "Quiz 06: model answer"}, {"id": "s10", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week07", "label": "Week 07", "url": "Marketing/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why marketing information matters"}, {"id": "s2", "title": "Three types of marketing data"}, {"id": "s3", "title": "The marketing information system (MIS)"}, {"id": "s4", "title": "Types of marketing research"}, {"id": "s5", "title": "The marketing research process"}, {"id": "s6", "title": "Why marketing research fails"}, {"id": "s7", "title": "Quiz 07: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week08", "label": "Week 08", "url": "Marketing/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is digital marketing?"}, {"id": "s2", "title": "Objectives of digital marketing"}, {"id": "s3", "title": "Why people go online"}, {"id": "s4", "title": "Key components of a digital marketing strategy"}, {"id": "s5", "title": "Strategy & measurement"}, {"id": "s6", "title": "Quiz 08: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week09", "label": "Week 09", "url": "Marketing/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why new products matter"}, {"id": "s2", "title": "Why develop new products, and why they fail"}, {"id": "s3", "title": "The 8-stage new product development process"}, {"id": "s4", "title": "The product life cycle (PLC)"}, {"id": "s5", "title": "Characteristics of each PLC stage"}, {"id": "s6", "title": "Marketing-mix strategies across the PLC"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week10", "label": "Week 10", "url": "Marketing/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Product strategy"}, {"id": "s2", "title": "Three levels of a product"}, {"id": "s3", "title": "Product classifications"}, {"id": "s4", "title": "Product mix and product line decisions"}, {"id": "s5", "title": "Brands, brand meaning and brand equity"}, {"id": "s6", "title": "Branding decisions"}, {"id": "s7", "title": "Packaging & labelling"}, {"id": "s8", "title": "Quiz 10: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week11", "label": "Week 11", "url": "Marketing/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Price: the revenue P"}, {"id": "s2", "title": "Factors affecting pricing decisions"}, {"id": "s3", "title": "The 6-step pricing process"}, {"id": "s4", "title": "New-product pricing: skimming vs penetration"}, {"id": "s5", "title": "Seven price-adjustment strategies"}, {"id": "s6", "title": "Price changes & reactions"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week12", "label": "Week 12", "url": "Marketing/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Before promoting"}, {"id": "s2", "title": "Integrated marketing communication (IMC)"}, {"id": "s3", "title": "Promotion objectives"}, {"id": "s4", "title": "The promotion mix"}, {"id": "s5", "title": "Advertising"}, {"id": "s6", "title": "Message strategy"}, {"id": "s7", "title": "Public relations"}, {"id": "s8", "title": "Sales promotion"}, {"id": "s9", "title": "Push vs pull channel policies"}, {"id": "s10", "title": "Socially responsible marketing communication"}, {"id": "s11", "title": "Quiz 12: model answer"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week13", "label": "Week 13", "url": "Marketing/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is \"place\"?"}, {"id": "s2", "title": "The nature of marketing channels"}, {"id": "s3", "title": "Push and pull strategies"}, {"id": "s4", "title": "How channel members add value"}, {"id": "s5", "title": "Channel levels"}, {"id": "s6", "title": "Channel behaviour and conflict"}, {"id": "s7", "title": "Conventional vs vertical marketing systems"}, {"id": "s8", "title": "Designing a marketing channel"}, {"id": "s9", "title": "Managing the marketing channel"}, {"id": "s10", "title": "Marketing logistics and supply chain management"}, {"id": "s11", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week14", "label": "Week 14", "url": "Marketing/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing planning"}, {"id": "s2", "title": "Purpose of marketing planning"}, {"id": "s3", "title": "Importance of marketing planning"}, {"id": "s4", "title": "Components of a marketing plan"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}]}]</script>
 <script>(function(){
   var KEY = document.body.getAttribute('data-key');
   function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }

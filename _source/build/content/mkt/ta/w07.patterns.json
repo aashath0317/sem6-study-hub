@@ -1,0 +1,12 @@
+[
+  {
+    "pattern": "Finite population correction: n = ",
+    "replacement": "முடிவுறு மக்கள்தொகைத் திருத்தம்: n = ",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Respondents needed: ",
+    "replacement": "தேவையான பதிலளிப்போர்: ",
+    "selector": ".tool"
+  }
+]

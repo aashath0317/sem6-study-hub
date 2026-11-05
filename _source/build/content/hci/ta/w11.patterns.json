@@ -1,0 +1,56 @@
+[
+  {
+    "pattern": "Path so far: ",
+    "replacement": "இதுவரை சென்ற பாதை: "
+  },
+  {
+    "pattern": "Establish requirements",
+    "replacement": "தேவைகளை நிறுவு",
+    "flags": "g"
+  },
+  {
+    "pattern": "Design alternatives",
+    "replacement": "மாற்றுகளை வடிவமை",
+    "flags": "g"
+  },
+  {
+    "pattern": "Prototype",
+    "replacement": "முன்மாதிரி",
+    "flags": "g"
+  },
+  {
+    "pattern": "Evaluate",
+    "replacement": "மதிப்பிடு",
+    "flags": "g"
+  },
+  {
+    "pattern": "Final product",
+    "replacement": "இறுதித் தயாரிப்பு",
+    "flags": "g"
+  },
+  {
+    "pattern": "User\\ Centred\\ Design\\ –\\ Basics",
+    "replacement": "பயனர்மைய வடிவமைப்பு — அடிப்படைகள்",
+    "flags": "g"
+  },
+  {
+    "pattern": "User\\ Centred\\ Design\\ –\\ Principles",
+    "replacement": "பயனர்மைய வடிவமைப்பு — கொள்கைகள்",
+    "flags": "g"
+  },
+  {
+    "pattern": "Characteristics\\ of\\ the\\ User",
+    "replacement": "பயனரின் பண்புகள்",
+    "flags": "g"
+  },
+  {
+    "pattern": "Design\\ Life\\ Cycle\\ –\\ in\\ Brief",
+    "replacement": "வடிவமைப்பு வாழ்க்கைச் சுழற்சி — சுருக்கமாக",
+    "flags": "g"
+  },
+  {
+    "pattern": "Stakeholder\\-Centred\\ Design",
+    "replacement": "பங்குதாரர்மைய வடிவமைப்பு",
+    "flags": "g"
+  }
+]

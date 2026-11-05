@@ -1,0 +1,29 @@
+Counting — Product & Sum Rules, Permutations & Combinations	எண்ணல் — பெருக்கல் மற்றும் கூட்டல் விதிகள், ஒழுங்கமைப்புகள், சேர்வுகள்
+Why counting matters, the product rule, the sum rule, inclusion–exclusion for counting, tree diagrams, combinations ⁿCᵣ, and permutations with and without repetition.	எண்ணல் ஏன் முக்கியம், பெருக்கல் விதி, கூட்டல் விதி, எண்ணலுக்கான உள்ளடக்கல்–விலக்கல், மர வரைபடங்கள், ⁿCᵣ சேர்வுகள், மீளுருவுடனும் இன்றியும் ஒழுங்கமைப்புகள்.
+Lesson 8 – Counting, Permutations & Combinations	பாடம் 8 – எண்ணல், ஒழுங்கமைப்புகள், சேர்வுகள்
+Counting principles and how to choose between permutations and combinations.	எண்ணல் கொள்கைகளும் ஒழுங்கமைப்புகள், சேர்வுகளுக்கிடையே தேர்ந்தெடுப்பதும்.
+Lesson 8: counting, permutations and combinations	பாடம் 8: எண்ணல், ஒழுங்கமைப்புகள், சேர்வுகள்
+The product rule	பெருக்கல் விதி
+Example: Lily's shirts and pants	எடுத்துக்காட்டு: லில்லியின் சட்டைகளும் காற்சட்டைகளும்
+Counting functions: nᵐ	சார்புகளை எண்ணுதல்: nᵐ
+Counting one-to-one functions	ஒன்றுக்கொன்றான சார்புகளை எண்ணுதல்
+The sum rule: 37 + 83 representatives	கூட்டல் விதி: 37 + 83 பிரதிநிதிகள்
+Subtraction rule (inclusion–exclusion)	கழித்தல் விதி (உள்ளடக்கல்–விலக்கல்)
+Tree diagrams: bit strings with no two consecutive 1s	மர வரைபடங்கள்: அடுத்தடுத்த இரு 1-கள் இல்லாத பிட் சரங்கள்
+Permutations vs combinations	ஒழுங்கமைப்புகளும் சேர்வுகளும்
+Combinations: ⁿCᵣ and the magician example	சேர்வுகள்: ⁿCᵣ, மந்திரவாதி எடுத்துக்காட்டு
+Permutations: ⁿPᵣ	ஒழுங்கமைப்புகள்: ⁿPᵣ
+Example: picking the top three goals (720 ways)	எடுத்துக்காட்டு: சிறந்த மூன்று கோல்களைத் தேர்ந்தெடுத்தல் (720 வழிகள்)
+Self-assessment questions	சுயமதிப்பீட்டுக் கேள்விகள்
+Bit-string tree (no two consecutive 1s)	பிட்-சர மரம் (அடுத்தடுத்த இரு 1-கள் இல்லை)
+Length n	நீளம் n
+Permutations & combinations lab	ஒழுங்கமைப்பு மற்றும் சேர்வு ஆய்வகம்
+Objects (comma separated)	பொருட்கள் (காற்புள்ளியால் பிரிக்கப்பட்டவை)
+n (for big numbers, ignores the list)	n (பெரிய எண்களுக்கு, பட்டியலைப் புறக்கணிக்கிறது)
+e.g. 100	எ.கா. 100
+Question	கேள்வி
+Formula	சூத்திரம்
+Answer	விடை
+Order matters, no repetition	வரிசை முக்கியம், மீளுரு இல்லை
+Order doesn't matter, no repetition	வரிசை முக்கியமல்ல, மீளுரு இல்லை
+Order matters, repetition allowed	வரிசை முக்கியம், மீளுரு அனுமதிக்கப்படுகிறது

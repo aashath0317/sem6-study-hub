@@ -1,0 +1,5 @@
+[
+ {"pattern":"^(\\d+)/7 passed\\.$","replacement":"$1/7 தேர்ச்சி."},
+ {"pattern":"^\\((\\d+) failures in stages 1–4\\)\\.$","replacement":"(1–4 நிலைகளில் $1 தோல்விகள்)."},
+ {"pattern":"^\\((\\d+) failures in stages 5–7\\)\\.$","replacement":"(5–7 நிலைகளில் $1 தோல்விகள்)."}
+]

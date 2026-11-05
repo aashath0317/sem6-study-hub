@@ -1,0 +1,50 @@
+[
+  {
+    "pattern": "Shaded regions:",
+    "replacement": "நிழலிடப்பட்ட பகுதிகள்:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Only A =",
+    "replacement": "A மட்டும் =",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Only B =",
+    "replacement": "B மட்டும் =",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Exactly one =",
+    "replacement": "துல்லியமாக ஒன்று =",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Neither =",
+    "replacement": "இரண்டுமில்லை =",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " vs ",
+    "replacement": " மற்றும் ",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "missing \\)",
+    "replacement": "விடுபட்ட )",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "unexpected ",
+    "replacement": "எதிர்பாராத ",
+    "selector": ".tool",
+    "flags": "g"
+  }
+]

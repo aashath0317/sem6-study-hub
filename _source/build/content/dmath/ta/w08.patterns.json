@@ -1,0 +1,56 @@
+[
+  {
+    "pattern": "leaves = (\\d+) valid bit strings of length (\\d+)",
+    "replacement": "இலைகள் = நீளம் $2 உடைய $1 செல்லுபடியான பிட் சரங்கள்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\(out of 2",
+    "replacement": "(மொத்தம் 2",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "in total\\)\\. Notice these counts are Fibonacci numbers!",
+    "replacement": "என்பவற்றிலிருந்து). இந்த எண்ணிக்கைகள் ஃபிபொனாச்சி எண்கள் என்பதைக் கவனிக்கவும்!",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "r must be between 0 and n = (\\d+)\\.",
+    "replacement": "r என்பது 0 முதல் n = $1 வரை இருக்க வேண்டும்.",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Permutations:",
+    "replacement": "ஒழுங்கமைப்புகள்:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Combinations:",
+    "replacement": "சேர்வுகள்:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "All (\\d+) permutations:",
+    "replacement": "அனைத்து $1 ஒழுங்கமைப்புகள்:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "All (\\d+) combinations:",
+    "replacement": "அனைத்து $1 சேர்வுகள்:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Each combination appears as (\\d+)! = (\\d+) permutations, so",
+    "replacement": "ஒவ்வொரு சேர்வும் $1! = $2 ஒழுங்கமைப்புகளாகத் தோன்றுகிறது; எனவே",
+    "selector": ".tool",
+    "flags": "g"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "pattern": "^(.*) = Rs (.*) per year$",
+    "replacement": "$1 = வருடத்துக்கு ரூ $2"
+  },
+  {
+    "pattern": "^: rate = (.*)$",
+    "replacement": ": வீதம் = $1"
+  },
+  {
+    "pattern": "^of opening NBV$",
+    "replacement": "ஆரம்ப NBVஇன்"
+  },
+  {
+    "pattern": "^Both end at the residual value Rs (.+)\\. Reducing balance writes off more in the early years\\. Journal each year: Dr Depreciation / Cr Provision for depreciation\\.$",
+    "replacement": "இரண்டும் எச்சப் பெறுமதியான ரூ $1இல் முடிகின்றன. குறைந்துசெல்லும் மீதி முறை ஆரம்ப வருடங்களில் அதிகமாக நீக்குகிறது. ஒவ்வொரு வருடக் குறிப்பேடு: தேய்மானம் பற்று / தேய்மான ஏற்பாடு வரவு."
+  },
+  {
+    "pattern": "^Carrying amount = (.+) · Proceeds (.+) →$",
+    "replacement": "கொண்டுசெல்லும் பெறுமதி = $1 · விற்பனை வருவாய் $2 →"
+  },
+  {
+    "pattern": "^profit of Rs (.+)$",
+    "replacement": "ரூ $1 இலாபம்"
+  },
+  {
+    "pattern": "^loss of Rs (.+)$",
+    "replacement": "ரூ $1 நட்டம்"
+  }
+]

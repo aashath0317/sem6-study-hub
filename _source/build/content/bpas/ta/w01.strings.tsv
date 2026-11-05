@@ -1,0 +1,99 @@
+Business Processes & Accounting Information Systems (AIS)	வணிகச் செயல்முறைகளும் கணக்கியல் தகவல் முறைமைகளும் (AIS)
+What a business process is, the three core business processes and Porter's value chain, accounting information and its users, what an AIS is and why it matters, its five components, AIS principles, and internal control.	வணிகச் செயல்முறை என்றால் என்ன, மூன்று மைய வணிகச் செயல்முறைகளும் போர்ட்டரின் பெறுமதிச் சங்கிலியும், கணக்கியல் தகவலும் பயனர்களும், AIS என்றால் என்ன மற்றும் அதன் முக்கியத்துவம், ஐந்து கூறுகள், AIS கொள்கைகள், அகக் கட்டுப்பாடு.
+🧪 Try it — Follow a business through its three processes	🧪 முயன்று பாருங்கள் — வணிகத்தின் மூன்று செயல்முறைகளையும் பின்தொடருங்கள்
+Business	வணிகம்
+Bakery	வெதுப்பகம்
+Software company	மென்பொருள் நிறுவனம்
+Garment factory	ஆடைத் தொழிற்சாலை
+Process	செயல்முறை
+Activities	நடவடிக்கைகள்
+Source documents	மூல ஆவணங்கள்
+Accounts affected (data for the AIS)	பாதிக்கப்படும் கணக்குகள் (AIS-க்கான தரவு)
+1. Acquire & pay	1. பெற்று பணம் செலுத்துதல்
+2. Convert	2. மாற்றுதல்
+3. Sell & collect	3. விற்று வசூலித்தல்
+Buy flour, sugar, eggs, gas; pay bakers' wages	மா, சீனி, முட்டை, எரிவாயு வாங்குதல்; வெதுப்பகப் பணியாளர்களின் ஊதியத்தைச் செலுத்துதல்
+Purchase order → goods received note → supplier invoice → payment voucher	கொள்வனவுக் கட்டளை → பொருள் பெறுதல் குறிப்பு → வழங்குநர் விலைப்பட்டியல் → கொடுப்பனவுச் சான்று
+Purchases, accounts payable, cash/bank, payroll	கொள்வனவுகள், செலுத்தவேண்டிய கணக்குகள், காசு/வங்கி, ஊதியப்பட்டியல்
+Mix, bake and pack bread and cakes	பாண் மற்றும் கேக்குகளைக் கலந்து, சுட்டு, பொதியிடுதல்
+Production schedule, materials issue note	உற்பத்தி அட்டவணை, பொருள் வழங்கல் குறிப்பு
+Inventory: raw materials → finished goods	சரக்கு: மூலப்பொருட்கள் → முடிவுற்ற பொருட்கள்
+Sell to shops and walk-in customers; collect cash or credit	கடைகளுக்கும் நேரில் வரும் வாடிக்கையாளர்களுக்கும் விற்றல்; காசு அல்லது கடன் வசூலித்தல்
+Sales order → delivery note → sales invoice → receipt	விற்பனைக் கட்டளை → விநியோகக் குறிப்பு → விற்பனை விலைப்பட்டியல் → ரசீது
+Sales, accounts receivable, cash/bank	விற்பனைகள், பெறவேண்டிய கணக்குகள், காசு/வங்கி
+Hire developers, buy laptops and cloud servers	மென்பொருள் உருவாக்குநர்களை வேலைக்கமர்த்துதல்; மடிக்கணினிகளும் மேகச் சேவையகங்களும் வாங்குதல்
+Employment contracts, purchase invoices	வேலை ஒப்பந்தங்கள், கொள்வனவு விலைப்பட்டியல்கள்
+Payroll, fixed assets, accounts payable	ஊதியப்பட்டியல், நிலையான சொத்துகள், செலுத்தவேண்டிய கணக்குகள்
+Develop and test the software product	மென்பொருள் தயாரிப்பை உருவாக்கிச் சோதித்தல்
+Timesheets, project records	நேரப்பதிவுத் தாள்கள், திட்டப் பதிவுகள்
+Work-in-progress / development costs	நடைபெறும் வேலை / உருவாக்கச் செலவுகள்
+Sell licences and subscriptions; collect monthly fees	உரிமங்களும் சந்தாக்களும் விற்றல்; மாதாந்தக் கட்டணங்களை வசூலித்தல்
+Contracts, subscription invoices, receipts	ஒப்பந்தங்கள், சந்தா விலைப்பட்டியல்கள், ரசீதுகள்
+Revenue, receivables, bank	வருவாய், பெறவேண்டியவை, வங்கி
+Buy fabric, thread, machines; pay machine operators	துணி, நூல், இயந்திரங்கள் வாங்குதல்; இயந்திர இயக்குநர்களுக்குச் சம்பளம் செலுத்துதல்
+Purchase requisition → PO → GRN → invoice	கொள்வனவுக் கோரிக்கை → கொள்வனவுக் கட்டளை → பொருள் பெறுதல் குறிப்பு → விலைப்பட்டியல்
+Purchases, inventory, payables, payroll	கொள்வனவுகள், சரக்கு, செலுத்தவேண்டியவை, ஊதியப்பட்டியல்
+Cut, sew, finish and pack garments	ஆடைகளை வெட்டி, தைத்து, நிறைவுசெய்து, பொதியிடுதல்
+Job cards, material requisitions	வேலை அட்டைகள், பொருள் கோரிக்கைகள்
+Raw materials → WIP → finished goods	மூலப்பொருட்கள் → நடைபெறும் வேலை → முடிவுற்ற பொருட்கள்
+Export to buyers; collect payment by letter of credit	வாங்குநர்களுக்கு ஏற்றுமதி செய்தல்; கடன் கடிதம் மூலம் பணம் பெறுதல்
+Commercial invoice, shipping documents	வர்த்தக விலைப்பட்டியல், கப்பல் சரக்கு ஆவணங்கள்
+Sales, receivables, foreign currency bank	விற்பனைகள், பெறவேண்டியவை, வெளிநாட்டு நாணய வங்கிக் கணக்கு
+Every row produces accounting data, and the AIS captures all of it.	ஒவ்வொரு வரியும் கணக்கியல் தரவை உருவாக்குகிறது; AIS அனைத்தையும் பதிவு செய்கிறது.
+Accounting Information System (AIS)	கணக்கியல் தகவல் முறைமை (AIS)
+Definition of an AIS, its design principles and its components.	AISஇன் வரையறை, அதன் வடிவமைப்புக் கொள்கைகள், அதன் கூறுகள்.
+Definition: people, records and methods that collect, process and communicate data	வரையறை: தரவைச் சேகரித்து, செயலாக்கி, தெரிவிக்கும் மனிதர்கள், பதிவுகள், முறைகள்
+The AIS is the process that turns transactions into financial statements	பரிவர்த்தனைகளை நிதிக் கூற்றுகளாக மாற்றும் செயல்முறையே AIS
+Principles: control, relevance, compatibility, flexibility, cost–benefit	கொள்கைகள்: கட்டுப்பாடு, பொருத்தப்பாடு, இணக்கத்தன்மை, நெகிழ்வுத்தன்மை, செலவு–பயன்
+Components: source documents, input devices, processing, storage, output	கூறுகள்: மூல ஆவணங்கள், உள்ளீட்டுச் சாதனங்கள், செயலாக்கம், சேமிப்பு, வெளியீடு
+Introduction to Accounting	கணக்கியல் அறிமுகம்
+What accounting is and who uses accounting information.	கணக்கியல் என்றால் என்ன என்பதும் கணக்கியல் தகவலைப் பயன்படுத்துவோர் யார் என்பதும்.
+Introduction and learning outcomes	அறிமுகமும் கற்றல் பெறுபேறுகளும்
+Definitions of accounting	கணக்கியலின் வரையறைகள்
+Financial vs management and cost accounting	நிதிக் கணக்கியல், முகாமைத்துவ மற்றும் செலவுக் கணக்கியல்
+Objectives of accounting	கணக்கியலின் நோக்கங்கள்
+Stakeholders and their interests	அக்கறைதாரர்களும் அவர்களது அக்கறைகளும்
+Internal stakeholders: owners, managers, employees	அக அக்கறைதாரர்கள்: உரிமையாளர்கள், நிர்வாகிகள், ஊழியர்கள்
+External stakeholders: suppliers, lenders, government	புற அக்கறைதாரர்கள்: வழங்குநர்கள், கடனளிப்பவர்கள், அரசு
+Forms of business: sole proprietorship, partnership, company	வணிக வடிவங்கள்: தனியாள் வணிகம், பங்குடைமை, நிறுவனம்
+Private vs public limited companies	தனியார் மற்றும் பொதுவரையறுக்கப்பட்ட நிறுவனங்கள்
+Sole proprietorship and partnership: advantages	தனியாள் வணிகமும் பங்குடைமையும்: நன்மைகள்
+Disadvantages: unlimited liability, transfer, continuity	தீமைகள்: வரம்பற்ற பொறுப்பு, மாற்றுதல், தொடர்ச்சி
+Public limited companies: limited liability, raising capital	பொதுவரையறுக்கப்பட்ட நிறுவனங்கள்: வரையறுக்கப்பட்ட பொறுப்பு, மூலதனம் திரட்டுதல்
+Company disadvantages: double taxation, regulation	நிறுவனத்தின் தீமைகள்: இரட்டை வரிவிதிப்பு, ஒழுங்குபடுத்தல்
+Conceptual Framework	கருத்தியல் கட்டமைப்பு
+The conceptual framework for financial reporting.	நிதி அறிக்கையிடலுக்கான கருத்தியல் கட்டமைப்பு.
+Introduction to the conceptual framework	கருத்தியல் கட்டமைப்பின் அறிமுகம்
+Business entity concept	வணிகத் தனித்துவக் கருத்து
+Going concern concept	தொடர்ந்தியங்கும் கருத்து
+Money measurement concept	பண அளவீட்டுக் கருத்து
+Historical cost concept	வரலாற்றுச் செலவுக் கருத்து
+Accrual and matching concepts	உபசித மற்றும் பொருத்தக் கருத்துகள்
+Qualitative characteristics: relevance	தரப் பண்புகள்: பொருத்தப்பாடு
+Materiality	முக்கியத்துவம்
+Faithful representation	உண்மையான பிரதிநிதித்துவம்
+Enhancing characteristics: comparability	மேம்படுத்தும் பண்புகள்: ஒப்பிடத்தக்க தன்மை
+Verifiability (and timeliness)	சரிபார்க்கத்தக்க தன்மை (மற்றும் உரிய நேரத்தன்மை)
+Understandability	புரிந்துகொள்ளத்தக்க தன்மை
+Elements of financial statements: assets	நிதிக் கூற்றுகளின் கூறுகள்: சொத்துகள்
+Liabilities	பொறுப்புகள்
+Equity	பங்குரிமை
+Income	வருமானம்
+Expenses	செலவுகள்
+Information Management Systems	தகவல் முகாமைத்துவ முறைமைகள்
+Information systems in organisations.	நிறுவனங்களிலுள்ள தகவல் முறைமைகள்.
+Organisations and their departments	நிறுவனங்களும் அவற்றின் துறைகளும்
+Data: facts collected and stored	தரவு: சேகரித்துச் சேமிக்கப்பட்ட உண்மைகள்
+Example: data in a sales transaction	எடுத்துக்காட்டு: விற்பனைப் பரிவர்த்தனையின் தரவு
+Information: data organised meaningfully	தகவல்: பொருளுள்ள விதத்தில் ஒழுங்கமைக்கப்பட்ட தரவு
+Data set example: from data to information	தரவுத் தொகுப்பு எடுத்துக்காட்டு: தரவிலிருந்து தகவலுக்கு
+What an organisation is	நிறுவனம் என்றால் என்ன
+Business processes: repeatable and standardised	வணிகச் செயல்முறைகள்: மீண்டும் செய்யக்கூடியவை, தரப்படுத்தப்பட்டவை
+Decisions made in each business process (HR, finance)	ஒவ்வொரு வணிகச் செயல்முறையிலும் எடுக்கப்படும் முடிவுகள் (மனிதவளம், நிதி)
+Accounting as the language of business	வணிகத்தின் மொழியாகக் கணக்கியல்
+What an AIS is (paper, computer, mixed)	AIS என்றால் என்ன (காகிதம், கணினி, கலப்பு)
+The six components of an AIS	AISஇன் ஆறு கூறுகள்
+Safeguarding assets and data	சொத்துகளையும் தரவையும் பாதுகாத்தல்
+AIS and the value chain: primary vs support activities	AISஉம் பெறுமதிச் சங்கிலியும்: முதன்மை மற்றும் ஆதரவு நடவடிக்கைகள்
+Adding value (the ice-cream example)	பெறுமதியைச் சேர்த்தல் (ஐஸ்கிரீம் எடுத்துக்காட்டு)
+How an AIS adds value	AIS எவ்வாறு பெறுமதியைச் சேர்க்கிறது

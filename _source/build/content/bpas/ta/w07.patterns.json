@@ -1,0 +1,70 @@
+[
+  {
+    "pattern": "^Should be in the P&L for the year: (.+)$",
+    "replacement": "வருடத்தின் P&Lஇல் இடம்பெற வேண்டியது: $1"
+  },
+  {
+    "pattern": "^· Cash per TB: Rs (.+)$",
+    "replacement": "· மீதிச் சோதனையின்படி காசு: ரூ $1"
+  },
+  {
+    "pattern": "^Rs (.+)$",
+    "replacement": "ரூ $1"
+  },
+  {
+    "pattern": "^of Rs (.+)$",
+    "replacement": "ரூ $1"
+  },
+  {
+    "pattern": "^Dr Expense / Cr Accrued expense Rs (.+)$",
+    "replacement": "செலவு பற்று / திரண்ட செலவு வரவு ரூ $1"
+  },
+  {
+    "pattern": "^Dr Prepaid expense / Cr Expense Rs (.+)$",
+    "replacement": "முற்பணச் செலவு பற்று / செலவு வரவு ரூ $1"
+  },
+  {
+    "pattern": "^Dr Income receivable / Cr Income Rs (.+)$",
+    "replacement": "பெறத்தக்க வருமானம் பற்று / வருமானம் வரவு ரூ $1"
+  },
+  {
+    "pattern": "^Dr Income / Cr Income received in advance Rs (.+)$",
+    "replacement": "வருமானம் பற்று / முன்கூட்டிப் பெற்ற வருமானம் வரவு ரூ $1"
+  },
+  {
+    "pattern": "^→ receivables now (.+)$",
+    "replacement": "→ தற்போதைய பெறத்தக்கவை $1"
+  },
+  {
+    "pattern": "^3\\. Change vs opening (.+)$",
+    "replacement": "3. ஆரம்ப $1 உடனான மாற்றம்"
+  },
+  {
+    "pattern": "^(.+): Dr Impairment loss / Cr Provision$",
+    "replacement": "$1: பெறுமதிக்குறைவு நட்டம் பற்று / ஏற்பாடு வரவு"
+  },
+  {
+    "pattern": "^Under-provision → increase (.+)$",
+    "replacement": "குறைவான ஏற்பாடு → அதிகரிப்பு $1"
+  },
+  {
+    "pattern": "^Over-provision → decrease (.+)$",
+    "replacement": "அதிகமான ஏற்பாடு → குறைவு $1"
+  },
+  {
+    "pattern": "^Bad debts expense (.+) \\+ impairment loss (.+) → total charge$",
+    "replacement": "அறவிடமுடியாக் கடன் செலவு $1 + பெறுமதிக்குறைவு நட்டம் $2 → மொத்தச் செலவு"
+  },
+  {
+    "pattern": "^Bad debts expense (.+) and impairment reversal \\(income\\) (.+) → total charge$",
+    "replacement": "அறவிடமுடியாக் கடன் செலவு $1 மற்றும் பெறுமதிக்குறைவு மீள்திருப்பல் (வருமானம்) $2 → மொத்தச் செலவு"
+  },
+  {
+    "pattern": "^Bad debts expense (.+) → total charge$",
+    "replacement": "அறவிடமுடியாக் கடன் செலவு $1 → மொத்தச் செலவு"
+  },
+  {
+    "pattern": "^Trade receivables (.+) − provision (.+) =$",
+    "replacement": "வியாபாரப் பெறத்தக்கவை $1 − ஏற்பாடு $2 ="
+  }
+]

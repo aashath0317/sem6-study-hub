@@ -1,0 +1,6 @@
+[
+ {"pattern":"^AgeGroup = (.*?) ⇒ buys Phone$", "replacement":"வயதுக் குழு = $1 ⇒ தொலைபேசி வாங்குவார்"},
+ {"pattern":"^AgeGroup = (.*?) ⇒ buys Laptop$", "replacement":"வயதுக் குழு = $1 ⇒ மடிக்கணினி வாங்குவார்"},
+ {"pattern":"^(.*?) ⇒ Phone · support (.*?) · confidence (.*?)$", "replacement":"$1 ⇒ தொலைபேசி · ஆதரவு $2 · நம்பிக்கை $3"},
+ {"pattern":"^(.*?) ⇒ Laptop · support (.*?)$", "replacement":"$1 ⇒ மடிக்கணினி · ஆதரவு $2"}
+]

@@ -1,0 +1,55 @@
+Cash Book, Petty Cash Book & General Journal	காசேடு, சிறுகாசேடு, பொது நாளேடு
+The cash book as both a day book and a ledger account; one-, two- and three-column cash books (contra entries, discounts allowed and received); the petty cash book and the imprest system; and the general journal for everything else.	ஆரம்பப் பதிவேடாகவும் பேரேட்டுக் கணக்காகவும் காசேடு; ஒற்றை, இரட்டை, மூன்று பத்திக் காசேடுகள் (எதிர்ப் பதிவுகள், கொடுத்த மற்றும் பெற்ற கழிவுகள்); சிறுகாசேடும் முற்பண முறைமையும்; ஏனையவற்றுக்கான பொது நாளேடு.
+🧪 Try it — Three-column cash book builder	🧪 முயன்று பாருங்கள் — மூன்று பத்திக் காசேடு உருவாக்கி
+Type	வகை
+Capital introduced	மூலதனம் அறிமுகப்படுத்தப்பட்டது
+Cash sales	காசு விற்பனைகள்
+Debtor pays (with discount allowed)	கடன்படுநர் செலுத்துகிறார் (கொடுத்த கழிவுடன்)
+Deposit cash into bank (contra)	வங்கியில் காசு வைப்பிடுதல் (எதிர்ப்பதிவு)
+Withdraw cash from bank (contra)	வங்கியிலிருந்து காசு எடுத்தல் (எதிர்ப்பதிவு)
+Pay a creditor (with discount received)	கடன்கொடுநருக்குச் செலுத்துதல் (பெற்ற கழிவுடன்)
+Pay an expense	செலவு ஒன்றைச் செலுத்துதல்
+Via	வழி
+Bank	வங்கி
+Cash	காசு
+Amount	தொகை
+Discount	கழிவு
+Add	சேர்
+Reset	மீட்டமை
+Capital	மூலதனம்
+Sales	விற்பனைகள்
+Debtor	கடன்படுநர்
+Cash (C)	காசு (C)
+Bank (C)	வங்கி (C)
+Creditor	கடன்கொடுநர்
+Expenses	செலவுகள்
+Dr (receipts)	பற்று (பெறுதல்கள்)
+Cr (payments)	வரவு (கொடுப்பனவுகள்)
+Details	விவரங்கள்
+D/A	கொடுத்த கழிவு
+D/R	பெற்ற கழிவு
+Balance c/d	மீதி c/d
+Balance b/d	மீதி b/d
+Totals	மொத்தங்கள்
+overdraft	வங்கி மேலதிகப் பற்று
+Add entries to see a properly ruled three-column cash book.	முறையாகக் கோடிடப்பட்ட மூன்று பத்திக் காசேட்டைப் பார்க்கப் பதிவுகளைச் சேருங்கள்.
+🧪 Try it — Imprest petty cash simulator	🧪 முயன்று பாருங்கள் — முற்பணச் சிறுகாசு உருவகப்படுத்தல்
+Float Rs	நிலையான முற்பணம் ரூ.
+Voucher	சான்று
+Category	வகை
+Rs	ரூ.
+Pay	செலுத்து
+New period	புதிய காலப்பகுதி
+Stationery	எழுதுபொருட்கள்
+Travelling	பயணம்
+Postage	அஞ்சல்
+Ledger a/c	பேரேட்டுக் கணக்கு
+Receipts	பெறுதல்கள்
+V/N	சான்று இல.
+Payments	கொடுப்பனவுகள்
+Float (from main cash book)	நிலையான முற்பணம் (பிரதான காசேட்டிலிருந்து)
+Printer paper	அச்சுக் காகிதம்
+Expense	செலவு
+Cash left in the box:	பெட்டியில் மீதிக் காசு:
+(overspent!)	(அதிகமாகச் செலவிடப்பட்டது!)
+Imprest top-up from the main cashier = amount spent =	பிரதான காசாளரிடமிருந்து முற்பண மீள்நிரப்பல் = செலவிட்ட தொகை =

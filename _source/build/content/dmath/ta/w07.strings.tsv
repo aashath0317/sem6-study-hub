@@ -1,0 +1,36 @@
+Mathematical Induction & Recursion	கணிதத் தொகுத்தறிதலும் மறுசுழற்சியும்
+The principle of mathematical induction (basis step, inductive step, inductive hypothesis), four fully worked proofs, the well-ordering property, and recursively defined sequences and functions (factorial, powers, sums, Fibonacci).	கணிதத் தொகுத்தறிதல் கொள்கை (அடிப்படைப் படி, தொகுத்தறிதல் படி, கருதுகோள்), நான்கு முழுச் செய்முறை நிறுவல்கள், நன்கு வரிசைப்படுத்தல் பண்பு, மறுசுழற்சியாக வரையறுக்கப்பட்ட தொடரிகளும் சார்புகளும் (காரணியல், அடுக்குகள், கூட்டுத்தொகைகள், ஃபிபொனாச்சி).
+Lesson 7 – Induction & Recursion	பாடம் 7 – தொகுத்தறிதலும் மறுசுழற்சியும்
+Proof by induction and recursive definitions.	தொகுத்தறிதலால் நிறுவலும் மறுசுழற்சி வரையறைகளும்.
+Lesson 7: induction and recursion	பாடம் 7: தொகுத்தறிதலும் மறுசுழற்சியும்
+Mathematical induction: basis step and inductive step	கணிதத் தொகுத்தறிதல்: அடிப்படைப் படியும் தொகுத்தறிதல் படியும்
+Example: 1 + 2 + … + n = n(n + 1)/2	எடுத்துக்காட்டு: 1 + 2 + … + n = n(n + 1)/2
+Example: sum of the first n odd numbers = n²	எடுத்துக்காட்டு: முதல் n ஒற்றை எண்களின் கூட்டுத்தொகை = n²
+Proving n < 2ⁿ	n < 2ⁿ நிறுவுதல்
+Proving n³ − n is divisible by 3	n³ − n, 3-ஆல் வகுபடும் என நிறுவுதல்
+The well-ordering property	நன்கு வரிசைப்படுத்தல் பண்பு
+Self-assessment: sum of squares	சுயமதிப்பீடு: வர்க்கங்களின் கூட்டுத்தொகை
+Exercise 3: sum of odd squares	பயிற்சி 3: ஒற்றை வர்க்கங்களின் கூட்டுத்தொகை
+Recursive definitions	மறுசுழற்சி வரையறைகள்
+aₙ = 3ⁿ defined recursively	aₙ = 3ⁿ மறுசுழற்சியாக வரையறுக்கப்பட்டது
+Recursively defined functions: f(n + 1) = 2f(n) + 3	மறுசுழற்சியாக வரையறுக்கப்பட்ட சார்புகள்: f(n + 1) = 2f(n) + 3
+Factorial defined recursively	காரணியல் மறுசுழற்சியாக வரையறுக்கப்பட்டது
+aⁿ and Σ defined recursively	aⁿ, Σ மறுசுழற்சியாக வரையறுக்கப்பட்டன
+Fibonacci numbers	ஃபிபொனாச்சி எண்கள்
+Domino induction	டொமினோ தொகுத்தறிதல்
+Basis step proven: P(1)	அடிப்படைப் படி நிறுவப்பட்டது: P(1)
+Inductive step proven: P(k) → P(k+1)	தொகுத்தறிதல் படி நிறுவப்பட்டது: P(k) → P(k+1)
+Push!	தள்ளு!
+Both steps hold, so every domino falls: P(n) is true for all n ≥ 1.	இரு படிகளும் பொருந்துவதால் ஒவ்வொரு டொமினோவும் விழுகிறது: அனைத்து n ≥ 1-க்கும் P(n) உண்மை.
+Check a formula numerically	சூத்திரத்தை எண்ணியல் ரீதியாகச் சரிபார்
+Claim	கூற்று
+up to n =	n வரை =
+Left side	இடப்பக்கம்
+Right side	வலப்பக்கம்
+Holds?	பொருந்துகிறதா?
+Recursion evaluator	மறுசுழற்சி மதிப்பீட்டி
+terms	உறுப்புகள்
+Ex 7.2.2	எடுத்துக்காட்டு 7.2.2
+Factorial	காரணியல்
+Fibonacci	ஃபிபொனாச்சி
+Check the rule (use f for f(n) and n).	விதியைச் சரிபார்க்கவும் (f(n)-க்கு f, n பயன்படுத்தவும்).

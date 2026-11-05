@@ -1,0 +1,11 @@
+[
+ {"pattern":"^Derived: GP (.*) · EBIT (.*) · NPAT (.*) · total assets (.*) · equity \\(balancing\\) (.*)$","replacement":"பெறப்பட்டவை: GP $1 · EBIT $2 · NPAT $3 · மொத்தச் சொத்துகள் $4 · உரிமை மூலதனம் (சமநிலைப்படுத்தியது) $5"},
+ {"pattern":"^NCL ÷ \\(equity (.*) \\+ NCL\\)$","replacement":"NCL ÷ (உரிமை மூலதனம் $1 + NCL)"},
+ {"pattern":"^total debt (.*) ÷ equity$","replacement":"மொத்தக் கடன் $1 ÷ உரிமை மூலதனம்"},
+ {"pattern":"^EBIT (.*) ÷ interest$","replacement":"EBIT $1 ÷ வட்டி"},
+ {"pattern":"^sales ÷ total assets (.*)$","replacement":"விற்பனை ÷ மொத்தச் சொத்துகள் $1"},
+ {"pattern":"^GP (.*) ÷ sales$","replacement":"GP $1 ÷ விற்பனை"},
+ {"pattern":"^NPAT (.*) ÷ sales$","replacement":"NPAT $1 ÷ விற்பனை"},
+ {"pattern":"^([−–\\-]?[0-9.,]+) days$","replacement":"$1 நாட்கள்"},
+ {"pattern":"^Rs (.*)$","replacement":"ரூ. $1"}
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "pattern": "^Knob (\\d+)$",
+    "replacement": "கட்டுப்பாட்டுக் குமிழ் $1"
+  },
+  {
+    "pattern": "^Deleted \"(.*)\" $",
+    "replacement": "“$1” நீக்கப்பட்டது "
+  },
+  {
+    "pattern": "^Deleted \"(.*)\"$",
+    "replacement": "“$1” நீக்கப்பட்டது"
+  },
+  {
+    "pattern": "^\"(.*)\" is gone forever\\.$",
+    "replacement": "“$1” நிரந்தரமாக நீக்கப்பட்டது."
+  },
+  {
+    "pattern": "^✓ Sent at (.*)$",
+    "replacement": "✓ அனுப்பிய நேரம் $1"
+  }
+]

@@ -1,0 +1,4 @@
+{
+  "Assumes raw reaction time is under 1 s, so a prompt just before the junction is \"enough\". <b style=\"color:var(--warn)\">High risk of missing the turn or crashing.</b>": "மூல எதிர்வினை நேரம் 1 நொடிக்குக் குறைவு என்று கருதுவதால், சந்திப்புக்கு உடனடியாக முன் அறிவிப்பது “போதும்” எனக் கருதுகிறது. <b style=\"color:var(--warn)\">திருப்பத்தைத் தவறவிடும் அல்லது விபத்துக்குள்ளாகும் ஆபத்து அதிகம்.</b>",
+  "Allows for crying children, loud radio, heavy rain and blind spots: <b>progressive</b> visual HUD cues and audio chimes well in advance.": "அழும் குழந்தைகள், சத்தமான வானொலி, கடும் மழை, மறைப்புள்ளிகள் ஆகியவற்றைக் கருத்தில் கொண்டு, போதிய நேரத்துக்கு முன்னரே <b>படிப்படியான</b> முன்னோக்குத் திரைக் காட்சிக் குறிப்புகளையும் ஒலி எச்சரிக்கைகளையும் வழங்குகிறது."
+}

@@ -1,0 +1,7 @@
+[
+ {"pattern":"^DF @([\\d.]+)%$","replacement":"$1%இல் கழித்தொதுக்கல் காரணி"},
+ {"pattern":"^([\\d.]+) years$","replacement":"$1 ஆண்டுகள்"},
+ {"pattern":"^the ([\\d.]+)-year target$","replacement":"$1-ஆண்டு இலக்கு"},
+ {"pattern":"^vs cost of capital ([\\d.]+)% →$","replacement":"மூலதனச் செலவு $1% உடன் ஒப்பிடுக →"},
+ {"pattern":"^Interpolation between ([-\\d.]+)% \\(NPV ([-\\d,]+)\\) and ([-\\d.]+)% \\(NPV ([-\\d,]+)\\): (.*)$","replacement":"NPV $2 உள்ள $1%க்கும் NPV $4 உள்ள $3%க்கும் இடையிலான இடைச்செருகல்: $5"}
+]

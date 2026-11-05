@@ -47,3 +47,44 @@ Planner checks (Node.js, no extra packages):
 node _source/build/tests/study-plan.test.cjs
 node _source/build/tests/study-timer.test.cjs
 ```
+
+## HCI authored Tamil translations
+
+All 13 HCI weeks, past papers and the subject index have a floating **தமிழ் / English** button. Tamil is an authored translation of the existing English notes, tables, examples, quizzes and interactive-tool text, saved locally. It does not use Google Translate, an API or a translation service. Switching retains quiz answers and live tool state. The original labels inside figure images and embedded video players remain unchanged; captions and chapter descriptions are translated.
+
+Translation sources live in `_source/build/content/hci/ta/`. The original English note files and quiz answers remain unchanged. `source-manifest.json` detects changes to the English source that require a translation review. Never substitute the earlier explanatory summaries for these translations. The original per-section **தமிழில் புரிந்துகொள்ள** explanation buttons are also available alongside the floating translation button. `HCI_TAMIL_REVIEW.md` documents those authored explanations.
+
+To refresh only the HCI translations while preserving the existing English pages and video metadata:
+
+```sh
+python _source/build/refresh_hci_translations.py
+```
+
+The regular builder also embeds these translations. Translation checks cover all 15 HCI pages, 90 note/past-paper sections, 145 weekly questions and 24 live tools. Run the DOM integration test with Node.js and `jsdom` installed:
+
+```sh
+node _source/build/tests/hci-translation.test.cjs
+```
+
+The test exercises Tamil/English switching, dynamic tool branches, answer selection and quiz grading without fetching external resources.
+
+## Business Tamil translations
+
+All **15 Business Processes and Accounting Systems weeks**, past papers and the subject index now include authored offline Tamil translations through the right-side **தமிழ் / English** button. Original per-section **தமிழில் புரிந்துகொள்ள** explanations remain available alongside it.
+
+Coverage: **114 note/past-paper sections, 168 weekly quiz questions and 24 live tools**, including worked examples, tables and all video titles, descriptions and chapter captions. English content, financial values, quiz answers and original explanation content are preserved. Labels embedded in original images/video players and editable source data remain unchanged.
+
+Refresh: `python _source/build/refresh_hci_translations.py bpas`.
+
+Checks (Node.js integration requires `jsdom`):
+
+```sh
+python _source/build/tests/tamil-source.test.py
+STUDY_TRANSLATION_SUBJECT=bpas node _source/build/tests/hci-translation.test.cjs
+```
+
+These checks cover numeric/source parity, metadata coverage, both Tamil options, tool branches, edited financial inputs/results, quiz selections and grading.
+
+## Business sections awaiting Tamil
+
+Beginner practice and rewritten course-paper practice sections show English under a Tamil notice until they are translated. After changing them, run `python _source/build/tamil_english_fallback.py`, then rebuild.

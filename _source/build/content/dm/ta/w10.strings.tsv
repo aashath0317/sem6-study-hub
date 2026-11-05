@@ -1,0 +1,24 @@
+FP-Growth & Kinds of Association Rules	FP-Growth மற்றும் தொடர்பு விதிகளின் வகைகள்
+Mining frequent patterns without candidate generation (FP-tree + conditional pattern bases), multilevel and multidimensional rules, and constraint-based mining.	வேட்பாளர் உருவாக்கமின்றி அடிக்கடி நிகழும் வடிவங்களைச் சுரங்கம் செய்தல் (FP-tree + நிபந்தனை வடிவத் தளங்கள்), பல்நிலை மற்றும் பல்பரிமாண விதிகள், கட்டுப்பாடு சார்ந்த சுரங்கம்.
+FP-Tree Approach	FP-Tree அணுகுமுறை
+The three steps of the FP-tree approach, with a worked example (beans, carrot, banana, mango…).	FP-tree அணுகுமுறையின் மூன்று படிகள், செய்முறை எடுத்துக்காட்டுடன் (பீன்ஸ், கரட், வாழைப்பழம், மாம்பழம்…).
+FP-tree: no candidate generation, only two DB scans	FP-tree: வேட்பாளர் உருவாக்கம் இல்லை, இரண்டு தரவுத்தள ஸ்கேன்கள் மட்டுமே
+Step 1 – scan once, find frequent 1-itemsets	படி 1 – ஒருமுறை ஸ்கேன் செய்து அடிக்கடி நிகழும் 1-பொருட்கணங்களைக் கண்டறி
+Step 2 – remove infrequent items, sort each transaction by descending support	படி 2 – அடிக்கடி நிகழாத பொருட்களை நீக்கி ஒவ்வொரு பரிவர்த்தனையையும் இறங்குவரிசை ஆதரவுப்படி வரிசைப்படுத்து
+Step 3 – second scan builds a tree path per transaction	படி 3 – இரண்டாவது ஸ்கேன் பரிவர்த்தனைக்கு ஒரு மரப் பாதையை உருவாக்குகிறது
+Worked example: 9 transactions, min support 3	செய்முறை எடுத்துக்காட்டு: 9 பரிவர்த்தனைகள், குறைந்தபட்ச ஆதரவு 3
+Building the tree transaction by transaction	ஒவ்வொரு பரிவர்த்தனையாக மரத்தை உருவாக்குதல்
+Final tree: beans 8, carrot 7, banana 6, mango 5 …	இறுதி மரம்: பீன்ஸ் 8, கரட் 7, வாழைப்பழம் 6, மாம்பழம் 5 …
+FP-tree builder & miner	FP-tree உருவாக்கியும் சுரங்கியும்
+Transactions (one per line)	பரிவர்த்தனைகள் (வரிக்கு ஒன்று)
+Tie-break order (optional)	சமநிலைத் தீர்ப்பு வரிசை (விருப்பமானது)
+Supports:	ஆதரவுகள்:
+L order:	L வரிசை:
+Ordered frequent items	வரிசைப்படுத்தப்பட்ட அடிக்கடி நிகழும் பொருட்கள்
+FP-tree	FP-மரம்
+Item	பொருள்
+Conditional pattern base	நிபந்தனை வடிவத் தளம்
+Conditional FP-tree	நிபந்தனை FP-மரம்
+Frequent patterns	அடிக்கடி நிகழும் வடிவங்கள்
+none	எதுவுமில்லை
+Mining (least frequent suffix first)	சுரங்கம் (மிகக்குறைவாக நிகழும் பின்னொட்டு முதலில்)

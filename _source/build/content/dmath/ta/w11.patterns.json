@@ -1,0 +1,44 @@
+[
+  {
+    "pattern": "Directed\\?",
+    "replacement": "திசையுள்ளதா?",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Multiple edges\\?",
+    "replacement": "பல்விளிம்புகளா?",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Loops\\?",
+    "replacement": "வளையங்களா?",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\(gold\\)",
+    "replacement": "(பொன்நிறம்)",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\(red\\)",
+    "replacement": "(சிவப்பு)",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Degrees:",
+    "replacement": "படிகள்:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "(\\d+) odd-degree vertices, so you cannot cross every edge exactly once and return \\(Euler\\)\\.",
+    "replacement": "$1 ஒற்றைப் படி முனைகள்; எனவே ஒவ்வொரு விளிம்பையும் துல்லியமாக ஒருமுறை கடந்து திரும்ப முடியாது (ஆய்லர்).",
+    "selector": ".tool",
+    "flags": "g"
+  }
+]

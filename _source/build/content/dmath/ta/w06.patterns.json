@@ -1,0 +1,56 @@
+[
+  {
+    "pattern": "The largest multiple of ([\\d−.-]+) that is ≤ ([\\d−.-]+) is ([\\d−.-]+)\\. The remainder is the distance from there, so it is always 0 ≤ r (?:<|&lt;) ([\\d−.-]+)\\.",
+    "replacement": "$2-ஐ மீறாத $1-இன் மிகப்பெரிய மடங்கு $3. அங்கிருந்து உள்ள தொலைவே மீதி; எனவே எப்போதும் 0 ≤ r < $4.",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Does ([\\d−.-]+) divide ([\\d−.-]+)\\?",
+    "replacement": "$1, $2-ஐ வகுக்கிறதா?",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": ", so ",
+    "replacement": ", எனவே ",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Check with Theorem 3:",
+    "replacement": "தேற்றம் 3-ஆல் சரிபார்க்கவும்:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Congruence class of ",
+    "replacement": "சமான வகுப்பு: ",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": " is prime",
+    "replacement": " பகா எண்",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "(\\d+) is ",
+    "replacement": "$1 என்பது ",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Repeated division:",
+    "replacement": "மீண்டும் வகுத்தல்:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "No divisor from 2 to √([\\d.]+) ≈ ([\\d.]+), so it is prime\\.",
+    "replacement": "2 முதல் √$1 ≈ $2 வரை வகுப்பான் இல்லை; எனவே இது பகா எண்.",
+    "selector": ".tool",
+    "flags": "g"
+  }
+]

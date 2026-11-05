@@ -1,0 +1,79 @@
+Mental Models, Representations & Error Taxonomy	மன மாதிரிகள், பிரதிநிதித்துவங்கள், பிழை வகைப்பாடு
+What mental models are, representations vs the implementation model, four traits of good representations, the full slip/mistake taxonomy, learned helplessness and expert blindness.	மன மாதிரிகள் என்றால் என்ன, பிரதிநிதித்துவங்களும் செயலாக்க மாதிரியும், நல்ல பிரதிநிதித்துவங்களின் நான்கு பண்புகள், செயல் வழுவல்/தவறான திட்டங்களின் முழு வகைப்பாடு, கற்றுக்கொண்ட இயலாமை, வல்லுநர் குருட்டுத்தன்மை.
+Basics of Mental Models	மன மாதிரிகளின் அடிப்படைகள்
+What a mental model is and how users build one.	மன மாதிரி என்றால் என்ன, பயனர்கள் அதை எப்படி உருவாக்குகிறார்கள்.
+Introduction: mental models and representations	அறிமுகம்: மன மாதிரிகளும் பிரதிநிதித்துவங்களும்
+A mental model: your internal picture of how the world works	மன மாதிரி: உலகம் செயல்படும் விதத்தைப் பற்றிய உங்கள் உள்ளார்ந்த படம்
+Using mental models to predict outcomes	விளைவுகளை முன்கணிக்க மன மாதிரிகளைப் பயன்படுத்துதல்
+Mismatched models cause user errors	பொருந்தாத மாதிரிகள் பயனர் பிழைகளை ஏற்படுத்துகின்றன
+Example: the light switchboard	எடுத்துக்காட்டு: மின்விளக்கு விசைப் பலகை
+Different users, different expectations	வெவ்வேறு பயனர்கள், வெவ்வேறு எதிர்பார்ப்புகள்
+Designers can't know every user's model	ஒவ்வொரு பயனரின் மாதிரியையும் வடிவமைப்பாளர்களால் அறிய முடியாது
+The interface should teach the user	இடைமுகம் பயனருக்குக் கற்பிக்க வேண்டும்
+Designer as teacher: HCI meets education	ஆசிரியராக வடிவமைப்பாளர்: HCI கல்வியைச் சந்திக்கிறது
+Representations	பிரதிநிதித்துவங்கள்
+How the interface represents the system to the user.	இடைமுகம் முறைமையைப் பயனருக்கு எவ்வாறு பிரதிநிதித்துவப்படுத்துகிறது.
+Representations and the learning process	பிரதிநிதித்துவங்களும் கற்றல் செயல்முறையும்
+The interface represents the system	இடைமுகம் முறைமையைப் பிரதிநிதித்துவப்படுத்துகிறது
+Mapping the mental model to the representation	மன மாதிரியைப் பிரதிநிதித்துவத்துடன் பொருத்துதல்
+Analogy: preparing for an interview	ஒப்புமை: நேர்காணலுக்குத் தயாராகுதல்
+The interface design represents what's inside	இடைமுக வடிவமைப்பு உள்ளிருப்பதைப் பிரதிநிதித்துவப்படுத்துகிறது
+Good representations make tasks easier	நல்ல பிரதிநிதித்துவங்கள் பணிகளை எளிதாக்குகின்றன
+Grouping related controls together	தொடர்புடைய கட்டுப்பாடுகளை ஒன்றாகக் குழுவாக்குதல்
+Removing irrelevant detail	தொடர்பற்ற விவரங்களை நீக்குதல்
+Design Principles, Mental Models & Representations	வடிவமைப்புக் கொள்கைகள், மன மாதிரிகள், பிரதிநிதித்துவங்கள்
+Consistency, affordance and mapping help users build accurate mental models.	ஒரேமாதிரித்தன்மை, செயல்வாய்ப்பு, பொருத்தம் ஆகியவை சரியான மன மாதிரிகளை உருவாக்கப் பயனர்களுக்கு உதவுகின்றன.
+Consistency: users rely on past experience	ஒரேமாதிரித்தன்மை: பயனர்கள் முந்தைய அனுபவத்தைச் சார்ந்திருக்கிறார்கள்
+Affordance: the interface teaches how to use it	செயல்வாய்ப்பு: பயன்படுத்தும் விதத்தை இடைமுகம் கற்பிக்கிறது
+Learnability, provision for error, and mapping	கற்றல் எளிமை, பிழைக்கான ஏற்பாடு, பொருத்தம்
+Slips and Mistakes – Revisited	செயல் வழுவல்களும் தவறான திட்டங்களும் — மீளாய்வு
+Norman's finer division: action-based and memory-lapse slips; rule-based, knowledge-based and memory-lapse mistakes.	நார்மனின் நுண்ணிய பிரிவு: செயல் அடிப்படை மற்றும் நினைவுத் தவறல் வழுவல்கள்; விதி அடிப்படை, அறிவு அடிப்படை, நினைவுத் தவறல் தவறான திட்டங்கள்.
+How good representation reduces slips and mistakes	நல்ல பிரதிநிதித்துவம் செயல் வழுவல்களையும் தவறான திட்டங்களையும் எவ்வாறு குறைக்கிறது
+Action-based slips: wrong action, or right action on the wrong object	செயல் அடிப்படை வழுவல்கள்: தவறான செயல் அல்லது தவறான பொருளின்மீது சரியான செயல்
+Example: pressing the switch next to the right one	எடுத்துக்காட்டு: சரியான விசைக்கு அருகிலுள்ள விசையை அழுத்துதல்
+Example: the middle touchpad button brings up the scroller	எடுத்துக்காட்டு: தொடுதள நடுப் பொத்தான் உருட்டியைக் காட்டுகிறது
+Memory-lapse slips	நினைவுத் தவறல் செயல் வழுவல்கள்
+Mistakes: rule-based, knowledge-based, memory-lapse	தவறான திட்டங்கள்: விதி அடிப்படை, அறிவு அடிப்படை, நினைவுத் தவறல்
+Memory-lapse slip vs memory-lapse mistake	நினைவுத் தவறல் செயல் வழுவலும் நினைவுத் தவறல் தவறான திட்டமும்
+Learned Helplessness & Expert Blindness	கற்றுக்கொண்ட இயலாமையும் வல்லுநர் குருட்டுத்தன்மையும்
+Two traps good designers must avoid.	நல்ல வடிவமைப்பாளர்கள் தவிர்க்க வேண்டிய இரண்டு பொறிகள்.
+Learned helplessness: repeated failure kills faith in the interface	கற்றுக்கொண்ட இயலாமை: தொடர் தோல்வி இடைமுகத்தின் மீதான நம்பிக்கையை அழிக்கிறது
+Don't let users fail continuously; provide for different learners (accessibility)	பயனர்களைத் தொடர்ந்து தோல்வியடைய விடாதீர்கள்; வெவ்வேறு கற்பவர்களுக்கு ஏற்பாடு செய்யுங்கள் (அணுகல்தன்மை)
+Expert blindness: familiarity hides the steps that are hard for novices	வல்லுநர் குருட்டுத்தன்மை: பரிச்சயம் புதியவர்களுக்குக் கடினமான படிகளை மறைக்கிறது
+🧪 Try it — Attach a file — legacy vs modern	🧪 முயன்று பாருங்கள் — கோப்பை இணைத்தல்: பழையதும் நவீனமும்
+❌ Legacy webmail	❌ பழைய இணைய மின்னஞ்சல்
+✨ Modern (Gmail-style)	✨ நவீனம் (Gmail பாணி)
+📎 Attach	📎 இணை
+(scrolled to the bottom section)	(கீழ்ப்பகுதிக்கு உருட்டப்பட்டது)
+Choose file…	கோப்பைத் தேர்ந்தெடு…
+Update	புதுப்பி
+Send	அனுப்பு
+report.pdf (not attached yet!)	report.pdf (இன்னும் இணைக்கப்படவில்லை!)
+report.pdf ✓ attached	report.pdf ✓ இணைக்கப்பட்டது
+Sent with the attachment. You remembered the extra "Update" step.	இணைப்புடன் அனுப்பப்பட்டது. கூடுதல் “புதுப்பி” படியை நினைவில் கொண்டீர்கள்.
+Sent WITHOUT the attachment!	இணைப்பு இல்லாமல் அனுப்பப்பட்டது!
+You chose a file but never clicked "Update". This is a memory-lapse slip caused by a poor representation.	கோப்பைத் தேர்ந்தெடுத்தும் “புதுப்பி” என்பதைச் சொடுக்கவில்லை. இது மோசமான பிரதிநிதித்துவத்தால் ஏற்பட்ட நினைவுத் தவறல் செயல் வழுவல்.
+Sent with the attachment. One click attached it inline, with no extra confirmation.	இணைப்புடன் அனுப்பப்பட்டது. கூடுதல் உறுதிப்படுத்தல் இல்லாமல் ஒரே சொடுக்கலில் அதே இடத்தில் இணைக்கப்பட்டது.
+Sent without an attachment (you never clicked 📎).	இணைப்பு இல்லாமல் அனுப்பப்பட்டது (நீங்கள் 📎 என்பதைச் சொடுக்கவே இல்லை).
+🧪 Try it — Error classifier — walk the decision tree	🧪 முயன்று பாருங்கள் — பிழை வகைப்படுத்தி: முடிவு மரத்தில் செல்லுங்கள்
+↺ Start over	↺ மீண்டும் தொடங்கு
+Did the user have the RIGHT goal/plan (they knew what to do)?	பயனரிடம் சரியான இலக்கு/திட்டம் இருந்ததா (என்ன செய்வது என்று தெரிந்ததா)?
+Yes	ஆம்
+No	இல்லை
+It's a SLIP. What went wrong?	இது செயல் வழுவல். என்ன தவறியது?
+Did the wrong action, or the right action on the wrong object	தவறான செயல் அல்லது தவறான பொருளின்மீது சரியான செயல் செய்தார்
+Forgot a step in the sequence	செயல் வரிசையில் ஒரு படியை மறந்தார்
+It's a MISTAKE. How did they assess the situation?	இது தவறான திட்டம். சூழலை எப்படி மதிப்பிட்டார்?
+Assessed correctly but picked the wrong rule or decision	சரியாக மதிப்பிட்டும் தவறான விதி அல்லது முடிவைத் தேர்ந்தெடுத்தார்
+Assessed wrongly: not enough knowledge	தவறாக மதிப்பிட்டார்: போதிய அறிவில்லை
+Forgot the whole goal or action cycle	முழு இலக்கு அல்லது செயல் சுழற்சியை மறந்தார்
+⚡ Action-based slip. Fix with better layout, spacing and larger targets.	⚡ செயல் அடிப்படை வழுவல். சிறந்த அமைப்பு, இடைவெளி, பெரிய இலக்குகளால் சரிசெய்க.
+⏳ Memory-lapse slip. Fix with reminders, auto-steps and fewer steps (e.g. inline attachment).	⏳ நினைவுத் தவறல் செயல் வழுவல். நினைவூட்டல்கள், தானியங்குப் படிகள், குறைந்த படிகளால் சரிசெய்க (எ.கா. அதே இடத்தில் இணைத்தல்).
+📜 Rule-based mistake. Fix with clearer situational cues and better guidance on the correct rule.	📜 விதி அடிப்படைத் தவறான திட்டம். தெளிவான சூழல் குறிப்புகளாலும் சரியான விதிக்கான சிறந்த வழிகாட்டலாலும் சரிசெய்க.
+🧠 Knowledge-based mistake. Fix with a better conceptual model, training and onboarding.	🧠 அறிவு அடிப்படைத் தவறான திட்டம். சிறந்த கருத்தியல் மாதிரி, பயிற்சி, அறிமுக வழிகாட்டலால் சரிசெய்க.
+🔄 Memory-lapse mistake. Fix by preserving state and showing "you were in the middle of…".	🔄 நினைவுத் தவறல் தவறான திட்டம். நிலையைப் பாதுகாத்து “நீங்கள் இதைச் செய்துகொண்டிருந்தீர்கள்…” என்று காட்டிச் சரிசெய்க.
+Yes → Did the wrong action, or the right action on the wrong object	ஆம் → தவறான செயல் அல்லது தவறான பொருளின்மீது சரியான செயல் செய்தார்
+Yes → Forgot a step in the sequence	ஆம் → செயல் வரிசையில் ஒரு படியை மறந்தார்
+No → Assessed correctly but picked the wrong rule or decision	இல்லை → சரியாக மதிப்பிட்டும் தவறான விதி அல்லது முடிவைத் தேர்ந்தெடுத்தார்
+No → Assessed wrongly: not enough knowledge	இல்லை → தவறாக மதிப்பிட்டார்: போதிய அறிவில்லை
+No → Forgot the whole goal or action cycle	இல்லை → முழு இலக்கு அல்லது செயல் சுழற்சியை மறந்தார்

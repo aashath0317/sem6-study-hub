@@ -1,0 +1,54 @@
+Trees & Applications of Trees	மரங்களும் மரங்களின் பயன்பாடுகளும்
+Circuits and trees, forests, the unique-path theorem, rooted trees and family terminology, subtrees, ordered and binary trees, and binary search trees with the insertion algorithm.	சுற்றுகளும் மரங்களும், காடுகள், தனித்துவப் பாதைத் தேற்றம், வேருள்ள மரங்களும் குடும்பச் சொற்களும், உட்மரங்கள், வரிசைப்படுத்தப்பட்ட மற்றும் இரும மரங்கள், செருகல் படிமுறையுடன் இருமத் தேடல் மரங்கள்.
+Video Lecture 1 – Trees & terminology	காணொளி விரிவுரை 1 – மரங்களும் சொற்களும்
+What a tree is, how to identify one, rooted trees and terminology.	மரம் என்றால் என்ன, அதை அடையாளம் காணுதல், வேருள்ள மரங்கள், சொற்கள்.
+Introduction and learning outcomes	அறிமுகமும் கற்றல் விளைவுகளும்
+Connected graphs and paths (recap)	இணைந்த வரைபுகளும் பாதைகளும் (மீள்நினைவு)
+What a tree is: connected, no simple circuits	மரம் என்றால் என்ன: இணைந்தது, எளிய சுற்றுகள் இல்லை
+Example: which of G1–G4 are trees?	எடுத்துக்காட்டு: G1–G4-இல் எவை மரங்கள்?
+Applications: decision and regression trees	பயன்பாடுகள்: முடிவெடுக்கும், பின்னடைவு மரங்கள்
+A forest: a graph whose components are trees	காடு: கூறுகள் மரங்களாக உள்ள வரைபு
+Checking a graph against the tree definition	வரைபை மர வரையறையுடன் சரிபார்த்தல்
+Rooted trees and their applications	வேருள்ள மரங்களும் அவற்றின் பயன்பாடுகளும்
+Terminology: parent and child	சொற்கள்: பெற்றோரும் பிள்ளையும்
+Siblings	சகோதர முனைகள்
+Ancestors	மூதாதைகள்
+Descendants	வழித்தோன்றல்கள்
+Leaves and internal vertices	இலைகளும் உள்முனைகளும்
+Worked example: naming every part	செய்முறை எடுத்துக்காட்டு: ஒவ்வொரு பகுதிக்கும் பெயரிடுதல்
+Next: ordered rooted trees	அடுத்து: வரிசைப்படுத்தப்பட்ட வேருள்ள மரங்கள்
+Video Lecture 2 – Ordered trees & binary search trees	காணொளி விரிவுரை 2 – வரிசைப்படுத்தப்பட்ட மரங்களும் இருமத் தேடல் மரங்களும்
+Ordered rooted trees, a worked terminology exercise, binary search trees, decision and game trees.	வரிசைப்படுத்தப்பட்ட வேருள்ள மரங்கள், சொற்பயிற்சிச் செய்முறை, இருமத் தேடல் மரங்கள், முடிவெடுக்கும் மற்றும் விளையாட்டு மரங்கள்.
+Ordered rooted trees: left child, right child	வரிசைப்படுத்தப்பட்ட வேருள்ள மரங்கள்: இடது பிள்ளை, வலது பிள்ளை
+Exercise: which graphs are trees? (connected + no simple circuit)	பயிற்சி: எந்த வரைபுகள் மரங்கள்? (இணைப்பு + எளிய சுற்றின்மை)
+Rooted tree Q&A: root, internal vertices, leaves	வேருள்ள மரக் கேள்வி–விடை: வேர், உள்முனைகள், இலைகள்
+Children, parent, siblings, ancestors, descendants	பிள்ளைகள், பெற்றோர், சகோதர முனைகள், மூதாதைகள், வழித்தோன்றல்கள்
+Binary search trees: goal and definition	இருமத் தேடல் மரங்கள்: இலக்கும் வரையறையும்
+Key > left subtree and < right subtree	சாவி > இடது உட்மரம், < வலது உட்மரம்
+Worked example: mathematics, physics, geography…	செய்முறை எடுத்துக்காட்டு: mathematics, physics, geography…
+Other applications: decision trees, game trees	பிற பயன்பாடுகள்: முடிவெடுக்கும் மரங்கள், விளையாட்டு மரங்கள்
+Exercise answer: banana, apple, peach…	பயிற்சி விடை: banana, apple, peach…
+Is it a tree? (connected + no circuit)	இது மரமா? (இணைப்பு + சுற்றின்மை)
+Edges (u-v, comma separated)	விளிம்புகள் (u-v, காற்புள்ளியால் பிரிக்கப்பட்டவை)
+Tree	மரம்
+Has circuit	சுற்று உள்ளது
+Not connected (forest)	இணையவில்லை (காடு)
+TREE	மரம்
+FOREST (not a tree)	காடு (மரமல்ல)
+NOT A TREE	மரமல்ல
+Rooted tree explorer (Figure 5)	வேருள்ள மர ஆராய்வுக் கருவி (படம் 5)
+Click any vertex to see its relatives.	தொடர்புடைய முனைகளைப் பார்க்க எந்த முனையையும் சொடுக்கவும்.
+Vertex	முனை
+Parent	பெற்றோர்
+Children	பிள்ளைகள்
+none	எதுவுமில்லை
+internal	உள்முனை
+leaf	இலை
+— (root)	— (வேர்)
+Binary search tree builder	இருமத் தேடல் மர உருவாக்கி
+Items in insertion order (comma separated)	செருகல் வரிசையில் பொருட்கள் (காற்புள்ளியால் பிரிக்கப்பட்டவை)
+Example 12.2.1	எடுத்துக்காட்டு 12.2.1
+Fruits	பழங்கள்
+Numbers	எண்கள்
+Insert / search	செருகு / தேடு
+Insert	செருகு

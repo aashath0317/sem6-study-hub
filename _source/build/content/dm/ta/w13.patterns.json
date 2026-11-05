@@ -1,0 +1,74 @@
+[
+  {
+    "pattern": "Manhattan =",
+    "replacement": "மன்ஹாட்டன் =",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Euclidean =",
+    "replacement": "யூக்ளிடியன் =",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Minkowski \\(q =",
+    "replacement": "மின்கோவ்ஸ்கி (q =",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Iteration (\\d+)",
+    "replacement": "மறு செய்கை $1",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "to \\(",
+    "replacement": "மையம் (",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Starting centres:",
+    "replacement": "ஆரம்ப மையங்கள்:",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "New centres:",
+    "replacement": "புதிய மையங்கள்:",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Showing the first 12 of (\\d+) rounds\\.",
+    "replacement": "$1 சுற்றுகளில் முதல் 12 காட்டப்படுகின்றன.",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Each round: train on ≈",
+    "replacement": "ஒவ்வொரு சுற்றிலும்: பயிற்சி ≈",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "test on ≈",
+    "replacement": "சோதனை ≈",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\(red fold\\) · Weka runs the learner",
+    "replacement": "(சிவப்பு மடிப்பு) · Weka கற்றல் படிமுறையை இயக்குவது",
+    "flags": "g",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "times \\((\\d+) folds \\+ 1 on all data\\)\\.",
+    "replacement": "தடவைகள் ($1 மடிப்புகள் + முழுத் தரவில் 1).",
+    "flags": "g",
+    "selector": ".tool"
+  }
+]

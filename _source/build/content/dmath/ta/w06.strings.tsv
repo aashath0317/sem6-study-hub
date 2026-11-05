@@ -1,0 +1,37 @@
+Number Theory & Cryptography	எண் கோட்பாடும் மறையியலும்
+Divisibility and its theorem, the division algorithm (div and mod), congruence modulo m, congruence classes, primes and composites, the fundamental theorem of arithmetic, and Caesar's cipher.	வகுபடுதன்மையும் அதன் தேற்றமும், வகுத்தல் படிமுறை (div, mod), மட்டு m சமானம், சமான வகுப்புகள், பகா மற்றும் பகு எண்கள், எண்கணிதத்தின் அடிப்படைத் தேற்றம், சீசரின் மறையீடு.
+Lesson 6 – Number Theory & Cryptography	பாடம் 6 – எண் கோட்பாடும் மறையியலும்
+Divisibility, modular arithmetic, primes and the Caesar cipher.	வகுபடுதன்மை, மட்டு எண்கணிதம், பகா எண்கள், சீசர் மறையீடு.
+Lesson 6: number theory and cryptography	பாடம் 6: எண் கோட்பாடும் மறையியலும்
+Divisibility: a | b	வகுபடுதன்மை: a | b
+Theorem 1 and its proofs	தேற்றம் 1, அதன் நிறுவல்கள்
+The division algorithm: quotient and remainder	வகுத்தல் படிமுறை: ஈவும் மீதியும்
+27 = 4 · 6 + 3; −23 mod 5	27 = 4 · 6 + 3; −23 mod 5
+Congruence modulo m: Theorem 3	மட்டு m சமானம்: தேற்றம் 3
+Example: 17 ≡ 3 (mod 7)	எடுத்துக்காட்டு: 17 ≡ 3 (mod 7)
+Theorem 4: adding and multiplying congruences	தேற்றம் 4: சமானங்களைக் கூட்டலும் பெருக்கலும்
+Primes and composites	பகா மற்றும் பகு எண்கள்
+Prime factorisation examples	பகாக் காரணிப்படுத்தல் எடுத்துக்காட்டுகள்
+Self-assessment exercises	சுயமதிப்பீட்டுப் பயிற்சிகள்
+Caesar cipher: f(p) = (p + 3) mod 26	சீசர் மறையீடு: f(p) = (p + 3) mod 26
+Encrypting YARD → BDUG	மறைகுறியாக்கம் YARD → BDUG
+Decrypting: CHVW → ZEST	மறைவிலக்கல்: CHVW → ZEST
+Division algorithm & mod calculator	வகுத்தல் படிமுறை மற்றும் மட்டு கணிப்பான்
+a (dividend)	a (வகுபடும் எண்)
+d (divisor, > 0)	d (வகுக்கும் எண், > 0)
+d must be a positive integer.	d நேர்மறை முழு எண்ணாக இருக்க வேண்டும்.
+Congruence checker & class lister	சமானச் சரிபார்ப்பியும் வகுப்புப் பட்டியலிடியும்
+Yes	ஆம்
+No	இல்லை
+Prime checker & factoriser	பகா எண் சரிபார்ப்பியும் காரணிப்படுத்தியும்
+Enter an integer from 2 to 10¹².	2 முதல் 10¹² வரை முழு எண்ணை உள்ளிடவும்.
+PRIME	பகா எண்
+COMPOSITE	பகு எண்
+Caesar cipher machine	சீசர் மறையீட்டு இயந்திரம்
+Text	உரை
+Shift k	நகர்வு k
+Mode	முறை
+Encrypt (p + k)	மறைகுறியாக்கு (p + k)
+Decrypt (p − k)	மறைவிலக்கு (p − k)
+Letter	எழுத்து
+Result	முடிவு

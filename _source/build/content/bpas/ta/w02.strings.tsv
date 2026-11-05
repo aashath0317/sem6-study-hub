@@ -1,0 +1,121 @@
+Accounting Process, Double Entry & Primary Entry Journals	கணக்கியல் செயல்முறை, இரட்டைப் பதிவு, ஆரம்பப் பதிவேடுகள்
+What accounting is, the entity concept, stakeholders and their needs, the Conceptual Framework (objective, qualitative characteristics, elements, recognition, measurement), debit and credit rules, the accounting equation, T-accounts and balancing, source documents, and the four day books.	கணக்கியல் என்றால் என்ன, தனித்துவக் கருத்து, அக்கறைதாரர்களும் தேவைகளும், கருத்தியல் கட்டமைப்பு (நோக்கம், தரப் பண்புகள், கூறுகள், அங்கீகாரம், அளவீடு), பற்று–வரவு விதிகள், கணக்கியல் சமன்பாடு, T-கணக்குகளும் மீதிகட்டுதலும், மூல ஆவணங்கள், நான்கு நாளேடுகள்.
+🧪 Try it — Double-entry simulator (Mr. Isuru's business)	🧪 முயன்று பாருங்கள் — இரட்டைப் பதிவு உருவகப்படுத்தல் (திரு. இசுருவின் வணிகம்)
+Transaction	பரிவர்த்தனை
+Owner invests cash (capital)	உரிமையாளர் காசை முதலீடு செய்கிறார் (மூலதனம்)
+Obtain a bank loan	வங்கிக் கடன் பெறுதல்
+Buy a motor vehicle for cash	காசுக்கு மோட்டார் வாகனம் வாங்குதல்
+Buy goods on credit	கடனுக்குப் பொருட்கள் வாங்குதல்
+Buy goods for cash	காசுக்குப் பொருட்கள் வாங்குதல்
+Sell goods on credit	கடனுக்குப் பொருட்கள் விற்றல்
+Sell goods for cash	காசுக்குப் பொருட்கள் விற்றல்
+Pay rent	வாடகை செலுத்துதல்
+Customer pays what they owe	வாடிக்கையாளர் செலுத்தவேண்டியதைச் செலுத்துகிறார்
+Pay a supplier	வழங்குநருக்குப் பணம் செலுத்துதல்
+Owner takes cash for personal use	உரிமையாளர் தனிப்பட்ட பயன்பாட்டுக்குக் காசு எடுத்தல்
+Amount Rs	தொகை ரூ.
+Post it	பதிக
+Reset	மீட்டமை
+Cash	காசு
+Capital	மூலதனம்
+Bank loan	வங்கிக் கடன்
+Motor vehicle	மோட்டார் வாகனம்
+Purchases	கொள்வனவுகள்
+Creditors	கடன்கொடுநர்கள்
+Debtors	கடன்படுநர்கள்
+Sales	விற்பனைகள்
+Rent expense	வாடகைச் செலவு
+Drawings	எடுப்பனவுகள்
+Dr	பற்று
+/ Cr	/ வரவு
+Assets + Expenses + Drawings	சொத்துகள் + செலவுகள் + எடுப்பனவுகள்
+Capital + Income + Liabilities	மூலதனம் + வருமானம் + பொறுப்புகள்
+✓ balances	✓ சமநிலைப்படுகிறது
+Post a few transactions. Every one updates two T-accounts, and the accounting equation always balances.	சில பரிவர்த்தனைகளைப் பதியுங்கள். ஒவ்வொன்றும் இரண்டு T-கணக்குகளைப் புதுப்பிக்கிறது; கணக்கியல் சமன்பாடு எப்போதும் சமநிலைப்படுகிறது.
+🧪 Try it — Which book does it go in?	🧪 முயன்று பாருங்கள் — எந்தப் பதிவேட்டில் பதியப்படும்?
+Bought goods on credit from ABC Ltd	ABC Ltd நிறுவனத்திடமிருந்து கடனுக்குப் பொருட்கள் வாங்கியது
+Bought goods for cash	காசுக்குப் பொருட்கள் வாங்கியது
+Bought a computer on credit (fixed asset)	கடனுக்குக் கணினி வாங்கியது (நிலையான சொத்து)
+Returned faulty goods to ABC Ltd	குறைபாடுள்ள பொருட்களை ABC Ltd நிறுவனத்துக்குத் திருப்பியது
+Sold goods on credit to Kamal	கமலுக்குக் கடனுக்குப் பொருட்கள் விற்றது
+Kamal returned damaged goods	கமல் சேதமடைந்த பொருட்களைத் திருப்பினார்
+Sold goods for cash	காசுக்குப் பொருட்கள் விற்றது
+Primary book	ஆரம்பப் பதிவேடு
+Source document	மூல ஆவணம்
+Double entry	இரட்டைப் பதிவு
+Purchase journal	கொள்வனவு நாளேடு
+Purchase invoice	கொள்வனவு விலைப்பட்டியல்
+Dr Purchases / Cr Creditors (ABC Ltd)	பற்று கொள்வனவுகள் / வரவு கடன்கொடுநர்கள் (ABC Ltd)
+Cash book (not the purchase journal)	காசேடு (கொள்வனவு நாளேடு அல்ல)
+Payment voucher / receipt	கொடுப்பனவுச் சான்று / ரசீது
+Dr Purchases / Cr Cash	பற்று கொள்வனவுகள் / வரவு காசு
+General journal (not the purchase journal: it's a fixed asset)	பொது நாளேடு (கொள்வனவு நாளேடு அல்ல: இது நிலையான சொத்து)
+Purchase invoice + journal voucher	கொள்வனவு விலைப்பட்டியல் + நாளேட்டுச் சான்று
+Dr Computer equipment / Cr Creditor	பற்று கணினிச் சாதனங்கள் / வரவு கடன்கொடுநர்
+Purchase return journal (returns outwards)	கொள்வனவுத் திருப்ப நாளேடு (வெளித்திருப்பம்)
+Debit note (sent to ABC Ltd)	பற்றுக் குறிப்பு (ABC Ltd நிறுவனத்துக்கு அனுப்பியது)
+Dr Creditors (ABC Ltd) / Cr Purchase returns	பற்று கடன்கொடுநர்கள் (ABC Ltd) / வரவு கொள்வனவுத் திருப்பங்கள்
+Sales journal	விற்பனை நாளேடு
+Sales invoice	விற்பனை விலைப்பட்டியல்
+Dr Debtors (Kamal) / Cr Sales	பற்று கடன்படுநர்கள் (கமல்) / வரவு விற்பனைகள்
+Sales return journal (returns inwards)	விற்பனைத் திருப்ப நாளேடு (உள்திருப்பம்)
+Credit note (issued to Kamal)	வரவுக் குறிப்பு (கமலுக்கு வழங்கியது)
+Dr Sales returns / Cr Debtors (Kamal)	பற்று விற்பனைத் திருப்பங்கள் / வரவு கடன்படுநர்கள் (கமல்)
+Cash book (not the sales journal)	காசேடு (விற்பனை நாளேடு அல்ல)
+Receipt	ரசீது
+Dr Cash / Cr Sales	பற்று காசு / வரவு விற்பனைகள்
+Accounting Process – Part I	கணக்கியல் செயல்முறை – பகுதி I
+Accounting process lecture, part 1.	கணக்கியல் செயல்முறை விரிவுரை, பகுதி 1.
+Introduction: double-entry system	அறிமுகம்: இரட்டைப் பதிவு முறைமை
+What a T-account is	T-கணக்கு என்றால் என்ன
+Asset accounts: debit increases	சொத்துக் கணக்குகள்: பற்று அதிகரிக்கிறது
+Liability accounts: credit increases	பொறுப்புக் கணக்குகள்: வரவு அதிகரிக்கிறது
+Owner's equity accounts	உரிமையாளரின் பங்குரிமைக் கணக்குகள்
+Real example with T-accounts	T-கணக்குகளுடன் உண்மையான எடுத்துக்காட்டு
+The accounting equation: equal impact on both sides	கணக்கியல் சமன்பாடு: இரு பக்கங்களிலும் சமமான தாக்கம்
+What double-entry bookkeeping is	இரட்டைப் பதிவுப் புத்தகப் பராமரிப்பு என்றால் என்ன
+Receiver debit, giver credit	பெறுபவருக்குப் பற்று, கொடுப்பவருக்கு வரவு
+Key characteristics of double entry	இரட்டைப் பதிவின் முக்கிய பண்புகள்
+Worked transactions and the accounting equation	தீர்வுகளுடன் பரிவர்த்தனைகளும் கணக்கியல் சமன்பாடும்
+The final balanced equation and summary	இறுதிச் சமநிலைச் சமன்பாடும் சுருக்கமும்
+Accounting Process – Part II	கணக்கியல் செயல்முறை – பகுதி II
+Part 2.	பகுதி 2.
+Introduction	அறிமுகம்
+The accounting cycle, step by step	கணக்கியல் சுழற்சி, படிப்படியாக
+Transaction → journals → ledger → trial balance → statements	பரிவர்த்தனை → நாளேடுகள் → பேரேடு → சோதனை மீதி → கூற்றுகள்
+Source documents	மூல ஆவணங்கள்
+Source-document examples	மூல ஆவண எடுத்துக்காட்டுகள்
+The cash book as a book of prime entry	ஆரம்பப் பதிவேடாகக் காசேடு
+Types of cash book: single, two-column, three-column	காசேட்டு வகைகள்: ஒற்றை, இரட்டை, மூன்று பத்தி
+Cash receipt journal format	காசுப் பெறுதல் நாளேட்டின் வடிவம்
+The petty cash book	சிறுகாசேடு
+Advantages of a petty cash book	சிறுகாசேட்டின் நன்மைகள்
+The imprest system	முற்பண முறைமை
+Imprest example	முற்பண எடுத்துக்காட்டு
+Petty cash payment journal format	சிறுகாசுக் கொடுப்பனவு நாளேட்டின் வடிவம்
+Accounting Process – Part III	கணக்கியல் செயல்முறை – பகுதி III
+Part 3.	பகுதி 3.
+Purchase journal: credit purchases of goods only	கொள்வனவு நாளேடு: பொருட்களின் கடன் கொள்வனவுகள் மட்டும்
+Source document: purchase invoice	மூல ஆவணம்: கொள்வனவு விலைப்பட்டியல்
+Returns: reasons (quality, damage, wrong goods)	திருப்பங்கள்: காரணங்கள் (தரம், சேதம், தவறான பொருட்கள்)
+Return outwards journal and the debit note	வெளித்திருப்ப நாளேடும் பற்றுக் குறிப்பும்
+Sales journal format	விற்பனை நாளேட்டின் வடிவம்
+Return inwards journal and the credit note	உள்திருப்ப நாளேடும் வரவுக் குறிப்பும்
+The general journal (journal proper)	பொது நாளேடு
+Opening entries	ஆரம்பப் பதிவுகள்
+Purchase of non-current assets on credit	நடைமுறையல்லாத சொத்துகளின் கடன் கொள்வனவு
+Capital introduced in kind	பொருளாக அறிமுகப்படுத்தப்பட்ட மூலதனம்
+Sale of non-current assets on credit	நடைமுறையல்லாத சொத்துகளின் கடன் விற்பனை
+Drawings of assets other than cash	காசு தவிர்ந்த சொத்துகளின் எடுப்பனவுகள்
+Correction of errors and adjusting entries	பிழைகளைத் திருத்துதலும் சீராக்கப் பதிவுகளும்
+Accounting Process – Part IV	கணக்கியல் செயல்முறை – பகுதி IV
+Part 4.	பகுதி 4.
+Introduction and lecture outcomes	அறிமுகமும் விரிவுரைப் பெறுபேறுகளும்
+Capital vs revenue expenditure	மூலதன மற்றும் வருவாய்ச் செலவினம்
+Capital expenditure: examples and characteristics	மூலதனச் செலவினம்: எடுத்துக்காட்டுகளும் பண்புகளும்
+Revenue expenditure: characteristics and examples	வருவாய்ச் செலவினம்: பண்புகளும் எடுத்துக்காட்டுகளும்
+Ledger accounts	பேரேட்டுக் கணக்குகள்
+The trial balance	சோதனை மீதி
+Purposes of a trial balance	சோதனை மீதியின் நோக்கங்கள்
+Limitations of a trial balance	சோதனை மீதியின் வரம்புகள்
+Summary	சுருக்கம்

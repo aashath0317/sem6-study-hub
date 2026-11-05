@@ -1,0 +1,17 @@
+[
+  {
+    "pattern": " lines · ",
+    "replacement": " வரிசைகள் · ",
+    "selector": ".tool"
+  },
+  {
+    "pattern": " items · ",
+    "replacement": " பொருட்கள் · ",
+    "selector": ".tool"
+  },
+  {
+    "pattern": " variants per item",
+    "replacement": " மாறுவகைகள் ஒவ்வொரு பொருளுக்கும்",
+    "selector": ".tool"
+  }
+]

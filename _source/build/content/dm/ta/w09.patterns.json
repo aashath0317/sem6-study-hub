@@ -1,0 +1,27 @@
+[
+  {
+    "pattern": "Level (\\d+):",
+    "replacement": "நிலை $1:",
+    "flags": "g"
+  },
+  {
+    "pattern": "L(\\d+) is empty → stop\\.",
+    "replacement": "L$1 வெற்று → நிறுத்து.",
+    "flags": "g"
+  },
+  {
+    "pattern": "Join L(\\d+) ⋈ L(\\d+) produces no candidates →",
+    "replacement": "L$1 ⋈ L$2 இணைப்பு வேட்பாளர்களை உருவாக்கவில்லை →",
+    "flags": "g"
+  },
+  {
+    "pattern": " because \\{([^}]+)\\} is not frequent",
+    "replacement": " ஏனெனில் {$1} அடிக்கடி நிகழவில்லை",
+    "flags": "g"
+  },
+  {
+    "pattern": ": nothing removed\\.",
+    "replacement": ": எதுவும் நீக்கப்படவில்லை.",
+    "flags": "g"
+  }
+]

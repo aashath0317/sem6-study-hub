@@ -1,0 +1,35 @@
+Data Cube Computation & Data Generalization	தரவுக் கனசதுரக் கணக்கீடும் தரவுப் பொதுமைப்படுத்தலும்
+Materializing cubes, base vs aggregate cells, iceberg cubes, MultiWay array aggregation, BUC, star-nodes and star-trees, and attribute-oriented induction (AOI).	கனசதுரப் பொருளாக்கம், அடிப்படை மற்றும் திரட்டுக் கலங்கள், பனிப்பாறைக் கனசதுரங்கள், MultiWay அணித் திரட்டல், BUC, நட்சத்திரக் கணுக்களும் மரங்களும், பண்புக்கூறு நோக்கிய தூண்டல் (AOI).
+Data Cube Computation	தரவுக் கனசதுரக் கணக்கீடு
+Walkthrough of cube materialization and efficient computation methods.	கனசதுரப் பொருளாக்கத்தையும் திறமையான கணக்கீட்டு முறைகளையும் படிப்படியாகப் பார்த்தல்.
+A simple data cube example (product, location, time)	எளிய தரவுக் கனசதுர எடுத்துக்காட்டு (தயாரிப்பு, இடம், காலம்)
+The apex cuboid: the most summarised view	உச்சிக் கனச்செவ்வகம்: மிகவும் சுருக்கப்பட்ட பார்வை
+Base cells: P1, Calgary, Wednesday…	அடிப்படைக் கலங்கள்: P1, Calgary, புதன்கிழமை…
+Aggregate cells and slices ("*" = all)	திரட்டுக் கலங்களும் துண்டுகளும் ("*" = அனைத்தும்)
+Reading aggregate values (111, 27…)	திரட்டுப் பெறுமதிகளை வாசித்தல் (111, 27…)
+Two categories of cube computation	கனசதுரக் கணக்கீட்டின் இரு பிரிவுகள்
+Simultaneous aggregation: base → 1-D → 2-D cells	ஒரேநேரத் திரட்டல்: அடிப்படை → 1-D → 2-D கலங்கள்
+Example: Apple, Central Province, January	எடுத்துக்காட்டு: ஆப்பிள், மத்திய மாகாணம், ஜனவரி
+How aggregated values are updated	திரட்டுப் பெறுமதிகள் புதுப்பிக்கப்படுவது எவ்வாறு
+One base cell feeds 2ⁿ cells	ஓர் அடிப்படைக் கலம் 2ⁿ கலங்களுக்குப் பங்களிக்கிறது
+Choose a base cell. Every highlighted cell is an aggregate that this one base tuple adds to. This is exactly what MultiWay does when it fills a cell. Click any cell to see its ancestors and descendants.	ஓர் அடிப்படைக் கலத்தைத் தேர்ந்தெடுக்கவும். சுட்டிக்காட்டப்படும் ஒவ்வொரு கலமும் இந்த ஓர் அடிப்படை வரிசை பங்களிக்கும் திரட்டலாகும். ஒரு கலத்தை நிரப்பும்போது MultiWay செய்வது இதுவே. மூதாதைகளையும் வழித்தோன்றல்களையும் பார்க்க எந்தக் கலத்தையும் சொடுக்கவும்.
+Month	மாதம்
+City	நகரம்
+Group	குழு
+Jan	ஜனவரி
+Feb	பெப்ரவரி
+Business	வணிகம்
+Home	வீடு
+0-D apex	0-D உச்சி
+3-D base	3-D அடிப்படை
+click	சொடுக்கவும்
+ancestors (more general)	மூதாதைகள் (மேலும் பொதுவானவை)
+descendants (more specific)	வழித்தோன்றல்கள் (மேலும் குறிப்பானவை)
+Star-reduction lab	நட்சத்திரக் குறைப்பு ஆய்வகம்
+1-D aggregates	1-D திரட்டல்கள்
+count	எண்ணிக்கை
+After replacing star-nodes with *	நட்சத்திரக் கணுக்களை * கொண்டு மாற்றியபின்
+Reduced base table	குறைக்கப்பட்ட அடிப்படை அட்டவணை
+Star-table	நட்சத்திர அட்டவணை
+none	எதுவுமில்லை
+cells get +1 from this single base tuple.	கலங்கள் இந்த ஒற்றை அடிப்படைப் பதிவிலிருந்து +1 பெறுகின்றன.

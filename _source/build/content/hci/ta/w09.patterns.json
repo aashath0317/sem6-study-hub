@@ -1,0 +1,43 @@
+[
+  {
+    "pattern": "^Mental preparation accounts for (\\d+)% of the time\\.$",
+    "replacement": "நேரத்தில் $1% மனத் தயாரிப்புக்குச் செல்கிறது."
+  },
+  {
+    "pattern": "^([0-9.]+) bits$",
+    "replacement": "$1 பிட்கள்"
+  },
+  {
+    "pattern": "^→ predicted MT = (.*)$",
+    "replacement": "→ முன்கணிக்கப்பட்ட MT = $1"
+  },
+  {
+    "pattern": "^([0-9.]+) s$",
+    "replacement": "$1 நொடி"
+  },
+  {
+    "pattern": "Cognitive\\ Modelling",
+    "replacement": "அறிவாற்றல் மாதிரியாக்கம்",
+    "flags": "g"
+  },
+  {
+    "pattern": "GOMS\\ Model",
+    "replacement": "GOMS மாதிரி",
+    "flags": "g"
+  },
+  {
+    "pattern": "Keystroke\\-Level\\ Model\\ \\(KLM\\)",
+    "replacement": "விசைஅழுத்த நிலை மாதிரி (KLM)",
+    "flags": "g"
+  },
+  {
+    "pattern": "Fitts's\\ Law",
+    "replacement": "ஃபிட்ஸின் விதி",
+    "flags": "g"
+  },
+  {
+    "pattern": "GOMS\\ \\(extra\\)",
+    "replacement": "GOMS (கூடுதல்)",
+    "flags": "g"
+  }
+]

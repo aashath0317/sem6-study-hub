@@ -1,0 +1,23 @@
+k-Medoids & Hierarchical Clustering	k-Medoids மற்றும் படிநிலைக் குழுமமாக்கல்
+The k-medoids method and the PAM algorithm with its swap cost, the lesson's worked example (cost 23 vs 16), agglomerative (AGNES) and divisive (DIANA) hierarchical clustering, and the four cluster-distance measures behind single, complete and average linkage.	k-medoids முறையும் பரிமாற்றச் செலவுடன் PAM படிமுறையும், பாடத்தின் செய்முறை எடுத்துக்காட்டு (செலவு 23 மற்றும் 16), திரட்டல் (AGNES), பிரித்தல் (DIANA) படிநிலைக் குழுமமாக்கல், ஒற்றை, முழு, சராசரி இணைப்புகளுக்குப் பின்னுள்ள நான்கு குழுமத் தொலைவு அளவைகள்.
+k-medoids cost calculator	k-medoids செலவுக் கணிப்பான்
+Medoid 1	மெடாய்டு 1
+Medoid 2	மெடாய்டு 2
+Medoid 3	மெடாய்டு 3
+Pick three different medoids.	மூன்று வெவ்வேறு மெடாய்டுகளைத் தேர்ந்தெடுக்கவும்.
+Point	புள்ளி
+Cost	செலவு
+better: keep this swap	சிறந்தது: இந்தப் பரிமாற்றத்தை வைத்திரு
+worse: not suitable	மோசமானது: பொருத்தமற்றது
+no change	மாற்றமில்லை
+Agglomerative clustering stepper	திரட்டல் குழுமமாக்கல் படிக்கருவி
+Five points on a line: a = 1, b = 2, c = 6, d = 9, e = 10. Merge the two closest clusters at each step.	ஒரு கோட்டில் ஐந்து புள்ளிகள்: a = 1, b = 2, c = 6, d = 9, e = 10. ஒவ்வொரு படியிலும் அருகிலுள்ள இரு குழுமங்களை இணைக்கவும்.
+Linkage	இணைப்பு
+Single (d_min)	ஒற்றை (d_min)
+Complete (d_max)	முழு (d_max)
+Average (d_avg)	சோடிச் சராசரி (d_avg)
+Mean (d_mean)	சராசரி (d_mean)
+Merge next	அடுத்து இணை
+Reset	மீட்டமை
+All objects are in one cluster: AGNES is finished.	அனைத்துப் பொருட்களும் ஒரே குழுமத்தில்: AGNES முடிந்தது.
+Choose three medoids from A1–A8 (Manhattan distance). The page compares the cost with A1, A4, A7.	A1–A8-இலிருந்து மூன்று மெடாய்டுகளைத் தேர்ந்தெடுக்கவும் (மன்ஹாட்டன் தொலைவு). பக்கம் செலவை A1, A4, A7 உடன் ஒப்பிடுகிறது.

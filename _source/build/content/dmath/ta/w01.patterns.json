@@ -1,0 +1,38 @@
+[
+  {
+    "pattern": "counterexample x =",
+    "replacement": "எதிர் எடுத்துக்காட்டு x =",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "witness x =",
+    "replacement": "சான்றுப் பெறுமதி x =",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "(\\d+) value\\(s\\) make it true",
+    "replacement": "$1 பெறுமதி(கள்) இதை உண்மையாக்குகின்றன",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "Could not read the expression:",
+    "replacement": "கோவையை வாசிக்க முடியவில்லை:",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "missing \\)",
+    "replacement": "விடுபட்ட )",
+    "selector": ".tool",
+    "flags": "g"
+  },
+  {
+    "pattern": "unexpected ",
+    "replacement": "எதிர்பாராத ",
+    "selector": ".tool",
+    "flags": "g"
+  }
+]

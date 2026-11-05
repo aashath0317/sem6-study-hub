@@ -249,7 +249,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 06</div><h1>Number Theory &amp; Cryptography</h1><p>Divisibility and its theorem, the division algorithm (div and mod), congruence modulo m, congruence classes, primes and composites, the fundamental theorem of arithmetic, and Caesar's cipher.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">1 video · 33 min</span><span class="chip">📄 Lesson 6 - Number Theory  Cryptography.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Lesson 6 – Number Theory &amp; Cryptography · 33 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- Lesson 06- Number Theory and Cryptography - CODL-UOM.mp4" data-drive="15J2QEQWFX9ollRnjpSsyIQhT4jRhvKnZ"><source src="ITE3822-25S2-%20Lesson%2006-%20Number%20Theory%20and%20Cryptography%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Lesson 6 – Number Theory &amp; Cryptography</p><p class="vs">Divisibility, modular arithmetic, primes and the Caesar cipher.</p><a href="#" data-v="0" data-t="0"><b>00:00</b><span>Lesson 6: number theory and cryptography</span></a><a href="#" data-v="0" data-t="106"><b>01:46</b><span>Divisibility: a | b</span></a><a href="#" data-v="0" data-t="214"><b>03:34</b><span>Theorem 1 and its proofs</span></a><a href="#" data-v="0" data-t="445"><b>07:25</b><span>The division algorithm: quotient and remainder</span></a><a href="#" data-v="0" data-t="503"><b>08:23</b><span>27 = 4 · 6 + 3; −23 mod 5</span></a><a href="#" data-v="0" data-t="609"><b>10:09</b><span>Congruence modulo m: Theorem 3</span></a><a href="#" data-v="0" data-t="664"><b>11:04</b><span>Example: 17 ≡ 3 (mod 7)</span></a><a href="#" data-v="0" data-t="767"><b>12:47</b><span>Theorem 4: adding and multiplying congruences</span></a><a href="#" data-v="0" data-t="881"><b>14:41</b><span>Primes and composites</span></a><a href="#" data-v="0" data-t="1171"><b>19:31</b><span>Prime factorisation examples</span></a><a href="#" data-v="0" data-t="1290"><b>21:30</b><span>Self-assessment exercises</span></a><a href="#" data-v="0" data-t="1460"><b>24:20</b><span>Caesar cipher: f(p) = (p + 3) mod 26</span></a><a href="#" data-v="0" data-t="1567"><b>26:07</b><span>Encrypting YARD → BDUG</span></a><a href="#" data-v="0" data-t="1777"><b>29:37</b><span>Decrypting: CHVW → ZEST</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Divisibility"><span class="num">1</span>Divisibility</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>மீதியில்லாமல் வகுபடுதல்</h3><p><strong>a|b</strong> என்றால் b=ak ஆகும் ஒரு integer k உள்ளது. 3|12 ஏனெனில் 12=3×4. இது a÷b என்ற division instruction அல்ல; மீதியில்லாமல் வகுபடுகிறதா என்ற கூற்று.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>a|b, a|c என்றால் a|(b+c) மற்றும் a|(b−c). a|b, b|c என்றால் a|c. b=ak, c=aℓ என்று எழுதி factor a வெளியே எடுத்தால் proof கிடைக்கும்.
 a|b என்பதால் b|a என்று சொல்ல முடியாது: 3|12 true; 12|3 false. Division notation-உடன் divisibility symbol-ஐக் குழப்பாதீர்கள்.</p>
 <p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>a|b என்றால்b=ak,integerk,a≠0 (course definition);a/b numerical division வேறு. a|b,a|c→a|(b+c) மற்றும்a|(mb+nc). b=as,c=at substitute→a(ms+nt). a|b,b|c→a|c. Definition-இன் integer multiplier-ஐ explicit காட்டுவது proof-இன் முக்கியப் படி.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><p><strong>Number theory</strong> ("higher arithmetic") studies <strong>integers and their properties</strong>. This lesson covers divisibility, modular arithmetic, primes and a cryptography application.</p>
+<p>a|b என்றால்b=ak,integerk,a≠0 (course definition);a/b numerical division வேறு. a|b,a|c→a|(b+c) மற்றும்a|(mb+nc). b=as,c=at substitute→a(ms+nt). a|b,b|c→a|c. Definition-இன் integer multiplier-ஐ explicit காட்டுவது proof-இன் முக்கியப் படி.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p><strong>Number theory</strong> ("higher arithmetic") studies <strong>integers and their properties</strong>. This lesson covers divisibility, modular arithmetic, primes and a cryptography application.</p>
 <div class="call key"><div class="ct">Definition 1</div><p>Let a and b be integers with <strong>a ≠ 0</strong>. If there is an integer c with <strong>b = ac</strong>, then <strong>a divides b</strong>, written <strong>a | b</strong>.</p>
 <ul>
 <li>a is a <strong>factor</strong> of b; b is a <strong>multiple</strong> of a.</li>
@@ -274,8 +274,33 @@ Then b + c = as + at = <strong>a(s + t)</strong>, so a | (b + c). ∎</p>
 <p><strong>(ii)</strong> a | b, so b = as. Then bc = asc = <strong>a(sc)</strong>, so a | bc. ∎</p>
 <p><strong>(iii)</strong> b = as and c = bt, so c = (as)t = <strong>a(st)</strong>, so a | c. ∎</p></div>
 <div class="call key"><div class="ct">Corollary</div><p>If a | b and a | c, then <strong>a | (mb + nc)</strong> for any integers m and n.</p>
-<p><em>Proof:</em> by (ii), a | mb and a | nc. Then by (i), a | mb + nc. ∎</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="The division algorithm"><span class="num">2</span>The division algorithm</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>ஈவும் மீதியும்</h3><p><strong>a=bq+r</strong>, b&gt;0, <strong>0≤r&lt;b</strong>. Negative a இருந்தாலும் remainder non-negative வர வேண்டும். −23=5(−5)+2; ஆகவே −23 mod 5 = 2.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p><strong>a=dq+r,d&gt;0,0≤r&lt;d</strong>,q/r unique.27=4·6+3;−23=5·(−5)+2. q−4,r−3 அனுமதி இல்லை. Mathematical q=floor(a/d). சில programming மொழிகளின் % negative remainder தரலாம்;அதை course mod-உடன் தானாக ஒப்பிடாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="call key"><div class="ct">Theorem 2 (the division algorithm)</div><p>Let a be an integer and d a <strong>positive</strong> integer. Then there are <strong>unique</strong> integers q and r with <strong>0 ≤ r &lt; d</strong> such that</p>
+<p><em>Proof:</em> by (ii), a | mb and a | nc. Then by (i), a | mb + nc. ∎</p></div></div><div class="hci-ta" lang="ta" hidden data-title="வகுபடுதன்மை"><p><strong>எண் கோட்பாடு</strong> ("உயர் எண்கணிதம்"), <strong>முழு எண்களையும் அவற்றின் பண்புகளையும்</strong> ஆய்கிறது. இந்தப் பாடம் வகுபடுதன்மை, மட்டு எண்கணிதம், பகா எண்கள், மறையியல் பயன்பாடு ஆகியவற்றை உள்ளடக்குகிறது.</p>
+<div class="call key"><div class="ct">வரையறை 1</div><p>a, b முழு எண்களாகவும் <strong>a ≠ 0</strong> ஆகவும் இருக்கட்டும். <strong>b = ac</strong> ஆகும் முழு எண் c இருந்தால் <strong>a, b-ஐ வகுக்கிறது</strong>; <strong>a | b</strong> என எழுதப்படுகிறது.</p>
+<ul>
+<li>a என்பது b-இன் <strong>காரணி</strong>; b என்பது a-இன் <strong>மடங்கு</strong>.</li>
+<li>a, b-ஐ வகுக்காவிட்டால் <strong>a ∤ b</strong> எழுதவும்.</li>
+</ul></div>
+<div class="call example"><div class="ct">எடுத்துக்காட்டு 6.1.1</div><ul>
+<li>20/4 = 5 முழு எண்; எனவே <strong>4 | 20</strong>.</li>
+<li>17/6 முழு எண் அல்ல; எனவே <strong>6 ∤ 17</strong>.</li>
+</ul></div>
+<div class="call warn"><div class="ct">குறியீடுகளைக் குழப்ப வேண்டாம்</div><p><strong>a | b</strong> ஒரு <strong>வாக்கியம்</strong> (உண்மை அல்லது பொய்): "a, b-ஐ வகுக்கிறது".
+<strong>a / b</strong> ஓர் <strong>எண்</strong>: a-ஐ b-ஆல் வகுத்தது.</p>
+<p>3 | 12 <em>உண்மை</em>; 12/3 = 4.</p></div>
+<h3>தேற்றம் 1 — வகுபடுதன்மைப் பண்புகள்</h3>
+<p>முழு எண்கள் a, b, c-க்கு:</p>
+<ol>
+<li><strong>a | b, a | c எனில் a | (b + c)</strong>.</li>
+<li><strong>a | b எனில்</strong>, ஒவ்வொரு முழு எண் c-க்கும் <strong>a | bc</strong>.</li>
+<li><strong>a | b, b | c எனில் a | c</strong> (கடத்தற்பண்பு).</li>
+</ol>
+<div class="call example"><div class="ct">நிறுவல்கள் (வரையறையைப் பயன்படுத்தி நேரடியாக)</div><p><strong>(i)</strong> a | b, a | c; எனவே முழு எண்கள் s, t-க்கு b = as, c = at.
+அப்போது b + c = as + at = <strong>a(s + t)</strong>; எனவே a | (b + c). ∎</p>
+<p><strong>(ii)</strong> a | b; எனவே b = as. அப்போது bc = asc = <strong>a(sc)</strong>; எனவே a | bc. ∎</p>
+<p><strong>(iii)</strong> b = as, c = bt; எனவே c = (as)t = <strong>a(st)</strong>; எனவே a | c. ∎</p></div>
+<div class="call key"><div class="ct">பெறுபேறு</div><p>a | b, a | c எனில் எந்த முழு எண்கள் m, n-க்கும் <strong>a | (mb + nc)</strong>.</p>
+<p><em>நிறுவல்:</em> (ii)-ஆல் a | mb, a | nc. பின்னர் (i)-ஆல் a | mb + nc. ∎</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="The division algorithm"><span class="num">2</span>The division algorithm</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>ஈவும் மீதியும்</h3><p><strong>a=bq+r</strong>, b&gt;0, <strong>0≤r&lt;b</strong>. Negative a இருந்தாலும் remainder non-negative வர வேண்டும். −23=5(−5)+2; ஆகவே −23 mod 5 = 2.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
+<p><strong>a=dq+r,d&gt;0,0≤r&lt;d</strong>,q/r unique.27=4·6+3;−23=5·(−5)+2. q−4,r−3 அனுமதி இல்லை. Mathematical q=floor(a/d). சில programming மொழிகளின் % negative remainder தரலாம்;அதை course mod-உடன் தானாக ஒப்பிடாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Theorem 2 (the division algorithm)</div><p>Let a be an integer and d a <strong>positive</strong> integer. Then there are <strong>unique</strong> integers q and r with <strong>0 ≤ r &lt; d</strong> such that</p>
 <p><strong>a = dq + r</strong></p></div>
 <table>
 <thead>
@@ -325,10 +350,49 @@ var W=520,x=function(v){return 20+(v-lo+d)*(W-40)/(3*d)};h+='<svg viewBox="0 0 '
 [lo-d,lo,hi,hi+d].forEach(function(m){h+='<line x1="'+x(m)+'" y1="27" x2="'+x(m)+'" y2="43" stroke="var(--ink)"/><text x="'+x(m)+'" y="60" text-anchor="middle" font-size="11">'+m+'</text>'});
 h+='<rect x="'+x(lo)+'" y="30" width="'+(x(a)-x(lo))+'" height="10" fill="var(--accent)" opacity=".5"/><circle cx="'+x(a)+'" cy="35" r="6" fill="var(--warn)"/><text x="'+x(a)+'" y="18" text-anchor="middle" font-size="12" font-weight="700">a = '+a+'</text><text x="'+((x(lo)+x(a))/2)+'" y="25" text-anchor="middle" font-size="11" style="fill:var(--accent-ink)">r = '+r+'</text></svg><p class="note">The largest multiple of '+d+' that is ≤ '+a+' is '+lo+'. The remainder is the distance from there, so it is always 0 ≤ r &lt; '+d+'.</p>';o.innerHTML=h}
 R.addEventListener('input',run);run();})();
-</script></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Modular arithmetic &amp; congruence"><span class="num">3</span>Modular arithmetic &amp; congruence</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>மீதியை அடிப்படையாகக் கொண்ட கணக்கு</h3><p>Clock-இல் 12-க்குப் பிறகு மீண்டும் 1 வருவது போல ஒரு modulus-க்குள் எண்ணுகிறோம். <strong>a≡b (mod m)</strong> என்றால் m, a−b-ஐ வகுக்கும். இரண்டுக்கும் ஒரே remainder என்பதும் அதே பொருள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>a≡b(mod m) iff m|(a−b)</strong>. ஒரே remainder கொண்ட அனைத்தும் ஒரு congruence class. Classes [0],…,[m−1].
+</script></div></div><div class="hci-ta" lang="ta" hidden data-title="வகுத்தல் படிமுறை"><div class="call key"><div class="ct">தேற்றம் 2 (வகுத்தல் படிமுறை)</div><p>a முழு எண்ணாகவும் d <strong>நேர்மறை</strong> முழு எண்ணாகவும் இருக்கட்டும். அப்போது <strong>0 ≤ r &lt; d</strong> ஆகுமாறு <strong>தனித்துவமான</strong> முழு எண்கள் q, r உள்ளன:</p>
+<p><strong>a = dq + r</strong></p></div>
+<table>
+<thead>
+<tr>
+<th>பெயர்</th>
+<th>குறியீடு</th>
+<th>குறியீட்டு முறை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>வகுபடும் எண்</strong></td>
+<td>a</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>வகுக்கும் எண்</strong></td>
+<td>d</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>ஈவு</strong></td>
+<td>q</td>
+<td><strong>q = a div d</strong></td>
+</tr>
+<tr>
+<td><strong>மீதி</strong></td>
+<td>r</td>
+<td><strong>r = a mod d</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="call example"><div class="ct">எடுத்துக்காட்டுகள் 6.2.1, 6.2.2</div><ul>
+<li><strong>27 ÷ 4:</strong> 27 = 4·6 + 3; எனவே 6 = 27 div 4, <strong>3 = 27 mod 4</strong>.</li>
+<li><strong>−23 ÷ 5:</strong> −23 = 5·(−5) + 2; எனவே −5 = −23 div 5, <strong>2 = −23 mod 5</strong>.</li>
+</ul></div>
+<div class="call warn"><div class="ct">மீதி ஒருபோதும் எதிர்மறையல்ல</div><p>−23 ÷ 5-க்கு விடை q = −4, r = −3 <strong>அல்ல</strong>. மீதி 0 ≤ r &lt; d நிறைவேற்ற வேண்டும். எனவே மேலும் ஒரு படி <strong>கீழே</strong> செல்லவும்: q = −5; r = −23 − (−25) = <strong>2</strong>.</p></div>
+<p>மீதி <strong>பூச்சியம்</strong> எனில் x, y-ஆல் <strong>வகுபடும்</strong> (y | x).</p>
+<p><div data-ta-tool="dv"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Modular arithmetic &amp; congruence"><span class="num">3</span>Modular arithmetic &amp; congruence</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>மீதியை அடிப்படையாகக் கொண்ட கணக்கு</h3><p>Clock-இல் 12-க்குப் பிறகு மீண்டும் 1 வருவது போல ஒரு modulus-க்குள் எண்ணுகிறோம். <strong>a≡b (mod m)</strong> என்றால் m, a−b-ஐ வகுக்கும். இரண்டுக்கும் ஒரே remainder என்பதும் அதே பொருள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>a≡b(mod m) iff m|(a−b)</strong>. ஒரே remainder கொண்ட அனைத்தும் ஒரு congruence class. Classes [0],…,[m−1].
 Congruences-ஐ கூட்டவும் பெருக்கவும்லாம். ஆனால் இருபுறமும் ஒரு எண்ணால் cancel செய்வது எல்லா நேரமும் அனுமதி இல்லை; modulus-உடன் அந்த எண்ணின் gcd போன்ற நிபந்தனை தேவை. Modular arithmetic-இல் ordinary division-ஐக் கண்மூடி செய்யாதீர்கள்.</p>
 <p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>a≡b(modm)⇔m|(a−b)⇔same remainder.17≡3(mod7);21≢6(mod8). Add/multiply congruences valid. <strong>Cancellation பொதுவாக தவறு:</strong>2·1≡2·4(mod6),ஆனால்1≢4. gcd(c,m)=1 என்றால் c cancel செய்யலாம். Class[a]ₘ={a+km:k∈ℤ};residues0…m−1.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="call key"><div class="ct">Definition 2 — congruence</div><p>Let m be a positive integer. <strong>a is congruent to b modulo m</strong>, written <strong>a ≡ b (mod m)</strong>, if <strong>m divides a − b</strong>. If not, write a ≢ b (mod m).</p></div>
+<p>a≡b(modm)⇔m|(a−b)⇔same remainder.17≡3(mod7);21≢6(mod8). Add/multiply congruences valid. <strong>Cancellation பொதுவாக தவறு:</strong>2·1≡2·4(mod6),ஆனால்1≢4. gcd(c,m)=1 என்றால் c cancel செய்யலாம். Class[a]ₘ={a+km:k∈ℤ};residues0…m−1.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Definition 2 — congruence</div><p>Let m be a positive integer. <strong>a is congruent to b modulo m</strong>, written <strong>a ≡ b (mod m)</strong>, if <strong>m divides a − b</strong>. If not, write a ≢ b (mod m).</p></div>
 <div class="call key"><div class="ct">Theorem 3</div><p><strong>a ≡ b (mod m) if and only if a mod m = b mod m</strong>: a and b leave the <strong>same remainder</strong>.</p></div>
 <div class="call example"><div class="ct">Example 6.3.1</div><ul>
 <li>Is 17 ≡ 3 (mod 7)? 17 − 3 = 14, and 7 | 14. <strong>Yes</strong>, 17 ≡ 3 (mod 7).</li>
@@ -356,10 +420,30 @@ Congruences-ஐ கூட்டவும் பெருக்கவும்ல
 (function(){var R=document.getElementById('cg');function md(a,m){return ((a%m)+m)%m}function run(){var a=+R.querySelector('.a').value,b=+R.querySelector('.b').value,m=+R.querySelector('.m').value;if(!(m>0))return;var c=(a-b)%m===0,r=md(a,m),cls=[];for(var k=-5;k<=5;k++)cls.push(r+k*m);
 R.querySelector('.out').innerHTML='<p>a − b = '+(a-b)+'. Does '+m+' divide '+(a-b)+'? <b>'+(c?'Yes':'No')+'</b>, so <span class="pill '+(c?'ok':'bad')+'" style="text-decoration:none">'+a+(c?' ≡ ':' ≢ ')+b+' (mod '+m+')</span></p><p>Check with Theorem 3: '+a+' mod '+m+' = '+md(a,m)+', '+b+' mod '+m+' = '+md(b,m)+'</p><p>Congruence class of '+a+' mod '+m+': {…, '+cls.join(', ')+', …}</p>'}
 R.addEventListener('input',run);run();})();
-</script></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Primes"><span class="num">4</span>Primes</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>பகா எண்கள்</h3><p>1-ஐவிடப் பெரிய எண்ணை 1 மற்றும் அதே எண்ணால் மட்டுமே வகுக்க முடிந்தால் <strong>Prime</strong>. 1 prime அல்ல. பெரிய எண்ணின் prime factors-ஐப் பிரித்தால் gcd, lcm போன்றவற்றைக் கணக்கிட உதவும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Prime factor தேட n-க்கு <strong>√n</strong> வரை possible divisors சோதித்தால் போதும். n=ab-இல் இரண்டும் √n-ஐவிடப் பெரியதாக இருந்தால் product&gt;n ஆகிவிடும் என்பதே காரணம்.
+</script></div></div><div class="hci-ta" lang="ta" hidden data-title="மட்டு எண்கணிதமும் சமானமும்"><div class="call key"><div class="ct">வரையறை 2 — சமானம்</div><p>m நேர்மறை முழு எண்ணாக இருக்கட்டும். <strong>m, a − b-ஐ வகுத்தால்</strong>, <strong>a, b-க்கு மட்டு m-இல் சமானம்</strong>; <strong>a ≡ b (mod m)</strong> என எழுதப்படுகிறது. இல்லாவிட்டால் a ≢ b (mod m).</p></div>
+<div class="call key"><div class="ct">தேற்றம் 3</div><p><strong>a mod m = b mod m என்றால் மட்டுமே a ≡ b (mod m)</strong>: a, b <strong>ஒரே மீதியை</strong> விடுகின்றன.</p></div>
+<div class="call example"><div class="ct">எடுத்துக்காட்டு 6.3.1</div><ul>
+<li>17 ≡ 3 (mod 7) ஆகுமா? 17 − 3 = 14; 7 | 14. <strong>ஆம்</strong>, 17 ≡ 3 (mod 7).</li>
+<li>21 ≡ 6 (mod 8) ஆகுமா? 21 − 6 = 15; 8 ∤ 15. <strong>இல்லை</strong>, 21 ≢ 6 (mod 8).</li>
+</ul></div>
+<div class="call key"><div class="ct">தேற்றம் 4 — சமானங்களைக் கூட்டவும் பெருக்கவும் முடியும்</div><p><strong>a ≡ b (mod m)</strong>, <strong>c ≡ d (mod m)</strong> எனில்:</p>
+<ul>
+<li><strong>a + c ≡ b + d (mod m)</strong></li>
+<li><strong>ac ≡ bd (mod m)</strong></li>
+</ul></div>
+<div class="call example"><div class="ct">எடுத்துக்காட்டு 6.3.2</div><p>12 ≡ 2 (mod 5), 16 ≡ 1 (mod 5). எனவே:</p>
+<ul>
+<li>28 = 12 + 16 ≡ 2 + 1 = <strong>3 (mod 5)</strong></li>
+<li>192 = 12·16 ≡ 2·1 = <strong>2 (mod 5)</strong></li>
+</ul></div>
+<h3>சமான வகுப்புகள் (வரையறை 3)</h3>
+<p><strong>a-இன் மட்டு n சமான வகுப்பு</strong>, n-ஆல் வகுக்கும்போது <strong>a-இன் அதே மீதியை விடும் அனைத்து முழு எண்களினதும்</strong> கணம்.</p>
+<div class="call example"><div class="ct">எடுத்துக்காட்டு 6.3.3</div><p>… ≡ −40 ≡ −33 ≡ −26 ≡ −19 ≡ −12 ≡ −5 ≡ 2 ≡ 9 ≡ 16 ≡ 23 ≡ 30 ≡ 37 ≡ … ≡ 2 (mod 7)</p>
+<p>எனவே <strong>2-இன் மட்டு 7 சமான வகுப்பு</strong> {…, −40, −33, −26, −19, −12, −5, 2, 9, 16, 23, 30, 37, …}. 2-இல் தொடங்கி 7-ஐச் சேர்த்தோ கழித்தோ செல்லவும்.</p></div>
+<p><div data-ta-tool="cg"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Primes"><span class="num">4</span>Primes</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>பகா எண்கள்</h3><p>1-ஐவிடப் பெரிய எண்ணை 1 மற்றும் அதே எண்ணால் மட்டுமே வகுக்க முடிந்தால் <strong>Prime</strong>. 1 prime அல்ல. பெரிய எண்ணின் prime factors-ஐப் பிரித்தால் gcd, lcm போன்றவற்றைக் கணக்கிட உதவும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Prime factor தேட n-க்கு <strong>√n</strong> வரை possible divisors சோதித்தால் போதும். n=ab-இல் இரண்டும் √n-ஐவிடப் பெரியதாக இருந்தால் product&gt;n ஆகிவிடும் என்பதே காரணம்.
 2 ஒரே even prime. 1 neither prime nor composite. n&gt;2 even என்றால் 2 என்ற nontrivial divisor இருப்பதால் composite.</p>
 <p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Primep&gt;1 factors1,p;1 neither prime nor composite;2 மட்டும் even prime. Factor748=2²·11·17. Check primes≤√n போதும். Unique prime factorisation order தவிர. Euclid proof:finite primes product+1 எந்த listed prime-ஆலும் divide ஆகாது;அந்த number தானே prime ஆகவேண்டும் என்றில்லை,புதிய prime factor இருக்கவேண்டும்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><p>Every positive integer greater than 1 is divisible by at least 1 and itself.</p>
+<p>Primep&gt;1 factors1,p;1 neither prime nor composite;2 மட்டும் even prime. Factor748=2²·11·17. Check primes≤√n போதும். Unique prime factorisation order தவிர. Euclid proof:finite primes product+1 எந்த listed prime-ஆலும் divide ஆகாது;அந்த number தானே prime ஆகவேண்டும் என்றில்லை,புதிய prime factor இருக்கவேண்டும்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>Every positive integer greater than 1 is divisible by at least 1 and itself.</p>
 <div class="call key"><div class="ct">Definition 4</div><ul>
 <li>A positive integer <strong>p &gt; 1</strong> is <strong>prime</strong> if its <strong>only positive factors are 1 and p</strong>.</li>
 <li>An integer <strong>&gt; 1 that is not prime</strong> is <strong>composite</strong>.</li>
@@ -437,10 +521,78 @@ var ks=Object.keys(f).map(Number),pr=ks.length===1&&f[ks[0]]===1;
 o.innerHTML='<p style="font-size:19px">'+n+' is <b>'+(pr?'PRIME':'COMPOSITE')+'</b>'+(pr?'':' = '+ks.map(function(k){return k+(f[k]>1?'<sup>'+f[k]+'</sup>':'')}).join(' × '))+'</p>'+(steps.length?'<p class="note">Repeated division: '+steps.join(' → ')+(m>1&&!pr?' → '+m+' is prime':'')+'</p>':'<p class="note">No divisor from 2 to √'+n+' ≈ '+Math.floor(Math.sqrt(n))+', so it is prime.</p>')}
 R.addEventListener('input',run);run();})();
 </script></div>
-<div class="call tip"><div class="ct">Fast primality check</div><p>To test n, you only need to try divisors <strong>up to √n</strong>. If n = ab with both a and b greater than √n, then ab &gt; n, which is impossible.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Cryptography — Caesar&#x27;s cipher"><span class="num">5</span>Cryptography — Caesar's cipher</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>எழுத்துகளை நகர்த்தி மறைகுறியாக்குதல்</h3><p>எழுத்துகளை ஒரு நிரந்தர எண்ணால் நகர்த்துவோம். A=0,…,Z=25 என்றால் <strong>E(x)=(x+k) mod 26</strong>. Decode செய்ய k-ஐக் கழிக்க வேண்டும். இது கருத்தைப் புரிய உதவும் எளிய cipher; வலுவான நவீன பாதுகாப்பு அல்ல.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>k=3 என்றால் Y(24)→B(1), A(0)→D(3); அதனால் <strong>YARD→BDUG</strong>. Decode-இல் <strong>CHVW→ZEST</strong>.
+<div class="call tip"><div class="ct">Fast primality check</div><p>To test n, you only need to try divisors <strong>up to √n</strong>. If n = ab with both a and b greater than √n, then ab &gt; n, which is impossible.</p></div></div><div class="hci-ta" lang="ta" hidden data-title="பகா எண்கள்"><p>1-ஐவிடப் பெரிய ஒவ்வொரு நேர்மறை முழு எண்ணும் குறைந்தது 1-ஆலும் அதனாலுமே வகுபடும்.</p>
+<div class="call key"><div class="ct">வரையறை 4</div><ul>
+<li><strong>1, p மட்டுமே நேர்மறைக் காரணிகளாக</strong> இருந்தால் நேர்மறை முழு எண் <strong>p &gt; 1</strong>, <strong>பகா எண்</strong>.</li>
+<li><strong>பகா எண் அல்லாத &gt; 1 முழு எண்</strong>, <strong>பகு எண்</strong>.</li>
+<li>அதற்குச் சமமாக, பகா எண் என்பது <strong>இரு சிறிய இயல் எண்களின் பெருக்கலாக எழுத முடியாத</strong>, &gt; 1 இயல் எண்.</li>
+<li><strong>குறிப்பு:</strong> <strong>a | n, 1 &lt; a &lt; n</strong> ஆகும் முழு எண் a இருந்தால் மட்டுமே n பகு எண்.</li>
+</ul></div>
+<table>
+<thead>
+<tr>
+<th>எடுத்துக்காட்டு</th>
+<th>காரணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>7 பகா எண்</strong> (6.4.1)</td>
+<td>1 × 7, 7 × 1 மட்டுமே பெருக்கல்கள்</td>
+</tr>
+<tr>
+<td><strong>6 பகு எண்</strong> (6.4.2)</td>
+<td>6 = 2 × 3; இரண்டும் 6-ஐவிடச் சிறியவை</td>
+</tr>
+<tr>
+<td><strong>ஒவ்வொரு இரட்டை முழு எண் &gt; 2-உம் பகு எண்</strong> (6.4.3)</td>
+<td>x = 2 × (x/2); x/2 முழு எண்</td>
+</tr>
+</tbody>
+</table>
+<div class="call key"><div class="ct">தேற்றம் 5 (யூக்ளிட்)</div><p><strong>முடிவற்ற பகா எண்கள் உள்ளன.</strong> p₁, …, pₙ என்பவை n மிகச்சிறிய பகா எண்கள் எனில், பட்டியலில் இல்லாத பெரிய பகா எண் எப்போதும் உள்ளது.</p></div>
+<div class="call key"><div class="ct">தேற்றம் 6 — எண்கணிதத்தின் அடிப்படைத் தேற்றம்</div><p>1-ஐவிடப் பெரிய ஒவ்வொரு நேர்மறை முழு எண்ணையும் <strong>பகா எண்ணாகவோ</strong>, <strong>இரண்டு அல்லது அதிகமான பகா எண்களின் பெருக்கலாகவோ</strong>, காரணிகளை <strong>குறையாத வரிசையில்</strong> அமைத்து <strong>தனித்துவமாக</strong> எழுதலாம்.</p></div>
+<div class="call example"><div class="ct">எடுத்துக்காட்டு 6.4.4 — A = {4, 5, 12, 49, 748}</div><table>
+<thead>
+<tr>
+<th>n</th>
+<th>பகா அல்லது பகு</th>
+<th>பகாக் காரணிப்படுத்தல்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>பகு</td>
+<td>2²</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>பகா</strong></td>
+<td>5</td>
+</tr>
+<tr>
+<td>12</td>
+<td>பகு</td>
+<td>2² × 3</td>
+</tr>
+<tr>
+<td>49</td>
+<td>பகு</td>
+<td>7²</td>
+</tr>
+<tr>
+<td>748</td>
+<td>பகு</td>
+<td>2² × 11 × 17</td>
+</tr>
+</tbody>
+</table></div>
+<p><div data-ta-tool="pf"></div></p>
+<div class="call tip"><div class="ct">விரைவான பகாத்தன்மைச் சோதனை</div><p>n-ஐச் சோதிக்க <strong>√n வரையான</strong> வகுப்பான்களை மட்டும் முயன்றால் போதும். n = ab; a, b இரண்டும் √n-ஐவிடப் பெரியவை எனில் ab &gt; n; அது இயலாது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Cryptography — Caesar&#x27;s cipher"><span class="num">5</span>Cryptography — Caesar's cipher</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>எழுத்துகளை நகர்த்தி மறைகுறியாக்குதல்</h3><p>எழுத்துகளை ஒரு நிரந்தர எண்ணால் நகர்த்துவோம். A=0,…,Z=25 என்றால் <strong>E(x)=(x+k) mod 26</strong>. Decode செய்ய k-ஐக் கழிக்க வேண்டும். இது கருத்தைப் புரிய உதவும் எளிய cipher; வலுவான நவீன பாதுகாப்பு அல்ல.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>k=3 என்றால் Y(24)→B(1), A(0)→D(3); அதனால் <strong>YARD→BDUG</strong>. Decode-இல் <strong>CHVW→ZEST</strong>.
 Alphabet A=0 convention-ஐப் பின்பற்றுங்கள்; A=1 என்று நடுவில் மாற்றினால் answer shift ஆகிவிடும். Negative remainder வந்தால் 26 சேர்த்து 0…25 range-க்கு மாற்றுங்கள்.</p>
 <p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>A0…Z25;encrypt(p+k)mod26;decrypt(c−k)mod26. YARD→BDUG;CHVW→ZEST. Y24+3=27→1B;C2−3=−1→25Z. Shift map alphabet residues-இல் bijective. இது mathematical teaching cipher;நவீன secure encryption என்று கருதாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><p><strong>Cryptography</strong> is the study of <strong>secret messages</strong>. It has two parts:</p>
+<p>A0…Z25;encrypt(p+k)mod26;decrypt(c−k)mod26. YARD→BDUG;CHVW→ZEST. Y24+3=27→1B;C2−3=−1→25Z. Shift map alphabet residues-இல் bijective. இது mathematical teaching cipher;நவீன secure encryption என்று கருதாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><p><strong>Cryptography</strong> is the study of <strong>secret messages</strong>. It has two parts:</p>
 <ul>
 <li><strong>Encryption</strong>: making a message secret.</li>
 <li><strong>Decryption</strong>: recovering the original message.</li>
@@ -539,7 +691,97 @@ R.addEventListener('input',run);run();})();
 <li>Listing congruence classes</li>
 <li>Prime or composite + <strong>prime factorisation</strong></li>
 <li><strong>Caesar encryption and decryption with a working table</strong></li>
-</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>மீதியில்லாமல் வகுபடுதல்</h4><p><strong>a|b</strong> என்றால் b=ak ஆகும் ஒரு integer k உள்ளது. 3|12 ஏனெனில் 12=3×4. இது a÷b என்ற division instruction அல்ல; மீதியில்லாமல் வகுபடுகிறதா என்ற கூற்று.</p>
+</ul></div></div><div class="hci-ta" lang="ta" hidden data-title="மறையியல் — சீசரின் மறையீடு"><p><strong>மறையியல்</strong>, <strong>இரகசியச் செய்திகளின்</strong> ஆய்வு. அதற்கு இரு பகுதிகள்:</p>
+<ul>
+<li><strong>மறைகுறியாக்கம்</strong>: செய்தியை இரகசியமாக்குதல்.</li>
+<li><strong>மறைவிலக்கல்</strong>: மூலச் செய்தியை மீட்டெடுத்தல்.</li>
+</ul>
+<p><strong>சீசரின் மறையீடு</strong> (Julius Caesar பயன்படுத்தியது), <strong>ஒவ்வொரு எழுத்தையும் மூன்று இடங்கள் முன்னோக்கி நகர்த்துகிறது</strong>. எனவே C → F, Y → B (மீண்டும் தொடக்கத்துக்கு வருகிறது).</p>
+<p>எழுத்துகளுக்கு A = 0, B = 1, …, Z = 25 என எண்களிடவும். அப்போது:</p>
+<div class="formula"><strong>மறைகுறியாக்கு:</strong> f(p) = (p + 3) mod 26<br><strong>மறைவிலக்கு:</strong> f⁻¹(p) = (p − 3) mod 26</div>
+<p>{0, …, 25}-இல் f <strong>ஒன்றுக்கொன்றானது</strong> (உண்மையில் இருவழிச் சார்பு); எனவே <strong>f⁻¹ உள்ளது</strong>. ஆட்களம், துணை ஆட்களம் இரண்டும் {0, 1, …, 25}.</p>
+<div class="call example"><div class="ct">எடுத்துக்காட்டு 6.5.1 — YARD-ஐ மறைகுறியாக்குதல்</div><table>
+<thead>
+<tr>
+<th>எழுத்து</th>
+<th>Y</th>
+<th>A</th>
+<th>R</th>
+<th>D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td>24</td>
+<td>0</td>
+<td>17</td>
+<td>3</td>
+</tr>
+<tr>
+<td>(p + 3) mod 26</td>
+<td>27 ≡ <strong>1</strong></td>
+<td><strong>3</strong></td>
+<td><strong>20</strong></td>
+<td><strong>6</strong></td>
+</tr>
+<tr>
+<td>மறையீடு</td>
+<td><strong>B</strong></td>
+<td><strong>D</strong></td>
+<td><strong>U</strong></td>
+<td><strong>G</strong></td>
+</tr>
+</tbody>
+</table>
+<p>YARD → <strong>BDUG</strong></p></div>
+<div class="call example"><div class="ct">CHVW-ஐ மறைவிலக்குதல்</div><table>
+<thead>
+<tr>
+<th>எழுத்து</th>
+<th>C</th>
+<th>H</th>
+<th>V</th>
+<th>W</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td>2</td>
+<td>7</td>
+<td>21</td>
+<td>22</td>
+</tr>
+<tr>
+<td>(p − 3) mod 26</td>
+<td>−1 ≡ <strong>25</strong></td>
+<td><strong>4</strong></td>
+<td><strong>18</strong></td>
+<td><strong>19</strong></td>
+</tr>
+<tr>
+<td>மூல எழுத்து</td>
+<td><strong>Z</strong></td>
+<td><strong>E</strong></td>
+<td><strong>S</strong></td>
+<td><strong>T</strong></td>
+</tr>
+</tbody>
+</table>
+<p>CHVW → <strong>ZEST</strong>. (குறிப்பு −1 = 26 × (−1) + 25; எனவே −1 mod 26 = 25.)</p></div>
+<p><div data-ta-tool="cz"></div></p>
+<div class="call exam"><div class="ct">Exam focus</div><p>எதிர்பார்க்க வேண்டியவை:</p>
+<ul>
+<li>a | b தீர்மானித்தல்</li>
+<li><strong>வகுபடுதன்மைப் பண்புகளை நிறுவுதல்</strong> (b = as பயன்படுத்தி நேரடி நிறுவல்கள்)</li>
+<li><strong>எதிர்மறைகளுடனும் ஈவும் மீதியும்</strong></li>
+<li>a mod m</li>
+<li>சமானங்களைச் சரிபார்த்தல்</li>
+<li>சமான வகுப்புகளைப் பட்டியலிடுதல்</li>
+<li>பகா அல்லது பகு + <strong>பகாக் காரணிப்படுத்தல்</strong></li>
+<li><strong>செய்முறை அட்டவணையுடன் சீசர் மறைகுறியாக்கமும் மறைவிலக்கலும்</strong></li>
+</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>மீதியில்லாமல் வகுபடுதல்</h4><p><strong>a|b</strong> என்றால் b=ak ஆகும் ஒரு integer k உள்ளது. 3|12 ஏனெனில் 12=3×4. இது a÷b என்ற division instruction அல்ல; மீதியில்லாமல் வகுபடுகிறதா என்ற கூற்று.</p>
 <p>a|b, a|c என்றால் a|(b+c) மற்றும் a|(b−c). a|b, b|c என்றால் a|c. b=ak, c=aℓ என்று எழுதி factor a வெளியே எடுத்தால் proof கிடைக்கும்.
 a|b என்பதால் b|a என்று சொல்ல முடியாது: 3|12 true; 12|3 false. Division notation-உடன் divisibility symbol-ஐக் குழப்பாதீர்கள்.</p>
 <p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
@@ -557,7 +799,7 @@ Congruences-ஐ கூட்டவும் பெருக்கவும்ல
 <p>k=3 என்றால் Y(24)→B(1), A(0)→D(3); அதனால் <strong>YARD→BDUG</strong>. Decode-இல் <strong>CHVW→ZEST</strong>.
 Alphabet A=0 convention-ஐப் பின்பற்றுங்கள்; A=1 என்று நடுவில் மாற்றினால் answer shift ஆகிவிடும். Negative remainder வந்தால் 26 சேர்த்து 0…25 range-க்கு மாற்றுங்கள்.</p>
 <p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>A0…Z25;encrypt(p+k)mod26;decrypt(c−k)mod26. YARD→BDUG;CHVW→ZEST. Y24+3=27→1B;C2−3=−1→25Z. Shift map alphabet residues-இல் bijective. இது mathematical teaching cipher;நவீன secure encryption என்று கருதாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><table>
+<p>A0…Z25;encrypt(p+k)mod26;decrypt(c−k)mod26. YARD→BDUG;CHVW→ZEST. Y24+3=27→1B;C2−3=−1→25Z. Shift map alphabet residues-இல் bijective. இது mathematical teaching cipher;நவீன secure encryption என்று கருதாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>
@@ -614,7 +856,64 @@ Alphabet A=0 convention-ஐப் பின்பற்றுங்கள்; A=
 <td>Encrypt (p + 3) mod 26; decrypt (p − 3) mod 26; YARD → BDUG</td>
 </tr>
 </tbody>
-</table></div><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">12 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="dmath-Week06" data-pick="0"><script type="application/json" class="qdata">[{"q": "Does 6 divide 17?", "o": ["Yes", "No"], "e": "17/6 isn't an integer, so 6 ∤ 17. ", "a": 1, "w": "Week 06"}, {"q": "What is 27 mod 4?", "e": "27 = 4·6 + 3. ", "n": 3.0, "w": "Week 06"}, {"q": "What is −23 mod 5?", "e": "−23 = 5·(−5) + 2. The remainder is never negative. ", "n": 2.0, "w": "Week 06"}, {"q": "What is −23 div 5?", "e": "The quotient is −5, since −23 = 5(−5) + 2. ", "n": -5.0, "w": "Week 06"}, {"q": "Is 21 ≡ 6 (mod 8)?", "o": ["Yes", "No"], "e": "21 − 6 = 15, and 8 ∤ 15. ", "a": 1, "w": "Week 06"}, {"q": "12 ≡ 2 (mod 5) and 16 ≡ 1 (mod 5). What is 12·16 mod 5?", "e": "2·1 = 2. Congruences can be multiplied. ", "n": 2.0, "w": "Week 06"}, {"q": "If a | b and a | c, then:", "o": ["a | (mb + nc) for any integers m, n", "b | c", "c | a", "a = b"], "e": "This is the corollary of Theorem 1. ", "a": 0, "w": "Week 06"}, {"q": "The prime factorisation of 748 is:", "o": ["2² × 11 × 17", "2 × 374", "4 × 187", "2³ × 7 × 13"], "e": "The Fundamental Theorem of Arithmetic says it's unique. ", "a": 0, "w": "Week 06"}, {"q": "Encrypt the letter Y (p = 24) with the Caesar cipher (shift 3). What is the cipher value?", "e": "(24 + 3) mod 26 = 1, which is B. ", "n": 1.0, "w": "Week 06"}, {"q": "Decrypt C (p = 2) with the Caesar cipher. What is the plaintext value?", "e": "(2 − 3) mod 26 = −1 mod 26 = 25, which is Z. ", "n": 25.0, "w": "Week 06"}, {"q": "Which number is in the congruence class of 2 modulo 7?", "o": ["23", "20", "14", "3"], "e": "23 = 7·3 + 2. ", "a": 0, "w": "Week 06"}, {"q": "Who proved that there are infinitely many primes?", "o": ["Euclid", "Fermat", "Euler", "Gauss"], "e": "Proof by contradiction: multiply all the primes together and add 1. ", "a": 0, "w": "Week 06"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2005/Week%2005%20-%20Study%20Guide.html"><small>← Previous</small>Matrices</a><a class="nx" href="../Week%2007/Week%2007%20-%20Study%20Guide.html"><small>Next →</small>Mathematical Induction &amp; Recursion</a></div></main></div>
+</table></div><div class="hci-ta" lang="ta" hidden data-title="விரைவு மீளாய்வுத் தாள்"><table>
+<thead>
+<tr>
+<th>கருத்து</th>
+<th>இவ்வாறு நினைவில் கொள்ளவும்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a | b</td>
+<td>ஏதாவது முழு எண் c-க்கு b = ac (a ≠ 0); இல்லாவிட்டால் a ∤ b</td>
+</tr>
+<tr>
+<td>தேற்றம் 1</td>
+<td>a|b, a|c ⇒ a|(b+c); a|b ⇒ a|bc; a|b, b|c ⇒ a|c</td>
+</tr>
+<tr>
+<td>பெறுபேறு</td>
+<td>a|b, a|c ⇒ a|(mb + nc)</td>
+</tr>
+<tr>
+<td>வகுத்தல் படிமுறை</td>
+<td>a = dq + r, 0 ≤ r &lt; d; q = a div d, r = a mod d</td>
+</tr>
+<tr>
+<td>எதிர்மறை a</td>
+<td>−23 = 5(−5) + 2; எனவே r = 2 (ஒருபோதும் எதிர்மறையல்ல)</td>
+</tr>
+<tr>
+<td>a ≡ b (mod m)</td>
+<td>m | (a − b) ⇔ ஒரே மீதி</td>
+</tr>
+<tr>
+<td>தேற்றம் 4</td>
+<td>சமானங்களைக் கூட்டவும் பெருக்கவும் முடியும்</td>
+</tr>
+<tr>
+<td>சமான வகுப்பு</td>
+<td>ஒரே மீதியுள்ள அனைத்து முழு எண்களும்: r + km</td>
+</tr>
+<tr>
+<td>பகா எண்</td>
+<td>&gt; 1; 1, அதுவே மட்டுமே காரணிகள்; இல்லாவிட்டால் பகு எண்</td>
+</tr>
+<tr>
+<td>யூக்ளிட்</td>
+<td>முடிவற்ற பகா எண்கள்</td>
+</tr>
+<tr>
+<td>அடிப்படைத் தேற்றம்</td>
+<td>தனித்துவப் பகாக் காரணிப்படுத்தல் (748 = 2² × 11 × 17)</td>
+</tr>
+<tr>
+<td>சீசர்</td>
+<td>மறைகுறியாக்கு (p + 3) mod 26; மறைவிலக்கு (p − 3) mod 26; YARD → BDUG</td>
+</tr>
+</tbody>
+</table></div></div><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">12 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="dmath-Week06" data-pick="0"><script type="application/json" class="qdata">[{"q": "Does 6 divide 17?", "o": ["Yes", "No"], "e": "17/6 isn't an integer, so 6 ∤ 17. ", "a": 1, "w": "Week 06"}, {"q": "What is 27 mod 4?", "e": "27 = 4·6 + 3. ", "n": 3.0, "w": "Week 06"}, {"q": "What is −23 mod 5?", "e": "−23 = 5·(−5) + 2. The remainder is never negative. ", "n": 2.0, "w": "Week 06"}, {"q": "What is −23 div 5?", "e": "The quotient is −5, since −23 = 5(−5) + 2. ", "n": -5.0, "w": "Week 06"}, {"q": "Is 21 ≡ 6 (mod 8)?", "o": ["Yes", "No"], "e": "21 − 6 = 15, and 8 ∤ 15. ", "a": 1, "w": "Week 06"}, {"q": "12 ≡ 2 (mod 5) and 16 ≡ 1 (mod 5). What is 12·16 mod 5?", "e": "2·1 = 2. Congruences can be multiplied. ", "n": 2.0, "w": "Week 06"}, {"q": "If a | b and a | c, then:", "o": ["a | (mb + nc) for any integers m, n", "b | c", "c | a", "a = b"], "e": "This is the corollary of Theorem 1. ", "a": 0, "w": "Week 06"}, {"q": "The prime factorisation of 748 is:", "o": ["2² × 11 × 17", "2 × 374", "4 × 187", "2³ × 7 × 13"], "e": "The Fundamental Theorem of Arithmetic says it's unique. ", "a": 0, "w": "Week 06"}, {"q": "Encrypt the letter Y (p = 24) with the Caesar cipher (shift 3). What is the cipher value?", "e": "(24 + 3) mod 26 = 1, which is B. ", "n": 1.0, "w": "Week 06"}, {"q": "Decrypt C (p = 2) with the Caesar cipher. What is the plaintext value?", "e": "(2 − 3) mod 26 = −1 mod 26 = 25, which is Z. ", "n": 25.0, "w": "Week 06"}, {"q": "Which number is in the congruence class of 2 modulo 7?", "o": ["23", "20", "14", "3"], "e": "23 = 7·3 + 2. ", "a": 0, "w": "Week 06"}, {"q": "Who proved that there are infinitely many primes?", "o": ["Euclid", "Fermat", "Euler", "Gauss"], "e": "Proof by contradiction: multiply all the primes together and add 1. ", "a": 0, "w": "Week 06"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2005/Week%2005%20-%20Study%20Guide.html"><small>← Previous</small>Matrices</a><a class="nx" href="../Week%2007/Week%2007%20-%20Study%20Guide.html"><small>Next →</small>Mathematical Induction &amp; Recursion</a></div></main></div>
 <script type="application/json" id="study-data">[{"key": "bpas", "name": "Business Processes & Accounting Systems", "exam": ["2026-11-15", "11:00", "14:00"], "url": "Business%20Processes%20and%20Accounting%20Systems/Study%20Guide%20-%20Index.html", "weeks": [{"key": "bpas-Week01", "label": "Week 01", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Business processes"}, {"id": "s2", "title": "Accounting information and its users"}, {"id": "s3", "title": "What is an Accounting Information System?"}, {"id": "s4", "title": "The five components of a computerised AIS"}, {"id": "s5", "title": "Internal control & security"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week02", "label": "Week 02", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is accounting?"}, {"id": "s2", "title": "Stakeholders and what they need"}, {"id": "s3", "title": "The Conceptual Framework for financial reporting"}, {"id": "s4", "title": "Debit & credit rules and the accounting equation"}, {"id": "s5", "title": "The T-account & balancing"}, {"id": "s6", "title": "Source documents & primary books"}, {"id": "s7", "title": "The four day books (primary entry journals)"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}, {"id": "s10", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week03", "label": "Week 03", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where these books fit"}, {"id": "s2", "title": "The cash book"}, {"id": "s3", "title": "The petty cash book & imprest system"}, {"id": "s4", "title": "The general journal"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week04", "label": "Week 04", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Capital vs revenue expenditure"}, {"id": "s2", "title": "The general ledger"}, {"id": "s3", "title": "The trial balance"}, {"id": "s4", "title": "Worked example: posting to the ledger and extracting a TB"}, {"id": "s5", "title": "Quick revision sheet"}, {"id": "s6", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week05", "label": "Week 05", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From trial balance to financial statements"}, {"id": "s2", "title": "The trading account → gross profit"}, {"id": "s3", "title": "The income statement → net profit"}, {"id": "s4", "title": "LKAS 1 / IAS 1 — Presentation of Financial Statements"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week06", "label": "Week 06", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The statement of financial position (SFP)"}, {"id": "s2", "title": "Adjustment 1: closing inventory"}, {"id": "s3", "title": "LKAS 16 — Property, Plant & Equipment"}, {"id": "s4", "title": "Adjustment 2: depreciation"}, {"id": "s5", "title": "Disposal of PPE"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week07", "label": "Week 07", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The accrual concept"}, {"id": "s2", "title": "Accrued & prepaid expenses"}, {"id": "s3", "title": "Income receivable & income received in advance"}, {"id": "s4", "title": "Bad debts (irrecoverable debts)"}, {"id": "s5", "title": "Provision for impairment of receivables"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week08", "label": "Week 08", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Inventory & LKAS 2"}, {"id": "s2", "title": "Function 1: managing purchases"}, {"id": "s3", "title": "Function 2: storing materials & stock levels"}, {"id": "s4", "title": "Function 3: pricing material issues — FIFO & weighted average"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week09", "label": "Week 09", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct vs indirect labour"}, {"id": "s2", "title": "Time keeping & time booking"}, {"id": "s3", "title": "Methods of remuneration"}, {"id": "s4", "title": "The salary sheet, EPF & ETF"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week10", "label": "Week 10", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is overhead?"}, {"id": "s2", "title": "Cost centres, allocation & apportionment"}, {"id": "s3", "title": "Re-apportioning service department costs"}, {"id": "s4", "title": "Overhead absorption"}, {"id": "s5", "title": "Under- and over-absorption"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week11", "label": "Week 11", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why price matters"}, {"id": "s2", "title": "The pricing policy: six factors"}, {"id": "s3", "title": "Markup vs margin"}, {"id": "s4", "title": "Pricing methods"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week12", "label": "Week 12", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why ratio analysis?"}, {"id": "s2", "title": "1. Liquidity ratios"}, {"id": "s3", "title": "2. Gearing (capital structure) ratios"}, {"id": "s4", "title": "3. Financial efficiency (activity) ratios"}, {"id": "s5", "title": "4. Profitability ratios"}, {"id": "s6", "title": "5. Shareholder (market test) ratios"}, {"id": "s7", "title": "Benefits & limitations"}, {"id": "s8", "title": "Quick revision sheet"}, {"id": "s9", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week13", "label": "Week 13", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is project appraisal?"}, {"id": "s2", "title": "Non-discounting methods"}, {"id": "s3", "title": "Time value of money"}, {"id": "s4", "title": "Net present value (NPV)"}, {"id": "s5", "title": "Internal rate of return (IRR)"}, {"id": "s6", "title": "Which method is best?"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week14", "label": "Week 14", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a budget?"}, {"id": "s2", "title": "Types of budgets"}, {"id": "s3", "title": "The functional budgets: formats"}, {"id": "s4", "title": "Full worked example: LFT company"}, {"id": "s5", "title": "The cash budget: rules"}, {"id": "s6", "title": "Limitations of budgeting [[36:08]]"}, {"id": "s7", "title": "Practice questions (course paper)"}, {"id": "s8", "title": "Quick revision sheet"}, {"id": "s9", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week15", "label": "Week 15", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Standard cost & standard costing"}, {"id": "s2", "title": "Setting standards"}, {"id": "s3", "title": "Types of standards"}, {"id": "s4", "title": "Standard cost card"}, {"id": "s5", "title": "The variance tree"}, {"id": "s6", "title": "Variance formulas"}, {"id": "s7", "title": "Advantages & limitations"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}, {"id": "s10", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-papers", "label": "Past papers", "url": "Business%20Processes%20and%20Accounting%20Systems/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Q1: Financial statements (40 marks)"}, {"id": "s3", "title": "January 2023 — Q2: Inventory, petty cash, framework (20 marks)"}, {"id": "s4", "title": "January 2023 — Q3: Primary entry books and NPV (20 marks)"}, {"id": "s5", "title": "January 2023 — Q4: Cash budget and sales variances (20 marks)"}, {"id": "s6", "title": "January 2023 — Q5: Overheads (20 marks)"}, {"id": "s7", "title": "August 2020 — what's different"}, {"id": "s8", "title": "November 2019 — Section A, Q1: 20 MCQs"}, {"id": "s9", "title": "November 2019 — Section A, Q2: Araliya Traders (Rs. '000)"}, {"id": "s10", "title": "November 2019 — Section B"}, {"id": "s11", "title": "2024 and 2025 — topic lists to practise"}]}]}, {"key": "dm", "name": "Data Mining", "exam": ["2026-11-22", "11:30", "14:30"], "url": "Data%20Mining/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dm-Week01", "label": "Week 01", "url": "Data%20Mining/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What data mining is about"}, {"id": "s2", "title": "Why data mining is required"}, {"id": "s3", "title": "Big Data and the 5 V's"}, {"id": "s4", "title": "Defining data mining properly"}, {"id": "s5", "title": "Applications of data mining"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week02", "label": "Week 02", "url": "Data%20Mining/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Data mining = \"knowledge mining from data\""}, {"id": "s2", "title": "The 7 steps of the KDD process"}, {"id": "s3", "title": "Architecture of a typical data mining system"}, {"id": "s4", "title": "What kinds of data can be mined?"}, {"id": "s5", "title": "Data mining task primitives"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week03", "label": "Week 03", "url": "Data%20Mining/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why preprocessing is needed"}, {"id": "s2", "title": "Data cleaning — handling missing values"}, {"id": "s3", "title": "Noisy data and smoothing"}, {"id": "s4", "title": "Data cleaning as a process"}, {"id": "s5", "title": "Data integration"}, {"id": "s6", "title": "Data transformation"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week04", "label": "Week 04", "url": "Data%20Mining/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why reduce data at all?"}, {"id": "s2", "title": "Data cube aggregation"}, {"id": "s3", "title": "Attribute subset selection"}, {"id": "s4", "title": "Dimensionality reduction"}, {"id": "s5", "title": "Numerosity reduction"}, {"id": "s6", "title": "Discretization & concept hierarchies"}, {"id": "s7", "title": "Binning: equal-width vs equal-depth"}, {"id": "s8", "title": "Smoothing noisy data with bins"}, {"id": "s9", "title": "Histogram partitioning — a full worked example"}, {"id": "s10", "title": "Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule"}, {"id": "s11", "title": "Self-assignment (2024): binning in practice"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week05", "label": "Week 05", "url": "Data%20Mining/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why data warehouses matter"}, {"id": "s2", "title": "What is a data warehouse?"}, {"id": "s3", "title": "OLTP vs OLAP"}, {"id": "s4", "title": "Why keep the warehouse separate?"}, {"id": "s5", "title": "The multidimensional data model"}, {"id": "s6", "title": "Lattice of cuboids"}, {"id": "s7", "title": "Weka — the tool used in this course"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week06", "label": "Week 06", "url": "Data%20Mining/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why a different schema for warehouses?"}, {"id": "s2", "title": "Star schema"}, {"id": "s3", "title": "Snowflake schema"}, {"id": "s4", "title": "Fact constellation (galaxy schema)"}, {"id": "s5", "title": "Data warehouse vs data mart"}, {"id": "s6", "title": "Defining cubes with DMQL"}, {"id": "s7", "title": "Concept hierarchies"}, {"id": "s8", "title": "Weka 1.2 — Exploring the Explorer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week07", "label": "Week 07", "url": "Data%20Mining/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why build a data warehouse?"}, {"id": "s2", "title": "The four views of warehouse design"}, {"id": "s3", "title": "Design approaches & methodology"}, {"id": "s4", "title": "The 4-step warehouse design process"}, {"id": "s5", "title": "Three-tier data warehouse architecture"}, {"id": "s6", "title": "The metadata repository"}, {"id": "s7", "title": "OLAP server models: ROLAP, MOLAP, HOLAP"}, {"id": "s8", "title": "Weka 1.3 — Exploring datasets"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week08", "label": "Week 08", "url": "Data%20Mining/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why compute cubes efficiently?"}, {"id": "s2", "title": "Cube materialization: cells and cuboids"}, {"id": "s3", "title": "Full cube vs iceberg cube"}, {"id": "s4", "title": "MultiWay array aggregation"}, {"id": "s5", "title": "BUC — Bottom-Up Computation"}, {"id": "s6", "title": "Star attributes, star-nodes and star-trees"}, {"id": "s7", "title": "Attribute-oriented induction (AOI)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week09", "label": "Week 09", "url": "Data%20Mining/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Frequent patterns"}, {"id": "s2", "title": "Market basket analysis"}, {"id": "s3", "title": "Association rules, support and confidence"}, {"id": "s4", "title": "The Apriori algorithm"}, {"id": "s5", "title": "Full worked example (|D| = 9, min_sup = 2)"}, {"id": "s6", "title": "Generating strong association rules"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week10", "label": "Week 10", "url": "Data%20Mining/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why not just use Apriori?"}, {"id": "s2", "title": "FP-growth: the idea"}, {"id": "s3", "title": "Worked example (min_sup = 3)"}, {"id": "s4", "title": "Mining the FP-tree"}, {"id": "s5", "title": "Multilevel association rules"}, {"id": "s6", "title": "Multidimensional association rules"}, {"id": "s7", "title": "Constraint-based association mining"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week11", "label": "Week 11", "url": "Data%20Mining/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Classification vs prediction"}, {"id": "s2", "title": "The two-step classification process"}, {"id": "s3", "title": "Preparing data & comparing methods"}, {"id": "s4", "title": "Decision trees & their history"}, {"id": "s5", "title": "Attribute selection measures"}, {"id": "s6", "title": "Worked example — buys_computer (14 tuples)"}, {"id": "s7", "title": "Weka: J48, filters and visualisation"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week12", "label": "Week 12", "url": "Data%20Mining/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Bayesian classifiers — overview"}, {"id": "s2", "title": "Bayes' theorem"}, {"id": "s3", "title": "The naïve Bayesian classifier"}, {"id": "s4", "title": "Worked example — will X buy a computer?"}, {"id": "s5", "title": "Rule-based classification"}, {"id": "s6", "title": "Extracting rules from a decision tree"}, {"id": "s7", "title": "Weka: training and testing"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week13", "label": "Week 13", "url": "Data%20Mining/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is cluster analysis?"}, {"id": "s2", "title": "Requirements of clustering in data mining"}, {"id": "s3", "title": "Types of clustering methods"}, {"id": "s4", "title": "Clustering by k-means"}, {"id": "s5", "title": "Weka: baseline accuracy and cross-validation"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week14", "label": "Week 14", "url": "Data%20Mining/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why k-medoids?"}, {"id": "s2", "title": "k-medoids and PAM"}, {"id": "s3", "title": "Worked example (from the lesson)"}, {"id": "s4", "title": "Hierarchical clustering"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week15", "label": "Week 15", "url": "Data%20Mining/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Overview"}, {"id": "s2", "title": "Financial data analysis"}, {"id": "s3", "title": "Retail industry"}, {"id": "s4", "title": "Telecommunication industry"}, {"id": "s5", "title": "Biological data analysis"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}]}, {"key": "dmath", "name": "Discrete Mathematics", "exam": ["2026-11-21", "08:30", "11:30"], "url": "Discrete%20Mathematics/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dmath-Week01", "label": "Week 01", "url": "Discrete%20Mathematics/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From propositions to predicates"}, {"id": "s2", "title": "Propositional functions"}, {"id": "s3", "title": "Compound expressions"}, {"id": "s4", "title": "Quantifiers: ∀, ∃, ∃!"}, {"id": "s5", "title": "Negating quantified expressions"}, {"id": "s6", "title": "Translating English into logic"}, {"id": "s7", "title": "Introduction to proofs — direct proof"}, {"id": "s8", "title": "Assignment 1: worked answers"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week02", "label": "Week 02", "url": "Discrete%20Mathematics/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Set terminology & notation"}, {"id": "s2", "title": "Equality, subsets & disjoint sets"}, {"id": "s3", "title": "Venn diagrams"}, {"id": "s4", "title": "Set operations"}, {"id": "s5", "title": "Set laws"}, {"id": "s6", "title": "Number of elements — inclusion–exclusion"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week03", "label": "Week 03", "url": "Discrete%20Mathematics/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a function?"}, {"id": "s2", "title": "One-to-one (injective)"}, {"id": "s3", "title": "Onto (surjective) & bijection"}, {"id": "s4", "title": "Inverse functions"}, {"id": "s5", "title": "Composition of functions"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week04", "label": "Week 04", "url": "Discrete%20Mathematics/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Sequences"}, {"id": "s2", "title": "Geometric & arithmetic progressions"}, {"id": "s3", "title": "Summation notation (Σ)"}, {"id": "s4", "title": "Geometric series (Theorem 1)"}, {"id": "s5", "title": "Infinite series (Theorem 2)"}, {"id": "s6", "title": "Double sums"}, {"id": "s7", "title": "Useful closed forms (Table 2)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week05", "label": "Week 05", "url": "Discrete%20Mathematics/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Matrices represent data"}, {"id": "s2", "title": "Matrix addition"}, {"id": "s3", "title": "Matrix multiplication"}, {"id": "s4", "title": "Identity, powers, transpose & symmetric"}, {"id": "s5", "title": "Zero–one matrices: join and meet"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week06", "label": "Week 06", "url": "Discrete%20Mathematics/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Divisibility"}, {"id": "s2", "title": "The division algorithm"}, {"id": "s3", "title": "Modular arithmetic & congruence"}, {"id": "s4", "title": "Primes"}, {"id": "s5", "title": "Cryptography — Caesar's cipher"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week07", "label": "Week 07", "url": "Discrete%20Mathematics/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why induction?"}, {"id": "s2", "title": "Worked induction proofs"}, {"id": "s3", "title": "The well-ordering property"}, {"id": "s4", "title": "Recursion"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week08", "label": "Week 08", "url": "Discrete%20Mathematics/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why counting?"}, {"id": "s2", "title": "The product rule (\"AND\", then multiply)"}, {"id": "s3", "title": "The sum rule (\"OR\", then add)"}, {"id": "s4", "title": "Tree diagrams"}, {"id": "s5", "title": "Combinations — order doesn't matter"}, {"id": "s6", "title": "Permutations — order matters"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week09", "label": "Week 09", "url": "Discrete%20Mathematics/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Binary relations"}, {"id": "s2", "title": "Functions as relations"}, {"id": "s3", "title": "Relations on a set"}, {"id": "s4", "title": "Properties: reflexive, symmetric, transitive"}, {"id": "s5", "title": "Equivalence relations"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week10", "label": "Week 10", "url": "Discrete%20Mathematics/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From pairs to n-tuples"}, {"id": "s2", "title": "Databases & the relational data model"}, {"id": "s3", "title": "Primary keys, composite keys, extension & intension"}, {"id": "s4", "title": "Operations: selection, projection, join"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week11", "label": "Week 11", "url": "Discrete%20Mathematics/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why graphs?"}, {"id": "s2", "title": "The birth of graph theory — Königsberg"}, {"id": "s3", "title": "What is a graph?"}, {"id": "s4", "title": "The six types of graphs"}, {"id": "s5", "title": "Graph models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week12", "label": "Week 12", "url": "Discrete%20Mathematics/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Trees"}, {"id": "s2", "title": "Rooted trees & terminology"}, {"id": "s3", "title": "Ordered rooted trees & binary trees"}, {"id": "s4", "title": "Binary search trees (BST)"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week13", "label": "Week 13", "url": "Discrete%20Mathematics/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Decision trees"}, {"id": "s2", "title": "Tree traversal"}, {"id": "s3", "title": "Spanning trees"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-papers", "label": "Past papers", "url": "Discrete%20Mathematics/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Question 1"}, {"id": "s3", "title": "January 2023 — Question 2 (number theory)"}, {"id": "s4", "title": "January 2023 — Question 3"}, {"id": "s5", "title": "January 2023 — Question 4 (graphs)"}, {"id": "s6", "title": "July 2023"}, {"id": "s7", "title": "October 2019"}, {"id": "s8", "title": "Model questions (official sample problems)"}]}]}, {"key": "hci", "name": "Human Computer Interaction", "exam": ["2026-11-22", "08:30", "11:30"], "url": "Human%20Computer%20Interaction/Study%20Guide%20-%20Index.html", "weeks": [{"key": "hci-Week01", "label": "Week 01", "url": "Human%20Computer%20Interaction/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "History of HCI"}, {"id": "s2", "title": "HCI is multi-disciplinary"}, {"id": "s3", "title": "Computers today: ubiquitous computing"}, {"id": "s4", "title": "Humans and perception"}, {"id": "s5", "title": "Interaction: two-way and task-centred"}, {"id": "s6", "title": "The HCI space"}, {"id": "s7", "title": "Applications of HCI — three pillars"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week02", "label": "Week 02", "url": "Human%20Computer%20Interaction/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is interaction?"}, {"id": "s2", "title": "Donald Norman's model — 7 stages"}, {"id": "s3", "title": "The two gulfs"}, {"id": "s4", "title": "Human errors: slips vs mistakes"}, {"id": "s5", "title": "The Abowd & Beale framework"}, {"id": "s6", "title": "Ergonomics"}, {"id": "s7", "title": "Direct vs indirect manipulation"}, {"id": "s8", "title": "Interaction styles"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week03", "label": "Week 03", "url": "Human%20Computer%20Interaction/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The human as an information processing machine"}, {"id": "s2", "title": "The senses in UI design"}, {"id": "s3", "title": "Human memory: three stores"}, {"id": "s4", "title": "Chunking & semantic networks"}, {"id": "s5", "title": "Cognitive load"}, {"id": "s6", "title": "Attention: selective vs divided"}, {"id": "s7", "title": "Motor skills & physical ergonomics"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week04", "label": "Week 04", "url": "Human%20Computer%20Interaction/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Design for tasks, not interfaces"}, {"id": "s2", "title": "The three contexts of \"use\": useful, usable, used"}, {"id": "s3", "title": "Three perspectives of the user"}, {"id": "s4", "title": "The in-car GPS turn example"}, {"id": "s5", "title": "UX beyond interaction"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week05", "label": "Week 05", "url": "Human%20Computer%20Interaction/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Action, interaction, effect, feedback"}, {"id": "s2", "title": "Feedback cycles are everywhere"}, {"id": "s3", "title": "Norman's model revisited: the two bridges"}, {"id": "s4", "title": "The 7 questions — designer & user perspectives"}, {"id": "s5", "title": "Norman's three levels of design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week06", "label": "Week 06", "url": "Human%20Computer%20Interaction/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct manipulation"}, {"id": "s2", "title": "The desktop metaphor vs the command line"}, {"id": "s3", "title": "Metaphorical vs literal invisibility — good vs bad design"}, {"id": "s4", "title": "Where direct manipulation is still lacking"}, {"id": "s5", "title": "Invisibility by learning vs by design"}, {"id": "s6", "title": "Five tips for invisible interfaces"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week07", "label": "Week 07", "url": "Human%20Computer%20Interaction/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Principles, guidelines and standards"}, {"id": "s2", "title": "Classic design frameworks"}, {"id": "s3", "title": "The 15 universal design principles"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week08", "label": "Week 08", "url": "Human%20Computer%20Interaction/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Mental models"}, {"id": "s2", "title": "Representations"}, {"id": "s3", "title": "Four traits of good representations"}, {"id": "s4", "title": "Full error taxonomy: slips vs mistakes"}, {"id": "s5", "title": "Learned helplessness & expert blindness"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week09", "label": "Week 09", "url": "Human%20Computer%20Interaction/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Task analysis & cognitive modelling"}, {"id": "s2", "title": "The GOMS framework"}, {"id": "s3", "title": "Keystroke-Level Model (KLM)"}, {"id": "s4", "title": "Fitts's law"}, {"id": "s5", "title": "Strengths and limits of predictive models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week10", "label": "Week 10", "url": "Human%20Computer%20Interaction/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Processor- vs predictor-oriented models"}, {"id": "s2", "title": "Cognitive Task Analysis (CTA) — 5 steps"}, {"id": "s3", "title": "Case study: the customer feedback thought stream"}, {"id": "s4", "title": "Hierarchical Task Analysis (HTA)"}, {"id": "s5", "title": "Modularity & divide and conquer"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week11", "label": "Week 11", "url": "Human%20Computer%20Interaction/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is user-centred design (UCD)?"}, {"id": "s2", "title": "The 8 user characteristics"}, {"id": "s3", "title": "ISO 9241-210: the 6 UCD principles"}, {"id": "s4", "title": "The 4-phase interaction design life cycle"}, {"id": "s5", "title": "Stakeholder-centred design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week12", "label": "Week 12", "url": "Human%20Computer%20Interaction/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where needfinding fits"}, {"id": "s2", "title": "The seven questions"}, {"id": "s3", "title": "Biases in needfinding"}, {"id": "s4", "title": "Needfinding methods"}, {"id": "s5", "title": "Representing the needs"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week13", "label": "Week 13", "url": "Human%20Computer%20Interaction/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where evaluation fits"}, {"id": "s2", "title": "Match the evaluation to the prototype"}, {"id": "s3", "title": "Evaluation across the design life cycle"}, {"id": "s4", "title": "Three types of evaluation"}, {"id": "s5", "title": "Four key terms"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-papers", "label": "Past papers", "url": "Human%20Computer%20Interaction/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what to focus on"}, {"id": "s2", "title": "ITE 3752 — Question 1: User-centred design (25 marks)"}, {"id": "s3", "title": "ITE 3752 — Question 2: Norman's model (25 marks)"}, {"id": "s4", "title": "ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)"}, {"id": "s5", "title": "ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)"}, {"id": "s6", "title": "Older ITE 3603 papers — outline answers"}]}]}, {"key": "mkt", "name": "Marketing", "exam": ["2026-11-22", "14:45", "17:45"], "url": "Marketing/Study%20Guide%20-%20Index.html", "weeks": [{"key": "mkt-Week01", "label": "Week 01", "url": "Marketing/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is marketing?"}, {"id": "s2", "title": "Marketing vs selling — the iceberg"}, {"id": "s3", "title": "Why marketing matters"}, {"id": "s4", "title": "Core concepts of marketing"}, {"id": "s5", "title": "Objectives of marketing"}, {"id": "s6", "title": "Quiz 01: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week02", "label": "Week 02", "url": "Marketing/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing has a history"}, {"id": "s2", "title": "1. Production concept"}, {"id": "s3", "title": "2. Product concept & marketing myopia"}, {"id": "s4", "title": "3. Selling concept"}, {"id": "s5", "title": "4. Marketing concept"}, {"id": "s6", "title": "5. Societal marketing concept"}, {"id": "s7", "title": "6. Holistic marketing concept"}, {"id": "s8", "title": "Quiz 02: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week03", "label": "Week 03", "url": "Marketing/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why scan the environment?"}, {"id": "s2", "title": "The three layers of the environment"}, {"id": "s3", "title": "Internal environment — 5 Ms & 7S"}, {"id": "s4", "title": "Micro environment (task environment)"}, {"id": "s5", "title": "Macro environment (DENTPC)"}, {"id": "s6", "title": "Responding to the environment"}, {"id": "s7", "title": "Marketing information system (MIS) & planning"}, {"id": "s8", "title": "Quiz 03: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week04", "label": "Week 04", "url": "Marketing/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Customer-driven marketing strategy"}, {"id": "s2", "title": "Market segmentation — four bases"}, {"id": "s3", "title": "Market targeting & Porter's five forces"}, {"id": "s4", "title": "Five patterns of target-market selection"}, {"id": "s5", "title": "Differentiation"}, {"id": "s6", "title": "Positioning & perceptual maps"}, {"id": "s7", "title": "Quiz 04: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week05", "label": "Week 05", "url": "Marketing/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why study consumer behaviour?"}, {"id": "s2", "title": "Consumer markets"}, {"id": "s3", "title": "The black box model (stimulus → response)"}, {"id": "s4", "title": "Factors influencing consumer behaviour"}, {"id": "s5", "title": "The buyer decision process — 5 stages"}, {"id": "s6", "title": "Four types of buying behaviour"}, {"id": "s7", "title": "Contemporary trends — Sri Lanka & global"}, {"id": "s8", "title": "Quiz 05: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week06", "label": "Week 06", "url": "Marketing/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a business market?"}, {"id": "s2", "title": "How business markets differ from consumer markets"}, {"id": "s3", "title": "Buying situations"}, {"id": "s4", "title": "Systems buying & selling"}, {"id": "s5", "title": "The buying centre — seven roles"}, {"id": "s6", "title": "Procurement: orientations & Kraljic's four product types"}, {"id": "s7", "title": "The 8 buy phases (Robinson et al.)"}, {"id": "s8", "title": "Business-to-business relationships"}, {"id": "s9", "title": "Quiz 06: model answer"}, {"id": "s10", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week07", "label": "Week 07", "url": "Marketing/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why marketing information matters"}, {"id": "s2", "title": "Three types of marketing data"}, {"id": "s3", "title": "The marketing information system (MIS)"}, {"id": "s4", "title": "Types of marketing research"}, {"id": "s5", "title": "The marketing research process"}, {"id": "s6", "title": "Why marketing research fails"}, {"id": "s7", "title": "Quiz 07: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week08", "label": "Week 08", "url": "Marketing/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is digital marketing?"}, {"id": "s2", "title": "Objectives of digital marketing"}, {"id": "s3", "title": "Why people go online"}, {"id": "s4", "title": "Key components of a digital marketing strategy"}, {"id": "s5", "title": "Strategy & measurement"}, {"id": "s6", "title": "Quiz 08: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week09", "label": "Week 09", "url": "Marketing/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why new products matter"}, {"id": "s2", "title": "Why develop new products, and why they fail"}, {"id": "s3", "title": "The 8-stage new product development process"}, {"id": "s4", "title": "The product life cycle (PLC)"}, {"id": "s5", "title": "Characteristics of each PLC stage"}, {"id": "s6", "title": "Marketing-mix strategies across the PLC"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week10", "label": "Week 10", "url": "Marketing/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Product strategy"}, {"id": "s2", "title": "Three levels of a product"}, {"id": "s3", "title": "Product classifications"}, {"id": "s4", "title": "Product mix and product line decisions"}, {"id": "s5", "title": "Brands, brand meaning and brand equity"}, {"id": "s6", "title": "Branding decisions"}, {"id": "s7", "title": "Packaging & labelling"}, {"id": "s8", "title": "Quiz 10: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week11", "label": "Week 11", "url": "Marketing/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Price: the revenue P"}, {"id": "s2", "title": "Factors affecting pricing decisions"}, {"id": "s3", "title": "The 6-step pricing process"}, {"id": "s4", "title": "New-product pricing: skimming vs penetration"}, {"id": "s5", "title": "Seven price-adjustment strategies"}, {"id": "s6", "title": "Price changes & reactions"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week12", "label": "Week 12", "url": "Marketing/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Before promoting"}, {"id": "s2", "title": "Integrated marketing communication (IMC)"}, {"id": "s3", "title": "Promotion objectives"}, {"id": "s4", "title": "The promotion mix"}, {"id": "s5", "title": "Advertising"}, {"id": "s6", "title": "Message strategy"}, {"id": "s7", "title": "Public relations"}, {"id": "s8", "title": "Sales promotion"}, {"id": "s9", "title": "Push vs pull channel policies"}, {"id": "s10", "title": "Socially responsible marketing communication"}, {"id": "s11", "title": "Quiz 12: model answer"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week13", "label": "Week 13", "url": "Marketing/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is \"place\"?"}, {"id": "s2", "title": "The nature of marketing channels"}, {"id": "s3", "title": "Push and pull strategies"}, {"id": "s4", "title": "How channel members add value"}, {"id": "s5", "title": "Channel levels"}, {"id": "s6", "title": "Channel behaviour and conflict"}, {"id": "s7", "title": "Conventional vs vertical marketing systems"}, {"id": "s8", "title": "Designing a marketing channel"}, {"id": "s9", "title": "Managing the marketing channel"}, {"id": "s10", "title": "Marketing logistics and supply chain management"}, {"id": "s11", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week14", "label": "Week 14", "url": "Marketing/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing planning"}, {"id": "s2", "title": "Purpose of marketing planning"}, {"id": "s3", "title": "Importance of marketing planning"}, {"id": "s4", "title": "Components of a marketing plan"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}]}]</script>
 <script>(function(){
   var KEY = document.body.getAttribute('data-key');
@@ -1044,4 +1343,209 @@ Alphabet A=0 convention-ஐப் பின்பற்றுங்கள்; A=
   function allowed(k){return /^sg-done-(bpas|dm|dmath|hci|mkt)-(Week\d{2}|papers)$/.test(k)||/^sg-quiz-(bpas|dm|dmath|hci|mkt)-(Week\d{2}|mixed)$/.test(k)||/^sg-plan-(settings|events|time|reviews|baseline)$/.test(k);}
   render();setInterval(function(){if(!document.hidden&&!panel?.contains(document.activeElement))render();},60000);
 })(typeof window!=='undefined'?window:globalThis);
+</script><script type="application/json" id="hci-tamil-data">{"strings": {"Self-check quiz": "சுய பரிசோதனை வினாடிவினா", "Check my answers": "என் விடைகளைச் சரிபார்", "Try again (new order)": "மீண்டும் முயல்க (புதிய வரிசை)", "New random exam": "புதிய சீரற்ற தேர்வு", "All answered": "அனைத்துக்கும் விடையளிக்கப்பட்டது", "✓ Correct.": "✓ சரி.", "✗ Not quite.": "✗ முழுவதும் சரியில்லை.", "Excellent — you know this well": "மிகச் சிறப்பு — இதை நன்றாக அறிந்திருக்கிறீர்கள்", "Good — revise the ones you missed": "நன்று — தவறவிட்டவற்றை மீளாய்வு செய்யுங்கள்", "Getting there — reread the weak sections": "முன்னேறுகிறீர்கள் — பலவீனமான பகுதிகளை மீண்டும் வாசியுங்கள்", "Needs revision — go through the notes again": "மீளாய்வு தேவை — குறிப்புகளை மீண்டும் படியுங்கள்", "Lecture videos": "விரிவுரைக் காணொளிகள்", "▶ Lecture videos": "▶ விரிவுரைக் காணொளிகள்", "Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.": "இங்கோ குறிப்புகளுக்குள்ளோ உள்ள நேரக் குறியீட்டைச் சொடுக்கினால் காணொளி அந்த நேரத்துக்குச் செல்லும். நீங்கள் பார்த்த இடம் நினைவில் வைக்கப்படும்.", "Open in Google Drive ↗": "Google Drive-இல் திறக்கவும் ↗", "ON THIS PAGE": "இந்தப் பக்கத்தில்", "On this page": "இந்தப் பக்கத்தில்", "← Previous": "← முந்தையது", "Next →": "அடுத்தது →", "NEXT →": "அடுத்தது →", "Mark this section as understood": "இந்தப் பகுதியைப் புரிந்துகொண்டதாகக் குறிக்கவும்", "✓ Understood": "✓ புரிந்துகொண்டேன்", "Understood — click to undo": "புரிந்துகொண்டேன் — செயல்தவிர்க்கச் சொடுக்கவும்", "Type a number": "ஓர் எண்ணை உள்ளிடவும்", "Type what you remember…": "நினைவிருப்பதைத் தட்டச்சு செய்யுங்கள்…", "Answer:": "விடை:", "Best": "சிறந்தது", "Last": "கடைசி", "Attempts": "முயற்சிகள்", "Attempt": "முயற்சி", "today": "இன்று", "yesterday": "நேற்று", "Mixed practice exam": "கலப்புப் பயிற்சித் தேர்வு", "? Self-check quiz": "? சுய பரிசோதனை வினாடிவினா", "★ Mixed practice exam": "★ கலப்புப் பயிற்சித் தேர்வு", "📊 Your knowledge in this subject": "📊 இந்தப் பாடத்தில் உங்கள் அறிவு", "Overall knowledge": "ஒட்டுமொத்த அறிவு", "Weeks quizzed": "வினாடிவினா முயன்ற வாரங்கள்", "Average best score": "சிறந்த மதிப்பெண்களின் சராசரி", "on the weeks you tried": "நீங்கள் முயன்ற வாரங்களில்", "— average best score × weeks covered": "— சிறந்த மதிப்பெண்களின் சராசரி × முயன்ற வாரங்களின் விகிதம்", "Mixed exam best": "கலப்புத் தேர்வின் சிறந்த மதிப்பெண்", "Exam practice": "தேர்வுப் பயிற்சி", "Past papers with worked answers": "தீர்வுகளுடன் கடந்தகால வினாத்தாள்கள்", "Real exam questions from previous years, fully solved, plus which topics come up most.": "முந்தைய ஆண்டுகளின் உண்மையான தேர்வுக் கேள்விகளுக்கான முழுத் தீர்வுகளும் அதிகம் இடம்பெறும் தலைப்புகளும்.", "Offline study guides — one per week, built from the lecture notes and lecture videos. Green bar = sections you marked as understood.": "விரிவுரைக் குறிப்புகளையும் காணொளிகளையும் கொண்டு உருவாக்கப்பட்ட இணையமில்லா கற்றல் வழிகாட்டிகள் — வாரத்துக்கு ஒன்று. பச்சைப் பட்டை = நீங்கள் புரிந்துகொண்டதாகக் குறித்த பகுதிகள்.", "Take the": "நீங்கள் பல வாரங்களைப் படித்த பின், கீழேயுள்ள", "mixed practice exam": "கலப்புப் பயிற்சித் தேர்வை", "at the bottom when you have covered several weeks.": "முயலுங்கள்.", "📄 Lecture videos (no PDF for this week)": "📄 விரிவுரைக் காணொளிகள் (இந்த வாரத்துக்கு PDF இல்லை)", "📄 Lecture video (no PDF for this week)": "📄 விரிவுரைக் காணொளி (இந்த வாரத்துக்கு PDF இல்லை)", "✓ Understood — click to unmark": "✓ புரிந்துகொண்டேன் — குறியை நீக்கச் சொடுக்கவும்", "Discrete Mathematics": "தனித்த கணிதம்", "data preprocessing": "தரவு முன்செயலாக்கம்", "Discrete Mathematics · Past papers": "தனித்த கணிதம் · கடந்தகால வினாத்தாள்கள்", "Tip": "குறிப்புரை", "Exam focus": "தேர்வுக் கவனம்", "Common mistake": "பொதுவான தவறு", "Worked example": "தீர்வுடன் எடுத்துக்காட்டு", "Key idea": "முக்கியக் கருத்து", "From the lecture video": "விரிவுரைக் காணொளியிலிருந்து", "Number Theory & Cryptography": "எண் கோட்பாடும் மறையியலும்", "Divisibility and its theorem, the division algorithm (div and mod), congruence modulo m, congruence classes, primes and composites, the fundamental theorem of arithmetic, and Caesar's cipher.": "வகுபடுதன்மையும் அதன் தேற்றமும், வகுத்தல் படிமுறை (div, mod), மட்டு m சமானம், சமான வகுப்புகள், பகா மற்றும் பகு எண்கள், எண்கணிதத்தின் அடிப்படைத் தேற்றம், சீசரின் மறையீடு.", "Lesson 6 – Number Theory & Cryptography": "பாடம் 6 – எண் கோட்பாடும் மறையியலும்", "Divisibility, modular arithmetic, primes and the Caesar cipher.": "வகுபடுதன்மை, மட்டு எண்கணிதம், பகா எண்கள், சீசர் மறையீடு.", "Lesson 6: number theory and cryptography": "பாடம் 6: எண் கோட்பாடும் மறையியலும்", "Divisibility: a | b": "வகுபடுதன்மை: a | b", "Theorem 1 and its proofs": "தேற்றம் 1, அதன் நிறுவல்கள்", "The division algorithm: quotient and remainder": "வகுத்தல் படிமுறை: ஈவும் மீதியும்", "27 = 4 · 6 + 3; −23 mod 5": "27 = 4 · 6 + 3; −23 mod 5", "Congruence modulo m: Theorem 3": "மட்டு m சமானம்: தேற்றம் 3", "Example: 17 ≡ 3 (mod 7)": "எடுத்துக்காட்டு: 17 ≡ 3 (mod 7)", "Theorem 4: adding and multiplying congruences": "தேற்றம் 4: சமானங்களைக் கூட்டலும் பெருக்கலும்", "Primes and composites": "பகா மற்றும் பகு எண்கள்", "Prime factorisation examples": "பகாக் காரணிப்படுத்தல் எடுத்துக்காட்டுகள்", "Self-assessment exercises": "சுயமதிப்பீட்டுப் பயிற்சிகள்", "Caesar cipher: f(p) = (p + 3) mod 26": "சீசர் மறையீடு: f(p) = (p + 3) mod 26", "Encrypting YARD → BDUG": "மறைகுறியாக்கம் YARD → BDUG", "Decrypting: CHVW → ZEST": "மறைவிலக்கல்: CHVW → ZEST", "Division algorithm & mod calculator": "வகுத்தல் படிமுறை மற்றும் மட்டு கணிப்பான்", "a (dividend)": "a (வகுபடும் எண்)", "d (divisor, > 0)": "d (வகுக்கும் எண், > 0)", "d must be a positive integer.": "d நேர்மறை முழு எண்ணாக இருக்க வேண்டும்.", "Congruence checker & class lister": "சமானச் சரிபார்ப்பியும் வகுப்புப் பட்டியலிடியும்", "Yes": "ஆம்", "No": "இல்லை", "Prime checker & factoriser": "பகா எண் சரிபார்ப்பியும் காரணிப்படுத்தியும்", "Enter an integer from 2 to 10¹².": "2 முதல் 10¹² வரை முழு எண்ணை உள்ளிடவும்.", "PRIME": "பகா எண்", "COMPOSITE": "பகு எண்", "Caesar cipher machine": "சீசர் மறையீட்டு இயந்திரம்", "Text": "உரை", "Shift k": "நகர்வு k", "Mode": "முறை", "Encrypt (p + k)": "மறைகுறியாக்கு (p + k)", "Decrypt (p − k)": "மறைவிலக்கு (p − k)", "Letter": "எழுத்து", "Result": "முடிவு", "🧪 Try it — Division algorithm & mod calculator": "🧪 முயன்று பாருங்கள் — வகுத்தல் படிமுறை மற்றும் மட்டு கணிப்பான்", "🧪 Try it — Congruence checker & class lister": "🧪 முயன்று பாருங்கள் — சமானச் சரிபார்ப்பியும் வகுப்புப் பட்டியலிடியும்", "🧪 Try it — Prime checker & factoriser": "🧪 முயன்று பாருங்கள் — பகா எண் சரிபார்ப்பியும் காரணிப்படுத்தியும்", "🧪 Try it — Caesar cipher machine": "🧪 முயன்று பாருங்கள் — சீசர் மறையீட்டு இயந்திரம்", "The Foundations — Predicate Logic, Quantifiers & Direct Proofs": "அடித்தளங்கள் — பயனிலைத் தர்க்கம், அளவைக்குறிகள், நேரடி நிறுவல்கள்", "Predicates and propositional functions, compound expressions, ∀ / ∃ / ∃!, negating quantifiers, translating English into logic, and constructing direct proofs.": "பயனிலைகளும் கூற்றுச் சார்புகளும், சேர்மக் கோவைகள், ∀ / ∃ / ∃!, அளவைக்குறிகளை மறுத்தல், ஆங்கிலத்தைத் தர்க்கமாக மொழிபெயர்த்தல், நேரடி நிறுவல்களை அமைத்தல்.", "Sets & Set Operations": "கணங்களும் கணச் செயல்பாடுகளும்", "Set terminology and notation, the number systems, equality, subsets and proper subsets, disjoint sets, Venn diagrams, union, intersection, complement and difference, set laws, De Morgan's laws, and inclusion–exclusion.": "கணச் சொற்களும் குறியீடும், எண் முறைமைகள், சமத்துவம், உட்கணங்களும் முறையான உட்கணங்களும், வெட்டாத கணங்கள், வென் வரைபடங்கள், சேர்ப்பு, வெட்டு, நிரப்பு, வேறுபாடு, கண விதிகள், டி மோர்கன் விதிகள், உள்ளடக்கல்–விலக்கல்.", "Functions": "சார்புகள்", "Definition of a function, domain, codomain and range, finding domains, one-to-one (injective), onto (surjective) and bijective functions, inverses, and composition.": "சார்பின் வரையறை, ஆட்களம், துணை ஆட்களம், வீச்சு, ஆட்களங்களைக் கண்டறிதல், ஒன்றுக்கொன்று (உட்சார்பு), மேல் சார்பு, இருவழிச் சார்புகள், நேர்மாறுகள், தொகுப்பு.", "Sequences & Summations": "தொடரிகளும் கூட்டுத்தொகைகளும்", "Sequence notation, geometric and arithmetic progressions, strings, finding formulas for sequences, Σ notation and its laws, the geometric series theorem, infinite series, double sums, and the standard closed forms.": "தொடரிக் குறியீடு, பெருக்குத் தொடரிகளும் கூட்டுத் தொடரிகளும், சரங்கள், தொடரிச் சூத்திரங்களைக் கண்டறிதல், Σ குறியீடும் விதிகளும், பெருக்குத் தொடர் தேற்றம், முடிவற்ற தொடர்கள், இரட்டைக் கூட்டுத்தொகைகள், வழக்கமான மூடிய வடிவங்கள்.", "Matrices": "அணிகள்", "Matrices to represent data, size, square and equal matrices, rows, columns and entries, addition, multiplication and its algorithm, non-commutativity, identity, powers, transpose, symmetric matrices, and zero–one matrices (join and meet).": "தரவைப் பிரதிநிதித்துவப்படுத்தும் அணிகள், அளவு, சதுர மற்றும் சம அணிகள், நிரைகள், நிரல்கள், உறுப்புகள், கூட்டல், பெருக்கலும் அதன் படிமுறையும், பரிமாற்றுப் பண்பின்மை, சமனி, அடுக்குகள், இடமாற்று, சமச்சீர் அணிகள், பூச்சியம்–ஒன்று அணிகள் (சேர்வும் சந்திப்பும்).", "Mathematical Induction & Recursion": "கணிதத் தொகுத்தறிதலும் மறுசுழற்சியும்", "The principle of mathematical induction (basis step, inductive step, inductive hypothesis), four fully worked proofs, the well-ordering property, and recursively defined sequences and functions (factorial, powers, sums, Fibonacci).": "கணிதத் தொகுத்தறிதல் கொள்கை (அடிப்படைப் படி, தொகுத்தறிதல் படி, கருதுகோள்), நான்கு முழுச் செய்முறை நிறுவல்கள், நன்கு வரிசைப்படுத்தல் பண்பு, மறுசுழற்சியாக வரையறுக்கப்பட்ட தொடரிகளும் சார்புகளும் (காரணியல், அடுக்குகள், கூட்டுத்தொகைகள், ஃபிபொனாச்சி).", "Counting — Product & Sum Rules, Permutations & Combinations": "எண்ணல் — பெருக்கல் மற்றும் கூட்டல் விதிகள், ஒழுங்கமைப்புகள், சேர்வுகள்", "Why counting matters, the product rule, the sum rule, inclusion–exclusion for counting, tree diagrams, combinations ⁿCᵣ, and permutations with and without repetition.": "எண்ணல் ஏன் முக்கியம், பெருக்கல் விதி, கூட்டல் விதி, எண்ணலுக்கான உள்ளடக்கல்–விலக்கல், மர வரைபடங்கள், ⁿCᵣ சேர்வுகள், மீளுருவுடனும் இன்றியும் ஒழுங்கமைப்புகள்.", "Relations & Their Properties": "தொடர்புகளும் அவற்றின் பண்புகளும்", "Binary relations as subsets of A × B, arrow diagrams and tables, functions as relations, relations on a set, reflexive, symmetric and transitive properties, and equivalence relations.": "A × B-இன் உட்கணங்களாக இருமத் தொடர்புகள், அம்பு வரைபடங்களும் அட்டவணைகளும், தொடர்புகளாகச் சார்புகள், ஒரு கணத்தின் மீதான தொடர்புகள், தற்சுட்டு, சமச்சீர், கடத்தல் பண்புகள், சமானத் தொடர்புகள்.", "n-ary Relations & Relational Databases": "n-உறுப்புத் தொடர்புகளும் தொடர்புநிலைத் தரவுத்தளங்களும்", "n-ary relations, domains and degree, the relational data model, records and fields, primary and composite keys, extension vs intension, and the selection, projection and join operators.": "n-உறுப்புத் தொடர்புகள், ஆட்களங்களும் படியும், தொடர்புநிலைத் தரவு மாதிரி, பதிவுகளும் புலங்களும், முதன்மை மற்றும் கூட்டுச் சாவிகள், விரிவும் உள்நோக்கமும், தேர்வு, வீழ்த்தல், இணைப்புச் செயற்குறிகள்.", "Graphs & Graph Models": "வரைபுகளும் வரைபு மாதிரிகளும்", "What a graph is, the Königsberg bridge problem, finite vs infinite graphs, the six graph types (simple, multigraph, pseudograph, simple directed, directed multigraph, mixed), and graph models for social, information, transport and tournament problems.": "வரைபு என்றால் என்ன, கோனிக்ஸ்பெர்க் பாலப் பிரச்சினை, முடிவுள்ள மற்றும் முடிவற்ற வரைபுகள், ஆறு வரைபு வகைகள் (எளிய, பல்வரைபு, போலி, எளிய திசை, திசைப் பல்வரைபு, கலப்பு), சமூக, தகவல், போக்குவரத்து, போட்டிப் பிரச்சினைகளுக்கான வரைபு மாதிரிகள்.", "Trees & Applications of Trees": "மரங்களும் மரங்களின் பயன்பாடுகளும்", "Circuits and trees, forests, the unique-path theorem, rooted trees and family terminology, subtrees, ordered and binary trees, and binary search trees with the insertion algorithm.": "சுற்றுகளும் மரங்களும், காடுகள், தனித்துவப் பாதைத் தேற்றம், வேருள்ள மரங்களும் குடும்பச் சொற்களும், உட்மரங்கள், வரிசைப்படுத்தப்பட்ட மற்றும் இரும மரங்கள், செருகல் படிமுறையுடன் இருமத் தேடல் மரங்கள்.", "Decision Trees, Tree Traversal & Spanning Trees": "முடிவெடுக்கும் மரங்கள், மரச் சுற்றல், படரும் மரங்கள்", "Decision trees as maps of choices and outcomes (drawing, evaluating with expected values, pros and cons), preorder and postorder traversal of ordered rooted trees, and spanning trees with their use in IP multicasting.": "தேர்வுகளும் விளைவுகளும் குறித்த வரைபடங்களாக முடிவெடுக்கும் மரங்கள் (வரைதல், எதிர்பார்க்கப்படும் மதிப்புகளால் மதிப்பிடுதல், நன்மை தீமைகள்), வரிசைப்படுத்தப்பட்ட வேருள்ள மரங்களின் முன்வரிசை மற்றும் பின்வரிசைச் சுற்றல், படரும் மரங்களும் IP பல்பரப்பில் அவற்றின் பயன்பாடும்.", "Does 6 divide 17?": "6, 17-ஐ வகுக்கிறதா?", "17/6 isn't an integer, so 6 ∤ 17.": "17/6 முழு எண் அல்ல; எனவே 6 ∤ 17.", "What is 27 mod 4?": "27 mod 4 என்ன?", "27 = 4·6 + 3.": "27 = 4·6 + 3.", "What is −23 mod 5?": "−23 mod 5 என்ன?", "−23 = 5·(−5) + 2. The remainder is never negative.": "−23 = 5·(−5) + 2. மீதி ஒருபோதும் எதிர்மறையல்ல.", "What is −23 div 5?": "−23 div 5 என்ன?", "The quotient is −5, since −23 = 5(−5) + 2.": "ஈவு −5; ஏனெனில் −23 = 5(−5) + 2.", "Is 21 ≡ 6 (mod 8)?": "21 ≡ 6 (mod 8) ஆகுமா?", "21 − 6 = 15, and 8 ∤ 15.": "21 − 6 = 15; 8 ∤ 15.", "12 ≡ 2 (mod 5) and 16 ≡ 1 (mod 5). What is 12·16 mod 5?": "12 ≡ 2 (mod 5), 16 ≡ 1 (mod 5). 12·16 mod 5 என்ன?", "2·1 = 2. Congruences can be multiplied.": "2·1 = 2. சமானங்களைப் பெருக்கலாம்.", "If a | b and a | c, then:": "a | b, a | c எனில்:", "a | (mb + nc) for any integers m, n": "எந்த முழு எண்கள் m, n-க்கும் a | (mb + nc)", "b | c": "b | c", "c | a": "c | a", "a = b": "a = b", "This is the corollary of Theorem 1.": "இது தேற்றம் 1-இன் பெறுபேறு.", "The prime factorisation of 748 is:": "748-இன் பகாக் காரணிப்படுத்தல்:", "2² × 11 × 17": "2² × 11 × 17", "2 × 374": "2 × 374", "4 × 187": "4 × 187", "2³ × 7 × 13": "2³ × 7 × 13", "The Fundamental Theorem of Arithmetic says it's unique.": "எண்கணிதத்தின் அடிப்படைத் தேற்றம் அது தனித்துவமானது என்கிறது.", "Encrypt the letter Y (p = 24) with the Caesar cipher (shift 3). What is the cipher value?": "Y எழுத்தை (p = 24) சீசர் மறையீட்டால் (நகர்வு 3) மறைகுறியாக்கவும். மறையீட்டுப் பெறுமதி என்ன?", "(24 + 3) mod 26 = 1, which is B.": "(24 + 3) mod 26 = 1; அது B.", "Decrypt C (p = 2) with the Caesar cipher. What is the plaintext value?": "C-ஐ (p = 2) சீசர் மறையீட்டால் மறைவிலக்கவும். மூல எழுத்துப் பெறுமதி என்ன?", "(2 − 3) mod 26 = −1 mod 26 = 25, which is Z.": "(2 − 3) mod 26 = −1 mod 26 = 25; அது Z.", "Which number is in the congruence class of 2 modulo 7?": "2-இன் மட்டு 7 சமான வகுப்பிலுள்ள எண் எது?", "23": "23", "20": "20", "14": "14", "3": "3", "23 = 7·3 + 2.": "23 = 7·3 + 2.", "Who proved that there are infinitely many primes?": "முடிவற்ற பகா எண்கள் உள்ளன என நிறுவியவர் யார்?", "Euclid": "யூக்ளிட்", "Fermat": "ஃபெர்மா", "Euler": "ஆய்லர்", "Gauss": "காஸ்", "Proof by contradiction: multiply all the primes together and add 1.": "முரண்பாட்டால் நிறுவல்: அனைத்துப் பகா எண்களையும் ஒன்றாகப் பெருக்கி 1 சேர்க்கவும்."}, "markup": {"Does 6 divide 17?": "6, 17-ஐ வகுக்கிறதா?", "Yes": "ஆம்", "No": "இல்லை", "17/6 isn't an integer, so 6 ∤ 17.": "17/6 முழு எண் அல்ல; எனவே 6 ∤ 17.", "What is 27 mod 4?": "27 mod 4 என்ன?", "27 = 4·6 + 3.": "27 = 4·6 + 3.", "What is −23 mod 5?": "−23 mod 5 என்ன?", "−23 = 5·(−5) + 2. The remainder is never negative.": "−23 = 5·(−5) + 2. மீதி ஒருபோதும் எதிர்மறையல்ல.", "What is −23 div 5?": "−23 div 5 என்ன?", "The quotient is −5, since −23 = 5(−5) + 2.": "ஈவு −5; ஏனெனில் −23 = 5(−5) + 2.", "Is 21 ≡ 6 (mod 8)?": "21 ≡ 6 (mod 8) ஆகுமா?", "21 − 6 = 15, and 8 ∤ 15.": "21 − 6 = 15; 8 ∤ 15.", "12 ≡ 2 (mod 5) and 16 ≡ 1 (mod 5). What is 12·16 mod 5?": "12 ≡ 2 (mod 5), 16 ≡ 1 (mod 5). 12·16 mod 5 என்ன?", "2·1 = 2. Congruences can be multiplied.": "2·1 = 2. சமானங்களைப் பெருக்கலாம்.", "If a | b and a | c, then:": "a | b, a | c எனில்:", "a | (mb + nc) for any integers m, n": "எந்த முழு எண்கள் m, n-க்கும் a | (mb + nc)", "b | c": "b | c", "c | a": "c | a", "a = b": "a = b", "This is the corollary of Theorem 1.": "இது தேற்றம் 1-இன் பெறுபேறு.", "The prime factorisation of 748 is:": "748-இன் பகாக் காரணிப்படுத்தல்:", "2² × 11 × 17": "2² × 11 × 17", "2 × 374": "2 × 374", "4 × 187": "4 × 187", "2³ × 7 × 13": "2³ × 7 × 13", "The Fundamental Theorem of Arithmetic says it's unique.": "எண்கணிதத்தின் அடிப்படைத் தேற்றம் அது தனித்துவமானது என்கிறது.", "Encrypt the letter Y (p = 24) with the Caesar cipher (shift 3). What is the cipher value?": "Y எழுத்தை (p = 24) சீசர் மறையீட்டால் (நகர்வு 3) மறைகுறியாக்கவும். மறையீட்டுப் பெறுமதி என்ன?", "(24 + 3) mod 26 = 1, which is B.": "(24 + 3) mod 26 = 1; அது B.", "Decrypt C (p = 2) with the Caesar cipher. What is the plaintext value?": "C-ஐ (p = 2) சீசர் மறையீட்டால் மறைவிலக்கவும். மூல எழுத்துப் பெறுமதி என்ன?", "(2 − 3) mod 26 = −1 mod 26 = 25, which is Z.": "(2 − 3) mod 26 = −1 mod 26 = 25; அது Z.", "Which number is in the congruence class of 2 modulo 7?": "2-இன் மட்டு 7 சமான வகுப்பிலுள்ள எண் எது?", "23": "23", "20": "20", "14": "14", "3": "3", "23 = 7·3 + 2.": "23 = 7·3 + 2.", "Who proved that there are infinitely many primes?": "முடிவற்ற பகா எண்கள் உள்ளன என நிறுவியவர் யார்?", "Euclid": "யூக்ளிட்", "Fermat": "ஃபெர்மா", "Euler": "ஆய்லர்", "Gauss": "காஸ்", "Proof by contradiction: multiply all the primes together and add 1.": "முரண்பாட்டால் நிறுவல்: அனைத்துப் பகா எண்களையும் ஒன்றாகப் பெருக்கி 1 சேர்க்கவும்."}, "patterns": [{"pattern": "^(\\d+) unanswered$", "replacement": "$1 விடையளிக்கப்படவில்லை"}, {"pattern": "^(\\d+) / (\\d+) sections understood$", "replacement": "$1 / $2 பகுதிகள் புரிந்துகொள்ளப்பட்டன"}, {"pattern": "^Week (\\d+)$", "replacement": "வாரம் $1"}, {"pattern": "^(\\d+) days ago$", "replacement": "$1 நாட்களுக்கு முன்"}, {"pattern": "^\\((\\d+) of (\\d+)\\)$", "replacement": "($2இல் $1)"}, {"pattern": "^\\((\\d+) attempts?\\)$", "replacement": "($1 முயற்சிகள்)"}, {"pattern": "^(\\d+) videos? · (\\d+) min$", "replacement": "$1 காணொளிகள் · $2 நிமிடம்"}, {"pattern": "^Quiz: not tried \\((\\d+) Qs\\)$", "replacement": "வினாடிவினா: முயலவில்லை ($1 கேள்விகள்)"}, {"pattern": "^Best (\\d+)% · last (\\d+)%$", "replacement": "சிறந்தது $1% · கடைசி $2%"}, {"pattern": "^(\\d+) questions on this week\\. Answer them all, then press$", "replacement": "இந்த வாரத்தில் $1 கேள்விகள். அனைத்துக்கும் விடையளித்துவிட்டுப் பின்னர் அழுத்துங்கள்:"}, {"pattern": "^\\. Your best and latest scores are saved and shown on the subject page\\.$", "replacement": ". உங்கள் சிறந்த மற்றும் சமீபத்திய மதிப்பெண்கள் சேமிக்கப்பட்டுப் பாடப் பக்கத்தில் காட்டப்படும்."}, {"pattern": "^Discrete Mathematics · Week (\\d+)$", "replacement": "தனித்த கணிதம் · வாரம் $1"}, {"pattern": "^(\\d+) random questions drawn from all (\\d+) weeks \\((\\d+) in the bank\\)\\. Every attempt is a new mix — a good way to test whole-subject knowledge before the exam\\.$", "replacement": "அனைத்து $2 வாரங்களிலிருந்தும் சீரற்ற முறையில் தேர்ந்தெடுக்கப்படும் $1 கேள்விகள் (தொகுப்பில் $3 உள்ளன). ஒவ்வொரு முயற்சியிலும் புதிய கலவை — தேர்வுக்கு முன் முழுப் பாட அறிவையும் சோதிக்கச் சிறந்த வழி."}, {"pattern": "^›\\s*Week (\\d+)$", "replacement": "› வாரம் $1"}, {"pattern": "The largest multiple of ([\\d−.-]+) that is ≤ ([\\d−.-]+) is ([\\d−.-]+)\\. The remainder is the distance from there, so it is always 0 ≤ r (?:<|&lt;) ([\\d−.-]+)\\.", "replacement": "$2-ஐ மீறாத $1-இன் மிகப்பெரிய மடங்கு $3. அங்கிருந்து உள்ள தொலைவே மீதி; எனவே எப்போதும் 0 ≤ r < $4.", "selector": ".tool", "flags": "g"}, {"pattern": "Does ([\\d−.-]+) divide ([\\d−.-]+)\\?", "replacement": "$1, $2-ஐ வகுக்கிறதா?", "selector": ".tool", "flags": "g"}, {"pattern": ", so ", "replacement": ", எனவே ", "selector": ".tool", "flags": "g"}, {"pattern": "Check with Theorem 3:", "replacement": "தேற்றம் 3-ஆல் சரிபார்க்கவும்:", "selector": ".tool", "flags": "g"}, {"pattern": "Congruence class of ", "replacement": "சமான வகுப்பு: ", "selector": ".tool", "flags": "g"}, {"pattern": " is prime", "replacement": " பகா எண்", "selector": ".tool", "flags": "g"}, {"pattern": "(\\d+) is ", "replacement": "$1 என்பது ", "selector": ".tool", "flags": "g"}, {"pattern": "Repeated division:", "replacement": "மீண்டும் வகுத்தல்:", "selector": ".tool", "flags": "g"}, {"pattern": "No divisor from 2 to √([\\d.]+) ≈ ([\\d.]+), so it is prime\\.", "replacement": "2 முதல் √$1 ≈ $2 வரை வகுப்பான் இல்லை; எனவே இது பகா எண்.", "selector": ".tool", "flags": "g"}]}</script><style>.hci-language{position:fixed;right:16px;bottom:calc(100px + env(safe-area-inset-bottom));z-index:70;border:1px solid var(--line);border-radius:28px;background:var(--panel);color:var(--ink);box-shadow:var(--shadow);padding:12px 20px;font:inherit;font-weight:700;cursor:pointer;min-height:48px}
+.hci-language:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.hci-en[hidden],.hci-ta[hidden]{display:none!important}
+.hci-ta{line-height:1.9}
+@media(max-width:760px){.hci-language{bottom:calc(100px + env(safe-area-inset-bottom));right:10px}}
+@media print{.hci-language{display:none}}
+</style><script>// Authored, offline Tamil translations. No network requests or external translator.
+(function () {
+  'use strict';
+  var sections = Array.from(document.querySelectorAll('section[data-sec]'));
+  if (!document.getElementById('hci-tamil-data') || sections.some(function (s) { return !s.querySelector('.hci-ta'); })) return;
+  var button = document.createElement('button');
+  button.type = 'button'; button.className = 'hci-language'; button.lang = 'ta';
+  button.textContent = 'தமிழ்'; button.setAttribute('aria-label', 'Read the Tamil translation');
+  button.setAttribute('aria-pressed', 'false'); document.body.appendChild(button);
+  // Keep source values stable when options use their visible text as their value.
+  document.querySelectorAll('.tool option:not([value])').forEach(function (option) { option.value = option.textContent; });
+  var tamil = false;
+  var tools = [];
+  sections.forEach(function (section) {
+    var heading = section.querySelector('h2');
+    heading.dataset.english = heading.innerHTML;
+    var explanationButton = section.querySelector('.native-toggle');
+    var explanation = section.querySelector('.tamil-native');
+    var content = section.querySelector('.section-english');
+    var reference = section.querySelector('.native-reference');
+    function explanationLabels() {
+      if (!explanationButton) return;
+      explanationButton.textContent = explanation.hidden ? 'தமிழில் புரிந்துகொள்ள' : (tamil ? 'மொழிபெயர்ப்புக்குத் திரும்பு' : 'English-இல் படிக்க');
+      if (reference) reference.textContent = !content.hidden ? 'முழு விவரத்தை மறைக்க' : (tamil ? 'முழு விவரம் · தமிழ் மொழிபெயர்ப்பு' : 'முழு விவரம், கணக்கு, படம், கருவிகள் · English');
+    }
+    if (explanationButton) explanationButton.onclick = function () {
+      var show = explanation.hidden;
+      explanation.hidden = !show; content.hidden = show;
+      content.classList.remove('reference-open');
+      section.classList.toggle('show-tamil', show);
+      explanationButton.setAttribute('aria-expanded', String(show));
+      if (reference) reference.setAttribute('aria-expanded', 'false');
+      explanationLabels(); window.dispatchEvent(new Event('resize'));
+    };
+    if (reference) reference.onclick = function () {
+      content.hidden = !content.hidden;
+      content.classList.toggle('reference-open', !content.hidden);
+      reference.setAttribute('aria-expanded', String(!content.hidden));
+      explanationLabels(); window.dispatchEvent(new Event('resize'));
+    };
+
+    var englishHeads = section.querySelectorAll('.hci-en h3[id]');
+    section.querySelectorAll('.hci-ta h3').forEach(function (h, index) {
+      var english = englishHeads[index];
+      if (!english) return;
+      h.id = 'ta-' + english.id;
+      h.dataset.englishId = english.id;
+      h.dataset.englishText = english.textContent;
+    });
+    section.querySelectorAll('[data-ta-tool]').forEach(function (slot) {
+      var live = document.getElementById(slot.dataset.taTool);
+      if (!live) throw new Error('Missing shared tool: ' + slot.dataset.taTool);
+      var tool = live.closest('.tool');
+      var home = document.createElement('span');
+      tool.before(home); tools.push({tool:tool, home:home, slot:slot});
+    });
+  });
+  var data = JSON.parse(document.getElementById('hci-tamil-data').textContent);
+  var patterns = (data.patterns || []).map(function (p) { return {regex:new RegExp(p.pattern, p.flags || ''), replacement:p.replacement, selector:p.selector || null}; });
+  var textState = new WeakMap(), htmlState = new WeakMap(), attributeState = new WeakMap();
+  function fitTamilDiagrams() {
+    document.querySelectorAll('.tool svg:has(foreignObject)').forEach(function (svg) {
+      if (!svg.dataset.hciViewbox) svg.dataset.hciViewbox = svg.getAttribute('viewBox');
+      var box = svg.dataset.hciViewbox.split(/\s+/).map(Number);
+      svg.setAttribute('viewBox', tamil ? [box[0],box[1],box[2],box[3]*2].join(' ') : svg.dataset.hciViewbox);
+      svg.querySelectorAll('[y],[y1],[y2],[cy],[height]').forEach(function (el) {
+        ['y','y1','y2','cy','height'].forEach(function (attr) {
+          if (!el.hasAttribute(attr)) return;
+          var saved = 'data-hci-' + attr;
+          if (!el.hasAttribute(saved)) el.setAttribute(saved, el.getAttribute(attr));
+          var original = el.getAttribute(saved);
+          if (!isNaN(Number(original))) el.setAttribute(attr, tamil ? Number(original)*2 : original);
+        });
+      });
+    });
+  }
+  function translateLiveContent() {
+    fitTamilDiagrams();
+    var markupElements = document.querySelectorAll('.qt,.qe,.qo span,.tool p,.tool .out,.tool h4,.tool td,.tool th,.tool text,.tool foreignObject div');
+    markupElements.forEach(function (el) {
+      var current = el.innerHTML, saved = htmlState.get(el);
+      if (saved && current !== saved.ta) { htmlState.delete(el); saved = null; }
+      if (saved && !tamil) { el.innerHTML = saved.en; return; }
+      if (saved && current === saved.ta) return;
+      if (!tamil) return;
+      var prefix = '', suffix = '', content = current.trim();
+      if (el.matches('.qt')) {
+        var week = content.match(/(\s*<span class="qw">[\s\S]*?<\/span>)$/);
+        if (week) { suffix = week[1]; content = content.slice(0, -suffix.length).trim(); }
+      }
+      if (el.matches('.qt,.qe')) {
+        var parts = content.match(/^(<b>.*?<\/b>\s*)([\s\S]*)$/);
+        if (parts) { prefix = parts[1]; content = parts[2].trim(); }
+      }
+      if (Object.prototype.hasOwnProperty.call(data.markup, content)) {
+        var translated = prefix + data.markup[content] + suffix;
+        htmlState.set(el, {en:current, ta:translated}); el.innerHTML = translated;
+      }
+    });
+    document.querySelectorAll('[placeholder],[title],[aria-label]').forEach(function (el) {
+      if (el === button) return;
+      var saved = attributeState.get(el) || {};
+      ['placeholder','title','aria-label'].forEach(function (attr) {
+        var current = el.getAttribute(attr); if (!current) return;
+        if (saved[attr] && current === saved[attr].ta) {
+          if (!tamil) el.setAttribute(attr, saved[attr].en);
+          return;
+        }
+        if (tamil && data.strings[current]) {
+          saved[attr] = {en:current, ta:data.strings[current]}; el.setAttribute(attr, saved[attr].ta);
+        }
+      });
+      attributeState.set(el, saved);
+    });
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) {
+      if (!node.parentElement || node.parentElement.closest('script,style,textarea,.hci-language')) continue;
+      var value = node.nodeValue, saved = textState.get(node);
+      if (saved && value === saved.ta) {
+        if (!tamil) node.nodeValue = saved.en;
+        continue;
+      }
+      if (!tamil) continue;
+      var key = value.trim(), translated = data.strings[key];
+      if (!translated && /^\d+ unanswered$/.test(key)) translated = key.split(' ')[0] + ' விடையளிக்கப்படவில்லை';
+      if (!translated) {
+        var numbered = key.match(/^(\d+\.\s+)(.*)$/);
+        if (numbered && data.strings[numbered[2]]) translated = numbered[1] + data.strings[numbered[2]];
+      }
+      if (!translated) {
+        var video = key.match(/^(\d+\.\s+)(.*?) · (\d+) min$/);
+        if (video && data.strings[video[2]]) translated = video[1] + data.strings[video[2]] + ' · ' + video[3] + ' நிமிடம்';
+      }
+      var patterned = translated || key;
+      patterns.forEach(function (p) { if (p.selector && !node.parentElement.closest(p.selector)) return; p.regex.lastIndex = 0; patterned = patterned.replace(p.regex, p.replacement); });
+      if (patterned !== key) translated = patterned;
+      if (!translated) continue;
+      var output = value.replace(key, translated);
+      if (output !== value) { textState.set(node, {en:value, ta:output}); node.nodeValue = output; }
+    }
+    if (tamil) markupElements.forEach(function (el) {
+      var saved = htmlState.get(el);
+      if (saved) saved.ta = el.innerHTML;
+    });
+  }
+  document.addEventListener('click', function (event) {
+    var item = event.target.closest('.tool .ml li');
+    if (!tamil || !item) return;
+    var walker = document.createTreeWalker(item, NodeFilter.SHOW_TEXT), node;
+    while ((node = walker.nextNode())) {
+      var saved = textState.get(node);
+      if (saved && node.nodeValue === saved.ta) node.nodeValue = saved.en;
+    }
+  }, true);
+  var observer = new MutationObserver(function () { if (tamil) translateLiveContent(); });
+  observer.observe(document.body, {subtree:true, childList:true, characterData:true});
+  button.onclick = function () {
+    tamil = !tamil;
+    sections.forEach(function (section) {
+      var explanation = section.querySelector('.tamil-native');
+      var content = section.querySelector('.section-english');
+      var toggle = section.querySelector('.native-toggle');
+      var reference = section.querySelector('.native-reference');
+      if (explanation) explanation.hidden = true;
+      if (content) { content.hidden = false; content.classList.remove('reference-open'); }
+      section.classList.remove('show-tamil');
+      if (toggle) { toggle.setAttribute('aria-expanded','false'); toggle.textContent='தமிழில் புரிந்துகொள்ள'; }
+      if (reference) { reference.setAttribute('aria-expanded','false'); reference.textContent = tamil ? 'முழு விவரம் · தமிழ் மொழிபெயர்ப்பு' : 'முழு விவரம், கணக்கு, படம், கருவிகள் · English'; }
+    });
+    tools.forEach(function (item) {
+      if (tamil) item.slot.appendChild(item.tool);
+      else item.home.after(item.tool);
+    });
+    sections.forEach(function (section) {
+      var en = section.querySelector('.hci-en'), ta = section.querySelector('.hci-ta');
+      en.hidden = tamil; ta.hidden = !tamil;
+      var h = section.querySelector('h2'), number = h.querySelector('.num').outerHTML;
+      if (tamil) { h.innerHTML = number; h.appendChild(document.createTextNode(ta.dataset.title)); }
+      else h.innerHTML = h.dataset.english;
+      section.querySelectorAll('.hci-ta h3[data-english-id]').forEach(function (subheading) {
+        var target = tamil ? subheading.dataset.englishId : subheading.id;
+        var link = document.querySelector('#toc a[href="#' + target + '"]');
+        if (link) {
+          link.href = '#' + (tamil ? subheading.id : subheading.dataset.englishId);
+          link.lastElementChild.textContent = tamil ? subheading.textContent : subheading.dataset.englishText;
+        }
+      });
+      var toc = document.querySelector('#toc a[href="#' + h.id + '"]');
+      if (toc && toc.lastElementChild) toc.lastElementChild.textContent = tamil ? ta.dataset.title : h.dataset.t;
+    });
+    document.documentElement.lang = tamil ? 'ta' : 'en';
+    button.textContent = tamil ? 'English' : 'தமிழ்'; button.lang = tamil ? 'en' : 'ta';
+    button.setAttribute('aria-label', tamil ? 'Read original English' : 'Read the Tamil translation');
+    button.setAttribute('aria-pressed', String(tamil));
+    translateLiveContent();
+    window.dispatchEvent(new Event('resize'));
+  };
+})();
 </script></body></html>

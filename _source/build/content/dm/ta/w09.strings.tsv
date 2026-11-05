@@ -1,0 +1,28 @@
+Frequent Patterns & the Apriori Algorithm	அடிக்கடி நிகழும் வடிவங்களும் Apriori படிமுறையும்
+Market basket analysis, support and confidence, the Apriori property, the join and prune steps, a full worked example, and generating strong association rules.	சந்தைக் கூடைப் பகுப்பாய்வு, ஆதரவும் நம்பிக்கையும், Apriori பண்பு, இணைப்பு மற்றும் கிளை வெட்டுப் படிகள், முழுச் செய்முறை எடுத்துக்காட்டு, வலுவான தொடர்பு விதிகளை உருவாக்குதல்.
+Apriori Algorithm	Apriori படிமுறை
+Step-by-step Apriori on a transaction database.	பரிவர்த்தனைத் தரவுத்தளத்தில் படிப்படியான Apriori.
+Support and confidence	ஆதரவும் நம்பிக்கையும்
+Example: shirt and tie, 13.5% support	எடுத்துக்காட்டு: சட்டையும் கழுத்துப்பட்டியும், 13.5% ஆதரவு
+Example: rules from the frequent itemset ABE	எடுத்துக்காட்டு: அடிக்கடி நிகழும் ABE பொருட்கணத்திலிருந்து விதிகள்
+The Apriori algorithm: the idea	Apriori படிமுறை: கருத்து
+Generating (k+1) candidates from frequent k-itemsets	அடிக்கடி நிகழும் k-பொருட்கணங்களிலிருந்து (k+1) வேட்பாளர்களை உருவாக்குதல்
+Worked example: minimum support and level-wise passes	செய்முறை எடுத்துக்காட்டு: குறைந்தபட்ச ஆதரவும் நிலைவாரிச் சுற்றுகளும்
+Apriori pruning: infrequent subsets → infrequent supersets	Apriori கிளை வெட்டல்: அடிக்கடி நிகழாத உட்கணங்கள் → அடிக்கடி நிகழாத மேற்கணங்கள்
+Animation on Apriori (no narration)	Apriori இயங்குபடம் (பேச்சுரை இல்லை)
+Short silent animation of the level-wise search.	நிலைவாரித் தேடலின் குறுகிய அமைதி இயங்குபடம்.
+Apriori step-by-step machine	Apriori இயந்திரம்
+Transactions (one per line, items separated by commas)	பரிவர்த்தனைகள் (வரிக்கு ஒன்று, பொருட்கள் காற்புள்ளியால் பிரிக்கப்பட்டவை)
+min_sup (count)	min_sup (எண்ணிக்கை)
+min_conf %	min_conf (%)
+Run Apriori	Apriori-ஐ இயக்கு
+Join	இணைப்பு
+Prune	கிளை வெட்டு
+stop	நிறுத்து
+algorithm terminates	படிமுறை முடிகிறது
+nothing removed.	எதுவும் நீக்கப்படவில்லை.
+Association rules (from every frequent itemset of size ≥ 2)	தொடர்பு விதிகள் (அளவு ≥ 2 உடைய அடிக்கடி நிகழும் ஒவ்வொரு பொருட்கணத்திலிருந்தும்)
+Rule	விதி
+Confidence	நம்பிக்கை
+Strong?	வலுவானதா?
+✓ strong	✓ வலுவானது

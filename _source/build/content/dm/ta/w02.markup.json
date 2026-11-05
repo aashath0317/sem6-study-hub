@@ -1,0 +1,6 @@
+{
+ "Keep only the data relevant to the task. Task: <i>which age groups buy phones?</i> So keep Age and Item and drop Src and Amount.": "பணிக்குப் பொருத்தமான தரவுகளை மட்டும் வைத்திருக்கவும். பணி: <i>எந்த வயதுக் குழுக்கள் தொலைபேசிகளை வாங்குகின்றன?</i> எனவே வயதையும் பொருளையும் வைத்திருந்து மூலத்தையும் தொகையையும் நீக்கவும்.",
+ "Keep only the <b>truly interesting</b> patterns, e.g. those above the support and confidence thresholds.": "<b>உண்மையில் சுவாரசியமான</b> வடிவங்களை மட்டும் வைத்திருக்கவும்; எ.கா. ஆதரவு மற்றும் நம்பிக்கை வரம்புகளுக்கு மேலுள்ளவை.",
+ "📊 Dashboard: <i>'Young customers (20–29) are the main phone buyers. Target them in phone campaigns.'</i>": "📊 தகவல் பலகை: <i>'இளம் வாடிக்கையாளர்களே (20–29) முக்கியமாகத் தொலைபேசி வாங்குபவர்கள். தொலைபேசி விளம்பர இயக்கங்களில் அவர்களை இலக்காகக் கொள்ளுங்கள்.'</i>",
+ "Steps 1–4 are all forms of <b>data preprocessing</b>.": "1–4 படிகள் அனைத்தும் <b>தரவு முன்செயலாக்க</b> வடிவங்களாகும்."
+}

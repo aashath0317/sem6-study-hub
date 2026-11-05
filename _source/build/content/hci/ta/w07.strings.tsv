@@ -1,0 +1,96 @@
+Design Principles, Guidelines & Standards	வடிவமைப்புக் கொள்கைகள், வழிகாட்டுதல்கள், தரநிலைகள்
+The authority vs generality spectrum; Norman's principles, Nielsen's 10 heuristics and Shneiderman's 8 golden rules; the 15 universal design principles with live good-vs-bad demos.	அதிகார–பொதுத்தன்மை வரம்பு; நார்மனின் கொள்கைகள், நீல்சனின் 10 சுருக்கவிதிகள், ஷ்னைடர்மனின் 8 பொற்கொள்கைகள்; நல்ல–மோசமான நேரடிச் செயல்விளக்கங்களுடன் 15 பொதுவான வடிவமைப்புக் கொள்கைகள்.
+Principles, Guidelines and Standards	கொள்கைகள், வழிகாட்டுதல்கள், தரநிலைகள்
+How the three kinds of design rules differ.	மூன்று வகை வடிவமைப்பு விதிகளும் எவ்வாறு வேறுபடுகின்றன.
+Introduction: rules that govern design	அறிமுகம்: வடிவமைப்பை நிர்வகிக்கும் விதிகள்
+Design is free, but guided	வடிவமைப்பு சுதந்திரமானது; ஆனால் வழிகாட்டப்படுகிறது
+Principles: general and flexible	கொள்கைகள்: பொதுவானவை, நெகிழ்வானவை
+Standards: specific and enforced	தரநிலைகள்: குறிப்பானவை, அமலாக்கப்படுபவை
+Guidelines: in between	வழிகாட்டுதல்கள்: இரண்டுக்கும் இடையில்
+Generality vs authority (principles → guidelines → standards)	பொதுத்தன்மையும் அதிகாரமும் (கொள்கைகள் → வழிகாட்டுதல்கள் → தரநிலைகள்)
+ISO 9241: a user-centred design standard	ISO 9241: பயனர்மைய வடிவமைப்புத் தரநிலை
+Where the design principles come from	வடிவமைப்புக் கொள்கைகள் எங்கிருந்து வருகின்றன
+Common design principles	பொதுவான வடிவமைப்புக் கொள்கைகள்
+Design Principles – Different Presentations	வடிவமைப்புக் கொள்கைகள் — வெவ்வேறு வழங்கல்கள்
+The sets of principles proposed by different authors.	வெவ்வேறு ஆசிரியர்கள் முன்மொழிந்த கொள்கைத் தொகுப்புகள்.
+Different presentations of the principles	கொள்கைகளின் வெவ்வேறு வழங்கல்கள்
+Shneiderman's eight golden rules	ஷ்னைடர்மனின் எட்டுப் பொற்கொள்கைகள்
+Norman's design principles: knowledge in the head and in the world	நார்மனின் வடிவமைப்புக் கொள்கைகள்: மனதிலுள்ள அறிவும் உலகிலுள்ள அறிவும்
+Visibility of system state	முறைமை நிலை புலப்படுதல்
+Exploit the power of constraints	கட்டுப்பாடுகளின் சக்தியைப் பயன்படுத்துங்கள்
+Design for error: reversibility	பிழைக்காக வடிவமைத்தல்: மீளத் திருப்பக்கூடிய தன்மை
+Standardise when all else fails	மற்றவை அனைத்தும் தோல்வியடைந்தால் தரப்படுத்துங்கள்
+Nielsen's ten heuristics	நீல்சனின் பத்துச் சுருக்கவிதிகள்
+Recognition rather than recall	நினைவுகூர்வதைவிட அடையாளம் காணுதல்
+Help and documentation (the last heuristic)	உதவியும் ஆவணங்களும் (இறுதிச் சுருக்கவிதி)
+Constantine and Lockwood's six principles	கான்ஸ்டன்டைன் மற்றும் லாக்வுட்டின் ஆறு கொள்கைகள்
+Design Principles – Set 01	வடிவமைப்புக் கொள்கைகள் — தொகுப்பு 01
+The first group of the 15 principles.	15 கொள்கைகளின் முதல் குழு.
+Discoverability: making functions visible	கண்டறியக்கூடிய தன்மை: செயல்பாடுகளைப் புலப்படச் செய்தல்
+Minimise memory load (Nielsen)	நினைவுச் சுமையைக் குறைத்தல் (நீல்சன்)
+Feedback: timely and informative	பின்னூட்டம்: உரிய நேரத்தில் தகவலளிப்பது
+Different people need different feedback	வெவ்வேறு மக்களுக்கு வெவ்வேறு பின்னூட்டங்கள் தேவை
+Constraints: restrict incorrect actions	கட்டுப்பாடுகள்: தவறான செயல்களை வரையறுத்தல்
+Mapping: controls match their effects	பொருத்தம்: கட்டுப்பாடுகள் அவற்றின் விளைவுகளுடன் பொருந்துகின்றன
+Consistency	ஒரேமாதிரித்தன்மை
+Consistency vs continuous improvement	ஒரேமாதிரித்தன்மையும் தொடர்ச்சியான மேம்பாடும்
+Design Principles – Set 02	வடிவமைப்புக் கொள்கைகள் — தொகுப்பு 02
+The second group of principles.	கொள்கைகளின் இரண்டாவது குழு.
+Consistency in behaviour; familiarity	நடத்தையில் ஒரேமாதிரித்தன்மை; பரிச்சயம்
+Affordance: push vs pull handles	செயல்வாய்ப்பு: தள்ளும் மற்றும் இழுக்கும் பிடிகள்
+Structure: matching the user's mental model	கட்டமைப்பு: பயனரின் மன மாதிரியுடன் பொருந்துதல்
+Simplicity: minimal but sufficient	எளிமை: குறைவானது; ஆனால் போதுமானது
+Tolerance for user error	பயனர் பிழையைப் பொறுத்தல்
+Error prevention	பிழைத் தடுப்பு
+Equity vs equality: equitable use for all expertise levels	சமவாய்ப்பும் சமத்துவமும்: அனைத்து நிபுணத்துவ நிலைகளுக்கும் சமவாய்ப்புள்ள பயன்பாடு
+Flexibility: more than one way to do a thing	நெகிழ்வுத்தன்மை: ஒரு செயலைச் செய்ய ஒன்றுக்கு மேற்பட்ட வழிகள்
+Design Principles – Set 03	வடிவமைப்புக் கொள்கைகள் — தொகுப்பு 03
+The third group of principles.	கொள்கைகளின் மூன்றாவது குழு.
+Flexibility continued	நெகிழ்வுத்தன்மை தொடர்ச்சி
+Perceiving the current state	தற்போதைய நிலையை உணர்தல்
+Ease and comfort	எளிமையும் வசதியும்
+Example: minimising form-filling effort	எடுத்துக்காட்டு: படிவம் நிரப்பும் முயற்சியைக் குறைத்தல்
+Ease and comfort as interfaces grow complex	இடைமுகங்கள் சிக்கலாகும்போது எளிமையும் வசதியும்
+Easy to learn, self-explanatory designs	கற்பதற்கு எளிய, தானாகப் புரியும் வடிவமைப்புகள்
+🧪 Try it — Good vs bad: live principle demos	🧪 முயன்று பாருங்கள் — நல்லதும் மோசமானதும்: நேரடிக் கொள்கைச் செயல்விளக்கங்கள்
+Principle	கொள்கை
+4. Mapping	4. பொருத்தம்
+3. Constraints	3. கட்டுப்பாடுகள்
+9. Tolerance (undo)	9. பொறுத்தல் (செயல்தவிர்ப்பு)
+2. Feedback	2. பின்னூட்டம்
+12. Perceptibility	12. உணரக்கூடிய தன்மை
+Show the GOOD design	நல்ல வடிவமைப்பைக் காட்டு
+Click a knob to light a burner.	அடுப்பைப் பற்றவைக்க ஒரு கட்டுப்பாட்டுக் குமிழைச் சொடுக்குங்கள்.
+back-left	பின்-இடது
+back-right	பின்-வலது
+front-left	முன்-இடது
+front-right	முன்-வலது
+⬤ back-left	⬤ பின்-இடது
+⬤ back-right	⬤ பின்-வலது
+⬤ front-left	⬤ முன்-இடது
+⬤ front-right	⬤ முன்-வலது
+Good: knobs are laid out in the same arrangement as the burners, so the mapping is natural.	நல்லது: அடுப்புகளின் அதே அமைப்பில் கட்டுப்பாட்டுக் குமிழ்கள் இருப்பதால் பொருத்தம் இயல்பானது.
+Bad: four knobs in a row in an arbitrary order. You have to guess or memorise which knob is which.	மோசமானது: தன்னிச்சையான வரிசையில் நான்கு குமிழ்கள் ஒரே வரியில் உள்ளன. எந்தக் குமிழ் எதற்கானது என்று ஊகிக்கவோ நினைவில் வைக்கவோ வேண்டும்.
+Date of birth	பிறந்த தேதி
+Good: a date picker only allows valid dates, so the error is impossible.	நல்லது: தேதித் தெரிவி செல்லுபடியாகும் தேதிகளை மட்டுமே அனுமதிப்பதால் பிழை ஏற்பட முடியாது.
+type any date…	எந்தத் தேதியையும் உள்ளிடுங்கள்…
+Save	சேமி
+Bad: free text. Try "31/02/2026" or "yesterday".	மோசமானது: கட்டுப்பாடற்ற உரை. “31/02/2026” அல்லது “நேற்று” என்பதை முயலுங்கள்.
+❌ Error: invalid date format. (The interface allowed the error and then blamed you.)	❌ பிழை: செல்லாத தேதிவடிவம். (இடைமுகம் பிழையை அனுமதித்துவிட்டு உங்களைக் குற்றஞ்சாட்டியது.)
+📧 Meeting notes	📧 கூட்டக் குறிப்புகள்
+📧 Invoice #42	📧 விலைப்பட்டியல் #42
+📧 Holiday photos	📧 விடுமுறைப் புகைப்படங்கள்
+Click an email to delete it. Good: Undo is available.	மின்னஞ்சலை நீக்க அதைச் சொடுக்குங்கள். நல்லது: செயல்தவிர்ப்பு உள்ளது.
+Click an email to delete it. Bad: permanent delete with no undo.	மின்னஞ்சலை நீக்க அதைச் சொடுக்குங்கள். மோசமானது: செயல்தவிர்ப்பில்லாத நிரந்தர நீக்கம்.
+Undo	செயல்தவிர்
+Restored ✓	மீட்டமைக்கப்பட்டது ✓
+Send message	செய்தியை அனுப்பு
+Good: immediate progress, then clear confirmation.	நல்லது: உடனடி முன்னேற்றம்; பின்னர் தெளிவான உறுதிப்படுத்தல்.
+Bad: nothing happens visibly. Did it send? Users click again and send duplicates.	மோசமானது: புலப்படும்படி எதுவும் நடக்கவில்லை. அனுப்பப்பட்டதா? பயனர்கள் மீண்டும் சொடுக்கி நகல்களை அனுப்புகிறார்கள்.
+Sending…	அனுப்பப்படுகிறது…
+Payment failed:	கட்டணம் தோல்வியடைந்தது:
+card expired	அட்டை காலாவதியானது
+(colour + icon + text + border)	(நிறம் + சின்னம் + உரை + விளிம்பு)
+Good: redundant channels. Colour-blind users, or someone glancing quickly, still get it.	நல்லது: ஒன்றுக்கு மேற்பட்ட தகவல் வழிகள். நிறக்குருடு பயனருக்கும் விரைவாகப் பார்ப்பவருக்கும் புரிகிறது.
+Payment	கட்டணம்
+Bad: status shown only by a red dot. About 1 in 12 men can't reliably tell it from green.	மோசமானது: சிவப்புப் புள்ளி மூலம் மட்டுமே நிலை காட்டப்படுகிறது. சுமார் 12 ஆண்களில் ஒருவரால் பச்சையிலிருந்து அதை நம்பத்தகுந்தவாறு வேறுபடுத்த முடியாது.

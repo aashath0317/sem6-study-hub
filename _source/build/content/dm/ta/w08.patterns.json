@@ -1,0 +1,37 @@
+[
+  {
+    "pattern": "(\\d+)-D cuboids",
+    "replacement": "$1-D கனச்செவ்வகங்கள்",
+    "flags": "g"
+  },
+  {
+    "pattern": "Selected ",
+    "replacement": "தேர்ந்தெடுக்கப்பட்டது ",
+    "flags": "g"
+  },
+  {
+    "pattern": "All <b>2³ = 8</b> cells get \\+1 from this single base tuple\\.",
+    "replacement": "இந்த ஒற்றை அடிப்படை வரிசையிலிருந்து <b>2³ = 8</b> கலங்களுக்கும் +1 கிடைக்கிறது.",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\(count of each value\\)",
+    "replacement": "(ஒவ்வொரு பெறுமதியின் எண்ணிக்கை)",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\(identical rows merged\\)",
+    "replacement": "(ஒரே மாதிரியான வரிசைகள் இணைக்கப்பட்டன)",
+    "flags": "g"
+  },
+  {
+    "pattern": "(\\d+) rows → (\\d+) rows",
+    "replacement": "$1 வரிசைகள் → $2 வரிசைகள்",
+    "flags": "g"
+  },
+  {
+    "pattern": "\\(star-nodes\\):",
+    "replacement": "(நட்சத்திரக் கணுக்கள்):",
+    "flags": "g"
+  }
+]

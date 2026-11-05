@@ -1,0 +1,3 @@
+[
+ {"pattern":"^Standard cost per unit = ([\\d.-]+) · FOAR = ([\\d.-]+)/unit · standard profit = ([\\d.-]+)/unit · SQ = ([\\d.-]+) kg · SH = ([\\d.-]+) hrs$","replacement":"அலகொன்றுக்கான நியமச் செலவு = $1 · FOAR = அலகுக்கு $2 · நியம இலாபம் = அலகுக்கு $3 · SQ = $4 கி.கி. · SH = $5 மணிகள்"}
+]

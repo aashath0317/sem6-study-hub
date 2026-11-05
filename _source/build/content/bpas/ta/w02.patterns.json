@@ -1,0 +1,21 @@
+[
+ {"pattern":"\\(asset\\)","replacement":"(சொத்து)","flags":"g"},
+ {"pattern":"\\(liability\\)","replacement":"(பொறுப்பு)","flags":"g"},
+ {"pattern":"\\(capital\\)","replacement":"(மூலதனம்)","flags":"g"},
+ {"pattern":"\\(income\\)","replacement":"(வருமானம்)","flags":"g"},
+ {"pattern":"\\(expense\\)","replacement":"(செலவு)","flags":"g"},
+ {"pattern":"\\(drawings\\)","replacement":"(எடுப்பனவுகள்)","flags":"g"},
+ {"pattern":"^Balance: ([\\d,.-]+) Dr$","replacement":"மீதி: $1 பற்று"},
+ {"pattern":"^Balance: ([\\d,.-]+) Cr$","replacement":"மீதி: $1 வரவு"},
+ {"pattern":"^Cash ([\\d,.-]+)$","replacement":"காசு $1"},
+ {"pattern":"^Capital ([\\d,.-]+)$","replacement":"மூலதனம் $1"},
+ {"pattern":"^Bank loan ([\\d,.-]+)$","replacement":"வங்கிக் கடன் $1"},
+ {"pattern":"^Motor vehicle ([\\d,.-]+)$","replacement":"மோட்டார் வாகனம் $1"},
+ {"pattern":"^Purchases ([\\d,.-]+)$","replacement":"கொள்வனவுகள் $1"},
+ {"pattern":"^Creditors ([\\d,.-]+)$","replacement":"கடன்கொடுநர்கள் $1"},
+ {"pattern":"^Debtors ([\\d,.-]+)$","replacement":"கடன்படுநர்கள் $1"},
+ {"pattern":"^Sales ([\\d,.-]+)$","replacement":"விற்பனைகள் $1"},
+ {"pattern":"^Rent expense ([\\d,.-]+)$","replacement":"வாடகைச் செலவு $1"},
+ {"pattern":"^Drawings ([\\d,.-]+)$","replacement":"எடுப்பனவுகள் $1"},
+ {"pattern":"^Rs ([\\d,.-]+)$","replacement":"ரூ. $1"}
+]

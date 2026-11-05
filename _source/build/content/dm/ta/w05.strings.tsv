@@ -1,0 +1,32 @@
+Introduction to Data Warehousing	தரவுக் கிடங்காக்கல் அறிமுகம்
+What a data warehouse is (Inmon's 4 keywords), OLTP vs OLAP, why keep it separate, and the multidimensional data model — cubes, facts, dimensions and the lattice of cuboids.	தரவுக் கிடங்கு என்றால் என்ன (இன்மனின் 4 முக்கிய சொற்கள்), OLTP மற்றும் OLAP, தனியாக வைத்திருப்பதன் காரணம், பல்பரிமாணத் தரவு மாதிரி — கனசதுரங்கள், உண்மைகள், பரிமாணங்கள், கனச்செவ்வகங்களின் பின்னல்.
+Lecture overview of data warehouses and the multidimensional model.	தரவுக் கிடங்குகளும் பல்பரிமாண மாதிரியும் பற்றிய விரிவுரைக் கண்ணோட்டம்.
+The need for data warehouses	தரவுக் கிடங்குகளின் தேவை
+Heterogeneous sources: scientific, health, transactional data	பல்வகை மூலங்கள்: அறிவியல், சுகாதாரம், பரிவர்த்தனைத் தரவு
+Integrating multiple sources into one store	பல மூலங்களை ஒரு சேமிப்பகத்தில் ஒருங்கிணைத்தல்
+The metadata repository	மேல்தரவுச் சேமிப்பகம்
+Definition: subject-oriented, integrated, time-variant, non-volatile	வரையறை: பொருள் நோக்கியது, ஒருங்கிணைக்கப்பட்டது, காலத்துடன் மாறுபடுவது, நிலையழியாதது
+Integrated: sources, cleaning, consistency	ஒருங்கிணைக்கப்பட்டது: மூலங்கள், தூய்மைப்படுத்தல், சீர்மை
+Time-variant: long time horizon	காலத்துடன் மாறுபடுவது: நீண்ட கால வீச்சு
+Non-volatile: lecture simplification and the recovery/concurrency qualification in the notes	நிலையழியாதது: விரிவுரையின் எளிமைப்படுத்தலும் குறிப்புகளிலுள்ள மீட்பு/ஒரேநேர விளக்கமும்
+Data Mining with Weka 1.1 – Introduction	Weka-வுடன் தரவுச் சுரங்கம் 1.1 – அறிமுகம்
+Ian Witten's introduction to the Weka course and the Weka workbench.	Weka பாடநெறியையும் Weka பணித்தளத்தையும் Ian Witten அறிமுகப்படுத்துகிறார்.
+Welcome to Data Mining with Weka	Weka-வுடன் தரவுச் சுரங்கத்துக்கு வரவேற்கிறோம்
+We're overwhelmed with data: credit cards, coupons	தரவால் சூழப்பட்டுள்ளோம்: கடன் அட்டைகள், கூப்பன்கள்
+Applications: e.g. IVF embryo selection	பயன்பாடுகள்: எ.கா. IVF கருத் தேர்வு
+What Weka is	Weka என்றால் என்ன
+Course structure: classes and lessons	பாடநெறி அமைப்பு: வகுப்புகளும் பாடங்களும்
+Using Weka on your own data	உங்கள் சொந்தத் தரவில் Weka-வைப் பயன்படுத்துதல்
+Cube & cuboid explorer	கனச்செவ்வகப் பின்னல் மற்றும் மேல்சுருக்க ஆராய்வுக் கருவி
+time	காலம்
+item	பொருள்
+location	இடம்
+supplier	வழங்குநர்
+dollars_sold	விற்ற_டொலர்கள்
+home ent.	வீட்டுப் பொழுதுபோக்கு
+computer	கணினி
+phone	தொலைபேசி
+security	பாதுகாப்பு
+all	அனைத்தும்
+4-D base	4-D அடிப்படை
+0-D apex	0-D உச்சி

@@ -1,0 +1,102 @@
+[
+  {
+    "pattern": " components covered",
+    "replacement": " கூறுகள் உள்ளடக்கப்பட்டுள்ளன",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "\\. Still missing: ",
+    "replacement": ". இன்னும் விடுபட்டவை: ",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Executive\\ summary\\ \\(narrator\\ of\\ the\\ plan\\)",
+    "replacement": "நிறைவேற்றுச் சுருக்கம் (திட்டத்தின் கதைசொல்லி)",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Company\\ information\\ \\(vision,\\ mission,\\ history,\\ performance\\)",
+    "replacement": "நிறுவனத் தகவல் (தொலைநோக்கு, பணிக்கூற்று, வரலாறு, செயலாற்றல்)",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Macro\\ environment\\ \\(demographic,\\ economic,\\ natural,\\ technological,\\ political\\-legal,\\ socio\\-cultural\\)",
+    "replacement": "பரந்த சூழல் (மக்கள்தொகை, பொருளாதாரம், இயற்கை, தொழில்நுட்பம், அரசியல்-சட்டம், சமூக-பண்பாடு)",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Current\\ situation:\\ customers",
+    "replacement": "தற்போதைய நிலைமை: வாடிக்கையாளர்கள்",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Current\\ situation:\\ competitors",
+    "replacement": "தற்போதைய நிலைமை: போட்டியாளர்கள்",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Suppliers",
+    "replacement": "வழங்குநர்கள்",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Marketing\\ channels\\ and\\ logistics",
+    "replacement": "சந்தைப்படுத்தல் வழிகளும் தளவாடமும்",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "SWOT\\ analysis",
+    "replacement": "SWOT பகுப்பாய்வு",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Objectives\\ and\\ issues",
+    "replacement": "நோக்கங்களும் சிக்கல்களும்",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Segmentation\\ and\\ targeting",
+    "replacement": "பிரிவாக்கமும் இலக்கிடலும்",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Positioning\\ \\(map\\ and\\ statement\\)",
+    "replacement": "நிலைப்படுத்தல் (வரைபடமும் கூற்றும்)",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Product\\ strategy\\ \\(attributes,\\ brand,\\ packaging,\\ labelling\\)",
+    "replacement": "தயாரிப்பு உத்தி (பண்புகள், வர்த்தகநாமம், பொதியிடல், அடையாளச்சீட்டிடல்)",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Pricing\\ strategy\\ \\(suggested\\ price\\)",
+    "replacement": "விலையிடல் உத்தி (பரிந்துரைக்கப்படும் விலை)",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Distribution\\ strategy",
+    "replacement": "விநியோக உத்தி",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Communication\\ strategy\\ \\(promo\\ mix,\\ push\\ vs\\ pull\\)",
+    "replacement": "தொடர்பாடல் உத்தி (மேம்படுத்தல் கலவை, தள்ளுதலும் இழுத்தலும்)",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Action\\ programmes\\ \\(what,\\ when,\\ who,\\ cost\\)",
+    "replacement": "செயற்திட்டங்கள் (என்ன, எப்போது, யார், செலவு)",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Marketing\\ budget\\ \\(projected\\ P\\&L\\)",
+    "replacement": "சந்தைப்படுத்தல் வரவுசெலவுத் திட்டம் (முன்மதிப்பிடப்பட்ட இலாபநட்டம்)",
+    "selector": ".tool"
+  },
+  {
+    "pattern": "Controls\\ \\(monitoring,\\ ROI\\)",
+    "replacement": "கட்டுப்பாடுகள் (கண்காணிப்பு, ROI)",
+    "selector": ".tool"
+  }
+]

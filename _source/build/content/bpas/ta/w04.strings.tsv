@@ -1,0 +1,47 @@
+Capital vs Revenue Expenditure, the Ledger & the Trial Balance	மூலதன மற்றும் வருவாய்ச் செலவினங்கள், பேரேடு, சோதனை மீதி
+Telling capital expenditure from revenue expenditure, the general ledger and its classification, posting and balancing ledger accounts, preparing a trial balance, its purposes and its limitations (errors it can't detect), with a full worked example.	மூலதன மற்றும் வருவாய்ச் செலவினங்களை வேறுபடுத்துதல், பொதுப் பேரேடும் வகைப்பாடும், பேரேட்டுக் கணக்குகளைப் பதிந்து மீதிகட்டுதல், சோதனை மீதி தயாரித்தல், நோக்கங்களும் வரம்புகளும் (கண்டறிய முடியாத பிழைகள்), முழுமையான தீர்வுடன் எடுத்துக்காட்டு.
+🧪 Try it — Which errors does a trial balance catch?	🧪 முயன்று பாருங்கள் — சோதனை மீதி எந்தப் பிழைகளைக் கண்டறிகிறது?
+Error	பிழை
+Omission: transaction not recorded at all	விடுபாடு: பரிவர்த்தனை முற்றிலும் பதியப்படவில்லை
+Commission: right type, wrong person (Dr Kamal instead of Kamani)	செயற்பிழை: சரியான வகை, தவறான நபர் (கமனிக்குப் பதிலாக கமலுக்குப் பற்று)
+Principle: van repair debited to the Motor vehicle account	கொள்கை: வான் திருத்தச் செலவை மோட்டார் வாகனக் கணக்கில் பற்று வைத்தல்
+Original entry: wrong amount (Rs 540 recorded as 450) on both sides	ஆரம்பப் பதிவு: இரு பக்கங்களிலும் தவறான தொகை (ரூ. 540ஐ 450 எனப் பதிதல்)
+Complete reversal: Dr and Cr swapped	முழு எதிர்மாற்று: பற்றும் வரவும் இடம்மாற்றப்பட்டன
+Compensating: two errors cancel out	ஈடுசெய்தல்: இரண்டு பிழைகள் ஒன்றையொன்று ஈடுசெய்கின்றன
+Single-sided: debit posted but no credit	ஒருபக்கப் பதிவு: பற்று பதியப்பட்டது; வரவு இல்லை
+Transposition in one account only (540 → 450)	ஒரு கணக்கில் மட்டும் இலக்க இடம்மாற்றம் (540 → 450)
+Casting (addition) error in one account	ஒரு கணக்கில் கூட்டல் பிழை
+Balance extracted to the wrong side of the TB	சோதனை மீதியின் தவறான பக்கத்தில் மீதியை எடுத்தெடுத்தல்
+Both the debit and credit are missing, so totals still agree.	பற்றும் வரவும் இரண்டும் விடுபட்டதால் மொத்தங்கள் இன்னும் சமப்படுகின்றன.
+The right amount is on the right side, just in the wrong personal account.	சரியான தொகை சரியான பக்கத்தில் உள்ளது; தவறான ஆள்சார் கணக்கில் மட்டும் பதியப்பட்டுள்ளது.
+A revenue item went to a capital account (or vice versa). Amounts still balance, but the financial statements are wrong.	வருவாய் உருப்படி மூலதனக் கணக்கில் பதியப்பட்டது (அல்லது மாறாக). தொகைகள் இன்னும் சமப்படுகின்றன; ஆனால் நிதிக் கூற்றுகள் தவறானவை.
+The wrong figure is used on both sides, so it balances.	இரு பக்கங்களிலும் தவறான எண் பயன்படுத்தப்பட்டதால் சமப்படுகிறது.
+Both entries are present and equal, just on the wrong sides.	இரு பதிவுகளும் உள்ளன; சமமானவை; தவறான பக்கங்களில் மட்டும் உள்ளன.
+One error is cancelled by an equal opposite error.	ஒரு பிழையைச் சமமான எதிர்ப்பிழை ஈடுசெய்கிறது.
+Only one side was posted, so the debit and credit totals differ.	ஒரு பக்கம் மட்டுமே பதியப்பட்டதால் பற்று, வரவு மொத்தங்கள் வேறுபடுகின்றன.
+Only one side has the swapped digits, so the totals differ (and the difference is divisible by 9!).	ஒரு பக்கத்தில் மட்டுமே இலக்கங்கள் இடம்மாற்றப்பட்டதால் மொத்தங்கள் வேறுபடுகின்றன (வேறுபாடு 9ஆல் வகுபடும்!).
+The account balance is wrong, so the TB totals differ.	கணக்கு மீதி தவறாக இருப்பதால் சோதனை மீதி மொத்தங்கள் வேறுபடுகின்றன.
+A Dr balance listed as Cr shifts twice the amount between the sides.	பற்று மீதியை வரவாகப் பட்டியலிடுவது இரு பக்கங்களுக்கிடையே இருமடங்குத் தொகை மாற்றத்தை ஏற்படுத்துகிறது.
+✗ NOT detected: TB still balances	✗ கண்டறியப்படவில்லை: சோதனை மீதி இன்னும் சமப்படுகிறது
+✓ Detected: TB does not balance	✓ கண்டறியப்பட்டது: சோதனை மீதி சமப்படவில்லை
+The difference is put into a suspense account until the error is found.	பிழை கண்டறியப்படும்வரை வேறுபாடு அனாமத்துக் கணக்கில் இடப்படுகிறது.
+🧪 Try it — Trial balance builder	🧪 முயன்று பாருங்கள் — சோதனை மீதி உருவாக்கி
+Type ledger balances (Name, amount, Dr/Cr), one per line. The tool sorts and totals them.	பேரேட்டு மீதிகளை (பெயர், தொகை, Dr/Cr), வரிக்கு ஒன்று என்றவாறு தட்டச்சு செய்யுங்கள். கருவி அவற்றை வகைப்படுத்திக் கூட்டுகிறது.
+Account	கணக்கு
+Dr	பற்று
+Cr	வரவு
+Total	மொத்தம்
+Cash	காசு
+Bank	வங்கி
+Capital	மூலதனம்
+Purchases	கொள்வனவுகள்
+Sales	விற்பனைகள்
+Rent	வாடகை
+Carriage	ஏற்றிச்செல்லும் செலவு
+✓ The trial balance agrees	✓ சோதனை மீதி சமப்படுகிறது
+(but remember: it can still hide errors of omission, commission, principle and so on).	(ஆனால் நினைவில் கொள்க: விடுபாடு, செயற்பிழை, கொள்கை போன்ற பிழைகள் இன்னும் மறைந்திருக்கலாம்).
+→ open a	→ திறக்கவும்:
+suspense account	அனாமத்துக் கணக்கு
+The difference is divisible by 9, so suspect a	வேறுபாடு 9ஆல் வகுபடுவதால் சந்தேகிக்க வேண்டியது:
+transposition	இலக்க இடம்மாற்று
+error.	பிழை.

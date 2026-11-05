@@ -1,0 +1,49 @@
+Evaluation — Measuring Usability	மதிப்பீடு — பயன்பாட்டுத் திறனை அளவிடுதல்
+Why evaluation is the core of user-centred design, matching evaluation to the prototype's functions and stage, qualitative → usability → quantitative feedback across the design life cycle, the three types of evaluation (qualitative, empirical, predictive), and four key terms (reliability, validity, generalisability, precision).	மதிப்பீடு ஏன் பயனர்மைய வடிவமைப்பின் மையம்; முன்மாதிரியின் செயல்பாடுகளுக்கும் நிலைக்கும் மதிப்பீட்டைப் பொருத்துதல்; வடிவமைப்பு வாழ்க்கைச் சுழற்சி முழுவதும் தரம்சார் → பயன்பாட்டுத் திறன் → அளவுசார் பின்னூட்டம்; மூன்று மதிப்பீட்டு வகைகள் (தரம்சார், அனுபவச் சான்றுசார், முன்கணிப்பு); நான்கு முக்கியச் சொற்கள் (நம்பகத்தன்மை, செல்லுபடித்தன்மை, பொதுமைப்படுத்தக்கூடிய தன்மை, நுண்துல்லியம்).
+Evaluation	மதிப்பீடு
+What evaluation is, how it changes across the design stages, the three evaluation types, and reliability, validity, generalisability and precision.	மதிப்பீடு என்றால் என்ன; வடிவமைப்பு நிலைகளில் அது எப்படி மாறுகிறது; மூன்று மதிப்பீட்டு வகைகள்; நம்பகத்தன்மை, செல்லுபடித்தன்மை, பொதுமைப்படுத்தக்கூடிய தன்மை, நுண்துல்லியம்.
+Evaluation: measuring how usable the interface is	மதிப்பீடு: இடைமுகம் எவ்வளவு பயன்படுத்தக்கூடியது என்பதை அளவிடுதல்
+Evaluation is the core of user-centred design	மதிப்பீடு பயனர்மைய வடிவமைப்பின் மையம்
+Feedback on what we designed, not what we planned	நாம் திட்டமிட்டதை அல்ல; வடிவமைத்ததைப் பற்றிய பின்னூட்டம்
+The prototype serves different functions at different stages	முன்மாதிரி வெவ்வேறு நிலைகளில் வெவ்வேறு செயல்பாடுகளைச் செய்கிறது
+Match the evaluation method to the prototype	மதிப்பீட்டு முறையை முன்மாதிரியுடன் பொருத்துங்கள்
+Early stage: qualitative feedback and preferences	தொடக்க நிலை: தரம்சார் பின்னூட்டமும் விருப்பங்களும்
+Middle stage: is it usable? Workload, intuitive, easy to learn	இடைநிலை: பயன்படுத்தக்கூடியதா? பணிச்சுமை, இயல்பாகப் புரிதல், கற்றல் எளிமை
+Late stage: quantitative measures (time, jobs, sales)	இறுதிநிலை: அளவுசார் அளவீடுகள் (நேரம், வேலைகள், விற்பனை)
+Summary across the stages	நிலைகளின் சுருக்கம்
+Evaluation is a journey: iterate	மதிப்பீடு ஒரு பயணம்: மீளச்செய்யுங்கள்
+Three types: qualitative, empirical, predictive	மூன்று வகைகள்: தரம்சார், அனுபவச் சான்றுசார், முன்கணிப்பு
+Empirical: controlled experiments	அனுபவச் சான்றுசார்: கட்டுப்படுத்தப்பட்ட சோதனைகள்
+Predictive: no users, a model of the human	முன்கணிப்பு: பயனர்கள் இல்லை; மனித மாதிரி
+Key terms: reliability, validity, generalisability, precision	முக்கியச் சொற்கள்: நம்பகத்தன்மை, செல்லுபடித்தன்மை, பொதுமைப்படுத்தக்கூடிய தன்மை, நுண்துல்லியம்
+Reliability: consistent over time	நம்பகத்தன்மை: காலப்போக்கில் ஒரேமாதிரியாக இருத்தல்
+Validity: how accurately it measures reality	செல்லுபடித்தன்மை: நிஜத்தை எவ்வளவு சரியாக அளக்கிறது
+Generalisability: applying lessons to a broader audience	பொதுமைப்படுத்தக்கூடிய தன்மை: கற்றதைப் பரந்த பயனர் தொகுதிக்குப் பயன்படுத்துதல்
+Precision: how specific the assessment is	நுண்துல்லியம்: மதிப்பீடு எவ்வளவு நுணுக்கமானது
+🧪 Try it — Which evaluation fits?	🧪 முயன்று பாருங்கள் — எந்த மதிப்பீடு பொருந்துகிறது?
+Design stage	வடிவமைப்பு நிலை
+Early: concept / rough sketch	தொடக்கம்: கருத்து / தோராயமான வரைபடம்
+Middle: working prototype	இடைநிலை: செயல்படும் முன்மாதிரி
+Late: near-final design	இறுதிநிலை: ஏறத்தாழ முடிவடைந்த வடிவமைப்பு
+Users available?	பயனர்கள் கிடைக்கிறார்களா?
+Yes	ஆம்
+No	இல்லை
+Qualitative feedback	தரம்சார் பின்னூட்டம்
+Ask about preferences: colour theme, concept, prominence, readability.	விருப்பங்களைக் கேளுங்கள்: நிறத் தோற்றம், கருத்து, முனைப்பு, வாசிப்புத்தன்மை.
+"Which of these patterns do you like most?"	“இந்த வடிவங்களில் உங்களுக்கு மிகவும் பிடித்தது எது?”
+Usability evaluation	பயன்பாட்டுத் திறன் மதிப்பீடு
+Check workload, intuitiveness and learnability; design the questions around usability.	பணிச்சுமை, இயல்பாகப் புரிதல், கற்றல் எளிமை ஆகியவற்றைச் சரிபாருங்கள்; பயன்பாட்டுத் திறனை மையமாகக் கொண்டு கேள்விகளை வடிவமையுங்கள்.
+"Was this easy to learn? Did it reduce your work?"	“இதைக் கற்பது எளிதாக இருந்ததா? உங்கள் வேலையைக் குறைத்ததா?”
+Quantitative (empirical) evaluation	அளவுசார் (அனுபவச் சான்றுசார்) மதிப்பீடு
+Measure numbers: task time, jobs completed per day, sales volume. Use controlled experiments.	எண்களை அளவிடுங்கள்: பணி நேரம், நாளொன்றில் முடித்த வேலைகள், விற்பனை அளவு. கட்டுப்படுத்தப்பட்ட சோதனைகளைப் பயன்படுத்துங்கள்.
+"Form submission time fell from 4 min to 2.5 min."	“படிவச் சமர்ப்பிப்பு நேரம் 4 நிமிடத்திலிருந்து 2.5 நிமிடமாகக் குறைந்தது.”
+Predictive evaluation	முன்கணிப்பு மதிப்பீடு
+🧪 Try it — Precision levels	🧪 முயன்று பாருங்கள் — நுண்துல்லிய நிலைகள்
+Distance in km	கி.மீ.யில் தொலைவு
+Reported as	குறிப்பிடப்படும் விதம்
+Precision	நுண்துல்லியம்
+nearest km	அருகிலுள்ள கி.மீ. அளவில்
+nearest 100 m	அருகிலுள்ள 100 மீ. அளவில்
+nearest 10 m	அருகிலுள்ள 10 மீ. அளவில்
+nearest metre	அருகிலுள்ள மீட்டர் அளவில்
+More precision isn't always needed. Choose the level the evaluation actually requires.	அதிக நுண்துல்லியம் எப்போதும் தேவையில்லை. மதிப்பீட்டுக்கு உண்மையில் தேவையான நிலையைத் தேர்வுசெய்யுங்கள்.

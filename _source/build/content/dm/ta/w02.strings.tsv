@@ -1,0 +1,43 @@
+The Knowledge Discovery (KDD) Process	அறிவுக் கண்டறிதல் (KDD) செயல்முறை
+The 7 steps from raw data to knowledge, the architecture of a data-mining system, the kinds of data we can mine, and the five task primitives.	மூலத் தரவிலிருந்து அறிவை அடையும் 7 படிகள், தரவுச் சுரங்க முறைமையின் கட்டமைப்பு, சுரங்கம் செய்யக்கூடிய தரவு வகைகள், ஐந்து பணி அடிப்படைக் கூறுகள்.
+Walk through the KDD process	KDD செயல்முறையின் படிகளைப் பாருங்கள்
+◀ Back	◀ பின்னே
+Next step ▶	அடுத்த படி ▶
+Raw data	மூலத் தரவு
+Cleaning	தூய்மைப்படுத்தல்
+Integration	ஒருங்கிணைப்பு
+Selection	தேர்வு
+Transformation	உருமாற்றம்
+Pattern evaluation	வடிவ மதிப்பீடு
+Presentation	வழங்குதல்
+Three branch databases hold sales records. Some rows are messy.	மூன்று கிளைத் தரவுத்தளங்களில் விற்பனைப் பதிவுகள் உள்ளன. சில வரிகள் ஒழுங்கற்றவை.
+Remove noise and inconsistent data. Age −3 is impossible, the missing amount is filled with the item's average, and 'phone' becomes 'Phone'.	இரைச்சலையும் முரண்பாடான தரவுகளையும் அகற்றவும். வயது −3 சாத்தியமற்றது; விடுபட்ட தொகை பொருளின் சராசரியால் நிரப்பப்படுகிறது; 'phone' என்பது 'Phone' ஆகிறது.
+Combine the sources. The three branch databases become one store, and duplicate customers are matched.	மூலங்களை இணைக்கவும். மூன்று கிளைத் தரவுத்தளங்களும் ஒரு சேமிப்பகமாகின்றன; நகல் வாடிக்கையாளர்கள் பொருத்தப்படுகின்றனர்.
+Consolidate into a form suitable for mining, e.g. by generalising or aggregating ages into groups.	சுரங்கத்துக்கு ஏற்ற வடிவமாக ஒருங்குதிரட்டவும்; எ.கா. வயதுகளைப் பொதுமைப்படுத்தியோ குழுக்களாகத் திரட்டியோ மாற்றுதல்.
+Apply an intelligent method (association, classification, clustering…) to extract patterns.	வடிவங்களைப் பிரித்தெடுக்க நுண்ணறிவு முறையைப் பயன்படுத்தவும் (தொடர்பு விதி, வகைப்படுத்தல், குழுமமாக்கல்…).
+Show the knowledge to the user with visualisations: charts, rules, tables, trees.	விளக்கப்படங்கள், விதிகள், அட்டவணைகள், மரங்கள் போன்ற காட்சிப்படுத்தல்களால் பயனருக்கு அறிவைக் காட்டவும்.
+Src	மூலம்
+Cust	வாடிக்கையாளர்
+Age	வயது
+Item	பொருள்
+Amount	தொகை
+Colombo	கொழும்பு
+Kandy	கண்டி
+Galle	காலி
+Phone	தொலைபேசி
+phone	தொலைபேசி
+TV	தொலைக்காட்சி
+Laptop	மடிக்கணினி
+AgeGroup	வயதுக் குழு
+Count	எண்ணிக்கை
+Colombo DB + Kandy DB + Galle DB →	கொழும்பு தரவுத்தளம் + கண்டி தரவுத்தளம் + காலி தரவுத்தளம் →
+one unified table	ஓர் ஒருங்கிணைந்த அட்டவணை
+(for example, a data warehouse).	(எடுத்துக்காட்டாக, ஒரு தரவுக் கிடங்கு).
+Pattern found:	கண்டறியப்பட்ட வடிவம்:
+The knowledge can also be stored back into the knowledge base.	அறிவை மீண்டும் அறிவுத் தளத்திலும் சேமிக்கலாம்.
+truly interesting	உண்மையில் சுவாரசியமான
+Keep only the	மட்டுமே வைத்திருக்கவும்:
+patterns, e.g. those above the support and confidence thresholds.	வடிவங்கள்; எ.கா. ஆதரவு மற்றும் நம்பிக்கை வரம்புகளுக்கு மேலுள்ளவை.
+Steps 1–4 are all forms of	1–4 படிகள் அனைத்தும்
+ data preprocessing	தரவு முன்செயலாக்கம்
+🧪 Try it — Walk through the KDD process	🧪 முயன்று பாருங்கள் — KDD செயல்முறையின் படிகளைப் பாருங்கள்

@@ -1,0 +1,39 @@
+The Human as an Information Processor	தகவல் செயலாக்கியாக மனிதர்
+Perceptual, cognitive and motor systems; vision, hearing and touch in UI design; sensory memory, STM (Miller's 7 ± 2, chunking) and LTM; cognitive load; attention; motor skills.	புலனுணர்வு, அறிவாற்றல், இயக்க முறைமைகள்; UI வடிவமைப்பில் பார்வை, கேள்வி, தொடுதல்; புலன்சார் நினைவு, STM (மில்லரின் 7 ± 2, தொகுதியாக்கல்), LTM; அறிவாற்றல் சுமை; கவனம்; இயக்கத் திறன்கள்.
+🧪 Try it — Short-term memory experiment	🧪 முயன்று பாருங்கள் — குறுகியகால நினைவுச் சோதனை
+Press a button, memorise the sequence for 3 seconds, then type what you remember. Compare random letters with familiar chunks.	ஒரு பொத்தானை அழுத்தி, வரிசையை 3 நொடிகள் நினைவில் வைத்து, நினைவிருப்பதைத் தட்டச்சு செய்யுங்கள். சீரற்ற எழுத்துகளைப் பரிச்சயமான தொகுதிகளுடன் ஒப்பிடுங்கள்.
+Random letters (9)	சீரற்ற எழுத்துகள் (9)
+Same 9 letters as familiar chunks	அதே 9 எழுத்துகள் பரிச்சயமான தொகுதிகளாக
+10 random digits	10 சீரற்ற இலக்கங்கள்
+Check	சரிபார்
+• • • (hidden) • • •	• • • (மறைக்கப்பட்டது) • • •
+Answer:	விடை:
+· you got	· சரியான இடத்தில் நீங்கள் பெற்றவை
+in the right position.	.
+9 letters became just	9 எழுத்துகள் வெறும்
+3 chunks	3 தொகுதிகளாகின
+(BBC, IBM…), well within STM capacity. That is the power of chunking plus semantic LTM.	(BBC, IBM…), STM கொள்ளளவுக்குள் எளிதாக அடங்குகின்றன. இதுவே தொகுதியாக்கலுடன் பொருள்சார் LTM இணைவதன் ஆற்றல்.
+Random items each take up a "slot". 9–10 of them exceed the realistic STM capacity of about 4–5 items, so most people lose some.	சீரற்ற ஒவ்வொரு உருப்படியும் ஒரு “இடத்தை” எடுத்துக்கொள்கிறது. 9–10 உருப்படிகள், நடைமுறை STM கொள்ளளவான சுமார் 4–5 உருப்படிகளை மீறுவதால் பெரும்பாலோர் சிலவற்றை மறந்துவிடுகிறார்கள்.
+🧪 Try it — Chunk it yourself	🧪 முயன்று பாருங்கள் — நீங்களே தொகுதியாக்குங்கள்
+Any long string (phone, card, ID number)	நீண்ட சரம் ஏதேனும் (தொலைபேசி, அட்டை, அடையாள எண்)
+Chunk size	தொகுதியின் அளவு
+✓ fits comfortably in STM (4–5)	✓ STM-இல் எளிதாக அடங்குகிறது (4–5)
+✗ still more than about 5 chunks	✗ இன்னும் சுமார் 5 தொகுதிகளுக்கு அதிகமாக உள்ளது
+🧪 Try it — Mental bandwidth meter	🧪 முயன்று பாருங்கள் — மன வள அளவி
+Task complexity	பணிச் சிக்கல்
+Visual clutter	காட்சிக் குழப்பம்
+Someone watching you	ஒருவர் உங்களைப் பார்க்கிறார்
+OVERLOAD: errors spike and performance collapses	அதிகச் சுமை: பிழைகள் உயர்ந்து செயல்திறன் சரிகிறது
+UNDERLOAD: boredom and a wandering mind	குறைந்த சுமை: சலிப்பும் அலைபாயும் மனமும்
+Healthy load: focused and productive	சீரான சுமை: கவனமும் பயனுள்ள செயல்பாடும்
+Human as an Information Processing Machine	தகவல் செயலாக்க இயந்திரமாக மனிதர்
+The human as input–processing–output, senses, memory and cognitive limits.	உள்ளீடு–செயலாக்கம்–வெளியீடாக மனிதர், புலன்கள், நினைவு, அறிவாற்றல் வரம்புகள்.
+Humans: the core component of HCI	மனிதர்கள்: HCI-இன் மையக் கூறு
+Designing interfaces humans can understand	மனிதர்கள் புரிந்துகொள்ளக்கூடிய இடைமுகங்களை வடிவமைத்தல்
+The human as an information processor: input and output	தகவல் செயலாக்கியாக மனிதர்: உள்ளீடும் வெளியீடும்
+Input channels: vision, hearing, touch	உள்ளீட்டு வழிகள்: பார்வை, கேள்வி, தொடுதல்
+Sensory memory → short-term → long-term memory	புலன்சார் நினைவு → குறுகியகால → நீண்டகால நினைவு
+Analysing sensory signals	புலன்சார் சமிக்ஞைகளைப் பகுப்பாய்வு செய்தல்
+Recognition: matching against long-term memory (familiar faces)	அடையாளம் காணுதல்: நீண்டகால நினைவுடன் பொருத்துதல் (பரிச்சயமான முகங்கள்)
+Processing and responding	செயலாக்குதலும் பதிலளித்தலும்
+Type what you remember…	நினைவிருப்பதைத் தட்டச்சு செய்யுங்கள்…

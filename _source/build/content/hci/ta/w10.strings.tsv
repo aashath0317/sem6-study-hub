@@ -1,0 +1,77 @@
+Cognitive Task Analysis & Hierarchical Task Analysis	அறிவாற்றல் பணி ஆய்வும் படிநிலை பணி ஆய்வும்
+Processor- vs predictor-oriented models, the 5-step CTA method, the customer-feedback thought stream, HTA in textual and diagram form with plans, and modularity through divide and conquer.	செயலாக்கி மற்றும் முன்கணிப்பாளர் சார்ந்த மாதிரிகள், 5 படி CTA முறை, வாடிக்கையாளர் பின்னூட்டச் சிந்தனை ஓட்டம், திட்டங்களுடன் உரை/வரைபட வடிவ HTA, பிரித்து வெல்லுதல் மூலம் கூறுநிலைத்தன்மை.
+🧪 Try it — HTA walker	🧪 முயன்று பாருங்கள் — HTA மரத்தில் பயணம்
+Feedback method	பின்னூட்ட முறை
+Email	மின்னஞ்சல்
+Web form	வலைப் படிவம்
+▶ Walk the tree	▶ மரத்தில் பயணம் செய்
+Step	அடுத்த படி
+0. Provide feedback	0. பின்னூட்டம் வழங்கு
+1. Choose method	1. முறையைத் தேர்ந்தெடு
+2. Write feedback	2. பின்னூட்டத்தை எழுது
+3. Submit feedback	3. பின்னூட்டத்தைச் சமர்ப்பி
+2.1 Open email	2.1 மின்னஞ்சலைத் திற
+2.2 Write email	2.2 மின்னஞ்சலை எழுது
+2.3 Open form	2.3 படிவத்தைத் திற
+2.4 Fill form	2.4 படிவத்தை நிரப்பு
+3.1 Send email	3.1 மின்னஞ்சலை அனுப்பு
+3.2 Submit form	3.2 படிவத்தைச் சமர்ப்பி
+Plan 2: IF email → 2.1, 2.2 ELSE → 2.3, 2.4	திட்டம் 2: மின்னஞ்சல் எனில் → 2.1, 2.2; இல்லையெனில் → 2.3, 2.4
+Plan 3: IF email → 3.1 ELSE 3.2	திட்டம் 3: மின்னஞ்சல் எனில் → 3.1; இல்லையெனில் 3.2
+Press Walk or Step. The traversal goes top to bottom, left to right, finishing sub-branches before moving right. Greyed nodes are skipped by the plan.	மரத்தில் பயணம் செய் அல்லது அடுத்த படி என்பதை அழுத்துங்கள். பயணம் மேலிருந்து கீழாகவும் இடமிருந்து வலமாகவும் செல்கிறது; வலப்புறம் நகருமுன் துணைக் கிளைகளை முடிக்கிறது. சாம்பல் நிற முனைகள் திட்டத்தால் தவிர்க்கப்படுகின்றன.
+Cognitive Task Analysis	அறிவாற்றல் பணி ஆய்வு
+Studying the unobservable reasoning behind tasks.	பணிகளுக்குப் பின்னாலுள்ள காண முடியாத பகுத்தறிதலை ஆராய்தல்.
+Cognitive models: GOMS and cognitive task analysis	அறிவாற்றல் மாதிரிகள்: GOMS மற்றும் அறிவாற்றல் பணி ஆய்வு
+Why model the user: intentions and processes	பயனரை ஏன் மாதிரியாக்க வேண்டும்: எண்ணங்களும் செயல்முறைகளும்
+Goal and task hierarchies	இலக்கு மற்றும் பணிப் படிநிலைகள்
+Cognitive task analysis: studying the thinking behind the task	அறிவாற்றல் பணி ஆய்வு: பணிக்குப் பின்னாலுள்ள சிந்தனையை ஆராய்தல்
+Different people do the same task differently	வெவ்வேறு நபர்கள் ஒரே பணியை வெவ்வேறு விதமாகச் செய்கிறார்கள்
+Example: taking a phone call	எடுத்துக்காட்டு: தொலைபேசி அழைப்பை ஏற்றல்
+Example: getting off at a bus stop (ringing the bell)	எடுத்துக்காட்டு: பேருந்து நிறுத்தத்தில் இறங்குதல் (மணியை அடித்தல்)
+Sequences of actions towards a goal	இலக்கை நோக்கிய செயல் வரிசைகள்
+Modelling for what you plan to deliver	வழங்கத் திட்டமிடுவதற்காக மாதிரியாக்குதல்
+Feeling and remembering vs thinking: what's hard to model	உணர்தலும் நினைவுகூர்தலும் எதிர் சிந்தித்தல்: மாதிரியாக்குவதில் கடினமானவை
+HTA Example	HTA எடுத்துக்காட்டு
+Converting the feedback task into a textual HTA, then a diagram with plans, and how to traverse it.	பின்னூட்டப் பணியை உரை வடிவ HTA-ஆகவும் பின்னர் திட்டங்களுள்ள வரைபடமாகவும் மாற்றுதல்; அதில் பயணிக்கும் விதம்.
+HTA: textual first, then diagrammatic	HTA: முதலில் உரை, பின்னர் வரைபடம்
+Levels: provide feedback → choose / write / submit	நிலைகள்: பின்னூட்டம் வழங்கு → தேர்ந்தெடு / எழுது / சமர்ப்பி
+Email vs form branches (2.1–2.4)	மின்னஞ்சல் மற்றும் படிவக் கிளைகள் (2.1–2.4)
+Drawing the diagram	வரைபடம் வரைதல்
+Plan: IF email do 2.1, 2.2 ELSE 2.3, 2.4	திட்டம்: மின்னஞ்சல் எனில் 2.1, 2.2; இல்லையெனில் 2.3, 2.4
+Submit plan: IF email do 3.1 ELSE 3.2	சமர்ப்பிப்புத் திட்டம்: மின்னஞ்சல் எனில் 3.1; இல்லையெனில் 3.2
+Reading the diagram: top to bottom, left to right	வரைபடத்தை வாசித்தல்: மேலிருந்து கீழாக, இடமிருந்து வலமாக
+Divide and Conquer Example	பிரித்து வெல்லுதல் எடுத்துக்காட்டு
+Breaking a large task into reusable sub-tasks.	பெரிய பணியை மீண்டும் பயன்படுத்தக்கூடிய துணைப் பணிகளாகப் பிரித்தல்.
+Jackson structure charts (JSD)	ஜாக்சன் கட்டமைப்பு வரைபடங்கள் (JSD)
+Example: providing feedback, top level	எடுத்துக்காட்டு: பின்னூட்டம் வழங்குதல், மேல்நிலை
+An abstract, observable task	கருத்தியலான, காணக்கூடிய பணி
+Methods: phone call, form, in person	முறைகள்: தொலைபேசி அழைப்பு, படிவம், நேரில்
+Decomposing "mention the feedback"	“பின்னூட்டத்தைக் கூறு” என்பதைப் பிரித்தல்
+Hidden cognitive parts (the dashed area)	மறைந்த அறிவாற்றல் பகுதிகள் (கோடிட்ட பகுதி)
+Assessing service quality	சேவைத் தரத்தை மதிப்பிடுதல்
+Adapting to different people	வெவ்வேறு நபர்களுக்கேற்ப மாற்றியமைத்தல்
+00:00 Cognitive models: GOMS and cognitive task analysis	00:00 அறிவாற்றல் மாதிரிகள்: GOMS மற்றும் அறிவாற்றல் பணி ஆய்வு
+00:50 Why model the user: intentions and processes	00:50 பயனரை ஏன் மாதிரியாக்க வேண்டும்: எண்ணங்களும் செயல்முறைகளும்
+03:31 Goal and task hierarchies	03:31 இலக்கு மற்றும் பணிப் படிநிலைகள்
+05:12 Cognitive task analysis: studying the thinking behind the task	05:12 அறிவாற்றல் பணி ஆய்வு: பணிக்குப் பின்னாலுள்ள சிந்தனையை ஆராய்தல்
+05:58 Different people do the same task differently	05:58 வெவ்வேறு நபர்கள் ஒரே பணியை வெவ்வேறு விதமாகச் செய்கிறார்கள்
+07:39 Example: taking a phone call	07:39 எடுத்துக்காட்டு: தொலைபேசி அழைப்பை ஏற்றல்
+10:18 Example: getting off at a bus stop (ringing the bell)	10:18 எடுத்துக்காட்டு: பேருந்து நிறுத்தத்தில் இறங்குதல் (மணியை அடித்தல்)
+11:54 Sequences of actions towards a goal	11:54 இலக்கை நோக்கிய செயல் வரிசைகள்
+13:33 Modelling for what you plan to deliver	13:33 வழங்கத் திட்டமிடுவதற்காக மாதிரியாக்குதல்
+15:08 Feeling and remembering vs thinking: what's hard to model	15:08 உணர்தலும் நினைவுகூர்தலும் எதிர் சிந்தித்தல்: மாதிரியாக்குவதில் கடினமானவை
+00:00 HTA: textual first, then diagrammatic	00:00 HTA: முதலில் உரை, பின்னர் வரைபடம்
+00:30 Levels: provide feedback → choose / write / submit	00:30 நிலைகள்: பின்னூட்டம் வழங்கு → தேர்ந்தெடு / எழுது / சமர்ப்பி
+00:58 Email vs form branches (2.1–2.4)	00:58 மின்னஞ்சல் மற்றும் படிவக் கிளைகள் (2.1–2.4)
+02:05 Drawing the diagram	02:05 வரைபடம் வரைதல்
+02:35 Plan: IF email do 2.1, 2.2 ELSE 2.3, 2.4	02:35 திட்டம்: மின்னஞ்சல் எனில் 2.1, 2.2; இல்லையெனில் 2.3, 2.4
+03:17 Submit plan: IF email do 3.1 ELSE 3.2	03:17 சமர்ப்பிப்புத் திட்டம்: மின்னஞ்சல் எனில் 3.1; இல்லையெனில் 3.2
+03:51 Reading the diagram: top to bottom, left to right	03:51 வரைபடத்தை வாசித்தல்: மேலிருந்து கீழாக, இடமிருந்து வலமாக
+00:00 Jackson structure charts (JSD)	00:00 ஜாக்சன் கட்டமைப்பு வரைபடங்கள் (JSD)
+01:38 Example: providing feedback, top level	01:38 எடுத்துக்காட்டு: பின்னூட்டம் வழங்குதல், மேல்நிலை
+03:12 An abstract, observable task	03:12 கருத்தியலான, காணக்கூடிய பணி
+03:58 Methods: phone call, form, in person	03:58 முறைகள்: தொலைபேசி அழைப்பு, படிவம், நேரில்
+06:26 Decomposing "mention the feedback"	06:26 “பின்னூட்டத்தைக் கூறு” என்பதைப் பிரித்தல்
+08:49 Hidden cognitive parts (the dashed area)	08:49 மறைந்த அறிவாற்றல் பகுதிகள் (கோடிட்ட பகுதி)
+09:39 Assessing service quality	09:39 சேவைத் தரத்தை மதிப்பிடுதல்
+11:20 Adapting to different people	11:20 வெவ்வேறு நபர்களுக்கேற்ப மாற்றியமைத்தல்

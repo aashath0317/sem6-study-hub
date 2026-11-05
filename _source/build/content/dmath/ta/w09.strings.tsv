@@ -1,0 +1,36 @@
+Relations & Their Properties	தொடர்புகளும் அவற்றின் பண்புகளும்
+Binary relations as subsets of A × B, arrow diagrams and tables, functions as relations, relations on a set, reflexive, symmetric and transitive properties, and equivalence relations.	A × B-இன் உட்கணங்களாக இருமத் தொடர்புகள், அம்பு வரைபடங்களும் அட்டவணைகளும், தொடர்புகளாகச் சார்புகள், ஒரு கணத்தின் மீதான தொடர்புகள், தற்சுட்டு, சமச்சீர், கடத்தல் பண்புகள், சமானத் தொடர்புகள்.
+Week 9 – Relations	வாரம் 9 – தொடர்புகள்
+Relations, their representations and properties.	தொடர்புகள், அவற்றின் பிரதிநிதித்துவங்கள், பண்புகள்.
+Lesson 9: relations and their properties	பாடம் 9: தொடர்புகளும் அவற்றின் பண்புகளும்
+Binary relations: a subset of A × B	இருமத் தொடர்புகள்: A × B-இன் உட்கணம்
+Functions as relations	தொடர்புகளாகச் சார்புகள்
+Example: friends and cities visited	எடுத்துக்காட்டு: நண்பர்களும் பார்வையிட்ட நகரங்களும்
+Example 9.1.2: degree programmes and universities	எடுத்துக்காட்டு 9.1.2: பட்டப்படிப்புகளும் பல்கலைக்கழகங்களும்
+Relation where b = a²	b = a² என்ற தொடர்பு
+Relations on a set: A = {1, 2, 3, 4}	ஒரு கணத்தின் மீதான தொடர்புகள்: A = {1, 2, 3, 4}
+Relations on the integers: R1 to R6	முழு எண்களில் தொடர்புகள்: R1 முதல் R6 வரை
+Definition 3: reflexive relations	வரையறை 3: தற்சுட்டுத் தொடர்புகள்
+Example 9.4.3: symmetric relations	எடுத்துக்காட்டு 9.4.3: சமச்சீர்த் தொடர்புகள்
+Example 9.4.5: a < b is not symmetric	எடுத்துக்காட்டு 9.4.5: a < b சமச்சீரல்ல
+Transitive relations: the hometown example	கடத்தல் தொடர்புகள்: சொந்த ஊர் எடுத்துக்காட்டு
+Equivalence relations	சமானத் தொடர்புகள்
+Relation lab: pairs → digraph, matrix & properties	தொடர்பு ஆய்வகம்: சோடிகள் → திசைவரைபு, அணி, பண்புகள்
+Set A (comma separated)	கணம் A (காற்புள்ளியால் பிரிக்கப்பட்டது)
+Relation R (ordered pairs)	தொடர்பு R (வரிசைச் சோடிகள்)
+Preset	முன்னமைவு
+Reflexive	தற்சுட்டு
+Symmetric	சமச்சீர்
+Transitive	கடத்தல்
+Antisymmetric (extra)	எதிர்சமச்சீர் (கூடுதல்)
+every element has a loop	ஒவ்வொரு மூலகத்துக்கும் வளையம் உள்ளது
+every arrow has a reverse	ஒவ்வொரு அம்புக்கும் எதிர் உள்ளது
+every 2-step path has a shortcut	ஒவ்வொரு 2-படிப் பாதைக்கும் குறுக்குவழி உள்ளது
+no two-way pairs between different elements	வெவ்வேறு மூலகங்களுக்கிடையே இருவழிச் சோடிகள் இல்லை
+EQUIVALENCE RELATION	சமானத் தொடர்பு
+⇒ not an equivalence relation	⇒ சமானத் தொடர்பல்ல
+Relation property checker (with digraph & matrix)	தொடர்புப் பண்புச் சரிபார்ப்பி (திசைவரைபும் அணியும்)
+Set A	கணம் A
+Pairs R (e.g. (1,1),(1,2))	சோடிகள் R (எ.கா. (1,1),(1,2))
+divides	வகுக்கிறது
+9.4.8 equivalence	9.4.8 சமானம்

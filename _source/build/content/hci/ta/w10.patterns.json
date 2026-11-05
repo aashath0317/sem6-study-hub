@@ -1,0 +1,21 @@
+[
+  {
+    "pattern": "^Visited: (.*)$",
+    "replacement": "பார்வையிட்டவை: $1"
+  },
+  {
+    "pattern": "Cognitive\\ Task\\ Analysis",
+    "replacement": "அறிவாற்றல் பணி ஆய்வு",
+    "flags": "g"
+  },
+  {
+    "pattern": "HTA\\ Example",
+    "replacement": "HTA எடுத்துக்காட்டு",
+    "flags": "g"
+  },
+  {
+    "pattern": "Divide\\ and\\ Conquer\\ Example",
+    "replacement": "பிரித்து வெல்லுதல் எடுத்துக்காட்டு",
+    "flags": "g"
+  }
+]

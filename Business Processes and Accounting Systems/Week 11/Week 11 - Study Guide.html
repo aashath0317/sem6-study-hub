@@ -162,6 +162,10 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .gp-tx{background:var(--accent-soft);color:var(--ink);padding:10px 12px;border-radius:8px;margin:12px 0 8px;font-weight:600}
 .gp-howto,.gp-q{font-size:15px;margin:8px 0}
 .gp-tablewrap{margin:10px 0}
+.gp-table td.gp-now input,.gp-acct,.gp-amt,.gp-check,.gp-fb{scroll-margin:84px 0 130px}
+.gp-table .gp-action-row td{background:var(--panel);padding:8px}
+.gp-action-row .gp-check{margin:0}
+@media (max-width:900px){.gp-table td.gp-now input,.gp-acct,.gp-amt,.gp-check,.gp-fb{scroll-margin-bottom:170px}}
 .gp-scroll{overflow-x:auto}
 .tool table.gp-table,table.gp-table{display:table;width:100%;max-width:none;overflow:visible;max-height:none;border-collapse:collapse;font-size:14.5px;table-layout:auto;margin:0}
 .gp-table th,.gp-table td{border:1px solid var(--line);padding:6px 8px;text-align:left;background:var(--panel);color:var(--ink)}
@@ -279,6 +283,12 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .beginner-answer summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
 .beginner-answer[open] summary{margin-bottom:16px}
 .beginner-answer li{margin-bottom:10px}
+
+/* Keep calculator labels and selects within narrow screens. */
+.tool .row > label{min-width:0;max-width:100%}
+.tool .row > label select{max-width:100%}
+
+.tool select{min-width:0;max-width:100%}
 
 .study-plan{margin:24px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow);scroll-margin-top:80px}
 .sp-heading,.sp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.sp-heading h2{margin:2px 0 8px}.sp-heading p{font-size:15px;color:var(--muted)}
@@ -909,15 +919,15 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 <tbody>
 <tr>
 <td>Factory production overhead</td>
-<td>Rs. 750,000</td>
+<td>Rs. 750,000.00</td>
 </tr>
 <tr>
 <td>Fixed selling costs</td>
-<td>Rs. 550,000</td>
+<td>Rs. 550,000.00</td>
 </tr>
 <tr>
 <td>Administration and other overhead</td>
-<td>Rs. 325,000</td>
+<td>Rs. 325,000.00</td>
 </tr>
 <tr>
 <td>Variable cost per unit</td>
@@ -929,14 +939,14 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 </tr>
 <tr>
 <td>Budgeted sales volume</td>
-<td>500,000 units</td>
+<td>500,000.00 units</td>
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w11-q1" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Fixed overhead per unit",""],["Full cost per unit",""],["Selling price per unit",""]]},"steps":[{"type":"num","q":"Fixed overhead per unit — enter the number","a":3.25,"think":"Spread all fixed costs over budgeted sales units.","why":"(750,000 + 550,000 + 325,000) ÷ 500,000 = 3.25.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Spread all fixed costs over budgeted sales units."}},{"type":"num","q":"Full cost per unit — enter the number","a":11.25,"think":"Variable cost plus allocated fixed cost.","why":"8 + 3.25 = 11.25.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Variable cost plus allocated fixed cost."}},{"type":"num","q":"Selling price per unit — enter the number","a":15.19,"think":"Mark-up is a percentage of cost, not selling price.","why":"11.25 × 1.35 = 15.1875, rounded 15.19.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Mark-up is a percentage of cost, not selling price."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w11-q1" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Pricing working", "Units / hours", "Rs."], "rows": [["Factory overhead", "", 750000], ["Fixed selling costs", "", 550000], ["Administration and other overhead", "", 325000], ["Budgeted sales volume (units)", 500000, ""], ["Variable cost per unit", "", 8], ["total fixed cost", "", ""], ["fixed cost per unit", "", ""], ["full cost per unit", "", ""], ["mark-up per unit", "", ""], ["selling price per unit", "", ""]], "moneyCols": [2], "decimals": 2}, "steps": [{"type": "num", "q": "What is the total fixed cost?", "a": 1625000, "think": "Add factory overhead (750,000.00), fixed selling costs (550,000.00), administration overhead (325,000.00).", "why": "total fixed cost = 1,625,000.00.", "mistakes": {"1300000": "You left out administration overhead. Include every component of this total.", "750000": "That is only one component of this total. Add all the named components on the row.", "550000": "That is only one component of this total. Add all the named components on the row."}, "fill": [5, 2]}, {"type": "num", "q": "What is the fixed cost per unit?", "a": 3.25, "think": "Divide total fixed cost (1,625,000.00) by budgeted units (500,000.00).", "why": "fixed cost per unit = 3.25.", "mistakes": {"812500000000": "You multiplied the numerator and denominator. Divide to find the amount per unit."}, "fill": [6, 2]}, {"type": "num", "q": "What is the full cost per unit?", "a": 11.25, "think": "Add variable cost (8.00), fixed cost per unit (3.25).", "why": "full cost per unit = 11.25.", "mistakes": {"8": "You left out fixed cost per unit. Include every component of this total.", "3.25": "That is only one component of this total. Add all the named components on the row.", "4.75": "You subtracted the other components. This row asks you to add them."}, "fill": [7, 2]}, {"type": "num", "q": "What is the mark-up per unit? Round to two decimal places.", "a": 3.9375, "think": "Multiply full cost (11.25) by mark-up rate (0.35).", "why": "mark-up per unit = 3.94.", "mistakes": {"11.6": "You added the factors. This row requires multiplication.", "11.25": "That is only full cost. Apply the other factor(s)."}, "fill": [8, 2], "tol": 0.02}, {"type": "num", "q": "What is the selling price per unit? Round to two decimal places.", "a": 15.1875, "think": "Add full cost (11.25), unrounded mark-up (3.94).", "why": "selling price per unit = 15.19.", "mistakes": {"11.25": "You left out unrounded mark-up. Include every component of this total.", "3.94": "That is only one component of this total. Add all the named components on the row.", "7.31": "You subtracted the other components. This row asks you to add them."}, "fill": [9, 2], "tol": 0.02}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q1</summary>
-<p><strong>Step 1 — Find total fixed cost.</strong> 750,000 + 550,000 + 325,000 = 1,625,000. Assume budgeted production matches budgeted sales and use those 500,000 units as the allocation base.</p>
+<p><strong>Step 1 — Find total fixed cost.</strong> 750,000.00 + 550,000.00 + 325,000.00 = 1,625,000. Assume budgeted production matches budgeted sales and use those 500,000.00 units as the allocation base.</p>
 <p><strong>Step 2 — Build full cost and add mark-up.</strong></p>
 <table>
 <thead>
@@ -951,7 +961,7 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 <td>8.00</td>
 </tr>
 <tr>
-<td>Fixed cost: 1,625,000 / 500,000</td>
+<td>Fixed cost: 1,625,000.00 / 500,000.00</td>
 <td>3.25</td>
 </tr>
 <tr>
@@ -959,12 +969,12 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 <td>11.25</td>
 </tr>
 <tr>
-<td>Mark-up: 11.25 × 35%</td>
-<td>3.9375</td>
+<td>Mark-up: 11.25 × 35% (display rounded)</td>
+<td>3.94</td>
 </tr>
 <tr>
-<td>Unrounded selling price</td>
-<td>15.1875</td>
+<td>Selling price (display rounded)</td>
+<td>15.19</td>
 </tr>
 <tr>
 <td>Rounded selling price</td>
@@ -972,7 +982,7 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 </tr>
 </tbody>
 </table>
-<p><strong>Final check:</strong> 15.1875 − 11.25 = 3.9375, exactly 35% of cost. Do not divide cost by 0.65; that would be a 35% sales margin rather than a mark-up.</p>
+<p><strong>Final check:</strong> The unrounded mark-up is exactly 35% of full cost; round the final price once to 15.19. Do not divide cost by 0.65; that would be a 35% sales margin rather than a mark-up.</p>
 </details>
 <p><strong>Q2. Question:</strong> Amaranath Enterprises produces plastic chairs. One production department is the chair plant (X); packing (A) and maintenance (B) are service departments.</p>
 <table>
@@ -997,15 +1007,15 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 </tr>
 <tr>
 <td>Chair plant overhead</td>
-<td>Rs. 25,000</td>
+<td>Rs. 25,000.00</td>
 </tr>
 <tr>
 <td>Packing overhead</td>
-<td>Rs. 6,000</td>
+<td>Rs. 6,000.00</td>
 </tr>
 <tr>
 <td>Maintenance overhead</td>
-<td>Rs. 5,000</td>
+<td>Rs. 5,000.00</td>
 </tr>
 </tbody>
 </table>
@@ -1034,12 +1044,12 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 </tbody>
 </table>
 <p>(i) Calculate cost per chair using simultaneous-equation redistribution and direct-labour-hour absorption. (ii) Calculate selling price on a full-cost-plus basis with 25% mark-up.</p>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w11-q2" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Reciprocal packing A",""],["Total chair plant overhead",""],["Rate per direct labour hour",""],["Cost per chair",""],["Selling price",""]]},"steps":[{"type":"num","q":"Reciprocal packing A — enter the number","a":7631.58,"think":"A receives 25% of maintenance, which itself receives 20% of A.","why":"A = 6,000 + .25(5,000 + .2A); .95A = 7,250; A = 7,631.578947.","fill":[0,1],"mistakes":{"0":"This is not a zero result. A receives 25% of maintenance, which itself receives 20% of A."}},{"type":"num","q":"Total chair plant overhead — enter the number","a":36000.0,"think":"Add the plant’s shares of both reciprocal services.","why":"25,000 + .8A + .75B = 36,000.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Add the plant’s shares of both reciprocal services."}},{"type":"num","q":"Rate per direct labour hour — enter the number","a":24.0,"think":"Divide plant overhead by 300 chairs × five hours each.","why":"36,000 ÷ 1,500 = 24.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Divide plant overhead by 300 chairs × five hours each."}},{"type":"num","q":"Cost per chair — enter the number","a":2420.0,"think":"Direct material plus direct labour plus absorbed overhead.","why":"2,000 + 300 + 120 = 2,420.","fill":[3,1],"mistakes":{"0":"This is not a zero result. Direct material plus direct labour plus absorbed overhead."}},{"type":"num","q":"Selling price — enter the number","a":3025.0,"think":"Add 25% of cost.","why":"2,420 × 1.25 = 3,025.","fill":[4,1],"mistakes":{"0":"This is not a zero result. Add 25% of cost."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w11-q2" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Pricing working", "Units / hours", "Rs."], "rows": [["total reciprocal packing cost A", "", ""], ["total reciprocal maintenance cost B", "", ""], ["packing share to chair plant", "", ""], ["maintenance share to chair plant", "", ""], ["total chair plant overhead", "", ""], ["annual direct labour hours", "", ""], ["overhead absorption rate per labour hour", "", ""], ["material per chair", "", ""], ["labour per chair", "", ""], ["overhead per chair", "", ""], ["full cost per chair", "", ""], ["mark-up per chair", "", ""], ["selling price per chair", "", ""]], "moneyCols": [2], "decimals": 2}, "steps": [{"type": "num", "q": "What is the total packing department cost after reciprocal sharing? Round to two decimal places.", "a": 7631.58, "think": "Substitute B = 5,000 + 0.20A into A = 6,000 + 0.25B. Divide (6,000 + 0.25 × 5,000) by (1 − 0.25 × 0.20).", "why": "total reciprocal packing cost A = 7,631.58.", "mistakes": {"7250": "You included only the first return from B. Divide by 0.95 to include the reciprocal loop.", "6000": "That is A’s own cost before B serves it."}, "fill": [0, 2], "tol": 0.02}, {"type": "num", "q": "What is the total maintenance department cost after reciprocal sharing? Round to two decimal places.", "a": 6526.32, "think": "Use B = 5,000 + 0.20 × unrounded total packing cost A.", "why": "total reciprocal maintenance cost B = 6,526.32.", "mistakes": {"5000": "That is B’s own cost. Include its receipt from packing."}, "fill": [1, 2], "tol": 0.02}, {"type": "num", "q": "How much of the packing department cost goes to the chair plant? Round to two decimal places.", "a": 6105.26315789, "think": "Multiply unrounded A (7,631.58) by plant share (0.80).", "why": "packing share to chair plant = 6,105.26.", "mistakes": {"7632.37894737": "You added the factors. This row requires multiplication.", "7631.57894737": "That is only unrounded A. Apply the other factor(s)."}, "fill": [2, 2], "tol": 0.02}, {"type": "num", "q": "How much of the maintenance department cost goes to the chair plant? Round to two decimal places.", "a": 4894.73684211, "think": "Multiply unrounded B (6,526.32) by plant share (0.75).", "why": "maintenance share to chair plant = 4,894.74.", "mistakes": {"6527.06578947": "You added the factors. This row requires multiplication.", "6526.31578947": "That is only unrounded B. Apply the other factor(s)."}, "fill": [3, 2], "tol": 0.02}, {"type": "num", "q": "What is the total chair plant overhead? Round to two decimal places.", "a": 36000.0, "think": "Add own plant cost (25,000.00), packing share (6,105.26), maintenance share (4,894.74).", "why": "total chair plant overhead = 36,000.00.", "mistakes": {"31105.2631579": "You left out maintenance share. Include every component of this total.", "25000": "That is only one component of this total. Add all the named components on the row.", "6105.26": "That is only one component of this total. Add all the named components on the row.", "14000": "You subtracted the other components. This row asks you to add them."}, "fill": [4, 2], "tol": 0.02}, {"type": "num", "q": "How many direct labour hours are there in the year?", "a": 1500, "think": "Multiply annual chairs (300.00) by hours per chair (5.00).", "why": "annual direct labour hours = 1,500.00.", "mistakes": {"305": "You added the factors. This row requires multiplication.", "300": "That is only annual chairs. Apply the other factor(s)."}, "fill": [5, 1]}, {"type": "num", "q": "What is the overhead absorption rate per labour hour? Round to two decimal places.", "a": 24.0, "think": "Divide plant overhead (36,000.00) by annual labour hours (1,500.00).", "why": "overhead absorption rate per labour hour = 24.00.", "mistakes": {"54000000": "You multiplied the numerator and denominator. Divide to find the amount per unit."}, "fill": [6, 2], "tol": 0.02}, {"type": "num", "q": "What is the material per chair?", "a": 2000, "think": "Multiply material quantity (20.00) by price per unit (100.00).", "why": "material per chair = 2,000.00.", "mistakes": {"120": "You added the factors. This row requires multiplication.", "20": "That is only material quantity. Apply the other factor(s)."}, "fill": [7, 2]}, {"type": "num", "q": "What is the labour per chair?", "a": 300, "think": "Multiply hours per chair (5.00) by hourly wage (60.00).", "why": "labour per chair = 300.00.", "mistakes": {"65": "You added the factors. This row requires multiplication.", "5": "That is only hours per chair. Apply the other factor(s)."}, "fill": [8, 2]}, {"type": "num", "q": "What is the overhead per chair? Round to two decimal places.", "a": 120.0, "think": "Multiply hours per chair (5.00) by unrounded hourly overhead rate (24.00).", "why": "overhead per chair = 120.00.", "mistakes": {"29": "You added the factors. This row requires multiplication.", "5": "That is only hours per chair. Apply the other factor(s)."}, "fill": [9, 2], "tol": 0.02}, {"type": "num", "q": "What is the full cost per chair? Round to two decimal places.", "a": 2420.0, "think": "Add material (2,000.00), labour (300.00), overhead (120.00).", "why": "full cost per chair = 2,420.00.", "mistakes": {"2300": "You left out overhead. Include every component of this total.", "2000": "That is only one component of this total. Add all the named components on the row.", "300": "That is only one component of this total. Add all the named components on the row.", "1580": "You subtracted the other components. This row asks you to add them."}, "fill": [10, 2], "tol": 0.02}, {"type": "num", "q": "What is the mark-up per chair? Round to two decimal places.", "a": 605.0, "think": "Multiply full cost (2,420.00) by mark-up rate (0.25).", "why": "mark-up per chair = 605.00.", "mistakes": {"2420.25": "You added the factors. This row requires multiplication.", "2420": "That is only full cost. Apply the other factor(s)."}, "fill": [11, 2], "tol": 0.02}, {"type": "num", "q": "What is the selling price per chair? Round to two decimal places.", "a": 3025.0, "think": "Add full cost (2,420.00), mark-up (605.00).", "why": "selling price per chair = 3,025.00.", "mistakes": {"2420": "You left out mark-up. Include every component of this total.", "605": "That is only one component of this total. Add all the named components on the row.", "1815": "You subtracted the other components. This row asks you to add them."}, "fill": [12, 2], "tol": 0.02}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q2</summary>
-<p><strong>Step 1 — Redistribute reciprocal service costs.</strong> A = 6,000 + 0.25B; B = 5,000 + 0.20A. Substitution gives 0.95A = 7,250, hence A = <strong>7,631.578947</strong>, B = <strong>6,526.315789</strong>.</p>
-<p><strong>Step 2 — Charge the chair plant.</strong> 25,000 + 80% × A + 75% × B = 25,000 + 6,105.263158 + 4,894.736842 = <strong>36,000</strong>.</p>
-<p><strong>Step 3 — Absorb production overhead by labour hours.</strong> 300 × 5 = 1,500 hours; rate 36,000/1,500 = <strong>24 per hour</strong>.</p>
+<p><strong>Step 1 — Redistribute reciprocal service costs.</strong> A = 6,000.00 + 0.25B; B = 5,000.00 + 0.20A. Substitution gives 0.95A = 7,250, hence A = <strong>7,631.58</strong>, B = <strong>6,526.32</strong>.</p>
+<p><strong>Step 2 — Charge the chair plant.</strong> 25,000.00 + 80% × A + 75% × B = 25,000.00 + 6,105.26 + 4,894.74 = <strong>36,000.00</strong>.</p>
+<p><strong>Step 3 — Absorb production overhead by labour hours.</strong> 300 × 5 = 1,500.00 hours; rate 36,000.00/1,500.00 = <strong>24 per hour</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -1052,36 +1062,36 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 <tr>
 <td>Material</td>
 <td>20 × 100</td>
-<td>2,000</td>
+<td>2,000.00</td>
 </tr>
 <tr>
 <td>Labour</td>
 <td>5 × 60</td>
-<td>300</td>
+<td>300.00</td>
 </tr>
 <tr>
 <td>Production overhead</td>
 <td>5 × 24</td>
-<td>120</td>
+<td>120.00</td>
 </tr>
 <tr>
 <td>Full cost</td>
 <td></td>
-<td>2,420</td>
+<td>2,420.00</td>
 </tr>
 <tr>
 <td>Mark-up</td>
-<td>2,420 × 25%</td>
-<td>605</td>
+<td>2,420.00 × 25%</td>
+<td>605.00</td>
 </tr>
 <tr>
 <td>Selling price</td>
 <td></td>
-<td>3,025</td>
+<td>3,025.00</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Final check:</strong> plant overhead 36,000 equals the original 25,000 + 6,000 + 5,000. Per-chair overhead 120 × 300 recovers 36,000; price − cost = 605 = 25% of 2,420.</p>
+<p><strong>Final check:</strong> plant overhead 36,000.00 equals the original 25,000.00 + 6,000.00 + 5,000. Per-chair overhead 120 × 300 recovers 36,000.00; price − cost = 605 = 25% of 2,420.</p>
 </details></div><div class="hci-ta" lang="ta" hidden data-title="பயிற்சிக் கேள்விகள் (பாட வினாத்தாள்)"><p><strong>இந்தப் பகுதி இன்னும் தமிழில் மொழிபெயர்க்கப்படவில்லை; தற்போது ஆங்கிலத்தில் மட்டும் உள்ளது.</strong></p>
 <p>Both pricing questions are complete. State cost first, then apply the requested mark-up.</p>
 <p><strong>Read the verbs:</strong> underline every action word in the Required part (identify, record, post, prepare, calculate) and answer each one, in that order.</p>
@@ -1119,15 +1129,15 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 <tbody>
 <tr>
 <td>Factory production overhead</td>
-<td>Rs. 750,000</td>
+<td>Rs. 750,000.00</td>
 </tr>
 <tr>
 <td>Fixed selling costs</td>
-<td>Rs. 550,000</td>
+<td>Rs. 550,000.00</td>
 </tr>
 <tr>
 <td>Administration and other overhead</td>
-<td>Rs. 325,000</td>
+<td>Rs. 325,000.00</td>
 </tr>
 <tr>
 <td>Variable cost per unit</td>
@@ -1139,14 +1149,14 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 </tr>
 <tr>
 <td>Budgeted sales volume</td>
-<td>500,000 units</td>
+<td>500,000.00 units</td>
 </tr>
 </tbody>
 </table>
 <div data-ta-tool="gp-w11-q1"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q1</summary>
-<p><strong>Step 1 — Find total fixed cost.</strong> 750,000 + 550,000 + 325,000 = 1,625,000. Assume budgeted production matches budgeted sales and use those 500,000 units as the allocation base.</p>
+<p><strong>Step 1 — Find total fixed cost.</strong> 750,000.00 + 550,000.00 + 325,000.00 = 1,625,000. Assume budgeted production matches budgeted sales and use those 500,000.00 units as the allocation base.</p>
 <p><strong>Step 2 — Build full cost and add mark-up.</strong></p>
 <table>
 <thead>
@@ -1161,7 +1171,7 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 <td>8.00</td>
 </tr>
 <tr>
-<td>Fixed cost: 1,625,000 / 500,000</td>
+<td>Fixed cost: 1,625,000.00 / 500,000.00</td>
 <td>3.25</td>
 </tr>
 <tr>
@@ -1169,12 +1179,12 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 <td>11.25</td>
 </tr>
 <tr>
-<td>Mark-up: 11.25 × 35%</td>
-<td>3.9375</td>
+<td>Mark-up: 11.25 × 35% (display rounded)</td>
+<td>3.94</td>
 </tr>
 <tr>
-<td>Unrounded selling price</td>
-<td>15.1875</td>
+<td>Selling price (display rounded)</td>
+<td>15.19</td>
 </tr>
 <tr>
 <td>Rounded selling price</td>
@@ -1182,7 +1192,7 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 </tr>
 </tbody>
 </table>
-<p><strong>Final check:</strong> 15.1875 − 11.25 = 3.9375, exactly 35% of cost. Do not divide cost by 0.65; that would be a 35% sales margin rather than a mark-up.</p>
+<p><strong>Final check:</strong> The unrounded mark-up is exactly 35% of full cost; round the final price once to 15.19. Do not divide cost by 0.65; that would be a 35% sales margin rather than a mark-up.</p>
 </details>
 <p><strong>Q2. Question:</strong> Amaranath Enterprises produces plastic chairs. One production department is the chair plant (X); packing (A) and maintenance (B) are service departments.</p>
 <table>
@@ -1207,15 +1217,15 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 </tr>
 <tr>
 <td>Chair plant overhead</td>
-<td>Rs. 25,000</td>
+<td>Rs. 25,000.00</td>
 </tr>
 <tr>
 <td>Packing overhead</td>
-<td>Rs. 6,000</td>
+<td>Rs. 6,000.00</td>
 </tr>
 <tr>
 <td>Maintenance overhead</td>
-<td>Rs. 5,000</td>
+<td>Rs. 5,000.00</td>
 </tr>
 </tbody>
 </table>
@@ -1247,9 +1257,9 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 <div data-ta-tool="gp-w11-q2"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q2</summary>
-<p><strong>Step 1 — Redistribute reciprocal service costs.</strong> A = 6,000 + 0.25B; B = 5,000 + 0.20A. Substitution gives 0.95A = 7,250, hence A = <strong>7,631.578947</strong>, B = <strong>6,526.315789</strong>.</p>
-<p><strong>Step 2 — Charge the chair plant.</strong> 25,000 + 80% × A + 75% × B = 25,000 + 6,105.263158 + 4,894.736842 = <strong>36,000</strong>.</p>
-<p><strong>Step 3 — Absorb production overhead by labour hours.</strong> 300 × 5 = 1,500 hours; rate 36,000/1,500 = <strong>24 per hour</strong>.</p>
+<p><strong>Step 1 — Redistribute reciprocal service costs.</strong> A = 6,000.00 + 0.25B; B = 5,000.00 + 0.20A. Substitution gives 0.95A = 7,250, hence A = <strong>7,631.58</strong>, B = <strong>6,526.32</strong>.</p>
+<p><strong>Step 2 — Charge the chair plant.</strong> 25,000.00 + 80% × A + 75% × B = 25,000.00 + 6,105.26 + 4,894.74 = <strong>36,000.00</strong>.</p>
+<p><strong>Step 3 — Absorb production overhead by labour hours.</strong> 300 × 5 = 1,500.00 hours; rate 36,000.00/1,500.00 = <strong>24 per hour</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -1262,36 +1272,36 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
 <tr>
 <td>Material</td>
 <td>20 × 100</td>
-<td>2,000</td>
+<td>2,000.00</td>
 </tr>
 <tr>
 <td>Labour</td>
 <td>5 × 60</td>
-<td>300</td>
+<td>300.00</td>
 </tr>
 <tr>
 <td>Production overhead</td>
 <td>5 × 24</td>
-<td>120</td>
+<td>120.00</td>
 </tr>
 <tr>
 <td>Full cost</td>
 <td></td>
-<td>2,420</td>
+<td>2,420.00</td>
 </tr>
 <tr>
 <td>Mark-up</td>
-<td>2,420 × 25%</td>
-<td>605</td>
+<td>2,420.00 × 25%</td>
+<td>605.00</td>
 </tr>
 <tr>
 <td>Selling price</td>
 <td></td>
-<td>3,025</td>
+<td>3,025.00</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Final check:</strong> plant overhead 36,000 equals the original 25,000 + 6,000 + 5,000. Per-chair overhead 120 × 300 recovers 36,000; price − cost = 605 = 25% of 2,420.</p>
+<p><strong>Final check:</strong> plant overhead 36,000.00 equals the original 25,000.00 + 6,000.00 + 5,000. Per-chair overhead 120 × 300 recovers 36,000.00; price − cost = 605 = 25% of 2,420.</p>
 </details></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>விலை ஏன் முக்கியம்?</h4><p>விலை அதிகமானால் விற்பனை குறையலாம்; மிகக் குறைந்தால் செலவே ஈடாகாமல் போகலாம். விலை வாடிக்கையாளரின் மதிப்புணர்வையும் நிறுவனத்தின் இலாபத்தையும் பாதிக்கிறது. செலவைக் கூட்டுவது மட்டும் pricing அல்ல.</p></div><div class="ta-recap-item"><h4>விலையை நிர்ணயிக்கும் காரணிகள்</h4><p>செலவு, வாடிக்கையாளர் தேவை, போட்டியாளர் விலை, இலக்கு, சந்தை நிலை ஆகியவற்றைப் பார்க்க வேண்டும். ஒரே செலவு இருந்தாலும் அவசர சேவைக்கும் வழக்கமான சேவைக்கும் வாடிக்கையாளர் கொடுக்கும் மதிப்பு மாறலாம்.</p></div><div class="ta-recap-item"><h4>Markup மற்றும் Margin</h4><p>Cost ரூ.100; selling price ரூ.125 என்றால் இலாபம் ரூ.25. <strong>Markup = 25 ÷ 100 = 25%</strong>; <strong>Margin = 25 ÷ 125 = 20%</strong>. சதவீதத்தின் அடிப்படை செலவா விற்பனை விலையா என்று பாருங்கள்.</p></div><div class="ta-recap-item"><h4>விலை நிர்ணயிக்கும் முறைகள்</h4><p><strong>Cost-plus</strong> செலவிற்கு இலாபம் சேர்க்கும். <strong>Marginal costing</strong> variable cost, contribution-ஐப் பார்க்கும். வாடிக்கையாளர் மதிப்பும் போட்டியும் வேறு அடிப்படைகள். ஒரே முறை எல்லாச் சூழலுக்கும் சிறந்தது அல்ல.</p></div><div class="ta-recap-item"><h4>விலை கணக்குப் பயிற்சி</h4><p>Markup கொடுத்தால் cost × (1 + rate). Margin கொடுத்தால் cost ÷ (1 − rate). முழுச் செலவா variable cost-ஆ என்பதையும் கேள்வியில் கண்டுபிடித்த பிறகே கணக்கிடுங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
@@ -1540,10 +1550,13 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
     if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
       a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
   });
-  if (!KEY) return;
+  var toc = document.getElementById('toc');
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn && !toc) tbtn.hidden = true;
+  if (!KEY || !toc) return;
 
   // TOC
-  var toc = document.getElementById('toc'), links = [];
+  var links = [];
   var heads = document.querySelectorAll('main h2[id], main h3[id]');
   heads.forEach(function(h){
     var a = document.createElement('a'); a.href = '#' + h.id;
@@ -1554,8 +1567,6 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
     a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
     a.onclick = function(){ var english=h.closest('.section-english'); if(english && english.hidden){ var toggle=h.closest('section').querySelector('.native-toggle'); if(toggle) toggle.click(); } toc.classList.remove('open'); };
   });
-  var tbtn = document.getElementById('tocbtn');
-  if (tbtn && !toc) tbtn.style.display = 'none';
   if (tbtn && toc) {
     var isPhone = function(){ return window.matchMedia('(max-width:900px)').matches; };
     var showToc = function(){
@@ -1826,7 +1837,9 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
     function advance(firstTry){
       if (firstTry) state.first++;
       state.i++; tries = 0; save(key, state); render();
-      var focus = box.querySelector('.gp-acct,.gp-amt,.gp-opt'); if (focus) focus.focus({preventScroll:true});
+      var focus = box.querySelector('.gp-acct,.gp-amt,.gp-opt');
+      if (focus) { focus.focus({preventScroll:true}); focus.scrollIntoView({block:'nearest'}); }
+      else if (box.querySelector('.gp-fb')) box.querySelector('.gp-fb').scrollIntoView({block:'nearest'});
     }
     function feedback(kind, html, cont){
       var f = box.querySelector('.gp-fb');
@@ -1841,6 +1854,7 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
         var r = document.createElement('button'); r.type = 'button'; r.className = 'alt'; r.textContent = 'Show me the answer';
         r.onclick = reveal; f.appendChild(r);
       }
+      f.scrollIntoView({block:'nearest'});
     }
     function reveal(){
       var s = steps[state.i], text;
@@ -1900,20 +1914,36 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
         rows += '<tr class="gp-now"><td>' + (s.tx !== last ? esc(dateOf(s.tx)) : '') + '</td><td class="gp-cell-acct"><input class="gp-acct" placeholder="Click to choose" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Account"><div class="gp-list" role="listbox" hidden></div></td><td><input class="gp-dr" inputmode="decimal" autocomplete="off" aria-label="Debit amount"></td><td><input class="gp-cr" inputmode="decimal" autocomplete="off" aria-label="Credit amount"></td></tr>';
         s.tx.e.slice(s.n + 1).forEach(function(){ rows += '<tr class="gp-row-next"><td></td><td></td><td></td><td></td></tr>'; });
       }
+      if (!rows) return '';
       return '<div class="gp-tablewrap"><table class="gp-table"><thead><tr><th class="gp-col-date">Date</th><th>Account</th><th class="r gp-col-amt">Debit (Rs.)</th><th class="r gp-col-amt">Credit (Rs.)</th></tr></thead><tbody>' + rows + '</tbody>' +
         (done.length ? '<tfoot><tr><td></td><td>Total so far</td><td class="r">' + money(dr) + '</td><td class="r">' + money(cr) + '</td></tr></tfoot>' : '') + '</table></div>';
     }
     function grid(s){
       if (!data.table) return '';
       var values = {};
-      steps.slice(0, state.i).forEach(function(x){ if (x.fill) values[x.fill.join()] = money(x.a); });
+      var moneyCols = data.table.moneyCols || [], dp = data.table.decimals;
+      // A held cell stays blank until no remaining step has that value as its answer.
+      var waiting = {};
+      steps.slice(state.i).forEach(function(x){
+        if (x.fill) waiting[Math.abs(x.a).toFixed(2)] = true;
+        if (x.type === 'entry') waiting[Math.abs(x.entry.amt).toFixed(2)] = true;
+      });
+      var held = {};
+      (data.table.hold || []).forEach(function(h){ held[h.join()] = true; });
+      function shown(value, c){
+        var n = moneyCols.indexOf(c) > -1 && /^-?[\d,]+(\.\d+)?$/.test(String(value)) ? parse(value) : null;
+        return n === null ? String(value) : n.toLocaleString('en-US', {minimumFractionDigits:dp, maximumFractionDigits:dp});
+      }
+      steps.slice(0, state.i).forEach(function(x){ if (x.fill) values[x.fill.join()] = x.a; });
       var head = data.table.cols.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('');
+      var actionRow = s && s.fill ? '<tr class="gp-action-row"><td colspan="' + data.table.cols.length + '"><button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></td></tr>' : '';
       var body = data.table.rows.map(function(row, r){
         return '<tr' + (row.total ? ' class="gp-row-total"' : '') + '>' + (row.cells || row).map(function(cell, c){
           var id = r + ',' + c;
           if (s && s.fill && s.fill.join() === id) return '<td class="gp-now"><input class="gp-amt" inputmode="decimal" autocomplete="off" aria-label="' + esc(data.table.cols[c]) + '"></td>';
-          return '<td>' + esc(values[id] !== undefined ? values[id] : cell) + '</td>';
-        }).join('') + '</tr>';
+          if (held[id] && values[id] === undefined && waiting[Math.abs(parse(cell)).toFixed(2)]) return '<td></td>';
+          return '<td>' + esc(values[id] !== undefined ? (moneyCols.indexOf(c) > -1 ? shown(values[id], c) : money(values[id])) : shown(cell, c)) + '</td>';
+        }).join('') + '</tr>' + (s && s.fill && s.fill[0] === r ? actionRow : '');
       }).join('');
       return '<div class="gp-tablewrap gp-scroll"><table class="gp-table"><thead><tr>' + head + '</tr></thead><tbody>' + body + '</tbody></table></div>';
     }
@@ -1927,7 +1957,7 @@ R.querySelector('.out').innerHTML=k.map(function(x,i){return '<p>'+(i==0&&sc[x]>
         html += '<p class="gp-tx">' + esc(s.tx.tx) + '</p><p class="gp-howto"><b>Line ' + (s.n + 1) + ' of ' + s.tx.e.length + ' for this transaction.</b> Click the Account cell and choose an account. Then type the amount in the Debit or the Credit column. Debit lines come first.</p>' + journal(s) + '<button type="button" class="gp-check">Check this line</button><div class="gp-fb" aria-live="polite" hidden></div>';
       } else if (s.type === 'num') {
         html += journal() + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p class="gp-q"><b>' + esc(s.q) + '</b>' + (s.fill ? ' <span class="gp-muted">Type it in the highlighted cell.</span>' : '') + '</p>' + grid(s) +
-          (s.fill ? '' : '<label class="gp-label">Your answer <input class="gp-amt gp-amt-free gp-now-input" inputmode="decimal" autocomplete="off"></label> ') + '<button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div>';
+          (s.fill ? '' : '<label class="gp-label">Your answer <input class="gp-amt gp-amt-free gp-now-input" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div>');
       } else {
         html += journal() + grid(s) + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p class="gp-q"><b>' + esc(s.q) + '</b></p><div class="gp-opts">' +
           s.opts.map(function(o, i){ return '<button type="button" class="alt gp-opt" data-i="' + i + '">' + esc(o.t) + '</button>'; }).join('') + '</div><div class="gp-fb" aria-live="polite" hidden></div>';

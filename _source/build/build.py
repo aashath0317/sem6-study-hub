@@ -274,11 +274,12 @@ def page(title, body, key="", crumbs=""):
     if is_hci:
         translation = '<style>' + open(os.path.join(HERE, "hci-translate.css"), encoding="utf-8").read() + '</style><script>' + open(os.path.join(HERE, "hci-translate.js"), encoding="utf-8").read() + '</script>'
     home = ("../../" if re.fullmatch(r"[a-z]+-Week\d+", key) else "../" if key.endswith("-papers") or 'href="../SEM 6' in crumbs else "") + "SEM%206%20Study%20Hub.html#study-plan"
+    menu_button = '<button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button>' if 'id="toc"' in body else ""
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title><style>{CSS}</style></head>
 <body data-key="{key}" data-study-home="{home}">
-<div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb">{crumbs}</div>
+<div class="topbar">{menu_button}<div class="crumb">{crumbs}</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
 {body}
 <script type="application/json" id="study-data">{study_data()}</script>

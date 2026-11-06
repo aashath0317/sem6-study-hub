@@ -162,6 +162,10 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .gp-tx{background:var(--accent-soft);color:var(--ink);padding:10px 12px;border-radius:8px;margin:12px 0 8px;font-weight:600}
 .gp-howto,.gp-q{font-size:15px;margin:8px 0}
 .gp-tablewrap{margin:10px 0}
+.gp-table td.gp-now input,.gp-acct,.gp-amt,.gp-check,.gp-fb{scroll-margin:84px 0 130px}
+.gp-table .gp-action-row td{background:var(--panel);padding:8px}
+.gp-action-row .gp-check{margin:0}
+@media (max-width:900px){.gp-table td.gp-now input,.gp-acct,.gp-amt,.gp-check,.gp-fb{scroll-margin-bottom:170px}}
 .gp-scroll{overflow-x:auto}
 .tool table.gp-table,table.gp-table{display:table;width:100%;max-width:none;overflow:visible;max-height:none;border-collapse:collapse;font-size:14.5px;table-layout:auto;margin:0}
 .gp-table th,.gp-table td{border:1px solid var(--line);padding:6px 8px;text-align:left;background:var(--panel);color:var(--ink)}
@@ -279,6 +283,12 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .beginner-answer summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
 .beginner-answer[open] summary{margin-bottom:16px}
 .beginner-answer li{margin-bottom:10px}
+
+/* Keep calculator labels and selects within narrow screens. */
+.tool .row > label{min-width:0;max-width:100%}
+.tool .row > label select{max-width:100%}
+
+.tool select{min-width:0;max-width:100%}
 
 .study-plan{margin:24px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow);scroll-margin-top:80px}
 .sp-heading,.sp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.sp-heading h2{margin:2px 0 8px}.sp-heading p{font-size:15px;color:var(--muted)}
@@ -1038,31 +1048,31 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Depreciation</td>
-<td>190,000</td>
+<td>190,000.00</td>
 </tr>
 <tr>
 <td>Rent, rates and taxes</td>
-<td>36,000</td>
+<td>36,000.00</td>
 </tr>
 <tr>
 <td>Insurance</td>
-<td>15,200</td>
+<td>15,200.00</td>
 </tr>
 <tr>
 <td>Power</td>
-<td>20,000</td>
+<td>20,000.00</td>
 </tr>
 <tr>
 <td>Canteen expenses</td>
-<td>10,800</td>
+<td>10,800.00</td>
 </tr>
 <tr>
 <td>Electricity</td>
-<td>4,800</td>
+<td>4,800.00</td>
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w10-q1" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Primary X",""],["Final X",""],["Final Y",""]]},"steps":[{"type":"num","q":"Primary X — enter the number","a":139800.0,"think":"Apply each basis before redistributing service cost.","why":"100,000 + 15,000 + 8,000 + 10,000 + 4,800 + 2,000 = 139,800.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Apply each basis before redistributing service cost."}},{"type":"num","q":"Final X — enter the number","a":183180.0,"think":"Add X’s shares of A and B to its own primary overhead.","why":"139,800 + 25,560 + 17,820 = 183,180.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Add X’s shares of A and B to its own primary overhead."}},{"type":"num","q":"Final Y — enter the number","a":93620.0,"think":"Add Y’s shares of A and B.","why":"74,600 + 17,040 + 1,980 = 93,620.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Add Y’s shares of A and B."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w10-q1" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Overhead distribution (Rs.)", "X", "Y", "A", "B"], "rows": [["Depreciation / asset value", "", "", "", ""], ["Rent, rates and taxes / floor space", "", "", "", ""], ["Insurance / asset value", "", "", "", ""], ["Power / machine hours", "", "", "", ""], ["Canteen / workers", "", "", "", ""], ["Electricity / light points", "", "", "", ""], ["Primary total", "", "", "", ""], ["A service redistribution", "", "", "Cleared", ""], ["B service redistribution", "", "", "Cleared", ""], ["Final production overhead", "", "", 0, 0]], "moneyCols": [1, 2, 3, 4], "decimals": 2}, "steps": [{"type": "num", "q": "How much of the depreciation cost is allocated to department X? Round to two decimal places.", "a": 100000.0, "think": "Allocate depreciation 190,000.00 using asset value: X has 10 out of 19. Multiply total expense by its share.", "why": "Depreciation allocated to X = 100,000.00.", "mistakes": {"47500": "You divided equally. Use this department’s share of the stated allocation base.", "190000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [0, 1], "tol": 0.02}, {"type": "num", "q": "How much of the depreciation cost is allocated to department Y? Round to two decimal places.", "a": 50000.0, "think": "Allocate depreciation 190,000.00 using asset value: Y has 5 out of 19. Multiply total expense by its share.", "why": "Depreciation allocated to Y = 50,000.00.", "mistakes": {"47500": "You divided equally. Use this department’s share of the stated allocation base.", "190000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [0, 2], "tol": 0.02}, {"type": "num", "q": "How much of the depreciation cost is allocated to department A? Round to two decimal places.", "a": 30000.0, "think": "Allocate depreciation 190,000.00 using asset value: A has 3 out of 19. Multiply total expense by its share.", "why": "Depreciation allocated to A = 30,000.00.", "mistakes": {"47500": "You divided equally. Use this department’s share of the stated allocation base.", "190000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [0, 3], "tol": 0.02}, {"type": "num", "q": "How much of the depreciation cost is allocated to department B? Round to two decimal places.", "a": 10000.0, "think": "Allocate depreciation 190,000.00 using asset value: B has 1 out of 19. Multiply total expense by its share.", "why": "Depreciation allocated to B = 10,000.00.", "mistakes": {"47500": "You divided equally. Use this department’s share of the stated allocation base.", "190000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [0, 4], "tol": 0.02}, {"type": "num", "q": "How much of the rent, rates and taxes cost is allocated to department X? Round to two decimal places.", "a": 15000.0, "think": "Allocate rent, rates and taxes 36,000.00 using floor space: X has 5000 out of 12000. Multiply total expense by its share.", "why": "Rent, rates and taxes allocated to X = 15,000.00.", "mistakes": {"9000": "You divided equally. Use this department’s share of the stated allocation base.", "36000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [1, 1], "tol": 0.02}, {"type": "num", "q": "How much of the rent, rates and taxes cost is allocated to department Y? Round to two decimal places.", "a": 12000.0, "think": "Allocate the rent, rates and taxes of 36,000.00 by floor space. Multiply by Y’s area of 4,000 square feet divided by the combined floor area of X, Y, A and B in the question.", "why": "Rent, rates and taxes allocated to Y = 12,000.00.", "mistakes": {"9000": "You divided equally. Use this department’s share of the stated allocation base.", "36000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [1, 2], "tol": 0.02}, {"type": "num", "q": "How much of the rent, rates and taxes cost is allocated to department A? Round to two decimal places.", "a": 3000.0, "think": "Allocate rent, rates and taxes 36,000.00 using floor space: A has 1000 out of 12000. Multiply total expense by its share.", "why": "Rent, rates and taxes allocated to A = 3,000.00.", "mistakes": {"9000": "You divided equally. Use this department’s share of the stated allocation base.", "36000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [1, 3], "tol": 0.02}, {"type": "num", "q": "How much of the rent, rates and taxes cost is allocated to department B? Round to two decimal places.", "a": 6000.0, "think": "Allocate rent, rates and taxes 36,000.00 using floor space: B has 2000 out of 12000. Multiply total expense by its share.", "why": "Rent, rates and taxes allocated to B = 6,000.00.", "mistakes": {"9000": "You divided equally. Use this department’s share of the stated allocation base.", "36000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [1, 4], "tol": 0.02}, {"type": "num", "q": "How much of the insurance cost is allocated to department X? Round to two decimal places.", "a": 8000.0, "think": "Allocate insurance 15,200.00 using asset value: X has 10 out of 19. Multiply total expense by its share.", "why": "Insurance allocated to X = 8,000.00.", "mistakes": {"3800": "You divided equally. Use this department’s share of the stated allocation base.", "15200": "That is the cost for every department. Apply this department’s proportion."}, "fill": [2, 1], "tol": 0.02}, {"type": "num", "q": "How much of the insurance cost is allocated to department Y? Round to two decimal places.", "a": 4000.0, "think": "Allocate insurance 15,200.00 using asset value: Y has 5 out of 19. Multiply total expense by its share.", "why": "Insurance allocated to Y = 4,000.00.", "mistakes": {"3800": "You divided equally. Use this department’s share of the stated allocation base.", "15200": "That is the cost for every department. Apply this department’s proportion."}, "fill": [2, 2], "tol": 0.02}, {"type": "num", "q": "How much of the insurance cost is allocated to department A? Round to two decimal places.", "a": 2400.0, "think": "Allocate insurance 15,200.00 using asset value: A has 3 out of 19. Multiply total expense by its share.", "why": "Insurance allocated to A = 2,400.00.", "mistakes": {"3800": "You divided equally. Use this department’s share of the stated allocation base.", "15200": "That is the cost for every department. Apply this department’s proportion."}, "fill": [2, 3], "tol": 0.02}, {"type": "num", "q": "How much of the insurance cost is allocated to department B? Round to two decimal places.", "a": 800.0, "think": "Allocate insurance 15,200.00 using asset value: B has 1 out of 19. Multiply total expense by its share.", "why": "Insurance allocated to B = 800.00.", "mistakes": {"3800": "You divided equally. Use this department’s share of the stated allocation base.", "15200": "That is the cost for every department. Apply this department’s proportion."}, "fill": [2, 4], "tol": 0.02}, {"type": "num", "q": "How much of the power cost is allocated to department X? Round to two decimal places.", "a": 10000.0, "think": "Allocate power 20,000.00 using machine hours: X has 1000 out of 2000. Multiply total expense by its share.", "why": "Power allocated to X = 10,000.00.", "mistakes": {"5000": "You divided equally. Use this department’s share of the stated allocation base.", "20000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [3, 1], "tol": 0.02}, {"type": "num", "q": "How much of the power cost is allocated to department Y? Round to two decimal places.", "a": 5000.0, "think": "Allocate power 20,000.00 using machine hours: Y has 500 out of 2000. Multiply total expense by its share.", "why": "Power allocated to Y = 5,000.00.", "mistakes": {"20000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [3, 2], "tol": 0.02}, {"type": "num", "q": "How much of the power cost is allocated to department A? Round to two decimal places.", "a": 4000.0, "think": "Allocate power 20,000.00 using machine hours: A has 400 out of 2000. Multiply total expense by its share.", "why": "Power allocated to A = 4,000.00.", "mistakes": {"5000": "You divided equally. Use this department’s share of the stated allocation base.", "20000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [3, 3], "tol": 0.02}, {"type": "num", "q": "How much of the power cost is allocated to department B? Round to two decimal places.", "a": 1000.0, "think": "Allocate power 20,000.00 using machine hours: B has 100 out of 2000. Multiply total expense by its share.", "why": "Power allocated to B = 1,000.00.", "mistakes": {"5000": "You divided equally. Use this department’s share of the stated allocation base.", "20000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [3, 4], "tol": 0.02}, {"type": "num", "q": "How much of the canteen cost is allocated to department X? Round to two decimal places.", "a": 4800.0, "think": "Allocate canteen 10,800.00 using workers: X has 100 out of 225. Multiply total expense by its share.", "why": "Canteen allocated to X = 4,800.00.", "mistakes": {"2700": "You divided equally. Use this department’s share of the stated allocation base.", "10800": "That is the cost for every department. Apply this department’s proportion."}, "fill": [4, 1], "tol": 0.02}, {"type": "num", "q": "How much of the canteen cost is allocated to department Y? Round to two decimal places.", "a": 2400.0, "think": "Allocate canteen 10,800.00 using workers: Y has 50 out of 225. Multiply total expense by its share.", "why": "Canteen allocated to Y = 2,400.00.", "mistakes": {"2700": "You divided equally. Use this department’s share of the stated allocation base.", "10800": "That is the cost for every department. Apply this department’s proportion."}, "fill": [4, 2], "tol": 0.02}, {"type": "num", "q": "How much of the canteen cost is allocated to department A? Round to two decimal places.", "a": 2400.0, "think": "Allocate canteen 10,800.00 using workers: A has 50 out of 225. Multiply total expense by its share.", "why": "Canteen allocated to A = 2,400.00.", "mistakes": {"2700": "You divided equally. Use this department’s share of the stated allocation base.", "10800": "That is the cost for every department. Apply this department’s proportion."}, "fill": [4, 3], "tol": 0.02}, {"type": "num", "q": "How much of the canteen cost is allocated to department B? Round to two decimal places.", "a": 1200.0, "think": "Allocate canteen 10,800.00 using workers: B has 25 out of 225. Multiply total expense by its share.", "why": "Canteen allocated to B = 1,200.00.", "mistakes": {"2700": "You divided equally. Use this department’s share of the stated allocation base.", "10800": "That is the cost for every department. Apply this department’s proportion."}, "fill": [4, 4], "tol": 0.02}, {"type": "num", "q": "How much of the electricity cost is allocated to department X? Round to two decimal places.", "a": 2000.0, "think": "Allocate electricity 4,800.00 using light points: X has 50 out of 120. Multiply total expense by its share.", "why": "Electricity allocated to X = 2,000.00.", "mistakes": {"1200": "You divided equally. Use this department’s share of the stated allocation base.", "4800": "That is the cost for every department. Apply this department’s proportion."}, "fill": [5, 1], "tol": 0.02}, {"type": "num", "q": "How much of the electricity cost is allocated to department Y? Round to two decimal places.", "a": 1200.0, "think": "Allocate electricity 4,800.00 using light points: Y has 30 out of 120. Multiply total expense by its share.", "why": "Electricity allocated to Y = 1,200.00.", "mistakes": {"4800": "That is the cost for every department. Apply this department’s proportion."}, "fill": [5, 2], "tol": 0.02}, {"type": "num", "q": "How much of the electricity cost is allocated to department A? Round to two decimal places.", "a": 800.0, "think": "Allocate electricity 4,800.00 using light points: A has 20 out of 120. Multiply total expense by its share.", "why": "Electricity allocated to A = 800.00.", "mistakes": {"1200": "You divided equally. Use this department’s share of the stated allocation base.", "4800": "That is the cost for every department. Apply this department’s proportion."}, "fill": [5, 3], "tol": 0.02}, {"type": "num", "q": "How much of the electricity cost is allocated to department B? Round to two decimal places.", "a": 800.0, "think": "Allocate electricity 4,800.00 using light points: B has 20 out of 120. Multiply total expense by its share.", "why": "Electricity allocated to B = 800.00.", "mistakes": {"1200": "You divided equally. Use this department’s share of the stated allocation base.", "4800": "That is the cost for every department. Apply this department’s proportion."}, "fill": [5, 4], "tol": 0.02}, {"type": "num", "q": "What is the primary total for department X?", "a": 139800.0, "think": "Add Depreciation (100,000.00), Rent, rates and taxes (15,000.00), Insurance (8,000.00), Power (10,000.00), Canteen (4,800.00), Electricity (2,000.00).", "why": "primary total for X = 139,800.00.", "mistakes": {"137800": "You left out Electricity. Include every component of this total.", "100000": "That is only one component of this total. Add all the named components on the row.", "15000": "That is only one component of this total. Add all the named components on the row.", "60200": "You subtracted the other components. This row asks you to add them."}, "fill": [6, 1]}, {"type": "num", "q": "What is the primary total for department Y?", "a": 74600.0, "think": "Add Depreciation (50,000.00), Rent, rates and taxes (12,000.00), Insurance (4,000.00), Power (5,000.00), Canteen (2,400.00), Electricity (1,200.00).", "why": "primary total for Y = 74,600.00.", "mistakes": {"73400": "You left out Electricity. Include every component of this total.", "50000": "That is only one component of this total. Add all the named components on the row.", "12000": "That is only one component of this total. Add all the named components on the row.", "25400": "You subtracted the other components. This row asks you to add them."}, "fill": [6, 2]}, {"type": "num", "q": "What is the primary total for department A?", "a": 42600.0, "think": "Add Depreciation (30,000.00), Rent, rates and taxes (3,000.00), Insurance (2,400.00), Power (4,000.00), Canteen (2,400.00), Electricity (800.00).", "why": "primary total for A = 42,600.00.", "mistakes": {"41800": "You left out Electricity. Include every component of this total.", "30000": "That is only one component of this total. Add all the named components on the row.", "3000": "That is only one component of this total. Add all the named components on the row.", "17400": "You subtracted the other components. This row asks you to add them."}, "fill": [6, 3]}, {"type": "num", "q": "What is the primary total for department B?", "a": 19800.0, "think": "Add Depreciation (10,000.00), Rent, rates and taxes (6,000.00), Insurance (800.00), Power (1,000.00), Canteen (1,200.00), Electricity (800.00).", "why": "primary total for B = 19,800.00.", "mistakes": {"19000": "You left out Electricity. Include every component of this total.", "10000": "That is only one component of this total. Add all the named components on the row.", "6000": "That is only one component of this total. Add all the named components on the row.", "200": "You subtracted the other components. This row asks you to add them."}, "fill": [6, 4]}, {"type": "num", "q": "How much of department A's cost goes to department X?", "a": 25560.0, "think": "Service A total 42,600.00 is shared between X and Y in 3:2. Multiply by 3/5 for X.", "why": "A share to X = 25,560.00.", "mistakes": {"21300": "You divided equally instead of applying the given service ratio."}, "fill": [7, 1]}, {"type": "num", "q": "How much of department A's cost goes to department Y?", "a": 17040.0, "think": "Service A total 42,600.00 is shared between X and Y in 3:2. Multiply by 2/5 for Y.", "why": "A share to Y = 17,040.00.", "mistakes": {"21300": "You divided equally instead of applying the given service ratio."}, "fill": [7, 2]}, {"type": "num", "q": "How much of department B's cost goes to department X?", "a": 17820.0, "think": "Service B total 19,800.00 is shared between X and Y in 9:1. Multiply by 9/10 for X.", "why": "B share to X = 17,820.00.", "mistakes": {"9900": "You divided equally instead of applying the given service ratio."}, "fill": [8, 1]}, {"type": "num", "q": "How much of department B's cost goes to department Y?", "a": 1980.0, "think": "Service B total 19,800.00 is shared between X and Y in 9:1. Multiply by 1/10 for Y.", "why": "B share to Y = 1,980.00.", "mistakes": {"9900": "You divided equally instead of applying the given service ratio."}, "fill": [8, 2]}, {"type": "num", "q": "What is the final overhead of department X?", "a": 183180.0, "think": "Add own primary cost (139,800.00), share of A (25,560.00), share of B (17,820.00).", "why": "final X = 183,180.00.", "mistakes": {"165360": "You left out share of B. Include every component of this total.", "139800": "That is only one component of this total. Add all the named components on the row.", "25560": "That is only one component of this total. Add all the named components on the row.", "96420": "You subtracted the other components. This row asks you to add them."}, "fill": [9, 1]}, {"type": "num", "q": "What is the final overhead of department Y?", "a": 93620.0, "think": "Add own primary cost (74,600.00), share of A (17,040.00), share of B (1,980.00).", "why": "final Y = 93,620.00.", "mistakes": {"91640": "You left out share of B. Include every component of this total.", "74600": "That is only one component of this total. Add all the named components on the row.", "17040": "That is only one component of this total. Add all the named components on the row.", "55580": "You subtracted the other components. This row asks you to add them."}, "fill": [9, 2]}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q1</summary>
 <p><strong>Step 1 — Allocate each shared cost on its relevant basis.</strong> A department’s share = total expense × its quantity ÷ total quantities. Asset value drives insurance and depreciation; space drives occupancy costs; workers drive canteen cost; hours drive power and points drive electricity.</p>
@@ -1080,59 +1090,59 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Depreciation / Asset value</td>
-<td>100,000</td>
-<td>50,000</td>
-<td>30,000</td>
-<td>10,000</td>
-<td>190,000</td>
+<td>100,000.00</td>
+<td>50,000.00</td>
+<td>30,000.00</td>
+<td>10,000.00</td>
+<td>190,000.00</td>
 </tr>
 <tr>
 <td>Rent, rates and taxes / Floor space</td>
-<td>15,000</td>
-<td>12,000</td>
-<td>3,000</td>
-<td>6,000</td>
-<td>36,000</td>
+<td>15,000.00</td>
+<td>12,000.00</td>
+<td>3,000.00</td>
+<td>6,000.00</td>
+<td>36,000.00</td>
 </tr>
 <tr>
 <td>Insurance / Asset value</td>
-<td>8,000</td>
-<td>4,000</td>
-<td>2,400</td>
-<td>800</td>
-<td>15,200</td>
+<td>8,000.00</td>
+<td>4,000.00</td>
+<td>2,400.00</td>
+<td>800.00</td>
+<td>15,200.00</td>
 </tr>
 <tr>
 <td>Power / Machine hours</td>
-<td>10,000</td>
-<td>5,000</td>
-<td>4,000</td>
-<td>1,000</td>
-<td>20,000</td>
+<td>10,000.00</td>
+<td>5,000.00</td>
+<td>4,000.00</td>
+<td>1,000.00</td>
+<td>20,000.00</td>
 </tr>
 <tr>
 <td>Canteen expenses / Workers</td>
-<td>4,800</td>
-<td>2,400</td>
-<td>2,400</td>
-<td>1,200</td>
-<td>10,800</td>
+<td>4,800.00</td>
+<td>2,400.00</td>
+<td>2,400.00</td>
+<td>1,200.00</td>
+<td>10,800.00</td>
 </tr>
 <tr>
 <td>Electricity / Light points</td>
-<td>2,000</td>
-<td>1,200</td>
-<td>800</td>
-<td>800</td>
-<td>4,800</td>
+<td>2,000.00</td>
+<td>1,200.00</td>
+<td>800.00</td>
+<td>800.00</td>
+<td>4,800.00</td>
 </tr>
 <tr>
 <td>Primary total</td>
-<td>139,800</td>
-<td>74,600</td>
-<td>42,600</td>
-<td>19,800</td>
-<td>276,800</td>
+<td>139,800.00</td>
+<td>74,600.00</td>
+<td>42,600.00</td>
+<td>19,800.00</td>
+<td>276,800.00</td>
 </tr>
 </tbody>
 </table>
@@ -1148,26 +1158,26 @@ Repeated distribution-இல் service balances முடிவில் பூ
 </thead>
 <tbody>
 <tr>
-<td>A: 42,600 × 3/5 and 2/5</td>
-<td>25,560</td>
-<td>17,040</td>
-<td>42,600</td>
+<td>A: 42,600.00 × 3/5 and 2/5</td>
+<td>25,560.00</td>
+<td>17,040.00</td>
+<td>42,600.00</td>
 </tr>
 <tr>
-<td>B: 19,800 × 9/10 and 1/10</td>
-<td>17,820</td>
-<td>1,980</td>
-<td>19,800</td>
+<td>B: 19,800.00 × 9/10 and 1/10</td>
+<td>17,820.00</td>
+<td>1,980.00</td>
+<td>19,800.00</td>
 </tr>
 <tr>
 <td>Final production overhead</td>
-<td>183,180</td>
-<td>93,620</td>
+<td>183,180.00</td>
+<td>93,620.00</td>
 <td>0 remaining</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Final check:</strong> 183,180 + 93,620 = <strong>276,800</strong>, the six original expenses added together. Redistribution moves costs; it never creates more cost.</p>
+<p><strong>Final check:</strong> 183,180.00 + 93,620.00 = <strong>276,800.00</strong>, the six original expenses added together. Redistribution moves costs; it never creates more cost.</p>
 </details>
 <p><strong>Q2. Question:</strong> The overhead expenses for the year ended 31 March 2014 are given below. Production departments are Machine shop and Packing; service departments are General plant and Maintenance.</p>
 <table>
@@ -1289,7 +1299,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>1000</td>
 <td>90</td>
 <td>40</td>
-<td>64000</td>
+<td>64,000.00</td>
 <td>3500</td>
 </tr>
 <tr>
@@ -1297,7 +1307,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>400</td>
 <td>180</td>
 <td>20</td>
-<td>20000</td>
+<td>20,000.00</td>
 <td>500</td>
 </tr>
 <tr>
@@ -1305,7 +1315,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>200</td>
 <td>60</td>
 <td>6</td>
-<td>1000</td>
+<td>1,000.00</td>
 <td>0</td>
 </tr>
 <tr>
@@ -1313,7 +1323,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>800</td>
 <td>120</td>
 <td>10</td>
-<td>15000</td>
+<td>15,000.00</td>
 <td>1000</td>
 </tr>
 <tr>
@@ -1321,16 +1331,18 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>2400</td>
 <td>450</td>
 <td>76</td>
-<td>100000</td>
+<td>100,000.00</td>
 <td>5000</td>
 </tr>
 </tbody>
 </table>
 <p>Maintenance costs are distributed: Machine shop 50%, Packing 20%, General plant 30%. General plant costs are distributed by employees. Show distribution to production and service departments and determine production overheads after redistribution. Carry through 2 cycles.</p>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w10-q2" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Primary Machine shop",""],["Primary Maintenance",""],["Maintenance remaining after two cycles",""],["Final Machine shop with residual shortcut",""],["Final Packing with residual shortcut",""]]},"steps":[{"type":"num","q":"Primary Machine shop — enter the number","a":165280.0,"think":"Add its direct allocations and shares of five overheads.","why":"12,400 + 11,200 + 10,000 + 2,400 + 1,280 + 128,000 = 165,280.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Add its direct allocations and shares of five overheads."}},{"type":"num","q":"Primary Maintenance — enter the number","a":59400.0,"think":"Use the given basis for each overhead, not a single percentage for all costs.","why":"14,700 + 3,200 + 8,000 + 3,200 + 300 + 30,000 = 59,400.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Use the given basis for each overhead, not a single percentage for all costs."}},{"type":"num","q":"Maintenance remaining after two cycles — enter the number","a":353.76,"think":"Carry both reciprocal rounds, including service-to-service shares.","why":"After cycle two General plant redistributes 2,476.285714; 1/7 goes back to Maintenance = 353.755102.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Carry both reciprocal rounds, including service-to-service shares."}},{"type":"num","q":"Final Machine shop with residual shortcut — enter the number","a":233791.99,"think":"Allocate the residual at 5:2 after completing the required two cycles.","why":"233,539.30 + 353.76 × 5/7 = 233,791.99.","fill":[3,1],"mistakes":{"0":"This is not a zero result. Allocate the residual at 5:2 after completing the required two cycles."}},{"type":"num","q":"Final Packing with residual shortcut — enter the number","a":91048.01,"think":"Allocate the remaining 2/7 of the residual to Packing.","why":"90,946.94 + 353.76 × 2/7 = 91,048.01.","fill":[4,1],"mistakes":{"0":"This is not a zero result. Allocate the remaining 2/7 of the residual to Packing."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself — Part 1 of 2 — Primary overhead distribution</div><div id="gp-w10-q2" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Overhead distribution (Rs.)", "Machine shop", "Packing", "General plant", "Maintenance"], "rows": [["Already allocated", 12400, 9400, 34340, 14700], ["Power / machine hours", "", "", 0, ""], ["Rent / floor space", "", "", "", ""], ["Heat and fuel / radiator sections", "", "", "", ""], ["Insurance / asset value", "", "", "", ""], ["Depreciation / asset value", "", "", "", ""], ["Primary total", "", "", "", ""]], "moneyCols": [1, 2, 3, 4], "decimals": 2}, "steps": [{"type": "num", "q": "What is the power allocated to machine shop? Round to two decimal places.", "a": 11200.0, "think": "Allocate power 16,000.00 using machine hours: Machine shop has 3500 out of 5000. Multiply total expense by its share.", "why": "Power allocated to Machine shop = 11,200.00.", "mistakes": {"4000": "You divided equally. Use this department’s share of the stated allocation base.", "16000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [1, 1], "tol": 0.02}, {"type": "num", "q": "What is the power allocated to packing? Round to two decimal places.", "a": 1600.0, "think": "Allocate power 16,000.00 using machine hours: Packing has 500 out of 5000. Multiply total expense by its share.", "why": "Power allocated to Packing = 1,600.00.", "mistakes": {"4000": "You divided equally. Use this department’s share of the stated allocation base.", "16000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [1, 2], "tol": 0.02}, {"type": "num", "q": "What is the power allocated to maintenance? Round to two decimal places.", "a": 3200.0, "think": "Allocate power 16,000.00 using machine hours: Maintenance has 1000 out of 5000. Multiply total expense by its share.", "why": "Power allocated to Maintenance = 3,200.00.", "mistakes": {"4000": "You divided equally. Use this department’s share of the stated allocation base.", "16000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [1, 4], "tol": 0.02}, {"type": "num", "q": "What is the rent allocated to machine shop? Round to two decimal places.", "a": 10000.0, "think": "Allocate rent 24,000.00 using floor space: Machine shop has 1000 out of 2400. Multiply total expense by its share.", "why": "Rent allocated to Machine shop = 10,000.00.", "mistakes": {"6000": "You divided equally. Use this department’s share of the stated allocation base.", "24000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [2, 1], "tol": 0.02}, {"type": "num", "q": "What is the rent allocated to packing? Round to two decimal places.", "a": 4000.0, "think": "Allocate rent 24,000.00 using floor space: Packing has 400 out of 2400. Multiply total expense by its share.", "why": "Rent allocated to Packing = 4,000.00.", "mistakes": {"6000": "You divided equally. Use this department’s share of the stated allocation base.", "24000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [2, 2], "tol": 0.02}, {"type": "num", "q": "What is the rent allocated to general plant? Round to two decimal places.", "a": 2000.0, "think": "Allocate rent 24,000.00 using floor space: General plant has 200 out of 2400. Multiply total expense by its share.", "why": "Rent allocated to General plant = 2,000.00.", "mistakes": {"6000": "You divided equally. Use this department’s share of the stated allocation base.", "24000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [2, 3], "tol": 0.02}, {"type": "num", "q": "What is the rent allocated to maintenance? Round to two decimal places.", "a": 8000.0, "think": "Allocate rent 24,000.00 using floor space: Maintenance has 800 out of 2400. Multiply total expense by its share.", "why": "Rent allocated to Maintenance = 8,000.00.", "mistakes": {"6000": "You divided equally. Use this department’s share of the stated allocation base.", "24000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [2, 4], "tol": 0.02}, {"type": "num", "q": "What is the heat and fuel allocated to machine shop? Round to two decimal places.", "a": 2400.0, "think": "Allocate heat and fuel 12,000.00 using radiator sections: Machine shop has 90 out of 450. Multiply total expense by its share.", "why": "Heat and fuel allocated to Machine shop = 2,400.00.", "mistakes": {"3000": "You divided equally. Use this department’s share of the stated allocation base.", "12000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [3, 1], "tol": 0.02}, {"type": "num", "q": "What is the heat and fuel allocated to packing? Round to two decimal places.", "a": 4800.0, "think": "Allocate heat and fuel 12,000.00 using radiator sections: Packing has 180 out of 450. Multiply total expense by its share.", "why": "Heat and fuel allocated to Packing = 4,800.00.", "mistakes": {"3000": "You divided equally. Use this department’s share of the stated allocation base.", "12000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [3, 2], "tol": 0.02}, {"type": "num", "q": "What is the heat and fuel allocated to general plant? Round to two decimal places.", "a": 1600.0, "think": "Allocate heat and fuel 12,000.00 using radiator sections: General plant has 60 out of 450. Multiply total expense by its share.", "why": "Heat and fuel allocated to General plant = 1,600.00.", "mistakes": {"3000": "You divided equally. Use this department’s share of the stated allocation base.", "12000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [3, 3], "tol": 0.02}, {"type": "num", "q": "What is the heat and fuel allocated to maintenance? Round to two decimal places.", "a": 3200.0, "think": "Allocate heat and fuel 12,000.00 using radiator sections: Maintenance has 120 out of 450. Multiply total expense by its share.", "why": "Heat and fuel allocated to Maintenance = 3,200.00.", "mistakes": {"3000": "You divided equally. Use this department’s share of the stated allocation base.", "12000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [3, 4], "tol": 0.02}, {"type": "num", "q": "What is the insurance allocated to machine shop? Round to two decimal places.", "a": 1280.0, "think": "Allocate insurance 2,000.00 using asset value: Machine shop has 64000 out of 100000. Multiply total expense by its share.", "why": "Insurance allocated to Machine shop = 1,280.00.", "mistakes": {"500": "You divided equally. Use this department’s share of the stated allocation base.", "2000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [4, 1], "tol": 0.02}, {"type": "num", "q": "What is the insurance allocated to packing? Round to two decimal places.", "a": 400.0, "think": "Allocate insurance 2,000.00 using asset value: Packing has 20000 out of 100000. Multiply total expense by its share.", "why": "Insurance allocated to Packing = 400.00.", "mistakes": {"500": "You divided equally. Use this department’s share of the stated allocation base.", "2000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [4, 2], "tol": 0.02}, {"type": "num", "q": "What is the insurance allocated to general plant? Round to two decimal places.", "a": 20.0, "think": "Allocate insurance 2,000.00 using asset value: General plant has 1000 out of 100000. Multiply total expense by its share.", "why": "Insurance allocated to General plant = 20.00.", "mistakes": {"500": "You divided equally. Use this department’s share of the stated allocation base.", "2000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [4, 3], "tol": 0.02}, {"type": "num", "q": "What is the insurance allocated to maintenance? Round to two decimal places.", "a": 300.0, "think": "Allocate insurance 2,000.00 using asset value: Maintenance has 15000 out of 100000. Multiply total expense by its share.", "why": "Insurance allocated to Maintenance = 300.00.", "mistakes": {"500": "You divided equally. Use this department’s share of the stated allocation base.", "2000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [4, 4], "tol": 0.02}, {"type": "num", "q": "What is the depreciation allocated to machine shop? Round to two decimal places.", "a": 128000.0, "think": "Allocate depreciation 200,000.00 using asset value: Machine shop has 64000 out of 100000. Multiply total expense by its share.", "why": "Depreciation allocated to Machine shop = 128,000.00.", "mistakes": {"50000": "You divided equally. Use this department’s share of the stated allocation base.", "200000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [5, 1], "tol": 0.02}, {"type": "num", "q": "What is the depreciation allocated to packing? Round to two decimal places.", "a": 40000.0, "think": "Allocate depreciation 200,000.00 using asset value: Packing has 20000 out of 100000. Multiply total expense by its share.", "why": "Depreciation allocated to Packing = 40,000.00.", "mistakes": {"50000": "You divided equally. Use this department’s share of the stated allocation base.", "200000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [5, 2], "tol": 0.02}, {"type": "num", "q": "What is the depreciation allocated to general plant? Round to two decimal places.", "a": 2000.0, "think": "Allocate depreciation 200,000.00 using asset value: General plant has 1000 out of 100000. Multiply total expense by its share.", "why": "Depreciation allocated to General plant = 2,000.00.", "mistakes": {"50000": "You divided equally. Use this department’s share of the stated allocation base.", "200000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [5, 3], "tol": 0.02}, {"type": "num", "q": "What is the depreciation allocated to maintenance? Round to two decimal places.", "a": 30000.0, "think": "Allocate depreciation 200,000.00 using asset value: Maintenance has 15000 out of 100000. Multiply total expense by its share.", "why": "Depreciation allocated to Maintenance = 30,000.00.", "mistakes": {"50000": "You divided equally. Use this department’s share of the stated allocation base.", "200000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [5, 4], "tol": 0.02}, {"type": "num", "q": "What is the primary total for machine shop?", "a": 165280.0, "think": "Add already allocated (12,400.00), Power (11,200.00), Rent (10,000.00), Heat and fuel (2,400.00), Insurance (1,280.00), Depreciation (128,000.00).", "why": "primary total for Machine shop = 165,280.00.", "mistakes": {"37280": "You left out Depreciation. Include every component of this total.", "12400": "That is only one component of this total. Add all the named components on the row.", "11200": "That is only one component of this total. Add all the named components on the row."}, "fill": [6, 1]}, {"type": "num", "q": "What is the primary total for packing?", "a": 60200.0, "think": "Add already allocated (9,400.00), Power (1,600.00), Rent (4,000.00), Heat and fuel (4,800.00), Insurance (400.00), Depreciation (40,000.00).", "why": "primary total for Packing = 60,200.00.", "mistakes": {"20200": "You left out Depreciation. Include every component of this total.", "9400": "That is only one component of this total. Add all the named components on the row.", "1600": "That is only one component of this total. Add all the named components on the row."}, "fill": [6, 2]}, {"type": "num", "q": "What is the primary total for general plant?", "a": 39960.0, "think": "Add already allocated (34,340.00), Power (0.00), Rent (2,000.00), Heat and fuel (1,600.00), Insurance (20.00), Depreciation (2,000.00).", "why": "primary total for General plant = 39,960.00.", "mistakes": {"37960": "You left out Depreciation. Include every component of this total.", "34340": "That is only one component of this total. Add all the named components on the row.", "28720": "You subtracted the other components. This row asks you to add them."}, "fill": [6, 3]}, {"type": "num", "q": "What is the primary total for maintenance?", "a": 59400.0, "think": "Add already allocated (14,700.00), Power (3,200.00), Rent (8,000.00), Heat and fuel (3,200.00), Insurance (300.00), Depreciation (30,000.00).", "why": "primary total for Maintenance = 59,400.00.", "mistakes": {"29400": "You left out Depreciation. Include every component of this total.", "14700": "That is only one component of this total. Add all the named components on the row.", "3200": "That is only one component of this total. Add all the named components on the row."}, "fill": [6, 4]}], "end": "Continue with the next part below, using your completed working above."}</script></div></div>
+<p>Use your completed work from the preceding part above. All practice steps are retained.</p>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself — Part 2 of 2 — Service redistribution and final costs</div><div id="gp-w10-q2-part2" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Overhead distribution (Rs.)", "Machine shop", "Packing", "General plant", "Maintenance"], "rows": [["Cycle 1: distribute Maintenance", "", "", "", "(59,400.00)"], ["Cycle 1: distribute General plant", "", "", "(57,780.00)", ""], ["Cycle 2: distribute Maintenance", "", "", "", "(8,254.29)"], ["Cycle 2: distribute General plant", "", "", "(2,476.29)", ""], ["Balances after two cycles", "", "", 0, ""], ["Optional residual shortcut: 5:2", "", "", 0, "Cleared"], ["Final after optional shortcut", "", "", 0, 0]], "moneyCols": [1, 2, 3, 4], "decimals": 2}, "steps": [{"type": "num", "q": "What is the cycle 1 maintenance share to machine shop? Round to two decimal places.", "a": 29700.0, "think": "Multiply the unrounded Maintenance balance at the start of cycle 1 by 50%. The recipient is Machine shop. Round the transfer to cents for this report.", "why": "cycle 1 Maintenance share to Machine shop = 29,700.00.", "mistakes": {"19800": "You divided equally. The service shares are 50%, 20% and 30%."}, "fill": [0, 1], "tol": 0.02}, {"type": "num", "q": "What is the cycle 1 maintenance share to packing? Round to two decimal places.", "a": 11880.0, "think": "Multiply the unrounded Maintenance balance at the start of cycle 1 by 20%. The recipient is Packing. Round the transfer to cents for this report.", "why": "cycle 1 Maintenance share to Packing = 11,880.00.", "mistakes": {"19800": "You divided equally. The service shares are 50%, 20% and 30%."}, "fill": [0, 2], "tol": 0.02}, {"type": "num", "q": "What is the cycle 1 maintenance share to general plant? Round to two decimal places.", "a": 17820.0, "think": "Multiply the unrounded Maintenance balance at the start of cycle 1 by 30%. The recipient is General plant. Round the transfer to cents for this report.", "why": "cycle 1 Maintenance share to General plant = 17,820.00.", "mistakes": {"19800": "You divided equally. The service shares are 50%, 20% and 30%."}, "fill": [0, 3], "tol": 0.02}, {"type": "num", "q": "What is the cycle 1 general plant share to machine shop? Round to two decimal places.", "a": 33017.14, "think": "General plant’s unrounded balance includes the preceding Maintenance transfer. Multiply it by 40/70 employees for Machine shop; exclude the six General plant workers.", "why": "cycle 1 General plant share to Machine shop = 33,017.14.", "mistakes": {"30410.53": "You included General plant’s own six employees. Only 70 recipient employees share this cost."}, "fill": [1, 1], "tol": 0.02}, {"type": "num", "q": "What is the cycle 1 general plant share to packing? Round to two decimal places.", "a": 16508.57, "think": "General plant’s unrounded balance includes the preceding Maintenance transfer. Multiply it by 20/70 employees for Packing; exclude the six General plant workers.", "why": "cycle 1 General plant share to Packing = 16,508.57.", "mistakes": {"15205.26": "You included General plant’s own six employees. Only 70 recipient employees share this cost."}, "fill": [1, 2], "tol": 0.02}, {"type": "num", "q": "What is the cycle 1 general plant share to maintenance? Round to two decimal places.", "a": 8254.29, "think": "General plant’s unrounded balance includes the preceding Maintenance transfer. Multiply it by 10/70 employees for Maintenance; exclude the six General plant workers.", "why": "cycle 1 General plant share to Maintenance = 8,254.29.", "mistakes": {"7602.63": "You included General plant’s own six employees. Only 70 recipient employees share this cost."}, "fill": [1, 4], "tol": 0.02}, {"type": "num", "q": "What is the cycle 2 maintenance share to machine shop? Round to two decimal places.", "a": 4127.14, "think": "Multiply the unrounded Maintenance balance at the start of cycle 2 by 50%. The recipient is Machine shop. Round the transfer to cents for this report.", "why": "cycle 2 Maintenance share to Machine shop = 4,127.14.", "mistakes": {"2751.43": "You divided equally. The service shares are 50%, 20% and 30%."}, "fill": [2, 1], "tol": 0.02}, {"type": "num", "q": "What is the cycle 2 maintenance share to packing? Round to two decimal places.", "a": 1650.86, "think": "Multiply the unrounded Maintenance balance at the start of cycle 2 by 20%. The recipient is Packing. Round the transfer to cents for this report.", "why": "cycle 2 Maintenance share to Packing = 1,650.86.", "mistakes": {"2751.43": "You divided equally. The service shares are 50%, 20% and 30%."}, "fill": [2, 2], "tol": 0.02}, {"type": "num", "q": "What is the cycle 2 maintenance share to general plant? Round to two decimal places.", "a": 2476.29, "think": "Multiply the unrounded Maintenance balance at the start of cycle 2 by 30%. The recipient is General plant. Round the transfer to cents for this report.", "why": "cycle 2 Maintenance share to General plant = 2,476.29.", "mistakes": {"2751.43": "You divided equally. The service shares are 50%, 20% and 30%."}, "fill": [2, 3], "tol": 0.02}, {"type": "num", "q": "What is the cycle 2 general plant share to machine shop? Round to two decimal places.", "a": 1415.02, "think": "General plant’s unrounded balance includes the preceding Maintenance transfer. Multiply it by 40/70 employees for Machine shop; exclude the six General plant workers.", "why": "cycle 2 General plant share to Machine shop = 1,415.02.", "mistakes": {"1303.31": "You included General plant’s own six employees. Only 70 recipient employees share this cost."}, "fill": [3, 1], "tol": 0.02}, {"type": "num", "q": "What is the cycle 2 general plant share to packing? Round to two decimal places.", "a": 707.51, "think": "General plant’s unrounded balance includes the preceding Maintenance transfer. Multiply it by 20/70 employees for Packing; exclude the six General plant workers.", "why": "cycle 2 General plant share to Packing = 707.51.", "mistakes": {"651.65": "You included General plant’s own six employees. Only 70 recipient employees share this cost."}, "fill": [3, 2], "tol": 0.02}, {"type": "num", "q": "What is the cycle 2 general plant share to maintenance? Round to two decimal places.", "a": 353.76, "think": "General plant’s unrounded balance includes the preceding Maintenance transfer. Multiply it by 10/70 employees for Maintenance; exclude the six General plant workers.", "why": "cycle 2 General plant share to Maintenance = 353.76.", "mistakes": {"325.83": "You included General plant’s own six employees. Only 70 recipient employees share this cost."}, "fill": [3, 4], "tol": 0.02}, {"type": "num", "q": "What is the machine shop two-cycle overhead? Round to two decimal places.", "a": 233539.3, "think": "Add Machine shop primary overhead and its four displayed service transfers from both cycles. Keep the cent-based convention stated in the answer.", "why": "Machine shop two-cycle overhead = 233,539.30.", "mistakes": {"165280": "That is only primary overhead. Add this department’s four service receipts."}, "fill": [4, 1], "tol": 0.02}, {"type": "num", "q": "What is the packing two-cycle overhead? Round to two decimal places.", "a": 90946.94, "think": "Add Packing primary overhead and its four displayed service transfers from both cycles. Keep the cent-based convention stated in the answer.", "why": "Packing two-cycle overhead = 90,946.94.", "mistakes": {"60200": "That is only primary overhead. Add this department’s four service receipts."}, "fill": [4, 2], "tol": 0.02}, {"type": "num", "q": "What is the maintenance residual after two cycles? Round to two decimal places.", "a": 353.76, "think": "The second General plant distribution sends 10/70 of its balance back to Maintenance. This residual remains after the required two cycles.", "why": "Maintenance residual after two cycles = 353.76.", "mistakes": {"0": "Two cycles do not eliminate reciprocal service cost completely. Retain the final return to Maintenance."}, "fill": [4, 4], "tol": 0.02}, {"type": "num", "q": "What is the residual share to machine shop? Round to two decimal places.", "a": 252.68571429, "think": "Multiply residual (353.76) by production-only proportion (0.71).", "why": "residual share to Machine shop = 252.69.", "mistakes": {"354.474285714": "You added the factors. This row requires multiplication.", "353.76": "That is only residual. Apply the other factor(s)."}, "fill": [5, 1], "tol": 0.02}, {"type": "num", "q": "What is the residual share to packing? Round to two decimal places.", "a": 101.07428571, "think": "Multiply residual (353.76) by production-only proportion (0.29).", "why": "residual share to Packing = 101.07.", "mistakes": {"354.045714286": "You added the factors. This row requires multiplication.", "353.76": "That is only residual. Apply the other factor(s)."}, "fill": [5, 2], "tol": 0.02}, {"type": "num", "q": "What is the final machine shop? Round to two decimal places.", "a": 233791.99, "think": "Add Machine shop two-cycle balance and its rounded share of residual Maintenance (5/7 of 353.76).", "why": "final Machine shop = 233,791.99.", "mistakes": {"233539.3": "That is the two-cycle balance before the optional residual allocation."}, "fill": [6, 1], "tol": 0.02}, {"type": "num", "q": "What is the final packing? Round to two decimal places.", "a": 91048.01, "think": "Add Packing two-cycle balance and its rounded share of residual Maintenance (2/7 of 353.76).", "why": "final Packing = 91,048.01.", "mistakes": {"90946.94": "That is the two-cycle balance before the optional residual allocation."}, "fill": [6, 2], "tol": 0.02}], "end": "This completes all parts of the question. Open the written answer below to compare."}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q2</summary>
-<p><strong>Step 1 — Primary distribution.</strong> Already allocated costs total 12,400 / 9,400 / 34,340 / 14,700. Spread the remaining expenses using the bases below; do not allocate power by floor space or heat by employees.</p>
+<p><strong>Step 1 — Primary distribution.</strong> Already allocated costs total 12,400.00 / 9,400.00 / 34,340.00 / 14,700. Spread the remaining expenses using the bases below; do not allocate power by floor space or heat by employees.</p>
 <table>
 <thead>
 <tr>
@@ -1344,52 +1356,52 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Already allocated</td>
-<td>12,400</td>
-<td>9,400</td>
-<td>34,340</td>
-<td>14,700</td>
+<td>12,400.00</td>
+<td>9,400.00</td>
+<td>34,340.00</td>
+<td>14,700.00</td>
 </tr>
 <tr>
 <td>Power / Machine hours</td>
-<td>11,200</td>
-<td>1,600</td>
-<td>0</td>
-<td>3,200</td>
+<td>11,200.00</td>
+<td>1,600.00</td>
+<td>0.00</td>
+<td>3,200.00</td>
 </tr>
 <tr>
 <td>Rent / Floor space</td>
-<td>10,000</td>
-<td>4,000</td>
-<td>2,000</td>
-<td>8,000</td>
+<td>10,000.00</td>
+<td>4,000.00</td>
+<td>2,000.00</td>
+<td>8,000.00</td>
 </tr>
 <tr>
 <td>Heat and fuel / Radiator sections</td>
-<td>2,400</td>
-<td>4,800</td>
-<td>1,600</td>
-<td>3,200</td>
+<td>2,400.00</td>
+<td>4,800.00</td>
+<td>1,600.00</td>
+<td>3,200.00</td>
 </tr>
 <tr>
 <td>Insurance / Asset value</td>
-<td>1,280</td>
-<td>400</td>
-<td>20</td>
-<td>300</td>
+<td>1,280.00</td>
+<td>400.00</td>
+<td>20.00</td>
+<td>300.00</td>
 </tr>
 <tr>
 <td>Depreciation / Asset value</td>
-<td>128,000</td>
-<td>40,000</td>
-<td>2,000</td>
-<td>30,000</td>
+<td>128,000.00</td>
+<td>40,000.00</td>
+<td>2,000.00</td>
+<td>30,000.00</td>
 </tr>
 <tr>
 <td>Primary totals</td>
-<td>165,280</td>
-<td>60,200</td>
-<td>39,960</td>
-<td>59,400</td>
+<td>165,280.00</td>
+<td>60,200.00</td>
+<td>39,960.00</td>
+<td>59,400.00</td>
 </tr>
 </tbody>
 </table>
@@ -1408,16 +1420,16 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Cycle 1: Maintenance</td>
-<td>29,700</td>
-<td>11,880</td>
-<td>17,820</td>
-<td>(59,400)</td>
+<td>29,700.00</td>
+<td>11,880.00</td>
+<td>17,820.00</td>
+<td>(59,400.00)</td>
 </tr>
 <tr>
 <td>Cycle 1: General plant</td>
 <td>33,017.14</td>
 <td>16,508.57</td>
-<td>(57,780)</td>
+<td>(57,780.00)</td>
 <td>8,254.29</td>
 </tr>
 <tr>
@@ -1436,9 +1448,9 @@ Repeated distribution-இல் service balances முடிவில் பூ
 </tr>
 <tr>
 <td>Balances after cycle 2</td>
-<td>233,539.3</td>
+<td>233,539.30</td>
 <td>90,946.94</td>
-<td>0</td>
+<td>0.00</td>
 <td>353.76</td>
 </tr>
 </tbody>
@@ -1466,7 +1478,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 </tbody>
 </table>
 <p>This final residual shortcut is an approximation, not the exact infinite reciprocal solution.</p>
-<p><strong>Final check:</strong> after two cycles, 233,539.30 + 90,946.94 + 353.76 = <strong>324,840</strong>. After residual allocation, 233,791.99 + 91,048.01 = <strong>324,840</strong>.</p>
+<p><strong>Final check:</strong> after two cycles, 233,539.30 + 90,946.94 + 353.76 = <strong>324,840.00</strong>. After residual allocation, 233,791.99 + 91,048.01 = <strong>324,840.00</strong>.</p>
 </details>
 <p><strong>Q3. Question:</strong> A manufacturing company is described as having two production and three service departments. The overheads and apportionment table below are provided. Show total overheads chargeable to production using (a) repeated distribution and (b) simultaneous equations.</p>
 <table>
@@ -1508,11 +1520,11 @@ Repeated distribution-இல் service balances முடிவில் பூ
 </tbody>
 </table>
 <p>Total overhead Rs. 33,000. The paper calls them “two production departments” again in the requirement.</p>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w10-q3" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Reciprocal service A",""],["Final production 1",""],["Final production 2",""],["Final production 3",""]]},"steps":[{"type":"num","q":"Reciprocal service A — enter the number","a":1836.73,"think":"A receives 20% of B. Substitute B’s equation into A.","why":"A = 1,800 ÷ 0.98 = 1,836.734694.","fill":[0,1],"mistakes":{"0":"This is not a zero result. A receives 20% of B. Substitute B’s equation into A."}},{"type":"num","q":"Final production 1 — enter the number","a":7224.49,"think":"Own cost plus 30% of A and 40% of B.","why":"5,000 + 551.020408 + 1,673.469388 = 7,224.49.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Own cost plus 30% of A and 40% of B."}},{"type":"num","q":"Final production 2 — enter the number","a":10173.47,"think":"Own cost plus 50% of A and 30% of B.","why":"8,000 + 918.367347 + 1,255.102041 = 10,173.47.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Own cost plus 50% of A and 30% of B."}},{"type":"num","q":"Final production 3 — enter the number","a":15602.04,"think":"Own cost plus 10% of each service.","why":"15,000 + 183.673469 + 418.367347 = 15,602.04.","fill":[3,1],"mistakes":{"0":"This is not a zero result. Own cost plus 10% of each service."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w10-q3" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Repeated distribution / equations (Rs.)", "1", "2", "3", "A", "B"], "rows": [["Own overhead", 5000.0, 8000.0, 15000.0, 1000.0, 4000.0], ["Cycle 1: A", "", "", "", "(1,000.00)", ""], ["Cycle 1: B", "", "", "", "", "(4,100.00)"], ["Cycle 2: A", "", "", "", "(820.00)", ""], ["Cycle 2: B", "", "", "", "", "(82.00)"], ["Cycle 3: A", "4.92", "8.20", "1.64", "(16.40)", "1.64"], ["Cycle 3: B", "0.66", "0.49", "0.16", "0.33", "(1.64)"], ["Cycle 4: A", "0.10", "0.16", "0.03", "(0.33)", "0.03"], ["Cycle 4: B", "0.01", "0.01", "0.00", "0.01", "(0.03)"], ["Cycle 5: A", "0.00", "0.00", "0.00", "(0.01)", "0.00"], ["Cycle 5: B", "0.00", "0.00", "0.00", "0.00", "(0.00)"], ["Cycle 6: A", "0.00", "0.00", "0.00", "(0.00)", "0.00"], ["Cycle 6: B", "0.00", "0.00", "0.00", "0.00", "(0.00)"], ["Cycle 7: A", "0.00", "0.00", "0.00", "(0.00)", "0.00"], ["Cycle 7: B", "0.00", "0.00", "0.00", "0.00", "(0.00)"], ["Cycle 8: A", "0.00", "0.00", "0.00", "(0.00)", "0.00"], ["Cycle 8: B", "0.00", "0.00", "0.00", "0.00", "(0.00)"], ["Simultaneous service totals", "", "", "", "", ""], ["Equation method: share of A", "", "", "", "", ""], ["Equation method: share of B", "", "", "", "", ""], ["Final production overhead", "", "", "", 0, 0]], "moneyCols": [1, 2, 3, 4, 5], "decimals": 2}, "steps": [{"type": "num", "q": "What is the cycle 1 a transfer to 1? Round to two decimal places.", "a": 300.0, "think": "Multiply service A balance at this round (1,000.00) by the 30% share for recipient 1. Include service-to-service transfers.", "why": "cycle 1 A transfer to 1 = 300.00.", "mistakes": {"250": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [1, 1], "tol": 0.02}, {"type": "num", "q": "What is the cycle 1 a transfer to 2? Round to two decimal places.", "a": 500.0, "think": "Multiply service A balance at this round (1,000.00) by the 50% share for recipient 2. Include service-to-service transfers.", "why": "cycle 1 A transfer to 2 = 500.00.", "mistakes": {"250": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [1, 2], "tol": 0.02}, {"type": "num", "q": "What is the cycle 1 a transfer to 3? Round to two decimal places.", "a": 100.0, "think": "Multiply service A balance at this round (1,000.00) by the 10% share for recipient 3. Include service-to-service transfers.", "why": "cycle 1 A transfer to 3 = 100.00.", "mistakes": {"250": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [1, 3], "tol": 0.02}, {"type": "num", "q": "What is the cycle 1 a transfer to b? Round to two decimal places.", "a": 100.0, "think": "Multiply service A balance at this round (1,000.00) by the 10% share for recipient B. Include service-to-service transfers.", "why": "cycle 1 A transfer to B = 100.00.", "mistakes": {"250": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [1, 5], "tol": 0.02}, {"type": "num", "q": "What is the cycle 1 b transfer to 1? Round to two decimal places.", "a": 1640.0, "think": "Multiply service B balance at this round (4,100.00) by the 40% share for recipient 1. Include service-to-service transfers.", "why": "cycle 1 B transfer to 1 = 1,640.00.", "mistakes": {"1025": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [2, 1], "tol": 0.02}, {"type": "num", "q": "What is the cycle 1 b transfer to 2? Round to two decimal places.", "a": 1230.0, "think": "Multiply service B balance at this round (4,100.00) by the 30% share for recipient 2. Include service-to-service transfers.", "why": "cycle 1 B transfer to 2 = 1,230.00.", "mistakes": {"1025": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [2, 2], "tol": 0.02}, {"type": "num", "q": "What is the cycle 1 b transfer to 3? Round to two decimal places.", "a": 410.0, "think": "Multiply service B balance at this round (4,100.00) by the 10% share for recipient 3. Include service-to-service transfers.", "why": "cycle 1 B transfer to 3 = 410.00.", "mistakes": {"1025": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [2, 3], "tol": 0.02}, {"type": "num", "q": "What is the cycle 1 b transfer to a? Round to two decimal places.", "a": 820.0, "think": "Multiply service B balance at this round (4,100.00) by the 20% share for recipient A. Include service-to-service transfers.", "why": "cycle 1 B transfer to A = 820.00.", "mistakes": {"1025": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [2, 4], "tol": 0.02}, {"type": "num", "q": "What is the cycle 2 a transfer to 1? Round to two decimal places.", "a": 246.0, "think": "Multiply service A balance at this round (820.00) by the 30% share for recipient 1. Include service-to-service transfers.", "why": "cycle 2 A transfer to 1 = 246.00.", "mistakes": {"205": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [3, 1], "tol": 0.02}, {"type": "num", "q": "What is the cycle 2 a transfer to 2? Round to two decimal places.", "a": 410.0, "think": "Multiply service A balance at this round (820.00) by the 50% share for recipient 2. Include service-to-service transfers.", "why": "cycle 2 A transfer to 2 = 410.00.", "mistakes": {"205": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [3, 2], "tol": 0.02}, {"type": "num", "q": "What is the cycle 2 a transfer to 3? Round to two decimal places.", "a": 82.0, "think": "Multiply service A balance at this round (820.00) by the 10% share for recipient 3. Include service-to-service transfers.", "why": "cycle 2 A transfer to 3 = 82.00.", "mistakes": {"205": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [3, 3], "tol": 0.02}, {"type": "num", "q": "What is the cycle 2 a transfer to b? Round to two decimal places.", "a": 82.0, "think": "Multiply service A balance at this round (820.00) by the 10% share for recipient B. Include service-to-service transfers.", "why": "cycle 2 A transfer to B = 82.00.", "mistakes": {"205": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [3, 5], "tol": 0.02}, {"type": "num", "q": "What is the cycle 2 b transfer to 1? Round to two decimal places.", "a": 32.8, "think": "Multiply service B balance at this round (82.00) by the 40% share for recipient 1. Include service-to-service transfers.", "why": "cycle 2 B transfer to 1 = 32.80.", "mistakes": {"20.5": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [4, 1], "tol": 0.02}, {"type": "num", "q": "What is the cycle 2 b transfer to 2? Round to two decimal places.", "a": 24.6, "think": "Multiply service B balance at this round (82.00) by the 30% share for recipient 2. Include service-to-service transfers.", "why": "cycle 2 B transfer to 2 = 24.60.", "mistakes": {"20.5": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [4, 2], "tol": 0.02}, {"type": "num", "q": "What is the cycle 2 b transfer to 3? Round to two decimal places.", "a": 8.2, "think": "Multiply service B balance at this round (82.00) by the 10% share for recipient 3. Include service-to-service transfers.", "why": "cycle 2 B transfer to 3 = 8.20.", "mistakes": {"20.5": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [4, 3], "tol": 0.02}, {"type": "num", "q": "What is the cycle 2 b transfer to a? Round to two decimal places.", "a": 16.4, "think": "Multiply service B balance at this round (82.00) by the 20% share for recipient A. Include service-to-service transfers.", "why": "cycle 2 B transfer to A = 16.40.", "mistakes": {"20.5": "You spread the service equally. Apply the recipient percentage in the paper."}, "fill": [4, 4], "tol": 0.02}, {"type": "num", "q": "What is the total reciprocal service a? Round to two decimal places.", "a": 1836.73, "think": "Substitute B = 4,000 + 0.10A into A = 1,000 + 0.20B, then solve (1 − 0.20 × 0.10)A = 1,000 + 0.20 × 4,000.", "why": "total reciprocal service A = 1,836.73.", "mistakes": {"1800": "You omitted service returned after the first distribution. Divide by 1 − 0.20 × 0.10."}, "fill": [17, 4], "tol": 0.02}, {"type": "num", "q": "What is the total reciprocal service b? Round to two decimal places.", "a": 4183.67, "think": "Use B = 4,000 + 0.10 × the unrounded total service A.", "why": "total reciprocal service B = 4,183.67.", "mistakes": {"4000": "That is only B’s own cost. Include its receipt from A."}, "fill": [17, 5], "tol": 0.02}, {"type": "num", "q": "What is a equation share to 1? Round to two decimal places.", "a": 551.02040816, "think": "Multiply unrounded reciprocal service total (1,836.73) by recipient proportion (0.30).", "why": "A equation share to 1 = 551.02.", "mistakes": {"1837.03469388": "You added the factors. This row requires multiplication.", "1836.73469388": "That is only unrounded reciprocal service total. Apply the other factor(s)."}, "fill": [18, 1], "tol": 0.02}, {"type": "num", "q": "What is a equation share to 2? Round to two decimal places.", "a": 918.36734694, "think": "Multiply unrounded reciprocal service total (1,836.73) by recipient proportion (0.50).", "why": "A equation share to 2 = 918.37.", "mistakes": {"1837.23469388": "You added the factors. This row requires multiplication.", "1836.73469388": "That is only unrounded reciprocal service total. Apply the other factor(s)."}, "fill": [18, 2], "tol": 0.02}, {"type": "num", "q": "What is a equation share to 3? Round to two decimal places.", "a": 183.67346939, "think": "Multiply unrounded reciprocal service total (1,836.73) by recipient proportion (0.10).", "why": "A equation share to 3 = 183.67.", "mistakes": {"1836.83469388": "You added the factors. This row requires multiplication.", "1836.73469388": "That is only unrounded reciprocal service total. Apply the other factor(s)."}, "fill": [18, 3], "tol": 0.02}, {"type": "num", "q": "What is the b equation share to 1? Round to two decimal places.", "a": 1673.46938776, "think": "Multiply unrounded reciprocal service total (4,183.67) by recipient proportion (0.40).", "why": "B equation share to 1 = 1,673.47.", "mistakes": {"4184.07346939": "You added the factors. This row requires multiplication.", "4183.67346939": "That is only unrounded reciprocal service total. Apply the other factor(s)."}, "fill": [19, 1], "tol": 0.02}, {"type": "num", "q": "What is the b equation share to 2? Round to two decimal places.", "a": 1255.10204082, "think": "Multiply unrounded reciprocal service total (4,183.67) by recipient proportion (0.30).", "why": "B equation share to 2 = 1,255.10.", "mistakes": {"4183.97346939": "You added the factors. This row requires multiplication.", "4183.67346939": "That is only unrounded reciprocal service total. Apply the other factor(s)."}, "fill": [19, 2], "tol": 0.02}, {"type": "num", "q": "What is the b equation share to 3? Round to two decimal places.", "a": 418.36734694, "think": "Multiply unrounded reciprocal service total (4,183.67) by recipient proportion (0.10).", "why": "B equation share to 3 = 418.37.", "mistakes": {"4183.77346939": "You added the factors. This row requires multiplication.", "4183.67346939": "That is only unrounded reciprocal service total. Apply the other factor(s)."}, "fill": [19, 3], "tol": 0.02}, {"type": "num", "q": "What is the final production 1? Round to two decimal places.", "a": 7224.48979592, "think": "Add own overhead (5,000.00), unrounded A share (551.02), unrounded B share (1,673.47).", "why": "final production 1 = 7,224.49.", "mistakes": {"5551.02040816": "You left out unrounded B share. Include every component of this total.", "5000": "That is only one component of this total. Add all the named components on the row.", "551.02": "That is only one component of this total. Add all the named components on the row.", "2775.51": "You subtracted the other components. This row asks you to add them."}, "fill": [20, 1], "tol": 0.02}, {"type": "num", "q": "What is the final production 2? Round to two decimal places.", "a": 10173.46938776, "think": "Add own overhead (8,000.00), unrounded A share (918.37), unrounded B share (1,255.10).", "why": "final production 2 = 10,173.47.", "mistakes": {"8918.36734694": "You left out unrounded B share. Include every component of this total.", "8000": "That is only one component of this total. Add all the named components on the row.", "918.37": "That is only one component of this total. Add all the named components on the row.", "5826.53": "You subtracted the other components. This row asks you to add them."}, "fill": [20, 2], "tol": 0.02}, {"type": "num", "q": "What is the final production 3? Round to two decimal places.", "a": 15602.04081633, "think": "Add own overhead (15,000.00), unrounded A share (183.67), unrounded B share (418.37).", "why": "final production 3 = 15,602.04.", "mistakes": {"15183.6734694": "You left out unrounded B share. Include every component of this total.", "15000": "That is only one component of this total. Add all the named components on the row.", "183.67": "That is only one component of this total. Add all the named components on the row.", "14397.96": "You subtracted the other components. This row asks you to add them."}, "fill": [20, 3], "tol": 0.02}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q3</summary>
 <p><strong>Step 1 — Resolve the department-label error.</strong> The figures clearly contain three production departments (1, 2, 3) and two services (A, B). Use that table, not the contradictory prose.</p>
-<p><strong>Step 2 — Repeated distribution.</strong> Start with 5,000 / 8,000 / 15,000 / 1,000 / 4,000. Distribute A, then B, repeatedly. Every service distribution includes the other service’s percentage.</p>
+<p><strong>Step 2 — Repeated distribution.</strong> Start with 5,000.00 / 8,000.00 / 15,000.00 / 1,000.00 / 4,000. Distribute A, then B, repeatedly. Every service distribution includes the other service’s percentage.</p>
 <table>
 <thead>
 <tr>
@@ -1526,137 +1538,137 @@ Repeated distribution-இல் service balances முடிவில் பூ
 </thead>
 <tbody>
 <tr>
-<td>1 A</td>
-<td>300.000000</td>
-<td>500.000000</td>
-<td>100.000000</td>
-<td>(1000.000000)</td>
-<td>100.000000</td>
+<td>1.00 A</td>
+<td>300.00</td>
+<td>500.00</td>
+<td>100.00</td>
+<td>(1,000.00)</td>
+<td>100.00</td>
 </tr>
 <tr>
 <td>1 B</td>
-<td>1640.000000</td>
-<td>1230.000000</td>
-<td>410.000000</td>
-<td>820.000000</td>
-<td>(4100.000000)</td>
+<td>1,640.00</td>
+<td>1,230.00</td>
+<td>410.00</td>
+<td>820.00</td>
+<td>(4,100.00)</td>
 </tr>
 <tr>
-<td>2 A</td>
-<td>246.000000</td>
-<td>410.000000</td>
-<td>82.000000</td>
-<td>(820.000000)</td>
-<td>82.000000</td>
+<td>2.00 A</td>
+<td>246.00</td>
+<td>410.00</td>
+<td>82.00</td>
+<td>(820.00)</td>
+<td>82.00</td>
 </tr>
 <tr>
 <td>2 B</td>
-<td>32.800000</td>
-<td>24.600000</td>
-<td>8.200000</td>
-<td>16.400000</td>
-<td>(82.000000)</td>
+<td>32.80</td>
+<td>24.60</td>
+<td>8.20</td>
+<td>16.40</td>
+<td>(82.00)</td>
 </tr>
 <tr>
-<td>3 A</td>
-<td>4.920000</td>
-<td>8.200000</td>
-<td>1.640000</td>
-<td>(16.400000)</td>
-<td>1.640000</td>
+<td>3.00 A</td>
+<td>4.92</td>
+<td>8.20</td>
+<td>1.64</td>
+<td>(16.40)</td>
+<td>1.64</td>
 </tr>
 <tr>
 <td>3 B</td>
-<td>0.656000</td>
-<td>0.492000</td>
-<td>0.164000</td>
-<td>0.328000</td>
-<td>(1.640000)</td>
+<td>0.66</td>
+<td>0.49</td>
+<td>0.16</td>
+<td>0.33</td>
+<td>(1.64)</td>
 </tr>
 <tr>
-<td>4 A</td>
-<td>0.098400</td>
-<td>0.164000</td>
-<td>0.032800</td>
-<td>(0.328000)</td>
-<td>0.032800</td>
+<td>4.00 A</td>
+<td>0.10</td>
+<td>0.16</td>
+<td>0.03</td>
+<td>(0.33)</td>
+<td>0.03</td>
 </tr>
 <tr>
 <td>4 B</td>
-<td>0.013120</td>
-<td>0.009840</td>
-<td>0.003280</td>
-<td>0.006560</td>
-<td>(0.032800)</td>
+<td>0.01</td>
+<td>0.01</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>(0.03)</td>
 </tr>
 <tr>
-<td>5 A</td>
-<td>0.001968</td>
-<td>0.003280</td>
-<td>0.000656</td>
-<td>(0.006560)</td>
-<td>0.000656</td>
+<td>5.00 A</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.01)</td>
+<td>0.00</td>
 </tr>
 <tr>
 <td>5 B</td>
-<td>0.000262</td>
-<td>0.000197</td>
-<td>0.000066</td>
-<td>0.000131</td>
-<td>(0.000656)</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.00)</td>
 </tr>
 <tr>
-<td>6 A</td>
-<td>0.000039</td>
-<td>0.000066</td>
-<td>0.000013</td>
-<td>(0.000131)</td>
-<td>0.000013</td>
+<td>6.00 A</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.00)</td>
+<td>0.00</td>
 </tr>
 <tr>
 <td>6 B</td>
-<td>0.000005</td>
-<td>0.000004</td>
-<td>0.000001</td>
-<td>0.000003</td>
-<td>(0.000013)</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.00)</td>
 </tr>
 <tr>
-<td>7 A</td>
-<td>0.000001</td>
-<td>0.000001</td>
-<td>0.000000</td>
-<td>(0.000003)</td>
-<td>0.000000</td>
+<td>7.00 A</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.00)</td>
+<td>0.00</td>
 </tr>
 <tr>
 <td>7 B</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>(0.000000)</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.00)</td>
 </tr>
 <tr>
-<td>8 A</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>(0.000000)</td>
-<td>0.000000</td>
+<td>8.00 A</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.00)</td>
+<td>0.00</td>
 </tr>
 <tr>
 <td>8 B</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>(0.000000)</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.00)</td>
 </tr>
 </tbody>
 </table>
 <p>After eight cycles the residual is below a paisa; keep full precision until rounding final department totals.</p>
-<p><strong>Step 3 — Simultaneous equations.</strong> A = 1,000 + 0.20B; B = 4,000 + 0.10A. Substitute: 0.98A = 1,800, so A = <strong>1,836.734694</strong> and B = <strong>4,183.673469</strong>. These are total reciprocal service costs, not additional costs to add to 33,000.</p>
+<p><strong>Step 3 — Simultaneous equations.</strong> A = 1,000.00 + 0.20B; B = 4,000.00 + 0.10A. Substitute: 0.98A = 1,800, so A = <strong>1,836.73</strong> and B = <strong>4,183.67</strong>. These are total reciprocal service costs, not additional costs to add to 33,000.</p>
 <table>
 <thead>
 <tr>
@@ -1670,31 +1682,31 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>1</td>
-<td>5,000</td>
+<td>5,000.00</td>
 <td>551.02</td>
 <td>1,673.47</td>
 <td>7,224.49</td>
 </tr>
 <tr>
 <td>2</td>
-<td>8,000</td>
+<td>8,000.00</td>
 <td>918.37</td>
-<td>1,255.1</td>
+<td>1,255.10</td>
 <td>10,173.47</td>
 </tr>
 <tr>
 <td>3</td>
-<td>15,000</td>
+<td>15,000.00</td>
 <td>183.67</td>
 <td>418.37</td>
 <td>15,602.04</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Final check:</strong> 7,224.49 + 10,173.47 + 15,602.04 = <strong>33,000</strong>. Both methods converge to the same answer.</p>
+<p><strong>Final check:</strong> 7,224.49 + 10,173.47 + 15,602.04 = <strong>33,000.00</strong>. Both methods converge to the same answer.</p>
 </details>
-<p><strong>Q4. Question:</strong> Following information was extracted from Araliya Enterprises: 4.5 kg of direct material per unit at Rs. 2/kg; direct labour six hours per unit at Rs. 1/hour; total production overhead Rs. 3,000; output 2,000 units; machinery hours per unit two. Calculate production cost per unit under (a) production units, (b) percentage of direct wages, (c) percentage of direct material cost, (d) percentage of prime cost, (e) direct labour hour rate and (f) machine hour rate.</p>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w10-q4" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Material cost per unit",""],["Direct labour per unit",""],["Overhead per unit on any stated basis",""],["Full production cost per unit",""]]},"steps":[{"type":"num","q":"Material cost per unit — enter the number","a":9,"think":"Quantity times material price.","why":"Material = 9.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Quantity times material price."}},{"type":"num","q":"Direct labour per unit — enter the number","a":6,"think":"Hours times wage rate.","why":"Labour = 6.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Hours times wage rate."}},{"type":"num","q":"Overhead per unit on any stated basis — enter the number","a":1.5,"think":"Distribute total overhead across the single-product output; bases produce the same recovery.","why":"3,000 ÷ 2,000 = 1.5.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Distribute total overhead across the single-product output; bases produce the same recovery."}},{"type":"num","q":"Full production cost per unit — enter the number","a":16.5,"think":"Material + labour + one overhead absorption.","why":"9 + 6 + 1.5 = 16.5.","fill":[3,1],"mistakes":{"0":"This is not a zero result. Material + labour + one overhead absorption."}}]}</script></div></div>
+<p><strong>Q4. Question:</strong> Following information was extracted from Araliya Enterprises: 4.5 kg of direct material per unit at Rs. 2/kg; direct labour six hours per unit at Rs. 1/hour; total production overhead Rs. 3,000.00; output 2,000.00 units; machinery hours per unit two. Calculate production cost per unit under (a) production units, (b) percentage of direct wages, (c) percentage of direct material cost, (d) percentage of prime cost, (e) direct labour hour rate and (f) machine hour rate.</p>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w10-q4" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Absorption method", "Total base", "Rate (Rs. / base or %)", "Overhead / unit Rs.", "Full cost / unit Rs."], "rows": [["Direct material / unit", "", "", "", ""], ["Direct labour / unit", "", "", "", ""], ["Prime cost / unit", "", "", "", ""], ["Units", 2000, "", "", ""], ["Wages %", 12000, "", "", ""], ["Materials %", 18000.0, "", 1.5, 16.5], ["Prime cost %", 30000.0, "", 1.5, 16.5], ["Labour hours", 12000, "", 1.5, 16.5], ["Machine hours", 4000, "", 1.5, 16.5]], "moneyCols": [3, 4], "decimals": 2}, "steps": [{"type": "num", "q": "What is the direct material cost per unit?", "a": 9.0, "think": "Multiply kg per unit (4.50) by price per kg (2.00).", "why": "direct material cost per unit = 9.00.", "mistakes": {"6.5": "You added the factors. This row requires multiplication.", "4.5": "That is only kg per unit. Apply the other factor(s)."}, "fill": [0, 4]}, {"type": "num", "q": "What is the direct labour cost per unit?", "a": 6, "think": "Find the labour hours required for one unit and the hourly wage in the question. Multiply hours per unit by the hourly wage; do not use the hours for the entire output.", "why": "direct labour cost per unit = 6.00.", "mistakes": {"7": "You added the factors. This row requires multiplication."}, "fill": [1, 4]}, {"type": "num", "q": "What is the prime cost per unit?", "a": 15.0, "think": "Add material (9.00), labour (6.00).", "why": "prime cost per unit = 15.00.", "mistakes": {"9": "You left out labour. Include every component of this total.", "6": "That is only one component of this total. Add all the named components on the row.", "3": "You subtracted the other components. This row asks you to add them."}, "fill": [2, 4]}, {"type": "num", "q": "Using production units, what is the absorption rate? Round to two decimal places.", "a": 1.5, "think": "Divide overhead 3,000.00 by total units base 2,000.00.", "why": "Units absorption rate = 1.50.", "mistakes": {"3000": "You used the base for one unit instead of the whole output."}, "fill": [3, 2], "tol": 0.02}, {"type": "num", "q": "Using production units, what is the overhead per unit?", "a": 1.5, "think": "Apply the unrounded units rate to the per-unit base 1.00.", "why": "Units overhead per unit = 1.50.", "mistakes": {"3000": "That is total overhead for all output, not overhead per unit."}, "fill": [3, 3]}, {"type": "num", "q": "Using production units, what is the full unit cost?", "a": 16.5, "think": "Add material (9.00), labour (6.00), one overhead absorption (1.50).", "why": "Units full unit cost = 16.50.", "mistakes": {"15": "You left out one overhead absorption. Include every component of this total.", "9": "That is only one component of this total. Add all the named components on the row.", "6": "That is only one component of this total. Add all the named components on the row.", "1.5": "You subtracted the other components. This row asks you to add them."}, "fill": [3, 4]}, {"type": "num", "q": "Using percentage of direct wages, what is the absorption rate? Round to two decimal places.", "a": 25.0, "think": "Divide overhead 3,000.00 by total wages % base 12,000.00 and multiply by 100 for a percentage.", "why": "Wages % absorption rate = 25.00.", "mistakes": {"500": "You used the base for one unit instead of the whole output."}, "fill": [4, 2], "tol": 0.02}, {"type": "num", "q": "Using percentage of direct wages, what is the overhead per unit?", "a": 1.5, "think": "Apply the unrounded wages % rate to the per-unit base 6.00 and divide by 100 to remove the percentage scale.", "why": "Wages % overhead per unit = 1.50.", "mistakes": {"3000": "That is total overhead for all output, not overhead per unit."}, "fill": [4, 3]}, {"type": "num", "q": "Using percentage of direct wages, what is the full unit cost?", "a": 16.5, "think": "Add material (9.00), labour (6.00), one overhead absorption (1.50).", "why": "Wages % full unit cost = 16.50.", "mistakes": {"15": "You left out one overhead absorption. Include every component of this total.", "9": "That is only one component of this total. Add all the named components on the row.", "6": "That is only one component of this total. Add all the named components on the row.", "1.5": "You subtracted the other components. This row asks you to add them."}, "fill": [4, 4]}, {"type": "num", "q": "Using percentage of direct materials, what is the absorption rate? Round to two decimal places.", "a": 16.666667, "think": "Divide overhead 3,000.00 by total materials % base 18,000.00 and multiply by 100 for a percentage.", "why": "Materials % absorption rate = 16.67.", "mistakes": {"333.333333333": "You used the base for one unit instead of the whole output."}, "fill": [5, 2], "tol": 0.02}, {"type": "num", "q": "Using percentage of prime cost, what is the absorption rate? Round to two decimal places.", "a": 10.0, "think": "Divide overhead 3,000.00 by total prime cost % base 30,000.00 and multiply by 100 for a percentage.", "why": "Prime cost % absorption rate = 10.00.", "mistakes": {"200": "You used the base for one unit instead of the whole output."}, "fill": [6, 2], "tol": 0.02}, {"type": "num", "q": "Using direct labour hours, what is the absorption rate? Round to two decimal places.", "a": 0.25, "think": "Divide overhead 3,000.00 by total labour hours base 12,000.00.", "why": "Labour hours absorption rate = 0.25.", "mistakes": {"500": "You used the base for one unit instead of the whole output."}, "fill": [7, 2], "tol": 0.02}, {"type": "num", "q": "Using machine hours, what is the absorption rate? Round to two decimal places.", "a": 0.75, "think": "Divide overhead 3,000.00 by total machine hours base 4,000.00.", "why": "Machine hours absorption rate = 0.75.", "mistakes": {"1500": "You used the base for one unit instead of the whole output."}, "fill": [8, 2], "tol": 0.02}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q4</summary>
 <p><strong>Step 1 — Find direct cost and the total base.</strong> Prime cost means direct material plus direct labour. Material = 9; labour = 6; prime cost = 15 per unit.</p>
@@ -1712,53 +1724,53 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Units</td>
-<td>3,000 / 2,000</td>
+<td>3,000.00 / 2,000.00</td>
 <td>1.5 / unit</td>
 <td>1.5</td>
-<td>16.5</td>
+<td>16.50</td>
 </tr>
 <tr>
 <td>Wages %</td>
-<td>3,000 / 12,000 × 100</td>
+<td>3,000.00 / 12,000.00 × 100</td>
 <td>25.000000%</td>
 <td>1.5</td>
-<td>16.5</td>
+<td>16.50</td>
 </tr>
 <tr>
 <td>Materials %</td>
-<td>3,000 / 18,000 × 100</td>
+<td>3,000.00 / 18,000.00 × 100</td>
 <td>16.666667%</td>
 <td>1.5</td>
-<td>16.5</td>
+<td>16.50</td>
 </tr>
 <tr>
 <td>Prime cost %</td>
-<td>3,000 / 30,000 × 100</td>
+<td>3,000.00 / 30,000.00 × 100</td>
 <td>10.000000%</td>
 <td>1.5</td>
-<td>16.5</td>
+<td>16.50</td>
 </tr>
 <tr>
 <td>Labour hours</td>
-<td>3,000 / 12,000</td>
+<td>3,000.00 / 12,000.00</td>
 <td>0.25 / hour</td>
 <td>1.5</td>
-<td>16.5</td>
+<td>16.50</td>
 </tr>
 <tr>
 <td>Machine hours</td>
-<td>3,000 / 4,000</td>
+<td>3,000.00 / 4,000.00</td>
 <td>0.75 / hour</td>
 <td>1.5</td>
-<td>16.5</td>
+<td>16.50</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Step 3 — Explain why the costs agree.</strong> There is one product and every base is proportional to output. Each absorbs 1.5 per unit; do not add all six alternatives together.</p>
-<p><strong>Final check:</strong> 9 material + 6 labour + 1.5 overhead = <strong>16.5</strong> on every basis. 1.5 × 2,000 units recovers overhead 3,000.</p>
+<p><strong>Final check:</strong> 9 material + 6 labour + 1.5 overhead = <strong>16.5</strong> on every basis. 1.5 × 2,000.00 units recovers overhead 3,000.</p>
 </details>
-<p><strong>Q5. Question:</strong> ABC Company produces electronic equipment. For the year ended 31 March 2014: output 1,000 units; total production overhead Rs. 10,000; total machine hours 4,000; direct material per unit 10 kg at Rs. 5/kg; direct labour per unit eight hours at Rs. 4/hour. Calculate production cost per unit under the six absorption methods listed in Q4: production units, percentage of wages, percentage of materials, percentage of prime cost, direct labour hour rate and machine hour rate.</p>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w10-q5" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Material cost per unit",""],["Direct labour per unit",""],["Overhead per unit on any stated basis",""],["Full production cost per unit",""]]},"steps":[{"type":"num","q":"Material cost per unit — enter the number","a":50,"think":"Quantity times material price.","why":"Material = 50.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Quantity times material price."}},{"type":"num","q":"Direct labour per unit — enter the number","a":32,"think":"Hours times wage rate.","why":"Labour = 32.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Hours times wage rate."}},{"type":"num","q":"Overhead per unit on any stated basis — enter the number","a":10.0,"think":"Distribute total overhead across the single-product output; bases produce the same recovery.","why":"10,000 ÷ 1,000 = 10.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Distribute total overhead across the single-product output; bases produce the same recovery."}},{"type":"num","q":"Full production cost per unit — enter the number","a":92.0,"think":"Material + labour + one overhead absorption.","why":"50 + 32 + 10 = 92.","fill":[3,1],"mistakes":{"0":"This is not a zero result. Material + labour + one overhead absorption."}}]}</script></div></div>
+<p><strong>Q5. Question:</strong> ABC Company produces electronic equipment. For the year ended 31 March 2014: output 1,000.00 units; total production overhead Rs. 10,000.00; total machine hours 4,000.00; direct material per unit 10 kg at Rs. 5/kg; direct labour per unit eight hours at Rs. 4/hour. Calculate production cost per unit under the six absorption methods listed in Q4: production units, percentage of wages, percentage of materials, percentage of prime cost, direct labour hour rate and machine hour rate.</p>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w10-q5" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Absorption method", "Total base", "Rate (Rs. / base or %)", "Overhead / unit Rs.", "Full cost / unit Rs."], "rows": [["Direct material / unit", "", "", "", ""], ["Direct labour / unit", "", "", "", ""], ["Prime cost / unit", "", "", "", ""], ["Units", 1000, "", "", ""], ["Wages %", 32000, "", "", ""], ["Materials %", 50000, "", 10.0, 92.0], ["Prime cost %", 82000, "", 10.0, 92.0], ["Labour hours", 8000, "", 10.0, 92.0], ["Machine hours", 4000, "", 10.0, 92.0]], "moneyCols": [3, 4], "decimals": 2}, "steps": [{"type": "num", "q": "What is the direct material cost per unit?", "a": 50, "think": "Multiply kg per unit (10.00) by price per kg (5.00).", "why": "direct material cost per unit = 50.00.", "mistakes": {"15": "You added the factors. This row requires multiplication.", "10": "That is only kg per unit. Apply the other factor(s)."}, "fill": [0, 4]}, {"type": "num", "q": "What is the direct labour cost per unit?", "a": 32, "think": "Multiply hours per unit (8.00) by hourly wage (4.00).", "why": "direct labour cost per unit = 32.00.", "mistakes": {"12": "You added the factors. This row requires multiplication.", "8": "That is only hours per unit. Apply the other factor(s)."}, "fill": [1, 4]}, {"type": "num", "q": "What is the prime cost per unit?", "a": 82, "think": "Add material (50.00), labour (32.00).", "why": "prime cost per unit = 82.00.", "mistakes": {"50": "You left out labour. Include every component of this total.", "32": "That is only one component of this total. Add all the named components on the row.", "18": "You subtracted the other components. This row asks you to add them."}, "fill": [2, 4]}, {"type": "num", "q": "Using production units, what is the absorption rate? Round to two decimal places.", "a": 10.0, "think": "Divide overhead 10,000.00 by total units base 1,000.00.", "why": "Units absorption rate = 10.00.", "mistakes": {"10000": "You used the base for one unit instead of the whole output."}, "fill": [3, 2], "tol": 0.02}, {"type": "num", "q": "Using production units, what is the overhead per unit?", "a": 10.0, "think": "Apply the unrounded units rate to the per-unit base 1.00.", "why": "Units overhead per unit = 10.00.", "mistakes": {"10000": "That is total overhead for all output, not overhead per unit."}, "fill": [3, 3]}, {"type": "num", "q": "Using production units, what is the full unit cost?", "a": 92.0, "think": "Add material (50.00), labour (32.00), one overhead absorption (10.00).", "why": "Units full unit cost = 92.00.", "mistakes": {"82": "You left out one overhead absorption. Include every component of this total.", "50": "That is only one component of this total. Add all the named components on the row.", "32": "That is only one component of this total. Add all the named components on the row.", "8": "You subtracted the other components. This row asks you to add them."}, "fill": [3, 4]}, {"type": "num", "q": "Using percentage of direct wages, what is the absorption rate? Round to two decimal places.", "a": 31.25, "think": "Divide overhead 10,000.00 by total wages % base 32,000.00 and multiply by 100 for a percentage.", "why": "Wages % absorption rate = 31.25.", "mistakes": {"312.5": "You used the base for one unit instead of the whole output."}, "fill": [4, 2], "tol": 0.02}, {"type": "num", "q": "Using percentage of direct wages, what is the overhead per unit?", "a": 10.0, "think": "Apply the unrounded wages % rate to the per-unit base 32.00 and divide by 100 to remove the percentage scale.", "why": "Wages % overhead per unit = 10.00.", "mistakes": {"10000": "That is total overhead for all output, not overhead per unit."}, "fill": [4, 3]}, {"type": "num", "q": "Using percentage of direct wages, what is the full unit cost?", "a": 92.0, "think": "Add material (50.00), labour (32.00), one overhead absorption (10.00).", "why": "Wages % full unit cost = 92.00.", "mistakes": {"82": "You left out one overhead absorption. Include every component of this total.", "50": "That is only one component of this total. Add all the named components on the row.", "32": "That is only one component of this total. Add all the named components on the row.", "8": "You subtracted the other components. This row asks you to add them."}, "fill": [4, 4]}, {"type": "num", "q": "Using percentage of direct materials, what is the absorption rate? Round to two decimal places.", "a": 20.0, "think": "Divide overhead 10,000.00 by total materials % base 50,000.00 and multiply by 100 for a percentage.", "why": "Materials % absorption rate = 20.00.", "mistakes": {"200": "You used the base for one unit instead of the whole output."}, "fill": [5, 2], "tol": 0.02}, {"type": "num", "q": "Using percentage of prime cost, what is the absorption rate? Round to two decimal places.", "a": 12.195122, "think": "Divide overhead 10,000.00 by total prime cost % base 82,000.00 and multiply by 100 for a percentage.", "why": "Prime cost % absorption rate = 12.20.", "mistakes": {"121.951219512": "You used the base for one unit instead of the whole output."}, "fill": [6, 2], "tol": 0.02}, {"type": "num", "q": "Using direct labour hours, what is the absorption rate? Round to two decimal places.", "a": 1.25, "think": "Divide overhead 10,000.00 by total labour hours base 8,000.00.", "why": "Labour hours absorption rate = 1.25.", "mistakes": {"1250": "You used the base for one unit instead of the whole output."}, "fill": [7, 2], "tol": 0.02}, {"type": "num", "q": "Using machine hours, what is the absorption rate? Round to two decimal places.", "a": 2.5, "think": "Divide overhead 10,000.00 by total machine hours base 4,000.00.", "why": "Machine hours absorption rate = 2.50.", "mistakes": {"2500": "You used the base for one unit instead of the whole output."}, "fill": [8, 2], "tol": 0.02}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q5</summary>
 <p><strong>Step 1 — Find direct cost and the total base.</strong> Prime cost means direct material plus direct labour. Material = 50; labour = 32; prime cost = 82 per unit.</p>
@@ -1776,50 +1788,50 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Units</td>
-<td>10,000 / 1,000</td>
+<td>10,000.00 / 1,000.00</td>
 <td>10 / unit</td>
 <td>10</td>
-<td>92</td>
+<td>92.00</td>
 </tr>
 <tr>
 <td>Wages %</td>
-<td>10,000 / 32,000 × 100</td>
+<td>10,000.00 / 32,000.00 × 100</td>
 <td>31.250000%</td>
 <td>10</td>
-<td>92</td>
+<td>92.00</td>
 </tr>
 <tr>
 <td>Materials %</td>
-<td>10,000 / 50,000 × 100</td>
+<td>10,000.00 / 50,000.00 × 100</td>
 <td>20.000000%</td>
 <td>10</td>
-<td>92</td>
+<td>92.00</td>
 </tr>
 <tr>
 <td>Prime cost %</td>
-<td>10,000 / 82,000 × 100</td>
+<td>10,000.00 / 82,000.00 × 100</td>
 <td>12.195122%</td>
 <td>10</td>
-<td>92</td>
+<td>92.00</td>
 </tr>
 <tr>
 <td>Labour hours</td>
-<td>10,000 / 8,000</td>
+<td>10,000.00 / 8,000.00</td>
 <td>1.25 / hour</td>
 <td>10</td>
-<td>92</td>
+<td>92.00</td>
 </tr>
 <tr>
 <td>Machine hours</td>
-<td>10,000 / 4,000</td>
+<td>10,000.00 / 4,000.00</td>
 <td>2.5 / hour</td>
 <td>10</td>
-<td>92</td>
+<td>92.00</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Step 3 — Explain why the costs agree.</strong> There is one product and every base is proportional to output. Each absorbs 10 per unit; do not add all six alternatives together.</p>
-<p><strong>Final check:</strong> 50 material + 32 labour + 10 overhead = <strong>92</strong> on every basis. 10 × 1,000 units recovers overhead 10,000.</p>
+<p><strong>Final check:</strong> 50 material + 32 labour + 10 overhead = <strong>92</strong> on every basis. 10 × 1,000.00 units recovers overhead 10,000.</p>
 </details>
 <p><strong>Q6. Question:</strong> New Enterprises Ltd has three production departments A, B, C and two service departments D, E. The following figures are extracted from the company records.</p>
 <table>
@@ -1832,27 +1844,27 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Rent and rates</td>
-<td>5,000</td>
+<td>5,000.00</td>
 </tr>
 <tr>
 <td>General lighting</td>
-<td>600</td>
+<td>600.00</td>
 </tr>
 <tr>
 <td>Indirect wages</td>
-<td>1,500</td>
+<td>1,500.00</td>
 </tr>
 <tr>
 <td>Power</td>
-<td>1,500</td>
+<td>1,500.00</td>
 </tr>
 <tr>
 <td>Machinery depreciation</td>
-<td>10,000</td>
+<td>10,000.00</td>
 </tr>
 <tr>
 <td>Sundries</td>
-<td>10,000</td>
+<td>10,000.00</td>
 </tr>
 </tbody>
 </table>
@@ -1956,7 +1968,9 @@ Repeated distribution-இல் service balances முடிவில் பூ
 </tbody>
 </table>
 <p>What is the total cost of an article with raw materials Rs. 50 and labour Rs. 30, passing through A, B, C for 4, 5 and 3 hours respectively?</p>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w10-q6" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Reciprocal D",""],["Reciprocal E",""],["Article overhead",""],["Total article cost",""]]},"steps":[{"type":"num","q":"Reciprocal D — enter the number","a":3265.15,"think":"Include 10% of the total E service cost.","why":"D = 3,232.50 ÷ 0.99 = 3,265.151515.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Include 10% of the total E service cost."}},{"type":"num","q":"Reciprocal E — enter the number","a":1401.52,"think":"Include 10% of D in E.","why":"1,075 + 0.1 × 3,265.151515 = 1,401.515152.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Include 10% of D in E."}},{"type":"num","q":"Article overhead — enter the number","a":24.53,"think":"Apply each unrounded departmental rate to 4, 5 and 3 hours.","why":"Overhead = 24.525536528, rounded 24.53.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Apply each unrounded departmental rate to 4, 5 and 3 hours."}},{"type":"num","q":"Total article cost — enter the number","a":104.53,"think":"Add materials 50 and labour 30 to the overhead once.","why":"80 + 24.525536528 = 104.53.","fill":[3,1],"mistakes":{"0":"This is not a zero result. Add materials 50 and labour 30 to the overhead once."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself — Part 1 of 2 — Primary overhead distribution</div><div id="gp-w10-q6" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Overhead distribution (Rs.)", "A", "B", "C", "D", "E"], "rows": [["Rent and rates / floor space", "", "", "", "", ""], ["Lighting / light points", "", "", "", "", ""], ["Indirect wages / direct wages", "", "", "", "", ""], ["Power / machine HP", "", "", "", "", 0], ["Depreciation / machinery value", "", "", "", "", ""], ["Sundries / direct wages", "", "", "", "", ""], ["Primary total", "", "", "", "", ""]], "moneyCols": [1, 2, 3, 4, 5], "decimals": 2}, "steps": [{"type": "num", "q": "How much of the rent and rates cost is allocated to department A? Round to two decimal places.", "a": 1000.0, "think": "Allocate rent and rates 5,000.00 using floor space: A has 2000 out of 10000. Multiply total expense by its share.", "why": "Rent and rates allocated to A = 1,000.00.", "mistakes": {"5000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [0, 1], "tol": 0.02}, {"type": "num", "q": "How much of the rent and rates cost is allocated to department B? Round to two decimal places.", "a": 1250.0, "think": "Allocate rent and rates 5,000.00 using floor space: B has 2500 out of 10000. Multiply total expense by its share.", "why": "Rent and rates allocated to B = 1,250.00.", "mistakes": {"1000": "You divided equally. Use this department’s share of the stated allocation base.", "5000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [0, 2], "tol": 0.02}, {"type": "num", "q": "How much of the rent and rates cost is allocated to department C? Round to two decimal places.", "a": 1500.0, "think": "Allocate rent and rates 5,000.00 using floor space: C has 3000 out of 10000. Multiply total expense by its share.", "why": "Rent and rates allocated to C = 1,500.00.", "mistakes": {"1000": "You divided equally. Use this department’s share of the stated allocation base.", "5000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [0, 3], "tol": 0.02}, {"type": "num", "q": "How much of the rent and rates cost is allocated to department D? Round to two decimal places.", "a": 1000.0, "think": "Allocate rent and rates 5,000.00 using floor space: D has 2000 out of 10000. Multiply total expense by its share.", "why": "Rent and rates allocated to D = 1,000.00.", "mistakes": {"5000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [0, 4], "tol": 0.02}, {"type": "num", "q": "How much of the rent and rates cost is allocated to department E? Round to two decimal places.", "a": 250.0, "think": "Allocate rent and rates 5,000.00 using floor space: E has 500 out of 10000. Multiply total expense by its share.", "why": "Rent and rates allocated to E = 250.00.", "mistakes": {"1000": "You divided equally. Use this department’s share of the stated allocation base.", "5000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [0, 5], "tol": 0.02}, {"type": "num", "q": "How much of the lighting cost is allocated to department A? Round to two decimal places.", "a": 100.0, "think": "Allocate lighting 600.00 using light points: A has 10 out of 60. Multiply total expense by its share.", "why": "Lighting allocated to A = 100.00.", "mistakes": {"120": "You divided equally. Use this department’s share of the stated allocation base.", "600": "That is the cost for every department. Apply this department’s proportion."}, "fill": [1, 1], "tol": 0.02}, {"type": "num", "q": "How much of the lighting cost is allocated to department B? Round to two decimal places.", "a": 150.0, "think": "Allocate lighting 600.00 using light points: B has 15 out of 60. Multiply total expense by its share.", "why": "Lighting allocated to B = 150.00.", "mistakes": {"120": "You divided equally. Use this department’s share of the stated allocation base.", "600": "That is the cost for every department. Apply this department’s proportion."}, "fill": [1, 2], "tol": 0.02}, {"type": "num", "q": "How much of the lighting cost is allocated to department C? Round to two decimal places.", "a": 200.0, "think": "Allocate lighting 600.00 using light points: C has 20 out of 60. Multiply total expense by its share.", "why": "Lighting allocated to C = 200.00.", "mistakes": {"120": "You divided equally. Use this department’s share of the stated allocation base.", "600": "That is the cost for every department. Apply this department’s proportion."}, "fill": [1, 3], "tol": 0.02}, {"type": "num", "q": "How much of the lighting cost is allocated to department D? Round to two decimal places.", "a": 100.0, "think": "Allocate lighting 600.00 using light points: D has 10 out of 60. Multiply total expense by its share.", "why": "Lighting allocated to D = 100.00.", "mistakes": {"120": "You divided equally. Use this department’s share of the stated allocation base.", "600": "That is the cost for every department. Apply this department’s proportion."}, "fill": [1, 4], "tol": 0.02}, {"type": "num", "q": "How much of the lighting cost is allocated to department E? Round to two decimal places.", "a": 50.0, "think": "Allocate lighting 600.00 using light points: E has 5 out of 60. Multiply total expense by its share.", "why": "Lighting allocated to E = 50.00.", "mistakes": {"120": "You divided equally. Use this department’s share of the stated allocation base.", "600": "That is the cost for every department. Apply this department’s proportion."}, "fill": [1, 5], "tol": 0.02}, {"type": "num", "q": "How much of the indirect wages cost is allocated to department A? Round to two decimal places.", "a": 450.0, "think": "Allocate indirect wages 1,500.00 using direct wages: A has 3000 out of 10000. Multiply total expense by its share.", "why": "Indirect wages allocated to A = 450.00.", "mistakes": {"300": "You divided equally. Use this department’s share of the stated allocation base.", "1500": "That is the cost for every department. Apply this department’s proportion."}, "fill": [2, 1], "tol": 0.02}, {"type": "num", "q": "How much of the indirect wages cost is allocated to department B? Round to two decimal places.", "a": 300.0, "think": "Allocate indirect wages 1,500.00 using direct wages: B has 2000 out of 10000. Multiply total expense by its share.", "why": "Indirect wages allocated to B = 300.00.", "mistakes": {"1500": "That is the cost for every department. Apply this department’s proportion."}, "fill": [2, 2], "tol": 0.02}, {"type": "num", "q": "How much of the indirect wages cost is allocated to department C? Round to two decimal places.", "a": 450.0, "think": "Allocate indirect wages 1,500.00 using direct wages: C has 3000 out of 10000. Multiply total expense by its share.", "why": "Indirect wages allocated to C = 450.00.", "mistakes": {"300": "You divided equally. Use this department’s share of the stated allocation base.", "1500": "That is the cost for every department. Apply this department’s proportion."}, "fill": [2, 3], "tol": 0.02}, {"type": "num", "q": "How much of the indirect wages cost is allocated to department D? Round to two decimal places.", "a": 225.0, "think": "Allocate indirect wages 1,500.00 using direct wages: D has 1500 out of 10000. Multiply total expense by its share.", "why": "Indirect wages allocated to D = 225.00.", "mistakes": {"300": "You divided equally. Use this department’s share of the stated allocation base.", "1500": "That is the cost for every department. Apply this department’s proportion."}, "fill": [2, 4], "tol": 0.02}, {"type": "num", "q": "How much of the indirect wages cost is allocated to department E? Round to two decimal places.", "a": 75.0, "think": "Allocate indirect wages 1,500.00 using direct wages: E has 500 out of 10000. Multiply total expense by its share.", "why": "Indirect wages allocated to E = 75.00.", "mistakes": {"300": "You divided equally. Use this department’s share of the stated allocation base.", "1500": "That is the cost for every department. Apply this department’s proportion."}, "fill": [2, 5], "tol": 0.02}, {"type": "num", "q": "How much of the power cost is allocated to department A? Round to two decimal places.", "a": 600.0, "think": "Allocate power 1,500.00 using machine HP: A has 60 out of 150. Multiply total expense by its share.", "why": "Power allocated to A = 600.00.", "mistakes": {"300": "You divided equally. Use this department’s share of the stated allocation base.", "1500": "That is the cost for every department. Apply this department’s proportion."}, "fill": [3, 1], "tol": 0.02}, {"type": "num", "q": "How much of the power cost is allocated to department B? Round to two decimal places.", "a": 300.0, "think": "Allocate power 1,500.00 using machine HP: B has 30 out of 150. Multiply total expense by its share.", "why": "Power allocated to B = 300.00.", "mistakes": {"1500": "That is the cost for every department. Apply this department’s proportion."}, "fill": [3, 2], "tol": 0.02}, {"type": "num", "q": "How much of the power cost is allocated to department C? Round to two decimal places.", "a": 500.0, "think": "Allocate power 1,500.00 using machine HP: C has 50 out of 150. Multiply total expense by its share.", "why": "Power allocated to C = 500.00.", "mistakes": {"300": "You divided equally. Use this department’s share of the stated allocation base.", "1500": "That is the cost for every department. Apply this department’s proportion."}, "fill": [3, 3], "tol": 0.02}, {"type": "num", "q": "How much of the power cost is allocated to department D? Round to two decimal places.", "a": 100.0, "think": "Allocate power 1,500.00 using machine HP: D has 10 out of 150. Multiply total expense by its share.", "why": "Power allocated to D = 100.00.", "mistakes": {"300": "You divided equally. Use this department’s share of the stated allocation base.", "1500": "That is the cost for every department. Apply this department’s proportion."}, "fill": [3, 4], "tol": 0.02}, {"type": "num", "q": "How much of the depreciation cost is allocated to department A? Round to two decimal places.", "a": 2400.0, "think": "Allocate depreciation 10,000.00 using machinery value: A has 60000 out of 250000. Multiply total expense by its share.", "why": "Depreciation allocated to A = 2,400.00.", "mistakes": {"2000": "You divided equally. Use this department’s share of the stated allocation base.", "10000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [4, 1], "tol": 0.02}, {"type": "num", "q": "How much of the depreciation cost is allocated to department B? Round to two decimal places.", "a": 3200.0, "think": "Allocate depreciation 10,000.00 using machinery value: B has 80000 out of 250000. Multiply total expense by its share.", "why": "Depreciation allocated to B = 3,200.00.", "mistakes": {"2000": "You divided equally. Use this department’s share of the stated allocation base.", "10000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [4, 2], "tol": 0.02}, {"type": "num", "q": "How much of the depreciation cost is allocated to department C? Round to two decimal places.", "a": 4000.0, "think": "Allocate depreciation 10,000.00 using machinery value: C has 100000 out of 250000. Multiply total expense by its share.", "why": "Depreciation allocated to C = 4,000.00.", "mistakes": {"2000": "You divided equally. Use this department’s share of the stated allocation base.", "10000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [4, 3], "tol": 0.02}, {"type": "num", "q": "How much of the depreciation cost is allocated to department D? Round to two decimal places.", "a": 200.0, "think": "Allocate depreciation 10,000.00 using machinery value: D has 5000 out of 250000. Multiply total expense by its share.", "why": "Depreciation allocated to D = 200.00.", "mistakes": {"2000": "You divided equally. Use this department’s share of the stated allocation base.", "10000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [4, 4], "tol": 0.02}, {"type": "num", "q": "How much of the depreciation cost is allocated to department E? Round to two decimal places.", "a": 200.0, "think": "Allocate depreciation 10,000.00 using machinery value: E has 5000 out of 250000. Multiply total expense by its share.", "why": "Depreciation allocated to E = 200.00.", "mistakes": {"2000": "You divided equally. Use this department’s share of the stated allocation base.", "10000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [4, 5], "tol": 0.02}, {"type": "num", "q": "How much of the sundries cost is allocated to department A? Round to two decimal places.", "a": 3000.0, "think": "Allocate sundries of 10,000.00 using the stated direct-wages assumption. Multiply by department A’s direct wages divided by total direct wages for all five departments in the question.", "why": "Sundries allocated to A = 3,000.00.", "mistakes": {"2000": "You divided equally. Use this department’s share of the stated allocation base.", "10000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [5, 1], "tol": 0.02}, {"type": "num", "q": "How much of the sundries cost is allocated to department B? Round to two decimal places.", "a": 2000.0, "think": "Allocate sundries of 10,000.00 using the stated direct-wages assumption. Multiply by department B’s direct wages divided by total direct wages for all five departments in the question.", "why": "Sundries allocated to B = 2,000.00.", "mistakes": {"10000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [5, 2], "tol": 0.02}, {"type": "num", "q": "How much of the sundries cost is allocated to department C? Round to two decimal places.", "a": 3000.0, "think": "Allocate sundries of 10,000.00 using the stated direct-wages assumption. Multiply by department C’s direct wages divided by total direct wages for all five departments in the question.", "why": "Sundries allocated to C = 3,000.00.", "mistakes": {"2000": "You divided equally. Use this department’s share of the stated allocation base.", "10000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [5, 3], "tol": 0.02}, {"type": "num", "q": "How much of the sundries cost is allocated to department D? Round to two decimal places.", "a": 1500.0, "think": "Allocate sundries of 10,000.00 using the stated direct-wages assumption. Multiply by department D’s direct wages divided by total direct wages for all five departments in the question.", "why": "Sundries allocated to D = 1,500.00.", "mistakes": {"2000": "You divided equally. Use this department’s share of the stated allocation base.", "10000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [5, 4], "tol": 0.02}, {"type": "num", "q": "How much of the sundries cost is allocated to department E? Round to two decimal places.", "a": 500.0, "think": "Allocate sundries of 10,000.00 using the stated direct-wages assumption. Multiply by department E’s direct wages divided by total direct wages for all five departments in the question.", "why": "Sundries allocated to E = 500.00.", "mistakes": {"2000": "You divided equally. Use this department’s share of the stated allocation base.", "10000": "That is the cost for every department. Apply this department’s proportion."}, "fill": [5, 5], "tol": 0.02}, {"type": "num", "q": "What is the primary total for department A?", "a": 7550.0, "think": "Add Rent and rates (1,000.00), Lighting (100.00), Indirect wages (450.00), Power (600.00), Depreciation (2,400.00), Sundries (3,000.00).", "why": "primary total for A = 7,550.00.", "mistakes": {"4550": "You left out Sundries. Include every component of this total.", "1000": "That is only one component of this total. Add all the named components on the row.", "100": "That is only one component of this total. Add all the named components on the row."}, "fill": [6, 1]}, {"type": "num", "q": "What is the primary total for department B?", "a": 7200.0, "think": "Add Rent and rates (1,250.00), Lighting (150.00), Indirect wages (300.00), Power (300.00), Depreciation (3,200.00), Sundries (2,000.00).", "why": "primary total for B = 7,200.00.", "mistakes": {"5200": "You left out Sundries. Include every component of this total.", "1250": "That is only one component of this total. Add all the named components on the row.", "150": "That is only one component of this total. Add all the named components on the row."}, "fill": [6, 2]}, {"type": "num", "q": "What is the primary total for department C?", "a": 9650.0, "think": "Add Rent and rates (1,500.00), Lighting (200.00), Indirect wages (450.00), Power (500.00), Depreciation (4,000.00), Sundries (3,000.00).", "why": "primary total for C = 9,650.00.", "mistakes": {"6650": "You left out Sundries. Include every component of this total.", "1500": "That is only one component of this total. Add all the named components on the row.", "200": "That is only one component of this total. Add all the named components on the row."}, "fill": [6, 3]}, {"type": "num", "q": "What is the primary total for department D?", "a": 3125.0, "think": "Add Rent and rates (1,000.00), Lighting (100.00), Indirect wages (225.00), Power (100.00), Depreciation (200.00), Sundries (1,500.00).", "why": "primary total for D = 3,125.00.", "mistakes": {"1625": "You left out Sundries. Include every component of this total.", "1000": "That is only one component of this total. Add all the named components on the row.", "100": "That is only one component of this total. Add all the named components on the row."}, "fill": [6, 4]}, {"type": "num", "q": "What is the primary total for department E?", "a": 1075.0, "think": "Add Rent and rates (250.00), Lighting (50.00), Indirect wages (75.00), Power (0.00), Depreciation (200.00), Sundries (500.00).", "why": "primary total for E = 1,075.00.", "mistakes": {"575": "You left out Sundries. Include every component of this total.", "250": "That is only one component of this total. Add all the named components on the row.", "50": "That is only one component of this total. Add all the named components on the row."}, "fill": [6, 5]}], "end": "Continue with the next part below, using your completed working above."}</script></div></div>
+<p>Use your completed work from the preceding part above. All practice steps are retained.</p>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself — Part 2 of 2 — Service redistribution and final costs</div><div id="gp-w10-q6-part2" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Overhead distribution (Rs.)", "A", "B", "C", "D", "E"], "rows": [["Reciprocal service totals", "", "", "", "", ""], ["Share of D", "", "", "", "", ""], ["Share of E", "", "", "", "", ""], ["Final production overhead", "", "", "", 0, 0], ["Rate per hour", "", "", "", "", ""], ["Article overhead", "", "", "", "", ""], ["Total article overhead", "", "", "", "", ""], ["Full article cost", "", "", "", "", ""]], "moneyCols": [1, 2, 3, 4, 5], "decimals": 2}, "steps": [{"type": "num", "q": "What is the reciprocal service d? Round to two decimal places.", "a": 3265.15, "think": "Substitute E = 1,075 + 0.10D into D = 3,125 + 0.10E. Divide (3,125 + 0.10 × 1,075) by (1 − 0.10 × 0.10).", "why": "reciprocal service D = 3,265.15.", "mistakes": {"3232.5": "That includes only one return from E. Divide by 0.99 to include the reciprocal loop."}, "fill": [0, 4], "tol": 0.02}, {"type": "num", "q": "What is the reciprocal service e? Round to two decimal places.", "a": 1401.52, "think": "Use E = 1,075 + 0.10 × unrounded reciprocal D.", "why": "reciprocal service E = 1,401.52.", "mistakes": {"1075": "That is only E’s primary cost. Add its share of D."}, "fill": [0, 5], "tol": 0.02}, {"type": "num", "q": "How much of department D's cost goes to department A? Round to two decimal places.", "a": 653.03030303, "think": "Multiply unrounded service cost (3,265.15) by recipient share (0.20).", "why": "D share to A = 653.03.", "mistakes": {"3265.35151515": "You added the factors. This row requires multiplication.", "3265.15151515": "That is only unrounded service cost. Apply the other factor(s)."}, "fill": [1, 1], "tol": 0.02}, {"type": "num", "q": "How much of department D's cost goes to department B? Round to two decimal places.", "a": 979.54545455, "think": "Multiply unrounded service cost (3,265.15) by recipient share (0.30).", "why": "D share to B = 979.55.", "mistakes": {"3265.45151515": "You added the factors. This row requires multiplication.", "3265.15151515": "That is only unrounded service cost. Apply the other factor(s)."}, "fill": [1, 2], "tol": 0.02}, {"type": "num", "q": "How much of department D's cost goes to department C? Round to two decimal places.", "a": 1306.06060606, "think": "Multiply unrounded service cost (3,265.15) by recipient share (0.40).", "why": "D share to C = 1,306.06.", "mistakes": {"3265.55151515": "You added the factors. This row requires multiplication.", "3265.15151515": "That is only unrounded service cost. Apply the other factor(s)."}, "fill": [1, 3], "tol": 0.02}, {"type": "num", "q": "How much of department E's cost goes to department A? Round to two decimal places.", "a": 560.60606061, "think": "Multiply unrounded service cost (1,401.52) by recipient share (0.40).", "why": "E share to A = 560.61.", "mistakes": {"1401.91515152": "You added the factors. This row requires multiplication.", "1401.51515152": "That is only unrounded service cost. Apply the other factor(s)."}, "fill": [2, 1], "tol": 0.02}, {"type": "num", "q": "How much of department E's cost goes to department B? Round to two decimal places.", "a": 280.3030303, "think": "Multiply unrounded service cost (1,401.52) by recipient share (0.20).", "why": "E share to B = 280.30.", "mistakes": {"1401.71515152": "You added the factors. This row requires multiplication.", "1401.51515152": "That is only unrounded service cost. Apply the other factor(s)."}, "fill": [2, 2], "tol": 0.02}, {"type": "num", "q": "How much of department E's cost goes to department C? Round to two decimal places.", "a": 420.45454545, "think": "Multiply unrounded service cost (1,401.52) by recipient share (0.30).", "why": "E share to C = 420.45.", "mistakes": {"1401.81515152": "You added the factors. This row requires multiplication.", "1401.51515152": "That is only unrounded service cost. Apply the other factor(s)."}, "fill": [2, 3], "tol": 0.02}, {"type": "num", "q": "What is the final production overhead a? Round to two decimal places.", "a": 8763.63636364, "think": "Add primary (7,550.00), unrounded D share (653.03), unrounded E share (560.61).", "why": "final production overhead A = 8,763.64.", "mistakes": {"8203.03030303": "You left out unrounded E share. Include every component of this total.", "7550": "That is only one component of this total. Add all the named components on the row.", "653.03": "That is only one component of this total. Add all the named components on the row.", "6336.36": "You subtracted the other components. This row asks you to add them."}, "fill": [3, 1], "tol": 0.02}, {"type": "num", "q": "What is the final production overhead b? Round to two decimal places.", "a": 8459.84848485, "think": "Add primary (7,200.00), unrounded D share (979.55), unrounded E share (280.30).", "why": "final production overhead B = 8,459.85.", "mistakes": {"8179.54545455": "You left out unrounded E share. Include every component of this total.", "7200": "That is only one component of this total. Add all the named components on the row.", "979.55": "That is only one component of this total. Add all the named components on the row.", "5940.15": "You subtracted the other components. This row asks you to add them."}, "fill": [3, 2], "tol": 0.02}, {"type": "num", "q": "What is the final production overhead c? Round to two decimal places.", "a": 11376.51515152, "think": "Add primary (9,650.00), unrounded D share (1,306.06), unrounded E share (420.45).", "why": "final production overhead C = 11,376.52.", "mistakes": {"10956.0606061": "You left out unrounded E share. Include every component of this total.", "9650": "That is only one component of this total. Add all the named components on the row.", "1306.06": "That is only one component of this total. Add all the named components on the row.", "7923.49": "You subtracted the other components. This row asks you to add them."}, "fill": [3, 3], "tol": 0.02}, {"type": "num", "q": "What is a hourly rate? Round to two decimal places.", "a": 1.40758695, "think": "Divide unrounded departmental overhead (8,763.64) by working hours (6,226.00).", "why": "A hourly rate = 1.41.", "mistakes": {"54562400": "You multiplied the numerator and denominator. Divide to find the amount per unit."}, "fill": [4, 1], "tol": 0.02}, {"type": "num", "q": "What is the b hourly rate? Round to two decimal places.", "a": 2.1002603, "think": "Divide unrounded departmental overhead (8,459.85) by working hours (4,028.00).", "why": "B hourly rate = 2.10.", "mistakes": {"34076269.697": "You multiplied the numerator and denominator. Divide to find the amount per unit."}, "fill": [4, 2], "tol": 0.02}, {"type": "num", "q": "What is the c hourly rate? Round to two decimal places.", "a": 2.79796241, "think": "Divide unrounded departmental overhead (11,376.52) by working hours (4,066.00).", "why": "C hourly rate = 2.80.", "mistakes": {"46256910.6061": "You multiplied the numerator and denominator. Divide to find the amount per unit."}, "fill": [4, 3], "tol": 0.02}, {"type": "num", "q": "What is a article overhead? Round to two decimal places.", "a": 5.63034781, "think": "Multiply unrounded hourly rate (1.41) by article hours (4.00).", "why": "A article overhead = 5.63.", "mistakes": {"5.40758695208": "You added the factors. This row requires multiplication.", "1.40758695208": "That is only unrounded hourly rate. Apply the other factor(s)."}, "fill": [5, 1], "tol": 0.02}, {"type": "num", "q": "What is the b article overhead? Round to two decimal places.", "a": 10.5013015, "think": "Multiply unrounded hourly rate (2.10) by article hours (5.00).", "why": "B article overhead = 10.50.", "mistakes": {"7.10026029912": "You added the factors. This row requires multiplication.", "2.10026029912": "That is only unrounded hourly rate. Apply the other factor(s)."}, "fill": [5, 2], "tol": 0.02}, {"type": "num", "q": "What is the c article overhead? Round to two decimal places.", "a": 8.39388722, "think": "Multiply unrounded hourly rate (2.80) by article hours (3.00).", "why": "C article overhead = 8.39.", "mistakes": {"5.79796240814": "You added the factors. This row requires multiplication.", "2.79796240814": "That is only unrounded hourly rate. Apply the other factor(s)."}, "fill": [5, 3], "tol": 0.02}, {"type": "num", "q": "What is the total article overhead? Round to two decimal places.", "a": 24.53, "think": "Add the three departmental article overheads using their unrounded hourly rates. Round the combined amount once.", "why": "total article overhead = 24.53.", "mistakes": {"24.52": "That adds separately rounded rows. Keep the rates unrounded and round the combined overhead once."}, "fill": [6, 1], "tol": 0.01}, {"type": "num", "q": "What is the full article cost? Round to two decimal places.", "a": 104.52553653, "think": "Add material (50.00), direct labour (30.00), unrounded absorbed overhead (24.53).", "why": "full article cost = 104.53.", "mistakes": {"80": "You left out unrounded absorbed overhead. Include every component of this total.", "50": "That is only one component of this total. Add all the named components on the row.", "30": "That is only one component of this total. Add all the named components on the row."}, "fill": [7, 1], "tol": 0.02}], "end": "This completes all parts of the question. Open the written answer below to compare."}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q6</summary>
 <p><strong>Step 1 — State and apply allocation bases.</strong> Rent uses floor space; lighting uses points; indirect wages use direct wages; power uses horsepower; depreciation uses machinery value. Sundries have no explicit basis, so use direct wages as the course worked figures imply.</p>
@@ -1975,70 +1989,70 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Rent and rates / Floor space</td>
-<td>1,000</td>
-<td>1,250</td>
-<td>1,500</td>
-<td>1,000</td>
-<td>250</td>
-<td>5,000</td>
+<td>1,000.00</td>
+<td>1,250.00</td>
+<td>1,500.00</td>
+<td>1,000.00</td>
+<td>250.00</td>
+<td>5,000.00</td>
 </tr>
 <tr>
 <td>General lighting / Light points</td>
-<td>100</td>
-<td>150</td>
-<td>200</td>
-<td>100</td>
-<td>50</td>
-<td>600</td>
+<td>100.00</td>
+<td>150.00</td>
+<td>200.00</td>
+<td>100.00</td>
+<td>50.00</td>
+<td>600.00</td>
 </tr>
 <tr>
 <td>Indirect wages / Direct wages</td>
-<td>450</td>
-<td>300</td>
-<td>450</td>
-<td>225</td>
-<td>75</td>
-<td>1,500</td>
+<td>450.00</td>
+<td>300.00</td>
+<td>450.00</td>
+<td>225.00</td>
+<td>75.00</td>
+<td>1,500.00</td>
 </tr>
 <tr>
 <td>Power / Machine HP</td>
-<td>600</td>
-<td>300</td>
-<td>500</td>
-<td>100</td>
-<td>0</td>
-<td>1,500</td>
+<td>600.00</td>
+<td>300.00</td>
+<td>500.00</td>
+<td>100.00</td>
+<td>0.00</td>
+<td>1,500.00</td>
 </tr>
 <tr>
 <td>Machinery depreciation / Machinery value</td>
-<td>2,400</td>
-<td>3,200</td>
-<td>4,000</td>
-<td>200</td>
-<td>200</td>
-<td>10,000</td>
+<td>2,400.00</td>
+<td>3,200.00</td>
+<td>4,000.00</td>
+<td>200.00</td>
+<td>200.00</td>
+<td>10,000.00</td>
 </tr>
 <tr>
 <td>Sundries / Direct wages</td>
-<td>3,000</td>
-<td>2,000</td>
-<td>3,000</td>
-<td>1,500</td>
-<td>500</td>
-<td>10,000</td>
+<td>3,000.00</td>
+<td>2,000.00</td>
+<td>3,000.00</td>
+<td>1,500.00</td>
+<td>500.00</td>
+<td>10,000.00</td>
 </tr>
 <tr>
 <td>Primary total</td>
-<td>7,550</td>
-<td>7,200</td>
-<td>9,650</td>
-<td>3,125</td>
-<td>1,075</td>
-<td>28,600</td>
+<td>7,550.00</td>
+<td>7,200.00</td>
+<td>9,650.00</td>
+<td>3,125.00</td>
+<td>1,075.00</td>
+<td>28,600.00</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Step 2 — Redistribute reciprocal services.</strong> D = 3,125 + 0.10E; E = 1,075 + 0.10D. Thus 0.99D = 3,232.50; <strong>D = 3,265.151515</strong>, <strong>E = 1,401.515152</strong>.</p>
+<p><strong>Step 2 — Redistribute reciprocal services.</strong> D = 3,125.00 + 0.10E; E = 1,075.00 + 0.10D. Thus 0.99D = 3,232.50; <strong>D = 3,265.15</strong>, <strong>E = 1,401.52</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -2052,21 +2066,21 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>A</td>
-<td>7,550</td>
+<td>7,550.00</td>
 <td>653.03</td>
 <td>560.61</td>
 <td>8,763.64</td>
 </tr>
 <tr>
 <td>B</td>
-<td>7,200</td>
+<td>7,200.00</td>
 <td>979.55</td>
 <td>280.3</td>
 <td>8,459.85</td>
 </tr>
 <tr>
 <td>C</td>
-<td>9,650</td>
+<td>9,650.00</td>
 <td>1,306.06</td>
 <td>420.45</td>
 <td>11,376.52</td>
@@ -2090,7 +2104,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>A</td>
 <td>8,763.64</td>
 <td>6226</td>
-<td>1.407586952</td>
+<td>1.41</td>
 <td>4</td>
 <td>5.63</td>
 </tr>
@@ -2098,7 +2112,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>B</td>
 <td>8,459.85</td>
 <td>4028</td>
-<td>2.100260299</td>
+<td>2.10</td>
 <td>5</td>
 <td>10.5</td>
 </tr>
@@ -2106,14 +2120,14 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>C</td>
 <td>11,376.52</td>
 <td>4066</td>
-<td>2.797962408</td>
+<td>2.80</td>
 <td>3</td>
 <td>8.39</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Step 4 — Add direct costs.</strong> Material 50 + labour 30 + overhead 24.525536528 = <strong>104.53</strong>. Add unrounded departmental overhead, then round once; adding separately rounded rows can differ by a paisa.</p>
-<p><strong>Final check:</strong> unrounded production allocations total <strong>28,600</strong>, equal to all original expenses. Article cost <strong>104.53</strong>, including overhead <strong>24.53</strong>. Rounded production totals 8,763.64 + 8,459.85 + 11,376.52 sum to 28,600.01 only because of display rounding.</p>
+<p><strong>Final check:</strong> unrounded production allocations total <strong>28,600.00</strong>, equal to all original expenses. Article cost <strong>104.53</strong>, including overhead <strong>24.53</strong>. Rounded production totals 8,763.64 + 8,459.85 + 11,376.52 sum to 28,600.01 only because of display rounding.</p>
 </details></div><div class="hci-ta" lang="ta" hidden data-title="பயிற்சிக் கேள்விகள் (பாட வினாத்தாள்)"><p><strong>இந்தப் பகுதி இன்னும் தமிழில் மொழிபெயர்க்கப்படவில்லை; தற்போது ஆங்கிலத்தில் மட்டும் உள்ளது.</strong></p>
 <p>All six overhead questions are complete, including the two reciprocal cycles in Q2. Keep unrounded rates until the final amount; display cents only for readability.</p>
 <p><strong>Read the verbs:</strong> underline every action word in the Required part (identify, record, post, prepare, calculate) and answer each one, in that order.</p>
@@ -2203,27 +2217,27 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Depreciation</td>
-<td>190,000</td>
+<td>190,000.00</td>
 </tr>
 <tr>
 <td>Rent, rates and taxes</td>
-<td>36,000</td>
+<td>36,000.00</td>
 </tr>
 <tr>
 <td>Insurance</td>
-<td>15,200</td>
+<td>15,200.00</td>
 </tr>
 <tr>
 <td>Power</td>
-<td>20,000</td>
+<td>20,000.00</td>
 </tr>
 <tr>
 <td>Canteen expenses</td>
-<td>10,800</td>
+<td>10,800.00</td>
 </tr>
 <tr>
 <td>Electricity</td>
-<td>4,800</td>
+<td>4,800.00</td>
 </tr>
 </tbody>
 </table>
@@ -2245,59 +2259,59 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Depreciation / Asset value</td>
-<td>100,000</td>
-<td>50,000</td>
-<td>30,000</td>
-<td>10,000</td>
-<td>190,000</td>
+<td>100,000.00</td>
+<td>50,000.00</td>
+<td>30,000.00</td>
+<td>10,000.00</td>
+<td>190,000.00</td>
 </tr>
 <tr>
 <td>Rent, rates and taxes / Floor space</td>
-<td>15,000</td>
-<td>12,000</td>
-<td>3,000</td>
-<td>6,000</td>
-<td>36,000</td>
+<td>15,000.00</td>
+<td>12,000.00</td>
+<td>3,000.00</td>
+<td>6,000.00</td>
+<td>36,000.00</td>
 </tr>
 <tr>
 <td>Insurance / Asset value</td>
-<td>8,000</td>
-<td>4,000</td>
-<td>2,400</td>
-<td>800</td>
-<td>15,200</td>
+<td>8,000.00</td>
+<td>4,000.00</td>
+<td>2,400.00</td>
+<td>800.00</td>
+<td>15,200.00</td>
 </tr>
 <tr>
 <td>Power / Machine hours</td>
-<td>10,000</td>
-<td>5,000</td>
-<td>4,000</td>
-<td>1,000</td>
-<td>20,000</td>
+<td>10,000.00</td>
+<td>5,000.00</td>
+<td>4,000.00</td>
+<td>1,000.00</td>
+<td>20,000.00</td>
 </tr>
 <tr>
 <td>Canteen expenses / Workers</td>
-<td>4,800</td>
-<td>2,400</td>
-<td>2,400</td>
-<td>1,200</td>
-<td>10,800</td>
+<td>4,800.00</td>
+<td>2,400.00</td>
+<td>2,400.00</td>
+<td>1,200.00</td>
+<td>10,800.00</td>
 </tr>
 <tr>
 <td>Electricity / Light points</td>
-<td>2,000</td>
-<td>1,200</td>
-<td>800</td>
-<td>800</td>
-<td>4,800</td>
+<td>2,000.00</td>
+<td>1,200.00</td>
+<td>800.00</td>
+<td>800.00</td>
+<td>4,800.00</td>
 </tr>
 <tr>
 <td>Primary total</td>
-<td>139,800</td>
-<td>74,600</td>
-<td>42,600</td>
-<td>19,800</td>
-<td>276,800</td>
+<td>139,800.00</td>
+<td>74,600.00</td>
+<td>42,600.00</td>
+<td>19,800.00</td>
+<td>276,800.00</td>
 </tr>
 </tbody>
 </table>
@@ -2313,26 +2327,26 @@ Repeated distribution-இல் service balances முடிவில் பூ
 </thead>
 <tbody>
 <tr>
-<td>A: 42,600 × 3/5 and 2/5</td>
-<td>25,560</td>
-<td>17,040</td>
-<td>42,600</td>
+<td>A: 42,600.00 × 3/5 and 2/5</td>
+<td>25,560.00</td>
+<td>17,040.00</td>
+<td>42,600.00</td>
 </tr>
 <tr>
-<td>B: 19,800 × 9/10 and 1/10</td>
-<td>17,820</td>
-<td>1,980</td>
-<td>19,800</td>
+<td>B: 19,800.00 × 9/10 and 1/10</td>
+<td>17,820.00</td>
+<td>1,980.00</td>
+<td>19,800.00</td>
 </tr>
 <tr>
 <td>Final production overhead</td>
-<td>183,180</td>
-<td>93,620</td>
+<td>183,180.00</td>
+<td>93,620.00</td>
 <td>0 remaining</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Final check:</strong> 183,180 + 93,620 = <strong>276,800</strong>, the six original expenses added together. Redistribution moves costs; it never creates more cost.</p>
+<p><strong>Final check:</strong> 183,180.00 + 93,620.00 = <strong>276,800.00</strong>, the six original expenses added together. Redistribution moves costs; it never creates more cost.</p>
 </details>
 <p><strong>Q2. Question:</strong> The overhead expenses for the year ended 31 March 2014 are given below. Production departments are Machine shop and Packing; service departments are General plant and Maintenance.</p>
 <table>
@@ -2454,7 +2468,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>1000</td>
 <td>90</td>
 <td>40</td>
-<td>64000</td>
+<td>64,000.00</td>
 <td>3500</td>
 </tr>
 <tr>
@@ -2462,7 +2476,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>400</td>
 <td>180</td>
 <td>20</td>
-<td>20000</td>
+<td>20,000.00</td>
 <td>500</td>
 </tr>
 <tr>
@@ -2470,7 +2484,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>200</td>
 <td>60</td>
 <td>6</td>
-<td>1000</td>
+<td>1,000.00</td>
 <td>0</td>
 </tr>
 <tr>
@@ -2478,7 +2492,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>800</td>
 <td>120</td>
 <td>10</td>
-<td>15000</td>
+<td>15,000.00</td>
 <td>1000</td>
 </tr>
 <tr>
@@ -2486,16 +2500,18 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>2400</td>
 <td>450</td>
 <td>76</td>
-<td>100000</td>
+<td>100,000.00</td>
 <td>5000</td>
 </tr>
 </tbody>
 </table>
 <p>Maintenance costs are distributed: Machine shop 50%, Packing 20%, General plant 30%. General plant costs are distributed by employees. Show distribution to production and service departments and determine production overheads after redistribution. Carry through 2 cycles.</p>
 <div data-ta-tool="gp-w10-q2"></div>
+<p>Use your completed work from the preceding part above. All practice steps are retained.</p>
+<div data-ta-tool="gp-w10-q2-part2"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q2</summary>
-<p><strong>Step 1 — Primary distribution.</strong> Already allocated costs total 12,400 / 9,400 / 34,340 / 14,700. Spread the remaining expenses using the bases below; do not allocate power by floor space or heat by employees.</p>
+<p><strong>Step 1 — Primary distribution.</strong> Already allocated costs total 12,400.00 / 9,400.00 / 34,340.00 / 14,700. Spread the remaining expenses using the bases below; do not allocate power by floor space or heat by employees.</p>
 <table>
 <thead>
 <tr>
@@ -2509,52 +2525,52 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Already allocated</td>
-<td>12,400</td>
-<td>9,400</td>
-<td>34,340</td>
-<td>14,700</td>
+<td>12,400.00</td>
+<td>9,400.00</td>
+<td>34,340.00</td>
+<td>14,700.00</td>
 </tr>
 <tr>
 <td>Power / Machine hours</td>
-<td>11,200</td>
-<td>1,600</td>
-<td>0</td>
-<td>3,200</td>
+<td>11,200.00</td>
+<td>1,600.00</td>
+<td>0.00</td>
+<td>3,200.00</td>
 </tr>
 <tr>
 <td>Rent / Floor space</td>
-<td>10,000</td>
-<td>4,000</td>
-<td>2,000</td>
-<td>8,000</td>
+<td>10,000.00</td>
+<td>4,000.00</td>
+<td>2,000.00</td>
+<td>8,000.00</td>
 </tr>
 <tr>
 <td>Heat and fuel / Radiator sections</td>
-<td>2,400</td>
-<td>4,800</td>
-<td>1,600</td>
-<td>3,200</td>
+<td>2,400.00</td>
+<td>4,800.00</td>
+<td>1,600.00</td>
+<td>3,200.00</td>
 </tr>
 <tr>
 <td>Insurance / Asset value</td>
-<td>1,280</td>
-<td>400</td>
-<td>20</td>
-<td>300</td>
+<td>1,280.00</td>
+<td>400.00</td>
+<td>20.00</td>
+<td>300.00</td>
 </tr>
 <tr>
 <td>Depreciation / Asset value</td>
-<td>128,000</td>
-<td>40,000</td>
-<td>2,000</td>
-<td>30,000</td>
+<td>128,000.00</td>
+<td>40,000.00</td>
+<td>2,000.00</td>
+<td>30,000.00</td>
 </tr>
 <tr>
 <td>Primary totals</td>
-<td>165,280</td>
-<td>60,200</td>
-<td>39,960</td>
-<td>59,400</td>
+<td>165,280.00</td>
+<td>60,200.00</td>
+<td>39,960.00</td>
+<td>59,400.00</td>
 </tr>
 </tbody>
 </table>
@@ -2573,16 +2589,16 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Cycle 1: Maintenance</td>
-<td>29,700</td>
-<td>11,880</td>
-<td>17,820</td>
-<td>(59,400)</td>
+<td>29,700.00</td>
+<td>11,880.00</td>
+<td>17,820.00</td>
+<td>(59,400.00)</td>
 </tr>
 <tr>
 <td>Cycle 1: General plant</td>
 <td>33,017.14</td>
 <td>16,508.57</td>
-<td>(57,780)</td>
+<td>(57,780.00)</td>
 <td>8,254.29</td>
 </tr>
 <tr>
@@ -2601,9 +2617,9 @@ Repeated distribution-இல் service balances முடிவில் பூ
 </tr>
 <tr>
 <td>Balances after cycle 2</td>
-<td>233,539.3</td>
+<td>233,539.30</td>
 <td>90,946.94</td>
-<td>0</td>
+<td>0.00</td>
 <td>353.76</td>
 </tr>
 </tbody>
@@ -2631,7 +2647,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 </tbody>
 </table>
 <p>This final residual shortcut is an approximation, not the exact infinite reciprocal solution.</p>
-<p><strong>Final check:</strong> after two cycles, 233,539.30 + 90,946.94 + 353.76 = <strong>324,840</strong>. After residual allocation, 233,791.99 + 91,048.01 = <strong>324,840</strong>.</p>
+<p><strong>Final check:</strong> after two cycles, 233,539.30 + 90,946.94 + 353.76 = <strong>324,840.00</strong>. After residual allocation, 233,791.99 + 91,048.01 = <strong>324,840.00</strong>.</p>
 </details>
 <p><strong>Q3. Question:</strong> A manufacturing company is described as having two production and three service departments. The overheads and apportionment table below are provided. Show total overheads chargeable to production using (a) repeated distribution and (b) simultaneous equations.</p>
 <table>
@@ -2677,7 +2693,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q3</summary>
 <p><strong>Step 1 — Resolve the department-label error.</strong> The figures clearly contain three production departments (1, 2, 3) and two services (A, B). Use that table, not the contradictory prose.</p>
-<p><strong>Step 2 — Repeated distribution.</strong> Start with 5,000 / 8,000 / 15,000 / 1,000 / 4,000. Distribute A, then B, repeatedly. Every service distribution includes the other service’s percentage.</p>
+<p><strong>Step 2 — Repeated distribution.</strong> Start with 5,000.00 / 8,000.00 / 15,000.00 / 1,000.00 / 4,000. Distribute A, then B, repeatedly. Every service distribution includes the other service’s percentage.</p>
 <table>
 <thead>
 <tr>
@@ -2691,137 +2707,137 @@ Repeated distribution-இல் service balances முடிவில் பூ
 </thead>
 <tbody>
 <tr>
-<td>1 A</td>
-<td>300.000000</td>
-<td>500.000000</td>
-<td>100.000000</td>
-<td>(1000.000000)</td>
-<td>100.000000</td>
+<td>1.00 A</td>
+<td>300.00</td>
+<td>500.00</td>
+<td>100.00</td>
+<td>(1,000.00)</td>
+<td>100.00</td>
 </tr>
 <tr>
 <td>1 B</td>
-<td>1640.000000</td>
-<td>1230.000000</td>
-<td>410.000000</td>
-<td>820.000000</td>
-<td>(4100.000000)</td>
+<td>1,640.00</td>
+<td>1,230.00</td>
+<td>410.00</td>
+<td>820.00</td>
+<td>(4,100.00)</td>
 </tr>
 <tr>
-<td>2 A</td>
-<td>246.000000</td>
-<td>410.000000</td>
-<td>82.000000</td>
-<td>(820.000000)</td>
-<td>82.000000</td>
+<td>2.00 A</td>
+<td>246.00</td>
+<td>410.00</td>
+<td>82.00</td>
+<td>(820.00)</td>
+<td>82.00</td>
 </tr>
 <tr>
 <td>2 B</td>
-<td>32.800000</td>
-<td>24.600000</td>
-<td>8.200000</td>
-<td>16.400000</td>
-<td>(82.000000)</td>
+<td>32.80</td>
+<td>24.60</td>
+<td>8.20</td>
+<td>16.40</td>
+<td>(82.00)</td>
 </tr>
 <tr>
-<td>3 A</td>
-<td>4.920000</td>
-<td>8.200000</td>
-<td>1.640000</td>
-<td>(16.400000)</td>
-<td>1.640000</td>
+<td>3.00 A</td>
+<td>4.92</td>
+<td>8.20</td>
+<td>1.64</td>
+<td>(16.40)</td>
+<td>1.64</td>
 </tr>
 <tr>
 <td>3 B</td>
-<td>0.656000</td>
-<td>0.492000</td>
-<td>0.164000</td>
-<td>0.328000</td>
-<td>(1.640000)</td>
+<td>0.66</td>
+<td>0.49</td>
+<td>0.16</td>
+<td>0.33</td>
+<td>(1.64)</td>
 </tr>
 <tr>
-<td>4 A</td>
-<td>0.098400</td>
-<td>0.164000</td>
-<td>0.032800</td>
-<td>(0.328000)</td>
-<td>0.032800</td>
+<td>4.00 A</td>
+<td>0.10</td>
+<td>0.16</td>
+<td>0.03</td>
+<td>(0.33)</td>
+<td>0.03</td>
 </tr>
 <tr>
 <td>4 B</td>
-<td>0.013120</td>
-<td>0.009840</td>
-<td>0.003280</td>
-<td>0.006560</td>
-<td>(0.032800)</td>
+<td>0.01</td>
+<td>0.01</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>(0.03)</td>
 </tr>
 <tr>
-<td>5 A</td>
-<td>0.001968</td>
-<td>0.003280</td>
-<td>0.000656</td>
-<td>(0.006560)</td>
-<td>0.000656</td>
+<td>5.00 A</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.01)</td>
+<td>0.00</td>
 </tr>
 <tr>
 <td>5 B</td>
-<td>0.000262</td>
-<td>0.000197</td>
-<td>0.000066</td>
-<td>0.000131</td>
-<td>(0.000656)</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.00)</td>
 </tr>
 <tr>
-<td>6 A</td>
-<td>0.000039</td>
-<td>0.000066</td>
-<td>0.000013</td>
-<td>(0.000131)</td>
-<td>0.000013</td>
+<td>6.00 A</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.00)</td>
+<td>0.00</td>
 </tr>
 <tr>
 <td>6 B</td>
-<td>0.000005</td>
-<td>0.000004</td>
-<td>0.000001</td>
-<td>0.000003</td>
-<td>(0.000013)</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.00)</td>
 </tr>
 <tr>
-<td>7 A</td>
-<td>0.000001</td>
-<td>0.000001</td>
-<td>0.000000</td>
-<td>(0.000003)</td>
-<td>0.000000</td>
+<td>7.00 A</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.00)</td>
+<td>0.00</td>
 </tr>
 <tr>
 <td>7 B</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>(0.000000)</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.00)</td>
 </tr>
 <tr>
-<td>8 A</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>(0.000000)</td>
-<td>0.000000</td>
+<td>8.00 A</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.00)</td>
+<td>0.00</td>
 </tr>
 <tr>
 <td>8 B</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>0.000000</td>
-<td>(0.000000)</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>(0.00)</td>
 </tr>
 </tbody>
 </table>
 <p>After eight cycles the residual is below a paisa; keep full precision until rounding final department totals.</p>
-<p><strong>Step 3 — Simultaneous equations.</strong> A = 1,000 + 0.20B; B = 4,000 + 0.10A. Substitute: 0.98A = 1,800, so A = <strong>1,836.734694</strong> and B = <strong>4,183.673469</strong>. These are total reciprocal service costs, not additional costs to add to 33,000.</p>
+<p><strong>Step 3 — Simultaneous equations.</strong> A = 1,000.00 + 0.20B; B = 4,000.00 + 0.10A. Substitute: 0.98A = 1,800, so A = <strong>1,836.73</strong> and B = <strong>4,183.67</strong>. These are total reciprocal service costs, not additional costs to add to 33,000.</p>
 <table>
 <thead>
 <tr>
@@ -2835,30 +2851,30 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>1</td>
-<td>5,000</td>
+<td>5,000.00</td>
 <td>551.02</td>
 <td>1,673.47</td>
 <td>7,224.49</td>
 </tr>
 <tr>
 <td>2</td>
-<td>8,000</td>
+<td>8,000.00</td>
 <td>918.37</td>
-<td>1,255.1</td>
+<td>1,255.10</td>
 <td>10,173.47</td>
 </tr>
 <tr>
 <td>3</td>
-<td>15,000</td>
+<td>15,000.00</td>
 <td>183.67</td>
 <td>418.37</td>
 <td>15,602.04</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Final check:</strong> 7,224.49 + 10,173.47 + 15,602.04 = <strong>33,000</strong>. Both methods converge to the same answer.</p>
+<p><strong>Final check:</strong> 7,224.49 + 10,173.47 + 15,602.04 = <strong>33,000.00</strong>. Both methods converge to the same answer.</p>
 </details>
-<p><strong>Q4. Question:</strong> Following information was extracted from Araliya Enterprises: 4.5 kg of direct material per unit at Rs. 2/kg; direct labour six hours per unit at Rs. 1/hour; total production overhead Rs. 3,000; output 2,000 units; machinery hours per unit two. Calculate production cost per unit under (a) production units, (b) percentage of direct wages, (c) percentage of direct material cost, (d) percentage of prime cost, (e) direct labour hour rate and (f) machine hour rate.</p>
+<p><strong>Q4. Question:</strong> Following information was extracted from Araliya Enterprises: 4.5 kg of direct material per unit at Rs. 2/kg; direct labour six hours per unit at Rs. 1/hour; total production overhead Rs. 3,000.00; output 2,000.00 units; machinery hours per unit two. Calculate production cost per unit under (a) production units, (b) percentage of direct wages, (c) percentage of direct material cost, (d) percentage of prime cost, (e) direct labour hour rate and (f) machine hour rate.</p>
 <div data-ta-tool="gp-w10-q4"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q4</summary>
@@ -2877,52 +2893,52 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Units</td>
-<td>3,000 / 2,000</td>
+<td>3,000.00 / 2,000.00</td>
 <td>1.5 / unit</td>
 <td>1.5</td>
-<td>16.5</td>
+<td>16.50</td>
 </tr>
 <tr>
 <td>Wages %</td>
-<td>3,000 / 12,000 × 100</td>
+<td>3,000.00 / 12,000.00 × 100</td>
 <td>25.000000%</td>
 <td>1.5</td>
-<td>16.5</td>
+<td>16.50</td>
 </tr>
 <tr>
 <td>Materials %</td>
-<td>3,000 / 18,000 × 100</td>
+<td>3,000.00 / 18,000.00 × 100</td>
 <td>16.666667%</td>
 <td>1.5</td>
-<td>16.5</td>
+<td>16.50</td>
 </tr>
 <tr>
 <td>Prime cost %</td>
-<td>3,000 / 30,000 × 100</td>
+<td>3,000.00 / 30,000.00 × 100</td>
 <td>10.000000%</td>
 <td>1.5</td>
-<td>16.5</td>
+<td>16.50</td>
 </tr>
 <tr>
 <td>Labour hours</td>
-<td>3,000 / 12,000</td>
+<td>3,000.00 / 12,000.00</td>
 <td>0.25 / hour</td>
 <td>1.5</td>
-<td>16.5</td>
+<td>16.50</td>
 </tr>
 <tr>
 <td>Machine hours</td>
-<td>3,000 / 4,000</td>
+<td>3,000.00 / 4,000.00</td>
 <td>0.75 / hour</td>
 <td>1.5</td>
-<td>16.5</td>
+<td>16.50</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Step 3 — Explain why the costs agree.</strong> There is one product and every base is proportional to output. Each absorbs 1.5 per unit; do not add all six alternatives together.</p>
-<p><strong>Final check:</strong> 9 material + 6 labour + 1.5 overhead = <strong>16.5</strong> on every basis. 1.5 × 2,000 units recovers overhead 3,000.</p>
+<p><strong>Final check:</strong> 9 material + 6 labour + 1.5 overhead = <strong>16.5</strong> on every basis. 1.5 × 2,000.00 units recovers overhead 3,000.</p>
 </details>
-<p><strong>Q5. Question:</strong> ABC Company produces electronic equipment. For the year ended 31 March 2014: output 1,000 units; total production overhead Rs. 10,000; total machine hours 4,000; direct material per unit 10 kg at Rs. 5/kg; direct labour per unit eight hours at Rs. 4/hour. Calculate production cost per unit under the six absorption methods listed in Q4: production units, percentage of wages, percentage of materials, percentage of prime cost, direct labour hour rate and machine hour rate.</p>
+<p><strong>Q5. Question:</strong> ABC Company produces electronic equipment. For the year ended 31 March 2014: output 1,000.00 units; total production overhead Rs. 10,000.00; total machine hours 4,000.00; direct material per unit 10 kg at Rs. 5/kg; direct labour per unit eight hours at Rs. 4/hour. Calculate production cost per unit under the six absorption methods listed in Q4: production units, percentage of wages, percentage of materials, percentage of prime cost, direct labour hour rate and machine hour rate.</p>
 <div data-ta-tool="gp-w10-q5"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q5</summary>
@@ -2941,50 +2957,50 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Units</td>
-<td>10,000 / 1,000</td>
+<td>10,000.00 / 1,000.00</td>
 <td>10 / unit</td>
 <td>10</td>
-<td>92</td>
+<td>92.00</td>
 </tr>
 <tr>
 <td>Wages %</td>
-<td>10,000 / 32,000 × 100</td>
+<td>10,000.00 / 32,000.00 × 100</td>
 <td>31.250000%</td>
 <td>10</td>
-<td>92</td>
+<td>92.00</td>
 </tr>
 <tr>
 <td>Materials %</td>
-<td>10,000 / 50,000 × 100</td>
+<td>10,000.00 / 50,000.00 × 100</td>
 <td>20.000000%</td>
 <td>10</td>
-<td>92</td>
+<td>92.00</td>
 </tr>
 <tr>
 <td>Prime cost %</td>
-<td>10,000 / 82,000 × 100</td>
+<td>10,000.00 / 82,000.00 × 100</td>
 <td>12.195122%</td>
 <td>10</td>
-<td>92</td>
+<td>92.00</td>
 </tr>
 <tr>
 <td>Labour hours</td>
-<td>10,000 / 8,000</td>
+<td>10,000.00 / 8,000.00</td>
 <td>1.25 / hour</td>
 <td>10</td>
-<td>92</td>
+<td>92.00</td>
 </tr>
 <tr>
 <td>Machine hours</td>
-<td>10,000 / 4,000</td>
+<td>10,000.00 / 4,000.00</td>
 <td>2.5 / hour</td>
 <td>10</td>
-<td>92</td>
+<td>92.00</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Step 3 — Explain why the costs agree.</strong> There is one product and every base is proportional to output. Each absorbs 10 per unit; do not add all six alternatives together.</p>
-<p><strong>Final check:</strong> 50 material + 32 labour + 10 overhead = <strong>92</strong> on every basis. 10 × 1,000 units recovers overhead 10,000.</p>
+<p><strong>Final check:</strong> 50 material + 32 labour + 10 overhead = <strong>92</strong> on every basis. 10 × 1,000.00 units recovers overhead 10,000.</p>
 </details>
 <p><strong>Q6. Question:</strong> New Enterprises Ltd has three production departments A, B, C and two service departments D, E. The following figures are extracted from the company records.</p>
 <table>
@@ -2997,27 +3013,27 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Rent and rates</td>
-<td>5,000</td>
+<td>5,000.00</td>
 </tr>
 <tr>
 <td>General lighting</td>
-<td>600</td>
+<td>600.00</td>
 </tr>
 <tr>
 <td>Indirect wages</td>
-<td>1,500</td>
+<td>1,500.00</td>
 </tr>
 <tr>
 <td>Power</td>
-<td>1,500</td>
+<td>1,500.00</td>
 </tr>
 <tr>
 <td>Machinery depreciation</td>
-<td>10,000</td>
+<td>10,000.00</td>
 </tr>
 <tr>
 <td>Sundries</td>
-<td>10,000</td>
+<td>10,000.00</td>
 </tr>
 </tbody>
 </table>
@@ -3122,6 +3138,8 @@ Repeated distribution-இல் service balances முடிவில் பூ
 </table>
 <p>What is the total cost of an article with raw materials Rs. 50 and labour Rs. 30, passing through A, B, C for 4, 5 and 3 hours respectively?</p>
 <div data-ta-tool="gp-w10-q6"></div>
+<p>Use your completed work from the preceding part above. All practice steps are retained.</p>
+<div data-ta-tool="gp-w10-q6-part2"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q6</summary>
 <p><strong>Step 1 — State and apply allocation bases.</strong> Rent uses floor space; lighting uses points; indirect wages use direct wages; power uses horsepower; depreciation uses machinery value. Sundries have no explicit basis, so use direct wages as the course worked figures imply.</p>
@@ -3140,70 +3158,70 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>Rent and rates / Floor space</td>
-<td>1,000</td>
-<td>1,250</td>
-<td>1,500</td>
-<td>1,000</td>
-<td>250</td>
-<td>5,000</td>
+<td>1,000.00</td>
+<td>1,250.00</td>
+<td>1,500.00</td>
+<td>1,000.00</td>
+<td>250.00</td>
+<td>5,000.00</td>
 </tr>
 <tr>
 <td>General lighting / Light points</td>
-<td>100</td>
-<td>150</td>
-<td>200</td>
-<td>100</td>
-<td>50</td>
-<td>600</td>
+<td>100.00</td>
+<td>150.00</td>
+<td>200.00</td>
+<td>100.00</td>
+<td>50.00</td>
+<td>600.00</td>
 </tr>
 <tr>
 <td>Indirect wages / Direct wages</td>
-<td>450</td>
-<td>300</td>
-<td>450</td>
-<td>225</td>
-<td>75</td>
-<td>1,500</td>
+<td>450.00</td>
+<td>300.00</td>
+<td>450.00</td>
+<td>225.00</td>
+<td>75.00</td>
+<td>1,500.00</td>
 </tr>
 <tr>
 <td>Power / Machine HP</td>
-<td>600</td>
-<td>300</td>
-<td>500</td>
-<td>100</td>
-<td>0</td>
-<td>1,500</td>
+<td>600.00</td>
+<td>300.00</td>
+<td>500.00</td>
+<td>100.00</td>
+<td>0.00</td>
+<td>1,500.00</td>
 </tr>
 <tr>
 <td>Machinery depreciation / Machinery value</td>
-<td>2,400</td>
-<td>3,200</td>
-<td>4,000</td>
-<td>200</td>
-<td>200</td>
-<td>10,000</td>
+<td>2,400.00</td>
+<td>3,200.00</td>
+<td>4,000.00</td>
+<td>200.00</td>
+<td>200.00</td>
+<td>10,000.00</td>
 </tr>
 <tr>
 <td>Sundries / Direct wages</td>
-<td>3,000</td>
-<td>2,000</td>
-<td>3,000</td>
-<td>1,500</td>
-<td>500</td>
-<td>10,000</td>
+<td>3,000.00</td>
+<td>2,000.00</td>
+<td>3,000.00</td>
+<td>1,500.00</td>
+<td>500.00</td>
+<td>10,000.00</td>
 </tr>
 <tr>
 <td>Primary total</td>
-<td>7,550</td>
-<td>7,200</td>
-<td>9,650</td>
-<td>3,125</td>
-<td>1,075</td>
-<td>28,600</td>
+<td>7,550.00</td>
+<td>7,200.00</td>
+<td>9,650.00</td>
+<td>3,125.00</td>
+<td>1,075.00</td>
+<td>28,600.00</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Step 2 — Redistribute reciprocal services.</strong> D = 3,125 + 0.10E; E = 1,075 + 0.10D. Thus 0.99D = 3,232.50; <strong>D = 3,265.151515</strong>, <strong>E = 1,401.515152</strong>.</p>
+<p><strong>Step 2 — Redistribute reciprocal services.</strong> D = 3,125.00 + 0.10E; E = 1,075.00 + 0.10D. Thus 0.99D = 3,232.50; <strong>D = 3,265.15</strong>, <strong>E = 1,401.52</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -3217,21 +3235,21 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <tbody>
 <tr>
 <td>A</td>
-<td>7,550</td>
+<td>7,550.00</td>
 <td>653.03</td>
 <td>560.61</td>
 <td>8,763.64</td>
 </tr>
 <tr>
 <td>B</td>
-<td>7,200</td>
+<td>7,200.00</td>
 <td>979.55</td>
 <td>280.3</td>
 <td>8,459.85</td>
 </tr>
 <tr>
 <td>C</td>
-<td>9,650</td>
+<td>9,650.00</td>
 <td>1,306.06</td>
 <td>420.45</td>
 <td>11,376.52</td>
@@ -3255,7 +3273,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>A</td>
 <td>8,763.64</td>
 <td>6226</td>
-<td>1.407586952</td>
+<td>1.41</td>
 <td>4</td>
 <td>5.63</td>
 </tr>
@@ -3263,7 +3281,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>B</td>
 <td>8,459.85</td>
 <td>4028</td>
-<td>2.100260299</td>
+<td>2.10</td>
 <td>5</td>
 <td>10.5</td>
 </tr>
@@ -3271,14 +3289,14 @@ Repeated distribution-இல் service balances முடிவில் பூ
 <td>C</td>
 <td>11,376.52</td>
 <td>4066</td>
-<td>2.797962408</td>
+<td>2.80</td>
 <td>3</td>
 <td>8.39</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Step 4 — Add direct costs.</strong> Material 50 + labour 30 + overhead 24.525536528 = <strong>104.53</strong>. Add unrounded departmental overhead, then round once; adding separately rounded rows can differ by a paisa.</p>
-<p><strong>Final check:</strong> unrounded production allocations total <strong>28,600</strong>, equal to all original expenses. Article cost <strong>104.53</strong>, including overhead <strong>24.53</strong>. Rounded production totals 8,763.64 + 8,459.85 + 11,376.52 sum to 28,600.01 only because of display rounding.</p>
+<p><strong>Final check:</strong> unrounded production allocations total <strong>28,600.00</strong>, equal to all original expenses. Article cost <strong>104.53</strong>, including overhead <strong>24.53</strong>. Rounded production totals 8,763.64 + 8,459.85 + 11,376.52 sum to 28,600.01 only because of display rounding.</p>
 </details></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Quick revision sheet"><span class="num">7</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>Overhead என்றால் என்ன?</h4><p>ஒரு பொருளுக்கே நேரடியாகச் சேர்க்க முடியாத உற்பத்திச் செலவுதான் <strong>Overhead</strong>. தொழிற்சாலை வாடகை பல பொருட்களுக்கும் பொதுவானது. அதைப் பொருத்தமான அடிப்படையில் பகிர வேண்டியிருக்கும்.</p></div><div class="ta-recap-item"><h4>பொதுச் செலவை எப்படிப் பகிர்வது?</h4><p>முழுச் செலவும் ஒரு பிரிவுக்கே சேர்ந்தால் <strong>Allocation</strong>. பல பிரிவுகளுக்குப் பொருந்தினால் <strong>Apportionment</strong>. வாடகையை தரைப் பரப்பிலும் மின்சாரத்தை பயன்பாட்டிலும் பகிர்வது நியாயமான அடிப்படைக்கான உதாரணம்.</p></div><div class="ta-recap-item"><h4>உதவிப் பிரிவின் செலவு</h4><p>பராமரிப்புப் பிரிவு தயாரிப்பு செய்யாமல் உற்பத்திப் பிரிவுகளுக்கு உதவுகிறது. அதன் செலவை அவை பெற்ற சேவைக்கு ஏற்ப மீண்டும் பகிர வேண்டும். உதவிப் பிரிவுகள் ஒன்றுக்கொன்று சேவை செய்தால் <strong>Reciprocal method</strong> இருவழிப் பயன்பாட்டையும் கணக்கிடும்.</p></div><div class="ta-recap-item"><h4>ஒரு பொருளில் Overhead சேர்ப்பது</h4><p>பிரிவின் budgeted overhead ÷ budgeted activity செய்தால் <strong>Absorption rate</strong>. அதை ஒரு பொருள் பயன்படுத்திய hours-ஆல் பெருக்கிச் செலவு சேர்க்கலாம். Labour hours, machine hours எது பொருத்தம் என்று முதலில் பாருங்கள்.</p></div><div class="ta-recap-item"><h4>குறைவாகவா அதிகமாகவா சேர்த்தோம்?</h4><p>உண்மையான Overhead-ஐவிட பொருட்களில் சேர்த்தது குறைந்தால் <strong>Under-absorption</strong>; அதிகமானால் <strong>Over-absorption</strong>. Budget rate பயன்படுத்துவதால் இந்த வேறுபாடு ஏற்படலாம். காரணத்தை volume, cost இரண்டிலும் தேடுங்கள்.</p></div><div class="ta-recap-item"><h4>Overhead பயிற்சி</h4><p>முதலில் Primary distribution, அடுத்து service re-apportionment, கடைசியில் rate எனப் படிப்படியாகச் செல்லுங்கள். பகிர்ந்த பிறகும் மொத்தச் செலவு மாறக்கூடாது. மணிநேரங்கள் கேள்வியில் என்ன வகை என்று கவனியுங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
@@ -3495,10 +3513,13 @@ Repeated distribution-இல் service balances முடிவில் பூ
     if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
       a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
   });
-  if (!KEY) return;
+  var toc = document.getElementById('toc');
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn && !toc) tbtn.hidden = true;
+  if (!KEY || !toc) return;
 
   // TOC
-  var toc = document.getElementById('toc'), links = [];
+  var links = [];
   var heads = document.querySelectorAll('main h2[id], main h3[id]');
   heads.forEach(function(h){
     var a = document.createElement('a'); a.href = '#' + h.id;
@@ -3509,8 +3530,6 @@ Repeated distribution-இல் service balances முடிவில் பூ
     a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
     a.onclick = function(){ var english=h.closest('.section-english'); if(english && english.hidden){ var toggle=h.closest('section').querySelector('.native-toggle'); if(toggle) toggle.click(); } toc.classList.remove('open'); };
   });
-  var tbtn = document.getElementById('tocbtn');
-  if (tbtn && !toc) tbtn.style.display = 'none';
   if (tbtn && toc) {
     var isPhone = function(){ return window.matchMedia('(max-width:900px)').matches; };
     var showToc = function(){
@@ -3781,7 +3800,9 @@ Repeated distribution-இல் service balances முடிவில் பூ
     function advance(firstTry){
       if (firstTry) state.first++;
       state.i++; tries = 0; save(key, state); render();
-      var focus = box.querySelector('.gp-acct,.gp-amt,.gp-opt'); if (focus) focus.focus({preventScroll:true});
+      var focus = box.querySelector('.gp-acct,.gp-amt,.gp-opt');
+      if (focus) { focus.focus({preventScroll:true}); focus.scrollIntoView({block:'nearest'}); }
+      else if (box.querySelector('.gp-fb')) box.querySelector('.gp-fb').scrollIntoView({block:'nearest'});
     }
     function feedback(kind, html, cont){
       var f = box.querySelector('.gp-fb');
@@ -3796,6 +3817,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
         var r = document.createElement('button'); r.type = 'button'; r.className = 'alt'; r.textContent = 'Show me the answer';
         r.onclick = reveal; f.appendChild(r);
       }
+      f.scrollIntoView({block:'nearest'});
     }
     function reveal(){
       var s = steps[state.i], text;
@@ -3855,20 +3877,36 @@ Repeated distribution-இல் service balances முடிவில் பூ
         rows += '<tr class="gp-now"><td>' + (s.tx !== last ? esc(dateOf(s.tx)) : '') + '</td><td class="gp-cell-acct"><input class="gp-acct" placeholder="Click to choose" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Account"><div class="gp-list" role="listbox" hidden></div></td><td><input class="gp-dr" inputmode="decimal" autocomplete="off" aria-label="Debit amount"></td><td><input class="gp-cr" inputmode="decimal" autocomplete="off" aria-label="Credit amount"></td></tr>';
         s.tx.e.slice(s.n + 1).forEach(function(){ rows += '<tr class="gp-row-next"><td></td><td></td><td></td><td></td></tr>'; });
       }
+      if (!rows) return '';
       return '<div class="gp-tablewrap"><table class="gp-table"><thead><tr><th class="gp-col-date">Date</th><th>Account</th><th class="r gp-col-amt">Debit (Rs.)</th><th class="r gp-col-amt">Credit (Rs.)</th></tr></thead><tbody>' + rows + '</tbody>' +
         (done.length ? '<tfoot><tr><td></td><td>Total so far</td><td class="r">' + money(dr) + '</td><td class="r">' + money(cr) + '</td></tr></tfoot>' : '') + '</table></div>';
     }
     function grid(s){
       if (!data.table) return '';
       var values = {};
-      steps.slice(0, state.i).forEach(function(x){ if (x.fill) values[x.fill.join()] = money(x.a); });
+      var moneyCols = data.table.moneyCols || [], dp = data.table.decimals;
+      // A held cell stays blank until no remaining step has that value as its answer.
+      var waiting = {};
+      steps.slice(state.i).forEach(function(x){
+        if (x.fill) waiting[Math.abs(x.a).toFixed(2)] = true;
+        if (x.type === 'entry') waiting[Math.abs(x.entry.amt).toFixed(2)] = true;
+      });
+      var held = {};
+      (data.table.hold || []).forEach(function(h){ held[h.join()] = true; });
+      function shown(value, c){
+        var n = moneyCols.indexOf(c) > -1 && /^-?[\d,]+(\.\d+)?$/.test(String(value)) ? parse(value) : null;
+        return n === null ? String(value) : n.toLocaleString('en-US', {minimumFractionDigits:dp, maximumFractionDigits:dp});
+      }
+      steps.slice(0, state.i).forEach(function(x){ if (x.fill) values[x.fill.join()] = x.a; });
       var head = data.table.cols.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('');
+      var actionRow = s && s.fill ? '<tr class="gp-action-row"><td colspan="' + data.table.cols.length + '"><button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></td></tr>' : '';
       var body = data.table.rows.map(function(row, r){
         return '<tr' + (row.total ? ' class="gp-row-total"' : '') + '>' + (row.cells || row).map(function(cell, c){
           var id = r + ',' + c;
           if (s && s.fill && s.fill.join() === id) return '<td class="gp-now"><input class="gp-amt" inputmode="decimal" autocomplete="off" aria-label="' + esc(data.table.cols[c]) + '"></td>';
-          return '<td>' + esc(values[id] !== undefined ? values[id] : cell) + '</td>';
-        }).join('') + '</tr>';
+          if (held[id] && values[id] === undefined && waiting[Math.abs(parse(cell)).toFixed(2)]) return '<td></td>';
+          return '<td>' + esc(values[id] !== undefined ? (moneyCols.indexOf(c) > -1 ? shown(values[id], c) : money(values[id])) : shown(cell, c)) + '</td>';
+        }).join('') + '</tr>' + (s && s.fill && s.fill[0] === r ? actionRow : '');
       }).join('');
       return '<div class="gp-tablewrap gp-scroll"><table class="gp-table"><thead><tr>' + head + '</tr></thead><tbody>' + body + '</tbody></table></div>';
     }
@@ -3882,7 +3920,7 @@ Repeated distribution-இல் service balances முடிவில் பூ
         html += '<p class="gp-tx">' + esc(s.tx.tx) + '</p><p class="gp-howto"><b>Line ' + (s.n + 1) + ' of ' + s.tx.e.length + ' for this transaction.</b> Click the Account cell and choose an account. Then type the amount in the Debit or the Credit column. Debit lines come first.</p>' + journal(s) + '<button type="button" class="gp-check">Check this line</button><div class="gp-fb" aria-live="polite" hidden></div>';
       } else if (s.type === 'num') {
         html += journal() + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p class="gp-q"><b>' + esc(s.q) + '</b>' + (s.fill ? ' <span class="gp-muted">Type it in the highlighted cell.</span>' : '') + '</p>' + grid(s) +
-          (s.fill ? '' : '<label class="gp-label">Your answer <input class="gp-amt gp-amt-free gp-now-input" inputmode="decimal" autocomplete="off"></label> ') + '<button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div>';
+          (s.fill ? '' : '<label class="gp-label">Your answer <input class="gp-amt gp-amt-free gp-now-input" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div>');
       } else {
         html += journal() + grid(s) + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p class="gp-q"><b>' + esc(s.q) + '</b></p><div class="gp-opts">' +
           s.opts.map(function(o, i){ return '<button type="button" class="alt gp-opt" data-i="' + i + '">' + esc(o.t) + '</button>'; }).join('') + '</div><div class="gp-fb" aria-live="polite" hidden></div>';

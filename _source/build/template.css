@@ -160,6 +160,10 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .gp-tx{background:var(--accent-soft);color:var(--ink);padding:10px 12px;border-radius:8px;margin:12px 0 8px;font-weight:600}
 .gp-howto,.gp-q{font-size:15px;margin:8px 0}
 .gp-tablewrap{margin:10px 0}
+.gp-table td.gp-now input,.gp-acct,.gp-amt,.gp-check,.gp-fb{scroll-margin:84px 0 130px}
+.gp-table .gp-action-row td{background:var(--panel);padding:8px}
+.gp-action-row .gp-check{margin:0}
+@media (max-width:900px){.gp-table td.gp-now input,.gp-acct,.gp-amt,.gp-check,.gp-fb{scroll-margin-bottom:170px}}
 .gp-scroll{overflow-x:auto}
 .tool table.gp-table,table.gp-table{display:table;width:100%;max-width:none;overflow:visible;max-height:none;border-collapse:collapse;font-size:14.5px;table-layout:auto;margin:0}
 .gp-table th,.gp-table td{border:1px solid var(--line);padding:6px 8px;text-align:left;background:var(--panel);color:var(--ink)}
@@ -277,3 +281,9 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .beginner-answer summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
 .beginner-answer[open] summary{margin-bottom:16px}
 .beginner-answer li{margin-bottom:10px}
+
+/* Keep calculator labels and selects within narrow screens. */
+.tool .row > label{min-width:0;max-width:100%}
+.tool .row > label select{max-width:100%}
+
+.tool select{min-width:0;max-width:100%}

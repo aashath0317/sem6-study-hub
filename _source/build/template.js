@@ -24,10 +24,13 @@
     if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
       a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
   });
-  if (!KEY) return;
+  var toc = document.getElementById('toc');
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn && !toc) tbtn.hidden = true;
+  if (!KEY || !toc) return;
 
   // TOC
-  var toc = document.getElementById('toc'), links = [];
+  var links = [];
   var heads = document.querySelectorAll('main h2[id], main h3[id]');
   heads.forEach(function(h){
     var a = document.createElement('a'); a.href = '#' + h.id;
@@ -38,8 +41,6 @@
     a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
     a.onclick = function(){ var english=h.closest('.section-english'); if(english && english.hidden){ var toggle=h.closest('section').querySelector('.native-toggle'); if(toggle) toggle.click(); } toc.classList.remove('open'); };
   });
-  var tbtn = document.getElementById('tocbtn');
-  if (tbtn && !toc) tbtn.style.display = 'none';
   if (tbtn && toc) {
     var isPhone = function(){ return window.matchMedia('(max-width:900px)').matches; };
     var showToc = function(){

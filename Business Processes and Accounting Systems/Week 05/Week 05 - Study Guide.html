@@ -162,6 +162,10 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .gp-tx{background:var(--accent-soft);color:var(--ink);padding:10px 12px;border-radius:8px;margin:12px 0 8px;font-weight:600}
 .gp-howto,.gp-q{font-size:15px;margin:8px 0}
 .gp-tablewrap{margin:10px 0}
+.gp-table td.gp-now input,.gp-acct,.gp-amt,.gp-check,.gp-fb{scroll-margin:84px 0 130px}
+.gp-table .gp-action-row td{background:var(--panel);padding:8px}
+.gp-action-row .gp-check{margin:0}
+@media (max-width:900px){.gp-table td.gp-now input,.gp-acct,.gp-amt,.gp-check,.gp-fb{scroll-margin-bottom:170px}}
 .gp-scroll{overflow-x:auto}
 .tool table.gp-table,table.gp-table{display:table;width:100%;max-width:none;overflow:visible;max-height:none;border-collapse:collapse;font-size:14.5px;table-layout:auto;margin:0}
 .gp-table th,.gp-table td{border:1px solid var(--line);padding:6px 8px;text-align:left;background:var(--panel);color:var(--ink)}
@@ -279,6 +283,12 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .beginner-answer summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
 .beginner-answer[open] summary{margin-bottom:16px}
 .beginner-answer li{margin-bottom:10px}
+
+/* Keep calculator labels and selects within narrow screens. */
+.tool .row > label{min-width:0;max-width:100%}
+.tool .row > label select{max-width:100%}
+
+.tool select{min-width:0;max-width:100%}
 
 .study-plan{margin:24px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow);scroll-margin-top:80px}
 .sp-heading,.sp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.sp-heading h2{margin:2px 0 8px}.sp-heading p{font-size:15px;color:var(--muted)}
@@ -755,8 +765,9 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
 <li><strong>பொதுவான பண்புகள்</strong> (தொடர்ந்து இயங்குதல், திரண்ட அடிப்படை, ஒரேமாதிரித்தன்மை, முக்கியத்துவம், ஈடுசெய்தல், ஒப்பீடுகள்)</li>
 <li><strong>நடைமுறை, நடைமுறையல்லாத</strong> வரையறைகள்</li>
 <li><strong>OCI என்றால் என்ன?</strong></li>
-</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Practice questions (course paper)"><span class="num">5</span>Practice questions (course paper)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>Trading account பயிற்சி</h3><p><strong>Net sales = Sales − Sales returns</strong>. <strong>Cost of sales = Opening stock + Net purchases + Carriage inwards − Closing stock</strong>. Carriage outwards விற்பனைச் செலவு; அதை சரக்கின் கொள்வனவுச் செலவுடன் கலக்காதீர்கள்.</p><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><p>These are the three questions from the <strong>Session 5 practice PDF</strong>. Fill in the short trading or income statement one line at a time. A wrong answer explains the mistake and how to think about it; your progress is saved in this browser. After you finish, open the full step-by-step account below to compare.</p>
+</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Practice questions (course paper)"><span class="num">5</span>Practice questions (course paper)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>Trading account பயிற்சி</h3><p><strong>Net sales = Sales − Sales returns</strong>. <strong>Cost of sales = Opening stock + Net purchases + Carriage inwards − Closing stock</strong>. Carriage outwards விற்பனைச் செலவு; அதை சரக்கின் கொள்வனவுச் செலவுடன் கலக்காதீர்கள்.</p><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><p>These are the three questions from the <strong>Session 5 practice PDF</strong>. Build the full trading or income statement one line at a time. Amounts copied directly from the question are prefilled; calculate each blank working and total. A wrong answer explains the mistake and how to think about it; your progress is saved in this browser. After you finish, open the full step-by-step account below to compare.</p>
 <p><strong>Read the verbs:</strong> underline every action word in the Required part — identify, record, post, prepare, calculate or draw up — and answer each one, in that order. Here, “draw up” means show the requested account or statement, not only the final profit figure.</p>
+<p>Enter deductions as positive amounts: “Less” rows, cost of sales and total operating expenses are subtracted as labelled. The two rupee columns separate workings from statement totals. No rounding is needed for these whole-rupee calculations.</p>
 <p><strong>The formulas you need</strong></p>
 <table>
 <thead>
@@ -796,92 +807,112 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
 <tbody>
 <tr>
 <td>Carriage inwards</td>
-<td>5,000</td>
+<td>5,000.00</td>
 </tr>
 <tr>
 <td>Returns outwards</td>
-<td>10,000</td>
+<td>10,000.00</td>
 </tr>
 <tr>
 <td>Returns inwards</td>
-<td>15,000</td>
+<td>15,000.00</td>
 </tr>
 <tr>
 <td>Sales</td>
-<td>230,000</td>
+<td>230,000.00</td>
 </tr>
 <tr>
 <td>Purchases</td>
-<td>120,000</td>
+<td>120,000.00</td>
 </tr>
 </tbody>
 </table>
-<p>Inventory at 31 December 2018 would be Rs. 20,000.</p>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w05-q1" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Trading / income statement","Rs."],"rows":[["Opening inventory",""],["Net sales",""],["Net purchases",""],["Cost of sales (deduct from net sales)",""],{"cells":["Gross profit",""],"total":true}]},"steps":[{"type":"choice","q":"The question says “draw up the trading account”. What must your answer show?","think":"Read the action word and the named output. A full account shows the route from net sales through cost of sales to gross profit.","opts":[{"t":"The trading account, including net sales, cost of sales and gross profit","ok":true},{"t":"Only the final gross-profit figure","why":"The figure alone leaves out the trading account requested. Show net sales, cost of sales and gross profit."},{"t":"A general journal of transactions","why":"The question asks for a trading account from supplied figures, not journal entries."}],"why":"“Draw up” asks you to present the account. The final profit figure alone does not show all the required work."},{"type":"num","tx":"Araliya Enterprises — trading account for the year ended 31 December 2018","q":"Opening inventory — enter Rs.","a":0,"think":"This was the first year in business. There were no goods carried over from a previous trading year.","why":"Opening inventory is zero; the 20,000 is the stock remaining at the end, not the start.","mistakes":{"20000":"20,000 is closing inventory. Opening inventory means goods carried over from before this first year."},"fill":[0,1]},{"type":"num","tx":"Araliya Enterprises — trading account for the year ended 31 December 2018","q":"Net sales — enter Rs.","a":215000,"think":"Take customer returns away from Sales. Returns inwards means goods came back to us.","why":"230,000 sales − 15,000 returns inwards = 215,000.","mistakes":{"245000":"A customer return reduces sales. You added it; subtract 15,000 from 230,000.","230000":"230,000 is before customer returns. Deduct the 15,000 returned by customers."},"fill":[1,1]},{"type":"num","tx":"Araliya Enterprises — trading account for the year ended 31 December 2018","q":"Net purchases — enter Rs.","a":110000,"think":"Take returns to suppliers away from Purchases. Keep carriage inwards separate for the next calculation.","why":"120,000 purchases − 10,000 returns outwards = 110,000.","mistakes":{"130000":"Goods returned to suppliers reduce purchases. Subtract the 10,000 instead of adding it.","115000":"115,000 includes carriage inwards. This line asks for purchases less supplier returns only."},"fill":[2,1]},{"type":"num","tx":"Araliya Enterprises — trading account for the year ended 31 December 2018","q":"Cost of sales (deduct from net sales) — enter Rs.","a":95000,"think":"Add opening inventory, net purchases and carriage inwards, then deduct closing inventory. Enter the positive amount to deduct.","why":"0 + 110,000 + 5,000 = 115,000 goods available; 115,000 − 20,000 closing inventory = 95,000 cost of sales.","mistakes":{"115000":"115,000 is goods available before removing unsold stock. Deduct the 20,000 closing inventory.","135000":"Closing inventory is unsold goods. Subtract it from goods available instead of adding it.","90000":"The cost of bringing goods in belongs in cost of sales. Include carriage inwards of 5,000."},"fill":[3,1]},{"type":"num","tx":"Araliya Enterprises — trading account for the year ended 31 December 2018","q":"Gross profit — enter Rs.","a":120000,"think":"Subtract cost of sales from net sales, after both kinds of returns have been dealt with.","why":"215,000 net sales − 95,000 cost of sales = 120,000 gross profit.","mistakes":{"135000":"You used sales before customer returns. Gross profit starts with net sales of 215,000.","95000":"95,000 is cost of sales, not profit. Take it away from net sales of 215,000."},"fill":[4,1]}]}</script></div></div>
+<p>Inventory at 31 December 2018 would be Rs. 20,000.00.</p>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w05-q1" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "The question says “draw up the trading account”. What must your answer show?", "think": "Read both the action word and the named output. Which option satisfies both parts of the requirement?", "opts": [{"t": "The trading account, including net sales, cost of sales and gross profit", "ok": true}, {"t": "Only the final gross-profit figure", "why": "The figure alone leaves out the trading account requested. Show net sales, cost of sales and gross profit."}, {"t": "A general journal of transactions", "why": "The question asks for a trading account from supplied figures, not journal entries."}], "why": "“Draw up” asks you to present the account. The final profit figure alone does not show all the required work."}, {"type": "num", "tx": "Araliya Enterprises — trading account for the year ended 31 December 2018", "q": "What are the net sales?", "a": 215000, "think": "Subtract customer returns (returns inwards) of Rs. 15,000.00 from sales of Rs. 230,000.00.", "why": "230,000.00 sales − 15,000.00 returns inwards = 215,000.00.", "mistakes": {"245000": "A customer return reduces sales. You added it; subtract 15,000.00 from 230,000.00.", "230000": "230,000.00 is before customer returns. Deduct the 15,000.00 returned by customers."}, "fill": [2, 2]}, {"type": "num", "q": "What is the opening inventory?", "a": 0, "think": "This is the first trading year. Decide whether any stock could have been carried forward from an earlier trading year.", "why": "There is no previous trading year, so opening inventory is Rs. 0.00.", "mistakes": {"20000": "That is the year-end stock, not stock carried into the first year.", "120000": "Those are purchases during the year, not goods held before trading began."}, "fill": [3, 1]}, {"type": "num", "tx": "Araliya Enterprises — trading account for the year ended 31 December 2018", "q": "What are the net purchases?", "a": 110000, "think": "Subtract supplier returns (returns outwards) of Rs. 10,000.00 from purchases of Rs. 120,000.00; keep inward carriage for the next row.", "why": "120,000.00 purchases − 10,000.00 returns outwards = 110,000.00.", "mistakes": {"130000": "Goods returned to suppliers reduce purchases. Subtract the 10,000.00 instead of adding it.", "115000": "115,000.00 includes carriage inwards. This line asks for purchases less supplier returns only."}, "fill": [6, 1]}, {"type": "num", "q": "What is the purchase cost including carriage inwards?", "a": 115000, "think": "Add the Rs. 5,000.00 inward delivery cost to net purchases. This delivery brings the goods into the business.", "why": "110,000.00 + 5,000.00 = Rs. 115,000.00.", "mistakes": {"110000": "You left out the cost of bringing the purchases in.", "105000": "Inward carriage adds to the cost of the goods; it is not a deduction.", "125000": "You included delivery but did not deduct supplier returns."}, "fill": [8, 1]}, {"type": "num", "q": "What is the cost of goods available?", "a": 115000, "think": "Add opening inventory of Rs. 0.00 to purchases including inward carriage. Do this before removing closing inventory.", "why": "0.00 + 115,000.00 = Rs. 115,000.00.", "mistakes": {"95000": "You have already removed the unsold goods. This line is before deducting closing inventory.", "135000": "Closing inventory is part of the goods already available, not an extra receipt."}, "fill": [9, 1]}, {"type": "num", "tx": "Araliya Enterprises — trading account for the year ended 31 December 2018", "q": "What is the cost of sales?", "a": 95000, "think": "From cost of goods available, deduct the Rs. 20,000.00 left unsold. Enter the positive cost; the statement deducts this row from net sales.", "why": "0 + 110,000.00 + 5,000.00 = 115,000.00 goods available; 115,000.00 − 20,000.00 closing inventory = 95,000.00 cost of sales.", "mistakes": {"115000": "115,000.00 is goods available before removing unsold stock. Deduct the 20,000.00 closing inventory.", "135000": "Closing inventory is unsold goods. Subtract it from goods available instead of adding it.", "90000": "The cost of bringing goods in belongs in cost of sales. Include carriage inwards of 5,000.00."}, "fill": [11, 2]}, {"type": "num", "tx": "Araliya Enterprises — trading account for the year ended 31 December 2018", "q": "What is the gross profit?", "a": 120000, "think": "Use sales of Rs. 230,000.00 less customer returns of Rs. 15,000.00. Subtract the cost of sales you calculated in the preceding row.", "why": "215,000.00 net sales − 95,000.00 cost of sales = 120,000.00 gross profit.", "mistakes": {"135000": "You used sales before customer returns. Gross profit starts with net sales of 215,000.00.", "95000": "95,000.00 is cost of sales, not profit. Take it away from net sales of 215,000.00."}, "fill": [12, 2]}], "end": "All deductions are entered as positive amounts. Rows labelled “Less” and cost of sales or operating expenses are subtracted in the statement.", "table": {"cols": ["Trading account", "Workings (Rs.)", "Total (Rs.)"], "rows": [["Sales", "230,000", ""], ["Less: returns inwards", "15,000", ""], {"cells": ["Net sales", "", ""], "total": true}, ["Opening inventory", "", ""], ["Add: purchases", "120,000", ""], ["Less: returns outwards", "10,000", ""], ["Net purchases", "", ""], ["Add: carriage inwards", "5,000", ""], ["Purchases including carriage inwards", "", ""], ["Cost of goods available", "", ""], ["Less: closing inventory", "20,000", ""], {"cells": ["Cost of sales", "", ""], "total": true}, {"cells": ["Gross profit", "", ""], "total": true}], "moneyCols": [1, 2], "decimals": 2, "hold": [[4, 1]]}}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q1</summary>
-<p><strong>Step 1 — Net sales.</strong> 230,000 − 15,000 = 215,000.</p>
+<p><strong>Step 1 — Net sales.</strong> 230,000.00 − 15,000.00 = 215,000.00.</p>
 <p><strong>Step 2 — Opening inventory.</strong> This is the first year in business, so there is none.</p>
-<p><strong>Step 3 — Cost of sales.</strong> 0 + 120,000 − 10,000 + 5,000 − 20,000 = 95,000. Closing inventory is deducted because those goods are not sold yet.</p>
-<p><strong>Step 4 — Gross profit.</strong> 215,000 − 95,000 = 120,000.</p>
+<p><strong>Step 3 — Cost of sales.</strong> 0.00 + 120,000.00 − 10,000.00 + 5,000.00 − 20,000.00 = 95,000.00. Closing inventory is deducted because those goods are not sold yet.</p>
+<p><strong>Step 4 — Gross profit.</strong> 215,000.00 − 95,000.00 = 120,000.00.</p>
 <p><strong>Trading account for the year ended 31 December 2018</strong></p>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>Rs.</th>
-<th>Rs.</th>
+<th style="text-align: right;">Workings (Rs.)</th>
+<th style="text-align: right;">Total (Rs.)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Sales</td>
-<td>230,000</td>
-<td></td>
+<td style="text-align: right;">230,000.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less returns inwards</td>
-<td>(15,000)</td>
-<td>215,000</td>
+<td>Less: returns inwards</td>
+<td style="text-align: right;">(15,000.00)</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Purchases</td>
-<td>120,000</td>
-<td></td>
+<td><strong>Net sales</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>215,000.00</strong></td>
 </tr>
 <tr>
-<td>Less returns outwards</td>
-<td>(10,000)</td>
-<td></td>
+<td>Opening inventory</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Add carriage inwards</td>
-<td>5,000</td>
-<td></td>
+<td>Add: purchases</td>
+<td style="text-align: right;">120,000.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Less: returns outwards</td>
+<td style="text-align: right;">(10,000.00)</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Net purchases</td>
+<td style="text-align: right;">110,000.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Add: carriage inwards</td>
+<td style="text-align: right;">5,000.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Purchases including carriage inwards</td>
+<td style="text-align: right;">115,000.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Cost of goods available</td>
-<td>115,000</td>
-<td></td>
+<td style="text-align: right;">115,000.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less closing inventory</td>
-<td>(20,000)</td>
-<td></td>
+<td>Less: closing inventory</td>
+<td style="text-align: right;">(20,000.00)</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td><strong>Cost of sales</strong></td>
-<td></td>
-<td><strong>(95,000)</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>(95,000.00)</strong></td>
 </tr>
 <tr>
 <td><strong>Gross profit</strong></td>
-<td></td>
-<td><strong>120,000</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>120,000.00</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Final check:</strong> 95,000 + 120,000 = 215,000, the net sales. ✓</p>
+<p><strong>Final check:</strong> 95,000.00 + 120,000.00 = 215,000.00, the net sales. ✓</p>
 </details>
 <p><strong>Q2. Question:</strong> Draw up the trading account of Nuwana Enterprises for the year ending 31 March 2019.</p>
 <table>
@@ -894,103 +925,118 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
 <tbody>
 <tr>
 <td>Inventory at 31 March 2018</td>
-<td>52,400</td>
+<td>52,400.00</td>
 </tr>
 <tr>
 <td>Returns inwards</td>
-<td>16,220</td>
+<td>16,220.00</td>
 </tr>
 <tr>
 <td>Returns outwards</td>
-<td>19,480</td>
+<td>19,480.00</td>
 </tr>
 <tr>
 <td>Purchases</td>
-<td>394,170</td>
+<td>394,170.00</td>
 </tr>
 <tr>
 <td>Carriage inwards</td>
-<td>2,490</td>
+<td>2,490.00</td>
 </tr>
 <tr>
 <td>Sales</td>
-<td>469,320</td>
+<td>469,320.00</td>
 </tr>
 </tbody>
 </table>
-<p>Inventory at 31 March 2019 would be Rs. 5,000.</p>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w05-q2" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Trading / income statement","Rs."],"rows":[["Opening inventory",""],["Net sales",""],["Net purchases",""],["Cost of sales (deduct from net sales)",""],{"cells":["Gross profit",""],"total":true}]},"steps":[{"type":"num","tx":"Nuwana Enterprises — trading account for the year ended 31 March 2019","q":"Opening inventory — enter Rs.","a":52400,"think":"The year starts on 1 April 2018. Stock on 31 March 2018 is brought forward as the opening stock.","why":"The earlier inventory date supplies opening inventory of 52,400.","mistakes":{"5000":"5,000 is stock on 31 March 2019, the end of this year. Use the 52,400 from the previous year-end.","0":"This is not stated to be the first year. The paper gives opening stock of 52,400."},"fill":[0,1]},{"type":"num","tx":"Nuwana Enterprises — trading account for the year ended 31 March 2019","q":"Net sales — enter Rs.","a":453100,"think":"Deduct returns inwards, which are customer returns, from Sales.","why":"469,320 − 16,220 = 453,100.","mistakes":{"485540":"Adding returns increases sales incorrectly. Deduct the goods returned by customers.","449840":"19,480 is returns outwards to suppliers. Customer returns are the 16,220 returns inwards."},"fill":[1,1]},{"type":"num","tx":"Nuwana Enterprises — trading account for the year ended 31 March 2019","q":"Net purchases — enter Rs.","a":374690,"think":"Deduct returns outwards from Purchases. Do not include opening stock or carriage in this line.","why":"394,170 − 19,480 = 374,690.","mistakes":{"413650":"Supplier returns reduce purchase cost. Deduct 19,480 instead of adding it.","377180":"That includes carriage inwards of 2,490. Keep carriage separate until calculating cost of sales."},"fill":[2,1]},{"type":"num","tx":"Nuwana Enterprises — trading account for the year ended 31 March 2019","q":"Cost of sales (deduct from net sales) — enter Rs.","a":424580,"think":"Opening inventory plus net purchases plus carriage inwards gives goods available. Deduct the 5,000 left unsold. Enter the positive cost.","why":"52,400 + 374,690 + 2,490 = 429,580 goods available; 429,580 − 5,000 = 424,580.","mistakes":{"429580":"You stopped at goods available. Deduct the 5,000 closing inventory.","434580":"Closing stock was not sold. Deduct 5,000 instead of adding it.","372180":"You omitted opening inventory of 52,400. Goods brought into this year are available to sell too."},"fill":[3,1]},{"type":"num","tx":"Nuwana Enterprises — trading account for the year ended 31 March 2019","q":"Gross profit — enter Rs.","a":28520,"think":"Subtract cost of sales from net sales. Gross profit is the margin left from trading in goods.","why":"453,100 − 424,580 = 28,520.","mistakes":{"44740":"44,740 starts from sales before customer returns. Use net sales of 453,100.","424580":"That is the cost of the goods sold. Profit is net sales less that cost."},"fill":[4,1]}]}</script></div></div>
+<p>Inventory at 31 March 2019 would be Rs. 5,000.00.</p>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w05-q2" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "num", "tx": "Nuwana Enterprises — trading account for the year ended 31 March 2019", "q": "What are the net sales?", "a": 453100, "think": "Subtract customer returns (returns inwards) of Rs. 16,220.00 from sales of Rs. 469,320.00.", "why": "469,320.00 − 16,220.00 = 453,100.00.", "mistakes": {"485540": "Adding returns increases sales incorrectly. Deduct the goods returned by customers.", "449840": "19,480.00 is returns outwards to suppliers. Customer returns are the 16,220.00 returns inwards."}, "fill": [2, 2]}, {"type": "num", "tx": "Nuwana Enterprises — trading account for the year ended 31 March 2019", "q": "What are the net purchases?", "a": 374690, "think": "Subtract supplier returns (returns outwards) of Rs. 19,480.00 from purchases of Rs. 394,170.00; keep inward carriage for the next row.", "why": "394,170.00 − 19,480.00 = 374,690.00.", "mistakes": {"413650": "Supplier returns reduce purchase cost. Deduct 19,480.00 instead of adding it.", "377180": "That includes carriage inwards of 2,490.00. Keep carriage separate until calculating cost of sales."}, "fill": [6, 1]}, {"type": "num", "q": "What is the purchase cost including carriage inwards?", "a": 377180, "think": "Add the Rs. 2,490.00 inward delivery cost to net purchases. This delivery brings the goods into the business.", "why": "374,690.00 + 2,490.00 = Rs. 377,180.00.", "mistakes": {"374690": "You left out the cost of bringing the purchases in.", "372200": "Inward carriage adds to the cost of the goods; it is not a deduction.", "396660": "You included delivery but did not deduct supplier returns."}, "fill": [8, 1]}, {"type": "num", "q": "What is the cost of goods available?", "a": 429580, "think": "Add opening inventory of Rs. 52,400.00 to purchases including inward carriage. Do this before removing closing inventory.", "why": "52,400.00 + 377,180.00 = Rs. 429,580.00.", "mistakes": {"424580": "You have already removed the unsold goods. This line is before deducting closing inventory.", "434580": "Closing inventory is part of the goods already available, not an extra receipt.", "377180": "You omitted the inventory brought forward from the previous year."}, "fill": [9, 1]}, {"type": "num", "tx": "Nuwana Enterprises — trading account for the year ended 31 March 2019", "q": "What is the cost of sales?", "a": 424580, "think": "From cost of goods available, deduct the Rs. 5,000.00 left unsold. Enter the positive cost; the statement deducts this row from net sales.", "why": "52,400.00 + 374,690.00 + 2,490.00 = 429,580.00 goods available; 429,580.00 − 5,000.00 = 424,580.00.", "mistakes": {"429580": "You stopped at goods available. Deduct the 5,000.00 closing inventory.", "434580": "Closing stock was not sold. Deduct 5,000.00 instead of adding it.", "372180": "You omitted opening inventory of 52,400.00. Goods brought into this year are available to sell too."}, "fill": [11, 2]}, {"type": "num", "tx": "Nuwana Enterprises — trading account for the year ended 31 March 2019", "q": "What is the gross profit?", "a": 28520, "think": "Use sales of Rs. 469,320.00 less customer returns of Rs. 16,220.00. Subtract the cost of sales you calculated in the preceding row.", "why": "453,100.00 − 424,580.00 = 28,520.00.", "mistakes": {"44740": "44,740.00 starts from sales before customer returns. Use net sales of 453,100.00.", "424580": "That is the cost of the goods sold. Profit is net sales less that cost."}, "fill": [12, 2]}], "end": "All deductions are entered as positive amounts. Rows labelled “Less” and cost of sales or operating expenses are subtracted in the statement.", "table": {"cols": ["Trading account", "Workings (Rs.)", "Total (Rs.)"], "rows": [["Sales", "469,320", ""], ["Less: returns inwards", "16,220", ""], {"cells": ["Net sales", "", ""], "total": true}, ["Opening inventory", "52,400", ""], ["Add: purchases", "394,170", ""], ["Less: returns outwards", "19,480", ""], ["Net purchases", "", ""], ["Add: carriage inwards", "2,490", ""], ["Purchases including carriage inwards", "", ""], ["Cost of goods available", "", ""], ["Less: closing inventory", "5,000", ""], {"cells": ["Cost of sales", "", ""], "total": true}, {"cells": ["Gross profit", "", ""], "total": true}], "moneyCols": [1, 2], "decimals": 2}}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q2</summary>
-<p><strong>Step 1 — Net sales.</strong> 469,320 − 16,220 = 453,100.</p>
-<p><strong>Step 2 — Find opening inventory.</strong> The year starts on 1 April 2018, so inventory at 31 March 2018 is the opening figure: 52,400.</p>
-<p><strong>Step 3 — Cost of sales.</strong> 52,400 + 394,170 − 19,480 + 2,490 = 429,580 available, and 429,580 − 5,000 = 424,580.</p>
-<p><strong>Step 4 — Gross profit.</strong> 453,100 − 424,580 = 28,520.</p>
+<p><strong>Step 1 — Net sales.</strong> 469,320.00 − 16,220.00 = 453,100.00.</p>
+<p><strong>Step 2 — Find opening inventory.</strong> The year starts on 1 April 2018, so inventory at 31 March 2018 is the opening figure: 52,400.00.</p>
+<p><strong>Step 3 — Cost of sales.</strong> 52,400.00 + 394,170.00 − 19,480.00 + 2,490.00 = 429,580.00 available, and 429,580.00 − 5,000.00 = 424,580.00.</p>
+<p><strong>Step 4 — Gross profit.</strong> 453,100.00 − 424,580.00 = 28,520.00.</p>
 <p><strong>Trading account for the year ended 31 March 2019</strong></p>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>Rs.</th>
-<th>Rs.</th>
+<th style="text-align: right;">Workings (Rs.)</th>
+<th style="text-align: right;">Total (Rs.)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Sales</td>
-<td>469,320</td>
-<td></td>
+<td style="text-align: right;">469,320.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less returns inwards</td>
-<td>(16,220)</td>
-<td>453,100</td>
+<td>Less: returns inwards</td>
+<td style="text-align: right;">(16,220.00)</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td><strong>Net sales</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>453,100.00</strong></td>
 </tr>
 <tr>
 <td>Opening inventory</td>
-<td>52,400</td>
-<td></td>
+<td style="text-align: right;">52,400.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Add purchases</td>
-<td>394,170</td>
-<td></td>
+<td>Add: purchases</td>
+<td style="text-align: right;">394,170.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less returns outwards</td>
-<td>(19,480)</td>
-<td></td>
+<td>Less: returns outwards</td>
+<td style="text-align: right;">(19,480.00)</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Add carriage inwards</td>
-<td>2,490</td>
-<td></td>
+<td>Net purchases</td>
+<td style="text-align: right;">374,690.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Add: carriage inwards</td>
+<td style="text-align: right;">2,490.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Purchases including carriage inwards</td>
+<td style="text-align: right;">377,180.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Cost of goods available</td>
-<td>429,580</td>
-<td></td>
+<td style="text-align: right;">429,580.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less closing inventory</td>
-<td>(5,000)</td>
-<td></td>
+<td>Less: closing inventory</td>
+<td style="text-align: right;">(5,000.00)</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td><strong>Cost of sales</strong></td>
-<td></td>
-<td><strong>(424,580)</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>(424,580.00)</strong></td>
 </tr>
 <tr>
 <td><strong>Gross profit</strong></td>
-<td></td>
-<td><strong>28,520</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>28,520.00</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Final check:</strong> 424,580 + 28,520 = 453,100. ✓</p>
+<p><strong>Final check:</strong> 424,580.00 + 28,520.00 = 453,100.00. ✓</p>
 </details>
-<p><strong>Q3. Question:</strong> From this trial balance of Sugathadasa Enterprises, draw up a trading and comprehensive income statement for the year ending 31 December 2018. Inventory at 31 December 2018 was Rs. 44,780.</p>
+<p><strong>Q3. Question:</strong> From this trial balance of Sugathadasa Enterprises, draw up a trading and comprehensive income statement for the year ending 31 December 2018. Inventory at 31 December 2018 was Rs. 44,780.00.</p>
 <table>
 <thead>
 <tr>
@@ -1002,240 +1048,271 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
 <tbody>
 <tr>
 <td>Inventory, 1 January 2018</td>
-<td>41,600</td>
+<td>41,600.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Carriage outwards</td>
-<td>2,100</td>
+<td>2,100.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Carriage inwards</td>
-<td>3,700</td>
+<td>3,700.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Returns inwards</td>
-<td>1,540</td>
+<td>1,540.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Returns outwards</td>
 <td></td>
-<td>3,410</td>
+<td>3,410.00</td>
 </tr>
 <tr>
 <td>Purchases</td>
-<td>188,430</td>
+<td>188,430.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Sales</td>
 <td></td>
-<td>380,400</td>
+<td>380,400.00</td>
 </tr>
 <tr>
 <td>Salaries and wages</td>
-<td>61,400</td>
+<td>61,400.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Rent</td>
-<td>3,700</td>
+<td>3,700.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Insurance</td>
-<td>1,356</td>
+<td>1,356.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Motor expenses</td>
-<td>1,910</td>
+<td>1,910.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Office expenses</td>
-<td>412</td>
+<td>412.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Lighting and heating expenses</td>
-<td>894</td>
+<td>894.00</td>
 <td></td>
 </tr>
 <tr>
 <td>General expenses</td>
-<td>245</td>
+<td>245.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Building</td>
-<td>92,000</td>
+<td>92,000.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Motor vehicles</td>
-<td>13,400</td>
+<td>13,400.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Fixtures and fittings</td>
-<td>1,900</td>
+<td>1,900.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Accounts receivable</td>
-<td>42,560</td>
+<td>42,560.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Accounts payable</td>
 <td></td>
-<td>31,600</td>
+<td>31,600.00</td>
 </tr>
 <tr>
 <td>Cash at bank</td>
-<td>5,106</td>
+<td>5,106.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Drawings</td>
-<td>22,000</td>
+<td>22,000.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Capital</td>
 <td></td>
-<td>68,843</td>
+<td>68,843.00</td>
 </tr>
 <tr>
 <td><strong>Total</strong></td>
-<td><strong>484,253</strong></td>
-<td><strong>484,253</strong></td>
+<td><strong>484,253.00</strong></td>
+<td><strong>484,253.00</strong></td>
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w05-q3" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Trading / income statement","Rs."],"rows":[["Net sales",""],["Cost of sales (deduct from net sales)",""],{"cells":["Gross profit",""],"total":true},["Total operating expenses (deduct)",""],{"cells":["Net profit",""],"total":true},{"cells":["Total comprehensive income",""],"total":true}]},"steps":[{"type":"choice","q":"Where does carriage outwards belong in this statement?","think":"“Outwards” means delivery to customers. Ask whether the cost brings purchases in or delivers completed sales.","opts":[{"t":"As a selling expense below gross profit","ok":true},{"t":"In cost of sales with carriage inwards","why":"That confuses delivery to customers with the cost of bringing purchases into the business. Put carriage outwards below gross profit."},{"t":"Leave it out entirely","why":"It is a business expense. It reduces net profit even though it does not reduce gross profit."}],"why":"Carriage outwards is a distribution expense. Carriage inwards belongs in cost of sales."},{"type":"choice","q":"Should the owner’s drawings of Rs. 22,000 reduce the net profit?","think":"Profit measures income less business expenses. Taking cash for private use is a transaction with the owner.","opts":[{"t":"No — exclude drawings from this statement","ok":true},{"t":"Yes — deduct drawings as an operating expense","why":"Drawings are the owner’s private withdrawal. Deducting them would understate the business’s profit."},{"t":"No — add drawings as other income instead","why":"The owner taking money out is not income earned from business activity. Exclude it from profit entirely."}],"why":"Drawings reduce owner equity, not the business’s profit. The same exclusion applies to capital; asset and liability balances are not operating expenses either."},{"type":"num","tx":"Sugathadasa Enterprises — trading and comprehensive income statement for the year ended 31 December 2018","q":"Net sales — enter Rs.","a":378860,"think":"Customer returns reduce sales revenue. Use Sales less Returns inwards.","why":"380,400 − 1,540 = 378,860.","mistakes":{"381940":"Returns inwards reduce revenue. Do not add the 1,540.","376990":"You used the supplier returns of 3,410. Deduct customer returns of 1,540 here."},"fill":[0,1]},{"type":"num","tx":"Sugathadasa Enterprises — trading and comprehensive income statement for the year ended 31 December 2018","q":"Cost of sales (deduct from net sales) — enter Rs.","a":185540,"think":"Start with opening inventory. Add purchases and carriage inwards, deduct returns outwards, then deduct closing inventory. Carriage outwards belongs below gross profit. Enter the positive cost.","why":"41,600 + 188,430 − 3,410 + 3,700 = 230,320 goods available; 230,320 − 44,780 = 185,540.","mistakes":{"230320":"You have goods available for sale. Deduct the 44,780 still unsold at year-end.","275100":"Closing inventory must be deducted, not added.","187640":"You included carriage outwards of 2,100 in cost of sales. It is a delivery expense below gross profit.","181840":"You omitted carriage inwards of 3,700, the cost of getting goods into the business."},"fill":[1,1]},{"type":"num","tx":"Sugathadasa Enterprises — trading and comprehensive income statement for the year ended 31 December 2018","q":"Gross profit — enter Rs.","a":193320,"think":"Use net sales, then subtract the cost of the goods actually sold.","why":"378,860 − 185,540 = 193,320.","mistakes":{"194860":"You began with sales before customer returns. Deduct 1,540 first.","185540":"Cost of sales is not gross profit. Subtract it from net sales."},"fill":[2,1]},{"type":"num","tx":"Sugathadasa Enterprises — trading and comprehensive income statement for the year ended 31 December 2018","q":"Total operating expenses (deduct) — enter Rs.","a":72017,"think":"Add salaries and wages, rent, carriage outwards, motor expenses, insurance, lighting and heating, office expenses and general expenses. Exclude drawings and assets. Enter a positive total.","why":"61,400 + 3,700 + 2,100 + 1,910 + 1,356 + 894 + 412 + 245 = 72,017.","mistakes":{"94017":"You included drawings of 22,000. Owner withdrawals reduce equity; they are not a business expense.","69917":"You left out carriage outwards of 2,100. Delivery to customers is an expense below gross profit.","164017":"You included the 92,000 building. Its purchase cost is an asset, not a running expense in this question."},"fill":[3,1]},{"type":"num","tx":"Sugathadasa Enterprises — trading and comprehensive income statement for the year ended 31 December 2018","q":"Net profit — enter Rs.","a":121303,"think":"Deduct operating expenses from gross profit. There is no other income or finance expense stated in this trial balance.","why":"193,320 − 72,017 = 121,303 net profit.","mistakes":{"193320":"193,320 is gross profit before running expenses. Deduct the 72,017 expense total.","99303":"You also deducted drawings of 22,000. Drawings belong to owner equity, not profit."},"fill":[4,1]},{"type":"num","tx":"Sugathadasa Enterprises — trading and comprehensive income statement for the year ended 31 December 2018","q":"Total comprehensive income — enter Rs.","a":121303,"think":"Other comprehensive income means specified gains or losses outside ordinary profit, such as certain revaluation gains. No such item or adjustment is given here.","why":"121,303 profit + 0 other comprehensive income = 121,303 total comprehensive income.","mistakes":{"143303":"Do not add the owner’s drawings to profit. No other comprehensive income is given.","193320":"That is gross profit. Comprehensive income starts from net profit of 121,303 here."},"fill":[5,1]}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w05-q3" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "Where does carriage outwards belong in this statement?", "think": "Compare the direction of the delivery with the two expense sections: buying goods for resale and selling or delivering them to customers.", "opts": [{"t": "As a selling expense below gross profit", "ok": true}, {"t": "In cost of sales with carriage inwards", "why": "That confuses delivery to customers with the cost of bringing purchases into the business. Put carriage outwards below gross profit."}, {"t": "Leave it out entirely", "why": "It is a business expense. It reduces net profit even though it does not reduce gross profit."}], "why": "Carriage outwards is a distribution expense. Carriage inwards belongs in cost of sales."}, {"type": "choice", "q": "Should the owner’s drawings of Rs. 22,000.00 reduce the net profit?", "think": "Decide whether a private withdrawal pays for running the business or changes the amount belonging to its owner.", "opts": [{"t": "No — exclude drawings from this statement", "ok": true}, {"t": "Yes — deduct drawings as an operating expense", "why": "Drawings are the owner’s private withdrawal. Deducting them would understate the business’s profit."}, {"t": "No — add drawings as other income instead", "why": "The owner taking money out is not income earned from business activity. Exclude it from profit entirely."}], "why": "Drawings reduce owner equity, not the business’s profit. The same exclusion applies to capital; asset and liability balances are not operating expenses either."}, {"type": "num", "tx": "Sugathadasa Enterprises — trading and comprehensive income statement for the year ended 31 December 2018", "q": "What are the net sales?", "a": 378860, "think": "Subtract customer returns (returns inwards) of Rs. 1,540.00 from sales of Rs. 380,400.00.", "why": "380,400.00 − 1,540.00 = 378,860.00.", "mistakes": {"381940": "Returns inwards reduce revenue. Do not add the 1,540.00.", "376990": "You used the supplier returns of 3,410.00. Deduct customer returns of 1,540.00 here."}, "fill": [2, 2]}, {"type": "num", "q": "What are the net purchases?", "a": 185020, "think": "Subtract supplier returns (returns outwards) of Rs. 3,410.00 from purchases of Rs. 188,430.00; keep inward carriage for the next row.", "why": "188,430.00 − 3,410.00 = Rs. 185,020.00.", "mistakes": {"188430": "You have not deducted the goods returned to suppliers.", "191840": "You added supplier returns. Goods sent back reduce purchases.", "186890": "You deducted customer returns instead of supplier returns."}, "fill": [6, 1]}, {"type": "num", "q": "What is the purchase cost including carriage inwards?", "a": 188720, "think": "Add the Rs. 3,700.00 inward delivery cost to net purchases. This delivery brings the goods into the business.", "why": "185,020.00 + 3,700.00 = Rs. 188,720.00.", "mistakes": {"185020": "You left out the cost of bringing the purchases in.", "181320": "Inward carriage adds to the cost of the goods; it is not a deduction.", "192130": "You included delivery but did not deduct supplier returns."}, "fill": [8, 1]}, {"type": "num", "q": "What is the cost of goods available?", "a": 230320, "think": "Add opening inventory of Rs. 41,600.00 to purchases including inward carriage. Do this before removing closing inventory.", "why": "41,600.00 + 188,720.00 = Rs. 230,320.00.", "mistakes": {"185540": "You have already removed the unsold goods. This line is before deducting closing inventory.", "275100": "Closing inventory is part of the goods already available, not an extra receipt.", "188720": "You omitted the inventory brought forward from the previous year."}, "fill": [9, 1]}, {"type": "num", "tx": "Sugathadasa Enterprises — trading and comprehensive income statement for the year ended 31 December 2018", "q": "What is the cost of sales?", "a": 185540, "think": "From cost of goods available, deduct the Rs. 44,780.00 left unsold. Enter the positive cost; the statement deducts this row from net sales.", "why": "41,600.00 + 188,430.00 − 3,410.00 + 3,700.00 = 230,320.00 goods available; 230,320.00 − 44,780.00 = 185,540.00.", "mistakes": {"230320": "You have goods available for sale. Deduct the 44,780.00 still unsold at year-end.", "275100": "Closing inventory must be deducted, not added.", "187640": "You included carriage outwards of 2,100.00 in cost of sales. It is a delivery expense below gross profit.", "181840": "You omitted carriage inwards of 3,700.00, the cost of getting goods into the business."}, "fill": [11, 2]}, {"type": "num", "tx": "Sugathadasa Enterprises — trading and comprehensive income statement for the year ended 31 December 2018", "q": "What is the gross profit?", "a": 193320, "think": "Use sales of Rs. 380,400.00 less customer returns of Rs. 1,540.00. Subtract the cost of sales you calculated in the preceding row.", "why": "378,860.00 − 185,540.00 = 193,320.00.", "mistakes": {"194860": "You began with sales before customer returns. Deduct 1,540.00 first.", "185540": "Cost of sales is not gross profit. Subtract it from net sales."}, "fill": [12, 2]}, {"type": "num", "tx": "Sugathadasa Enterprises — trading and comprehensive income statement for the year ended 31 December 2018", "q": "What is the total of the operating expenses?", "a": 72017, "think": "Add salaries and wages Rs. 61,400.00, rent Rs. 3,700.00, carriage outwards Rs. 2,100.00, motor expenses Rs. 1,910.00, insurance Rs. 1,356.00, lighting and heating Rs. 894.00, office expenses Rs. 412.00 and general expenses Rs. 245.00. Exclude drawings and asset balances.", "why": "61,400.00 + 3,700.00 + 2,100.00 + 1,910.00 + 1,356.00 + 894.00 + 412.00 + 245.00 = 72,017.00.", "mistakes": {"94017": "You included drawings of 22,000.00. Owner withdrawals reduce equity; they are not a business expense.", "69917": "You left out carriage outwards of 2,100.00. Delivery to customers is an expense below gross profit.", "164017": "You included the 92,000.00 building. Its purchase cost is an asset, not a running expense in this question."}, "fill": [21, 2]}, {"type": "num", "tx": "Sugathadasa Enterprises — trading and comprehensive income statement for the year ended 31 December 2018", "q": "What is the net profit?", "a": 121303, "think": "Subtract the total of the eight operating expenses from the gross profit calculated above. No other income or finance cost is stated.", "why": "193,320.00 − 72,017.00 = 121,303.00 net profit.", "mistakes": {"193320": "193,320.00 is gross profit before running expenses. Deduct the 72,017.00 expense total.", "99303": "You also deducted drawings of 22,000.00. Drawings belong to owner equity, not profit."}, "fill": [22, 2]}, {"type": "num", "q": "What is the other comprehensive income?", "a": 0, "think": "Look for a separately stated gain or loss outside profit, such as a revaluation gain. Do not invent a gain from the asset balances in this trial balance.", "why": "No other comprehensive income item is given, so it is Rs. 0.00.", "mistakes": {"92000": "The building balance is an asset cost, not a revaluation gain.", "22000": "Drawings are an owner withdrawal, not other comprehensive income.", "121303": "That is net profit. This row asks only for gains and losses outside profit."}, "fill": [23, 2]}, {"type": "num", "tx": "Sugathadasa Enterprises — trading and comprehensive income statement for the year ended 31 December 2018", "q": "What is the total comprehensive income?", "a": 121303, "think": "Add the net profit and the other comprehensive income from the two preceding rows. Owner contributions and drawings are excluded.", "why": "121,303.00 profit + 0 other comprehensive income = 121,303.00 total comprehensive income.", "mistakes": {"143303": "Do not add the owner’s drawings to profit. No other comprehensive income is given.", "193320": "That is gross profit. Comprehensive income starts from net profit of 121,303.00 here."}, "fill": [24, 2]}], "end": "All deductions are entered as positive amounts. Rows labelled “Less” and cost of sales or operating expenses are subtracted in the statement.", "table": {"cols": ["Trading and comprehensive income statement", "Workings (Rs.)", "Total (Rs.)"], "rows": [["Sales", "380,400", ""], ["Less: returns inwards", "1,540", ""], {"cells": ["Net sales", "", ""], "total": true}, ["Opening inventory", "41,600", ""], ["Add: purchases", "188,430", ""], ["Less: returns outwards", "3,410", ""], ["Net purchases", "", ""], ["Add: carriage inwards", "3,700", ""], ["Purchases including carriage inwards", "", ""], ["Cost of goods available", "", ""], ["Less: closing inventory", "44,780", ""], {"cells": ["Cost of sales", "", ""], "total": true}, {"cells": ["Gross profit", "", ""], "total": true}, ["Salaries and wages", "61,400", ""], ["Rent", "3,700", ""], ["Carriage outwards", "2,100", ""], ["Motor expenses", "1,910", ""], ["Insurance", "1,356", ""], ["Lighting and heating", "894", ""], ["Office expenses", "412", ""], ["General expenses", "245", ""], {"cells": ["Total operating expenses", "", ""], "total": true}, {"cells": ["Net profit", "", ""], "total": true}, ["Other comprehensive income", "", ""], {"cells": ["Total comprehensive income", "", ""], "total": true}], "moneyCols": [1, 2], "decimals": 2}}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q3</summary>
 <p><strong>Step 1 — Sort the accounts.</strong> Sales, returns, purchases, inventory and carriage inwards go in the trading section. Expenses go below gross profit. Assets, liabilities, capital and drawings are <strong>not</strong> in this statement.</p>
-<p><strong>Step 2 — Net sales.</strong> 380,400 − 1,540 = 378,860.</p>
-<p><strong>Step 3 — Cost of sales.</strong> 41,600 + 188,430 − 3,410 + 3,700 − 44,780 = 185,540.</p>
-<p><strong>Step 4 — Gross profit.</strong> 378,860 − 185,540 = 193,320.</p>
+<p><strong>Step 2 — Net sales.</strong> 380,400.00 − 1,540.00 = 378,860.00.</p>
+<p><strong>Step 3 — Cost of sales.</strong> 41,600.00 + 188,430.00 − 3,410.00 + 3,700.00 − 44,780.00 = 185,540.00.</p>
+<p><strong>Step 4 — Gross profit.</strong> 378,860.00 − 185,540.00 = 193,320.00.</p>
 <p><strong>Step 5 — Add up expenses.</strong> Carriage outwards belongs here. Drawings do not, because they are the owner's personal withdrawals.</p>
 <p><strong>Statement for the year ended 31 December 2018</strong></p>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>Rs.</th>
-<th>Rs.</th>
+<th style="text-align: right;">Workings (Rs.)</th>
+<th style="text-align: right;">Total (Rs.)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Sales</td>
-<td>380,400</td>
-<td></td>
+<td style="text-align: right;">380,400.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less returns inwards</td>
-<td>(1,540)</td>
-<td>378,860</td>
+<td>Less: returns inwards</td>
+<td style="text-align: right;">(1,540.00)</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td><strong>Net sales</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>378,860.00</strong></td>
 </tr>
 <tr>
 <td>Opening inventory</td>
-<td>41,600</td>
-<td></td>
+<td style="text-align: right;">41,600.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Add purchases</td>
-<td>188,430</td>
-<td></td>
+<td>Add: purchases</td>
+<td style="text-align: right;">188,430.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less returns outwards</td>
-<td>(3,410)</td>
-<td></td>
+<td>Less: returns outwards</td>
+<td style="text-align: right;">(3,410.00)</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Add carriage inwards</td>
-<td>3,700</td>
-<td></td>
+<td>Net purchases</td>
+<td style="text-align: right;">185,020.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less closing inventory</td>
-<td>(44,780)</td>
-<td></td>
+<td>Add: carriage inwards</td>
+<td style="text-align: right;">3,700.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Purchases including carriage inwards</td>
+<td style="text-align: right;">188,720.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Cost of goods available</td>
+<td style="text-align: right;">230,320.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Less: closing inventory</td>
+<td style="text-align: right;">(44,780.00)</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td><strong>Cost of sales</strong></td>
-<td></td>
-<td><strong>(185,540)</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>(185,540.00)</strong></td>
 </tr>
 <tr>
 <td><strong>Gross profit</strong></td>
-<td></td>
-<td><strong>193,320</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>193,320.00</strong></td>
 </tr>
 <tr>
 <td>Salaries and wages</td>
-<td>61,400</td>
-<td></td>
+<td style="text-align: right;">61,400.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Rent</td>
-<td>3,700</td>
-<td></td>
+<td style="text-align: right;">3,700.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Carriage outwards</td>
-<td>2,100</td>
-<td></td>
+<td style="text-align: right;">2,100.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Motor expenses</td>
-<td>1,910</td>
-<td></td>
+<td style="text-align: right;">1,910.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Insurance</td>
-<td>1,356</td>
-<td></td>
+<td style="text-align: right;">1,356.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Lighting and heating</td>
-<td>894</td>
-<td></td>
+<td style="text-align: right;">894.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Office expenses</td>
-<td>412</td>
-<td></td>
+<td style="text-align: right;">412.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>General expenses</td>
-<td>245</td>
-<td></td>
+<td style="text-align: right;">245.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td><strong>Total expenses</strong></td>
-<td></td>
-<td><strong>(72,017)</strong></td>
+<td><strong>Total operating expenses</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>(72,017.00)</strong></td>
 </tr>
 <tr>
 <td><strong>Net profit</strong></td>
-<td></td>
-<td><strong>121,303</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>121,303.00</strong></td>
+</tr>
+<tr>
+<td>Other comprehensive income</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr>
+<td><strong>Total comprehensive income</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>121,303.00</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Final check:</strong> 193,320 − 72,017 = 121,303. There is no other comprehensive income, so total comprehensive income is also 121,303.</p>
+<p><strong>Final check:</strong> 193,320.00 − 72,017.00 = 121,303.00. There is no other comprehensive income, so total comprehensive income is also 121,303.00.</p>
 </details></div><div class="hci-ta" lang="ta" hidden data-title="பயிற்சிக் கேள்விகள் (பாட வினாத்தாள்)"><p><strong>இந்தப் பகுதி இன்னும் தமிழில் மொழிபெயர்க்கப்படவில்லை; தற்போது ஆங்கிலத்தில் மட்டும் உள்ளது.</strong></p>
-<p>These are the three questions from the <strong>Session 5 practice PDF</strong>. Fill in the short trading or income statement one line at a time. A wrong answer explains the mistake and how to think about it; your progress is saved in this browser. After you finish, open the full step-by-step account below to compare.</p>
+<p>These are the three questions from the <strong>Session 5 practice PDF</strong>. Build the full trading or income statement one line at a time. Amounts copied directly from the question are prefilled; calculate each blank working and total. A wrong answer explains the mistake and how to think about it; your progress is saved in this browser. After you finish, open the full step-by-step account below to compare.</p>
 <p><strong>Read the verbs:</strong> underline every action word in the Required part — identify, record, post, prepare, calculate or draw up — and answer each one, in that order. Here, “draw up” means show the requested account or statement, not only the final profit figure.</p>
+<p>Enter deductions as positive amounts: “Less” rows, cost of sales and total operating expenses are subtracted as labelled. The two rupee columns separate workings from statement totals. No rounding is needed for these whole-rupee calculations.</p>
 <p><strong>The formulas you need</strong></p>
 <table>
 <thead>
@@ -1275,92 +1352,112 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
 <tbody>
 <tr>
 <td>Carriage inwards</td>
-<td>5,000</td>
+<td>5,000.00</td>
 </tr>
 <tr>
 <td>Returns outwards</td>
-<td>10,000</td>
+<td>10,000.00</td>
 </tr>
 <tr>
 <td>Returns inwards</td>
-<td>15,000</td>
+<td>15,000.00</td>
 </tr>
 <tr>
 <td>Sales</td>
-<td>230,000</td>
+<td>230,000.00</td>
 </tr>
 <tr>
 <td>Purchases</td>
-<td>120,000</td>
+<td>120,000.00</td>
 </tr>
 </tbody>
 </table>
-<p>Inventory at 31 December 2018 would be Rs. 20,000.</p>
+<p>Inventory at 31 December 2018 would be Rs. 20,000.00.</p>
 <div data-ta-tool="gp-w05-q1"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q1</summary>
-<p><strong>Step 1 — Net sales.</strong> 230,000 − 15,000 = 215,000.</p>
+<p><strong>Step 1 — Net sales.</strong> 230,000.00 − 15,000.00 = 215,000.00.</p>
 <p><strong>Step 2 — Opening inventory.</strong> This is the first year in business, so there is none.</p>
-<p><strong>Step 3 — Cost of sales.</strong> 0 + 120,000 − 10,000 + 5,000 − 20,000 = 95,000. Closing inventory is deducted because those goods are not sold yet.</p>
-<p><strong>Step 4 — Gross profit.</strong> 215,000 − 95,000 = 120,000.</p>
+<p><strong>Step 3 — Cost of sales.</strong> 0.00 + 120,000.00 − 10,000.00 + 5,000.00 − 20,000.00 = 95,000.00. Closing inventory is deducted because those goods are not sold yet.</p>
+<p><strong>Step 4 — Gross profit.</strong> 215,000.00 − 95,000.00 = 120,000.00.</p>
 <p><strong>Trading account for the year ended 31 December 2018</strong></p>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>Rs.</th>
-<th>Rs.</th>
+<th style="text-align: right;">Workings (Rs.)</th>
+<th style="text-align: right;">Total (Rs.)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Sales</td>
-<td>230,000</td>
-<td></td>
+<td style="text-align: right;">230,000.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less returns inwards</td>
-<td>(15,000)</td>
-<td>215,000</td>
+<td>Less: returns inwards</td>
+<td style="text-align: right;">(15,000.00)</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Purchases</td>
-<td>120,000</td>
-<td></td>
+<td><strong>Net sales</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>215,000.00</strong></td>
 </tr>
 <tr>
-<td>Less returns outwards</td>
-<td>(10,000)</td>
-<td></td>
+<td>Opening inventory</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Add carriage inwards</td>
-<td>5,000</td>
-<td></td>
+<td>Add: purchases</td>
+<td style="text-align: right;">120,000.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Less: returns outwards</td>
+<td style="text-align: right;">(10,000.00)</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Net purchases</td>
+<td style="text-align: right;">110,000.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Add: carriage inwards</td>
+<td style="text-align: right;">5,000.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Purchases including carriage inwards</td>
+<td style="text-align: right;">115,000.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Cost of goods available</td>
-<td>115,000</td>
-<td></td>
+<td style="text-align: right;">115,000.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less closing inventory</td>
-<td>(20,000)</td>
-<td></td>
+<td>Less: closing inventory</td>
+<td style="text-align: right;">(20,000.00)</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td><strong>Cost of sales</strong></td>
-<td></td>
-<td><strong>(95,000)</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>(95,000.00)</strong></td>
 </tr>
 <tr>
 <td><strong>Gross profit</strong></td>
-<td></td>
-<td><strong>120,000</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>120,000.00</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Final check:</strong> 95,000 + 120,000 = 215,000, the net sales. ✓</p>
+<p><strong>Final check:</strong> 95,000.00 + 120,000.00 = 215,000.00, the net sales. ✓</p>
 </details>
 <p><strong>Q2. Question:</strong> Draw up the trading account of Nuwana Enterprises for the year ending 31 March 2019.</p>
 <table>
@@ -1373,103 +1470,118 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
 <tbody>
 <tr>
 <td>Inventory at 31 March 2018</td>
-<td>52,400</td>
+<td>52,400.00</td>
 </tr>
 <tr>
 <td>Returns inwards</td>
-<td>16,220</td>
+<td>16,220.00</td>
 </tr>
 <tr>
 <td>Returns outwards</td>
-<td>19,480</td>
+<td>19,480.00</td>
 </tr>
 <tr>
 <td>Purchases</td>
-<td>394,170</td>
+<td>394,170.00</td>
 </tr>
 <tr>
 <td>Carriage inwards</td>
-<td>2,490</td>
+<td>2,490.00</td>
 </tr>
 <tr>
 <td>Sales</td>
-<td>469,320</td>
+<td>469,320.00</td>
 </tr>
 </tbody>
 </table>
-<p>Inventory at 31 March 2019 would be Rs. 5,000.</p>
+<p>Inventory at 31 March 2019 would be Rs. 5,000.00.</p>
 <div data-ta-tool="gp-w05-q2"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q2</summary>
-<p><strong>Step 1 — Net sales.</strong> 469,320 − 16,220 = 453,100.</p>
-<p><strong>Step 2 — Find opening inventory.</strong> The year starts on 1 April 2018, so inventory at 31 March 2018 is the opening figure: 52,400.</p>
-<p><strong>Step 3 — Cost of sales.</strong> 52,400 + 394,170 − 19,480 + 2,490 = 429,580 available, and 429,580 − 5,000 = 424,580.</p>
-<p><strong>Step 4 — Gross profit.</strong> 453,100 − 424,580 = 28,520.</p>
+<p><strong>Step 1 — Net sales.</strong> 469,320.00 − 16,220.00 = 453,100.00.</p>
+<p><strong>Step 2 — Find opening inventory.</strong> The year starts on 1 April 2018, so inventory at 31 March 2018 is the opening figure: 52,400.00.</p>
+<p><strong>Step 3 — Cost of sales.</strong> 52,400.00 + 394,170.00 − 19,480.00 + 2,490.00 = 429,580.00 available, and 429,580.00 − 5,000.00 = 424,580.00.</p>
+<p><strong>Step 4 — Gross profit.</strong> 453,100.00 − 424,580.00 = 28,520.00.</p>
 <p><strong>Trading account for the year ended 31 March 2019</strong></p>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>Rs.</th>
-<th>Rs.</th>
+<th style="text-align: right;">Workings (Rs.)</th>
+<th style="text-align: right;">Total (Rs.)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Sales</td>
-<td>469,320</td>
-<td></td>
+<td style="text-align: right;">469,320.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less returns inwards</td>
-<td>(16,220)</td>
-<td>453,100</td>
+<td>Less: returns inwards</td>
+<td style="text-align: right;">(16,220.00)</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td><strong>Net sales</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>453,100.00</strong></td>
 </tr>
 <tr>
 <td>Opening inventory</td>
-<td>52,400</td>
-<td></td>
+<td style="text-align: right;">52,400.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Add purchases</td>
-<td>394,170</td>
-<td></td>
+<td>Add: purchases</td>
+<td style="text-align: right;">394,170.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less returns outwards</td>
-<td>(19,480)</td>
-<td></td>
+<td>Less: returns outwards</td>
+<td style="text-align: right;">(19,480.00)</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Add carriage inwards</td>
-<td>2,490</td>
-<td></td>
+<td>Net purchases</td>
+<td style="text-align: right;">374,690.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Add: carriage inwards</td>
+<td style="text-align: right;">2,490.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Purchases including carriage inwards</td>
+<td style="text-align: right;">377,180.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Cost of goods available</td>
-<td>429,580</td>
-<td></td>
+<td style="text-align: right;">429,580.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less closing inventory</td>
-<td>(5,000)</td>
-<td></td>
+<td>Less: closing inventory</td>
+<td style="text-align: right;">(5,000.00)</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td><strong>Cost of sales</strong></td>
-<td></td>
-<td><strong>(424,580)</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>(424,580.00)</strong></td>
 </tr>
 <tr>
 <td><strong>Gross profit</strong></td>
-<td></td>
-<td><strong>28,520</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>28,520.00</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Final check:</strong> 424,580 + 28,520 = 453,100. ✓</p>
+<p><strong>Final check:</strong> 424,580.00 + 28,520.00 = 453,100.00. ✓</p>
 </details>
-<p><strong>Q3. Question:</strong> From this trial balance of Sugathadasa Enterprises, draw up a trading and comprehensive income statement for the year ending 31 December 2018. Inventory at 31 December 2018 was Rs. 44,780.</p>
+<p><strong>Q3. Question:</strong> From this trial balance of Sugathadasa Enterprises, draw up a trading and comprehensive income statement for the year ending 31 December 2018. Inventory at 31 December 2018 was Rs. 44,780.00.</p>
 <table>
 <thead>
 <tr>
@@ -1481,118 +1593,118 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
 <tbody>
 <tr>
 <td>Inventory, 1 January 2018</td>
-<td>41,600</td>
+<td>41,600.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Carriage outwards</td>
-<td>2,100</td>
+<td>2,100.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Carriage inwards</td>
-<td>3,700</td>
+<td>3,700.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Returns inwards</td>
-<td>1,540</td>
+<td>1,540.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Returns outwards</td>
 <td></td>
-<td>3,410</td>
+<td>3,410.00</td>
 </tr>
 <tr>
 <td>Purchases</td>
-<td>188,430</td>
+<td>188,430.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Sales</td>
 <td></td>
-<td>380,400</td>
+<td>380,400.00</td>
 </tr>
 <tr>
 <td>Salaries and wages</td>
-<td>61,400</td>
+<td>61,400.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Rent</td>
-<td>3,700</td>
+<td>3,700.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Insurance</td>
-<td>1,356</td>
+<td>1,356.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Motor expenses</td>
-<td>1,910</td>
+<td>1,910.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Office expenses</td>
-<td>412</td>
+<td>412.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Lighting and heating expenses</td>
-<td>894</td>
+<td>894.00</td>
 <td></td>
 </tr>
 <tr>
 <td>General expenses</td>
-<td>245</td>
+<td>245.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Building</td>
-<td>92,000</td>
+<td>92,000.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Motor vehicles</td>
-<td>13,400</td>
+<td>13,400.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Fixtures and fittings</td>
-<td>1,900</td>
+<td>1,900.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Accounts receivable</td>
-<td>42,560</td>
+<td>42,560.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Accounts payable</td>
 <td></td>
-<td>31,600</td>
+<td>31,600.00</td>
 </tr>
 <tr>
 <td>Cash at bank</td>
-<td>5,106</td>
+<td>5,106.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Drawings</td>
-<td>22,000</td>
+<td>22,000.00</td>
 <td></td>
 </tr>
 <tr>
 <td>Capital</td>
 <td></td>
-<td>68,843</td>
+<td>68,843.00</td>
 </tr>
 <tr>
 <td><strong>Total</strong></td>
-<td><strong>484,253</strong></td>
-<td><strong>484,253</strong></td>
+<td><strong>484,253.00</strong></td>
+<td><strong>484,253.00</strong></td>
 </tr>
 </tbody>
 </table>
@@ -1600,118 +1712,148 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q3</summary>
 <p><strong>Step 1 — Sort the accounts.</strong> Sales, returns, purchases, inventory and carriage inwards go in the trading section. Expenses go below gross profit. Assets, liabilities, capital and drawings are <strong>not</strong> in this statement.</p>
-<p><strong>Step 2 — Net sales.</strong> 380,400 − 1,540 = 378,860.</p>
-<p><strong>Step 3 — Cost of sales.</strong> 41,600 + 188,430 − 3,410 + 3,700 − 44,780 = 185,540.</p>
-<p><strong>Step 4 — Gross profit.</strong> 378,860 − 185,540 = 193,320.</p>
+<p><strong>Step 2 — Net sales.</strong> 380,400.00 − 1,540.00 = 378,860.00.</p>
+<p><strong>Step 3 — Cost of sales.</strong> 41,600.00 + 188,430.00 − 3,410.00 + 3,700.00 − 44,780.00 = 185,540.00.</p>
+<p><strong>Step 4 — Gross profit.</strong> 378,860.00 − 185,540.00 = 193,320.00.</p>
 <p><strong>Step 5 — Add up expenses.</strong> Carriage outwards belongs here. Drawings do not, because they are the owner's personal withdrawals.</p>
 <p><strong>Statement for the year ended 31 December 2018</strong></p>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>Rs.</th>
-<th>Rs.</th>
+<th style="text-align: right;">Workings (Rs.)</th>
+<th style="text-align: right;">Total (Rs.)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Sales</td>
-<td>380,400</td>
-<td></td>
+<td style="text-align: right;">380,400.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less returns inwards</td>
-<td>(1,540)</td>
-<td>378,860</td>
+<td>Less: returns inwards</td>
+<td style="text-align: right;">(1,540.00)</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td><strong>Net sales</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>378,860.00</strong></td>
 </tr>
 <tr>
 <td>Opening inventory</td>
-<td>41,600</td>
-<td></td>
+<td style="text-align: right;">41,600.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Add purchases</td>
-<td>188,430</td>
-<td></td>
+<td>Add: purchases</td>
+<td style="text-align: right;">188,430.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less returns outwards</td>
-<td>(3,410)</td>
-<td></td>
+<td>Less: returns outwards</td>
+<td style="text-align: right;">(3,410.00)</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Add carriage inwards</td>
-<td>3,700</td>
-<td></td>
+<td>Net purchases</td>
+<td style="text-align: right;">185,020.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td>Less closing inventory</td>
-<td>(44,780)</td>
-<td></td>
+<td>Add: carriage inwards</td>
+<td style="text-align: right;">3,700.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Purchases including carriage inwards</td>
+<td style="text-align: right;">188,720.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Cost of goods available</td>
+<td style="text-align: right;">230,320.00</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Less: closing inventory</td>
+<td style="text-align: right;">(44,780.00)</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td><strong>Cost of sales</strong></td>
-<td></td>
-<td><strong>(185,540)</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>(185,540.00)</strong></td>
 </tr>
 <tr>
 <td><strong>Gross profit</strong></td>
-<td></td>
-<td><strong>193,320</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>193,320.00</strong></td>
 </tr>
 <tr>
 <td>Salaries and wages</td>
-<td>61,400</td>
-<td></td>
+<td style="text-align: right;">61,400.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Rent</td>
-<td>3,700</td>
-<td></td>
+<td style="text-align: right;">3,700.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Carriage outwards</td>
-<td>2,100</td>
-<td></td>
+<td style="text-align: right;">2,100.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Motor expenses</td>
-<td>1,910</td>
-<td></td>
+<td style="text-align: right;">1,910.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Insurance</td>
-<td>1,356</td>
-<td></td>
+<td style="text-align: right;">1,356.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Lighting and heating</td>
-<td>894</td>
-<td></td>
+<td style="text-align: right;">894.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>Office expenses</td>
-<td>412</td>
-<td></td>
+<td style="text-align: right;">412.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td>General expenses</td>
-<td>245</td>
-<td></td>
+<td style="text-align: right;">245.00</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
-<td><strong>Total expenses</strong></td>
-<td></td>
-<td><strong>(72,017)</strong></td>
+<td><strong>Total operating expenses</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>(72,017.00)</strong></td>
 </tr>
 <tr>
 <td><strong>Net profit</strong></td>
-<td></td>
-<td><strong>121,303</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>121,303.00</strong></td>
+</tr>
+<tr>
+<td>Other comprehensive income</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr>
+<td><strong>Total comprehensive income</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>121,303.00</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Final check:</strong> 193,320 − 72,017 = 121,303. There is no other comprehensive income, so total comprehensive income is also 121,303.</p>
+<p><strong>Final check:</strong> 193,320.00 − 72,017.00 = 121,303.00. There is no other comprehensive income, so total comprehensive income is also 121,303.00.</p>
 </details></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>கணக்கிலிருந்து அறிக்கைக்கு</h4><p><strong>Trial balance</strong>-இல் உள்ள அனைத்தும் செலவு அல்ல. வருமானம், செலவு இலாப அறிக்கைக்குச் செல்லும்; சொத்து, கடன் நிதிநிலை அறிக்கைக்குச் செல்லும். எந்தத் தொகை எங்கு வர வேண்டும் என்று முதலில் பிரியுங்கள்.</p></div><div class="ta-recap-item"><h4>மொத்த இலாபம்</h4><p>விற்பனைத் தொகையிலிருந்து விற்கப்பட்ட சரக்கின் செலவைக் கழித்தால் <strong>Gross profit</strong>. வாங்கிய எல்லாச் சரக்கும் விற்றதாகக் கொள்ளக்கூடாது. விற்காமல் மீதமிருக்கும் Closing inventory-ஐ கழித்துத்தான் Cost of sales கணக்கிட வேண்டும்.</p></div><div class="ta-recap-item"><h4>நிகர இலாபம்</h4><p>Gross profit-உடன் பிற வருமானங்களைச் சேர்த்து, அலுவலகம் நடத்தும் செலவுகளைக் கழித்தால் <strong>Net profit</strong>. கடையில் பணம் எவ்வளவு இருக்கிறது என்பதும் இலாபம் எவ்வளவு என்பதும் வெவ்வேறு கேள்விகள்.</p></div><div class="ta-recap-item"><h4>LKAS 1 என்ன சொல்கிறது?</h4><p>நிதியறிக்கைகள் தெளிவாகவும் ஒப்பிடக்கூடிய வகையிலும் இருக்க <strong>LKAS 1</strong> வழிகாட்டுகிறது. அறிக்கைகளின் முழுத் தொகுப்பில் இலாபம், நிதிநிலை, பணப்பாய்வு, உரிமையாளர் பங்கு மாற்றம், குறிப்புகள் ஆகியவை உள்ளன.</p></div><div class="ta-recap-item"><h4>Trading account பயிற்சி</h4><p><strong>Net sales = Sales − Sales returns</strong>. <strong>Cost of sales = Opening stock + Net purchases + Carriage inwards − Closing stock</strong>. Carriage outwards விற்பனைச் செலவு; அதை சரக்கின் கொள்வனவுச் செலவுடன் கலக்காதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
@@ -1936,10 +2078,13 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
     if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
       a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
   });
-  if (!KEY) return;
+  var toc = document.getElementById('toc');
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn && !toc) tbtn.hidden = true;
+  if (!KEY || !toc) return;
 
   // TOC
-  var toc = document.getElementById('toc'), links = [];
+  var links = [];
   var heads = document.querySelectorAll('main h2[id], main h3[id]');
   heads.forEach(function(h){
     var a = document.createElement('a'); a.href = '#' + h.id;
@@ -1950,8 +2095,6 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
     a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
     a.onclick = function(){ var english=h.closest('.section-english'); if(english && english.hidden){ var toggle=h.closest('section').querySelector('.native-toggle'); if(toggle) toggle.click(); } toc.classList.remove('open'); };
   });
-  var tbtn = document.getElementById('tocbtn');
-  if (tbtn && !toc) tbtn.style.display = 'none';
   if (tbtn && toc) {
     var isPhone = function(){ return window.matchMedia('(max-width:900px)').matches; };
     var showToc = function(){
@@ -2222,7 +2365,9 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
     function advance(firstTry){
       if (firstTry) state.first++;
       state.i++; tries = 0; save(key, state); render();
-      var focus = box.querySelector('.gp-acct,.gp-amt,.gp-opt'); if (focus) focus.focus({preventScroll:true});
+      var focus = box.querySelector('.gp-acct,.gp-amt,.gp-opt');
+      if (focus) { focus.focus({preventScroll:true}); focus.scrollIntoView({block:'nearest'}); }
+      else if (box.querySelector('.gp-fb')) box.querySelector('.gp-fb').scrollIntoView({block:'nearest'});
     }
     function feedback(kind, html, cont){
       var f = box.querySelector('.gp-fb');
@@ -2237,6 +2382,7 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
         var r = document.createElement('button'); r.type = 'button'; r.className = 'alt'; r.textContent = 'Show me the answer';
         r.onclick = reveal; f.appendChild(r);
       }
+      f.scrollIntoView({block:'nearest'});
     }
     function reveal(){
       var s = steps[state.i], text;
@@ -2296,20 +2442,36 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
         rows += '<tr class="gp-now"><td>' + (s.tx !== last ? esc(dateOf(s.tx)) : '') + '</td><td class="gp-cell-acct"><input class="gp-acct" placeholder="Click to choose" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Account"><div class="gp-list" role="listbox" hidden></div></td><td><input class="gp-dr" inputmode="decimal" autocomplete="off" aria-label="Debit amount"></td><td><input class="gp-cr" inputmode="decimal" autocomplete="off" aria-label="Credit amount"></td></tr>';
         s.tx.e.slice(s.n + 1).forEach(function(){ rows += '<tr class="gp-row-next"><td></td><td></td><td></td><td></td></tr>'; });
       }
+      if (!rows) return '';
       return '<div class="gp-tablewrap"><table class="gp-table"><thead><tr><th class="gp-col-date">Date</th><th>Account</th><th class="r gp-col-amt">Debit (Rs.)</th><th class="r gp-col-amt">Credit (Rs.)</th></tr></thead><tbody>' + rows + '</tbody>' +
         (done.length ? '<tfoot><tr><td></td><td>Total so far</td><td class="r">' + money(dr) + '</td><td class="r">' + money(cr) + '</td></tr></tfoot>' : '') + '</table></div>';
     }
     function grid(s){
       if (!data.table) return '';
       var values = {};
-      steps.slice(0, state.i).forEach(function(x){ if (x.fill) values[x.fill.join()] = money(x.a); });
+      var moneyCols = data.table.moneyCols || [], dp = data.table.decimals;
+      // A held cell stays blank until no remaining step has that value as its answer.
+      var waiting = {};
+      steps.slice(state.i).forEach(function(x){
+        if (x.fill) waiting[Math.abs(x.a).toFixed(2)] = true;
+        if (x.type === 'entry') waiting[Math.abs(x.entry.amt).toFixed(2)] = true;
+      });
+      var held = {};
+      (data.table.hold || []).forEach(function(h){ held[h.join()] = true; });
+      function shown(value, c){
+        var n = moneyCols.indexOf(c) > -1 && /^-?[\d,]+(\.\d+)?$/.test(String(value)) ? parse(value) : null;
+        return n === null ? String(value) : n.toLocaleString('en-US', {minimumFractionDigits:dp, maximumFractionDigits:dp});
+      }
+      steps.slice(0, state.i).forEach(function(x){ if (x.fill) values[x.fill.join()] = x.a; });
       var head = data.table.cols.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('');
+      var actionRow = s && s.fill ? '<tr class="gp-action-row"><td colspan="' + data.table.cols.length + '"><button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></td></tr>' : '';
       var body = data.table.rows.map(function(row, r){
         return '<tr' + (row.total ? ' class="gp-row-total"' : '') + '>' + (row.cells || row).map(function(cell, c){
           var id = r + ',' + c;
           if (s && s.fill && s.fill.join() === id) return '<td class="gp-now"><input class="gp-amt" inputmode="decimal" autocomplete="off" aria-label="' + esc(data.table.cols[c]) + '"></td>';
-          return '<td>' + esc(values[id] !== undefined ? values[id] : cell) + '</td>';
-        }).join('') + '</tr>';
+          if (held[id] && values[id] === undefined && waiting[Math.abs(parse(cell)).toFixed(2)]) return '<td></td>';
+          return '<td>' + esc(values[id] !== undefined ? (moneyCols.indexOf(c) > -1 ? shown(values[id], c) : money(values[id])) : shown(cell, c)) + '</td>';
+        }).join('') + '</tr>' + (s && s.fill && s.fill[0] === r ? actionRow : '');
       }).join('');
       return '<div class="gp-tablewrap gp-scroll"><table class="gp-table"><thead><tr>' + head + '</tr></thead><tbody>' + body + '</tbody></table></div>';
     }
@@ -2323,7 +2485,7 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
         html += '<p class="gp-tx">' + esc(s.tx.tx) + '</p><p class="gp-howto"><b>Line ' + (s.n + 1) + ' of ' + s.tx.e.length + ' for this transaction.</b> Click the Account cell and choose an account. Then type the amount in the Debit or the Credit column. Debit lines come first.</p>' + journal(s) + '<button type="button" class="gp-check">Check this line</button><div class="gp-fb" aria-live="polite" hidden></div>';
       } else if (s.type === 'num') {
         html += journal() + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p class="gp-q"><b>' + esc(s.q) + '</b>' + (s.fill ? ' <span class="gp-muted">Type it in the highlighted cell.</span>' : '') + '</p>' + grid(s) +
-          (s.fill ? '' : '<label class="gp-label">Your answer <input class="gp-amt gp-amt-free gp-now-input" inputmode="decimal" autocomplete="off"></label> ') + '<button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div>';
+          (s.fill ? '' : '<label class="gp-label">Your answer <input class="gp-amt gp-amt-free gp-now-input" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div>');
       } else {
         html += journal() + grid(s) + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p class="gp-q"><b>' + esc(s.q) + '</b></p><div class="gp-opts">' +
           s.opts.map(function(o, i){ return '<button type="button" class="alt gp-opt" data-i="' + i + '">' + esc(o.t) + '</button>'; }).join('') + '</div><div class="gp-fb" aria-live="polite" hidden></div>';

@@ -162,6 +162,10 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .gp-tx{background:var(--accent-soft);color:var(--ink);padding:10px 12px;border-radius:8px;margin:12px 0 8px;font-weight:600}
 .gp-howto,.gp-q{font-size:15px;margin:8px 0}
 .gp-tablewrap{margin:10px 0}
+.gp-table td.gp-now input,.gp-acct,.gp-amt,.gp-check,.gp-fb{scroll-margin:84px 0 130px}
+.gp-table .gp-action-row td{background:var(--panel);padding:8px}
+.gp-action-row .gp-check{margin:0}
+@media (max-width:900px){.gp-table td.gp-now input,.gp-acct,.gp-amt,.gp-check,.gp-fb{scroll-margin-bottom:170px}}
 .gp-scroll{overflow-x:auto}
 .tool table.gp-table,table.gp-table{display:table;width:100%;max-width:none;overflow:visible;max-height:none;border-collapse:collapse;font-size:14.5px;table-layout:auto;margin:0}
 .gp-table th,.gp-table td{border:1px solid var(--line);padding:6px 8px;text-align:left;background:var(--panel);color:var(--ink)}
@@ -279,6 +283,12 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .beginner-answer summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
 .beginner-answer[open] summary{margin-bottom:16px}
 .beginner-answer li{margin-bottom:10px}
+
+/* Keep calculator labels and selects within narrow screens. */
+.tool .row > label{min-width:0;max-width:100%}
+.tool .row > label select{max-width:100%}
+
+.tool select{min-width:0;max-width:100%}
 
 .study-plan{margin:24px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow);scroll-margin-top:80px}
 .sp-heading,.sp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.sp-heading h2{margin:2px 0 8px}.sp-heading p{font-size:15px;color:var(--muted)}
@@ -1293,7 +1303,7 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 <tbody>
 <tr>
 <td>Purchase price</td>
-<td>300,000</td>
+<td>300,000.00</td>
 </tr>
 <tr>
 <td>Trade discount</td>
@@ -1301,28 +1311,28 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 </tr>
 <tr>
 <td>Carriage inwards</td>
-<td>50,000</td>
+<td>50,000.00</td>
 </tr>
 <tr>
 <td>Import tax (printed “Impart tax”)</td>
-<td>20,000</td>
+<td>20,000.00</td>
 </tr>
 <tr>
 <td>Clearing charges</td>
-<td>15,000</td>
+<td>15,000.00</td>
 </tr>
 <tr>
 <td>VAT</td>
-<td>10,000 (40% recoverable)</td>
+<td>10,000.00 (40% recoverable)</td>
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q1" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Net purchase price",""],["Non-recoverable VAT",""],["Raw material cost",""]]},"steps":[{"type":"choice","q":"The entity buys raw materials. Is this a transaction to identify?","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"Yes — a measurable business amount changes","ok":true},{"t":"No — there must be a cash payment first","why":"Credit purchases, accruals, depreciation and write-offs can be transactions without any immediate cash payment."}],"why":"A change in assets, liabilities, owner equity, income or expenses is a transaction even when no cash moves today."},{"type":"num","q":"Net purchase price — enter the number","a":270000,"think":"Deduct trade discount.","why":"300,000 × 90% = 270,000.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Deduct trade discount."}},{"type":"num","q":"Non-recoverable VAT — enter the number","a":6000,"think":"Only the 60% not recoverable is part of inventory cost.","why":"10,000 × 60% = 6,000.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Only the 60% not recoverable is part of inventory cost."}},{"type":"num","q":"Raw material cost — enter the number","a":361000,"think":"Add costs of bringing materials to their location and condition.","why":"270,000 + 50,000 + 20,000 + 15,000 + 6,000 = 361,000.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Add costs of bringing materials to their location and condition."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q1" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Raw-material acquisition cost", "Rs."], "rows": [["Invoice purchase price", 300000], ["trade discount", ""], ["net purchase price", ""], ["recoverable VAT", ""], ["non-recoverable VAT", ""], ["Carriage inwards", 50000], ["Import tax", 20000], ["Clearing charges", 15000], ["raw material cost", ""]], "moneyCols": [1], "decimals": 2}, "steps": [{"type": "num", "q": "What is the trade discount?", "a": 30000.0, "think": "Multiply purchase price (300,000.00) by discount rate (0.10).", "why": "trade discount = 30,000.00.", "mistakes": {"300000.1": "You added the factors. This row requires multiplication.", "300000": "That is only purchase price. Apply the other factor(s)."}, "fill": [1, 1]}, {"type": "num", "q": "What is the net purchase price?", "a": 270000.0, "think": "Start with invoice price (300,000.00) and subtract trade discount (30,000.00).", "why": "net purchase price = 270,000.00.", "mistakes": {"330000": "You added a deduction. Subtract the amounts labelled less.", "300000": "That is invoice price before the deductions. Apply each deduction on this row."}, "fill": [2, 1]}, {"type": "num", "q": "What is the recoverable VAT?", "a": 4000.0, "think": "Multiply total VAT (10,000.00) by recoverable fraction (0.40).", "why": "recoverable VAT = 4,000.00.", "mistakes": {"10000.4": "You added the factors. This row requires multiplication.", "10000": "That is only total VAT. Apply the other factor(s)."}, "fill": [3, 1]}, {"type": "num", "q": "What is the non-recoverable VAT?", "a": 6000.0, "think": "Start with total VAT (10,000.00) and subtract recoverable VAT (4,000.00).", "why": "non-recoverable VAT = 6,000.00.", "mistakes": {"14000": "You added a deduction. Subtract the amounts labelled less.", "10000": "That is total VAT before the deductions. Apply each deduction on this row."}, "fill": [4, 1]}, {"type": "num", "q": "What is the raw material cost?", "a": 361000.0, "think": "Add net purchase price (270,000.00), carriage (50,000.00), import tax (20,000.00), clearing (15,000.00), non-recoverable VAT (6,000.00).", "why": "raw material cost = 361,000.00.", "mistakes": {"355000": "You left out non-recoverable VAT. Include every component of this total.", "270000": "That is only one component of this total. Add all the named components on the row.", "50000": "That is only one component of this total. Add all the named components on the row.", "179000": "You subtracted the other components. This row asks you to add them."}, "fill": [8, 1]}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q1</summary>
-<p><strong>Step 1 — Deduct trade discount.</strong> 300,000 − 30,000 = 270,000.</p>
-<p><strong>Step 2 — Identify attributable costs.</strong> Freight 50,000, import tax 20,000, clearing 15,000 and non-recoverable VAT 6,000 are included. Recoverable VAT 4,000 is excluded.</p>
-<p><strong>Final check:</strong> 270,000 + 50,000 + 20,000 + 15,000 + 6,000 = <strong>361,000</strong>.</p>
+<p><strong>Step 1 — Deduct trade discount.</strong> 300,000.00 − 30,000.00 = 270,000.</p>
+<p><strong>Step 2 — Identify attributable costs.</strong> Freight 50,000, import tax 20,000, clearing 15,000.00 and non-recoverable VAT 6,000.00 are included. Recoverable VAT 4,000.00 is excluded.</p>
+<p><strong>Final check:</strong> 270,000.00 + 50,000.00 + 20,000.00 + 15,000.00 + 6,000.00 = <strong>361,000.00</strong>.</p>
 </details>
 <p><strong>Q2. Question:</strong> Calculate net realisable value on the following inventory items.</p>
 <table>
@@ -1355,7 +1365,7 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q2" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["NRV per unit: A",""],["NRV per unit: B",""],["NRV per unit: C",""]]},"steps":[{"type":"num","q":"NRV per unit: A — enter the number","a":90,"think":"NRV is estimated selling price less costs to sell, not the lower-of-cost figure.","why":"120 − 30 = 90.","fill":[0,1],"mistakes":{"0":"This is not a zero result. NRV is estimated selling price less costs to sell, not the lower-of-cost figure."}},{"type":"num","q":"NRV per unit: B — enter the number","a":130,"think":"NRV is estimated selling price less costs to sell, not the lower-of-cost figure.","why":"150 − 20 = 130.","fill":[1,1],"mistakes":{"0":"This is not a zero result. NRV is estimated selling price less costs to sell, not the lower-of-cost figure."}},{"type":"num","q":"NRV per unit: C — enter the number","a":290,"think":"NRV is estimated selling price less costs to sell, not the lower-of-cost figure.","why":"305 − 15 = 290.","fill":[2,1],"mistakes":{"0":"This is not a zero result. NRV is estimated selling price less costs to sell, not the lower-of-cost figure."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q2" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Item", "Selling price Rs.", "Selling cost Rs.", "NRV Rs.", "Cost Rs.", "Carrying value Rs."], "rows": [["A", 120, 30, "", 100, ""], ["B", 150, 20, "", 120, ""], ["C", 305, 15, "", 300, ""]], "moneyCols": [1, 2, 3, 4, 5], "decimals": 2}, "steps": [{"type": "num", "q": "What is the NRV per unit of item A?", "a": 90, "think": "Start with selling price (120.00) and subtract selling costs (30.00).", "why": "A NRV per unit = 90.00.", "mistakes": {"150": "You added a deduction. Subtract the amounts labelled less.", "120": "That is selling price before the deductions. Apply each deduction on this row."}, "fill": [0, 3]}, {"type": "num", "q": "What is the carrying value of item A?", "a": 90, "think": "Compare A cost 100.00 with its NRV from the previous cell. Use the lower amount; do not recognise an unrealised gain.", "why": "A carrying value = 90.00.", "mistakes": {"100": "You selected the higher figure. Inventory is carried at the lower of cost and NRV."}, "fill": [0, 5]}, {"type": "num", "q": "What is the NRV per unit of item B?", "a": 130, "think": "Start with selling price (150.00) and subtract selling costs (20.00).", "why": "B NRV per unit = 130.00.", "mistakes": {"170": "You added a deduction. Subtract the amounts labelled less.", "150": "That is selling price before the deductions. Apply each deduction on this row."}, "fill": [1, 3]}, {"type": "num", "q": "What is the carrying value of item B?", "a": 120, "think": "Compare B cost the matching figure in the question or previous working with its NRV from the previous cell. Use the lower amount; do not recognise an unrealised gain.", "why": "B carrying value = 120.00.", "mistakes": {"130": "You selected the higher figure. Inventory is carried at the lower of cost and NRV."}, "fill": [1, 5]}, {"type": "num", "q": "What is the NRV per unit of item C?", "a": 290, "think": "Start with selling price (305.00) and subtract selling costs (15.00).", "why": "C NRV per unit = 290.00.", "mistakes": {"320": "You added a deduction. Subtract the amounts labelled less.", "305": "That is selling price before the deductions. Apply each deduction on this row."}, "fill": [2, 3]}, {"type": "num", "q": "What is the carrying value of item C?", "a": 290, "think": "Compare C cost 300.00 with its NRV from the previous cell. Use the lower amount; do not recognise an unrealised gain.", "why": "C carrying value = 290.00.", "mistakes": {"300": "You selected the higher figure. Inventory is carried at the lower of cost and NRV."}, "fill": [2, 5]}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q2</summary>
 <p><strong>Step 1 — Calculate NRV.</strong> Net realisable value is the amount expected after selling costs.</p>
@@ -1373,23 +1383,23 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 <tr>
 <td>A</td>
 <td>120 − 30</td>
-<td>90</td>
-<td>100</td>
-<td>90</td>
+<td>90.00</td>
+<td>100.00</td>
+<td>90.00</td>
 </tr>
 <tr>
 <td>B</td>
 <td>150 − 20</td>
-<td>130</td>
-<td>120</td>
-<td>120</td>
+<td>130.00</td>
+<td>120.00</td>
+<td>120.00</td>
 </tr>
 <tr>
 <td>C</td>
 <td>305 − 15</td>
-<td>290</td>
-<td>300</td>
-<td>290</td>
+<td>290.00</td>
+<td>300.00</td>
+<td>290.00</td>
 </tr>
 </tbody>
 </table>
@@ -1411,34 +1421,34 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 <tr>
 <td>Soap</td>
 <td>Lux</td>
-<td>35</td>
-<td>30</td>
+<td>35.00</td>
+<td>30.00</td>
 <td>200</td>
 </tr>
 <tr>
 <td>Soap</td>
 <td>Rani</td>
-<td>40</td>
-<td>41</td>
+<td>40.00</td>
+<td>41.00</td>
 <td>150</td>
 </tr>
 <tr>
 <td>Toothpaste</td>
 <td>Signal</td>
-<td>120</td>
-<td>110</td>
+<td>120.00</td>
+<td>110.00</td>
 <td>100</td>
 </tr>
 <tr>
 <td>Toothpaste</td>
 <td>Supiriviki</td>
-<td>100</td>
-<td>95</td>
+<td>100.00</td>
+<td>95.00</td>
 <td>60</td>
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q3" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Item-method inventory value",""],["Batch-method inventory value",""]]},"steps":[{"type":"num","q":"Item-method inventory value — enter the number","a":28700,"think":"Compare cost with NRV separately for each item, multiply by units, then add.","why":"6,000 + 6,000 + 11,000 + 5,700 = 28,700.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Compare cost with NRV separately for each item, multiply by units, then add."}},{"type":"num","q":"Batch-method inventory value — enter the number","a":28850,"think":"Compare aggregate cost and aggregate NRV within each named batch.","why":"Soap min(13,000,12,150) + toothpaste min(18,000,16,700) = 28,850.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Compare aggregate cost and aggregate NRV within each named batch."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q3" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Item / batch", "Units", "Unit cost Rs.", "Unit NRV Rs.", "Total cost Rs.", "Total NRV Rs.", "Carrying value Rs."], "rows": [["Lux", 200, 35, 30, "", "", ""], ["Rani", 150, 40, 41, "", "", ""], ["Signal", 100, 120, 110, "", "", ""], ["Supiriviki", 60, 100, 95, "", "", ""], ["Item-method total", "", "", "", "", "", ""], ["Soap batch", "", "", "", "", "", ""], ["Toothpaste batch", "", "", "", "", "", ""], ["Batch-method total", "", "", "", "", "", ""]], "moneyCols": [2, 3, 4, 5, 6], "decimals": 2}, "steps": [{"type": "num", "q": "For Lux, what is the total cost?", "a": 7000, "think": "Multiply units (200.00) by unit cost (35.00).", "why": "Lux total cost = 7,000.00.", "mistakes": {"235": "You added the factors. This row requires multiplication.", "200": "That is only units. Apply the other factor(s)."}, "fill": [0, 4]}, {"type": "num", "q": "For Lux, what is the total NRV?", "a": 6000, "think": "Multiply units (200.00) by unit NRV (30.00).", "why": "Lux total NRV = 6,000.00.", "mistakes": {"230": "You added the factors. This row requires multiplication.", "200": "That is only units. Apply the other factor(s)."}, "fill": [0, 5]}, {"type": "num", "q": "For Lux, what is the item carrying amount?", "a": 6000, "think": "Compare Lux total cost and total NRV from the two preceding columns, and choose the lower.", "why": "Lux item carrying amount = 6,000.00.", "mistakes": {"7000": "That is the higher total. Apply the lower-of-cost-and-NRV rule to this item."}, "fill": [0, 6]}, {"type": "num", "q": "For Rani, what is the total cost?", "a": 6000, "think": "Multiply units (150.00) by unit cost (40.00).", "why": "Rani total cost = 6,000.00.", "mistakes": {"190": "You added the factors. This row requires multiplication.", "150": "That is only units. Apply the other factor(s)."}, "fill": [1, 4]}, {"type": "num", "q": "For Rani, what is the total NRV?", "a": 6150, "think": "Multiply units (150.00) by unit NRV (41.00).", "why": "Rani total NRV = 6,150.00.", "mistakes": {"191": "You added the factors. This row requires multiplication.", "150": "That is only units. Apply the other factor(s)."}, "fill": [1, 5]}, {"type": "num", "q": "For Rani, what is the item carrying amount?", "a": 6000, "think": "Compare Rani total cost and total NRV from the two preceding columns, and choose the lower.", "why": "Rani item carrying amount = 6,000.00.", "mistakes": {"6150": "That is the higher total. Apply the lower-of-cost-and-NRV rule to this item."}, "fill": [1, 6]}, {"type": "num", "q": "For Signal, what is the total cost?", "a": 12000, "think": "Multiply units (100.00) by unit cost (120.00).", "why": "Signal total cost = 12,000.00.", "mistakes": {"220": "You added the factors. This row requires multiplication.", "100": "That is only units. Apply the other factor(s)."}, "fill": [2, 4]}, {"type": "num", "q": "For Signal, what is the total NRV?", "a": 11000, "think": "Multiply units (100.00) by unit NRV (110.00).", "why": "Signal total NRV = 11,000.00.", "mistakes": {"210": "You added the factors. This row requires multiplication.", "100": "That is only units. Apply the other factor(s)."}, "fill": [2, 5]}, {"type": "num", "q": "For Signal, what is the item carrying amount?", "a": 11000, "think": "Compare Signal total cost and total NRV from the two preceding columns, and choose the lower.", "why": "Signal item carrying amount = 11,000.00.", "mistakes": {"12000": "That is the higher total. Apply the lower-of-cost-and-NRV rule to this item."}, "fill": [2, 6]}, {"type": "num", "q": "For Supiriviki, what is the total cost?", "a": 6000, "think": "Multiply units (60.00) by unit cost (100.00).", "why": "Supiriviki total cost = 6,000.00.", "mistakes": {"160": "You added the factors. This row requires multiplication.", "60": "That is only units. Apply the other factor(s)."}, "fill": [3, 4]}, {"type": "num", "q": "For Supiriviki, what is the total NRV?", "a": 5700, "think": "Multiply units (60.00) by unit NRV (95.00).", "why": "Supiriviki total NRV = 5,700.00.", "mistakes": {"155": "You added the factors. This row requires multiplication.", "60": "That is only units. Apply the other factor(s)."}, "fill": [3, 5]}, {"type": "num", "q": "For Supiriviki, what is the item carrying amount?", "a": 5700, "think": "Compare Supiriviki total cost and total NRV from the two preceding columns, and choose the lower.", "why": "Supiriviki item carrying amount = 5,700.00.", "mistakes": {"6000": "That is the higher total. Apply the lower-of-cost-and-NRV rule to this item."}, "fill": [3, 6]}, {"type": "num", "q": "What is the item-method inventory value?", "a": 28700, "think": "Add Lux (6,000.00), Rani (6,000.00), Signal (11,000.00), Supiriviki (5,700.00).", "why": "item-method inventory value = 28,700.00.", "mistakes": {"23000": "You left out Supiriviki. Include every component of this total.", "6000": "That is only one component of this total. Add all the named components on the row."}, "fill": [4, 6]}, {"type": "num", "q": "For the soap batch, what is the cost?", "a": 13000, "think": "Add first item cost (7,000.00), second item cost (6,000.00).", "why": "Soap batch cost = 13,000.00.", "mistakes": {"7000": "You left out second item cost. Include every component of this total.", "6000": "That is only one component of this total. Add all the named components on the row.", "1000": "You subtracted the other components. This row asks you to add them."}, "fill": [5, 4]}, {"type": "num", "q": "For the soap batch, what is the NRV?", "a": 12150, "think": "Add first item NRV (6,000.00), second item NRV (6,150.00).", "why": "Soap batch NRV = 12,150.00.", "mistakes": {"6000": "You left out second item NRV. Include every component of this total.", "6150": "That is only one component of this total. Add all the named components on the row."}, "fill": [5, 5]}, {"type": "num", "q": "For the soap batch, what is the carrying amount?", "a": 12150, "think": "Compare this batch’s total cost and total NRV from the preceding two cells. Choose the lower combined total.", "why": "Soap batch carrying amount = 12,150.00.", "mistakes": {"13000": "You chose the higher batch total. Use the lower total for each batch."}, "fill": [5, 6]}, {"type": "num", "q": "For the toothpaste batch, what is the cost?", "a": 18000, "think": "Add first item cost (12,000.00), second item cost (6,000.00).", "why": "Toothpaste batch cost = 18,000.00.", "mistakes": {"12000": "You left out second item cost. Include every component of this total.", "6000": "That is only one component of this total. Add all the named components on the row."}, "fill": [6, 4]}, {"type": "num", "q": "For the toothpaste batch, what is the NRV?", "a": 16700, "think": "Add first item NRV (11,000.00), second item NRV (5,700.00).", "why": "Toothpaste batch NRV = 16,700.00.", "mistakes": {"11000": "You left out second item NRV. Include every component of this total.", "5700": "That is only one component of this total. Add all the named components on the row.", "5300": "You subtracted the other components. This row asks you to add them."}, "fill": [6, 5]}, {"type": "num", "q": "For the toothpaste batch, what is the carrying amount?", "a": 16700, "think": "Compare this batch’s total cost and total NRV from the preceding two cells. Choose the lower combined total.", "why": "Toothpaste batch carrying amount = 16,700.00.", "mistakes": {"18000": "You chose the higher batch total. Use the lower total for each batch."}, "fill": [6, 6]}, {"type": "num", "q": "What is the batch-method inventory value?", "a": 28850, "think": "Add soap batch (12,150.00), toothpaste batch (16,700.00).", "why": "batch-method inventory value = 28,850.00.", "mistakes": {"12150": "You left out toothpaste batch. Include every component of this total.", "16700": "That is only one component of this total. Add all the named components on the row."}, "fill": [7, 6]}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q3</summary>
 <p><strong>Step 1 — Interpret the requested methods.</strong> NRV itself is given per unit. Item and batch methods here mean applying the lower-of-cost-and-NRV valuation rule individually or to the two named groups.</p>
@@ -1454,32 +1464,32 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 <tbody>
 <tr>
 <td>Lux</td>
-<td>7,000</td>
-<td>6,000</td>
-<td>6,000</td>
+<td>7,000.00</td>
+<td>6,000.00</td>
+<td>6,000.00</td>
 </tr>
 <tr>
 <td>Rani</td>
-<td>6,000</td>
-<td>6,150</td>
-<td>6,000</td>
+<td>6,000.00</td>
+<td>6,150.00</td>
+<td>6,000.00</td>
 </tr>
 <tr>
 <td>Signal</td>
-<td>12,000</td>
-<td>11,000</td>
-<td>11,000</td>
+<td>12,000.00</td>
+<td>11,000.00</td>
+<td>11,000.00</td>
 </tr>
 <tr>
 <td>Supiriviki</td>
-<td>6,000</td>
-<td>5,700</td>
-<td>5,700</td>
+<td>6,000.00</td>
+<td>5,700.00</td>
+<td>5,700.00</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Step 2 — Group the batches.</strong> Soap cost = 7,000 + 6,000 = 13,000; NRV = 6,000 + 6,150 = 12,150. Toothpaste cost = 12,000 + 6,000 = 18,000; NRV = 11,000 + 5,700 = 16,700.</p>
-<p><strong>Final check:</strong> item carrying value <strong>28,700</strong>; batch carrying value <strong>28,850</strong>. The difference 150 comes from offsetting Rani’s NRV above cost against Lux’s loss within the soap group. Total raw NRV is 28,850 under either grouping; the item carrying amount is lower.</p>
+<p><strong>Step 2 — Group the batches.</strong> Soap cost = 7,000.00 + 6,000.00 = 13,000.00; NRV = 6,000.00 + 6,150.00 = 12,150. Toothpaste cost = 12,000.00 + 6,000.00 = 18,000.00; NRV = 11,000.00 + 5,700.00 = 16,700.</p>
+<p><strong>Final check:</strong> item carrying value <strong>28,700.00</strong>; batch carrying value <strong>28,850.00</strong>. The difference 150 comes from offsetting Rani’s NRV above cost against Lux’s loss within the soap group. Total raw NRV is 28,850.00 under either grouping; the item carrying amount is lower.</p>
 </details>
 <p><strong>Q4. Question:</strong> The guiding factors for stores requisitioning are:</p>
 <table>
@@ -1508,7 +1518,7 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q4" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"The guiding factors for stores requisitioning are:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(d) All of the above","ok":true},{"t":"(a) Maximum stock level","why":"This is not the course answer. All three control levels guide stock replenishment and requisitioning."},{"t":"(b) Minimum stock level","why":"This is not the course answer. All three control levels guide stock replenishment and requisitioning."},{"t":"(c) Re-order level","why":"This is not the course answer. All three control levels guide stock replenishment and requisitioning."}],"why":"All three control levels guide stock replenishment and requisitioning."}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q4" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "The guiding factors for stores requisitioning are:", "think": "Think about the three limits used in stock control: avoiding excessive stock, avoiding shortages and knowing when to reorder. Decide whether the question is restricted to just one limit.", "opts": [{"t": "(d) All of the above", "ok": true}, {"t": "(a) Maximum stock level", "why": "This is not the course answer. All three control levels guide stock replenishment and requisitioning. Think about the three limits used in stock control: avoiding excessive stock, avoiding shortages and knowing when to reorder. Decide whether the question is restricted to just one limit."}, {"t": "(b) Minimum stock level", "why": "This is not the course answer. All three control levels guide stock replenishment and requisitioning. Think about the three limits used in stock control: avoiding excessive stock, avoiding shortages and knowing when to reorder. Decide whether the question is restricted to just one limit."}, {"t": "(c) Re-order level", "why": "This is not the course answer. All three control levels guide stock replenishment and requisitioning. Think about the three limits used in stock control: avoiding excessive stock, avoiding shortages and knowing when to reorder. Decide whether the question is restricted to just one limit."}], "why": "All three control levels guide stock replenishment and requisitioning."}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q4</summary>
 <p><strong>Step 1 — Choose the rule.</strong> All three control levels guide stock replenishment and requisitioning.</p>
@@ -1542,7 +1552,7 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q5" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"Minimum or safety stock level is fixed after considering the following factors except:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(d) Stock-out costs","ok":true},{"t":"(a) Average rate of consumption","why":"This is not the course answer. The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula."},{"t":"(b) Re-order level","why":"This is not the course answer. The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula."},{"t":"(c) Lead time","why":"This is not the course answer. The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula."}],"why":"The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula."}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q5" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "Minimum or safety stock level is fixed after considering the following factors except:", "think": "Use the lecture’s minimum-level formula: reorder level minus average consumption during average lead time. Identify the option that is absent from those inputs.", "opts": [{"t": "(d) Stock-out costs", "ok": true}, {"t": "(a) Average rate of consumption", "why": "This is not the course answer. The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula. Use the lecture’s minimum-level formula: reorder level minus average consumption during average lead time. Identify the option that is absent from those inputs."}, {"t": "(b) Re-order level", "why": "This is not the course answer. The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula. Use the lecture’s minimum-level formula: reorder level minus average consumption during average lead time. Identify the option that is absent from those inputs."}, {"t": "(c) Lead time", "why": "This is not the course answer. The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula. Use the lecture’s minimum-level formula: reorder level minus average consumption during average lead time. Identify the option that is absent from those inputs."}], "why": "The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula."}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q5</summary>
 <p><strong>Step 1 — Choose the rule.</strong> The lecture formula is minimum level = reorder level − average consumption × average lead time. It uses (a), (b) and (c); stock-out costs are not an input to this formula.</p>
@@ -1576,7 +1586,7 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q6" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"The most advantageous buying pattern to adopt is found by computing the:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(c) Economic order quantity","ok":true},{"t":"(a) Re-order level","why":"This is not the course answer. EOQ balances annual ordering cost with annual holding cost."},{"t":"(b) Optimum stock level","why":"This is not the course answer. EOQ balances annual ordering cost with annual holding cost."},{"t":"(d) Lead time","why":"This is not the course answer. EOQ balances annual ordering cost with annual holding cost."}],"why":"EOQ balances annual ordering cost with annual holding cost."}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q6" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "The most advantageous buying pattern to adopt is found by computing the:", "think": "Compare the purpose of each concept: a trigger for ordering, a delivery delay, or an order size that balances ordering and holding costs.", "opts": [{"t": "(c) Economic order quantity", "ok": true}, {"t": "(a) Re-order level", "why": "This is not the course answer. EOQ balances annual ordering cost with annual holding cost. Compare the purpose of each concept: a trigger for ordering, a delivery delay, or an order size that balances ordering and holding costs."}, {"t": "(b) Optimum stock level", "why": "This is not the course answer. EOQ balances annual ordering cost with annual holding cost. Compare the purpose of each concept: a trigger for ordering, a delivery delay, or an order size that balances ordering and holding costs."}, {"t": "(d) Lead time", "why": "This is not the course answer. EOQ balances annual ordering cost with annual holding cost. Compare the purpose of each concept: a trigger for ordering, a delivery delay, or an order size that balances ordering and holding costs."}], "why": "EOQ balances annual ordering cost with annual holding cost."}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q6</summary>
 <p><strong>Step 1 — Choose the rule.</strong> EOQ balances annual ordering cost with annual holding cost.</p>
@@ -1594,27 +1604,27 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 <tbody>
 <tr>
 <td>a</td>
-<td>1,000</td>
+<td>1,000.00</td>
 </tr>
 <tr>
 <td>b</td>
-<td>2,100</td>
+<td>2,100.00</td>
 </tr>
 <tr>
 <td>c</td>
-<td>1,600</td>
+<td>1,600.00</td>
 </tr>
 <tr>
 <td>d</td>
-<td>1,400</td>
+<td>1,400.00</td>
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q7" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"The safety stock is 750 units; the supplier quotes a delivery delay of two to three weeks; the factory uses 400 to 700 units a week according to activity levels. The re-order level is:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(b) 2,100","ok":true},{"t":"(a) 1,000","why":"This is not the course answer. Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention."},{"t":"(c) 1,600","why":"This is not the course answer. Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention."},{"t":"(d) 1,400","why":"This is not the course answer. Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention."}],"why":"Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention."}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q7" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "The safety stock is 750 units; the supplier quotes a delivery delay of two to three weeks; the factory uses 400 to 700 units a week according to activity levels. The re-order level is:", "think": "Use maximum usage 700 units per week and maximum lead time 3 weeks. Under the lecture convention, do not add the 750-unit safety stock again.", "opts": [{"t": "(b) 2,100", "ok": true}, {"t": "(a) 1,000", "why": "This is not the course answer. Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention. Use maximum usage 700 units per week and maximum lead time 3 weeks. Under the lecture convention, do not add the 750-unit safety stock again."}, {"t": "(c) 1,600", "why": "This is not the course answer. Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention. Use maximum usage 700 units per week and maximum lead time 3 weeks. Under the lecture convention, do not add the 750-unit safety stock again."}, {"t": "(d) 1,400", "why": "This is not the course answer. Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention. Use maximum usage 700 units per week and maximum lead time 3 weeks. Under the lecture convention, do not add the 750-unit safety stock again."}], "why": "Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention."}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q7</summary>
 <p><strong>Step 1 — Choose the rule.</strong> Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention.</p>
-<p><strong>Step 2 — Select the option.</strong> <strong>(b) 2,100</strong>.</p>
+<p><strong>Step 2 — Select the option.</strong> <strong>(b) 2,100.00</strong>.</p>
 <p><strong>Final check:</strong> Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention.</p>
 </details>
 <p><strong>Q8. Question:</strong> In case of rise in price levels, the most suitable method for valuing materials issued is:</p>
@@ -1644,7 +1654,7 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q8" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"In case of rise in price levels, the most suitable method for valuing materials issued is:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(a) LIFO","ok":true},{"t":"(b) FIFO","why":"This is not the course answer. The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation."},{"t":"(c) Simple average","why":"This is not the course answer. The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation."},{"t":"(d) Weighted average","why":"This is not the course answer. The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation."}],"why":"The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation."}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q8" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "In case of rise in price levels, the most suitable method for valuing materials issued is:", "think": "During rising prices, recent purchases cost more. Think which issue method charges the latest purchases to production; distinguish this textbook issue-cost question from permitted financial-statement inventory methods.", "opts": [{"t": "(a) LIFO", "ok": true}, {"t": "(b) FIFO", "why": "This is not the course answer. The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation. During rising prices, recent purchases cost more. Think which issue method charges the latest purchases to production; distinguish this textbook issue-cost question from permitted financial-statement inventory methods."}, {"t": "(c) Simple average", "why": "This is not the course answer. The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation. During rising prices, recent purchases cost more. Think which issue method charges the latest purchases to production; distinguish this textbook issue-cost question from permitted financial-statement inventory methods."}, {"t": "(d) Weighted average", "why": "This is not the course answer. The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation. During rising prices, recent purchases cost more. Think which issue method charges the latest purchases to production; distinguish this textbook issue-cost question from permitted financial-statement inventory methods."}], "why": "The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation."}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q8</summary>
 <p><strong>Step 1 — Choose the rule.</strong> The textbook issue-costing answer is LIFO because the latest, higher costs are charged to production. LKAS 2 does not permit LIFO for published financial-statement inventory valuation.</p>
@@ -1679,7 +1689,7 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 </tbody>
 </table>
 <p>Prepare stores ledger cards under FIFO and WAC methods and show how you would deal with the discrepancy.</p>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q9" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["FIFO February issue",""],["FIFO closing value",""],["WAC closing value",""],["Valuation difference",""]]},"steps":[{"type":"num","q":"FIFO February issue — enter the number","a":22565,"think":"Use the remaining old layers before the February receipt.","why":"145 × 35 + 444 × 37.50 + 21 × 40 = 22,565.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Use the remaining old layers before the February receipt."}},{"type":"num","q":"FIFO closing value — enter the number","a":32660,"think":"Keep the final unsold layers.","why":"29 × 40 + 750 × 42 = 32,660.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Keep the final unsold layers."}},{"type":"num","q":"WAC closing value — enter the number","a":31474.01,"think":"Recompute average after each receipt and deduct actual issues at that average.","why":"779 units × unrounded March moving average = 31,474.01.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Recompute average after each receipt and deduct actual issues at that average."}},{"type":"num","q":"Valuation difference — enter the number","a":1185.99,"think":"FIFO value minus WAC value; it is not a count loss.","why":"32,660 − 31,474.01 = 1,185.99.","fill":[3,1],"mistakes":{"0":"This is not a zero result. FIFO value minus WAC value; it is not a count loss."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q9" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Method / date", "Receipt qty", "Receipt rate Rs.", "Receipt value Rs.", "Issue qty", "Issue value Rs.", "Balance qty", "Balance value Rs."], "rows": [["FIFO opening", 545, 35, 19075, "", "", 545, 19075], ["FIFO January receipt", 444, 37.5, "", "", "", "", ""], ["FIFO January issue", "", "", "", 400, "", "", ""], ["FIFO February receipt", 500, 40, "", "", "", "", ""], ["FIFO February issue", "", "", "", 610, "", "", ""], ["FIFO March receipt", 750, 42, "", "", "", "", ""], ["FIFO March issue", "", "", "", 450, "", "", ""], ["WAC opening", 545, 35, 19075, "", "", 545, 19075], ["WAC January receipt", 444, 37.5, "", "", "", "", ""], ["WAC January issue", "", "", "", 400, "", "", ""], ["WAC February receipt", 500, 40, "", "", "", "", ""], ["WAC February issue", "", "", "", 610, "", "", ""], ["WAC March receipt", 750, 42, "", "", "", "", ""], ["WAC March issue", "", "", "", 450, "", "", ""], ["Valuation difference", "", "", "", "", "", "", ""]], "moneyCols": [2, 3, 5, 7], "decimals": 2}, "steps": [{"type": "num", "q": "Under FIFO, what is the January receipt value?", "a": 16650.0, "think": "Multiply receipt units (444.00) by receipt rate (37.50).", "why": "FIFO January receipt value = 16,650.00.", "mistakes": {"481.5": "You added the factors. This row requires multiplication.", "444": "That is only receipt units. Apply the other factor(s)."}, "fill": [1, 3]}, {"type": "num", "q": "Under FIFO, what is the January quantity after receipt?", "a": 989, "think": "Add opening quantity (545.00), receipt units (444.00).", "why": "FIFO January quantity after receipt = 989.00.", "mistakes": {"545": "You left out receipt units. Include every component of this total.", "444": "That is only one component of this total. Add all the named components on the row.", "101": "You subtracted the other components. This row asks you to add them."}, "fill": [1, 6]}, {"type": "num", "q": "Under FIFO, what is the January value after receipt?", "a": 35725.0, "think": "Add opening carrying value (19,075.00), receipt value (16,650.00).", "why": "FIFO January value after receipt = 35,725.00.", "mistakes": {"19075": "You left out receipt value. Include every component of this total.", "16650": "That is only one component of this total. Add all the named components on the row.", "2425": "You subtracted the other components. This row asks you to add them."}, "fill": [1, 7]}, {"type": "num", "q": "Under FIFO, what is the January issue cost? Round to two decimal places.", "a": 14000.0, "think": "Issue oldest layers first: 400 × 35.00. Use the oldest remaining prices, not the latest purchase price.", "why": "FIFO January issue cost = 14,000.00.", "mistakes": {"15000": "You valued every issued unit at the latest purchase price. FIFO uses the oldest remaining layers."}, "fill": [2, 5], "tol": 0.02}, {"type": "num", "q": "Under FIFO, what is the January closing quantity?", "a": 589, "think": "Start with available units (989.00) and subtract issued units (400.00).", "why": "FIFO January closing quantity = 589.00.", "mistakes": {"1389": "You added a deduction. Subtract the amounts labelled less.", "989": "That is available units before the deductions. Apply each deduction on this row."}, "fill": [2, 6]}, {"type": "num", "q": "Under FIFO, what is the January closing value? Round to two decimal places.", "a": 21725.0, "think": "Subtract the unrounded January issue cost from the unrounded post-receipt carrying value. Round only the final money amount.", "why": "FIFO January closing value = 21,725.00.", "mistakes": {"35725": "That is the value before the issue. Deduct the issue cost."}, "fill": [2, 7], "tol": 0.02}, {"type": "num", "q": "Under FIFO, what is the February receipt value?", "a": 20000, "think": "Multiply receipt units (500.00) by receipt rate (40.00).", "why": "FIFO February receipt value = 20,000.00.", "mistakes": {"540": "You added the factors. This row requires multiplication.", "500": "That is only receipt units. Apply the other factor(s)."}, "fill": [3, 3]}, {"type": "num", "q": "Under FIFO, what is the February quantity after receipt?", "a": 1089, "think": "Add opening quantity (589.00), receipt units (500.00).", "why": "FIFO February quantity after receipt = 1,089.00.", "mistakes": {"589": "You left out receipt units. Include every component of this total.", "500": "That is only one component of this total. Add all the named components on the row.", "89": "You subtracted the other components. This row asks you to add them."}, "fill": [3, 6]}, {"type": "num", "q": "Under FIFO, what is the February value after receipt?", "a": 41725.0, "think": "Add opening carrying value (21,725.00), receipt value (20,000.00).", "why": "FIFO February value after receipt = 41,725.00.", "mistakes": {"21725": "You left out receipt value. Include every component of this total.", "20000": "That is only one component of this total. Add all the named components on the row.", "1725": "You subtracted the other components. This row asks you to add them."}, "fill": [3, 7]}, {"type": "num", "q": "Under FIFO, what is the February issue cost? Round to two decimal places.", "a": 22565.0, "think": "Issue oldest layers first: 145 × 35.00 + 444 × 37.50 + 21 × 40.00. Use the oldest remaining prices, not the latest purchase price.", "why": "FIFO February issue cost = 22,565.00.", "mistakes": {"24400": "You valued every issued unit at the latest purchase price. FIFO uses the oldest remaining layers."}, "fill": [4, 5], "tol": 0.02}, {"type": "num", "q": "Under FIFO, what is the February closing quantity?", "a": 479, "think": "Start with available units (1,089.00) and subtract issued units (610.00).", "why": "FIFO February closing quantity = 479.00.", "mistakes": {"1699": "You added a deduction. Subtract the amounts labelled less.", "1089": "That is available units before the deductions. Apply each deduction on this row."}, "fill": [4, 6]}, {"type": "num", "q": "Under FIFO, what is the February closing value? Round to two decimal places.", "a": 19160.0, "think": "Subtract the unrounded February issue cost from the unrounded post-receipt carrying value. Round only the final money amount.", "why": "FIFO February closing value = 19,160.00.", "mistakes": {"41725": "That is the value before the issue. Deduct the issue cost."}, "fill": [4, 7], "tol": 0.02}, {"type": "num", "q": "Under FIFO, what is the March receipt value?", "a": 31500, "think": "Multiply receipt units (750.00) by receipt rate (42.00).", "why": "FIFO March receipt value = 31,500.00.", "mistakes": {"792": "You added the factors. This row requires multiplication.", "750": "That is only receipt units. Apply the other factor(s)."}, "fill": [5, 3]}, {"type": "num", "q": "Under FIFO, what is the March quantity after receipt?", "a": 1229, "think": "Add opening quantity (479.00), receipt units (750.00).", "why": "FIFO March quantity after receipt = 1,229.00.", "mistakes": {"479": "You left out receipt units. Include every component of this total.", "750": "That is only one component of this total. Add all the named components on the row."}, "fill": [5, 6]}, {"type": "num", "q": "Under FIFO, what is the March value after receipt?", "a": 50660.0, "think": "Add opening carrying value (19,160.00), receipt value (31,500.00).", "why": "FIFO March value after receipt = 50,660.00.", "mistakes": {"19160": "You left out receipt value. Include every component of this total.", "31500": "That is only one component of this total. Add all the named components on the row."}, "fill": [5, 7]}, {"type": "num", "q": "Under FIFO, what is the March issue cost? Round to two decimal places.", "a": 18000.0, "think": "Issue oldest layers first: 450 × 40.00. Use the oldest remaining prices, not the latest purchase price.", "why": "FIFO March issue cost = 18,000.00.", "mistakes": {"18900": "You valued every issued unit at the latest purchase price. FIFO uses the oldest remaining layers."}, "fill": [6, 5], "tol": 0.02}, {"type": "num", "q": "Under FIFO, what is the March closing quantity?", "a": 779, "think": "Start with available units (1,229.00) and subtract issued units (450.00).", "why": "FIFO March closing quantity = 779.00.", "mistakes": {"1679": "You added a deduction. Subtract the amounts labelled less.", "1229": "That is available units before the deductions. Apply each deduction on this row."}, "fill": [6, 6]}, {"type": "num", "q": "Under FIFO, what is the March closing value? Round to two decimal places.", "a": 32660.0, "think": "Subtract the unrounded March issue cost from the unrounded post-receipt carrying value. Round only the final money amount.", "why": "FIFO March closing value = 32,660.00.", "mistakes": {"50660": "That is the value before the issue. Deduct the issue cost."}, "fill": [6, 7], "tol": 0.02}, {"type": "num", "q": "Under WAC, what is the January receipt value?", "a": 16650.0, "think": "Multiply receipt units (444.00) by receipt rate (37.50).", "why": "WAC January receipt value = 16,650.00.", "mistakes": {"481.5": "You added the factors. This row requires multiplication.", "444": "That is only receipt units. Apply the other factor(s)."}, "fill": [8, 3]}, {"type": "num", "q": "Under WAC, what is the January quantity after receipt?", "a": 989, "think": "Add opening quantity (545.00), receipt units (444.00).", "why": "WAC January quantity after receipt = 989.00.", "mistakes": {"545": "You left out receipt units. Include every component of this total.", "444": "That is only one component of this total. Add all the named components on the row.", "101": "You subtracted the other components. This row asks you to add them."}, "fill": [8, 6]}, {"type": "num", "q": "Under WAC, what is the January value after receipt?", "a": 35725.0, "think": "Add opening carrying value (19,075.00), receipt value (16,650.00).", "why": "WAC January value after receipt = 35,725.00.", "mistakes": {"19075": "You left out receipt value. Include every component of this total.", "16650": "That is only one component of this total. Add all the named components on the row.", "2425": "You subtracted the other components. This row asks you to add them."}, "fill": [8, 7]}, {"type": "num", "q": "Under WAC, what is the January issue cost? Round to two decimal places.", "a": 14448.94, "think": "Divide the unrounded post-receipt balance value by 989 available units, then multiply that moving average by 400 issued units. Keep full precision until the final money amount.", "why": "WAC January issue cost = 14,448.94.", "mistakes": {"15000": "You used the latest receipt price. WAC uses total available value divided by total available units.", "14000": "You used the opening unit price. Recompute the average after each receipt."}, "fill": [9, 5], "tol": 0.02}, {"type": "num", "q": "Under WAC, what is the January closing quantity?", "a": 589, "think": "Start with available units (989.00) and subtract issued units (400.00).", "why": "WAC January closing quantity = 589.00.", "mistakes": {"1389": "You added a deduction. Subtract the amounts labelled less.", "989": "That is available units before the deductions. Apply each deduction on this row."}, "fill": [9, 6]}, {"type": "num", "q": "Under WAC, what is the January closing value? Round to two decimal places.", "a": 21276.06, "think": "Subtract the unrounded January issue cost from the unrounded post-receipt carrying value. Round only the final money amount.", "why": "WAC January closing value = 21,276.06.", "mistakes": {"35725": "That is the value before the issue. Deduct the issue cost."}, "fill": [9, 7], "tol": 0.02}, {"type": "num", "q": "Under WAC, what is the February receipt value?", "a": 20000, "think": "Multiply receipt units (500.00) by receipt rate (40.00).", "why": "WAC February receipt value = 20,000.00.", "mistakes": {"540": "You added the factors. This row requires multiplication.", "500": "That is only receipt units. Apply the other factor(s)."}, "fill": [10, 3]}, {"type": "num", "q": "Under WAC, what is the February quantity after receipt?", "a": 1089, "think": "Add opening quantity (589.00), receipt units (500.00).", "why": "WAC February quantity after receipt = 1,089.00.", "mistakes": {"589": "You left out receipt units. Include every component of this total.", "500": "That is only one component of this total. Add all the named components on the row.", "89": "You subtracted the other components. This row asks you to add them."}, "fill": [10, 6]}, {"type": "num", "q": "Under WAC, what is the February value after receipt?", "a": 41276.06167846, "think": "Add opening carrying value (21,276.06), receipt value (20,000.00).", "why": "WAC February value after receipt = 41,276.06.", "mistakes": {"21276.0616785": "You left out receipt value. Include every component of this total.", "21276.06": "That is only one component of this total. Add all the named components on the row.", "20000": "That is only one component of this total. Add all the named components on the row.", "1276.06": "You subtracted the other components. This row asks you to add them."}, "fill": [10, 7]}, {"type": "num", "q": "Under WAC, what is the February issue cost? Round to two decimal places.", "a": 23120.66, "think": "Divide the unrounded post-receipt balance value by 1089 available units, then multiply that moving average by 610 issued units. Keep full precision until the final money amount.", "why": "WAC February issue cost = 23,120.66.", "mistakes": {"24400": "You used the latest receipt price. WAC uses total available value divided by total available units.", "21350": "You used the opening unit price. Recompute the average after each receipt."}, "fill": [11, 5], "tol": 0.02}, {"type": "num", "q": "Under WAC, what is the February closing quantity?", "a": 479, "think": "Start with available units (1,089.00) and subtract issued units (610.00).", "why": "WAC February closing quantity = 479.00.", "mistakes": {"1699": "You added a deduction. Subtract the amounts labelled less.", "1089": "That is available units before the deductions. Apply each deduction on this row."}, "fill": [11, 6]}, {"type": "num", "q": "Under WAC, what is the February closing value? Round to two decimal places.", "a": 18155.4, "think": "Subtract the unrounded February issue cost from the unrounded post-receipt carrying value. Round only the final money amount.", "why": "WAC February closing value = 18,155.40.", "mistakes": {"41276.06": "That is the value before the issue. Deduct the issue cost."}, "fill": [11, 7], "tol": 0.02}, {"type": "num", "q": "Under WAC, what is the March receipt value?", "a": 31500, "think": "Multiply receipt units (750.00) by receipt rate (42.00).", "why": "WAC March receipt value = 31,500.00.", "mistakes": {"792": "You added the factors. This row requires multiplication.", "750": "That is only receipt units. Apply the other factor(s)."}, "fill": [12, 3]}, {"type": "num", "q": "Under WAC, what is the March quantity after receipt?", "a": 1229, "think": "Add opening quantity (479.00), receipt units (750.00).", "why": "WAC March quantity after receipt = 1,229.00.", "mistakes": {"479": "You left out receipt units. Include every component of this total.", "750": "That is only one component of this total. Add all the named components on the row."}, "fill": [12, 6]}, {"type": "num", "q": "Under WAC, what is the March value after receipt?", "a": 49655.40270338, "think": "Add opening carrying value (18,155.40), receipt value (31,500.00).", "why": "WAC March value after receipt = 49,655.40.", "mistakes": {"18155.4027034": "You left out receipt value. Include every component of this total.", "18155.4": "That is only one component of this total. Add all the named components on the row.", "31500": "That is only one component of this total. Add all the named components on the row."}, "fill": [12, 7]}, {"type": "num", "q": "Under WAC, what is the March issue cost? Round to two decimal places.", "a": 18181.39, "think": "Divide the unrounded post-receipt balance value by 1229 available units, then multiply that moving average by 450 issued units. Keep full precision until the final money amount.", "why": "WAC March issue cost = 18,181.39.", "mistakes": {"18900": "You used the latest receipt price. WAC uses total available value divided by total available units.", "15750": "You used the opening unit price. Recompute the average after each receipt."}, "fill": [13, 5], "tol": 0.02}, {"type": "num", "q": "Under WAC, what is the March closing quantity?", "a": 779, "think": "Start with available units (1,229.00) and subtract issued units (450.00).", "why": "WAC March closing quantity = 779.00.", "mistakes": {"1679": "You added a deduction. Subtract the amounts labelled less.", "1229": "That is available units before the deductions. Apply each deduction on this row."}, "fill": [13, 6]}, {"type": "num", "q": "Under WAC, what is the March closing value? Round to two decimal places.", "a": 31474.01, "think": "Subtract the unrounded March issue cost from the unrounded post-receipt carrying value. Round only the final money amount.", "why": "WAC March closing value = 31,474.01.", "mistakes": {"49655.4": "That is the value before the issue. Deduct the issue cost."}, "fill": [13, 7], "tol": 0.02}, {"type": "num", "q": "What is the FIFO less WAC valuation difference?", "a": 1185.99, "think": "Start with FIFO closing value (32,660.00) and subtract WAC closing value (31,474.01).", "why": "FIFO less WAC valuation difference = 1,185.99.", "mistakes": {"64134.01": "You added a deduction. Subtract the amounts labelled less.", "32660": "That is FIFO closing value before the deductions. Apply each deduction on this row."}, "fill": [14, 7]}, {"type": "choice", "q": "Does this valuation difference prove a physical stock shortage?", "think": "Compare the physical closing quantities in both cards. A shortage requires a stock count below the recorded quantity.", "opts": [{"t": "No — the same units have different carrying values", "ok": true}, {"t": "Yes — write off the difference", "why": "Both methods leave 779 units. Their valuation difference is caused by the issue-cost method, so it does not prove missing stock."}], "why": "Both methods leave 779 units. Their valuation difference is caused by the issue-cost method, so it does not prove missing stock."}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q9</summary>
 <p><strong>Step 1 — Name the methods.</strong> FIFO means first in, first out: issue the oldest layer first. Moving weighted average (WAC) recomputes value ÷ units after every receipt; keep that rate until the next receipt. Assume receipts precede issues exactly as stated. Keep full precision in WAC calculations and round money for display.</p>
@@ -1700,49 +1710,49 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 <td>Opening: 545 @ 35</td>
 <td></td>
 <td>545 @ 35</td>
-<td>19,075</td>
+<td>19,075.00</td>
 </tr>
 <tr>
 <td>Jan beginning</td>
-<td>444 @ 37.5 = 16,650</td>
+<td>444 @ 37.5 = 16,650.00</td>
 <td></td>
 <td>545 @ 35; 444 @ 37.5</td>
-<td>35,725</td>
+<td>35,725.00</td>
 </tr>
 <tr>
 <td>Jan end</td>
 <td></td>
-<td>400 @ 35 = 14,000</td>
+<td>400 @ 35 = 14,000.00</td>
 <td>145 @ 35; 444 @ 37.5</td>
-<td>21,725</td>
+<td>21,725.00</td>
 </tr>
 <tr>
 <td>Feb beginning</td>
-<td>500 @ 40 = 20,000</td>
+<td>500 @ 40 = 20,000.00</td>
 <td></td>
 <td>145 @ 35; 444 @ 37.5; 500 @ 40</td>
-<td>41,725</td>
+<td>41,725.00</td>
 </tr>
 <tr>
 <td>Feb end</td>
 <td></td>
-<td>145 @ 35 + 444 @ 37.5 + 21 @ 40 = 22,565</td>
+<td>145 @ 35 + 444 @ 37.5 + 21 @ 40 = 22,565.00</td>
 <td>479 @ 40</td>
-<td>19,160</td>
+<td>19,160.00</td>
 </tr>
 <tr>
 <td>Mar beginning</td>
-<td>750 @ 42 = 31,500</td>
+<td>750 @ 42 = 31,500.00</td>
 <td></td>
 <td>479 @ 40; 750 @ 42</td>
-<td>50,660</td>
+<td>50,660.00</td>
 </tr>
 <tr>
 <td>Mar end</td>
 <td></td>
-<td>450 @ 40 = 18,000</td>
+<td>450 @ 40 = 18,000.00</td>
 <td>29 @ 40; 750 @ 42</td>
-<td>32,660</td>
+<td>32,660.00</td>
 </tr>
 </tbody>
 </table>
@@ -1763,14 +1773,14 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 <td>Opening: 545 @ 35</td>
 <td></td>
 <td>545 @ 35</td>
-<td>19,075</td>
+<td>19,075.00</td>
 </tr>
 <tr>
 <td>Jan beginning</td>
-<td>444 @ 37.5 = 16,650</td>
+<td>444 @ 37.5 = 16,650.00</td>
 <td></td>
 <td>989 @ 36.12234580</td>
-<td>35,725</td>
+<td>35,725.00</td>
 </tr>
 <tr>
 <td>Jan end</td>
@@ -1781,7 +1791,7 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 </tr>
 <tr>
 <td>Feb beginning</td>
-<td>500 @ 40 = 20,000</td>
+<td>500 @ 40 = 20,000.00</td>
 <td></td>
 <td>1089 @ 37.90271963</td>
 <td>41,276.06</td>
@@ -1791,14 +1801,14 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 <td></td>
 <td>610 @ 37.90271963 = 23,120.66</td>
 <td>479 @ 37.90271963</td>
-<td>18,155.4</td>
+<td>18,155.40</td>
 </tr>
 <tr>
 <td>Mar beginning</td>
-<td>750 @ 42 = 31,500</td>
+<td>750 @ 42 = 31,500.00</td>
 <td></td>
 <td>1229 @ 40.40309414</td>
-<td>49,655.4</td>
+<td>49,655.40</td>
 </tr>
 <tr>
 <td>Mar end</td>
@@ -1809,11 +1819,11 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 </tr>
 </tbody>
 </table>
-<p><strong>Step 4 — Explain “discrepancy”.</strong> Both methods leave <strong>779 units</strong>, but FIFO values them at 32,660 and WAC at 31,474.01. The <strong>1,185.99</strong> difference is a valuation-method difference, not missing physical stock; do not write it off as a shortage. If an actual count finds fewer than 779 units, investigate, document and authorise the shortage, then Dr Inventory loss / Cr Inventory at the chosen method’s appropriate carrying cost. No count or quantity shortage is provided, so no numerical shortage entry can be calculated.</p>
-<p><strong>Final check:</strong> opening and receipts = 19,075 + 16,650 + 20,000 + 31,500 = <strong>87,225</strong>. FIFO: 14,000 + 22,565 + 18,000 + 32,660 = 87,225. WAC: 14,448.94 + 23,120.66 + 18,181.39 + 31,474.01 = 87,225.</p>
+<p><strong>Step 4 — Explain “discrepancy”.</strong> Both methods leave <strong>779 units</strong>, but FIFO values them at 32,660.00 and WAC at 31,474.01. The <strong>1,185.99</strong> difference is a valuation-method difference, not missing physical stock; do not write it off as a shortage. If an actual count finds fewer than 779 units, investigate, document and authorise the shortage, then Dr Inventory loss / Cr Inventory at the chosen method’s appropriate carrying cost. No count or quantity shortage is provided, so no numerical shortage entry can be calculated.</p>
+<p><strong>Final check:</strong> opening and receipts = 19,075.00 + 16,650.00 + 20,000.00 + 31,500.00 = <strong>87,225.00</strong>. FIFO: 14,000.00 + 22,565.00 + 18,000.00 + 32,660.00 = 87,225. WAC: 14,448.94 + 23,120.66 + 18,181.39 + 31,474.01 = 87,225.</p>
 </details>
 <p><strong>Q10. Question:</strong> Swarnahansa has to supply to his customers 600 units per year. “Storage is not allowed” (wording printed in the paper) and inventory carrying cost is Rs. 0.60 per unit per year. Set-up cost per run is Rs. 80. Find (i) economic order quantity, (ii) optimum orders per year, (iii) minimum average yearly cost and (iv) optimum supply period per order in months.</p>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q10" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["EOQ, units",""],["Orders per year",""],["Annual ordering plus holding cost",""],["Months per supply cycle",""]]},"steps":[{"type":"num","q":"EOQ, units — enter the number","a":400,"think":"Use annual demand and annual holding cost.","why":"√(2 × 600 × 80 ÷ 0.60) = 400.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Use annual demand and annual holding cost."}},{"type":"num","q":"Orders per year — enter the number","a":1.5,"think":"Annual demand divided by EOQ.","why":"600 ÷ 400 = 1.5.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Annual demand divided by EOQ."}},{"type":"num","q":"Annual ordering plus holding cost — enter the number","a":240,"think":"Demand/EOQ × ordering cost + EOQ/2 × holding cost.","why":"1.5 × 80 + 200 × 0.60 = 240.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Demand/EOQ × ordering cost + EOQ/2 × holding cost."}},{"type":"num","q":"Months per supply cycle — enter the number","a":8,"think":"Divide 12 by orders per year.","why":"12 ÷ 1.5 = 8.","fill":[3,1],"mistakes":{"0":"This is not a zero result. Divide 12 by orders per year."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q10" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Inventory-control calculation", "Units / orders / months", "Rs."], "rows": [["EOQ, units", "", ""], ["Orders per year", "", ""], ["Annual ordering plus holding cost", "", ""], ["Months per supply cycle", "", ""]], "moneyCols": [2], "decimals": 2}, "steps": [{"type": "num", "q": "What is the eoq, units?", "a": 400, "think": "Use √(2 × annual demand 600 × ordering cost 80 ÷ annual holding cost 0.60). Take the square root last.", "why": "√(2 × 600 × 80 ÷ 0.60) = 400.", "fill": [0, 1], "mistakes": {"160000": "You stopped at the expression under the square root. Take its square root.", "282.842712475": "You omitted the factor 2 in EOQ."}, "tol": 0.02}, {"type": "num", "q": "How many orders are placed per year?", "a": 1.5, "think": "Divide annual demand 600 units by EOQ 400 units per order.", "why": "600 ÷ 400 = 1.5.", "fill": [1, 1], "mistakes": {"0.666666666667": "You inverted the fraction. Demand divided by order size gives orders per year."}, "tol": 0.02}, {"type": "num", "q": "What is the annual ordering plus holding cost?", "a": 240, "think": "Add (600 ÷ 400 × 80) ordering cost and (400 ÷ 2 × 0.60) holding cost.", "why": "1.5 × 80 + 200 × 0.60 = 240.", "fill": [2, 2], "mistakes": {"120": "That is one of the two annual costs. Add ordering and holding costs."}, "tol": 0.02}, {"type": "num", "q": "What is the months per supply cycle?", "a": 8, "think": "Divide 12 months by 1.5 orders per year.", "why": "12 ÷ 1.5 = 8.", "fill": [3, 1], "mistakes": {"18": "You multiplied. Divide a year by the number of orders."}, "tol": 0.02}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q10</summary>
 <p><strong>Step 1 — State the wording assumption.</strong> “Storage is not allowed” conflicts with a positive holding cost and the requested EOQ model. Interpret this as the usual <strong>shortages not allowed</strong> assumption, subject to confirmation; EOQ requires storage. No production rate is supplied, so use instantaneous replenishment rather than a finite-production model.</p>
@@ -1822,11 +1832,11 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 <p><strong>Final check:</strong> ordering cost <strong>120</strong> = holding cost <strong>120</strong> at the optimum; total <strong>240</strong>.</p>
 </details>
 <p><strong>Q11. Question:</strong> Sachin Ltd furnishes: (i) consumption 300 units per quarter; (ii) unit cost Rs. 40; (iii) processing cost per order Rs. 600; (iv) inventory insurance 25% per quarter. Compute (i) EOQ and (ii) number of orders per year.</p>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q11" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Annual demand, units",""],["Annual carrying cost per unit",""],["EOQ, units",""],["Orders per year",""]]},"steps":[{"type":"num","q":"Annual demand, units — enter the number","a":1200,"think":"Four quarters in one year.","why":"300 × 4 = 1,200.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Four quarters in one year."}},{"type":"num","q":"Annual carrying cost per unit — enter the number","a":40,"think":"Apply each quarter’s 25% insurance to unit cost, then multiply by four.","why":"40 × 25% × 4 = 40.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Apply each quarter’s 25% insurance to unit cost, then multiply by four."}},{"type":"num","q":"EOQ, units — enter the number","a":189.74,"think":"Use matching annual time units in the square-root formula.","why":"√(2 × 1,200 × 600 ÷ 40) = 189.7367 ≈ 189.74.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Use matching annual time units in the square-root formula."}},{"type":"num","q":"Orders per year — enter the number","a":6.32,"think":"Use unrounded EOQ before rounding the final result.","why":"1,200 ÷ 189.7367 = 6.3246 ≈ 6.32.","fill":[3,1],"mistakes":{"0":"This is not a zero result. Use unrounded EOQ before rounding the final result."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q11" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Inventory-control calculation", "Units / orders / months", "Rs."], "rows": [["Annual demand, units", "", ""], ["Annual carrying cost per unit", "", ""], ["EOQ, units", "", ""], ["Orders per year", "", ""]], "moneyCols": [2], "decimals": 2}, "steps": [{"type": "num", "q": "What is the annual demand, units?", "a": 1200, "think": "Multiply quarterly usage 300 units by four quarters per year.", "why": "300 × 4 = 1,200.", "fill": [0, 1], "mistakes": {"300": "That is one quarter. Use annual demand."}, "tol": 0.02}, {"type": "num", "q": "What is the annual carrying cost per unit?", "a": 40, "think": "Multiply unit cost the matching figure in the question or previous working × insurance rate 25% per quarter × four quarters.", "why": "40 × 25% × 4 = 40.", "fill": [1, 2], "mistakes": {"10": "That is quarterly holding cost. Annualise it to match demand."}, "tol": 0.02}, {"type": "num", "q": "What is the eoq, units? Round to two decimal places.", "a": 189.74, "think": "Use √(2 × annual demand 1,200 × ordering cost 600 ÷ annual holding cost 40).", "why": "√(2 × 1,200 × 600 ÷ 40) = 189.7367 ≈ 189.74.", "fill": [2, 1], "mistakes": {"379.47331922": "You used quarterly holding cost with annual demand. Annualise both."}, "tol": 0.02}, {"type": "num", "q": "How many orders are placed per year?", "a": 6.32, "think": "Divide annual demand 1,200 by the unrounded √36,000 EOQ, then round to two decimals.", "why": "1,200 ÷ 189.7367 = 6.3246 ≈ 6.32.", "fill": [3, 1], "mistakes": {"4": "You used quarterly demand as order size instead of EOQ."}, "tol": 0.02}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q11</summary>
-<p><strong>Step 1 — Annualise both inputs.</strong> Demand = 300 × 4 = 1,200; insurance holding cost = 40 × 25% × 4 = 40 per unit per year. Use simple annualisation, not compound interest, because this is a carrying-cost rate.</p>
-<p><strong>Step 2 — EOQ and orders.</strong> EOQ = √36,000 = <strong>189.74 units</strong>, operationally about 190. Orders/year = <strong>6.32</strong> using unrounded EOQ, or 1,200/190 = 6.3158 if a whole-unit policy is used.</p>
+<p><strong>Step 1 — Annualise both inputs.</strong> Demand = 300 × 4 = 1,200.00; insurance holding cost = 40 × 25% × 4 = 40 per unit per year. Use simple annualisation, not compound interest, because this is a carrying-cost rate.</p>
+<p><strong>Step 2 — EOQ and orders.</strong> EOQ = √36,000.00 = <strong>189.74 units</strong>, operationally about 190. Orders/year = <strong>6.32</strong> using unrounded EOQ, or 1,200.00/190 = 6.3158 if a whole-unit policy is used.</p>
 <p><strong>Final check:</strong> at unrounded EOQ, ordering and holding each equal about <strong>3,794.73</strong> annually.</p>
 </details>
 <p><strong>Q12. Question:</strong> A manufacturing company produces a special product “X”. The material particulars are:</p>
@@ -1865,10 +1875,10 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 </tbody>
 </table>
 <p>Compute (i) reorder quantity, (ii) reorder level, (iii) minimum stock, (iv) maximum stock and (v) average stock.</p>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q12" class="gp"><script type="application/json">{"accts":{},"table":{"cols":["Working / result","Rs. or units as labelled"],"rows":[["Reorder quantity, rounded units",""],["Reorder level, units",""],["Minimum stock, units",""],["Maximum stock, units",""],["Average stock, units",""]]},"steps":[{"type":"num","q":"Reorder quantity, rounded units — enter the number","a":250,"think":"Assume 52 weeks; round the computed EOQ to a whole unit before the stock-level policy calculations.","why":"√(2 × 3,120 × 120 ÷ 12) = 249.7999 ≈ 250.","fill":[0,1],"mistakes":{"0":"This is not a zero result. Assume 52 weeks; round the computed EOQ to a whole unit before the stock-level policy calculations."}},{"type":"num","q":"Reorder level, units — enter the number","a":540,"think":"Maximum usage times maximum lead time.","why":"90 × 6 = 540.","fill":[1,1],"mistakes":{"0":"This is not a zero result. Maximum usage times maximum lead time."}},{"type":"num","q":"Minimum stock, units — enter the number","a":240,"think":"Reorder level less normal consumption during normal lead time (five weeks).","why":"540 − 60 × 5 = 240.","fill":[2,1],"mistakes":{"0":"This is not a zero result. Reorder level less normal consumption during normal lead time (five weeks)."}},{"type":"num","q":"Maximum stock, units — enter the number","a":670,"think":"Reorder level + rounded order − minimum usage during minimum delivery.","why":"540 + 250 − 30 × 4 = 670.","fill":[3,1],"mistakes":{"0":"This is not a zero result. Reorder level + rounded order − minimum usage during minimum delivery."}},{"type":"num","q":"Average stock, units — enter the number","a":455,"think":"Use the midpoint of the computed minimum and maximum for this answer.","why":"(240 + 670) ÷ 2 = 455.","fill":[4,1],"mistakes":{"0":"This is not a zero result. Use the midpoint of the computed minimum and maximum for this answer."}}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q12" class="gp"><script type="application/json">{"accts": {}, "table": {"cols": ["Inventory-control calculation", "Units / orders / months", "Rs."], "rows": [["Reorder quantity, rounded units", "", ""], ["Reorder level, units", "", ""], ["Minimum stock, units", "", ""], ["Maximum stock, units", "", ""], ["Average stock, units", "", ""]], "moneyCols": [2], "decimals": 2}, "steps": [{"type": "num", "q": "What is the reorder quantity, rounded units? Round to two decimal places.", "a": 250, "think": "Annual demand is 60 × 52. Calculate √(2 × annual demand × 120 ÷ 12), then round to the nearest whole unit.", "why": "√(2 × 3,120 × 120 ÷ 12) = 249.7999 ≈ 250.", "fill": [0, 1], "mistakes": {"34.6410161514": "You used one week’s demand. Annualise demand using 52 weeks."}, "tol": 0.5}, {"type": "num", "q": "What is the reorder level, units?", "a": 540, "think": "Multiply maximum weekly usage 90 by maximum delivery time 6 weeks.", "why": "90 × 6 = 540.", "fill": [1, 1], "mistakes": {"300": "That is normal consumption during normal lead time. Reorder level uses the maxima."}, "tol": 0.02}, {"type": "num", "q": "What is the minimum stock, units?", "a": 240, "think": "Subtract normal usage 60 × average lead time ((4 + 6) ÷ 2) from reorder level 540.", "why": "540 − 60 × 5 = 240.", "fill": [2, 1], "mistakes": {"540": "That is reorder level. Deduct normal lead-time consumption."}, "tol": 0.02}, {"type": "num", "q": "What is the maximum stock, units?", "a": 670, "think": "Use reorder level 540 + rounded order quantity 250 − minimum usage 30 × minimum lead time 4.", "why": "540 + 250 − 30 × 4 = 670.", "fill": [3, 1], "mistakes": {"790": "You omitted consumption during minimum lead time."}, "tol": 0.02}, {"type": "num", "q": "What is the average stock, units?", "a": 455, "think": "Use (minimum stock 240 + maximum stock 670) ÷ 2, following the stated midpoint convention.", "why": "(240 + 670) ÷ 2 = 455.", "fill": [4, 1], "mistakes": {"365": "That is the alternative minimum + half order quantity convention. This question uses the midpoint of minimum and maximum."}, "tol": 0.02}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q12</summary>
-<p><strong>Step 1 — EOQ.</strong> Demand 60 × 52 = 3,120; EOQ = √62,400 = 249.7999, rounded <strong>250</strong>.</p>
+<p><strong>Step 1 — EOQ.</strong> Demand 60 × 52 = 3,120.00; EOQ = √62,400.00 = 249.7999, rounded <strong>250</strong>.</p>
 <p><strong>Step 2 — Apply the stock-level formulas.</strong> Reorder 90 × 6 = <strong>540</strong>; normal lead time (4+6)/2 = 5; minimum 540 − 60 × 5 = <strong>240</strong>; maximum 540 + 250 − 30 × 4 = <strong>670</strong>.</p>
 <p><strong>Step 3 — State the average convention.</strong> Midpoint of minimum and maximum = <strong>455</strong>. Another common convention, minimum + half reorder quantity, gives 240 + 125 = <strong>365</strong>. These formulas describe different stock assumptions; state which is used. Without whole-unit EOQ rounding, maximum is 669.7999 and midpoint is 454.89996.</p>
 <p><strong>Final check:</strong> (240 + 670)/2 = <strong>455</strong>, while the alternative 240 + 250/2 = <strong>365</strong>.</p>
@@ -1923,12 +1933,12 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q13" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"The Economic Order Quantity is:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(c) 600 units","ok":true},{"t":"(a) 500 units","why":"Check annualisation and the required output. Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units."},{"t":"(b) 550 units","why":"Check annualisation and the required output. Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units."},{"t":"(d) 650 units","why":"Check annualisation and the required output. Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units."}],"why":"Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units."}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q13" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "The Economic Order Quantity is:", "think": "Convert monthly consumption 250 to annual demand, then use √(2 × annual demand × 30 ÷ 0.50). The holding cost is assumed annual per unit.", "opts": [{"t": "(c) 600 units", "ok": true}, {"t": "(a) 500 units", "why": "Check annualisation and the required output. Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units. Convert monthly consumption 250 to annual demand, then use √(2 × annual demand × 30 ÷ 0.50). The holding cost is assumed annual per unit."}, {"t": "(b) 550 units", "why": "Check annualisation and the required output. Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units. Convert monthly consumption 250 to annual demand, then use √(2 × annual demand × 30 ÷ 0.50). The holding cost is assumed annual per unit."}, {"t": "(d) 650 units", "why": "Check annualisation and the required output. Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units. Convert monthly consumption 250 to annual demand, then use √(2 × annual demand × 30 ÷ 0.50). The holding cost is assumed annual per unit."}], "why": "Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units."}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q13</summary>
 <p><strong>Step 1 — Match the time units.</strong> Carrying cost 0.50 is assumed annual per unit, although the paper omits its time basis. That convention fits the offered answers.</p>
-<p><strong>Step 2 — Calculate the requested result.</strong> Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units.</p>
-<p><strong>Final check:</strong> 5 × 600 = 3,000 annual units and 5 × 2.4 = 12 months. Correct option <strong>(c)</strong>.</p>
+<p><strong>Step 2 — Calculate the requested result.</strong> Annual demand 250 × 12 = 3,000.00; EOQ = √(2 × 3,000.00 × 30 / 0.50) = 600 units.</p>
+<p><strong>Final check:</strong> 5 × 600 = 3,000.00 annual units and 5 × 2.4 = 12 months. Correct option <strong>(c)</strong>.</p>
 </details>
 <p><strong>Q14. Question:</strong> Use the following information in respect of materials used by a manufacturing firm.</p>
 <table>
@@ -1964,28 +1974,28 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 <tbody>
 <tr>
 <td>a</td>
-<td>5</td>
+<td>5.00</td>
 </tr>
 <tr>
 <td>b</td>
-<td>6</td>
+<td>6.00</td>
 </tr>
 <tr>
 <td>c</td>
-<td>6.5</td>
+<td>6.50</td>
 </tr>
 <tr>
 <td>d</td>
-<td>7</td>
+<td>7.00</td>
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q14" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"Number of orders per annum is:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(a) 5","ok":true},{"t":"(b) 6","why":"Check annualisation and the required output. Annual demand 3,000 ÷ EOQ 600 = 5 orders."},{"t":"(c) 6.5","why":"Check annualisation and the required output. Annual demand 3,000 ÷ EOQ 600 = 5 orders."},{"t":"(d) 7","why":"Check annualisation and the required output. Annual demand 3,000 ÷ EOQ 600 = 5 orders."}],"why":"Annual demand 3,000 ÷ EOQ 600 = 5 orders."}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q14" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "Number of orders per annum is:", "think": "Use annual demand (250 × 12) divided by EOQ from the preceding question. Orders per year counts replenishments, not units in each order.", "opts": [{"t": "(a) 5", "ok": true}, {"t": "(b) 6", "why": "Check annualisation and the required output. Annual demand 3,000 ÷ EOQ 600 = 5 orders. Use annual demand (250 × 12) divided by EOQ from the preceding question. Orders per year counts replenishments, not units in each order."}, {"t": "(c) 6.5", "why": "Check annualisation and the required output. Annual demand 3,000 ÷ EOQ 600 = 5 orders. Use annual demand (250 × 12) divided by EOQ from the preceding question. Orders per year counts replenishments, not units in each order."}, {"t": "(d) 7", "why": "Check annualisation and the required output. Annual demand 3,000 ÷ EOQ 600 = 5 orders. Use annual demand (250 × 12) divided by EOQ from the preceding question. Orders per year counts replenishments, not units in each order."}], "why": "Annual demand 3,000 ÷ EOQ 600 = 5 orders."}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q14</summary>
 <p><strong>Step 1 — Match the time units.</strong> Carrying cost 0.50 is assumed annual per unit, although the paper omits its time basis. That convention fits the offered answers.</p>
-<p><strong>Step 2 — Calculate the requested result.</strong> Annual demand 3,000 ÷ EOQ 600 = 5 orders.</p>
-<p><strong>Final check:</strong> 5 × 600 = 3,000 annual units and 5 × 2.4 = 12 months. Correct option <strong>(a)</strong>.</p>
+<p><strong>Step 2 — Calculate the requested result.</strong> Annual demand 3,000.00 ÷ EOQ 600 = 5 orders.</p>
+<p><strong>Final check:</strong> 5 × 600 = 3,000.00 annual units and 5 × 2.4 = 12 months. Correct option <strong>(a)</strong>.</p>
 </details>
 <p><strong>Q15. Question:</strong> Use the following information in respect of materials used by a manufacturing firm.</p>
 <table>
@@ -2037,12 +2047,12 @@ EOQ Q10: √(2×600×80/0.60)=<strong>400 units</strong>. Orders/year = 600/400 
 </tr>
 </tbody>
 </table>
-<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q15" class="gp"><script type="application/json">{"accts":{},"steps":[{"type":"choice","q":"The time between two orders is:","think":"Read the event and ask which accounting rule applies before calculating.","opts":[{"t":"(c) 2.4 months","ok":true},{"t":"(a) 3 months","why":"Check annualisation and the required output. 12 months ÷ 5 annual orders = 2.4 months."},{"t":"(b) 2.5 months","why":"Check annualisation and the required output. 12 months ÷ 5 annual orders = 2.4 months."},{"t":"(d) 2.6 months","why":"Check annualisation and the required output. 12 months ÷ 5 annual orders = 2.4 months."}],"why":"12 months ÷ 5 annual orders = 2.4 months."}]}</script></div></div>
+<div class="tool"><div class="tt">🧪 Try it — Answer it yourself, one step at a time</div><div id="gp-w08-q15" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "The time between two orders is:", "think": "Divide 12 months by annual demand divided by EOQ. Keep the time interval in months rather than years.", "opts": [{"t": "(c) 2.4 months", "ok": true}, {"t": "(a) 3 months", "why": "Check annualisation and the required output. 12 months ÷ 5 annual orders = 2.4 months. Divide 12 months by annual demand divided by EOQ. Keep the time interval in months rather than years."}, {"t": "(b) 2.5 months", "why": "Check annualisation and the required output. 12 months ÷ 5 annual orders = 2.4 months. Divide 12 months by annual demand divided by EOQ. Keep the time interval in months rather than years."}, {"t": "(d) 2.6 months", "why": "Check annualisation and the required output. 12 months ÷ 5 annual orders = 2.4 months. Divide 12 months by annual demand divided by EOQ. Keep the time interval in months rather than years."}], "why": "12 months ÷ 5 annual orders = 2.4 months."}]}</script></div></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q15</summary>
 <p><strong>Step 1 — Match the time units.</strong> Carrying cost 0.50 is assumed annual per unit, although the paper omits its time basis. That convention fits the offered answers.</p>
 <p><strong>Step 2 — Calculate the requested result.</strong> 12 months ÷ 5 annual orders = 2.4 months.</p>
-<p><strong>Final check:</strong> 5 × 600 = 3,000 annual units and 5 × 2.4 = 12 months. Correct option <strong>(c)</strong>.</p>
+<p><strong>Final check:</strong> 5 × 600 = 3,000.00 annual units and 5 × 2.4 = 12 months. Correct option <strong>(c)</strong>.</p>
 </details>
 <div class="tool"><div class="tt">🧪 Try it — EOQ calculator</div><div id="eoqp">
 <div class="row"><label>Annual demand <input type="number" class="d" value="600" style="width:90px"></label><label>Cost per order <input type="number" class="o" value="80" style="width:80px"></label><label>Holding cost / unit / year <input type="number" class="h" value="0.6" step="0.1" style="width:80px"></label></div>
@@ -2093,7 +2103,7 @@ R.addEventListener('input',run);run();})();
 <tbody>
 <tr>
 <td>Purchase price</td>
-<td>300,000</td>
+<td>300,000.00</td>
 </tr>
 <tr>
 <td>Trade discount</td>
@@ -2101,28 +2111,28 @@ R.addEventListener('input',run);run();})();
 </tr>
 <tr>
 <td>Carriage inwards</td>
-<td>50,000</td>
+<td>50,000.00</td>
 </tr>
 <tr>
 <td>Import tax (printed “Impart tax”)</td>
-<td>20,000</td>
+<td>20,000.00</td>
 </tr>
 <tr>
 <td>Clearing charges</td>
-<td>15,000</td>
+<td>15,000.00</td>
 </tr>
 <tr>
 <td>VAT</td>
-<td>10,000 (40% recoverable)</td>
+<td>10,000.00 (40% recoverable)</td>
 </tr>
 </tbody>
 </table>
 <div data-ta-tool="gp-w08-q1"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q1</summary>
-<p><strong>Step 1 — Deduct trade discount.</strong> 300,000 − 30,000 = 270,000.</p>
-<p><strong>Step 2 — Identify attributable costs.</strong> Freight 50,000, import tax 20,000, clearing 15,000 and non-recoverable VAT 6,000 are included. Recoverable VAT 4,000 is excluded.</p>
-<p><strong>Final check:</strong> 270,000 + 50,000 + 20,000 + 15,000 + 6,000 = <strong>361,000</strong>.</p>
+<p><strong>Step 1 — Deduct trade discount.</strong> 300,000.00 − 30,000.00 = 270,000.</p>
+<p><strong>Step 2 — Identify attributable costs.</strong> Freight 50,000, import tax 20,000, clearing 15,000.00 and non-recoverable VAT 6,000.00 are included. Recoverable VAT 4,000.00 is excluded.</p>
+<p><strong>Final check:</strong> 270,000.00 + 50,000.00 + 20,000.00 + 15,000.00 + 6,000.00 = <strong>361,000.00</strong>.</p>
 </details>
 <p><strong>Q2. Question:</strong> Calculate net realisable value on the following inventory items.</p>
 <table>
@@ -2173,23 +2183,23 @@ R.addEventListener('input',run);run();})();
 <tr>
 <td>A</td>
 <td>120 − 30</td>
-<td>90</td>
-<td>100</td>
-<td>90</td>
+<td>90.00</td>
+<td>100.00</td>
+<td>90.00</td>
 </tr>
 <tr>
 <td>B</td>
 <td>150 − 20</td>
-<td>130</td>
-<td>120</td>
-<td>120</td>
+<td>130.00</td>
+<td>120.00</td>
+<td>120.00</td>
 </tr>
 <tr>
 <td>C</td>
 <td>305 − 15</td>
-<td>290</td>
-<td>300</td>
-<td>290</td>
+<td>290.00</td>
+<td>300.00</td>
+<td>290.00</td>
 </tr>
 </tbody>
 </table>
@@ -2211,29 +2221,29 @@ R.addEventListener('input',run);run();})();
 <tr>
 <td>Soap</td>
 <td>Lux</td>
-<td>35</td>
-<td>30</td>
+<td>35.00</td>
+<td>30.00</td>
 <td>200</td>
 </tr>
 <tr>
 <td>Soap</td>
 <td>Rani</td>
-<td>40</td>
-<td>41</td>
+<td>40.00</td>
+<td>41.00</td>
 <td>150</td>
 </tr>
 <tr>
 <td>Toothpaste</td>
 <td>Signal</td>
-<td>120</td>
-<td>110</td>
+<td>120.00</td>
+<td>110.00</td>
 <td>100</td>
 </tr>
 <tr>
 <td>Toothpaste</td>
 <td>Supiriviki</td>
-<td>100</td>
-<td>95</td>
+<td>100.00</td>
+<td>95.00</td>
 <td>60</td>
 </tr>
 </tbody>
@@ -2254,32 +2264,32 @@ R.addEventListener('input',run);run();})();
 <tbody>
 <tr>
 <td>Lux</td>
-<td>7,000</td>
-<td>6,000</td>
-<td>6,000</td>
+<td>7,000.00</td>
+<td>6,000.00</td>
+<td>6,000.00</td>
 </tr>
 <tr>
 <td>Rani</td>
-<td>6,000</td>
-<td>6,150</td>
-<td>6,000</td>
+<td>6,000.00</td>
+<td>6,150.00</td>
+<td>6,000.00</td>
 </tr>
 <tr>
 <td>Signal</td>
-<td>12,000</td>
-<td>11,000</td>
-<td>11,000</td>
+<td>12,000.00</td>
+<td>11,000.00</td>
+<td>11,000.00</td>
 </tr>
 <tr>
 <td>Supiriviki</td>
-<td>6,000</td>
-<td>5,700</td>
-<td>5,700</td>
+<td>6,000.00</td>
+<td>5,700.00</td>
+<td>5,700.00</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Step 2 — Group the batches.</strong> Soap cost = 7,000 + 6,000 = 13,000; NRV = 6,000 + 6,150 = 12,150. Toothpaste cost = 12,000 + 6,000 = 18,000; NRV = 11,000 + 5,700 = 16,700.</p>
-<p><strong>Final check:</strong> item carrying value <strong>28,700</strong>; batch carrying value <strong>28,850</strong>. The difference 150 comes from offsetting Rani’s NRV above cost against Lux’s loss within the soap group. Total raw NRV is 28,850 under either grouping; the item carrying amount is lower.</p>
+<p><strong>Step 2 — Group the batches.</strong> Soap cost = 7,000.00 + 6,000.00 = 13,000.00; NRV = 6,000.00 + 6,150.00 = 12,150. Toothpaste cost = 12,000.00 + 6,000.00 = 18,000.00; NRV = 11,000.00 + 5,700.00 = 16,700.</p>
+<p><strong>Final check:</strong> item carrying value <strong>28,700.00</strong>; batch carrying value <strong>28,850.00</strong>. The difference 150 comes from offsetting Rani’s NRV above cost against Lux’s loss within the soap group. Total raw NRV is 28,850.00 under either grouping; the item carrying amount is lower.</p>
 </details>
 <p><strong>Q4. Question:</strong> The guiding factors for stores requisitioning are:</p>
 <table>
@@ -2394,19 +2404,19 @@ R.addEventListener('input',run);run();})();
 <tbody>
 <tr>
 <td>a</td>
-<td>1,000</td>
+<td>1,000.00</td>
 </tr>
 <tr>
 <td>b</td>
-<td>2,100</td>
+<td>2,100.00</td>
 </tr>
 <tr>
 <td>c</td>
-<td>1,600</td>
+<td>1,600.00</td>
 </tr>
 <tr>
 <td>d</td>
-<td>1,400</td>
+<td>1,400.00</td>
 </tr>
 </tbody>
 </table>
@@ -2414,7 +2424,7 @@ R.addEventListener('input',run);run();})();
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q7</summary>
 <p><strong>Step 1 — Choose the rule.</strong> Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention.</p>
-<p><strong>Step 2 — Select the option.</strong> <strong>(b) 2,100</strong>.</p>
+<p><strong>Step 2 — Select the option.</strong> <strong>(b) 2,100.00</strong>.</p>
 <p><strong>Final check:</strong> Use the course formula: maximum weekly usage × maximum lead time = 700 × 3 = 2,100. Do not add the given safety stock again under this convention.</p>
 </details>
 <p><strong>Q8. Question:</strong> In case of rise in price levels, the most suitable method for valuing materials issued is:</p>
@@ -2500,49 +2510,49 @@ R.addEventListener('input',run);run();})();
 <td>Opening: 545 @ 35</td>
 <td></td>
 <td>545 @ 35</td>
-<td>19,075</td>
+<td>19,075.00</td>
 </tr>
 <tr>
 <td>Jan beginning</td>
-<td>444 @ 37.5 = 16,650</td>
+<td>444 @ 37.5 = 16,650.00</td>
 <td></td>
 <td>545 @ 35; 444 @ 37.5</td>
-<td>35,725</td>
+<td>35,725.00</td>
 </tr>
 <tr>
 <td>Jan end</td>
 <td></td>
-<td>400 @ 35 = 14,000</td>
+<td>400 @ 35 = 14,000.00</td>
 <td>145 @ 35; 444 @ 37.5</td>
-<td>21,725</td>
+<td>21,725.00</td>
 </tr>
 <tr>
 <td>Feb beginning</td>
-<td>500 @ 40 = 20,000</td>
+<td>500 @ 40 = 20,000.00</td>
 <td></td>
 <td>145 @ 35; 444 @ 37.5; 500 @ 40</td>
-<td>41,725</td>
+<td>41,725.00</td>
 </tr>
 <tr>
 <td>Feb end</td>
 <td></td>
-<td>145 @ 35 + 444 @ 37.5 + 21 @ 40 = 22,565</td>
+<td>145 @ 35 + 444 @ 37.5 + 21 @ 40 = 22,565.00</td>
 <td>479 @ 40</td>
-<td>19,160</td>
+<td>19,160.00</td>
 </tr>
 <tr>
 <td>Mar beginning</td>
-<td>750 @ 42 = 31,500</td>
+<td>750 @ 42 = 31,500.00</td>
 <td></td>
 <td>479 @ 40; 750 @ 42</td>
-<td>50,660</td>
+<td>50,660.00</td>
 </tr>
 <tr>
 <td>Mar end</td>
 <td></td>
-<td>450 @ 40 = 18,000</td>
+<td>450 @ 40 = 18,000.00</td>
 <td>29 @ 40; 750 @ 42</td>
-<td>32,660</td>
+<td>32,660.00</td>
 </tr>
 </tbody>
 </table>
@@ -2563,14 +2573,14 @@ R.addEventListener('input',run);run();})();
 <td>Opening: 545 @ 35</td>
 <td></td>
 <td>545 @ 35</td>
-<td>19,075</td>
+<td>19,075.00</td>
 </tr>
 <tr>
 <td>Jan beginning</td>
-<td>444 @ 37.5 = 16,650</td>
+<td>444 @ 37.5 = 16,650.00</td>
 <td></td>
 <td>989 @ 36.12234580</td>
-<td>35,725</td>
+<td>35,725.00</td>
 </tr>
 <tr>
 <td>Jan end</td>
@@ -2581,7 +2591,7 @@ R.addEventListener('input',run);run();})();
 </tr>
 <tr>
 <td>Feb beginning</td>
-<td>500 @ 40 = 20,000</td>
+<td>500 @ 40 = 20,000.00</td>
 <td></td>
 <td>1089 @ 37.90271963</td>
 <td>41,276.06</td>
@@ -2591,14 +2601,14 @@ R.addEventListener('input',run);run();})();
 <td></td>
 <td>610 @ 37.90271963 = 23,120.66</td>
 <td>479 @ 37.90271963</td>
-<td>18,155.4</td>
+<td>18,155.40</td>
 </tr>
 <tr>
 <td>Mar beginning</td>
-<td>750 @ 42 = 31,500</td>
+<td>750 @ 42 = 31,500.00</td>
 <td></td>
 <td>1229 @ 40.40309414</td>
-<td>49,655.4</td>
+<td>49,655.40</td>
 </tr>
 <tr>
 <td>Mar end</td>
@@ -2609,8 +2619,8 @@ R.addEventListener('input',run);run();})();
 </tr>
 </tbody>
 </table>
-<p><strong>Step 4 — Explain “discrepancy”.</strong> Both methods leave <strong>779 units</strong>, but FIFO values them at 32,660 and WAC at 31,474.01. The <strong>1,185.99</strong> difference is a valuation-method difference, not missing physical stock; do not write it off as a shortage. If an actual count finds fewer than 779 units, investigate, document and authorise the shortage, then Dr Inventory loss / Cr Inventory at the chosen method’s appropriate carrying cost. No count or quantity shortage is provided, so no numerical shortage entry can be calculated.</p>
-<p><strong>Final check:</strong> opening and receipts = 19,075 + 16,650 + 20,000 + 31,500 = <strong>87,225</strong>. FIFO: 14,000 + 22,565 + 18,000 + 32,660 = 87,225. WAC: 14,448.94 + 23,120.66 + 18,181.39 + 31,474.01 = 87,225.</p>
+<p><strong>Step 4 — Explain “discrepancy”.</strong> Both methods leave <strong>779 units</strong>, but FIFO values them at 32,660.00 and WAC at 31,474.01. The <strong>1,185.99</strong> difference is a valuation-method difference, not missing physical stock; do not write it off as a shortage. If an actual count finds fewer than 779 units, investigate, document and authorise the shortage, then Dr Inventory loss / Cr Inventory at the chosen method’s appropriate carrying cost. No count or quantity shortage is provided, so no numerical shortage entry can be calculated.</p>
+<p><strong>Final check:</strong> opening and receipts = 19,075.00 + 16,650.00 + 20,000.00 + 31,500.00 = <strong>87,225.00</strong>. FIFO: 14,000.00 + 22,565.00 + 18,000.00 + 32,660.00 = 87,225. WAC: 14,448.94 + 23,120.66 + 18,181.39 + 31,474.01 = 87,225.</p>
 </details>
 <p><strong>Q10. Question:</strong> Swarnahansa has to supply to his customers 600 units per year. “Storage is not allowed” (wording printed in the paper) and inventory carrying cost is Rs. 0.60 per unit per year. Set-up cost per run is Rs. 80. Find (i) economic order quantity, (ii) optimum orders per year, (iii) minimum average yearly cost and (iv) optimum supply period per order in months.</p>
 <div data-ta-tool="gp-w08-q10"></div>
@@ -2625,8 +2635,8 @@ R.addEventListener('input',run);run();})();
 <div data-ta-tool="gp-w08-q11"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q11</summary>
-<p><strong>Step 1 — Annualise both inputs.</strong> Demand = 300 × 4 = 1,200; insurance holding cost = 40 × 25% × 4 = 40 per unit per year. Use simple annualisation, not compound interest, because this is a carrying-cost rate.</p>
-<p><strong>Step 2 — EOQ and orders.</strong> EOQ = √36,000 = <strong>189.74 units</strong>, operationally about 190. Orders/year = <strong>6.32</strong> using unrounded EOQ, or 1,200/190 = 6.3158 if a whole-unit policy is used.</p>
+<p><strong>Step 1 — Annualise both inputs.</strong> Demand = 300 × 4 = 1,200.00; insurance holding cost = 40 × 25% × 4 = 40 per unit per year. Use simple annualisation, not compound interest, because this is a carrying-cost rate.</p>
+<p><strong>Step 2 — EOQ and orders.</strong> EOQ = √36,000.00 = <strong>189.74 units</strong>, operationally about 190. Orders/year = <strong>6.32</strong> using unrounded EOQ, or 1,200.00/190 = 6.3158 if a whole-unit policy is used.</p>
 <p><strong>Final check:</strong> at unrounded EOQ, ordering and holding each equal about <strong>3,794.73</strong> annually.</p>
 </details>
 <p><strong>Q12. Question:</strong> A manufacturing company produces a special product “X”. The material particulars are:</p>
@@ -2668,7 +2678,7 @@ R.addEventListener('input',run);run();})();
 <div data-ta-tool="gp-w08-q12"></div>
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q12</summary>
-<p><strong>Step 1 — EOQ.</strong> Demand 60 × 52 = 3,120; EOQ = √62,400 = 249.7999, rounded <strong>250</strong>.</p>
+<p><strong>Step 1 — EOQ.</strong> Demand 60 × 52 = 3,120.00; EOQ = √62,400.00 = 249.7999, rounded <strong>250</strong>.</p>
 <p><strong>Step 2 — Apply the stock-level formulas.</strong> Reorder 90 × 6 = <strong>540</strong>; normal lead time (4+6)/2 = 5; minimum 540 − 60 × 5 = <strong>240</strong>; maximum 540 + 250 − 30 × 4 = <strong>670</strong>.</p>
 <p><strong>Step 3 — State the average convention.</strong> Midpoint of minimum and maximum = <strong>455</strong>. Another common convention, minimum + half reorder quantity, gives 240 + 125 = <strong>365</strong>. These formulas describe different stock assumptions; state which is used. Without whole-unit EOQ rounding, maximum is 669.7999 and midpoint is 454.89996.</p>
 <p><strong>Final check:</strong> (240 + 670)/2 = <strong>455</strong>, while the alternative 240 + 250/2 = <strong>365</strong>.</p>
@@ -2727,8 +2737,8 @@ R.addEventListener('input',run);run();})();
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q13</summary>
 <p><strong>Step 1 — Match the time units.</strong> Carrying cost 0.50 is assumed annual per unit, although the paper omits its time basis. That convention fits the offered answers.</p>
-<p><strong>Step 2 — Calculate the requested result.</strong> Annual demand 250 × 12 = 3,000; EOQ = √(2 × 3,000 × 30 / 0.50) = 600 units.</p>
-<p><strong>Final check:</strong> 5 × 600 = 3,000 annual units and 5 × 2.4 = 12 months. Correct option <strong>(c)</strong>.</p>
+<p><strong>Step 2 — Calculate the requested result.</strong> Annual demand 250 × 12 = 3,000.00; EOQ = √(2 × 3,000.00 × 30 / 0.50) = 600 units.</p>
+<p><strong>Final check:</strong> 5 × 600 = 3,000.00 annual units and 5 × 2.4 = 12 months. Correct option <strong>(c)</strong>.</p>
 </details>
 <p><strong>Q14. Question:</strong> Use the following information in respect of materials used by a manufacturing firm.</p>
 <table>
@@ -2764,19 +2774,19 @@ R.addEventListener('input',run);run();})();
 <tbody>
 <tr>
 <td>a</td>
-<td>5</td>
+<td>5.00</td>
 </tr>
 <tr>
 <td>b</td>
-<td>6</td>
+<td>6.00</td>
 </tr>
 <tr>
 <td>c</td>
-<td>6.5</td>
+<td>6.50</td>
 </tr>
 <tr>
 <td>d</td>
-<td>7</td>
+<td>7.00</td>
 </tr>
 </tbody>
 </table>
@@ -2784,8 +2794,8 @@ R.addEventListener('input',run);run();})();
 <details class="beginner-answer">
 <summary>Show step-by-step answer — Q14</summary>
 <p><strong>Step 1 — Match the time units.</strong> Carrying cost 0.50 is assumed annual per unit, although the paper omits its time basis. That convention fits the offered answers.</p>
-<p><strong>Step 2 — Calculate the requested result.</strong> Annual demand 3,000 ÷ EOQ 600 = 5 orders.</p>
-<p><strong>Final check:</strong> 5 × 600 = 3,000 annual units and 5 × 2.4 = 12 months. Correct option <strong>(a)</strong>.</p>
+<p><strong>Step 2 — Calculate the requested result.</strong> Annual demand 3,000.00 ÷ EOQ 600 = 5 orders.</p>
+<p><strong>Final check:</strong> 5 × 600 = 3,000.00 annual units and 5 × 2.4 = 12 months. Correct option <strong>(a)</strong>.</p>
 </details>
 <p><strong>Q15. Question:</strong> Use the following information in respect of materials used by a manufacturing firm.</p>
 <table>
@@ -2842,7 +2852,7 @@ R.addEventListener('input',run);run();})();
 <summary>Show step-by-step answer — Q15</summary>
 <p><strong>Step 1 — Match the time units.</strong> Carrying cost 0.50 is assumed annual per unit, although the paper omits its time basis. That convention fits the offered answers.</p>
 <p><strong>Step 2 — Calculate the requested result.</strong> 12 months ÷ 5 annual orders = 2.4 months.</p>
-<p><strong>Final check:</strong> 5 × 600 = 3,000 annual units and 5 × 2.4 = 12 months. Correct option <strong>(c)</strong>.</p>
+<p><strong>Final check:</strong> 5 × 600 = 3,000.00 annual units and 5 × 2.4 = 12 months. Correct option <strong>(c)</strong>.</p>
 </details>
 <div data-ta-tool="eoqp"></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>சரக்கின் மதிப்பு</h4><p><strong>LKAS 2</strong> படி சரக்கை Cost அல்லது விற்றால் கிடைக்கும் நிகரத் தொகை (<strong>NRV</strong>) இவற்றில் குறைந்ததில் காட்டுவோம். NRV என்பது விற்பனை விலை மட்டும் அல்ல; முடிக்கவும் விற்கவும் இன்னும் செய்ய வேண்டிய செலவுகளை கழிக்க வேண்டும்.</p></div><div class="ta-recap-item"><h4>சரக்கு வாங்கும் நடைமுறை</h4><p>என்ன தேவை என்று கோரிக்கை, கொள்வனவு ஆணை, பொருள் பெற்ற சான்று, பில், பணம் செலுத்தல் எனச் சான்றுகளை இணைத்துப் பாருங்கள். ஆணையிட்டது வந்ததா, விலையும் அளவும் சரியா என்பதை இதனால் சரிபார்க்க முடியும்.</p></div><div class="ta-recap-item"><h4>எப்போது மீண்டும் வாங்குவது?</h4><p>சரக்கு முடிந்த பிறகு ஆணையிட்டால் வேலை நின்றுவிடும். <strong>Reorder level</strong> வந்ததும் வாங்கத் தொடங்குவோம்; <strong>Lead time</strong> என்பது பொருள் வந்து சேரும் தாமதம். EOQ வாங்கும் செலவும் சேமிப்புச் செலவும் சேர்ந்து குறையும் அளவு.</p></div><div class="ta-recap-item"><h4>FIFO மற்றும் சராசரிச் செலவு</h4><p><strong>FIFO</strong>-இல் முதலில் வந்த சரக்கின் செலவை முதலில் வழங்குவோம். <strong>Weighted average</strong>-இல் மொத்த மதிப்பு ÷ மொத்த அளவு செய்து ஒரு அலகின் சராசரிச் செலவைப் பெறுவோம். இரண்டிலும் மீதமுள்ள சரக்கின் அளவு ஒன்றாக இருந்தாலும் மதிப்பு மாறலாம்.</p></div><div class="ta-recap-item"><h4>சரக்குக் கணக்குப் பயிற்சி</h4><p>Stores ledger-இல் ஒவ்வொரு வரவுக்கும் செலவுக்கும் பிறகு மீதியைப் புதுப்பியுங்கள். EOQ-இல் Demand, ordering cost, holding cost மூன்றும் ஒரே கால அடிப்படையில் இருக்க வேண்டும். வருடத் தேவையுடன் மாத holding cost-ஐ நேரடியாகப் பயன்படுத்தாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><table>
 <thead>
@@ -3062,10 +3072,13 @@ R.addEventListener('input',run);run();})();
     if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
       a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
   });
-  if (!KEY) return;
+  var toc = document.getElementById('toc');
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn && !toc) tbtn.hidden = true;
+  if (!KEY || !toc) return;
 
   // TOC
-  var toc = document.getElementById('toc'), links = [];
+  var links = [];
   var heads = document.querySelectorAll('main h2[id], main h3[id]');
   heads.forEach(function(h){
     var a = document.createElement('a'); a.href = '#' + h.id;
@@ -3076,8 +3089,6 @@ R.addEventListener('input',run);run();})();
     a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
     a.onclick = function(){ var english=h.closest('.section-english'); if(english && english.hidden){ var toggle=h.closest('section').querySelector('.native-toggle'); if(toggle) toggle.click(); } toc.classList.remove('open'); };
   });
-  var tbtn = document.getElementById('tocbtn');
-  if (tbtn && !toc) tbtn.style.display = 'none';
   if (tbtn && toc) {
     var isPhone = function(){ return window.matchMedia('(max-width:900px)').matches; };
     var showToc = function(){
@@ -3348,7 +3359,9 @@ R.addEventListener('input',run);run();})();
     function advance(firstTry){
       if (firstTry) state.first++;
       state.i++; tries = 0; save(key, state); render();
-      var focus = box.querySelector('.gp-acct,.gp-amt,.gp-opt'); if (focus) focus.focus({preventScroll:true});
+      var focus = box.querySelector('.gp-acct,.gp-amt,.gp-opt');
+      if (focus) { focus.focus({preventScroll:true}); focus.scrollIntoView({block:'nearest'}); }
+      else if (box.querySelector('.gp-fb')) box.querySelector('.gp-fb').scrollIntoView({block:'nearest'});
     }
     function feedback(kind, html, cont){
       var f = box.querySelector('.gp-fb');
@@ -3363,6 +3376,7 @@ R.addEventListener('input',run);run();})();
         var r = document.createElement('button'); r.type = 'button'; r.className = 'alt'; r.textContent = 'Show me the answer';
         r.onclick = reveal; f.appendChild(r);
       }
+      f.scrollIntoView({block:'nearest'});
     }
     function reveal(){
       var s = steps[state.i], text;
@@ -3422,20 +3436,36 @@ R.addEventListener('input',run);run();})();
         rows += '<tr class="gp-now"><td>' + (s.tx !== last ? esc(dateOf(s.tx)) : '') + '</td><td class="gp-cell-acct"><input class="gp-acct" placeholder="Click to choose" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Account"><div class="gp-list" role="listbox" hidden></div></td><td><input class="gp-dr" inputmode="decimal" autocomplete="off" aria-label="Debit amount"></td><td><input class="gp-cr" inputmode="decimal" autocomplete="off" aria-label="Credit amount"></td></tr>';
         s.tx.e.slice(s.n + 1).forEach(function(){ rows += '<tr class="gp-row-next"><td></td><td></td><td></td><td></td></tr>'; });
       }
+      if (!rows) return '';
       return '<div class="gp-tablewrap"><table class="gp-table"><thead><tr><th class="gp-col-date">Date</th><th>Account</th><th class="r gp-col-amt">Debit (Rs.)</th><th class="r gp-col-amt">Credit (Rs.)</th></tr></thead><tbody>' + rows + '</tbody>' +
         (done.length ? '<tfoot><tr><td></td><td>Total so far</td><td class="r">' + money(dr) + '</td><td class="r">' + money(cr) + '</td></tr></tfoot>' : '') + '</table></div>';
     }
     function grid(s){
       if (!data.table) return '';
       var values = {};
-      steps.slice(0, state.i).forEach(function(x){ if (x.fill) values[x.fill.join()] = money(x.a); });
+      var moneyCols = data.table.moneyCols || [], dp = data.table.decimals;
+      // A held cell stays blank until no remaining step has that value as its answer.
+      var waiting = {};
+      steps.slice(state.i).forEach(function(x){
+        if (x.fill) waiting[Math.abs(x.a).toFixed(2)] = true;
+        if (x.type === 'entry') waiting[Math.abs(x.entry.amt).toFixed(2)] = true;
+      });
+      var held = {};
+      (data.table.hold || []).forEach(function(h){ held[h.join()] = true; });
+      function shown(value, c){
+        var n = moneyCols.indexOf(c) > -1 && /^-?[\d,]+(\.\d+)?$/.test(String(value)) ? parse(value) : null;
+        return n === null ? String(value) : n.toLocaleString('en-US', {minimumFractionDigits:dp, maximumFractionDigits:dp});
+      }
+      steps.slice(0, state.i).forEach(function(x){ if (x.fill) values[x.fill.join()] = x.a; });
       var head = data.table.cols.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('');
+      var actionRow = s && s.fill ? '<tr class="gp-action-row"><td colspan="' + data.table.cols.length + '"><button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></td></tr>' : '';
       var body = data.table.rows.map(function(row, r){
         return '<tr' + (row.total ? ' class="gp-row-total"' : '') + '>' + (row.cells || row).map(function(cell, c){
           var id = r + ',' + c;
           if (s && s.fill && s.fill.join() === id) return '<td class="gp-now"><input class="gp-amt" inputmode="decimal" autocomplete="off" aria-label="' + esc(data.table.cols[c]) + '"></td>';
-          return '<td>' + esc(values[id] !== undefined ? values[id] : cell) + '</td>';
-        }).join('') + '</tr>';
+          if (held[id] && values[id] === undefined && waiting[Math.abs(parse(cell)).toFixed(2)]) return '<td></td>';
+          return '<td>' + esc(values[id] !== undefined ? (moneyCols.indexOf(c) > -1 ? shown(values[id], c) : money(values[id])) : shown(cell, c)) + '</td>';
+        }).join('') + '</tr>' + (s && s.fill && s.fill[0] === r ? actionRow : '');
       }).join('');
       return '<div class="gp-tablewrap gp-scroll"><table class="gp-table"><thead><tr>' + head + '</tr></thead><tbody>' + body + '</tbody></table></div>';
     }
@@ -3449,7 +3479,7 @@ R.addEventListener('input',run);run();})();
         html += '<p class="gp-tx">' + esc(s.tx.tx) + '</p><p class="gp-howto"><b>Line ' + (s.n + 1) + ' of ' + s.tx.e.length + ' for this transaction.</b> Click the Account cell and choose an account. Then type the amount in the Debit or the Credit column. Debit lines come first.</p>' + journal(s) + '<button type="button" class="gp-check">Check this line</button><div class="gp-fb" aria-live="polite" hidden></div>';
       } else if (s.type === 'num') {
         html += journal() + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p class="gp-q"><b>' + esc(s.q) + '</b>' + (s.fill ? ' <span class="gp-muted">Type it in the highlighted cell.</span>' : '') + '</p>' + grid(s) +
-          (s.fill ? '' : '<label class="gp-label">Your answer <input class="gp-amt gp-amt-free gp-now-input" inputmode="decimal" autocomplete="off"></label> ') + '<button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div>';
+          (s.fill ? '' : '<label class="gp-label">Your answer <input class="gp-amt gp-amt-free gp-now-input" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div>');
       } else {
         html += journal() + grid(s) + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p class="gp-q"><b>' + esc(s.q) + '</b></p><div class="gp-opts">' +
           s.opts.map(function(o, i){ return '<button type="button" class="alt gp-opt" data-i="' + i + '">' + esc(o.t) + '</button>'; }).join('') + '</div><div class="gp-fb" aria-live="polite" hidden></div>';

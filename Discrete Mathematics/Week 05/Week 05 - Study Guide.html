@@ -512,7 +512,122 @@ Non-square matrix-க்கு same-size identity என்ற பெயரி�
 <h3 id="symmetric-matrix-definition-3">Symmetric matrix (Definition 3)</h3>
 <p>A <strong>square</strong> matrix A is <strong>symmetric</strong> if <strong>A = Aᵗ</strong>. It is a mirror image across the main diagonal: aᵢⱼ = aⱼᵢ.</p>
 <p><em>Example:</em> <span class="mxs" style="grid-template-columns:repeat(3,auto)"><span>1</span><span>1</span><span>−1</span><span>1</span><span>2</span><span>0</span><span>−1</span><span>0</span><span>5</span></span> is symmetric.</p>
-<div class="call tip"><div class="ct">Useful transpose facts</div><p>(A + B)ᵗ = Aᵗ + Bᵗ  ·  <strong>(AB)ᵗ = Bᵗ Aᵗ</strong> (the order reverses)  ·  (Aᵗ)ᵗ = A</p></div></div><div class="hci-ta" lang="ta" hidden data-title="சமனி, அடுக்குகள், இடமாற்று, சமச்சீர்"><h3>சமனி அணி (வரையறை 3)</h3>
+<div class="call tip"><div class="ct">Useful transpose facts</div><p>(A + B)ᵗ = Aᵗ + Bᵗ  ·  <strong>(AB)ᵗ = Bᵗ Aᵗ</strong> (the order reverses)  ·  (Aᵗ)ᵗ = A</p></div>
+<h3 id="determinant-and-inverse-of-a-matrix-examined-january-2023">Determinant and inverse of a matrix (examined: January 2023)</h3>
+<p>The lesson PDF stops at transposes, but the <strong>January 2023 paper asked for a 3 × 3 inverse</strong>. Learn this method.</p>
+<div class="call key"><div class="ct">2 × 2 matrices</div><p>For A = <span class="mxs" style="grid-template-columns:repeat(2,auto)"><span>a</span><span>b</span><span>c</span><span>d</span></span>:</p>
+<ul>
+<li><strong>det A = ad − bc</strong></li>
+<li>If det A ≠ 0, <strong>A⁻¹ = (1/det A) · <span class="mxs" style="grid-template-columns:repeat(2,auto)"><span>d</span><span>−b</span><span>−c</span><span>a</span></span></strong>: swap the diagonal, change the signs of the other two, divide by the determinant.</li>
+<li>If det A = 0 the matrix has <strong>no inverse</strong> (it is <em>singular</em>).</li>
+</ul></div>
+<p><em>Example:</em> A = <span class="mxs" style="grid-template-columns:repeat(2,auto)"><span>4</span><span>7</span><span>2</span><span>6</span></span>. det A = 4·6 − 7·2 = <strong>10</strong>, so A⁻¹ = (1/10)·<span class="mxs" style="grid-template-columns:repeat(2,auto)"><span>6</span><span>−7</span><span>−2</span><span>4</span></span>.</p>
+<div class="call key"><div class="ct">3 × 3 matrices: the four-step method</div><ol>
+<li><strong>Determinant:</strong> expand along row 1 with the signs <strong>+ − +</strong>: det A = a₁₁·M₁₁ − a₁₂·M₁₂ + a₁₃·M₁₃, where M is the 2 × 2 determinant left after deleting that entry's row and column.</li>
+<li><strong>Cofactors:</strong> for every entry, Cᵢⱼ = (sign) × (its 2 × 2 minor), using the chessboard of signs <span class="mxs" style="grid-template-columns:repeat(3,auto)"><span>+</span><span>−</span><span>+</span><span>−</span><span>+</span><span>−</span><span>+</span><span>−</span><span>+</span></span>.</li>
+<li><strong>Adjugate:</strong> adj A = the <strong>transpose</strong> of the cofactor matrix (rows become columns).</li>
+<li><strong>Inverse:</strong> <strong>A⁻¹ = (1/det A) · adj A</strong>. Check by multiplying: A·A⁻¹ must give I₃.</li>
+</ol></div>
+<div class="call example"><div class="ct">January 2023 Q3(c): A = <span class="mxs" style="grid-template-columns:repeat(3,auto)"><span>1</span><span>2</span><span>3</span><span>2</span><span>1</span><span>3</span><span>3</span><span>2</span><span>1</span></span></div><p><strong>Step 1, determinant (row 1, signs + − +):</strong></p>
+<p>det A = 1·(1·1 − 3·2) − 2·(2·1 − 3·3) + 3·(2·2 − 1·3) = 1·(−5) − 2·(−7) + 3·(1) = −5 + 14 + 3 = <strong>12</strong></p>
+<p><strong>Step 2, cofactors:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>Minor (delete its row and column)</th>
+<th>Sign</th>
+<th>Cofactor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a₁₁</td>
+<td>1·1 − 3·2 = −5</td>
+<td>+</td>
+<td><strong>−5</strong></td>
+</tr>
+<tr>
+<td>a₁₂</td>
+<td>2·1 − 3·3 = −7</td>
+<td>−</td>
+<td><strong>7</strong></td>
+</tr>
+<tr>
+<td>a₁₃</td>
+<td>2·2 − 1·3 = 1</td>
+<td>+</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>a₂₁</td>
+<td>2·1 − 3·2 = −4</td>
+<td>−</td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td>a₂₂</td>
+<td>1·1 − 3·3 = −8</td>
+<td>+</td>
+<td><strong>−8</strong></td>
+</tr>
+<tr>
+<td>a₂₃</td>
+<td>1·2 − 2·3 = −4</td>
+<td>−</td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td>a₃₁</td>
+<td>2·3 − 3·1 = 3</td>
+<td>+</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>a₃₂</td>
+<td>1·3 − 3·2 = −3</td>
+<td>−</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>a₃₃</td>
+<td>1·1 − 2·2 = −3</td>
+<td>+</td>
+<td><strong>−3</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Cofactor matrix C = <span class="mxs" style="grid-template-columns:repeat(3,auto)"><span>−5</span><span>7</span><span>1</span><span>4</span><span>−8</span><span>4</span><span>3</span><span>3</span><span>−3</span></span></p>
+<p><strong>Step 3, adjugate (transpose of C):</strong> adj A = <span class="mxs" style="grid-template-columns:repeat(3,auto)"><span>−5</span><span>4</span><span>3</span><span>7</span><span>−8</span><span>3</span><span>1</span><span>4</span><span>−3</span></span></p>
+<p><strong>Step 4, inverse:</strong> A⁻¹ = (1/12)·<span class="mxs" style="grid-template-columns:repeat(3,auto)"><span>−5</span><span>4</span><span>3</span><span>7</span><span>−8</span><span>3</span><span>1</span><span>4</span><span>−3</span></span></p>
+<p><em>Check one entry of A·A⁻¹:</em> row 1 of A · column 1 of adj A = 1(−5) + 2(7) + 3(1) = 12, and 12/12 = <strong>1</strong> ✓</p></div>
+<div class="call warn"><div class="ct">Solving matrix equations: keep X on the right</div><p>To solve <strong>BX = 2X + C</strong>, move the X terms together: BX − 2X = C. Factor X out <strong>on the right</strong>: <strong>(B − 2I)X = C</strong>. Write 2I, not 2, because you can't subtract a number from a matrix. Then multiply by the inverse <strong>on the left</strong>: <strong>X = (B − 2I)⁻¹C</strong>. Since matrix multiplication isn't commutative, CA⁻¹ is wrong here.</p></div>
+<div class="tool"><div class="tt">🧪 Try it — Determinant &amp; inverse calculator (2 × 2 or 3 × 3)</div><div id="inv">
+<label style="display:block">Matrix (rows on lines, numbers separated by spaces)<textarea class="a" rows="3">1 2 3
+2 1 3
+3 2 1</textarea></label>
+<div class="row"><button class="alt" data-p="1 2 3;2 1 3;3 2 1">Jan 2023</button><button class="alt" data-p="4 7;2 6">2 × 2 example</button><button class="alt" data-p="1 2;2 4">Singular</button></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('inv');function g(a,b){a=Math.abs(a);b=Math.abs(b);while(b){var t=b;b=a%b;a=t}return a||1}
+function fr(p,q){if(q<0){p=-p;q=-q}var k=g(p,q);p/=k;q/=k;return q===1?''+p:p+'/'+q}
+function T(M,f){return '<table class="mx">'+M.map(function(r){return '<tr>'+r.map(function(v){return '<td>'+(f?f(v):v)+'</td>'}).join('')+'</tr>'}).join('')+'</table>'}
+function d2(m){return m[0][0]*m[1][1]-m[0][1]*m[1][0]}
+function minor(M,r,c){return M.filter(function(_,i){return i!==r}).map(function(row){return row.filter(function(_,j){return j!==c})})}
+function run(){var o=R.querySelector('.out'),M=R.querySelector('.a').value.trim().split(/\n|;/).map(function(l){return l.trim().split(/[\s,]+/).filter(Boolean).map(Number)}).filter(function(r){return r.length});
+var n=M.length;if(!(n===2||n===3)||M.some(function(r){return r.length!==n||r.some(isNaN)})){o.innerHTML='<p>Enter a square 2 × 2 or 3 × 3 matrix of numbers.</p>';return}
+if(M.some(function(r){return r.some(function(v){return !Number.isInteger(v)})})){o.innerHTML='<p>Use whole numbers so the inverse can be shown as exact fractions.</p>';return}
+var h,det,adj;if(n===2){det=d2(M);h='<p>det A = ('+M[0][0]+')('+M[1][1]+') − ('+M[0][1]+')('+M[1][0]+') = <b>'+det+'</b></p>';adj=[[M[1][1],-M[0][1]],[-M[1][0],M[0][0]]];h+='<p>Swap the diagonal and change the other signs: '+T(adj)+'</p>'}
+else{var mi=[0,1,2].map(function(c){return d2(minor(M,0,c))});det=M[0][0]*mi[0]-M[0][1]*mi[1]+M[0][2]*mi[2];
+h='<p>det A = '+M[0][0]+'·('+mi[0]+') − '+M[0][1]+'·('+mi[1]+') + '+M[0][2]+'·('+mi[2]+') = <b>'+det+'</b></p>';
+var C=[0,1,2].map(function(r){return [0,1,2].map(function(c){return ((r+c)%2?-1:1)*d2(minor(M,r,c))})});adj=[0,1,2].map(function(r){return [0,1,2].map(function(c){return C[c][r]})});
+h+='<p>Cofactor matrix C (signs + − + / − + − / + − +): '+T(C)+'</p><p>adj A = Cᵗ: '+T(adj)+'</p>'}
+if(det===0){h+='<p style="color:var(--warn)"><b>det A = 0, so A has no inverse</b> (it is singular).</p>'}
+else{h+='<p>A⁻¹ = (1/'+det+') · adj A = '+T(adj,function(v){return fr(v,det)})+'</p>';var ok=M.every(function(r,i){return M.every(function(_,j){return r.reduce(function(s,v,k){return s+v*adj[k][j]},0)===(i===j?det:0)})});h+='<p class="note">Check: A · adj A = '+det+' · I, so A · A⁻¹ = I '+(ok?'✓':'✗')+'</p>'}
+o.innerHTML=h}
+R.querySelectorAll('[data-p]').forEach(function(b){b.onclick=function(){R.querySelector('.a').value=b.dataset.p.replace(/;/g,'\n');run()}});R.querySelector('.a').oninput=run;run();})();
+</script></div></div><div class="hci-ta" lang="ta" hidden data-title="சமனி, அடுக்குகள், இடமாற்று, சமச்சீர்"><h3>சமனி அணி (வரையறை 3)</h3>
 <p><strong>Iₙ</strong>, <strong>முதன்மை மூலைவிட்டத்தில் 1-களும் மற்ற எல்லா இடங்களிலும் 0-களும் உள்ள n × n அணி</strong>. எ.கா. I₃ = <span class="mxs" style="grid-template-columns:repeat(3,auto)"><span>1</span><span>0</span><span>0</span><span>0</span><span>1</span><span>0</span><span>0</span><span>0</span><span>1</span></span></p>
 <div class="formula">A என்பது n × n எனில்: <strong>IₙA = AIₙ = A</strong></div>
 <h3>அணிகளின் அடுக்குகள்</h3>
@@ -524,7 +639,98 @@ Non-square matrix-க்கு same-size identity என்ற பெயரி�
 <h3>சமச்சீர் அணி (வரையறை 3)</h3>
 <p><strong>சதுர</strong> அணி A-க்கு <strong>A = Aᵗ</strong> எனில் அது <strong>சமச்சீர்</strong>. முதன்மை மூலைவிட்டத்தின் இருபக்கமும் கண்ணாடிப் படிமம்: aᵢⱼ = aⱼᵢ.</p>
 <p><em>எடுத்துக்காட்டு:</em> <span class="mxs" style="grid-template-columns:repeat(3,auto)"><span>1</span><span>1</span><span>−1</span><span>1</span><span>2</span><span>0</span><span>−1</span><span>0</span><span>5</span></span> சமச்சீரானது.</p>
-<div class="call tip"><div class="ct">பயனுள்ள இடமாற்று உண்மைகள்</div><p>(A + B)ᵗ = Aᵗ + Bᵗ  ·  <strong>(AB)ᵗ = Bᵗ Aᵗ</strong> (வரிசை தலைகீழாகிறது)  ·  (Aᵗ)ᵗ = A</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Zero–one matrices: join and meet"><span class="num">5</span>Zero–one matrices: join and meet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>பூஜ்யம்–ஒன்று அணிகள்</h3><p>ஒவ்வொரு இடமும் 0 அல்லது 1. <strong>Join</strong> என்பது OR; <strong>Meet</strong> என்பது AND. Join-இல் ஏதேனும் ஒன்று 1 என்றால் 1; Meet-இல் இரண்டும் 1 ஆக வேண்டும். இவை சாதாரண கூட்டல் விதிகள் அல்ல.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Join/Meet entry-wise: <strong>1∨0=1; 1∧0=0; 1∨1=1; 1∧1=1</strong>. Join addition அல்ல: 1+1=2, ஆனால் 1∨1=1.
+<div class="call tip"><div class="ct">பயனுள்ள இடமாற்று உண்மைகள்</div><p>(A + B)ᵗ = Aᵗ + Bᵗ  ·  <strong>(AB)ᵗ = Bᵗ Aᵗ</strong> (வரிசை தலைகீழாகிறது)  ·  (Aᵗ)ᵗ = A</p></div>
+<p><strong>கீழுள்ள பகுதி இன்னும் தமிழில் மொழிபெயர்க்கப்படவில்லை; தற்போது ஆங்கிலத்தில் மட்டும் உள்ளது.</strong></p>
+<h3>Determinant and inverse of a matrix (examined: January 2023)</h3>
+<p>The lesson PDF stops at transposes, but the <strong>January 2023 paper asked for a 3 × 3 inverse</strong>. Learn this method.</p>
+<div class="call key"><div class="ct">2 × 2 matrices</div><p>For A = <span class="mxs" style="grid-template-columns:repeat(2,auto)"><span>a</span><span>b</span><span>c</span><span>d</span></span>:</p>
+<ul>
+<li><strong>det A = ad − bc</strong></li>
+<li>If det A ≠ 0, <strong>A⁻¹ = (1/det A) · <span class="mxs" style="grid-template-columns:repeat(2,auto)"><span>d</span><span>−b</span><span>−c</span><span>a</span></span></strong>: swap the diagonal, change the signs of the other two, divide by the determinant.</li>
+<li>If det A = 0 the matrix has <strong>no inverse</strong> (it is <em>singular</em>).</li>
+</ul></div>
+<p><em>Example:</em> A = <span class="mxs" style="grid-template-columns:repeat(2,auto)"><span>4</span><span>7</span><span>2</span><span>6</span></span>. det A = 4·6 − 7·2 = <strong>10</strong>, so A⁻¹ = (1/10)·<span class="mxs" style="grid-template-columns:repeat(2,auto)"><span>6</span><span>−7</span><span>−2</span><span>4</span></span>.</p>
+<div class="call key"><div class="ct">3 × 3 matrices: the four-step method</div><ol>
+<li><strong>Determinant:</strong> expand along row 1 with the signs <strong>+ − +</strong>: det A = a₁₁·M₁₁ − a₁₂·M₁₂ + a₁₃·M₁₃, where M is the 2 × 2 determinant left after deleting that entry's row and column.</li>
+<li><strong>Cofactors:</strong> for every entry, Cᵢⱼ = (sign) × (its 2 × 2 minor), using the chessboard of signs <span class="mxs" style="grid-template-columns:repeat(3,auto)"><span>+</span><span>−</span><span>+</span><span>−</span><span>+</span><span>−</span><span>+</span><span>−</span><span>+</span></span>.</li>
+<li><strong>Adjugate:</strong> adj A = the <strong>transpose</strong> of the cofactor matrix (rows become columns).</li>
+<li><strong>Inverse:</strong> <strong>A⁻¹ = (1/det A) · adj A</strong>. Check by multiplying: A·A⁻¹ must give I₃.</li>
+</ol></div>
+<div class="call example"><div class="ct">January 2023 Q3(c): A = <span class="mxs" style="grid-template-columns:repeat(3,auto)"><span>1</span><span>2</span><span>3</span><span>2</span><span>1</span><span>3</span><span>3</span><span>2</span><span>1</span></span></div><p><strong>Step 1, determinant (row 1, signs + − +):</strong></p>
+<p>det A = 1·(1·1 − 3·2) − 2·(2·1 − 3·3) + 3·(2·2 − 1·3) = 1·(−5) − 2·(−7) + 3·(1) = −5 + 14 + 3 = <strong>12</strong></p>
+<p><strong>Step 2, cofactors:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>Minor (delete its row and column)</th>
+<th>Sign</th>
+<th>Cofactor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a₁₁</td>
+<td>1·1 − 3·2 = −5</td>
+<td>+</td>
+<td><strong>−5</strong></td>
+</tr>
+<tr>
+<td>a₁₂</td>
+<td>2·1 − 3·3 = −7</td>
+<td>−</td>
+<td><strong>7</strong></td>
+</tr>
+<tr>
+<td>a₁₃</td>
+<td>2·2 − 1·3 = 1</td>
+<td>+</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>a₂₁</td>
+<td>2·1 − 3·2 = −4</td>
+<td>−</td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td>a₂₂</td>
+<td>1·1 − 3·3 = −8</td>
+<td>+</td>
+<td><strong>−8</strong></td>
+</tr>
+<tr>
+<td>a₂₃</td>
+<td>1·2 − 2·3 = −4</td>
+<td>−</td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td>a₃₁</td>
+<td>2·3 − 3·1 = 3</td>
+<td>+</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>a₃₂</td>
+<td>1·3 − 3·2 = −3</td>
+<td>−</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>a₃₃</td>
+<td>1·1 − 2·2 = −3</td>
+<td>+</td>
+<td><strong>−3</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Cofactor matrix C = <span class="mxs" style="grid-template-columns:repeat(3,auto)"><span>−5</span><span>7</span><span>1</span><span>4</span><span>−8</span><span>4</span><span>3</span><span>3</span><span>−3</span></span></p>
+<p><strong>Step 3, adjugate (transpose of C):</strong> adj A = <span class="mxs" style="grid-template-columns:repeat(3,auto)"><span>−5</span><span>4</span><span>3</span><span>7</span><span>−8</span><span>3</span><span>1</span><span>4</span><span>−3</span></span></p>
+<p><strong>Step 4, inverse:</strong> A⁻¹ = (1/12)·<span class="mxs" style="grid-template-columns:repeat(3,auto)"><span>−5</span><span>4</span><span>3</span><span>7</span><span>−8</span><span>3</span><span>1</span><span>4</span><span>−3</span></span></p>
+<p><em>Check one entry of A·A⁻¹:</em> row 1 of A · column 1 of adj A = 1(−5) + 2(7) + 3(1) = 12, and 12/12 = <strong>1</strong> ✓</p></div>
+<div class="call warn"><div class="ct">Solving matrix equations: keep X on the right</div><p>To solve <strong>BX = 2X + C</strong>, move the X terms together: BX − 2X = C. Factor X out <strong>on the right</strong>: <strong>(B − 2I)X = C</strong>. Write 2I, not 2, because you can't subtract a number from a matrix. Then multiply by the inverse <strong>on the left</strong>: <strong>X = (B − 2I)⁻¹C</strong>. Since matrix multiplication isn't commutative, CA⁻¹ is wrong here.</p></div>
+<div data-ta-tool="inv"></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Zero–one matrices: join and meet"><span class="num">5</span>Zero–one matrices: join and meet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>பூஜ்யம்–ஒன்று அணிகள்</h3><p>ஒவ்வொரு இடமும் 0 அல்லது 1. <strong>Join</strong> என்பது OR; <strong>Meet</strong> என்பது AND. Join-இல் ஏதேனும் ஒன்று 1 என்றால் 1; Meet-இல் இரண்டும் 1 ஆக வேண்டும். இவை சாதாரண கூட்டல் விதிகள் அல்ல.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Join/Meet entry-wise: <strong>1∨0=1; 1∧0=0; 1∨1=1; 1∧1=1</strong>. Join addition அல்ல: 1+1=2, ஆனால் 1∨1=1.
 Zero–one matrices relations-ஐக் குறிக்க உதவும். OR, AND எந்தப் பணியைச் செய்கிறது என்று truth table-உடன் இணைத்தால் நினைவில் நிற்கும்.</p>
 <p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
 <p>Zero–one entries0/1. <strong>Join OR</strong> ஒரே position-இல் குறைந்தது ஒன்று1;<strong>meet AND</strong> இரண்டும்1. Examplejoin rows(1,1,1),(1,1,0);meet(0,0,0),(0,1,0). Ordinary addition1+1=2;Boolean OR1∨1=1. Join/meet elementwise,ordinary row-column product அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><p>A <strong>zero–one matrix</strong> has entries that are <strong>only 0 or 1</strong>. Its arithmetic uses the <strong>Boolean operations ∧ and ∨</strong>:</p>
@@ -578,6 +784,7 @@ Zero–one matrices relations-ஐக் குறிக்க உதவும்
 <li>Join and meet</li>
 <li>Powers Aʳ</li>
 <li>Counting operations in Algorithm 1</li>
+<li><strong>Determinant and inverse</strong> of 2 × 2 and 3 × 3 matrices, and solving matrix equations such as BX = 2X + C (January 2023)</li>
 </ul></div></div><div class="hci-ta" lang="ta" hidden data-title="பூச்சியம்–ஒன்று அணிகள்: சேர்வும் சந்திப்பும்"><p><strong>பூச்சியம்–ஒன்று அணியில் 0 அல்லது 1 மட்டுமே</strong> உறுப்புகளாக உள்ளன. அதன் எண்கணிதம் <strong>பூலியன் செயல்பாடுகள் ∧, ∨</strong>-ஐப் பயன்படுத்துகிறது:</p>
 <table>
 <thead>
@@ -629,6 +836,7 @@ Zero–one matrices relations-ஐக் குறிக்க உதவும்
 <li>சேர்வும் சந்திப்பும்</li>
 <li>Aʳ அடுக்குகள்</li>
 <li>படிமுறை 1-இல் செயல்பாடுகளை எண்ணுதல்</li>
+<li>2 × 2, 3 × 3 அணிகளின் <strong>துணிகோவையும் (determinant) நேர்மாறும்</strong>; BX = 2X + C போன்ற அணிச் சமன்பாடுகளைத் தீர்த்தல் (ஜனவரி 2023)</li>
 </ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>Matrix அளவு</h4><p>வரிசைகளும் நிரல்களும் கொண்ட எண்ணட்டவணை <strong>Matrix</strong>. m×n என்றால் m rows, n columns. முதலில் size-ஐ எழுதினால் எந்த operation செய்யலாம் என்பதில் தவறு குறையும்.</p>
 <p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
 <p>Matrix m×n என்றால்m rows,n columns. Entry aᵢⱼ rowi,columnj. <strong>ஒரு column m×1</strong>,row1×n. Equal matrices same dimensions+entrywise equality. Square m=n. Data table மட்டும் அல்ல;relations/graphs matrix representation-க்கும் பயன்படும்.</p></div><div class="ta-recap-item"><h4>அணிகளைக் கூட்டுதல்</h4><p>ஒரே size உள்ள matrices-ஐ மட்டும் கூட்டலாம். பொருந்தும் இடங்களின் எண்களைச் சேருங்கள். Row 1 column 2-இன் எண்ணை அதே இடத்திலுள்ள எண்ணுடன் மட்டுமே கூட்ட வேண்டும்.</p>
@@ -702,6 +910,10 @@ Zero–one matrices relations-ஐக் குறிக்க உதவும்
 <td>Join / meet</td>
 <td>Entrywise OR / AND for 0–1 matrices</td>
 </tr>
+<tr>
+<td>Inverse</td>
+<td>det A ≠ 0; A⁻¹ = (1/det A) · adj A; adj A = transpose of the cofactors (signs + − +)</td>
+</tr>
 </tbody>
 </table></div><div class="hci-ta" lang="ta" hidden data-title="விரைவு மீளாய்வுத் தாள்"><table>
 <thead>
@@ -758,6 +970,10 @@ Zero–one matrices relations-ஐக் குறிக்க உதவும்
 <tr>
 <td>சேர்வு / சந்திப்பு</td>
 <td>0–1 அணிகளுக்கு உறுப்புவாரி OR / AND</td>
+</tr>
+<tr>
+<td>நேர்மாறு</td>
+<td>det A ≠ 0; A⁻¹ = (1/det A) · adj A; adj A = இணைக்காரணிகளின் இடமாற்று (குறிகள் + − +)</td>
 </tr>
 </tbody>
 </table></div></div><button class="done-btn"></button></section><section class="card quizcard"><h2 id="quiz" data-t="Self-check quiz"><span class="num">?</span>Self-check quiz</h2><p style="color:var(--muted)">12 questions on this week. Answer them all, then press <b>Check my answers</b>. Your best and latest scores are saved and shown on the subject page.</p><div class="quiz" data-qid="dmath-Week05" data-pick="0"><script type="application/json" class="qdata">[{"q": "The matrix <span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>1<\/span><span>0<\/span><span>1<\/span><span>1<\/span><span>2<\/span><span>3<\/span><\/span> has size:", "o": ["2 × 3", "3 × 2", "2 × 2", "3 × 3"], "e": "2 rows, 3 columns. ", "a": 0, "w": "Week 05"}, {"q": "A is 3 × 4 and B is 4 × 5. What size is AB?", "o": ["3 × 5", "4 × 4", "5 × 3", "Undefined"], "e": "(m × k)(k × n) = m × n. ", "a": 0, "w": "Week 05"}, {"q": "A is 3 × 4 and B is 4 × 5. BA is:", "o": ["Undefined", "4 × 4", "5 × 3", "3 × 5"], "e": "B has 5 columns but A has 3 rows. ", "a": 0, "w": "Week 05"}, {"q": "A = <span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>3<\/span><span>1<\/span><span>4<\/span><span>−1<\/span><span>2<\/span><span>3<\/span><\/span>, B = <span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>1<\/span><span>3<\/span><span>−3<\/span><span>4<\/span><span>−1<\/span><span>2<\/span><span>2<\/span><span>4<\/span><span>1<\/span><\/span>. What is entry c₁₁ of AB?", "e": "3·1 + 1·4 + 4·2 = 15. ", "n": 15.0, "w": "Week 05"}, {"q": "Same matrices: what is entry c₂₂ of AB?", "e": "(−1)(3) + 2(−1) + 3(4) = 7. ", "n": 7.0, "w": "Week 05"}, {"q": "In general, matrix multiplication is:", "o": ["Not commutative: AB ≠ BA", "Commutative", "Only defined for square matrices", "The same as entrywise multiplication"], "e": "Even when both products exist, they usually differ. ", "a": 0, "w": "Week 05"}, {"q": "Multiplying two n × n matrices with the standard algorithm uses how many multiplications?", "o": ["n³", "n²", "2n", "n²(n − 1)"], "e": "n²(n − 1) is the number of additions. ", "a": 0, "w": "Week 05"}, {"q": "For 0–1 matrices, the <strong>join<\/strong> A ∨ B is:", "o": ["The entrywise OR", "The entrywise AND", "The matrix product", "The transpose"], "e": "The meet A ∧ B is the entrywise AND. ", "a": 0, "w": "Week 05"}, {"q": "A = <span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>1<\/span><span>0<\/span><span>1<\/span><span>0<\/span><span>1<\/span><span>0<\/span><\/span>, B = <span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>0<\/span><span>1<\/span><span>0<\/span><span>1<\/span><span>1<\/span><span>0<\/span><\/span>. How many 1s are in A ∧ B?", "e": "Only position (2,2) has 1 in both. ", "n": 1.0, "w": "Week 05"}, {"q": "A square matrix is <strong>symmetric<\/strong> when:", "o": ["A = Aᵗ", "A = −A", "AB = BA", "All its entries are 1"], "e": "The transpose swaps rows and columns. ", "a": 0, "w": "Week 05"}, {"q": "(AB)ᵗ equals:", "o": ["BᵗAᵗ", "AᵗBᵗ", "AB", "BA"], "e": "The order reverses. ", "a": 0, "w": "Week 05"}, {"q": "A⁰ for an n × n matrix A is:", "o": ["Iₙ (the identity matrix)", "The zero matrix", "A", "Undefined"], "e": "IₙA = AIₙ = A. ", "a": 0, "w": "Week 05"}]</script><div class="qhead"></div><div class="qbody"></div></div></section><div class="navfoot"><a href="../Week%2004/Week%2004%20-%20Study%20Guide.html"><small>← Previous</small>Sequences &amp; Summations</a><a class="nx" href="../Week%2006/Week%2006%20-%20Study%20Guide.html"><small>Next →</small>Number Theory &amp; Cryptography</a></div></main></div><script type="application/json" id="hci-tamil-data">{"strings": {"Self-check quiz": "சுய பரிசோதனை வினாடிவினா", "Check my answers": "என் விடைகளைச் சரிபார்", "Try again (new order)": "மீண்டும் முயல்க (புதிய வரிசை)", "New random exam": "புதிய சீரற்ற தேர்வு", "All answered": "அனைத்துக்கும் விடையளிக்கப்பட்டது", "✓ Correct.": "✓ சரி.", "✗ Not quite.": "✗ முழுவதும் சரியில்லை.", "Excellent — you know this well": "மிகச் சிறப்பு — இதை நன்றாக அறிந்திருக்கிறீர்கள்", "Good — revise the ones you missed": "நன்று — தவறவிட்டவற்றை மீளாய்வு செய்யுங்கள்", "Getting there — reread the weak sections": "முன்னேறுகிறீர்கள் — பலவீனமான பகுதிகளை மீண்டும் வாசியுங்கள்", "Needs revision — go through the notes again": "மீளாய்வு தேவை — குறிப்புகளை மீண்டும் படியுங்கள்", "Lecture videos": "விரிவுரைக் காணொளிகள்", "▶ Lecture videos": "▶ விரிவுரைக் காணொளிகள்", "Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.": "இங்கோ குறிப்புகளுக்குள்ளோ உள்ள நேரக் குறியீட்டைச் சொடுக்கினால் காணொளி அந்த நேரத்துக்குச் செல்லும். நீங்கள் பார்த்த இடம் நினைவில் வைக்கப்படும்.", "Open in Google Drive ↗": "Google Drive-இல் திறக்கவும் ↗", "ON THIS PAGE": "இந்தப் பக்கத்தில்", "On this page": "இந்தப் பக்கத்தில்", "← Previous": "← முந்தையது", "Next →": "அடுத்தது →", "NEXT →": "அடுத்தது →", "Mark this section as understood": "இந்தப் பகுதியைப் புரிந்துகொண்டதாகக் குறிக்கவும்", "✓ Understood": "✓ புரிந்துகொண்டேன்", "Understood — click to undo": "புரிந்துகொண்டேன் — செயல்தவிர்க்கச் சொடுக்கவும்", "Type a number": "ஓர் எண்ணை உள்ளிடவும்", "Type what you remember…": "நினைவிருப்பதைத் தட்டச்சு செய்யுங்கள்…", "Answer:": "விடை:", "Best": "சிறந்தது", "Last": "கடைசி", "Attempts": "முயற்சிகள்", "Attempt": "முயற்சி", "today": "இன்று", "yesterday": "நேற்று", "Mixed practice exam": "கலப்புப் பயிற்சித் தேர்வு", "? Self-check quiz": "? சுய பரிசோதனை வினாடிவினா", "★ Mixed practice exam": "★ கலப்புப் பயிற்சித் தேர்வு", "📊 Your knowledge in this subject": "📊 இந்தப் பாடத்தில் உங்கள் அறிவு", "Overall knowledge": "ஒட்டுமொத்த அறிவு", "Weeks quizzed": "வினாடிவினா முயன்ற வாரங்கள்", "Average best score": "சிறந்த மதிப்பெண்களின் சராசரி", "on the weeks you tried": "நீங்கள் முயன்ற வாரங்களில்", "— average best score × weeks covered": "— சிறந்த மதிப்பெண்களின் சராசரி × முயன்ற வாரங்களின் விகிதம்", "Mixed exam best": "கலப்புத் தேர்வின் சிறந்த மதிப்பெண்", "Exam practice": "தேர்வுப் பயிற்சி", "Past papers with worked answers": "தீர்வுகளுடன் கடந்தகால வினாத்தாள்கள்", "Real exam questions from previous years, fully solved, plus which topics come up most.": "முந்தைய ஆண்டுகளின் உண்மையான தேர்வுக் கேள்விகளுக்கான முழுத் தீர்வுகளும் அதிகம் இடம்பெறும் தலைப்புகளும்.", "Offline study guides — one per week, built from the lecture notes and lecture videos. Green bar = sections you marked as understood.": "விரிவுரைக் குறிப்புகளையும் காணொளிகளையும் கொண்டு உருவாக்கப்பட்ட இணையமில்லா கற்றல் வழிகாட்டிகள் — வாரத்துக்கு ஒன்று. பச்சைப் பட்டை = நீங்கள் புரிந்துகொண்டதாகக் குறித்த பகுதிகள்.", "Take the": "நீங்கள் பல வாரங்களைப் படித்த பின், கீழேயுள்ள", "mixed practice exam": "கலப்புப் பயிற்சித் தேர்வை", "at the bottom when you have covered several weeks.": "முயலுங்கள்.", "📄 Lecture videos (no PDF for this week)": "📄 விரிவுரைக் காணொளிகள் (இந்த வாரத்துக்கு PDF இல்லை)", "📄 Lecture video (no PDF for this week)": "📄 விரிவுரைக் காணொளி (இந்த வாரத்துக்கு PDF இல்லை)", "✓ Understood — click to unmark": "✓ புரிந்துகொண்டேன் — குறியை நீக்கச் சொடுக்கவும்", "Discrete Mathematics": "தனித்த கணிதம்", "data preprocessing": "தரவு முன்செயலாக்கம்", "Discrete Mathematics · Past papers": "தனித்த கணிதம் · கடந்தகால வினாத்தாள்கள்", "Tip": "குறிப்புரை", "Exam focus": "தேர்வுக் கவனம்", "Common mistake": "பொதுவான தவறு", "Worked example": "தீர்வுடன் எடுத்துக்காட்டு", "Key idea": "முக்கியக் கருத்து", "From the lecture video": "விரிவுரைக் காணொளியிலிருந்து", "Matrices": "அணிகள்", "Matrices to represent data, size, square and equal matrices, rows, columns and entries, addition, multiplication and its algorithm, non-commutativity, identity, powers, transpose, symmetric matrices, and zero–one matrices (join and meet).": "தரவைப் பிரதிநிதித்துவப்படுத்தும் அணிகள், அளவு, சதுர மற்றும் சம அணிகள், நிரைகள், நிரல்கள், உறுப்புகள், கூட்டல், பெருக்கலும் அதன் படிமுறையும், பரிமாற்றுப் பண்பின்மை, சமனி, அடுக்குகள், இடமாற்று, சமச்சீர் அணிகள், பூச்சியம்–ஒன்று அணிகள் (சேர்வும் சந்திப்பும்).", "Lesson 5 – Matrices": "பாடம் 5 – அணிகள்", "Matrix definitions, arithmetic and zero–one matrices.": "அணி வரையறைகள், எண்கணிதம், பூச்சியம்–ஒன்று அணிகள்.", "Lesson 5: matrices": "பாடம் 5: அணிகள்", "Why matrices: organising large amounts of data": "ஏன் அணிகள்: பெருமளவு தரவை ஒழுங்கமைத்தல்", "Elements, rows, columns and order m × n": "உறுப்புகள், நிரைகள், நிரல்கள், m × n வரிசை", "Square matrices": "சதுர அணிகள்", "Notation: A = [aᵢⱼ]": "குறியீடு: A = [aᵢⱼ]", "Matrix addition and subtraction": "அணிக் கூட்டலும் கழித்தலும்", "Matrix multiplication step by step": "படிப்படியான அணிப் பெருக்கல்", "Matrix multiplication is not commutative": "அணிப் பெருக்கல் பரிமாற்றுப் பண்புடையதல்ல", "Identity matrix and powers of matrices": "சமனி அணியும் அணிகளின் அடுக்குகளும்", "Transpose": "இடமாற்று", "Symmetric matrices": "சமச்சீர் அணிகள்", "Zero–one matrices: join and meet": "பூச்சியம்–ஒன்று அணிகள்: சேர்வும் சந்திப்பும்", "Matrix calculator (click a cell of AB to see its working)": "அணிக் கணிப்பான் (செய்முறையைப் பார்க்க AB-இன் கலத்தைச் சொடுக்கவும்)", "A (rows on lines, numbers separated by spaces)": "A (வரிகளாக நிரைகள், இடைவெளிகளால் பிரிக்கப்பட்ட எண்கள்)", "AB ≠ BA example": "AB ≠ BA எடுத்துக்காட்டு", "Zero–one example": "பூச்சியம்–ஒன்று எடுத்துக்காட்டு", "Addition example": "கூட்டல் எடுத்துக்காட்டு", "Power r for Aʳ": "Aʳ-க்கான அடுக்கு r", "Each matrix needs rows of equal length.": "ஒவ்வொரு அணிக்கும் சம நீளமான நிரைகள் தேவை.", "not defined (sizes differ)": "வரையறுக்கப்படவில்லை (அளவுகள் வேறுபடுகின்றன)", "A is symmetric": "A சமச்சீரானது", "Join A ∨ B": "சேர்வு A ∨ B", "Meet A ∧ B": "சந்திப்பு A ∧ B", "🧪 Try it — Matrix calculator (click a cell of AB to see its working)": "🧪 முயன்று பாருங்கள் — அணிக் கணிப்பான் (செய்முறையைப் பார்க்க AB-இன் கலத்தைச் சொடுக்கவும்)", "The Foundations — Predicate Logic, Quantifiers & Direct Proofs": "அடித்தளங்கள் — பயனிலைத் தர்க்கம், அளவைக்குறிகள், நேரடி நிறுவல்கள்", "Predicates and propositional functions, compound expressions, ∀ / ∃ / ∃!, negating quantifiers, translating English into logic, and constructing direct proofs.": "பயனிலைகளும் கூற்றுச் சார்புகளும், சேர்மக் கோவைகள், ∀ / ∃ / ∃!, அளவைக்குறிகளை மறுத்தல், ஆங்கிலத்தைத் தர்க்கமாக மொழிபெயர்த்தல், நேரடி நிறுவல்களை அமைத்தல்.", "Sets & Set Operations": "கணங்களும் கணச் செயல்பாடுகளும்", "Set terminology and notation, the number systems, equality, subsets and proper subsets, disjoint sets, Venn diagrams, union, intersection, complement and difference, set laws, De Morgan's laws, and inclusion–exclusion.": "கணச் சொற்களும் குறியீடும், எண் முறைமைகள், சமத்துவம், உட்கணங்களும் முறையான உட்கணங்களும், வெட்டாத கணங்கள், வென் வரைபடங்கள், சேர்ப்பு, வெட்டு, நிரப்பு, வேறுபாடு, கண விதிகள், டி மோர்கன் விதிகள், உள்ளடக்கல்–விலக்கல்.", "Functions": "சார்புகள்", "Definition of a function, domain, codomain and range, finding domains, one-to-one (injective), onto (surjective) and bijective functions, inverses, and composition.": "சார்பின் வரையறை, ஆட்களம், துணை ஆட்களம், வீச்சு, ஆட்களங்களைக் கண்டறிதல், ஒன்றுக்கொன்று (உட்சார்பு), மேல் சார்பு, இருவழிச் சார்புகள், நேர்மாறுகள், தொகுப்பு.", "Sequences & Summations": "தொடரிகளும் கூட்டுத்தொகைகளும்", "Sequence notation, geometric and arithmetic progressions, strings, finding formulas for sequences, Σ notation and its laws, the geometric series theorem, infinite series, double sums, and the standard closed forms.": "தொடரிக் குறியீடு, பெருக்குத் தொடரிகளும் கூட்டுத் தொடரிகளும், சரங்கள், தொடரிச் சூத்திரங்களைக் கண்டறிதல், Σ குறியீடும் விதிகளும், பெருக்குத் தொடர் தேற்றம், முடிவற்ற தொடர்கள், இரட்டைக் கூட்டுத்தொகைகள், வழக்கமான மூடிய வடிவங்கள்.", "Number Theory & Cryptography": "எண் கோட்பாடும் மறையியலும்", "Divisibility and its theorem, the division algorithm (div and mod), congruence modulo m, congruence classes, primes and composites, the fundamental theorem of arithmetic, and Caesar's cipher.": "வகுபடுதன்மையும் அதன் தேற்றமும், வகுத்தல் படிமுறை (div, mod), மட்டு m சமானம், சமான வகுப்புகள், பகா மற்றும் பகு எண்கள், எண்கணிதத்தின் அடிப்படைத் தேற்றம், சீசரின் மறையீடு.", "Mathematical Induction & Recursion": "கணிதத் தொகுத்தறிதலும் மறுசுழற்சியும்", "The principle of mathematical induction (basis step, inductive step, inductive hypothesis), four fully worked proofs, the well-ordering property, and recursively defined sequences and functions (factorial, powers, sums, Fibonacci).": "கணிதத் தொகுத்தறிதல் கொள்கை (அடிப்படைப் படி, தொகுத்தறிதல் படி, கருதுகோள்), நான்கு முழுச் செய்முறை நிறுவல்கள், நன்கு வரிசைப்படுத்தல் பண்பு, மறுசுழற்சியாக வரையறுக்கப்பட்ட தொடரிகளும் சார்புகளும் (காரணியல், அடுக்குகள், கூட்டுத்தொகைகள், ஃபிபொனாச்சி).", "Counting — Product & Sum Rules, Permutations & Combinations": "எண்ணல் — பெருக்கல் மற்றும் கூட்டல் விதிகள், ஒழுங்கமைப்புகள், சேர்வுகள்", "Why counting matters, the product rule, the sum rule, inclusion–exclusion for counting, tree diagrams, combinations ⁿCᵣ, and permutations with and without repetition.": "எண்ணல் ஏன் முக்கியம், பெருக்கல் விதி, கூட்டல் விதி, எண்ணலுக்கான உள்ளடக்கல்–விலக்கல், மர வரைபடங்கள், ⁿCᵣ சேர்வுகள், மீளுருவுடனும் இன்றியும் ஒழுங்கமைப்புகள்.", "Relations & Their Properties": "தொடர்புகளும் அவற்றின் பண்புகளும்", "Binary relations as subsets of A × B, arrow diagrams and tables, functions as relations, relations on a set, reflexive, symmetric and transitive properties, and equivalence relations.": "A × B-இன் உட்கணங்களாக இருமத் தொடர்புகள், அம்பு வரைபடங்களும் அட்டவணைகளும், தொடர்புகளாகச் சார்புகள், ஒரு கணத்தின் மீதான தொடர்புகள், தற்சுட்டு, சமச்சீர், கடத்தல் பண்புகள், சமானத் தொடர்புகள்.", "n-ary Relations & Relational Databases": "n-உறுப்புத் தொடர்புகளும் தொடர்புநிலைத் தரவுத்தளங்களும்", "n-ary relations, domains and degree, the relational data model, records and fields, primary and composite keys, extension vs intension, and the selection, projection and join operators.": "n-உறுப்புத் தொடர்புகள், ஆட்களங்களும் படியும், தொடர்புநிலைத் தரவு மாதிரி, பதிவுகளும் புலங்களும், முதன்மை மற்றும் கூட்டுச் சாவிகள், விரிவும் உள்நோக்கமும், தேர்வு, வீழ்த்தல், இணைப்புச் செயற்குறிகள்.", "Graphs & Graph Models": "வரைபுகளும் வரைபு மாதிரிகளும்", "What a graph is, the Königsberg bridge problem, finite vs infinite graphs, the six graph types (simple, multigraph, pseudograph, simple directed, directed multigraph, mixed), and graph models for social, information, transport and tournament problems.": "வரைபு என்றால் என்ன, கோனிக்ஸ்பெர்க் பாலப் பிரச்சினை, முடிவுள்ள மற்றும் முடிவற்ற வரைபுகள், ஆறு வரைபு வகைகள் (எளிய, பல்வரைபு, போலி, எளிய திசை, திசைப் பல்வரைபு, கலப்பு), சமூக, தகவல், போக்குவரத்து, போட்டிப் பிரச்சினைகளுக்கான வரைபு மாதிரிகள்.", "Trees & Applications of Trees": "மரங்களும் மரங்களின் பயன்பாடுகளும்", "Circuits and trees, forests, the unique-path theorem, rooted trees and family terminology, subtrees, ordered and binary trees, and binary search trees with the insertion algorithm.": "சுற்றுகளும் மரங்களும், காடுகள், தனித்துவப் பாதைத் தேற்றம், வேருள்ள மரங்களும் குடும்பச் சொற்களும், உட்மரங்கள், வரிசைப்படுத்தப்பட்ட மற்றும் இரும மரங்கள், செருகல் படிமுறையுடன் இருமத் தேடல் மரங்கள்.", "Decision Trees, Tree Traversal & Spanning Trees": "முடிவெடுக்கும் மரங்கள், மரச் சுற்றல், படரும் மரங்கள்", "Decision trees as maps of choices and outcomes (drawing, evaluating with expected values, pros and cons), preorder and postorder traversal of ordered rooted trees, and spanning trees with their use in IP multicasting.": "தேர்வுகளும் விளைவுகளும் குறித்த வரைபடங்களாக முடிவெடுக்கும் மரங்கள் (வரைதல், எதிர்பார்க்கப்படும் மதிப்புகளால் மதிப்பிடுதல், நன்மை தீமைகள்), வரிசைப்படுத்தப்பட்ட வேருள்ள மரங்களின் முன்வரிசை மற்றும் பின்வரிசைச் சுற்றல், படரும் மரங்களும் IP பல்பரப்பில் அவற்றின் பயன்பாடும்.", "2 × 3": "2 × 3", "3 × 2": "3 × 2", "2 × 2": "2 × 2", "3 × 3": "3 × 3", "2 rows, 3 columns.": "2 நிரைகள், 3 நிரல்கள்.", "A is 3 × 4 and B is 4 × 5. What size is AB?": "A என்பது 3 × 4; B என்பது 4 × 5. AB-இன் அளவு என்ன?", "3 × 5": "3 × 5", "4 × 4": "4 × 4", "5 × 3": "5 × 3", "Undefined": "வரையறுக்கப்படவில்லை", "(m × k)(k × n) = m × n.": "(m × k)(k × n) = m × n.", "A is 3 × 4 and B is 4 × 5. BA is:": "A என்பது 3 × 4; B என்பது 4 × 5. BA என்பது:", "B has 5 columns but A has 3 rows.": "B-க்கு 5 நிரல்கள்; ஆனால் A-க்கு 3 நிரைகள்.", "3·1 + 1·4 + 4·2 = 15.": "3·1 + 1·4 + 4·2 = 15.", "Same matrices: what is entry c₂₂ of AB?": "அதே அணிகள்: AB-இன் c₂₂ உறுப்பு என்ன?", "(−1)(3) + 2(−1) + 3(4) = 7.": "(−1)(3) + 2(−1) + 3(4) = 7.", "In general, matrix multiplication is:": "பொதுவாக அணிப் பெருக்கல்:", "Not commutative: AB ≠ BA": "பரிமாற்றுப் பண்புடையதல்ல: AB ≠ BA", "Commutative": "பரிமாற்றுப் பண்புடையது", "Only defined for square matrices": "சதுர அணிகளுக்கு மட்டும் வரையறுக்கப்படுகிறது", "The same as entrywise multiplication": "உறுப்புவாரிப் பெருக்கலுக்குச் சமம்", "Even when both products exist, they usually differ.": "இரு பெருக்கல்களும் இருந்தாலும் பொதுவாக வேறுபடுகின்றன.", "Multiplying two n × n matrices with the standard algorithm uses how many multiplications?": "வழக்கமான படிமுறையால் இரு n × n அணிகளைப் பெருக்க எத்தனை பெருக்கல்கள் தேவை?", "n³": "n³", "n²": "n²", "2n": "2n", "n²(n − 1)": "n²(n − 1)", "n²(n − 1) is the number of additions.": "n²(n − 1) கூட்டல்களின் எண்ணிக்கை.", "The entrywise OR": "உறுப்புவாரி OR", "The entrywise AND": "உறுப்புவாரி AND", "The matrix product": "அணிப் பெருக்கல்", "The transpose": "இடமாற்று", "The meet A ∧ B is the entrywise AND.": "சந்திப்பு A ∧ B என்பது உறுப்புவாரி AND.", "Only position (2,2) has 1 in both.": "(2,2) இடத்தில் மட்டும் இரண்டிலும் 1 உள்ளது.", "A = Aᵗ": "A = Aᵗ எனில்", "A = −A": "A = −A எனில்", "AB = BA": "AB = BA எனில்", "All its entries are 1": "அனைத்து உறுப்புகளும் 1 எனில்", "The transpose swaps rows and columns.": "இடமாற்று நிரைகளையும் நிரல்களையும் மாற்றுகிறது.", "(AB)ᵗ equals:": "(AB)ᵗ சமம்:", "BᵗAᵗ": "BᵗAᵗ", "AᵗBᵗ": "AᵗBᵗ", "AB": "AB", "BA": "BA", "The order reverses.": "வரிசை தலைகீழாகிறது.", "A⁰ for an n × n matrix A is:": "n × n அணி A-க்கு A⁰ என்பது:", "Iₙ (the identity matrix)": "Iₙ (சமனி அணி)", "The zero matrix": "பூச்சிய அணி", "A": "A", "IₙA = AIₙ = A.": "IₙA = AIₙ = A."}, "markup": {"The matrix <span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>1<\/span><span>0<\/span><span>1<\/span><span>1<\/span><span>2<\/span><span>3<\/span><\/span> has size:": "<span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>1<\/span><span>0<\/span><span>1<\/span><span>1<\/span><span>2<\/span><span>3<\/span><\/span> அணியின் அளவு:", "2 × 3": "2 × 3", "3 × 2": "3 × 2", "2 × 2": "2 × 2", "3 × 3": "3 × 3", "2 rows, 3 columns.": "2 நிரைகள், 3 நிரல்கள்.", "A is 3 × 4 and B is 4 × 5. What size is AB?": "A என்பது 3 × 4; B என்பது 4 × 5. AB-இன் அளவு என்ன?", "3 × 5": "3 × 5", "4 × 4": "4 × 4", "5 × 3": "5 × 3", "Undefined": "வரையறுக்கப்படவில்லை", "(m × k)(k × n) = m × n.": "(m × k)(k × n) = m × n.", "A is 3 × 4 and B is 4 × 5. BA is:": "A என்பது 3 × 4; B என்பது 4 × 5. BA என்பது:", "B has 5 columns but A has 3 rows.": "B-க்கு 5 நிரல்கள்; ஆனால் A-க்கு 3 நிரைகள்.", "A = <span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>3<\/span><span>1<\/span><span>4<\/span><span>−1<\/span><span>2<\/span><span>3<\/span><\/span>, B = <span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>1<\/span><span>3<\/span><span>−3<\/span><span>4<\/span><span>−1<\/span><span>2<\/span><span>2<\/span><span>4<\/span><span>1<\/span><\/span>. What is entry c₁₁ of AB?": "A = <span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>3<\/span><span>1<\/span><span>4<\/span><span>−1<\/span><span>2<\/span><span>3<\/span><\/span>, B = <span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>1<\/span><span>3<\/span><span>−3<\/span><span>4<\/span><span>−1<\/span><span>2<\/span><span>2<\/span><span>4<\/span><span>1<\/span><\/span>. AB-இன் c₁₁ உறுப்பு என்ன?", "3·1 + 1·4 + 4·2 = 15.": "3·1 + 1·4 + 4·2 = 15.", "Same matrices: what is entry c₂₂ of AB?": "அதே அணிகள்: AB-இன் c₂₂ உறுப்பு என்ன?", "(−1)(3) + 2(−1) + 3(4) = 7.": "(−1)(3) + 2(−1) + 3(4) = 7.", "In general, matrix multiplication is:": "பொதுவாக அணிப் பெருக்கல்:", "Not commutative: AB ≠ BA": "பரிமாற்றுப் பண்புடையதல்ல: AB ≠ BA", "Commutative": "பரிமாற்றுப் பண்புடையது", "Only defined for square matrices": "சதுர அணிகளுக்கு மட்டும் வரையறுக்கப்படுகிறது", "The same as entrywise multiplication": "உறுப்புவாரிப் பெருக்கலுக்குச் சமம்", "Even when both products exist, they usually differ.": "இரு பெருக்கல்களும் இருந்தாலும் பொதுவாக வேறுபடுகின்றன.", "Multiplying two n × n matrices with the standard algorithm uses how many multiplications?": "வழக்கமான படிமுறையால் இரு n × n அணிகளைப் பெருக்க எத்தனை பெருக்கல்கள் தேவை?", "n³": "n³", "n²": "n²", "2n": "2n", "n²(n − 1)": "n²(n − 1)", "n²(n − 1) is the number of additions.": "n²(n − 1) கூட்டல்களின் எண்ணிக்கை.", "For 0–1 matrices, the <strong>join<\/strong> A ∨ B is:": "0–1 அணிகளுக்கு <strong>சேர்வு<\/strong> A ∨ B என்பது:", "The entrywise OR": "உறுப்புவாரி OR", "The entrywise AND": "உறுப்புவாரி AND", "The matrix product": "அணிப் பெருக்கல்", "The transpose": "இடமாற்று", "The meet A ∧ B is the entrywise AND.": "சந்திப்பு A ∧ B என்பது உறுப்புவாரி AND.", "A = <span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>1<\/span><span>0<\/span><span>1<\/span><span>0<\/span><span>1<\/span><span>0<\/span><\/span>, B = <span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>0<\/span><span>1<\/span><span>0<\/span><span>1<\/span><span>1<\/span><span>0<\/span><\/span>. How many 1s are in A ∧ B?": "A = <span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>1<\/span><span>0<\/span><span>1<\/span><span>0<\/span><span>1<\/span><span>0<\/span><\/span>, B = <span class=\"mxs\" style=\"grid-template-columns:repeat(3,auto)\"><span>0<\/span><span>1<\/span><span>0<\/span><span>1<\/span><span>1<\/span><span>0<\/span><\/span>. A ∧ B-இல் எத்தனை 1-கள் உள்ளன?", "Only position (2,2) has 1 in both.": "(2,2) இடத்தில் மட்டும் இரண்டிலும் 1 உள்ளது.", "A square matrix is <strong>symmetric<\/strong> when:": "சதுர அணி <strong>சமச்சீராக<\/strong> இருப்பது:", "A = Aᵗ": "A = Aᵗ எனில்", "A = −A": "A = −A எனில்", "AB = BA": "AB = BA எனில்", "All its entries are 1": "அனைத்து உறுப்புகளும் 1 எனில்", "The transpose swaps rows and columns.": "இடமாற்று நிரைகளையும் நிரல்களையும் மாற்றுகிறது.", "(AB)ᵗ equals:": "(AB)ᵗ சமம்:", "BᵗAᵗ": "BᵗAᵗ", "AᵗBᵗ": "AᵗBᵗ", "AB": "AB", "BA": "BA", "The order reverses.": "வரிசை தலைகீழாகிறது.", "A⁰ for an n × n matrix A is:": "n × n அணி A-க்கு A⁰ என்பது:", "Iₙ (the identity matrix)": "Iₙ (சமனி அணி)", "The zero matrix": "பூச்சிய அணி", "A": "A", "IₙA = AIₙ = A.": "IₙA = AIₙ = A."}, "patterns": [{"pattern": "^(\\d+) unanswered$", "replacement": "$1 விடையளிக்கப்படவில்லை"}, {"pattern": "^(\\d+) / (\\d+) sections understood$", "replacement": "$1 / $2 பகுதிகள் புரிந்துகொள்ளப்பட்டன"}, {"pattern": "^Week (\\d+)$", "replacement": "வாரம் $1"}, {"pattern": "^(\\d+) days ago$", "replacement": "$1 நாட்களுக்கு முன்"}, {"pattern": "^\\((\\d+) of (\\d+)\\)$", "replacement": "($2இல் $1)"}, {"pattern": "^\\((\\d+) attempts?\\)$", "replacement": "($1 முயற்சிகள்)"}, {"pattern": "^(\\d+) videos? · (\\d+) min$", "replacement": "$1 காணொளிகள் · $2 நிமிடம்"}, {"pattern": "^Quiz: not tried \\((\\d+) Qs\\)$", "replacement": "வினாடிவினா: முயலவில்லை ($1 கேள்விகள்)"}, {"pattern": "^Best (\\d+)% · last (\\d+)%$", "replacement": "சிறந்தது $1% · கடைசி $2%"}, {"pattern": "^(\\d+) questions on this week\\. Answer them all, then press$", "replacement": "இந்த வாரத்தில் $1 கேள்விகள். அனைத்துக்கும் விடையளித்துவிட்டுப் பின்னர் அழுத்துங்கள்:"}, {"pattern": "^\\. Your best and latest scores are saved and shown on the subject page\\.$", "replacement": ". உங்கள் சிறந்த மற்றும் சமீபத்திய மதிப்பெண்கள் சேமிக்கப்பட்டுப் பாடப் பக்கத்தில் காட்டப்படும்."}, {"pattern": "^Discrete Mathematics · Week (\\d+)$", "replacement": "தனித்த கணிதம் · வாரம் $1"}, {"pattern": "^(\\d+) random questions drawn from all (\\d+) weeks \\((\\d+) in the bank\\)\\. Every attempt is a new mix — a good way to test whole-subject knowledge before the exam\\.$", "replacement": "அனைத்து $2 வாரங்களிலிருந்தும் சீரற்ற முறையில் தேர்ந்தெடுக்கப்படும் $1 கேள்விகள் (தொகுப்பில் $3 உள்ளன). ஒவ்வொரு முயற்சியிலும் புதிய கலவை — தேர்வுக்கு முன் முழுப் பாட அறிவையும் சோதிக்கச் சிறந்த வழி."}, {"pattern": "^›\\s*Week (\\d+)$", "replacement": "› வாரம் $1"}, {"pattern": "A is ", "replacement": "A-இன் அளவு ", "selector": ".tool", "flags": "g"}, {"pattern": ", B is ", "replacement": ", B-இன் அளவு ", "selector": ".tool", "flags": "g"}, {"pattern": "not defined: inner sizes ", "replacement": "வரையறுக்கப்படவில்லை: உள் அளவுகள் ", "selector": ".tool", "flags": "g"}, {"pattern": "Click a cell.", "replacement": "ஒரு கலத்தைச் சொடுக்கவும்.", "selector": ".tool", "flags": "g"}, {"pattern": "row (\\d+) of A · column (\\d+) of B", "replacement": "A-இன் நிரை $1 · B-இன் நிரல் $2", "selector": ".tool", "flags": "g"}]}</script>

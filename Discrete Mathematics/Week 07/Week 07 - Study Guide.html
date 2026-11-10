@@ -526,7 +526,13 @@ R.addEventListener('input',function(){fib=false;run()});run();})();
 <ul>
 <li><strong>A full induction proof</strong> (sum formula, inequality or divisibility). Marks go to: clearly defining P(n), the basis step, <strong>stating the inductive hypothesis</strong>, the inductive step, and the conclusion.</li>
 <li>"State the well-ordering property and find the least element of a set."</li>
-<li>"Give a recursive definition of aₙ = 6n / 2n + 1 / 5 / 4n − 2", e.g. 6n: a₁ = 6, aₙ₊₁ = aₙ + 6.</li>
+<li>"Give a recursive definition" of a sequence. Start with a₁, then say how each term follows from the one before:<ul>
+<li>aₙ = 6n: a₁ = 6, aₙ₊₁ = aₙ + 6</li>
+<li>aₙ = 2n + 1: a₁ = 3, aₙ₊₁ = aₙ + 2</li>
+<li>aₙ = 5: a₁ = 5, aₙ₊₁ = aₙ</li>
+<li>aₙ = 4n − 2: a₁ = 2, aₙ₊₁ = aₙ + 4</li>
+</ul>
+</li>
 <li>"Find f(1)…f(5) given a recursive rule."</li>
 </ul></div></div><div class="hci-ta" lang="ta" hidden data-title="மறுசுழற்சி"><p>சிலசமயம் பொருளை <strong>வெளிப்படையாக</strong> வரையறுப்பது கடினம்; ஆனால் <strong>அதனையே அடிப்படையாகக் கொண்டு</strong> வரையறுப்பது எளிது. இதுவே <strong>மறுசுழற்சி</strong>. இது <strong>தொடரிகள், சார்புகள், கணங்களை</strong> வரையறுக்கலாம்.</p>
 <div class="grid2"><div><p><strong>மறுசுழற்சியாக வரையறுக்கப்பட்ட தொடரி</strong></p>
@@ -575,7 +581,13 @@ R.addEventListener('input',function(){fib=false;run()});run();})();
 <ul>
 <li><strong>முழுத் தொகுத்தறிதல் நிறுவல்</strong> (கூட்டுத்தொகைச் சூத்திரம், அசமத்துவம் அல்லது வகுபடுதன்மை). மதிப்பெண்கள்: P(n)-ஐத் தெளிவாக வரையறுத்தல், அடிப்படைப் படி, <strong>தொகுத்தறிதல் கருதுகோளைக் குறிப்பிடுதல்</strong>, தொகுத்தறிதல் படி, முடிவு.</li>
 <li>"நன்கு வரிசைப்படுத்தல் பண்பைக் கூறி, கணத்தின் மிகச்சிறிய மூலகத்தைக் கண்டறியவும்."</li>
-<li>"aₙ = 6n / 2n + 1 / 5 / 4n − 2-க்கு மறுசுழற்சி வரையறை கொடுக்கவும்"; எ.கா. 6n: a₁ = 6, aₙ₊₁ = aₙ + 6.</li>
+<li>"தொடரொன்றுக்கு மறுசுழற்சி வரையறை கொடுக்கவும்". a₁-இல் தொடங்கி, ஒவ்வொரு உறுப்பும் முந்தையதிலிருந்து எப்படி வருகிறது எனக் கூறவும்:<ul>
+<li>aₙ = 6n: a₁ = 6, aₙ₊₁ = aₙ + 6</li>
+<li>aₙ = 2n + 1: a₁ = 3, aₙ₊₁ = aₙ + 2</li>
+<li>aₙ = 5: a₁ = 5, aₙ₊₁ = aₙ</li>
+<li>aₙ = 4n − 2: a₁ = 2, aₙ₊₁ = aₙ + 4</li>
+</ul>
+</li>
 <li>"மறுசுழற்சி விதி கொடுக்கப்பட்டால் f(1)…f(5) கண்டறியவும்."</li>
 </ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Quick revision sheet"><span class="num">5</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>Induction ஏன்?</h4><p>எல்லா positive integers-க்கும் ஒரு கூற்றை ஒவ்வொன்றாகச் சோதிக்க முடியாது. <strong>Base case</strong> உண்மை; <strong>P(k) உண்மையெனில் P(k+1) உண்மை</strong> என்று நிரூபித்தால் சங்கிலிபோல் எல்லாவற்றுக்கும் பரவும்.</p>
 <p>Induction proof இரண்டு பகுதிகளும் அவசியம்: <strong>P(n₀)</strong> base; <strong>P(k)⇒P(k+1)</strong> step. Base இல்லாமல் step மட்டும் இருந்தால் தொடங்காத domino chain போல.

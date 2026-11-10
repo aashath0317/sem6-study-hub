@@ -377,7 +377,109 @@ Directed graph-இல் indegree/outdegree தனியாக. Total indegree=t
 <td>An edge that <strong>starts and ends at the same vertex</strong> <a class="ts" href="#" data-v="2" data-t="320">05:20</a></td>
 </tr>
 </tbody>
-</table></div><div class="hci-ta" lang="ta" hidden data-title="வரைபு என்றால் என்ன?"><div class="call key"><div class="ct">வரையறை 1</div><p><strong>G = (V, E) வரைபில்</strong> இருப்பவை:</p>
+</table>
+<h3 id="degree-of-a-vertex-and-the-handshaking-theorem-examined-both-2023-papers">Degree of a vertex and the handshaking theorem (examined: both 2023 papers)</h3>
+<div class="call key"><div class="ct">Degree</div><ul>
+<li>The <strong>degree</strong> deg(v) of a vertex in an undirected graph is the <strong>number of edges at v</strong>. A <strong>loop counts twice</strong>.</li>
+<li>deg(v) = 0: an <strong>isolated</strong> vertex. deg(v) = 1: a <strong>pendant</strong> vertex.</li>
+<li>In a <strong>simple</strong> graph with n vertices, every degree is at most <strong>n − 1</strong> (v can join each other vertex once).</li>
+<li>In a <strong>directed</strong> graph, deg⁻(v) is the <strong>in-degree</strong> (arrows in) and deg⁺(v) the <strong>out-degree</strong> (arrows out).</li>
+</ul></div>
+<div class="formula"><strong>Handshaking theorem:</strong> Σ deg(v) = <strong>2|E|</strong><br>Each edge has two ends, so it adds 2 to the total degree.<br>Directed graphs: Σ deg⁻(v) = Σ deg⁺(v) = |E|</div>
+<div class="call key"><div class="ct">Corollary</div><p>An undirected graph has an <strong>even number of vertices of odd degree</strong>. (The total is even, so the odd degrees must pair up.)</p></div>
+<p><em>Example:</em> a graph has 10 edges. Its degrees add up to 2 × 10 = <strong>20</strong>.</p>
+<h3 id="can-a-graph-with-these-degrees-exist">Can a graph with these degrees exist?</h3>
+<p>Check in this order and stop at the first failure:</p>
+<ol>
+<li><strong>Sum must be even</strong> (handshaking). Any graph type.</li>
+<li><strong>Simple graph:</strong> no degree above <strong>n − 1</strong>, and <strong>0 and n − 1 can't both appear</strong> (a vertex joined to everyone means nobody is isolated).</li>
+<li><strong>Simple graph, final test (Havel–Hakimi):</strong> sort the degrees largest first, remove the largest d, subtract 1 from the next d degrees, and repeat. If you ever get a negative number, or need more vertices than are left, it's <strong>impossible</strong>; if everything becomes 0, it's <strong>possible</strong>, and the steps tell you how to draw it.</li>
+<li><strong>Multigraph (no loops):</strong> possible exactly when the sum is even and the <strong>largest degree ≤ the sum of all the others</strong>.</li>
+<li><strong>Pseudograph (loops allowed):</strong> possible exactly when the sum is even.</li>
+</ol>
+<div class="call example"><div class="ct">Worked checks</div><table>
+<thead>
+<tr>
+<th>Degrees</th>
+<th>Type asked</th>
+<th>Verdict</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2, 3, 3, 3, 5</td>
+<td>Simple, 5 vertices</td>
+<td><strong>Impossible</strong></td>
+<td>Maximum degree is 4</td>
+</tr>
+<tr>
+<td>1, 1, 3 with five edges</td>
+<td>Any</td>
+<td><strong>Impossible</strong></td>
+<td>Sum must be 2 × 5 = 10, but it is 5</td>
+</tr>
+<tr>
+<td>1, 2, 3, 4</td>
+<td>Simple</td>
+<td><strong>Impossible</strong></td>
+<td>4 vertices allow at most degree 3</td>
+</tr>
+<tr>
+<td>1, 2, 3, 4</td>
+<td>Multigraph</td>
+<td><strong>Possible</strong></td>
+<td>Sum 10 is even and 4 ≤ 1 + 2 + 3</td>
+</tr>
+<tr>
+<td>3, 3, 1, 1</td>
+<td>Simple</td>
+<td><strong>Impossible</strong></td>
+<td>Each degree-3 vertex joins all 3 others, so every vertex has degree ≥ 2</td>
+</tr>
+<tr>
+<td>2, 2, 2, 3, 4, 6</td>
+<td>Any</td>
+<td><strong>Impossible</strong></td>
+<td>Sum 19 is odd</td>
+</tr>
+<tr>
+<td>2, 2, 2, 4, 4</td>
+<td>Simple</td>
+<td><strong>Possible</strong></td>
+<td>Two vertices joined to each other and to the other three</td>
+</tr>
+</tbody>
+</table></div>
+<div class="call tip"><div class="ct">How to write "draw it or explain why not"</div><p>If it is possible, <strong>draw it and label each vertex with its degree</strong>. If it isn't, <strong>name the rule it breaks with the numbers</strong>, e.g. "the degree sum is 19, which is odd, but Σ deg(v) = 2|E| must be even".</p></div>
+<h3 id="the-pigeonhole-principle-and-the-two-equal-degrees-proof">The pigeonhole principle and the "two equal degrees" proof</h3>
+<div class="call key"><div class="ct">Pigeonhole principle</div><p>If <strong>k + 1 or more objects</strong> go into <strong>k boxes</strong>, at least one box holds <strong>two or more</strong> objects.</p></div>
+<div class="call example"><div class="ct">Proof (both 2023 papers): every simple graph with n ≥ 2 vertices has two vertices of equal degree</div><ol>
+<li>Let G be a simple graph with n ≥ 2 vertices. Each degree is one of the <strong>n values 0, 1, …, n − 1</strong>.</li>
+<li><strong>Case 1:</strong> some vertex has degree <strong>n − 1</strong>. It is joined to every other vertex, so <strong>no vertex has degree 0</strong>. The degrees lie in {1, …, n − 1}: <strong>n − 1 values</strong>.</li>
+<li><strong>Case 2:</strong> no vertex has degree n − 1. The degrees lie in {0, …, n − 2}: again <strong>n − 1 values</strong>.</li>
+<li>In both cases, <strong>n vertices</strong> (pigeons) share at most <strong>n − 1 degree values</strong> (boxes).</li>
+<li>By the pigeonhole principle, <strong>two vertices have the same degree</strong>. ∎</li>
+</ol>
+<p>Marks go to: the range of degrees, the reason 0 and n − 1 can't both appear, and naming the pigeonhole principle.</p></div>
+<div class="tool"><div class="tt">🧪 Try it — Degree sequence checker</div><div id="dsq">
+<div class="row"><label style="flex:1">Degrees (comma separated) <input type="text" class="d" value="2, 2, 2, 4, 4"></label><label>Graph type <select class="t"><option value="s">Simple graph</option><option value="m">Multigraph (no loops)</option><option value="p">Pseudograph (loops allowed)</option></select></label></div>
+<div class="row"><button class="alt" data-p="2,3,3,3,5">2,3,3,3,5</button><button class="alt" data-p="1,2,3,4">1,2,3,4</button><button class="alt" data-p="3,3,1,1">3,3,1,1</button><button class="alt" data-p="2,2,2,3,4,6">2,2,2,3,4,6</button><button class="alt" data-p="3,3,3,3">3,3,3,3</button></div>
+<div class="out"></div>
+</div>
+<script>
+(function(){var R=document.getElementById('dsq');function run(){var o=R.querySelector('.out'),t=R.querySelector('.t').value,D=R.querySelector('.d').value.split(/[\s,;]+/).filter(Boolean).map(Number);
+if(!D.length||D.some(function(v){return !Number.isInteger(v)||v<0})){o.innerHTML='<p>Enter non-negative whole numbers.</p>';return}
+var n=D.length,s=D.reduce(function(a,b){return a+b},0),mx=Math.max.apply(0,D),rows=[],ok=true;function row(pass,txt){rows.push('<tr><td>'+(pass?'✓':'✗')+'</td><td>'+txt+'</td></tr>');if(!pass)ok=false}
+row(s%2===0,'Degree sum = '+s+(s%2?' is odd, but Σ deg(v) = 2|E| must be even':' is even, so |E| = '+s/2));
+var steps=[];if(ok&&t==='s'){row(mx<=n-1,'Largest degree '+mx+(mx<=n-1?' ≤ ':' &gt; ')+'n − 1 = '+(n-1));
+if(ok)row(!(D.indexOf(0)>=0&&D.indexOf(n-1)>=0),D.indexOf(0)>=0&&D.indexOf(n-1)>=0?'Both 0 and n − 1 appear: impossible':'0 and n − 1 do not both appear');
+if(ok){var q=D.slice().sort(function(a,b){return b-a}),good=true;while(q.length&&q[0]>0){var d=q.shift(),before=q.slice();if(d>q.length){good=false;steps.push('Remove '+d+', but only '+q.length+' vertices are left');break}for(var i=0;i<d;i++)q[i]--;steps.push('Remove '+d+' and subtract 1 from the next '+d+': ('+before.join(', ')+') → ('+q.join(', ')+')');if(q.some(function(v){return v<0})){good=false;steps.push('A degree became negative');break}q.sort(function(a,b){return b-a})}
+row(good,'Havel–Hakimi: '+(good?'everything reduced to 0':'fails'))}}
+if(ok&&t==='m')row(mx<=s-mx,'Largest degree '+mx+(mx<=s-mx?' ≤ ':' &gt; ')+'sum of the others = '+(s-mx));
+o.innerHTML='<table>'+rows.join('')+'</table>'+(steps.length?'<p class="note">'+steps.join('<br>')+'</p>':'')+'<p style="font-size:19px">⇒ <b style="color:'+(ok?'var(--tip)':'var(--warn)')+'">'+(ok?'POSSIBLE':'IMPOSSIBLE')+'</b> as a '+R.querySelector('.t').selectedOptions[0].text.toLowerCase()+'</p>'}
+R.querySelectorAll('[data-p]').forEach(function(b){b.onclick=function(){R.querySelector('.d').value=b.dataset.p;run()}});R.addEventListener('input',run);R.addEventListener('change',run);run();})();
+</script></div></div><div class="hci-ta" lang="ta" hidden data-title="வரைபு என்றால் என்ன?"><div class="call key"><div class="ct">வரையறை 1</div><p><strong>G = (V, E) வரைபில்</strong> இருப்பவை:</p>
 <ul>
 <li><strong>V</strong>: <strong>முனைகளின் வெற்றல்லாத கணம்</strong> (கணுக்கள்)</li>
 <li><strong>E</strong>: <strong>விளிம்புகளின்</strong> கணம்</li>
@@ -412,7 +514,93 @@ Directed graph-இல் indegree/outdegree தனியாக. Total indegree=t
 <td><strong>ஒரே முனையில் தொடங்கி முடியும்</strong> விளிம்பு <a class="ts" href="#" data-v="2" data-t="320">05:20</a></td>
 </tr>
 </tbody>
-</table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="The six types of graphs"><span class="num">4</span>The six types of graphs</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Graph வகைகள்</h3><p><strong>Simple graph</strong>-இல் loop, parallel edges இல்லை. Multigraph பல edges அனுமதிக்கலாம்; pseudograph loops-யும் அனுமதிக்கும். Directed graph-இல் அம்பின் திசை முக்கியம். கேள்வியின் definitions-ஐப் பின்பற்றுங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>ஆறு வகைகள்:</strong> simple undirected — loops/parallel இல்லை; multigraph — parallel அனுமதி, பாட வரையறையில் loops இல்லை; pseudograph — loops-உம் அனுமதி; simple directed; directed multigraph; mixed — directed, undirected இரண்டும்.
+</table>
+<p><strong>கீழுள்ள பகுதி இன்னும் தமிழில் மொழிபெயர்க்கப்படவில்லை; தற்போது ஆங்கிலத்தில் மட்டும் உள்ளது.</strong></p>
+<h3>Degree of a vertex and the handshaking theorem (examined: both 2023 papers)</h3>
+<div class="call key"><div class="ct">Degree</div><ul>
+<li>The <strong>degree</strong> deg(v) of a vertex in an undirected graph is the <strong>number of edges at v</strong>. A <strong>loop counts twice</strong>.</li>
+<li>deg(v) = 0: an <strong>isolated</strong> vertex. deg(v) = 1: a <strong>pendant</strong> vertex.</li>
+<li>In a <strong>simple</strong> graph with n vertices, every degree is at most <strong>n − 1</strong> (v can join each other vertex once).</li>
+<li>In a <strong>directed</strong> graph, deg⁻(v) is the <strong>in-degree</strong> (arrows in) and deg⁺(v) the <strong>out-degree</strong> (arrows out).</li>
+</ul></div>
+<div class="formula"><strong>Handshaking theorem:</strong> Σ deg(v) = <strong>2|E|</strong><br>Each edge has two ends, so it adds 2 to the total degree.<br>Directed graphs: Σ deg⁻(v) = Σ deg⁺(v) = |E|</div>
+<div class="call key"><div class="ct">Corollary</div><p>An undirected graph has an <strong>even number of vertices of odd degree</strong>. (The total is even, so the odd degrees must pair up.)</p></div>
+<p><em>Example:</em> a graph has 10 edges. Its degrees add up to 2 × 10 = <strong>20</strong>.</p>
+<h3>Can a graph with these degrees exist?</h3>
+<p>Check in this order and stop at the first failure:</p>
+<ol>
+<li><strong>Sum must be even</strong> (handshaking). Any graph type.</li>
+<li><strong>Simple graph:</strong> no degree above <strong>n − 1</strong>, and <strong>0 and n − 1 can't both appear</strong> (a vertex joined to everyone means nobody is isolated).</li>
+<li><strong>Simple graph, final test (Havel–Hakimi):</strong> sort the degrees largest first, remove the largest d, subtract 1 from the next d degrees, and repeat. If you ever get a negative number, or need more vertices than are left, it's <strong>impossible</strong>; if everything becomes 0, it's <strong>possible</strong>, and the steps tell you how to draw it.</li>
+<li><strong>Multigraph (no loops):</strong> possible exactly when the sum is even and the <strong>largest degree ≤ the sum of all the others</strong>.</li>
+<li><strong>Pseudograph (loops allowed):</strong> possible exactly when the sum is even.</li>
+</ol>
+<div class="call example"><div class="ct">Worked checks</div><table>
+<thead>
+<tr>
+<th>Degrees</th>
+<th>Type asked</th>
+<th>Verdict</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2, 3, 3, 3, 5</td>
+<td>Simple, 5 vertices</td>
+<td><strong>Impossible</strong></td>
+<td>Maximum degree is 4</td>
+</tr>
+<tr>
+<td>1, 1, 3 with five edges</td>
+<td>Any</td>
+<td><strong>Impossible</strong></td>
+<td>Sum must be 2 × 5 = 10, but it is 5</td>
+</tr>
+<tr>
+<td>1, 2, 3, 4</td>
+<td>Simple</td>
+<td><strong>Impossible</strong></td>
+<td>4 vertices allow at most degree 3</td>
+</tr>
+<tr>
+<td>1, 2, 3, 4</td>
+<td>Multigraph</td>
+<td><strong>Possible</strong></td>
+<td>Sum 10 is even and 4 ≤ 1 + 2 + 3</td>
+</tr>
+<tr>
+<td>3, 3, 1, 1</td>
+<td>Simple</td>
+<td><strong>Impossible</strong></td>
+<td>Each degree-3 vertex joins all 3 others, so every vertex has degree ≥ 2</td>
+</tr>
+<tr>
+<td>2, 2, 2, 3, 4, 6</td>
+<td>Any</td>
+<td><strong>Impossible</strong></td>
+<td>Sum 19 is odd</td>
+</tr>
+<tr>
+<td>2, 2, 2, 4, 4</td>
+<td>Simple</td>
+<td><strong>Possible</strong></td>
+<td>Two vertices joined to each other and to the other three</td>
+</tr>
+</tbody>
+</table></div>
+<div class="call tip"><div class="ct">How to write "draw it or explain why not"</div><p>If it is possible, <strong>draw it and label each vertex with its degree</strong>. If it isn't, <strong>name the rule it breaks with the numbers</strong>, e.g. "the degree sum is 19, which is odd, but Σ deg(v) = 2|E| must be even".</p></div>
+<h3>The pigeonhole principle and the "two equal degrees" proof</h3>
+<div class="call key"><div class="ct">Pigeonhole principle</div><p>If <strong>k + 1 or more objects</strong> go into <strong>k boxes</strong>, at least one box holds <strong>two or more</strong> objects.</p></div>
+<div class="call example"><div class="ct">Proof (both 2023 papers): every simple graph with n ≥ 2 vertices has two vertices of equal degree</div><ol>
+<li>Let G be a simple graph with n ≥ 2 vertices. Each degree is one of the <strong>n values 0, 1, …, n − 1</strong>.</li>
+<li><strong>Case 1:</strong> some vertex has degree <strong>n − 1</strong>. It is joined to every other vertex, so <strong>no vertex has degree 0</strong>. The degrees lie in {1, …, n − 1}: <strong>n − 1 values</strong>.</li>
+<li><strong>Case 2:</strong> no vertex has degree n − 1. The degrees lie in {0, …, n − 2}: again <strong>n − 1 values</strong>.</li>
+<li>In both cases, <strong>n vertices</strong> (pigeons) share at most <strong>n − 1 degree values</strong> (boxes).</li>
+<li>By the pigeonhole principle, <strong>two vertices have the same degree</strong>. ∎</li>
+</ol>
+<p>Marks go to: the range of degrees, the reason 0 and n − 1 can't both appear, and naming the pigeonhole principle.</p></div>
+<div data-ta-tool="dsq"></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="The six types of graphs"><span class="num">4</span>The six types of graphs</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Graph வகைகள்</h3><p><strong>Simple graph</strong>-இல் loop, parallel edges இல்லை. Multigraph பல edges அனுமதிக்கலாம்; pseudograph loops-யும் அனுமதிக்கும். Directed graph-இல் அம்பின் திசை முக்கியம். கேள்வியின் definitions-ஐப் பின்பற்றுங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>ஆறு வகைகள்:</strong> simple undirected — loops/parallel இல்லை; multigraph — parallel அனுமதி, பாட வரையறையில் loops இல்லை; pseudograph — loops-உம் அனுமதி; simple directed; directed multigraph; mixed — directed, undirected இரண்டும்.
 “Simple directed” loop convention புத்தகங்களுக்கு மாறலாம்; பாட அட்டவணை/கேள்வி definition-ஐப் பின்பற்றுங்கள். Road question-இல் one-way condition வந்தால் அம்பு தேவை.</p>
 <p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
 <p>Course six types: simpleundirected no loops/parallel;multigraph parallel/no loops;pseudograph both;simpledirected no loops/parallel perorderedpair;directedmulti both;mixed directed+undirected. Definitions textbook-க்கு மாறலாம்;இந்த course convention சொல்லுங்கள். Opposite arrows(u,v),(v,u) same parallel edge அல்ல;orderedpairs வேறு. Undirected{u,v} orderஇல்லை.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>The PDF builds these types using a <strong>computer network of data centres</strong>: San Francisco, Los Angeles, Denver, Chicago, Detroit, New York, Washington.</p>
@@ -737,6 +925,7 @@ R.querySelectorAll('[data-p]').forEach(function(b){b.onclick=function(){R.queryS
 <li><strong>Classifying given drawings</strong> (directed? multiple? loops?) and the <strong>terminology table</strong></li>
 <li>"What kind of graph models X?" (highway systems, airline routes, parties, influence on a board, round-robin results)</li>
 <li><strong>Drawing</strong> acquaintanceship and influence graphs from a description</li>
+<li><strong>Degrees:</strong> the handshaking theorem, "draw it or explain why it can't exist" for a list of degrees, and the two-equal-degrees proof (both 2023 papers)</li>
 </ul></div></div><div class="hci-ta" lang="ta" hidden data-title="வரைபு மாதிரிகள்"><p>மாதிரியை உருவாக்கும்போது மூன்று முக்கிய கேள்விகளுக்குப் பதிலளிக்கவும்: <strong>திசையுள்ளதா திசையற்றதா? பல்விளிம்புகளா? வளையங்களா?</strong></p>
 <table>
 <thead>
@@ -811,6 +1000,7 @@ R.querySelectorAll('[data-p]').forEach(function(b){b.onclick=function(){R.queryS
 <li><strong>கொடுக்கப்பட்ட படங்களை வகைப்படுத்துதல்</strong> (திசையா? பல்விளிம்புகளா? வளையங்களா?), <strong>சொல் அட்டவணை</strong></li>
 <li>"X-ஐ எந்த வகை வரைபு மாதிரியாக்குகிறது?" (நெடுஞ்சாலை முறைமைகள், விமானப் பாதைகள், விருந்துகள், சபையில் செல்வாக்கு, சுற்றுமுறை முடிவுகள்)</li>
 <li>விளக்கத்திலிருந்து பரிச்சய மற்றும் செல்வாக்கு வரைபுகளை <strong>வரைதல்</strong></li>
+<li><strong>படிகள் (degrees):</strong> கைகுலுக்கல் தேற்றம், கொடுத்த படிகளுடன் "வரையவும் அல்லது ஏன் முடியாது என விளக்கவும்", சம படியுள்ள இரு முனைகள் நிறுவல் (இரு 2023 வினாத்தாள்களும்)</li>
 </ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>Graph ஏன்?</h4><p>நகரங்களும் சாலைகளும், மனிதர்களும் தொடர்புகளும் போன்றவற்றை எளிமையாக மாதிரியாக்கலாம். பொருட்கள் <strong>Vertices</strong>, தொடர்புகள் <strong>Edges</strong>. எந்த விவரத்தை edge காட்டுகிறது என்பதைக் முதலில் தெளிவுபடுத்த வேண்டும்.</p>
 <p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
 <p>Vertices entities;edges chosen relationship. Road intersections/routes;people/acquaintance;pages/links;teams/results;workers/jobs. முதலில் vertex என்ன,edge என்ன, direction/multiplicity/loops allowed என்ன என்று define செய்யுங்கள். Drawing-இல் lines cross ஆவதால் மட்டும் vertex இல்லை;vertex explicit ஆக இருக்கவேண்டும்.</p></div><div class="ta-recap-item"><h4>Königsberg பிரச்சினை</h4><p>ஒவ்வொரு பாலத்தையும் ஒரே முறை கடக்க முடியுமா என்ற கேள்வியில் நிலப்பகுதிகள் vertices; பாலங்கள் edges. Map-இன் துல்லியத் தூரத்தைவிட இணைப்பும் degree-யும் முக்கியம் என்பதே graph modelling-இன் பலம்.</p>
@@ -874,6 +1064,18 @@ Directed graph-இல் indegree/outdegree தனியாக. Total indegree=t
 <td>Directed and undirected</td>
 </tr>
 <tr>
+<td>Degree</td>
+<td>Edges at v; a loop counts twice; at most n − 1 in a simple graph</td>
+</tr>
+<tr>
+<td>Handshaking</td>
+<td>Σ deg(v) = 2|E|; odd-degree vertices come in pairs</td>
+</tr>
+<tr>
+<td>Equal degrees</td>
+<td>n vertices, at most n − 1 possible degrees → pigeonhole</td>
+</tr>
+<tr>
 <td>Models</td>
 <td>Acquaintance (simple) · influence (directed) · web (directed) · roadmap (simple/directed/mixed) · airline (directed multigraph) · round-robin (simple directed)</td>
 </tr>
@@ -925,6 +1127,18 @@ Directed graph-இல் indegree/outdegree தனியாக. Total indegree=t
 <tr>
 <td>கலப்பு</td>
 <td>திசையுள்ளதும் திசையற்றதும்</td>
+</tr>
+<tr>
+<td>படி</td>
+<td>v-இல் உள்ள விளிம்புகள்; வளையம் இருமுறை எண்ணப்படும்; எளிய வரைபில் அதிகபட்சம் n − 1</td>
+</tr>
+<tr>
+<td>கைகுலுக்கல்</td>
+<td>Σ deg(v) = 2|E|; ஒற்றைப் படி முனைகள் சோடிகளாக வரும்</td>
+</tr>
+<tr>
+<td>சம படிகள்</td>
+<td>n முனைகள், அதிகபட்சம் n − 1 படிப் பெறுமதிகள் → புறாக்கூட்டுக் கொள்கை</td>
 </tr>
 <tr>
 <td>மாதிரிகள்</td>

@@ -8,6 +8,8 @@
   function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
   function money(n){ return Number(n).toLocaleString('en-US',{maximumFractionDigits:2}); }
   function parse(s){ var v = parseFloat(String(s).replace(/[,\s]|Rs\.?/gi,'')); return isNaN(v) ? null : v; }
+  // The transaction being entered, repeated right above the input row so it is visible while typing.
+  function txRow(text, n){ return '<tr class="gp-txrow"><td colspan="' + n + '"><span class="gp-txrow-tag">Now entering</span> ' + esc(text) + '</td></tr>'; }
   function dateOf(tx){ var m = /^([^:]{1,12}):/.exec(tx.tx); return m ? m[1] : ''; }
 
   document.querySelectorAll('.gp').forEach(function(root){
@@ -143,7 +145,7 @@
         if (x.kind === 'rec') tot.rec += x.amt; else { tot.paid += x.amt; colTot[x.col] += x.amt; }
         return '<tr class="gp-row-done">' + cell(x.kind === 'rec' ? x.amt : '') + '<td>' + esc(dateOf(x.tx)) + '</td><td>' + esc(x.details) + '</td>' + cell(x.kind === 'pay' ? x.amt : '') + PC.cols.map(function(c){ return cell(x.col === c[0] ? x.amt : ''); }).join('') + '</tr>';
       }).join('');
-      if (s && s.type === 'pc') rows += '<tr class="gp-now"><td><input class="gp-rec gp-pc" inputmode="decimal" autocomplete="off" aria-label="Received"></td><td>' + esc(dateOf(s.tx)) + '</td><td>' + esc(s.details) + '</td><td><input class="gp-tot gp-pc" inputmode="decimal" autocomplete="off" aria-label="Total paid"></td>' + PC.cols.map(function(c){ return '<td><input class="gp-ana gp-pc" data-a="' + esc(c[0]) + '" inputmode="decimal" autocomplete="off" aria-label="' + esc(c[1]) + '"></td>'; }).join('') + '</tr>';
+      if (s && s.type === 'pc') rows += txRow(s.tx.tx, 4 + PC.cols.length) + '<tr class="gp-now"><td><input class="gp-rec gp-pc" inputmode="decimal" autocomplete="off" aria-label="Received"></td><td>' + esc(dateOf(s.tx)) + '</td><td>' + esc(s.details) + '</td><td><input class="gp-tot gp-pc" inputmode="decimal" autocomplete="off" aria-label="Total paid"></td>' + PC.cols.map(function(c){ return '<td><input class="gp-ana gp-pc" data-a="' + esc(c[0]) + '" inputmode="decimal" autocomplete="off" aria-label="' + esc(c[1]) + '"></td>'; }).join('') + '</tr>';
       var blank = PC.cols.map(function(){ return '<td></td>'; }).join(''), foot = '';
       if (done.length && !(s && s.type === 'pc')) {
         foot = '<tr>' + cell(tot.rec) + '<td></td><td>' + (final && PC.prior ? 'Totals' : 'Totals so far') + '</td>' + cell(tot.paid) + PC.cols.map(function(c){ return cell(colTot[c[0]]); }).join('') + '</tr>';
@@ -223,7 +225,7 @@
         var label = side === 'Dr' ? 'Receipts side (Dr) — money in' : 'Payments side (Cr) — money out';
         var head = '<tr><th class="gp-col-date">Date</th><th>Particulars</th>' + (CB.disc ? '<th class="r gp-col-amt">' + (side === 'Dr' ? 'Discount allowed' : 'Discount received') + '</th>' : '') + '<th class="r gp-col-amt">Cash</th><th class="r gp-col-amt">Bank</th></tr>';
         var rows = sides[side].map(function(r){ return '<tr class="gp-row-done"><td>' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td>' + (CB.disc ? cell(r[2]) : '') + cell(r[3]) + cell(r[4]) + '</tr>'; }).join('');
-        if (s && s.type === 'cb') rows += '<tr class="gp-now" data-side="' + side + '"><td>' + esc(dateOf(s.tx)) + '</td><td class="gp-cell-acct"><input class="gp-acct" placeholder="Click to choose" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Particulars, ' + label + '"><div class="gp-list" role="listbox" hidden></div></td>' + (CB.disc ? '<td><input class="gp-disc" inputmode="decimal" autocomplete="off" aria-label="Discount"></td>' : '') + '<td><input class="gp-cash" inputmode="decimal" autocomplete="off" aria-label="Cash"></td><td><input class="gp-bank" inputmode="decimal" autocomplete="off" aria-label="Bank"></td></tr>';
+        if (s && s.type === 'cb') rows += txRow(s.tx.tx, CB.disc ? 5 : 4) + '<tr class="gp-now" data-side="' + side + '"><td>' + esc(dateOf(s.tx)) + '</td><td class="gp-cell-acct"><input class="gp-acct" placeholder="Click to choose" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Particulars, ' + label + '"><div class="gp-list" role="listbox" hidden></div></td>' + (CB.disc ? '<td><input class="gp-disc" inputmode="decimal" autocomplete="off" aria-label="Discount"></td>' : '') + '<td><input class="gp-cash" inputmode="decimal" autocomplete="off" aria-label="Cash"></td><td><input class="gp-bank" inputmode="decimal" autocomplete="off" aria-label="Bank"></td></tr>';
         var foot = final ? '<tr><td></td><td>Total</td>' + (CB.disc ? cell(tot[side].d) : '') + cell(tot[side].Cash) + cell(tot[side].Bank) + '</tr>' + bd[side].map(function(r){ return '<tr><td>' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td>' + (CB.disc ? '<td></td>' : '') + cell(r[3]) + cell(r[4]) + '</tr>'; }).join('') : '';
         return '<p class="gp-cb-label"><b>' + label + '</b></p><div class="gp-tablewrap gp-scroll"><table class="gp-table"><thead>' + head + '</thead><tbody>' + rows + '</tbody>' + (foot ? '<tfoot>' + foot + '</tfoot>' : '') + '</table></div>';
       }
@@ -249,7 +251,7 @@
         last = x.tx;
       });
       if (s && s.type === 'entry') {
-        rows += '<tr class="gp-now"><td>' + (s.tx !== last ? esc(dateOf(s.tx)) : '') + '</td><td class="gp-cell-acct"><input class="gp-acct" placeholder="Click to choose" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Account"><div class="gp-list" role="listbox" hidden></div></td><td><input class="gp-dr" inputmode="decimal" autocomplete="off" aria-label="Debit amount"></td><td><input class="gp-cr" inputmode="decimal" autocomplete="off" aria-label="Credit amount"></td></tr>';
+        rows += txRow(s.tx.tx, 4) + '<tr class="gp-now"><td>' + (s.tx !== last ? esc(dateOf(s.tx)) : '') + '</td><td class="gp-cell-acct"><input class="gp-acct" placeholder="Click to choose" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Account"><div class="gp-list" role="listbox" hidden></div></td><td><input class="gp-dr" inputmode="decimal" autocomplete="off" aria-label="Debit amount"></td><td><input class="gp-cr" inputmode="decimal" autocomplete="off" aria-label="Credit amount"></td></tr>';
         s.tx.e.slice(s.n + 1).forEach(function(){ rows += '<tr class="gp-row-next"><td></td><td></td><td></td><td></td></tr>'; });
       }
       if (!rows) return '';

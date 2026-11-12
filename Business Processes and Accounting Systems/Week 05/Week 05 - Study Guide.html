@@ -2673,8 +2673,19 @@ R.querySelector('.out').innerHTML='<table style="max-width:520px"><tr><th colspa
         var match = accounts.filter(function(a){ return all || a.toLowerCase().indexOf(q) > -1; });
         list.innerHTML = match.length ? match.map(function(a){ return '<div class="gp-item" role="option" data-a="' + esc(a) + '">' + esc(a) + '</div>'; }).join('') : '<div class="gp-none">No account with that name</div>';
         list.hidden = false; active = -1; input.setAttribute('aria-expanded', 'true');
+        place(); window.addEventListener('scroll', place, true); window.addEventListener('resize', place);
       }
-      function hide(){ list.hidden = true; input.setAttribute('aria-expanded', 'false'); }
+      // Float the list over the page so a scrolling table cannot clip it; open upwards when there is little room below.
+      function place(){
+        if (list.hidden) return;
+        var r = input.getBoundingClientRect(), below = window.innerHeight - r.bottom - 12, above = r.top - 12, up = below < 200 && above > below;
+        var w = Math.min(Math.max(r.width, 220), window.innerWidth - 16);
+        list.style.position = 'fixed'; list.style.left = Math.max(8, Math.min(r.left, window.innerWidth - w - 8)) + 'px'; list.style.width = w + 'px'; list.style.right = 'auto';
+        list.style.maxHeight = Math.max(96, Math.min(260, up ? above : below)) + 'px';
+        if (up) { list.style.top = 'auto'; list.style.bottom = (window.innerHeight - r.top + 2) + 'px'; }
+        else { list.style.bottom = 'auto'; list.style.top = (r.bottom + 2) + 'px'; }
+      }
+      function hide(){ list.hidden = true; input.setAttribute('aria-expanded', 'false'); window.removeEventListener('scroll', place, true); window.removeEventListener('resize', place); }
       function choose(a){ input.value = a; hide(); var next = input.closest('tr').querySelector('.gp-dr,.gp-disc,.gp-cash'); if (next) next.focus({preventScroll:true}); }
       input.onfocus = function(){ show(true); };
       input.onclick = function(){ show(true); };

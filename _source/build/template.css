@@ -159,6 +159,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .gp-done li{margin:3px 0}.gp-muted{color:var(--muted);font-size:13px;font-weight:400}
 .gp-tx{background:var(--accent-soft);color:var(--ink);padding:10px 12px;border-radius:8px;margin:12px 0 8px;font-weight:600}
 .gp-howto,.gp-q{font-size:15px;margin:8px 0}
+.gp-cb-label{font-size:15px;margin:14px 0 4px}
 .gp-tablewrap{margin:10px 0}
 .gp-table td.gp-now input,.gp-acct,.gp-amt,.gp-check,.gp-fb{scroll-margin:84px 0 130px}
 .gp-table .gp-action-row td{background:var(--panel);padding:8px}

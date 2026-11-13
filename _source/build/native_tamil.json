@@ -274,6 +274,11 @@
       "heading": "Practice questions (course paper)",
       "title": "பாடநெறிப் பயிற்சியைப் படிப்படியாகச் செய்வோம்",
       "text": "ஒவ்வொரு பரிவர்த்தனையிலும் மாறும் கணக்குகளைத் தேர்ந்தெடுத்து, பற்று அல்லது வரவு பக்கத்தில் தொகையை எழுதுங்கள். பிறகு பேரேட்டுக் கணக்குகளின் மீதிகளைக் கொண்டு இருப்பாய்வைத் தயாரியுங்கள். இரு பக்க மொத்தங்களும் சமமாக இருக்க வேண்டும். ஆனால் கையிருப்புப் பணம் எதிர்மறையாக இருக்க முடியாது. முதல் கேள்வியில் கொடுக்கப்பட்ட பண விவரங்களில் குறைபாடு உள்ளது.\n\nஇந்தப் பகுதியின் முழு மொழிபெயர்ப்பு இன்னும் தயாராகவில்லை. கீழே ஆங்கிலத்தில் உள்ள கேள்விகளையும் படிப்படியான விடைகளையும் பயன்படுத்துங்கள். நீண்டகாலச் சொத்தை வாங்கும் அல்லது மேம்படுத்தும் செலவையும், அன்றாடப் பராமரிப்புச் செலவையும் வேறுபடுத்திப் பாருங்கள்.\n\nகதை வடிவிலான கேள்வியில் முதலில் பரிவர்த்தனைகளை அடையாளம் காணுங்கள். பணம் அல்லது பொருள் நகராத உரையாடல் மட்டும் பதிவுசெய்ய வேண்டிய பரிவர்த்தனை அல்ல. கூடுதல் கதையை முயன்று, அடையாளம் காணுதல், பதிவு செய்தல், பேரேட்டில் பதிதல், இருப்பாய்வு தயாரித்தல் ஆகிய எல்லாச் செயல்களுக்கும் விடையளியுங்கள்."
+    },
+    {
+      "heading": "Mid exam 25S2 — every question explained",
+      "title": "Mid Exam 25S2 — நினைவில் வைக்க வேண்டியவை",
+      "text": "- **Financial accounting** = வெளிப் பயனாளர்களுக்கான கடந்தகால (historical) தகவல்; **management accounting** = உள் மேலாளர்களுக்கு, எதிர்காலம்.\n- **Cash basis:** பணம் வந்தால் மட்டும் வருமானம். **Accrual:** நிகழும்போதே (earned / incurred) பதிவு. **Matching:** செலவை அது உருவாக்கிய வருமானத்தின் அதே காலத்தில்.\n- **Prudence:** சாத்தியமான இழப்பை உடனே பதிவு; எதிர்பார்க்கும் இலாபத்தை உண்மையில் கிடைக்கும் வரை பதிவு செய்யாதே.\n- **Real** = சொத்துகள் (Cash, Building); **Nominal** = வருமானம், செலவுகள் (Revenue); **Personal** = நபர்கள் (Debtors).\n- **Cash sale:** Dr Cash, Cr Sales. **Credit purchase:** Dr Purchases, Cr Accounts payable.\n- **Source documents** = பரிவர்த்தனைக்கான சான்று. **Journal** = தேதி வரிசை; **Ledger** = கணக்கு வாரியாக; **General journal** = special journals-இல் பொருந்தாதவை.\n- **Imprest:** நிலையான தொகைக்கு மீண்டும் நிரப்பப்படும் petty cash. **Cash flow:** வட்டி செலுத்தல் = operating; கடன் திருப்பிச் செலுத்தல் = financing; நிலம் வாங்கல் = investing.\n- **Profitability** ஒரு qualitative characteristic அல்ல (timeliness, faithful representation, verifiability ஆகியவை ஆகும்)."
     }
   ],
   "bpas/w05": [
@@ -1258,6 +1263,11 @@
           "text": "**Task primitives**-இல் எந்தத் தரவு, எந்த அறிவு, எந்த அளவுகோல், எந்த வடிவில் முடிவு வேண்டும் என்பதை வரையறுப்போம். எல்லாப் பதிவுகளிலும் எல்லா patterns-ஐயும் தேடுவது செலவானதும் பயனற்றதுமாகலாம்.\n\n**ஐந்து Task primitives:** task-relevant data; தேடும் knowledge வகை; பயன்படுத்தும் background knowledge; interestingness measures/thresholds; முடிவின் presentation.\nஉதாரணம்: கடந்த வருட supermarket baskets-இல், பொருள் hierarchy பயன்படுத்தி, support≥10%, confidence≥60% rules தேடி table-ஆகக் காட்டு. “எதை, எப்படித் தேர்வு செய்து, எந்த format-இல்?” என்பதற்குப் பதில் கிடைக்க வேண்டும்.\n\n**விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்**\n\nஒரு query-க்கு **ஐந்து primitives:** எந்த data (Sri Lanka customers); எந்த knowledge (association); background (age/item hierarchies); interestingness (support≥5%, confidence≥70%); output (rules/table/chart/tree). “எந்த algorithm?” என்ற பதில் மட்டும் முழு task specification அல்ல. ஒரே data-இல் வேறு goal/threshold/hierarchy வைத்தால் வேறு patterns பயனுள்ளதாகலாம்."
         }
       ]
+    },
+    {
+      "heading": "Self-assessment quiz — every question explained",
+      "title": "Self-assessment — எந்தப் பிரச்சினைக்கு எந்த function",
+      "text": "- **ஒன்றாக வாங்கப்படும் பொருட்கள்** (Daraz basket) → **Association & correlation analysis**.\n- **லேபிள் உள்ள வகைப்படுத்தல்** (spam / not spam) → **Classification**.\n- **ஒத்தவற்றைக் குழுவாக்கல்** → **Clustering** (frequent pattern mining அல்ல).\n- **அசாதாரணமானவை** (credit card fraud, இயந்திரத்தில் முறைகேடு) → **Outlier analysis**.\n- **Data warehousing, feature selection, integration, normalization** → data mining functions அல்ல (சேமிப்பு / pre-processing).\n- **Biological data:** curse of dimensionality, privacy, பெரிய அளவு. **Stream data:** dynamic (தொடர்ந்து மாறும்).\n- **Manhattan distance:** வேறுபாடுகளின் முழு மதிப்புகளைக் கூட்டு: |5−1| + |6−0| + |7−0| = 17.\n- **Labeled data** → supervised learning; **unlabeled data** → unsupervised learning."
     }
   ],
   "dm/w03": [
@@ -5705,9 +5715,8 @@
     },
     {
       "heading": "Quiz 02: model answer",
-      "title": "Quiz 02 விடைக்குறிப்பு",
-      "text": "உங்கள் file-இல் தேர்வுக் கேள்விகள் இல்லை; answer letters மட்டுமே உள்ளன. கேள்வி தெரியாமல் a அல்லது b-யின் காரணத்தை ஊகிக்க முடியாது. மேலுள்ள concepts-இன் வேறுபாடுகளைப் புரிந்து புதிய MCQ-க்கு பயன்படுத்துங்கள்.",
-      "details": "**பாடத்தைப் படிப்படியாகப் புரிந்துகொள்ள**\n\nAvailable answer key: **1-a, 2-a, 3-a, 4-b, 5-c**. Original questions இல்லை; அந்த letters-க்கு reasoning உருவாக்க முடியாது. தளத்தில் உள்ள தனி self-check quiz புதிய practice questions; அது காணாமல் போன original Quiz 02-ஐ மீட்டெடுத்ததாக அல்ல."
+      "title": "Quiz 02 — விடைகளும் காரணங்களும்",
+      "text": "- **சமூக, நெறிமுறைக் கவலைகள்** → **Societal marketing** concept.\n- **வாடிக்கையாளர் எதிர்ப்பை personal selling, advertising மூலம் முறியடித்தல்** → **Sales (selling)** orientation.\n- **Supplier concept** என்ற marketing philosophy இல்லை (production, product, selling, marketing, societal, holistic மட்டும்).\n- **குறைந்த விலை, எளிதில் கிடைப்பது** → **Production concept**.\n- **Goal orientation:** நீண்டகால நிறுவன இலக்குகளை அடைவது வாடிக்கையாளர் திருப்தியைப் போலவே முக்கியம்."
     },
     {
       "heading": "Quick revision sheet",

@@ -274,11 +274,6 @@
       "heading": "Practice questions (course paper)",
       "title": "பாடநெறிப் பயிற்சியைப் படிப்படியாகச் செய்வோம்",
       "text": "ஒவ்வொரு பரிவர்த்தனையிலும் மாறும் கணக்குகளைத் தேர்ந்தெடுத்து, பற்று அல்லது வரவு பக்கத்தில் தொகையை எழுதுங்கள். பிறகு பேரேட்டுக் கணக்குகளின் மீதிகளைக் கொண்டு இருப்பாய்வைத் தயாரியுங்கள். இரு பக்க மொத்தங்களும் சமமாக இருக்க வேண்டும். ஆனால் கையிருப்புப் பணம் எதிர்மறையாக இருக்க முடியாது. முதல் கேள்வியில் கொடுக்கப்பட்ட பண விவரங்களில் குறைபாடு உள்ளது.\n\nஇந்தப் பகுதியின் முழு மொழிபெயர்ப்பு இன்னும் தயாராகவில்லை. கீழே ஆங்கிலத்தில் உள்ள கேள்விகளையும் படிப்படியான விடைகளையும் பயன்படுத்துங்கள். நீண்டகாலச் சொத்தை வாங்கும் அல்லது மேம்படுத்தும் செலவையும், அன்றாடப் பராமரிப்புச் செலவையும் வேறுபடுத்திப் பாருங்கள்.\n\nகதை வடிவிலான கேள்வியில் முதலில் பரிவர்த்தனைகளை அடையாளம் காணுங்கள். பணம் அல்லது பொருள் நகராத உரையாடல் மட்டும் பதிவுசெய்ய வேண்டிய பரிவர்த்தனை அல்ல. கூடுதல் கதையை முயன்று, அடையாளம் காணுதல், பதிவு செய்தல், பேரேட்டில் பதிதல், இருப்பாய்வு தயாரித்தல் ஆகிய எல்லாச் செயல்களுக்கும் விடையளியுங்கள்."
-    },
-    {
-      "heading": "Mid exam 25S2 — every question explained",
-      "title": "Mid Exam 25S2 — நினைவில் வைக்க வேண்டியவை",
-      "text": "- **Financial accounting** = வெளிப் பயனாளர்களுக்கான கடந்தகால (historical) தகவல்; **management accounting** = உள் மேலாளர்களுக்கு, எதிர்காலம்.\n- **Cash basis:** பணம் வந்தால் மட்டும் வருமானம். **Accrual:** நிகழும்போதே (earned / incurred) பதிவு. **Matching:** செலவை அது உருவாக்கிய வருமானத்தின் அதே காலத்தில்.\n- **Prudence:** சாத்தியமான இழப்பை உடனே பதிவு; எதிர்பார்க்கும் இலாபத்தை உண்மையில் கிடைக்கும் வரை பதிவு செய்யாதே.\n- **Real** = சொத்துகள் (Cash, Building); **Nominal** = வருமானம், செலவுகள் (Revenue); **Personal** = நபர்கள் (Debtors).\n- **Cash sale:** Dr Cash, Cr Sales. **Credit purchase:** Dr Purchases, Cr Accounts payable.\n- **Source documents** = பரிவர்த்தனைக்கான சான்று. **Journal** = தேதி வரிசை; **Ledger** = கணக்கு வாரியாக; **General journal** = special journals-இல் பொருந்தாதவை.\n- **Imprest:** நிலையான தொகைக்கு மீண்டும் நிரப்பப்படும் petty cash. **Cash flow:** வட்டி செலுத்தல் = operating; கடன் திருப்பிச் செலுத்தல் = financing; நிலம் வாங்கல் = investing.\n- **Profitability** ஒரு qualitative characteristic அல்ல (timeliness, faithful representation, verifiability ஆகியவை ஆகும்)."
     }
   ],
   "bpas/w05": [
@@ -1263,11 +1258,6 @@
           "text": "**Task primitives**-இல் எந்தத் தரவு, எந்த அறிவு, எந்த அளவுகோல், எந்த வடிவில் முடிவு வேண்டும் என்பதை வரையறுப்போம். எல்லாப் பதிவுகளிலும் எல்லா patterns-ஐயும் தேடுவது செலவானதும் பயனற்றதுமாகலாம்.\n\n**ஐந்து Task primitives:** task-relevant data; தேடும் knowledge வகை; பயன்படுத்தும் background knowledge; interestingness measures/thresholds; முடிவின் presentation.\nஉதாரணம்: கடந்த வருட supermarket baskets-இல், பொருள் hierarchy பயன்படுத்தி, support≥10%, confidence≥60% rules தேடி table-ஆகக் காட்டு. “எதை, எப்படித் தேர்வு செய்து, எந்த format-இல்?” என்பதற்குப் பதில் கிடைக்க வேண்டும்.\n\n**விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்**\n\nஒரு query-க்கு **ஐந்து primitives:** எந்த data (Sri Lanka customers); எந்த knowledge (association); background (age/item hierarchies); interestingness (support≥5%, confidence≥70%); output (rules/table/chart/tree). “எந்த algorithm?” என்ற பதில் மட்டும் முழு task specification அல்ல. ஒரே data-இல் வேறு goal/threshold/hierarchy வைத்தால் வேறு patterns பயனுள்ளதாகலாம்."
         }
       ]
-    },
-    {
-      "heading": "Self-assessment quiz — every question explained",
-      "title": "Self-assessment — எந்தப் பிரச்சினைக்கு எந்த function",
-      "text": "- **ஒன்றாக வாங்கப்படும் பொருட்கள்** (Daraz basket) → **Association & correlation analysis**.\n- **லேபிள் உள்ள வகைப்படுத்தல்** (spam / not spam) → **Classification**.\n- **ஒத்தவற்றைக் குழுவாக்கல்** → **Clustering** (frequent pattern mining அல்ல).\n- **அசாதாரணமானவை** (credit card fraud, இயந்திரத்தில் முறைகேடு) → **Outlier analysis**.\n- **Data warehousing, feature selection, integration, normalization** → data mining functions அல்ல (சேமிப்பு / pre-processing).\n- **Biological data:** curse of dimensionality, privacy, பெரிய அளவு. **Stream data:** dynamic (தொடர்ந்து மாறும்).\n- **Manhattan distance:** வேறுபாடுகளின் முழு மதிப்புகளைக் கூட்டு: |5−1| + |6−0| + |7−0| = 17.\n- **Labeled data** → supervised learning; **unlabeled data** → unsupervised learning."
     }
   ],
   "dm/w03": [
@@ -1336,11 +1326,6 @@
           "text": "சம்பளம் ஆயிரங்களில், வயது பத்துகளில் இருந்தால் சில algorithms சம்பளத்திற்கே அதிக எடை தரலாம். **Normalization** அவற்றை ஒப்பிடக்கூடிய அளவிற்கு மாற்றும். Training data-வில் கற்ற scale-ஐ test data-க்கும் பயன்படுத்த வேண்டும்.\n\n**Min–max:** v′=(v−min)/(max−min)×(new_max−new_min)+new_min. 73,600-ஐ 12,000…98,000-இலிருந்து 0…1-க்கு மாற்றினால் **0.716**.\n**Z-score:** v′=(v−mean)/SD. Mean 54,000; SD 16,000 என்றால் அதே value **1.225** — mean-ஐவிட 1.225 SD மேலே.\n**Decimal scaling:** v/10ʲ; எல்லா transformed |values|<1 ஆகும் மிகச் சிறிய j. −986 என்றால் j=3 → −0.986. Min=max அல்லது SD=0 என்றால் சாதாரண division formula வரையறுக்கப்படாது.\n\n**விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்**\n\n**Transformation நான்கு:** smoothing, aggregation (daily→monthly), generalisation (street→city), normalisation. Min–max **(73600−12000)/(98000−12000)=0.716279…≈0.716**; z-score **(73600−54000)/16000=1.225**; decimal scaling max absolute986 என்றால் j=3, −986→−0.986. Min=max அல்லது σ=0 என்றால் denominator zero. Z-score-உம் outliers-ஆல் பாதிக்கப்படும்; robust alternative தேவைப்படலாம். Fit bounds/mean/σ training set-இலிருந்து; test-ஐத் தனியே மறுபடி fit செய்யாதீர்கள்."
         }
       ]
-    },
-    {
-      "heading": "Assessment 02 practice — cleaning, integration and transformation",
-      "title": "Assessment 02 பயிற்சி — எளிய விதிகள்",
-      "text": "- **Missing values (எண்கள்):** outliers இல்லையெனில் **mean** (சராசரி) கொண்டு நிரப்பு; outliers இருந்தால் **median** (நடு மதிப்பு).\n- **Missing values (வகைகள், எ.கா. PaymentType):** **mode** (அதிகம் வரும் மதிப்பு) — சொற்களுக்குச் சராசரி எடுக்க முடியாது.\n- **Male / male / M** போன்ற மாறுபாடுகள்: **Standardizing** — ஒரே uniform format-க்கு மாற்று.\n- **இரண்டு கோப்புகள்:** CustomerID மூலம் **merge** செய் → **Data integration**.\n- **தேதி வடிவங்கள்:** எல்லாவற்றையும் YYYY-MM-DD ஆக மாற்று → consistency, parsing errors இல்லை.\n- **Age → Youth/Adult/Senior:** புதிய feature (Customer Age Group); எண் → categorical (discretization)."
     }
   ],
   "dm/w04": [
@@ -2345,11 +2330,6 @@
           "text": "∀ வினாவை மறுக்க ஒரு counterexample போதும்; ∃ வினாவை நிரூபிக்க ஒரு example போதும். Inverse-க்கு x,y இடங்களை மாற்றித் தீருங்கள். Injective-க்கு வெவ்வேறு inputs ஒரே output தருகிறதா பாருங்கள்.\n\nAssignment Q1 integers-இல்: (a) y=0 மூலம் true; (b) y=−x மூலம் true; (c) x=y counterexample, false; (d) x=0,y=0 மூலம் true.\nQ2 f(x)=ln(4−2x), x<2 என்றால் **f⁻¹(x)=2−eˣ/2**; domain ℝ, range (−∞,2). y-intercept (0,1.5), x-intercept (ln4,0), horizontal asymptote y=2.\nQ3: x²:ℝ→ℝ neither; x²:ℝ→[0,∞) onto ஆனால் injective அல்ல; x³−x onto ஆனால் −1,0,1 மூன்றுக்கும் output 0 என்பதால் injective அல்ல. ஒவ்வொன்றுக்கும் domain/codomain எழுதுவது முக்கியம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Assignment1:** integer formulas true(y0),true(y−x),false(x=y),true(x2,y4). f(x)=ln(4−2x),x<2:inverse **2−eˣ/2**;inverse domainℝ,range(−∞,2);intercepts(0,1.5),(ln4,0);asymptote y2;decreasing. x²:ℝ→ℝ neither;ℝ→[0,∞) onto only. x³−x:0,1 same output→not injective;continuous and reaches±∞→ontoℝ. Domain/codomain மாற்றினால் verdict மாறலாம்."
         }
       ]
-    },
-    {
-      "heading": "Official quiz 1 — every question explained",
-      "title": "Predicate Logic வினாடி வினா — எளிய முறைகள",
-      "text": "- **∃** = “ஏதாவது ஒன்று உண்டு”; **∃!** = “ஒன்றே ஒன்று மட்டும்”; **∀** = “எல்லாவற்றுக்கும்”.\n- **Negation:** ∀ ↔ ∃ என மாற்றி, உள்ளே உள்ள கூற்றை மறு. x > 0 இன் மறுப்பு x ≤ 0 (சமம் சேர்க்கவும்).\n- **∀ உடன் ⇒**, **∃ உடன் ∧** — “Some A are B” = ∃x(A(x) ∧ B(x)).\n- வரையறுக்கப்பட்ட பட்டியலில் ∀ = எல்லாவற்றையும் **∧** (AND) கொண்டு இணை; ∃ = **∨** (OR).\n- P(…) கேள்விகளில்: எண்களை வைத்து ஒவ்வொரு பகுதியையும் சரிபார்."
     }
   ],
   "dmath/w02": [
@@ -2418,11 +2398,6 @@
           "text": "**|A∪B| = |A| + |B| − |A∩B|**. இரண்டு பாடங்களையும் படிப்பவர் இருமுறை எண்ணப்பட்டதால் intersection-ஐ ஒருமுறை கழிக்கிறோம். மூன்று sets-இல் pair overlaps கழித்து triple overlap மீண்டும் சேர்க்க வேண்டும்.\n\n**மூன்று Sets:** |A∪B∪C|=|A|+|B|+|C|−|A∩B|−|A∩C|−|B∩C|+|A∩B∩C|.\n**Only A**=|A|−|A∩B| இரண்டு sets சூழலில். **Neither**=|U|−|A∪B|. “Exactly one”, “at least one”, “both” மூன்றும் வேறு பகுதிகள்; கேள்விச் சொல்லை வட்டமிடுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Inclusion–exclusion:**|A∪B|=|A|+|B|−|A∩B|. Coffee100,sugar70,cream60,both50→only20/10,union80,exactly-one30,neither20. Three sets:singles−pair intersections+triple. Pair intersection counts-இல் triple பொதுவாக ஏற்கெனவே உள்ளது;“only pair” வேண்டுமெனில் triple கழிக்கவும். Venn fill order triple→pair-only→single-only→none;negative region வந்தால் data/interpretation பிழை."
         }
       ]
-    },
-    {
-      "heading": "Official quiz 2 — every question explained",
-      "title": "Sets வினாடி வினா — எளிய முறைகள்",
-      "text": "- **Whole numbers** 0-இலிருந்து; **Natural numbers** 1-இலிருந்து தொடங்கும்.\n- **∩** = இரண்டிலும் (AND); **∪** = ஏதாவது ஒன்றில் (OR); **A \\ B** = A-இல் உண்டு, B-இல் இல்லை.\n- **Venn சூத்திரம்:** |A ∪ B| = |A| + |B| − |A ∩ B|. 80 = 60 + 35 − both → both = 15.\n- **∈** ஒரு உறுப்புக்கு; **⊆** ஒரு set-க்கு. ∅ எல்லா set-க்கும் subset.\n- **Disjoint** = பொது உறுப்பு இல்லை → A ∩ B = ∅."
     }
   ],
   "dmath/w03": [
@@ -2481,11 +2456,6 @@
           "text": "**(f∘g)(x)=f(g(x))**. முதலில் உள்ளே உள்ள g; பிறகு f. வரிசை முக்கியம்: துணியைத் துவைத்துப் பிறகு உலர்த்துவது போல, வரிசை மாற்றினால் முடிவு பொதுவாக மாறும்.\n\nf(x)=x+1, g(x)=2x என்றால் **f∘g=2x+1**; **g∘f=2x+2**. இவை வேறுபடும்.\nf(g(x)) வரையறுக்க g(x) output f-இன் domain-இல் இருக்க வேண்டும். Inverse composition-இல் (f∘g)⁻¹=g⁻¹∘f⁻¹; வரிசை திரும்புகிறது.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**f∘g:g முதலில்**. f=x²−1,g=√x+1: f∘g=x+2√x,domainx≥0;g∘f=√(x²−1)+1,domainx≤−1 அல்லதுx≥1. Formula simplify செய்தபின் original domain restrictions மறக்காதீர்கள். Whole domain-இல் composition வேண்டுமெனில் inner function image outer domain-க்குள் இருக்கவேண்டும்;இல்லையெனில் restricted composite domain குறிப்பிடவும்."
         }
       ]
-    },
-    {
-      "heading": "Official quiz 3 — every question explained",
-      "title": "Functions வினாடி வினா — எளிய முறைகள்",
-      "text": "- **One-to-one:** வேறு inputs → வேறு outputs. **Onto:** codomain-இன் ஒவ்வொரு மதிப்பும் output ஆக வேண்டும். |b| எதிர்மறை தராது → onto அல்ல.\n- **f∘g = f(g(x)):** முதலில் g, பின்னர் f. f(x)=2x+1, g(x)=3x+4 → 6x+9.\n- **Inverse:** y = f(x) என எழுதி x-க்குத் தீர். y = x³+2 → x = ∛(y−2).\n- **Graph:** ● (closed) = [ ] சேர்க்கப்படும்; ○ (open) = ( ) சேர்க்கப்படாது. Domain = x மதிப்புகள், Range = y மதிப்புகள்.\n- ஒரு input-க்கு இரண்டு outputs இருந்தால் அது function அல்ல. 1/x-இல் x ≠ 0."
     }
   ],
   "dmath/w04": [
@@ -2564,11 +2534,6 @@
           "text": "1+…+n, squares, cubes ஆகியவற்றிற்குத் தயார் sum formulas உண்டு. ஆனால் 100 முதல் 200 வரை என்றால் S(200)−S(99). S(100)-ஐ கழித்தால் 100-ஐயும் தவறாக நீக்கிவிடுவீர்கள்.\n\n**1+…+n=n(n+1)/2**; **1²+…+n²=n(n+1)(2n+1)/6**; **1³+…+n³=[n(n+1)/2]²**.\n100…200 sum = S(200)−S(99)=20,100−4,950=**15,150**. PDF-இல் 196,050 என இருப்பது arithmetic slip. Answer-ஐ average×count=150×101 மூலமும் சோதிக்கலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nΣk=n(n+1)/2;Σk²=n(n+1)(2n+1)/6;Σk³=[n(n+1)/2]². Σ100…200=20100−4950=**15150**. 1…10 squares385,cubes3025. Σ₀∞xᵏ=1/(1−x);Σ₁∞kxᵏ⁻¹=1/(1−x)²,|x|<1. Lower index வேறாக இருந்தால் missing initial terms adjust செய்யவேண்டும்."
         }
       ]
-    },
-    {
-      "heading": "Official quiz 4 — every question explained",
-      "title": "Sequences & Sums வினாடி வினா — எளிய முறைகள்",
-      "text": "- **n-வது உறுப்பு:** n-ஐ சூத்திரத்தில் வை (a(5) = 2·5+3 = 13).\n- **Arithmetic** (ஒவ்வொரு முறையும் d கூட்டு): Sₙ = n/2 (2a + (n−1)d).\n- **Geometric** (ஒவ்வொரு முறையும் r ஆல் பெருக்கு): Sₙ = a(rⁿ − 1)/(r − 1); முடிவிலி தொகை S = a/(1 − r), −1 < r < 1 போது மட்டும்.\n- **1² + … + n² = n(n+1)(2n+1)/6.** 50 முதல் 100 வரை = (1→100) − (1→49).\n- சூத்திரத்தைக் கண்டுபிடிக்க: n = 1, 2, 3 வைத்து ஒவ்வொரு option-ஐயும் சோதி."
     }
   ],
   "dmath/w05": [
@@ -2627,11 +2592,6 @@
           "text": "ஒவ்வொரு இடமும் 0 அல்லது 1. **Join** என்பது OR; **Meet** என்பது AND. Join-இல் ஏதேனும் ஒன்று 1 என்றால் 1; Meet-இல் இரண்டும் 1 ஆக வேண்டும். இவை சாதாரண கூட்டல் விதிகள் அல்ல.\n\nJoin/Meet entry-wise: **1∨0=1; 1∧0=0; 1∨1=1; 1∧1=1**. Join addition அல்ல: 1+1=2, ஆனால் 1∨1=1.\nZero–one matrices relations-ஐக் குறிக்க உதவும். OR, AND எந்தப் பணியைச் செய்கிறது என்று truth table-உடன் இணைத்தால் நினைவில் நிற்கும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nZero–one entries0/1. **Join OR** ஒரே position-இல் குறைந்தது ஒன்று1;**meet AND** இரண்டும்1. Examplejoin rows(1,1,1),(1,1,0);meet(0,0,0),(0,1,0). Ordinary addition1+1=2;Boolean OR1∨1=1. Join/meet elementwise,ordinary row-column product அல்ல."
         }
       ]
-    },
-    {
-      "heading": "Official quiz 5 — every question explained",
-      "title": "Matrices வினாடி வினா — எளிய முறைகள்",
-      "text": "- பொதுவாக **AB ≠ BA** (பெருக்கலில் வரிசை முக்கியம்).\n- **(Aᵀ)ᵀ = A**; **(AB)ᵀ = BᵀAᵀ**.\n- **Symmetric:** A = Aᵀ. **Skew-symmetric:** A = −Aᵀ. **Identity:** diagonal-இல் 1, மற்றவை 0.\n- **கூட்டல்:** இரண்டு matrix-களும் ஒரே அளவு. **பெருக்கல் A×B:** A-இன் columns = B-இன் rows.\n- ஒரு column = column matrix; ஒரு row = row matrix."
     }
   ],
   "dmath/w06": [
@@ -2690,11 +2650,6 @@
           "text": "எழுத்துகளை ஒரு நிரந்தர எண்ணால் நகர்த்துவோம். A=0,…,Z=25 என்றால் **E(x)=(x+k) mod 26**. Decode செய்ய k-ஐக் கழிக்க வேண்டும். இது கருத்தைப் புரிய உதவும் எளிய cipher; வலுவான நவீன பாதுகாப்பு அல்ல.\n\nk=3 என்றால் Y(24)→B(1), A(0)→D(3); அதனால் **YARD→BDUG**. Decode-இல் **CHVW→ZEST**.\nAlphabet A=0 convention-ஐப் பின்பற்றுங்கள்; A=1 என்று நடுவில் மாற்றினால் answer shift ஆகிவிடும். Negative remainder வந்தால் 26 சேர்த்து 0…25 range-க்கு மாற்றுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nA0…Z25;encrypt(p+k)mod26;decrypt(c−k)mod26. YARD→BDUG;CHVW→ZEST. Y24+3=27→1B;C2−3=−1→25Z. Shift map alphabet residues-இல் bijective. இது mathematical teaching cipher;நவீன secure encryption என்று கருதாதீர்கள்."
         }
       ]
-    },
-    {
-      "heading": "Official quiz 6 — every question explained",
-      "title": "Number Theory வினாடி வினா — எளிய முறைகள்",
-      "text": "- **a | b** = a, b-ஐ மீதியின்றி வகுக்கும். a|b, b|c ⇒ a|c; a|b, a|c ⇒ a|(b+c).\n- **a = dq + r**, 0 ≤ r < d. 34 = 5×6 + 4 → quotient 6, remainder 4.\n- **a ≡ b (mod m)** என்றால் m, **a − b**-ஐ வகுக்கும் (a + b அல்ல). கழித்துப் பார்த்துச் சோதி.\n- **Prime:** 1-ஐ விடப் பெரியது, 1 மற்றும் தன்னால் மட்டுமே வகுபடும். √n வரை உள்ள primes-ஆல் வகுத்துச் சோதி.\n- **Caesar cipher:** encrypt = 3 எழுத்துகள் முன்னே (C→F); decrypt = 3 பின்னே (E→B)."
     }
   ],
   "dmath/w07": [
@@ -2743,11 +2698,6 @@
           "text": "ஒரு term-ஐ முந்தைய terms மூலம் வரையறுப்பது **Recursion**. Fibonacci-இல் fₙ=fₙ₋₁+fₙ₋₂; தொடக்க மதிப்புகளும் தேவை. விதி மட்டும் இருந்தால் sequence முழுவதும் தீர்மானிக்கப்படாது.\n\nRecursive definition-க்கு **base values + recursive rule** தேவை. f(0)=1, f(n+1)=2f(n)+3 என்றால் f(1)=5, f(2)=13, f(3)=29.\nFactorial: 0!=1; n!=n(n−1)!, n≥1. Base இல்லாவிட்டால் recursion நிற்காது அல்லது பல sequences அதே rule-க்கு பொருந்தலாம்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nRecursion initial values+smaller arguments-இலிருந்து next rule. f0=3,f(n+1)=2fn+3→**3,9,21,45,93**. FactorialF0=1,F(n+1)=(n+1)Fn. Powersa0=1,nexta×previous. FibonacciF0=0,F1=1→0,1,1,2,3,5,8;two initials வேண்டும். Base இல்லாத circular rule unique sequence தராது. Induction statement நிரூபிக்கும்;recursion object வரையறுக்கும்."
         }
       ]
-    },
-    {
-      "heading": "Official quiz 7 — every question explained",
-      "title": "Induction வினாடி வினா — எளிய முறைகள்",
-      "text": "- Induction-இல் **இரண்டு படிகள்:** (1) **Basis step** — P(1) உண்மை எனக் காட்டு; (2) **Inductive step** — P(k) உண்மை என அனுமானித்து P(k+1) உண்மை எனக் காட்டு. “Conclusive step” என்று தனிப் படி இல்லை.\n- **P(1)** = சூத்திரத்தில் n-க்குப் பதிலாக 1 வை.\n- Inductive hypothesis-ஐ inductive step-இல் **ஒரு முறை** பயன்படுத்துவோம்.\n- **Recursive definition:** தொடக்க மதிப்பு + அடுத்த உறுப்பைப் பெறும் விதி (a₀ = 1, aₙ₊₁ = 4aₙ).\n- f(n+1) = 2f(n) + 7, f(0) = 1 → f(1) = 9."
     }
   ],
   "dmath/w08": [
@@ -2816,11 +2766,6 @@
           "text": "யார் முதலாவது, இரண்டாவது என்று வரிசை முக்கியமானால் **nPr=n!/(n−r)!**. திரும்பத் தேர்வு செய்ய அனுமதியா, ஒரே மாதிரியான உறுப்புகள் உள்ளனவா என்பதைப் பொறுத்து formula மாறும்.\n\n**nPr=n!/(n−r)!** order முக்கியமான without-replacement தேர்வு. Repeated identical letters இருப்பின் arrangements = n!/(n₁!n₂!…). வேறுபட்ட objects போல எண்ணினால் overcount ஆகும்.\nCircular arrangements-க்கு rotations ஒன்றாகக் கருதப்படுகிறதா என்பது கூடுதல் assumption. கேள்வி line-ஆ circle-ஆ தெளிவாகப் படியுங்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nOrdered no repeats **nPr=n!/(n−r)!**;repeats allowed ordered strings **nʳ**.10P3=720;100P3=970200;nPr=C(n,r)r!. Repeated identical letters arrangements n!/(m1!m2!…). PIN-க்கு leading0 பொதுவாக அனுமதி;4-digit integer-க்கு first0 இல்லை. Notation P(n,r)-ஐ ஒரே இடத்தில் இரு அர்த்தங்களில் பயன்படுத்தாமல் assumptions தெளிவாக்கவும்."
         }
       ]
-    },
-    {
-      "heading": "Official quiz 8 — every question explained",
-      "title": "Counting வினாடி வினா — எளிய முறைகள்",
-      "text": "- **OR → கூட்டு** (3 சிவப்பு அல்லது 4 நீல skirt = 7). **AND → பெருக்கு** (50 × 95 × 30).\n- **Pigeonhole:** பெட்டிகளின் எண்ணிக்கை + 1 → இரண்டு ஒரே பெட்டியில் உறுதி. 26×26 = 676 initials → 677 மாணவர்கள்.\n- **எல்லாவற்றையும் வரிசைப்படுத்து:** n! (5! = 120).\n- **Permutation** (வரிசை முக்கியம்): P(4,2) = 4×3 = 12. **Combination** (வரிசை முக்கியமில்லை): C(10,3) = 120."
     }
   ],
   "dmath/w09": [
@@ -2879,11 +2824,6 @@
           "text": "Reflexive, symmetric, transitive மூன்றும் இருந்தால் equivalence. “ஒரே பிறந்த மாதம்” என்பது உதாரணம். இதனால் overlap இல்லாத **Equivalence classes** உருவாகி set-ஐப் பிரிக்கும்.\n\nEquivalence class **[a]={x:xRa}**. aRb என்றால் [a]=[b]; இல்லையெனில் classes disjoint. ஒவ்வொரு member-உம் ஒரு class-இல் மட்டுமே இருக்கும்.\n“mod 3-இல் same remainder” என்ற relation classes 0,1,2 remainders-ஆகப் பிரிக்கும். Class என்பது ஒரு member அல்ல; பல members கொண்ட set.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nEquivalence=reflexive+symmetric+transitive மூன்று தனிப் proofs. m|(a−b):a−a0;reverse negative;chain(a−b)+(b−c)=a−c. Classes partitionA. Same-remainder mod7→7classes. “Parallel lines” reflexive ஆகக் course relation **same line or parallel** என எடுத்தால் equivalence;strict distinct parallel மட்டும் reflexive இல்லை."
         }
       ]
-    },
-    {
-      "heading": "Official quiz 9 — every question explained",
-      "title": "Relations வினாடி வினா — எளிய முறைகள்",
-      "text": "- A-இலிருந்து B-க்கான relation = **A × B**-இன் subset; ஒவ்வொரு pair-உம் (A-இன் உறுப்பு, B-இன் உறுப்பு).\n- **Reflexive:** எல்லா a-க்கும் (a, a). **Symmetric:** (a,b) இருந்தால் (b,a). **Transitive:** (a,b), (b,c) ⇒ (a,c).\n- a < b: transitive ஆம், symmetric இல்லை, reflexive இல்லை.\n- **Equivalence relation** = Reflexive + Symmetric + Transitive (R-S-T)."
     }
   ],
   "dmath/w10": [
@@ -2932,11 +2872,6 @@
           "text": "**Selection** condition பொருந்தும் rows; **Projection** வேண்டிய columns; **Join** தொடர்புடைய tables இணைப்பு. மாணவர் table-ஐ marks table-உடன் Student ID மூலம் சேர்ப்பது Join.\n\n**Selection** rows குறைக்கும்; degree வழக்கமாக மாறாது. **Projection** columns தேர்வு செய்யும்; duplicates set semantics-இல் நீங்கலாம். **Join** common fields பொருந்தும் tuples-ஐ இணைக்கும்.\nProjection-இல் column order கேட்டபடி வைத்திருங்கள். Join key repeated என்றால் பல matching pairs உருவாகலாம்; ஒரு row மட்டும் கிடைக்கும் என்று ஊகிக்காதீர்கள்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\n**Selection rows** condition;**projection columns**,set duplicates merge;**join matching attributes** கொண்ட row combinations. GPA>3.5→Ackermann/Rao;CS ANDGPA>3.5→Ackermann மட்டும். P1,3(2,3,0,4)=(2,0). Lecturer/course schedulejoin common Department+Coursecode-இல் match செய்யவேண்டும்;ஒரு field மட்டும் match செய்தால் spurious combinations. SQL projection-இல் distinct behaviour வேறுபடலாம்."
         }
       ]
-    },
-    {
-      "heading": "Official quiz 10 — every question explained",
-      "title": "n-ary Relations வினாடி வினா — எளிய முறைகள்",
-      "text": "- 3-ary relation ⊆ **A × B × C**; n-ary relation = n-tuples-இன் set.\n- **Degree** = ஒரு tuple-இல் உள்ள உறுப்புகளின் எண்ணிக்கை. (a, b, c, d) → 4.\n- Relation = **table**; tuple = **record/row**; field = **column**. Database என்பது n-ary relation (binary அல்ல).\n- **Primary key** = ஒரு record-ஐ தனித்துவமாகக் குறிக்கும் field. **Composite key** = பல fields சேர்ந்து.\n- **Extension** = தற்போதைய rows; **Intension** = நிரந்தர அமைப்பு. Operations: selection, projection, join (multiplication இல்லை)."
     }
   ],
   "dmath/w11": [
@@ -2995,11 +2930,6 @@
           "text": "Highway-க்கு நகரங்கள் vertices; network-க்கு computers vertices. One-way சாலை என்றால் directed edge. நகரத்திற்கு வெளியே சென்று அதே நகருக்கு வரும் சாலை loop ஆகும். Model உண்மைச் சூழலைப் பொருத்த வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nAcquaintance undirected mutual;influence directed;web/citation directed link;roads direction/multiple/loops description-ஐப் பொறுத்தது;airline perflight directedmultigraph;roundrobin winner→loser (draws இல்லாத assumption). Traffic/committee conflict edge ஒரேநேரம் முடியாத pair;colour=timeslot. பழைய billions figures current counts அல்ல;model structure-ஐப் படிக்கவும்."
         }
       ]
-    },
-    {
-      "heading": "Official quiz 11 — every question explained",
-      "title": "Graphs வினாடி வினா — எளிய முறைகள்",
-      "text": "- **Simple graph:** loops இல்லை, ஒரே ஜோடிக்குப் பல edges இல்லை. **Multigraph:** பல edges உண்டு. **Pseudograph:** loops-உம் உண்டு. **Mixed graph:** directed + undirected edges.\n- Simple graph connected ஆக இருக்க வேண்டியதில்லை.\n- **Influence graph** (directed): a → b = a, b-ஐ பாதிக்கிறார்.\n- **Tree** (connected, cycle இல்லை): v vertices → v − 1 edges, அதாவது v = e + 1.\n- Q5, Q7-இல் quiz key பாடநூலிலிருந்து வேறுபடுகிறது — விளக்கத்தைப் படியுங்கள்."
     }
   ],
   "dmath/w12": [
@@ -3048,11 +2978,6 @@
           "text": "சிறிய keys இடது subtree-இலும் பெரிய keys வலது subtree-இலும் வரும் விதி. புதிய value-ஐ root-உடன் ஒப்பிட்டு இடம் அல்லது வலம் சென்று insert செய்வோம். Insert வரிசை tree-இன் shape-ஐ மாற்றலாம்.\n\nஒவ்வொரு compare-இலும் குறைவு left, அதிகம் right. Sorted order-இல் insert செய்தால் skewed tree ஆகி search **O(n)** வரை போகலாம்; balanced tree-இல் **O(log n)** ஆகலாம்.\nDuplicates-ஐ left-ஆ right-ஆ அல்லது count-ஆ கையாளும் policy முன்பே தேவை. Binary tree என்றாலே binary *search* tree ஆகாது; ordering rule பூர்த்தியாக வேண்டும்.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nBST leftsubtreeallkeys<node<rightsubtreeallkeys,distinctkeys convention. Insert comparefromroot until empty slot;equalkey duplicatepolicy specify. Mathematicsroot→oceanography rightphysics→leftmeteorology→rightempty. Height h-க்கு searchO(h);balancedO(logn),skewedO(n),alwaysfast guarantee இல்லை. Numerickeys numbers போல compare;stringlexicographic order50 vs100 வேறாகலாம்."
         }
       ]
-    },
-    {
-      "heading": "Official quiz 12 — every question explained",
-      "title": "Trees வினாடி வினா — எளிய முறைகள்",
-      "text": "- **Binary tree:** ஒவ்வொரு node-க்கும் 0, 1 அல்லது 2 children.\n- **Binary search tree:** இடது < node < வலது, ஒவ்வொரு node-இலும். 10-இன் இடது child 16 என்றால் BST அல்ல.\n- **Full binary tree:** leaves = internal nodes + 1.\n- **Complete binary tree:** கடைசி level தவிர எல்லாம் நிரம்பியது; கடைசி level இடமிருந்து வலமாக.\n- **Optimal BST:** keys-இன் access frequency தெரிந்திருக்க வேண்டும், tree மாறக்கூடாது → lookup cost குறையும். Undo/redo = stack, tree அல்ல."
     }
   ],
   "dmath/w13": [
@@ -3091,11 +3016,6 @@
           "text": "Graph-இன் எல்லா vertices-ஐயும் cycle இல்லாமல் இணைக்கும் subgraph **Spanning tree**. Connected graph-க்குத்தான் அது இருக்கும். n vertices என்றால் n−1 edges; extra edges நீக்கினாலும் connectivity காக்க வேண்டும்.\n\nConnected graph-இல் cycle edge-ஐ நீக்கினால் connectivity காக்கப்படும்; cycle-இன் redundant edges நீக்கித் தொடருங்கள். n vertices, m edges இருந்தால் spanning tree பெற **m−n+1** edges நீக்க வேண்டும்.\nஎந்த edge-ஐயும் சீரற்ற முறையில் நீக்காதீர்கள்; bridge நீக்கினால் disconnect ஆகும். Spanning tree பல இருக்கலாம். Weighted minimum spanning tree என்பது கூடுதல் optimisation problem.\n\n**முழுப் படிகளுடன் புரிந்துகொள்ள**\n\nSpanningtree original graph-இன் **allvertices**,subsetedges,connected+acyclic. Finite connected graph iff spanningtree exists;nvertices,medges→remove m−n+1 **cycle edges safely**. Arbitrary அந்தஎண்ணிக்கை edges remove செய்தால் connectedness உறுதி இல்லை;bridge remove செய்யாதீர்கள். Disconnected graph-க்கு spanningforest. Multicast deliverytree participating network/receivers-ஐ இணைக்கலாம்;entirephysicalnetwork எல்லாவற்றையும் span செய்யவேண்டிய அவசியமில்லை."
         }
       ]
-    },
-    {
-      "heading": "Official quiz 13 — every question explained",
-      "title": "Traversals & Decision Trees வினாடி வினா — எளிய முறைகள்",
-      "text": "- **Pre-order:** Root, Left, Right. **In-order:** Left, Root, Right. **Post-order:** Left, Right, Root.\n- BST pre-order கொடுத்தால்: எண்களை வரிசையாகச் செருகி tree-ஐக் கட்டு, பிறகு கேட்ட traversal-ஐப் படி.\n- **Spanning tree:** எல்லா vertices-ஐயும் தொடும், cycle இல்லாத subgraph.\n- **Decision tree:** ஒவ்வொரு internal node = ஒரு முடிவு; **risk** நிலையில் (probabilities தெரியும்) பயனுள்ளது.\n- Decision node = **சதுரம்**, chance node = வட்டம், end node = முக்கோணம்."
     }
   ],
   "dmath/papers": [
@@ -5715,8 +5635,9 @@
     },
     {
       "heading": "Quiz 02: model answer",
-      "title": "Quiz 02 — விடைகளும் காரணங்களும்",
-      "text": "- **சமூக, நெறிமுறைக் கவலைகள்** → **Societal marketing** concept.\n- **வாடிக்கையாளர் எதிர்ப்பை personal selling, advertising மூலம் முறியடித்தல்** → **Sales (selling)** orientation.\n- **Supplier concept** என்ற marketing philosophy இல்லை (production, product, selling, marketing, societal, holistic மட்டும்).\n- **குறைந்த விலை, எளிதில் கிடைப்பது** → **Production concept**.\n- **Goal orientation:** நீண்டகால நிறுவன இலக்குகளை அடைவது வாடிக்கையாளர் திருப்தியைப் போலவே முக்கியம்."
+      "title": "Quiz 02 விடைக்குறிப்பு",
+      "text": "உங்கள் file-இல் தேர்வுக் கேள்விகள் இல்லை; answer letters மட்டுமே உள்ளன. கேள்வி தெரியாமல் a அல்லது b-யின் காரணத்தை ஊகிக்க முடியாது. மேலுள்ள concepts-இன் வேறுபாடுகளைப் புரிந்து புதிய MCQ-க்கு பயன்படுத்துங்கள்.",
+      "details": "**பாடத்தைப் படிப்படியாகப் புரிந்துகொள்ள**\n\nAvailable answer key: **1-a, 2-a, 3-a, 4-b, 5-c**. Original questions இல்லை; அந்த letters-க்கு reasoning உருவாக்க முடியாது. தளத்தில் உள்ள தனி self-check quiz புதிய practice questions; அது காணாமல் போன original Quiz 02-ஐ மீட்டெடுத்ததாக அல்ல."
     },
     {
       "heading": "Quick revision sheet",
@@ -6751,6 +6672,99 @@
           "text": "Situation analysis → objectives → target, positioning → marketing mix → action programme → budget → control. Telecom product எடுத்துக்காட்டில் customer need-இலிருந்து implementation வரை அனைத்தும் பொருந்த வேண்டும்; வெறும் 4Ps பட்டியல் போதாது.\n\n**Plan-இன் முக்கிய பகுதிகள்:** executive summary; company information; marketing environment; current market/product/competition situation; suppliers; channels/logistics; SWOT; objectives/issues; strategy; action programme; budget; controls.\n**SWOT:** strengths/weaknesses internal; opportunities/threats external. **Strategy:** STP + product/price/place/promotion. **Action programme:** என்ன, யார், எப்போது, எவ்வளவு செலவு? **Controls:** KPI, target, review, corrective action.\nTelecom செயல்வினாவில் imaginary புதிய offer-க்கு assumptions வெளிப்படையாகச் சொல்லுங்கள். “புதிய app” என்று மட்டும் எழுதாமல் target need முதல் implementation மற்றும் evaluation வரை தொடரைக் காட்டுங்கள்.\n\n**பாடத்தைப் படிப்படியாகப் புரிந்துகொள்ள**\n\nபத்து main பகுதிகள்: **executive summary, company information, macro analysis, current situation, SWOT, objectives/issues, strategy, actions, budget, controls**. Current situation-இல் customer, competitor, supplier, channel/logistics subparts. Summary முதல் தோன்றினாலும் முழுப் plan பிறகு எழுத உதவும்.\nSWOT internal S/W, external O/T. Strategy STP+differentiation+4Ps; actions what/who/when/cost. Budget projected P&L; control KPI/target/data source/review date/responsible person/correction.\nTelecom imaginary student bundle: need/capacity assumptions→target/position→data/service/price/channel/message→launch tasks→cost/revenue→review. SMART example 3 months-இல் trial1,000, paid conversion20%, contribution target போன்றவை assumptions என்று குறிக்கவும். Checklist எல்லா boxes tick செய்தாலும் quality/evidence/budget feasibility தானாக நிரூபிக்காது."
         }
       ]
+    }
+  ],
+  "dmath/quizzes": [
+    {
+      "heading": "Quiz 1 — Introduction to Predicate Logic",
+      "title": "Predicate Logic வினாடி வினா — எளிய முறைகள",
+      "text": "- **∃** = “ஏதாவது ஒன்று உண்டு”; **∃!** = “ஒன்றே ஒன்று மட்டும்”; **∀** = “எல்லாவற்றுக்கும்”.\n- **Negation:** ∀ ↔ ∃ என மாற்றி, உள்ளே உள்ள கூற்றை மறு. x > 0 இன் மறுப்பு x ≤ 0 (சமம் சேர்க்கவும்).\n- **∀ உடன் ⇒**, **∃ உடன் ∧** — “Some A are B” = ∃x(A(x) ∧ B(x)).\n- வரையறுக்கப்பட்ட பட்டியலில் ∀ = எல்லாவற்றையும் **∧** (AND) கொண்டு இணை; ∃ = **∨** (OR).\n- P(…) கேள்விகளில்: எண்களை வைத்து ஒவ்வொரு பகுதியையும் சரிபார்."
+    },
+    {
+      "heading": "Quiz 2 — Sets and Set Operations",
+      "title": "Sets வினாடி வினா — எளிய முறைகள்",
+      "text": "- **Whole numbers** 0-இலிருந்து; **Natural numbers** 1-இலிருந்து தொடங்கும்.\n- **∩** = இரண்டிலும் (AND); **∪** = ஏதாவது ஒன்றில் (OR); **A \\ B** = A-இல் உண்டு, B-இல் இல்லை.\n- **Venn சூத்திரம்:** |A ∪ B| = |A| + |B| − |A ∩ B|. 80 = 60 + 35 − both → both = 15.\n- **∈** ஒரு உறுப்புக்கு; **⊆** ஒரு set-க்கு. ∅ எல்லா set-க்கும் subset.\n- **Disjoint** = பொது உறுப்பு இல்லை → A ∩ B = ∅."
+    },
+    {
+      "heading": "Quiz 3 — Functions",
+      "title": "Functions வினாடி வினா — எளிய முறைகள்",
+      "text": "- **One-to-one:** வேறு inputs → வேறு outputs. **Onto:** codomain-இன் ஒவ்வொரு மதிப்பும் output ஆக வேண்டும். |b| எதிர்மறை தராது → onto அல்ல.\n- **f∘g = f(g(x)):** முதலில் g, பின்னர் f. f(x)=2x+1, g(x)=3x+4 → 6x+9.\n- **Inverse:** y = f(x) என எழுதி x-க்குத் தீர். y = x³+2 → x = ∛(y−2).\n- **Graph:** ● (closed) = [ ] சேர்க்கப்படும்; ○ (open) = ( ) சேர்க்கப்படாது. Domain = x மதிப்புகள், Range = y மதிப்புகள்.\n- ஒரு input-க்கு இரண்டு outputs இருந்தால் அது function அல்ல. 1/x-இல் x ≠ 0."
+    },
+    {
+      "heading": "Quiz 4 — Sequences and Summations",
+      "title": "Sequences & Sums வினாடி வினா — எளிய முறைகள்",
+      "text": "- **n-வது உறுப்பு:** n-ஐ சூத்திரத்தில் வை (a(5) = 2·5+3 = 13).\n- **Arithmetic** (ஒவ்வொரு முறையும் d கூட்டு): Sₙ = n/2 (2a + (n−1)d).\n- **Geometric** (ஒவ்வொரு முறையும் r ஆல் பெருக்கு): Sₙ = a(rⁿ − 1)/(r − 1); முடிவிலி தொகை S = a/(1 − r), −1 < r < 1 போது மட்டும்.\n- **1² + … + n² = n(n+1)(2n+1)/6.** 50 முதல் 100 வரை = (1→100) − (1→49).\n- சூத்திரத்தைக் கண்டுபிடிக்க: n = 1, 2, 3 வைத்து ஒவ்வொரு option-ஐயும் சோதி."
+    },
+    {
+      "heading": "Quiz 5 — Matrices",
+      "title": "Matrices வினாடி வினா — எளிய முறைகள்",
+      "text": "- பொதுவாக **AB ≠ BA** (பெருக்கலில் வரிசை முக்கியம்).\n- **(Aᵀ)ᵀ = A**; **(AB)ᵀ = BᵀAᵀ**.\n- **Symmetric:** A = Aᵀ. **Skew-symmetric:** A = −Aᵀ. **Identity:** diagonal-இல் 1, மற்றவை 0.\n- **கூட்டல்:** இரண்டு matrix-களும் ஒரே அளவு. **பெருக்கல் A×B:** A-இன் columns = B-இன் rows.\n- ஒரு column = column matrix; ஒரு row = row matrix."
+    },
+    {
+      "heading": "Quiz 6 — Number Theory and Cryptography",
+      "title": "Number Theory வினாடி வினா — எளிய முறைகள்",
+      "text": "- **a | b** = a, b-ஐ மீதியின்றி வகுக்கும். a|b, b|c ⇒ a|c; a|b, a|c ⇒ a|(b+c).\n- **a = dq + r**, 0 ≤ r < d. 34 = 5×6 + 4 → quotient 6, remainder 4.\n- **a ≡ b (mod m)** என்றால் m, **a − b**-ஐ வகுக்கும் (a + b அல்ல). கழித்துப் பார்த்துச் சோதி.\n- **Prime:** 1-ஐ விடப் பெரியது, 1 மற்றும் தன்னால் மட்டுமே வகுபடும். √n வரை உள்ள primes-ஆல் வகுத்துச் சோதி.\n- **Caesar cipher:** encrypt = 3 எழுத்துகள் முன்னே (C→F); decrypt = 3 பின்னே (E→B)."
+    },
+    {
+      "heading": "Quiz 7 — Induction and Recursion",
+      "title": "Induction வினாடி வினா — எளிய முறைகள்",
+      "text": "- Induction-இல் **இரண்டு படிகள்:** (1) **Basis step** — P(1) உண்மை எனக் காட்டு; (2) **Inductive step** — P(k) உண்மை என அனுமானித்து P(k+1) உண்மை எனக் காட்டு. “Conclusive step” என்று தனிப் படி இல்லை.\n- **P(1)** = சூத்திரத்தில் n-க்குப் பதிலாக 1 வை.\n- Inductive hypothesis-ஐ inductive step-இல் **ஒரு முறை** பயன்படுத்துவோம்.\n- **Recursive definition:** தொடக்க மதிப்பு + அடுத்த உறுப்பைப் பெறும் விதி (a₀ = 1, aₙ₊₁ = 4aₙ).\n- f(n+1) = 2f(n) + 7, f(0) = 1 → f(1) = 9."
+    },
+    {
+      "heading": "Quiz 8 — Basics of Counting",
+      "title": "Counting வினாடி வினா — எளிய முறைகள்",
+      "text": "- **OR → கூட்டு** (3 சிவப்பு அல்லது 4 நீல skirt = 7). **AND → பெருக்கு** (50 × 95 × 30).\n- **Pigeonhole:** பெட்டிகளின் எண்ணிக்கை + 1 → இரண்டு ஒரே பெட்டியில் உறுதி. 26×26 = 676 initials → 677 மாணவர்கள்.\n- **எல்லாவற்றையும் வரிசைப்படுத்து:** n! (5! = 120).\n- **Permutation** (வரிசை முக்கியம்): P(4,2) = 4×3 = 12. **Combination** (வரிசை முக்கியமில்லை): C(10,3) = 120."
+    },
+    {
+      "heading": "Quiz 9 — Relations and Their Properties",
+      "title": "Relations வினாடி வினா — எளிய முறைகள்",
+      "text": "- A-இலிருந்து B-க்கான relation = **A × B**-இன் subset; ஒவ்வொரு pair-உம் (A-இன் உறுப்பு, B-இன் உறுப்பு).\n- **Reflexive:** எல்லா a-க்கும் (a, a). **Symmetric:** (a,b) இருந்தால் (b,a). **Transitive:** (a,b), (b,c) ⇒ (a,c).\n- a < b: transitive ஆம், symmetric இல்லை, reflexive இல்லை.\n- **Equivalence relation** = Reflexive + Symmetric + Transitive (R-S-T)."
+    },
+    {
+      "heading": "Quiz 10 — n-ary Relations",
+      "title": "n-ary Relations வினாடி வினா — எளிய முறைகள்",
+      "text": "- 3-ary relation ⊆ **A × B × C**; n-ary relation = n-tuples-இன் set.\n- **Degree** = ஒரு tuple-இல் உள்ள உறுப்புகளின் எண்ணிக்கை. (a, b, c, d) → 4.\n- Relation = **table**; tuple = **record/row**; field = **column**. Database என்பது n-ary relation (binary அல்ல).\n- **Primary key** = ஒரு record-ஐ தனித்துவமாகக் குறிக்கும் field. **Composite key** = பல fields சேர்ந்து.\n- **Extension** = தற்போதைய rows; **Intension** = நிரந்தர அமைப்பு. Operations: selection, projection, join (multiplication இல்லை)."
+    },
+    {
+      "heading": "Quiz 11 — Graphs and Graph Models",
+      "title": "Graphs வினாடி வினா — எளிய முறைகள்",
+      "text": "- **Simple graph:** loops இல்லை, ஒரே ஜோடிக்குப் பல edges இல்லை. **Multigraph:** பல edges உண்டு. **Pseudograph:** loops-உம் உண்டு. **Mixed graph:** directed + undirected edges.\n- Simple graph connected ஆக இருக்க வேண்டியதில்லை.\n- **Influence graph** (directed): a → b = a, b-ஐ பாதிக்கிறார்.\n- **Tree** (connected, cycle இல்லை): v vertices → v − 1 edges, அதாவது v = e + 1.\n- Q5, Q7-இல் quiz key பாடநூலிலிருந்து வேறுபடுகிறது — விளக்கத்தைப் படியுங்கள்."
+    },
+    {
+      "heading": "Quiz 12 — Trees and Applications of Trees",
+      "title": "Trees வினாடி வினா — எளிய முறைகள்",
+      "text": "- **Binary tree:** ஒவ்வொரு node-க்கும் 0, 1 அல்லது 2 children.\n- **Binary search tree:** இடது < node < வலது, ஒவ்வொரு node-இலும். 10-இன் இடது child 16 என்றால் BST அல்ல.\n- **Full binary tree:** leaves = internal nodes + 1.\n- **Complete binary tree:** கடைசி level தவிர எல்லாம் நிரம்பியது; கடைசி level இடமிருந்து வலமாக.\n- **Optimal BST:** keys-இன் access frequency தெரிந்திருக்க வேண்டும், tree மாறக்கூடாது → lookup cost குறையும். Undo/redo = stack, tree அல்ல."
+    },
+    {
+      "heading": "Quiz 13 — Decision Trees, Tree Traversals and Spanning Trees",
+      "title": "Traversals & Decision Trees வினாடி வினா — எளிய முறைகள்",
+      "text": "- **Pre-order:** Root, Left, Right. **In-order:** Left, Root, Right. **Post-order:** Left, Right, Root.\n- BST pre-order கொடுத்தால்: எண்களை வரிசையாகச் செருகி tree-ஐக் கட்டு, பிறகு கேட்ட traversal-ஐப் படி.\n- **Spanning tree:** எல்லா vertices-ஐயும் தொடும், cycle இல்லாத subgraph.\n- **Decision tree:** ஒவ்வொரு internal node = ஒரு முடிவு; **risk** நிலையில் (probabilities தெரியும்) பயனுள்ளது.\n- Decision node = **சதுரம்**, chance node = வட்டம், end node = முக்கோணம்."
+    }
+  ],
+  "dm/quizzes": [
+    {
+      "heading": "Self-assessment quiz — data mining functions and issues",
+      "title": "Self-assessment — எந்தப் பிரச்சினைக்கு எந்த function",
+      "text": "- **ஒன்றாக வாங்கப்படும் பொருட்கள்** (Daraz basket) → **Association & correlation analysis**.\n- **லேபிள் உள்ள வகைப்படுத்தல்** (spam / not spam) → **Classification**.\n- **ஒத்தவற்றைக் குழுவாக்கல்** → **Clustering** (frequent pattern mining அல்ல).\n- **அசாதாரணமானவை** (credit card fraud, இயந்திரத்தில் முறைகேடு) → **Outlier analysis**.\n- **Data warehousing, feature selection, integration, normalization** → data mining functions அல்ல (சேமிப்பு / pre-processing).\n- **Biological data:** curse of dimensionality, privacy, பெரிய அளவு. **Stream data:** dynamic (தொடர்ந்து மாறும்).\n- **Manhattan distance:** வேறுபாடுகளின் முழு மதிப்புகளைக் கூட்டு: |5−1| + |6−0| + |7−0| = 17.\n- **Labeled data** → supervised learning; **unlabeled data** → unsupervised learning."
+    },
+    {
+      "heading": "Assessment 02 practice — cleaning, integration and transformation",
+      "title": "Assessment 02 பயிற்சி — எளிய விதிகள்",
+      "text": "- **Missing values (எண்கள்):** outliers இல்லையெனில் **mean** (சராசரி) கொண்டு நிரப்பு; outliers இருந்தால் **median** (நடு மதிப்பு).\n- **Missing values (வகைகள், எ.கா. PaymentType):** **mode** (அதிகம் வரும் மதிப்பு) — சொற்களுக்குச் சராசரி எடுக்க முடியாது.\n- **Male / male / M** போன்ற மாறுபாடுகள்: **Standardizing** — ஒரே uniform format-க்கு மாற்று.\n- **இரண்டு கோப்புகள்:** CustomerID மூலம் **merge** செய் → **Data integration**.\n- **தேதி வடிவங்கள்:** எல்லாவற்றையும் YYYY-MM-DD ஆக மாற்று → consistency, parsing errors இல்லை.\n- **Age → Youth/Adult/Senior:** புதிய feature (Customer Age Group); எண் → categorical (discretization)."
+    }
+  ],
+  "bpas/quizzes": [
+    {
+      "heading": "Mid Exam 25S2 — all 20 questions",
+      "title": "Mid Exam 25S2 — நினைவில் வைக்க வேண்டியவை",
+      "text": "- **Financial accounting** = வெளிப் பயனாளர்களுக்கான கடந்தகால (historical) தகவல்; **management accounting** = உள் மேலாளர்களுக்கு, எதிர்காலம்.\n- **Cash basis:** பணம் வந்தால் மட்டும் வருமானம். **Accrual:** நிகழும்போதே (earned / incurred) பதிவு. **Matching:** செலவை அது உருவாக்கிய வருமானத்தின் அதே காலத்தில்.\n- **Prudence:** சாத்தியமான இழப்பை உடனே பதிவு; எதிர்பார்க்கும் இலாபத்தை உண்மையில் கிடைக்கும் வரை பதிவு செய்யாதே.\n- **Real** = சொத்துகள் (Cash, Building); **Nominal** = வருமானம், செலவுகள் (Revenue); **Personal** = நபர்கள் (Debtors).\n- **Cash sale:** Dr Cash, Cr Sales. **Credit purchase:** Dr Purchases, Cr Accounts payable.\n- **Source documents** = பரிவர்த்தனைக்கான சான்று. **Journal** = தேதி வரிசை; **Ledger** = கணக்கு வாரியாக; **General journal** = special journals-இல் பொருந்தாதவை.\n- **Imprest:** நிலையான தொகைக்கு மீண்டும் நிரப்பப்படும் petty cash. **Cash flow:** வட்டி செலுத்தல் = operating; கடன் திருப்பிச் செலுத்தல் = financing; நிலம் வாங்கல் = investing.\n- **Profitability** ஒரு qualitative characteristic அல்ல (timeliness, faithful representation, verifiability ஆகியவை ஆகும்)."
+    }
+  ],
+  "mkt/quizzes": [
+    {
+      "heading": "Quiz 02 — Paradigms of Marketing",
+      "title": "Quiz 02 — விடைகளும் காரணங்களும்",
+      "text": "- **சமூக, நெறிமுறைக் கவலைகள்** → **Societal marketing** concept.\n- **வாடிக்கையாளர் எதிர்ப்பை personal selling, advertising மூலம் முறியடித்தல்** → **Sales (selling)** orientation.\n- **Supplier concept** என்ற marketing philosophy இல்லை (production, product, selling, marketing, societal, holistic மட்டும்).\n- **குறைந்த விலை, எளிதில் கிடைப்பது** → **Production concept**.\n- **Goal orientation:** நீண்டகால நிறுவன இலக்குகளை அடைவது வாடிக்கையாளர் திருப்தியைப் போலவே முக்கியம்."
     }
   ]
 }

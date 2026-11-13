@@ -196,11 +196,11 @@ def native_tables(tables):
 
 
 def native_sections(body, key):
-    match = re.fullmatch(r"([a-z]+)-(?:Week(\d+)|(papers))", key)
+    match = re.fullmatch(r"([a-z]+)-(?:Week(\d+)|(papers|quizzes))", key)
     if not match:
         return body
     subject, week, papers = match.groups()
-    path = subject + "/" + ("papers" if papers else "w" + week)
+    path = subject + "/" + (papers if papers else "w" + week)
     entries = NATIVE_TAMIL.get(path, [])
     if entries:
         source = os.path.join(HERE, "content", path + ".md")
@@ -255,12 +255,13 @@ def study_data():
                 weeks.append({"key": skey + "-Week" + num, "label": week, "url": quote(folder + "/" + week + "/" + OUTNAME.format(week=week)),
                               "sections": [{"id": "s" + str(i+1), "title": re.sub(r"[*`]", "", h)} for i, h in enumerate(headings)],
                               "quiz": os.path.exists(os.path.join(HERE, "content", skey, "w" + num + ".quiz"))})
-            paper = os.path.join(HERE, "content", skey, "papers.md")
-            if os.path.exists(paper):
-                meta, body = parse(paper)
-                headings = re.findall(r"^## (.+)$", body, re.M)
-                weeks.append({"key": skey + "-papers", "label": "Past papers", "url": quote(folder + "/Past Papers.html"), "paper": True, "quiz": False,
-                              "sections": [{"id": "s" + str(i+1), "title": re.sub(r"[*`]", "", h)} for i, h in enumerate(headings)]})
+            for kind, (label, outfile) in EXTRA.items():
+                paper = os.path.join(HERE, "content", skey, kind + ".md")
+                if os.path.exists(paper):
+                    meta, body = parse(paper)
+                    headings = re.findall(r"^## (.+)$", body, re.M)
+                    weeks.append({"key": skey + "-" + kind, "label": label, "url": quote(folder + "/" + outfile), "paper": True, "quiz": False,
+                                  "sections": [{"id": "s" + str(i+1), "title": re.sub(r"[*`]", "", h)} for i, h in enumerate(headings)]})
             catalog.append({"key": skey, "name": name, "exam": EXAMS[skey], "url": quote(folder + "/Study Guide - Index.html"), "weeks": weeks})
         _STUDY_DATA = json.dumps(catalog, ensure_ascii=False).replace("</", "<\\/")
     return _STUDY_DATA
@@ -273,7 +274,7 @@ def page(title, body, key="", crumbs=""):
     translation = ""
     if is_hci:
         translation = '<style>' + open(os.path.join(HERE, "hci-translate.css"), encoding="utf-8").read() + '</style><script>' + open(os.path.join(HERE, "hci-translate.js"), encoding="utf-8").read() + '</script>'
-    home = ("../../" if re.fullmatch(r"[a-z]+-Week\d+", key) else "../" if key.endswith("-papers") or 'href="../SEM 6' in crumbs else "") + "SEM%206%20Study%20Hub.html#study-plan"
+    home = ("../../" if re.fullmatch(r"[a-z]+-Week\d+", key) else "../" if key.endswith(("-papers", "-quizzes")) or 'href="../SEM 6' in crumbs else "") + "SEM%206%20Study%20Hub.html#study-plan"
     menu_button = '<button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button>' if 'id="toc"' in body else ""
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -375,12 +376,15 @@ def weeks_of(skey):
 
 
 PAPERS = "Past Papers.html"
+QUIZZES = "Quizzes.html"
+EXTRA = {"papers": ("Past papers", PAPERS), "quizzes": ("Official quizzes", QUIZZES)}
 
 
-def build_papers(skey):
-    """content/<skey>/papers.md -> <Subject>/Past Papers.html (past exam papers with worked answers)."""
+def build_papers(skey, kind="papers"):
+    """content/<skey>/<kind>.md -> <Subject>/Past Papers.html or Quizzes.html (practice pages kept apart from the weeks)."""
     _, folder, code, sname = SUBJ[skey]
-    src = os.path.join(HERE, "content", skey, "papers.md")
+    label, outfile = EXTRA[kind]
+    src = os.path.join(HERE, "content", skey, kind + ".md")
     if not os.path.exists(src): return False
     meta, body = parse(src)
     parts = re.split(r"^## (.+)$", body, flags=re.M)
@@ -391,12 +395,12 @@ def build_papers(skey):
         secs_html.append(f'<section class="card" data-sec="{sid}"><h2 id="{sid}" data-t="{html.escape(re.sub(r"[*`]", "", h))}"><span class="num">{n}</span>{md_inline(h)}</h2>'
                          f'{md(parts[i+1])}<button class="done-btn"></button></section>')
     chips = [f'<span class="chip">{code}</span>'] + [f'<span class="chip">📄 {html.escape(s)}</span>' for s in meta["sources"]] + ['<span class="chip" id="donecount"></span>']
-    hero = (f'<div class="hero"><div class="sub">{html.escape(sname)} · Past papers</div><h1>{md_inline(meta["title"])}</h1>'
+    hero = (f'<div class="hero"><div class="sub">{html.escape(sname)} · {label}</div><h1>{md_inline(meta["title"])}</h1>'
             f'<p>{md_inline(meta.get("lead", ""))}</p>{md(parts[0].strip()) if parts[0].strip() else ""}<div class="meta">{"".join(chips)}</div></div>')
-    crumbs = f'<a href="../SEM 6 Study Hub.html">SEM 6</a> › <a href="{quote("Study Guide - Index.html")}">{html.escape(sname)}</a> › Past papers'
-    out = page(f"Past papers — {sname}", f'<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main>{hero}{"".join(secs_html)}</main></div>',
-               key=f"{skey}-papers", crumbs=crumbs)
-    open(os.path.join(ROOT, folder, PAPERS), "w", encoding="utf-8").write(out)
+    crumbs = f'<a href="../SEM 6 Study Hub.html">SEM 6</a> › <a href="{quote("Study Guide - Index.html")}">{html.escape(sname)}</a> › {label}'
+    out = page(f"{label} — {sname}", f'<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main>{hero}{"".join(secs_html)}</main></div>',
+               key=f"{skey}-{kind}", crumbs=crumbs)
+    open(os.path.join(ROOT, folder, outfile), "w", encoding="utf-8").write(out)
     return True
 
 
@@ -411,6 +415,9 @@ def build_subject(skey):
     if build_papers(skey):
         cards.append(f'<a href="{quote(PAPERS)}" data-key="{skey}-papers" class="papers"><small>Exam practice</small><span>Past papers with worked answers</span>'
                      f'<em>Real exam questions from previous years, fully solved, plus which topics come up most.</em><div class="pg"><i></i></div></a>')
+    if build_papers(skey, "quizzes"):
+        cards.append(f'<a href="{quote(QUIZZES)}" data-key="{skey}-quizzes" class="papers"><small>Quiz practice</small><span>Official quizzes — try first, then see why</span>'
+                     f'<em>The real course quizzes and exams. Pick an answer: a wrong pick explains why it is wrong.</em><div class="pg"><i></i></div></a>')
     for i, f in enumerate(files):
         week, meta, n, qs = build_week(skey, f, info[i-1] if i > 0 else None, info[i+1] if i + 1 < len(info) else None)
         cards.append(f'<a href="{quote(week)}/{quote(OUTNAME.format(week=week))}" data-key="{skey}-{week.replace(" ", "")}" data-n="{n}"><small>{week}</small>'

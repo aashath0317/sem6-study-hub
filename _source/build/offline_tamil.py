@@ -21,11 +21,11 @@ def _strings(path):
 
 
 def translated_body(body, key, here, render):
-    match = re.fullmatch(r'(hci|bpas|dm|dmath|mkt)-(?:Week(\d+)|(papers)|(index))', key)
+    match = re.fullmatch(r'(hci|bpas|dm|dmath|mkt)-(?:Week(\d+)|(papers|quizzes)|(index))', key)
     if not match:
         return body, False
     subject = match[1]
-    stem = 'w' + match[2] if match[2] else 'papers' if match[3] else 'index'
+    stem = 'w' + match[2] if match[2] else match[3] if match[3] else 'index'
     directory = os.path.join(here, 'content', subject, 'ta')
     path = os.path.join(directory, stem + '.md')
     if stem != 'index' and not os.path.isfile(path):

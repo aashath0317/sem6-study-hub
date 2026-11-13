@@ -1,0 +1,1421 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Official quizzes — Marketing</title><style>:root{
+  --bg:#f7f6f2;--panel:#ffffff;--ink:#1d2330;--muted:#5c6577;--line:#e3e1da;
+  --accent:#2f5bd3;--accent-soft:#e8eefc;--accent-ink:#1d3f9c;
+  --tip:#0f7b5f;--tip-bg:#e6f5ef;--exam:#b4400f;--exam-bg:#fdeee5;
+  --warn:#a3141f;--warn-bg:#fdecee;--ex:#6b3fb8;--ex-bg:#f1ecfb;--key:#8a6100;--key-bg:#fdf5dc;
+  --code-bg:#f1efe8;--th:#eef0f5;--shadow:0 1px 2px rgba(20,25,40,.06),0 4px 16px rgba(20,25,40,.05);
+  --fs:17px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12151c;--panel:#1a1f29;--ink:#e6e8ee;--muted:#9aa3b5;--line:#2b3240;
+  --accent:#7aa2ff;--accent-soft:#1f2a45;--accent-ink:#a9c1ff;
+  --tip:#5fd3ad;--tip-bg:#13302a;--exam:#ff9f6e;--exam-bg:#3a2216;
+  --warn:#ff7d86;--warn-bg:#3a1a1e;--ex:#b99bff;--ex-bg:#2a2140;--key:#f2c95b;--key-bg:#352c12;
+  --code-bg:#222836;--th:#232a38;--shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs)/1.7 "Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:10px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar .crumb{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.topbar .crumb a{color:var(--muted);text-decoration:none}.topbar .crumb a:hover{color:var(--accent)}
+.topbar button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.topbar button:hover{border-color:var(--accent)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0;transition:width .3s}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:36px;max-width:1240px;margin:0 auto;padding:28px 20px 80px}
+nav.toc{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14px;padding-right:6px}
+nav.toc .tt{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+nav.toc a{display:flex;gap:6px;align-items:flex-start;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid transparent;line-height:1.4}
+nav.toc a.h3{padding-left:22px;font-size:13px}
+nav.toc a:hover{color:var(--ink)}
+nav.toc a.on{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-soft)}
+nav.toc a .ck{flex:none;width:14px;color:var(--tip)}
+main{min-width:0}
+.hero{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);margin-bottom:26px}
+.hero .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hero h1{margin:6px 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:0;color:var(--muted)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 12px}
+section.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:8px 30px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+h2{font-size:24px;line-height:1.3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+h2 .num{flex:none;display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;font-size:15px}
+h3{font-size:19px;margin:26px 0 8px;color:var(--accent-ink)}
+h4{font-size:16.5px;margin:20px 0 6px}
+p{margin:10px 0}
+li{margin:4px 0}
+ul,ol{padding-left:24px}
+strong{font-weight:650}
+.done-btn{margin-top:18px;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:6px 14px;cursor:pointer}
+.done-btn.on{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);font-weight:650}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 40%,transparent)}
+td.r,th.r{text-align:right}
+code{font-family:Consolas,"Cascadia Mono",Menlo,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px}
+pre{background:var(--code-bg);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.55}
+pre code{background:none;padding:0}
+blockquote{margin:12px 0;padding:6px 16px;border-left:4px solid var(--line);color:var(--muted)}
+.call{border-radius:12px;padding:12px 18px;margin:16px 0;border-left:5px solid}
+.call>.ct{font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+.call>*:last-child{margin-bottom:4px}
+.call.tip{background:var(--tip-bg);border-color:var(--tip)}.call.tip>.ct{color:var(--tip)}
+.call.exam{background:var(--exam-bg);border-color:var(--exam)}.call.exam>.ct{color:var(--exam)}
+.call.warn{background:var(--warn-bg);border-color:var(--warn)}.call.warn>.ct{color:var(--warn)}
+.call.example{background:var(--ex-bg);border-color:var(--ex)}.call.example>.ct{color:var(--ex)}
+.call.key{background:var(--key-bg);border-color:var(--key)}.call.key>.ct{color:var(--key)}
+.call.video{background:var(--accent-soft);border-color:var(--accent)}.call.video>.ct{color:var(--accent-ink)}
+.call table{background:var(--panel)}
+.formula{font-family:"Cambria Math","Cambria",Georgia,serif;font-size:1.08em;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:10px 16px;margin:12px 0;text-align:center;overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+.grid2>div{border:1px solid var(--line);border-radius:12px;padding:4px 16px 8px;background:var(--bg)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:16px 0}
+.flow>span{flex:1 1 120px;background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:10px 12px;font-size:14.5px;font-weight:600;text-align:center;display:grid;place-items:center;position:relative}
+.flow>span+span::before{content:"→";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:400}
+dl dt{font-weight:650;margin-top:10px}dl dd{margin:2px 0 6px 18px;color:var(--ink)}
+/* video */
+.vwrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:22px;box-shadow:var(--shadow)}
+.vtabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.vtabs button{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;text-align:left}
+.vtabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:16/9}
+.vdrive{width:100%;border:0;border-radius:10px;background:#000;aspect-ratio:16/9;display:block}
+.vdlink{display:inline-block;margin-top:6px;font-size:13px;color:var(--muted)}
+.chap{max-height:420px;overflow:auto;font-size:14.5px}
+.chap .vt{font-weight:650;margin:0 0 4px}
+.chap .vs{color:var(--muted);font-size:14px;margin:0 0 8px}
+.chap a{display:flex;gap:10px;padding:6px 8px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.4}
+.chap a:hover{background:var(--accent-soft)}
+.chap a b{flex:none;font-family:Consolas,monospace;font-weight:600;color:var(--accent);font-size:13px;padding-top:2px}
+.ts{font-family:Consolas,monospace;font-size:12.5px;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border-radius:6px;padding:1px 7px;white-space:nowrap}
+.ts::before{content:"▶ "}
+.vmissing{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px}
+.navfoot{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.navfoot a{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.navfoot a small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.navfoot a.nx{text-align:right}
+/* index pages */
+.wk{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.wk a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.wk a:hover{border-color:var(--accent)}
+.wk a small{color:var(--accent);font-weight:650;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.wk a span{display:block;font-weight:650;margin:4px 0;line-height:1.35}
+.wk a em{font-style:normal;color:var(--muted);font-size:14px}
+.wk a .pg{height:4px;border-radius:4px;background:var(--line);margin-top:10px;overflow:hidden}
+.wk a .pg i{display:block;height:100%;background:var(--tip);width:0}
+main img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block;margin:12px auto}
+figure{margin:14px 0}figcaption{text-align:center;font-size:14px;color:var(--muted)}
+table.mx{display:inline-table;width:auto;margin:4px 6px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif}
+table.mx td{border:none;padding:2px 9px;text-align:center;background:none!important}
+.mxs{display:inline-grid;gap:1px 14px;padding:3px 10px;margin:4px 4px;vertical-align:middle;border-left:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:7px;font-family:"Cambria Math",Cambria,Georgia,serif;text-align:center;line-height:1.45}
+.mxl{display:inline-block;vertical-align:middle;font-family:"Cambria Math",Cambria,Georgia,serif;font-size:1.05em}
+/* interactive tools */
+.tool{border:2px solid var(--accent);border-radius:14px;padding:14px 18px 16px;margin:18px 0;background:linear-gradient(180deg,var(--accent-soft),var(--panel) 60px)}
+.tool>.tt{font-weight:700;color:var(--accent-ink);margin-bottom:8px}
+.tool label{font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:6px;margin:4px 12px 4px 0}
+.tool input[type=text],.tool input[type=number],.tool select,.tool textarea{font:inherit;font-size:14.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.tool input[type=text],.tool textarea{width:100%}
+.tool input[type=range]{accent-color:var(--accent)}
+.tool button{font:inherit;font-size:14px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;margin:4px 6px 4px 0}
+.tool button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.tool .out{margin-top:10px;font-size:15px}
+.tool .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tool .pill{display:inline-block;border-radius:8px;padding:3px 9px;margin:2px;font-family:Consolas,monospace;font-size:13.5px;background:var(--bg);border:1px solid var(--line)}
+.tool .pill.hi{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tool .pill.ok{background:var(--tip-bg);color:var(--tip);border-color:var(--tip)}
+.tool .pill.bad{background:var(--warn-bg);color:var(--warn);border-color:var(--warn);text-decoration:line-through}
+.tool .bar{display:inline-block;vertical-align:middle;margin-right:6px;height:16px;background:var(--accent);border-radius:4px;min-width:2px;transition:width .3s}
+.tool svg{max-width:100%;height:auto}
+.tool svg text{fill:var(--ink);font-family:inherit}
+.tool .note{font-size:13.5px;color:var(--muted)}
+mark{background:#ffe680;color:#000;border-radius:3px}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:16px 16px 60px}
+  nav.toc{position:fixed;inset:52px 0 0 0;z-index:25;background:var(--panel);padding:18px;max-height:none;display:none}
+  nav.toc.open{display:block}
+  .vgrid{grid-template-columns:1fr}
+  section.card,.hero,.vwrap{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:26px}
+}
+@media (min-width:901px){
+  body.toc-hidden .layout{grid-template-columns:minmax(0,1fr);max-width:1000px}
+  body.toc-hidden nav.toc{display:none}
+}
+#tocbtn{white-space:nowrap;flex:none}
+.gp-bar{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;flex-wrap:wrap}
+.gp-bar i{flex:1;min-width:80px;height:8px;background:var(--line);border-radius:6px;overflow:hidden;display:block}
+.gp-bar b{display:block;height:100%;background:var(--tip)}
+.gp-done{font-size:14px;margin:12px 0;padding-left:24px}
+.gp-done li{margin:3px 0}.gp-muted{color:var(--muted);font-size:13px;font-weight:400}
+.gp-tx{background:var(--accent-soft);color:var(--ink);padding:10px 12px;border-radius:8px;margin:12px 0 8px;font-weight:600}
+.gp-howto,.gp-q{font-size:15px;margin:8px 0}
+.gp-cb-label{font-size:15px;margin:14px 0 4px}
+.gp-table .gp-txrow td{background:var(--accent-soft);color:var(--ink);font-weight:600;font-size:14px;padding:6px 10px;white-space:normal}
+.gp-txrow-tag{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--accent);margin-right:6px}
+.gp-tablewrap{margin:10px 0}
+.gp-table td.gp-now input,.gp-acct,.gp-amt,.gp-check,.gp-fb{scroll-margin:84px 0 130px}
+.gp-table .gp-action-row td{background:var(--panel);padding:8px}
+.gp-action-row .gp-check{margin:0}
+@media (max-width:900px){.gp-table td.gp-now input,.gp-acct,.gp-amt,.gp-check,.gp-fb{scroll-margin-bottom:170px}}
+.gp-scroll{overflow-x:auto}
+.tool table.gp-table,table.gp-table{display:table;width:100%;max-width:none;overflow:visible;max-height:none;border-collapse:collapse;font-size:14.5px;table-layout:auto;margin:0}
+.gp-table th,.gp-table td{border:1px solid var(--line);padding:6px 8px;text-align:left;background:var(--panel);color:var(--ink)}
+.gp-table th{background:var(--accent-soft);font-weight:700;font-size:13px}
+.gp-table .r{text-align:right}
+.gp-col-date{width:70px}.gp-col-amt{width:22%}
+.gp-table .gp-credit{padding-left:26px}
+.gp-table tfoot td,.gp-row-total td{font-weight:700;background:var(--bg)}
+.gp-row-next td{height:32px;background:var(--bg)}
+.gp-table td.gp-now,.gp-now td{background:var(--key-bg);padding:4px}
+.gp-table input{font:inherit;width:100%;box-sizing:border-box;padding:5px 6px;border:1px solid var(--accent);border-radius:6px;background:var(--panel);color:var(--ink)}
+.gp-dr,.gp-cr{text-align:right}
+.gp-cell-acct{position:relative;min-width:110px}
+@media (max-width:600px){.gp-col-date{width:44px}.gp-table th,.gp-table td{padding:4px;font-size:13px}.gp-table input{padding:4px;min-width:0}.gp-col-amt{width:24%}}
+.gp-list{position:absolute;left:4px;right:4px;top:calc(100% - 2px);z-index:20;background:var(--panel);border:1px solid var(--accent);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.18);max-height:220px;overflow:auto}
+.gp-item,.gp-none{padding:7px 10px;font-size:14px}
+.gp-item{cursor:pointer}.gp-item:hover,.gp-item.on{background:var(--accent);color:#fff}
+.gp-none{color:var(--muted)}
+.gp-opts{display:flex;flex-wrap:wrap;margin:6px 0 10px}
+.gp-label{font-size:14px;font-weight:600}
+.gp-amt-free{font:inherit;width:150px;padding:6px 8px;border:1px solid var(--accent);border-radius:8px;background:var(--panel);color:var(--ink);margin-left:6px}
+.gp-fb{margin-top:12px;padding:10px 12px;border-radius:8px;font-size:15px;border-left:4px solid var(--line)}
+.gp-fb p{margin:8px 0 6px}.gp-fb button{display:block;margin-top:10px}
+.gp-ok{background:var(--tip-bg);border-left-color:var(--tip)}
+.gp-bad{background:var(--warn-bg);border-left-color:var(--warn)}
+.gp-hint{background:var(--key-bg);border-left-color:var(--key)}
+.gp-show{background:var(--ex-bg);border-left-color:var(--ex)}
+.tool button:disabled{opacity:.55;cursor:default}
+@media print{
+  .topbar,nav.toc,.done-btn,.vwrap,.navfoot{display:none!important}
+  .layout{display:block;padding:0}
+  section.card,.hero{box-shadow:none;border:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+}
+/* quizzes */
+.quizcard h2 .num{background:var(--accent)}
+.qstat{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;font-size:14px;color:var(--muted);margin:4px 0 14px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);border-radius:10px}
+.qstat b{color:var(--ink)}
+.spark{display:inline-flex;align-items:flex-end;gap:2px;height:26px}.spark i{display:block;width:6px;background:var(--accent);border-radius:2px}
+.qq{border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0;background:var(--panel)}
+.qq.ok{border-color:var(--tip)}.qq.no{border-color:var(--warn)}
+.qt{margin-bottom:8px;line-height:1.5}
+.qw{display:inline-block;font-size:11.5px;font-weight:650;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle}
+.qo{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:4px 0;border-radius:8px;border:1px solid transparent;cursor:pointer;line-height:1.45}
+.qo:hover{background:var(--bg)}.qo input{margin-top:4px;accent-color:var(--accent)}
+.qo.right{border-color:var(--tip);background:var(--tip-bg)}.qo.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qn input{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:200px}
+.qn input.right{border-color:var(--tip);background:var(--tip-bg)}.qn input.wrong{border-color:var(--warn);background:var(--warn-bg)}
+.qcorr{margin-left:10px;color:var(--tip)}
+.qe{font-size:14.5px;color:var(--muted);margin-top:6px}.qe:empty{display:none}
+.qq.ok .qe b{color:var(--tip)}.qq.no .qe b{color:var(--warn)}
+.qact{display:flex;align-items:center;gap:14px;margin-top:14px}.qleft{color:var(--muted);font-size:14px}
+.quiz button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 20px;cursor:pointer;font-weight:600}
+.qscore{margin-top:16px;padding:18px 20px;border-radius:14px;border:2px solid var(--line);text-align:center}
+.qscore .big{font-size:32px;font-weight:750}.qscore small{font-size:18px;color:var(--muted)}
+.qscore.ok{border-color:var(--tip);background:var(--tip-bg)}.qscore.mid{border-color:var(--accent);background:var(--accent-soft)}.qscore.bad{border-color:var(--warn);background:var(--warn-bg)}
+.qscore button{margin-top:12px}.qweak{margin-top:6px;font-size:14px}
+.wk a .qb,.wk a .hq{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:650;padding:2px 9px;border-radius:7px;border:1px solid var(--line);color:var(--muted)}
+.wk a .qb:empty,.wk a .hq:empty{display:none}
+.wk a .ok{color:var(--tip);border-color:var(--tip);background:var(--tip-bg)}.wk a .mid{color:var(--accent);border-color:var(--accent)}.wk a .bad{color:var(--warn);border-color:var(--warn);background:var(--warn-bg)}
+.kpanel:empty{display:none}
+.kpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 0 18px;box-shadow:var(--shadow)}
+.kpanel .tt{font-weight:700;margin-bottom:8px}
+.km{display:grid;grid-template-columns:minmax(120px,220px) 1fr minmax(120px,auto);gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.kbar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}.kbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--tip))}
+.kv{color:var(--muted)}.kv b{color:var(--ink)}
+@media (max-width:640px){.km{grid-template-columns:1fr}.qn input{width:100%}}
+.kpanel .note{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+.exams{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:0 0 18px}.exams table{width:100%}.exams td.cd{font-weight:700;color:var(--accent);white-space:nowrap}.wk em.exd{color:var(--accent);font-style:normal}
+.wk a.papers{border-color:var(--accent);background:var(--accent-soft)}
+
+/* Native Tamil explanations: inline, offline, independently controlled. */
+.section-language{display:flex;gap:8px;margin:2px 0 18px}
+.native-toggle{font:inherit;font-size:14px;font-weight:600;line-height:1.7;border:1px solid var(--accent);background:var(--accent-soft);color:var(--accent-ink);border-radius:10px;padding:7px 14px;cursor:pointer;white-space:normal}
+.native-toggle:hover{border-color:var(--ink)}
+.native-toggle:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.tamil-native{font-family:"Nirmala UI","Latha","Tamil Sangam MN",system-ui,sans-serif;line-height:2.05;overflow-wrap:break-word}
+.tamil-native h3{font-size:1.15em;line-height:1.8;margin:8px 0 14px;color:var(--accent-ink)}
+.tamil-native p{margin:0 0 18px}
+.tamil-native strong{font-weight:700}
+.tamil-native[hidden],.section-english[hidden]{display:none!important}
+.ta-recap-item{border-bottom:1px solid var(--line);padding:4px 0 10px;margin:0 0 14px}
+.ta-recap-item h4{line-height:1.8;margin:6px 0}
+@media print{.section-language{display:none}}
+
+.tamil-details{border-top:1px solid var(--line);padding-top:14px;margin-top:18px}
+.ta-detail-label{font-weight:700;color:var(--accent-ink);font-size:.93em}
+.tamil-native li{line-height:2;margin-bottom:8px}
+.native-reference{font:inherit;font-size:14px;line-height:1.8;padding:8px 12px;border:1px solid var(--accent);border-radius:10px;background:var(--accent-soft);color:var(--accent-ink);cursor:pointer;white-space:normal;text-align:left;margin:8px 0 10px}
+.native-reference:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.section-english.reference-open{border-top:2px solid var(--accent);padding-top:18px;margin-top:16px}
+.section-english.reference-open::before{content:'முழுக் குறிப்பு · English';display:block;color:var(--accent-ink);font-weight:700;margin-bottom:12px}
+
+/* Authored Tamil comparisons: labelled rows on small screens. */
+.ta-table-wrap{margin:20px 0 28px;max-width:100%}
+.ta-readable-table{width:100%;table-layout:fixed;border-collapse:collapse;line-height:1.95;font-size:.95em}
+.ta-readable-table caption{text-align:left;font-weight:700;color:var(--accent-ink);font-size:1.05em;padding:0 0 12px;line-height:1.9}
+.ta-readable-table th,.ta-readable-table td{padding:14px 16px;vertical-align:top;text-align:left;white-space:normal;overflow-wrap:anywhere;border:1px solid var(--line)}
+.ta-readable-table thead th{background:var(--accent-soft);color:var(--accent-ink)}
+.ta-readable-table tbody th{font-weight:700;background:var(--panel)}
+.ta-cell-label{display:none}
+@media(max-width:760px){
+ .ta-readable-table,.ta-readable-table tbody{display:block;width:100%}
+ .ta-readable-table caption{display:block}
+ .ta-readable-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .ta-readable-table tbody tr{display:block;margin:0 0 18px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+ .ta-readable-table tbody th,.ta-readable-table tbody td{display:block;width:auto;border:0;border-bottom:1px solid var(--line);padding:12px 14px}
+ .ta-readable-table tbody td:last-child{border-bottom:0}
+ .ta-readable-table .ta-cell-label{display:block;font-weight:700;color:var(--accent-ink);font-size:.9em;margin-bottom:4px}
+}
+
+/* Beginner practice: native details works online and offline, including keyboard use. */
+.beginner-answer{border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:16px 0 26px;background:var(--panel)}
+.beginner-answer summary{cursor:pointer;font-weight:700;color:var(--accent);line-height:1.6}
+.beginner-answer summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+.beginner-answer[open] summary{margin-bottom:16px}
+.beginner-answer li{margin-bottom:10px}
+
+/* Keep calculator labels and selects within narrow screens. */
+.tool .row > label{min-width:0;max-width:100%}
+.tool .row > label select{max-width:100%}
+
+.tool select{min-width:0;max-width:100%}
+
+.study-plan{margin:24px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow);scroll-margin-top:80px}
+.sp-heading,.sp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.sp-heading h2{margin:2px 0 8px}.sp-heading p{font-size:15px;color:var(--muted)}
+.sp-pill{display:inline-block;white-space:nowrap;padding:5px 10px;border-radius:20px;font-size:12px}.sp-bad{background:var(--warn-bg);color:var(--warn)}.sp-good{background:var(--tip-bg);color:var(--tip)}
+.sp-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0}.sp-stats>div{padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}.sp-stats b{display:block;font-size:24px;line-height:1.25}.sp-stats span{display:block;font-size:13px;margin-top:8px;color:var(--muted)}
+.sp-alert{padding:14px 16px;background:var(--warn-bg);border-left:4px solid var(--warn);border-radius:8px;font-size:15px}.sp-clear{background:var(--tip-bg);border-color:var(--tip)}
+.study-plan details{padding:12px 0;border-top:1px solid var(--line)}.study-plan summary{cursor:pointer;font-weight:650;color:var(--accent)}.study-plan button,.study-plan input,.study-dock button{font:inherit}.study-plan button{padding:8px 12px;border-radius:9px;border:1px solid var(--line);background:var(--accent-soft);color:var(--accent-ink);cursor:pointer}.study-plan button:hover{border-color:var(--accent)}.study-plan input[type=number]{display:block;border:1px solid var(--line);border-radius:6px;padding:7px;max-width:100%;background:var(--bg);color:var(--ink)}.sp-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}.sp-fields label{font-size:14px}.study-plan fieldset{border:1px solid var(--line);border-radius:8px;margin:12px 0}.study-plan fieldset label{white-space:nowrap}
+.sp-columns{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;margin:20px 0}.sp-columns section{min-width:0}.sp-blocks{list-style:none;padding:0;max-height:430px;overflow:auto}.sp-blocks li{padding:12px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:60px 1fr;gap:10px;font-size:14px}.sp-blocks a{text-decoration:none}.sp-blocks span{font-size:12px;font-weight:700;color:var(--muted)}.sp-late{grid-column:2;color:var(--warn);font-size:12px}.sp-subjects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:20px}.sp-subject{border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}.sp-subject h4{margin:0}.sp-subject p{font-size:14px}.sp-subject progress{width:100%;height:12px;accent-color:var(--accent)}.sp-action{display:block;margin:10px 0;font-size:14px;font-weight:650}.sp-week{border-bottom:1px solid var(--line);padding:12px 0;display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:13px}.sp-week span{color:var(--muted)}.sp-week button{font-size:12px}.sp-bars>div{display:grid;grid-template-columns:65px minmax(0,1fr) 55px;gap:7px;align-items:center;font-size:12px;height:27px}.sp-bars i{height:9px;background:var(--accent);border-radius:5px}.sp-backup{border-top:1px solid var(--line);margin-top:20px}.sp-backup p{font-size:14px}.sp-import{display:inline-block;font-size:14px;padding:10px}.sp-import input{display:block;max-width:250px;font-size:13px}.study-dock{position:fixed;right:16px;bottom:14px;z-index:60;display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:14px;background:var(--panel);box-shadow:var(--shadow);padding:9px 12px;font-size:13px;max-width:calc(100vw - 24px);flex-wrap:wrap}.study-dock a{font-weight:700;text-decoration:none}.study-dock button{background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:5px 8px;cursor:pointer}.study-dock.sp-risk{border-color:var(--warn)}.study-dock.sp-risk a{color:var(--warn)}.study-dock .sp-clock{font-variant-numeric:tabular-nums}.study-dock [hidden]{display:none}
+@media(max-width:760px){.study-plan{padding:16px}.sp-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.sp-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.sp-subjects,.sp-columns{grid-template-columns:1fr}.sp-heading{display:block}.study-dock{right:10px;bottom:8px}.sp-row{flex-wrap:wrap}}
+@media print{.study-dock,.sp-settings,.sp-backup,#sp-log{display:none}.sp-blocks{max-height:none}}
+</style></head>
+<body data-key="mkt-quizzes" data-study-home="../SEM%206%20Study%20Hub.html#study-plan">
+<div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../SEM 6 Study Hub.html">SEM 6</a> › <a href="Study%20Guide%20-%20Index.html">Marketing</a> › Official quizzes</div>
+<button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Marketing · Official quizzes</div><h1>Official Quizzes — Try First, Then See Why</h1><p>The real course quiz questions. Answer each question first; a wrong pick explains why it is wrong.</p><div class="meta"><span class="chip">ITE3642</span><span class="chip">📄 Quiz 02 review</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Quiz 02 — Paradigms of Marketing"><span class="num">1</span>Quiz 02 — Paradigms of Marketing</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>Quiz 02 — விடைகளும் காரணங்களும்</h3><ul>
+<li><strong>சமூக, நெறிமுறைக் கவலைகள்</strong> → <strong>Societal marketing</strong> concept.</li>
+<li><strong>வாடிக்கையாளர் எதிர்ப்பை personal selling, advertising மூலம் முறியடித்தல்</strong> → <strong>Sales (selling)</strong> orientation.</li>
+<li><strong>Supplier concept</strong> என்ற marketing philosophy இல்லை (production, product, selling, marketing, societal, holistic மட்டும்).</li>
+<li><strong>குறைந்த விலை, எளிதில் கிடைப்பது</strong> → <strong>Production concept</strong>.</li>
+<li><strong>Goal orientation:</strong> நீண்டகால நிறுவன இலக்குகளை அடைவது வாடிக்கையாளர் திருப்தியைப் போலவே முக்கியம்.</li>
+</ul><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p><em>Notes for this topic: <a href="Week%2002/Week%2002%20-%20Study%20Guide.html">Week 02</a></em></p>
+<p>These are the <strong>5 questions of the official Quiz 02 (Week 02 — Paradigms of Marketing)</strong>, taken from your quiz review screenshot. Moodle shuffles the options, so learn the <strong>answer</strong>, not the letter (the old letter key 1-a, 2-a, 3-a, 4-b, 5-c in <code>Week 03/Quiz 02.docx</code> does not match this order).</p>
+<p><strong>How to use it:</strong> answer each question in the quiz box. A wrong pick tells you <strong>why that option is wrong</strong> and gives a hint — try again until you get it. Then open the answer table below to revise.</p>
+<div class="tool"><div class="tt">🧪 Try it — Do the quiz first — Quiz 02</div><div id="gp-mkt02-quiz02" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "“A stronger focus on social and ethical concerns in marketing” is a characteristic of the ____ philosophy.", "think": "Which concept adds society's well-being?", "opts": [{"t": "societal marketing", "ok": true}, {"t": "production", "why": "Production focuses on making lots of cheap products efficiently."}, {"t": "sales", "why": "Selling focuses on pushing products through aggressive selling."}, {"t": "marketing", "why": "The marketing concept focuses on customer needs, but not society's well-being."}], "why": "Societal marketing balances company profit, customer wants and society's long-term well-being."}, {"type": "choice", "q": "An organization with a ____ orientation assumes that customers will resist purchasing products not deemed essential. The job of marketers is to overcome this resistance through personal selling and advertising.", "think": "Overcome resistance by personal selling and advertising.", "opts": [{"t": "marketing", "why": "The marketing concept makes what customers want, so there is no resistance to push through."}, {"t": "relationship", "why": "Relationship marketing builds long-term ties; it does not push reluctant buyers."}, {"t": "sales", "ok": true}, {"t": "production", "why": "Production focuses on cheap, available products, not on persuading buyers."}], "why": "Selling (sales) concept: customers will not buy enough unless the company sells and promotes aggressively."}, {"type": "choice", "q": "Which of the following concepts is not a marketing philosophy?", "think": "List the six: production, product, selling, marketing, societal, holistic.", "opts": [{"t": "Supplier", "ok": true}, {"t": "Holistic", "why": "Holistic marketing is the sixth (newest) philosophy."}, {"t": "Selling", "why": "Selling is the third philosophy."}, {"t": "Production", "why": "Production is the first philosophy."}], "why": "There is no “supplier concept”. The philosophies are production, product, selling, marketing, societal and holistic."}, {"type": "choice", "q": "What is the marketing philosophy that stresses only focusing on product availability at low prices?", "think": "Available + cheap → make lots of it efficiently.", "opts": [{"t": "Marketing concept", "why": "The marketing concept starts from customer needs, not just low price."}, {"t": "Marketing myopia", "why": "Myopia is a mistake (focusing on the product, not the need), not a philosophy."}, {"t": "Production concept", "ok": true}, {"t": "Product concept", "why": "The product concept focuses on quality and features, not low price."}], "why": "Production concept: consumers prefer products that are widely available and cheap, so improve production and distribution efficiency."}, {"type": "choice", "q": "The marketing concept includes a goal orientation to remind managers that:", "think": "The marketing concept has a customer focus, but the firm must also survive.", "opts": [{"t": "the objective is to find a target market that differs from that of the competition", "why": "Choosing a different target market is a strategy, not the goal orientation."}, {"t": "customers must be satisfied no matter what the long-term effect on the firm", "why": "Satisfying customers at any cost would harm the firm — the goal orientation says the opposite."}, {"t": "the only reason for any business to exist is to make a profit", "why": "Profit alone ignores the customer focus of the marketing concept."}, {"t": "achieving long-term organizational goals is as important as satisfying customers", "ok": true}], "why": "Goal orientation: satisfy customers in a way that also achieves the firm's long-term goals (such as profit and survival)."}], "end": "Now open the answer table below and reread any question you missed."}</script></div></div>
+<details class="beginner-answer">
+<summary>Show all answers — Quiz 02 (open after you finish the quiz)</summary>
+<table>
+<thead>
+<tr>
+<th>Q</th>
+<th>Answer</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>societal marketing</strong></td>
+<td>Societal marketing balances company profit, customer wants and society's long-term well-being.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>sales</strong></td>
+<td>Selling (sales) concept: customers will not buy enough unless the company sells and promotes aggressively.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Supplier</strong></td>
+<td>There is no “supplier concept”. The philosophies are production, product, selling, marketing, societal and holistic.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Production concept</strong></td>
+<td>Production concept: consumers prefer products that are widely available and cheap, so improve production and distribution efficiency.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>achieving long-term organizational goals is as important as satisfying customers</strong></td>
+<td>Goal orientation: satisfy customers in a way that also achieves the firm's long-term goals (such as profit and survival).</td>
+</tr>
+</tbody>
+</table>
+</details></div><div class="hci-ta" lang="ta" hidden data-title="வினாடி வினா 02 — Paradigms of Marketing"><p><em>இந்தத் தலைப்பின் பாடக் குறிப்புகள்: <a href="Week%2002/Week%2002%20-%20Study%20Guide.html">Week 02</a></em></p>
+<p>இவை அதிகாரபூர்வ <strong>Quiz 02 (Week 02 — Paradigms of Marketing)</strong>-இன் <strong>5 கேள்விகள்</strong>, உங்கள் quiz review screenshot-இலிருந்து. Moodle options-ஐக் கலக்கும்; எனவே எழுத்தை அல்ல, <strong>விடையை</strong> நினைவில் கொள்ளுங்கள் (<code>Week 03/Quiz 02.docx</code>-இல் உள்ள பழைய 1-a, 2-a, 3-a, 4-b, 5-c இந்த வரிசைக்குப் பொருந்தாது).</p>
+<p><strong>எப்படிப் பயன்படுத்துவது:</strong> quiz-இல் ஒவ்வொரு கேள்விக்கும் விடையைத் தேர்ந்தெடுங்கள். தவறான விடையைத் தேர்ந்தால் அது <strong>ஏன் தவறு</strong> என்றும் ஒரு குறிப்பும் காட்டப்படும் — சரியான விடை வரும் வரை மீண்டும் முயலுங்கள். பின்னர் கீழே உள்ள விடை அட்டவணையைத் திறந்து மீள்பார்வை செய்யுங்கள்.</p>
+<p><div data-ta-tool="gp-mkt02-quiz02"></div></p>
+<details class="beginner-answer">
+<summary>Show all answers — Quiz 02 (open after you finish the quiz)</summary>
+<table>
+<thead>
+<tr>
+<th>Q</th>
+<th>Answer</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>societal marketing</strong></td>
+<td>Societal marketing balances company profit, customer wants and society's long-term well-being.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>sales</strong></td>
+<td>Selling (sales) concept: customers will not buy enough unless the company sells and promotes aggressively.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Supplier</strong></td>
+<td>There is no “supplier concept”. The philosophies are production, product, selling, marketing, societal and holistic.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Production concept</strong></td>
+<td>Production concept: consumers prefer products that are widely available and cheap, so improve production and distribution efficiency.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>achieving long-term organizational goals is as important as satisfying customers</strong></td>
+<td>Goal orientation: satisfy customers in a way that also achieves the firm's long-term goals (such as profit and survival).</td>
+</tr>
+</tbody>
+</table>
+</details></div></div><button class="done-btn"></button></section></main></div><script type="application/json" id="hci-tamil-data">{"strings": {"Self-check quiz": "சுய பரிசோதனை வினாடிவினா", "Check my answers": "என் விடைகளைச் சரிபார்", "Try again (new order)": "மீண்டும் முயல்க (புதிய வரிசை)", "New random exam": "புதிய சீரற்ற தேர்வு", "All answered": "அனைத்துக்கும் விடையளிக்கப்பட்டது", "✓ Correct.": "✓ சரி.", "✗ Not quite.": "✗ முழுவதும் சரியில்லை.", "Excellent — you know this well": "மிகச் சிறப்பு — இதை நன்றாக அறிந்திருக்கிறீர்கள்", "Good — revise the ones you missed": "நன்று — தவறவிட்டவற்றை மீளாய்வு செய்யுங்கள்", "Getting there — reread the weak sections": "முன்னேறுகிறீர்கள் — பலவீனமான பகுதிகளை மீண்டும் வாசியுங்கள்", "Needs revision — go through the notes again": "மீளாய்வு தேவை — குறிப்புகளை மீண்டும் படியுங்கள்", "Lecture videos": "விரிவுரைக் காணொளிகள்", "▶ Lecture videos": "▶ விரிவுரைக் காணொளிகள்", "Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.": "இங்கோ குறிப்புகளுக்குள்ளோ உள்ள நேரக் குறியீட்டைச் சொடுக்கினால் காணொளி அந்த நேரத்துக்குச் செல்லும். நீங்கள் பார்த்த இடம் நினைவில் வைக்கப்படும்.", "Open in Google Drive ↗": "Google Drive-இல் திறக்கவும் ↗", "ON THIS PAGE": "இந்தப் பக்கத்தில்", "On this page": "இந்தப் பக்கத்தில்", "← Previous": "← முந்தையது", "Next →": "அடுத்தது →", "NEXT →": "அடுத்தது →", "Mark this section as understood": "இந்தப் பகுதியைப் புரிந்துகொண்டதாகக் குறிக்கவும்", "✓ Understood": "✓ புரிந்துகொண்டேன்", "Understood — click to undo": "புரிந்துகொண்டேன் — செயல்தவிர்க்கச் சொடுக்கவும்", "Type a number": "ஓர் எண்ணை உள்ளிடவும்", "Type what you remember…": "நினைவிருப்பதைத் தட்டச்சு செய்யுங்கள்…", "Answer:": "விடை:", "Best": "சிறந்தது", "Last": "கடைசி", "Attempts": "முயற்சிகள்", "Attempt": "முயற்சி", "today": "இன்று", "yesterday": "நேற்று", "Mixed practice exam": "கலப்புப் பயிற்சித் தேர்வு", "? Self-check quiz": "? சுய பரிசோதனை வினாடிவினா", "★ Mixed practice exam": "★ கலப்புப் பயிற்சித் தேர்வு", "📊 Your knowledge in this subject": "📊 இந்தப் பாடத்தில் உங்கள் அறிவு", "Overall knowledge": "ஒட்டுமொத்த அறிவு", "Weeks quizzed": "வினாடிவினா முயன்ற வாரங்கள்", "Average best score": "சிறந்த மதிப்பெண்களின் சராசரி", "on the weeks you tried": "நீங்கள் முயன்ற வாரங்களில்", "— average best score × weeks covered": "— சிறந்த மதிப்பெண்களின் சராசரி × முயன்ற வாரங்களின் விகிதம்", "Mixed exam best": "கலப்புத் தேர்வின் சிறந்த மதிப்பெண்", "Exam practice": "தேர்வுப் பயிற்சி", "Past papers with worked answers": "தீர்வுகளுடன் கடந்தகால வினாத்தாள்கள்", "Real exam questions from previous years, fully solved, plus which topics come up most.": "முந்தைய ஆண்டுகளின் உண்மையான தேர்வுக் கேள்விகளுக்கான முழுத் தீர்வுகளும் அதிகம் இடம்பெறும் தலைப்புகளும்.", "Offline study guides — one per week, built from the lecture notes and lecture videos. Green bar = sections you marked as understood.": "விரிவுரைக் குறிப்புகளையும் காணொளிகளையும் கொண்டு உருவாக்கப்பட்ட இணையமில்லா கற்றல் வழிகாட்டிகள் — வாரத்துக்கு ஒன்று. பச்சைப் பட்டை = நீங்கள் புரிந்துகொண்டதாகக் குறித்த பகுதிகள்.", "Take the": "நீங்கள் பல வாரங்களைப் படித்த பின், கீழேயுள்ள", "mixed practice exam": "கலப்புப் பயிற்சித் தேர்வை", "at the bottom when you have covered several weeks.": "முயலுங்கள்.", "📄 Lecture videos (no PDF for this week)": "📄 விரிவுரைக் காணொளிகள் (இந்த வாரத்துக்கு PDF இல்லை)", "📄 Lecture video (no PDF for this week)": "📄 விரிவுரைக் காணொளி (இந்த வாரத்துக்கு PDF இல்லை)", "✓ Understood — click to unmark": "✓ புரிந்துகொண்டேன் — குறியை நீக்கச் சொடுக்கவும்", "Marketing": "சந்தைப்படுத்தல்", "data preprocessing": "தரவு முன்செயலாக்கம்", "Marketing · Past papers": "சந்தைப்படுத்தல் · கடந்தகால வினாத்தாள்கள்", "Tip": "குறிப்புரை", "Exam focus": "தேர்வுக் கவனம்", "Common mistake": "பொதுவான தவறு", "Worked example": "தீர்வுடன் எடுத்துக்காட்டு", "Key idea": "முக்கியக் கருத்து", "From the lecture video": "விரிவுரைக் காணொளியிலிருந்து", "Official Quizzes — Try First, Then See Why": "அதிகாரபூர்வ வினாடி வினாக்கள் — முதலில் முயலுங்கள், பின்னர் காரணத்தைப் பாருங்கள்", "The real course quiz questions. Answer each question first; a wrong pick explains why it is wrong.": "பாடநெறியின் உண்மையான வினாடி வினாக் கேள்விகள். முதலில் விடையளியுங்கள்; தவறான தேர்வு ஏன் தவறு என்று விளக்கும்.", "Introduction to Marketing": "சந்தைப்படுத்தல் அறிமுகம்", "What marketing is (Kotler, CIM, AMA, social marketing), marketing vs selling and the iceberg, why marketing matters, its core concepts (needs, wants, demand states, offerings, value, satisfaction, exchange, markets) and its objectives.": "சந்தைப்படுத்தல் என்றால் என்ன (Kotler, CIM, AMA, சமூகச் சந்தைப்படுத்தல்), சந்தைப்படுத்தலும் விற்பனையும் பனிப்பாறையும், சந்தைப்படுத்தலின் முக்கியத்துவம், அதன் அடிப்படைக் கருத்துக்கள் (தேவைகள், விருப்பங்கள், கேள்வி நிலைகள், வழங்கல்கள், மதிப்பு, திருப்தி, பரிமாற்றம், சந்தைகள்) மற்றும் அதன் நோக்கங்கள்.", "Paradigms (Philosophies) of Marketing": "சந்தைப்படுத்தலின் கருத்துநிலைகள் (தத்துவங்கள்)", "How marketing thought evolved: production, product, selling, marketing, societal and holistic marketing concepts, with their focus, examples, benefits and drawbacks, plus marketing myopia and the four pillars of holistic marketing.": "சந்தைப்படுத்தல் சிந்தனை வளர்ந்த விதம்: உற்பத்தி, தயாரிப்பு, விற்பனை, சந்தைப்படுத்தல், சமூக நலன் சார்ந்த மற்றும் முழுமையான சந்தைப்படுத்தல் கருத்துக்கள்; அவற்றின் கவனம், எடுத்துக்காட்டுகள், நன்மைகள், குறைபாடுகள்; சந்தைப்படுத்தல் குறுகிய பார்வையும் முழுமையான சந்தைப்படுத்தலின் நான்கு தூண்களும்.", "Environmental Scanning & Marketing Planning": "சூழல் ஆராய்தலும் சந்தைப்படுத்தல் திட்டமிடலும்", "The marketing environment (internal, micro and macro), the 5 Ms and McKinsey 7S, suppliers, intermediaries, customer markets, competitor types and publics, the six macro forces (DENTPC), reactive vs proactive responses, and the marketing information system.": "சந்தைப்படுத்தல் சூழல் (அக, நுண், பரந்த), 5 Ms மற்றும் McKinsey 7S, வழங்குநர்கள், இடைத்தரகர்கள், வாடிக்கையாளர் சந்தைகள், போட்டியாளர் வகைகள், பொதுக் குழுக்கள், ஆறு பரந்த சக்திகள் (DENTPC), எதிர்வினை மற்றும் முனைப்பான பதில்கள், சந்தைப்படுத்தல் தகவல் அமைப்பு.", "Customer-Driven Marketing Strategy — Segmentation, Targeting, Differentiation & Positioning": "வாடிக்கையாளரால் இயக்கப்படும் சந்தைப்படுத்தல் உத்தி — பிரிவாக்கம், இலக்கிடல், வேறுபடுத்தல் மற்றும் நிலைப்படுத்தல்", "STP explained: four segmentation bases, why segment, the five requirements for useful segments, targeting with Porter's five forces and the five target-selection patterns, differentiation types, positioning and perceptual maps.": "STP விளக்கம்: நான்கு பிரிவாக்க அடிப்படைகள், பிரிவாக்கம் செய்வதன் காரணம், பயனுள்ள பிரிவுகளுக்கான ஐந்து தேவைகள், Porter இன் ஐந்து சக்திகளுடனான இலக்கிடலும் ஐந்து இலக்குத் தேர்வு முறைகளும், வேறுபடுத்தல் வகைகள், நிலைப்படுத்தல் மற்றும் புலனுணர்வு வரைபடங்கள்.", "Consumer Markets & Consumer Buyer Behaviour": "நுகர்வோர் சந்தைகளும் நுகர்வோர் கொள்வனவு நடத்தையும்", "What consumer markets are, the stimulus–response (black box) model, cultural, social, personal and psychological influences, buying roles, the 5-stage buyer decision process, the four buying behaviour types, and Sri Lankan and global consumer trends.": "நுகர்வோர் சந்தைகள் என்றால் என்ன, தூண்டுதல்–பதில் (கருப்புப் பெட்டி) மாதிரி, பண்பாட்டு, சமூக, தனிநபர் மற்றும் உளவியல் செல்வாக்குகள், கொள்வனவுப் பங்குகள், 5 கட்ட வாங்குபவர் முடிவெடுக்கும் செயல்முறை, நான்கு கொள்வனவு நடத்தை வகைகள், இலங்கை மற்றும் உலக நுகர்வோர் போக்குகள்.", "Business Markets & Business Buyer Behaviour": "வணிகச் சந்தைகளும் வணிக வாங்குபவர் நடத்தையும்", "How B2B markets differ from consumer markets, the three buying situations, systems buying and selling, the buying centre's seven roles, purchasing orientations, Kraljic's four product types, the 8 buy phases, and B2B relationships.": "B2B சந்தைகள் நுகர்வோர் சந்தைகளிலிருந்து வேறுபடும் விதம், மூன்று கொள்வனவுச் சூழ்நிலைகள், அமைப்புக் கொள்வனவும் விற்பனையும், கொள்வனவு மையத்தின் ஏழு பங்குகள், கொள்வனவு நோக்குநிலைகள், Kraljic இன் நான்கு தயாரிப்பு வகைகள், 8 கொள்வனவுக் கட்டங்கள் மற்றும் B2B உறவுகள்.", "Marketing Information & Marketing Research": "சந்தைப்படுத்தல் தகவலும் சந்தைப்படுத்தல் ஆராய்ச்சியும்", "Why information beats gut feeling, internal data, competitive intelligence and research, the marketing information system (internal records, intelligence, MDSS, research), types of research, qualitative vs quantitative methods, the 4-step research process, and why research fails.": "உள்ளுணர்வைவிடத் தகவல் ஏன் சிறந்தது, உள்ளகத் தரவு, போட்டி நுண்ணறிவு, ஆராய்ச்சி, சந்தைப்படுத்தல் தகவல் அமைப்பு (உள்ளகப் பதிவுகள், நுண்ணறிவு, MDSS, ஆராய்ச்சி), ஆராய்ச்சி வகைகள், பண்புசார் மற்றும் அளவுசார் முறைகள், 4 படி ஆராய்ச்சிச் செயல்முறை, ஆராய்ச்சி தோல்வியடையும் காரணங்கள்.", "Fundamentals of Digital Marketing": "எண்ணிமச் சந்தைப்படுத்தலின் அடிப்படைகள்", "What digital marketing is (and isn't), its four objectives, why people go online, the seven key components (website, SEO/SEM, social, paid ads, remarketing, affiliate, email), Kaushik's measurement model, and metrics vs KPIs.": "எண்ணிமச் சந்தைப்படுத்தல் என்றால் என்ன (எது அல்ல), அதன் நான்கு நோக்கங்கள், மக்கள் இணையத்தைப் பயன்படுத்தும் காரணங்கள், ஏழு முக்கியக் கூறுகள் (இணையத்தளம், SEO/SEM, சமூக, கட்டண விளம்பரங்கள், மீள்சந்தைப்படுத்தல், இணைச் சந்தையாளர், மின்னஞ்சல்), Kaushik இன் அளவீட்டு மாதிரி, அளவீடுகளும் KPI களும்.", "New Product Development & Product Life Cycle Strategies": "புதிய தயாரிப்பு அபிவிருத்தியும் தயாரிப்பு வாழ்க்கைச் சுழற்சி உத்திகளும்", "Six types of new products, why new products are needed and why they fail, the 8-stage NPD process, sequential vs simultaneous development, the product life cycle (shapes, stages, characteristics) and 4P strategies for each stage.": "புதிய தயாரிப்புகளின் ஆறு வகைகள், புதிய தயாரிப்புகள் தேவைப்படும் காரணங்களும் தோல்விக்கான காரணங்களும், 8 கட்ட NPD செயல்முறை, வரிசையான மற்றும் ஒரேநேர அபிவிருத்தி, தயாரிப்பு வாழ்க்கைச் சுழற்சி (வடிவங்கள், கட்டங்கள், பண்புகள்), ஒவ்வொரு கட்டத்திற்குமான 4P உத்திகள்.", "Product & Branding Strategies": "தயாரிப்பு மற்றும் வர்த்தகநாம உத்திகள்", "Product strategy, the three levels of a product, product classifications (durability, consumer shopping habits), product-mix dimensions and product-line decisions, brands and their six meanings, brand equity, branding decisions, and packaging and labelling.": "தயாரிப்பு உத்தி, தயாரிப்பின் மூன்று நிலைகள், தயாரிப்பு வகைப்பாடுகள் (நீடித்தன்மை, நுகர்வோர் வாங்கும் பழக்கங்கள்), தயாரிப்புக் கலவைப் பரிமாணங்களும் வரிசை முடிவுகளும், வர்த்தகநாமங்களும் அவற்றின் ஆறு பொருள்களும், வர்த்தகநாமப் பெறுமதி, வர்த்தகநாமமிடல் முடிவுகள், பொதியிடலும் அடையாளச்சீட்டிடலும்.", "Pricing Strategies": "விலையிடல் உத்திகள்", "What price is and why it's special, internal and external factors affecting price, the 6-step pricing process (objectives, demand and elasticity, costs, competitors, methods, final price), skimming vs penetration, seven price-adjustment strategies, and initiating and reacting to price changes.": "விலை என்றால் என்ன, அதன் சிறப்பு, விலையைப் பாதிக்கும் அக மற்றும் புறக் காரணிகள், 6 படி விலையிடல் செயல்முறை (நோக்கங்கள், கேள்வியும் நெகிழ்ச்சியும், செலவுகள், போட்டியாளர்கள், முறைகள், இறுதி விலை), பலனறுத்தலும் ஊடுருவலும், ஏழு விலைச் சரிசெய்தல் உத்திகள், விலை மாற்றங்களைத் தொடங்குதலும் பதிலளித்தலும்.", "Promotional Strategies & Integrated Marketing Communication": "மேம்படுத்தல் உத்திகளும் ஒருங்கிணைந்த சந்தைப்படுத்தல் தொடர்பாடலும்", "IMC, the new marketing communications model, six promotion objectives, the five promotion-mix tools, advertising types and strategy, message strategy (appeals, structure, format), PR tools, sales promotion (consumer and trade), push vs pull, and socially responsible communication.": "IMC, புதிய சந்தைப்படுத்தல் தொடர்பாடல் மாதிரி, ஆறு மேம்படுத்தல் நோக்கங்கள், ஐந்து மேம்படுத்தல் கலவைக் கருவிகள், விளம்பர வகைகளும் உத்தியும், செய்தி உத்தி (ஈர்ப்புகள், கட்டமைப்பு, வடிவம்), PR கருவிகள், விற்பனை மேம்படுத்தல் (நுகர்வோர் மற்றும் வர்த்தகம்), தள்ளுதலும் இழுத்தலும், சமூகப் பொறுப்புள்ள தொடர்பாடல்.", "Channel Strategies, Logistics & Supply Chain": "விநியோக வழி உத்திகள், தளவாடம் மற்றும் வழங்கல் சங்கிலி", "Place, the last of the 4 Ps: the nature of marketing channels, push and pull, how channel members add value, channel levels, behaviour and conflict, conventional vs vertical and horizontal marketing systems, designing a channel step by step, managing channel members, and marketing logistics.": "4 Ps இன் இறுதிக் கூறான இடம்: சந்தைப்படுத்தல் வழிகளின் இயல்பு, தள்ளுதலும் இழுத்தலும், உறுப்பினர்கள் மதிப்புச் சேர்க்கும் விதம், வழி நிலைகள், நடத்தை மற்றும் முரண்பாடு, வழக்கமான, செங்குத்து, கிடைமட்டச் சந்தைப்படுத்தல் அமைப்புகள், படிப்படியான வழி வடிவமைப்பு, உறுப்பினர் முகாமைத்துவம், சந்தைப்படுத்தல் தளவாடம்.", "The Marketing Plan": "சந்தைப்படுத்தல் திட்டம்", "The final session: what marketing planning is, why it matters, and every component of a marketing plan, from the executive summary, company information, environment and current situation through SWOT, objectives and the full marketing strategy (STP and the 4 Ps) to action programmes, budget and controls.": "இறுதி அமர்வு: சந்தைப்படுத்தல் திட்டமிடல் என்றால் என்ன, அதன் முக்கியத்துவம், திட்டத்தின் ஒவ்வொரு கூறும்: நிறைவேற்றுச் சுருக்கம், நிறுவனத் தகவல், சூழல், தற்போதைய நிலைமையிலிருந்து SWOT, நோக்கங்கள், முழுச் சந்தைப்படுத்தல் உத்தி (STP மற்றும் 4 Ps), செயற்திட்டங்கள், வரவுசெலவுத் திட்டம், கட்டுப்பாடுகள் வரை."}, "markup": {}, "patterns": [{"pattern": "^(\\d+) unanswered$", "replacement": "$1 விடையளிக்கப்படவில்லை"}, {"pattern": "^(\\d+) / (\\d+) sections understood$", "replacement": "$1 / $2 பகுதிகள் புரிந்துகொள்ளப்பட்டன"}, {"pattern": "^Week (\\d+)$", "replacement": "வாரம் $1"}, {"pattern": "^(\\d+) days ago$", "replacement": "$1 நாட்களுக்கு முன்"}, {"pattern": "^\\((\\d+) of (\\d+)\\)$", "replacement": "($2இல் $1)"}, {"pattern": "^\\((\\d+) attempts?\\)$", "replacement": "($1 முயற்சிகள்)"}, {"pattern": "^(\\d+) videos? · (\\d+) min$", "replacement": "$1 காணொளிகள் · $2 நிமிடம்"}, {"pattern": "^Quiz: not tried \\((\\d+) Qs\\)$", "replacement": "வினாடிவினா: முயலவில்லை ($1 கேள்விகள்)"}, {"pattern": "^Best (\\d+)% · last (\\d+)%$", "replacement": "சிறந்தது $1% · கடைசி $2%"}, {"pattern": "^(\\d+) questions on this week\\. Answer them all, then press$", "replacement": "இந்த வாரத்தில் $1 கேள்விகள். அனைத்துக்கும் விடையளித்துவிட்டுப் பின்னர் அழுத்துங்கள்:"}, {"pattern": "^\\. Your best and latest scores are saved and shown on the subject page\\.$", "replacement": ". உங்கள் சிறந்த மற்றும் சமீபத்திய மதிப்பெண்கள் சேமிக்கப்பட்டுப் பாடப் பக்கத்தில் காட்டப்படும்."}, {"pattern": "^Marketing · Week (\\d+)$", "replacement": "சந்தைப்படுத்தல் · வாரம் $1"}, {"pattern": "^(\\d+) random questions drawn from all (\\d+) weeks \\((\\d+) in the bank\\)\\. Every attempt is a new mix — a good way to test whole-subject knowledge before the exam\\.$", "replacement": "அனைத்து $2 வாரங்களிலிருந்தும் சீரற்ற முறையில் தேர்ந்தெடுக்கப்படும் $1 கேள்விகள் (தொகுப்பில் $3 உள்ளன). ஒவ்வொரு முயற்சியிலும் புதிய கலவை — தேர்வுக்கு முன் முழுப் பாட அறிவையும் சோதிக்கச் சிறந்த வழி."}, {"pattern": "^›\\s*Week (\\d+)$", "replacement": "› வாரம் $1"}]}</script>
+<script type="application/json" id="study-data">[{"key": "bpas", "name": "Business Processes & Accounting Systems", "exam": ["2026-11-15", "11:00", "14:00"], "url": "Business%20Processes%20and%20Accounting%20Systems/Study%20Guide%20-%20Index.html", "weeks": [{"key": "bpas-Week01", "label": "Week 01", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Business processes"}, {"id": "s2", "title": "Accounting information and its users"}, {"id": "s3", "title": "What is an Accounting Information System?"}, {"id": "s4", "title": "The five components of a computerised AIS"}, {"id": "s5", "title": "Internal control & security"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week02", "label": "Week 02", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is accounting?"}, {"id": "s2", "title": "Stakeholders and what they need"}, {"id": "s3", "title": "The Conceptual Framework for financial reporting"}, {"id": "s4", "title": "Debit & credit rules and the accounting equation"}, {"id": "s5", "title": "The T-account & balancing"}, {"id": "s6", "title": "Source documents & primary books"}, {"id": "s7", "title": "The four day books (primary entry journals)"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}, {"id": "s10", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week03", "label": "Week 03", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where these books fit"}, {"id": "s2", "title": "The cash book"}, {"id": "s3", "title": "The petty cash book & imprest system"}, {"id": "s4", "title": "The general journal"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week04", "label": "Week 04", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Capital vs revenue expenditure"}, {"id": "s2", "title": "The general ledger"}, {"id": "s3", "title": "The trial balance"}, {"id": "s4", "title": "Worked example: posting to the ledger and extracting a TB"}, {"id": "s5", "title": "Quick revision sheet"}, {"id": "s6", "title": "Beginner practice — questions and step-by-step answers"}, {"id": "s7", "title": "Practice questions (course paper)"}], "quiz": true}, {"key": "bpas-Week05", "label": "Week 05", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From trial balance to financial statements"}, {"id": "s2", "title": "The trading account → gross profit"}, {"id": "s3", "title": "The income statement → net profit"}, {"id": "s4", "title": "LKAS 1 / IAS 1 — Presentation of Financial Statements"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week06", "label": "Week 06", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The statement of financial position (SFP)"}, {"id": "s2", "title": "Adjustment 1: closing inventory"}, {"id": "s3", "title": "LKAS 16 — Property, Plant & Equipment"}, {"id": "s4", "title": "Adjustment 2: depreciation"}, {"id": "s5", "title": "Disposal of PPE"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week07", "label": "Week 07", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The accrual concept"}, {"id": "s2", "title": "Accrued & prepaid expenses"}, {"id": "s3", "title": "Income receivable & income received in advance"}, {"id": "s4", "title": "Bad debts (irrecoverable debts)"}, {"id": "s5", "title": "Provision for impairment of receivables"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week08", "label": "Week 08", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Inventory & LKAS 2"}, {"id": "s2", "title": "Function 1: managing purchases"}, {"id": "s3", "title": "Function 2: storing materials & stock levels"}, {"id": "s4", "title": "Function 3: pricing material issues — FIFO & weighted average"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week09", "label": "Week 09", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct vs indirect labour"}, {"id": "s2", "title": "Time keeping & time booking"}, {"id": "s3", "title": "Methods of remuneration"}, {"id": "s4", "title": "The salary sheet, EPF & ETF"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week10", "label": "Week 10", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is overhead?"}, {"id": "s2", "title": "Cost centres, allocation & apportionment"}, {"id": "s3", "title": "Re-apportioning service department costs"}, {"id": "s4", "title": "Overhead absorption"}, {"id": "s5", "title": "Under- and over-absorption"}, {"id": "s6", "title": "Practice questions (course paper)"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week11", "label": "Week 11", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why price matters"}, {"id": "s2", "title": "The pricing policy: six factors"}, {"id": "s3", "title": "Markup vs margin"}, {"id": "s4", "title": "Pricing methods"}, {"id": "s5", "title": "Practice questions (course paper)"}, {"id": "s6", "title": "Quick revision sheet"}, {"id": "s7", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week12", "label": "Week 12", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why ratio analysis?"}, {"id": "s2", "title": "1. Liquidity ratios"}, {"id": "s3", "title": "2. Gearing (capital structure) ratios"}, {"id": "s4", "title": "3. Financial efficiency (activity) ratios"}, {"id": "s5", "title": "4. Profitability ratios"}, {"id": "s6", "title": "5. Shareholder (market test) ratios"}, {"id": "s7", "title": "Benefits & limitations"}, {"id": "s8", "title": "Quick revision sheet"}, {"id": "s9", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week13", "label": "Week 13", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is project appraisal?"}, {"id": "s2", "title": "Non-discounting methods"}, {"id": "s3", "title": "Time value of money"}, {"id": "s4", "title": "Net present value (NPV)"}, {"id": "s5", "title": "Internal rate of return (IRR)"}, {"id": "s6", "title": "Which method is best?"}, {"id": "s7", "title": "Quick revision sheet"}, {"id": "s8", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week14", "label": "Week 14", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a budget?"}, {"id": "s2", "title": "Types of budgets"}, {"id": "s3", "title": "The functional budgets: formats"}, {"id": "s4", "title": "Full worked example: LFT company"}, {"id": "s5", "title": "The cash budget: rules"}, {"id": "s6", "title": "Limitations of budgeting [[36:08]]"}, {"id": "s7", "title": "Practice questions (course paper)"}, {"id": "s8", "title": "Quick revision sheet"}, {"id": "s9", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-Week15", "label": "Week 15", "url": "Business%20Processes%20and%20Accounting%20Systems/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Standard cost & standard costing"}, {"id": "s2", "title": "Setting standards"}, {"id": "s3", "title": "Types of standards"}, {"id": "s4", "title": "Standard cost card"}, {"id": "s5", "title": "The variance tree"}, {"id": "s6", "title": "Variance formulas"}, {"id": "s7", "title": "Advantages & limitations"}, {"id": "s8", "title": "Practice questions (course paper)"}, {"id": "s9", "title": "Quick revision sheet"}, {"id": "s10", "title": "Beginner practice — questions and step-by-step answers"}], "quiz": true}, {"key": "bpas-papers", "label": "Past papers", "url": "Business%20Processes%20and%20Accounting%20Systems/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Q1: Financial statements (40 marks)"}, {"id": "s3", "title": "January 2023 — Q2: Inventory, petty cash, framework (20 marks)"}, {"id": "s4", "title": "January 2023 — Q3: Primary entry books and NPV (20 marks)"}, {"id": "s5", "title": "January 2023 — Q4: Cash budget and sales variances (20 marks)"}, {"id": "s6", "title": "January 2023 — Q5: Overheads (20 marks)"}, {"id": "s7", "title": "August 2020 — what's different"}, {"id": "s8", "title": "November 2019 — Section A, Q1: 20 MCQs"}, {"id": "s9", "title": "November 2019 — Section A, Q2: Araliya Traders (Rs. '000)"}, {"id": "s10", "title": "November 2019 — Section B"}, {"id": "s11", "title": "2024 and 2025 — topic lists to practise"}]}, {"key": "bpas-quizzes", "label": "Official quizzes", "url": "Business%20Processes%20and%20Accounting%20Systems/Quizzes.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "Mid Exam 25S2 — all 20 questions"}]}]}, {"key": "dm", "name": "Data Mining", "exam": ["2026-11-22", "11:30", "14:30"], "url": "Data%20Mining/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dm-Week01", "label": "Week 01", "url": "Data%20Mining/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What data mining is about"}, {"id": "s2", "title": "Why data mining is required"}, {"id": "s3", "title": "Big Data and the 5 V's"}, {"id": "s4", "title": "Defining data mining properly"}, {"id": "s5", "title": "Applications of data mining"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week02", "label": "Week 02", "url": "Data%20Mining/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Data mining = \"knowledge mining from data\""}, {"id": "s2", "title": "The 7 steps of the KDD process"}, {"id": "s3", "title": "Architecture of a typical data mining system"}, {"id": "s4", "title": "What kinds of data can be mined?"}, {"id": "s5", "title": "Data mining task primitives"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week03", "label": "Week 03", "url": "Data%20Mining/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why preprocessing is needed"}, {"id": "s2", "title": "Data cleaning — handling missing values"}, {"id": "s3", "title": "Noisy data and smoothing"}, {"id": "s4", "title": "Data cleaning as a process"}, {"id": "s5", "title": "Data integration"}, {"id": "s6", "title": "Data transformation"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week04", "label": "Week 04", "url": "Data%20Mining/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why reduce data at all?"}, {"id": "s2", "title": "Data cube aggregation"}, {"id": "s3", "title": "Attribute subset selection"}, {"id": "s4", "title": "Dimensionality reduction"}, {"id": "s5", "title": "Numerosity reduction"}, {"id": "s6", "title": "Discretization & concept hierarchies"}, {"id": "s7", "title": "Binning: equal-width vs equal-depth"}, {"id": "s8", "title": "Smoothing noisy data with bins"}, {"id": "s9", "title": "Histogram partitioning — a full worked example"}, {"id": "s10", "title": "Also asked in self-assessments: entropy-based discretization and the 3-4-5 rule"}, {"id": "s11", "title": "Self-assignment (2024): binning in practice"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week05", "label": "Week 05", "url": "Data%20Mining/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why data warehouses matter"}, {"id": "s2", "title": "What is a data warehouse?"}, {"id": "s3", "title": "OLTP vs OLAP"}, {"id": "s4", "title": "Why keep the warehouse separate?"}, {"id": "s5", "title": "The multidimensional data model"}, {"id": "s6", "title": "Lattice of cuboids"}, {"id": "s7", "title": "Weka — the tool used in this course"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week06", "label": "Week 06", "url": "Data%20Mining/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why a different schema for warehouses?"}, {"id": "s2", "title": "Star schema"}, {"id": "s3", "title": "Snowflake schema"}, {"id": "s4", "title": "Fact constellation (galaxy schema)"}, {"id": "s5", "title": "Data warehouse vs data mart"}, {"id": "s6", "title": "Defining cubes with DMQL"}, {"id": "s7", "title": "Concept hierarchies"}, {"id": "s8", "title": "Weka 1.2 — Exploring the Explorer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week07", "label": "Week 07", "url": "Data%20Mining/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why build a data warehouse?"}, {"id": "s2", "title": "The four views of warehouse design"}, {"id": "s3", "title": "Design approaches & methodology"}, {"id": "s4", "title": "The 4-step warehouse design process"}, {"id": "s5", "title": "Three-tier data warehouse architecture"}, {"id": "s6", "title": "The metadata repository"}, {"id": "s7", "title": "OLAP server models: ROLAP, MOLAP, HOLAP"}, {"id": "s8", "title": "Weka 1.3 — Exploring datasets"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week08", "label": "Week 08", "url": "Data%20Mining/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why compute cubes efficiently?"}, {"id": "s2", "title": "Cube materialization: cells and cuboids"}, {"id": "s3", "title": "Full cube vs iceberg cube"}, {"id": "s4", "title": "MultiWay array aggregation"}, {"id": "s5", "title": "BUC — Bottom-Up Computation"}, {"id": "s6", "title": "Star attributes, star-nodes and star-trees"}, {"id": "s7", "title": "Attribute-oriented induction (AOI)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week09", "label": "Week 09", "url": "Data%20Mining/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Frequent patterns"}, {"id": "s2", "title": "Market basket analysis"}, {"id": "s3", "title": "Association rules, support and confidence"}, {"id": "s4", "title": "The Apriori algorithm"}, {"id": "s5", "title": "Full worked example (|D| = 9, min_sup = 2)"}, {"id": "s6", "title": "Generating strong association rules"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week10", "label": "Week 10", "url": "Data%20Mining/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why not just use Apriori?"}, {"id": "s2", "title": "FP-growth: the idea"}, {"id": "s3", "title": "Worked example (min_sup = 3)"}, {"id": "s4", "title": "Mining the FP-tree"}, {"id": "s5", "title": "Multilevel association rules"}, {"id": "s6", "title": "Multidimensional association rules"}, {"id": "s7", "title": "Constraint-based association mining"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week11", "label": "Week 11", "url": "Data%20Mining/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Classification vs prediction"}, {"id": "s2", "title": "The two-step classification process"}, {"id": "s3", "title": "Preparing data & comparing methods"}, {"id": "s4", "title": "Decision trees & their history"}, {"id": "s5", "title": "Attribute selection measures"}, {"id": "s6", "title": "Worked example — buys_computer (14 tuples)"}, {"id": "s7", "title": "Weka: J48, filters and visualisation"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week12", "label": "Week 12", "url": "Data%20Mining/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Bayesian classifiers — overview"}, {"id": "s2", "title": "Bayes' theorem"}, {"id": "s3", "title": "The naïve Bayesian classifier"}, {"id": "s4", "title": "Worked example — will X buy a computer?"}, {"id": "s5", "title": "Rule-based classification"}, {"id": "s6", "title": "Extracting rules from a decision tree"}, {"id": "s7", "title": "Weka: training and testing"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week13", "label": "Week 13", "url": "Data%20Mining/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is cluster analysis?"}, {"id": "s2", "title": "Requirements of clustering in data mining"}, {"id": "s3", "title": "Types of clustering methods"}, {"id": "s4", "title": "Clustering by k-means"}, {"id": "s5", "title": "Weka: baseline accuracy and cross-validation"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week14", "label": "Week 14", "url": "Data%20Mining/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why k-medoids?"}, {"id": "s2", "title": "k-medoids and PAM"}, {"id": "s3", "title": "Worked example (from the lesson)"}, {"id": "s4", "title": "Hierarchical clustering"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-Week15", "label": "Week 15", "url": "Data%20Mining/Week%2015/Week%2015%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Overview"}, {"id": "s2", "title": "Financial data analysis"}, {"id": "s3", "title": "Retail industry"}, {"id": "s4", "title": "Telecommunication industry"}, {"id": "s5", "title": "Biological data analysis"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dm-quizzes", "label": "Official quizzes", "url": "Data%20Mining/Quizzes.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "Self-assessment quiz — data mining functions and issues"}, {"id": "s2", "title": "Assessment 02 practice — cleaning, integration and transformation"}]}]}, {"key": "dmath", "name": "Discrete Mathematics", "exam": ["2026-11-21", "08:30", "11:30"], "url": "Discrete%20Mathematics/Study%20Guide%20-%20Index.html", "weeks": [{"key": "dmath-Week01", "label": "Week 01", "url": "Discrete%20Mathematics/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From propositions to predicates"}, {"id": "s2", "title": "Propositional functions"}, {"id": "s3", "title": "Compound expressions"}, {"id": "s4", "title": "Quantifiers: ∀, ∃, ∃!"}, {"id": "s5", "title": "Negating quantified expressions"}, {"id": "s6", "title": "Translating English into logic"}, {"id": "s7", "title": "Introduction to proofs — direct proof"}, {"id": "s8", "title": "Assignment 1: worked answers"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week02", "label": "Week 02", "url": "Discrete%20Mathematics/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Set terminology & notation"}, {"id": "s2", "title": "Equality, subsets & disjoint sets"}, {"id": "s3", "title": "Venn diagrams"}, {"id": "s4", "title": "Set operations"}, {"id": "s5", "title": "Set laws"}, {"id": "s6", "title": "Number of elements — inclusion–exclusion"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week03", "label": "Week 03", "url": "Discrete%20Mathematics/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a function?"}, {"id": "s2", "title": "One-to-one (injective)"}, {"id": "s3", "title": "Onto (surjective) & bijection"}, {"id": "s4", "title": "Inverse functions"}, {"id": "s5", "title": "Composition of functions"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week04", "label": "Week 04", "url": "Discrete%20Mathematics/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Sequences"}, {"id": "s2", "title": "Geometric & arithmetic progressions"}, {"id": "s3", "title": "Summation notation (Σ)"}, {"id": "s4", "title": "Geometric series (Theorem 1)"}, {"id": "s5", "title": "Infinite series (Theorem 2)"}, {"id": "s6", "title": "Double sums"}, {"id": "s7", "title": "Useful closed forms (Table 2)"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week05", "label": "Week 05", "url": "Discrete%20Mathematics/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Matrices represent data"}, {"id": "s2", "title": "Matrix addition"}, {"id": "s3", "title": "Matrix multiplication"}, {"id": "s4", "title": "Identity, powers, transpose & symmetric"}, {"id": "s5", "title": "Zero–one matrices: join and meet"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week06", "label": "Week 06", "url": "Discrete%20Mathematics/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Divisibility"}, {"id": "s2", "title": "The division algorithm"}, {"id": "s3", "title": "Modular arithmetic & congruence"}, {"id": "s4", "title": "Primes"}, {"id": "s5", "title": "Cryptography — Caesar's cipher"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week07", "label": "Week 07", "url": "Discrete%20Mathematics/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why induction?"}, {"id": "s2", "title": "Worked induction proofs"}, {"id": "s3", "title": "The well-ordering property"}, {"id": "s4", "title": "Recursion"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week08", "label": "Week 08", "url": "Discrete%20Mathematics/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why counting?"}, {"id": "s2", "title": "The product rule (\"AND\", then multiply)"}, {"id": "s3", "title": "The sum rule (\"OR\", then add)"}, {"id": "s4", "title": "Tree diagrams"}, {"id": "s5", "title": "Combinations — order doesn't matter"}, {"id": "s6", "title": "Permutations — order matters"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week09", "label": "Week 09", "url": "Discrete%20Mathematics/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Binary relations"}, {"id": "s2", "title": "Functions as relations"}, {"id": "s3", "title": "Relations on a set"}, {"id": "s4", "title": "Properties: reflexive, symmetric, transitive"}, {"id": "s5", "title": "Equivalence relations"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week10", "label": "Week 10", "url": "Discrete%20Mathematics/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "From pairs to n-tuples"}, {"id": "s2", "title": "Databases & the relational data model"}, {"id": "s3", "title": "Primary keys, composite keys, extension & intension"}, {"id": "s4", "title": "Operations: selection, projection, join"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week11", "label": "Week 11", "url": "Discrete%20Mathematics/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why graphs?"}, {"id": "s2", "title": "The birth of graph theory — Königsberg"}, {"id": "s3", "title": "What is a graph?"}, {"id": "s4", "title": "The six types of graphs"}, {"id": "s5", "title": "Graph models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week12", "label": "Week 12", "url": "Discrete%20Mathematics/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Trees"}, {"id": "s2", "title": "Rooted trees & terminology"}, {"id": "s3", "title": "Ordered rooted trees & binary trees"}, {"id": "s4", "title": "Binary search trees (BST)"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-Week13", "label": "Week 13", "url": "Discrete%20Mathematics/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Decision trees"}, {"id": "s2", "title": "Tree traversal"}, {"id": "s3", "title": "Spanning trees"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "dmath-papers", "label": "Past papers", "url": "Discrete%20Mathematics/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what keeps coming back"}, {"id": "s2", "title": "January 2023 — Question 1"}, {"id": "s3", "title": "January 2023 — Question 2 (number theory)"}, {"id": "s4", "title": "January 2023 — Question 3"}, {"id": "s5", "title": "January 2023 — Question 4 (graphs)"}, {"id": "s6", "title": "July 2023"}, {"id": "s7", "title": "October 2019"}, {"id": "s8", "title": "Model questions (official sample problems)"}]}, {"key": "dmath-quizzes", "label": "Official quizzes", "url": "Discrete%20Mathematics/Quizzes.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "Quiz 1 — Introduction to Predicate Logic"}, {"id": "s2", "title": "Quiz 2 — Sets and Set Operations"}, {"id": "s3", "title": "Quiz 3 — Functions"}, {"id": "s4", "title": "Quiz 4 — Sequences and Summations"}, {"id": "s5", "title": "Quiz 5 — Matrices"}, {"id": "s6", "title": "Quiz 6 — Number Theory and Cryptography"}, {"id": "s7", "title": "Quiz 7 — Induction and Recursion"}, {"id": "s8", "title": "Quiz 8 — Basics of Counting"}, {"id": "s9", "title": "Quiz 9 — Relations and Their Properties"}, {"id": "s10", "title": "Quiz 10 — n-ary Relations"}, {"id": "s11", "title": "Quiz 11 — Graphs and Graph Models"}, {"id": "s12", "title": "Quiz 12 — Trees and Applications of Trees"}, {"id": "s13", "title": "Quiz 13 — Decision Trees, Tree Traversals and Spanning Trees"}]}]}, {"key": "hci", "name": "Human Computer Interaction", "exam": ["2026-11-22", "08:30", "11:30"], "url": "Human%20Computer%20Interaction/Study%20Guide%20-%20Index.html", "weeks": [{"key": "hci-Week01", "label": "Week 01", "url": "Human%20Computer%20Interaction/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "History of HCI"}, {"id": "s2", "title": "HCI is multi-disciplinary"}, {"id": "s3", "title": "Computers today: ubiquitous computing"}, {"id": "s4", "title": "Humans and perception"}, {"id": "s5", "title": "Interaction: two-way and task-centred"}, {"id": "s6", "title": "The HCI space"}, {"id": "s7", "title": "Applications of HCI — three pillars"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week02", "label": "Week 02", "url": "Human%20Computer%20Interaction/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is interaction?"}, {"id": "s2", "title": "Donald Norman's model — 7 stages"}, {"id": "s3", "title": "The two gulfs"}, {"id": "s4", "title": "Human errors: slips vs mistakes"}, {"id": "s5", "title": "The Abowd & Beale framework"}, {"id": "s6", "title": "Ergonomics"}, {"id": "s7", "title": "Direct vs indirect manipulation"}, {"id": "s8", "title": "Interaction styles"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week03", "label": "Week 03", "url": "Human%20Computer%20Interaction/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "The human as an information processing machine"}, {"id": "s2", "title": "The senses in UI design"}, {"id": "s3", "title": "Human memory: three stores"}, {"id": "s4", "title": "Chunking & semantic networks"}, {"id": "s5", "title": "Cognitive load"}, {"id": "s6", "title": "Attention: selective vs divided"}, {"id": "s7", "title": "Motor skills & physical ergonomics"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week04", "label": "Week 04", "url": "Human%20Computer%20Interaction/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Design for tasks, not interfaces"}, {"id": "s2", "title": "The three contexts of \"use\": useful, usable, used"}, {"id": "s3", "title": "Three perspectives of the user"}, {"id": "s4", "title": "The in-car GPS turn example"}, {"id": "s5", "title": "UX beyond interaction"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week05", "label": "Week 05", "url": "Human%20Computer%20Interaction/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Action, interaction, effect, feedback"}, {"id": "s2", "title": "Feedback cycles are everywhere"}, {"id": "s3", "title": "Norman's model revisited: the two bridges"}, {"id": "s4", "title": "The 7 questions — designer & user perspectives"}, {"id": "s5", "title": "Norman's three levels of design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week06", "label": "Week 06", "url": "Human%20Computer%20Interaction/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Direct manipulation"}, {"id": "s2", "title": "The desktop metaphor vs the command line"}, {"id": "s3", "title": "Metaphorical vs literal invisibility — good vs bad design"}, {"id": "s4", "title": "Where direct manipulation is still lacking"}, {"id": "s5", "title": "Invisibility by learning vs by design"}, {"id": "s6", "title": "Five tips for invisible interfaces"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week07", "label": "Week 07", "url": "Human%20Computer%20Interaction/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Principles, guidelines and standards"}, {"id": "s2", "title": "Classic design frameworks"}, {"id": "s3", "title": "The 15 universal design principles"}, {"id": "s4", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week08", "label": "Week 08", "url": "Human%20Computer%20Interaction/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Mental models"}, {"id": "s2", "title": "Representations"}, {"id": "s3", "title": "Four traits of good representations"}, {"id": "s4", "title": "Full error taxonomy: slips vs mistakes"}, {"id": "s5", "title": "Learned helplessness & expert blindness"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week09", "label": "Week 09", "url": "Human%20Computer%20Interaction/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Task analysis & cognitive modelling"}, {"id": "s2", "title": "The GOMS framework"}, {"id": "s3", "title": "Keystroke-Level Model (KLM)"}, {"id": "s4", "title": "Fitts's law"}, {"id": "s5", "title": "Strengths and limits of predictive models"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week10", "label": "Week 10", "url": "Human%20Computer%20Interaction/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Processor- vs predictor-oriented models"}, {"id": "s2", "title": "Cognitive Task Analysis (CTA) — 5 steps"}, {"id": "s3", "title": "Case study: the customer feedback thought stream"}, {"id": "s4", "title": "Hierarchical Task Analysis (HTA)"}, {"id": "s5", "title": "Modularity & divide and conquer"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week11", "label": "Week 11", "url": "Human%20Computer%20Interaction/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is user-centred design (UCD)?"}, {"id": "s2", "title": "The 8 user characteristics"}, {"id": "s3", "title": "ISO 9241-210: the 6 UCD principles"}, {"id": "s4", "title": "The 4-phase interaction design life cycle"}, {"id": "s5", "title": "Stakeholder-centred design"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week12", "label": "Week 12", "url": "Human%20Computer%20Interaction/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where needfinding fits"}, {"id": "s2", "title": "The seven questions"}, {"id": "s3", "title": "Biases in needfinding"}, {"id": "s4", "title": "Needfinding methods"}, {"id": "s5", "title": "Representing the needs"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-Week13", "label": "Week 13", "url": "Human%20Computer%20Interaction/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Where evaluation fits"}, {"id": "s2", "title": "Match the evaluation to the prototype"}, {"id": "s3", "title": "Evaluation across the design life cycle"}, {"id": "s4", "title": "Three types of evaluation"}, {"id": "s5", "title": "Four key terms"}, {"id": "s6", "title": "Quick revision sheet"}], "quiz": true}, {"key": "hci-papers", "label": "Past papers", "url": "Human%20Computer%20Interaction/Past%20Papers.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "What the exam looks like and what to focus on"}, {"id": "s2", "title": "ITE 3752 — Question 1: User-centred design (25 marks)"}, {"id": "s3", "title": "ITE 3752 — Question 2: Norman's model (25 marks)"}, {"id": "s4", "title": "ITE 3752 — Question 3: Goals, tasks and HTA (25 marks)"}, {"id": "s5", "title": "ITE 3752 — Question 4: Needfinding and the design life cycle (25 marks)"}, {"id": "s6", "title": "Older ITE 3603 papers — outline answers"}]}]}, {"key": "mkt", "name": "Marketing", "exam": ["2026-11-22", "14:45", "17:45"], "url": "Marketing/Study%20Guide%20-%20Index.html", "weeks": [{"key": "mkt-Week01", "label": "Week 01", "url": "Marketing/Week%2001/Week%2001%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is marketing?"}, {"id": "s2", "title": "Marketing vs selling — the iceberg"}, {"id": "s3", "title": "Why marketing matters"}, {"id": "s4", "title": "Core concepts of marketing"}, {"id": "s5", "title": "Objectives of marketing"}, {"id": "s6", "title": "Quiz 01: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week02", "label": "Week 02", "url": "Marketing/Week%2002/Week%2002%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing has a history"}, {"id": "s2", "title": "1. Production concept"}, {"id": "s3", "title": "2. Product concept & marketing myopia"}, {"id": "s4", "title": "3. Selling concept"}, {"id": "s5", "title": "4. Marketing concept"}, {"id": "s6", "title": "5. Societal marketing concept"}, {"id": "s7", "title": "6. Holistic marketing concept"}, {"id": "s8", "title": "Quiz 02: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week03", "label": "Week 03", "url": "Marketing/Week%2003/Week%2003%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why scan the environment?"}, {"id": "s2", "title": "The three layers of the environment"}, {"id": "s3", "title": "Internal environment — 5 Ms & 7S"}, {"id": "s4", "title": "Micro environment (task environment)"}, {"id": "s5", "title": "Macro environment (DENTPC)"}, {"id": "s6", "title": "Responding to the environment"}, {"id": "s7", "title": "Marketing information system (MIS) & planning"}, {"id": "s8", "title": "Quiz 03: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week04", "label": "Week 04", "url": "Marketing/Week%2004/Week%2004%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Customer-driven marketing strategy"}, {"id": "s2", "title": "Market segmentation — four bases"}, {"id": "s3", "title": "Market targeting & Porter's five forces"}, {"id": "s4", "title": "Five patterns of target-market selection"}, {"id": "s5", "title": "Differentiation"}, {"id": "s6", "title": "Positioning & perceptual maps"}, {"id": "s7", "title": "Quiz 04: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week05", "label": "Week 05", "url": "Marketing/Week%2005/Week%2005%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why study consumer behaviour?"}, {"id": "s2", "title": "Consumer markets"}, {"id": "s3", "title": "The black box model (stimulus → response)"}, {"id": "s4", "title": "Factors influencing consumer behaviour"}, {"id": "s5", "title": "The buyer decision process — 5 stages"}, {"id": "s6", "title": "Four types of buying behaviour"}, {"id": "s7", "title": "Contemporary trends — Sri Lanka & global"}, {"id": "s8", "title": "Quiz 05: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week06", "label": "Week 06", "url": "Marketing/Week%2006/Week%2006%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is a business market?"}, {"id": "s2", "title": "How business markets differ from consumer markets"}, {"id": "s3", "title": "Buying situations"}, {"id": "s4", "title": "Systems buying & selling"}, {"id": "s5", "title": "The buying centre — seven roles"}, {"id": "s6", "title": "Procurement: orientations & Kraljic's four product types"}, {"id": "s7", "title": "The 8 buy phases (Robinson et al.)"}, {"id": "s8", "title": "Business-to-business relationships"}, {"id": "s9", "title": "Quiz 06: model answer"}, {"id": "s10", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week07", "label": "Week 07", "url": "Marketing/Week%2007/Week%2007%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why marketing information matters"}, {"id": "s2", "title": "Three types of marketing data"}, {"id": "s3", "title": "The marketing information system (MIS)"}, {"id": "s4", "title": "Types of marketing research"}, {"id": "s5", "title": "The marketing research process"}, {"id": "s6", "title": "Why marketing research fails"}, {"id": "s7", "title": "Quiz 07: model answer"}, {"id": "s8", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week08", "label": "Week 08", "url": "Marketing/Week%2008/Week%2008%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is digital marketing?"}, {"id": "s2", "title": "Objectives of digital marketing"}, {"id": "s3", "title": "Why people go online"}, {"id": "s4", "title": "Key components of a digital marketing strategy"}, {"id": "s5", "title": "Strategy & measurement"}, {"id": "s6", "title": "Quiz 08: model answer"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week09", "label": "Week 09", "url": "Marketing/Week%2009/Week%2009%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Why new products matter"}, {"id": "s2", "title": "Why develop new products, and why they fail"}, {"id": "s3", "title": "The 8-stage new product development process"}, {"id": "s4", "title": "The product life cycle (PLC)"}, {"id": "s5", "title": "Characteristics of each PLC stage"}, {"id": "s6", "title": "Marketing-mix strategies across the PLC"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week10", "label": "Week 10", "url": "Marketing/Week%2010/Week%2010%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Product strategy"}, {"id": "s2", "title": "Three levels of a product"}, {"id": "s3", "title": "Product classifications"}, {"id": "s4", "title": "Product mix and product line decisions"}, {"id": "s5", "title": "Brands, brand meaning and brand equity"}, {"id": "s6", "title": "Branding decisions"}, {"id": "s7", "title": "Packaging & labelling"}, {"id": "s8", "title": "Quiz 10: model answer"}, {"id": "s9", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week11", "label": "Week 11", "url": "Marketing/Week%2011/Week%2011%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Price: the revenue P"}, {"id": "s2", "title": "Factors affecting pricing decisions"}, {"id": "s3", "title": "The 6-step pricing process"}, {"id": "s4", "title": "New-product pricing: skimming vs penetration"}, {"id": "s5", "title": "Seven price-adjustment strategies"}, {"id": "s6", "title": "Price changes & reactions"}, {"id": "s7", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week12", "label": "Week 12", "url": "Marketing/Week%2012/Week%2012%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Before promoting"}, {"id": "s2", "title": "Integrated marketing communication (IMC)"}, {"id": "s3", "title": "Promotion objectives"}, {"id": "s4", "title": "The promotion mix"}, {"id": "s5", "title": "Advertising"}, {"id": "s6", "title": "Message strategy"}, {"id": "s7", "title": "Public relations"}, {"id": "s8", "title": "Sales promotion"}, {"id": "s9", "title": "Push vs pull channel policies"}, {"id": "s10", "title": "Socially responsible marketing communication"}, {"id": "s11", "title": "Quiz 12: model answer"}, {"id": "s12", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week13", "label": "Week 13", "url": "Marketing/Week%2013/Week%2013%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "What is \"place\"?"}, {"id": "s2", "title": "The nature of marketing channels"}, {"id": "s3", "title": "Push and pull strategies"}, {"id": "s4", "title": "How channel members add value"}, {"id": "s5", "title": "Channel levels"}, {"id": "s6", "title": "Channel behaviour and conflict"}, {"id": "s7", "title": "Conventional vs vertical marketing systems"}, {"id": "s8", "title": "Designing a marketing channel"}, {"id": "s9", "title": "Managing the marketing channel"}, {"id": "s10", "title": "Marketing logistics and supply chain management"}, {"id": "s11", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-Week14", "label": "Week 14", "url": "Marketing/Week%2014/Week%2014%20-%20Study%20Guide.html", "sections": [{"id": "s1", "title": "Marketing planning"}, {"id": "s2", "title": "Purpose of marketing planning"}, {"id": "s3", "title": "Importance of marketing planning"}, {"id": "s4", "title": "Components of a marketing plan"}, {"id": "s5", "title": "Quick revision sheet"}], "quiz": true}, {"key": "mkt-quizzes", "label": "Official quizzes", "url": "Marketing/Quizzes.html", "paper": true, "quiz": false, "sections": [{"id": "s1", "title": "Quiz 02 — Paradigms of Marketing"}]}]}]</script>
+<script>(function(){
+  var KEY = document.body.getAttribute('data-key');
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+  // theme + font size
+  var root = document.documentElement;
+  var theme = load('sg-theme', null); if (theme) root.setAttribute('data-theme', theme);
+  var fs = load('sg-fs', 17); root.style.setProperty('--fs', fs + 'px');
+  var tb = document.getElementById('themebtn');
+  if (tb) tb.onclick = function(){
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt = dark ? 'light' : 'dark'; root.setAttribute('data-theme', nt); save('sg-theme', nt);
+  };
+  function setFs(d){ fs = Math.max(14, Math.min(22, fs + d)); root.style.setProperty('--fs', fs + 'px'); save('sg-fs', fs); }
+  var a1 = document.getElementById('fsm'), a2 = document.getElementById('fsp');
+  if (a1) a1.onclick = function(){ setFs(-1); };
+  if (a2) a2.onclick = function(){ setFs(1); };
+
+  // index-page progress bars
+  document.querySelectorAll('.wk a[data-key]').forEach(function(a){
+    var st = load('sg-done-' + a.getAttribute('data-key'), null), n = +a.getAttribute('data-n');
+    if (st && n){ var c = Object.keys(st).filter(function(k){ return st[k]; }).length;
+      a.querySelector('.pg i').style.width = Math.round(100 * c / n) + '%'; }
+  });
+  var toc = document.getElementById('toc');
+  var tbtn = document.getElementById('tocbtn');
+  if (tbtn && !toc) tbtn.hidden = true;
+  if (!KEY || !toc) return;
+
+  // TOC
+  var links = [];
+  var heads = document.querySelectorAll('main h2[id], main h3[id]');
+  heads.forEach(function(h){
+    var a = document.createElement('a'); a.href = '#' + h.id;
+    a.className = h.tagName === 'H3' ? 'h3' : 'h2';
+    var ck = document.createElement('span'); ck.className = 'ck';
+    var c = h.cloneNode(true); c.querySelectorAll('.ts,.num').forEach(function(x){ x.remove(); });
+    var t = document.createElement('span'); t.textContent = h.getAttribute('data-t') || c.textContent.trim();
+    a.appendChild(ck); a.appendChild(t); toc.appendChild(a); links.push([h, a, ck]);
+    a.onclick = function(){ var english=h.closest('.section-english'); if(english && english.hidden){ var toggle=h.closest('section').querySelector('.native-toggle'); if(toggle) toggle.click(); } toc.classList.remove('open'); };
+  });
+  if (tbtn && toc) {
+    var isPhone = function(){ return window.matchMedia('(max-width:900px)').matches; };
+    var showToc = function(){
+      var hidden = document.body.classList.contains('toc-hidden');
+      tbtn.textContent = isPhone() ? '☰ Menu' : hidden ? '☰ Show menu' : '✕ Hide menu';
+      tbtn.setAttribute('aria-expanded', isPhone() ? String(toc.classList.contains('open')) : String(!hidden));
+    };
+    if (load('sg-toc-hidden', false)) document.body.classList.add('toc-hidden');
+    tbtn.onclick = function(){
+      if (isPhone()) toc.classList.toggle('open');
+      else save('sg-toc-hidden', document.body.classList.toggle('toc-hidden'));
+      showToc();
+    };
+    window.addEventListener('resize', showToc);
+    showToc();
+  }
+
+  // done state
+  var done = load('sg-done-' + KEY, {});
+  var secs = document.querySelectorAll('section.card[data-sec]');
+  function paint(){
+    var c = 0;
+    secs.forEach(function(s){
+      var id = s.getAttribute('data-sec'), on = !!done[id]; if (on) c++;
+      var b = s.querySelector('.done-btn'); b.classList.toggle('on', on);
+      b.textContent = on ? '✓ Understood — click to unmark' : 'Mark this section as understood';
+    });
+    links.forEach(function(l){ if (l[0].tagName === 'H2'){ l[2].textContent = done[l[0].id] ? '✓' : ''; } });
+    var p = document.getElementById('donecount'); if (p) p.textContent = c + ' / ' + secs.length + ' sections understood';
+  }
+  secs.forEach(function(s){
+    s.querySelector('.done-btn').onclick = function(){
+      var id = s.getAttribute('data-sec'); done[id] = !done[id]; save('sg-done-' + KEY, done); paint(); window.dispatchEvent(new CustomEvent('sg-progress', {detail:{kind:'section',key:KEY,section:id,on:done[id]}}));
+    };
+  });
+  paint();
+
+  // scroll spy + reading progress
+  var bar = document.querySelector('.progress');
+  function spy(){
+    var y = window.scrollY + 90, cur = null;
+    heads.forEach(function(h){ if (h.getClientRects().length && h.offsetTop <= y) cur = h; });
+    links.forEach(function(l){ l[1].classList.toggle('on', l[0] === cur); });
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (max > 0 ? 100 * window.scrollY / max : 0) + '%';
+  }
+  window.addEventListener('scroll', spy, {passive: true}); spy();
+
+  // videos
+  var vids = document.querySelectorAll('.vpane');
+  var tabs = document.querySelectorAll('.vtabs button');
+  var ONLINE = location.protocol.indexOf('http') === 0 && location.hostname.indexOf('github.io') > -1 || /[?&]online\b/.test(location.search);
+  // online copy: swap the local <video> for the Google Drive player (loaded only while its tab is open)
+  function drive(e){
+    var id = e.getAttribute('data-drive'); if (!id) return false;
+    var w = document.createElement('div');
+    var f = document.createElement('iframe'); f.className = 'vdrive'; f.allow = 'autoplay; fullscreen'; f.allowFullscreen = true;
+    f.setAttribute('data-src', 'https://drive.google.com/file/d/' + id + '/preview');
+    var a = document.createElement('a'); a.className = 'vdlink'; a.target = '_blank'; a.rel = 'noopener';
+    a.href = 'https://drive.google.com/file/d/' + id + '/view'; a.textContent = 'Open in Google Drive ↗';
+    w.appendChild(f); w.appendChild(a); e.replaceWith(w);
+    return true;
+  }
+  function show(i){
+    vids.forEach(function(v, j){
+      v.style.display = j === i ? '' : 'none';
+      var e = v.querySelector('video'); if (j !== i && e) e.pause();
+      var f = v.querySelector('iframe.vdrive');
+      if (f){ if (j === i){ if (!f.getAttribute('src')) f.src = f.getAttribute('data-src'); } else f.removeAttribute('src'); }
+    });
+    tabs.forEach(function(b, j){ b.classList.toggle('on', j === i); });
+  }
+  tabs.forEach(function(b, i){ b.onclick = function(){ show(i); }; });
+  if (ONLINE) vids.forEach(function(v){ var e = v.querySelector('video'); if (e) drive(e); });
+  if (vids.length) show(0);
+  vids.forEach(function(v){
+    var e = v.querySelector('video'); if (!e) return;
+    e.addEventListener('error', function(){
+      if (drive(e)){ var k = [].indexOf.call(vids, v); if (v.style.display !== 'none') show(k); return; }
+      var m = document.createElement('div'); m.className = 'vmissing';
+      m.textContent = 'This video could not be played here. Keep this HTML file in the same folder as "' + e.getAttribute('data-file') + '". (.mkv files play in Chrome/Edge; if not, open the file in VLC.)';
+      e.replaceWith(m);
+    }, true);
+    var pos = load('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), 0);
+    e.addEventListener('loadedmetadata', function(){ if (pos > 5 && pos < e.duration - 5) e.currentTime = pos; });
+    var last = 0;
+    e.addEventListener('timeupdate', function(){ if (Math.abs(e.currentTime - last) > 5){ last = e.currentTime; save('sg-vpos-' + KEY + '-' + e.getAttribute('data-file'), last); } });
+  });
+  document.addEventListener('click', function(ev){
+    var a = ev.target.closest('a[data-t]'); if (!a) return;
+    ev.preventDefault();
+    var i = +a.getAttribute('data-v'), t = +a.getAttribute('data-t');
+    show(i);
+    var f = vids[i] && vids[i].querySelector('iframe.vdrive');
+    if (f){ f.src = f.getAttribute('data-src') + '?t=' + t; document.getElementById('videos').scrollIntoView({behavior: 'smooth'}); return; }
+    var e = vids[i] && vids[i].querySelector('video'); if (!e) return;
+    document.getElementById('videos').scrollIntoView({behavior: 'smooth'});
+    e.currentTime = t; e.play();
+  });
+  // Native, offline Tamil explanations. Each section keeps its own language.
+  (function(){
+    try { localStorage.removeItem('sg-lang'); } catch(e){}
+    ['',location.hostname,'.'+location.hostname].forEach(function(d){
+      document.cookie='googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT'+(d?';domain='+d:'');
+    });
+    document.querySelectorAll('.native-toggle').forEach(function(button){
+      var section=button.closest('section'), tamil=section.querySelector('.tamil-native'), english=section.querySelector('.section-english');
+      if(!tamil || !english) return;
+      var reference=section.querySelector('.native-reference');
+      if(reference) reference.onclick=function(){
+        var showReference=english.hidden;
+        english.hidden=!showReference;
+        english.classList.toggle('reference-open',showReference);
+        reference.setAttribute('aria-expanded',String(showReference));
+        reference.textContent=showReference?'English விவரத்தை மறைக்க':'முழு விவரம், கணக்கு, படம், கருவிகள் · English';
+        window.dispatchEvent(new Event('resize'));
+      };
+      button.onclick=function(){
+        var showTamil=tamil.hidden;
+        tamil.hidden=!showTamil; english.hidden=showTamil;
+        english.classList.remove('reference-open');
+        var ref=section.querySelector('.native-reference');
+        if(ref){ ref.setAttribute('aria-expanded','false'); ref.textContent='முழு விவரம், கணக்கு, படம், கருவிகள் · English'; }
+        button.setAttribute('aria-expanded',String(showTamil));
+        button.textContent=showTamil?'English-இல் படிக்க':'தமிழில் புரிந்துகொள்ள';
+        section.classList.toggle('show-tamil',showTamil);
+      };
+    });
+  })();
+})();
+;
+(function(){
+  function load(k, d){ try{ var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well', 'ok'] : p >= 70 ? ['Good — revise the ones you missed', 'ok'] : p >= 50 ? ['Getting there — reread the weak sections', 'mid'] : ['Needs revision — go through the notes again', 'bad']; }
+  function num(s){ return parseFloat(String(s).replace(/[,\s]/g, '').replace(/[^0-9.\-eE]/g, '')); }
+  function fmtAgo(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+
+  document.querySelectorAll('.quiz').forEach(function(Q){
+    var all = JSON.parse(Q.querySelector('.qdata').textContent), qid = Q.getAttribute('data-qid'),
+        pick = +Q.getAttribute('data-pick') || 0, head = Q.querySelector('.qhead'), body = Q.querySelector('.qbody'), cur = [];
+    function header(){
+      var st = load('sg-quiz-' + qid, null);
+      head.innerHTML = st ? '<div class="qstat"><span>Best <b>' + st.best + '%</b></span><span>Last <b>' + st.last + '%</b> (' + fmtAgo(st.ts) + ')</span><span>Attempts <b>' + st.tries + '</b></span>' +
+        (st.hist && st.hist.length > 1 ? '<span class="spark">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(8, h) + '%" title="' + h + '%"></i>'; }).join('') + '</span>' : '') + '</div>' : '';
+    }
+    function start(){
+      cur = (pick ? shuffle(all).slice(0, pick) : shuffle(all)).map(function(q){
+        var c = Object.assign({}, q);
+        if (q.o){ var idx = shuffle(q.o.map(function(_, i){ return i; })); c.order = idx; }
+        return c;
+      });
+      body.innerHTML = cur.map(function(q, i){
+        var h = '<div class="qq" data-i="' + i + '"><div class="qt"><b>' + (i + 1) + '.</b> ' + q.q + (q.w && pick ? ' <span class="qw">' + q.w + '</span>' : '') + '</div>';
+        if (q.o) h += q.order.map(function(oi){ return '<label class="qo"><input type="radio" name="' + qid + '-' + i + '" value="' + oi + '"><span>' + q.o[oi] + '</span></label>'; }).join('');
+        else h += '<div class="qn"><input type="text" inputmode="decimal" placeholder="Type a number"></div>';
+        return h + '<div class="qe"></div></div>';
+      }).join('') + '<div class="qact"><button class="qcheck">Check my answers</button><span class="qleft"></span></div><div class="qres"></div>';
+      body.querySelector('.qcheck').onclick = check;
+      body.addEventListener('change', left); left();
+    }
+    function answered(i){
+      var el = body.querySelector('.qq[data-i="' + i + '"]');
+      return cur[i].o ? !!el.querySelector('input:checked') : el.querySelector('.qn input').value.trim() !== '';
+    }
+    function left(){ var n = cur.filter(function(_, i){ return !answered(i); }).length; var s = body.querySelector('.qleft'); if (s) s.textContent = n ? n + ' unanswered' : 'All answered'; }
+    function check(){
+      var n = cur.filter(function(_, i){ return !answered(i); }).length;
+      if (n && !confirm(n + ' question(s) unanswered — they will count as wrong. Check anyway?')) return;
+      var right = 0, weak = {};
+      cur.forEach(function(q, i){
+        var el = body.querySelector('.qq[data-i="' + i + '"]'), ok;
+        if (q.o){
+          var sel = el.querySelector('input:checked'), v = sel ? +sel.value : -1; ok = v === q.a;
+          el.querySelectorAll('.qo').forEach(function(l){ var iv = +l.querySelector('input').value; l.classList.toggle('right', iv === q.a); l.classList.toggle('wrong', iv === v && !ok); });
+        } else {
+          var inp = el.querySelector('.qn input'), x = num(inp.value), tol = q.t != null ? q.t : Math.max(0.01, Math.abs(q.n) * 0.005);
+          ok = !isNaN(x) && Math.abs(x - q.n) <= tol + 1e-9;
+          inp.insertAdjacentHTML('afterend', ok ? '' : '<span class="qcorr">Answer: <b>' + q.n.toLocaleString(undefined, {maximumFractionDigits: 4}) + '</b></span>');
+          inp.classList.add(ok ? 'right' : 'wrong');
+        }
+        if (ok) right++; else if (q.w) weak[q.w] = (weak[q.w] || 0) + 1;
+        el.classList.add(ok ? 'ok' : 'no');
+        el.querySelector('.qe').innerHTML = '<b>' + (ok ? '✓ Correct.' : '✗ Not quite.') + '</b> ' + (q.e || '');
+        el.querySelectorAll('input').forEach(function(x){ x.disabled = true; });
+      });
+      var p = Math.round(100 * right / cur.length), g = grade(p), st = load('sg-quiz-' + qid, {best: 0, tries: 0, hist: []});
+      st.best = Math.max(st.best, p); st.last = p; st.tries++; st.ts = Date.now(); st.n = cur.length; st.hist = (st.hist || []).concat(p).slice(-12);
+      save('sg-quiz-' + qid, st); header(); window.dispatchEvent(new CustomEvent('sg-progress', {detail:{kind:'quiz',key:qid,score:p}}));
+      var wk = Object.keys(weak).sort(function(a, b){ return weak[b] - weak[a]; });
+      body.querySelector('.qact').innerHTML = '';
+      body.querySelector('.qres').innerHTML = '<div class="qscore ' + g[1] + '"><div class="big">' + right + ' / ' + cur.length + ' <small>(' + p + '%)</small></div><div>' + g[0] + '</div>' +
+        (pick && wk.length ? '<div class="qweak">Weakest weeks this time: ' + wk.slice(0, 4).map(function(w){ return w + ' (' + weak[w] + ' wrong)'; }).join(', ') + '</div>' : '') +
+        '<button class="qagain">' + (pick ? 'New random exam' : 'Try again (new order)') + '</button></div>';
+      body.querySelector('.qagain').onclick = function(){ start(); Q.scrollIntoView({behavior: 'smooth'}); };
+      body.querySelector('.qres').scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    header(); start();
+  });
+
+  // week-card badges on subject pages
+  function badge(el, st, n){
+    if (!st){ el.textContent = n ? 'Quiz: not tried (' + n + ' Qs)' : ''; el.className = el.className.replace(/ (ok|mid|bad)/g, ''); return; }
+    el.textContent = 'Quiz best ' + st.best + '%'; el.classList.add(grade(st.best)[1]);
+  }
+  document.querySelectorAll('.qb[data-qid]').forEach(function(b){ badge(b, load('sg-quiz-' + b.getAttribute('data-qid'), null), +b.getAttribute('data-qn')); });
+
+  // knowledge panels
+  function summary(keys){
+    var done = keys.map(function(k){ return load('sg-quiz-' + k, null); }).filter(Boolean);
+    var avg = done.length ? Math.round(done.reduce(function(a, s){ return a + s.best; }, 0) / done.length) : 0;
+    var cover = keys.length ? Math.round(100 * done.length / keys.length) : 0;
+    return {done: done.length, total: keys.length, avg: avg, cover: cover, know: Math.round(avg * done.length / (keys.length || 1))};
+  }
+  function meter(label, v, sub){ return '<div class="km"><div class="kl">' + label + '</div><div class="kbar"><i style="width:' + v + '%"></i></div><div class="kv"><b>' + v + '%</b> ' + sub + '</div></div>'; }
+  document.querySelectorAll('.kpanel[data-subj]').forEach(function(P){
+    var sk = P.getAttribute('data-subj'), keys = [].map.call(document.querySelectorAll('.qb[data-qid]'), function(b){ return b.getAttribute('data-qid'); });
+    if (!keys.length) return;
+    var s = summary(keys), mx = load('sg-quiz-' + sk + '-mixed', null);
+    P.innerHTML = '<div class="tt">📊 Your knowledge in this subject</div>' +
+      meter('Overall knowledge', s.know, '— average best score × weeks covered') +
+      meter('Weeks quizzed', s.cover, '(' + s.done + ' of ' + s.total + ')') +
+      meter('Average best score', s.avg, 'on the weeks you tried') +
+      (mx ? meter('Mixed exam best', mx.best, '(' + mx.tries + ' attempt' + (mx.tries > 1 ? 's' : '') + ')') : '<p class="note">Take the <a href="#exam">mixed practice exam</a> at the bottom when you have covered several weeks.</p>');
+  });
+  var hub = document.querySelector('.kpanel[data-hub]');
+  if (hub){
+    var rows = [], tot = 0, cnt = 0;
+    document.querySelectorAll('.wk a[data-qkeys]').forEach(function(a){
+      var keys = a.getAttribute('data-qkeys').split(',').filter(Boolean); if (!keys.length) return;
+      var s = summary(keys), mx = load('sg-quiz-' + a.getAttribute('data-skey') + '-mixed', null);
+      a.querySelector('.hq').textContent = s.done ? 'Knowledge ' + s.know + '% · ' + s.done + '/' + s.total + ' weeks quizzed' + (mx ? ' · exam best ' + mx.best + '%' : '') : 'Quizzes: not started';
+      if (s.done) a.querySelector('.hq').classList.add(grade(s.know)[1]);
+      rows.push(meter(a.querySelector('span').textContent, s.know, '(' + s.done + '/' + s.total + ' weeks)')); tot += s.know; cnt++;
+    });
+    if (cnt) hub.innerHTML = '<div class="tt">📊 Semester knowledge — ' + Math.round(tot / cnt) + '% overall</div>' + rows.join('') +
+      '<p class="note">Knowledge = your average best quiz score × the share of weeks you have quizzed. Take each week\'s quiz, then the mixed exam on each subject page.</p>';
+  }
+})();
+;
+// Answer-it-yourself practice: fill in a real table one line at a time, with an explanation for each wrong answer.
+(function(){
+  var RULE = {Dr:'A debit records an asset, expense or drawings going up, or a liability, income or capital going down.',
+              Cr:'A credit records a liability, income or capital going up, or an asset, expense or drawings going down.'};
+  var TYPE = {asset:['an asset','debit'],expense:['an expense','debit'],drawings:['drawings','debit'],liability:['a liability','credit'],income:['income','credit'],capital:['capital','credit']};
+  function load(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
+  function save(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function money(n){ return Number(n).toLocaleString('en-US',{maximumFractionDigits:2}); }
+  function parse(s){ var v = parseFloat(String(s).replace(/[,\s]|Rs\.?/gi,'')); return isNaN(v) ? null : v; }
+  // The transaction being entered, repeated right above the input row so it is visible while typing.
+  function txRow(text, n){ return '<tr class="gp-txrow"><td colspan="' + n + '"><span class="gp-txrow-tag">Now entering</span> ' + esc(text) + '</td></tr>'; }
+  function dateOf(tx){ var m = /^([^:]{1,12}):/.exec(tx.tx); return m ? m[1] : ''; }
+
+  document.querySelectorAll('.gp').forEach(function(root){
+    var data = JSON.parse(root.querySelector('script').textContent), steps = [], key = 'sg-gp-' + root.id, accounts = Object.keys(data.accts || {});
+    var CB = data.cashbook || null, PC = data.pettycash || null;
+    function pcSteps(list){
+      // A petty cash book has one row per transaction: money in goes under Received; money out goes under Total paid and one analysis column.
+      return list.filter(function(item){ return item.e; }).map(function(item){
+        var rec = item.e.filter(function(x){ return x.a === 'Petty cash' && x.s === 'Dr'; })[0];
+        var pay = item.e.filter(function(x){ return x.a !== 'Petty cash' && x.s === 'Dr'; })[0];
+        var m = /Pay (.+?) Rs\./.exec(item.tx), details = rec ? (/restore/i.test(item.tx) ? 'Cash (restore imprest)' : 'Cash (float)') : m ? m[1].charAt(0).toUpperCase() + m[1].slice(1) : pay.a;
+        return {type:'pc', tx:item, kind:rec ? 'rec' : 'pay', entry:rec || pay, amt:(rec || pay).amt, col:rec ? null : pay.a, details:details};
+      });
+    }
+    var PRIOR = [];
+    if (PC && PC.prior) { var pe = document.getElementById(PC.prior); if (pe) PRIOR = pcSteps(JSON.parse(pe.querySelector('script').textContent).steps); }
+    function pcLabel(a){ var c = PC.cols.filter(function(x){ return x[0] === a; })[0]; return c ? c[1] : a; }
+    function isCB(a){ return a === 'Cash' || a === 'Bank'; }
+    function isDisc(a){ return /^Discount (allowed|received)$/.test(a); }
+    data.steps.forEach(function(item){
+      if (item.e && PC) steps.push(pcSteps([item])[0]);
+      else if (item.e && CB) {
+        // A cash book records only the Cash/Bank half of each entry; the other account is named in Particulars.
+        var lines = item.e.filter(function(x){ return isCB(x.a); }), contra = lines.length > 1;
+        var others = item.e.filter(function(x){ return !isCB(x.a) && !isDisc(x.a); });
+        lines.forEach(function(entry, i){
+          var disc = item.e.filter(function(x){ return isDisc(x.a) && x.s === entry.s; })[0];
+          var part = contra ? lines.filter(function(x){ return x !== entry; })[0].a : (others[0] ? others[0].a : '');
+          steps.push({type:'cb', tx:item, entry:entry, n:i, count:lines.length, side:entry.s, col:entry.a, part:part, contra:contra, disc:disc ? disc.amt : 0, ledger:contra ? [] : others.concat(item.e.filter(isDiscEntry))});
+        });
+      }
+      else if (item.e) item.e.forEach(function(entry, i){ steps.push({type:'entry', tx:item, entry:entry, n:i}); });
+      else steps.push(item);
+    });
+    function isDiscEntry(x){ return isDisc(x.a); }
+    var state = load(key) || {i:0, first:0}, tries = 0;
+    if (state.i > steps.length) state = {i:0, first:0};
+    var box = document.createElement('div'); root.appendChild(box);
+
+    function doneLine(s){
+      if (s.type === 'num') return esc(s.q) + ' <b>' + money(s.a) + '</b>';
+      return esc(s.q) + ' <b>' + esc(s.opts.filter(function(o){ return o.ok; })[0].t) + '</b>';
+    }
+    function advance(firstTry){
+      if (firstTry) state.first++;
+      state.i++; tries = 0; save(key, state); render();
+      var focus = box.querySelector('.gp-acct,.gp-amt,.gp-opt');
+      if (focus) { focus.focus({preventScroll:true}); focus.scrollIntoView({block:'nearest'}); }
+      else if (box.querySelector('.gp-fb')) box.querySelector('.gp-fb').scrollIntoView({block:'nearest'});
+    }
+    function feedback(kind, html, cont){
+      var f = box.querySelector('.gp-fb');
+      f.className = 'gp-fb ' + kind; f.innerHTML = html; f.hidden = false;
+      if (cont) {
+        var b = document.createElement('button'); b.type = 'button'; b.textContent = state.i + 1 < steps.length ? 'Next →' : 'Finish';
+        b.onclick = function(){ advance(cont.first); }; f.appendChild(b);
+        box.querySelectorAll('.gp-now input,.gp-opt,.gp-check').forEach(function(el){ el.disabled = true; });
+        box.querySelectorAll('.gp-list').forEach(function(list){ list.hidden = true; });
+        b.focus({preventScroll:true});
+      } else if (tries >= 2) {
+        var r = document.createElement('button'); r.type = 'button'; r.className = 'alt'; r.textContent = 'Show me the answer';
+        r.onclick = reveal; f.appendChild(r);
+      }
+      f.scrollIntoView({block:'nearest'});
+    }
+    function reveal(){
+      var s = steps[state.i], text;
+      if (s.type === 'pc') text = s.kind === 'rec' ? 'Write Rs. <b>' + money(s.amt) + '</b> in the <b>Received</b> column only. Money is coming into petty cash from the main cash book.' : 'Write Rs. <b>' + money(s.amt) + '</b> in <b>Total paid</b> and the same Rs. <b>' + money(s.amt) + '</b> in the <b>' + esc(pcLabel(s.col)) + '</b> analysis column. Leave Received empty.';
+      else if (s.type === 'cb') text = 'Write it on the <b>' + (s.side === 'Dr' ? 'Receipts (Dr)' : 'Payments (Cr)') + '</b> side: Particulars <b>' + esc(s.part + (s.contra ? ' (C)' : '')) + '</b>, <b>' + s.col + '</b> column Rs. <b>' + money(s.entry.amt) + '</b>' + (s.disc ? ', discount column Rs. <b>' + money(s.disc) + '</b>' : '') + '. ' + esc(s.entry.w);
+      else if (s.type === 'entry') text = 'Write <b>' + esc(s.entry.a) + '</b> with <b>Rs. ' + money(s.entry.amt) + '</b> in the <b>' + (s.entry.s === 'Dr' ? 'Debit' : 'Credit') + '</b> column. ' + esc(s.entry.w);
+      else if (s.type === 'num') text = 'The answer is <b>' + money(s.a) + '</b>. ' + esc(s.why || s.think);
+      else text = 'The answer is <b>' + esc(s.opts.filter(function(o){ return o.ok; })[0].t) + '</b>. ' + esc(s.why || '');
+      feedback('gp-show', text + '<p class="gp-muted">Read the reason. It will help on the next line.</p>', {first:false});
+    }
+    function checkEntry(s){
+      var typed = box.querySelector('.gp-acct').value.trim(), e = s.entry, sideName = e.s === 'Dr' ? 'Debit' : 'Credit';
+      var dr = box.querySelector('.gp-dr').value.trim(), cr = box.querySelector('.gp-cr').value.trim();
+      var pick = accounts.filter(function(a){ return a.toLowerCase() === typed.toLowerCase(); })[0];
+      if (!typed) return feedback('gp-hint', 'Start with the Account cell. Click it to see the available accounts.');
+      if (!pick) return feedback('gp-hint', '"' + esc(typed) + '" is not one of the accounts here. Click the Account cell and choose from the list.');
+      if (!dr && !cr) return feedback('gp-hint', 'Now type the amount in the column you think is right: Debit or Credit.');
+      if (dr && cr) return feedback('gp-hint', 'One line has only one amount. Keep it in one column and clear the other.');
+      var side = dr ? 'Dr' : 'Cr', amount = parse(dr || cr);
+      if (amount === null) return feedback('gp-hint', 'The amount must be a number. Commas are fine.');
+      var other = s.tx.e.filter(function(x){ return x.a === pick && x.a !== e.a; })[0];
+      if (pick !== e.a) {
+        if (other && other.s === side && s.tx.e.indexOf(other) > s.n) return feedback('gp-hint', '<b>Good thinking.</b> ' + esc(pick) + ' does go in the ' + (side === 'Dr' ? 'Debit' : 'Credit') + ' column here. But a journal entry lists debits before credits, and this line comes first. Enter it on its own line next.');
+        tries++;
+        var type = TYPE[data.accts[pick]], msg;
+        if (other && other.s !== side) msg = '<b>' + esc(pick) + '</b> is part of this transaction, but not in the ' + (side === 'Dr' ? 'Debit' : 'Credit') + ' column. ' + esc(other.w);
+        else if (other) msg = '<b>' + esc(pick) + '</b> is part of this transaction, but this line is for a different account.';
+        else msg = '<b>' + esc(pick) + '</b> does not change in this transaction, so it gets no entry.' + (type ? ' It is ' + type[0] + ', which increases on the ' + type[1] + ' side.' : '');
+        return feedback('gp-bad', '<b>Not quite.</b> ' + msg + '<p><b>How to think:</b> ' + esc(s.tx.think) + ' ' + RULE[e.s] + ' Which account fits this ' + sideName.toLowerCase() + ' line?</p>');
+      }
+      if (side !== e.s) {
+        tries++;
+        return feedback('gp-bad', '<b>Right account, wrong column.</b> ' + esc(pick) + ' belongs in the ' + sideName + ' column, not ' + (side === 'Dr' ? 'Debit' : 'Credit') + '. ' + esc(e.w) + '<p><b>How to think:</b> did this account go up or down? ' + RULE[e.s] + '</p>');
+      }
+      if (Math.abs(amount - e.amt) > 0.01) {
+        tries++;
+        return feedback('gp-bad', '<b>The account and column are right, but the amount is not.</b><p><b>How to think:</b> read the transaction again and find the rupee value of this one line. Do not add other transactions to it.' + (s.tx.e.length > 2 ? ' This transaction has several lines, so each line has its own amount, and total debits must equal total credits.' : ' The debit and credit of a transaction are always the same amount.') + '</p>');
+      }
+      feedback('gp-ok', '<b>Correct.</b> ' + esc(e.w), {first:tries === 0});
+    }
+    function checkPc(s){
+      var tr = box.querySelector('tr.gp-now'), rec = tr.querySelector('.gp-rec').value.trim(), tot = tr.querySelector('.gp-tot').value.trim(), cols = [];
+      tr.querySelectorAll('.gp-ana').forEach(function(x){ if (x.value.trim()) cols.push([x.dataset.a, x.value.trim()]); });
+      if (s.kind === 'rec') {
+        if (tot || cols.length) { tries++; return feedback('gp-bad', '<b>Not quite.</b> This money is coming <b>into</b> petty cash, so it goes in the <b>Received</b> column only. Total paid and the analysis columns are for money paid out.'); }
+        if (!rec) return feedback('gp-hint', 'Type the amount in the Received column.');
+        var r = parse(rec); if (r === null) return feedback('gp-hint', 'The amount must be a number. Commas are fine.');
+        if (Math.abs(r - s.amt) > 0.01) { tries++; return feedback('gp-bad', '<b>The column is right, but the amount is not.</b> Read the transaction again for the rupee value received.'); }
+        return feedback('gp-ok', '<b>Correct.</b> ' + (/restore/i.test(s.tx.tx) ? 'Under the imprest system the top-up equals the amount spent, which brings petty cash back to the full float.' : 'The float comes from the main cash book (Cr Cash there), so it is entered as money received here.'), {first:tries === 0});
+      }
+      if (rec) { tries++; return feedback('gp-bad', '<b>Not quite.</b> This is a payment <b>out</b> of petty cash, so the Received column stays empty. Use Total paid and one analysis column.'); }
+      if (!tot) return feedback('gp-hint', 'Type the amount paid in the <b>Total paid</b> column first.');
+      var t = parse(tot); if (t === null) return feedback('gp-hint', 'The amount must be a number. Commas are fine.');
+      if (Math.abs(t - s.amt) > 0.01) { tries++; return feedback('gp-bad', '<b>Total paid is wrong.</b> Write the rupee value of this one payment.'); }
+      if (!cols.length) return feedback('gp-hint', 'Now type the same amount in the <b>analysis column</b> that describes what the money was spent on.');
+      if (cols.length > 1) return feedback('gp-hint', 'One payment goes in one analysis column only. Clear the others.');
+      if (cols[0][0] !== s.col) { tries++; return feedback('gp-bad', '<b>Wrong analysis column.</b> ' + esc(s.details) + ' is not a ' + esc(pcLabel(cols[0][0])) + ' item. Ask what the money was spent on, and choose the column with that heading.' + (s.col !== 'Creditor X' ? '' : ' A payment to a supplier we owe goes in the Ledger a/c column, because it reduces a debt instead of being an expense.')); }
+      var v = parse(cols[0][1]);
+      if (v === null || Math.abs(v - t) > 0.01) { tries++; return feedback('gp-bad', '<b>The analysis amount must equal Total paid.</b> The analysis column just sorts the same payment by type.'); }
+      feedback('gp-ok', '<b>Correct.</b> Total paid shows the money leaving petty cash; the <b>' + esc(pcLabel(s.col)) + '</b> column shows what it was for. At month end the column total is posted to the debit of the ' + esc(s.col) + ' account in the ledger.', {first:tries === 0});
+    }
+    function pcbook(s){
+      var final = state.i >= steps.length, done = PRIOR.concat(steps.slice(0, state.i).filter(function(x){ return x.type === 'pc'; }));
+      var tot = {rec:0, paid:0}, colTot = {};
+      PC.cols.forEach(function(c){ colTot[c[0]] = 0; });
+      function cell(v){ return '<td class="r">' + (v === '' || v === undefined ? '' : money(v)) + '</td>'; }
+      var head = '<tr><th class="r gp-col-amt">Received</th><th class="gp-col-date">Date</th><th>Details</th><th class="r gp-col-amt">Total paid</th>' + PC.cols.map(function(c){ return '<th class="r gp-col-amt">' + esc(c[1]) + '</th>'; }).join('') + '</tr>';
+      var rows = done.map(function(x){
+        if (x.kind === 'rec') tot.rec += x.amt; else { tot.paid += x.amt; colTot[x.col] += x.amt; }
+        return '<tr class="gp-row-done">' + cell(x.kind === 'rec' ? x.amt : '') + '<td>' + esc(dateOf(x.tx)) + '</td><td>' + esc(x.details) + '</td>' + cell(x.kind === 'pay' ? x.amt : '') + PC.cols.map(function(c){ return cell(x.col === c[0] ? x.amt : ''); }).join('') + '</tr>';
+      }).join('');
+      if (s && s.type === 'pc') rows += txRow(s.tx.tx, 4 + PC.cols.length) + '<tr class="gp-now"><td><input class="gp-rec gp-pc" inputmode="decimal" autocomplete="off" aria-label="Received"></td><td>' + esc(dateOf(s.tx)) + '</td><td>' + esc(s.details) + '</td><td><input class="gp-tot gp-pc" inputmode="decimal" autocomplete="off" aria-label="Total paid"></td>' + PC.cols.map(function(c){ return '<td><input class="gp-ana gp-pc" data-a="' + esc(c[0]) + '" inputmode="decimal" autocomplete="off" aria-label="' + esc(c[1]) + '"></td>'; }).join('') + '</tr>';
+      var blank = PC.cols.map(function(){ return '<td></td>'; }).join(''), foot = '';
+      if (done.length && !(s && s.type === 'pc')) {
+        foot = '<tr>' + cell(tot.rec) + '<td></td><td>' + (final && PC.prior ? 'Totals' : 'Totals so far') + '</td>' + cell(tot.paid) + PC.cols.map(function(c){ return cell(colTot[c[0]]); }).join('') + '</tr>';
+        var last = done[done.length - 1];
+        if (final && PC.prior && last.kind === 'rec') {
+          var bal = tot.rec - tot.paid, d = dateOf(last.tx);
+          foot += '<tr><td></td><td>' + esc(d) + '</td><td>Balance c/d</td>' + cell(bal) + blank + '</tr>' +
+            '<tr>' + cell(tot.rec) + '<td></td><td></td>' + cell(tot.paid + bal) + blank + '</tr>' +
+            '<tr>' + cell(bal) + '<td></td><td>Balance b/d (next month)</td><td></td>' + blank + '</tr>';
+        }
+      }
+      return '<p class="gp-cb-label"><b>Petty cash book' + (PRIOR.length ? ' — continued from Part 1' : '') + '</b></p><div class="gp-tablewrap gp-scroll"><table class="gp-table"><thead>' + head + '</thead><tbody>' + rows + '</tbody>' + (foot ? '<tfoot>' + foot + '</tfoot>' : '') + '</table></div>';
+    }
+    function checkCb(s){
+      var rows = {}, filled = [];
+      box.querySelectorAll('tr.gp-now[data-side]').forEach(function(tr){
+        var r = {acct:tr.querySelector('.gp-acct').value.trim(), cash:tr.querySelector('.gp-cash').value.trim(), bank:tr.querySelector('.gp-bank').value.trim(), disc:tr.querySelector('.gp-disc') ? tr.querySelector('.gp-disc').value.trim() : ''};
+        rows[tr.dataset.side] = r; if (r.acct || r.cash || r.bank || r.disc) filled.push(tr.dataset.side);
+      });
+      var sideName = {Dr:'Receipts (Dr)', Cr:'Payments (Cr)'};
+      if (!filled.length) return feedback('gp-hint', 'First decide the side. Money coming in goes on the <b>Receipts (Dr)</b> side; money going out goes on the <b>Payments (Cr)</b> side. Fill the row on that side.');
+      if (filled.length > 1) return feedback('gp-hint', 'This line goes on one side only. Clear the row on the other side.');
+      var side = filled[0], r = rows[side];
+      if (side !== s.side) {
+        tries++;
+        return feedback('gp-bad', '<b>Wrong side.</b> ' + (s.side === 'Dr' ? s.col + ' increases here, so this line belongs on the Receipts (Dr) side.' : s.col + ' decreases here, so this line belongs on the Payments (Cr) side.') + (s.contra ? ' A contra entry appears on both sides: first the side where money arrives, then the side it leaves.' : '') + '<p><b>How to think:</b> ' + esc(s.tx.think) + '</p>');
+      }
+      var pick = accounts.filter(function(a){ return a.toLowerCase() === r.acct.toLowerCase().replace(/\s*\(c\)$/, ''); })[0];
+      if (!r.acct) return feedback('gp-hint', 'Fill in Particulars. Click the cell and choose the <b>other</b> account in this transaction.');
+      if (!pick) return feedback('gp-hint', '"' + esc(r.acct) + '" is not one of the accounts here. Click the Particulars cell and choose from the list.');
+      if (pick !== s.part) {
+        tries++;
+        var msg = pick === s.col ? 'In a cash book you do not write ' + s.col + ' in Particulars: the ' + s.col + ' column already says that. Particulars names the <b>other</b> account in the double entry.'
+          : '<b>' + esc(pick) + '</b> is not the other account in this transaction.';
+        return feedback('gp-bad', '<b>Not quite.</b> ' + msg + (s.contra ? ' This is a contra entry, so the other account is the other of Cash and Bank.' : '') + '<p><b>How to think:</b> ' + esc(s.tx.think) + '</p>');
+      }
+      if (r.cash && r.bank) return feedback('gp-hint', 'Type the amount in one column only: Cash or Bank.');
+      if (!r.cash && !r.bank) return feedback('gp-hint', 'Now type the amount in the Cash or the Bank column.');
+      var col = r.cash ? 'Cash' : 'Bank', amount = parse(r.cash || r.bank);
+      if (amount === null) return feedback('gp-hint', 'The amount must be a number. Commas are fine.');
+      if (col !== s.col) {
+        tries++;
+        return feedback('gp-bad', '<b>Right side, wrong column.</b> This amount belongs in the <b>' + s.col + '</b> column. ' + (s.col === 'Cash' ? 'Notes, coins and cheques we are still holding (not yet deposited) are in the Cash column.' : 'Cheques paid in, cheques we write and bank transfers are in the Bank column.') + '<p><b>How to think:</b> ' + esc(s.tx.think) + '</p>');
+      }
+      if (Math.abs(amount - s.entry.amt) > 0.01) {
+        tries++;
+        return feedback('gp-bad', '<b>The side, Particulars and column are right, but the amount is not.</b><p><b>How to think:</b> write the money that actually moved.' + (CB.disc ? ' Any discount goes in its own column, not in the Cash or Bank amount.' : '') + '</p>');
+      }
+      if (CB.disc) {
+        var d = r.disc ? parse(r.disc) : 0;
+        if (d === null || Math.abs(d - s.disc) > 0.01) {
+          tries++;
+          return feedback('gp-bad', s.disc ? '<b>The discount is missing or wrong.</b> The debt cleared is bigger than the money that moved. Put the difference in the discount column: ' + (s.side === 'Dr' ? 'discount allowed (we gave it to a debtor).' : 'discount received (a creditor gave it to us).') : '<b>No discount here.</b> Leave the discount column empty for this line.');
+        }
+      }
+      var post = s.ledger.length ? ' <span class="gp-muted">The other half of the double entry (' + s.ledger.map(function(x){ return (x.s === 'Dr' ? 'Dr ' : 'Cr ') + esc(x.a) + ' ' + money(x.amt); }).join(', ') + ') is posted to the ledger, not written in the cash book.</span>' : (s.contra && s.n === 0 ? ' <span class="gp-muted">A contra entry: the next line is the same money on the other side.</span>' : '');
+      feedback('gp-ok', '<b>Correct.</b> ' + esc(s.entry.w) + post, {first:tries === 0});
+    }
+    function cashbook(s){
+      var final = state.i >= steps.length, open = CB.open || {}, done = steps.slice(0, state.i).filter(function(x){ return x.type === 'cb'; });
+      var sides = {Dr:[], Cr:[]}, tot = {Dr:{Cash:0, Bank:0, d:0}, Cr:{Cash:0, Bank:0, d:0}};
+      if (open.Cash || open.Bank) { sides.Dr.push([CB.openDate || '', 'Balance b/d', '', open.Cash || 0, open.Bank || 0]); tot.Dr.Cash += open.Cash || 0; tot.Dr.Bank += open.Bank || 0; }
+      done.forEach(function(x){
+        sides[x.side].push([dateOf(x.tx), x.part + (x.contra ? ' (C)' : ''), x.disc || '', x.col === 'Cash' ? x.entry.amt : '', x.col === 'Bank' ? x.entry.amt : '']);
+        tot[x.side][x.col] += x.entry.amt; tot[x.side].d += x.disc || 0;
+      });
+      var bd = {Dr:[], Cr:[]};
+      if (final) ['Cash', 'Bank'].forEach(function(c){
+        var diff = tot.Dr[c] - tot.Cr[c]; if (!diff) return;
+        var cd = diff > 0 ? 'Cr' : 'Dr', row = function(side, label){ var list = label === 'Balance c/d' ? sides[side] : bd[side], r = list.filter(function(x){ return x[1] === label; })[0]; if (!r) { r = [label === 'Balance c/d' ? (CB.end || '') : (CB.next || ''), label, '', '', '']; list.push(r); } return r; };
+        row(cd, 'Balance c/d')[c === 'Cash' ? 3 : 4] = Math.abs(diff);
+        row(cd === 'Cr' ? 'Dr' : 'Cr', 'Balance b/d')[c === 'Cash' ? 3 : 4] = Math.abs(diff);
+        tot[cd][c] += Math.abs(diff);
+      });
+      function cell(v){ return '<td class="r">' + (v === '' ? '' : money(v)) + '</td>'; }
+      function table(side){
+        var label = side === 'Dr' ? 'Receipts side (Dr) — money in' : 'Payments side (Cr) — money out';
+        var head = '<tr><th class="gp-col-date">Date</th><th>Particulars</th>' + (CB.disc ? '<th class="r gp-col-amt">' + (side === 'Dr' ? 'Discount allowed' : 'Discount received') + '</th>' : '') + '<th class="r gp-col-amt">Cash</th><th class="r gp-col-amt">Bank</th></tr>';
+        var rows = sides[side].map(function(r){ return '<tr class="gp-row-done"><td>' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td>' + (CB.disc ? cell(r[2]) : '') + cell(r[3]) + cell(r[4]) + '</tr>'; }).join('');
+        if (s && s.type === 'cb') rows += txRow(s.tx.tx, CB.disc ? 5 : 4) + '<tr class="gp-now" data-side="' + side + '"><td>' + esc(dateOf(s.tx)) + '</td><td class="gp-cell-acct"><input class="gp-acct" placeholder="Click to choose" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Particulars, ' + label + '"><div class="gp-list" role="listbox" hidden></div></td>' + (CB.disc ? '<td><input class="gp-disc" inputmode="decimal" autocomplete="off" aria-label="Discount"></td>' : '') + '<td><input class="gp-cash" inputmode="decimal" autocomplete="off" aria-label="Cash"></td><td><input class="gp-bank" inputmode="decimal" autocomplete="off" aria-label="Bank"></td></tr>';
+        var foot = final ? '<tr><td></td><td>Total</td>' + (CB.disc ? cell(tot[side].d) : '') + cell(tot[side].Cash) + cell(tot[side].Bank) + '</tr>' + bd[side].map(function(r){ return '<tr><td>' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td>' + (CB.disc ? '<td></td>' : '') + cell(r[3]) + cell(r[4]) + '</tr>'; }).join('') : '';
+        return '<p class="gp-cb-label"><b>' + label + '</b></p><div class="gp-tablewrap gp-scroll"><table class="gp-table"><thead>' + head + '</thead><tbody>' + rows + '</tbody>' + (foot ? '<tfoot>' + foot + '</tfoot>' : '') + '</table></div>';
+      }
+      return table('Dr') + table('Cr');
+    }
+    function checkNum(s){
+      var v = parse(box.querySelector('.gp-amt').value);
+      if (v === null) return feedback('gp-hint', 'Type a number first. Commas are fine.');
+      if (Math.abs(v - s.a) <= (s.tol || 0.01)) return feedback('gp-ok', '<b>Correct.</b> ' + esc(s.why || ''), {first:tries === 0});
+      tries++;
+      var known = (s.mistakes || {})[String(v)];
+      feedback('gp-bad', '<b>Not quite.</b> ' + (known ? esc(known) : 'You typed ' + money(v) + '.') + '<p><b>How to think:</b> ' + esc(s.think) + '</p>');
+    }
+    function journal(s){
+      if (PC) return pcbook(s);
+      if (CB) return cashbook(s);
+      var entries = steps.filter(function(x){ return x.type === 'entry'; });
+      if (!entries.length) return '';
+      var done = steps.slice(0, state.i).filter(function(x){ return x.type === 'entry'; }), dr = 0, cr = 0, last = null, rows = '';
+      done.forEach(function(x){
+        var isDr = x.entry.s === 'Dr'; if (isDr) dr += x.entry.amt; else cr += x.entry.amt;
+        rows += '<tr class="gp-row-done"><td>' + (x.tx !== last ? esc(dateOf(x.tx)) : '') + '</td><td' + (isDr ? '' : ' class="gp-credit"') + '>' + esc(x.entry.a) + '</td><td class="r">' + (isDr ? money(x.entry.amt) : '') + '</td><td class="r">' + (isDr ? '' : money(x.entry.amt)) + '</td></tr>';
+        last = x.tx;
+      });
+      if (s && s.type === 'entry') {
+        rows += txRow(s.tx.tx, 4) + '<tr class="gp-now"><td>' + (s.tx !== last ? esc(dateOf(s.tx)) : '') + '</td><td class="gp-cell-acct"><input class="gp-acct" placeholder="Click to choose" autocomplete="off" role="combobox" aria-expanded="false" aria-label="Account"><div class="gp-list" role="listbox" hidden></div></td><td><input class="gp-dr" inputmode="decimal" autocomplete="off" aria-label="Debit amount"></td><td><input class="gp-cr" inputmode="decimal" autocomplete="off" aria-label="Credit amount"></td></tr>';
+        s.tx.e.slice(s.n + 1).forEach(function(){ rows += '<tr class="gp-row-next"><td></td><td></td><td></td><td></td></tr>'; });
+      }
+      if (!rows) return '';
+      return '<div class="gp-tablewrap"><table class="gp-table"><thead><tr><th class="gp-col-date">Date</th><th>Account</th><th class="r gp-col-amt">Debit (Rs.)</th><th class="r gp-col-amt">Credit (Rs.)</th></tr></thead><tbody>' + rows + '</tbody>' +
+        (done.length ? '<tfoot><tr><td></td><td>Total so far</td><td class="r">' + money(dr) + '</td><td class="r">' + money(cr) + '</td></tr></tfoot>' : '') + '</table></div>';
+    }
+    function grid(s){
+      if (!data.table) return '';
+      var values = {};
+      var moneyCols = data.table.moneyCols || [], dp = data.table.decimals;
+      // A held cell stays blank until no remaining step has that value as its answer.
+      var waiting = {};
+      steps.slice(state.i).forEach(function(x){
+        if (x.fill) waiting[Math.abs(x.a).toFixed(2)] = true;
+        if (x.type === 'entry') waiting[Math.abs(x.entry.amt).toFixed(2)] = true;
+      });
+      var held = {};
+      (data.table.hold || []).forEach(function(h){ held[h.join()] = true; });
+      function shown(value, c){
+        var n = moneyCols.indexOf(c) > -1 && /^-?[\d,]+(\.\d+)?$/.test(String(value)) ? parse(value) : null;
+        return n === null ? String(value) : n.toLocaleString('en-US', {minimumFractionDigits:dp, maximumFractionDigits:dp});
+      }
+      steps.slice(0, state.i).forEach(function(x){ if (x.fill) values[x.fill.join()] = x.a; });
+      var head = data.table.cols.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('');
+      var actionRow = s && s.fill ? '<tr class="gp-action-row"><td colspan="' + data.table.cols.length + '"><button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div></td></tr>' : '';
+      var body = data.table.rows.map(function(row, r){
+        return '<tr' + (row.total ? ' class="gp-row-total"' : '') + '>' + (row.cells || row).map(function(cell, c){
+          var id = r + ',' + c;
+          if (s && s.fill && s.fill.join() === id) return '<td class="gp-now"><input class="gp-amt" inputmode="decimal" autocomplete="off" aria-label="' + esc(data.table.cols[c]) + '"></td>';
+          if (held[id] && values[id] === undefined && waiting[Math.abs(parse(cell)).toFixed(2)]) return '<td></td>';
+          return '<td>' + esc(values[id] !== undefined ? (moneyCols.indexOf(c) > -1 ? shown(values[id], c) : money(values[id])) : shown(cell, c)) + '</td>';
+        }).join('') + '</tr>' + (s && s.fill && s.fill[0] === r ? actionRow : '');
+      }).join('');
+      return '<div class="gp-tablewrap gp-scroll"><table class="gp-table"><thead><tr>' + head + '</tr></thead><tbody>' + body + '</tbody></table></div>';
+    }
+    function render(){
+      var pct = Math.round(state.i / steps.length * 100), s = steps[state.i], html = '<div class="gp-bar"><span>' + (s ? 'Step ' + (state.i + 1) + ' of ' + steps.length : 'Finished') + '</span><i><b style="width:' + pct + '%"></b></i><button type="button" class="alt gp-reset">Start again</button></div>';
+      var notes = steps.slice(0, state.i).filter(function(x){ return x.type !== 'entry' && x.type !== 'cb' && x.type !== 'pc' && !x.fill; });
+      if (notes.length) html += '<ol class="gp-done">' + notes.map(function(x){ return '<li>' + doneLine(x) + '</li>'; }).join('') + '</ol>';
+      if (!s) {
+        html += journal() + grid() + '<div class="gp-fb gp-ok"><b>You finished this question.</b> ' + state.first + ' of ' + steps.length + ' steps were right on the first try. Open the full answer below to compare.' + (data.end ? ' ' + esc(data.end) : '') + '</div>';
+      } else if (s.type === 'pc') {
+        html += '<p class="gp-tx">' + esc(s.tx.tx) + '</p><p class="gp-howto"><b>Petty cash book line.</b> Money coming in goes in <b>Received</b>. A payment goes in <b>Total paid</b> and again in the one <b>analysis column</b> that says what it was for.</p>' + pcbook(s) + '<button type="button" class="gp-check">Check this line</button><div class="gp-fb" aria-live="polite" hidden></div>';
+      } else if (s.type === 'cb') {
+        html += '<p class="gp-tx">' + esc(s.tx.tx) + '</p><p class="gp-howto"><b>Cash-book line' + (s.count > 1 ? ' ' + (s.n + 1) + ' of ' + s.count + ' (contra entry)' : '') + '.</b> Money in goes on the <b>Receipts (Dr)</b> side and money out on the <b>Payments (Cr)</b> side. In Particulars, choose the <b>other</b> account, then type the amount in the Cash or Bank column.' + (CB.disc ? ' Put any cash discount in the discount column.' : '') + '</p>' + cashbook(s) + '<button type="button" class="gp-check">Check this line</button><div class="gp-fb" aria-live="polite" hidden></div>';
+      } else if (s.type === 'entry') {
+        html += '<p class="gp-tx">' + esc(s.tx.tx) + '</p><p class="gp-howto"><b>Line ' + (s.n + 1) + ' of ' + s.tx.e.length + ' for this transaction.</b> Click the Account cell and choose an account. Then type the amount in the Debit or the Credit column. Debit lines come first.</p>' + journal(s) + '<button type="button" class="gp-check">Check this line</button><div class="gp-fb" aria-live="polite" hidden></div>';
+      } else if (s.type === 'num') {
+        html += journal() + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p class="gp-q"><b>' + esc(s.q) + '</b>' + (s.fill ? ' <span class="gp-muted">Type it in the highlighted cell.</span>' : '') + '</p>' + grid(s) +
+          (s.fill ? '' : '<label class="gp-label">Your answer <input class="gp-amt gp-amt-free gp-now-input" inputmode="decimal" autocomplete="off"></label> <button type="button" class="gp-check">Check</button><div class="gp-fb" aria-live="polite" hidden></div>');
+      } else {
+        html += journal() + grid(s) + (s.tx ? '<p class="gp-tx">' + esc(s.tx) + '</p>' : '') + '<p class="gp-q"><b>' + esc(s.q) + '</b></p><div class="gp-opts">' +
+          s.opts.map(function(o, i){ return '<button type="button" class="alt gp-opt" data-i="' + i + '">' + esc(o.t) + '</button>'; }).join('') + '</div><div class="gp-fb" aria-live="polite" hidden></div>';
+      }
+      box.innerHTML = html;
+      box.querySelector('.gp-reset').onclick = function(){ state = {i:0, first:0}; tries = 0; save(key, state); render(); };
+      box.querySelectorAll('.gp-opt').forEach(function(b){
+        b.onclick = function(){
+          var o = s.opts[+b.dataset.i];
+          if (o.ok) return feedback('gp-ok', '<b>Correct.</b> ' + esc(s.why || o.why || ''), {first:tries === 0});
+          tries++; feedback('gp-bad', '<b>Not quite.</b> ' + esc(o.why) + (s.think ? '<p><b>How to think:</b> ' + esc(s.think) + '</p>' : ''));
+        };
+      });
+      var check = box.querySelector('.gp-check');
+      if (check) check.onclick = function(){ s.type === 'entry' ? checkEntry(s) : s.type === 'cb' ? checkCb(s) : s.type === 'pc' ? checkPc(s) : checkNum(s); };
+      box.querySelectorAll('.gp-amt,.gp-dr,.gp-cr,.gp-disc,.gp-cash,.gp-bank,.gp-pc').forEach(function(input){
+        input.onkeydown = function(ev){ if (ev.key === 'Enter') { ev.preventDefault(); check.click(); } };
+      });
+      if (s && (s.type === 'entry' || s.type === 'cb')) box.querySelectorAll('.gp-acct').forEach(accountPicker);
+    }
+    function accountPicker(input){
+      var list = input.parentNode.querySelector('.gp-list'), active = -1;
+      function show(all){
+        var q = input.value.trim().toLowerCase();
+        var match = accounts.filter(function(a){ return all || a.toLowerCase().indexOf(q) > -1; });
+        list.innerHTML = match.length ? match.map(function(a){ return '<div class="gp-item" role="option" data-a="' + esc(a) + '">' + esc(a) + '</div>'; }).join('') : '<div class="gp-none">No account with that name</div>';
+        list.hidden = false; active = -1; input.setAttribute('aria-expanded', 'true');
+        place(); window.addEventListener('scroll', place, true); window.addEventListener('resize', place);
+      }
+      // Float the list over the page so a scrolling table cannot clip it; open upwards when there is little room below.
+      function place(){
+        if (list.hidden) return;
+        var r = input.getBoundingClientRect(), below = window.innerHeight - r.bottom - 12, above = r.top - 12, up = below < 200 && above > below;
+        var w = Math.min(Math.max(r.width, 220), window.innerWidth - 16);
+        list.style.position = 'fixed'; list.style.left = Math.max(8, Math.min(r.left, window.innerWidth - w - 8)) + 'px'; list.style.width = w + 'px'; list.style.right = 'auto';
+        list.style.maxHeight = Math.max(96, Math.min(260, up ? above : below)) + 'px';
+        if (up) { list.style.top = 'auto'; list.style.bottom = (window.innerHeight - r.top + 2) + 'px'; }
+        else { list.style.bottom = 'auto'; list.style.top = (r.bottom + 2) + 'px'; }
+      }
+      function hide(){ list.hidden = true; input.setAttribute('aria-expanded', 'false'); window.removeEventListener('scroll', place, true); window.removeEventListener('resize', place); }
+      function choose(a){ input.value = a; hide(); var next = input.closest('tr').querySelector('.gp-dr,.gp-disc,.gp-cash'); if (next) next.focus({preventScroll:true}); }
+      input.onfocus = function(){ show(true); };
+      input.onclick = function(){ show(true); };
+      input.oninput = function(){ show(false); };
+      input.onblur = function(){ setTimeout(hide, 120); };
+      list.onmousedown = function(ev){ var item = ev.target.closest('.gp-item'); if (item) { ev.preventDefault(); choose(item.dataset.a); } };
+      input.onkeydown = function(ev){
+        var items = list.querySelectorAll('.gp-item');
+        if (ev.key === 'ArrowDown' || ev.key === 'ArrowUp') {
+          ev.preventDefault(); if (list.hidden) show(true);
+          items = list.querySelectorAll('.gp-item'); if (!items.length) return;
+          active = (active + (ev.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length;
+          items.forEach(function(x, i){ x.classList.toggle('on', i === active); });
+          items[active].scrollIntoView({block:'nearest'});
+        } else if (ev.key === 'Enter') {
+          ev.preventDefault();
+          if (!list.hidden && active > -1) choose(items[active].dataset.a);
+          else if (!list.hidden && items.length === 1) choose(items[0].dataset.a);
+          else box.querySelector('.gp-check').click();
+        } else if (ev.key === 'Escape') hide();
+      };
+    }
+    render();
+  });
+})();
+;
+(function(global){
+  'use strict';
+  var DAY=86400000, TZ='Asia/Colombo';
+  function dayKey(t){var p=new Intl.DateTimeFormat('en-GB',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date(t));var o={};p.forEach(function(x){o[x.type]=x.value;});return o.year+'-'+o.month+'-'+o.day;}
+  function epoch(d){return Date.parse(d+'T00:00:00Z');}
+  function addDay(d,n){return new Date(epoch(d)+n*DAY).toISOString().slice(0,10);}
+  function days(a,b){return Math.round((epoch(b)-epoch(a))/DAY);}
+  function clamp(n,a,b,f){n=Number(n);return Number.isFinite(n)?Math.max(a,Math.min(b,n)):f;}
+  var defaults={hours:4,sectionMinutes:12,quizMinutes:15,reviewMinutes:10,idleMinutes:2,target:80,buffer:2,weekdays:[0,1,2,3,4,5,6],papers:true,mixed:true};
+  function settings(s){s=s||{};return {hours:clamp(s.hours,.25,16,4),sectionMinutes:clamp(s.sectionMinutes,2,90,12),quizMinutes:clamp(s.quizMinutes,5,90,15),reviewMinutes:clamp(s.reviewMinutes,5,60,10),idleMinutes:clamp(s.idleMinutes,1,30,2),target:clamp(s.target,50,100,80),buffer:Math.round(clamp(s.buffer,0,7,2)),weekdays:Array.isArray(s.weekdays)?s.weekdays.filter(function(x,i,a){return Number.isInteger(x)&&x>=0&&x<=6&&a.indexOf(x)===i;}):defaults.weekdays.slice(),papers:s.papers!==false,mixed:s.mixed!==false};}
+  // Separate elapsed-time accounting from browser events so transitions are testable.
+  function createFocusClock(o){
+    var t=o.now,activity=t,enabled=o.enabled!==false,manual=!!o.manual,visible=o.visible!==false,focused=o.focused!==false,lease=o.lease!==false,idle=o.idleMs||120000,total=0;
+    function tick(now){
+      now=Math.max(t,now);
+      var end=Math.min(now,activity+idle);
+      if(enabled&&!manual&&visible&&focused&&lease&&end>t){total+=end-t;if(o.onCount)o.onCount(t,end);}
+      t=now;return state(now);
+    }
+    function state(now){var reason=!enabled?'off':manual?'manual':!visible||!focused?'away':now>=activity+idle?'idle':!lease?'other':'running';return {reason:reason,running:reason==='running',enabled:enabled,manual:manual,totalMs:total};}
+    return {tick:tick,state:state,activity:function(now){tick(now);activity=now;return state(now);},availability:function(v,f,now){tick(now);var returning=v&&f&&(!visible||!focused);visible=v;focused=f;if(returning)activity=now;return state(now);},lease:function(on,now){tick(now);lease=on;return state(now);},pause:function(now){tick(now);manual=true;return state(now);},start:function(now){tick(now);enabled=true;manual=false;activity=now;return state(now);},stop:function(now){tick(now);enabled=false;manual=true;return state(now);},idle:function(ms,now){tick(now);idle=ms;return state(now);}};
+  }
+  function splitStudyInterval(from,to,accept){
+    while(from<to){var next=(Math.floor((from+19800000)/DAY)+1)*DAY-19800000,end=Math.min(to,next);accept(dayKey(from),end-from);from=end;}
+  }
+  function score(st){return st&&Number.isFinite(+st.last)?clamp(st.last,0,100,0):null;}
+  function calculate(catalog,read,raw,now){
+    var cfg=settings(raw),today=dayKey(now),examDays=catalog.map(function(s){return s.exam[0];});
+    function studyDay(d){return cfg.weekdays.indexOf(new Date(epoch(d)).getUTCDay())>=0&&examDays.indexOf(d)<0;}
+    var events=read('sg-plan-events',[]);if(!Array.isArray(events))events=[];
+    var logs=read('sg-plan-time',[]);if(!Array.isArray(logs))logs=[];
+    var reviewed=read('sg-plan-reviews',{}), usedToday=logs.filter(function(l){return l.day===today;}).reduce(function(a,l){return a+clamp(l.minutes,0,1440,0);},0);
+    var seven=addDay(today,-6), recentMins=logs.filter(function(l){return l.day>=seven&&l.day<=today;}).reduce(function(a,l){return a+clamp(l.minutes,0,1440,0);},0);
+    var deltas=events.filter(function(e){return e.day>=seven&&e.day<=today&&e.kind==='section';}).reduce(function(a,e){return a+(e.on?1:-1);},0);
+    var observed=deltas>=3&&recentMins>=30?recentMins/deltas:null;
+    var subjects=catalog.map(function(s){
+      var examEnd=Date.parse(s.exam[0]+'T'+s.exam[2]+':00+05:30'), finished=now>=examEnd,goal=addDay(s.exam[0],-cfg.buffer),tasks=[],complete=0,total=0,passed=0,tried=0;
+      var weeks=s.weeks.filter(function(w){return !w.paper||cfg.papers;}).map(function(w){
+        var done=read('sg-done-'+w.key,{}),missing=w.sections.filter(function(x){return !done[x.id];}),st=w.quiz?read('sg-quiz-'+w.key,null):null,last=score(st),pass=last!==null&&last>=cfg.target;
+        total+=w.sections.length;complete+=w.sections.length-missing.length;
+        if(w.quiz){if(last!==null)tried++;if(pass)passed++;}
+        var reviewStamp=Math.max(st&&+st.ts||0,Date.parse((reviewed[w.key]||'')+'T00:00:00+05:30')||0),fresh=reviewStamp>0&&days(dayKey(reviewStamp),today)<=7;
+        var rest=missing.length*cfg.sectionMinutes;
+        if(missing.length)tasks.push({type:'read',key:w.key,label:w.label+' · remaining notes ('+missing.length+' sections)',url:w.url+'#'+missing[0].id,minutes:rest,subject:s.key});
+        if(w.quiz&&!pass&&last!==null){tasks.push({type:'revise',key:w.key,label:w.label+' · revise missed concepts (last '+last+'%)',url:w.url+'#quiz',minutes:cfg.reviewMinutes,subject:s.key});rest+=cfg.reviewMinutes;}
+        if(w.quiz&&!pass){tasks.push({type:'quiz',key:w.key,label:w.label+' · '+(last===null?'take the quiz':'retry the quiz')+' (aim '+cfg.target+'%)',url:w.url+'#quiz',minutes:cfg.quizMinutes,subject:s.key});rest+=cfg.quizMinutes;}
+        if(w.quiz&&pass&&!fresh){tasks.push({type:'review',key:w.key,label:w.label+' · refresh older learning',url:w.url,minutes:cfg.reviewMinutes,subject:s.key});rest+=cfg.reviewMinutes;}
+        return {key:w.key,label:w.label,url:w.url,sections:w.sections.length,done:w.sections.length-missing.length,last:last,pass:pass,fresh:fresh,paper:!!w.paper,remaining:rest};
+      });
+      var mx=read('sg-quiz-'+s.key+'-mixed',null),mixed=score(mx),mixedPass=mixed!==null&&mixed>=cfg.target;
+      if(cfg.mixed&&!mixedPass)tasks.push({type:'mixed',key:s.key+'-mixed',label:'Mixed practice exam · aim '+cfg.target+'%',url:s.url+'#exam',minutes:cfg.quizMinutes+cfg.reviewMinutes,subject:s.key});
+      var remaining=tasks.reduce(function(a,t){return a+t.minutes;},0),available=[];
+      for(var d=today;d<=goal&&days(today,d)<120;d=addDay(d,1))if(studyDay(d))available.push(d);
+      var weeklyTotal=weeks.filter(function(w){return !w.paper;}).length,need=(total-complete)+(weeklyTotal-passed)*2+(cfg.mixed&&!mixedPass?3:0),units=total+weeklyTotal*2+(cfg.mixed?3:0);
+      return {key:s.key,name:s.name,exam:s.exam,goal:goal,url:s.url,finished:finished,weeks:weeks,total:total,complete:complete,passed:passed,tried:tried,weeklyTotal:weeklyTotal,mixed:mixed,mixedPass:mixedPass,tasks:tasks,remaining:finished?0:remaining,studyDays:available.length,capacity:available.length*cfg.hours*60-(available.indexOf(today)>=0?Math.min(usedToday,cfg.hours*60):0),progress:Math.round(100*(units-need)/(units||1)),ready:remaining===0};
+    }).sort(function(a,b){return a.goal.localeCompare(b.goal)||a.exam[1].localeCompare(b.exam[1]);});
+    var active=subjects.filter(function(s){return !s.finished;}),cumulative=0,minHours=0,shortfalls=[];
+    active.forEach(function(s){cumulative+=s.remaining;var cap=Math.max(0,s.capacity),n=s.studyDays,required=n?(cumulative+Math.min(usedToday,cfg.hours*60))/n/60:(cumulative?Infinity:0);minHours=Math.max(minHours,required);if(cumulative>cap+.01)shortfalls.push({name:s.name,goal:s.goal,minutes:cumulative-cap});s.prefixRemaining=cumulative;s.prefixCapacity=cap;s.dailyNeed=s.studyDays?s.remaining/s.studyDays/60:(s.remaining?Infinity:0);s.behind=s.remaining>0&&(s.studyDays===0||cumulative>cap+.01);});
+    var queue=[];active.forEach(function(s){s.tasks.forEach(function(t){queue.push(Object.assign({},t,{left:t.minutes,name:s.name,goal:s.goal}));});});
+    var schedule=[],forecast={},qi=0,last=active.length?active[active.length-1].exam[0]:today;
+    for(var date=today;date<addDay(last,31)&&days(today,date)<120&&qi<queue.length;date=addDay(date,1)){
+      if(!studyDay(date))continue;
+      var budget=Math.max(0,cfg.hours*60-(date===today?usedToday:0)),blocks=[];
+      while(budget>.01&&qi<queue.length){var t=queue[qi],m=Math.min(25,budget,t.left);blocks.push({subject:t.subject,name:t.name,label:t.label,type:t.type,key:t.key,url:t.url,minutes:m,late:date>t.goal});t.left-=m;budget-=m;forecast[t.subject]=date;if(t.left<.01)qi++;}
+      if(blocks.length)schedule.push({day:date,blocks:blocks,minutes:blocks.reduce(function(a,b){return a+b.minutes;},0)});
+    }
+    subjects.forEach(function(s){s.finish=s.remaining?forecast[s.key]||null:today;});
+    var todayPlan=schedule.filter(function(x){return x.day===today;})[0]||{day:today,blocks:[],minutes:0};
+    var baseline=read('sg-plan-baseline',{}),start=baseline.day&&baseline.day>seven?baseline.day:seven,trackedDays=0;
+    for(var td=start;td<=today;td=addDay(td,1))if(studyDay(td))trackedDays++;
+    var loggedHoursPerDay=trackedDays>=3?recentMins/trackedDays/60:null;
+    return {cfg:cfg,today:today,subjects:subjects,active:active,remaining:active.reduce(function(a,s){return a+s.remaining;},0),minHours:minHours,shortfalls:shortfalls,schedule:schedule,todayPlan:todayPlan,usedToday:usedToday,observed:observed,recentMins:recentMins,netSections:Math.max(0,deltas),studyDay:studyDay(today),logs:logs,trackedDays:trackedDays,loggedHoursPerDay:loggedHoursPerDay};
+  }
+  var api={settings:settings,calculate:calculate,dayKey:dayKey,addDay:addDay,defaults:defaults,createFocusClock:createFocusClock,splitStudyInterval:splitStudyInterval};
+  if(typeof module!=='undefined'&&module.exports){module.exports=api;return;}
+  global.StudyPlan=api;
+  var node=document.getElementById('study-data');if(!node)return;
+  var catalog=JSON.parse(node.textContent),panel=document.getElementById('study-plan'),key=document.body.getAttribute('data-key'),home=document.body.getAttribute('data-study-home');
+  function read(k,d){try{var v=localStorage.getItem(k);return v===null?d:JSON.parse(v);}catch(e){return d;}}
+  function save(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true;}catch(e){notice('Progress could not be saved. Check browser storage or export a backup.');return false;}}
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function dateLabel(d){return d?new Date(epoch(d)).toLocaleDateString('en-GB',{day:'numeric',month:'short',timeZone:'UTC'}):'not within forecast';}
+  function hours(m){return (m/60).toFixed(1)+' h';}
+  function daily(h){return Number.isFinite(h)?h.toFixed(1)+' h/day':'deadline already reached';}
+  function notice(t){var n=document.getElementById('sp-message')||document.getElementById('sp-dock-message');if(n)n.textContent=t;}
+  var dock=document.createElement('aside');dock.className='study-dock';dock.setAttribute('aria-label','Study pace and timer');dock.innerHTML='<a class="sp-home" href="'+esc(home)+'">Study plan</a><button type="button" class="sp-timer">Start focus</button><span class="sp-clock" aria-live="off"></span><button type="button" class="sp-end" hidden>Finish</button><span id="sp-dock-message" role="status"></span>';
+  document.body.appendChild(dock);
+  var owner='tab-'+Date.now()+'-'+Math.random().toString(36).slice(2),pending={},lastFlush=Date.now(),suspended=false;
+  function sessionRead(k,d){try{var s=sessionStorage.getItem(k);return s===null?d:JSON.parse(s);}catch(e){return d;}}
+  function sessionSave(k,v){try{sessionStorage.setItem(k,JSON.stringify(v));}catch(e){}}
+  function release(){var l=read('sg-plan-timer-lock',{});if(l.owner===owner)save('sg-plan-timer-lock',{owner:owner,until:0});}
+  function acquire(){var n=Date.now(),l=read('sg-plan-timer-lock',{});if(l.owner&&l.owner!==owner&&l.until>n)return false;if(l.owner===owner&&l.until>n+5000)return true;return save('sg-plan-timer-lock',{owner:owner,until:n+15000});}
+  var focus=createFocusClock({now:Date.now(),enabled:!!key||sessionRead('sg-plan-auto-session',false),manual:sessionRead('sg-plan-manual-focus-pause',false),visible:!document.hidden,focused:document.hasFocus(),lease:false,idleMs:settings(read('sg-plan-settings',{})).idleMinutes*60000,onCount:function(a,b){splitStudyInterval(a,b,function(d,ms){pending[d]=(pending[d]||0)+ms;});}});
+  function flush(){
+    if(!Object.keys(pending).length)return;
+    var logs=read('sg-plan-time',[]),n=Date.now();
+    Object.keys(pending).forEach(function(d){var id='focus-'+owner+'-'+d,item=logs.find(function(x){return x.id===id;});if(!item){item={id:id,day:d,subject:key?key.split('-')[0]:'general',kind:'focus'};logs.push(item);}item.milliseconds=(item.milliseconds||item.minutes*60000||0)+pending[d];item.minutes=item.milliseconds/60000;item.updatedAt=n;});
+    if(save('sg-plan-time',logs)){pending={};lastFlush=n;}
+  }
+  function timerPaint(){
+    var st=focus.state(Date.now()),minutes=read('sg-plan-time',[]).filter(function(l){return l.day===dayKey(Date.now());}).reduce(function(a,l){return a+clamp(l.minutes,0,1440,0);},0),seconds=Math.floor(minutes*60+(pending[dayKey(Date.now())]||0)/1000),button=dock.querySelector('.sp-timer');
+    button.textContent=st.running?'Pause':st.manual?'Resume':st.enabled?'Auto-paused':'Start auto';
+    button.title='Automatic study tracking: pauses after '+settings(read('sg-plan-settings',{})).idleMinutes+' minutes without activity, when unfocused, or when hidden. Returning or moving resumes automatically unless you manually pause.';
+    dock.querySelector('.sp-end').hidden=!st.enabled;dock.querySelector('.sp-end').textContent='Stop';
+    dock.querySelector('.sp-clock').textContent='Today '+Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');
+    dock.dataset.focusState=st.reason;
+    var text={running:'Auto tracking · studying',idle:'Auto-paused · move, scroll or type to resume',away:'Auto-paused · return to this page to resume',manual:'Manually paused · press Resume',off:'Automatic tracking starts on study pages',other:'Waiting for the other study tab to pause'};
+    document.getElementById('sp-dock-message').textContent=text[st.reason];
+  }
+  function clock(){
+    var n=Date.now();focus.availability(!document.hidden&&!suspended,document.hasFocus()&&!suspended,n);
+    var st=focus.state(n),eligible=st.enabled&&!st.manual&&st.reason!=='away'&&st.reason!=='idle';
+    if(eligible)focus.lease(acquire(),n);else{focus.lease(false,n);release();}
+    focus.tick(n);if(!focus.state(n).running||n-lastFlush>=10000)flush();timerPaint();
+  }
+  var lastActivityEvent=0;
+  function activity(){var n=Date.now();if(n-lastActivityEvent<250)return;lastActivityEvent=n;focus.activity(n);clock();}
+  ['pointermove','mousemove','pointerdown','keydown','scroll','touchstart','touchmove','wheel'].forEach(function(e){document.addEventListener(e,activity,{passive:true});});
+  dock.querySelector('.sp-timer').onclick=function(){clock();if(focus.state(Date.now()).running){focus.pause(Date.now());sessionSave('sg-plan-manual-focus-pause',true);release();flush();}else{focus.start(Date.now());sessionSave('sg-plan-manual-focus-pause',false);sessionSave('sg-plan-auto-session',true);}clock();};
+  dock.querySelector('.sp-end').onclick=function(){focus.stop(Date.now());sessionSave('sg-plan-manual-focus-pause',true);sessionSave('sg-plan-auto-session',false);release();flush();timerPaint();render();};
+  global.addEventListener('blur',function(){focus.availability(!document.hidden,false,Date.now());focus.lease(false,Date.now());release();flush();timerPaint();});
+  global.addEventListener('focus',function(){focus.availability(!document.hidden,true,Date.now());clock();});
+  document.addEventListener('visibilitychange',function(){focus.availability(!document.hidden,document.hasFocus(),Date.now());clock();});
+  global.addEventListener('pagehide',function(){suspended=true;focus.availability(false,false,Date.now());focus.lease(false,Date.now());release();flush();timerPaint();});
+  global.addEventListener('pageshow',function(){var n=Date.now();suspended=false;if(sessionRead('sg-plan-manual-focus-pause',false))focus.pause(n);else if(key||sessionRead('sg-plan-auto-session',false))focus.start(n);focus.availability(!document.hidden,document.hasFocus(),n);clock();});
+  setInterval(clock,1000);clock();
+  var initial=read('sg-plan-baseline',null);if(!initial)save('sg-plan-baseline',{ts:Date.now(),day:dayKey(Date.now())});
+  function record(e){var a=read('sg-plan-events',[]);a.push(Object.assign({id:'event-'+Date.now()+'-'+Math.random().toString(36).slice(2),day:dayKey(Date.now()),ts:Date.now()},e));save('sg-plan-events',a);render();}
+  global.addEventListener('sg-progress',function(e){record(e.detail);});
+  global.addEventListener('storage',function(e){if(e.key&&e.key.indexOf('sg-')===0&&e.key!=='sg-plan-timer-lock')render();});
+  function render(){
+    var m=calculate(catalog,read,read('sg-plan-settings',{}),Date.now()),risk=m.shortfalls.length,anchor=dock.querySelector('.sp-home');anchor.textContent=risk?'Behind pace · '+risk+' warning'+(risk===1?'':'s'):'Study plan · '+(m.remaining?'on budget':'complete');dock.classList.toggle('sp-risk',!!risk);
+    if(!panel)return;
+    var c=m.cfg,done=m.subjects.reduce(function(a,s){return a+s.complete;},0),total=m.subjects.reduce(function(a,s){return a+s.total;},0),quiz=m.subjects.reduce(function(a,s){return a+s.passed;},0),qt=m.subjects.reduce(function(a,s){return a+s.weeklyTotal;},0);
+    panel.innerHTML='<div class="sp-heading"><div><div class="sub">Your semester finish plan</div><h2>Stay ahead of your exams</h2><p lang="ta">நேரத்திற்குள் முடிக்க · தினமும் என்ன படிக்க வேண்டும், எவ்வளவு வேகமாகப் படிக்க வேண்டும் என்பதை இங்கே பாருங்கள்.</p></div><span class="sp-pill '+(risk?'sp-bad':'sp-good')+'">'+(risk?'Needs a faster pace':'Fits your current budget')+'</span></div>'+
+      '<div class="sp-stats"><div><b>'+done+' / '+total+'</b><span>sections marked understood</span></div><div><b>'+quiz+' / '+qt+'</b><span>weekly quizzes at '+c.target+'% or higher (latest score)</span></div><div><b>'+hours(m.remaining)+'</b><span>estimated work remaining</span></div><div><b>'+daily(m.minHours)+'</b><span>minimum uniform daily budget to meet every deadline</span></div></div>'+
+      '<p class="note">Plan dates and logs use Sri Lanka time. Exam days are reserved for exams. The deadline is '+c.buffer+' day'+(c.buffer===1?'':'s')+' before each exam; today counts as an available day when selected. Estimates include unread sections, quizzes, weak-topic revision, older-learning refresh'+(c.papers?', past papers':'')+(c.mixed?' and mixed practice exams':'')+'. They are workload estimates, not a guarantee of passing.</p>'+
+      '<div class="sp-warnings" role="status">'+(risk?m.shortfalls.map(function(x){return '<p class="sp-alert"><b>Capacity warning by '+dateLabel(x.goal)+': '+esc(x.name)+'</b><br>Your cumulative work due by then exceeds the available budget by '+hours(x.minutes)+'. Increase your available hours, improve the estimated pace only if realistic, or prioritise the most important unfinished work.</p>';}).join(''):'<p class="sp-alert sp-clear">'+(m.remaining?'Your estimated workload fits the selected days and hours. Keep checking quiz results and actual study time.':'All currently included tasks are recorded complete. Keep practising before the exams.')+'</p>')+'</div>'+
+      (!done&&!m.subjects.some(function(s){return s.tried;})?'<p class="sp-alert">No completion or quiz results were found in this browser. This does not mean you have never studied. Use your usual browser, restore a backup, or update your week progress below.</p>':'')+
+      '<details class="sp-settings"><summary>Set your realistic study time and goals</summary><form id="sp-settings"><div class="sp-fields">'+field('Hours per study day','hours',c.hours,.25,16,.25)+field('Minutes per section (estimate)','sectionMinutes',c.sectionMinutes,2,90,1)+field('Minutes per quiz','quizMinutes',c.quizMinutes,5,90,1)+field('Minutes per revision block','reviewMinutes',c.reviewMinutes,5,60,1)+field('Auto-pause after idle minutes','idleMinutes',c.idleMinutes,1,30,1)+field('Quiz target %','target',c.target,50,100,1)+field('Revision buffer days','buffer',c.buffer,0,7,1)+'</div><fieldset><legend>Days you can study</legend>'+['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(function(d,i){return '<label><input type="checkbox" name="weekday" value="'+i+'" '+(c.weekdays.indexOf(i)>=0?'checked':'')+'> '+d+'</label>';}).join(' ')+'</fieldset><label><input type="checkbox" name="papers" '+(c.papers?'checked':'')+'> Include available past-paper sections</label> <label><input type="checkbox" name="mixed" '+(c.mixed?'checked':'')+'> Include a mixed practice exam per subject</label><p><button>Save and recalculate</button></p></form><p class="note">Default: 4 hours/day and 12 minutes/section. Change these to your real availability. Quiz attempts and reading are separate; a high quiz score does not mark notes read.</p></details>'+
+      '<div class="sp-columns"><section><h3>'+dateLabel(m.today)+' · today’s plan</h3><p>'+hours(m.usedToday)+' logged · '+hours(m.todayPlan.minutes)+' planned next</p>'+(!m.studyDay?'<p>Today is an exam day or a day you excluded. Your next study day is '+dateLabel(m.schedule[0]&&m.schedule[0].day)+'.</p>':!m.todayPlan.blocks.length?'<p>'+((m.remaining&&m.usedToday>=c.hours*60)?'Today’s budget is used. Continue on the next planned day, or adjust your availability if you can genuinely study more.':'No remaining block is scheduled today.')+'</p>':'')+blocks(m.todayPlan.blocks)+'<p class="note">Blocks are up to 25 minutes. Take breaks in addition to the focused hours. Schedule order starts with the earliest exam deadlines; earlier tasks may need several blocks. Mark a section only when you understand it.</p></section><section><h3>Your measured pace</h3><p><b>'+hours(m.recentMins)+'</b> logged in the last 7 calendar days · <b>'+m.netSections+'</b> net section completions recorded since tracking began.</p><p>'+(m.observed?'Observed '+m.observed.toFixed(1)+' logged minutes per net new section. This includes quiz/revision time and is only a rough overall indicator; the plan still uses your editable estimate.':'Not enough timed history for an observed pace yet. Use the focus timer and mark completed sections; existing checks have no historical completion dates.')+'</p><form id="sp-log"><label>Study minutes already completed today <input name="minutes" type="number" min="1" max="960" step="1" required style="width:100px"></label><p><button>Add study time</button> <span class="note">Do not also log the same timer session.</span></p></form><div class="sp-bars">'+history(m)+'</div></section></div>'+
+      (m.loggedHoursPerDay!==null?'<p class="sp-alert '+(m.loggedHoursPerDay>=m.minHours?'sp-clear':'')+'"><b>Logged pace: '+daily(m.loggedHoursPerDay)+'</b> over '+m.trackedDays+' tracked study days. Current estimated requirement: '+daily(m.minHours)+'. '+(m.loggedHoursPerDay<m.minHours?'Your recorded time is below the required pace. Log missing sessions or increase actual study time; do not lower estimates just to remove a warning.':'Your logged time meets the current estimate; keep checking understanding and quiz scores.')+'</p>':'<p class="note">A logged-pace warning becomes available after 3 tracked study days. Missing time logs are not proof you did not study.</p>')+'<h3>Subject deadlines and next actions</h3><div class="sp-subjects">'+m.subjects.map(function(s){var warn=s.behind,first=s.tasks[0];return '<article class="sp-subject"><div class="sp-row"><h4><a href="'+esc(s.url)+'">'+esc(s.name)+'</a></h4><b class="sp-pill '+(warn?'sp-bad':'sp-good')+'">'+(s.finished?'Exam finished':s.ready?'Recorded ready':warn?'At risk':'On budget')+'</b></div><p>Exam '+dateLabel(s.exam[0])+' · '+s.exam[1]+'–'+s.exam[2]+'<br>Finish target '+dateLabel(s.goal)+' · '+s.studyDays+' selected study days remain</p><progress max="100" value="'+s.progress+'" aria-label="'+esc(s.name)+' readiness progress"></progress><p>'+s.complete+'/'+s.total+' sections · '+s.passed+'/'+s.weeklyTotal+' latest weekly quizzes reach target'+(c.mixed?' · mixed '+(s.mixed===null?'not tried':s.mixed+'%'):'')+'</p><p><b>'+hours(s.remaining)+'</b> estimated remaining · projected finish '+(s.finished?'exam passed':dateLabel(s.finish))+'</p>'+(first&&!s.finished?'<a class="sp-action" href="'+esc(first.url)+'">Next: '+esc(first.label)+'</a>':'')+'<details><summary>Update or inspect week progress</summary><p class="note">Marking all notes is a self-report of understanding, not proof of mastery. Quiz scores come from actual attempts. A refresh mark confirms you revised an older passed week.</p>'+s.weeks.map(function(w){return '<div class="sp-week"><a href="'+esc(w.url)+'">'+esc(w.label)+'</a><span>'+w.done+'/'+w.sections+' read'+(!w.paper?' · last quiz '+(w.last===null?'not tried':w.last+'%'):'')+'</span><button type="button" data-week="'+esc(w.key)+'" data-done="'+(w.done===w.sections?'0':'1')+'">'+(w.done===w.sections?'Unmark all notes':'Mark all notes understood')+'</button>'+(!w.paper&&w.pass&&!w.fresh?'<button type="button" data-review="'+esc(w.key)+'">I revised this week</button>':'')+'</div>';}).join('')+'</details></article>';}).join('')+'</div>'+
+      '<details><summary>Upcoming 7 study-day plan</summary>'+m.schedule.slice(0,7).map(function(d){return '<h4>'+dateLabel(d.day)+' · '+hours(d.minutes)+'</h4>'+blocks(d.blocks);}).join('')+'</details>'+
+      '<details><summary>Correct a study-time log</summary><p class="note">Remove an accidental entry, then add the correct minutes above. This changes recorded time, not section checks or quiz scores.</p>'+m.logs.slice(-10).reverse().map(function(l){return '<p class="sp-week">'+dateLabel(l.day)+' · '+Math.round(l.minutes)+' min · '+esc(l.kind||'study')+' <button type="button" data-remove-log="'+esc(l.id)+'">Remove this time entry</button></p>';}).join('')+'</details><section class="sp-backup"><h3>Keep your progress safe</h3><p>Progress is stored in this browser on this website. It does not automatically sync to another browser/device or to the offline files. Export a backup after studying and restore it on your other device. Backups include section checks, quiz results, settings and study logs.</p><button type="button" id="sp-export">Download progress backup</button> <label class="sp-import">Restore / merge backup <input id="sp-import" type="file" accept=".json,application/json"></label><p class="note">Restore merges understood sections and quiz records; it does not erase your existing progress. Theme, passwords and other browser data are not included. In-page warnings work while the site is open; no background phone notification is sent.</p></section><p id="sp-message" role="status" aria-live="polite"></p>';
+    bind(m);
+  }
+  function field(label,name,value,min,max,step){return '<label>'+label+'<input type="number" name="'+name+'" value="'+value+'" min="'+min+'" max="'+max+'" step="'+step+'" required></label>';}
+  function blocks(a){return '<ol class="sp-blocks">'+a.map(function(b){return '<li><span>'+Math.round(b.minutes)+' min</span><a href="'+esc(b.url)+'"><b>'+esc(b.name)+'</b><br>'+esc(b.label)+'</a>'+(b.late?'<strong class="sp-late">After finish target</strong>':'')+'</li>';}).join('')+'</ol>';}
+  function history(m){var out='';for(var i=6;i>=0;i--){var d=addDay(m.today,-i),n=m.logs.filter(function(l){return l.day===d;}).reduce(function(a,l){return a+clamp(l.minutes,0,1440,0);},0);out+='<div><span>'+dateLabel(d)+'</span><i style="width:'+Math.min(100,n/(m.cfg.hours*60)*100)+'%"></i><small>'+Math.round(n)+'m</small></div>';}return out;}
+  function bind(m){
+    document.getElementById('sp-settings').onsubmit=function(e){e.preventDefault();var f=new FormData(e.target),s={};['hours','sectionMinutes','quizMinutes','reviewMinutes','idleMinutes','target','buffer'].forEach(function(k){s[k]=+f.get(k);});s.weekdays=f.getAll('weekday').map(Number);if(!s.weekdays.length){notice('Choose at least one study day.');return;}s.papers=f.has('papers');s.mixed=f.has('mixed');save('sg-plan-settings',settings(s));focus.idle(settings(s).idleMinutes*60000,Date.now());clock();render();notice('Plan updated using your available time.');};
+    document.getElementById('sp-log').onsubmit=function(e){e.preventDefault();var n=+new FormData(e.target).get('minutes'),a=read('sg-plan-time',[]);if(!(n>=1&&n<=960))return;a.push({id:'manual-'+Date.now()+'-'+Math.random().toString(36).slice(2),day:m.today,minutes:n,kind:'manual'});save('sg-plan-time',a);render();notice(n+' minutes added for today.');};
+    panel.querySelectorAll('[data-week]').forEach(function(b){b.onclick=function(){var w;catalog.forEach(function(s){s.weeks.forEach(function(x){if(x.key===b.dataset.week)w=x;});});if(!w)return;var d=read('sg-done-'+w.key,{}),on=b.dataset.done==='1';w.sections.forEach(function(x){if(!!d[x.id]!==on){d[x.id]=on;var a=read('sg-plan-events',[]);a.push({id:'bulk-'+Date.now()+'-'+Math.random().toString(36).slice(2),day:m.today,ts:Date.now(),kind:'section',key:w.key,section:x.id,on:on});save('sg-plan-events',a);}});save('sg-done-'+w.key,d);render();};});
+    panel.querySelectorAll('[data-review]').forEach(function(b){b.onclick=function(){var a=read('sg-plan-reviews',{});a[b.dataset.review]=m.today;save('sg-plan-reviews',a);render();};});
+    panel.querySelectorAll('[data-remove-log]').forEach(function(b){b.onclick=function(){var a=read('sg-plan-time',[]);save('sg-plan-time',a.filter(function(l){return l.id!==b.dataset.removeLog;}));render();notice('Time entry removed. Add corrected minutes if needed.');};});
+    document.getElementById('sp-export').onclick=function(){var entries={};for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(allowed(k))entries[k]=read(k,null);}var blob=new Blob([JSON.stringify({format:'sem6-progress',version:1,exportedAt:new Date().toISOString(),entries:entries},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='sem6-progress-'+m.today+'.json';a.click();setTimeout(function(){URL.revokeObjectURL(url);},1000);notice('Progress backup downloaded. Keep a copy outside this device.');};
+    document.getElementById('sp-import').onchange=async function(e){var f=e.target.files[0];if(!f)return;try{if(f.size>10000000)throw Error('Backup is too large.');var obj=JSON.parse(await f.text());if(obj.format!=='sem6-progress'||obj.version!==1||!obj.entries||typeof obj.entries!=='object')throw Error('Not a supported SEM 6 backup.');var valid=[];Object.keys(obj.entries).forEach(function(k){if(!allowed(k))return;var v=obj.entries[k];if(!v||typeof v!=='object'||JSON.stringify(v).includes('__proto__'))throw Error('Invalid record in backup.');valid.push([k,v]);});if(!valid.length)throw Error('No supported progress records found.');valid.forEach(function(x){var k=x[0],v=x[1],old=read(k,null);if(k.indexOf('sg-done-')===0){var n={};[old||{},v].forEach(function(o){Object.keys(o).forEach(function(id){if(/^s\d+$/.test(id))n[id]=!!n[id]||o[id]===true;});});save(k,n);}else if(k.indexOf('sg-quiz-')===0){if(score(v)===null)return;var latest=old&&+old.ts>+v.ts?old:v;save(k,Object.assign({},latest,{best:Math.max(clamp(old&&old.best,0,100,0),clamp(v.best,0,100,0)),tries:Math.max(clamp(old&&old.tries,0,1e8,0),clamp(v.tries,0,1e8,0))}));}else if(Array.isArray(v)){var seen=Object.create(null),out=[];(Array.isArray(old)?old:[]).concat(v).forEach(function(r){if(!r||typeof r.id!=='string')return;if(seen[r.id]===undefined){seen[r.id]=out.length;out.push(r);}else if(k==='sg-plan-time'&&(+r.updatedAt||0)>(+out[seen[r.id]].updatedAt||0)){out[seen[r.id]]=r;}});save(k,out);}else if(k==='sg-plan-reviews'){var rev=old||{};Object.keys(v).forEach(function(id){if(/^\d{4}-\d{2}-\d{2}$/.test(v[id])&&(!rev[id]||v[id]>rev[id]))rev[id]=v[id];});save(k,rev);}else if(k==='sg-plan-settings')save(k,settings(v));else if(k==='sg-plan-baseline'&&(!old||v.ts<old.ts))save(k,v);});focus.idle(settings(read('sg-plan-settings',{})).idleMinutes*60000,Date.now());clock();render();notice('Backup merged. Existing understood sections and better quiz scores were retained.');}catch(err){notice('Restore failed: '+err.message);}};
+  }
+  function allowed(k){return /^sg-done-(bpas|dm|dmath|hci|mkt)-(Week\d{2}|papers|quizzes)$/.test(k)||/^sg-quiz-(bpas|dm|dmath|hci|mkt)-(Week\d{2}|mixed)$/.test(k)||/^sg-plan-(settings|events|time|reviews|baseline)$/.test(k);}
+  render();setInterval(function(){if(!document.hidden&&!panel?.contains(document.activeElement))render();},60000);
+})(typeof window!=='undefined'?window:globalThis);
+</script><style>.hci-language{position:fixed;right:16px;bottom:calc(100px + env(safe-area-inset-bottom));z-index:70;border:1px solid var(--line);border-radius:28px;background:var(--panel);color:var(--ink);box-shadow:var(--shadow);padding:12px 20px;font:inherit;font-weight:700;cursor:pointer;min-height:48px}
+.hci-language:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.hci-en[hidden],.hci-ta[hidden]{display:none!important}
+.hci-ta{line-height:1.9}
+@media(max-width:760px){.hci-language{bottom:calc(100px + env(safe-area-inset-bottom));right:10px}}
+@media print{.hci-language{display:none}}
+</style><script>// Authored, offline Tamil translations. No network requests or external translator.
+(function () {
+  'use strict';
+  var sections = Array.from(document.querySelectorAll('section[data-sec]'));
+  if (!document.getElementById('hci-tamil-data') || sections.some(function (s) { return !s.querySelector('.hci-ta'); })) return;
+  var button = document.createElement('button');
+  button.type = 'button'; button.className = 'hci-language'; button.lang = 'ta';
+  button.textContent = 'தமிழ்'; button.setAttribute('aria-label', 'Read the Tamil translation');
+  button.setAttribute('aria-pressed', 'false'); document.body.appendChild(button);
+  // Keep source values stable when options use their visible text as their value.
+  document.querySelectorAll('.tool option:not([value])').forEach(function (option) { option.value = option.textContent; });
+  var tamil = false;
+  var tools = [];
+  sections.forEach(function (section) {
+    var heading = section.querySelector('h2');
+    heading.dataset.english = heading.innerHTML;
+    var explanationButton = section.querySelector('.native-toggle');
+    var explanation = section.querySelector('.tamil-native');
+    var content = section.querySelector('.section-english');
+    var reference = section.querySelector('.native-reference');
+    function explanationLabels() {
+      if (!explanationButton) return;
+      explanationButton.textContent = explanation.hidden ? 'தமிழில் புரிந்துகொள்ள' : (tamil ? 'மொழிபெயர்ப்புக்குத் திரும்பு' : 'English-இல் படிக்க');
+      if (reference) reference.textContent = !content.hidden ? 'முழு விவரத்தை மறைக்க' : (tamil ? 'முழு விவரம் · தமிழ் மொழிபெயர்ப்பு' : 'முழு விவரம், கணக்கு, படம், கருவிகள் · English');
+    }
+    if (explanationButton) explanationButton.onclick = function () {
+      var show = explanation.hidden;
+      explanation.hidden = !show; content.hidden = show;
+      content.classList.remove('reference-open');
+      section.classList.toggle('show-tamil', show);
+      explanationButton.setAttribute('aria-expanded', String(show));
+      if (reference) reference.setAttribute('aria-expanded', 'false');
+      explanationLabels(); window.dispatchEvent(new Event('resize'));
+    };
+    if (reference) reference.onclick = function () {
+      content.hidden = !content.hidden;
+      content.classList.toggle('reference-open', !content.hidden);
+      reference.setAttribute('aria-expanded', String(!content.hidden));
+      explanationLabels(); window.dispatchEvent(new Event('resize'));
+    };
+
+    var englishHeads = section.querySelectorAll('.hci-en h3[id]');
+    section.querySelectorAll('.hci-ta h3').forEach(function (h, index) {
+      var english = englishHeads[index];
+      if (!english) return;
+      h.id = 'ta-' + english.id;
+      h.dataset.englishId = english.id;
+      h.dataset.englishText = english.textContent;
+    });
+    section.querySelectorAll('[data-ta-tool]').forEach(function (slot) {
+      var live = document.getElementById(slot.dataset.taTool);
+      if (!live) throw new Error('Missing shared tool: ' + slot.dataset.taTool);
+      var tool = live.closest('.tool');
+      var home = document.createElement('span');
+      tool.before(home); tools.push({tool:tool, home:home, slot:slot});
+    });
+  });
+  var data = JSON.parse(document.getElementById('hci-tamil-data').textContent);
+  var patterns = (data.patterns || []).map(function (p) { return {regex:new RegExp(p.pattern, p.flags || ''), replacement:p.replacement, selector:p.selector || null}; });
+  var textState = new WeakMap(), htmlState = new WeakMap(), attributeState = new WeakMap();
+  function fitTamilDiagrams() {
+    document.querySelectorAll('.tool svg:has(foreignObject)').forEach(function (svg) {
+      if (!svg.dataset.hciViewbox) svg.dataset.hciViewbox = svg.getAttribute('viewBox');
+      var box = svg.dataset.hciViewbox.split(/\s+/).map(Number);
+      svg.setAttribute('viewBox', tamil ? [box[0],box[1],box[2],box[3]*2].join(' ') : svg.dataset.hciViewbox);
+      svg.querySelectorAll('[y],[y1],[y2],[cy],[height]').forEach(function (el) {
+        ['y','y1','y2','cy','height'].forEach(function (attr) {
+          if (!el.hasAttribute(attr)) return;
+          var saved = 'data-hci-' + attr;
+          if (!el.hasAttribute(saved)) el.setAttribute(saved, el.getAttribute(attr));
+          var original = el.getAttribute(saved);
+          if (!isNaN(Number(original))) el.setAttribute(attr, tamil ? Number(original)*2 : original);
+        });
+      });
+    });
+  }
+  function translateLiveContent() {
+    fitTamilDiagrams();
+    var markupElements = document.querySelectorAll('.qt,.qe,.qo span,.tool p,.tool .out,.tool h4,.tool td,.tool th,.tool text,.tool foreignObject div');
+    markupElements.forEach(function (el) {
+      var current = el.innerHTML, saved = htmlState.get(el);
+      if (saved && current !== saved.ta) { htmlState.delete(el); saved = null; }
+      if (saved && !tamil) { el.innerHTML = saved.en; return; }
+      if (saved && current === saved.ta) return;
+      if (!tamil) return;
+      var prefix = '', suffix = '', content = current.trim();
+      if (el.matches('.qt')) {
+        var week = content.match(/(\s*<span class="qw">[\s\S]*?<\/span>)$/);
+        if (week) { suffix = week[1]; content = content.slice(0, -suffix.length).trim(); }
+      }
+      if (el.matches('.qt,.qe')) {
+        var parts = content.match(/^(<b>.*?<\/b>\s*)([\s\S]*)$/);
+        if (parts) { prefix = parts[1]; content = parts[2].trim(); }
+      }
+      if (Object.prototype.hasOwnProperty.call(data.markup, content)) {
+        var translated = prefix + data.markup[content] + suffix;
+        htmlState.set(el, {en:current, ta:translated}); el.innerHTML = translated;
+      }
+    });
+    document.querySelectorAll('[placeholder],[title],[aria-label]').forEach(function (el) {
+      if (el === button) return;
+      var saved = attributeState.get(el) || {};
+      ['placeholder','title','aria-label'].forEach(function (attr) {
+        var current = el.getAttribute(attr); if (!current) return;
+        if (saved[attr] && current === saved[attr].ta) {
+          if (!tamil) el.setAttribute(attr, saved[attr].en);
+          return;
+        }
+        if (tamil && data.strings[current]) {
+          saved[attr] = {en:current, ta:data.strings[current]}; el.setAttribute(attr, saved[attr].ta);
+        }
+      });
+      attributeState.set(el, saved);
+    });
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) {
+      if (!node.parentElement || node.parentElement.closest('script,style,textarea,.hci-language')) continue;
+      var value = node.nodeValue, saved = textState.get(node);
+      if (saved && value === saved.ta) {
+        if (!tamil) node.nodeValue = saved.en;
+        continue;
+      }
+      if (!tamil) continue;
+      var key = value.trim(), translated = data.strings[key];
+      if (!translated && /^\d+ unanswered$/.test(key)) translated = key.split(' ')[0] + ' விடையளிக்கப்படவில்லை';
+      if (!translated) {
+        var numbered = key.match(/^(\d+\.\s+)(.*)$/);
+        if (numbered && data.strings[numbered[2]]) translated = numbered[1] + data.strings[numbered[2]];
+      }
+      if (!translated) {
+        var video = key.match(/^(\d+\.\s+)(.*?) · (\d+) min$/);
+        if (video && data.strings[video[2]]) translated = video[1] + data.strings[video[2]] + ' · ' + video[3] + ' நிமிடம்';
+      }
+      var patterned = translated || key;
+      patterns.forEach(function (p) { if (p.selector && !node.parentElement.closest(p.selector)) return; p.regex.lastIndex = 0; patterned = patterned.replace(p.regex, p.replacement); });
+      if (patterned !== key) translated = patterned;
+      if (!translated) continue;
+      var output = value.replace(key, translated);
+      if (output !== value) { textState.set(node, {en:value, ta:output}); node.nodeValue = output; }
+    }
+    if (tamil) markupElements.forEach(function (el) {
+      var saved = htmlState.get(el);
+      if (saved) saved.ta = el.innerHTML;
+    });
+  }
+  document.addEventListener('click', function (event) {
+    var item = event.target.closest('.tool .ml li');
+    if (!tamil || !item) return;
+    var walker = document.createTreeWalker(item, NodeFilter.SHOW_TEXT), node;
+    while ((node = walker.nextNode())) {
+      var saved = textState.get(node);
+      if (saved && node.nodeValue === saved.ta) node.nodeValue = saved.en;
+    }
+  }, true);
+  var observer = new MutationObserver(function () { if (tamil) translateLiveContent(); });
+  observer.observe(document.body, {subtree:true, childList:true, characterData:true});
+  button.onclick = function () {
+    tamil = !tamil;
+    sections.forEach(function (section) {
+      var explanation = section.querySelector('.tamil-native');
+      var content = section.querySelector('.section-english');
+      var toggle = section.querySelector('.native-toggle');
+      var reference = section.querySelector('.native-reference');
+      if (explanation) explanation.hidden = true;
+      if (content) { content.hidden = false; content.classList.remove('reference-open'); }
+      section.classList.remove('show-tamil');
+      if (toggle) { toggle.setAttribute('aria-expanded','false'); toggle.textContent='தமிழில் புரிந்துகொள்ள'; }
+      if (reference) { reference.setAttribute('aria-expanded','false'); reference.textContent = tamil ? 'முழு விவரம் · தமிழ் மொழிபெயர்ப்பு' : 'முழு விவரம், கணக்கு, படம், கருவிகள் · English'; }
+    });
+    tools.forEach(function (item) {
+      if (tamil) item.slot.appendChild(item.tool);
+      else item.home.after(item.tool);
+    });
+    sections.forEach(function (section) {
+      var en = section.querySelector('.hci-en'), ta = section.querySelector('.hci-ta');
+      en.hidden = tamil; ta.hidden = !tamil;
+      var h = section.querySelector('h2'), number = h.querySelector('.num').outerHTML;
+      if (tamil) { h.innerHTML = number; h.appendChild(document.createTextNode(ta.dataset.title)); }
+      else h.innerHTML = h.dataset.english;
+      section.querySelectorAll('.hci-ta h3[data-english-id]').forEach(function (subheading) {
+        var target = tamil ? subheading.dataset.englishId : subheading.id;
+        var link = document.querySelector('#toc a[href="#' + target + '"]');
+        if (link) {
+          link.href = '#' + (tamil ? subheading.id : subheading.dataset.englishId);
+          link.lastElementChild.textContent = tamil ? subheading.textContent : subheading.dataset.englishText;
+        }
+      });
+      var toc = document.querySelector('#toc a[href="#' + h.id + '"]');
+      if (toc && toc.lastElementChild) toc.lastElementChild.textContent = tamil ? ta.dataset.title : h.dataset.t;
+    });
+    document.documentElement.lang = tamil ? 'ta' : 'en';
+    button.textContent = tamil ? 'English' : 'தமிழ்'; button.lang = tamil ? 'en' : 'ta';
+    button.setAttribute('aria-label', tamil ? 'Read original English' : 'Read the Tamil translation');
+    button.setAttribute('aria-pressed', String(tamil));
+    translateLiveContent();
+    window.dispatchEvent(new Event('resize'));
+  };
+})();
+</script></body></html>

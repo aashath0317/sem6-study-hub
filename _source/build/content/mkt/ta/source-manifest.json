@@ -4,7 +4,7 @@
     "quiz": "5b59dd761762cf7006d4cf2fbe1826a742b67f3043aa4664b04b792fe3dc771d"
   },
   "w02": {
-    "md": "889c1bb14c7ecd77cf337ae34917afaf1efcd00bdd32672f7377ff4b4bb3c0b8",
+    "md": "ab32a405e08ef2870adef3d824fb5de60a5417d7d36edac83aa1233adff0f577",
     "quiz": "184678f1fbf72a78ff1847660b6f9e9c5b86025f6804ee4c42dc309f3c8f77e6"
   },
   "w03": {
@@ -54,5 +54,8 @@
   "w14": {
     "md": "b9d8984682c4da333f062ad6e3196d4d23adc55a1c2bc3b3e2db14040cc2d909",
     "quiz": "3b5228a789d070c59af086fe2194c5582bba2358081628a68ebf2ec369b8ad06"
+  },
+  "quizzes": {
+    "md": "2cb0a330b8fcd46887b267ec51b96c5a4a950309ca458ecb5dc012d9524842e2"
   }
 }

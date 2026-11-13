@@ -895,61 +895,50 @@ Projection-இல் column order கேட்டபடி வைத்திர
 <li>Relation = <strong>table</strong>; tuple = <strong>record/row</strong>; field = <strong>column</strong>. Database என்பது n-ary relation (binary அல்ல).</li>
 <li><strong>Primary key</strong> = ஒரு record-ஐ தனித்துவமாகக் குறிக்கும் field. <strong>Composite key</strong> = பல fields சேர்ந்து.</li>
 <li><strong>Extension</strong> = தற்போதைய rows; <strong>Intension</strong> = நிரந்தர அமைப்பு. Operations: selection, projection, join (multiplication இல்லை).</li>
-</ul><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p>These are all <strong>8 questions from the official CODL Quiz 10 — n-ary Relations</strong>. Cover the answer, try the question yourself, then click <strong>Answer</strong> to check. Each answer gives the quick method in a few short steps — the same steps you can write in the written exam.</p>
+</ul><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p>These are all <strong>8 questions from the official CODL Quiz 10 — n-ary Relations</strong>.</p>
+<p><strong>How to use it:</strong> answer each question in the quiz box. If you choose a wrong option, it tells you <strong>why that option is wrong</strong> and gives a hint — try again until you get it. When you are right, it explains why. After the quiz, open the worked answers for the full method you can write in the written exam.</p>
+<div class="tool"><div class="tt">🧪 Try it — Do the quiz first — official Quiz 10</div><div id="gp-m10-official" class="gp"><script type="application/json">{"accts": {}, "steps": [{"type": "choice", "q": "A 3-ary relation on sets A, B and C is a subset of:", "think": "An n-ary relation is a set of n-tuples. A 3-tuple is (a, b, c).", "opts": [{"t": "A ∩ B ∩ C", "why": "That is a set of elements, not 3-tuples."}, {"t": "A × B × C", "ok": true}, {"t": "A × C", "why": "That only gives pairs, not 3-tuples."}, {"t": "A ∪ B ∪ C", "why": "That is a set of elements, not 3-tuples."}], "why": "All 3-tuples (a, b, c) form A × B × C."}, {"type": "choice", "q": "Which is an n-ary relation?", "think": "An n-ary relation links several values together in one tuple.", "opts": [{"t": "Employee name, number, salary and contact number", "why": "This is one — but so are the others."}, {"t": "All of the above", "ok": true}, {"t": "School name, address, number of teachers and number of students", "why": "This is one — but so are the others."}, {"t": "Five integers in an arithmetic progression with difference 5", "why": "This is one — but so are the others."}], "why": "Each option groups several values into one tuple, so all are n-ary relations."}, {"type": "choice", "q": "R = {(a, b, c, d) | a, b, c, d positive integers, abcd = 6}. The domains are all ____ and the degree is ____.", "think": "Domain = where each value comes from. Degree = how many entries in each tuple.", "opts": [{"t": "the set of positive integers, 4", "ok": true}, {"t": "the letters {a, b, c, d}, 4", "why": "a, b, c, d are variable names; their values are numbers."}, {"t": "none of the above", "why": "One option is right."}, {"t": "the set of integers, 4", "why": "The question says positive integers."}], "why": "Values are positive integers; each tuple has 4 entries → degree 4."}, {"type": "choice", "q": "Which statement is INCORRECT?", "think": "Do database records usually have just 2 fields?", "opts": [{"t": "A relational database consists of records which are n-tuples made of fields", "why": "True."}, {"t": "A database of records is represented as a binary relation in the relational model", "ok": true}, {"t": "The fields are the entries of the n-tuples", "why": "True."}, {"t": "The relational model is based on the concept of a relation", "why": "True."}], "why": "Records have many fields, so a database is an n-ary relation, not binary."}, {"type": "choice", "q": "True or false: relations used to represent databases are also called tables.", "think": "Picture a database: rows and columns.", "opts": [{"t": "False", "why": "Relation = table is standard vocabulary."}, {"t": "True", "ok": true}], "why": "Relation = table, tuple = row/record, field = column."}, {"type": "choice", "q": "A domain whose value uniquely determines the n-tuple is called:", "think": "Think of a Student ID.", "opts": [{"t": "a primary key", "ok": true}, {"t": "an extension", "why": "Extension = the current rows in the table."}, {"t": "an intension", "why": "Intension = the table structure (name and fields)."}, {"t": "a composite key", "why": "A composite key uses SEVERAL fields together, not one domain."}], "why": "A primary key identifies each record uniquely."}, {"type": "choice", "q": "The extension of a relational database is:", "think": "Extension = what is in the table right now.", "opts": [{"t": "another term for a primary key", "why": "No — a primary key is a field."}, {"t": "none of the above", "why": "One option is right."}, {"t": "the current collection of n-tuples in a relation", "ok": true}, {"t": "the more permanent part of a database", "why": "That is the intension (the structure)."}], "why": "Extension = the current rows; it changes as data is added or deleted."}, {"type": "choice", "q": "Which is NOT an operation on n-ary relations?", "think": "The operations are selection, projection and join.", "opts": [{"t": "the projection operator", "why": "Projection (keep some columns) is an operation."}, {"t": "the join operator", "why": "Join (combine tables) is an operation."}, {"t": "the selection operator", "why": "Selection (keep some rows) is an operation."}, {"t": "the multiplication operator", "ok": true}], "why": "There is no multiplication operator on relations."}], "end": "Now open the worked answers below and reread any question you missed."}</script></div></div>
+<details class="beginner-answer">
+<summary>Show all worked answers — Quiz 10 (open after you finish the quiz)</summary>
 <p><strong>Q1.</strong> A 3-ary relation on sets A, B, C is a subset of:</p>
 <p>(a) A ∩ B ∩ C (b) A × B × C (c) A × C (d) A ∪ B ∪ C</p>
-<details class="beginner-answer">
-<summary>Answer: (b) A × B × C</summary>
+<p><strong>✅ Answer: (b) A × B × C</strong></p>
 <p>An <strong>n-ary relation</strong> is a set of <strong>n-tuples</strong>. With 3 sets, each tuple is (a, b, c) → a subset of A × B × C. (Binary = 2-tuples = subset of A × B.)</p>
-</details>
 <p><strong>Q2.</strong> Which is an n-ary relation?</p>
 <p>(a) employee name, number, salary, contact number (c) school name, address, number of teachers, number of students (d) five integers in an arithmetic progression with difference 5 (b) all of the above</p>
-<details class="beginner-answer">
-<summary>Answer: all of the above</summary>
+<p><strong>✅ Answer: all of the above</strong></p>
 <p>Each one links <strong>several values together in one tuple</strong> (4 values, 4 values, 5 values) → each is an n-ary relation. A row in a database table is exactly this.</p>
-</details>
 <p><strong>Q3.</strong> R = {(a, b, c, d) | a, b, c, d positive integers with abcd = 6}. The domains are all <strong><em>_ and the degree is </em></strong>_.</p>
 <p>(a) positive integers, 4 (b) the letters {a, b, c, d}, 4 (c) none (d) the integers, 4</p>
-<details class="beginner-answer">
-<summary>Answer: (a) the set of positive integers, 4</summary>
+<p><strong>✅ Answer: (a) the set of positive integers, 4</strong></p>
 <ul>
 <li><strong>Domain</strong> = the set each position's values come from → positive integers (as the question says).</li>
 <li><strong>Degree</strong> = how many items in each tuple → (a, b, c, d) has <strong>4</strong>. Example tuple: (1, 2, 3, 1).</li>
 </ul>
-</details>
 <p><strong>Q4.</strong> Which is <strong>incorrect</strong>?</p>
 <p>(a) A relational database consists of records which are n-tuples made of fields. (b) A database of records is a <strong>binary</strong> relation in the relational model. (c) Fields are the entries of the n-tuples. (d) The relational model is based on relations.</p>
-<details class="beginner-answer">
-<summary>Answer: (b)</summary>
+<p><strong>✅ Answer: (b)</strong></p>
 <p>Records usually have <strong>many</strong> fields (name, ID, major, GPA …), so a database is an <strong>n-ary</strong> relation, not binary (2 fields only).</p>
-</details>
 <p><strong>Q5.</strong> True or false: relations used to represent databases are also called <strong>tables</strong>.</p>
-<details class="beginner-answer">
-<summary>Answer: True</summary>
+<p><strong>✅ Answer: True</strong></p>
 <p><strong>Vocabulary match:</strong> relation = <strong>table</strong>, n-tuple = <strong>record / row</strong>, field = <strong>column</strong>.</p>
-</details>
 <p><strong>Q6.</strong> A domain whose value uniquely determines the n-tuple is called:</p>
 <p>(a) a primary key (b) an extension (c) an intension (d) a composite key</p>
-<details class="beginner-answer">
-<summary>Answer: (a) a primary key</summary>
+<p><strong>✅ Answer: (a) a primary key</strong></p>
 <ul>
 <li><strong>Primary key:</strong> one field that identifies each record uniquely (e.g. Student ID).</li>
 <li><strong>Composite key:</strong> <strong>several</strong> fields together identify the record.</li>
 </ul>
-</details>
 <p><strong>Q7.</strong> The <strong>extension</strong> of a relational database is:</p>
 <p>(a) another word for primary key (b) none (c) the current collection of n-tuples in a relation (d) the more permanent part of a database</p>
-<details class="beginner-answer">
-<summary>Answer: (c) the current collection of n-tuples</summary>
+<p><strong>✅ Answer: (c) the current collection of n-tuples</strong></p>
 <ul>
 <li><strong>Extension</strong> = the actual rows <strong>right now</strong> (it changes as data is added or deleted).</li>
 <li><strong>Intension</strong> = the permanent part: the table's <strong>name and its fields</strong> (the structure). Option (d) describes intension.</li>
 </ul>
-</details>
 <p><strong>Q8.</strong> Which is <strong>not</strong> an operation on n-ary relations?</p>
 <p>(a) projection (b) join (c) selection (d) multiplication</p>
-<details class="beginner-answer">
-<summary>Answer: (d) the multiplication operator</summary>
+<p><strong>✅ Answer: (d) the multiplication operator</strong></p>
 <p>The operations are:</p>
 <ul>
 <li><strong>Selection</strong> σ: keep the <strong>rows</strong> that meet a condition.</li>
@@ -957,61 +946,50 @@ Projection-இல் column order கேட்டபடி வைத்திர
 <li><strong>Join</strong> J: combine two tables on matching fields.
 There is no “multiplication operator”.</li>
 </ul>
-</details></div><div class="hci-ta" lang="ta" hidden data-title="அதிகாரபூர்வ வினாடி வினா 10 — ஒவ்வொரு கேள்விக்கும் விளக்கம்"><p>இவை அதிகாரபூர்வ CODL வினாடி வினா 10 — n-ary Relations இன் <strong>8 கேள்விகள்</strong>. முதலில் நீங்களே முயன்று பாருங்கள்; பிறகு <strong>Answer</strong> என்பதைக் கிளிக் செய்து சரிபாருங்கள். விடைகளும் படிமுறைகளும் கீழே ஆங்கிலத்தில் உள்ளன.</p>
+</details></div><div class="hci-ta" lang="ta" hidden data-title="அதிகாரபூர்வ வினாடி வினா 10 — ஒவ்வொரு கேள்விக்கும் விளக்கம்"><p>இவை அதிகாரபூர்வ CODL வினாடி வினா 10 — n-ary Relations இன் <strong>8 கேள்விகள்</strong>.</p>
+<p><strong>எப்படிப் பயன்படுத்துவது:</strong> கீழே உள்ள quiz-இல் ஒவ்வொரு கேள்விக்கும் விடையைத் தேர்ந்தெடுங்கள். தவறான விடையைத் தேர்ந்தால், அது <strong>ஏன் தவறு</strong> என்றும் ஒரு குறிப்பும் காட்டப்படும் — சரியான விடை வரும் வரை மீண்டும் முயலுங்கள். Quiz முடிந்ததும், எழுத்துத் தேர்வில் எழுதக்கூடிய முழுப் படிமுறைகளுக்கு worked answers-ஐத் திறவுங்கள்.</p>
+<p><div data-ta-tool="gp-m10-official"></div></p>
+<details class="beginner-answer">
+<summary>Show all worked answers — Quiz 10 (open after you finish the quiz)</summary>
 <p><strong>Q1.</strong> A 3-ary relation on sets A, B, C is a subset of:</p>
 <p>(a) A ∩ B ∩ C (b) A × B × C (c) A × C (d) A ∪ B ∪ C</p>
-<details class="beginner-answer">
-<summary>Answer: (b) A × B × C</summary>
+<p><strong>✅ Answer: (b) A × B × C</strong></p>
 <p>An <strong>n-ary relation</strong> is a set of <strong>n-tuples</strong>. With 3 sets, each tuple is (a, b, c) → a subset of A × B × C. (Binary = 2-tuples = subset of A × B.)</p>
-</details>
 <p><strong>Q2.</strong> Which is an n-ary relation?</p>
 <p>(a) employee name, number, salary, contact number (c) school name, address, number of teachers, number of students (d) five integers in an arithmetic progression with difference 5 (b) all of the above</p>
-<details class="beginner-answer">
-<summary>Answer: all of the above</summary>
+<p><strong>✅ Answer: all of the above</strong></p>
 <p>Each one links <strong>several values together in one tuple</strong> (4 values, 4 values, 5 values) → each is an n-ary relation. A row in a database table is exactly this.</p>
-</details>
 <p><strong>Q3.</strong> R = {(a, b, c, d) | a, b, c, d positive integers with abcd = 6}. The domains are all <strong><em>_ and the degree is </em></strong>_.</p>
 <p>(a) positive integers, 4 (b) the letters {a, b, c, d}, 4 (c) none (d) the integers, 4</p>
-<details class="beginner-answer">
-<summary>Answer: (a) the set of positive integers, 4</summary>
+<p><strong>✅ Answer: (a) the set of positive integers, 4</strong></p>
 <ul>
 <li><strong>Domain</strong> = the set each position's values come from → positive integers (as the question says).</li>
 <li><strong>Degree</strong> = how many items in each tuple → (a, b, c, d) has <strong>4</strong>. Example tuple: (1, 2, 3, 1).</li>
 </ul>
-</details>
 <p><strong>Q4.</strong> Which is <strong>incorrect</strong>?</p>
 <p>(a) A relational database consists of records which are n-tuples made of fields. (b) A database of records is a <strong>binary</strong> relation in the relational model. (c) Fields are the entries of the n-tuples. (d) The relational model is based on relations.</p>
-<details class="beginner-answer">
-<summary>Answer: (b)</summary>
+<p><strong>✅ Answer: (b)</strong></p>
 <p>Records usually have <strong>many</strong> fields (name, ID, major, GPA …), so a database is an <strong>n-ary</strong> relation, not binary (2 fields only).</p>
-</details>
 <p><strong>Q5.</strong> True or false: relations used to represent databases are also called <strong>tables</strong>.</p>
-<details class="beginner-answer">
-<summary>Answer: True</summary>
+<p><strong>✅ Answer: True</strong></p>
 <p><strong>Vocabulary match:</strong> relation = <strong>table</strong>, n-tuple = <strong>record / row</strong>, field = <strong>column</strong>.</p>
-</details>
 <p><strong>Q6.</strong> A domain whose value uniquely determines the n-tuple is called:</p>
 <p>(a) a primary key (b) an extension (c) an intension (d) a composite key</p>
-<details class="beginner-answer">
-<summary>Answer: (a) a primary key</summary>
+<p><strong>✅ Answer: (a) a primary key</strong></p>
 <ul>
 <li><strong>Primary key:</strong> one field that identifies each record uniquely (e.g. Student ID).</li>
 <li><strong>Composite key:</strong> <strong>several</strong> fields together identify the record.</li>
 </ul>
-</details>
 <p><strong>Q7.</strong> The <strong>extension</strong> of a relational database is:</p>
 <p>(a) another word for primary key (b) none (c) the current collection of n-tuples in a relation (d) the more permanent part of a database</p>
-<details class="beginner-answer">
-<summary>Answer: (c) the current collection of n-tuples</summary>
+<p><strong>✅ Answer: (c) the current collection of n-tuples</strong></p>
 <ul>
 <li><strong>Extension</strong> = the actual rows <strong>right now</strong> (it changes as data is added or deleted).</li>
 <li><strong>Intension</strong> = the permanent part: the table's <strong>name and its fields</strong> (the structure). Option (d) describes intension.</li>
 </ul>
-</details>
 <p><strong>Q8.</strong> Which is <strong>not</strong> an operation on n-ary relations?</p>
 <p>(a) projection (b) join (c) selection (d) multiplication</p>
-<details class="beginner-answer">
-<summary>Answer: (d) the multiplication operator</summary>
+<p><strong>✅ Answer: (d) the multiplication operator</strong></p>
 <p>The operations are:</p>
 <ul>
 <li><strong>Selection</strong> σ: keep the <strong>rows</strong> that meet a condition.</li>

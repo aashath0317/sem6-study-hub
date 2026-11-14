@@ -292,6 +292,80 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .tool .row > label select{max-width:100%}
 
 .tool select{min-width:0;max-width:100%}
+/* Exam-style quiz (Quizzes pages) */
+.tool.ex-tool{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);padding:0;overflow:hidden}
+.tool.ex-tool>.tt{display:none}
+.ex{font-size:15.5px}
+.ex-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 20px;background:var(--accent);color:#fff}
+.ex-kicker{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.8}
+.ex-name{font-size:19px;font-weight:700;line-height:1.3}
+.ex-clock{font-variant-numeric:tabular-nums;font-weight:600;background:rgba(255,255,255,.16);border-radius:8px;padding:4px 10px;white-space:nowrap}
+.ex-intro,.ex-sum{padding:18px 20px 20px}
+.ex-facts{margin:0 0 12px;padding-left:20px}.ex-facts li{margin:3px 0}
+.ex-prev{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;color:var(--muted);background:var(--bg);border-radius:10px;padding:9px 14px;margin-bottom:12px}
+.ex-prev b{color:var(--ink)}
+.ex-actions{display:flex;flex-wrap:wrap;gap:8px;padding-top:4px}
+.ex .ex-actions button,.ex-move button,.ex-finrow button{margin:0;padding:9px 18px;font-weight:600;border-radius:9px}
+.ex-bar{display:flex;align-items:center;gap:10px;padding:12px 20px 0;font-size:13px;color:var(--muted);font-weight:600}
+.ex-bar i{flex:1;height:6px;background:var(--line);border-radius:6px;overflow:hidden}
+.ex-bar b{display:block;height:100%;background:var(--tip);transition:width .3s}
+.ex-nav{display:flex;flex-wrap:wrap;gap:6px;padding:12px 20px 4px}
+.tool .ex-n{position:relative;width:36px;height:36px;margin:0;padding:0;border-radius:8px;font-size:13.5px;font-weight:700;background:var(--panel);color:var(--ink);border:1.5px solid var(--line)}
+.tool .ex-n.ans{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink)}
+.tool .ex-n.cur{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--accent)}
+.tool .ex-n.flag::after{content:"";position:absolute;top:-1px;right:-1px;border-style:solid;border-width:0 11px 11px 0;border-color:transparent var(--exam) transparent transparent;border-top-right-radius:7px}
+.ex-q{display:grid;grid-template-columns:150px 1fr;gap:18px;margin:12px 20px 0;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
+.ex-info{font-size:13px;color:var(--muted);border-right:1px solid var(--line);padding-right:14px}
+.ex-qno{font-size:15px;color:var(--ink)}.ex-qno b{font-size:22px}.ex-state{margin:6px 0 10px;line-height:1.4}
+.tool .ex-flag{margin:0;font-size:13px;padding:5px 10px}.tool .ex-flag.on{background:var(--exam-bg);color:var(--exam);border-color:var(--exam)}
+.ex-tx{background:var(--accent-soft);border-radius:8px;padding:9px 12px;margin:0 0 10px;font-weight:600;font-size:15px}
+.ex-text{margin:0 0 10px;font-size:16.5px;font-weight:600;line-height:1.5}
+.ex-sel{font-size:13px;color:var(--muted);margin-bottom:4px}
+.ex-opts{display:flex;flex-direction:column;gap:6px}
+.tool label.ex-o,.ex-o{display:flex;align-items:flex-start;gap:10px;margin:0;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);font-size:15.5px;line-height:1.45;cursor:pointer;transition:border-color .15s,background .15s}
+.tool label.ex-o:hover{border-color:var(--accent)}
+.tool label.ex-o.on{border-color:var(--accent);background:var(--accent-soft)}
+.ex-o input{margin:4px 0 0;accent-color:var(--accent);flex:none}
+.ex-l{font-weight:700;color:var(--muted);flex:none;min-width:18px}
+.ex-t{flex:1}
+.tool .ex-clear{background:none;border:0;color:var(--muted);text-decoration:underline;font-size:13px;padding:6px 0 0;margin:0}
+.ex-move{display:flex;justify-content:space-between;gap:8px;padding:14px 20px 0}
+.ex-move button:disabled{opacity:.4;cursor:default}
+.ex-finrow{display:flex;justify-content:flex-end;padding:8px 20px 18px}
+.ex-move:last-child{padding-bottom:18px}
+.ex-sum h4{margin:0 0 10px;font-size:17px}
+.ex-sumgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:6px;margin-bottom:12px}
+.tool .ex-srow{display:flex;justify-content:space-between;gap:8px;margin:0;background:var(--bg);color:var(--ink);border:1px solid var(--line);font-size:13.5px;text-align:left}
+.tool .ex-srow span:first-child{font-weight:700}.tool .ex-srow.miss{background:var(--warn-bg);border-color:var(--warn);color:var(--warn)}
+.ex-warn{color:var(--warn);font-weight:600;margin:8px 0}.ex-okmsg{color:var(--tip);font-weight:600;margin:8px 0}.ex-note{color:var(--muted);font-size:14px;margin:4px 0 10px}
+.ex-score{display:flex;align-items:center;gap:18px;margin:18px 20px 10px;padding:16px 20px;border-radius:12px;border:1.5px solid}
+.ex-score.ok{background:var(--tip-bg);border-color:var(--tip)}.ex-score.mid{background:var(--key-bg);border-color:var(--key)}.ex-score.bad{background:var(--warn-bg);border-color:var(--warn)}
+.ex-big{font-size:42px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}.ex-big small{font-size:20px;color:var(--muted);font-weight:600}
+.ex-pct{font-size:17px}.ex-meta{font-size:13px;color:var(--muted);margin-top:2px}
+.ex-spark{display:flex;align-items:flex-end;gap:3px;height:36px;margin:0 20px 10px}.ex-spark i{width:12px;background:var(--accent);border-radius:3px 3px 0 0;opacity:.75}
+.ex-score+.ex-actions,.ex-spark+.ex-actions{padding:0 20px 6px}
+.ex-review{padding:6px 20px 0}
+.ex-review+.ex-actions{padding:6px 20px 20px}
+.ex-rq{border:1px solid var(--line);border-left:5px solid var(--line);border-radius:12px;padding:14px 16px;margin:12px 0;background:var(--panel)}
+.ex-rq.ok{border-left-color:var(--tip)}.ex-rq.no{border-left-color:var(--warn)}.ex-rq.skip{border-left-color:var(--key)}
+.ex-rh{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:14px;margin-bottom:8px}
+.ex-rq.ok .ex-rh span{color:var(--tip);font-weight:700}.ex-rq.no .ex-rh span{color:var(--warn);font-weight:700}.ex-rq.skip .ex-rh span{color:var(--key);font-weight:700}
+.ex-o.ro{cursor:default;padding:8px 12px}
+.ex-o.ro em{font-style:normal;font-size:12.5px;font-weight:700;white-space:nowrap;align-self:center}
+.ex-o.right{border-color:var(--tip);background:var(--tip-bg)}.ex-o.right em{color:var(--tip)}
+.ex-o.wrong{border-color:var(--warn);background:var(--warn-bg)}.ex-o.wrong em{color:var(--warn)}
+.ex-fb{margin-top:10px;font-size:14.5px;background:var(--bg);border-radius:10px;padding:4px 14px}
+.ex-fb p{margin:8px 0}.ex-think{color:var(--muted)}
+@media (max-width:640px){
+  .ex-q{grid-template-columns:1fr;gap:10px;margin:12px 12px 0;padding:12px}
+  .ex-info{border-right:0;border-bottom:1px solid var(--line);padding:0 0 10px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
+  .ex-state{margin:0}.ex-qno b{font-size:18px}
+  .ex-head,.ex-bar,.ex-nav,.ex-move,.ex-finrow,.ex-intro,.ex-sum,.ex-review{padding-left:12px;padding-right:12px}
+  .ex-score{margin:14px 12px 8px;padding:12px 14px}.ex-big{font-size:34px}
+  .tool .ex-n{width:32px;height:32px}
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ex-head{background:#24376b}}
+:root[data-theme="dark"] .ex-head{background:#24376b}
 
 .study-plan{margin:24px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow);scroll-margin-top:80px}
 .sp-heading,.sp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.sp-heading h2{margin:2px 0 8px}.sp-heading p{font-size:15px;color:var(--muted)}
@@ -1010,6 +1084,137 @@ Semantic integration பல genomic/proteomic databases-இன் பெயர�
   }
 })();
 ;
+// Exam-style quiz for the per-subject Quizzes pages: one question at a time, a question navigator,
+// Finish attempt -> mark, grade and a full review with why each option is right or wrong.
+(function(){
+  var KEY = document.body.getAttribute('data-key') || '';
+  if (!/-quizzes$/.test(KEY)) return;
+  function load(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
+  function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function esc(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function clock(ms){ var s = Math.max(0, Math.round(ms / 1000)), m = Math.floor(s / 60); return (m >= 60 ? Math.floor(m / 60) + ':' + ('0' + m % 60).slice(-2) : m) + ':' + ('0' + s % 60).slice(-2); }
+  function ago(ts){ var d = (Date.now() - ts) / 864e5; return d < 1 ? 'today' : d < 2 ? 'yesterday' : Math.floor(d) + ' days ago'; }
+  function grade(p){ return p >= 85 ? ['Excellent — you know this well.', 'ok'] : p >= 70 ? ['Good — revise the ones you missed.', 'ok'] : p >= 50 ? ['Getting there — reread the weak topics.', 'mid'] : ['Needs revision — go through the notes again, then retake.', 'bad']; }
+  var L = 'abcdefghij';
+
+  window.SGExam = function(root, data){
+    var Q = data.steps || [];
+    if (!Q.length || Q.some(function(s){ return s.type !== 'choice'; })) return false;
+    var tool = root.closest('.tool'), tt = tool && tool.querySelector(':scope > .tt');
+    var name = tt ? tt.textContent.replace(/^.*?Try it\s*—\s*/, '').replace(/^Do the quiz first\s*—\s*/i, '').trim() : 'Quiz';
+    if (tool) tool.classList.add('ex-tool');
+    var key = 'sg-exam-' + root.id, st = load(key) || {}, tick = null;
+    st.hist = st.hist || [];
+    function fresh(){ st.a = {}; st.f = {}; st.i = 0; st.t0 = Date.now(); st.mode = 'q'; st.wrongOnly = false; }
+    function persist(){ save(key, st); }
+    function right(i){ return st.a[i] != null && Q[i].opts[st.a[i]] && Q[i].opts[st.a[i]].ok; }
+    function nAns(){ return Object.keys(st.a).length; }
+    var box = document.createElement('div'); box.className = 'ex';
+    root.innerHTML = ''; root.appendChild(box);
+
+    function head(sub){
+      return '<div class="ex-head"><div><div class="ex-kicker">Quiz</div><div class="ex-name">' + esc(name) + '</div></div>' + (sub || '') + '</div>';
+    }
+    function intro(){
+      var last = st.hist.length ? st.hist[st.hist.length - 1] : null, best = st.hist.length ? Math.max.apply(null, st.hist.map(function(h){ return h.p; })) : null;
+      var going = st.mode === 'q' && st.a && nAns() > 0;
+      box.innerHTML = head() +
+        '<div class="ex-intro"><ul class="ex-facts"><li><b>' + Q.length + '</b> questions</li><li>Multiple choice · one answer each</li><li><b>1</b> mark per question</li><li>No time limit — the clock just shows how long you took</li></ul>' +
+        (st.hist.length ? '<div class="ex-prev"><span>Best <b>' + best + '%</b></span><span>Last <b>' + last.p + '%</b> (' + last.s + '/' + Q.length + ', ' + ago(last.ts) + ')</span><span>Attempts <b>' + st.hist.length + '</b></span></div>' : '') +
+        '<div class="ex-actions">' + (going ? '<button type="button" class="ex-go">Continue attempt (' + nAns() + ' of ' + Q.length + ' answered)</button><button type="button" class="alt ex-new">Start a new attempt</button>' : '<button type="button" class="ex-new">' + (st.hist.length ? 'Attempt quiz again' : 'Attempt quiz now') + '</button>') +
+        (st.hist.length && st.last ? '<button type="button" class="alt ex-rev">Review last attempt</button>' : '') + '</div></div>';
+      var go = box.querySelector('.ex-go'); if (go) go.onclick = function(){ st.mode = 'q'; persist(); question(); };
+      box.querySelector('.ex-new').onclick = function(){ fresh(); persist(); question(); };
+      var rv = box.querySelector('.ex-rev'); if (rv) rv.onclick = function(){ st.mode = 'review'; persist(); review(); };
+    }
+    function nav(){
+      return '<div class="ex-nav" aria-label="Quiz navigation">' + Q.map(function(_, i){
+        return '<button type="button" class="ex-n' + (st.a[i] != null ? ' ans' : '') + (st.f[i] ? ' flag' : '') + (i === st.i ? ' cur' : '') + '" data-i="' + i + '" title="Question ' + (i + 1) + (st.a[i] != null ? ' — answered' : ' — not answered') + (st.f[i] ? ', flagged' : '') + '">' + (i + 1) + '</button>';
+      }).join('') + '</div>';
+    }
+    function question(){
+      clearInterval(tick);
+      var i = st.i, s = Q[i], a = st.a[i];
+      box.innerHTML = head('<div class="ex-clock" title="Time taken">⏱ <span>' + clock(Date.now() - st.t0) + '</span></div>') +
+        '<div class="ex-bar"><i><b style="width:' + Math.round(nAns() / Q.length * 100) + '%"></b></i><span>' + nAns() + ' / ' + Q.length + ' answered</span></div>' + nav() +
+        '<div class="ex-q"><div class="ex-info"><div class="ex-qno">Question <b>' + (i + 1) + '</b> <span>of ' + Q.length + '</span></div><div class="ex-state">' + (a != null ? 'Answer saved' : 'Not yet answered') + ' · Marked out of 1</div>' +
+        '<button type="button" class="alt ex-flag' + (st.f[i] ? ' on' : '') + '" aria-pressed="' + !!st.f[i] + '">⚑ ' + (st.f[i] ? 'Flagged' : 'Flag question') + '</button></div>' +
+        '<div class="ex-body">' + (s.tx ? '<p class="ex-tx">' + esc(s.tx) + '</p>' : '') + '<p class="ex-text">' + esc(s.q) + '</p><div class="ex-sel">Select one:</div><div class="ex-opts" role="radiogroup">' +
+        s.opts.map(function(o, k){ return '<label class="ex-o' + (a === k ? ' on' : '') + '"><input type="radio" name="' + root.id + '-q" value="' + k + '"' + (a === k ? ' checked' : '') + '><span class="ex-l">' + L[k] + '.</span><span class="ex-t">' + esc(o.t) + '</span></label>'; }).join('') +
+        '</div>' + (a != null ? '<button type="button" class="alt ex-clear">Clear my choice</button>' : '') + '</div></div>' +
+        '<div class="ex-move"><button type="button" class="alt ex-prev"' + (i ? '' : ' disabled') + '>← Previous</button>' +
+        (i < Q.length - 1 ? '<button type="button" class="ex-next">Next →</button>' : '<button type="button" class="ex-fin">Finish attempt…</button>') + '</div>' +
+        (i < Q.length - 1 ? '<div class="ex-finrow"><button type="button" class="alt ex-fin">Finish attempt…</button></div>' : '');
+      box.querySelectorAll('.ex-o input').forEach(function(r){ r.onchange = function(){ st.a[i] = +r.value; persist(); question(); }; });
+      var c = box.querySelector('.ex-clear'); if (c) c.onclick = function(){ delete st.a[i]; persist(); question(); };
+      box.querySelector('.ex-flag').onclick = function(){ if (st.f[i]) delete st.f[i]; else st.f[i] = 1; persist(); question(); };
+      box.querySelectorAll('.ex-n').forEach(function(b){ b.onclick = function(){ go(+b.dataset.i); }; });
+      box.querySelector('.ex-prev').onclick = function(){ go(i - 1); };
+      var nx = box.querySelector('.ex-next'); if (nx) nx.onclick = function(){ go(i + 1); };
+      box.querySelectorAll('.ex-fin').forEach(function(b){ b.onclick = summary; });
+      var span = box.querySelector('.ex-clock span');
+      tick = setInterval(function(){ if (!document.body.contains(span)) return clearInterval(tick); span.textContent = clock(Date.now() - st.t0); }, 1000);
+    }
+    function go(i){ st.i = Math.max(0, Math.min(Q.length - 1, i)); persist(); question(); top(); }
+    function top(){ var r = box.getBoundingClientRect(); if (r.top < 70 || r.top > window.innerHeight * .6) box.scrollIntoView({block:'start', behavior:'smooth'}); }
+    function summary(){
+      clearInterval(tick);
+      var miss = Q.length - nAns(), flags = Object.keys(st.f).length;
+      box.innerHTML = head() + '<div class="ex-sum"><h4>Summary of attempt</h4><div class="ex-sumgrid">' + Q.map(function(_, i){
+          return '<button type="button" class="ex-srow' + (st.a[i] != null ? '' : ' miss') + '" data-i="' + i + '"><span>Q' + (i + 1) + (st.f[i] ? ' ⚑' : '') + '</span><span>' + (st.a[i] != null ? 'Answer saved (' + L[st.a[i]] + ')' : 'Not yet answered') + '</span></button>';
+        }).join('') + '</div>' +
+        (miss ? '<p class="ex-warn">' + miss + ' question' + (miss > 1 ? 's are' : ' is') + ' not answered. ' + (miss > 1 ? 'They' : 'It') + ' will count as wrong.</p>' : '<p class="ex-okmsg">All ' + Q.length + ' questions answered.</p>') +
+        (flags ? '<p class="ex-note">You flagged ' + flags + ' question' + (flags > 1 ? 's' : '') + ' to check again.</p>' : '') +
+        '<div class="ex-actions"><button type="button" class="alt ex-back">Return to attempt</button><button type="button" class="ex-submit">Submit all and finish</button></div></div>';
+      box.querySelectorAll('.ex-srow').forEach(function(b){ b.onclick = function(){ go(+b.dataset.i); }; });
+      box.querySelector('.ex-back').onclick = function(){ question(); };
+      box.querySelector('.ex-submit').onclick = submit;
+      top();
+    }
+    function submit(){
+      var score = Q.filter(function(_, i){ return right(i); }).length, p = Math.round(score / Q.length * 100);
+      st.last = {a: st.a, s: score, p: p, ms: Date.now() - st.t0, ts: Date.now()};
+      st.hist = st.hist.concat({p: p, s: score, ts: Date.now()}).slice(-12);
+      st.mode = 'review'; st.wrongOnly = false; persist();
+      window.dispatchEvent(new CustomEvent('sg-progress', {detail:{kind:'quiz', key:root.id, score:p}}));
+      review(); top();
+    }
+    function review(){
+      clearInterval(tick);
+      var R = st.last; if (!R) return intro();
+      var g = grade(R.p), best = Math.max.apply(null, st.hist.map(function(h){ return h.p; }));
+      var wrong = Q.filter(function(s, i){ return !(R.a[i] != null && s.opts[R.a[i]] && s.opts[R.a[i]].ok); }).length;
+      box.innerHTML = head() +
+        '<div class="ex-score ' + g[1] + '"><div class="ex-big">' + R.s + '<small> / ' + Q.length + '</small></div><div><div class="ex-pct">Grade <b>' + R.p + '%</b>' + (st.hist.length > 1 ? ' · best ' + best + '%' : '') + '</div><div>' + g[0] + '</div><div class="ex-meta">Time taken ' + clock(R.ms) + ' · attempt ' + st.hist.length + '</div></div></div>' +
+        (st.hist.length > 1 ? '<div class="ex-spark" title="Your recent attempts">' + st.hist.map(function(h){ return '<i style="height:' + Math.max(6, h.p) + '%" title="' + h.p + '%"></i>'; }).join('') + '</div>' : '') +
+        '<div class="ex-actions"><button type="button" class="ex-new">Retake quiz</button>' + (wrong ? '<button type="button" class="alt ex-wo' + (st.wrongOnly ? ' on' : '') + '">' + (st.wrongOnly ? 'Show all questions' : 'Show only the ' + wrong + ' I got wrong') + '</button>' : '') + '</div>' +
+        '<div class="ex-review">' + Q.map(function(s, i){
+          var a = R.a[i], ok = a != null && s.opts[a] && s.opts[a].ok, good = s.opts.filter(function(o){ return o.ok; })[0];
+          if (st.wrongOnly && ok) return '';
+          return '<div class="ex-rq ' + (ok ? 'ok' : a == null ? 'skip' : 'no') + '"><div class="ex-rh"><b>Question ' + (i + 1) + '</b><span>' + (ok ? '✓ Correct · 1 / 1' : a == null ? '— Not answered · 0 / 1' : '✗ Incorrect · 0 / 1') + '</span></div>' +
+            (s.tx ? '<p class="ex-tx">' + esc(s.tx) + '</p>' : '') + '<p class="ex-text">' + esc(s.q) + '</p><div class="ex-opts">' +
+            s.opts.map(function(o, k){ return '<div class="ex-o ro' + (o.ok ? ' right' : '') + (k === a && !o.ok ? ' wrong' : '') + (k === a ? ' mine' : '') + '"><span class="ex-l">' + L[k] + '.</span><span class="ex-t">' + esc(o.t) + '</span>' + (k === a ? '<em>' + (o.ok ? 'Your answer ✓' : 'Your answer ✗') + '</em>' : o.ok ? '<em>Correct answer</em>' : '') + '</div>'; }).join('') + '</div>' +
+            '<div class="ex-fb">' + (a != null && !ok && s.opts[a].why ? '<p><b>Why your answer is wrong:</b> ' + esc(s.opts[a].why) + '</p>' : '') +
+            '<p><b>The correct answer is:</b> ' + esc(good ? good.t : '') + '</p>' + (s.why || (good && good.why) ? '<p><b>Why:</b> ' + esc(s.why || good.why) + '</p>' : '') +
+            (!ok && s.think ? '<p class="ex-think"><b>How to think:</b> ' + esc(s.think) + '</p>' : '') + '</div></div>';
+        }).join('') + '</div>' +
+        '<div class="ex-actions"><button type="button" class="ex-new">Retake quiz</button></div>';
+      box.querySelectorAll('.ex-new').forEach(function(b){ b.onclick = function(){ fresh(); persist(); question(); top(); }; });
+      var wo = box.querySelector('.ex-wo'); if (wo) wo.onclick = function(){ st.wrongOnly = !st.wrongOnly; persist(); review(); };
+    }
+    box.addEventListener('keydown', function(ev){
+      if (st.mode !== 'q' || !box.querySelector('.ex-q') || ev.target.tagName === 'INPUT' && ev.target.type !== 'radio') return;
+      var k = ev.key.toLowerCase(), n = L.indexOf(k);
+      if (ev.key === 'ArrowRight' && st.i < Q.length - 1){ ev.preventDefault(); go(st.i + 1); }
+      else if (ev.key === 'ArrowLeft' && st.i > 0){ ev.preventDefault(); go(st.i - 1); }
+      else if (n > -1 && n < Q[st.i].opts.length && k.length === 1 && !ev.metaKey && !ev.ctrlKey){ st.a[st.i] = n; persist(); question(); var r = box.querySelector('.ex-o.on input'); if (r) r.focus({preventScroll:true}); }
+    });
+    if (st.mode === 'review' && st.last) review();
+    else intro();
+    return true;
+  };
+})();
+;
 // Answer-it-yourself practice: fill in a real table one line at a time, with an explanation for each wrong answer.
 (function(){
   var RULE = {Dr:'A debit records an asset, expense or drawings going up, or a liability, income or capital going down.',
@@ -1026,6 +1231,7 @@ Semantic integration பல genomic/proteomic databases-இன் பெயர�
 
   document.querySelectorAll('.gp').forEach(function(root){
     var data = JSON.parse(root.querySelector('script').textContent), steps = [], key = 'sg-gp-' + root.id, accounts = Object.keys(data.accts || {});
+    if (window.SGExam && window.SGExam(root, data)) return;
     var CB = data.cashbook || null, PC = data.pettycash || null;
     function pcSteps(list){
       // A petty cash book has one row per transaction: money in goes under Received; money out goes under Total paid and one analysis column.

@@ -9,7 +9,7 @@ ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
 _dp = os.path.join(HERE, "drive_ids.json")
 DRIVE = json.load(open(_dp, encoding="utf-8")) if os.path.exists(_dp) else {}
 CSS = open(os.path.join(HERE, "template.css"), encoding="utf-8").read() + "\n" + open(os.path.join(HERE, "study-plan.css"), encoding="utf-8").read()
-JS = open(os.path.join(HERE, "template.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "quiz.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "practice.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "study-plan.js"), encoding="utf-8").read()
+JS = open(os.path.join(HERE, "template.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "quiz.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "exam.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "practice.js"), encoding="utf-8").read() + ";\n" + open(os.path.join(HERE, "study-plan.js"), encoding="utf-8").read()
 OUTNAME = "{week} - Study Guide.html"
 SUBJECTS = [
     ("bpas", "Business Processes and Accounting Systems", "ITE3622", "Business Processes & Accounting Systems"),

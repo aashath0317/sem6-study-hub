@@ -14,6 +14,7 @@
 
   document.querySelectorAll('.gp').forEach(function(root){
     var data = JSON.parse(root.querySelector('script').textContent), steps = [], key = 'sg-gp-' + root.id, accounts = Object.keys(data.accts || {});
+    if (window.SGExam && window.SGExam(root, data)) return;
     var CB = data.cashbook || null, PC = data.pettycash || null;
     function pcSteps(list){
       // A petty cash book has one row per transaction: money in goes under Received; money out goes under Total paid and one analysis column.

@@ -6766,5 +6766,19 @@
       "title": "Quiz 02 — விடைகளும் காரணங்களும்",
       "text": "- **சமூக, நெறிமுறைக் கவலைகள்** → **Societal marketing** concept.\n- **வாடிக்கையாளர் எதிர்ப்பை personal selling, advertising மூலம் முறியடித்தல்** → **Sales (selling)** orientation.\n- **Supplier concept** என்ற marketing philosophy இல்லை (production, product, selling, marketing, societal, holistic மட்டும்).\n- **குறைந்த விலை, எளிதில் கிடைப்பது** → **Production concept**.\n- **Goal orientation:** நீண்டகால நிறுவன இலக்குகளை அடைவது வாடிக்கையாளர் திருப்தியைப் போலவே முக்கியம்."
     }
+  ],
+  "hci/quizzes": [
+    {
+      "heading": "Week 6 timed quiz — Norman's model, execution and the seven stages",
+      "title": "Norman model — goal முதல் evaluation வரை",
+      "text": "- **Goal** = பயனர் அடைய விரும்பும் இறுதி நிலை (Friday Kandy train-இல் இருக்கை). **Intention** = அதை அடைய எடுக்கும் முடிவு (app மூலம் book செய்வது).\n- **Execution** = intention → action sequence → திரையில் உண்மையாகச் செய்வது. சிறிய date picker-இல் தவறான நாளைத் தட்டுவது ஒரு **slip**.\n- **ஏழு நிலைகள்:** Goal → Intention → Specify actions → Execute → Perceive → Interpret → Evaluate.\n- **Gulf of Execution** = \"இதை எப்படிச் செய்வது?\" — விரும்பிய செயலுக்கும் system தரும் controls-க்கும் இடையிலான இடைவெளி (மறைந்த cancel option போன்றவை).",
+      "details": "Q3-இல் ஒவ்வொரு நிலைக்கும் பெயர், execution/evaluation பக்கம், உணவு ஆர்டர் உதாரணம் — மூன்றையும் எழுதுங்கள்; goal அடையாவிட்டால் cycle மீண்டும் தொடங்கும் என்றும் குறிப்பிடுங்கள்."
+    },
+    {
+      "heading": "Quiz — Usability problems in an online course registration system",
+      "title": "Usability principles — சிக்கலும் தீர்வும்",
+      "text": "- **Register/Drop buttons ஒன்றுபோல** → **Error prevention**: தவறாக Drop அழுத்துவதைத் தடுக்க வேறு நிறம், icon, இடம், உறுதிப்படுத்தல் கேள்வி.\n- **பதிவு உறுதிப்படுத்தல் இல்லை** → **Visibility of system status**: course பெயருடன் வெற்றிச் செய்தி, \"My registered courses\" பட்டியல்.\n- **\"Invalid input\"** → **Help users recognise, diagnose and recover from errors**: எது தவறு, எப்படிச் சரிசெய்வது என்று எளிய மொழியில்.\n- **Course codes-ஐ நினைவில் வைக்க வேண்டும்** → **Recognition rather than recall**: auto-complete, தேர்ந்த course-ஐ அடுத்த screen-க்குக் கொண்டு செல்லல்.\n- **Module/Course/Subject** → **Consistency and standards**: எல்லா இடத்திலும் ஒரே சொல்.",
+      "details": "தேர்வில் ஒவ்வொரு புள்ளிக்கும் **principle பெயர் → scenario-வில் ஏன் சிக்கல் → குறிப்பான தீர்வு** என்ற அமைப்பில் எழுதுங்கள். கேள்வி நான்கு கேட்கிறது; ஐந்தில் எவையேனும் நான்கு போதும்."
+    }
   ]
 }

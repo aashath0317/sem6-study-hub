@@ -543,8 +543,30 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dm-Week02" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
 <div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 02</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 02</div><h1>The Knowledge Discovery (KDD) Process</h1><p>The 7 steps from raw data to knowledge, the architecture of a data-mining system, the kinds of data we can mine, and the five task primitives.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">📄 Week 2.pdf</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Data mining = &quot;knowledge mining from data&quot;"><span class="num">1</span>Data mining = "knowledge mining from data"</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>தரவிலிருந்து அறிவைப் பெறுதல்</h3><p><strong>Knowledge mining</strong> என்பது பதிவுகளிலிருந்து அர்த்தமுள்ள தொடர்பைப் பெறுவது. பாணும் வெண்ணெயும் சேர்ந்து வாங்கப்படுகின்றன என்ற pattern கடையில் பொருட்களை வைக்க உதவலாம். அது ஒவ்வொரு வாடிக்கையாளருக்கும் பொருந்தும் சட்டம் அல்ல.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>பாறையிலிருந்து தங்கம் எடுப்பது போல data-விலிருந்து knowledge கண்டுபிடிக்கிறோம். <strong>KDD</strong> முழுப் பயணம்; இந்தப் பாடத்தில் <strong>data mining</strong> அதற்குள் pattern extraction செய்யும் ஒரு முக்கியப் படி. சிலர் இரண்டையும் loosely ஒரே பொருளில் சொல்வார்கள்; exam-இல் எந்த view என்பதைக் குறிப்பிட்டு ஏழு stages விளக்குங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p>In simple terms, <strong>data mining is extracting ("mining") knowledge from large amounts of data</strong>.</p>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 02</div><h1>The Knowledge Discovery (KDD) Process</h1><p>The 7 steps from raw data to knowledge, the architecture of a data-mining system, the kinds of data we can mine, and the five task primitives.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">📄 Week 2.pdf</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Data mining = &quot;knowledge mining from data&quot;"><span class="num">1</span>Data mining = "knowledge mining from data"</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>Data mining = data-விலிருந்து அறிவைத் தோண்டுதல்</h3><p><strong>எளிய வரையறை:</strong> பெரிய data-விலிருந்து <strong>அறிவை (knowledge) தோண்டி எடுப்பது</strong>தான் data mining.</p>
+<p><strong>தங்கச் சுரங்க உதாரணம்:</strong></p>
+<ul>
+<li>பாறைகளிலிருந்து தங்கம் எடுப்பதை <strong>"gold mining"</strong> என்கிறோம், "rock mining" என்று அல்ல.</li>
+<li>அப்படியென்றால் "data mining" என்பதை உண்மையில் <strong>"knowledge mining from data"</strong> என்றுதான் சொல்ல வேண்டும்.</li>
+<li><strong>Data = பாறை, knowledge = தங்கம்.</strong></li>
+<li>ஏன் "data mining" என்ற பெயர் நிலைத்தது? "Knowledge mining from data" மிக நீளம். "Knowledge mining" மட்டும் என்றால் "பெரிய data" என்ற கருத்து போய்விடும்.</li>
+</ul>
+<p><strong>KDD (Knowledge Discovery from Data) உடன் தொடர்பு — 2 பார்வைகள்</strong></p>
+<table>
+<thead>
+<tr>
+<th>பார்வை 1</th>
+<th>பார்வை 2 (பாடம் இதைப் பின்பற்றுகிறது)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data mining = KDD. <strong>இரண்டும் ஒன்றே</strong> (synonym)</td>
+<td>Data mining, KDD என்ற பெரிய செயல்முறையின் <strong>ஒரு முக்கியப் படி மட்டுமே</strong></td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam template (English)</strong></p>
+<p>Data mining is "knowledge mining from data" — just as gold mining extracts gold from rock, data mining extracts knowledge from data. Some treat data mining as a synonym for KDD; others (as in these notes) view it as <strong>one essential step</strong> in the knowledge discovery process.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p>In simple terms, <strong>data mining is extracting ("mining") knowledge from large amounts of data</strong>.</p>
 <div class="call tip"><div class="ct">The gold-mining analogy</div><p>Mining gold from rocks is called <em>gold mining</em>, not <em>rock mining</em>. So "data mining" should really be called <strong>"knowledge mining from data"</strong>: the data is the rock and the knowledge is the gold. The name stuck because "knowledge mining from data" is too long, and "knowledge mining" alone loses the idea of <em>large amounts of data</em>.</p></div>
 <p>There are two views of how data mining relates to <strong>KDD (Knowledge Discovery from Data)</strong>:</p>
 <div class="grid2"><div><p><strong>View 1: synonym</strong></p>
@@ -554,10 +576,72 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <p>தரவுச் சுரங்கத்துக்கும் <strong>KDD (தரவிலிருந்து அறிவைக் கண்டறிதல்)</strong> என்பதற்கும் உள்ள தொடர்பைப் பற்றி இரு பார்வைகள் உள்ளன:</p>
 <div class="grid2"><div><p><strong>பார்வை 1: ஒரே பொருளுடையவை</strong></p>
 <p>பலர் <em>தரவுச் சுரங்கம்</em>, <em>KDD</em> ஆகியவற்றை ஒரே பொருளில் பயன்படுத்துகின்றனர்.</p></div><div><p><strong>பார்வை 2: ஒரு படி</strong></p>
-<p>மற்றவர்கள், பெரிய அறிவுக் கண்டறிதல் செயல்முறைக்குள் தரவுச் சுரங்கத்தை <strong>ஓர் இன்றியமையாத படியாக</strong> கருதுகின்றனர். குறிப்புகள் இந்தப் பார்வையைப் பயன்படுத்துகின்றன.</p></div></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="The 7 steps of the KDD process"><span class="num">2</span>The 7 steps of the KDD process</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>KDD-இன் ஏழு படிகள்</h3><p>சுத்தப்படுத்துதல், இணைத்தல், தேர்வு, மாற்றம், mining, மதிப்பீடு, விளக்கமாகக் காட்டுதல் ஆகியவை <strong>KDD</strong>. Data mining அதற்குள் ஒரு படி மட்டுமே. குப்பைத் தரவை நேரடியாக algorithm-க்கு கொடுத்தால் முழு செயலும் பாதிக்கப்படும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>ஏழு படிகள்:</strong> (1) Cleaning — தவறு/noise சரிசெய்; (2) Integration — sources இணை; (3) Selection — தேவையான data எடு; (4) Transformation — ஏற்ற வடிவம் மாற்று; (5) Mining — pattern தேடு; (6) Evaluation — பயன்படும் pattern தேர்வு; (7) Presentation — மனிதர் புரியும் வடிவில் காட்டு.
-முடிவில் குறை தெரிந்தால் முந்தைய படிகளுக்குத் திரும்பலாம். KDD முழுச் செயல்முறை; mining அதன் ஐந்தாவது படி.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>ஏழு stages:</strong> cleaning பிழை/குறை சரிசெய்; integration sources இணை; selection task-relevant data தேர்வு; transformation ஏற்ற வடிவம்; mining pattern கண்டுபிடி; evaluation பயனுள்ளதா சோதி; presentation user-க்கு புரியும் வடிவில் காட்டு. முதல் நான்கு preprocessing. Evaluation-இல் பிரச்சினை தெரிந்தால் முன்படிகளுக்குத் திரும்பலாம்; ஒரே நேர்கோட்டில் ஒருமுறை முடியும் process அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p>Knowledge discovery is an <strong>iterative sequence</strong> of these steps (Figure 2-1):</p>
+<p>மற்றவர்கள், பெரிய அறிவுக் கண்டறிதல் செயல்முறைக்குள் தரவுச் சுரங்கத்தை <strong>ஓர் இன்றியமையாத படியாக</strong> கருதுகின்றனர். குறிப்புகள் இந்தப் பார்வையைப் பயன்படுத்துகின்றன.</p></div></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="The 7 steps of the KDD process"><span class="num">2</span>The 7 steps of the KDD process</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>KDD-இன் 7 படிகள் — சமையல் உதாரணத்துடன்</h3><p><strong>சமையல் உதாரணம்:</strong> ஒரு கறி சமைப்பதை நினைத்துப் பாருங்கள்.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>படி</th>
+<th>என்ன நடக்கிறது</th>
+<th>சமையலில்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Data cleaning</strong></td>
+<td><strong>Noise, சீரற்ற</strong> data-வை நீக்கு</td>
+<td>காய்கறிகளைக் கழுவு, அழுகியதை நீக்கு</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Data integration</strong></td>
+<td><strong>பல மூலங்களை (sources)</strong> ஒன்றாக இணை</td>
+<td>பல கடைகளிலிருந்து வாங்கியவற்றை ஒரே இடத்தில் வை</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Data selection</strong></td>
+<td>பகுப்பாய்வுக்குத் <strong>தேவையான data-வை மட்டும்</strong> எடு</td>
+<td>இந்தக் கறிக்குத் தேவையானதை மட்டும் எடு</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Data transformation</strong></td>
+<td>Mining-க்கு ஏற்ற வடிவில் மாற்று (சுருக்கம், aggregation)</td>
+<td>வெட்டு, அரை</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Data mining</strong></td>
+<td><strong>முக்கியப் படி:</strong> அறிவார்ந்த முறைகளால் <strong>patterns எடு</strong></td>
+<td>சமை!</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Pattern evaluation</strong></td>
+<td><strong>உண்மையிலேயே சுவாரஸ்யமான</strong> patterns-ஐ அளவுகோல்களால் தேர்ந்தெடு</td>
+<td>ருசி பார்</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Knowledge presentation</strong></td>
+<td>Visualisation மூலம் பயனருக்குக் <strong>காட்டு</strong></td>
+<td>அழகாகப் பரிமாறு</td>
+</tr>
+</tbody>
+</table>
+<p><strong>கட்டாயம் தெரிய வேண்டியவை:</strong></p>
+<ul>
+<li><strong>படிகள் 1–4 எல்லாம் data preprocessing</strong> — mining-க்கு data-வைத் தயார் செய்பவை.</li>
+<li>Mining படி <strong>பயனருடனோ knowledge base-உடனோ</strong> தொடர்புகொள்ளலாம்.</li>
+<li>சுவாரஸ்யமான patterns பயனருக்குக் காட்டப்படும், <strong>knowledge base-இல் புதிய அறிவாகச் சேமிக்கப்படலாம்</strong>.</li>
+<li>இது <strong>iterative</strong> — தேவைப்பட்டால் முந்தைய படிகளுக்குத் திரும்பலாம்.</li>
+</ul><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>நினைவில் வைக்க: C-I-S-T-M-E-P</strong></p>
+<p>"<strong>C</strong>an <strong>I</strong> <strong>S</strong>ee <strong>T</strong>he <strong>M</strong>ined <strong>E</strong>vidence <strong>P</strong>lease"</p>
+<p>Cleaning → Integration → Selection → Transformation → Mining → Evaluation → Presentation</p>
+<p><strong>Exam tip:</strong> "Explain the steps of the KDD process" — மிக அடிக்கடி வரும் கேள்வி. 7 படிகளையும் <strong>வரிசைப்படி</strong>, ஒவ்வொன்றுக்கும் ஒரு வரி எழுதுங்கள். பிறகு <strong>"steps 1–4 are forms of data preprocessing"</strong> என்று சேர்த்தால் முழு marks.</p>
+<p>Page-இல் உள்ள KDD tool-இல் ஒவ்வொரு படியையும் பார்க்கலாம்.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p>Knowledge discovery is an <strong>iterative sequence</strong> of these steps (Figure 2-1):</p>
 <table>
 <thead>
 <tr>
@@ -698,8 +782,60 @@ R.querySelector('.pv').onclick=function(){i=Math.max(0,i-1);draw()};draw();
 <li>சுவாரசியமான வடிவங்கள் <strong>பயனருக்கு வழங்கப்படுகின்றன</strong>; அறிவுத் தளத்தில் <strong>புதிய அறிவாகச் சேமிக்கப்படலாம்</strong>.</li>
 <li>இந்தப் பார்வையில், முழுச் செயல்முறையின் <strong>ஒரு படி மட்டுமே</strong> தரவுச் சுரங்கம்; ஆனால் மறைந்த வடிவங்களை வெளிக்கொணர்வதால் அது <strong>இன்றியமையாதது</strong>.</li>
 </ul></div>
-<div class="call exam"><div class="ct">Exam focus</div><p>"KDD செயல்முறையின் படிகளை விளக்குக" என்பது மிகவும் பொதுவான கேள்வி. 7 படிகளையும் வரிசையாக ஒவ்வொன்றுக்கு ஒரு வரி எழுதவும்; பின்னர் 1–4 படிகள் முன்செயலாக்கம் என்ற கருத்தையும் சேர்க்கவும். விரைவான நினைவுத் தொடர்: <strong>C-I-S-T-M-E-P</strong> ("<strong>C</strong>an <strong>I</strong> <strong>S</strong>ee <strong>T</strong>he <strong>M</strong>ined <strong>E</strong>vidence <strong>P</strong>lease" — சுரங்கப்பட்ட ஆதாரத்தை நான் பார்க்கலாமா).</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Architecture of a typical data mining system"><span class="num">3</span>Architecture of a typical data mining system</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Data mining அமைப்பின் பகுதிகள்</h3><p>Database தகவலை வழங்கும்; mining engine patterns தேடும்; evaluation அவற்றின் பயனை மதிப்பிடும்; interface மனிதருக்குக் காட்டும். Knowledge base தேடலுக்கு வழிகாட்டும். ஒவ்வொரு பகுதியின் வேலையைத் தனியாக நினைவில் கொள்ளுங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>கீழிருந்து மேலே architecture:</strong> databases/warehouse/web→clean/integrate/select→DB/DW server→mining engine→pattern evaluation→UI. <strong>Knowledge base</strong> domain hierarchies, beliefs, metadata, thresholds மூலம் search/evaluation-ஐ வழிநடத்தும். Engine classification, association, clustering, prediction, outliers, evolution போன்ற functions செய்கிறது. UI-இல் task specify, intermediate results explore, patterns visualise செய்யலாம். தேவையற்ற patterns உருவாக்கியபின் மட்டும் reject செய்யாமல் evaluation constraints-ஐ search-இலேயே பயன்படுத்துவது efficiency-க்கு உதவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><p>Figure 2-2 shows the components as layers. From the bottom up:</p>
+<div class="call exam"><div class="ct">Exam focus</div><p>"KDD செயல்முறையின் படிகளை விளக்குக" என்பது மிகவும் பொதுவான கேள்வி. 7 படிகளையும் வரிசையாக ஒவ்வொன்றுக்கு ஒரு வரி எழுதவும்; பின்னர் 1–4 படிகள் முன்செயலாக்கம் என்ற கருத்தையும் சேர்க்கவும். விரைவான நினைவுத் தொடர்: <strong>C-I-S-T-M-E-P</strong> ("<strong>C</strong>an <strong>I</strong> <strong>S</strong>ee <strong>T</strong>he <strong>M</strong>ined <strong>E</strong>vidence <strong>P</strong>lease" — சுரங்கப்பட்ட ஆதாரத்தை நான் பார்க்கலாமா).</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Architecture of a typical data mining system"><span class="num">3</span>Architecture of a typical data mining system</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Data mining system-இன் அமைப்பு — கீழிருந்து மேலே</h3><p>ஒரு data mining system-ஐ <strong>அடுக்குகளாக (layers)</strong> பார்க்கலாம். <strong>கீழிருந்து மேலே:</strong></p>
+<table>
+<thead>
+<tr>
+<th>அடுக்கு</th>
+<th>பணி</th>
+<th>எளிய உதாரணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data sources</strong> (கீழே)</td>
+<td>Database, data warehouse, WWW, மற்றவை</td>
+<td>மூலப்பொருள் கிடங்குகள்</td>
+</tr>
+<tr>
+<td>↑ cleaning, integration, selection</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Database / data warehouse server</strong></td>
+<td>பயனர் கேட்பதற்குத் <strong>தேவையான data-வை எடுத்துக் கொடுக்கும்</strong></td>
+<td>கிடங்குக் காப்பாளர்</td>
+</tr>
+<tr>
+<td><strong>Data mining engine</strong></td>
+<td><strong>இதயம்.</strong> Characterization, association, classification, prediction, clustering, outlier analysis, evolution analysis — எல்லா modules-உம் இங்கே</td>
+<td>சமையல்காரர்</td>
+</tr>
+<tr>
+<td><strong>Pattern evaluation module</strong></td>
+<td><strong>சுவாரஸ்யமான patterns-ஐ மட்டும்</strong> வடிகட்டும் (interestingness measures, thresholds)</td>
+<td>ருசி பார்ப்பவர்</td>
+</tr>
+<tr>
+<td><strong>User interface</strong> (மேலே)</td>
+<td>பயனர் <strong>query கொடுக்க</strong>, தேடலைக் <strong>குறுக்க</strong>, முடிவுகளைப் <strong>பார்க்க</strong>, schemas-ஐ browse செய்ய, patterns-ஐ visualise செய்ய</td>
+<td>உணவக menu, பரிமாறுபவர்</td>
+</tr>
+</tbody>
+</table>
+<p><strong>பக்கத்தில்: Knowledge base</strong></p>
+<p>Mining engine-உம் pattern evaluation-உம் இதைப் பயன்படுத்துகின்றன. இதில் உள்ளவை:</p>
+<ul>
+<li><strong>Concept hierarchies</strong> (உதாரணம்: தெரு → நகரம் → நாடு)</li>
+<li><strong>User beliefs</strong> — ஒரு pattern எவ்வளவு <strong>எதிர்பாராதது</strong> என்று மதிப்பிட</li>
+<li>கூடுதல் <strong>thresholds, constraints</strong></li>
+<li><strong>Metadata</strong> (data பற்றிய data)</li>
+</ul>
+<p><strong>செயல்திறன் குறிப்பு:</strong> Pattern evaluation-ஐ mining செயல்முறைக்குள் <strong>முடிந்தவரை ஆழமாகத் தள்ளு</strong> (push deep). அப்போது சுவாரஸ்யமான patterns-ஐ மட்டுமே தேடும். பிறகு தூக்கி எறியப்படும் patterns-ஐ உருவாக்கி நேரத்தை வீணாக்காது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam template (English)</strong></p>
+<p><em>Q: Explain the architecture of a typical data mining system.</em>
+From bottom to top: data sources (databases, data warehouse, WWW, other repositories) → data cleaning, integration and selection → database/data warehouse server → data mining engine → pattern evaluation module → user interface; the <strong>knowledge base</strong> guides both the mining engine and pattern evaluation (concept hierarchies, user beliefs, thresholds, metadata).</p>
+<p><strong>Exam tip:</strong> படம் வரைந்து, ஒவ்வொரு component-க்கும் ஒரு வரி எழுதுங்கள். <strong>Knowledge base-ஐ மறக்காதீர்கள்</strong> — அது பக்கவாட்டில் இருக்கும்.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><p>Figure 2-2 shows the components as layers. From the bottom up:</p>
 <div class="arch"><div class="ab top" style="grid-row:1;grid-column:1">User interface</div><div class="aa" style="grid-row:2;grid-column:1">▲ ▼</div><div class="ab" style="grid-row:3;grid-column:1">Pattern evaluation module</div><div class="ah" style="grid-row:3;grid-column:2">◀▶</div><div class="aa" style="grid-row:4;grid-column:1">▲ ▼</div><div class="ab" style="grid-row:5;grid-column:1">Data mining engine</div><div class="ah" style="grid-row:5;grid-column:2">◀▶</div><div class="akb" style="grid-row:3 / 6;grid-column:3">Knowledge base</div><div class="aa" style="grid-row:6;grid-column:1">▲ ▼</div><div class="ab db" style="grid-row:7;grid-column:1">Database / data warehouse server</div><div class="aa etl" style="grid-row:8;grid-column:1 / 4">▲ Data cleaning, integration &amp; selection</div><div class="tsrc" style="grid-row:9;grid-column:1 / 4"><span>Database</span><span>Data warehouse</span><span>WWW</span><span>Other repositories</span></div></div>
 
 <table>
@@ -765,11 +901,86 @@ R.querySelector('.pv').onclick=function(){i=Math.max(0,i-1);draw()};draw();
 </tr>
 </tbody>
 </table>
-<div class="call tip"><div class="ct">குறிப்புகளிலுள்ள திறன் சார்ந்த கருத்து</div><p>திறம்படச் சுரங்கம் செய்ய, <strong>வடிவச் சுவாரசியத்தன்மை மதிப்பீட்டைச் சுரங்கச் செயல்முறையில் இயன்றவரை ஆழமாகச் செலுத்தவும்</strong>. இதனால் தேடல் சுவாரசியமான வடிவங்களுக்கு மட்டுமே மட்டுப்படும்; நிராகரிக்கப்படும் வடிவங்களை உருவாக்க முறைமை நேரத்தை வீணாக்காது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="What kinds of data can be mined?"><span class="num">4</span>What kinds of data can be mined?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>எந்தத் தரவை ஆய்வு செய்யலாம்?</h3><p>அட்டவணை மட்டும் அல்ல; விற்பனை transactions, text, images, காலவரிசை போன்றவற்றையும் ஆய்வு செய்யலாம். தரவின் வடிவத்தைப் பொறுத்து preprocessing, algorithm மாற வேண்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Relational data</strong> rows/columns; <strong>transaction data</strong> ஒவ்வொரு basket-இன் items; <strong>warehouse</strong> ஒருங்கிணைந்த historical data.
-Advanced types: temporal — time-dependent states; sequence — வரிசை முக்கியம்; time-series — நேர இடைவெளியில் அளவுகள்; spatial — இடம்/வரைபடம்; spatiotemporal — இடமும் நேரமும்; text; multimedia; heterogeneous; legacy; web.
-“ஒவ்வொரு வெள்ளியும் விற்பனை உயர்கிறது” என்பது time pattern; “A வாங்கியபின் B வாங்குகிறார்கள்” என்பது sequence pattern.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Data வகைகளை example-உடன் வேறுபடுத்து:</strong> relational rows/tables; transaction ID+item list; warehouse integrated historical data; temporal timestamps; sequence event order; time-series repeated numeric readings; spatial location; text; multimedia; heterogeneous/legacy sources; web/streams. Raster=pixels; vector=points/lines/polygons. Email/XML semi-structured ஆகலாம். Audio/video continuous media-க்கு சரியான rate-இல் retrieval முக்கியம். Web usage mining access logs-இன் behaviour; web content mining page content.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>In principle data mining applies to <strong>any data repository</strong> and also to <strong>transient data</strong> such as <strong>data streams</strong>.</p>
+<div class="call tip"><div class="ct">குறிப்புகளிலுள்ள திறன் சார்ந்த கருத்து</div><p>திறம்படச் சுரங்கம் செய்ய, <strong>வடிவச் சுவாரசியத்தன்மை மதிப்பீட்டைச் சுரங்கச் செயல்முறையில் இயன்றவரை ஆழமாகச் செலுத்தவும்</strong>. இதனால் தேடல் சுவாரசியமான வடிவங்களுக்கு மட்டுமே மட்டுப்படும்; நிராகரிக்கப்படும் வடிவங்களை உருவாக்க முறைமை நேரத்தை வீணாக்காது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="What kinds of data can be mined?"><span class="num">4</span>What kinds of data can be mined?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>எந்த வகை data-வை mine செய்யலாம்?</h3><p>கொள்கையளவில் <strong>எந்த data repository-யையும்</strong> mine செய்யலாம். <strong>Data streams</strong> போன்ற நிலையற்ற data-வையும் கூட.</p>
+<p><strong>1. Relational databases</strong></p>
+<p><strong>DBMS</strong> = தொடர்புடைய data (database) + அதை நிர்வகிக்கும் software. Software, சேமிப்பு, பலர் ஒரே நேரத்தில் அணுகுதல், <strong>சீர்மை (consistency), பாதுகாப்பு</strong> ஆகியவற்றைக் கவனிக்கும் — system crash ஆனாலும் கூட.</p>
+<p><strong>2. Data warehouses</strong></p>
+<p><strong>உதாரணம் (AllElectronics):</strong> தலைவர் கேட்கிறார்: "Q3-இல் ஒவ்வொரு கிளையிலும், ஒவ்வொரு பொருள் வகைக்கும் விற்பனை எவ்வளவு?" Data <strong>பல இடங்களில், பல databases-இல்</strong> சிதறிக் கிடக்கிறது — கடினம். <strong>Data warehouse</strong> இருந்தால் எளிது.</p>
+<p><strong>Data warehouse</strong> = <strong>பல மூலங்களிலிருந்து</strong> சேகரித்து, <strong>ஒரே schema-வின் கீழ்</strong>, பொதுவாக <strong>ஒரே இடத்தில்</strong> சேமிக்கப்பட்ட தகவல் களஞ்சியம்.
+கட்டும் முறை: Cleaning → Integration → Transformation → Loading → Periodic refreshing</p>
+<p><strong>3. Transactional databases</strong></p>
+<p>ஒவ்வொரு record-உம் ஒரு <strong>transaction</strong>: தனித்த <strong>Trans ID</strong> + அதில் உள்ள <strong>items-இன் பட்டியல்</strong>. உதாரணம்: T100 → I1, I3, I8, I16. இதுதான் <strong>market basket analysis</strong>-க்கு (Week 9, Apriori) பயன்படும் data.</p>
+<p><strong>4. மேம்பட்ட database வகைகள்</strong></p>
+<table>
+<thead>
+<tr>
+<th>வகை</th>
+<th>என்ன சேமிக்கும்</th>
+<th>உதாரணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Object-relational</strong></td>
+<td>ஒவ்வொரு entity-உம் ஒரு <strong>object</strong></td>
+<td>சிக்கலான அமைப்புகள்</td>
+</tr>
+<tr>
+<td><strong>Temporal</strong></td>
+<td><strong>நேரம் தொடர்பான</strong> attributes</td>
+<td>ஊழியர் வரலாறு (எப்போதிலிருந்து, எப்போது வரை)</td>
+</tr>
+<tr>
+<td><strong>Sequence</strong></td>
+<td><strong>வரிசையான நிகழ்வுகள்</strong></td>
+<td>Shopping வரிசை, web clicks, DNA</td>
+</tr>
+<tr>
+<td><strong>Time-series</strong></td>
+<td><strong>காலப்போக்கில் மீண்டும் மீண்டும் அளக்கப்படும்</strong> மதிப்புகள்</td>
+<td>பங்குச் சந்தை, வெப்பநிலை</td>
+</tr>
+<tr>
+<td><strong>Spatial</strong></td>
+<td><strong>இடம்</strong> தொடர்பானவை</td>
+<td>வரைபடங்கள், செயற்கைக்கோள் படங்கள்</td>
+</tr>
+<tr>
+<td><strong>Text</strong></td>
+<td><strong>சொற்களால் ஆன</strong> விவரிப்புகள்</td>
+<td>Product specs, bug reports</td>
+</tr>
+<tr>
+<td><strong>Multimedia</strong></td>
+<td><strong>படம், ஒலி, video</strong></td>
+<td>Voice mail, video-on-demand</td>
+</tr>
+<tr>
+<td><strong>Heterogeneous</strong></td>
+<td>ஒன்றோடொன்று இணைந்த, <strong>தனித்தியங்கும்</strong> databases</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Legacy</strong></td>
+<td><strong>பல வகை பழைய systems</strong>-இன் கலவை</td>
+<td>பழைய நிறுவன systems</td>
+</tr>
+<tr>
+<td><strong>World Wide Web</strong></td>
+<td>இணைக்கப்பட்ட data objects</td>
+<td>Web usage mining</td>
+</tr>
+</tbody>
+</table>
+<p><strong>நினைவில் வைக்க வேண்டிய சில வேறுபாடுகள்:</strong></p>
+<ul>
+<li><strong>Time-series vs sequence:</strong> Time-series = <strong>குறிப்பிட்ட இடைவெளியில் அளக்கப்படும் எண்கள்</strong> (ஒவ்வொரு மணிநேர வெப்பநிலை). Sequence = <strong>வரிசையான நிகழ்வுகள்</strong>, நேரம் இருக்கலாம் அல்லது இல்லாமலும் இருக்கலாம் (முதலில் phone, பிறகு case வாங்குதல்).</li>
+<li><strong>Spatial — raster vs vector:</strong> Raster = <strong>pixel வரைபடம்</strong> (ஒவ்வொரு pixel-உம் அந்தப் பகுதியின் மழையளவு). Vector = <strong>புள்ளிகள், கோடுகள், பலகோணங்கள்</strong> (சாலைகள், பாலங்கள், ஏரிகள்).</li>
+<li><strong>Text அமைப்பு நிலைகள்:</strong> Unstructured (சில web pages) · Semi-structured (email, HTML/XML) · Well-structured (நூலகப் பட்டியல்).</li>
+<li><strong>Continuous-media data:</strong> Audio, video — <strong>சீரான வேகத்தில் நேரலையில்</strong> எடுக்க வேண்டும் (இல்லையென்றால் இடைவெளி வரும்).</li>
+<li><strong>Web usage mining (weblog mining):</strong> பயனர்கள் web-இல் <strong>எப்படி அணுகுகிறார்கள்</strong> என்ற patterns. System வடிவமைப்புக்கும், <strong>விளம்பரங்களை அதிகம் பார்க்கப்படும் pages-இல் வைக்கவும்</strong> உதவும்.</li>
+</ul><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam tip:</strong> "What kinds of data can be mined?" — Relational DB, data warehouse, transactional DB, பிறகு advanced types-இல் <strong>குறைந்தது 4–5</strong>, ஒவ்வொன்றுக்கும் ஒரு உதாரணத்துடன்.</p>
+<p><strong>அடிக்கடி கேட்கப்படும் ஒப்பீடுகள்:</strong> time-series vs sequence, raster vs vector — இந்த இரண்டையும் நன்றாக நினைவில் வையுங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>In principle data mining applies to <strong>any data repository</strong> and also to <strong>transient data</strong> such as <strong>data streams</strong>.</p>
 <h3 id="relational-databases">Relational databases</h3>
 <p>A <strong>DBMS</strong> = a collection of interrelated data (the <strong>database</strong>) plus software to manage and access it. The software handles defining structures, <strong>storage</strong>, <strong>concurrent/shared/distributed access</strong>, and <strong>consistency and security</strong>, even through system crashes or attempts at unauthorised access.</p>
 <h3 id="data-warehouses">Data warehouses</h3>
@@ -971,10 +1182,53 @@ Advanced types: temporal — time-dependent states; sequence — வரிசை
 <li><strong>நன்கு கட்டமைக்கப்பட்டவை</strong>: தொடர்புநிலைத் தரவுத்தளங்களில் சேமிக்கக்கூடிய நூலகப் பட்டியல்கள்</li>
 <li><strong>பல்லூடகத்துக்கு</strong>, <strong>பெரிய பொருட்களை</strong> (கிகாபைட்டுகள்) ஆதரிக்கும் சிறப்புச் சேமிப்பும் தேடலும் தேவை. ஒலிக்கும் காணொளிக்கும் <strong>சீரான வீதத்தில் நிகழ்நேர மீட்பு</strong> தேவை (இடைவெளிகளையும் இடையக நிரம்பிவழிதலையும் தவிர்க்க); எனவே அவை <strong>தொடர்ச்சியான ஊடகத் தரவுகள்</strong> எனப்படுகின்றன. <strong>பல்லூடகத் தரவுக் கனசதுரங்கள்</strong>, <strong>அம்சப் பிரித்தெடுப்பு</strong>, <strong>ஒற்றுமை அடிப்படையிலான வடிவப் பொருத்தம்</strong> ஆகியவை நம்பிக்கைக்குரிய அணுகுமுறைகள்.</li>
 <li><strong>வலைப் பயன்பாட்டுச் சுரங்கம் (வலைப்பதிவுச் சுரங்கம்)</strong> என்பது வலையில் <strong>பயனர் அணுகல் வடிவங்களைப்</strong> பதிவு செய்தல். இது <strong>முறைமை வடிவமைப்புக்கும்</strong> (தொடர்புடைய பொருட்களுக்கிடையே திறமையான அணுகல்) <strong>சந்தைப்படுத்தலுக்கும்</strong> (அடிக்கடி பார்வையிடப்படும் பக்கங்களில் விளம்பரங்கள், சிறந்த வாடிக்கையாளர் வகைப்படுத்தல்) உதவுகிறது.</li>
-</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Data mining task primitives"><span class="num">5</span>Data mining task primitives</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>எதைத் தேட வேண்டும் என்று சொல்வது</h3><p><strong>Task primitives</strong>-இல் எந்தத் தரவு, எந்த அறிவு, எந்த அளவுகோல், எந்த வடிவில் முடிவு வேண்டும் என்பதை வரையறுப்போம். எல்லாப் பதிவுகளிலும் எல்லா patterns-ஐயும் தேடுவது செலவானதும் பயனற்றதுமாகலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>ஐந்து Task primitives:</strong> task-relevant data; தேடும் knowledge வகை; பயன்படுத்தும் background knowledge; interestingness measures/thresholds; முடிவின் presentation.
-உதாரணம்: கடந்த வருட supermarket baskets-இல், பொருள் hierarchy பயன்படுத்தி, support≥10%, confidence≥60% rules தேடி table-ஆகக் காட்டு. “எதை, எப்படித் தேர்வு செய்து, எந்த format-இல்?” என்பதற்குப் பதில் கிடைக்க வேண்டும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>ஒரு query-க்கு <strong>ஐந்து primitives:</strong> எந்த data (Sri Lanka customers); எந்த knowledge (association); background (age/item hierarchies); interestingness (support≥5%, confidence≥70%); output (rules/table/chart/tree). “எந்த algorithm?” என்ற பதில் மட்டும் முழு task specification அல்ல. ஒரே data-இல் வேறு goal/threshold/hierarchy வைத்தால் வேறு patterns பயனுள்ளதாகலாம்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><p>A user specifies a data mining task as a <strong>data mining query</strong>. The query is defined in terms of <strong>task primitives</strong>, which let the user <strong>interactively communicate</strong> with the system to direct the mining and look at results from different angles.</p>
+</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Data mining task primitives"><span class="num">5</span>Data mining task primitives</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>5 task primitives — mining-க்கு நீங்கள் கொடுக்கும் 5 கட்டளைகள்</h3><p>பயனர் ஒரு mining வேலையை <strong>data mining query</strong>-ஆகக் கொடுக்கிறார். அந்த query <strong>5 primitives</strong>-ஆல் ஆனது. இவை மூலம் பயனர் system-உடன் <strong>தொடர்புகொண்டு</strong>, தேடலை வழிநடத்துகிறார்.</p>
+<p><strong>உதாரணம்:</strong> ஒரு supermarket manager, mining system-இடம் சொல்கிறார்:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Primitive</th>
+<th>என்ன சொல்கிறது</th>
+<th>Manager-இன் கட்டளை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Task-relevant data</strong></td>
+<td><strong>எந்த data</strong>-வில் தேட வேண்டும் (attributes, dimensions)</td>
+<td>"இலங்கை வாடிக்கையாளர்கள் மட்டும்: வயது, வருமானம், வாங்கிய பொருள்கள்"</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Kind of knowledge</strong></td>
+<td><strong>எந்த வகை</strong> அறிவு வேண்டும்</td>
+<td>"Association rules கண்டுபிடி" (அல்லது classification, clustering…)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Background knowledge</strong></td>
+<td>தேடலுக்கு உதவும் <strong>துறை அறிவு</strong> — concept hierarchies, user beliefs</td>
+<td>"வயது: 20–29 → இளைஞர் → எல்லோரும்"</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Interestingness measures &amp; thresholds</strong></td>
+<td>Patterns-ஐ <strong>எப்படி மதிப்பிடுவது</strong>; இதற்குக் கீழே உள்ளவை பயனற்றவை</td>
+<td>"Support ≥ 5%, confidence ≥ 70%"</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Visualisation</strong></td>
+<td>முடிவுகளை <strong>எந்த வடிவில்</strong> காட்டுவது</td>
+<td>"Decision tree-ஆகக் காட்டு" (அல்லது rules, tables, charts, cubes)</td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>நினைவில் வைக்க: D-K-B-I-V</strong></p>
+<p><strong>D</strong>ata · <strong>K</strong>nowledge type · <strong>B</strong>ackground knowledge · <strong>I</strong>nterestingness · <strong>V</strong>isualisation</p>
+<p><strong>Exam tip:</strong> "List and explain the data mining task primitives" — ஐந்தையும் <strong>ஒவ்வொன்றுக்கும் ஒரு உதாரணத்துடன்</strong> எழுதுங்கள், மேலே உள்ள அட்டவணை போல.</p>
+<p><strong>Week 10 constraints (K-D-D-I-R)-உடன் குழப்பிக்கொள்ள வேண்டாம்.</strong> இரண்டும் ஒத்தவை, ஆனால் அது constraint-based mining-க்கானது.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><p>A user specifies a data mining task as a <strong>data mining query</strong>. The query is defined in terms of <strong>task primitives</strong>, which let the user <strong>interactively communicate</strong> with the system to direct the mining and look at results from different angles.</p>
 <p>There are <strong>five primitives</strong> (Figure 2-4):</p>
 <table>
 <thead>
@@ -1064,24 +1318,68 @@ Advanced types: temporal — time-dependent states; sequence — வரிசை
 </tbody>
 </table>
 <div class="call tip"><div class="ct">நினைவுக்குறிப்பு: "D-K-B-I-V"</div><p><strong>D</strong>ata — தரவு · <strong>K</strong>nowledge type — அறிவு வகை · <strong>B</strong>ackground knowledge — பின்னணி அறிவு · <strong>I</strong>nterestingness — சுவாரசியத்தன்மை · <strong>V</strong>isualisation — காட்சிப்படுத்தல்</p></div>
-<div class="call exam"><div class="ct">Exam focus</div><p>"<strong>தரவுச் சுரங்கப் பணியின் அடிப்படைக் கூறுகளைப் பட்டியலிட்டு விளக்குக</strong>" எனக் கேள்விகள் அடிக்கடி கேட்கும். அட்டவணையில் உள்ளபடி ஐந்தையும் ஒவ்வொன்றுக்கு ஓர் எடுத்துக்காட்டுடன் கொடுக்கவும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>தரவிலிருந்து அறிவைப் பெறுதல்</h4><p><strong>Knowledge mining</strong> என்பது பதிவுகளிலிருந்து அர்த்தமுள்ள தொடர்பைப் பெறுவது. பாணும் வெண்ணெயும் சேர்ந்து வாங்கப்படுகின்றன என்ற pattern கடையில் பொருட்களை வைக்க உதவலாம். அது ஒவ்வொரு வாடிக்கையாளருக்கும் பொருந்தும் சட்டம் அல்ல.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>பாறையிலிருந்து தங்கம் எடுப்பது போல data-விலிருந்து knowledge கண்டுபிடிக்கிறோம். <strong>KDD</strong> முழுப் பயணம்; இந்தப் பாடத்தில் <strong>data mining</strong> அதற்குள் pattern extraction செய்யும் ஒரு முக்கியப் படி. சிலர் இரண்டையும் loosely ஒரே பொருளில் சொல்வார்கள்; exam-இல் எந்த view என்பதைக் குறிப்பிட்டு ஏழு stages விளக்குங்கள்.</p></div><div class="ta-recap-item"><h4>KDD-இன் ஏழு படிகள்</h4><p>சுத்தப்படுத்துதல், இணைத்தல், தேர்வு, மாற்றம், mining, மதிப்பீடு, விளக்கமாகக் காட்டுதல் ஆகியவை <strong>KDD</strong>. Data mining அதற்குள் ஒரு படி மட்டுமே. குப்பைத் தரவை நேரடியாக algorithm-க்கு கொடுத்தால் முழு செயலும் பாதிக்கப்படும்.</p>
-<p><strong>ஏழு படிகள்:</strong> (1) Cleaning — தவறு/noise சரிசெய்; (2) Integration — sources இணை; (3) Selection — தேவையான data எடு; (4) Transformation — ஏற்ற வடிவம் மாற்று; (5) Mining — pattern தேடு; (6) Evaluation — பயன்படும் pattern தேர்வு; (7) Presentation — மனிதர் புரியும் வடிவில் காட்டு.
-முடிவில் குறை தெரிந்தால் முந்தைய படிகளுக்குத் திரும்பலாம். KDD முழுச் செயல்முறை; mining அதன் ஐந்தாவது படி.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>ஏழு stages:</strong> cleaning பிழை/குறை சரிசெய்; integration sources இணை; selection task-relevant data தேர்வு; transformation ஏற்ற வடிவம்; mining pattern கண்டுபிடி; evaluation பயனுள்ளதா சோதி; presentation user-க்கு புரியும் வடிவில் காட்டு. முதல் நான்கு preprocessing. Evaluation-இல் பிரச்சினை தெரிந்தால் முன்படிகளுக்குத் திரும்பலாம்; ஒரே நேர்கோட்டில் ஒருமுறை முடியும் process அல்ல.</p></div><div class="ta-recap-item"><h4>Data mining அமைப்பின் பகுதிகள்</h4><p>Database தகவலை வழங்கும்; mining engine patterns தேடும்; evaluation அவற்றின் பயனை மதிப்பிடும்; interface மனிதருக்குக் காட்டும். Knowledge base தேடலுக்கு வழிகாட்டும். ஒவ்வொரு பகுதியின் வேலையைத் தனியாக நினைவில் கொள்ளுங்கள்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>கீழிருந்து மேலே architecture:</strong> databases/warehouse/web→clean/integrate/select→DB/DW server→mining engine→pattern evaluation→UI. <strong>Knowledge base</strong> domain hierarchies, beliefs, metadata, thresholds மூலம் search/evaluation-ஐ வழிநடத்தும். Engine classification, association, clustering, prediction, outliers, evolution போன்ற functions செய்கிறது. UI-இல் task specify, intermediate results explore, patterns visualise செய்யலாம். தேவையற்ற patterns உருவாக்கியபின் மட்டும் reject செய்யாமல் evaluation constraints-ஐ search-இலேயே பயன்படுத்துவது efficiency-க்கு உதவும்.</p></div><div class="ta-recap-item"><h4>எந்தத் தரவை ஆய்வு செய்யலாம்?</h4><p>அட்டவணை மட்டும் அல்ல; விற்பனை transactions, text, images, காலவரிசை போன்றவற்றையும் ஆய்வு செய்யலாம். தரவின் வடிவத்தைப் பொறுத்து preprocessing, algorithm மாற வேண்டும்.</p>
-<p><strong>Relational data</strong> rows/columns; <strong>transaction data</strong> ஒவ்வொரு basket-இன் items; <strong>warehouse</strong> ஒருங்கிணைந்த historical data.
-Advanced types: temporal — time-dependent states; sequence — வரிசை முக்கியம்; time-series — நேர இடைவெளியில் அளவுகள்; spatial — இடம்/வரைபடம்; spatiotemporal — இடமும் நேரமும்; text; multimedia; heterogeneous; legacy; web.
-“ஒவ்வொரு வெள்ளியும் விற்பனை உயர்கிறது” என்பது time pattern; “A வாங்கியபின் B வாங்குகிறார்கள்” என்பது sequence pattern.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Data வகைகளை example-உடன் வேறுபடுத்து:</strong> relational rows/tables; transaction ID+item list; warehouse integrated historical data; temporal timestamps; sequence event order; time-series repeated numeric readings; spatial location; text; multimedia; heterogeneous/legacy sources; web/streams. Raster=pixels; vector=points/lines/polygons. Email/XML semi-structured ஆகலாம். Audio/video continuous media-க்கு சரியான rate-இல் retrieval முக்கியம். Web usage mining access logs-இன் behaviour; web content mining page content.</p></div><div class="ta-recap-item"><h4>எதைத் தேட வேண்டும் என்று சொல்வது</h4><p><strong>Task primitives</strong>-இல் எந்தத் தரவு, எந்த அறிவு, எந்த அளவுகோல், எந்த வடிவில் முடிவு வேண்டும் என்பதை வரையறுப்போம். எல்லாப் பதிவுகளிலும் எல்லா patterns-ஐயும் தேடுவது செலவானதும் பயனற்றதுமாகலாம்.</p>
-<p><strong>ஐந்து Task primitives:</strong> task-relevant data; தேடும் knowledge வகை; பயன்படுத்தும் background knowledge; interestingness measures/thresholds; முடிவின் presentation.
-உதாரணம்: கடந்த வருட supermarket baskets-இல், பொருள் hierarchy பயன்படுத்தி, support≥10%, confidence≥60% rules தேடி table-ஆகக் காட்டு. “எதை, எப்படித் தேர்வு செய்து, எந்த format-இல்?” என்பதற்குப் பதில் கிடைக்க வேண்டும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>ஒரு query-க்கு <strong>ஐந்து primitives:</strong> எந்த data (Sri Lanka customers); எந்த knowledge (association); background (age/item hierarchies); interestingness (support≥5%, confidence≥70%); output (rules/table/chart/tree). “எந்த algorithm?” என்ற பதில் மட்டும் முழு task specification அல்ல. ஒரே data-இல் வேறு goal/threshold/hierarchy வைத்தால் வேறு patterns பயனுள்ளதாகலாம்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><table>
+<div class="call exam"><div class="ct">Exam focus</div><p>"<strong>தரவுச் சுரங்கப் பணியின் அடிப்படைக் கூறுகளைப் பட்டியலிட்டு விளக்குக</strong>" எனக் கேள்விகள் அடிக்கடி கேட்கும். அட்டவணையில் உள்ளபடி ஐந்தையும் ஒவ்வொன்றுக்கு ஓர் எடுத்துக்காட்டுடன் கொடுக்கவும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவு மீள்பார்வை — Week 2</h3><table>
+<thead>
+<tr>
+<th>தலைப்பு</th>
+<th>ஒரு வரியில்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data mining</td>
+<td>Data-விலிருந்து அறிவைத் தோண்டுதல் (தங்கம், பாறை அல்ல)</td>
+</tr>
+<tr>
+<td>KDD vs DM</td>
+<td>DM என்பது KDD-இன் ஒரு முக்கியப் படி</td>
+</tr>
+<tr>
+<td>KDD படிகள்</td>
+<td>Cleaning → Integration → Selection → Transformation → Mining → Evaluation → Presentation (C-I-S-T-M-E-P)</td>
+</tr>
+<tr>
+<td>Preprocessing</td>
+<td>படிகள் 1–4</td>
+</tr>
+<tr>
+<td>Architecture</td>
+<td>UI · Pattern evaluation · Mining engine · Knowledge base · DB/DW server</td>
+</tr>
+<tr>
+<td>Knowledge base</td>
+<td>Concept hierarchies, user beliefs, thresholds, metadata</td>
+</tr>
+<tr>
+<td>Data warehouse</td>
+<td>பல மூலங்கள், ஒரே schema, ஒரே இடம்; clean → integrate → transform → load → refresh</td>
+</tr>
+<tr>
+<td>Transactional DB</td>
+<td>Trans ID + items பட்டியல்</td>
+</tr>
+<tr>
+<td>Time-series vs sequence</td>
+<td>இடைவெளியில் அளக்கும் எண்கள் vs வரிசையான நிகழ்வுகள்</td>
+</tr>
+<tr>
+<td>Raster vs vector</td>
+<td>Pixel வரைபடம் vs புள்ளி, கோடு, பலகோணம்</td>
+</tr>
+<tr>
+<td>Continuous-media</td>
+<td>சீரான நேரலை வேகம் தேவைப்படும் audio/video</td>
+</tr>
+<tr>
+<td>Web usage mining</td>
+<td>பயனர் அணுகும் patterns (weblogs)</td>
+</tr>
+<tr>
+<td>5 primitives</td>
+<td>D-K-B-I-V</td>
+</tr>
+</tbody>
+</table><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>

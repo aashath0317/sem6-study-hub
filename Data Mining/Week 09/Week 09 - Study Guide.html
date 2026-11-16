@@ -543,9 +543,40 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dm-Week09" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
 <div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 09</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 09</div><h1>Frequent Patterns &amp; the Apriori Algorithm</h1><p>Market basket analysis, support and confidence, the Apriori property, the join and prune steps, a full worked example, and generating strong association rules.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">2 videos · 11 min</span><span class="chip">📄 week 9.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Apriori Algorithm · 11 min</button><button>2. Animation on Apriori (no narration) · 1 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Apriori.mp4" data-drive="1GhLe6AgMs0nIFGS6AbUsuhK7ueDgZQDF"><source src="Apriori.mp4"></video></div><div class="chap"><p class="vt">Apriori Algorithm</p><p class="vs">Step-by-step Apriori on a transaction database.</p><a href="#" data-v="0" data-t="2"><b>00:02</b><span>Support and confidence</span></a><a href="#" data-v="0" data-t="52"><b>00:52</b><span>Example: shirt and tie, 13.5% support</span></a><a href="#" data-v="0" data-t="99"><b>01:39</b><span>Example: rules from the frequent itemset ABE</span></a><a href="#" data-v="0" data-t="290"><b>04:50</b><span>The Apriori algorithm: the idea</span></a><a href="#" data-v="0" data-t="338"><b>05:38</b><span>Generating (k+1) candidates from frequent k-itemsets</span></a><a href="#" data-v="0" data-t="385"><b>06:25</b><span>Worked example: minimum support and level-wise passes</span></a><a href="#" data-v="0" data-t="573"><b>09:33</b><span>Apriori pruning: infrequent subsets → infrequent supersets</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Animation on Apriori Algorithm.mp4" data-drive="1HN-GNJ4H4aQ8C8slq0zrMm7VrpggX0fu"><source src="Animation%20on%20Apriori%20Algorithm.mp4"></video></div><div class="chap"><p class="vt">Animation on Apriori (no narration)</p><p class="vs">Short silent animation of the level-wise search.</p></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Frequent patterns"><span class="num">1</span>Frequent patterns</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>மீண்டும் மீண்டும் வரும் Pattern</h3><p>பல transactions-இல் திரும்ப வரும் item group <strong>Frequent itemset</strong>. எவ்வளவு அடிக்கடி வர வேண்டும் என்ற minimum support-ஐ முன்பே நிர்ணயிப்போம். அரிதான முக்கிய நிகழ்வுகளை இது தவறவிடலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Frequent itemset</strong> items சேர்ந்து வருவது; <strong>sequential pattern</strong> order-உடன் வருவது; <strong>structured pattern</strong> graph/tree போன்ற அமைப்பு மீண்டும் வருவது. Basket-இல் A,B இருப்பது மட்டும் A வாங்கியபிறகு B வாங்கினார் என்று sequence உறுதி செய்யாது.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Itemset</strong> ஒரே transaction-இல் சேர்வது; <strong>sequence</strong> காலவரிசை; <strong>substructure</strong> graph/tree வடிவம். Frequent என்பது user minimum support-ஐ meet செய்வது. Buying bread+milk co-occurrence மற்றும் PC→camera என்ற later purchase sequence வேறு mining tasks; order இல்லாத basket-ஐ time sequence என்று கருதாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p><strong>Frequent patterns</strong> are patterns that <strong>appear in a dataset frequently</strong>. There are three kinds:</p>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 09</div><h1>Frequent Patterns &amp; the Apriori Algorithm</h1><p>Market basket analysis, support and confidence, the Apriori property, the join and prune steps, a full worked example, and generating strong association rules.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">2 videos · 11 min</span><span class="chip">📄 week 9.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Apriori Algorithm · 11 min</button><button>2. Animation on Apriori (no narration) · 1 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Apriori.mp4" data-drive="1GhLe6AgMs0nIFGS6AbUsuhK7ueDgZQDF"><source src="Apriori.mp4"></video></div><div class="chap"><p class="vt">Apriori Algorithm</p><p class="vs">Step-by-step Apriori on a transaction database.</p><a href="#" data-v="0" data-t="2"><b>00:02</b><span>Support and confidence</span></a><a href="#" data-v="0" data-t="52"><b>00:52</b><span>Example: shirt and tie, 13.5% support</span></a><a href="#" data-v="0" data-t="99"><b>01:39</b><span>Example: rules from the frequent itemset ABE</span></a><a href="#" data-v="0" data-t="290"><b>04:50</b><span>The Apriori algorithm: the idea</span></a><a href="#" data-v="0" data-t="338"><b>05:38</b><span>Generating (k+1) candidates from frequent k-itemsets</span></a><a href="#" data-v="0" data-t="385"><b>06:25</b><span>Worked example: minimum support and level-wise passes</span></a><a href="#" data-v="0" data-t="573"><b>09:33</b><span>Apriori pruning: infrequent subsets → infrequent supersets</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Animation on Apriori Algorithm.mp4" data-drive="1HN-GNJ4H4aQ8C8slq0zrMm7VrpggX0fu"><source src="Animation%20on%20Apriori%20Algorithm.mp4"></video></div><div class="chap"><p class="vt">Animation on Apriori (no narration)</p><p class="vs">Short silent animation of the level-wise search.</p></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Frequent patterns"><span class="num">1</span>Frequent patterns</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>Frequent patterns — அடிக்கடி வருபவை</h3><p><strong>Frequent patterns</strong> = ஒரு dataset-இல் <strong>அடிக்கடி வரும்</strong> patterns. மூன்று வகைகள்:</p>
+<table>
+<thead>
+<tr>
+<th>வகை</th>
+<th>என்ன</th>
+<th>உதாரணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Frequent itemset</strong></td>
+<td><strong>சேர்ந்து</strong> அடிக்கடி வாங்கப்படும் பொருள்கள் (வரிசை முக்கியமில்லை)</td>
+<td>{பால், பாண்}</td>
+</tr>
+<tr>
+<td><strong>Frequent sequential pattern</strong></td>
+<td><strong>ஒரு வரிசையில்</strong> அடிக்கடி நடப்பவை</td>
+<td>முதலில் <strong>PC</strong> → பிறகு <strong>digital camera</strong> → பிறகு <strong>memory card</strong></td>
+</tr>
+<tr>
+<td><strong>Frequent structured pattern</strong></td>
+<td>அடிக்கடி வரும் <strong>அமைப்புகள்</strong></td>
+<td>Subgraphs, subtrees</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Itemset vs sequence வித்தியாசம்:</strong></p>
+<ul>
+<li><strong>Itemset:</strong> ஒரே bill-இல் பால், பாண் — <strong>எது முதல் என்பது முக்கியமில்லை</strong>.</li>
+<li><strong>Sequence:</strong> இன்று phone, அடுத்த வாரம் case, அடுத்த மாதம் charger — <strong>வரிசை முக்கியம்</strong>.</li>
+</ul>
+<p><strong>ஏன் முக்கியம்?</strong> Associations, correlations கண்டுபிடிக்க அத்தியாவசியம். Classification, clustering-க்கும் உதவும்.</p>
+<p>இந்தப் பாடம் <strong>frequent itemset mining</strong>-இல் கவனம் செலுத்துகிறது.</p><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p><strong>Frequent patterns</strong> are patterns that <strong>appear in a dataset frequently</strong>. There are three kinds:</p>
 <table>
 <thead>
 <tr>
@@ -591,8 +622,36 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 </tr>
 </tbody>
 </table>
-<p>அடிக்கடி நிகழும் வடிவங்களைக் கண்டறிதல், <strong>தொடர்பு விதிகளையும் ஒட்டுறவுகளையும்</strong> சுரங்கம் செய்வதற்கு இன்றியமையாதது. <strong>வகைப்படுத்தலுக்கும் குழுமமாக்கலுக்கும்</strong> உதவுகிறது. இந்தப் பாடம் <strong>அடிக்கடி நிகழும் பொருட்கணச் சுரங்கத்தில்</strong> கவனம் செலுத்துகிறது.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Market basket analysis"><span class="num">2</span>Market basket analysis</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>ஒரே கூடையில் வாங்கும் பொருட்கள்</h3><p>வாடிக்கையாளர் வாங்கிய ஒவ்வொரு கூடையையும் transaction-ஆகக் கொள்ளுங்கள். பாணுடன் பால் அடிக்கடி வாங்கப்படுகிறதா என்பதே கேள்வி. Customer பெயர் இல்லாமல்கூட item co-occurrence-ஐ ஆய்வு செய்ய முடியும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Basket analysis எந்த items ஒன்றாக வாங்கப்படுகின்றன என்று ஆராயும். Layout அருகில் வைத்து convenience அல்லது தொலைவில் வைத்து exposure; bundle/promotion; cross-marketing/catalogue decisions. கண்ட association வைத்து ஒரு strategy முன்மொழியலாம்; அது sales உயர்த்தியது என்று causal முடிவு செய்ய controlled comparison/கூடுதல் evidence தேவை.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p><strong>Market basket analysis</strong> analyses customer buying habits by finding <strong>associations between items placed in "shopping baskets"</strong>. <em>If customers buy milk, how likely are they to buy bread (and which bread) on the same trip?</em></p>
+<p>அடிக்கடி நிகழும் வடிவங்களைக் கண்டறிதல், <strong>தொடர்பு விதிகளையும் ஒட்டுறவுகளையும்</strong> சுரங்கம் செய்வதற்கு இன்றியமையாதது. <strong>வகைப்படுத்தலுக்கும் குழுமமாக்கலுக்கும்</strong> உதவுகிறது. இந்தப் பாடம் <strong>அடிக்கடி நிகழும் பொருட்கணச் சுரங்கத்தில்</strong> கவனம் செலுத்துகிறது.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Market basket analysis"><span class="num">2</span>Market basket analysis</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>Market basket analysis — கூடையில் என்ன சேர்ந்து வருகிறது?</h3><p><strong>Market basket analysis</strong> = வாடிக்கையாளர்களின் <strong>"shopping கூடைகளில்" சேர்ந்து வரும் பொருள்களுக்கு இடையிலான தொடர்புகளைக்</strong> கண்டுபிடித்து, அவர்களின் வாங்கும் பழக்கத்தைப் பகுப்பாய்வு செய்வது.</p>
+<p><strong>கேள்வி:</strong> "பால் வாங்குபவர்கள், அதே பயணத்தில் பாண் வாங்க எவ்வளவு வாய்ப்பு? எந்த வகைப் பாண்?"</p>
+<p><strong>கடைகள் முடிவுகளை எப்படிப் பயன்படுத்துகின்றன?</strong></p>
+<table>
+<thead>
+<tr>
+<th>பயன்</th>
+<th>உதாரணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Layout: அருகருகே வை</strong></td>
+<td>Computer display-க்கு <strong>அருகில்</strong> antivirus software display → ஒன்றை வாங்க வந்தவர் மற்றதையும் எடுப்பார்</td>
+</tr>
+<tr>
+<td><strong>Layout: தூரத்தில் வை</strong></td>
+<td>அல்லது <strong>தூரமாக</strong> வைத்தால், வாடிக்கையாளர் இடையில் உள்ள <strong>நிறைய பொருள்களைக் கடந்து</strong> நடப்பார் → கூடுதல் விற்பனை</td>
+</tr>
+<tr>
+<td><strong>தள்ளுபடிகள்</strong></td>
+<td>Computer, printer சேர்ந்து வாங்கப்படுகின்றன → <strong>printer-க்குத் தள்ளுபடி</strong> கொடுத்தால் <strong>இரண்டின்</strong> விற்பனையும் கூடும்</td>
+</tr>
+<tr>
+<td><strong>Catalogue, cross-marketing</strong></td>
+<td>எந்தப் பொருள்களைச் சேர்த்து விளம்பரப்படுத்துவது</td>
+</tr>
+</tbody>
+</table>
+<p><strong>நிஜ உதாரணம்:</strong> Supermarket-இல் பால் <strong>கடையின் பின்பகுதியில்</strong> இருப்பது ஏன்? எல்லோரும் வாங்கும் பொருள் என்பதால், அதை எடுக்க வருபவர்கள் <strong>முழுக் கடையையும் கடந்து</strong> செல்வார்கள்.</p><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p><strong>Market basket analysis</strong> analyses customer buying habits by finding <strong>associations between items placed in "shopping baskets"</strong>. <em>If customers buy milk, how likely are they to buy bread (and which bread) on the same trip?</em></p>
 <p>How retailers use the results:</p>
 <table>
 <thead>
@@ -646,10 +705,56 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <td>எந்தத் தயாரிப்புகளை ஒன்றாக விளம்பரப்படுத்துவது</td>
 </tr>
 </tbody>
-</table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Association rules, support and confidence"><span class="num">3</span>Association rules, support and confidence</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Support மற்றும் Confidence</h3><p>A, B இரண்டும் உள்ள baskets ÷ எல்லா baskets என்பது <strong>Support</strong>. A உள்ளவர்களில் B-யும் உள்ளவர்கள் எத்தனை என்பது <strong>Confidence A→B</strong>. Confidence அதிகம் என்பதால் மட்டும் A வாங்குவது B வாங்கக் காரணம் அல்ல.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>support(A→B)=count(A∪B)/N</strong>; <strong>confidence(A→B)=count(A∪B)/count(A)</strong>. Union இங்கு transactions-இல் A,B எல்லா items-உம் சேர்ந்து உள்ளதை எண்ணுகிறது.
-100 baskets; A 20; A,B சேர்ந்து 10 என்றால் support <strong>10%</strong>, confidence <strong>50%</strong>. B மிகவும் பொதுவானால் confidence அதிகமாக இருந்தாலும் சிறப்பு தொடர்பு இல்லாமலும் இருக்கலாம்; lift போன்ற கூடுதல் மதிப்பீடு உதவலாம்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Support(A⇒B)=count(A∪B)/N</strong>: A/B itemsets-இன் எல்லா items-உம் உள்ள baskets விகிதம். இது probability events-இன் “A OR B” union அல்ல; <strong>P(A AND B)</strong>. <strong>Confidence=count(A∪B)/count(A)</strong>: A உள்ளவற்றில் B-உம் எத்தனை. min_sup+min_conf இரண்டும் வேண்டும்; high confidence மட்டும் unusual/useful association நிரூபிக்காது. A,B disjoint/nonempty என்று rule அமைக்கவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><p>Patterns are written as <strong>association rules</strong>:</p>
+</table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Association rules, support and confidence"><span class="num">3</span>Association rules, support and confidence</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Support, confidence — பயனுள்ளதா? உறுதியானதா?</h3><p>Patterns, <strong>association rules</strong>-ஆக எழுதப்படுகின்றன:</p>
+<p><strong>computer ⇒ antivirus_software [support = 2%, confidence = 60%]</strong></p>
+<table>
+<thead>
+<tr>
+<th>அளவு</th>
+<th>எதைக் காட்டுகிறது</th>
+<th>இங்கே பொருள்</th>
+<th>Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Support</strong></td>
+<td><strong>பயன் (usefulness)</strong></td>
+<td><strong>எல்லா</strong> transactions-இல் <strong>2%</strong>-இல் computer, antivirus <strong>இரண்டும்</strong> உள்ளன</td>
+<td>count(A ∪ B) ÷ மொத்த transactions</td>
+</tr>
+<tr>
+<td><strong>Confidence</strong></td>
+<td><strong>உறுதி (certainty)</strong></td>
+<td><strong>Computer வாங்கியவர்களில் 60%</strong> பேர் antivirus-உம் வாங்கினார்கள்</td>
+<td>count(A ∪ B) ÷ count(A)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>முக்கிய வித்தியாசம்:</strong></p>
+<ul>
+<li><strong>Support:</strong> கீழே = <strong>மொத்த transactions எல்லாம்</strong></li>
+<li><strong>Confidence:</strong> கீழே = <strong>A உள்ள transactions மட்டும்</strong></li>
+</ul>
+<p><strong>உதாரணம்:</strong> 100 bills. 10-இல் computer. அந்த 10-இல் 6-இல் antivirus-உம்.</p>
+<ul>
+<li>Support = 6 ÷ <strong>100</strong> = <strong>6%</strong></li>
+<li>Confidence = 6 ÷ <strong>10</strong> = <strong>60%</strong></li>
+</ul>
+<p><strong>கவனம்: A ∪ B என்றால் "A அல்லது B" அல்ல!</strong> இங்கே ∪ itemsets-ஐ <strong>இணைக்கிறது</strong> → "A <strong>மற்றும்</strong> B இரண்டும் உள்ள transactions".</p>
+<p><strong>Strong rule:</strong> <strong>min_sup, min_conf இரண்டையும்</strong> தாண்ட வேண்டும் (பயனர்கள் அல்லது நிபுணர்கள் அமைப்பது).</p>
+<p><strong>Association rule mining = 2 படிகள்</strong></p>
+<ol>
+<li><strong>எல்லா frequent itemsets-ஐயும் கண்டுபிடி</strong> — ஒவ்வொன்றும் குறைந்தது <strong>min_sup</strong> முறை வர வேண்டும்.</li>
+<li>அவற்றிலிருந்து <strong>strong rules-ஐ உருவாக்கு</strong> — min_sup, min_conf இரண்டும்.</li>
+</ol>
+<p><strong>படி 1 தான் விலையுயர்ந்தது (கடினமானது).</strong></p>
+<p><strong>சவால்:</strong> ஒரு frequent itemset-இன் <strong>ஒவ்வொரு subset-உம் frequent</strong>. அதனால் 100 items கொண்ட ஒரு frequent itemset-க்கு <strong>2¹⁰⁰ − 1</strong> frequent subsets! Min_sup குறைவாக இருந்தால் frequent itemsets <strong>மிக அதிகமாக</strong> வரும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam tip:</strong> Support, confidence இரண்டின் formulas-ஐயும் எழுதி, <strong>கீழே உள்ள எண் வேறு</strong> என்பதைச் சுட்டிக்காட்டுங்கள். இதுதான் பொதுவான குழப்பம்.</p>
+<p><strong>நினைவில் வைக்க:</strong></p>
+<ul>
+<li><strong>S</strong>upport = <strong>S</strong>ize of whole database (கீழே)</li>
+<li><strong>C</strong>onfidence = <strong>C</strong>ondition A உள்ளவை மட்டும் (கீழே)</li>
+</ul></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><p>Patterns are written as <strong>association rules</strong>:</p>
 <div class="formula">computer ⇒ antivirus_software   [support = 2%, confidence = 60%]</div>
 <table>
 <thead>
@@ -713,10 +818,43 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <li>அவற்றிலிருந்து <strong>வலுவான தொடர்பு விதிகளை உருவாக்கு</strong>: <strong>min_sup, min_conf</strong> ஆகியவற்றை நிறைவேற்றும் விதிகள்.</li>
 </ol>
 <p>படி 1 அதிகச் செலவுடைய பகுதி.</p></div>
-<div class="call warn"><div class="ct">சவால்</div><p>குறிப்பாக <strong>குறைந்த min_sup</strong> இருந்தால், சுரங்கம் பெரும்பாலும் <strong>மிகப்பெரும் எண்ணிக்கையான</strong> அடிக்கடி நிகழும் பொருட்கணங்களை உருவாக்குகிறது; ஏனெனில் <strong>அடிக்கடி நிகழும் பொருட்கணத்தின் ஒவ்வொரு உட்கணமும் அடிக்கடி நிகழும்</strong>. அடிக்கடி நிகழும் 100-பொருட்கணத்துக்கு 2¹⁰⁰ − 1 அடிக்கடி நிகழும் உட்கணங்கள் உள்ளன.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="The Apriori algorithm"><span class="num">4</span>The Apriori algorithm</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Apriori தர்க்கம்</h3><p>ஒரு பெரிய itemset அடிக்கடி வந்தால் அதன் எல்லா சிறு subsets-உம் அடிக்கடி வந்திருக்க வேண்டும். அதனால் frequent அல்லாத subset உள்ள candidate-ஐ நீக்கலாம். <strong>Generate → count → prune</strong> எனப் படிப்படியாகச் செல்லும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Join:</strong> Lₖ₋₁-இன் compatible frequent itemsets சேர்த்து Cₖ உருவாக்கு. <strong>Prune:</strong> ஏதேனும் (k−1)-subset frequent அல்ல என்றால் candidate நீக்கு. அடுத்து database scan செய்து survivors counts எடு.
-Frequent subset இருந்ததால் எல்லா பெரிய supersets-உம் frequent என்று சொல்ல முடியாது. Apriori property ஒரு வழியில்தான் pruning உறுதி தருகிறது.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Lₖ</strong> frequent sets; <strong>Cₖ</strong> candidate sets. Sorted(k−1)-sets-இன் முதல் k−2 items ஒரேபடி இருந்தால் join; எந்த(k−1)-subset frequent இல்லாவிட்டால் prune; மீதியை DB scan count செய்து threshold meet செய்பவை Lₖ. <strong>Apriori property:</strong> frequent set-இன் subsets frequent; infrequent set-இன் supersets infrequent. இது support-க்கு; confidence-க்கு பொதுவான downward closure என்று பயன்படுத்தாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><ul>
+<div class="call warn"><div class="ct">சவால்</div><p>குறிப்பாக <strong>குறைந்த min_sup</strong> இருந்தால், சுரங்கம் பெரும்பாலும் <strong>மிகப்பெரும் எண்ணிக்கையான</strong> அடிக்கடி நிகழும் பொருட்கணங்களை உருவாக்குகிறது; ஏனெனில் <strong>அடிக்கடி நிகழும் பொருட்கணத்தின் ஒவ்வொரு உட்கணமும் அடிக்கடி நிகழும்</strong>. அடிக்கடி நிகழும் 100-பொருட்கணத்துக்கு 2¹⁰⁰ − 1 அடிக்கடி நிகழும் உட்கணங்கள் உள்ளன.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="The Apriori algorithm"><span class="num">4</span>The Apriori algorithm</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Apriori algorithm — நிலை நிலையாகத் தேடுதல்</h3><ul>
+<li><strong>R. Agrawal, R. Srikant (1994)</strong> முன்மொழிந்தது. <strong>Boolean</strong> association rules-க்கான frequent itemsets கண்டுபிடிக்க.</li>
+<li><strong>பெயர் ஏன் "Apriori"?</strong> Frequent itemsets பற்றிய <strong>முன் அறிவை (prior knowledge)</strong> பயன்படுத்துகிறது.</li>
+<li><strong>Level-wise தேடல்:</strong> frequent k-itemsets-ஐ வைத்து (k+1)-itemsets-ஐத் தேடு.<ul>
+<li>DB-ஐ scan → <strong>L₁</strong> → L₁-ஐ வைத்து <strong>L₂</strong> → L₃ … மேலும் கிடைக்காத வரை.</li>
+<li><strong>ஒவ்வொரு Lₖ-க்கும் ஒரு முழு database scan.</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>Apriori property (anti-monotone) — மிக முக்கியம்</strong></p>
+<p><strong>ஒரு frequent itemset-இன் எல்லா subsets-உம் frequent ஆக இருக்க வேண்டும்.</strong></p>
+<p>அதாவது: <strong>ஒரு itemset frequent இல்லையென்றால், அதன் எல்லா supersets-உம் frequent இல்லை.</strong></p>
+<p><strong>ஏன்?</strong> ஒரு itemset-இல் இன்னொரு item-ஐச் சேர்த்தால், அது <strong>அதிகமாக</strong> வர முடியாது — <strong>குறைவாகவோ சமமாகவோ</strong> மட்டுமே வரும்.</p>
+<p><strong>உதாரணம்:</strong> {பால், பாண்} 3 bills-இல் மட்டும் வருகிறது (min_sup = 5 → frequent அல்ல). அப்படியென்றால் {பால், பாண், முட்டை} 3-க்கு மேல் வர <strong>முடியாது</strong> — பால், பாண் இரண்டும் இல்லாத bill-இல் மூன்றும் இருக்க முடியாது! <strong>எண்ணவே தேவையில்லை.</strong></p>
+<p><strong>ஒவ்வொரு நிலைக்கும் 2 படிகள்</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>1. Join</strong></th>
+<th><strong>2. Prune</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lₖ₋₁ ⋈ Lₖ₋₁</strong> மூலம் <strong>Cₖ</strong> (candidates) உருவாக்கு</td>
+<td>Cₖ-இல் ஒரு candidate-இன் <strong>ஏதாவது ஒரு (k−1)-subset Lₖ₋₁-இல் இல்லையென்றால் நீக்கு</strong></td>
+</tr>
+<tr>
+<td>இரண்டு (k−1)-itemsets-இன் <strong>முதல் k−2 items ஒன்றாக இருந்தால்</strong> இணை</td>
+<td>பிறகு மீதமுள்ளவற்றை <strong>DB-ஐ scan செய்து எண்ணு</strong>, ≥ min_sup உள்ளவை → <strong>Lₖ</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Join உதாரணம் (k = 3):</strong> {I1, I2} + {I1, I3} → முதல் 1 item (I1) ஒன்றே → <strong>{I1, I2, I3}</strong></p>
+<p><strong>ஓட்டம்:</strong>
+Scan → C₁ → L₁ → Join → C₂ → Prune → Scan → L₂ → Join → C₃ → Prune → Scan → L₃ → … <strong>Cₖ = ∅ ஆகும் வரை</strong></p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam template (English):</strong>
+Apriori (Agrawal &amp; Srikant, 1994) uses a level-wise search where frequent k-itemsets are used to explore (k+1)-itemsets. <strong>Apriori property:</strong> all non-empty subsets of a frequent itemset must also be frequent (anti-monotone). Each level has a <strong>join</strong> step (Lₖ₋₁ ⋈ Lₖ₋₁ where the first k−2 items match) and a <strong>prune</strong> step (remove candidates with an infrequent (k−1)-subset), followed by a database scan to count supports.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><ul>
 <li><strong>Proposed by R. Agrawal and R. Srikant (1994)</strong> for mining frequent itemsets for <strong>Boolean</strong> association rules.</li>
 <li><strong>Name:</strong> it uses <strong>prior knowledge</strong> of frequent-itemset properties.</li>
 <li><strong>Level-wise search:</strong> frequent k-itemsets are used to explore (k+1)-itemsets.</li>
@@ -742,8 +880,235 @@ Frequent subset இருந்ததால் எல்லா பெரிய s
 <div class="grid2"><div><p><strong>1. இணைப்புப் படி</strong></p>
 <p><strong>Lₖ₋₁ ⋈ Lₖ₋₁</strong>-ஐ இணைத்து <strong>Cₖ</strong> (வேட்பாளர்கள்) உருவாக்கவும். இரு (k−1)-பொருட்கணங்களின் <strong>முதல் k−2 பொருட்கள் ஒரே மாதிரியாக</strong> இருந்தால் இணைக்கப்படுகின்றன.</p></div><div><p><strong>2. கிளை வெட்டுப் படி</strong></p>
 <p><strong>Lₖ₋₁-இல் இல்லாத (k−1)-உட்கணத்தைக்</strong> கொண்ட Cₖ வேட்பாளரை நீக்கவும். Apriori பண்பின்படி அது அடிக்கடி நிகழ முடியாது. பின்னர் மீதமுள்ளவற்றை எண்ண <strong>தரவுத்தளத்தை ஸ்கேன் செய்து</strong>, ≥ min_sup உள்ளவற்றை வைத்திருங்கள் → <strong>Lₖ</strong>.</p></div></div>
-<div class="flow"><span>ஸ்கேன் → C₁ → L₁</span><span>இணை → C₂ → கிளை வெட்டு → ஸ்கேன் → L₂</span><span>இணை → C₃ → கிளை வெட்டு → ஸ்கேன் → L₃</span><span>… Cₖ = ∅ ஆகும்வரை</span></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Full worked example (|D| = 9, min_sup = 2)"><span class="num">5</span>Full worked example (|D| = 9, min_sup = 2)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>ஒன்பது Transactions எடுத்துக்காட்டு</h3><p>முதலில் single items count; பிறகு pairs; அடுத்து triples கணக்கிடுங்கள். ஒவ்வொரு நிலையிலும் min_sup தாண்டியவற்றை மட்டும் வைத்திருக்க வேண்டும். முதல் படியில் ஒரு item விட்டுப்போனால் அடுத்த படி முழுவதும் மாறும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>9 transactions,min count2:</strong> L1 counts I1=6,I2=7,I3=6,I4=2,I5=2. L2:12=4,13=4,15=2,23=4,24=2,25=2. Join triples <strong>123,125,135,234,235,245</strong>;35/34/45 infrequent subsets கொண்டவை prune; remaining123=2,125=2. Candidate1235-இல்235 infrequent→prune→stop. Count2 என்பது <strong>2/9≈22.22%</strong>;2% அல்ல. Candidate table-இல் காணாத counts-ஐ ஊகிக்காமல் transactions-இலிருந்து எண்ணவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><table>
+<div class="flow"><span>ஸ்கேன் → C₁ → L₁</span><span>இணை → C₂ → கிளை வெட்டு → ஸ்கேன் → L₂</span><span>இணை → C₃ → கிளை வெட்டு → ஸ்கேன் → L₃</span><span>… Cₖ = ∅ ஆகும்வரை</span></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Full worked example (|D| = 9, min_sup = 2)"><span class="num">5</span>Full worked example (|D| = 9, min_sup = 2)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>முழுக் கணக்கு: 9 transactions, min_sup = 2</h3><p><strong>|D| = 9</strong> என்றால் database-இல் <strong>9 transactions</strong> (T100 … T900). <strong>| |</strong> = எண்ணிக்கை.
+<strong>min_sup = 2</strong> = ஒரு itemset <strong>குறைந்தது 2 transactions-இல்</strong> வர வேண்டும் (2/9 ≈ <strong>22%</strong>).</p>
+<table>
+<thead>
+<tr>
+<th>TID</th>
+<th>Items</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T100</td>
+<td>I1, I2, I5</td>
+</tr>
+<tr>
+<td>T200</td>
+<td>I2, I4</td>
+</tr>
+<tr>
+<td>T300</td>
+<td>I2, I3</td>
+</tr>
+<tr>
+<td>T400</td>
+<td>I1, I2, I4</td>
+</tr>
+<tr>
+<td>T500</td>
+<td>I1, I3</td>
+</tr>
+<tr>
+<td>T600</td>
+<td>I2, I3</td>
+</tr>
+<tr>
+<td>T700</td>
+<td>I1, I3</td>
+</tr>
+<tr>
+<td>T800</td>
+<td>I1, I2, I3, I5</td>
+</tr>
+<tr>
+<td>T900</td>
+<td>I1, I2, I3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>நிலை 1: தனி items-ஐ எண்ணு (C₁ → L₁)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>எங்கே வருகிறது</th>
+<th>Count</th>
+<th>≥ 2?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I1</td>
+<td>T100, 400, 500, 700, 800, 900</td>
+<td>6</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>I2</td>
+<td>T100, 200, 300, 400, 600, 800, 900</td>
+<td>7</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>I3</td>
+<td>T300, 500, 600, 700, 800, 900</td>
+<td>6</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>I4</td>
+<td>T200, 400</td>
+<td>2</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>I5</td>
+<td>T100, 800</td>
+<td>2</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p>எல்லா 5-உம் frequent.</p>
+<p><strong>நிலை 2: ஜோடிகள் (C₂ → L₂)</strong></p>
+<p>L₁-இலிருந்து 10 ஜோடிகள். எல்லாத் தனி items-உம் frequent என்பதால் <strong>எதுவும் prune ஆகாது</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>ஜோடி</th>
+<th>எங்கே</th>
+<th>Count</th>
+<th>≥ 2?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{I1,I2}</td>
+<td>T100, 400, 800, 900</td>
+<td>4</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I1,I3}</td>
+<td>T500, 700, 800, 900</td>
+<td>4</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I1,I4}</td>
+<td>T400</td>
+<td>1</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>{I1,I5}</td>
+<td>T100, 800</td>
+<td>2</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I2,I3}</td>
+<td>T300, 600, 800, 900</td>
+<td>4</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I2,I4}</td>
+<td>T200, 400</td>
+<td>2</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I2,I5}</td>
+<td>T100, 800</td>
+<td>2</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>{I3,I4}</td>
+<td>—</td>
+<td>0</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>{I3,I5}</td>
+<td>T800</td>
+<td>1</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>{I4,I5}</td>
+<td>—</td>
+<td>0</td>
+<td>✗</td>
+</tr>
+</tbody>
+</table>
+<p><strong>L₂ = {I1,I2}, {I1,I3}, {I1,I5}, {I2,I3}, {I2,I4}, {I2,I5}</strong></p>
+<p><strong>நிலை 3: மூன்று items (Join → Prune → Count)</strong></p>
+<p><strong>Join:</strong> L₂-இல் <strong>முதல் item ஒன்றாக</strong> உள்ள ஜோடிகளை இணை:</p>
+<ul>
+<li>I1-இல் தொடங்குபவை → {I1,I2,I3}, {I1,I2,I5}, {I1,I3,I5}</li>
+<li>I2-இல் தொடங்குபவை → {I2,I3,I4}, {I2,I3,I5}, {I2,I4,I5}</li>
+</ul>
+<p><strong>Prune:</strong> ஏதாவது ஒரு 2-subset L₂-இல் இல்லையென்றால் → நீக்கு:</p>
+<table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>பிரச்சினையான subset</th>
+<th>முடிவு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{I1,I2,I3}</td>
+<td>— எல்லாம் L₂-இல்</td>
+<td>✓ வை</td>
+</tr>
+<tr>
+<td>{I1,I2,I5}</td>
+<td>— எல்லாம் L₂-இல்</td>
+<td>✓ வை</td>
+</tr>
+<tr>
+<td>{I1,I3,I5}</td>
+<td><strong>{I3,I5}</strong> ✗</td>
+<td>நீக்கு</td>
+</tr>
+<tr>
+<td>{I2,I3,I4}</td>
+<td><strong>{I3,I4}</strong> ✗</td>
+<td>நீக்கு</td>
+</tr>
+<tr>
+<td>{I2,I3,I5}</td>
+<td><strong>{I3,I5}</strong> ✗</td>
+<td>நீக்கு</td>
+</tr>
+<tr>
+<td>{I2,I4,I5}</td>
+<td><strong>{I4,I5}</strong> ✗</td>
+<td>நீக்கு</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Count:</strong> {I1,I2,I3} → T800, T900 = <strong>2</strong> ✓. {I1,I2,I5} → T100, T800 = <strong>2</strong> ✓.</p>
+<p><strong>L₃ = {I1,I2,I3}, {I1,I2,I5}</strong></p>
+<p><strong>நிலை 4:</strong> Join → {I1,I2,I3,I5}. அதன் subset {I2,I3,I5} L₃-இல் இல்லை → <strong>நீக்கு</strong>. <strong>C₄ = ∅ → நிறுத்து.</strong></p>
+<p><strong>Brute force-உடன் ஒப்பீடு:</strong> 5 items-இலிருந்து எல்லா 3-சேர்க்கைகளும் = 10. Apriori <strong>2-ஐ மட்டுமே</strong> எண்ணியது. 8 சேர்க்கைகள் <strong>எண்ணாமலேயே</strong> நீக்கப்பட்டன. இதுதான் Apriori-இன் நோக்கம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>ஏன் (k−1)-subsets மட்டும் சோதிக்கிறோம்?</strong> Apriori நிலை நிலையாகப் போகிறது. அதனால் சிறிய subsets முந்தைய நிலைகளிலேயே சோதிக்கப்பட்டுவிட்டன.</p>
+<p><strong>Exam-இல் காட்ட வேண்டியவை:</strong></p>
+<ol>
+<li>C₁ / L₁ அட்டவணை</li>
+<li>C₂ / L₂ அட்டவணை (✗ உடன்)</li>
+<li>C₃-க்கான <strong>join முடிவு</strong></li>
+<li><strong>எவை prune ஆயின, எந்த subset காரணமாக</strong> — இதற்குத்தான் அதிக marks</li>
+<li>இறுதி L₃</li>
+<li>Confidence பின்னங்களுடன் rules</li>
+</ol>
+<p>Page-இல் உள்ள Apriori machine-இல் உங்கள் பயிற்சி விடைகளைச் சரிபார்க்கலாம்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>TID</th>
@@ -1059,10 +1424,81 @@ Frequent subset இருந்ததால் எல்லா பெரிய s
 <li><strong>கிளை வெட்டியபின் C₃</strong> = { {I1,I2,I3}, {I1,I2,I5} }. ஸ்கேன் செய்தால் <strong>2, 2</strong> எண்ணிக்கைகள் கிடைப்பதால் இரண்டும் <strong>L₃</strong>-இல் செல்கின்றன.</li>
 </ul>
 <p><strong>நிலை 4.</strong> L₃ ⋈ L₃ = { {I1,I2,I3,I5} }. அதன் {I2,I3,I5} உட்கணம் அடிக்கடி நிகழாததால் அது <strong>கிளை வெட்டப்படுகிறது</strong>. <strong>C₄ = ∅; படிமுறை முடிகிறது.</strong></p>
-<div class="call tip"><div class="ct">(k−1)-உட்கணங்கள் மட்டும் ஏன் சரிபார்க்கப்படுகின்றன</div><p>Apriori நிலைவாரியானதால் சிறிய உட்கணங்கள் அனைத்தும் ஏற்கெனவே முந்தைய நிலைகளில் சரிபார்க்கப்பட்டன. (k−1)-உட்கணங்களைச் சரிபார்ப்பது போதும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Generating strong association rules"><span class="num">6</span>Generating strong association rules</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>Strong rule உருவாக்குதல்</h3><p>Frequent itemset-இலிருந்து விதியை உருவாக்கி support, confidence இரண்டையும் சோதியுங்கள். <strong>A→B</strong> மற்றும் <strong>B→A</strong>-க்கு support ஒன்று; confidence பொதுவாக வேறு. Denominator எது என்று முதலில் எழுதுங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Rule confidence denominator <strong>antecedent</strong> count. I1,I2→I5-க்கு count(I1,I2); I5→I1,I2-க்கு count(I5). இரண்டிற்கும் ஒரே numerator இருந்தாலும் confidence மாறலாம்.
-Min support ஏற்கெனவே frequent itemset மூலம் பூர்த்தியாகினாலும் min confidence தனியாகச் சோதிக்க வேண்டும். Threshold-ஐ percent-ஆ அல்லது absolute count-ஆ கொடுத்துள்ளார்களா பாருங்கள்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Frequent l=125(count2)-இன் nonempty proper s ஒவ்வொன்றுக்கும் s⇒l−s. Confidences <strong>12⇒5:2/4=50%;15⇒2:2/2=100%;25⇒1:100%;1⇒25:2/6=33.33%;2⇒15:2/7=28.57%;5⇒12:100%</strong>. min_conf70%-இல் மூன்று100% rules pass. Support எல்லாவற்றுக்கும்2/9 ஏற்கெனவே pass. RHS-இல் பல items association rules-க்கு சாத்தியம்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p>For each frequent itemset <strong>l</strong>, take <strong>every non-empty proper subset s</strong> and form the rule <strong>s ⇒ (l − s)</strong>. Output it if:</p>
+<div class="call tip"><div class="ct">(k−1)-உட்கணங்கள் மட்டும் ஏன் சரிபார்க்கப்படுகின்றன</div><p>Apriori நிலைவாரியானதால் சிறிய உட்கணங்கள் அனைத்தும் ஏற்கெனவே முந்தைய நிலைகளில் சரிபார்க்கப்பட்டன. (k−1)-உட்கணங்களைச் சரிபார்ப்பது போதும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Generating strong association rules"><span class="num">6</span>Generating strong association rules</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>Strong rules உருவாக்குதல் — ஒவ்வொன்றையும் தமிழில்</h3><p>ஒவ்வொரு frequent itemset <strong>l</strong>-க்கும், அதன் <strong>ஒவ்வொரு non-empty proper subset s</strong>-க்கும், rule <strong>s ⇒ (l − s)</strong> உருவாக்கு.</p>
+<p><strong>Confidence = support_count(l) ÷ support_count(s) ≥ min_conf</strong> என்றால் வெளியிடு.</p>
+<p>l ஏற்கனவே frequent என்பதால், <strong>support தானாகவே சரி</strong>. <strong>Confidence மட்டுமே</strong> சோதிக்க வேண்டும்.</p>
+<p><strong>Rule-ஐப் படிக்கும் முறை:</strong> "<strong>இடப்பக்கம் உள்ளதை வாங்கியவர்களில், எத்தனை பேர் வலப்பக்கம் உள்ளதையும் வாங்கினார்கள்?</strong>"</p>
+<p><strong>உதாரணம்: l = {I1, I2, I5}</strong> (support count = 2, T100, T800-இல்)</p>
+<p>Non-empty proper subsets: {I1,I2}, {I1,I5}, {I2,I5}, {I1}, {I2}, {I5} → <strong>6 rules</strong></p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>கணக்கு</th>
+<th>Confidence</th>
+<th>Strong (≥ 70%)?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I1 ∧ I2 ⇒ I5</td>
+<td>2 / 4</td>
+<td>50%</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>I1 ∧ I5 ⇒ I2</td>
+<td>2 / 2</td>
+<td><strong>100%</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>I2 ∧ I5 ⇒ I1</td>
+<td>2 / 2</td>
+<td><strong>100%</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>I1 ⇒ I2 ∧ I5</td>
+<td>2 / 6</td>
+<td>33%</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>I2 ⇒ I1 ∧ I5</td>
+<td>2 / 7</td>
+<td>29%</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>I5 ⇒ I1 ∧ I2</td>
+<td>2 / 2</td>
+<td><strong>100%</strong></td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ஒவ்வொன்றும் தமிழில்:</strong></p>
+<ol>
+<li><strong>I1, I2 வாங்கியவர்களில்</strong> (4 பேர்: T100, 400, 800, 900) <strong>I5-உம்</strong> வாங்கியவர்கள் 2 → பாதி → ✗</li>
+<li><strong>I1, I5 வாங்கியவர்கள்</strong> (2 பேர்) <strong>எல்லோரும் I2-உம்</strong> வாங்கினார்கள் → <strong>எப்போதும்</strong> ✓</li>
+<li><strong>I2, I5 வாங்கியவர்கள்</strong> (2 பேர்) <strong>எல்லோரும் I1-உம்</strong> வாங்கினார்கள் ✓</li>
+<li><strong>I1 வாங்கிய 6 பேரில்</strong> 2 பேர் மட்டுமே I2, I5 இரண்டையும் → மூன்றில் ஒருவர் ✗</li>
+<li><strong>I2 வாங்கிய 7 பேரில்</strong> 2 பேர் மட்டுமே → I2 பிரபலம், ஆனால் I1, I5 அரிது ✗</li>
+<li><strong>I5 வாங்கிய 2 பேரும்</strong> I1, I2 இரண்டையும் வாங்கினார்கள் ✓</li>
+</ol>
+<p><strong>Pattern:</strong></p>
+<ul>
+<li><strong>இடப்பக்கம் அரிதான item</strong> (I5, 2 முறை) → கீழே சிறிய எண் → confidence <strong>அதிகம்</strong></li>
+<li><strong>இடப்பக்கம் பிரபலமான item</strong> (I1 = 6, I2 = 7) → கீழே பெரிய எண் → confidence <strong>குறைவு</strong></li>
+</ul>
+<p><strong>{I1, I2, I3}-க்கும் இதே முறையில் செய்தால்:</strong> எல்லா rules-உம் 50% அல்லது அதற்குக் குறைவு → <strong>strong rule எதுவும் இல்லை</strong>. அதனால்தான் textbook {I1, I2, I5}-ஐ உதாரணமாக எடுத்தது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Classification rules-இலிருந்து வித்தியாசம்:</strong> Association rules-இல் <strong>வலப்பக்கம் ஒன்றுக்கு மேற்பட்ட items</strong> இருக்கலாம் (I5 ⇒ I1 ∧ I2).</p>
+<p><strong>Exam tip:</strong></p>
+<ul>
+<li>"Generate rules from {I1, I2, I5}" என்று கேட்டால் → அதை மட்டும் செய்தால் போதும்.</li>
+<li>"Find <strong>all</strong> strong rules" என்று கேட்டால் → <strong>எல்லா frequent itemsets-க்கும்</strong> (size ≥ 2) செய்ய வேண்டும். L₂ ஜோடிகளிலிருந்தும்: உதாரணம் I5 ⇒ I1 (2/2 = 100%), I4 ⇒ I2 (2/2 = 100%).</li>
+</ul>
+<p><strong>பொதுவான தவறு:</strong> Confidence-க்குக் கீழே <strong>|D| = 9</strong> போடுவது. அப்படிச் செய்தால் கிடைப்பது <strong>support</strong>. Confidence-க்குக் கீழே <strong>இடப்பக்கத்தின் count</strong>.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p>For each frequent itemset <strong>l</strong>, take <strong>every non-empty proper subset s</strong> and form the rule <strong>s ⇒ (l − s)</strong>. Output it if:</p>
 <div class="formula">confidence = support_count(l) / support_count(s)  ≥  min_conf</div>
 <p>Since l is frequent, <strong>support is automatically satisfied</strong>. Only confidence needs checking.</p>
 <div class="call example"><div class="ct">Rules from l = {I1, I2, I5} (support count 2)</div><p>Non-empty proper subsets: {I1,I2}, {I1,I5}, {I2,I5}, {I1}, {I2}, {I5}</p>
@@ -1194,26 +1630,64 @@ R.querySelector('.go').onclick=run;R.querySelector('.ms').oninput=run;R.querySel
 <p>min_conf = 70% எனில் <strong>2-ஆவது, 3-ஆவது, இறுதி</strong> விதிகள் மட்டுமே வலுவானவை.</p></div>
 <div class="call tip"><div class="ct">வகைப்படுத்தல் விதிகளைப் போலல்லாமல்</div><p>தொடர்பு விதிகளின் <strong>வலப்பக்கத்தில் ஒன்றுக்கு மேற்பட்ட பொருட்கள் இருக்கலாம்</strong>; எ.கா. I5 ⇒ I1 ∧ I2.</p></div>
 <p><div data-ta-tool="apr"></div></p>
-<div class="call exam"><div class="ct">Exam focus</div><p>Apriori கணக்கீடுகள் முக்கிய பயிற்சித் தலைப்பு; தேர்வின் துல்லிய உள்ளடக்கம் உறுதியல்ல. <strong>C₁/L₁, C₂/L₂, C₃-க்கான இணைப்பு முடிவு, எந்த வேட்பாளர்கள் ஏன் கிளை வெட்டப்படுகின்றனர்</strong>, இறுதி L₃, பின்னர் நம்பிக்கைப் பின்னங்களுடன் விதிகள் ஆகியவற்றைக் காட்டவும். உங்கள் பயிற்சி விடைகளைச் சரிபார்க்க மேலுள்ள இயந்திரத்தைப் பயன்படுத்தவும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Quick revision sheet"><span class="num">7</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>மீண்டும் மீண்டும் வரும் Pattern</h4><p>பல transactions-இல் திரும்ப வரும் item group <strong>Frequent itemset</strong>. எவ்வளவு அடிக்கடி வர வேண்டும் என்ற minimum support-ஐ முன்பே நிர்ணயிப்போம். அரிதான முக்கிய நிகழ்வுகளை இது தவறவிடலாம்.</p>
-<p><strong>Frequent itemset</strong> items சேர்ந்து வருவது; <strong>sequential pattern</strong> order-உடன் வருவது; <strong>structured pattern</strong> graph/tree போன்ற அமைப்பு மீண்டும் வருவது. Basket-இல் A,B இருப்பது மட்டும் A வாங்கியபிறகு B வாங்கினார் என்று sequence உறுதி செய்யாது.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Itemset</strong> ஒரே transaction-இல் சேர்வது; <strong>sequence</strong> காலவரிசை; <strong>substructure</strong> graph/tree வடிவம். Frequent என்பது user minimum support-ஐ meet செய்வது. Buying bread+milk co-occurrence மற்றும் PC→camera என்ற later purchase sequence வேறு mining tasks; order இல்லாத basket-ஐ time sequence என்று கருதாதீர்கள்.</p></div><div class="ta-recap-item"><h4>ஒரே கூடையில் வாங்கும் பொருட்கள்</h4><p>வாடிக்கையாளர் வாங்கிய ஒவ்வொரு கூடையையும் transaction-ஆகக் கொள்ளுங்கள். பாணுடன் பால் அடிக்கடி வாங்கப்படுகிறதா என்பதே கேள்வி. Customer பெயர் இல்லாமல்கூட item co-occurrence-ஐ ஆய்வு செய்ய முடியும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Basket analysis எந்த items ஒன்றாக வாங்கப்படுகின்றன என்று ஆராயும். Layout அருகில் வைத்து convenience அல்லது தொலைவில் வைத்து exposure; bundle/promotion; cross-marketing/catalogue decisions. கண்ட association வைத்து ஒரு strategy முன்மொழியலாம்; அது sales உயர்த்தியது என்று causal முடிவு செய்ய controlled comparison/கூடுதல் evidence தேவை.</p></div><div class="ta-recap-item"><h4>Support மற்றும் Confidence</h4><p>A, B இரண்டும் உள்ள baskets ÷ எல்லா baskets என்பது <strong>Support</strong>. A உள்ளவர்களில் B-யும் உள்ளவர்கள் எத்தனை என்பது <strong>Confidence A→B</strong>. Confidence அதிகம் என்பதால் மட்டும் A வாங்குவது B வாங்கக் காரணம் அல்ல.</p>
-<p><strong>support(A→B)=count(A∪B)/N</strong>; <strong>confidence(A→B)=count(A∪B)/count(A)</strong>. Union இங்கு transactions-இல் A,B எல்லா items-உம் சேர்ந்து உள்ளதை எண்ணுகிறது.
-100 baskets; A 20; A,B சேர்ந்து 10 என்றால் support <strong>10%</strong>, confidence <strong>50%</strong>. B மிகவும் பொதுவானால் confidence அதிகமாக இருந்தாலும் சிறப்பு தொடர்பு இல்லாமலும் இருக்கலாம்; lift போன்ற கூடுதல் மதிப்பீடு உதவலாம்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Support(A⇒B)=count(A∪B)/N</strong>: A/B itemsets-இன் எல்லா items-உம் உள்ள baskets விகிதம். இது probability events-இன் “A OR B” union அல்ல; <strong>P(A AND B)</strong>. <strong>Confidence=count(A∪B)/count(A)</strong>: A உள்ளவற்றில் B-உம் எத்தனை. min_sup+min_conf இரண்டும் வேண்டும்; high confidence மட்டும் unusual/useful association நிரூபிக்காது. A,B disjoint/nonempty என்று rule அமைக்கவும்.</p></div><div class="ta-recap-item"><h4>Apriori தர்க்கம்</h4><p>ஒரு பெரிய itemset அடிக்கடி வந்தால் அதன் எல்லா சிறு subsets-உம் அடிக்கடி வந்திருக்க வேண்டும். அதனால் frequent அல்லாத subset உள்ள candidate-ஐ நீக்கலாம். <strong>Generate → count → prune</strong> எனப் படிப்படியாகச் செல்லும்.</p>
-<p><strong>Join:</strong> Lₖ₋₁-இன் compatible frequent itemsets சேர்த்து Cₖ உருவாக்கு. <strong>Prune:</strong> ஏதேனும் (k−1)-subset frequent அல்ல என்றால் candidate நீக்கு. அடுத்து database scan செய்து survivors counts எடு.
-Frequent subset இருந்ததால் எல்லா பெரிய supersets-உம் frequent என்று சொல்ல முடியாது. Apriori property ஒரு வழியில்தான் pruning உறுதி தருகிறது.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Lₖ</strong> frequent sets; <strong>Cₖ</strong> candidate sets. Sorted(k−1)-sets-இன் முதல் k−2 items ஒரேபடி இருந்தால் join; எந்த(k−1)-subset frequent இல்லாவிட்டால் prune; மீதியை DB scan count செய்து threshold meet செய்பவை Lₖ. <strong>Apriori property:</strong> frequent set-இன் subsets frequent; infrequent set-இன் supersets infrequent. இது support-க்கு; confidence-க்கு பொதுவான downward closure என்று பயன்படுத்தாதீர்கள்.</p></div><div class="ta-recap-item"><h4>ஒன்பது Transactions எடுத்துக்காட்டு</h4><p>முதலில் single items count; பிறகு pairs; அடுத்து triples கணக்கிடுங்கள். ஒவ்வொரு நிலையிலும் min_sup தாண்டியவற்றை மட்டும் வைத்திருக்க வேண்டும். முதல் படியில் ஒரு item விட்டுப்போனால் அடுத்த படி முழுவதும் மாறும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>9 transactions,min count2:</strong> L1 counts I1=6,I2=7,I3=6,I4=2,I5=2. L2:12=4,13=4,15=2,23=4,24=2,25=2. Join triples <strong>123,125,135,234,235,245</strong>;35/34/45 infrequent subsets கொண்டவை prune; remaining123=2,125=2. Candidate1235-இல்235 infrequent→prune→stop. Count2 என்பது <strong>2/9≈22.22%</strong>;2% அல்ல. Candidate table-இல் காணாத counts-ஐ ஊகிக்காமல் transactions-இலிருந்து எண்ணவும்.</p></div><div class="ta-recap-item"><h4>Strong rule உருவாக்குதல்</h4><p>Frequent itemset-இலிருந்து விதியை உருவாக்கி support, confidence இரண்டையும் சோதியுங்கள். <strong>A→B</strong> மற்றும் <strong>B→A</strong>-க்கு support ஒன்று; confidence பொதுவாக வேறு. Denominator எது என்று முதலில் எழுதுங்கள்.</p>
-<p>Rule confidence denominator <strong>antecedent</strong> count. I1,I2→I5-க்கு count(I1,I2); I5→I1,I2-க்கு count(I5). இரண்டிற்கும் ஒரே numerator இருந்தாலும் confidence மாறலாம்.
-Min support ஏற்கெனவே frequent itemset மூலம் பூர்த்தியாகினாலும் min confidence தனியாகச் சோதிக்க வேண்டும். Threshold-ஐ percent-ஆ அல்லது absolute count-ஆ கொடுத்துள்ளார்களா பாருங்கள்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Frequent l=125(count2)-இன் nonempty proper s ஒவ்வொன்றுக்கும் s⇒l−s. Confidences <strong>12⇒5:2/4=50%;15⇒2:2/2=100%;25⇒1:100%;1⇒25:2/6=33.33%;2⇒15:2/7=28.57%;5⇒12:100%</strong>. min_conf70%-இல் மூன்று100% rules pass. Support எல்லாவற்றுக்கும்2/9 ஏற்கெனவே pass. RHS-இல் பல items association rules-க்கு சாத்தியம்.</p></div><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><table>
+<div class="call exam"><div class="ct">Exam focus</div><p>Apriori கணக்கீடுகள் முக்கிய பயிற்சித் தலைப்பு; தேர்வின் துல்லிய உள்ளடக்கம் உறுதியல்ல. <strong>C₁/L₁, C₂/L₂, C₃-க்கான இணைப்பு முடிவு, எந்த வேட்பாளர்கள் ஏன் கிளை வெட்டப்படுகின்றனர்</strong>, இறுதி L₃, பின்னர் நம்பிக்கைப் பின்னங்களுடன் விதிகள் ஆகியவற்றைக் காட்டவும். உங்கள் பயிற்சி விடைகளைச் சரிபார்க்க மேலுள்ள இயந்திரத்தைப் பயன்படுத்தவும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Quick revision sheet"><span class="num">7</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>விரைவு மீள்பார்வை — Week 9</h3><table>
+<thead>
+<tr>
+<th>தலைப்பு</th>
+<th>ஒரு வரியில்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frequent pattern வகைகள்</td>
+<td>Itemsets · sequential patterns · structured patterns</td>
+</tr>
+<tr>
+<td>Market basket analysis</td>
+<td>சேர்ந்து வாங்கப்படுபவை → layout, தள்ளுபடி, catalogue, cross-marketing</td>
+</tr>
+<tr>
+<td>Support</td>
+<td>பயன்; <strong>எல்லா</strong> transactions-இல் A, B இரண்டும் உள்ள சதவீதம்</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>உறுதி; P(B | A) = count(A ∪ B) ÷ count(A)</td>
+</tr>
+<tr>
+<td>Strong rule</td>
+<td>≥ min_sup <strong>மற்றும்</strong> ≥ min_conf</td>
+</tr>
+<tr>
+<td>2-படி mining</td>
+<td>Frequent itemsets கண்டுபிடி → strong rules உருவாக்கு</td>
+</tr>
+<tr>
+<td>Apriori</td>
+<td>Agrawal &amp; Srikant 1994; நிலை நிலையாக; ஒவ்வொரு நிலைக்கும் ஒரு DB scan</td>
+</tr>
+<tr>
+<td>Apriori property</td>
+<td>Frequent-இன் subsets எல்லாம் frequent; frequent இல்லாததன் supersets frequent இல்லை</td>
+</tr>
+<tr>
+<td>Join</td>
+<td>Lₖ₋₁ ⋈ Lₖ₋₁, முதல் k−2 items பொருந்தினால்</td>
+</tr>
+<tr>
+<td>Prune</td>
+<td>Frequent இல்லாத (k−1)-subset உள்ள candidate-ஐ நீக்கு</td>
+</tr>
+<tr>
+<td>Rules</td>
+<td>s ⇒ (l − s), confidence = sup(l) ÷ sup(s)</td>
+</tr>
+<tr>
+<td>உதாரண விடை</td>
+<td>L₃ = {I1,I2,I3}, {I1,I2,I5}; C₄ prune; strong: I1∧I5⇒I2, I2∧I5⇒I1, I5⇒I1∧I2</td>
+</tr>
+</tbody>
+</table><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>

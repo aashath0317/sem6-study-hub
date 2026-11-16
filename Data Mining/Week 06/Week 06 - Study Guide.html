@@ -543,8 +543,18 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dm-Week06" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
 <div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 06</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 06</div><h1>Schemas for the Multidimensional Model</h1><p>Star, snowflake and fact constellation schemas, data warehouse vs data mart, defining cubes with DMQL, and concept hierarchies.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 11 min</span><span class="chip">📄 week 6.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Weka 1.2 – Exploring the Explorer · 11 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Data Mining with Weka (1.2_ Exploring the Explorer).mp4" data-drive="1cv4FEkNnPjksTB4epI07ejncpqawqzGN"><source src="Data%20Mining%20with%20Weka%20%281.2_%20Exploring%20the%20Explorer%29.mp4"></video></div><div class="chap"><p class="vt">Weka 1.2 – Exploring the Explorer</p><p class="vs">A tour of Weka's Explorer interface: opening a dataset, the Preprocess panel, attributes and instances.</p><a href="#" data-v="0" data-t="18"><b>00:18</b><span>Introduction</span></a><a href="#" data-v="0" data-t="66"><b>01:06</b><span>Downloading and installing Weka</span></a><a href="#" data-v="0" data-t="249"><b>04:09</b><span>Opening the Explorer and its panels</span></a><a href="#" data-v="0" data-t="342"><b>05:42</b><span>Preprocess panel: loading the weather data</span></a><a href="#" data-v="0" data-t="387"><b>06:27</b><span>Instances, attributes and the class</span></a><a href="#" data-v="0" data-t="477"><b>07:57</b><span>Attribute statistics and histograms</span></a><a href="#" data-v="0" data-t="569"><b>09:29</b><span>Editing and saving the dataset</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why a different schema for warehouses?"><span class="num">1</span>Why a different schema for warehouses?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>Warehouse schema ஏன் வேறு?</h3><p>Analysis-இல் பல rows-ஐச் சேர்த்து sums, comparisons செய்வோம். அதற்காக facts மற்றும் dimensions-ஐ ஒழுங்குபடுத்துகிறோம். Transaction database-இன் வடிவமே எல்லா analysis-க்கும் வேகமாக இருக்கும் என்று கருதக்கூடாது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Warehouse analysis-க்கு <strong>fact+dimensions</strong> கொண்ட multidimensional schema எளிய group-by/join செய்ய உதவும். Star, snowflake, constellation மூன்று designs. ER என்பது operational modelling-இல் பொதுவானது; warehouse-இல் ER “பயன்படுத்தவே முடியாது” அல்ல. Data grain, relationships, query needs அடிப்படையில் schema தேர்வு செய்யப்படுகிறது.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><ul>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 06</div><h1>Schemas for the Multidimensional Model</h1><p>Star, snowflake and fact constellation schemas, data warehouse vs data mart, defining cubes with DMQL, and concept hierarchies.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 11 min</span><span class="chip">📄 week 6.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Weka 1.2 – Exploring the Explorer · 11 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Data Mining with Weka (1.2_ Exploring the Explorer).mp4" data-drive="1cv4FEkNnPjksTB4epI07ejncpqawqzGN"><source src="Data%20Mining%20with%20Weka%20%281.2_%20Exploring%20the%20Explorer%29.mp4"></video></div><div class="chap"><p class="vt">Weka 1.2 – Exploring the Explorer</p><p class="vs">A tour of Weka's Explorer interface: opening a dataset, the Preprocess panel, attributes and instances.</p><a href="#" data-v="0" data-t="18"><b>00:18</b><span>Introduction</span></a><a href="#" data-v="0" data-t="66"><b>01:06</b><span>Downloading and installing Weka</span></a><a href="#" data-v="0" data-t="249"><b>04:09</b><span>Opening the Explorer and its panels</span></a><a href="#" data-v="0" data-t="342"><b>05:42</b><span>Preprocess panel: loading the weather data</span></a><a href="#" data-v="0" data-t="387"><b>06:27</b><span>Instances, attributes and the class</span></a><a href="#" data-v="0" data-t="477"><b>07:57</b><span>Attribute statistics and histograms</span></a><a href="#" data-v="0" data-t="569"><b>09:29</b><span>Editing and saving the dataset</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why a different schema for warehouses?"><span class="num">1</span>Why a different schema for warehouses?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>Warehouse-க்கு ஏன் வேறு schema?</h3><ul>
+<li>சாதாரண databases (OLTP), <strong>ER model</strong> (entity-relationship) மூலம் வடிவமைக்கப்படுகின்றன: entities, அவற்றுக்கு இடையிலான உறவுகள். இது <strong>அன்றாட transactions</strong>-க்கு ஏற்றது.</li>
+<li>ஆனால் data warehouse-க்கு <strong>பகுப்பாய்வுக்கு ஏற்ற, சுருக்கமான, subject-oriented</strong> schema தேவை.</li>
+<li>அதற்கு மிகப் பிரபலமானது <strong>multidimensional model</strong>. அதற்கு <strong>3 வடிவங்கள்</strong>:</li>
+</ul>
+<p><strong>Star schema → Snowflake schema → Fact constellation</strong></p>
+<p>மூன்றிலும் இரண்டு வகை அட்டவணைகள் உள்ளன:</p>
+<ul>
+<li><strong>Fact table:</strong> measures (எண்கள்) + ஒவ்வொரு dimension-க்கும் keys</li>
+<li><strong>Dimension tables:</strong> ஒவ்வொரு dimension-ஐயும் விவரிக்கும்</li>
+</ul>
+<p><strong>எளிய உதாரணம்:</strong> Fact table = <strong>bill-இன் வரிகள்</strong> (எத்தனை, எவ்வளவு ரூபாய்). Dimension tables = <strong>"யார், என்ன, எங்கே, எப்போது"</strong> பற்றிய விவரங்கள்.</p><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><ul>
 <li><strong>Relational databases</strong> (OLTP) are designed with the <strong>entity-relationship (ER) model</strong>: a set of entities and the relationships between them.</li>
 <li>A <strong>data warehouse</strong> needs a <strong>concise, subject-oriented schema</strong> that supports <strong>on-line data analysis</strong>.</li>
 <li>The most popular model for a warehouse is the <strong>multidimensional model</strong>. It comes in three forms:</li>
@@ -556,10 +566,49 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <li>கிடங்குக்கு மிகவும் பிரபலமானது <strong>பல்பரிமாண மாதிரி</strong>. அது மூன்று வடிவங்களில் வருகிறது:</li>
 </ul>
 <div class="flow"><span>நட்சத்திரத் திட்டவடிவம்</span><span>பனித்துகள் திட்டவடிவம்</span><span>உண்மை விண்மீன்கூட்டம்</span></div>
-<p>மூன்றிலும் <strong>உண்மை அட்டவணையும்</strong> (அளவைகளையும் பரிமாணங்களுக்கான சாவிகளையும் கொண்டது) <strong>பரிமாண அட்டவணைகளும்</strong> (ஒவ்வொரு பரிமாணத்தையும் விவரிப்பவை) உள்ளன.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Star schema"><span class="num">2</span>Star schema</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>நட்சத்திர வடிவத் தரவு அமைப்பு</h3><p>நடுவில் விற்பனை போன்ற <strong>Fact table</strong>; அதைச் சுற்றி Time, Product, Customer போன்ற Dimension tables. நட்சத்திரம்போல் தோன்றுவதால் Star schema. Fact table-இல் measures மற்றும் dimension keys இருக்கும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Fact table-இல் foreign keys மற்றும் numerical measures இருக்கும். Dimension table-இல் descriptive attributes. Grain “ஒரு product ஒரு shop-இல் ஒரு நாளின் sales” என்றால் ஒவ்வொரு row அதையே பிரதிநிதித்துவப்படுத்த வேண்டும்.
-Star dimension denormalised ஆக இருப்பதால் fewer joins, எளிய queries கிடைக்கலாம்; repeated descriptions சேமிப்பை அதிகரிக்கலாம்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Star-இல் நடுவில் sales fact: time_key,item_key,branch_key,location_key + dollars_sold/units_sold. ஒவ்வொரு dimension-க்கும் ஒரே denormalised table. Location-இல் city/state/country மீண்டும் வருவதால் redundancy; joins எளிதாகலாம். Diagram-இல் keys/facts மற்றும் descriptive attributes வேறுபடுத்துங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p><strong>A central fact table connected to one table per dimension.</strong> It is the <strong>simplest</strong> schema.</p>
+<p>மூன்றிலும் <strong>உண்மை அட்டவணையும்</strong> (அளவைகளையும் பரிமாணங்களுக்கான சாவிகளையும் கொண்டது) <strong>பரிமாண அட்டவணைகளும்</strong> (ஒவ்வொரு பரிமாணத்தையும் விவரிப்பவை) உள்ளன.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Star schema"><span class="num">2</span>Star schema</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>Star schema — நடுவில் ஒரு fact, சுற்றிலும் dimensions</h3><p><strong>நடுவில் ஒரு fact table, ஒவ்வொரு dimension-க்கும் ஒரே ஒரு table.</strong> மிக <strong>எளிமையான</strong> schema. வரைந்தால் ஒரு <strong>நட்சத்திரம்</strong> போல் இருக்கும்.</p>
+<p><strong>உதாரணம்:</strong></p>
+<pre><code>              time
+               |
+    item --- SALES --- branch
+               |
+            location
+</code></pre>
+<p><strong>Sales fact table:</strong> time_key, item_key, branch_key, location_key + <strong>dollars_sold, units_sold</strong></p>
+<p><strong>ஒவ்வொரு dimension-உம் சரியாக ஒரு table.</strong></p>
+<p><strong>பலவீனம்: Redundancy (மிகை)</strong></p>
+<p>Location table: (location_key, street, city, province_or_state, country)</p>
+<table>
+<thead>
+<tr>
+<th>location_key</th>
+<th>city</th>
+<th>province</th>
+<th>country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Vancouver</td>
+<td>British Columbia</td>
+<td>Canada</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Victoria</td>
+<td>British Columbia</td>
+<td>Canada</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Kelowna</td>
+<td>British Columbia</td>
+<td>Canada</td>
+</tr>
+</tbody>
+</table>
+<p>"<strong>British Columbia, Canada</strong>" <strong>மீண்டும் மீண்டும்</strong> வருகிறது. நூறு நகரங்கள் இருந்தால் நூறு முறை!</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam tip:</strong> Star schema-வை வரையும்போது, <strong>fact table-ஐ நடுவில்</strong>, 4 dimension tables-ஐச் சுற்றிலும் வரைந்து, ஒவ்வொன்றின் attributes-ஐயும் எழுதுங்கள். Fact table-இல் <strong>keys + measures</strong> இரண்டும் இருக்க வேண்டும்.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p><strong>A central fact table connected to one table per dimension.</strong> It is the <strong>simplest</strong> schema.</p>
 <ul>
 <li><strong>Example (Figure 6-1):</strong> the <strong>sales</strong> fact table has keys to <strong>time, item, branch, location</strong> and two measures, <strong>dollars_sold</strong> and <strong>units_sold</strong>.</li>
 <li><strong>Each dimension is exactly one table.</strong></li>
@@ -573,10 +622,38 @@ Star dimension denormalised ஆக இருப்பதால் fewer joins, �
 </ul>
 <div class="call warn"><div class="ct">குறைபாடு: மிகைமை</div><p>location அட்டவணையில் (location_key, street, city, province_or_state, country) உள்ளன. Vancouver, Victoria இரண்டும் கனடாவின் British Columbia-வில் உள்ளதால், "British Columbia, Canada" பல வரிசைகளில் <strong>மீண்டும் வருகிறது</strong>:</p>
 <p>(…, Vancouver, British Columbia, Canada)
-(…, Victoria, British Columbia, Canada)</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Snowflake schema"><span class="num">3</span>Snowflake schema</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>பிரிக்கப்பட்ட Dimension அட்டவணைகள்</h3><p>Dimension table-ஐ மேலும் சிறு tables-ஆகப் பிரித்தால் <strong>Snowflake</strong>. Product category விவரத்தை தனியாக வைத்தால் redundancy குறையலாம்; ஆனால் கூடுதல் joins தேவைப்படலாம். இது Star-ஐவிட அதிக normalisation கொண்டது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Snowflake-இல் dimension hierarchy தனித் tables-ஆக normalise செய்யப்படும்: product→category→department. Redundancy குறையலாம்; joins அதிகரிக்கும்.
-Fact table பல இருப்பது Snowflake-இன் அடையாளமல்ல. பல fact tables shared dimensions பயன்படுத்துவது constellation-க்கான கருத்து.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Snowflake dimension tables normalise செய்கிறது: item→supplier; location→city. Repeated state/country data குறையும்; maintenance சீராகலாம்; queries-க்கு joins அதிகரிக்கும். அதனால் எல்லா databases-லும் எப்போதும் slower அல்லது storage saving negligible என்ற universal rule இல்லை; workload/engine/size பார்க்கவேண்டும்.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><p><strong>A star schema whose dimension tables are normalised</strong> (split into extra tables). The diagram branches out like a <strong>snowflake</strong>.</p>
+(…, Victoria, British Columbia, Canada)</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Snowflake schema"><span class="num">3</span>Snowflake schema</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Snowflake schema — dimensions-ஐ மேலும் பிரித்தல்</h3><p><strong>Dimension tables normalize செய்யப்பட்ட (கூடுதல் tables-ஆகப் பிரிக்கப்பட்ட) star schema.</strong> வரைந்தால் <strong>பனித்துளி (snowflake)</strong> போலக் கிளைவிடும்.</p>
+<p><strong>உதாரணம்:</strong></p>
+<ul>
+<li><strong>item</strong> → item(item_key, item_name, brand, type, <strong>supplier_key</strong>) + <strong>supplier</strong>(supplier_key, supplier_type)</li>
+<li><strong>location</strong> → location(location_key, street, <strong>city_key</strong>) + <strong>city</strong>(city_key, city, province_or_state, country)</li>
+</ul>
+<p><strong>Star-இன் redundancy எப்படித் தீர்கிறது?</strong>
+"British Columbia, Canada" இப்போது <strong>city table-இல் ஒருமுறை மட்டும்</strong>. Location table-இல் <strong>city_key</strong> மட்டுமே.</p>
+<table>
+<thead>
+<tr>
+<th>நன்மைகள்</th>
+<th>தீமைகள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Redundancy குறைவு</strong> (normalized)</td>
+<td>சேமிக்கும் இடம், fact table-இன் அளவோடு ஒப்பிட்டால் <strong>மிகச் சிறியது</strong></td>
+</tr>
+<tr>
+<td><strong>பராமரிப்பது எளிது</strong></td>
+<td>ஒவ்வொரு query-க்கும் <strong>அதிக joins</strong> → <strong>மெதுவாக</strong> browse ஆகும்</td>
+</tr>
+<tr>
+<td><strong>இடம் மிச்சம்</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>எது பிரபலம்?</strong> <strong>Star schema</strong> தான். ஏனெனில் <strong>query வேகம்</strong>, சிறிது இட மிச்சத்தை விட முக்கியம்.</p>
+<p><strong>உதாரணம்:</strong> Star = ஒரே புத்தகத்தில் எல்லாம் — தேடுவது வேகம், ஆனால் சில விஷயங்கள் திரும்பத் திரும்ப எழுதப்பட்டிருக்கும். Snowflake = பல புத்தகங்களாகப் பிரித்தது — மிகை இல்லை, ஆனால் ஒரு தகவலுக்கு <strong>பல புத்தகங்களைப்</strong> புரட்ட வேண்டும்.</p><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><p><strong>A star schema whose dimension tables are normalised</strong> (split into extra tables). The diagram branches out like a <strong>snowflake</strong>.</p>
 <ul>
 <li><strong>Example (Figure 6-2):</strong></li>
 <li><strong>item</strong> → item(item_key, item_name, brand, type, <strong>supplier_key</strong>) + <strong>supplier</strong>(supplier_key, supplier_type)</li>
@@ -608,8 +685,78 @@ Fact table பல இருப்பது Snowflake-இன் அடையா�
 <li>உண்மை அட்டவணையின் அளவுடன் ஒப்பிடும்போது சேமிக்கப்படும் இடம் <strong>மிகச்சிறியது</strong></li>
 <li>ஒவ்வொரு வினவலுக்கும் <strong>அதிக இணைப்புகள்</strong> தேவை; எனவே <strong>உலாவல் குறைந்த திறனுடையது</strong> (மெதுவானது)</li>
 </ul></div></div>
-<div class="call tip"><div class="ct">எது அதிகம் பிரபலமானது?</div><p>சிறிய சேமிப்பு மிச்சத்தைவிட வினவல் வேகம் முக்கியமானதால், பனித்துகளைக் காட்டிலும் <strong>நட்சத்திரத் திட்டவடிவம்</strong> அதிகம் பிரபலமானது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Fact constellation (galaxy schema)"><span class="num">4</span>Fact constellation (galaxy schema)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>பல Fact அட்டவணைகளின் இணைப்பு</h3><p>Sales, Shipping போன்ற பல Fact tables ஒரே Time அல்லது Product dimensions-ஐப் பகிர்ந்தால் <strong>Galaxy schema</strong>. ஒரு business process-க்கு மட்டும் analysis கட்டுப்படாது; பொதுவான dimensions பொருந்த வேண்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Galaxy/constellation</strong>=பல fact tables சில dimensions பகிர்தல். Sales fact time/item/branch/location; shipping fact time/item/shipper/from_location/to_location. Time/item/location shared definitions report consistency-க்கு உதவும். Location ஒரே dimension-ஐ from/to என்ற இரு roles-இல் பயன்படுத்தலாம். ஒரே star-இல் ஒரு dimension split செய்தது snowflake; இரண்டாவது fact சேர்த்த shared stars constellation.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p><strong>Multiple fact tables that share dimension tables.</strong> It is a collection of stars, hence also called a <strong>galaxy schema</strong>.</p>
+<div class="call tip"><div class="ct">எது அதிகம் பிரபலமானது?</div><p>சிறிய சேமிப்பு மிச்சத்தைவிட வினவல் வேகம் முக்கியமானதால், பனித்துகளைக் காட்டிலும் <strong>நட்சத்திரத் திட்டவடிவம்</strong> அதிகம் பிரபலமானது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Fact constellation (galaxy schema)"><span class="num">4</span>Fact constellation (galaxy schema)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Fact constellation — பல fact tables, பகிரப்படும் dimensions</h3><p><strong>பல fact tables, அவை dimension tables-ஐப் பகிர்ந்துகொள்கின்றன.</strong> பல நட்சத்திரங்களின் தொகுப்பு — அதனால் <strong>galaxy schema</strong> என்றும் பெயர்.</p>
+<p><strong>உதாரணம்: இரண்டு fact tables</strong></p>
+<table>
+<thead>
+<tr>
+<th>Fact table</th>
+<th>Keys (dimensions)</th>
+<th>Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>sales</strong></td>
+<td>time, item, branch, location</td>
+<td>dollars_sold, units_sold</td>
+</tr>
+<tr>
+<td><strong>shipping</strong></td>
+<td>item, time, <strong>shipper</strong>, <strong>from_location</strong>, <strong>to_location</strong></td>
+<td>dollars_cost, units_shipped</td>
+</tr>
+</tbody>
+</table>
+<p><strong>time, item, location</strong> — இரண்டு fact tables-உம் <strong>பகிர்ந்துகொள்கின்றன</strong>.</p>
+<p><strong>மூன்றையும் ஒப்பிடுவோம்</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Star</th>
+<th>Snowflake</th>
+<th>Fact constellation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fact tables</td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>பல</strong></td>
+</tr>
+<tr>
+<td>Dimension tables</td>
+<td>ஒவ்வொரு dimension-க்கும் <strong>1</strong></td>
+<td><strong>பிரிக்கப்பட்டவை</strong> (normalized)</td>
+<td><strong>பகிரப்படுபவை</strong></td>
+</tr>
+<tr>
+<td>Redundancy</td>
+<td>அதிகம்</td>
+<td>குறைவு</td>
+<td>—</td>
+</tr>
+<tr>
+<td>வேகம்</td>
+<td><strong>வேகம்</strong></td>
+<td>மெதுவு (joins)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>பயன்</td>
+<td>Data mart</td>
+<td>Data mart</td>
+<td><strong>Enterprise warehouse</strong></td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam tip:</strong> "Compare star, snowflake and fact constellation schemas" — <strong>மிகப் பிடித்த கேள்வி</strong>. மூன்றுக்கும் <strong>sales உதாரணத்தை வரையுங்கள்</strong>:</p>
+<ul>
+<li><strong>Snowflake:</strong> item → supplier, location → city</li>
+<li><strong>Constellation:</strong> sales + shipping, time/item/location பகிரப்படுவது</li>
+</ul>
+<p>Page-இல் உள்ள schema viewer-இல் மூன்றையும் பார்க்கலாம்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p><strong>Multiple fact tables that share dimension tables.</strong> It is a collection of stars, hence also called a <strong>galaxy schema</strong>.</p>
 <p><strong>Example (Figure 6-3):</strong> two fact tables.</p>
 <table>
 <thead>
@@ -688,8 +835,53 @@ R.querySelectorAll('[data-s]').forEach(function(b){b.onclick=function(){draw(b.d
 </table>
 <p>இரு உண்மை அட்டவணைகளும் <strong>time, item, location</strong> ஆகியவற்றைப் <strong>பகிர்கின்றன</strong>.</p>
 <p><div data-ta-tool="sch"></div></p>
-<div class="call exam"><div class="ct">Exam focus</div><p>வரைபடங்களுடன் "நட்சத்திரம், பனித்துகள், உண்மை விண்மீன்கூட்டத் திட்டவடிவங்களை ஒப்பிடுக" என்பது விருப்பமான கேள்வி. ஒவ்வொன்றுக்கும் <strong>sales</strong> எடுத்துக்காட்டை வரையவும். பனித்துகளில் <strong>item → supplier</strong>, <strong>location → city</strong> ஆகியவற்றைக் காட்டவும். விண்மீன்கூட்டத்தில் <strong>sales + shipping, time/item/location-ஐப் பகிர்வதைக்</strong> காட்டவும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Data warehouse vs data mart"><span class="num">5</span>Data warehouse vs data mart</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>Warehouse மற்றும் Data mart</h3><p>முழு நிறுவனத்தின் விரிவான தகவல் Warehouse-இல் இருக்கும். Sales போன்ற ஒரு பிரிவிற்கான குறுகிய தகவல் <strong>Data mart</strong>. Mart சிறியது என்பதாலே அதன் தகவல் தானாகச் சரியாகிவிடாது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Warehouse</strong> enterprise subjects across departments; <strong>mart</strong> குறிப்பிட்ட department/process-க்கான focused subset/view/store. Dependent mart warehouse-இலிருந்து; independent mart பிற sources-இலிருந்தும் உருவாகலாம். Scope வேறுபாடுதான் முக்கியம்; GB அளவு/build time மட்டும் definition அல்ல. Enterprise warehouse ஒரே central fact table என்ற அவசியமும் இல்லை.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><table>
+<div class="call exam"><div class="ct">Exam focus</div><p>வரைபடங்களுடன் "நட்சத்திரம், பனித்துகள், உண்மை விண்மீன்கூட்டத் திட்டவடிவங்களை ஒப்பிடுக" என்பது விருப்பமான கேள்வி. ஒவ்வொன்றுக்கும் <strong>sales</strong> எடுத்துக்காட்டை வரையவும். பனித்துகளில் <strong>item → supplier</strong>, <strong>location → city</strong> ஆகியவற்றைக் காட்டவும். விண்மீன்கூட்டத்தில் <strong>sales + shipping, time/item/location-ஐப் பகிர்வதைக்</strong> காட்டவும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Data warehouse vs data mart"><span class="num">5</span>Data warehouse vs data mart</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>Data warehouse vs data mart — மையக் கிடங்கு vs துறை அலமாரி</h3><p><strong>எளிய உதாரணம்:</strong> ஒரு supermarket chain-இன் <strong>மையக் கிடங்கு</strong> = data warehouse. <strong>Marketing துறையின் சொந்த அலமாரி</strong> (தங்களுக்குத் தேவையானவை மட்டும்) = data mart.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Data warehouse</strong></th>
+<th><strong>Data mart</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>வரம்பு</strong></td>
+<td><strong>முழு நிறுவனம்</strong> — வாடிக்கையாளர், பொருள், விற்பனை, சொத்துகள், ஊழியர்கள்</td>
+<td><strong>ஒரு துறை / செயல்முறை</strong></td>
+</tr>
+<tr>
+<td><strong>தலைப்புகள்</strong></td>
+<td>பல, ஒன்றோடொன்று தொடர்புடையவை</td>
+<td><strong>தேர்ந்தெடுத்த / ஒரே</strong> தலைப்பு</td>
+</tr>
+<tr>
+<td><strong>பொதுவான schema</strong></td>
+<td><strong>Fact constellation</strong> (பல தலைப்புகள்)</td>
+<td><strong>Star</strong> அல்லது <strong>snowflake</strong> (ஒரே தலைப்பு); <strong>star அதிகம் பிரபலம்</strong></td>
+</tr>
+<tr>
+<td><strong>Data மூலங்கள்</strong></td>
+<td>பல</td>
+<td>சில</td>
+</tr>
+<tr>
+<td><strong>அளவு</strong></td>
+<td>பெரியது (100 GB – TB+)</td>
+<td>சிறியது</td>
+</tr>
+<tr>
+<td><strong>கட்ட ஆகும் நேரம்</strong></td>
+<td>மாதங்கள் முதல் ஆண்டுகள்</td>
+<td>வாரங்கள் முதல் மாதங்கள்</td>
+</tr>
+</tbody>
+</table>
+<p>Data mart, warehouse-இன் ஒரு பகுதியாக (dependent) இருக்கலாம், அல்லது தனியாகவும் (independent) இருக்கலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>நினைவில் வைக்க:</strong></p>
+<ul>
+<li><strong>Warehouse → Constellation</strong> (பெரியது → பல நட்சத்திரங்கள்)</li>
+<li><strong>Mart → Star</strong> (சிறியது → ஒரு நட்சத்திரம்)</li>
+</ul></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th></th>
@@ -771,10 +963,44 @@ R.querySelectorAll('[data-s]').forEach(function(b){b.onclick=function(){draw(b.d
 </tr>
 </tbody>
 </table>
-<div class="call tip"><div class="ct">கற்பனை செய்து பாருங்கள்</div><p>கிடங்கு என்பது பேரங்காடிச் சங்கிலியின் <strong>மையச் சேமிப்பகம்</strong>. தரவுச் சந்தை என்பது தேவையான பொருள்களை மட்டும் கொண்ட <strong>சந்தைப்படுத்தல் துறையின் அலமாரி</strong>.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Defining cubes with DMQL"><span class="num">6</span>Defining cubes with DMQL</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>DMQL-இல் Cube வரையறை</h3><p>எந்த measures, dimensions கொண்டு cube அமைக்க வேண்டும் என்பதை <strong>DMQL</strong> மூலம் சொல்வோம். Code-ஐ மனப்பாடம் செய்வதற்கு முன் ஒவ்வொரு dimension எந்தக் கேள்விக்குப் பதில் தருகிறது என்று புரிந்துகொள்ளுங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>DMQL-இல் cube பெயர், dimensions, measures தனித்தனியாக வரையறுக்கப்படுகின்றன. Dimension-இன் நிலைகள் என்ன, fact-இல் key எது, sum/count measure எது என code-ஐ வாசியுங்கள்.
-SQL SELECT result-ஐ மட்டும் cube schema எனக் கொள்ள வேண்டாம். ஒரே measure அனைத்திலும் sum செய்யலாமா என்பதும் business meaning-ஐப் பொறுத்தது; balance போன்ற measure-கள் நேரம் முழுவதும் additive அல்லாமல் இருக்கலாம்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>DMQL course notation:</strong> define cube பெயர்[dimensions]:measures; define dimension பெயர் as(attributes). Star flat list; snowflake supplier(…) போன்ற nested subdimension; constellation “as time in cube sales” மூலம் reuse. இது இந்தப் பாடத்தின் language example; எல்லா DBMS-லும் run ஆகும் SQL standard அல்ல. <strong>count(*) rows எண்ணும்; sum(units_sold) quantities கூட்டும்</strong> — ஒவ்வொரு row ஒரு unit என்ற assumption இல்லாமல் இரண்டையும் ஒன்றாகக் கருதாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p>A <strong>Data Mining Query Language (DMQL)</strong> specifies mining tasks the way SQL specifies relational queries. Warehouses and marts are defined with <strong>two primitives</strong>:</p>
+<div class="call tip"><div class="ct">கற்பனை செய்து பாருங்கள்</div><p>கிடங்கு என்பது பேரங்காடிச் சங்கிலியின் <strong>மையச் சேமிப்பகம்</strong>. தரவுச் சந்தை என்பது தேவையான பொருள்களை மட்டும் கொண்ட <strong>சந்தைப்படுத்தல் துறையின் அலமாரி</strong>.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Defining cubes with DMQL"><span class="num">6</span>Defining cubes with DMQL</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>DMQL — cubes-ஐ வரையறுக்கும் மொழி</h3><p><strong>DMQL (Data Mining Query Language)</strong> — SQL relational queries-ஐக் குறிப்பிடுவது போல, mining வேலைகளைக் குறிப்பிடுகிறது. Warehouses-ஐ <strong>2 primitives</strong> கொண்டு வரையறுக்கிறோம்:</p>
+<pre><code>define cube &lt;பெயர்&gt; [&lt;dimensions&gt;]: &lt;measures&gt;
+define dimension &lt;பெயர்&gt; as (&lt;attributes&gt;)
+</code></pre>
+<p><strong>1. Star schema</strong></p>
+<pre><code>define cube sales_star [time, item, branch, location]:
+    dollars_sold = sum(sales_in_dollars), units_sold = count(*)
+define dimension time     as (time_key, day, month, quarter, year)
+define dimension item     as (item_key, item_name, brand, type, supplier_type)
+define dimension location as (location_key, street, city, province_or_state, country)
+</code></pre>
+<ul>
+<li><strong>define cube</strong> = மைய fact table (4 dimensions + measures)</li>
+<li>ஒவ்வொரு <strong>define dimension</strong> = ஒரு dimension table</li>
+<li><strong>Attributes தட்டையான பட்டியல்</strong></li>
+<li><strong>count(*)</strong> rows-ஐ எண்ணும் (அளவுகளை அல்ல)</li>
+</ul>
+<p><strong>2. Snowflake schema</strong> — ஒரே மாற்றம்: <strong>sub-dimensions அடைப்புக்குறிக்குள் nested</strong></p>
+<pre><code>define dimension item as (item_key, item_name, brand, type,
+                          supplier(supplier_key, supplier_type))
+define dimension location as (location_key, street,
+                          city(city_key, province_or_state, country))
+</code></pre>
+<p>item-க்குள் <strong>supplier(...)</strong> என்று எழுதினால், item table-இல் <strong>supplier_key தானாக உருவாகும்</strong>.</p>
+<p><strong>3. Fact constellation</strong> — sales cube-ஐ star போல வரையறுத்து, பிறகு shipping-ஐ வரையறுத்து, <strong>பகிரப்படும் dimensions-ஐ மீண்டும் பயன்படுத்து</strong>:</p>
+<pre><code>define cube shipping [time, item, shipper, from_location, to_location]:
+    dollar_cost = sum(cost_in_dollars), unit_shipped = count(*)
+define dimension time as time in cube sales
+define dimension item as item in cube sales
+define dimension from_location as location in cube sales
+</code></pre>
+<p><strong>"… in cube sales"</strong> = இந்த dimension, sales cube-இலிருந்து <strong>பகிரப்படுகிறது</strong>.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>வேகமாக வேறுபடுத்த:</strong></p>
+<ul>
+<li><strong>Star:</strong> தட்டையான attribute பட்டியல்</li>
+<li><strong>Snowflake:</strong> அடைப்புக்குறிக்குள் அடைப்புக்குறி — <code>supplier(…)</code>, <code>city(…)</code></li>
+<li><strong>Constellation:</strong> <strong>இரண்டு</strong> <code>define cube</code> + <code>… in cube sales</code></li>
+</ul>
+<p><strong>Exam-இல் எப்படிக் கேட்பார்கள்:</strong> ஒரு DMQL code கொடுத்து "இது எந்த schema?" என்று கேட்பார்கள். அல்லது "Write DMQL for a star schema" என்று கேட்பார்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p>A <strong>Data Mining Query Language (DMQL)</strong> specifies mining tasks the way SQL specifies relational queries. Warehouses and marts are defined with <strong>two primitives</strong>:</p>
 <pre><code>define cube &lt;cube_name&gt; [&lt;dimension_list&gt;]: &lt;measure_list&gt;
 define dimension &lt;dimension_name&gt; as (&lt;attribute_or_subdimension_list&gt;)
 </code></pre>
@@ -850,8 +1076,22 @@ define dimension to_location   as location in cube sales
 <li><strong>நட்சத்திரம்:</strong> தட்டையான பண்புக்கூறுப் பட்டியல்கள்</li>
 <li><strong>பனித்துகள்:</strong> உள்ளடக்கப்பட்ட அடைப்புக்குறிகள், <code>supplier(…)</code>, <code>city(…)</code></li>
 <li><strong>விண்மீன்கூட்டம்:</strong> இரு <code>define cube</code> கூற்றுகளும் <code>… in cube sales</code> என்பதும்</li>
-</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Concept hierarchies"><span class="num">7</span>Concept hierarchies</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>கருத்துகளின் படிநிலை</h3><p>நாள் → மாதம் → ஆண்டு என ஒரே dimension-இல் பல levels இருக்கும். சிறிய நிலையிலிருந்து பெரிய நிலைக்கு roll-up செய்தால் மொத்தப் போக்கு தெரியும். Drill-down எதிர்த்திசையில் நுணுக்கத்தைக் காட்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Street→city→province/state→country→all என்பது low→high hierarchy. Roll-up உயர் concept; drill-down detail. ஒரே attribute-க்கு வேறு business hierarchy இருக்கலாம் (calendar/fiscal time). Functional relationships சரியா சோதிக்கவும்; எல்லா நகரப் பெயரும் உலகளவில் unique அல்ல. ஒரு level பெயரை மட்டும் காட்டாமல் அது எந்த higher member-க்கு map ஆகிறது குறிப்பிடவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><p>A <strong>concept hierarchy</strong> is a <strong>sequence of mappings from low-level concepts to higher-level, more general concepts</strong>.</p>
+</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Concept hierarchies"><span class="num">7</span>Concept hierarchies</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>Concept hierarchy — கீழிருந்து மேல்நிலைக் கருத்துகளுக்கு</h3><p><strong>Concept hierarchy</strong> = <strong>கீழ்நிலைக் கருத்துகளிலிருந்து மேல்நிலை, பொதுவான கருத்துகளுக்கான வரிசையான மாற்றங்கள் (mappings)</strong>.</p>
+<p><strong>Location hierarchy உதாரணம்:</strong></p>
+<pre><code>all
+├── Canada
+│   ├── British Columbia → Vancouver
+│   └── Ontario → Toronto
+└── USA
+    ├── New York → New York
+    └── Illinois → Chicago
+</code></pre>
+<p><strong>city → province_or_state → country → all</strong></p>
+<ul>
+<li><strong>பல hierarchies schema-விலேயே மறைந்துள்ளன.</strong> Location-க்கு number, street, city, province_or_state, zip_code, country attributes இருந்தால், <strong>street &lt; city &lt; province_or_state &lt; country</strong> என்ற வரிசை தானாகக் கிடைக்கிறது.</li>
+<li><strong>Roll-up</strong> = hierarchy-இல் <strong>மேலே</strong> ஏறு (நகரம் → நாடு). <strong>Drill-down</strong> = மீண்டும் <strong>கீழே</strong> இறங்கு.</li>
+</ul>
+<p><strong>உதாரணம்:</strong> "Vancouver-இல் விற்பனை 500" → roll-up → "British Columbia-வில் 1,200" → roll-up → "Canada-வில் 5,000". இப்படி <strong>கீழிருந்து மேலே</strong> போகப் போக, விவரம் குறைந்து <strong>மொத்தம்</strong> கூடும்.</p><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><p>A <strong>concept hierarchy</strong> is a <strong>sequence of mappings from low-level concepts to higher-level, more general concepts</strong>.</p>
 <div class="call example"><div class="ct">Location hierarchy (Figure 6-4)</div><div class="otree"><div class="ot-in"><ul><li><span>all</span><ul><li><span>Canada</span><ul><li><span>British Columbia</span><ul><li><span>Vancouver</span></li></ul></li><li><span>Ontario</span><ul><li><span>Toronto</span></li></ul></li></ul></li><li><span>USA</span><ul><li><span>New York</span><ul><li><span>New York</span></li></ul></li><li><span>Illinois</span><ul><li><span>Chicago</span></li></ul></li></ul></li></ul></li></ul></div></div>
 <p>city → province_or_state → country → all</p></div>
 <ul>
@@ -863,8 +1103,32 @@ define dimension to_location   as location in cube sales
 <ul>
 <li><strong>பல படிநிலைகள் திட்டவடிவத்தில் மறைமுகமாக உள்ளன.</strong> location-க்கு number, street, city, province_or_state, zip_code, country ஆகிய பண்புக்கூறுகள் இருந்தால், <strong>முழுமையான வரிசை</strong> தருவது: <strong>street &lt; city &lt; province_or_state &lt; country</strong> (படம் 6-5).</li>
 <li><strong>மேல்சுருக்கம்</strong> படிநிலையில் ஏறுகிறது (நகரம் → நாடு). <strong>கீழ்விரிப்பு</strong> மீண்டும் கீழே செல்கிறது.</li>
-</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Weka 1.2 — Exploring the Explorer"><span class="num">8</span>Weka 1.2 — Exploring the Explorer</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s8 en-s8" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s8" lang="ta" hidden><h3>Weka Explorer-ஐப் பயன்படுத்துதல்</h3><p>முதலில் dataset, attributes, missing values, class தேர்வைப் பாருங்கள். Preprocess, Classify, Cluster tabs வெவ்வேறு வேலைகள் செய்கின்றன. தவறான class தேர்வு செய்தால் வேறு கேள்விக்கான model கிடைக்கும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Explorer Preprocess:</strong> ARFF open→instances(rows)/attributes(columns) எண்ணிக்கை→type/missing/distribution/histogram→தேவையான filter. Class selector-இல் predict செய்யவேண்டிய target சரியா பார்க்கவும்; last column default ஆக இருக்கலாம், அது அவசியமான விதி அல்ல. Other tabs Classify/Cluster/Associate/Select attributes/Visualize. Save/edited data மற்றும் filter choices-ஐ பதிவு செய்யவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s8" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s8" lang="en"><div class="hci-en"><p>The Weka video walks through the <strong>Explorer</strong>, the main interface you'll use:</p>
+</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Weka 1.2 — Exploring the Explorer"><span class="num">8</span>Weka 1.2 — Exploring the Explorer</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s8 en-s8" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s8" lang="ta" hidden><h3>Weka Explorer-ஐப் பார்ப்போம்</h3><p>Weka-வின் <strong>Explorer</strong> = நீங்கள் பயன்படுத்தும் முக்கிய interface.</p>
+<table>
+<thead>
+<tr>
+<th>பகுதி</th>
+<th>என்ன செய்யலாம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Preprocess tab</strong></td>
+<td>Dataset-ஐத் திற (<strong>ARFF</strong> file); attributes பட்டியல், <strong>instances எண்ணிக்கை</strong>, ஒவ்வொரு attribute-இன் புள்ளிவிவரங்களும் histogram-உம் பார். <strong>Filters</strong>-உம் இங்கேதான்</td>
+</tr>
+<tr>
+<td><strong>மற்ற tabs</strong></td>
+<td>Classify, Cluster, Associate, Select attributes, Visualize</td>
+</tr>
+</tbody>
+</table>
+<p><strong>முக்கியச் சொற்கள்:</strong></p>
+<ul>
+<li><strong>Instances</strong> = rows</li>
+<li><strong>Attributes</strong> = columns</li>
+<li><strong>Class</strong> = கணிக்க வேண்டிய attribute (பொதுவாகக் கடைசி column)</li>
+</ul>
+<p><strong>Exam-க்கு:</strong> Written exam-இல் buttons பற்றிய கேள்விகள் குறைவு. Instances / attributes / class என்ற சொற்கள் தெரிந்தால் போதும்.</p><button type="button" class="native-reference" aria-controls="en-s8" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s8" lang="en"><div class="hci-en"><p>The Weka video walks through the <strong>Explorer</strong>, the main interface you'll use:</p>
 <ul>
 <li><strong>Preprocess</strong> tab: <strong>open a dataset</strong> (ARFF file), see the list of <strong>attributes</strong>, the <strong>number of instances</strong>, and per-attribute statistics and a histogram. Filters are also applied here.</li>
 <li>Other tabs: <strong>Classify, Cluster, Associate, Select attributes, Visualize</strong>.</li>
@@ -874,29 +1138,56 @@ define dimension to_location   as location in cube sales
 <li><strong>Preprocess</strong> தாவல்: <strong>தரவுத்தொகுப்பைத் திறக்கவும்</strong> (ARFF கோப்பு); <strong>பண்புக்கூறுகளின்</strong> பட்டியல், <strong>நிகழ்வுகளின் எண்ணிக்கை</strong>, ஒவ்வொரு பண்புக்கூறின் புள்ளிவிவரங்கள், அலைவெண் செவ்வகம் ஆகியவற்றைப் பார்க்கவும். வடிகட்டிகளும் இங்கே பயன்படுத்தப்படுகின்றன.</li>
 <li>மற்ற தாவல்கள்: <strong>Classify, Cluster, Associate, Select attributes, Visualize</strong>.</li>
 <li>தரவுத்தொகுப்புகளில் <strong>நிகழ்வுகளும்</strong> (வரிசைகள்) <strong>பண்புக்கூறுகளும்</strong> (நிரல்கள்) உள்ளன. ஒரு பண்புக்கூறு பொதுவாக <strong>வகுப்பாக</strong> இருக்கும்.</li>
-</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s9"><h2 id="s9" data-t="Quick revision sheet"><span class="num">9</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s9 en-s9" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s9" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>Warehouse schema ஏன் வேறு?</h4><p>Analysis-இல் பல rows-ஐச் சேர்த்து sums, comparisons செய்வோம். அதற்காக facts மற்றும் dimensions-ஐ ஒழுங்குபடுத்துகிறோம். Transaction database-இன் வடிவமே எல்லா analysis-க்கும் வேகமாக இருக்கும் என்று கருதக்கூடாது.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Warehouse analysis-க்கு <strong>fact+dimensions</strong> கொண்ட multidimensional schema எளிய group-by/join செய்ய உதவும். Star, snowflake, constellation மூன்று designs. ER என்பது operational modelling-இல் பொதுவானது; warehouse-இல் ER “பயன்படுத்தவே முடியாது” அல்ல. Data grain, relationships, query needs அடிப்படையில் schema தேர்வு செய்யப்படுகிறது.</p></div><div class="ta-recap-item"><h4>நட்சத்திர வடிவத் தரவு அமைப்பு</h4><p>நடுவில் விற்பனை போன்ற <strong>Fact table</strong>; அதைச் சுற்றி Time, Product, Customer போன்ற Dimension tables. நட்சத்திரம்போல் தோன்றுவதால் Star schema. Fact table-இல் measures மற்றும் dimension keys இருக்கும்.</p>
-<p>Fact table-இல் foreign keys மற்றும் numerical measures இருக்கும். Dimension table-இல் descriptive attributes. Grain “ஒரு product ஒரு shop-இல் ஒரு நாளின் sales” என்றால் ஒவ்வொரு row அதையே பிரதிநிதித்துவப்படுத்த வேண்டும்.
-Star dimension denormalised ஆக இருப்பதால் fewer joins, எளிய queries கிடைக்கலாம்; repeated descriptions சேமிப்பை அதிகரிக்கலாம்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Star-இல் நடுவில் sales fact: time_key,item_key,branch_key,location_key + dollars_sold/units_sold. ஒவ்வொரு dimension-க்கும் ஒரே denormalised table. Location-இல் city/state/country மீண்டும் வருவதால் redundancy; joins எளிதாகலாம். Diagram-இல் keys/facts மற்றும் descriptive attributes வேறுபடுத்துங்கள்.</p></div><div class="ta-recap-item"><h4>பிரிக்கப்பட்ட Dimension அட்டவணைகள்</h4><p>Dimension table-ஐ மேலும் சிறு tables-ஆகப் பிரித்தால் <strong>Snowflake</strong>. Product category விவரத்தை தனியாக வைத்தால் redundancy குறையலாம்; ஆனால் கூடுதல் joins தேவைப்படலாம். இது Star-ஐவிட அதிக normalisation கொண்டது.</p>
-<p>Snowflake-இல் dimension hierarchy தனித் tables-ஆக normalise செய்யப்படும்: product→category→department. Redundancy குறையலாம்; joins அதிகரிக்கும்.
-Fact table பல இருப்பது Snowflake-இன் அடையாளமல்ல. பல fact tables shared dimensions பயன்படுத்துவது constellation-க்கான கருத்து.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Snowflake dimension tables normalise செய்கிறது: item→supplier; location→city. Repeated state/country data குறையும்; maintenance சீராகலாம்; queries-க்கு joins அதிகரிக்கும். அதனால் எல்லா databases-லும் எப்போதும் slower அல்லது storage saving negligible என்ற universal rule இல்லை; workload/engine/size பார்க்கவேண்டும்.</p></div><div class="ta-recap-item"><h4>பல Fact அட்டவணைகளின் இணைப்பு</h4><p>Sales, Shipping போன்ற பல Fact tables ஒரே Time அல்லது Product dimensions-ஐப் பகிர்ந்தால் <strong>Galaxy schema</strong>. ஒரு business process-க்கு மட்டும் analysis கட்டுப்படாது; பொதுவான dimensions பொருந்த வேண்டும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Galaxy/constellation</strong>=பல fact tables சில dimensions பகிர்தல். Sales fact time/item/branch/location; shipping fact time/item/shipper/from_location/to_location. Time/item/location shared definitions report consistency-க்கு உதவும். Location ஒரே dimension-ஐ from/to என்ற இரு roles-இல் பயன்படுத்தலாம். ஒரே star-இல் ஒரு dimension split செய்தது snowflake; இரண்டாவது fact சேர்த்த shared stars constellation.</p></div><div class="ta-recap-item"><h4>Warehouse மற்றும் Data mart</h4><p>முழு நிறுவனத்தின் விரிவான தகவல் Warehouse-இல் இருக்கும். Sales போன்ற ஒரு பிரிவிற்கான குறுகிய தகவல் <strong>Data mart</strong>. Mart சிறியது என்பதாலே அதன் தகவல் தானாகச் சரியாகிவிடாது.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Warehouse</strong> enterprise subjects across departments; <strong>mart</strong> குறிப்பிட்ட department/process-க்கான focused subset/view/store. Dependent mart warehouse-இலிருந்து; independent mart பிற sources-இலிருந்தும் உருவாகலாம். Scope வேறுபாடுதான் முக்கியம்; GB அளவு/build time மட்டும் definition அல்ல. Enterprise warehouse ஒரே central fact table என்ற அவசியமும் இல்லை.</p></div><div class="ta-recap-item"><h4>DMQL-இல் Cube வரையறை</h4><p>எந்த measures, dimensions கொண்டு cube அமைக்க வேண்டும் என்பதை <strong>DMQL</strong> மூலம் சொல்வோம். Code-ஐ மனப்பாடம் செய்வதற்கு முன் ஒவ்வொரு dimension எந்தக் கேள்விக்குப் பதில் தருகிறது என்று புரிந்துகொள்ளுங்கள்.</p>
-<p>DMQL-இல் cube பெயர், dimensions, measures தனித்தனியாக வரையறுக்கப்படுகின்றன. Dimension-இன் நிலைகள் என்ன, fact-இல் key எது, sum/count measure எது என code-ஐ வாசியுங்கள்.
-SQL SELECT result-ஐ மட்டும் cube schema எனக் கொள்ள வேண்டாம். ஒரே measure அனைத்திலும் sum செய்யலாமா என்பதும் business meaning-ஐப் பொறுத்தது; balance போன்ற measure-கள் நேரம் முழுவதும் additive அல்லாமல் இருக்கலாம்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>DMQL course notation:</strong> define cube பெயர்[dimensions]:measures; define dimension பெயர் as(attributes). Star flat list; snowflake supplier(…) போன்ற nested subdimension; constellation “as time in cube sales” மூலம் reuse. இது இந்தப் பாடத்தின் language example; எல்லா DBMS-லும் run ஆகும் SQL standard அல்ல. <strong>count(*) rows எண்ணும்; sum(units_sold) quantities கூட்டும்</strong> — ஒவ்வொரு row ஒரு unit என்ற assumption இல்லாமல் இரண்டையும் ஒன்றாகக் கருதாதீர்கள்.</p></div><div class="ta-recap-item"><h4>கருத்துகளின் படிநிலை</h4><p>நாள் → மாதம் → ஆண்டு என ஒரே dimension-இல் பல levels இருக்கும். சிறிய நிலையிலிருந்து பெரிய நிலைக்கு roll-up செய்தால் மொத்தப் போக்கு தெரியும். Drill-down எதிர்த்திசையில் நுணுக்கத்தைக் காட்டும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Street→city→province/state→country→all என்பது low→high hierarchy. Roll-up உயர் concept; drill-down detail. ஒரே attribute-க்கு வேறு business hierarchy இருக்கலாம் (calendar/fiscal time). Functional relationships சரியா சோதிக்கவும்; எல்லா நகரப் பெயரும் உலகளவில் unique அல்ல. ஒரு level பெயரை மட்டும் காட்டாமல் அது எந்த higher member-க்கு map ஆகிறது குறிப்பிடவும்.</p></div><div class="ta-recap-item"><h4>Weka Explorer-ஐப் பயன்படுத்துதல்</h4><p>முதலில் dataset, attributes, missing values, class தேர்வைப் பாருங்கள். Preprocess, Classify, Cluster tabs வெவ்வேறு வேலைகள் செய்கின்றன. தவறான class தேர்வு செய்தால் வேறு கேள்விக்கான model கிடைக்கும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Explorer Preprocess:</strong> ARFF open→instances(rows)/attributes(columns) எண்ணிக்கை→type/missing/distribution/histogram→தேவையான filter. Class selector-இல் predict செய்யவேண்டிய target சரியா பார்க்கவும்; last column default ஆக இருக்கலாம், அது அவசியமான விதி அல்ல. Other tabs Classify/Cluster/Associate/Select attributes/Visualize. Save/edited data மற்றும் filter choices-ஐ பதிவு செய்யவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s9" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s9" lang="en"><div class="hci-en"><table>
+</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s9"><h2 id="s9" data-t="Quick revision sheet"><span class="num">9</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s9 en-s9" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s9" lang="ta" hidden><h3>விரைவு மீள்பார்வை — Week 6</h3><table>
+<thead>
+<tr>
+<th>தலைப்பு</th>
+<th>ஒரு வரியில்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ER model</td>
+<td>OLTP-க்கு; warehouses-க்கு subject-oriented multidimensional schemas தேவை</td>
+</tr>
+<tr>
+<td>Star</td>
+<td>1 fact table + ஒவ்வொரு dimension-க்கும் 1 table; எளிமை; சிறிது redundancy</td>
+</tr>
+<tr>
+<td>Snowflake</td>
+<td>Normalized dimensions (item → supplier, location → city); குறைந்த redundancy, அதிக joins</td>
+</tr>
+<tr>
+<td>Fact constellation</td>
+<td>பல fact tables, dimensions பகிர்வு (sales + shipping); galaxy</td>
+</tr>
+<tr>
+<td>Warehouse</td>
+<td>முழு நிறுவனம், பல தலைப்புகள், fact constellation</td>
+</tr>
+<tr>
+<td>Data mart</td>
+<td>ஒரு துறை, தேர்ந்த தலைப்புகள், star (விருப்பம்) அல்லது snowflake</td>
+</tr>
+<tr>
+<td>DMQL</td>
+<td><code>define cube பெயர் [dims]: measures</code> · <code>define dimension பெயர் as (attrs)</code></td>
+</tr>
+<tr>
+<td>Snowflake DMQL</td>
+<td>Nested sub-dimension → key தானாக உருவாகும்</td>
+</tr>
+<tr>
+<td>பகிர்வு DMQL</td>
+<td><code>define dimension time as time in cube sales</code></td>
+</tr>
+<tr>
+<td>Concept hierarchy</td>
+<td>கீழ் → மேல்: street &lt; city &lt; province/state &lt; country</td>
+</tr>
+</tbody>
+</table><button type="button" class="native-reference" aria-controls="en-s9" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s9" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>

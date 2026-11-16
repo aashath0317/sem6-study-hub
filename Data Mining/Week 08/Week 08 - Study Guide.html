@@ -543,8 +543,18 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dm-Week08" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
 <div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 08</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 08</div><h1>Data Cube Computation &amp; Data Generalization</h1><p>Materializing cubes, base vs aggregate cells, iceberg cubes, MultiWay array aggregation, BUC, star-nodes and star-trees, and attribute-oriented induction (AOI).</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 15 min</span><span class="chip">📄 week 8.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Data Cube Computation · 15 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Data Cube Computation.mp4" data-drive="1Vx6y6MP-kc9OZyR_4KmTdjR_li5AS2Dz"><source src="Data%20Cube%20Computation.mp4"></video></div><div class="chap"><p class="vt">Data Cube Computation</p><p class="vs">Walkthrough of cube materialization and efficient computation methods.</p><a href="#" data-v="0" data-t="2"><b>00:02</b><span>A simple data cube example (product, location, time)</span></a><a href="#" data-v="0" data-t="115"><b>01:55</b><span>The apex cuboid: the most summarised view</span></a><a href="#" data-v="0" data-t="171"><b>02:51</b><span>Base cells: P1, Calgary, Wednesday…</span></a><a href="#" data-v="0" data-t="277"><b>04:37</b><span>Aggregate cells and slices ("*" = all)</span></a><a href="#" data-v="0" data-t="384"><b>06:24</b><span>Reading aggregate values (111, 27…)</span></a><a href="#" data-v="0" data-t="502"><b>08:22</b><span>Two categories of cube computation</span></a><a href="#" data-v="0" data-t="567"><b>09:27</b><span>Simultaneous aggregation: base → 1-D → 2-D cells</span></a><a href="#" data-v="0" data-t="669"><b>11:09</b><span>Example: Apple, Central Province, January</span></a><a href="#" data-v="0" data-t="784"><b>13:04</b><span>How aggregated values are updated</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why compute cubes efficiently?"><span class="num">1</span>Why compute cubes efficiently?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>Cube கணக்கிடுதல் ஏன் சிக்கல்?</h3><p>Dimensions அதிகரித்தால் சாத்தியமான groupings வேகமாக அதிகரிக்கும். எல்லா totals-ஐயும் சேமிப்பது இடமும் நேரமும் அதிகம் எடுக்கும். பயனுள்ள பகுதிகளை மட்டும் கணக்கிடுவது முக்கியம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Cube precompute செய்தால் repeated OLAP queries வேகமாகலாம்; ஆனால் build time/storage/refresh செலவு உண்டு. Full materialisation எல்லா summaries; partial சில useful summaries; no materialisation query நேரத்தில் கணக்கு. எவ்வளவு முன்கணிக்கவேண்டும் என்பது query workload/cardinality/available memory-ஐப் பொறுத்தது.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><ul>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 08</div><h1>Data Cube Computation &amp; Data Generalization</h1><p>Materializing cubes, base vs aggregate cells, iceberg cubes, MultiWay array aggregation, BUC, star-nodes and star-trees, and attribute-oriented induction (AOI).</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 15 min</span><span class="chip">📄 week 8.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Data Cube Computation · 15 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Data Cube Computation.mp4" data-drive="1Vx6y6MP-kc9OZyR_4KmTdjR_li5AS2Dz"><source src="Data%20Cube%20Computation.mp4"></video></div><div class="chap"><p class="vt">Data Cube Computation</p><p class="vs">Walkthrough of cube materialization and efficient computation methods.</p><a href="#" data-v="0" data-t="2"><b>00:02</b><span>A simple data cube example (product, location, time)</span></a><a href="#" data-v="0" data-t="115"><b>01:55</b><span>The apex cuboid: the most summarised view</span></a><a href="#" data-v="0" data-t="171"><b>02:51</b><span>Base cells: P1, Calgary, Wednesday…</span></a><a href="#" data-v="0" data-t="277"><b>04:37</b><span>Aggregate cells and slices ("*" = all)</span></a><a href="#" data-v="0" data-t="384"><b>06:24</b><span>Reading aggregate values (111, 27…)</span></a><a href="#" data-v="0" data-t="502"><b>08:22</b><span>Two categories of cube computation</span></a><a href="#" data-v="0" data-t="567"><b>09:27</b><span>Simultaneous aggregation: base → 1-D → 2-D cells</span></a><a href="#" data-v="0" data-t="669"><b>11:09</b><span>Example: Apple, Central Province, January</span></a><a href="#" data-v="0" data-t="784"><b>13:04</b><span>How aggregated values are updated</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why compute cubes efficiently?"><span class="num">1</span>Why compute cubes efficiently?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>Cubes-ஐ ஏன் திறமையாகக் கணக்கிட வேண்டும்?</h3><ul>
+<li><strong>Data cube கணக்கீடு</strong>, warehouse-ஐச் செயல்படுத்துவதில் ஒரு <strong>அத்தியாவசிய</strong> வேலை.</li>
+<li>Cube-இன் முழுதையும் அல்லது ஒரு பகுதியையும் <strong>முன்கூட்டியே கணக்கிட்டு (pre-compute)</strong> வைத்தால், <strong>பதில் நேரம் மிகவும் குறையும்</strong>, OLAP வேகமாகும்.</li>
+<li><strong>சவால்:</strong> அதற்கு <strong>அதிக நேரமும் அதிக சேமிப்பு இடமும்</strong> தேவைப்படலாம்.</li>
+</ul>
+<p><strong>உதாரணம்:</strong> ஒரு கடையில் "மாதம் வாரியாக மொத்த விற்பனை" என்று மேலாளர் தினமும் கேட்கிறார்.</p>
+<ul>
+<li><strong>முன்கணக்கீடு இல்லாமல்:</strong> ஒவ்வொரு முறையும் லட்சக்கணக்கான bills-ஐக் கூட்ட வேண்டும் → <strong>மெதுவு</strong>.</li>
+<li><strong>முன்கணக்கீட்டுடன்:</strong> ஏற்கனவே கணக்கிட்ட மொத்தத்தை எடுத்துக் காட்டினால் போதும் → <strong>உடனே பதில்</strong>.</li>
+<li><strong>ஆனால்:</strong> எல்லாச் சேர்க்கைகளையும் (மாதம் × கிளை × பொருள் × …) முன்கணக்கிட்டால், <strong>சேமிப்பு இடம் வெடித்துவிடும்</strong>.</li>
+</ul>
+<p><strong>இந்த வாரத்தின் முழுக் கேள்வி:</strong> <strong>எதை, எப்படி</strong> முன்கணக்கிடுவது?</p><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><ul>
 <li><strong>Data cube computation</strong> is an <strong>essential</strong> task in warehouse implementation.</li>
 <li><strong>Pre-computing</strong> all or part of a cube <strong>greatly reduces response time</strong> and improves OLAP performance.</li>
 <li><strong>The challenge:</strong> it can need <strong>substantial computation time and storage space</strong>.</li>
@@ -552,10 +562,104 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <li>கிடங்கைச் செயல்படுத்துவதில் <strong>தரவுக் கனசதுரக் கணக்கீடு</strong> ஓர் <strong>இன்றியமையாத</strong> பணி.</li>
 <li>கனசதுரத்தின் முழுவதையோ பகுதியையோ <strong>முன்கணக்கிடுவது பதில் நேரத்தைப் பெரிதும் குறைத்து</strong>, OLAP செயல்திறனை மேம்படுத்துகிறது.</li>
 <li><strong>சவால்:</strong> இதற்கு <strong>கணிசமான கணக்கீட்டு நேரமும் சேமிப்பிடமும்</strong> தேவைப்படலாம்.</li>
-</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Cube materialization: cells and cuboids"><span class="num">2</span>Cube materialization: cells and cuboids</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>சுருக்க முடிவுகளை முன்பே சேமித்தல்</h3><p>சில அல்லது எல்லா summary results-ஐ முன்கூட்டியே கணக்கிட்டு வைத்திருப்பது <strong>Materialization</strong>. பின்னர் query வேகம் கூடும்; ஆனால் storage, refresh cost உண்டு. எவ்வளவு சேமிப்பது என்பது தேர்வு.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Base cell</strong> எல்லா dimensions-உம் குறிப்பிட்ட value கொண்டது. <strong>Aggregate cell</strong>-இல் குறைந்தது ஒரு * (all) இருக்கும். (Jan, Toronto, Business) detail; (Jan, *, Business) பல நகரங்களின் summary.
-Ancestor summary-இலிருந்து child details-ஐ முழுமையாக reconstruct செய்ய முடியாது. மொத்தத்தைக் கண்டதால் ஒவ்வொரு நகரத்தின் விற்பனை தெரிந்துவிடாது.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Base cell</strong> எல்லா n dimensions specified; aggregate cell-இல் சில dimensions <strong>all(*)</strong>. (Jan,<em>,Business)→2-D; (Jan,Toronto,Business)→3-D base. Ancestor குறைந்த specified dimensions உடையதும் மீதியெல்லாம் descendant-உடன் பொருந்துவதும்; parent-க்கு exactly one specified dimension குறைவு. </em><em>Cuboid</em><em> ஒரே group-by level; </em><em>cell</em>* அதிலுள்ள ஒரு aggregate.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p>A data cube is a <strong>lattice of cuboids</strong>, and <strong>each cuboid is a group-by</strong>. For dimensions A, B, C:</p>
+</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Cube materialization: cells and cuboids"><span class="num">2</span>Cube materialization: cells and cuboids</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>Cells, cuboids, ancestors, descendants</h3><p>Data cube = <strong>cuboids-இன் lattice</strong>. <strong>ஒவ்வொரு cuboid-உம் ஒரு group-by.</strong></p>
+<p>A, B, C என்ற 3 dimensions-க்கு:</p>
+<table>
+<thead>
+<tr>
+<th>நிலை</th>
+<th>Cuboids</th>
+<th>பொருள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-D (<strong>apex</strong>)</td>
+<td>all</td>
+<td><strong>ஒரே ஒரு</strong> மொத்த மதிப்பு</td>
+</tr>
+<tr>
+<td>1-D</td>
+<td>A, B, C</td>
+<td>ஒரு dimension-ஆல் group</td>
+</tr>
+<tr>
+<td>2-D</td>
+<td>AB, AC, BC</td>
+<td>இரண்டு dimensions-ஆல் group</td>
+</tr>
+<tr>
+<td>3-D (<strong>base</strong>)</td>
+<td>ABC</td>
+<td>எல்லா dimensions-உம்</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Drill down:</strong> apex-இலிருந்து base நோக்கி <strong>கீழே</strong> (அதிக விவரம்)</li>
+<li><strong>Roll up:</strong> base-இலிருந்து apex நோக்கி <strong>மேலே</strong> (அதிக சுருக்கம்)</li>
+</ul>
+<p><strong>Base cell vs aggregate cell</strong></p>
+<ul>
+<li><strong>Base cuboid</strong>-இல் உள்ள cell → <strong>base cell</strong> (எல்லா மதிப்புகளும் உள்ளன)</li>
+<li><strong>மற்ற</strong> cuboids-இல் உள்ள cell → <strong>aggregate cell</strong> (குறைந்தது ஒரு <strong>*</strong>)</li>
+<li><strong>*</strong> = "எல்லாம்" (அந்த dimension சுருக்கப்பட்டுவிட்டது)</li>
+<li><strong>m-D cell</strong> = சரியாக <strong>m மதிப்புகள் * அல்லாதவை</strong></li>
+</ul>
+<p><strong>உதாரணம்:</strong> மாதம் × நகரம் × வாடிக்கையாளர் குழு, measure = விலை</p>
+<table>
+<thead>
+<tr>
+<th>Cell</th>
+<th>வகை</th>
+<th>பொருள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(Jan, *, *, 2800)</td>
+<td><strong>1-D</strong> aggregate</td>
+<td>ஜனவரியில், எல்லா நகரங்களிலும், எல்லாக் குழுக்களிலும் மொத்தம்</td>
+</tr>
+<tr>
+<td>(*, Toronto, *, 1200)</td>
+<td><strong>1-D</strong> aggregate</td>
+<td>Toronto-வில், எல்லா மாதங்களிலும் மொத்தம்</td>
+</tr>
+<tr>
+<td>(Jan, *, Business, 150)</td>
+<td><strong>2-D</strong> aggregate</td>
+<td>ஜனவரியில், Business குழுவுக்கு, எல்லா நகரங்களிலும்</td>
+</tr>
+<tr>
+<td>(Jan, Toronto, Business, 45)</td>
+<td><strong>3-D base cell</strong></td>
+<td>எல்லாம் குறிப்பிட்டது</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ancestor, descendant — குடும்ப உதாரணம்</strong></p>
+<p>i-D cell <strong>a</strong>, j-D cell <strong>b</strong>-இன் <strong>ancestor</strong> ஆக இருக்க <strong>இரண்டு நிபந்தனைகள்</strong>:</p>
+<ol>
+<li><strong>i &lt; j</strong> — a-இல் <strong>குறைவான</strong> குறிப்பிட்ட மதிப்புகள் (அதிக *)</li>
+<li>a-இல் * <strong>இல்லாத</strong> ஒவ்வொரு இடத்திலும், <strong>b-உம் அதே மதிப்பைக்</strong> கொண்டிருக்க வேண்டும்</li>
+</ol>
+<p><strong>j = i + 1</strong> என்றால் (ஒரே ஒரு படி வித்தியாசம்) → <strong>parent / child</strong>.</p>
+<p><strong>உதாரணம்:</strong></p>
+<ul>
+<li>(Jan, *, *) → (Jan, Toronto, *) → (Jan, Toronto, Business)</li>
+<li><strong>தாத்தா → அப்பா → பேரன்</strong></li>
+<li>(Jan, *, *) = (Jan, Toronto, Business)-இன் <strong>ancestor</strong> (தாத்தா)</li>
+<li>(Jan, *, *) = (Jan, Toronto, *)-இன் <strong>parent</strong> (அப்பா)</li>
+<li>(<strong>Feb</strong>, *, *) ancestor <strong>அல்ல</strong> — Jan ≠ Feb, வேறு குடும்பம்!</li>
+</ul>
+<p><strong>ஒரு base cell எத்தனை cells-ஐப் பாதிக்கும்?</strong> n dimensions என்றால் <strong>2ⁿ</strong> cells (தன்னையும் சேர்த்து). 3 dimensions → 8.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam tip:</strong> "Is (a, *, c) an ancestor of (a, b, c)?" போன்ற கேள்விகள் வரும். இரண்டு நிபந்தனைகளையும் சோதியுங்கள்:</p>
+<ol>
+<li>* அல்லாத மதிப்புகளின் எண்ணிக்கை குறைவா? (2 &lt; 3 ✓)</li>
+<li>* அல்லாத இடங்களில் மதிப்புகள் பொருந்துகின்றனவா? (a = a ✓, c = c ✓)
+→ <strong>ஆம், ancestor. ஒரு படி வித்தியாசம் என்பதால் parent-உம் கூட.</strong></li>
+</ol>
+<p>Page-இல் உள்ள "One base cell feeds 2ⁿ cells" tool-இல் இதைப் பார்க்கலாம்.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p>A data cube is a <strong>lattice of cuboids</strong>, and <strong>each cuboid is a group-by</strong>. For dimensions A, B, C:</p>
 <div class="lattice">
 <svg viewBox="0 0 320 300" class="lat-svg" role="img" aria-label="Lattice of cuboids"><line x1="160" y1="52.5" x2="70" y2="97.5"/><line x1="160" y1="52.5" x2="160" y2="97.5"/><line x1="160" y1="52.5" x2="250" y2="97.5"/><line x1="70" y1="127.5" x2="70" y2="172.5"/><line x1="70" y1="127.5" x2="160" y2="172.5"/><line x1="160" y1="127.5" x2="70" y2="172.5"/><line x1="160" y1="127.5" x2="250" y2="172.5"/><line x1="250" y1="127.5" x2="160" y2="172.5"/><line x1="250" y1="127.5" x2="250" y2="172.5"/><line x1="70" y1="202.5" x2="160" y2="247.5"/><line x1="160" y1="202.5" x2="160" y2="247.5"/><line x1="250" y1="202.5" x2="160" y2="247.5"/><g class="l0"><rect x="128.0" y="22.5" width="64" height="30" rx="15"/><text x="160" y="42.5" text-anchor="middle">all</text></g><g class="l1"><rect x="40.0" y="97.5" width="60" height="30" rx="15"/><text x="70" y="117.5" text-anchor="middle">A</text></g><g class="l1"><rect x="130.0" y="97.5" width="60" height="30" rx="15"/><text x="160" y="117.5" text-anchor="middle">B</text></g><g class="l1"><rect x="220.0" y="97.5" width="60" height="30" rx="15"/><text x="250" y="117.5" text-anchor="middle">C</text></g><g class="l2"><rect x="40.0" y="172.5" width="60" height="30" rx="15"/><text x="70" y="192.5" text-anchor="middle">AB</text></g><g class="l2"><rect x="130.0" y="172.5" width="60" height="30" rx="15"/><text x="160" y="192.5" text-anchor="middle">AC</text></g><g class="l2"><rect x="220.0" y="172.5" width="60" height="30" rx="15"/><text x="250" y="192.5" text-anchor="middle">BC</text></g><g class="l3"><rect x="128.0" y="247.5" width="64" height="30" rx="15"/><text x="160" y="267.5" text-anchor="middle">ABC</text></g></svg>
 <div class="lat-labels"><div class="l0"><b>0-D · Apex cuboid</b><span>Most generalized: ONE value (“all”)</span></div><div class="l1"><b>1-D cuboids</b><span>Group by one dimension</span></div><div class="l2"><b>2-D cuboids</b><span>Group by two dimensions</span></div><div class="l3"><b>3-D · Base cuboid</b><span>Least generalized: every dimension</span></div></div>
@@ -674,10 +778,35 @@ R.addEventListener('change',function(){sel=null;run()});run();})();
 </ol>
 <p>கூடுதலாக <strong>j = i + 1</strong> எனில் a <strong>பெற்றோர்</strong>, b <strong>பிள்ளை</strong>.</p>
 <p><em>எடுத்துக்காட்டு:</em> (Jan, *, *) என்பது (Jan, Toronto, Business)-இன் மூதாதையும் (Jan, Toronto, *)-இன் <strong>பெற்றோரும்</strong> ஆகும்.</p>
-<p><div data-ta-tool="anc"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Full cube vs iceberg cube"><span class="num">3</span>Full cube vs iceberg cube</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Full cube மற்றும் Iceberg</h3><p>Full cube எல்லா cells-ஐயும் கணக்கிடும். <strong>Iceberg cube</strong> minimum count போன்ற threshold தாண்டும் cells மட்டும் வைத்திருக்கும். பெரும்பாலான records மிகக் குறைந்த ஆதரவு கொண்டிருந்தால் இது செலவைக் குறைக்கலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Full materialisation எல்லாச் summaries-ஐயும் வைத்திருக்கும்; no materialisation தேவைக்கேற்ப கணக்கிடும்; partial materialisation சிலவற்றை வைத்திருக்கும். Space–query-time சமநிலை முக்கியம்.
-Iceberg condition <strong>COUNT≥k</strong> என்றால் parent count&lt;k ஆகும் branch-இன் descendants-ஐ prune செய்யலாம். AVG போன்ற வேறு measures-க்கு இதே pruning தர்க்கத்தை ஆதாரமின்றிப் பயன்படுத்தக்கூடாது.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>No hierarchies n dimensions→2ⁿ cuboids. Levels Lᵢ+all கொண்டால் <strong>Π(Lᵢ+1)</strong>;time4,item2,location3→<strong>5×3×4=60</strong>. Iceberg count≥10 போன்ற condition meet செய்த cells மட்டும். Small count தானாக uninteresting அல்ல; rare fraud முக்கியமாகலாம். Count pruning-ஐ average போன்ற எல்லா measures-க்கும் அப்படியே பயன்படுத்த முடியாது.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><h3 id="full-cube">Full cube</h3>
+<p><div data-ta-tool="anc"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Full cube vs iceberg cube"><span class="num">3</span>Full cube vs iceberg cube</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Full cube vs iceberg cube — எல்லாமா, முக்கியமானது மட்டுமா?</h3><p><strong>Full cube</strong></p>
+<p><strong>எல்லா cuboids-இன் எல்லா cells-ஐயும்</strong> முன்கணக்கிடுவது. OLAP மிக வேகம். ஆனால்:</p>
+<ul>
+<li><strong>Dimensions-இன் எண்ணிக்கையில் exponential:</strong> n dimensions → <strong>2ⁿ cuboids</strong>.</li>
+<li><strong>Concept hierarchies இருந்தால் இன்னும் அதிகம்:</strong></li>
+</ul>
+<p><strong>மொத்த cuboids = (L₁ + 1) × (L₂ + 1) × … × (Lₙ + 1)</strong></p>
+<p>(Lᵢ = dimension i-இன் hierarchy நிலைகள்; +1 என்பது "all"-க்கு)</p>
+<p><strong>உதாரணம்:</strong></p>
+<ul>
+<li>Time: day &lt; month &lt; quarter &lt; year → <strong>L = 4</strong></li>
+<li>Item: 2 நிலைகள் → <strong>L = 2</strong></li>
+<li>Location: 3 நிலைகள் → <strong>L = 3</strong></li>
+<li>Cuboids = (4+1)(2+1)(3+1) = 5 × 3 × 4 = <strong>60</strong></li>
+<li>Hierarchies இல்லாமல்: 2³ = <strong>8</strong> மட்டுமே!</li>
+</ul>
+<p><strong>ஏன் +1?</strong> ஒவ்வொரு dimension-க்கும், அதன் L நிலைகளில் ஒன்றைத் தேர்ந்தெடுக்கலாம், <strong>அல்லது</strong> அதை முழுதும் சுருக்கலாம் ("all"). அதனால் L + 1 தேர்வுகள்.</p>
+<p><strong>Iceberg cube</strong></p>
+<ul>
+<li>Cube cells பொதுவாக <strong>sparse</strong> — ஒரு வாடிக்கையாளர் சில பொருள்களை மட்டுமே வாங்குகிறார். பெரும்பாலான cells <strong>காலி அல்லது மிகச் சிறியவை</strong>.</li>
+<li>அதனால், <strong>ஒரு குறைந்தபட்ச threshold-ஐத் தாண்டும் cells-ஐ மட்டும்</strong> சேமி. இது <strong>iceberg condition</strong>. உதாரணம்: <strong>count ≥ 10</strong> அல்லது <strong>sales ≥ $100</strong>.</li>
+</ul>
+<p><strong>ஏன் "iceberg" (பனிப்பாறை)?</strong> பனிப்பாறையின் <strong>சிறு பகுதி மட்டுமே</strong> நீருக்கு மேலே தெரியும். அதேபோல, cube-இன் <strong>முக்கியமான சிறு பகுதி மட்டுமே</strong> சேமிக்கப்படுகிறது.</p>
+<p><strong>நன்மைகள்:</strong> <strong>நேரமும் disk இடமும் மிச்சம்</strong>. <strong>அதிக கவனமான பகுப்பாய்வு</strong>. Threshold-க்குக் கீழே உள்ளவை பொதுவாகப் பகுப்பாய்வுக்கு <strong>முக்கியமற்றவை</strong>.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam template (English):</strong></p>
+<ul>
+<li><strong>Full cube:</strong> pre-computes all cells of all cuboids; exponential — 2ⁿ cuboids, or Π(Lᵢ + 1) with hierarchies; needs excessive memory.</li>
+<li><strong>Iceberg cube:</strong> materializes only cells whose measure satisfies the iceberg condition (e.g. count ≥ min_sup); saves time and space; gives focused analysis.</li>
+</ul>
+<p><strong>கணக்குக் கேள்வி:</strong> "How many cuboids with these hierarchy levels?" → ஒவ்வொரு dimension-இன் L-க்கும் <strong>1 கூட்டி, எல்லாவற்றையும் பெருக்குங்கள்</strong>.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><h3 id="full-cube">Full cube</h3>
 <p><strong>Pre-computing all cells of all cuboids</strong> gives the fastest OLAP, but:</p>
 <ul>
 <li>It's <strong>exponential in the number of dimensions</strong>: n dimensions → <strong>2ⁿ cuboids</strong>. With concept hierarchies there are <strong>even more</strong>:</li>
@@ -711,10 +840,47 @@ Iceberg condition <strong>COUNT≥k</strong> என்றால் parent count&
 </ul>
 <div class="call key"><div class="ct">பனிப்பாறைக் கனசதுரம்</div><p>பனிப்பாறை நிபந்தனையை நிறைவேற்றும் கலங்களை மட்டும் சேமிக்கும் <strong>பகுதியளவு பொருளாக்கப்பட்ட</strong> கனசதுரம். இது <strong>செயலாக்க நேரத்தையும் வட்டிடத்தையும் சேமித்து</strong>, <strong>மேலும் குவிக்கப்பட்ட பகுப்பாய்வை</strong> வழங்குகிறது. வரம்புக்குக் கீழுள்ள கலங்கள் பொதுவாகப் பகுப்பாய்வு செய்ய <strong>மிக அற்பமானவை</strong>.</p></div>
 <div class="call example"><div class="ct">படிநிலைகளுடன் கனச்செவ்வக எண்ணிக்கை</div><p>காலத்தில் நாள் &lt; மாதம் &lt; காலாண்டு &lt; ஆண்டு நிலைகள் உள்ளன (L = 4); பொருளுக்கு 2 நிலைகள்; இடத்துக்கு 3.</p>
-<p>கனச்செவ்வகங்கள் = (4+1)(2+1)(3+1) = <strong>60</strong>; படிநிலைகளின்றி 2³ = 8 மட்டுமே.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="MultiWay array aggregation"><span class="num">4</span>MultiWay array aggregation</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>பல மொத்தங்களைச் சேர்த்துக் கணக்கிடுதல்</h3><p>ஒரே data scan அல்லது chunk-இல் பல related summaries கணக்கிட முயலும் முறை. Parent–child cuboid தொடர்பைப் பயன்படுத்துவதால் மீண்டும் மீண்டும் ஒரே வேலையைத் தவிர்க்கலாம். Memory பயன்படுத்தும் விதமும் முக்கியம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>MultiWay array aggregation cube-ஐ <strong>chunks</strong>-ஆகப் பிரித்து memory-க்கு ஏற்ற பகுதிகளைச் செயலாக்கும். குறைந்த dimensions summaries-ஐ மற்ற summaries-உடன் ஒரே பயணத்தில் பகிர்ந்து கணக்கிட முயலும்.
-Array dense என்றால் ஏற்றது; sparse high-dimensional cube-இல் பல காலி cells இருந்தால் space waste அதிகமாகலாம். Chunk order, buffer size முடிவின் நேரத்தைப் பாதிக்கும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>A40,B400,C4000 ஒவ்வொன்றும்4 partitions→<strong>64 chunks</strong>, sizes10/100/1000. Full3-D cube-க்கு ABC,AB,AC,BC,A,B,C,all. ஒரு base tuple(count2) அதன் <strong>7 aggregate combinations</strong>-க்கும்2 சேர்க்கும்; base உட்பட8 cells தொடர்புடையவை. Chunk traversal/cache plan மூலம் repeated work/memory குறைகிறது; array size/cardinality storage செலவை நிர்ணயிக்கும்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p><strong>Data structures:</strong> <strong>ROLAP</strong> stores cuboids in <strong>relational tables</strong>. <strong>MOLAP</strong> uses <strong>multidimensional arrays</strong>. Two methods for computing <strong>full cubes</strong> are covered: <strong>MultiWay</strong> (array-based) and <strong>BUC</strong>.</p>
+<p>கனச்செவ்வகங்கள் = (4+1)(2+1)(3+1) = <strong>60</strong>; படிநிலைகளின்றி 2³ = 8 மட்டுமே.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="MultiWay array aggregation"><span class="num">4</span>MultiWay array aggregation</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>MultiWay — ஒருமுறை படி, எல்லாவற்றையும் ஒரே நேரத்தில் நிரப்பு</h3><p><strong>Data அமைப்புகள்:</strong> <strong>ROLAP</strong> → relational tables. <strong>MOLAP</strong> → multidimensional <strong>arrays</strong>. Full cubes-ஐக் கணக்கிட இரண்டு முறைகள்: <strong>MultiWay</strong> (array அடிப்படை), <strong>BUC</strong>.</p>
+<p><strong>முக்கிய யோசனை: ஒரே நேரத்தில் aggregation (simultaneous aggregation)</strong></p>
+<p>ஒரு base cell-ஐப் <strong>படிக்கும்போதே</strong>, அது சேரும் <strong>எல்லா aggregate cells-ஐயும் ஒரே நேரத்தில்</strong> புதுப்பி. அதனால் array-ஐ ஒவ்வொரு cuboid-க்கும் தனியாக அல்ல, <strong>ஒரே ஒருமுறை</strong> scan செய்தால் போதும்.</p>
+<p><strong>உதாரணம்:</strong> base tuple <strong>{P1, Calgary, Vance}</strong>, count = 2. இதைப் படிக்கும்போது, இவை எல்லாவற்றுக்கும் <strong>+2</strong>:</p>
+<ul>
+<li><strong>2-D:</strong> {P1, Calgary, *}, {P1, *, Vance}, {*, Calgary, Vance}</li>
+<li><strong>1-D:</strong> {P1, *, *}, {*, Calgary, *}, {*, *, Vance}</li>
+<li><strong>Apex:</strong> {*, *, *}</li>
+</ul>
+<p><strong>ஒரு அஞ்சல்காரர் உதாரணம்:</strong> ஒவ்வொரு கடிதத்தையும் கையில் எடுக்கும்போதே, "தெரு", "நகரம்", "மாவட்டம்" என்ற மூன்று எண்ணிக்கைகளையும் <strong>ஒரே நேரத்தில்</strong> கூட்டுகிறார். மூன்று முறை தனித்தனியாக எல்லாக் கடிதங்களையும் பார்ப்பதில்லை.</p>
+<p><strong>Chunks — சிறு துண்டுகளாக</strong></p>
+<ul>
+<li>3-D array (A, B, C), <strong>memory-இல் அடங்கும் சிறு chunks</strong>-ஆகப் பிரிக்கப்படுகிறது.</li>
+<li>ஒவ்வொரு dimension-உம் <strong>4 சம பகுதிகளாக</strong> → 4 × 4 × 4 = <strong>64 chunks</strong>.</li>
+<li>Cardinalities: <strong>A = 40, B = 400, C = 4000</strong> → ஒவ்வொரு பகுதியின் அளவு: <strong>10, 100, 1000</strong>.</li>
+</ul>
+<p><strong>Plane chunk அளவுகள்:</strong></p>
+<ul>
+<li>AB chunk = 10 × 100 = <strong>1,000</strong></li>
+<li>AC chunk = 10 × 1000 = <strong>10,000</strong></li>
+<li>BC chunk = 100 × 1000 = <strong>100,000</strong></li>
+</ul>
+<p><strong>Chunk வரிசை ஏன் முக்கியம்?</strong></p>
+<p><strong>விதி:</strong> <strong>மிகச் சிறிய dimension (A) மிக வேகமாக மாற வேண்டும், மிகப் பெரிய dimension (C) மிக மெதுவாக மாற வேண்டும்.</strong></p>
+<p><strong>நல்ல வரிசை (1, 2, 3 … 64):</strong></p>
+<ul>
+<li><strong>AB</strong> plane <strong>முழுதும்</strong> memory-இல் = 16 chunks × 1,000 = <strong>16,000</strong></li>
+<li><strong>AC</strong>-இன் <strong>ஒரு வரிசை</strong> = 4 chunks × 10,000 = <strong>40,000</strong></li>
+<li><strong>BC</strong>-இன் <strong>ஒரு chunk</strong> = <strong>100,000</strong></li>
+<li><strong>மொத்தம் = 156,000</strong></li>
+</ul>
+<p><strong>மோசமான வரிசை (C வேகமாக, A மெதுவாக):</strong></p>
+<ul>
+<li><strong>BC</strong> plane <strong>முழுதும்</strong> = 16 × 100,000 = <strong>1,600,000</strong></li>
+<li>AC ஒரு வரிசை = 40,000</li>
+<li>AB ஒரு chunk = 1,000</li>
+<li><strong>மொத்தம் = 1,641,000</strong> — பத்து மடங்குக்கும் அதிகம்!</li>
+</ul>
+<p><strong>ஏன்?</strong> கடைசியில் மாறும் dimension-இன் plane-ஐ <strong>முழுதாக</strong> memory-இல் வைத்திருக்க வேண்டும். <strong>மிகச் சிறிய</strong> plane-ஐ (AB) முழுதாக வைத்தால் memory மிச்சம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam template (English):</strong>
+MultiWay array aggregation partitions the array into memory-sized chunks and computes all cuboids <strong>simultaneously</strong> in one scan: each base cell updates all aggregate cells it contributes to. The chunk order should keep the <strong>smallest planes</strong> in memory: with A = 40, B = 400, C = 4000, the best order needs <strong>156,000</strong> memory units (whole AB plane 16,000 + one row of AC 40,000 + one chunk of BC 100,000).</p>
+<p>Page-இல் உள்ள "MultiWay, chunk by chunk" animation-இல் <strong>Good / Bad</strong> வரிசைகளை ஓட்டிப் பாருங்கள். Memory bar எப்படி வளர்கிறது என்று தெரியும்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p><strong>Data structures:</strong> <strong>ROLAP</strong> stores cuboids in <strong>relational tables</strong>. <strong>MOLAP</strong> uses <strong>multidimensional arrays</strong>. Two methods for computing <strong>full cubes</strong> are covered: <strong>MultiWay</strong> (array-based) and <strong>BUC</strong>.</p>
 <h3 id="the-chunked-array">The chunked array</h3>
 <ul>
 <li>Take a 3-D array for A, B, C, <strong>partitioned into small memory-based chunks</strong>.</li>
@@ -809,8 +975,53 @@ reset()})();
 </ul>
 <p>ஒவ்வொரு வரிசைக்கும் இதைச் செய்தால் முழுக் கனசதுரமும் நிரம்பும். மேலுள்ள கருவி இதைக் காட்டுகிறது.</p></div>
 <div class="call tip"><div class="ct">துண்டு வரிசை முக்கியம்</div><p>MultiWay, <strong>நினைவகத்தைக் குறைக்கும்</strong> வரிசையில் துண்டுகளை அணுகுகிறது: நினைவகத்தில் வைத்திருக்கும் 2-D தளங்கள் <strong>மிகச்சிறிய பரிமாணங்களுக்கானவையாக</strong> இருக்க வேண்டும் (இங்கு <strong>AB</strong>; A = 40, B = 400 மிகச்சிறியவை). மிகப்பெரிய தளத்துக்கு (BC) ஒரே நேரத்தில் நினைவகத்தில் ஒரு துண்டு மட்டுமே தேவை.</p></div>
-<p><div data-ta-tool="mw"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="BUC — Bottom-Up Computation"><span class="num">5</span>BUC — Bottom-Up Computation</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>BUC எளிமையாக</h3><p><strong>Bottom-Up Computation</strong> partitions-ஆகப் பிரித்து threshold தாண்டாத கிளைகளில் தேடலை நிறுத்தும். ஒரு group-இன் count குறைந்தால் அதன் மேலும் நுணுக்கமான subgroups count கூடாது என்ற தர்க்கம் பயன்படும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>BUC</strong> apex all-இலிருந்து partition செய்து detail-க்கு depth-first செல்கிறது: all→A→AB→ABC→AC→B→BC→C. Count-minsup fail ஆன partition-இன் descendants count அதிகரிக்காது; அதனால் prune. “Bottom-up” பெயர் lattice drawing-ஐ வைத்து குழப்பலாம்; செயல்முறை aggregate→specific என்பதைக் கூறுங்கள். இந்த pruning-க்கு anti-monotone condition தேவை; sum of negative values/average எல்லாவற்றுக்கும் count logic பொருந்தாது.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><ul>
+<p><div data-ta-tool="mw"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="BUC — Bottom-Up Computation"><span class="num">5</span>BUC — Bottom-Up Computation</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>BUC — apex-இலிருந்து base நோக்கி, iceberg pruning உடன்</h3><ul>
+<li><strong>BUC</strong>, cube-ஐ <strong>apex cuboid-இலிருந்து base cuboid நோக்கிக்</strong> கட்டுகிறது — MultiWay-க்கு <strong>எதிர் திசை</strong>.</li>
+<li>MultiWay: base (ABC) → கீழிருந்து மேலே சுருக்குகிறது.</li>
+<li>BUC: all → A → AB → ABC — மேலிருந்து கீழே விவரத்தைக் கூட்டுகிறது.</li>
+</ul>
+<p><strong>பெயர்க் குழப்பம் — exam பொறி!</strong></p>
+<p>BUC = "<strong>Bottom-Up</strong> Construction". ஆனால் வழக்கமான lattice படத்தில் (<strong>apex மேலே</strong>, base கீழே), அது உண்மையில் <strong>மேலிருந்து கீழே (top-down)</strong> போகிறது: all-இல் தொடங்கி ABC நோக்கி இறங்குகிறது. பெயர், <strong>apex-ஐக் கீழே வரையும்</strong> ஒரு பார்வையிலிருந்து வந்தது.</p>
+<p><strong>3-D cube-க்கு BUC-இன் தேடல் வரிசை:</strong></p>
+<p><strong>all → A → AB → ABC → AC → B → BC → C</strong></p>
+<p>இது <strong>depth-first:</strong> முதலில் A-ஆல் பிரி, ஒவ்வொரு A பகுதிக்குள்ளும் B-ஆல் பிரி, பிறகு C… ஒரு கிளையை முழுதும் முடித்த பிறகே அடுத்தது.</p>
+<p><strong>BUC-இன் பலம்: iceberg pruning</strong></p>
+<p><strong>Count அடிப்படையிலான</strong> min_sup-க்கு: ஒரு பகுதி threshold-ஐத் <strong>தோற்றால்</strong>, அதன் <strong>descendants எதுவும் தேற முடியாது</strong>. அதனால் BUC <strong>அந்தக் கிளையை முழுதும் விட்டுவிடுகிறது</strong>.</p>
+<p><strong>உதாரணம்:</strong> min_sup = 10. (a1, *, *) count = 6 → <strong>தோல்வி</strong>. அப்படியென்றால் (a1, b1, *), (a1, b1, c1)… எல்லாம் 6-க்குக் குறைவாகவே இருக்கும் (பெரிய குழுவின் பகுதி அதைவிடப் பெரியதாக இருக்க முடியாது). → <strong>எதையும் கணக்கிடத் தேவையில்லை!</strong></p>
+<p><strong>உதாரணம்:</strong> ஒரு பள்ளியில் "10 பேருக்கு மேல் உள்ள குழுக்களைத் தேடு". "Grade 6" வகுப்பிலேயே 6 பேர்தான் என்றால், "Grade 6, Section A" அல்லது "Grade 6, Section A, பெண்கள்" — எதுவும் 10-ஐத் தாண்டாது. <strong>உள்ளே போய்ப் பார்க்கவே தேவையில்லை.</strong></p>
+<p><strong>கவனம்:</strong> இந்த pruning <strong>count</strong>-க்குச் சரி. எதிர்மறை எண்கள் உள்ள <strong>sum, average</strong>-க்கு கண்மூடித்தனமாகப் பயன்படுத்தக் கூடாது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>MultiWay vs BUC:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>MultiWay</th>
+<th>BUC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>திசை</td>
+<td>Base → apex</td>
+<td>Apex → base</td>
+</tr>
+<tr>
+<td>அமைப்பு</td>
+<td>Arrays (MOLAP)</td>
+<td>Partitioning, depth-first</td>
+</tr>
+<tr>
+<td>பலம்</td>
+<td>ஒரே scan-இல் எல்லாம்</td>
+<td><strong>Iceberg pruning</strong></td>
+</tr>
+<tr>
+<td>எதற்கு</td>
+<td>Full cube, சில dimensions</td>
+<td>Iceberg cube, sparse data</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exam tip:</strong> "Why is BUC called bottom-up even though it starts at the apex?" — இந்தக் குழப்பத்தை விளக்குங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><ul>
 <li><strong>BUC</strong> builds the cube <strong>from the apex cuboid toward the base cuboid</strong>, the opposite direction to MultiWay.</li>
 <li>The usual lattice drawing puts the <strong>apex (all) at the top</strong> and the <strong>base (ABC) at the bottom</strong>.</li>
 </ul>
@@ -826,8 +1037,62 @@ reset()})();
 <p><strong>3-D கனசதுரத்தில் BUC-இன் ஆராய்வு வரிசை (படம் 8-4):</strong></p>
 <pre><code>all → A → AB → ABC → AC → B → BC → C
 </code></pre>
-<p>அது A-இல் பிரித்து, ஒவ்வொரு A பிரிவுக்குள்ளும் B-இல் மறுசுழற்சியாகப் பிரித்து, இவ்வாறே ஆழம்-முதல் செல்கிறது. <strong>BUC-இன் வலிமை: பனிப்பாறைக் கிளை வெட்டல்.</strong> <strong>எண்ணிக்கை சார்ந்த குறைந்தபட்ச ஆதரவுக்கு</strong>, ஒரு பிரிவு தோல்வியுற்றால் அதன் எந்த வழித்தோன்றலும் தேர்ச்சி பெற முடியாது; எனவே BUC <strong>அந்தக் கிளையை ஆராய்வதை நிறுத்துகிறது</strong>. சராசரிகளுக்கோ எதிர்மறைப் பெறுமதிகள் உள்ள கூட்டுத்தொகைகளுக்கோ இதைக் கண்மூடித்தனமாகப் பயன்படுத்த வேண்டாம்.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Star attributes, star-nodes and star-trees"><span class="num">6</span>Star attributes, star-nodes and star-trees</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>Star-tree-இன் வேலை</h3><p>குறைந்த count கொண்ட attribute values-ஐ star-ஆகச் சுருக்கி common prefixes பகிரலாம். <strong>Star-tree</strong> redundant வேலைகளைத் தவிர்க்க உதவும். இது Warehouse star schema-வுடன் பெயர் ஒத்தாலும் வேறு கருத்து.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Iceberg count2-இல் 1-D aggregate count குறைந்த dimension values-ஐ star-node-ஆகக் குறைத்து paths compress செய்யலாம். Example kept <strong>a1:3,a2:2,b1:2,c3:2,d4:2</strong>; others collapse. Reduced rows counts <strong>2,1,2</strong>→total5 அதே. <strong>Star-reduction placeholder</strong> மற்றும் cube query-இன் <strong>all wildcard</strong> ஒரே கருத்தல்ல; collapse ஆன original categories-ஐ எல்லா categories-க்கும் total என்று தவறாகப் பொருள் கொள்ளாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><ul>
+<p>அது A-இல் பிரித்து, ஒவ்வொரு A பிரிவுக்குள்ளும் B-இல் மறுசுழற்சியாகப் பிரித்து, இவ்வாறே ஆழம்-முதல் செல்கிறது. <strong>BUC-இன் வலிமை: பனிப்பாறைக் கிளை வெட்டல்.</strong> <strong>எண்ணிக்கை சார்ந்த குறைந்தபட்ச ஆதரவுக்கு</strong>, ஒரு பிரிவு தோல்வியுற்றால் அதன் எந்த வழித்தோன்றலும் தேர்ச்சி பெற முடியாது; எனவே BUC <strong>அந்தக் கிளையை ஆராய்வதை நிறுத்துகிறது</strong>. சராசரிகளுக்கோ எதிர்மறைப் பெறுமதிகள் உள்ள கூட்டுத்தொகைகளுக்கோ இதைக் கண்மூடித்தனமாகப் பயன்படுத்த வேண்டாம்.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Star attributes, star-nodes and star-trees"><span class="num">6</span>Star attributes, star-nodes and star-trees</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>Star-nodes — அரிதான மதிப்புகளை * ஆல் மாற்றுதல்</h3><p><strong>யோசனை:</strong> ஒரு attribute மதிப்பு p-இன் <strong>தனி (1-D) மொத்தமே</strong> iceberg condition-ஐத் <strong>தோற்றால்</strong>, p-ஐத் தனியாகக் கவனிப்பதில் அர்த்தமில்லை.</p>
+<ul>
+<li>அதனால் p-ஐ <strong>*</strong> ஆல் மாற்று → p ஒரு <strong>star-node</strong>.</li>
+<li>Threshold-ஐத் தாண்டும் மதிப்புகள் → <strong>non-star-nodes</strong>.</li>
+<li>இப்படிச் சுருக்கிய மரம் → <strong>star-tree</strong>. Star-nodes-இன் பட்டியல் → <strong>star-table</strong>.</li>
+</ul>
+<p><strong>கவனம்:</strong> இங்கே * = "<strong>அரிதான மதிப்பு</strong>" (compressed). Cube-இல் வரும் "all" * இலிருந்து இது வேறுபட்டது, இரண்டும் ஒரே மாதிரி எழுதப்பட்டாலும்.</p>
+<p><strong>உதாரணம் (min_sup = 2)</strong></p>
+<p>5 tuples, 4 dimensions (A, B, C, D).</p>
+<p><strong>படி 1:</strong> ஒவ்வொரு மதிப்பையும் தனியாக எண்ணு. ≥ 2 உள்ளவை மட்டும் <strong>தேறும்</strong>:
+<strong>a1 (3), a2 (2), b1 (2), c3 (2), d4 (2)</strong>. மற்றவை எல்லாம் → <strong>*</strong></p>
+<p><strong>படி 2:</strong> ஒவ்வொரு tuple-இலும் தேறாத மதிப்புகளை * ஆல் மாற்று.</p>
+<p><strong>படி 3:</strong> ஒரே மாதிரி ஆன rows-ஐ <strong>இணைத்து, count-ஐக் கூட்டு</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a1</td>
+<td>b1</td>
+<td>*</td>
+<td>*</td>
+<td>2</td>
+</tr>
+<tr>
+<td>a1</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>1</td>
+</tr>
+<tr>
+<td>a2</td>
+<td>*</td>
+<td>c3</td>
+<td>d4</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>"a1 * * * 1" என்ற தனி row ஏன்?</strong></p>
+<p>a1 மூன்று tuples-இல் வருகிறது. அவற்றில் <strong>இரண்டில் b1</strong> உள்ளது → அவை (a1, b1, *, *) ஆக இணைந்து count 2. <strong>மூன்றாவதில்</strong> வேறு ஒரு அரிதான B மதிப்பு (தேறாதது) → அது * ஆகிறது → (a1, *, *, *) count 1. <strong>B மதிப்பு வேறு என்பதால் இணைக்க முடியாது.</strong></p>
+<p><strong>முடிவு:</strong> 5 rows → <strong>3 rows</strong>. குறைவான வெவ்வேறு மதிப்புகள். அதனால் star-tree <strong>மிகச் சிறியது</strong>.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam-இல் எப்படிக் கேட்பார்கள்:</strong> ஒரு base table, min_sup கொடுத்து:</p>
+<ol>
+<li>"Which values are star-nodes?" → ஒவ்வொரு மதிப்பின் count-ஐயும் எண்ணி, min_sup-க்குக் குறைவானவற்றைப் பட்டியலிடு.</li>
+<li>"Give the reduced (star) table." → * ஆல் மாற்றி, ஒத்த rows-ஐ இணைத்து, counts-ஐக் கூட்டு.</li>
+</ol>
+<p><strong>முக்கியம்:</strong> ஒவ்வொரு மதிப்பையும் <strong>தனியாக (1-D)</strong> எண்ணுங்கள் — tuple முழுதையும் அல்ல.</p>
+<p>Page-இல் உள்ள star-reduction lab-இல் படிப்படியாகப் பார்க்கலாம்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><ul>
 <li>If the <strong>single-dimension aggregate</strong> for an attribute value p <strong>fails the iceberg condition</strong>, there's no point treating p separately.</li>
 <li>Replace p with <strong>*</strong>. Then p is represented by a <strong>star-node</strong>; values that pass are <strong>non-star-nodes</strong>. This compressed-value placeholder is conceptually different from the cube <strong>all</strong> wildcard, even when both are printed as *.</li>
 <li>A cuboid tree compressed this way is a <strong>star-tree</strong>. A <strong>star-table</strong> lists the star-nodes.</li>
@@ -931,10 +1196,196 @@ R.addEventListener('input',run);run();})();
 </tr>
 </tbody>
 </table>
-<p>இதில் <strong>இரண்டு வரிசைகள் குறைவாகவும்</strong> தனித்த பெறுமதிகள் குறைவாகவும் உள்ளதால், இதிலிருந்து உருவாக்கப்படும் <strong>நட்சத்திர மரம்</strong> மிகச்சிறியது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Attribute-oriented induction (AOI)"><span class="num">7</span>Attribute-oriented induction (AOI)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>AOI என்றால் என்ன?</h3><p>ஒவ்வொரு நகரப் பதிவையும் நாடு போன்ற மேல்நிலைக்கு மாற்றிச் சுருக்குவது <strong>Attribute-oriented induction</strong>. மிக நுணுக்கமான values-ஐ generalise செய்து ஒரு குழுவின் பொதுப் பண்பைக் காட்டுவோம். அளவுக்கு அதிகமாக generalise செய்தால் பொருள் மறையும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>AOI:</strong> task data தேர்வு → தேவையற்ற attributes நீக்கு → concept hierarchy மூலம் generalise → duplicates merge செய்து counts சேர் → thresholds பூர்த்தியாகும் வரை தொடரு.
-Rule 1: பல distinct values உள்ள attribute-க்கு hierarchy இல்லையெனில் நீக்கலாம். Rule 2: hierarchy இருந்தால் மேல்நிலைக்கு ஏற்றலாம். Name/phone பொதுப் பண்பை விளக்க உதவாது; birth_city-ஐ country-ஆக மாற்றலாம். Result counts-ஐ total-ஆல் பிரித்தால் relative support கிடைக்கும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>AOI steps:</strong> query task-relevant relation→attribute remove/generalise→identical tuples merge/count→chart/rule presentation. Name/phone பல values hierarchy இல்லை→remove; birth_place city→country; birth_date→age range; major→subject group; residence→city; GPA→grade. Gender குறைந்த distinct values என்றால் retain (பாட example codes). Attributes already higher-level fields-இல் represented என்றாலும் redundant lower-level remove. <strong>Attribute threshold</strong> distinct concepts எண்ணிக்கையை வரையறுக்கும்; merged counts மறக்கக்கூடாது.</p></div><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><p><strong>Data generalization</strong> replaces low-level values (numeric age) with <strong>higher-level concepts</strong> (young, middle-aged, senior), so large data can be described <strong>concisely at multiple levels of abstraction</strong>.</p>
+<p>இதில் <strong>இரண்டு வரிசைகள் குறைவாகவும்</strong> தனித்த பெறுமதிகள் குறைவாகவும் உள்ளதால், இதிலிருந்து உருவாக்கப்படும் <strong>நட்சத்திர மரம்</strong> மிகச்சிறியது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Attribute-oriented induction (AOI)"><span class="num">7</span>Attribute-oriented induction (AOI)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>AOI — விவரங்களைப் பொதுமைப்படுத்திச் சுருக்குதல்</h3><p><strong>Data generalization</strong> = கீழ்நிலை மதிப்புகளை (வயது 23) <strong>மேல்நிலைக் கருத்துகளால்</strong> (இளைஞர்) மாற்றி, பெரிய data-வை <strong>பல நிலைகளில் சுருக்கமாக</strong> விவரிப்பது.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Data cube முறை</th>
+<th><strong>AOI</strong> (1989)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>எப்போது</td>
+<td><strong>Offline</strong> — query வருவதற்கு <strong>முன்பே</strong> கணக்கிட்டது</td>
+<td><strong>Online</strong> — <strong>query வந்த பிறகு</strong></td>
+</tr>
+<tr>
+<td>அடிப்படை</td>
+<td>Warehouse-இல் முன்கணக்கிட்ட views</td>
+<td><strong>Query-oriented</strong>, generalization அடிப்படை</td>
+</tr>
+<tr>
+<td>வரலாறு</td>
+<td>பின்னர்</td>
+<td>Data cube-க்குச் <strong>சில ஆண்டுகள் முன்பு</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>AOI-இன் 4 படிகள்</strong></p>
+<ol>
+<li><strong>Collect:</strong> Database query மூலம் <strong>தொடர்புடைய data-வைச் சேகரி</strong>.</li>
+<li><strong>Generalize:</strong> ஒவ்வொரு attribute-இன் <strong>வெவ்வேறு மதிப்புகளின் எண்ணிக்கையைப்</strong> பார்த்து → <strong>நீக்கு</strong> அல்லது <strong>பொதுமைப்படுத்து</strong>.</li>
+<li><strong>Aggregate:</strong> <strong>ஒரே மாதிரி ஆன rows-ஐ இணைத்து</strong>, count-ஐக் கூட்டு.</li>
+<li><strong>Present:</strong> Charts, cross-tabs, rules ஆகக் காட்டு.</li>
+</ol>
+<p><strong>இரண்டு விதிகள்</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Attribute removal (நீக்கு)</strong></th>
+<th><strong>Attribute generalization (பொதுமைப்படுத்து)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>நிறைய</strong> வெவ்வேறு மதிப்புகள், <strong>மேலும்</strong>:</td>
+<td><strong>நிறைய</strong> வெவ்வேறு மதிப்புகள், <strong>மேலும்</strong>:</td>
+</tr>
+<tr>
+<td>(1) <strong>Concept hierarchy இல்லை</strong>, அல்லது</td>
+<td><strong>Concept hierarchy உள்ளது</strong></td>
+</tr>
+<tr>
+<td>(2) அதன் மேல்நிலைக் கருத்துகள் <strong>வேறு attributes-இல் ஏற்கனவே உள்ளன</strong></td>
+<td>→ Hierarchy-இல் <strong>மேலே ஏறு</strong>, மதிப்புகள் <strong>threshold-க்குள்</strong> வரும் வரை</td>
+</tr>
+<tr>
+<td>→ <strong>நீக்கு</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>முழு உதாரணம்: Big University-இன் அறிவியல் பட்டப்பின் மாணவர்கள்</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>முடிவு</th>
+<th>ஏன்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><strong>நீக்கு</strong></td>
+<td>ஒவ்வொருவருக்கும் வேறு; <strong>hierarchy இல்லை</strong> ("Jim"-க்கு மேல்நிலை என்ன?)</td>
+</tr>
+<tr>
+<td><strong>gender</strong></td>
+<td><strong>அப்படியே வை</strong></td>
+<td>2 மதிப்புகள் மட்டும்</td>
+</tr>
+<tr>
+<td><strong>major</strong></td>
+<td><strong>பொதுமைப்படுத்து</strong> → arts &amp; science, engineering, business</td>
+<td>Hierarchy உள்ளது; 20+ மதிப்புகள், threshold 5</td>
+</tr>
+<tr>
+<td><strong>birth_place</strong></td>
+<td><strong>பொதுமைப்படுத்து</strong> → birth_country</td>
+<td>நகரம் &lt; மாகாணம் &lt; நாடு</td>
+</tr>
+<tr>
+<td><strong>birth_date</strong></td>
+<td><strong>பொதுமைப்படுத்து</strong> → வயது → <strong>age_range</strong></td>
+<td>சில வயது வரம்புகள் போதும்</td>
+</tr>
+<tr>
+<td><strong>residence</strong></td>
+<td>எண், தெரு <strong>நீக்கு</strong> → <strong>residence_city</strong></td>
+<td>மிகக் கீழ்நிலை</td>
+</tr>
+<tr>
+<td><strong>phone#</strong></td>
+<td><strong>நீக்கு</strong></td>
+<td>நிறைய மதிப்புகள், hierarchy இல்லை</td>
+</tr>
+<tr>
+<td><strong>gpa</strong></td>
+<td><strong>பொதுமைப்படுத்து</strong> → excellent, very good, …</td>
+<td>இடைவெளி hierarchy உள்ளது</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prime relation (பொதுமைப்படுத்தி இணைத்த பிறகு):</strong></p>
+<table>
+<thead>
+<tr>
+<th>gender</th>
+<th>major</th>
+<th>birth_country</th>
+<th>age_range</th>
+<th>residence_city</th>
+<th>gpa</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M</td>
+<td>Science</td>
+<td>Canada</td>
+<td>20–25</td>
+<td>Richmond</td>
+<td>very good</td>
+<td>16</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Science</td>
+<td>Foreign</td>
+<td>25–30</td>
+<td>Burnaby</td>
+<td>excellent</td>
+<td>22</td>
+</tr>
+</tbody>
+</table>
+<p><strong>பொருள்:</strong> "Canada-வில் பிறந்த, 20–25 வயது, Richmond-இல் வசிக்கும், very good GPA உள்ள <strong>16</strong> ஆண் அறிவியல் மாணவர்கள்." ஆயிரக்கணக்கான rows → சில அர்த்தமுள்ள வரிகள்.</p>
+<p><strong>Cross-tab ஆகக் காட்டுதல்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>birth_country</th>
+<th>M</th>
+<th>F</th>
+<th>மொத்தம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canada</td>
+<td>16</td>
+<td>10</td>
+<td>26</td>
+</tr>
+<tr>
+<td>Foreign</td>
+<td>14</td>
+<td>22</td>
+<td>36</td>
+</tr>
+<tr>
+<td><strong>மொத்தம்</strong></td>
+<td>30</td>
+<td>32</td>
+<td>62</td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam tip:</strong> AOI கேள்விக்கு:</p>
+<ol>
+<li><strong>இரண்டு விதிகளையும்</strong> (removal vs generalization) விளக்குங்கள்.</li>
+<li><strong>name, gender, major, birth_place, birth_date, residence, phone#, gpa</strong> — ஒவ்வொன்றுக்கும் முடிவையும் காரணத்தையும் எழுதுங்கள். <strong>அந்த அட்டவணைதான் பதிலின் இதயம்.</strong></li>
+</ol>
+<p><strong>நினைவில் வைக்க:</strong></p>
+<ul>
+<li><strong>நீக்கப்படுபவை:</strong> name, phone# (hierarchy இல்லை)</li>
+<li><strong>அப்படியே:</strong> gender (2 மதிப்புகள்)</li>
+<li><strong>பொதுமைப்படுத்தப்படுபவை:</strong> major, birth_place, birth_date, residence, gpa</li>
+</ul>
+<p><strong>பொதுவான கேள்வி:</strong> "Why is name removed but birth_place generalized?" → name-க்கு <strong>concept hierarchy இல்லை</strong>; birth_place-க்கு <strong>உள்ளது</strong> (city → country).</p></div><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><p><strong>Data generalization</strong> replaces low-level values (numeric age) with <strong>higher-level concepts</strong> (young, middle-aged, senior), so large data can be described <strong>concisely at multiple levels of abstraction</strong>.</p>
 <div class="grid2"><div><p><strong>Data cube approach</strong></p>
 <ul>
 <li>Based on <strong>materialized views</strong> pre-computed in the warehouse</li>
@@ -1370,29 +1821,56 @@ where status in &quot;graduate&quot;
 </tr>
 </tbody>
 </table>
-<div class="call exam"><div class="ct">Exam focus</div><p>AOI கேள்விகளுக்கு <strong>இரு விதிகளையும்</strong> (நீக்கம் மற்றும் பொதுமைப்படுத்தல்) விளக்கி, <strong>name, gender, major, birth_place, birth_date, residence, phone#, gpa</strong> ஆகிய பண்புக்கூறுகள் ஒவ்வொன்றின் முடிவையும் விவரிக்கவும். அந்த அட்டவணையே விடையின் மையம்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Quick revision sheet"><span class="num">8</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s8 en-s8" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s8" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>Cube கணக்கிடுதல் ஏன் சிக்கல்?</h4><p>Dimensions அதிகரித்தால் சாத்தியமான groupings வேகமாக அதிகரிக்கும். எல்லா totals-ஐயும் சேமிப்பது இடமும் நேரமும் அதிகம் எடுக்கும். பயனுள்ள பகுதிகளை மட்டும் கணக்கிடுவது முக்கியம்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Cube precompute செய்தால் repeated OLAP queries வேகமாகலாம்; ஆனால் build time/storage/refresh செலவு உண்டு. Full materialisation எல்லா summaries; partial சில useful summaries; no materialisation query நேரத்தில் கணக்கு. எவ்வளவு முன்கணிக்கவேண்டும் என்பது query workload/cardinality/available memory-ஐப் பொறுத்தது.</p></div><div class="ta-recap-item"><h4>சுருக்க முடிவுகளை முன்பே சேமித்தல்</h4><p>சில அல்லது எல்லா summary results-ஐ முன்கூட்டியே கணக்கிட்டு வைத்திருப்பது <strong>Materialization</strong>. பின்னர் query வேகம் கூடும்; ஆனால் storage, refresh cost உண்டு. எவ்வளவு சேமிப்பது என்பது தேர்வு.</p>
-<p><strong>Base cell</strong> எல்லா dimensions-உம் குறிப்பிட்ட value கொண்டது. <strong>Aggregate cell</strong>-இல் குறைந்தது ஒரு * (all) இருக்கும். (Jan, Toronto, Business) detail; (Jan, *, Business) பல நகரங்களின் summary.
-Ancestor summary-இலிருந்து child details-ஐ முழுமையாக reconstruct செய்ய முடியாது. மொத்தத்தைக் கண்டதால் ஒவ்வொரு நகரத்தின் விற்பனை தெரிந்துவிடாது.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Base cell</strong> எல்லா n dimensions specified; aggregate cell-இல் சில dimensions <strong>all(*)</strong>. (Jan,<em>,Business)→2-D; (Jan,Toronto,Business)→3-D base. Ancestor குறைந்த specified dimensions உடையதும் மீதியெல்லாம் descendant-உடன் பொருந்துவதும்; parent-க்கு exactly one specified dimension குறைவு. </em><em>Cuboid</em><em> ஒரே group-by level; </em><em>cell</em>* அதிலுள்ள ஒரு aggregate.</p></div><div class="ta-recap-item"><h4>Full cube மற்றும் Iceberg</h4><p>Full cube எல்லா cells-ஐயும் கணக்கிடும். <strong>Iceberg cube</strong> minimum count போன்ற threshold தாண்டும் cells மட்டும் வைத்திருக்கும். பெரும்பாலான records மிகக் குறைந்த ஆதரவு கொண்டிருந்தால் இது செலவைக் குறைக்கலாம்.</p>
-<p>Full materialisation எல்லாச் summaries-ஐயும் வைத்திருக்கும்; no materialisation தேவைக்கேற்ப கணக்கிடும்; partial materialisation சிலவற்றை வைத்திருக்கும். Space–query-time சமநிலை முக்கியம்.
-Iceberg condition <strong>COUNT≥k</strong> என்றால் parent count&lt;k ஆகும் branch-இன் descendants-ஐ prune செய்யலாம். AVG போன்ற வேறு measures-க்கு இதே pruning தர்க்கத்தை ஆதாரமின்றிப் பயன்படுத்தக்கூடாது.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>No hierarchies n dimensions→2ⁿ cuboids. Levels Lᵢ+all கொண்டால் <strong>Π(Lᵢ+1)</strong>;time4,item2,location3→<strong>5×3×4=60</strong>. Iceberg count≥10 போன்ற condition meet செய்த cells மட்டும். Small count தானாக uninteresting அல்ல; rare fraud முக்கியமாகலாம். Count pruning-ஐ average போன்ற எல்லா measures-க்கும் அப்படியே பயன்படுத்த முடியாது.</p></div><div class="ta-recap-item"><h4>பல மொத்தங்களைச் சேர்த்துக் கணக்கிடுதல்</h4><p>ஒரே data scan அல்லது chunk-இல் பல related summaries கணக்கிட முயலும் முறை. Parent–child cuboid தொடர்பைப் பயன்படுத்துவதால் மீண்டும் மீண்டும் ஒரே வேலையைத் தவிர்க்கலாம். Memory பயன்படுத்தும் விதமும் முக்கியம்.</p>
-<p>MultiWay array aggregation cube-ஐ <strong>chunks</strong>-ஆகப் பிரித்து memory-க்கு ஏற்ற பகுதிகளைச் செயலாக்கும். குறைந்த dimensions summaries-ஐ மற்ற summaries-உடன் ஒரே பயணத்தில் பகிர்ந்து கணக்கிட முயலும்.
-Array dense என்றால் ஏற்றது; sparse high-dimensional cube-இல் பல காலி cells இருந்தால் space waste அதிகமாகலாம். Chunk order, buffer size முடிவின் நேரத்தைப் பாதிக்கும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>A40,B400,C4000 ஒவ்வொன்றும்4 partitions→<strong>64 chunks</strong>, sizes10/100/1000. Full3-D cube-க்கு ABC,AB,AC,BC,A,B,C,all. ஒரு base tuple(count2) அதன் <strong>7 aggregate combinations</strong>-க்கும்2 சேர்க்கும்; base உட்பட8 cells தொடர்புடையவை. Chunk traversal/cache plan மூலம் repeated work/memory குறைகிறது; array size/cardinality storage செலவை நிர்ணயிக்கும்.</p></div><div class="ta-recap-item"><h4>BUC எளிமையாக</h4><p><strong>Bottom-Up Computation</strong> partitions-ஆகப் பிரித்து threshold தாண்டாத கிளைகளில் தேடலை நிறுத்தும். ஒரு group-இன் count குறைந்தால் அதன் மேலும் நுணுக்கமான subgroups count கூடாது என்ற தர்க்கம் பயன்படும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>BUC</strong> apex all-இலிருந்து partition செய்து detail-க்கு depth-first செல்கிறது: all→A→AB→ABC→AC→B→BC→C. Count-minsup fail ஆன partition-இன் descendants count அதிகரிக்காது; அதனால் prune. “Bottom-up” பெயர் lattice drawing-ஐ வைத்து குழப்பலாம்; செயல்முறை aggregate→specific என்பதைக் கூறுங்கள். இந்த pruning-க்கு anti-monotone condition தேவை; sum of negative values/average எல்லாவற்றுக்கும் count logic பொருந்தாது.</p></div><div class="ta-recap-item"><h4>Star-tree-இன் வேலை</h4><p>குறைந்த count கொண்ட attribute values-ஐ star-ஆகச் சுருக்கி common prefixes பகிரலாம். <strong>Star-tree</strong> redundant வேலைகளைத் தவிர்க்க உதவும். இது Warehouse star schema-வுடன் பெயர் ஒத்தாலும் வேறு கருத்து.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Iceberg count2-இல் 1-D aggregate count குறைந்த dimension values-ஐ star-node-ஆகக் குறைத்து paths compress செய்யலாம். Example kept <strong>a1:3,a2:2,b1:2,c3:2,d4:2</strong>; others collapse. Reduced rows counts <strong>2,1,2</strong>→total5 அதே. <strong>Star-reduction placeholder</strong> மற்றும் cube query-இன் <strong>all wildcard</strong> ஒரே கருத்தல்ல; collapse ஆன original categories-ஐ எல்லா categories-க்கும் total என்று தவறாகப் பொருள் கொள்ளாதீர்கள்.</p></div><div class="ta-recap-item"><h4>AOI என்றால் என்ன?</h4><p>ஒவ்வொரு நகரப் பதிவையும் நாடு போன்ற மேல்நிலைக்கு மாற்றிச் சுருக்குவது <strong>Attribute-oriented induction</strong>. மிக நுணுக்கமான values-ஐ generalise செய்து ஒரு குழுவின் பொதுப் பண்பைக் காட்டுவோம். அளவுக்கு அதிகமாக generalise செய்தால் பொருள் மறையும்.</p>
-<p><strong>AOI:</strong> task data தேர்வு → தேவையற்ற attributes நீக்கு → concept hierarchy மூலம் generalise → duplicates merge செய்து counts சேர் → thresholds பூர்த்தியாகும் வரை தொடரு.
-Rule 1: பல distinct values உள்ள attribute-க்கு hierarchy இல்லையெனில் நீக்கலாம். Rule 2: hierarchy இருந்தால் மேல்நிலைக்கு ஏற்றலாம். Name/phone பொதுப் பண்பை விளக்க உதவாது; birth_city-ஐ country-ஆக மாற்றலாம். Result counts-ஐ total-ஆல் பிரித்தால் relative support கிடைக்கும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>AOI steps:</strong> query task-relevant relation→attribute remove/generalise→identical tuples merge/count→chart/rule presentation. Name/phone பல values hierarchy இல்லை→remove; birth_place city→country; birth_date→age range; major→subject group; residence→city; GPA→grade. Gender குறைந்த distinct values என்றால் retain (பாட example codes). Attributes already higher-level fields-இல் represented என்றாலும் redundant lower-level remove. <strong>Attribute threshold</strong> distinct concepts எண்ணிக்கையை வரையறுக்கும்; merged counts மறக்கக்கூடாது.</p></div><button type="button" class="native-reference" aria-controls="en-s8" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s8" lang="en"><div class="hci-en"><table>
+<div class="call exam"><div class="ct">Exam focus</div><p>AOI கேள்விகளுக்கு <strong>இரு விதிகளையும்</strong> (நீக்கம் மற்றும் பொதுமைப்படுத்தல்) விளக்கி, <strong>name, gender, major, birth_place, birth_date, residence, phone#, gpa</strong> ஆகிய பண்புக்கூறுகள் ஒவ்வொன்றின் முடிவையும் விவரிக்கவும். அந்த அட்டவணையே விடையின் மையம்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Quick revision sheet"><span class="num">8</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s8 en-s8" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s8" lang="ta" hidden><h3>விரைவு மீள்பார்வை — Week 8</h3><table>
+<thead>
+<tr>
+<th>தலைப்பு</th>
+<th>ஒரு வரியில்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base / aggregate cell</td>
+<td>எல்லா n மதிப்புகளும் / குறைந்தது ஒரு *</td>
+</tr>
+<tr>
+<td>m-D cell</td>
+<td>சரியாக m மதிப்புகள் * அல்லாதவை</td>
+</tr>
+<tr>
+<td>Ancestor</td>
+<td>குறைவான dims, * அல்லாத இடங்களில் பொருத்தம்; ஒரு படி மட்டும் என்றால் parent</td>
+</tr>
+<tr>
+<td>Full cube அளவு</td>
+<td>2ⁿ cuboids; hierarchies உடன் Π(Lᵢ + 1)</td>
+</tr>
+<tr>
+<td>Iceberg cube</td>
+<td>Threshold-ஐத் தாண்டும் cells மட்டும் (count ≥ 10, sales ≥ $100)</td>
+</tr>
+<tr>
+<td>ROLAP / MOLAP</td>
+<td>Relational tables / arrays</td>
+</tr>
+<tr>
+<td>MultiWay</td>
+<td>Chunks; ஒரு base cell எல்லா aggregate cells-ஐயும் ஒரே நேரத்தில் புதுப்பிக்கும்; சிறிய plane-ஐ memory-இல் வை (156,000 vs 1,641,000)</td>
+</tr>
+<tr>
+<td>BUC</td>
+<td>Apex → base; "bottom-up" என்று பெயர் ஆனால் top-down போகிறது; iceberg கிளைகளை prune செய்யும்</td>
+</tr>
+<tr>
+<td>Star-node</td>
+<td>1-D மொத்தம் தோற்ற மதிப்பு → *; star-tree, star-table</td>
+</tr>
+<tr>
+<td>AOI</td>
+<td>Query-oriented, online (1989); நீக்கு vs பொதுமைப்படுத்து; counts உடன் prime relation</td>
+</tr>
+</tbody>
+</table><button type="button" class="native-reference" aria-controls="en-s8" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s8" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>

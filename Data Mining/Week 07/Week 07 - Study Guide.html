@@ -543,8 +543,39 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dm-Week07" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
 <div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 07</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 07</div><h1>Design of a Data Warehouse</h1><p>Benefits, the four design views, top-down vs bottom-up, the 4-step design process, three-tier architecture, the metadata repository, and ROLAP / MOLAP / HOLAP servers.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 11 min</span><span class="chip">📄 week 7_5.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Weka 1.3 – Exploring datasets · 11 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Data Mining with Weka (1.3_ Exploring datasets).mp4" data-drive="1M3IY1dISDfSuPgqrCnuaH_gRm9nxLdjc"><source src="Data%20Mining%20with%20Weka%20%281.3_%20Exploring%20datasets%29.mp4"></video></div><div class="chap"><p class="vt">Weka 1.3 – Exploring datasets</p><p class="vs">Looking inside datasets in Weka: ARFF format, nominal vs numeric attributes, and the class attribute.</p><a href="#" data-v="0" data-t="17"><b>00:17</b><span>Introduction: exploring datasets</span></a><a href="#" data-v="0" data-t="47"><b>00:47</b><span>The weather data: attributes and the class</span></a><a href="#" data-v="0" data-t="71"><b>01:11</b><span>Opening a dataset in the Explorer</span></a><a href="#" data-v="0" data-t="96"><b>01:36</b><span>Viewing attribute values</span></a><a href="#" data-v="0" data-t="127"><b>02:07</b><span>Changing the class attribute</span></a><a href="#" data-v="0" data-t="153"><b>02:33</b><span>Input: a dataset of classified examples</span></a><a href="#" data-v="0" data-t="194"><b>03:14</b><span>Nominal vs numeric attributes; continuous classes</span></a><a href="#" data-v="0" data-t="254"><b>04:14</b><span>The numeric weather data</span></a><a href="#" data-v="0" data-t="286"><b>04:46</b><span>The glass dataset</span></a><a href="#" data-v="0" data-t="313"><b>05:13</b><span>The class: types of glass</span></a><a href="#" data-v="0" data-t="358"><b>05:58</b><span>Check values for reasonableness</span></a><a href="#" data-v="0" data-t="436"><b>07:16</b><span>Looking inside the ARFF file</span></a><a href="#" data-v="0" data-t="579"><b>09:39</b><span>Summary</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why build a data warehouse?"><span class="num">1</span>Why build a data warehouse?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>Warehouse-இன் நோக்கம்</h3><p>வாடிக்கையாளர், நேரம், இடம் வழியாக வியாபாரத்தை ஒப்பிட ஒருங்கிணைந்த நம்பகமான தகவல் தேவை. தரவைச் சேர்ப்பதற்கு முன் எந்த business decisions-க்கு அது பயன்படும் என்று தீர்மானிக்க வேண்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>நான்கு benefits:</strong> decision/performance தகவலால் competitive advantage; விரைவான consistent reports மூலம் productivity; customer/item unified view மூலம் CRM; trends/exceptions மூலம் செலவு குறைப்பு. Business need தெரியாமல் எல்லா data-வையும் ஏற்றுவது நல்ல design அல்ல. Benefit-க்கு ஒரு measurable business question சேர்த்துப் பதில் எழுதுங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p>To build an effective warehouse you need a <strong>clear understanding and analysis of business needs</strong>. The four benefits:</p>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 07</div><h1>Design of a Data Warehouse</h1><p>Benefits, the four design views, top-down vs bottom-up, the 4-step design process, three-tier architecture, the metadata repository, and ROLAP / MOLAP / HOLAP servers.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 11 min</span><span class="chip">📄 week 7_5.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Weka 1.3 – Exploring datasets · 11 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Data Mining with Weka (1.3_ Exploring datasets).mp4" data-drive="1M3IY1dISDfSuPgqrCnuaH_gRm9nxLdjc"><source src="Data%20Mining%20with%20Weka%20%281.3_%20Exploring%20datasets%29.mp4"></video></div><div class="chap"><p class="vt">Weka 1.3 – Exploring datasets</p><p class="vs">Looking inside datasets in Weka: ARFF format, nominal vs numeric attributes, and the class attribute.</p><a href="#" data-v="0" data-t="17"><b>00:17</b><span>Introduction: exploring datasets</span></a><a href="#" data-v="0" data-t="47"><b>00:47</b><span>The weather data: attributes and the class</span></a><a href="#" data-v="0" data-t="71"><b>01:11</b><span>Opening a dataset in the Explorer</span></a><a href="#" data-v="0" data-t="96"><b>01:36</b><span>Viewing attribute values</span></a><a href="#" data-v="0" data-t="127"><b>02:07</b><span>Changing the class attribute</span></a><a href="#" data-v="0" data-t="153"><b>02:33</b><span>Input: a dataset of classified examples</span></a><a href="#" data-v="0" data-t="194"><b>03:14</b><span>Nominal vs numeric attributes; continuous classes</span></a><a href="#" data-v="0" data-t="254"><b>04:14</b><span>The numeric weather data</span></a><a href="#" data-v="0" data-t="286"><b>04:46</b><span>The glass dataset</span></a><a href="#" data-v="0" data-t="313"><b>05:13</b><span>The class: types of glass</span></a><a href="#" data-v="0" data-t="358"><b>05:58</b><span>Check values for reasonableness</span></a><a href="#" data-v="0" data-t="436"><b>07:16</b><span>Looking inside the ARFF file</span></a><a href="#" data-v="0" data-t="579"><b>09:39</b><span>Summary</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why build a data warehouse?"><span class="num">1</span>Why build a data warehouse?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>ஏன் data warehouse கட்ட வேண்டும்? — 4 நன்மைகள்</h3><p>நல்ல warehouse கட்ட, <strong>வணிகத் தேவைகளைத் தெளிவாகப் புரிந்துகொள்வது</strong> அவசியம்.</p>
+<table>
+<thead>
+<tr>
+<th>நன்மை</th>
+<th>Warehouse எப்படித் தருகிறது</th>
+<th>உதாரணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>போட்டி நன்மை</strong> (competitive advantage)</td>
+<td>செயல்திறனை <strong>அளக்கவும்</strong>, போட்டியாளர்களை வெல்ல <strong>முக்கிய மாற்றங்கள்</strong> செய்யவும் தேவையான தகவலைத் தருகிறது</td>
+<td>"போட்டியாளர் விலை குறைத்த பிறகு எங்கள் விற்பனை 20% குறைந்தது" → உடனே பதிலடி</td>
+</tr>
+<tr>
+<td><strong>வணிக உற்பத்தித்திறன்</strong> (productivity)</td>
+<td>நிறுவனம் பற்றிய துல்லியமான தகவலை <strong>வேகமாகச் சேகரிக்கிறது</strong></td>
+<td>அறிக்கை தயாரிக்க ஒரு வாரம் அல்ல, ஒரு நிமிடம்</td>
+</tr>
+<tr>
+<td><strong>CRM</strong> (வாடிக்கையாளர் உறவு)</td>
+<td>எல்லாத் துறைகளிலும் வாடிக்கையாளர்கள், பொருள்கள் பற்றிய <strong>ஒரே சீரான பார்வை</strong></td>
+<td>ஒரு வாடிக்கையாளர் வங்கியில் loan, credit card, சேமிப்பு மூன்றும் வைத்திருப்பதை ஒரே இடத்தில் பார்க்கலாம்</td>
+</tr>
+<tr>
+<td><strong>செலவுக் குறைப்பு</strong></td>
+<td>நீண்ட காலத்துக்கு <strong>போக்குகள், patterns, விதிவிலக்குகளைச்</strong> சீராகக் கண்காணிக்கிறது</td>
+<td>தேவையற்ற stock-ஐக் கண்டுபிடித்துக் குறைக்கலாம்</td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>நினைவில் வைக்க: "C-P-C-C"</strong></p>
+<p><strong>C</strong>ompetitive advantage · <strong>P</strong>roductivity · <strong>C</strong>RM · <strong>C</strong>ost reduction</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p>To build an effective warehouse you need a <strong>clear understanding and analysis of business needs</strong>. The four benefits:</p>
 <table>
 <thead>
 <tr>
@@ -596,10 +627,40 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <td>நீண்ட காலத்தில் <strong>போக்குகள், வடிவங்கள், விதிவிலக்குகளைச்</strong> சீராகவும் நம்பகமாகவும் <strong>கண்காணிக்கிறது</strong></td>
 </tr>
 </tbody>
-</table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="The four views of warehouse design"><span class="num">2</span>The four views of warehouse design</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>Design-இன் நான்கு பார்வைகள்</h3><p><strong>Top-down</strong> தேவையைப் பார்க்கும்; Data source view உள்ள தரவைப் பார்க்கும்; Warehouse view சேமிப்பைப் பார்க்கும்; Business query view பயனர் கேள்வியைப் பார்க்கும். நான்கும் பொருந்தினால்தான் பயனுள்ள அமைப்பு கிடைக்கும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Top-down view:</strong> business questions-க்கு என்ன தகவல் வேண்டும். <strong>Data source view:</strong> sources எவை, அவை எப்படி capture ஆகின்றன. <strong>Warehouse view:</strong> facts, dimensions, storage அமைப்பு. <strong>Business query view:</strong> end user எந்த perspective-இல் கேள்வி கேட்கிறார்.
-Source-இல் data இருப்பதால் மட்டும் அதைக் கட்டாயம் warehouse-இல் வைக்க வேண்டியதில்லை; முடிவெடுக்கும் தேவையுடன் இணைக்க வேண்டும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>நான்கு views:</strong> top-down→business-க்கு என்ன தேவை; source→இப்போது என்ன data இருக்கிறது; warehouse→என்ன fact/dimension/aggregates சேமிக்கிறோம்; business-query→end user எப்படிப் பார்க்கிறார். Owner/architect/builder வேறு வரைபடம் பார்ப்பது போல. View பெயருடன் அதன் content மற்றும் decision purpose சொல்லுங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><div class="call tip"><div class="ct">The building analogy</div><p>Building a large information system is like constructing a large building: the <strong>owner, architect and builder</strong> each have a <strong>different view</strong>. A warehouse has <strong>four</strong> views:</p></div>
+</table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="The four views of warehouse design"><span class="num">2</span>The four views of warehouse design</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>Warehouse வடிவமைப்பின் 4 பார்வைகள் — கட்டிட உதாரணம்</h3><p><strong>கட்டிட உதாரணம்:</strong> ஒரு பெரிய கட்டிடத்தைக் கட்டும்போது, <strong>உரிமையாளர், கட்டடக் கலைஞர், கட்டுபவர்</strong> — ஒவ்வொருவருக்கும் <strong>வேறுபட்ட பார்வை</strong> இருக்கும். Warehouse-க்கும் <strong>4 பார்வைகள்</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>பார்வை</th>
+<th>என்ன காட்டுகிறது</th>
+<th>கேள்வி</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Top-down view</strong></td>
+<td>Warehouse-க்குத் தேவையான <strong>தகவலைத் தேர்ந்தெடுக்கிறது</strong> — தற்போதைய, எதிர்கால வணிகத் தேவைகளுக்கு ஏற்ப</td>
+<td>நமக்கு <strong>என்ன தேவை?</strong></td>
+</tr>
+<tr>
+<td><strong>Data source view</strong></td>
+<td>அன்றாட systems <strong>சேகரித்து, சேமித்து, நிர்வகிக்கும்</strong> தகவல் — பல்வேறு விவர நிலைகளில். <strong>ER models அல்லது CASE tools</strong> மூலம் model செய்யப்படும்</td>
+<td>நம்மிடம் <strong>என்ன இருக்கிறது?</strong></td>
+</tr>
+<tr>
+<td><strong>Data warehouse view</strong></td>
+<td>Warehouse-க்குள் சேமிக்கப்படும் <strong>fact, dimension tables</strong>. <strong>முன்பே கணக்கிட்ட மொத்தங்கள், எண்ணிக்கைகள்</strong>, data-வின் <strong>மூலம், தேதி, நேரம்</strong></td>
+<td>நாம் <strong>என்ன சேமிக்கிறோம்?</strong></td>
+</tr>
+<tr>
+<td><strong>Business query view</strong></td>
+<td><strong>இறுதிப் பயனர்</strong> பார்க்கும் data</td>
+<td>பயனர்கள் <strong>என்ன பார்க்கிறார்கள்?</strong></td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>நினைவில் வைக்க: "T-S-W-B"</strong></p>
+<p><strong>T</strong>op-down → என்ன <strong>தேவை</strong> · <strong>S</strong>ource → என்ன <strong>இருக்கிறது</strong> · <strong>W</strong>arehouse → என்ன <strong>சேமிக்கிறோம்</strong> · <strong>B</strong>usiness query → பயனர்கள் என்ன <strong>பார்க்கிறார்கள்</strong></p>
+<p><strong>Exam tip:</strong> நான்கையும் ஒவ்வொன்றுக்கும் ஒரு வரியுடன் எழுதி, கட்டிட உதாரணத்தையும் குறிப்பிடுங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><div class="call tip"><div class="ct">The building analogy</div><p>Building a large information system is like constructing a large building: the <strong>owner, architect and builder</strong> each have a <strong>different view</strong>. A warehouse has <strong>four</strong> views:</p></div>
 <table>
 <thead>
 <tr>
@@ -653,8 +714,59 @@ Source-இல் data இருப்பதால் மட்டும் அ�
 </tr>
 </tbody>
 </table>
-<div class="call tip"><div class="ct">நினைவுக்குறிப்பு: "T-S-W-B"</div><p><strong>T</strong>op-down → நமக்கு <strong>தேவையானது</strong> · <strong>S</strong>ource → நம்மிடம் <strong>இருப்பது</strong> · <strong>W</strong>arehouse → நாம் <strong>சேமிப்பது</strong> · <strong>B</strong>usiness query → பயனர்கள் <strong>காண்பது</strong>.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Design approaches &amp; methodology"><span class="num">3</span>Design approaches &amp; methodology</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Design அணுகுமுறைகள்</h3><p>முழு நிறுவனத்திலிருந்து தொடங்கலாம்; ஒரு mart-இலிருந்து தொடங்கலாம்; இரண்டையும் இணைக்கலாம். நேரம், செலவு, தேவையைப் பொறுத்து தேர்வு செய்ய வேண்டும். சிறியதாகத் தொடங்கினாலும் பின்னர் இணைக்கத் திட்டம் வேண்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Top-down overall plan-இலிருந்து; bottom-up experiments/prototypes/marts-இலிருந்து; combined strategic integration+early useful delivery. Planning→requirements→analysis→design→integration/testing→deployment steps. Waterfall stage-by-stage; spiral iterative cycles மற்றும் risk learning. Short release இருப்பது மட்டும் எந்த process-யும் spiral என்று நிரூபிக்காது.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><h3 id="top-down-bottom-up-or-combined">Top-down, bottom-up or combined</h3>
+<div class="call tip"><div class="ct">நினைவுக்குறிப்பு: "T-S-W-B"</div><p><strong>T</strong>op-down → நமக்கு <strong>தேவையானது</strong> · <strong>S</strong>ource → நம்மிடம் <strong>இருப்பது</strong> · <strong>W</strong>arehouse → நாம் <strong>சேமிப்பது</strong> · <strong>B</strong>usiness query → பயனர்கள் <strong>காண்பது</strong>.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Design approaches &amp; methodology"><span class="num">3</span>Design approaches &amp; methodology</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>வடிவமைப்பு அணுகுமுறைகள் — top-down, bottom-up, combined</h3><table>
+<thead>
+<tr>
+<th>அணுகுமுறை</th>
+<th>எதிலிருந்து தொடங்குகிறது</th>
+<th>எப்போது சிறந்தது</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Top-down</strong></td>
+<td><strong>முழு வடிவமைப்பும் திட்டமிடலும்</strong> முதலில்</td>
+<td>தொழில்நுட்பம் <strong>முதிர்ந்ததாகவும் நன்கு தெரிந்ததாகவும்</strong>, வணிகப் பிரச்சினைகள் <strong>தெளிவாகவும்</strong> இருக்கும்போது</td>
+</tr>
+<tr>
+<td><strong>Bottom-up</strong></td>
+<td><strong>சோதனைகள், prototypes</strong> முதலில்</td>
+<td>வணிக modelling, தொழில்நுட்பம் <strong>ஆரம்ப நிலையில்</strong> இருக்கும்போது. <strong>மிகக் குறைந்த செலவில்</strong> முன்னேறலாம்; பெரிய முதலீட்டுக்கு முன் <strong>பலனை மதிப்பிடலாம்</strong></td>
+</tr>
+<tr>
+<td><strong>Combined</strong></td>
+<td>இரண்டும்</td>
+<td>Top-down-இன் <strong>திட்டமிட்ட, மூலோபாய</strong> இயல்பு + bottom-up-இன் <strong>வேகமான செயலாக்கம்</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>உதாரணம்:</strong></p>
+<ul>
+<li><strong>Top-down:</strong> முழு வீட்டுக்கும் முதலில் வரைபடம் வரைந்து, பிறகு கட்டுவது.</li>
+<li><strong>Bottom-up:</strong> முதலில் ஒரு அறையைக் கட்டிப் பார்த்து, நன்றாக இருந்தால் அடுத்ததைக் கட்டுவது.</li>
+</ul>
+<p><strong>Software engineering படிகள்:</strong>
+Planning → Requirements study → Problem analysis → Warehouse design → Data integration &amp; testing → Deployment</p>
+<p><strong>இரண்டு development முறைகள்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>முறை</th>
+<th>எப்படி</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Waterfall</strong></td>
+<td>ஒவ்வொரு படியிலும் <strong>முழுமையான, முறையான பகுப்பாய்வு</strong> முடிந்த பிறகே அடுத்த படி — நீர்வீழ்ச்சி போல ஒரு நிலையிலிருந்து அடுத்ததுக்கு</td>
+</tr>
+<tr>
+<td><strong>Spiral</strong></td>
+<td><strong>சிறு இடைவெளிகளில்</strong>, <strong>படிப்படியாக அதிகச் செயல்பாடு</strong> கொண்ட systems-ஐ விரைவாக வெளியிடுதல்</td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam tip:</strong> "Explain top-down vs bottom-up approaches" — ஒவ்வொன்றும் <strong>எப்போது பொருத்தமானது</strong> என்பதையும் எழுதுங்கள். அதுதான் முக்கியப் புள்ளி.</p>
+<p><strong>நினைவில் வைக்க:</strong> Waterfall = <strong>ஒருமுறை, வரிசையாக</strong>. Spiral = <strong>சுழன்று சுழன்று, மேம்படுத்திக்கொண்டே</strong>.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><h3 id="top-down-bottom-up-or-combined">Top-down, bottom-up or combined</h3>
 <table>
 <thead>
 <tr>
@@ -720,10 +832,37 @@ Source-இல் data இருப்பதால் மட்டும் அ�
 <ul>
 <li><strong>நீர்வீழ்ச்சி</strong>: அடுத்த படிக்குச் செல்லுமுன் <strong>ஒவ்வொரு படியிலும் கட்டமைக்கப்பட்ட, முறையான பகுப்பாய்வு</strong>; நிலையிலிருந்து நிலைக்குக் கீழிறங்குகிறது.</li>
 <li><strong>சுழல்</strong>: <strong>வெளியீடுகளுக்கிடையே குறுகிய இடைவெளிகளுடன்</strong>, <strong>அதிகரிக்கும் செயல்பாடுள்ள முறைமைகளை விரைவாக உருவாக்குதல்</strong>.</li>
-</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="The 4-step warehouse design process"><span class="num">4</span>The 4-step warehouse design process</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Warehouse design நான்கு படிகள்</h3><p>Business process தேர்வு → ஒரு row எதைக் குறிக்கிறது என்ற <strong>Grain</strong> → dimensions → measures. Grain தெளிவில்லாமல் amounts சேர்த்தால் ஒரே விற்பனை இருமுறை எண்ணப்படலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>4 steps:</strong> process தேர்வு → grain வரையறை → dimensions → measures. எடுத்துக்காட்டு: Sales; ஒவ்வொரு invoice line; time/product/customer; quantity/amount.
-ஒரே table-இல் daily totals மற்றும் individual invoice lines கலந்தால் totals தவறாகலாம். எல்லா measures-உம் அதே grain-க்கு பொருந்த வேண்டும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Process→grain→dimensions→measures.</strong> Sales process; grain ஒவ்வொரு transaction line; dimensions time,item,customer,branch; measures quantity/revenue. Grain முதலில் தெளிவாக இல்லாவிட்டால் daily total-ஐ transaction data-உடன் கூட்டி double-count செய்யலாம். Balance snapshot போன்ற எல்லா measures-உம் time-இல் sum செய்ய ஏற்றவை அல்ல; additive/semi-additive/nonadditive பொருள் கவனிக்கவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><ol>
+</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="The 4-step warehouse design process"><span class="num">4</span>The 4-step warehouse design process</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Warehouse வடிவமைப்பின் 4 படிகள் — ஒரு கடையின் உதாரணம்</h3><p><strong>உதாரணம்:</strong> ஒரு supermarket-க்கு warehouse வடிவமைக்கிறோம்.</p>
+<p><strong>படி 1: வணிகச் செயல்முறையைத் தேர்ந்தெடு (business process)</strong></p>
+<p>எதை model செய்யப் போகிறோம்? Orders, invoices, shipments, inventory, <strong>sales</strong>…</p>
+<ul>
+<li>செயல்முறை <strong>முழு நிறுவனம் சார்ந்தது</strong>, பல சிக்கலான பொருள்கள் → <strong>data warehouse</strong> model</li>
+<li>செயல்முறை <strong>ஒரு துறை சார்ந்தது</strong> → <strong>data mart</strong> model</li>
+</ul>
+<p>→ நாம் <strong>sales</strong>-ஐத் தேர்ந்தெடுக்கிறோம்.</p>
+<p><strong>படி 2: Grain-ஐத் தேர்ந்தெடு</strong></p>
+<p>Fact table-இல் ஒரு row <strong>எதைக் குறிக்கும்?</strong> — data-வின் <strong>மிக அடிப்படை, பிரிக்க முடியாத நிலை</strong>.</p>
+<ul>
+<li><strong>ஒவ்வொரு தனி transaction</strong> (bill-இன் ஒவ்வொரு வரி), அல்லது</li>
+<li><strong>ஒவ்வொரு நாளின் snapshot</strong></li>
+</ul>
+<p>→ "<strong>ஒரு bill-இல் ஒரு பொருள் = ஒரு row</strong>"</p>
+<p><strong>படி 3: Dimensions-ஐத் தேர்ந்தெடு</strong></p>
+<p>ஒவ்வொரு row-ஐயும் <strong>எந்தக் கோணங்களில்</strong> பார்க்க வேண்டும்?
+→ <strong>time, item, customer, supplier, branch</strong></p>
+<p><strong>படி 4: Measures-ஐத் தேர்ந்தெடு</strong></p>
+<p>ஒவ்வொரு row-இலும் <strong>எந்த எண்களைச்</strong> சேமிக்க வேண்டும்? பொதுவாகக் <strong>கூட்டக்கூடிய (additive)</strong> எண்கள்.
+→ <strong>dollars_sold, units_sold</strong></p>
+<p><strong>ஏன் இந்த வரிசை?</strong> Grain தெரியாமல் dimensions-ஐத் தேர்ந்தெடுக்க முடியாது. உதாரணமாக, grain = "தினசரி மொத்தம்" என்றால், "customer" dimension வைக்க முடியாது — ஒரு நாளில் பல customers இருப்பார்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>நினைவில் வைக்க: "P-G-D-M"</strong></p>
+<p><strong>P</strong>rocess → <strong>G</strong>rain → <strong>D</strong>imensions → <strong>M</strong>easures</p>
+<p><strong>Exam template (English):</strong></p>
+<ol>
+<li><strong>Choose a business process</strong> to model (e.g. sales) — warehouse if organisational, data mart if departmental.</li>
+<li><strong>Choose the grain</strong> — the atomic level of data in the fact table (e.g. individual transactions).</li>
+<li><strong>Choose the dimensions</strong> (e.g. time, item, customer, supplier).</li>
+<li><strong>Choose the measures</strong> — numeric additive quantities (e.g. dollars_sold, units_sold).</li>
+</ol>
+<p>Page-இல் உள்ள design wizard-இல் இந்த 4 படிகளையும் பயிற்சி செய்யலாம்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><ol>
 <li><strong>Choose a business process to model</strong>, e.g. orders, invoices, shipments, inventory, account administration, sales, general ledger.<ul>
 <li>The process is <strong>organisational</strong> with many complex object collections → use a <strong>data warehouse</strong> model.</li>
 <li>The process is <strong>departmental</strong>, focused on one kind of business process → use a <strong>data mart</strong> model.</li>
@@ -766,8 +905,64 @@ R.addEventListener('input',run);run();})();
 <li>ஒவ்வொரு உண்மை அட்டவணைப் பதிவுக்கும் <strong>அளவைகளைத் தேர்ந்தெடுக்கவும்</strong>; பொதுவாக <strong>dollars_sold, units_sold</strong> போன்ற <strong>கூட்டக்கூடிய எண்</strong> அளவுகள்.</li>
 </ol>
 <p><div data-ta-tool="wiz"></div></p>
-<div class="call exam"><div class="ct">Exam focus</div><p>"கிடங்கு வடிவமைப்புச் செயல்முறையின் படிகளைக் கூறுக" எனில் <strong>செயல்முறை → நுணுக்கநிலை → பரிமாணங்கள் → அளவைகள்</strong>, ஒவ்வொன்றுக்கும் எடுத்துக்காட்டுடன். <strong>மேலிருந்து கீழ் மற்றும் கீழிருந்து மேல்</strong> என்பவற்றையும் விளக்கத் தெரிய வேண்டும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Three-tier data warehouse architecture"><span class="num">5</span>Three-tier data warehouse architecture</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>மூன்று அடுக்குக் கட்டமைப்பு</h3><p>கீழ்தளத்தில் database மற்றும் ETL; நடுவில் OLAP server; மேல்தளத்தில் report, analysis tools. பயனர் காணும் chart-க்கு பின்னால் data cleaning, loading போன்ற பல வேலைகள் நடக்கின்றன.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>மூன்று tiers:</strong> bottom warehouse DB+marts+metadata மற்றும் extract/clean/transform/load/refresh; middle OLAP server; top query/report/analysis/mining tools. Sources bottom-க்கு data தரும். Enterprise warehouse organisation-wide; mart focused; virtual warehouse operational sources மேலான views. Virtual design physical data duplication குறைக்கலாம்; query load/freshness/source availability இன்னும் முக்கியம்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><div class="tiers">
+<div class="call exam"><div class="ct">Exam focus</div><p>"கிடங்கு வடிவமைப்புச் செயல்முறையின் படிகளைக் கூறுக" எனில் <strong>செயல்முறை → நுணுக்கநிலை → பரிமாணங்கள் → அளவைகள்</strong>, ஒவ்வொன்றுக்கும் எடுத்துக்காட்டுடன். <strong>மேலிருந்து கீழ் மற்றும் கீழிருந்து மேல்</strong> என்பவற்றையும் விளக்கத் தெரிய வேண்டும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Three-tier data warehouse architecture"><span class="num">5</span>Three-tier data warehouse architecture</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>மூன்றடுக்கு அமைப்பு — உணவக உதாரணம்</h3><p><strong>உணவக உதாரணம்:</strong></p>
+<ul>
+<li><strong>கீழ் அடுக்கு</strong> = <strong>சமையலறை, சேமிப்பு அறை</strong> — பொருள்கள் வாங்கி, சுத்தம் செய்து, சேமிப்பது</li>
+<li><strong>நடு அடுக்கு</strong> = <strong>சமையல்காரர்</strong> — கேட்டதை விரைவாகத் தயாரிப்பது</li>
+<li><strong>மேல் அடுக்கு</strong> = <strong>உணவருந்தும் அறை, menu</strong> — வாடிக்கையாளர் பார்ப்பதும் கேட்பதும்</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>அடுக்கு</th>
+<th>என்ன</th>
+<th>முக்கியப் புள்ளிகள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bottom tier</strong> (கீழ்)</td>
+<td><strong>Warehouse database server</strong> — கிட்டத்தட்ட எப்போதும் ஒரு <strong>relational DB</strong></td>
+<td><strong>Back-end tools:</strong> அன்றாட DBs, வெளி மூலங்களிலிருந்து data-வை <strong>எடு, சுத்தம் செய், மாற்று, load செய், refresh செய்</strong>. <strong>Metadata repository</strong> இங்கே</td>
+</tr>
+<tr>
+<td><strong>Middle tier</strong> (நடு)</td>
+<td><strong>OLAP server</strong></td>
+<td><strong>ROLAP</strong> (relational) அல்லது <strong>MOLAP</strong> (multidimensional)</td>
+</tr>
+<tr>
+<td><strong>Top tier</strong> (மேல்)</td>
+<td><strong>Front-end client</strong></td>
+<td><strong>Query, அறிக்கைக் கருவிகள், பகுப்பாய்வுக் கருவிகள், data mining கருவிகள்</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>ஓட்டம் (கீழிருந்து மேலே):</strong>
+அன்றாட DBs + வெளி மூலங்கள் → <strong>(Extract · Clean · Transform · Load · Refresh)</strong> → Warehouse + data marts + metadata → OLAP server → பயனர் கருவிகள்</p>
+<p><strong>அமைப்புப் பார்வையில் 3 warehouse models:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>என்ன</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enterprise warehouse</strong></td>
+<td><strong>முழு நிறுவனத்தையும்</strong> உள்ளடக்கியது</td>
+</tr>
+<tr>
+<td><strong>Data mart</strong></td>
+<td>ஒரு <strong>துறையின்</strong> பகுதி</td>
+</tr>
+<tr>
+<td><strong>Virtual warehouse</strong></td>
+<td>அன்றாட DBs மீதான <strong>views-இன் தொகுப்பு</strong> மட்டும். கட்டுவது <strong>எளிது</strong>, ஆனால் அன்றாட servers-இல் <strong>கூடுதல் திறன்</strong> தேவை</td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam tip:</strong> "Explain the three-tier data warehouse architecture" — <strong>படம் வரையுங்கள்</strong>: கீழே data sources, அம்புக்குறியில் ETL, பிறகு 3 அடுக்குகள். ஒவ்வொரு அடுக்குக்கும் ஒரு வரி. <strong>Metadata repository கீழ் அடுக்கில்</strong> என்பதை மறக்காதீர்கள்.</p>
+<p><strong>நினைவில் வைக்க:</strong> <strong>Bottom = சேமிப்பு, Middle = OLAP, Top = கருவிகள்</strong>.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><div class="tiers">
 <div class="tier t1"><div class="tl"><b>Top tier</b><small>Front-end client</small></div><div class="tb"><span>Query / report tools</span><span>Analysis tools</span><span>Data mining tools</span></div></div>
 <div class="tarrow">▲ ▼</div>
 <div class="tier t2"><div class="tl"><b>Middle tier</b><small>OLAP server</small></div><div class="tb"><span>ROLAP <i>or</i> MOLAP server</span></div></div>
@@ -849,10 +1044,56 @@ R.addEventListener('input',run);run();})();
 <li><strong>நிறுவனக் கிடங்கு</strong>: முழு நிறுவனத்தையும் உள்ளடக்குகிறது.</li>
 <li><strong>தரவுச் சந்தை</strong>: துறைசார் உட்கணம்.</li>
 <li><strong>மெய்நிகர் கிடங்கு</strong>: <strong>செயல்பாட்டுத் தரவுத்தளங்களின் மேல் அமைந்த பார்வைகளின்</strong> தொகுப்பு; உருவாக்க எளிது; ஆனால் செயல்பாட்டுச் சேவையகங்களில் மேலதிகத் திறன் தேவை.</li>
-</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="The metadata repository"><span class="num">6</span>The metadata repository</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>Metadata என்றால் என்ன?</h3><p>ஒரு column-இன் பொருள், unit, source, புதுப்பித்த நேரம் போன்ற <strong>தரவைப் பற்றிய தரவு</strong> Metadata. Amount dollars-ஆ rupees-ஆ என்று தெரியாவிட்டால் சரியான analysis செய்ய முடியாது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Metadata repository-இல் schema, source mappings, cleaning/transformation rules, refresh history, lineage, business terms, summarisation/usage தகவல் இருக்கலாம்.
-“Sales” returns கழித்த net amount-ஆ அல்லது gross amount-ஆ என்று business metadata விளக்கும். Lineage ஒரு report value எந்த source-இலிருந்து எந்த மாற்றம் வழியாக வந்தது என்று காட்டும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>ஆறு metadata categories:</strong> structure(schema/hierarchy); operational(lineage/currency/errors); summarisation(measures/grain/algorithms); source mapping(ETL/refresh/security); performance(index/schedules); business(definitions/ownership). “Sales” net-ஆ gross-ஆ, எந்த currency, எந்த நாள்வரை data என்ற தகவல் இல்லாமல் number சரியாக interpret செய்யமுடியாது. Metadata என்பது data rows-இன் வேறு copy அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p><strong>Metadata = data about data.</strong> In a warehouse, metadata <strong>define the warehouse objects</strong>. The repository sits in the <strong>bottom tier</strong>.</p>
+</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="The metadata repository"><span class="num">6</span>The metadata repository</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>Metadata repository — data பற்றிய data</h3><p><strong>Metadata = data பற்றிய data.</strong> Warehouse-இல், metadata <strong>warehouse objects-ஐ வரையறுக்கிறது</strong>. இது <strong>கீழ் அடுக்கில்</strong> உள்ளது.</p>
+<p><strong>உதாரணம்:</strong> ஒரு நூலகத்தில், புத்தகங்கள் = data. <strong>நூலக அட்டவணை</strong> (தலைப்பு, ஆசிரியர், எந்த அலமாரியில், எப்போது வந்தது) = <strong>metadata</strong>.</p>
+<ul>
+<li>Data பெயர்களுக்கும் வரையறைகளுக்கும் metadata உருவாக்கப்படுகிறது.</li>
+<li>கூடுதல் metadata: எடுத்த data-வின் <strong>timestamps</strong>, தகவலின் <strong>மூலம்</strong>, cleaning/integration-இல் <strong>சேர்க்கப்பட்ட fields</strong>.</li>
+</ul>
+<p><strong>Repository-இல் இருக்க வேண்டிய 6 விஷயங்கள்</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>உள்ளடக்கம்</th>
+<th>எதை உள்ளடக்கும்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Warehouse-இன் அமைப்பு (structure)</strong></td>
+<td>Schema, views, dimensions, hierarchies, data marts எங்கே</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Operational metadata</strong></td>
+<td><strong>Data lineage</strong> (data-வின் வரலாறு, அதன் மாற்றங்கள்); data-வின் <strong>நிலை</strong> (active, archived, purged); <strong>கண்காணிப்பு</strong> (பயன்பாட்டுப் புள்ளிவிவரங்கள், பிழை அறிக்கைகள், audit trails)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Summarization algorithms</strong></td>
+<td>Measure, dimension வரையறைகள், granularity, aggregation, முன்வரையறுத்த queries, அறிக்கைகள்</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>அன்றாடச் சூழலிலிருந்து warehouse-க்கான mapping</strong></td>
+<td>மூல DBs, extraction/cleaning/transformation விதிகள், refresh, purge விதிகள், <strong>பாதுகாப்பு</strong> (அனுமதி, அணுகல் கட்டுப்பாடு)</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>System performance data</strong></td>
+<td>வேக அணுகலுக்கான indices; refresh, update, replication-இன் <strong>நேர அட்டவணை</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Business metadata</strong></td>
+<td><strong>வணிகச் சொற்கள், வரையறைகள், data உரிமை, கட்டணக் கொள்கைகள்</strong></td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>நினைவில் வைக்க: "SOS-MPB"</strong></p>
+<p><strong>S</strong>tructure · <strong>O</strong>perational · <strong>S</strong>ummarisation · <strong>M</strong>apping · <strong>P</strong>erformance · <strong>B</strong>usiness</p>
+<p><strong>Data lineage</strong> என்றால்: "இந்த எண் எங்கிருந்து வந்தது, வழியில் என்னென்ன மாற்றங்கள் நடந்தன" என்ற வரலாறு. Exam-இல் அடிக்கடி கேட்கப்படும் சொல்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p><strong>Metadata = data about data.</strong> In a warehouse, metadata <strong>define the warehouse objects</strong>. The repository sits in the <strong>bottom tier</strong>.</p>
 <ul>
 <li>Metadata are created for <strong>data names and definitions</strong>.</li>
 <li>Extra metadata record <strong>timestamps</strong> of extracted data, the <strong>source</strong> of the information, and <strong>missing fields added</strong> by cleaning or integration.</li>
@@ -946,10 +1187,60 @@ R.addEventListener('input',run);run();})();
 </tr>
 </tbody>
 </table>
-<div class="call tip"><div class="ct">நினைவுக்குறிப்பு: "SOS-MPB"</div><p><strong>S</strong>tructure — கட்டமைப்பு · <strong>O</strong>perational — செயல்பாடு · <strong>S</strong>ummarisation — சுருக்கம் · <strong>M</strong>apping — பொருத்துதல் · <strong>P</strong>erformance — செயல்திறன் · <strong>B</strong>usiness — வணிகம்</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="OLAP server models: ROLAP, MOLAP, HOLAP"><span class="num">7</span>OLAP server models: ROLAP, MOLAP, HOLAP</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>மூன்று OLAP சேமிப்பு முறைகள்</h3><p><strong>ROLAP</strong> relational tables-ஐப் பயன்படுத்தும்; <strong>MOLAP</strong> multidimensional storage-ஐப் பயன்படுத்தும்; <strong>HOLAP</strong> இரண்டையும் இணைக்கும். Storage, query speed, flexibility ஆகியவற்றில் பரிமாற்றங்கள் உள்ளன.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>ROLAP:</strong> relational tables, SQL மூலம் analysis; பெரிய detailed data-க்கு flexibility. <strong>MOLAP:</strong> precomputed multidimensional arrays; fast cube access, storage limits இருக்கலாம். <strong>HOLAP:</strong> summaries multidimensional, details relational என இணைக்கலாம்.
-எந்த model எப்போதும் fastest என்று கூறாமல் workload, dimension size, sparsity, refresh needs ஆகியவற்றைப் பாருங்கள்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>ROLAP</strong> relational tables+OLAP operations; <strong>MOLAP</strong> multidimensional arrays/precomputed aggregates; <strong>HOLAP</strong> relational detail+cube aggregates. Dense cells arrays-க்கு ஏற்றவை; sparse cells compression தேவைப்படலாம். Query speed/scalability trade-off engine/workload-ஐப் பொறுத்தது. SQL Server2000/MicroStrategy போன்ற names பாடத்தின் historical examples; தற்போதைய product comparison அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><table>
+<div class="call tip"><div class="ct">நினைவுக்குறிப்பு: "SOS-MPB"</div><p><strong>S</strong>tructure — கட்டமைப்பு · <strong>O</strong>perational — செயல்பாடு · <strong>S</strong>ummarisation — சுருக்கம் · <strong>M</strong>apping — பொருத்துதல் · <strong>P</strong>erformance — செயல்திறன் · <strong>B</strong>usiness — வணிகம்</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="OLAP server models: ROLAP, MOLAP, HOLAP"><span class="num">7</span>OLAP server models: ROLAP, MOLAP, HOLAP</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>ROLAP, MOLAP, HOLAP — எங்கே சேமிப்பது?</h3><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>ROLAP</strong> (Relational OLAP)</th>
+<th><strong>MOLAP</strong> (Multidimensional OLAP)</th>
+<th><strong>HOLAP</strong> (Hybrid OLAP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>சேமிப்பு</strong></td>
+<td><strong>Relational DB tables</strong> + OLAP middleware</td>
+<td><strong>Array அடிப்படையிலான</strong> multidimensional engines — data cube arrays</td>
+<td><strong>விரிவான data → relational DB</strong>, <strong>சுருக்கங்கள் → MOLAP</strong></td>
+</tr>
+<tr>
+<td><strong>பலம்</strong></td>
+<td><strong>அதிக scalability</strong> — மிகப் பெரிய data</td>
+<td><strong>முன்பே கணக்கிட்ட சுருக்கங்களுக்கு வேக அணுகல்</strong></td>
+<td><strong>இரண்டும்:</strong> ROLAP-இன் scalability + MOLAP-இன் வேகம்</td>
+</tr>
+<tr>
+<td><strong>குறிப்புகள்</strong></td>
+<td>ஒவ்வொரு DBMS-க்கும் மேம்படுத்தல்</td>
+<td><strong>இரு நிலைச் சேமிப்பு:</strong> <strong>dense</strong> sub-cubes → arrays; <strong>sparse</strong> → <strong>compress</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>உதாரணம்</strong></td>
+<td><strong>MicroStrategy DSS server</strong></td>
+<td>Essbase</td>
+<td><strong>Microsoft SQL Server 2000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>ஒவ்வொன்றும் ஒரு வரியில்:</strong></p>
+<ul>
+<li><strong>ROLAP:</strong> Data <strong>tables-இல்</strong> → <strong>மிகப் பெரிய data-வுக்கும் scale ஆகும்</strong>, ஆனால் <strong>மெதுவாகப்</strong> பதில் தரும்.</li>
+<li><strong>MOLAP:</strong> Data <strong>cube arrays-இல்</strong> → <strong>மிக வேகம்</strong>, ஆனால் <strong>குறைவாக scale ஆகும்</strong>; sparse data-வில் இடம் வீணாகலாம்.</li>
+<li><strong>HOLAP:</strong> இரண்டின் நன்மையும்.</li>
+</ul>
+<p><strong>Dense vs sparse:</strong></p>
+<ul>
+<li><strong>Dense</strong> sub-cube = <strong>பெரும்பாலான cells நிரம்பியவை</strong> → arrays திறமையானவை.</li>
+<li><strong>Sparse</strong> sub-cube = <strong>பெரும்பாலான cells காலி</strong> → MOLAP அவற்றை <strong>compress</strong> செய்கிறது.</li>
+</ul>
+<p><strong>உதாரணம்:</strong> ஒரு பெரிய excel sheet-இல் 95% cells காலி என்றால் (sparse), எல்லாவற்றையும் சேமிப்பது வீண். நிரம்பியவற்றை மட்டும் சேமித்தால் போதும் (compress).</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>நினைவில் வைக்க:</strong></p>
+<ul>
+<li><strong>R</strong>OLAP = <strong>R</strong>elational = <strong>R</strong>oom அதிகம் (scalable)</li>
+<li><strong>M</strong>OLAP = <strong>M</strong>ultidimensional arrays = <strong>M</strong>ின்னல் வேகம்</li>
+<li><strong>H</strong>OLAP = <strong>H</strong>ybrid = இரண்டும்</li>
+</ul>
+<p><strong>Exam tip:</strong> "Compare ROLAP, MOLAP and HOLAP" — சேமிப்பு, பலம், ஒரு உதாரண product. <strong>MOLAP-இன் dense/sparse</strong> இரு நிலைச் சேமிப்பைக் குறிப்பிட்டால் கூடுதல் marks.</p></div><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th></th>
@@ -1031,8 +1322,46 @@ R.addEventListener('input',run);run();})();
 <li><strong>ROLAP</strong>: தரவு அட்டவணைகளில் இருப்பதால் மிகப்பெரிய தரவுக்கு <strong>விரிவாக்கமடைகிறது</strong>; ஆனால் <strong>மெதுவாகப்</strong> பதிலளிக்கிறது.</li>
 <li><strong>MOLAP</strong>: தரவு கனசதுர அணிகளில் இருப்பதால் <strong>மிக வேகமானது</strong>; ஆனால் <strong>குறைந்த அளவீட்டுத்திறன்</strong> கொண்டது; அரிதான தரவில் இடத்தை வீணாக்கலாம்.</li>
 </ul></div><div><p><strong>அடர்த்தியானது மற்றும் அரிதானது</strong></p>
-<p><strong>அடர்த்தியான</strong> துணைக் கனசதுரத்தில் பெரும்பாலான கலங்கள் நிரம்பியிருப்பதால் அணிகள் திறமையானவை. <strong>அரிதான</strong> ஒன்றில் பெரும்பாலும் வெற்றுக் கலங்கள் இருப்பதால் MOLAP அதைச் <strong>சுருக்குகிறது</strong>.</p></div></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Weka 1.3 — Exploring datasets"><span class="num">8</span>Weka 1.3 — Exploring datasets</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s8 en-s8" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s8" lang="ta" hidden><h3>Dataset-ஐ ஆராய்வது</h3><p>Weka-வில் row ஒரு instance; column ஒரு attribute. Nominal, numeric, class எவை என்று பார்க்க வேண்டும். வயது −20 போன்ற பொருந்தாத மதிப்பு இருந்தால் model உருவாக்குவதற்கு முன் சரிசெய்யுங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>ARFF:</strong> @relation dataset பெயர்; @attribute பெயர்/type; @data rows. Nominal outlook={sunny,overcast,rainy}; numeric temperature; class play={yes,no}. CSV-இல் header மட்டும்; ARFF types explicit. Missing values/attribute types/class setting சரியா load ஆனதா பார்க்கவும்; number போல தெரியும் ID-ஐ numeric measurement என தவறாக எடுத்துக்கொள்ளாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s8" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s8" lang="en"><div class="hci-en"><p>The Weka video shows what's inside a dataset:</p>
+<p><strong>அடர்த்தியான</strong> துணைக் கனசதுரத்தில் பெரும்பாலான கலங்கள் நிரம்பியிருப்பதால் அணிகள் திறமையானவை. <strong>அரிதான</strong> ஒன்றில் பெரும்பாலும் வெற்றுக் கலங்கள் இருப்பதால் MOLAP அதைச் <strong>சுருக்குகிறது</strong>.</p></div></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Weka 1.3 — Exploring datasets"><span class="num">8</span>Weka 1.3 — Exploring datasets</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s8 en-s8" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s8" lang="ta" hidden><h3>Weka: ARFF file format</h3><p>Weka datasets <strong>ARFF</strong> (Attribute-Relation File Format) வடிவத்தில் உள்ளன.</p>
+<pre><code>@relation weather
+@attribute outlook {sunny, overcast, rainy}
+@attribute temperature numeric
+@attribute humidity numeric
+@attribute windy {TRUE, FALSE}
+@attribute play {yes, no}
+@data
+sunny,85,85,FALSE,no
+overcast,83,86,FALSE,yes
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>பகுதி</th>
+<th>பொருள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>@relation</strong></td>
+<td>Dataset-இன் <strong>பெயர்</strong></td>
+</tr>
+<tr>
+<td><strong>@attribute</strong></td>
+<td>ஒவ்வொரு column-இன் <strong>பெயரும் வகையும்</strong></td>
+</tr>
+<tr>
+<td><strong>@data</strong></td>
+<td>அதன் பிறகு, <strong>ஒரு வரிக்கு ஒரு instance (row)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>இரண்டு வகை attributes:</strong></p>
+<ul>
+<li><strong>Nominal:</strong> ஒரு <strong>நிலையான பட்டியலிலிருந்து</strong> மதிப்பு — <code>{sunny, overcast, rainy}</code> (அடைப்புக்குறிக்குள்)</li>
+<li><strong>Numeric:</strong> <strong>எண்கள்</strong> — <code>numeric</code> (temperature = 85)</li>
+</ul>
+<p><strong>Class attribute:</strong> கணிக்க வேண்டியது — பொதுவாகக் <strong>கடைசி</strong> (இங்கே <strong>play</strong> = yes/no).</p>
+<p><strong>உதாரணம்:</strong> முதல் data வரி: "sunny, 85°, ஈரப்பதம் 85, காற்று இல்லை → <strong>விளையாடவில்லை (no)</strong>".</p><button type="button" class="native-reference" aria-controls="en-s8" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s8" lang="en"><div class="hci-en"><p>The Weka video shows what's inside a dataset:</p>
 <ul>
 <li><strong>ARFF format</strong> (Attribute-Relation File Format): a header with <code>@relation</code>, <code>@attribute</code> lines (name and type), then <code>@data</code> with one instance per line.</li>
 <li><strong>Nominal</strong> attributes take values from a fixed set (e.g. outlook = sunny/overcast/rainy). <strong>Numeric</strong> attributes are numbers (e.g. temperature).</li>
@@ -1062,31 +1391,64 @@ overcast,83,86,FALSE,yes
 @data
 sunny,85,85,FALSE,no
 overcast,83,86,FALSE,yes
-</code></pre></div></div><button class="done-btn"></button></section><section class="card" data-sec="s9"><h2 id="s9" data-t="Quick revision sheet"><span class="num">9</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s9 en-s9" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s9" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>Warehouse-இன் நோக்கம்</h4><p>வாடிக்கையாளர், நேரம், இடம் வழியாக வியாபாரத்தை ஒப்பிட ஒருங்கிணைந்த நம்பகமான தகவல் தேவை. தரவைச் சேர்ப்பதற்கு முன் எந்த business decisions-க்கு அது பயன்படும் என்று தீர்மானிக்க வேண்டும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>நான்கு benefits:</strong> decision/performance தகவலால் competitive advantage; விரைவான consistent reports மூலம் productivity; customer/item unified view மூலம் CRM; trends/exceptions மூலம் செலவு குறைப்பு. Business need தெரியாமல் எல்லா data-வையும் ஏற்றுவது நல்ல design அல்ல. Benefit-க்கு ஒரு measurable business question சேர்த்துப் பதில் எழுதுங்கள்.</p></div><div class="ta-recap-item"><h4>Design-இன் நான்கு பார்வைகள்</h4><p><strong>Top-down</strong> தேவையைப் பார்க்கும்; Data source view உள்ள தரவைப் பார்க்கும்; Warehouse view சேமிப்பைப் பார்க்கும்; Business query view பயனர் கேள்வியைப் பார்க்கும். நான்கும் பொருந்தினால்தான் பயனுள்ள அமைப்பு கிடைக்கும்.</p>
-<p><strong>Top-down view:</strong> business questions-க்கு என்ன தகவல் வேண்டும். <strong>Data source view:</strong> sources எவை, அவை எப்படி capture ஆகின்றன. <strong>Warehouse view:</strong> facts, dimensions, storage அமைப்பு. <strong>Business query view:</strong> end user எந்த perspective-இல் கேள்வி கேட்கிறார்.
-Source-இல் data இருப்பதால் மட்டும் அதைக் கட்டாயம் warehouse-இல் வைக்க வேண்டியதில்லை; முடிவெடுக்கும் தேவையுடன் இணைக்க வேண்டும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>நான்கு views:</strong> top-down→business-க்கு என்ன தேவை; source→இப்போது என்ன data இருக்கிறது; warehouse→என்ன fact/dimension/aggregates சேமிக்கிறோம்; business-query→end user எப்படிப் பார்க்கிறார். Owner/architect/builder வேறு வரைபடம் பார்ப்பது போல. View பெயருடன் அதன் content மற்றும் decision purpose சொல்லுங்கள்.</p></div><div class="ta-recap-item"><h4>Design அணுகுமுறைகள்</h4><p>முழு நிறுவனத்திலிருந்து தொடங்கலாம்; ஒரு mart-இலிருந்து தொடங்கலாம்; இரண்டையும் இணைக்கலாம். நேரம், செலவு, தேவையைப் பொறுத்து தேர்வு செய்ய வேண்டும். சிறியதாகத் தொடங்கினாலும் பின்னர் இணைக்கத் திட்டம் வேண்டும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Top-down overall plan-இலிருந்து; bottom-up experiments/prototypes/marts-இலிருந்து; combined strategic integration+early useful delivery. Planning→requirements→analysis→design→integration/testing→deployment steps. Waterfall stage-by-stage; spiral iterative cycles மற்றும் risk learning. Short release இருப்பது மட்டும் எந்த process-யும் spiral என்று நிரூபிக்காது.</p></div><div class="ta-recap-item"><h4>Warehouse design நான்கு படிகள்</h4><p>Business process தேர்வு → ஒரு row எதைக் குறிக்கிறது என்ற <strong>Grain</strong> → dimensions → measures. Grain தெளிவில்லாமல் amounts சேர்த்தால் ஒரே விற்பனை இருமுறை எண்ணப்படலாம்.</p>
-<p><strong>4 steps:</strong> process தேர்வு → grain வரையறை → dimensions → measures. எடுத்துக்காட்டு: Sales; ஒவ்வொரு invoice line; time/product/customer; quantity/amount.
-ஒரே table-இல் daily totals மற்றும் individual invoice lines கலந்தால் totals தவறாகலாம். எல்லா measures-உம் அதே grain-க்கு பொருந்த வேண்டும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Process→grain→dimensions→measures.</strong> Sales process; grain ஒவ்வொரு transaction line; dimensions time,item,customer,branch; measures quantity/revenue. Grain முதலில் தெளிவாக இல்லாவிட்டால் daily total-ஐ transaction data-உடன் கூட்டி double-count செய்யலாம். Balance snapshot போன்ற எல்லா measures-உம் time-இல் sum செய்ய ஏற்றவை அல்ல; additive/semi-additive/nonadditive பொருள் கவனிக்கவும்.</p></div><div class="ta-recap-item"><h4>மூன்று அடுக்குக் கட்டமைப்பு</h4><p>கீழ்தளத்தில் database மற்றும் ETL; நடுவில் OLAP server; மேல்தளத்தில் report, analysis tools. பயனர் காணும் chart-க்கு பின்னால் data cleaning, loading போன்ற பல வேலைகள் நடக்கின்றன.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>மூன்று tiers:</strong> bottom warehouse DB+marts+metadata மற்றும் extract/clean/transform/load/refresh; middle OLAP server; top query/report/analysis/mining tools. Sources bottom-க்கு data தரும். Enterprise warehouse organisation-wide; mart focused; virtual warehouse operational sources மேலான views. Virtual design physical data duplication குறைக்கலாம்; query load/freshness/source availability இன்னும் முக்கியம்.</p></div><div class="ta-recap-item"><h4>Metadata என்றால் என்ன?</h4><p>ஒரு column-இன் பொருள், unit, source, புதுப்பித்த நேரம் போன்ற <strong>தரவைப் பற்றிய தரவு</strong> Metadata. Amount dollars-ஆ rupees-ஆ என்று தெரியாவிட்டால் சரியான analysis செய்ய முடியாது.</p>
-<p>Metadata repository-இல் schema, source mappings, cleaning/transformation rules, refresh history, lineage, business terms, summarisation/usage தகவல் இருக்கலாம்.
-“Sales” returns கழித்த net amount-ஆ அல்லது gross amount-ஆ என்று business metadata விளக்கும். Lineage ஒரு report value எந்த source-இலிருந்து எந்த மாற்றம் வழியாக வந்தது என்று காட்டும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>ஆறு metadata categories:</strong> structure(schema/hierarchy); operational(lineage/currency/errors); summarisation(measures/grain/algorithms); source mapping(ETL/refresh/security); performance(index/schedules); business(definitions/ownership). “Sales” net-ஆ gross-ஆ, எந்த currency, எந்த நாள்வரை data என்ற தகவல் இல்லாமல் number சரியாக interpret செய்யமுடியாது. Metadata என்பது data rows-இன் வேறு copy அல்ல.</p></div><div class="ta-recap-item"><h4>மூன்று OLAP சேமிப்பு முறைகள்</h4><p><strong>ROLAP</strong> relational tables-ஐப் பயன்படுத்தும்; <strong>MOLAP</strong> multidimensional storage-ஐப் பயன்படுத்தும்; <strong>HOLAP</strong> இரண்டையும் இணைக்கும். Storage, query speed, flexibility ஆகியவற்றில் பரிமாற்றங்கள் உள்ளன.</p>
-<p><strong>ROLAP:</strong> relational tables, SQL மூலம் analysis; பெரிய detailed data-க்கு flexibility. <strong>MOLAP:</strong> precomputed multidimensional arrays; fast cube access, storage limits இருக்கலாம். <strong>HOLAP:</strong> summaries multidimensional, details relational என இணைக்கலாம்.
-எந்த model எப்போதும் fastest என்று கூறாமல் workload, dimension size, sparsity, refresh needs ஆகியவற்றைப் பாருங்கள்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>ROLAP</strong> relational tables+OLAP operations; <strong>MOLAP</strong> multidimensional arrays/precomputed aggregates; <strong>HOLAP</strong> relational detail+cube aggregates. Dense cells arrays-க்கு ஏற்றவை; sparse cells compression தேவைப்படலாம். Query speed/scalability trade-off engine/workload-ஐப் பொறுத்தது. SQL Server2000/MicroStrategy போன்ற names பாடத்தின் historical examples; தற்போதைய product comparison அல்ல.</p></div><div class="ta-recap-item"><h4>Dataset-ஐ ஆராய்வது</h4><p>Weka-வில் row ஒரு instance; column ஒரு attribute. Nominal, numeric, class எவை என்று பார்க்க வேண்டும். வயது −20 போன்ற பொருந்தாத மதிப்பு இருந்தால் model உருவாக்குவதற்கு முன் சரிசெய்யுங்கள்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>ARFF:</strong> @relation dataset பெயர்; @attribute பெயர்/type; @data rows. Nominal outlook={sunny,overcast,rainy}; numeric temperature; class play={yes,no}. CSV-இல் header மட்டும்; ARFF types explicit. Missing values/attribute types/class setting சரியா load ஆனதா பார்க்கவும்; number போல தெரியும் ID-ஐ numeric measurement என தவறாக எடுத்துக்கொள்ளாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s9" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s9" lang="en"><div class="hci-en"><table>
+</code></pre></div></div><button class="done-btn"></button></section><section class="card" data-sec="s9"><h2 id="s9" data-t="Quick revision sheet"><span class="num">9</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s9 en-s9" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s9" lang="ta" hidden><h3>விரைவு மீள்பார்வை — Week 7</h3><table>
+<thead>
+<tr>
+<th>தலைப்பு</th>
+<th>ஒரு வரியில்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>நன்மைகள்</td>
+<td>போட்டி நன்மை · உற்பத்தித்திறன் · CRM · செலவுக் குறைப்பு</td>
+</tr>
+<tr>
+<td>4 பார்வைகள்</td>
+<td>Top-down · Data source · Data warehouse · Business query (T-S-W-B)</td>
+</tr>
+<tr>
+<td>Top-down vs bottom-up</td>
+<td>முதலில் திட்டம் (முதிர்ந்த தொழில்நுட்பம், தெளிவான பிரச்சினை) vs முதலில் prototype (ஆரம்ப நிலை, குறைந்த செலவு)</td>
+</tr>
+<tr>
+<td>Waterfall vs spiral</td>
+<td>வரிசையாக ஒவ்வொரு படி vs விரைவான, படிப்படியான வெளியீடுகள்</td>
+</tr>
+<tr>
+<td>4 வடிவமைப்புப் படிகள்</td>
+<td>Process → Grain → Dimensions → Measures (P-G-D-M)</td>
+</tr>
+<tr>
+<td>3 அடுக்குகள்</td>
+<td>கீழ்: relational warehouse + metadata · நடு: OLAP server · மேல்: கருவிகள்</td>
+</tr>
+<tr>
+<td>3 models</td>
+<td>Enterprise warehouse · Data mart · Virtual warehouse</td>
+</tr>
+<tr>
+<td>Metadata</td>
+<td>Data பற்றிய data; 6 உள்ளடக்கங்கள் (SOS-MPB)</td>
+</tr>
+<tr>
+<td>ROLAP</td>
+<td>Relational, scalable (MicroStrategy)</td>
+</tr>
+<tr>
+<td>MOLAP</td>
+<td>Arrays, வேகம், dense/sparse இரு நிலைச் சேமிப்பு</td>
+</tr>
+<tr>
+<td>HOLAP</td>
+<td>விவரம் ROLAP-இல், சுருக்கங்கள் MOLAP-இல் (MS SQL Server 2000)</td>
+</tr>
+<tr>
+<td>ARFF</td>
+<td>@relation, @attribute (nominal {…} / numeric), @data</td>
+</tr>
+</tbody>
+</table><button type="button" class="native-reference" aria-controls="en-s9" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s9" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>

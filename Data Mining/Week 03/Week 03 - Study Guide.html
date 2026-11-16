@@ -543,8 +543,70 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dm-Week03" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
 <div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 03</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 03</div><h1>Data Preprocessing — Cleaning, Integration &amp; Transformation</h1><p>Why real data is dirty, how to fill missing values and smooth noise, cleaning as a process, integrating sources with correlation analysis, and normalization.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 7 min</span><span class="chip">📄 week 3.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Introduction to Data Preprocessing · 7 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3432-25S2- Introduction to Data Pre processing - CODL-UOM.mp4" data-drive="1QLQsoOn4HmcwXQVX9-iJEtRlrYm8zUh0"><source src="ITE3432-25S2-%20Introduction%20to%20Data%20Pre%20processing%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Introduction to Data Preprocessing</p><p class="vs">Overview of why preprocessing is needed and the main preprocessing tasks.</p><a href="#" data-v="0" data-t="1"><b>00:01</b><span>Why data preprocessing is needed</span></a><a href="#" data-v="0" data-t="48"><b>00:48</b><span>Dirty data: errors, inconsistent codes (1-2-3 vs A-B-C)</span></a><a href="#" data-v="0" data-t="117"><b>01:57</b><span>Why data is dirty: entry, transmission, multiple sources</span></a><a href="#" data-v="0" data-t="239"><b>03:59</b><span>Cleaning: inconsistencies, missing values, noise</span></a><a href="#" data-v="0" data-t="278"><b>04:38</b><span>Preprocessing in the knowledge discovery (KDD) process</span></a><a href="#" data-v="0" data-t="330"><b>05:30</b><span>Major tasks: cleaning, integration, reduction, transformation</span></a><a href="#" data-v="0" data-t="381"><b>06:21</b><span>Data reduction and summarisation</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why preprocessing is needed"><span class="num">1</span>Why preprocessing is needed</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>தரவை ஏன் முதலில் தயார் செய்ய வேண்டும்?</h3><p>காணாத மதிப்பு, தவறான வயது, ஒரே நபரின் இரட்டைப் பதிவு போன்றவை முடிவை மாற்றும். இவற்றைச் சரிசெய்து algorithm-க்கு ஏற்றதாக்குவதே <strong>Preprocessing</strong>. நல்ல model-க்கு நல்ல input தேவை.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Incomplete</strong>=missing; <strong>noisy</strong>=பிழை/measurement variation; <strong>inconsistent</strong>=codes/formats முரண்பாடு. Entry, instruments, transmission, duplicates, பழைய data, source differences காரணமாகலாம். <strong>Cleaning, integration, transformation, reduction</strong> நான்கு preprocessing குடும்பங்கள். “70–80% effort” பாடத்தில் சொல்லப்படும் rough estimate; ஒவ்வொரு project-க்கும் fixed அளவு அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p>Real-world databases and data warehouses are commonly <strong>incomplete, noisy and inconsistent</strong>. Mining dirty data gives poor results, and <strong>users don't trust results from data they believe is dirty</strong>.</p>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 03</div><h1>Data Preprocessing — Cleaning, Integration &amp; Transformation</h1><p>Why real data is dirty, how to fill missing values and smooth noise, cleaning as a process, integrating sources with correlation analysis, and normalization.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 7 min</span><span class="chip">📄 week 3.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Introduction to Data Preprocessing · 7 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3432-25S2- Introduction to Data Pre processing - CODL-UOM.mp4" data-drive="1QLQsoOn4HmcwXQVX9-iJEtRlrYm8zUh0"><source src="ITE3432-25S2-%20Introduction%20to%20Data%20Pre%20processing%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Introduction to Data Preprocessing</p><p class="vs">Overview of why preprocessing is needed and the main preprocessing tasks.</p><a href="#" data-v="0" data-t="1"><b>00:01</b><span>Why data preprocessing is needed</span></a><a href="#" data-v="0" data-t="48"><b>00:48</b><span>Dirty data: errors, inconsistent codes (1-2-3 vs A-B-C)</span></a><a href="#" data-v="0" data-t="117"><b>01:57</b><span>Why data is dirty: entry, transmission, multiple sources</span></a><a href="#" data-v="0" data-t="239"><b>03:59</b><span>Cleaning: inconsistencies, missing values, noise</span></a><a href="#" data-v="0" data-t="278"><b>04:38</b><span>Preprocessing in the knowledge discovery (KDD) process</span></a><a href="#" data-v="0" data-t="330"><b>05:30</b><span>Major tasks: cleaning, integration, reduction, transformation</span></a><a href="#" data-v="0" data-t="381"><b>06:21</b><span>Data reduction and summarisation</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why preprocessing is needed"><span class="num">1</span>Why preprocessing is needed</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>ஏன் preprocessing? — அழுக்கு data, தவறான முடிவு</h3><p>நிஜ உலக data பொதுவாக <strong>முழுமையற்றது (incomplete), noise நிறைந்தது (noisy), சீரற்றது (inconsistent)</strong>. அழுக்கு data-வை mine செய்தால் <strong>மோசமான முடிவுகள்</strong> வரும். மேலும், data அழுக்கானது என்று தெரிந்தால் <strong>பயனர்கள் முடிவுகளை நம்ப மாட்டார்கள்</strong>.</p>
+<p><strong>"Garbage in, garbage out"</strong> — குப்பையைப் போட்டால் குப்பைதான் வரும்.</p>
+<table>
+<thead>
+<tr>
+<th>பிரச்சினை</th>
+<th>பொருள்</th>
+<th>காரணங்கள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Incomplete</strong></td>
+<td>மதிப்புகள் <strong>விடுபட்டுள்ளன</strong></td>
+<td>அந்த நேரத்தில் முக்கியமாகத் தோன்றவில்லை; தவறான புரிதல்; கருவிக் கோளாறு; வரலாறு பதிவு செய்யப்படவில்லை</td>
+</tr>
+<tr>
+<td><strong>Noisy</strong></td>
+<td>மதிப்புகள் <strong>தவறானவை</strong></td>
+<td>பழுதான கருவிகள்; data entry-இல் மனித/கணினிப் பிழை; அனுப்பும்போது பிழை; வெவ்வேறு date formats; duplicate rows</td>
+</tr>
+</tbody>
+</table>
+<p><strong>உதாரணம்:</strong> ஒரு customer form:</p>
+<ul>
+<li>வயது காலியாக உள்ளது → <strong>incomplete</strong></li>
+<li>வயது = 250 → <strong>noisy</strong></li>
+<li>ஒரு table-இல் "M/F", இன்னொன்றில் "1/0" → <strong>inconsistent</strong></li>
+</ul>
+<p><strong>இரண்டு எண்கள் நினைவில் வைக்க:</strong></p>
+<ul>
+<li>KDD வாழ்க்கைச் சுழற்சியில் preprocessing, <strong>data understanding-க்குப் பிறகு</strong> வருகிறது.</li>
+<li>ஒரு knowledge discovery project-இன் <strong>70–80% நேரமும் உழைப்பும் data தயாரிப்புக்கே</strong> செலவாகிறது.</li>
+</ul>
+<p><strong>4 preprocessing முறைகள்</strong></p>
+<table>
+<thead>
+<tr>
+<th>முறை</th>
+<th>நோக்கம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data cleaning</strong></td>
+<td>விடுபட்டவற்றை நிரப்பு, noise-ஐ smooth செய், outliers-ஐ நீக்கு, சீரின்மையைச் சரிசெய்</td>
+</tr>
+<tr>
+<td><strong>Data integration</strong></td>
+<td>பல மூலங்களை <strong>ஒரே ஒருங்கிணைந்த</strong> இடத்தில் இணை (data warehouse)</td>
+</tr>
+<tr>
+<td><strong>Data transformation</strong></td>
+<td>உதாரணம்: <strong>normalization</strong> — தூர அடிப்படையிலான algorithms-இன் துல்லியத்தை மேம்படுத்தும்</td>
+</tr>
+<tr>
+<td><strong>Data reduction</strong></td>
+<td>அளவைக் குறை — aggregation, தேவையற்ற features-ஐ நீக்குதல் (Week 4)</td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam template (English)</strong></p>
+<p><em>Q: Why is data preprocessing needed?</em>
+Real-world data is <strong>incomplete</strong> (missing values), <strong>noisy</strong> (errors/outliers) and <strong>inconsistent</strong> (discrepancies in codes or names). Mining dirty data gives unreliable results that users won't trust. Data preparation takes about <strong>70–80%</strong> of a KDD project's effort. The main techniques are data cleaning, integration, transformation and reduction.</p>
+<p><strong>நினைவில் வைக்க:</strong> <strong>C-I-T-R</strong> — Cleaning, Integration, Transformation, Reduction.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p>Real-world databases and data warehouses are commonly <strong>incomplete, noisy and inconsistent</strong>. Mining dirty data gives poor results, and <strong>users don't trust results from data they believe is dirty</strong>.</p>
 <div class="grid2"><div><p><strong>Incomplete</strong> (missing values)</p>
 <ul>
 <li>Attribute of interest <strong>not available</strong> (e.g. customer info on sales records)</li>
@@ -640,10 +702,69 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <td>திரட்டல், தேவையற்ற அம்சங்களை நீக்குதல், குழுமமாக்கல் மூலம் அளவைக் குறைத்தல் (வாரம் 4)</td>
 </tr>
 </tbody>
-</table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Data cleaning — handling missing values"><span class="num">2</span>Data cleaning — handling missing values</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>காணாத மதிப்பை நிரப்புதல்</h3><p>காலியான cell-ஐ எப்போதும் பூஜ்யமாக மாற்றக்கூடாது. <strong>Mean</strong>, அதே class-இன் mean, அல்லது பொருத்தமான prediction பயன்படுத்தலாம். எந்த முறை சரி என்பது missing value ஏற்பட்ட காரணத்தையும் தரவின் வகையையும் பொறுத்தது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Missing values-க்கு: record-ஐ விலக்குதல்; மனிதர் நிரப்புதல்; global constant; attribute mean; அதே class mean; probable value prediction ஆகிய வழிகள் உண்டு. குறைந்த records என்றால் manual சாத்தியம்; அதிகமானால் செலவு அதிகம்.
-Class label missing என்றால் supervised training-இல் சிக்கல்; mean நிரப்புவது class label-க்கு பொருத்தமில்லை. Test data-வின் தகவலால் training imputation-ஐ அமைக்காதீர்கள்; leakage ஏற்படும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>ஆறு missing-value வழிகள்:</strong> row drop; manual fill; Unknown போன்ற constant; overall mean; same-class mean; பிற attributes கொண்டு predicted value. உதாரண incomes 80k,70k,30k,44k→overall <strong>56k</strong>; Low-risk 80k,70k→<strong>75k</strong>. Unknown-ஐ meaningful category என model தவறாகக் கருதலாம். Predicted 76k toy value; actual fitted model இல்லாமல் அது கணக்கிடப்பட்ட உண்மை அல்ல. Evaluation-இல் imputation/scaling training data-இல் மட்டும் fit செய்யவும்; test label தெரியாதபோது class-mean பயன்படுத்த முடியாது.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p>Six methods, from simplest to smartest:</p>
+</table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Data cleaning — handling missing values"><span class="num">2</span>Data cleaning — handling missing values</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>விடுபட்ட மதிப்புகளைக் கையாளும் 6 வழிகள்</h3><p><strong>உதாரணம்:</strong> ஒரு வங்கியின் வாடிக்கையாளர் அட்டவணையில், சிலருக்கு <strong>income</strong> காலியாக உள்ளது. என்ன செய்வது?</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>முறை</th>
+<th>எப்படி</th>
+<th>பலவீனம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Row-ஐ நீக்கு</strong></td>
+<td>அந்த row-ஐ விட்டுவிடு. பொதுவாக <strong>class label</strong> விடுபட்டால்</td>
+<td>ஒரு row-இல் <strong>பல</strong> மதிப்புகள் விடுபட்டால் மட்டுமே நியாயம். இல்லையென்றால் நல்ல தகவலையும் இழக்கிறோம்</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>கையால் நிரப்பு</strong></td>
+<td>ஒருவர் ஒவ்வொன்றாக நிரப்புகிறார்</td>
+<td><strong>நேரம் அதிகம்</strong>; பெரிய data-க்கு முடியாது</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>ஒரு நிலையான மதிப்பு</strong></td>
+<td>எல்லாவற்றுக்கும் <strong>"Unknown"</strong> போடு</td>
+<td><strong>பொறி!</strong> பல rows-இல் "Unknown" இருப்பதால், algorithm அதை ஒரு <strong>சுவாரஸ்யமான கருத்து</strong> என்று நினைக்கலாம்</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Attribute சராசரி</strong></td>
+<td>எல்லோருடைய income சராசரி (உதாரணம்: Rs 56,000)</td>
+<td>அந்த நபரின் <strong>class-ஐக் கவனிக்காது</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>அதே class-இன் சராசரி</strong></td>
+<td><strong>அதே credit-risk வகையில்</strong> உள்ளவர்களின் சராசரி income</td>
+<td>4-ஐ விடப் புத்திசாலித்தனமானது</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>மிகச் சாத்தியமான மதிப்பு</strong></td>
+<td><strong>Regression, Bayesian, decision tree</strong> மூலம் <strong>கணிப்பு</strong></td>
+<td><strong>மற்ற attributes-இன் தகவலைப்</strong> பயன்படுத்துகிறது. ஆனால் model-இன் அனுமானங்களைப் பொறுத்தது</td>
+</tr>
+</tbody>
+</table>
+<p><strong>4-க்கும் 5-க்கும் உள்ள வித்தியாசம் — உதாரணம்:</strong></p>
+<ul>
+<li>எல்லோரின் சராசரி income = Rs 56,000</li>
+<li>"Low risk" வாடிக்கையாளர்களின் சராசரி = Rs 80,000</li>
+<li>"High risk" வாடிக்கையாளர்களின் சராசரி = Rs 30,000</li>
+</ul>
+<p>ஒரு <strong>high risk</strong> வாடிக்கையாளரின் income விடுபட்டால்: முறை 4 → 56,000 (தவறாக இருக்கலாம்). முறை 5 → <strong>30,000</strong> (அதிகம் பொருத்தமானது).</p>
+<p><strong>முறை 6 உதாரணம்:</strong> வயது, வேலை, கல்வி போன்ற மற்ற columns-ஐ வைத்து income-ஐக் <strong>கணிக்கிறோம்</strong>. "35 வயது, engineer, பட்டதாரி" → income ≈ Rs 95,000.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam tip:</strong> "Describe methods for handling missing values" — ஆறையும் எழுதுங்கள்.</p>
+<ul>
+<li><strong>முறை 3-இன் பொறியை</strong> (global constant ஒரு "சுவாரஸ்யமான கருத்து" போலத் தோன்றும்) கட்டாயம் குறிப்பிடுங்கள்.</li>
+<li><strong>முறை 6 மற்ற attributes-ஐப் பயன்படுத்துகிறது</strong> என்று விளக்குங்கள்.</li>
+</ul>
+<p><strong>நினைவில் வைக்க (எளியதிலிருந்து புத்திசாலித்தனமானதுக்கு):</strong> நீக்கு → கையால் → constant → சராசரி → class சராசரி → கணிப்பு</p>
+<p>Page-இல் உள்ள missing-value filler tool-இல் ஒவ்வொரு முறையையும் சோதிக்கலாம்.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p>Six methods, from simplest to smartest:</p>
 <table>
 <thead>
 <tr>
@@ -758,10 +879,73 @@ R.querySelectorAll('button').forEach(function(b){b.onclick=function(){var m=M[b.
 </tbody>
 </table>
 <p><div data-ta-tool="mv"></div></p>
-<div class="call exam"><div class="ct">Exam focus</div><p>"விடுபட்ட பெறுமதிகளைக் கையாளும் முறைகளை விவரிக்கவும்" என்பது பொதுவான கேள்வி. ஆறையும் பட்டியலிடவும். <strong>உலகளாவிய மாறிலி</strong> முறையிலுள்ள சிக்கலைக் குறிப்பிட்டு, <strong>முறை 6 பிற பண்புக்கூறுகளை எவ்வாறு பயன்படுத்துகிறது</strong> என்பதை அதன் அனுமானங்களுடனும் வரம்புகளுடனும் விளக்கவும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Noisy data and smoothing"><span class="num">3</span>Noisy data and smoothing</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Noise-ஐக் குறைத்தல்</h3><p>வழக்கமான வடிவத்தை மறைக்கும் சிறிய சீரற்ற மாற்றங்கள் <strong>Noise</strong>. அருகிலுள்ள மதிப்புகளை bins-ஆகப் பிரித்து mean அல்லது boundary-ஆல் மாற்றுவது smoothing. உண்மையான அரிய நிகழ்வைத் தவறாக நீக்காதீர்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Mean smoothing</strong> ஒவ்வொரு bin-ஐ mean-ஆல்; <strong>median</strong> நடு மதிப்பால்; <strong>boundary</strong> அருகிலுள்ள minimum/maximum-ஆல் மாற்றும். Tie வந்தால் தேர்ந்த policy-ஐச் சொல்லுங்கள்.
-Regression trend line-க்கு ஏற்ற மதிப்புகளைத் தரும்; clustering தனியாக நிற்கும் outliers-ஐக் காட்டலாம். உண்மையான extreme event-ஐ noise என நீக்குவதற்கு முன் domain காரணம் பார்க்க வேண்டும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Sorted <strong>4,8,15 |21,21,24 |25,28,34</strong>-க்கு mean smoothing <strong>9,9,9 |22,22,22 |29,29,29</strong>. Boundary smoothing ஒவ்வொரு value-ஐ அருகிலுள்ள bin min/max-க்கு மாற்றும்: <strong>4,4,15 |21,21,24 |25,25,34</strong>. Median வேறு முறை. Regression fitted trend மூலம் smooth; clustering-க்கு வெளியே உள்ளவை candidate outliers. Outlier எல்லாம் noise அல்ல; முக்கிய நிகழ்வாகவும் இருக்கலாம்.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><p><strong>Noise</strong> is a <strong>random error or variance in a measured variable</strong>. Three smoothing techniques:</p>
+<div class="call exam"><div class="ct">Exam focus</div><p>"விடுபட்ட பெறுமதிகளைக் கையாளும் முறைகளை விவரிக்கவும்" என்பது பொதுவான கேள்வி. ஆறையும் பட்டியலிடவும். <strong>உலகளாவிய மாறிலி</strong> முறையிலுள்ள சிக்கலைக் குறிப்பிட்டு, <strong>முறை 6 பிற பண்புக்கூறுகளை எவ்வாறு பயன்படுத்துகிறது</strong> என்பதை அதன் அனுமானங்களுடனும் வரம்புகளுடனும் விளக்கவும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Noisy data and smoothing"><span class="num">3</span>Noisy data and smoothing</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Noise-ஐ smooth செய்தல் — binning, regression, clustering</h3><p><strong>Noise</strong> = அளக்கப்பட்ட மதிப்பில் உள்ள <strong>random பிழை அல்லது மாறுபாடு</strong>.</p>
+<p><strong>1. Binning</strong></p>
+<p>மதிப்புகளை <strong>வரிசைப்படுத்தி</strong>, சிறு குழுக்களாக (<strong>bins</strong>) பிரித்து, ஒவ்வொரு மதிப்பையும் அதன் <strong>அண்டை மதிப்புகளைப் பார்த்து</strong> மாற்றுவது. இது <strong>local smoothing</strong>.</p>
+<p><strong>உதாரணம்:</strong> விலைகள் (வரிசைப்படுத்தப்பட்டவை): <strong>4, 8, 15, 21, 21, 24, 25, 28, 34</strong>
+ஒவ்வொரு bin-இலும் 3 மதிப்புகள் (equal-frequency):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Bin 1</th>
+<th>Bin 2</th>
+<th>Bin 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>பிரிவு</strong></td>
+<td>4, 8, 15</td>
+<td>21, 21, 24</td>
+<td>25, 28, 34</td>
+</tr>
+<tr>
+<td><strong>Bin சராசரியால்</strong></td>
+<td>9, 9, 9</td>
+<td>22, 22, 22</td>
+<td>29, 29, 29</td>
+</tr>
+<tr>
+<td><strong>Bin எல்லைகளால்</strong></td>
+<td>4, 4, 15</td>
+<td>21, 21, 24</td>
+<td>25, 25, 34</td>
+</tr>
+</tbody>
+</table>
+<p><strong>சராசரி முறை:</strong> ஒவ்வொரு மதிப்பையும் bin சராசரியால் மாற்று.</p>
+<ul>
+<li>Bin 1: (4 + 8 + 15) ÷ 3 = 27 ÷ 3 = <strong>9</strong></li>
+<li>Bin 2: (21 + 21 + 24) ÷ 3 = 66 ÷ 3 = <strong>22</strong></li>
+<li>Bin 3: (25 + 28 + 34) ÷ 3 = 87 ÷ 3 = <strong>29</strong></li>
+</ul>
+<p><strong>எல்லை (boundary) முறை:</strong> ஒவ்வொரு மதிப்பையும், bin-இன் <strong>குறைந்தபட்சம் அல்லது அதிகபட்சம் — எது அருகிலோ</strong> அதால் மாற்று.</p>
+<ul>
+<li>Bin 1-இல் 8: 4-க்குத் தூரம் 4, 15-க்குத் தூரம் 7 → <strong>4</strong></li>
+<li>Bin 3-இல் 28: 25-க்குத் தூரம் 3, 34-க்குத் தூரம் 6 → <strong>25</strong></li>
+</ul>
+<p><strong>Median முறை:</strong> ஒவ்வொரு மதிப்பையும் bin-இன் நடு மதிப்பால் மாற்று.</p>
+<p><strong>விதி:</strong> Bin <strong>அகலமாக இருந்தால்</strong>, smoothing <strong>அதிகமாக</strong> இருக்கும்.</p>
+<p><strong>2. Regression</strong></p>
+<p>Data-வை ஒரு <strong>சமன்பாட்டுக்கு (function)</strong> பொருத்து.</p>
+<ul>
+<li><strong>Linear regression:</strong> இரண்டு attributes-க்கு <strong>சிறந்த நேர்கோடு</strong> வரைந்து, ஒன்றை வைத்து இன்னொன்றைக் கணி.</li>
+<li><strong>Multiple linear regression:</strong> <strong>இரண்டுக்கு மேற்பட்ட</strong> attributes.</li>
+</ul>
+<p><strong>3. Clustering</strong></p>
+<p>ஒத்த மதிப்புகளைக் <strong>குழுக்களாக்கு</strong>. <strong>எந்தக் குழுவிலும் சேராத</strong> மதிப்புகள் → <strong>outliers</strong>.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam template (English) — binning question:</strong></p>
+<ol>
+<li>Sort the data.</li>
+<li>Partition into equal-frequency (or equal-width) bins.</li>
+<li>Smooth by bin means / medians / boundaries — show the arithmetic.</li>
+</ol>
+<p><strong>பொதுவான தவறுகள்:</strong></p>
+<ul>
+<li>Sort செய்ய மறப்பது.</li>
+<li>Boundary முறையில் <strong>நடுவில் உள்ள மதிப்பை</strong> சராசரியால் மாற்றுவது. <strong>Min அல்லது max</strong> மட்டுமே பயன்படுத்த வேண்டும்.</li>
+</ul>
+<p>Week 4-இல் இன்னும் விரிவான binning lab உள்ளது.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><p><strong>Noise</strong> is a <strong>random error or variance in a measured variable</strong>. Three smoothing techniques:</p>
 <h3 id="1-binning">1. Binning</h3>
 <p>Binning smooths a <strong>sorted</strong> value by consulting its <strong>neighbourhood</strong> (the values around it). This is <strong>local smoothing</strong>.</p>
 <div class="call example"><div class="ct">The notes' example: equal-frequency bins of size 3</div><p>Sorted prices: <strong>4, 8, 15, 21, 21, 24, 25, 28, 34</strong></p>
@@ -857,10 +1041,88 @@ Regression trend line-க்கு ஏற்ற மதிப்புகளை�
 <h3>2. பின்னடைவு</h3>
 <p>தரவை ஒரு <strong>சார்புக்குப்</strong> பொருத்தவும். <strong>நேரியல் பின்னடைவு</strong>, ஒரு பண்புக்கூறால் மற்றொன்றை <strong>முன்னறிவிக்க</strong> ஏற்றவாறு இரண்டு பண்புக்கூறுகளுக்குப் பொருந்தும் <strong>சிறந்த கோட்டைக்</strong> கண்டறிகிறது. <strong>பல நேரியல் பின்னடைவு</strong>, <strong>இரண்டுக்கும் மேற்பட்ட</strong> பண்புக்கூறுகளைப் பயன்படுத்தி <strong>பல்பரிமாண மேற்பரப்பைப்</strong> பொருத்துகிறது.</p>
 <h3>3. குழுமமாக்கல்</h3>
-<p>ஒத்த பெறுமதிகளைக் <strong>குழுமங்களாகத்</strong> தொகுக்கவும். <strong>அனைத்துக் குழுமங்களுக்கும் வெளியே உள்ள</strong> பெறுமதிகளை <strong>புறநிலைகளாகக்</strong> கருதலாம்.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Data cleaning as a process"><span class="num">4</span>Data cleaning as a process</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Data cleaning ஒரு தொடர்ச்சியான வேலை</h3><p>முதலில் முரண்பாட்டைக் கண்டுபிடித்து, காரணத்தை ஆராய்ந்து, விதிப்படி சரிசெய்து, மீண்டும் சோதிக்க வேண்டும். வருடம் தவறாக உள்ளதா, unit வேறுபட்டதா என்று பார்க்காமல் ஒரு எண்ணை மட்டும் மாற்றுவது ஆபத்து.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Discrepancy detection:</strong> metadata range/type-க்கு பொருந்துகிறதா, unique ID மீண்டுள்ளதா, sequence numbers தவறியுள்ளனவா, null அனுமதியா என்று பாருங்கள். Date format, currency, units மாறுபாடும் தவறாகத் தோன்றலாம்.
-<strong>Correction:</strong> transformation rules அல்லது ETL pipeline மூலம் சீராக்கி, மாற்றத்தைச் சரிபார்க்கவும். Data migration tools sources இடையே மாற்றும்; ETL extract→transform→load செய்கிறது. பிழையின் மூல காரணத்தையும் திருத்தினால்தான் மீண்டும் வராமல் தடுக்கலாம்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Detect→fix→check again</strong>. Metadata-வில் type/domain/range/dependencies/null coding பார்த்து discrepancies கண்டுபிடி. Unique rule ID repeat ஆகாதது; consecutive rule இடையில் missing/duplicate வராத வரிசை; null rule missing-ஐ எப்படிக் குறிக்கிறோம். Zero உண்மையான value ஆக இருக்கலாம்; missing-க்கு தானாக zero நிரப்பாதீர்கள். Migration/ETL/scripts fixes செய்யலாம்; transformation புதிய பிரச்சினை உருவாக்கலாம். Interactive cleaning உதாரணம் Potter’s Wheel detection+transformation+undo; இது பாடத்தின் வரலாற்றுக் கருவி உதாரணம்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>So far we've looked at <em>techniques</em>. In practice cleaning is a <strong>two-step iterative process</strong>:</p>
+<p>ஒத்த பெறுமதிகளைக் <strong>குழுமங்களாகத்</strong> தொகுக்கவும். <strong>அனைத்துக் குழுமங்களுக்கும் வெளியே உள்ள</strong> பெறுமதிகளை <strong>புறநிலைகளாகக்</strong> கருதலாம்.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Data cleaning as a process"><span class="num">4</span>Data cleaning as a process</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Data cleaning ஒரு செயல்முறை — கண்டுபிடி, சரிசெய், மீண்டும் பார்</h3><p>Cleaning என்பது ஒருமுறை செய்யும் வேலை அல்ல. இது <strong>இரண்டு படிகள் கொண்ட, மீண்டும் மீண்டும் நடக்கும்</strong> செயல்முறை:</p>
+<p><strong>Discrepancy detection (முரண்பாடு கண்டுபிடித்தல்) → Data transformation (சரிசெய்தல்) → மீண்டும் சோதி ↺</strong></p>
+<p><strong>படி 1: முரண்பாடுகளைக் கண்டுபிடி</strong></p>
+<p><strong>முரண்பாடுகளுக்கான காரணங்கள்:</strong></p>
+<ul>
+<li>மோசமாக வடிவமைக்கப்பட்ட forms (நிறைய optional fields)</li>
+<li>Data entry-இல் மனிதப் பிழை</li>
+<li><strong>வேண்டுமென்றே தவறு</strong> (தனிப்பட்ட தகவலை மறைக்க)</li>
+<li><strong>Data decay</strong> — காலாவதியான தகவல் (பழைய முகவரி)</li>
+<li><strong>சீரற்ற பிரதிநிதித்துவம்</strong>: "2004/12/25" vs "25/12/2004"</li>
+<li>கருவி, system பிழைகள்</li>
+<li>வேறு நோக்கத்துக்கு data-வைப் பயன்படுத்துதல்</li>
+<li>Integration-இல் ஒரே attribute-க்கு <strong>வெவ்வேறு பெயர்கள்</strong></li>
+</ul>
+<p><strong>எப்படிக் கண்டுபிடிப்பது?</strong> <strong>Metadata</strong> (data பற்றிய data)-விலிருந்து தொடங்கு: ஒவ்வொரு attribute-இன் <strong>வகை என்ன? ஏற்கக்கூடிய மதிப்புகள் எவை? எதிர்பார்த்த வரம்பில் உள்ளதா?</strong></p>
+<p><strong>Field overloading:</strong> Developers ஒரு புதிய attribute-ஐ, ஏற்கனவே உள்ள attribute-இன் <strong>பயன்படுத்தாத bits-இல்</strong> திணிப்பது. உதாரணம்: 31 bits மட்டுமே தேவைப்படும் 32-bit field-இன் கடைசி bit-ஐ வேறு தகவலுக்குப் பயன்படுத்துதல்.</p>
+<p><strong>3 விதிகளுடன் data-வைச் சோதி:</strong></p>
+<table>
+<thead>
+<tr>
+<th>விதி</th>
+<th>சொல்வது</th>
+<th>உதாரணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unique rule</strong></td>
+<td>ஒவ்வொரு மதிப்பும் <strong>வேறுபட்டதாக</strong> இருக்க வேண்டும்</td>
+<td>Customer ID</td>
+</tr>
+<tr>
+<td><strong>Consecutive rule</strong></td>
+<td>குறைந்ததுக்கும் அதிகமானதுக்கும் இடையில் <strong>எதுவும் விடுபடக் கூடாது</strong>, எல்லாம் unique</td>
+<td>Cheque எண்கள் (101, 102, 103… — 102 விடுபடக் கூடாது)</td>
+</tr>
+<tr>
+<td><strong>Null rule</strong></td>
+<td>காலி, "?", சிறப்புக் குறிகள் <strong>null-ஐக் குறிக்கும் முறை</strong>, அவற்றைக் கையாளும் விதம்</td>
+<td>0 ஒரு சரியான மதிப்பாக இருக்கும்போது, விடுபட்டதை 0 என்று போடக் கூடாது</td>
+</tr>
+</tbody>
+</table>
+<p><strong>மதிப்புகள் ஏன் விடுபடுகின்றன? (Null rule கையாள வேண்டியவை)</strong></p>
+<ol>
+<li>நபர் <strong>சொல்ல மறுக்கிறார்</strong>, அல்லது <strong>பொருந்தாது</strong> (வாகனம் ஓட்டாதவருக்கு licence எண் இல்லை)</li>
+<li>Data entry செய்பவருக்குச் <strong>சரியான மதிப்பு தெரியாது</strong></li>
+<li>மதிப்பு <strong>பின்னர் ஒரு படியில்</strong> வரும்</li>
+</ol>
+<p><strong>படி 2: சரிசெய் (transformation)</strong></p>
+<table>
+<thead>
+<tr>
+<th>கருவி</th>
+<th>என்ன செய்யும்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data migration tools</strong></td>
+<td>எளிய மாற்றங்கள் ("gender" → "sex")</td>
+</tr>
+<tr>
+<td><strong>ETL tools</strong> (Extraction / Transformation / Loading)</td>
+<td>GUI மூலம் மாற்றங்கள். ஆனால் <strong>வரையறுக்கப்பட்டவை</strong>, அதனால் <strong>custom scripts</strong> தேவைப்படும்</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ஏன் இது கடினம்?</strong></p>
+<ul>
+<li><strong>பிழை ஏற்படக்கூடியது, நேரம் அதிகம்.</strong></li>
+<li>சில மாற்றங்கள் <strong>புதிய முரண்பாடுகளை</strong> உருவாக்கும்.</li>
+<li><strong>Nested discrepancies:</strong> சில பிழைகள் மற்றவை சரிசெய்யப்பட்ட பிறகுதான் தெரியும். உதாரணம்: ஆண்டு "<strong>20004</strong>" என்ற தட்டச்சுப் பிழை, எல்லா dates-உம் ஒரே format-க்கு வந்த பிறகுதான் தெரியும்.</li>
+<li><strong>Batch jobs, feedback இல்லை:</strong> தோல்வியடைந்த rows, <strong>காரணம் சொல்லாமல்</strong> ஒரு file-இல் எழுதப்படும்.</li>
+</ul>
+<p><strong>புதிய, interactive முறைகள்:</strong></p>
+<ul>
+<li><strong>Potter's Wheel:</strong> முரண்பாடு கண்டுபிடித்தலையும் சரிசெய்தலையும் <strong>ஒருங்கிணைக்கும்</strong> tool. <strong>Spreadsheet போன்ற</strong> interface; முடிவுகள் <strong>உடனே</strong> தெரியும்; <strong>undo</strong> செய்யலாம்; பின்னணியில் சோதனை நடக்கும்.</li>
+<li><strong>Declarative languages:</strong> Data cleaning-க்கான <strong>SQL நீட்டிப்புகள்</strong>.</li>
+<li>Data பற்றிக் கற்றுக்கொண்டே <strong>metadata-வைப் புதுப்பி</strong>.</li>
+</ul><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam tip:</strong> "Explain data cleaning as a process" — இரண்டு படிகளையும் (discrepancy detection, transformation), 3 விதிகளையும் (unique, consecutive, null) உதாரணங்களுடன் எழுதுங்கள். <strong>Potter's Wheel</strong>-ஐக் குறிப்பிட்டால் கூடுதல் marks.</p>
+<p><strong>நினைவில் வைக்க:</strong> "Detect → Fix → Check again ↺" </p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>So far we've looked at <em>techniques</em>. In practice cleaning is a <strong>two-step iterative process</strong>:</p>
 <div class="flow"><span>Discrepancy detection</span><span>Data transformation (fix)</span><span>Check again ↺</span></div>
 <h3 id="step-1-discrepancy-detection">Step 1 — Discrepancy detection</h3>
 <p><strong>Causes of discrepancies:</strong>
@@ -1020,10 +1282,56 @@ Regression trend line-க்கு ஏற்ற மதிப்புகளை�
 <li>முடிவுகள் <strong>உடனடியாகத்</strong> தெரியும்; <strong>செயல்தவிர்க்கலாம்</strong>; முரண்பாட்டுச் சரிபார்ப்பு <strong>பின்னணியில்</strong> இயங்கும்.</li>
 <li><strong>அறிவிப்புமுறை மொழிகள்</strong>: தரவுத் தூய்மைப்படுத்தல் செயல்பாடுகளைக் குறிப்பிடுவதற்கான வலுவான <strong>SQL விரிவாக்கங்கள்</strong>.</li>
 <li>தரவைப் பற்றிக் கற்றுக்கொள்ளும்போது <strong>மேல்தரவைப் புதுப்பித்துக்கொண்டே</strong> இருக்கவும். எதிர்காலப் பதிப்புகளைத் தூய்மைப்படுத்துவதை இது விரைவுபடுத்தும்.</li>
-</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Data integration"><span class="num">5</span>Data integration</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>பல இடங்களின் தரவை இணைத்தல்</h3><p>இரண்டு files-இல் இருக்கும் பெயர்கள் ஒரே நபரையா குறிக்கின்றன என்று <strong>Entity identification</strong> பார்க்கும். ஒரே தகவல் இரண்டு attributes-இல் இருந்தால் redundancy. Correlation தொடர்பைக் காட்டும்; காரணத்தைக் காட்டாது. r = 0 என்பது linear தொடர்பு இல்லை என்பதே.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Pearson r = Σ(aᵢ−ā)(bᵢ−b̄)/√[Σ(aᵢ−ā)² Σ(bᵢ−b̄)²]</strong>, −1≤r≤1. r=+1 முழு positive linear தொடர்பு; −1 முழு negative linear தொடர்பு; 0 linear correlation இல்லை.
-<strong>முக்கிய திருத்தம்:</strong> r=0 என்பதால் பொதுவாக statistical independence என்று முடிவு செய்ய முடியாது; nonlinear தொடர்பு இருக்கலாம். |r| அதிகமாக இருப்பது direction-ஐப் பொருட்படுத்தாமல் வலுவான linear தொடர்பைக் காட்டும். Attribute constant என்றால் denominator 0; r undefined.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Entity matching:</strong> customer_id/cust_number ஒரே real customer-ஆ என metadata மற்றும் keys மூலம் சோதி. <strong>Redundancy:</strong> annual total மற்ற fields-இலிருந்து derive ஆகிறதா? Pearson <strong>r</strong> −1 முதல்1; sign direction, absolute size linear strength. r=0 என்றால் independence உறுதி இல்லை; correlation காரணத்தை நிரூபிக்காது. Formula-இல் N உடன் population σ பயன்படுத்துகிறோமா அல்லது N−1 sample σ-ஆ என்று consistent ஆக இருக்கவேண்டும். Constant attribute-க்கு r undefined.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><p><strong>Data integration</strong> combines data from <strong>multiple sources</strong> (databases, data cubes, flat files) into a <strong>coherent data store</strong>, as in data warehousing.</p>
+</ul></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Data integration"><span class="num">5</span>Data integration</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>Data integration — பல மூலங்களை ஒன்றாக்குதல்</h3><p><strong>Data integration</strong> = பல மூலங்களிலிருந்து (databases, data cubes, flat files) data-வை <strong>ஒரே ஒருங்கிணைந்த</strong> இடத்தில் சேர்ப்பது — data warehouse போல.</p>
+<p><strong>பிரச்சினை 1: Entity identification (ஒரே பொருளை அடையாளம் காணுதல்)</strong></p>
+<p>வெவ்வேறு மூலங்களில் உள்ள <strong>ஒரே நிஜப் பொருளை</strong> எப்படிப் பொருத்துவது?</p>
+<ul>
+<li>ஒரு database-இல் <code>customer_id</code>, இன்னொன்றில் <code>cust_number</code> — <strong>இரண்டும் ஒன்றா?</strong></li>
+<li>Pay type: ஒன்றில் <strong>"H" / "S"</strong>, இன்னொன்றில் <strong>1 / 2</strong>.</li>
+</ul>
+<p><strong>தீர்வு: Metadata</strong> — ஒவ்வொரு attribute-இன் பெயர், பொருள், data வகை, அனுமதிக்கப்பட்ட வரம்பு, null விதிகள். (இங்கே integration-உம் cleaning-உம் ஒன்றோடொன்று கலக்கின்றன.)</p>
+<p><strong>பிரச்சினை 2: Redundancy (மிகை)</strong></p>
+<p>ஒரு attribute-ஐ <strong>மற்றவற்றிலிருந்து கணக்கிட முடியுமென்றால்</strong>, அது <strong>redundant</strong>.</p>
+<ul>
+<li>உதாரணம்: மாதாந்திர வருமானம் இருந்தால், ஆண்டு வருமானம் தேவையில்லை (12-ஆல் பெருக்கினால் போதும்).</li>
+<li><strong>Correlation analysis</strong> மூலம் பல redundancies-ஐக் கண்டுபிடிக்கலாம்.</li>
+</ul>
+<p><strong>Correlation coefficient (Pearson's r)</strong></p>
+<p><strong>r = Σ(aᵢ − Ā)(bᵢ − B̄) / (N · σ_A · σ_B)</strong></p>
+<p>(Ā, B̄ = சராசரிகள்; σ_A, σ_B = standard deviations; N = rows எண்ணிக்கை)</p>
+<p>r எப்போதும் <strong>−1 முதல் +1 வரை</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>r</th>
+<th>பொருள்</th>
+<th>உதாரணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>r &gt; 0</strong></td>
+<td><strong>நேர் தொடர்பு:</strong> A கூடினால் B-உம் கூடும். r பெரியதாக இருந்தால் தொடர்பு வலுவானது — ஒன்று <strong>redundant ஆக இருக்கலாம்</strong></td>
+<td>உயரம் ↑, எடை ↑</td>
+</tr>
+<tr>
+<td><strong>r = 0</strong></td>
+<td><strong>நேர்கோட்டுத் தொடர்பு இல்லை</strong> (ஆனால் வேறு வகைத் தொடர்பு இருக்கலாம்)</td>
+<td>காலணி அளவு, தேர்வு மதிப்பெண்</td>
+</tr>
+<tr>
+<td><strong>r &lt; 0</strong></td>
+<td><strong>எதிர்த் தொடர்பு:</strong> ஒன்று கூடினால் மற்றது குறையும்</td>
+<td>விலை ↑, விற்பனை ↓</td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>கவனம்:</strong></p>
+<ul>
+<li>r = 0 என்றால் <strong>"தொடர்பே இல்லை" என்று சொல்ல வேண்டாம்</strong>. "<strong>நேர்கோட்டுத்</strong> தொடர்பு இல்லை" என்று சொல்லுங்கள்.</li>
+<li>r அதிகம் என்றால் உடனே attribute-ஐ நீக்க வேண்டாம். <strong>Redundancy-ஐ மதிப்பிட்ட பிறகு</strong> முடிவு செய்யுங்கள்.</li>
+</ul>
+<p><strong>Exam template (English):</strong> Data integration combines data from multiple sources into a coherent store. Issues: (1) <strong>entity identification problem</strong> — solved using metadata; (2) <strong>redundancy</strong> — detected by <strong>correlation analysis</strong> (Pearson's r: &gt; 0 positive, = 0 no linear correlation, &lt; 0 negative).</p>
+<p>Page-இல் உள்ள correlation explorer-இல் positive / negative / no-correlation உதாரணங்களைப் பார்க்கலாம்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><p><strong>Data integration</strong> combines data from <strong>multiple sources</strong> (databases, data cubes, flat files) into a <strong>coherent data store</strong>, as in data warehousing.</p>
 <h3 id="issue-1-entity-identification-problem">Issue 1 — Entity identification problem</h3>
 <p>How do we match <strong>equivalent real-world entities</strong> from different sources? Is <code>customer_id</code> in one DB the same attribute as <code>cust_number</code> in another? This is <strong>schema integration and object matching</strong>.</p>
 <p><strong>Solution: metadata</strong> for each attribute (name, meaning, data type, permitted range, null rules). Metadata also helps transform codes. For example, pay type may be <strong>"H"/"S"</strong> in one DB and <strong>1/2</strong> in another, so integration overlaps with cleaning.</p>
@@ -1107,11 +1415,67 @@ R.addEventListener('input',run);run();})();
 </tr>
 </tbody>
 </table>
-<p><div data-ta-tool="cor"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Data transformation"><span class="num">6</span>Data transformation</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>அளவுகளை மாற்றுதல்</h3><p>சம்பளம் ஆயிரங்களில், வயது பத்துகளில் இருந்தால் சில algorithms சம்பளத்திற்கே அதிக எடை தரலாம். <strong>Normalization</strong> அவற்றை ஒப்பிடக்கூடிய அளவிற்கு மாற்றும். Training data-வில் கற்ற scale-ஐ test data-க்கும் பயன்படுத்த வேண்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Min–max:</strong> v′=(v−min)/(max−min)×(new_max−new_min)+new_min. 73,600-ஐ 12,000…98,000-இலிருந்து 0…1-க்கு மாற்றினால் <strong>0.716</strong>.
-<strong>Z-score:</strong> v′=(v−mean)/SD. Mean 54,000; SD 16,000 என்றால் அதே value <strong>1.225</strong> — mean-ஐவிட 1.225 SD மேலே.
-<strong>Decimal scaling:</strong> v/10ʲ; எல்லா transformed |values|&lt;1 ஆகும் மிகச் சிறிய j. −986 என்றால் j=3 → −0.986. Min=max அல்லது SD=0 என்றால் சாதாரண division formula வரையறுக்கப்படாது.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Transformation நான்கு:</strong> smoothing, aggregation (daily→monthly), generalisation (street→city), normalisation. Min–max <strong>(73600−12000)/(98000−12000)=0.716279…≈0.716</strong>; z-score <strong>(73600−54000)/16000=1.225</strong>; decimal scaling max absolute986 என்றால் j=3, −986→−0.986. Min=max அல்லது σ=0 என்றால் denominator zero. Z-score-உம் outliers-ஆல் பாதிக்கப்படும்; robust alternative தேவைப்படலாம். Fit bounds/mean/σ training set-இலிருந்து; test-ஐத் தனியே மறுபடி fit செய்யாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p>Data are <strong>transformed or consolidated</strong> into forms suitable for mining. Four kinds:</p>
+<p><div data-ta-tool="cor"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Data transformation"><span class="num">6</span>Data transformation</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>Data transformation — normalization கணக்குகள்</h3><p>Data-வை mining-க்கு ஏற்ற வடிவில் <strong>மாற்றுவது</strong>. 4 வகைகள்:</p>
+<table>
+<thead>
+<tr>
+<th>வகை</th>
+<th>என்ன</th>
+<th>உதாரணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Smoothing</strong></td>
+<td>Noise-ஐ நீக்கு (binning, regression, clustering)</td>
+<td>முந்தைய பகுதி</td>
+</tr>
+<tr>
+<td><strong>Aggregation</strong></td>
+<td><strong>சுருக்குதல்</strong> — data cubes கட்ட</td>
+<td>தினசரி விற்பனை → மாதாந்திர, ஆண்டு மொத்தம்</td>
+</tr>
+<tr>
+<td><strong>Generalization</strong></td>
+<td>கீழ்நிலை மதிப்புகளை <strong>மேல்நிலைக் கருத்துகளால்</strong> மாற்று</td>
+<td>தெரு → நகரம் → நாடு; வயது → இளைஞர் / நடுத்தர வயது / முதியவர்</td>
+</tr>
+<tr>
+<td><strong>Normalization</strong></td>
+<td>மதிப்புகளை <strong>சிறிய வரம்புக்குள்</strong> கொண்டுவா ([0, 1] அல்லது [−1, 1])</td>
+<td>income → 0.716</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ஏன் normalization?</strong> Income (12,000–98,000), வயது (18–70) இரண்டையும் ஒப்பிடும்போது, income-இன் பெரிய எண்கள் <strong>வயதை அமுக்கிவிடும்</strong>. இரண்டையும் 0–1 ஆக்கினால் <strong>சமமாக</strong> இருக்கும்.</p>
+<p><strong>1. Min-max normalization</strong></p>
+<p><strong>v′ = (v − min) ÷ (max − min) × (new_max − new_min) + new_min</strong></p>
+<p><strong>உதாரணம்:</strong> Income min = $12,000, max = $98,000. $73,600-ஐ [0, 1]-க்கு மாற்று:</p>
+<ul>
+<li>v′ = (73,600 − 12,000) ÷ (98,000 − 12,000) × (1 − 0) + 0</li>
+<li>= 61,600 ÷ 86,000</li>
+<li>= <strong>0.716</strong></li>
+</ul>
+<p><strong>பொருள்:</strong> $73,600, வரம்பில் 71.6% தூரத்தில் உள்ளது.</p>
+<p><strong>2. Z-score normalization</strong></p>
+<p><strong>v′ = (v − சராசரி) ÷ standard deviation</strong></p>
+<p><strong>உதாரணம்:</strong> சராசரி income = $54,000, σ = $16,000. $73,600:</p>
+<ul>
+<li>v′ = (73,600 − 54,000) ÷ 16,000</li>
+<li>= 19,600 ÷ 16,000</li>
+<li>= <strong>1.225</strong></li>
+</ul>
+<p><strong>பொருள்:</strong> $73,600, சராசரியை விட <strong>1.225 standard deviations மேலே</strong> உள்ளது. எதிர்மறை எண் வந்தால் சராசரிக்குக் கீழே.</p>
+<p><strong>3. Decimal scaling</strong></p>
+<p><strong>v′ = v ÷ 10ʲ</strong> — j என்பது, <strong>எல்லா |v′|-உம் 1-க்குக் குறைவாக வரும் மிகச் சிறிய முழு எண்</strong>.</p>
+<p><strong>உதாரணம்:</strong> மதிப்புகள் −986 முதல் 917 வரை. மிகப் பெரிய |v| = 986 → j = 3 (1000-ஆல் வகு) → −986 → <strong>−0.986</strong>, 917 → <strong>0.917</strong></p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam tip:</strong> Normalization கணக்குகள் <strong>எளிதான marks</strong>. Formula எழுது → மதிப்புகளைப் போடு → <strong>3 தசம இடங்களுக்கு</strong> விடை.</p>
+<p><strong>Min-max vs z-score — எப்போது எது?</strong></p>
+<ul>
+<li><strong>Min-max:</strong> min, max <strong>தெரிந்திருந்தால்</strong>, ஒரு <strong>நிலையான வரம்பு</strong> வேண்டுமென்றால்.</li>
+<li><strong>Z-score:</strong> min, max <strong>தெரியாதபோது</strong>, அல்லது சராசரி/SD அடிப்படையிலான அளவீடு பொருத்தமாக இருக்கும்போது.</li>
+<li><strong>கவனம்:</strong> Z-score-உம் outliers-ஆல் பாதிக்கப்படும் (சராசரி, SD இரண்டையும் அவை மாற்றும்). "Z-score outliers-ஐ நீக்கும்" என்று எழுத வேண்டாம்.</li>
+</ul>
+<p>Page-இல் உள்ள normalization calculator-இல் உங்கள் எண்களைச் சோதிக்கலாம்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p>Data are <strong>transformed or consolidated</strong> into forms suitable for mining. Four kinds:</p>
 <table>
 <thead>
 <tr>
@@ -1216,30 +1580,68 @@ R.addEventListener('input',run);run();})();
 <h3>தசம அளவுமாற்றம் (பாடநூலிலிருந்து கூடுதலாக)</h3>
 <p>தசமப் புள்ளியை நகர்த்தவும்: v′ = v / 10<sup>j</sup>; இங்கு <em>j</em> என்பது <strong>max(|v′|) &lt; 1 ஆகும் மிகச்சிறிய முழு எண்</strong>. எ.கா. பெறுமதிகள் −986 முதல் 917 வரை இருந்தால் j = 3; எனவே −986 → −0.986.</p>
 <p><div data-ta-tool="nrm"></div></p>
-<div class="call exam"><div class="ct">Exam focus</div><p>இயல்பாக்கக் கணக்கீடுகள் <strong>எளிய மதிப்பெண்கள்</strong>. சூத்திரத்தை எழுதி, பிரதியிட்டு, 3 தசம இடங்களுக்கு விடையளிக்கவும். <strong>குறைந்தபட்ச-அதிகபட்சத்தைவிட Z-மதிப்பெண் எப்போது சிறந்தது</strong> என்பதையும் கூறத் தயாராக இருங்கள்: சராசரி/நியம-விலகல் அளவுமாற்றம் பணிக்குப் பொருந்தும்போது; புறநிலைகளின் பாதிப்பை அகற்றுகிறது என்று கூற வேண்டாம்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Quick revision sheet"><span class="num">7</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>தரவை ஏன் முதலில் தயார் செய்ய வேண்டும்?</h4><p>காணாத மதிப்பு, தவறான வயது, ஒரே நபரின் இரட்டைப் பதிவு போன்றவை முடிவை மாற்றும். இவற்றைச் சரிசெய்து algorithm-க்கு ஏற்றதாக்குவதே <strong>Preprocessing</strong>. நல்ல model-க்கு நல்ல input தேவை.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Incomplete</strong>=missing; <strong>noisy</strong>=பிழை/measurement variation; <strong>inconsistent</strong>=codes/formats முரண்பாடு. Entry, instruments, transmission, duplicates, பழைய data, source differences காரணமாகலாம். <strong>Cleaning, integration, transformation, reduction</strong> நான்கு preprocessing குடும்பங்கள். “70–80% effort” பாடத்தில் சொல்லப்படும் rough estimate; ஒவ்வொரு project-க்கும் fixed அளவு அல்ல.</p></div><div class="ta-recap-item"><h4>காணாத மதிப்பை நிரப்புதல்</h4><p>காலியான cell-ஐ எப்போதும் பூஜ்யமாக மாற்றக்கூடாது. <strong>Mean</strong>, அதே class-இன் mean, அல்லது பொருத்தமான prediction பயன்படுத்தலாம். எந்த முறை சரி என்பது missing value ஏற்பட்ட காரணத்தையும் தரவின் வகையையும் பொறுத்தது.</p>
-<p>Missing values-க்கு: record-ஐ விலக்குதல்; மனிதர் நிரப்புதல்; global constant; attribute mean; அதே class mean; probable value prediction ஆகிய வழிகள் உண்டு. குறைந்த records என்றால் manual சாத்தியம்; அதிகமானால் செலவு அதிகம்.
-Class label missing என்றால் supervised training-இல் சிக்கல்; mean நிரப்புவது class label-க்கு பொருத்தமில்லை. Test data-வின் தகவலால் training imputation-ஐ அமைக்காதீர்கள்; leakage ஏற்படும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>ஆறு missing-value வழிகள்:</strong> row drop; manual fill; Unknown போன்ற constant; overall mean; same-class mean; பிற attributes கொண்டு predicted value. உதாரண incomes 80k,70k,30k,44k→overall <strong>56k</strong>; Low-risk 80k,70k→<strong>75k</strong>. Unknown-ஐ meaningful category என model தவறாகக் கருதலாம். Predicted 76k toy value; actual fitted model இல்லாமல் அது கணக்கிடப்பட்ட உண்மை அல்ல. Evaluation-இல் imputation/scaling training data-இல் மட்டும் fit செய்யவும்; test label தெரியாதபோது class-mean பயன்படுத்த முடியாது.</p></div><div class="ta-recap-item"><h4>Noise-ஐக் குறைத்தல்</h4><p>வழக்கமான வடிவத்தை மறைக்கும் சிறிய சீரற்ற மாற்றங்கள் <strong>Noise</strong>. அருகிலுள்ள மதிப்புகளை bins-ஆகப் பிரித்து mean அல்லது boundary-ஆல் மாற்றுவது smoothing. உண்மையான அரிய நிகழ்வைத் தவறாக நீக்காதீர்கள்.</p>
-<p><strong>Mean smoothing</strong> ஒவ்வொரு bin-ஐ mean-ஆல்; <strong>median</strong> நடு மதிப்பால்; <strong>boundary</strong> அருகிலுள்ள minimum/maximum-ஆல் மாற்றும். Tie வந்தால் தேர்ந்த policy-ஐச் சொல்லுங்கள்.
-Regression trend line-க்கு ஏற்ற மதிப்புகளைத் தரும்; clustering தனியாக நிற்கும் outliers-ஐக் காட்டலாம். உண்மையான extreme event-ஐ noise என நீக்குவதற்கு முன் domain காரணம் பார்க்க வேண்டும்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p>Sorted <strong>4,8,15 |21,21,24 |25,28,34</strong>-க்கு mean smoothing <strong>9,9,9 |22,22,22 |29,29,29</strong>. Boundary smoothing ஒவ்வொரு value-ஐ அருகிலுள்ள bin min/max-க்கு மாற்றும்: <strong>4,4,15 |21,21,24 |25,25,34</strong>. Median வேறு முறை. Regression fitted trend மூலம் smooth; clustering-க்கு வெளியே உள்ளவை candidate outliers. Outlier எல்லாம் noise அல்ல; முக்கிய நிகழ்வாகவும் இருக்கலாம்.</p></div><div class="ta-recap-item"><h4>Data cleaning ஒரு தொடர்ச்சியான வேலை</h4><p>முதலில் முரண்பாட்டைக் கண்டுபிடித்து, காரணத்தை ஆராய்ந்து, விதிப்படி சரிசெய்து, மீண்டும் சோதிக்க வேண்டும். வருடம் தவறாக உள்ளதா, unit வேறுபட்டதா என்று பார்க்காமல் ஒரு எண்ணை மட்டும் மாற்றுவது ஆபத்து.</p>
-<p><strong>Discrepancy detection:</strong> metadata range/type-க்கு பொருந்துகிறதா, unique ID மீண்டுள்ளதா, sequence numbers தவறியுள்ளனவா, null அனுமதியா என்று பாருங்கள். Date format, currency, units மாறுபாடும் தவறாகத் தோன்றலாம்.
-<strong>Correction:</strong> transformation rules அல்லது ETL pipeline மூலம் சீராக்கி, மாற்றத்தைச் சரிபார்க்கவும். Data migration tools sources இடையே மாற்றும்; ETL extract→transform→load செய்கிறது. பிழையின் மூல காரணத்தையும் திருத்தினால்தான் மீண்டும் வராமல் தடுக்கலாம்.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Detect→fix→check again</strong>. Metadata-வில் type/domain/range/dependencies/null coding பார்த்து discrepancies கண்டுபிடி. Unique rule ID repeat ஆகாதது; consecutive rule இடையில் missing/duplicate வராத வரிசை; null rule missing-ஐ எப்படிக் குறிக்கிறோம். Zero உண்மையான value ஆக இருக்கலாம்; missing-க்கு தானாக zero நிரப்பாதீர்கள். Migration/ETL/scripts fixes செய்யலாம்; transformation புதிய பிரச்சினை உருவாக்கலாம். Interactive cleaning உதாரணம் Potter’s Wheel detection+transformation+undo; இது பாடத்தின் வரலாற்றுக் கருவி உதாரணம்.</p></div><div class="ta-recap-item"><h4>பல இடங்களின் தரவை இணைத்தல்</h4><p>இரண்டு files-இல் இருக்கும் பெயர்கள் ஒரே நபரையா குறிக்கின்றன என்று <strong>Entity identification</strong> பார்க்கும். ஒரே தகவல் இரண்டு attributes-இல் இருந்தால் redundancy. Correlation தொடர்பைக் காட்டும்; காரணத்தைக் காட்டாது. r = 0 என்பது linear தொடர்பு இல்லை என்பதே.</p>
-<p><strong>Pearson r = Σ(aᵢ−ā)(bᵢ−b̄)/√[Σ(aᵢ−ā)² Σ(bᵢ−b̄)²]</strong>, −1≤r≤1. r=+1 முழு positive linear தொடர்பு; −1 முழு negative linear தொடர்பு; 0 linear correlation இல்லை.
-<strong>முக்கிய திருத்தம்:</strong> r=0 என்பதால் பொதுவாக statistical independence என்று முடிவு செய்ய முடியாது; nonlinear தொடர்பு இருக்கலாம். |r| அதிகமாக இருப்பது direction-ஐப் பொருட்படுத்தாமல் வலுவான linear தொடர்பைக் காட்டும். Attribute constant என்றால் denominator 0; r undefined.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Entity matching:</strong> customer_id/cust_number ஒரே real customer-ஆ என metadata மற்றும் keys மூலம் சோதி. <strong>Redundancy:</strong> annual total மற்ற fields-இலிருந்து derive ஆகிறதா? Pearson <strong>r</strong> −1 முதல்1; sign direction, absolute size linear strength. r=0 என்றால் independence உறுதி இல்லை; correlation காரணத்தை நிரூபிக்காது. Formula-இல் N உடன் population σ பயன்படுத்துகிறோமா அல்லது N−1 sample σ-ஆ என்று consistent ஆக இருக்கவேண்டும். Constant attribute-க்கு r undefined.</p></div><div class="ta-recap-item"><h4>அளவுகளை மாற்றுதல்</h4><p>சம்பளம் ஆயிரங்களில், வயது பத்துகளில் இருந்தால் சில algorithms சம்பளத்திற்கே அதிக எடை தரலாம். <strong>Normalization</strong> அவற்றை ஒப்பிடக்கூடிய அளவிற்கு மாற்றும். Training data-வில் கற்ற scale-ஐ test data-க்கும் பயன்படுத்த வேண்டும்.</p>
-<p><strong>Min–max:</strong> v′=(v−min)/(max−min)×(new_max−new_min)+new_min. 73,600-ஐ 12,000…98,000-இலிருந்து 0…1-க்கு மாற்றினால் <strong>0.716</strong>.
-<strong>Z-score:</strong> v′=(v−mean)/SD. Mean 54,000; SD 16,000 என்றால் அதே value <strong>1.225</strong> — mean-ஐவிட 1.225 SD மேலே.
-<strong>Decimal scaling:</strong> v/10ʲ; எல்லா transformed |values|&lt;1 ஆகும் மிகச் சிறிய j. −986 என்றால் j=3 → −0.986. Min=max அல்லது SD=0 என்றால் சாதாரண division formula வரையறுக்கப்படாது.</p>
-<p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>Transformation நான்கு:</strong> smoothing, aggregation (daily→monthly), generalisation (street→city), normalisation. Min–max <strong>(73600−12000)/(98000−12000)=0.716279…≈0.716</strong>; z-score <strong>(73600−54000)/16000=1.225</strong>; decimal scaling max absolute986 என்றால் j=3, −986→−0.986. Min=max அல்லது σ=0 என்றால் denominator zero. Z-score-உம் outliers-ஆல் பாதிக்கப்படும்; robust alternative தேவைப்படலாம். Fit bounds/mean/σ training set-இலிருந்து; test-ஐத் தனியே மறுபடி fit செய்யாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><table>
+<div class="call exam"><div class="ct">Exam focus</div><p>இயல்பாக்கக் கணக்கீடுகள் <strong>எளிய மதிப்பெண்கள்</strong>. சூத்திரத்தை எழுதி, பிரதியிட்டு, 3 தசம இடங்களுக்கு விடையளிக்கவும். <strong>குறைந்தபட்ச-அதிகபட்சத்தைவிட Z-மதிப்பெண் எப்போது சிறந்தது</strong> என்பதையும் கூறத் தயாராக இருங்கள்: சராசரி/நியம-விலகல் அளவுமாற்றம் பணிக்குப் பொருந்தும்போது; புறநிலைகளின் பாதிப்பை அகற்றுகிறது என்று கூற வேண்டாம்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Quick revision sheet"><span class="num">7</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>விரைவு மீள்பார்வை — Week 3</h3><table>
+<thead>
+<tr>
+<th>தலைப்பு</th>
+<th>ஒரு வரியில்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>அழுக்கு data</td>
+<td>Incomplete (விடுபட்டது), noisy (தவறானது), inconsistent (சீரற்றது)</td>
+</tr>
+<tr>
+<td>நேரம்</td>
+<td>Data தயாரிப்பு = project-இன் 70–80%</td>
+</tr>
+<tr>
+<td>4 முறைகள்</td>
+<td>Cleaning · Integration · Transformation · Reduction</td>
+</tr>
+<tr>
+<td>விடுபட்ட மதிப்புகள்</td>
+<td>நீக்கு · கையால் · constant (பொறி!) · சராசரி · class சராசரி · கணிப்பு</td>
+</tr>
+<tr>
+<td>Binning</td>
+<td>Sort → bins → சராசரி / median / எல்லைகளால் smooth; 4, 8, 15 → 9, 9, 9 அல்லது 4, 4, 15</td>
+</tr>
+<tr>
+<td>Regression, clustering</td>
+<td>Function-க்குப் பொருத்து; எந்த cluster-இலும் சேராதவை = outliers</td>
+</tr>
+<tr>
+<td>Cleaning செயல்முறை</td>
+<td>கண்டுபிடி → சரிசெய் → மீண்டும்; unique / consecutive / null விதிகள்; Potter's Wheel</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>Entity identification (metadata); redundancy (correlation)</td>
+</tr>
+<tr>
+<td>Correlation r</td>
+<td>&gt; 0 நேர் (redundant ஆகலாம்), 0 நேர்கோட்டுத் தொடர்பு இல்லை, &lt; 0 எதிர்</td>
+</tr>
+<tr>
+<td>Transformation</td>
+<td>Smoothing · Aggregation · Generalization · Normalization</td>
+</tr>
+<tr>
+<td>Min-max</td>
+<td>(v − min) ÷ (max − min) × வரம்பு + new_min → 73,600 → <strong>0.716</strong></td>
+</tr>
+<tr>
+<td>Z-score</td>
+<td>(v − சராசரி) ÷ σ → 73,600 → <strong>1.225</strong></td>
+</tr>
+<tr>
+<td>Decimal scaling</td>
+<td>v ÷ 10ʲ → −986 → −0.986</td>
+</tr>
+</tbody>
+</table><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>

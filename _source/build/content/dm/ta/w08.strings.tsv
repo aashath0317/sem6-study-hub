@@ -33,3 +33,22 @@ Reduced base table	குறைக்கப்பட்ட அடிப்பட
 Star-table	நட்சத்திர அட்டவணை
 none	எதுவுமில்லை
 cells get +1 from this single base tuple.	கலங்கள் இந்த ஒற்றை அடிப்படைப் பதிவிலிருந்து +1 பெறுகின்றன.
+MultiWay, chunk by chunk	MultiWay — ஒவ்வொரு chunk-ஆக
+Watch the 64 chunks being read one at a time. Each chunk is added to the AB, AC and BC planes at the same moment. A plane chunk turns green when all 4 of its pieces have arrived; it is then written to disk and its memory is freed. Compare the two orders.	64 chunks ஒவ்வொன்றாக வாசிக்கப்படுவதைப் பாருங்கள். ஒவ்வொரு chunk-உம் AB, AC, BC planes-இல் ஒரே நேரத்தில் சேர்க்கப்படுகிறது. ஒரு plane chunk-க்குத் தேவையான 4 பகுதிகளும் வந்தவுடன் அது பச்சையாகும்; பிறகு disk-க்கு எழுதப்பட்டு அதன் memory விடுவிக்கப்படும். இரண்டு வரிசைகளையும் ஒப்பிடுங்கள்.
+Order	வரிசை
+Good: A fastest, C slowest (1, 2, 3 … 64)	நல்லது: A வேகமாக, C மெதுவாக (1, 2, 3 … 64)
+Bad: C fastest, A slowest (1, 17, 33, 49, 5 …)	மோசம்: C வேகமாக, A மெதுவாக (1, 17, 33, 49, 5 …)
+Speed	வேகம்
+Slow	மெதுவு
+Normal	சாதாரணம்
+Fast	விரைவு
+▶ Play	▶ இயக்கு
+⏸ Pause	⏸ நிறுத்து
+Step	ஒரு படி
+Reset	மீட்டமை
+3-D array: 64 chunks · each 10 × 100 × 1000	3-D array: 64 chunks · ஒவ்வொன்றும் 10 × 100 × 1000
+2-D planes being filled	நிரப்பப்படும் 2-D planes
+Memory needed	தேவையான memory
+(each plane’s peak)	(ஒவ்வொரு plane-இன் உச்சம்)
+in memory, still filling	memory-இல் உள்ளது, இன்னும் நிரம்புகிறது
+complete, written to disk	முழுமையானது, disk-க்கு எழுதப்பட்டது

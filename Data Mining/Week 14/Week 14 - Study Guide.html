@@ -543,7 +543,41 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dm-Week14" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
 <div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 14</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 14</div><h1>k-Medoids &amp; Hierarchical Clustering</h1><p>The k-medoids method and the PAM algorithm with its swap cost, the lesson's worked example (cost 23 vs 16), agglomerative (AGNES) and divisive (DIANA) hierarchical clustering, and the four cluster-distance measures behind single, complete and average linkage.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">📄 week 14.pdf</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why k-medoids?"><span class="num">1</span>Why k-medoids?</h2><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p><strong>k-means</strong> represents a cluster by its <strong>mean</strong>, so a few <strong>outliers</strong> can pull the mean a long way. <strong>k-medoids</strong> represents each cluster by an <strong>actual object</strong>, the most centrally located one, called the <strong>medoid</strong>. That makes it <strong>less sensitive to outliers and noise</strong>.</p>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 14</div><h1>k-Medoids &amp; Hierarchical Clustering</h1><p>The k-medoids method and the PAM algorithm with its swap cost, the lesson's worked example (cost 23 vs 16), agglomerative (AGNES) and divisive (DIANA) hierarchical clustering, and the four cluster-distance measures behind single, complete and average linkage.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">📄 week 14.pdf</span><span class="chip" id="donecount"></span></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why k-medoids?"><span class="num">1</span>Why k-medoids?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>k-medoids ஏன்? — சராசரியை outliers இழுத்துவிடும்</h3><p><strong>k-means</strong>-இன் பிரச்சினை: cluster-ஐ அதன் <strong>சராசரியால் (mean)</strong> குறிக்கிறது. ஒரு <strong>outlier</strong> (மிகத் தொலைவில் உள்ள புள்ளி) இருந்தால், அது சராசரியைத் தன் பக்கம் <strong>இழுத்துவிடும்</strong>.</p>
+<p><strong>உதாரணம்:</strong> 5 பேரின் சம்பளம்: 30, 32, 35, 33, <strong>500</strong> (ஆயிரம் ரூபாயில்).</p>
+<ul>
+<li><strong>சராசரி</strong> = 630 ÷ 5 = <strong>126</strong> → யாருமே இந்தச் சம்பளம் வாங்கவில்லை! ஒரு பணக்காரர் எல்லாவற்றையும் சிதைத்துவிட்டார்.</li>
+<li><strong>நடுவில் உள்ள உண்மையான நபர்</strong> (வரிசைப்படுத்தினால்: 30, 32, 33, 35, 500) = <strong>33</strong> → குழுவை நன்றாகப் பிரதிநிதித்துவப்படுத்துகிறது.</li>
+</ul>
+<p><strong>k-medoids</strong> இதைத்தான் செய்கிறது: cluster-ஐ <strong>நடுவில் உள்ள ஒரு உண்மையான object</strong>-ஆல் குறிக்கிறது. அதன் பெயர் <strong>medoid</strong>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>k-means</th>
+<th>k-medoids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>பிரதிநிதி</td>
+<td><strong>சராசரி</strong> (உண்மையான புள்ளியாக இல்லாமலும் இருக்கலாம்)</td>
+<td><strong>ஒரு உண்மையான object</strong> (medoid)</td>
+</tr>
+<tr>
+<td>Outliers</td>
+<td><strong>அதிகம் பாதிக்கப்படும்</strong></td>
+<td><strong>குறைவாகப் பாதிக்கப்படும்</strong> (robust)</td>
+</tr>
+<tr>
+<td>செலவு</td>
+<td>குறைவு, வேகம்</td>
+<td><strong>அதிகம்</strong>, மெதுவு</td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam template (English)</strong></p>
+<p><em>Q: Why is k-medoids preferred over k-means when there are outliers?</em>
+k-means represents each cluster by its mean, which can be pulled far by outliers. k-medoids uses an actual, most centrally located object (the medoid) as the representative, so it is <strong>less sensitive to outliers and noise</strong> — at a higher computational cost.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p><strong>k-means</strong> represents a cluster by its <strong>mean</strong>, so a few <strong>outliers</strong> can pull the mean a long way. <strong>k-medoids</strong> represents each cluster by an <strong>actual object</strong>, the most centrally located one, called the <strong>medoid</strong>. That makes it <strong>less sensitive to outliers and noise</strong>.</p>
 <div class="grid2"><div><p><strong>k-means</strong></p>
 <p>Representative = the <strong>mean</strong> of the cluster (may not be a real point).</p>
 <p>Sensitive to outliers.</p></div><div><p><strong>k-medoids</strong></p>
@@ -553,7 +587,35 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <p>பிரதிநிதி = குழுமத்தின் <strong>சராசரி</strong> (உண்மைப் புள்ளியாக இருக்க வேண்டியதில்லை).</p>
 <p>புறநிலைகளால் பாதிக்கப்படுகிறது.</p></div><div><p><strong>k-medoids</strong></p>
 <p>பிரதிநிதி = <strong>உண்மைப் பொருள்</strong> (மெடாய்டு).</p>
-<p>புறநிலைகளுக்கு அதிக உறுதித்தன்மை; ஆனால் அதிகக் கணக்கீட்டுச் செலவு.</p></div></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="k-medoids and PAM"><span class="num">2</span>k-medoids and PAM</h2><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><div class="call key"><div class="ct">k-medoids idea</div><p>Choose the initial <strong>representative objects (seeds)</strong> arbitrarily. Keep <strong>replacing a representative with a non-representative</strong> object as long as the <strong>quality of the clustering improves</strong>. Quality is measured by a <strong>cost function</strong>: the average dissimilarity between each object and the representative of its cluster.</p></div>
+<p>புறநிலைகளுக்கு அதிக உறுதித்தன்மை; ஆனால் அதிகக் கணக்கீட்டுச் செலவு.</p></div></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="k-medoids and PAM"><span class="num">2</span>k-medoids and PAM</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>PAM — மாற்றிப் பார், நன்றாக இருந்தால் வைத்துக்கொள்</h3><p><strong>PAM = Partitioning Around Medoids.</strong> முதல் k-medoids algorithms-இல் ஒன்று.</p>
+<p><strong>யோசனை, எளிய வார்த்தைகளில்:</strong></p>
+<ol>
+<li><strong>k</strong> objects-ஐ random-ஆக medoids-ஆகத் தேர்ந்தெடு.</li>
+<li>மற்ற ஒவ்வொரு object-ஐயும் <strong>அருகில் உள்ள medoid</strong>-இன் cluster-இல் சேர்.</li>
+<li>ஒரு medoid-ஐ ஒரு <strong>சாதாரண object</strong>-உடன் <strong>மாற்றிப் பார் (swap)</strong>.</li>
+<li>மாற்றிய பிறகு <strong>மொத்தச் செலவு குறைந்தால்</strong> → மாற்றத்தை வைத்துக்கொள். <strong>கூடினால்</strong> → பழையபடியே விடு.</li>
+<li>எந்த மாற்றமும் செலவைக் குறைக்காத வரை தொடர்.</li>
+</ol>
+<p><strong>"செலவு" (cost) என்றால் என்ன?</strong></p>
+<p>ஒவ்வொரு object-இலிருந்தும் அதன் medoid-க்கு உள்ள <strong>தூரங்களின் கூட்டுத்தொகை</strong>. இதன் பெயர் <strong>absolute-error criterion</strong>:</p>
+<p><strong>E = Σ (ஒவ்வொரு புள்ளிக்கும் அதன் medoid-க்கும் இடையிலான தூரம்)</strong></p>
+<p><strong>குறைந்த E = சிறந்த clustering.</strong> (எல்லாப் புள்ளிகளும் தங்கள் medoid-க்கு நெருக்கமாக உள்ளன.)</p>
+<p><strong>Swap cost S:</strong></p>
+<ul>
+<li><strong>S = புதிய செலவு − பழைய செலவு</strong></li>
+<li><strong>S &lt; 0</strong> → செலவு குறைந்தது → <strong>மாற்று</strong> ✓</li>
+<li><strong>S ≥ 0</strong> → செலவு குறையவில்லை → <strong>மாற்றாதே</strong> ✗</li>
+</ul>
+<p><strong>PAM-இன் பலவீனம்:</strong> ஒவ்வொரு iteration-உம் <strong>O(k(n − k)²)</strong>. ஏன்? ஒவ்வொரு medoid-ஐயும் (k), ஒவ்வொரு சாதாரண object-உடனும் (n − k) மாற்றிப் பார்த்து, ஒவ்வொரு முறையும் எல்லா objects-இன் செலவையும் (≈ n − k) கணக்கிட வேண்டும். <strong>பெரிய data-வுக்கு மிக மெதுவு.</strong></p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>PAM algorithm (exam-க்கு, English):</strong></p>
+<ol>
+<li>Arbitrarily choose k objects in D as the initial representative objects (seeds).</li>
+<li>Repeat: assign each remaining object to the cluster with the nearest representative object.</li>
+<li>Randomly select a non-representative object, o_random.</li>
+<li>Compute the total cost S of swapping representative object oⱼ with o_random.</li>
+<li>If S &lt; 0, swap oⱼ with o_random to form the new set of k representative objects.</li>
+<li>Until no change.</li>
+</ol>
+<p><strong>நினைவில் வைக்க:</strong> "Swap if S &lt; 0" — செலவு குறைந்தால் மட்டுமே மாற்று.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><div class="call key"><div class="ct">k-medoids idea</div><p>Choose the initial <strong>representative objects (seeds)</strong> arbitrarily. Keep <strong>replacing a representative with a non-representative</strong> object as long as the <strong>quality of the clustering improves</strong>. Quality is measured by a <strong>cost function</strong>: the average dissimilarity between each object and the representative of its cluster.</p></div>
 <p><strong>PAM (Partitioning Around Medoids)</strong> was one of the first k-medoids algorithms. It looks for k partitions of n objects:</p>
 <ul>
 <li>After a random choice of k representatives, it repeatedly tries to make a <strong>better choice</strong>.</li>
@@ -615,7 +677,180 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <li><strong>p</strong> = Cⱼ குழுமத்திலுள்ள புள்ளி</li>
 <li><strong>oⱼ</strong> = Cⱼ-இன் பிரதிநிதிப் பொருள்</li>
 </ul>
-<p>ஒவ்வொரு பிரதிநிதியும் அதன் குழுமத்தின் மிகவும் மையத்தில் அமைந்த பொருளான <strong>மெடாய்டாகும்</strong> வரை படிமுறை மீண்டும் இயங்குகிறது.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Worked example (from the lesson)"><span class="num">3</span>Worked example (from the lesson)</h2><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><p>Same eight points as Week 13, Manhattan distance, three clusters:</p>
+<p>ஒவ்வொரு பிரதிநிதியும் அதன் குழுமத்தின் மிகவும் மையத்தில் அமைந்த பொருளான <strong>மெடாய்டாகும்</strong> வரை படிமுறை மீண்டும் இயங்குகிறது.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Worked example (from the lesson)"><span class="num">3</span>Worked example (from the lesson)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>முழுக் கணக்கு: A4-ஐ A5-ஆல் மாற்றலாமா?</h3><p>Week 13-இன் அதே 8 புள்ளிகள், Manhattan தூரம், 3 clusters.</p>
+<p>A1(2,10) · A2(2,5) · A3(8,4) · A4(5,8) · A5(7,5) · A6(6,4) · A7(1,2) · A8(4,9)</p>
+<p><strong>கேள்வி:</strong> தொடக்க medoids <strong>A1, A4, A7</strong>. A4-ஐ <strong>A5</strong>-ஆல் மாற்றுவது பொருத்தமானதா?</p>
+<p><strong>படி 1: பழைய செலவு S₁ (medoids A1, A4, A7)</strong></p>
+<p>ஒவ்வொரு புள்ளிக்கும், மூன்று medoids-க்குமான தூரத்தைக் கணக்கிட்டு, <strong>குறைந்ததை</strong> மட்டும் எடு.</p>
+<table>
+<thead>
+<tr>
+<th>புள்ளி</th>
+<th>A1-க்கு</th>
+<th>A4-க்கு</th>
+<th>A7-க்கு</th>
+<th>செலவு (குறைந்தது)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1</td>
+<td><strong>0</strong></td>
+<td>5</td>
+<td>9</td>
+<td>0</td>
+</tr>
+<tr>
+<td>A2</td>
+<td>5</td>
+<td>6</td>
+<td><strong>4</strong></td>
+<td>4</td>
+</tr>
+<tr>
+<td>A3</td>
+<td>12</td>
+<td><strong>7</strong></td>
+<td>9</td>
+<td>7</td>
+</tr>
+<tr>
+<td>A4</td>
+<td>5</td>
+<td><strong>0</strong></td>
+<td>10</td>
+<td>0</td>
+</tr>
+<tr>
+<td>A5</td>
+<td>10</td>
+<td><strong>5</strong></td>
+<td>9</td>
+<td>5</td>
+</tr>
+<tr>
+<td>A6</td>
+<td>10</td>
+<td><strong>5</strong></td>
+<td>7</td>
+<td>5</td>
+</tr>
+<tr>
+<td>A7</td>
+<td>9</td>
+<td>10</td>
+<td><strong>0</strong></td>
+<td>0</td>
+</tr>
+<tr>
+<td>A8</td>
+<td>3</td>
+<td><strong>2</strong></td>
+<td>10</td>
+<td>2</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>S₁</strong></td>
+<td><strong>23</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>ஒரு வரியைச் சரிபார்ப்போம்:</strong> A3(8,4)-இலிருந்து A4(5,8)-க்கு = |8 − 5| + |4 − 8| = 3 + 4 = <strong>7</strong></p>
+<p><strong>படி 2: புதிய செலவு S₂ (medoids A1, A5, A7)</strong></p>
+<table>
+<thead>
+<tr>
+<th>புள்ளி</th>
+<th>A1-க்கு</th>
+<th>A5-க்கு</th>
+<th>A7-க்கு</th>
+<th>செலவு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1</td>
+<td><strong>0</strong></td>
+<td>10</td>
+<td>9</td>
+<td>0</td>
+</tr>
+<tr>
+<td>A2</td>
+<td>5</td>
+<td>5</td>
+<td><strong>4</strong></td>
+<td>4</td>
+</tr>
+<tr>
+<td>A3</td>
+<td>12</td>
+<td><strong>2</strong></td>
+<td>9</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A4</td>
+<td><strong>5</strong></td>
+<td><strong>5</strong></td>
+<td>10</td>
+<td>5</td>
+</tr>
+<tr>
+<td>A5</td>
+<td>10</td>
+<td><strong>0</strong></td>
+<td>9</td>
+<td>0</td>
+</tr>
+<tr>
+<td>A6</td>
+<td>10</td>
+<td><strong>2</strong></td>
+<td>7</td>
+<td>2</td>
+</tr>
+<tr>
+<td>A7</td>
+<td>9</td>
+<td>9</td>
+<td><strong>0</strong></td>
+<td>0</td>
+</tr>
+<tr>
+<td>A8</td>
+<td><strong>3</strong></td>
+<td>7</td>
+<td>10</td>
+<td>3</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>S₂</strong></td>
+<td><strong>16</strong></td>
+</tr>
+</tbody>
+</table>
+<p>A4: A1-க்கும் A5-க்கும் ஒரே தூரம் (5). எதைத் தேர்ந்தாலும் செலவு <strong>5</strong> தான்.</p>
+<p><strong>படி 3: முடிவு</strong></p>
+<ul>
+<li>S = S₂ − S₁ = 16 − 23 = <strong>−7</strong></li>
+<li><strong>S &lt; 0</strong> → செலவு 7 குறைந்துள்ளது → <strong>A4-ஐ A5-ஆல் மாற்றுவது பொருத்தமானது (suitable)</strong> ✓</li>
+</ul>
+<p><strong>ஏன் குறைந்தது?</strong> A3, A6 இரண்டும் A5-க்கு மிக அருகில் (2 மட்டுமே). A4-க்குத் தொலைவில் இருந்தன (7, 5).</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam answer layout:</strong></p>
+<ol>
+<li><strong>S₁</strong> அட்டவணை: ஒவ்வொரு புள்ளிக்கும் 3 தூரங்கள்; குறைந்ததை bold; கூட்டு = 23</li>
+<li><strong>S₂</strong> அட்டவணை: அதே முறை; கூட்டு = 16</li>
+<li><strong>முடிவு (English):</strong> "Since S₂ (16) &lt; S₁ (23), the swap cost S = 16 − 23 = −7 &lt; 0, so replacing A4 with A5 is <strong>suitable</strong>."</li>
+</ol>
+<p><strong>PDF பற்றி:</strong> PDF S₁ = 23 வரை மட்டுமே கணக்கிடுகிறது. S₂-ஐ மாணவர்களிடம் விடுகிறது. மேலே உள்ள அட்டவணை அதை முடிக்கிறது.</p>
+<p><strong>பொதுவான தவறு:</strong> மூன்று தூரங்களையும் கூட்டுவது. <strong>ஒவ்வொரு புள்ளிக்கும் குறைந்த தூரத்தை மட்டுமே</strong> எடுக்க வேண்டும்.</p>
+<p>Page-இல் உள்ள k-medoids calculator-இல் வேறு swaps-ஐயும் முயற்சி செய்யுங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><p>Same eight points as Week 13, Manhattan distance, three clusters:</p>
 <p><strong>A1(2, 10) · A2(2, 5) · A3(8, 4) · A4(5, 8) · A5(7, 5) · A6(6, 4) · A7(1, 2) · A8(4, 9)</strong></p>
 <p><strong>Task:</strong> find the cost for initial medoids <strong>A1, A4, A7</strong>. Then <strong>swap A4 for A5</strong> and decide whether the change is suitable.</p>
 <p><strong>Cost S₁</strong> (medoids A1, A4, A7): each point's distance to its <strong>nearest</strong> medoid</p>
@@ -959,7 +1194,99 @@ run();})();
 </ul>
 <p>இங்கு <strong>S₂ = 16 &lt; S₁ = 23</strong>; எனவே <strong>A4-க்குப் பதில் A5-ஐப் பரிமாற்றுவது பொருத்தமானது</strong>. மொத்தச் செலவு 7 குறைகிறது (பரிமாற்றச் செலவு S = 16 − 23 = −7 &lt; 0).</p></div>
 <div class="call tip"><div class="ct">PDF முன்கூட்டியே நிறுத்துகிறது</div><p>பாடம் S₁ = 23 கணக்கிட்டு, S₂-ஐ உங்களுக்காக விடுகிறது. மேலுள்ள அட்டவணை அதை முடிக்கிறது. A4, A1, A5 இரண்டிலிருந்தும் சம தொலைவில் (ஒவ்வொன்றும் 5) இருப்பதால் எந்த வழியிலும் அதன் செலவு 5.</p></div>
-<p><div data-ta-tool="kmd"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Hierarchical clustering"><span class="num">4</span>Hierarchical clustering</h2><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>A <strong>hierarchical</strong> method groups objects into a <strong>tree of clusters</strong> (a <strong>dendrogram</strong>).</p>
+<p><div data-ta-tool="kmd"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Hierarchical clustering"><span class="num">4</span>Hierarchical clustering</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Hierarchical clustering — சேர்த்தல் (AGNES), பிரித்தல் (DIANA)</h3><p>Hierarchical முறை, clusters-ஐ ஒரு <strong>மரமாக</strong> அமைக்கிறது. அந்த மரத்தின் பெயர் <strong>dendrogram</strong>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Agglomerative</strong> (AGNES)</th>
+<th><strong>Divisive</strong> (DIANA)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>திசை</td>
+<td><strong>கீழிருந்து மேலே</strong> — சேர்</td>
+<td><strong>மேலிருந்து கீழே</strong> — பிரி</td>
+</tr>
+<tr>
+<td>தொடக்கம்</td>
+<td>ஒவ்வொரு object-உம் <strong>தனி cluster</strong></td>
+<td>எல்லாம் <strong>ஒரே cluster</strong></td>
+</tr>
+<tr>
+<td>முடிவு</td>
+<td>எல்லாம் <strong>ஒரே cluster</strong> (அல்லது நிறுத்தும் நிபந்தனை)</td>
+<td>ஒவ்வொரு object-உம் <strong>தனியாக</strong> (அல்லது நிபந்தனை)</td>
+</tr>
+<tr>
+<td>முழுப் பெயர்</td>
+<td><strong>AG</strong>glomerative <strong>NES</strong>ting</td>
+<td><strong>DI</strong>visive <strong>ANA</strong>lysis</td>
+</tr>
+</tbody>
+</table>
+<p>பெரும்பாலான hierarchical முறைகள் <strong>agglomerative</strong>.</p>
+<p><strong>உதாரணம் (AGNES): 5 objects {a, b, c, d, e}</strong></p>
+<ul>
+<li>Step 0: {a}, {b}, {c}, {d}, {e}</li>
+<li>Step 1: <strong>{a, b}</strong> — மிக நெருக்கமான ஜோடி</li>
+<li>Step 2: <strong>{d, e}</strong></li>
+<li>Step 3: <strong>{c, d, e}</strong></li>
+<li>Step 4: <strong>{a, b, c, d, e}</strong> — எல்லாம் ஒன்று</li>
+</ul>
+<p><strong>உதாரணம்:</strong> குடும்ப மரம் போல — தனி நபர்கள் → குடும்பங்கள் → உறவினர் குழுக்கள் → முழு வம்சம்.</p>
+<p><strong>பெரிய பலவீனம்:</strong> ஒருமுறை சேர்த்தாலோ பிரித்தாலோ <strong>திரும்பப் போக முடியாது (no backtracking)</strong>. தவறான முடிவு எடுத்தால் சரிசெய்ய முடியாது.</p>
+<p><strong>இரண்டு clusters-க்கு இடையிலான தூரத்தை அளக்க 4 வழிகள்</strong></p>
+<p>ஒவ்வொரு cluster-இலும் பல புள்ளிகள் உள்ளன. அப்படியென்றால் "இரண்டு clusters-க்கு இடையிலான தூரம்" எது?</p>
+<table>
+<thead>
+<tr>
+<th>அளவு</th>
+<th>எளிய பொருள்</th>
+<th>Linkage பெயர்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>d_min</strong> (minimum)</td>
+<td>இரண்டு clusters-இலும் <strong>மிக நெருக்கமான</strong> இரண்டு புள்ளிகளின் தூரம்</td>
+<td><strong>Nearest-neighbour / single linkage</strong></td>
+</tr>
+<tr>
+<td><strong>d_max</strong> (maximum)</td>
+<td>இரண்டு clusters-இலும் <strong>மிகத் தொலைவான</strong> இரண்டு புள்ளிகளின் தூரம்</td>
+<td><strong>Farthest-neighbour / complete linkage</strong></td>
+</tr>
+<tr>
+<td><strong>d_mean</strong></td>
+<td>இரண்டு clusters-இன் <strong>சராசரிகளுக்கு (மையங்களுக்கு)</strong> இடையிலான தூரம்</td>
+<td>Mean distance</td>
+</tr>
+<tr>
+<td><strong>d_avg</strong> (average)</td>
+<td><strong>எல்லா ஜோடிகளின்</strong> தூரங்களின் சராசரி</td>
+<td><strong>Average linkage</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>உதாரணம்:</strong> இரண்டு கிராமங்களுக்கு இடையிலான தூரம்:</p>
+<ul>
+<li><strong>d_min</strong> = இரு கிராமங்களிலும் <strong>அருகருகே உள்ள</strong> இரண்டு வீடுகளுக்கு இடையிலான தூரம்</li>
+<li><strong>d_max</strong> = <strong>தொலைவில் உள்ள</strong> இரண்டு வீடுகளுக்கு இடையிலான தூரம்</li>
+<li><strong>d_mean</strong> = இரு கிராமங்களின் <strong>மையங்களுக்கு</strong> இடையிலான தூரம்</li>
+<li><strong>d_avg</strong> = எல்லா வீட்டு ஜோடிகளின் தூரங்களின் சராசரி</li>
+</ul>
+<p><strong>எதைப் பயன்படுத்துவது?</strong> d_min, d_max இரண்டும் <strong>இரு எல்லைகள் (extremes)</strong>. இரண்டும் <strong>outliers-ஆல் அதிகம் பாதிக்கப்படும்</strong>. d_mean, d_avg இரண்டும் <strong>சமரசம் (compromise)</strong>. ஆனால் அவற்றாலும் outlier பிரச்சினையை முழுதாக நீக்க முடியாது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Formulas (exam-க்கு):</strong></p>
+<ul>
+<li>d_min(Cᵢ, Cⱼ) = min |p − p′| (p ∈ Cᵢ, p′ ∈ Cⱼ)</li>
+<li>d_max(Cᵢ, Cⱼ) = max |p − p′|</li>
+<li>d_mean(Cᵢ, Cⱼ) = |mᵢ − mⱼ| (mᵢ = cluster Cᵢ-இன் சராசரி)</li>
+<li>d_avg(Cᵢ, Cⱼ) = (1 / nᵢnⱼ) Σ Σ |p − p′| (nᵢ = Cᵢ-இல் உள்ள objects எண்ணிக்கை)</li>
+</ul>
+<p><strong>நினைவில் வைக்க:</strong> <strong>min → single</strong> (ஒரே ஒரு நெருக்கமான இணைப்பு போதும்), <strong>max → complete</strong> (முழுதும் நெருக்கமாக இருக்க வேண்டும்).</p>
+<p><strong>Exam template (English):</strong> Define agglomerative vs divisive, name AGNES and DIANA, state the weakness (cannot undo a merge/split), and give the four inter-cluster distance measures with their linkage names.</p>
+<p><strong>கவனம்:</strong> DIANA, AGNES மரத்தை அப்படியே தலைகீழாகத் திருப்புவதில்லை. அது தன் சொந்த முறையில் பிரிக்கிறது.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>A <strong>hierarchical</strong> method groups objects into a <strong>tree of clusters</strong> (a <strong>dendrogram</strong>).</p>
 <div class="grid2"><div><p><strong>Agglomerative (bottom-up)</strong></p>
 <p>Start with <strong>each object in its own cluster</strong>, then <strong>merge</strong> clusters into larger and larger ones until all objects are in <strong>one cluster</strong> or a termination condition holds.</p>
 <p><strong>Most</strong> hierarchical methods are agglomerative; they differ in how they define <strong>intercluster similarity</strong>.</p></div><div><p><strong>Divisive (top-down)</strong></p>
@@ -1132,7 +1459,68 @@ R.querySelector('.st').onclick=step;R.querySelector('.rs').onclick=reset;R.query
 <div class="call exam"><div class="ct">Exam focus</div><ul>
 <li><strong>k-medoids:</strong> தொலைவு அட்டவணையை உருவாக்கி, ஒவ்வொரு புள்ளியின் மெடாய்டுக்கான <strong>குறைந்தபட்சத்</strong> தொலைவை எடுத்து, செலவுக்காக <strong>அவற்றைக் கூட்டி</strong>, <strong>S₁, S₂</strong> ஒப்பிட்டு, பரிமாற்றம் <strong>பொருத்தமானதா</strong> எனக் கூறவும்.</li>
 <li><strong>படிநிலை:</strong> திரட்டல் மற்றும் பிரித்தலை வரையறுத்து, <strong>AGNES/DIANA</strong> பெயரிட்டு, நான்கு தொலைவு அளவைகளையும் அவற்றின் இணைப்புப் பெயர்களுடன் வழங்கவும்.</li>
-</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Quick revision sheet"><span class="num">5</span>Quick revision sheet</h2><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><table>
+</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Quick revision sheet"><span class="num">5</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>விரைவு மீள்பார்வை — Week 14</h3><table>
+<thead>
+<tr>
+<th>தலைப்பு</th>
+<th>ஒரு வரியில்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Medoid</td>
+<td>Cluster-இன் நடுவில் உள்ள <strong>உண்மையான object</strong></td>
+</tr>
+<tr>
+<td>k-medoids vs k-means</td>
+<td>உண்மையான object vs சராசரி; outliers-ஆல் குறைவாகப் பாதிக்கப்படும்</td>
+</tr>
+<tr>
+<td>PAM</td>
+<td>Partitioning Around Medoids; swap செய்து பார், செலவு குறைந்தால் வைத்துக்கொள்</td>
+</tr>
+<tr>
+<td>PAM செலவு</td>
+<td>ஒவ்வொரு iteration-உம் O(k(n − k)²); பெரிய data-வுக்கு மெதுவு</td>
+</tr>
+<tr>
+<td>Swap விதி</td>
+<td>S &lt; 0 என்றால் மாற்று (புதிய செலவு &lt; பழைய செலவு)</td>
+</tr>
+<tr>
+<td>Error E</td>
+<td>ஒவ்வொரு object-இலிருந்தும் அதன் medoid-க்கு உள்ள தூரங்களின் கூட்டுத்தொகை</td>
+</tr>
+<tr>
+<td>உதாரணம்</td>
+<td>A1, A4, A7 → <strong>23</strong>; A1, A5, A7 → <strong>16</strong> → மாற்றுவது பொருத்தம்</td>
+</tr>
+<tr>
+<td>Agglomerative</td>
+<td>கீழிருந்து சேர்; AGNES; பெரும்பாலான முறைகள்</td>
+</tr>
+<tr>
+<td>Divisive</td>
+<td>மேலிருந்து பிரி; DIANA</td>
+</tr>
+<tr>
+<td>பலவீனம்</td>
+<td>சேர்த்தல்/பிரித்தலைத் திரும்ப மாற்ற முடியாது</td>
+</tr>
+<tr>
+<td>d_min</td>
+<td>Nearest-neighbour / single linkage</td>
+</tr>
+<tr>
+<td>d_max</td>
+<td>Farthest-neighbour / complete linkage</td>
+</tr>
+<tr>
+<td>d_mean, d_avg</td>
+<td>சமரசம்; ஆனாலும் outliers பாதிக்கலாம்</td>
+</tr>
+</tbody>
+</table><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>

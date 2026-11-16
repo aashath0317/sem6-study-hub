@@ -543,7 +543,52 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dm-Week10" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
 <div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Data Mining</a> › Week 10</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 10</div><h1>FP-Growth &amp; Kinds of Association Rules</h1><p>Mining frequent patterns without candidate generation (FP-tree + conditional pattern bases), multilevel and multidimensional rules, and constraint-based mining.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 6 min</span><span class="chip">📄 week 10.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. FP-Tree Approach · 6 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="FPTree.mp4" data-drive="15iu6imdGqfGQOWloIOaJLRHFATVGIvEN"><source src="FPTree.mp4"></video></div><div class="chap"><p class="vt">FP-Tree Approach</p><p class="vs">The three steps of the FP-tree approach, with a worked example (beans, carrot, banana, mango…).</p><a href="#" data-v="0" data-t="2"><b>00:02</b><span>FP-tree: no candidate generation, only two DB scans</span></a><a href="#" data-v="0" data-t="37"><b>00:37</b><span>Step 1 – scan once, find frequent 1-itemsets</span></a><a href="#" data-v="0" data-t="64"><b>01:04</b><span>Step 2 – remove infrequent items, sort each transaction by descending support</span></a><a href="#" data-v="0" data-t="102"><b>01:42</b><span>Step 3 – second scan builds a tree path per transaction</span></a><a href="#" data-v="0" data-t="141"><b>02:21</b><span>Worked example: 9 transactions, min support 3</span></a><a href="#" data-v="0" data-t="268"><b>04:28</b><span>Building the tree transaction by transaction</span></a><a href="#" data-v="0" data-t="306"><b>05:06</b><span>Final tree: beans 8, carrot 7, banana 6, mango 5 …</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why not just use Apriori?"><span class="num">1</span>Why not just use Apriori?</h2><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p>Apriori's candidate generate-and-test <strong>shrinks</strong> the candidate sets a lot, but it still has <strong>two non-trivial costs</strong>:</p>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Data Mining · Week 10</div><h1>FP-Growth &amp; Kinds of Association Rules</h1><p>Mining frequent patterns without candidate generation (FP-tree + conditional pattern bases), multilevel and multidimensional rules, and constraint-based mining.</p><div class="meta"><span class="chip">ITE3432</span><span class="chip">1 video · 6 min</span><span class="chip">📄 week 10.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. FP-Tree Approach · 6 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="FPTree.mp4" data-drive="15iu6imdGqfGQOWloIOaJLRHFATVGIvEN"><source src="FPTree.mp4"></video></div><div class="chap"><p class="vt">FP-Tree Approach</p><p class="vs">The three steps of the FP-tree approach, with a worked example (beans, carrot, banana, mango…).</p><a href="#" data-v="0" data-t="2"><b>00:02</b><span>FP-tree: no candidate generation, only two DB scans</span></a><a href="#" data-v="0" data-t="37"><b>00:37</b><span>Step 1 – scan once, find frequent 1-itemsets</span></a><a href="#" data-v="0" data-t="64"><b>01:04</b><span>Step 2 – remove infrequent items, sort each transaction by descending support</span></a><a href="#" data-v="0" data-t="102"><b>01:42</b><span>Step 3 – second scan builds a tree path per transaction</span></a><a href="#" data-v="0" data-t="141"><b>02:21</b><span>Worked example: 9 transactions, min support 3</span></a><a href="#" data-v="0" data-t="268"><b>04:28</b><span>Building the tree transaction by transaction</span></a><a href="#" data-v="0" data-t="306"><b>05:06</b><span>Final tree: beans 8, carrot 7, banana 6, mango 5 …</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why not just use Apriori?"><span class="num">1</span>Why not just use Apriori?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>Apriori இருக்கும்போது ஏன் இன்னொரு முறை?</h3><p>சிறிய data-க்கு Apriori போதும். ஆனால் <strong>பெரிய database-களில் Apriori-க்கு 2 பெரிய பிரச்சினைகள்</strong> உள்ளன.</p>
+<p><strong>பிரச்சினை 1: Candidates வெடித்துப் பெருகும்</strong></p>
+<ul>
+<li><strong>10,000 (10⁴)</strong> frequent தனி items இருந்தால், அவற்றிலிருந்து வரும் ஜோடிகள் = 10⁴ × (10⁴ − 1) ÷ 2 ≈ <strong>5 கோடி (5 × 10⁷)</strong>.</li>
+<li>அந்த 5 கோடி ஜோடிகள் ஒவ்வொன்றையும் எண்ண வேண்டும். அது மிகப் பெரிய வேலை.</li>
+</ul>
+<p><strong>பிரச்சினை 2: Database-ஐ மீண்டும் மீண்டும் scan செய்ய வேண்டும்</strong></p>
+<ul>
+<li>L1-க்கு ஒரு scan, L2-க்கு இன்னொரு scan, L3-க்கு இன்னொன்று…</li>
+<li>கோடிக்கணக்கான transactions இருந்தால், ஒவ்வொரு scan-உம் மிக மெதுவாக இருக்கும்.</li>
+<li>ஒரு பெரிய புத்தகத்தில் ஒரு சொல்லைத் தேட, ஒவ்வொரு முறையும் முதல் பக்கத்திலிருந்து மீண்டும் படிப்பது போன்றது.</li>
+</ul>
+<p><strong>தீர்வு: FP-growth</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Apriori</th>
+<th>FP-growth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Database scans</td>
+<td>ஒவ்வொரு level-க்கும் ஒன்று</td>
+<td><strong>2 மட்டும்</strong></td>
+</tr>
+<tr>
+<td>Candidates</td>
+<td>ஆம், மிக அதிகம்</td>
+<td><strong>இல்லை</strong></td>
+</tr>
+<tr>
+<td>முறை</td>
+<td>உருவாக்கு → எண்ணு</td>
+<td>Data-வை ஒரு <strong>மரமாக (tree)</strong> சுருக்கி, அதிலிருந்து நேரடியாக patterns எடு</td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam answer template (English)</strong></p>
+<p><em>Q: What are the limitations of Apriori?</em></p>
+<ol>
+<li><strong>Huge candidate sets:</strong> e.g. 10⁴ frequent 1-itemsets → more than 10⁷ candidate 2-itemsets.</li>
+<li><strong>Repeated database scans:</strong> one full scan per level, and support counting by pattern matching is costly.</li>
+<li><strong>FP-growth</strong> avoids both: <strong>no candidate generation, only two database scans.</strong></li>
+</ol>
+<p><strong>நினைவில் வைக்க:</strong> "நிறைய candidates + நிறைய scans" = Apriori-இன் இரண்டு பலவீனங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p>Apriori's candidate generate-and-test <strong>shrinks</strong> the candidate sets a lot, but it still has <strong>two non-trivial costs</strong>:</p>
 <div class="grid2"><div><p><strong>1. Huge candidate sets</strong></p>
 <p>With <strong>10⁴ frequent 1-itemsets</strong>, Apriori must generate <strong>more than 10⁷ candidate 2-itemsets</strong>. That's 10⁴ × (10⁴ − 1)/2 ≈ 5 × 10⁷.</p></div><div><p><strong>2. Repeated database scans</strong></p>
 <p>It <strong>scans the database again at every level</strong> and checks many candidates by pattern matching. Going over every transaction to count support is <strong>costly</strong>.</p></div></div>
@@ -551,7 +596,52 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <div class="grid2"><div><p><strong>1. மிகப்பெரிய வேட்பாளர் தொகுப்புகள்</strong></p>
 <p><strong>10⁴ அடிக்கடி நிகழும் 1-பொருட்கணங்கள்</strong> இருந்தால், Apriori <strong>10⁷-க்கும் மேற்பட்ட 2-பொருட்கண வேட்பாளர்களை</strong> உருவாக்க வேண்டும். அது 10⁴ × (10⁴ − 1)/2 ≈ 5 × 10⁷.</p></div><div><p><strong>2. மீண்டும் மீண்டும் தரவுத்தள ஸ்கேன்கள்</strong></p>
 <p><strong>ஒவ்வொரு நிலையிலும் தரவுத்தளத்தை மீண்டும் ஸ்கேன் செய்து</strong>, வடிவப் பொருத்தத்தால் பல வேட்பாளர்களைச் சரிபார்க்கிறது. ஆதரவை எண்ண ஒவ்வொரு பரிவர்த்தனையையும் ஆராய்வது <strong>செலவுடையது</strong>.</p></div></div>
-<div class="call key"><div class="ct">FP-growth-இன் விடை</div><p><strong>வேட்பாளர் உருவாக்கம் இல்லை; இரண்டு தரவுத்தள ஸ்கேன்கள் மட்டுமே</strong> <a class="ts" href="#" data-v="0" data-t="2">00:02</a>. இதனால்தான் கணக்கீட்டு நேரம் குறைகிறது எனக் காணொளி வலியுறுத்துகிறது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="FP-growth: the idea"><span class="num">2</span>FP-growth: the idea</h2><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p><strong>Frequent-pattern growth (FP-growth)</strong> uses a <strong>divide-and-conquer</strong> strategy:</p>
+<div class="call key"><div class="ct">FP-growth-இன் விடை</div><p><strong>வேட்பாளர் உருவாக்கம் இல்லை; இரண்டு தரவுத்தள ஸ்கேன்கள் மட்டுமே</strong> <a class="ts" href="#" data-v="0" data-t="2">00:02</a>. இதனால்தான் கணக்கீட்டு நேரம் குறைகிறது எனக் காணொளி வலியுறுத்துகிறது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="FP-growth: the idea"><span class="num">2</span>FP-growth: the idea</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>FP-growth: மூன்று வார்த்தைகளில் — சுருக்கு, பிரி, தேடு</h3><p>FP-growth-இன் யோசனை மூன்றே படிகள். இதுதான் <strong>divide and conquer</strong> (பிரித்து வெல்).</p>
+<ol>
+<li><strong>Compress (சுருக்கு):</strong> முழு database-ஐயும் ஒரு சிறிய மரமாக மாற்று. அதுதான் <strong>FP-tree</strong>. எந்த items சேர்ந்து வருகின்றன என்ற தகவல் அந்த மரத்திலேயே இருக்கும்.</li>
+<li><strong>Divide (பிரி):</strong> ஒவ்வொரு item-க்கும் ஒரு <strong>சிறிய database</strong> (conditional database) உருவாக்கு.</li>
+<li><strong>Mine (தேடு):</strong> அந்தச் சிறிய database-களை ஒவ்வொன்றாகத் தனித்தனியே தேடு.</li>
+</ol>
+<p><strong>மரம் கட்டும் 3 படிகள்</strong></p>
+<table>
+<thead>
+<tr>
+<th>படி</th>
+<th>என்ன செய்கிறோம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scan 1</strong></td>
+<td>ஒவ்வொரு item-ஐயும் எண்ணு. min_sup-க்குக் குறைவானவற்றை நீக்கு.</td>
+</tr>
+<tr>
+<td><strong>Sort</strong></td>
+<td>மீதமுள்ள items-ஐ count அடிப்படையில் <strong>பெரியதிலிருந்து சிறியதற்கு</strong> அடுக்கு. இதுதான் <strong>L order</strong>. ஒவ்வொரு transaction-ஐயும் இந்த வரிசையில் மாற்றி எழுது.</td>
+</tr>
+<tr>
+<td><strong>Scan 2</strong></td>
+<td>ஒவ்வொரு transaction-ஐயும் root-இலிருந்து ஒரு <strong>பாதையாக</strong> மரத்தில் சேர்.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ஒரு transaction-ஐ மரத்தில் எப்படிச் சேர்ப்பது?</strong></p>
+<ul>
+<li>Root-க்கு <strong>null</strong> என்று பெயர்.</li>
+<li>பாதை <strong>ஏற்கனவே இருந்தால்</strong> → அந்த nodes-இன் count-ஐ <strong>+1</strong> ஆக்கு.</li>
+<li>பாதை <strong>இல்லையென்றால்</strong> → அங்கிருந்து <strong>புதிய nodes</strong> உருவாக்கு (count 1).</li>
+<li><strong>Header table:</strong> ஒவ்வொரு item-உம் மரத்தில் எங்கெல்லாம் இருக்கிறது என்பதைக் காட்டும் ஒரு அட்டவணை. ஒரே item-இன் nodes-ஐ <strong>node-links</strong> இணைக்கின்றன.</li>
+</ul>
+<p><strong>ஏன் sort செய்ய வேண்டும்?</strong> அதிகம் வரும் items முன்னே இருந்தால், நிறைய transactions <strong>ஒரே கிளையைப் பகிர்ந்துகொள்ளும்</strong>. அதனால் மரம் சிறியதாகும்.</p>
+<p><strong>உதாரணம்:</strong> "f, c, a, m, p" மற்றும் "f, c, a, b, m" — இரண்டும் <strong>f → c → a</strong> என்ற ஒரே தொடக்கத்தைப் பகிர்கின்றன. அதனால் அந்தப் பகுதி மரத்தில் ஒரே ஒரு முறைதான் வரும் (count 2 உடன்).</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam answer template (English)</strong></p>
+<ol>
+<li><strong>Scan 1:</strong> count supports; keep frequent items; sort in descending support order (L order).</li>
+<li>Reorder each transaction by L order, dropping infrequent items.</li>
+<li><strong>Scan 2:</strong> insert each transaction as a path from the null root; a shared prefix increments counts, new items create new nodes.</li>
+<li>Maintain an <strong>item header table</strong> with <strong>node-links</strong> to every occurrence of each item.</li>
+<li>Mining the database becomes mining the FP-tree.</li>
+</ol>
+<p><strong>ஒரு வரியில்:</strong> Compress → Divide → Mine.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p><strong>Frequent-pattern growth (FP-growth)</strong> uses a <strong>divide-and-conquer</strong> strategy:</p>
 <ol>
 <li><strong>Compress</strong> the database of frequent items into a <strong>frequent-pattern tree (FP-tree)</strong>. The tree keeps the <strong>itemset association information</strong>.</li>
 <li><strong>Divide</strong> the compressed database into <strong>conditional databases</strong> (a kind of <em>projected database</em>), each linked to one frequent item or "pattern fragment".</li>
@@ -583,7 +673,81 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <li>பகிரப்பட்ட முன்னொட்டுக்குப் பின்னருள்ள பொருட்களுக்கு மட்டும் <strong>புதிய கணுக்களை</strong> உருவாக்கவும்.</li>
 <li><strong>பொருள் தலைப்பு அட்டவணையைப்</strong> பேணவும்: ஒவ்வொரு பொருளும் மரத்தில் தோன்றும் இடங்களை <strong>கணு-இணைப்புச்</strong> சங்கிலி மூலம் சுட்டுகிறது.</li>
 </ul>
-<p>தரவுத்தளத்தைச் சுரங்கம் செய்யும் பிரச்சினை, <strong>FP-tree-ஐச் சுரங்கம் செய்யும்</strong> பிரச்சினையாகிறது.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Worked example (min_sup = 3)"><span class="num">3</span>Worked example (min_sup = 3)</h2><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><table>
+<p>தரவுத்தளத்தைச் சுரங்கம் செய்யும் பிரச்சினை, <strong>FP-tree-ஐச் சுரங்கம் செய்யும்</strong> பிரச்சினையாகிறது.</p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Worked example (min_sup = 3)"><span class="num">3</span>Worked example (min_sup = 3)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>முழு உதாரணம்: 5 transactions, மரம் படிப்படியாக</h3><p><strong>படி 1: எண்ணு (Scan 1)</strong></p>
+<p>f:4, c:4, a:3, b:3, m:3, p:3. மற்றவை (d, g, i, l, o, h, j, k, s, e, n) எல்லாம் 3-க்குக் குறைவு, அதனால் <strong>நீக்கு</strong>.</p>
+<p><strong>L order:</strong> f, c, a, b, m, p (f, c இரண்டுக்கும் 4; a, b, m, p நான்குக்கும் 3. சமமானவற்றுக்கு ஒரு நிலையான வரிசையைப் பின்பற்றுகிறோம்.)</p>
+<p><strong>படி 2: ஒவ்வொரு transaction-ஐயும் L order-இல் மாற்று</strong></p>
+<table>
+<thead>
+<tr>
+<th>TID</th>
+<th>வாங்கியவை</th>
+<th>நீக்கி, அடுக்கியவை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>f, a, c, d, g, i, m, p</td>
+<td><strong>f, c, a, m, p</strong></td>
+</tr>
+<tr>
+<td>200</td>
+<td>a, b, c, f, l, m, o</td>
+<td><strong>f, c, a, b, m</strong></td>
+</tr>
+<tr>
+<td>300</td>
+<td>b, f, h, j, o</td>
+<td><strong>f, b</strong></td>
+</tr>
+<tr>
+<td>400</td>
+<td>b, c, k, s, p</td>
+<td><strong>c, b, p</strong></td>
+</tr>
+<tr>
+<td>500</td>
+<td>a, f, c, e, l, p, m, n</td>
+<td><strong>f, c, a, m, p</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>படி 3: மரத்தில் ஒவ்வொன்றாகச் சேர் (Scan 2)</strong></p>
+<ul>
+<li><strong>T100</strong> (f, c, a, m, p): மரம் காலி. புதிய பாதை: null → f:1 → c:1 → a:1 → m:1 → p:1</li>
+<li><strong>T200</strong> (f, c, a, b, m): f, c, a ஏற்கனவே உள்ளன → <strong>f:2, c:2, a:2</strong>. a-வின் கீழ் b இல்லை → புதிதாக <strong>b:1 → m:1</strong></li>
+<li><strong>T300</strong> (f, b): f இருக்கிறது → <strong>f:3</strong>. f-இன் கீழ் b இல்லை (அங்கே c தான் உள்ளது) → புதிதாக <strong>b:1</strong></li>
+<li><strong>T400</strong> (c, b, p): root-இன் கீழ் நேரடியாக c <strong>இல்லை</strong> (c இருப்பது f-க்குக் கீழே) → <strong>புதிய கிளை</strong>: null → c:1 → b:1 → p:1</li>
+<li><strong>T500</strong> (f, c, a, m, p): T100-இன் அதே பாதை → <strong>f:4, c:3, a:3, m:2, p:2</strong></li>
+</ul>
+<p><strong>இறுதி மரம்:</strong></p>
+<pre><code>null
+├── f:4
+│   ├── c:3
+│   │   └── a:3
+│   │       ├── m:2
+│   │       │   └── p:2
+│   │       └── b:1
+│   │           └── m:1
+│   └── b:1
+└── c:1
+    └── b:1
+        └── p:1
+</code></pre>
+<p><strong>சரிபார்ப்பு:</strong> ஒவ்வொரு item-இன் nodes-ஐக் கூட்டினால் அதன் support வர வேண்டும்.
+c = 3 + 1 = <strong>4</strong> ✓, b = 1 + 1 + 1 = <strong>3</strong> ✓, m = 2 + 1 = <strong>3</strong> ✓, p = 2 + 1 = <strong>3</strong> ✓</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam-இல் எழுத வேண்டியவை:</strong></p>
+<ol>
+<li>Supports அட்டவணை, நீக்கப்பட்டவற்றைக் குறிப்பிட்டு.</li>
+<li>L order.</li>
+<li>ஒவ்வொரு transaction-இன் "ordered frequent items".</li>
+<li><strong>Counts உடன்</strong> மரம்.</li>
+</ol>
+<p><strong>பொதுவான தவறுகள்:</strong></p>
+<ul>
+<li>T400 போன்றவற்றை f-இன் கீழ் சேர்ப்பது. <strong>முதல் item பொருந்தவில்லை என்றால், root-இலிருந்து புதிய கிளைதான்.</strong></li>
+<li>Sort செய்ய மறப்பது. Sort செய்யாவிட்டால் மரம் தவறாக வரும்.</li>
+</ul></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>TID</th>
@@ -671,7 +835,87 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <li><strong>T200</strong>, f-c-a முன்னொட்டைப் பகிர்வதால் அவை f:2, c:2, a:2 ஆகின்றன; a-க்குக் கீழ் புதிய <strong>b:1 → m:1</strong> கிளை சேர்க்கப்படுகிறது.</li>
 <li>ஐந்து பரிவர்த்தனைகளுக்கும் பின் FP-tree:</li>
 </ul>
-<div class="otree fp"><div class="ot-in"><ul><li><span>null</span><ul><li><span>f:4</span><ul><li><span>c:3</span><ul><li><span>a:3</span><ul><li><span>m:2</span><ul><li><span>p:2</span></li></ul></li><li><span>b:1</span><ul><li><span>m:1</span></li></ul></li></ul></li></ul></li><li><span>b:1</span></li></ul></li><li><span>c:1</span><ul><li><span>b:1</span><ul><li><span>p:1</span></li></ul></li></ul></li></ul></li></ul></div></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Mining the FP-tree"><span class="num">4</span>Mining the FP-tree</h2><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>For each frequent item, <strong>starting from the least frequent</strong> (bottom of L) as the <strong>suffix</strong>:</p>
+<div class="otree fp"><div class="ot-in"><ul><li><span>null</span><ul><li><span>f:4</span><ul><li><span>c:3</span><ul><li><span>a:3</span><ul><li><span>m:2</span><ul><li><span>p:2</span></li></ul></li><li><span>b:1</span><ul><li><span>m:1</span></li></ul></li></ul></li></ul></li><li><span>b:1</span></li></ul></li><li><span>c:1</span><ul><li><span>b:1</span><ul><li><span>p:1</span></li></ul></li></ul></li></ul></li></ul></div></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Mining the FP-tree"><span class="num">4</span>Mining the FP-tree</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>மரத்திலிருந்து patterns எடுப்பது — கீழிருந்து மேலே</h3><p><strong>குறைந்த count உள்ள item-இலிருந்து</strong> (L order-இன் கடைசியிலிருந்து) தொடங்குவோம்: p, m, b, a, c, f.</p>
+<p>ஒவ்வொரு item-க்கும் 3 படிகள்:</p>
+<ol>
+<li><strong>Conditional pattern base:</strong> அந்த item-க்கு <strong>முன்னால்</strong> வரும் பாதைகள் (prefix paths), அந்த item-இன் count உடன். இதுதான் அந்த item-இன் "சிறிய database".</li>
+<li><strong>Conditional FP-tree:</strong> அந்தப் பாதைகளில் ஒவ்வொரு item-ஐயும் கூட்டு. <strong>min_sup (3)-க்குக் குறைவானவற்றை நீக்கு.</strong></li>
+<li><strong>Patterns:</strong> மீதமுள்ளவற்றின் ஒவ்வொரு சேர்க்கையோடும் அந்த item-ஐச் சேர்.</li>
+</ol>
+<p><strong>p-ஐ முழுதாகப் பார்ப்போம்</strong></p>
+<ul>
+<li>p வருவது இரண்டு இடங்களில்: f → c → a → m → <strong>p</strong> (count 2), c → b → <strong>p</strong> (count 1).</li>
+<li>Prefixes: <strong>{f, c, a, m} : 2</strong> மற்றும் <strong>{c, b} : 1</strong></li>
+<li>கூட்டு: c = 2 + 1 = <strong>3</strong> ✓. f, a, m = 2 ✗. b = 1 ✗.</li>
+<li>Conditional tree = ⟨c:3⟩ → pattern: <strong>{c, p} : 3</strong></li>
+</ul>
+<p><strong>m</strong></p>
+<ul>
+<li>m வருவது: f → c → a → <strong>m</strong> (2), f → c → a → b → <strong>m</strong> (1)</li>
+<li>Prefixes: {f, c, a} : 2, {f, c, a, b} : 1</li>
+<li>கூட்டு: f = 3 ✓, c = 3 ✓, a = 3 ✓, b = 1 ✗</li>
+<li>f, c, a மூன்றின் எல்லாச் சேர்க்கைகளோடும் m: {f,m}, {c,m}, {a,m}, {f,c,m}, {f,a,m}, {c,a,m}, <strong>{f,c,a,m}</strong> — எல்லாம் <strong>3</strong>.</li>
+</ul>
+<p><strong>b</strong></p>
+<ul>
+<li>b மூன்று இடங்களில் வருகிறது. Prefixes: {f, c, a} : 1, {f} : 1, {c} : 1</li>
+<li>கூட்டு: f = 2, c = 2, a = 1. <strong>எதுவும் 3-ஐ எட்டவில்லை</strong> → b-க்கு patterns இல்லை.</li>
+</ul>
+<p><strong>a, c, f</strong></p>
+<ul>
+<li>a: prefix {f, c} : 3 → <strong>{f,a}, {c,a}, {f,c,a} : 3</strong></li>
+<li>c: prefix {f} : 3 (root-க்குக் கீழே உள்ள c:1-க்கு prefix இல்லை) → <strong>{f, c} : 3</strong></li>
+<li>f: root-க்கு நேரடியாகக் கீழே, prefix இல்லை → ஒன்றுமில்லை</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Pattern base</th>
+<th>Cond. tree</th>
+<th>Patterns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td>{f,c,a,m}:2, {c,b}:1</td>
+<td>⟨c:3⟩</td>
+<td>{c,p}:3</td>
+</tr>
+<tr>
+<td>m</td>
+<td>{f,c,a}:2, {f,c,a,b}:1</td>
+<td>⟨f:3, c:3, a:3⟩</td>
+<td>{f,c,a,m}:3 உட்பட 7</td>
+</tr>
+<tr>
+<td>b</td>
+<td>{f,c,a}:1, {f}:1, {c}:1</td>
+<td>∅</td>
+<td>—</td>
+</tr>
+<tr>
+<td>a</td>
+<td>{f,c}:3</td>
+<td>⟨f:3, c:3⟩</td>
+<td>{f,c,a}:3 உட்பட 3</td>
+</tr>
+<tr>
+<td>c</td>
+<td>{f}:3</td>
+<td>⟨f:3⟩</td>
+<td>{f,c}:3</td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>ஏன் வேகமாக இருக்கிறது?</strong></p>
+<ul>
+<li>நீளமான patterns-ஐ நேரடியாகத் தேடாமல், <strong>சிறிய patterns-ஐத் தேடி, அவற்றோடு suffix-ஐச் சேர்க்கிறோம்</strong>.</li>
+<li>குறைந்த count உள்ள item-இலிருந்து தொடங்குவதால், சிறிய database-கள் இன்னும் சிறியதாக இருக்கும்.</li>
+<li>மரம் memory-இல் அடங்காவிட்டால், database-ஐ <strong>projected databases</strong>-ஆகப் பிரித்து, ஒவ்வொன்றுக்கும் தனி மரம் கட்டலாம்.</li>
+<li>எப்போதும் Apriori-ஐ விட வேகம் என்று உறுதி இல்லை. Data-வைப் பொறுத்தது.</li>
+</ul>
+<p><strong>Exam template (English):</strong> For each item (least frequent first): conditional pattern base → conditional FP-tree (keep counts ≥ min_sup) → frequent patterns by concatenating the suffix. Present it as a 4-column table: Item | Conditional pattern base | Conditional FP-tree | Frequent patterns.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>For each frequent item, <strong>starting from the least frequent</strong> (bottom of L) as the <strong>suffix</strong>:</p>
 <ol>
 <li>Build its <strong>conditional pattern base</strong>: the set of <strong>prefix paths</strong> in the tree that end just before the suffix, each with the suffix's count.</li>
 <li>Build the <strong>conditional FP-tree</strong> from that base, keeping only items whose total count ≥ min_sup.</li>
@@ -847,7 +1091,43 @@ R.addEventListener('input',run);run();})();
 <li>எண்ணிக்கைகளுடன் <strong>மரத்தை வரையவும்</strong>.</li>
 <li><strong>நிபந்தனை வடிவத் தளம் / நிபந்தனை FP-tree / அடிக்கடி நிகழும் வடிவங்கள்</strong> அட்டவணையை உருவாக்கவும்.</li>
 </ol>
-<p>மேலுள்ள உருவாக்கியுடன் பயிற்சி செய்யவும். min_sup-ஐ மாற்றவும் அல்லது விரிவுரையின் பழம்/காய்கறித் தரவுத்தொகுப்பை ஒட்டவும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Multilevel association rules"><span class="num">5</span>Multilevel association rules</h2><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><ul>
+<p>மேலுள்ள உருவாக்கியுடன் பயிற்சி செய்யவும். min_sup-ஐ மாற்றவும் அல்லது விரிவுரையின் பழம்/காய்கறித் தரவுத்தொகுப்பை ஒட்டவும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Multilevel association rules"><span class="num">5</span>Multilevel association rules</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>பல நிலைகளில் rules — &quot;laptop&quot; ஆ, &quot;computer&quot; ஆ?</h3><p>Items-க்கு ஒரு <strong>படிநிலை (concept hierarchy)</strong> உண்டு:</p>
+<p>all → <strong>computer</strong> → laptop, desktop</p>
+<p><strong>பிரச்சினை என்ன?</strong></p>
+<ul>
+<li><strong>கீழ் நிலையில்</strong> (laptop, desktop போன்ற குறிப்பிட்ட items) data <strong>குறைவாகச் சிதறி</strong> இருக்கும். அதனால் வலுவான rules கிடைப்பது கடினம்.</li>
+<li><strong>மேல் நிலையில்</strong> (computer) கிடைக்கும் rules பெரும்பாலும் <strong>எல்லோருக்கும் தெரிந்தவை</strong> (common sense). ஆனால் ஒருவருக்குத் தெரிந்தது இன்னொருவருக்குப் புதிதாக இருக்கலாம்.</li>
+<li>அதனால் <strong>பல நிலைகளிலும்</strong> தேட வேண்டும். இவைதான் <strong>multilevel association rules</strong>.</li>
+</ul>
+<p><strong>எப்படித் தேடுவது?</strong> <strong>மேலிருந்து கீழே (top-down):</strong> முதலில் level 1-இல் frequent itemsets கண்டுபிடி, பிறகு level 2, இப்படியே frequent itemsets கிடைக்காத வரை. ஒவ்வொரு level-இலும் Apriori போன்ற எந்த algorithm-ஐயும் பயன்படுத்தலாம்.</p>
+<p><strong>உதாரணம்:</strong> computer = 10%, laptop = 6%, desktop = 4%</p>
+<table>
+<thead>
+<tr>
+<th>முறை</th>
+<th>Threshold</th>
+<th>முடிவு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Uniform support</strong></td>
+<td>எல்லா நிலைக்கும் <strong>ஒரே</strong> min_sup = 5%</td>
+<td>computer ✓, laptop ✓, <strong>desktop ✗</strong> (4% &lt; 5%)</td>
+</tr>
+<tr>
+<td><strong>Reduced support</strong></td>
+<td><strong>கீழே போகப் போகக் குறைவான</strong> min_sup: level 1 = 5%, level 2 = 3%</td>
+<td>computer ✓, laptop ✓, <strong>desktop ✓</strong> (4% ≥ 3%)</td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Uniform support-இன் சிக்கல்:</strong></p>
+<ul>
+<li>Threshold <strong>அதிகம்</strong> என்றால் → கீழ் நிலையில் உள்ள பயனுள்ள rules <strong>தவறிவிடும்</strong> (desktop போல).</li>
+<li>Threshold <strong>குறைவு</strong> என்றால் → மேல் நிலையில் <strong>பயனில்லாத rules ஏராளமாக</strong> வரும்.</li>
+<li><strong>Reduced support</strong> இதைத் தீர்க்கிறது: குறிப்பிட்ட (கீழ்) நிலைகளில் கொஞ்சம் தளர்வாக இருக்கிறது.</li>
+</ul>
+<p><strong>Exam tip:</strong> "Uniform vs reduced support" கேள்விக்கு, இந்த computer/laptop/desktop உதாரணத்தையே எழுதுங்கள். எண்களுடன் விளக்கினால் முழு marks.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><ul>
 <li>At <strong>low (primitive) levels</strong>, data is <strong>sparse</strong>, so strong associations are hard to find.</li>
 <li>Strong associations at <strong>high levels</strong> may just be <strong>common sense</strong>, but what is common sense to one user may be <strong>novel</strong> to another.</li>
 <li>So the system should mine at <strong>multiple levels of abstraction</strong> using <strong>concept hierarchies</strong>:</li>
@@ -911,7 +1191,42 @@ R.addEventListener('input',run);run();})();
 </tr>
 </tbody>
 </table>
-<div class="call warn"><div class="ct">சமரசம்</div><p><strong>சீரான ஆதரவு</strong> எளிதானது; ஆனால் அதிகமாக இருந்தால் பொருளுள்ள கீழ்நிலைத் தொடர்புகளை <strong>இழக்கிறீர்கள்</strong>; குறைவாக இருந்தால் சுவாரசியமற்ற உயர்நிலைத் தொடர்புகள் <strong>அளவுக்கதிகமாக</strong> வருகின்றன. குறிப்பான நிலைகளில் தளர்வாக இருப்பதன் மூலம் <strong>குறைக்கப்பட்ட ஆதரவு</strong> இதைச் சரிசெய்கிறது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Multidimensional association rules"><span class="num">6</span>Multidimensional association rules</h2><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p>Each <strong>distinct predicate</strong> in a rule is a <strong>dimension</strong>.</p>
+<div class="call warn"><div class="ct">சமரசம்</div><p><strong>சீரான ஆதரவு</strong> எளிதானது; ஆனால் அதிகமாக இருந்தால் பொருளுள்ள கீழ்நிலைத் தொடர்புகளை <strong>இழக்கிறீர்கள்</strong>; குறைவாக இருந்தால் சுவாரசியமற்ற உயர்நிலைத் தொடர்புகள் <strong>அளவுக்கதிகமாக</strong> வருகின்றன. குறிப்பான நிலைகளில் தளர்வாக இருப்பதன் மூலம் <strong>குறைக்கப்பட்ட ஆதரவு</strong> இதைச் சரிசெய்கிறது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Multidimensional association rules"><span class="num">6</span>Multidimensional association rules</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>Dimensions-ஐ எண்ணுவது — predicate பெயர்களைப் பாருங்கள்</h3><p>Rule-இல் உள்ள ஒவ்வொரு <strong>வேறுபட்ட predicate</strong>-உம் (buys, age, occupation…) ஒரு <strong>dimension</strong>.</p>
+<p><strong>எளிய சோதனை:</strong> Rule-இல் உள்ள predicate <strong>பெயர்களை</strong> மட்டும் பாருங்கள்.</p>
+<table>
+<thead>
+<tr>
+<th>வகை</th>
+<th>விதி</th>
+<th>உதாரணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Single-dimensional</strong> (intradimensional)</td>
+<td><strong>ஒரே ஒரு</strong> predicate, பல முறை</td>
+<td>buys(X, "camera") ⇒ buys(X, "printer") → buys மட்டும்</td>
+</tr>
+<tr>
+<td><strong>Interdimensional</strong></td>
+<td><strong>2 அல்லது அதற்கு மேல்</strong>, எதுவும் <strong>திரும்ப வராது</strong></td>
+<td>age(X, "20…29") ∧ occupation(X, "student") ⇒ buys(X, "laptop") → age, occupation, buys — மூன்றும் வேறு</td>
+</tr>
+<tr>
+<td><strong>Hybrid-dimensional</strong></td>
+<td>2 அல்லது அதற்கு மேல், ஒன்று <strong>திரும்ப வரும்</strong></td>
+<td>age(X, "20…29") ∧ buys(X, "laptop") ⇒ buys(X, "printer") → buys இரண்டு முறை</td>
+</tr>
+</tbody>
+</table>
+<p><strong>நினைவில் வைக்க:</strong></p>
+<ul>
+<li>1 பெயர் → <strong>Single</strong></li>
+<li>பல பெயர், திரும்ப வருவதில்லை → <strong>Inter</strong></li>
+<li>பல பெயர், ஒன்று திரும்ப வருகிறது → <strong>Hybrid</strong></li>
+</ul><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam-இல் எப்படிக் கேட்பார்கள்:</strong> ஒரு rule கொடுத்து "இது எந்த வகை? காரணம் சொல்" என்று கேட்பார்கள்.</p>
+<p><strong>பதில் எழுதும் முறை (English):</strong> "The predicates are age, occupation and buys — three distinct predicates with no repetition, so it is an <strong>interdimensional</strong> association rule."</p>
+<p><strong>கவனம்:</strong> X என்பது ஒரு customer. அது predicate அல்ல. "laptop", "20…29" போன்றவை values. அவையும் predicates அல்ல. <strong>அடைப்புக்குறிக்கு முன் உள்ள பெயரை மட்டும் எண்ணுங்கள்.</strong></p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p>Each <strong>distinct predicate</strong> in a rule is a <strong>dimension</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -965,7 +1280,49 @@ R.addEventListener('input',run);run();})();
 </tr>
 </tbody>
 </table>
-<div class="call tip"><div class="ct">விரைவுச் சோதனை</div><p><strong>வேறுபட்ட</strong> பயனிலைப் பெயர்களை எண்ணவும். ஒன்று → ஒற்றைப் பரிமாணம். ஒன்றுக்கு மேல், மீளுருவில்லை → பரிமாணங்களுக்கிடையிலானது. ஒன்றுக்கு மேல், மீளுருவுள்ளது → கலப்பு.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Constraint-based association mining"><span class="num">7</span>Constraint-based association mining</h2><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><ul>
+<div class="call tip"><div class="ct">விரைவுச் சோதனை</div><p><strong>வேறுபட்ட</strong> பயனிலைப் பெயர்களை எண்ணவும். ஒன்று → ஒற்றைப் பரிமாணம். ஒன்றுக்கு மேல், மீளுருவில்லை → பரிமாணங்களுக்கிடையிலானது. ஒன்றுக்கு மேல், மீளுருவுள்ளது → கலப்பு.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Constraint-based association mining"><span class="num">7</span>Constraint-based association mining</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>Constraints — தேவையானதை மட்டும் தேடு</h3><p>Mining செய்தால் <strong>ஆயிரக்கணக்கான rules</strong> வரலாம். அவற்றில் பெரும்பாலானவை பயனற்றவை.</p>
+<p>பயனருக்கு பெரும்பாலும் <strong>என்ன மாதிரியான rules வேண்டும்</strong> என்று ஏற்கனவே ஓரளவு தெரியும். அதனால் அவர் <strong>நிபந்தனைகள் (constraints)</strong> கொடுத்து தேடலைச் சுருக்கலாம். இதுதான் <strong>constraint-based mining</strong>.</p>
+<p><strong>உதாரணம்:</strong> Supermarket manager: "2025-இல் கொழும்பில் நடந்த விற்பனையில், 20–29 வயதினர் laptop வாங்குவது தொடர்பான, confidence 70%-க்கு மேல் உள்ள rules மட்டும் வேண்டும்."</p>
+<p><strong>5 வகை constraints:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Constraint</th>
+<th>என்ன சொல்கிறது</th>
+<th>உதாரணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Knowledge type</strong></td>
+<td><strong>எந்த வகை</strong> அறிவு வேண்டும்</td>
+<td>Association அல்லது correlation</td>
+</tr>
+<tr>
+<td><strong>Data</strong></td>
+<td><strong>எந்த data</strong>-வில் தேட வேண்டும்</td>
+<td>கொழும்பு விற்பனை, 2025</td>
+</tr>
+<tr>
+<td><strong>Dimension / level</strong></td>
+<td><strong>எந்த dimensions, எந்த நிலை</strong></td>
+<td>Item-ஐ "brand" நிலையில், வயதுடன் சேர்த்து</td>
+</tr>
+<tr>
+<td><strong>Interestingness</strong></td>
+<td><strong>குறைந்தபட்ச அளவுகள்</strong></td>
+<td>support ≥ 5%, confidence ≥ 70%</td>
+</tr>
+<tr>
+<td><strong>Rule</strong></td>
+<td>Rule-இன் <strong>வடிவம்</strong> (metarules / templates)</td>
+<td>P(X, Y) ∧ Q(X, W) ⇒ buys(X, "laptop")</td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>நினைவில் வைக்க: "K-D-D-I-R"</strong></p>
+<p><strong>K</strong>nowledge type · <strong>D</strong>ata · <strong>D</strong>imension/level · <strong>I</strong>nterestingness · <strong>R</strong>ule</p>
+<p><strong>Metarule என்றால்?</strong> Rule-இன் ஒரு <strong>வார்ப்புரு (template)</strong>. "இடப்பக்கம் 2 predicates, வலப்பக்கம் buys(X, laptop)" என்பது போல. P, Q இடங்களில் எந்த predicate-உம் வரலாம்.</p>
+<p><strong>Exam template (English):</strong> Constraint-based mining lets the user specify constraints to confine the search space: knowledge type, data, dimension/level, interestingness and rule constraints (metarules).</p></div><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><ul>
 <li>Mining can produce <strong>thousands of rules</strong>, most <strong>uninteresting</strong>.</li>
 <li>Users often know the <strong>"direction"</strong> and <strong>"form"</strong> of what they want, so they specify <strong>constraints</strong> to <strong>confine the search space</strong>. This is <strong>constraint-based mining</strong>.</li>
 </ul>
@@ -1043,7 +1400,52 @@ R.addEventListener('input',run);run();})();
 <td>P(X, Y) ∧ Q(X, W) ⇒ buys(X, "laptop")</td>
 </tr>
 </tbody>
-</table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Quick revision sheet"><span class="num">8</span>Quick revision sheet</h2><div class="section-english" id="en-s8" lang="en"><div class="hci-en"><table>
+</table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s8"><h2 id="s8" data-t="Quick revision sheet"><span class="num">8</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s8 en-s8" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s8" lang="ta" hidden><h3>விரைவு மீள்பார்வை — Week 10</h3><table>
+<thead>
+<tr>
+<th>தலைப்பு</th>
+<th>ஒரு வரியில்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apriori-இன் பலவீனம்</td>
+<td>நிறைய candidates (10⁴ → 10⁷ ஜோடிகள்) + ஒவ்வொரு level-க்கும் ஒரு scan</td>
+</tr>
+<tr>
+<td>FP-growth</td>
+<td>சுருக்கு → பிரி → தேடு. Candidates இல்லை, 2 scans மட்டும்</td>
+</tr>
+<tr>
+<td>மரம் கட்டுவது</td>
+<td>Count-இன் இறங்கு வரிசையில் அடுக்கு; பொதுவான தொடக்கம் → count +1; header table + node-links</td>
+</tr>
+<tr>
+<td>மரத்திலிருந்து தேடுவது</td>
+<td>குறைந்த count item முதலில் → pattern base → conditional tree → suffix சேர்</td>
+</tr>
+<tr>
+<td>நினைவில் வைக்க வேண்டிய விடைகள்</td>
+<td>p → {c,p}:3 · m → {f,c,a,m}:3 · b → இல்லை · a → {f,c,a}:3 · c → {f,c}:3</td>
+</tr>
+<tr>
+<td>Memory போதவில்லை</td>
+<td>Projected databases</td>
+</tr>
+<tr>
+<td>Multilevel</td>
+<td>Concept hierarchy, மேலிருந்து கீழே; uniform vs reduced support</td>
+</tr>
+<tr>
+<td>Multidimensional</td>
+<td>Single (1 பெயர்) · Inter (திரும்ப வராது) · Hybrid (திரும்ப வரும்)</td>
+</tr>
+<tr>
+<td>Constraints</td>
+<td>K-D-D-I-R</td>
+</tr>
+</tbody>
+</table><button type="button" class="native-reference" aria-controls="en-s8" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s8" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>

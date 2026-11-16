@@ -1,36 +1,36 @@
 ? Inmon's definition describes a data warehouse as:
-+ Subject-oriented, integrated, time-variant and nonvolatile, supporting management decisions
++ Subject-oriented, integrated, time-variant and nonvolatile
 - Real-time, transactional, volatile and normalised
-- Small, fast, local and private
-- Object-oriented, distributed, encrypted
+- Application-oriented, local, current and updatable
+- Object-oriented, distributed, encrypted and private
 = These four characteristics are commonly examined.
 
 ? "Nonvolatile" means that the data warehouse:
-+ Is maintained mainly by controlled loads/refreshes rather than ordinary operational row updates
-- Loses data when the power fails
-- Is updated every second
-- Stores only current data
++ Is loaded and refreshed in batches, not updated row by row
+- Loses its data whenever the power or server fails
+- Is updated every second by the operational systems
+- Stores only the current values, overwriting old ones
 = Nonvolatile does not mean no backups, recovery or concurrency safeguards; safe loads and analytical reads still matter.
 
 ? "Time-variant" means that the warehouse:
-+ Keeps a long history (5–10 years), and every key structure has a time element
-- Changes its schema daily
-- Stores only today's data
-- Uses timestamps for locking
++ Keeps a long history, and every key structure has a time element
+- Changes its schema every day as new kinds of data arrive from the sources
+- Stores only today's data and deletes yesterday's
+- Uses timestamps only for locking rows during updates
 = Operational databases hold mainly current data.
 
 ? Which is true of **OLTP**?
-+ Used by clerks for day-to-day operations, with short read/write transactions on current data
-- Used by analysts for complex historical queries
-- Holds terabytes of historical data
-- Has mainly read-only scans
++ Used by clerks for day-to-day work: short read/write transactions
+- Used by analysts for complex queries over historical data
+- Holds terabytes of summarised historical data for years
+- Mostly runs long read-only scans over many records
 = OLAP serves knowledge workers with historical, consolidated data for decision support.
 
 ? Why keep the data warehouse separate from operational databases?
-+ Performance, different concurrency and recovery needs, and different (historical, consolidated) data
-- To save licence costs
-- Because SQL can't run on warehouses
-- Because the law requires it
++ Performance, different concurrency and recovery needs, and different data
+- To save licence costs, since one DBMS licence covers only one use
+- Because SQL queries cannot run on a data warehouse
+- Because data protection law requires two separate systems
 = OLAP queries would slow down OLTP systems.
 
 ? In a data cube, the numeric measures (e.g. dollars_sold) are called:
@@ -46,9 +46,9 @@
 
 ? The **apex** cuboid is:
 + The most summarised (0-D) cuboid, "all"
-- The cuboid with all dimensions
-- An empty cube
-- The fact table
+- The least summarised cuboid, with all dimensions
+- An empty cube that has no measures yet
+- The fact table that holds the raw measures
 = The base cuboid contains all the dimensions and is the least summarised.
 
 ? Moving from city to country level in a cube is:

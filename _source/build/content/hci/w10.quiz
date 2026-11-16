@@ -6,38 +6,38 @@
 = Predictor-oriented models (cognitivism) look at hidden reasoning, memory and attention.
 
 ? Cognitive task analysis (CTA) aims to:
-+ Uncover the invisible cognition behind a task (reasoning, memory, attention)
-- Measure keystroke times only
-- Design the database
-- Count the users
++ Uncover the invisible thinking behind a task (memory, attention)
+- Measure the keystroke times for every single step of a task
+- Design the database tables that the task will read and write
+- Count how many users perform the task each day
 = Two people may do the same task with different thought processes.
 
 ? The five CTA steps, in order, are:
-+ Collect → identify representations → populate (think-aloud) → verify with users → format for design
++ Collect → representations → populate → verify → format
 - Design → code → test → deploy → maintain
-- Observe → guess → build → sell → repeat
+- Observe → interview → prototype → build → sell
 - Plan → do → check → act → review
 = Verify the model with users before formatting it.
 
 ? In HTA, a **plan** specifies:
-+ The order of, and conditions on, sub-tasks (e.g. IF email THEN 2.1, 2.2 ELSE 2.3, 2.4)
-- The cost of the system
-- The colour scheme
-- The user's age
++ The order of, and conditions on, the sub-tasks
+- The total cost of building the new system
+- The colour scheme used on each screen
+- The age and experience of the user
 = Plans make the hierarchy executable.
 
 ? HTA should be written:
 + Textually first, then as a diagram
-- Only as a diagram
-- Only as code
-- Never written down
+- Only as a diagram, never as text
+- As program code with if-statements
+- As a diagram first, then as text
 = Number the nodes 1, 1.1, 1.2…
 
 ? In the lesson HTA example, which reading pattern is used while following its plans?
-+ Top to bottom, left to right, finishing sub-branches first
-- Bottom to top
-- Right to left
-- At random
++ Top to bottom, left to right, sub-branches first
+- Bottom to top, finishing the root last
+- Right to left across each level in turn
+- In any order, as long as all boxes are visited
 = The written plans determine sequence and conditions; diagram position alone is not a general HTA execution rule.
 
 ? Reusing standard sub-tasks like "checkout" via PayPal or Stripe illustrates HTA's:
@@ -49,16 +49,16 @@
 
 ? The "provide feedback" CTA stream is:
 + Recall the experience → assess the quality → organise what to say
-- Type → send → forget
-- Open app → close app → reopen
-- Login → logout → login
+- Type the message quickly → send it straight away → forget about it
+- Open the app → close the app → reopen it
+- Log in → rate with stars → log out
 = These are hidden cognitive steps before the observable action.
 
 ? The "divide and conquer" approach in task analysis means:
-+ Breaking a complex task into smaller sub-tasks until you reach basic operations
-- Splitting users into teams
-- Dividing the screen into halves
-- Removing tasks
++ Breaking a complex task into sub-tasks down to basic operations
+- Splitting the users into teams that each test one feature
+- Dividing the screen into halves for two tasks at once
+- Removing the hardest tasks so the rest are simpler
 = This is the core of hierarchical task analysis.
 
 ? Which is an observable action rather than hidden cognition?

@@ -1,8 +1,8 @@
 ? A standard cost is:
-+ A predetermined unit cost that should be incurred under efficient operating conditions
-- The actual cost at the end of the period
-- The total budget for an activity
-- The market price of a product
++ A predetermined unit cost under efficient operating conditions
+- The actual unit cost worked out at the end of the period
+- The total budget set for an activity or department
+- The market price at which the product is sold
 = A standard is per unit; a budget is for the total activity.
 
 ? Budget output 10,000 units at a standard cost of Rs 3 per unit. What is the budgeted cost in Rs?
@@ -18,9 +18,9 @@
 
 ? Material quantity standards come mainly from the:
 + Bill of materials (BOM), allowing for unavoidable waste
-- Payroll records
-- Sales budget
-- Cash book
+- Payroll records of the production workers and supervisors
+- Sales budget for the coming year
+- Cash book and bank statements
 = Price standards come from the purchasing department.
 
 ? Card: 2 kg at Rs 10, 3 hours at Rs 24, variable OH Rs 8 per hour, fixed OH Rs 6 per hour. What is the standard cost per unit in Rs?
@@ -44,9 +44,9 @@
 
 ? The fixed overhead **volume** variance is:
 - Actual FOH − budgeted FOH
-+ (Actual output − budgeted output) × FOAR per unit
-- Actual FOH − absorbed FOH
-- (AH − SH) × standard rate
++ (Actual output − budgeted output) × FOAR
+- Actual FOH − absorbed FOH (actual output × FOAR)
+- (Actual hours − standard hours) × standard rate
 = Producing more than budget (absorbed > budgeted) gives a favourable volume variance.
 
 ? With absorption costing, the sales volume variance is valued at:
@@ -61,8 +61,8 @@
 = (175 − 180) × 1,100 = −5,500 A.
 
 ? Which is a **limitation** of standard costing?
-- It helps set budgets
-+ It needs repetitive operations and homogeneous output, so it's unsuited to customised work and services
-- It acts as a control device
-- It simplifies inventory valuation
+- It helps managers set realistic budgets
++ It needs repetitive work and uniform output, so it suits services poorly
+- It acts as a control device for comparing actual results with standard
+- It simplifies the valuation of inventory at standard cost
 = Others: too much focus on direct labour, it suits only stable environments, and it conflicts with continuous improvement.

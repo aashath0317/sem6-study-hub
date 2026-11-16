@@ -1,8 +1,8 @@
 ? Project appraisal is best described as:
-+ Assessing and questioning proposals before resources are committed
-- Auditing completed projects
-- Preparing the cash budget
-- Valuing inventory
++ Assessing proposals before resources are committed
+- Auditing projects after they have been completed
+- Preparing the monthly cash budget for the firm
+- Valuing closing inventory at the year end
 = It evaluates whether an investment is worthwhile.
 
 ? Which methods **ignore** the time value of money?
@@ -17,10 +17,10 @@
 = 600k + 400k recovers the 1m by the end of year 2.
 
 ? The main weakness shown by Project A (payback 3 years, but 1.3m arriving in year 4) is that payback:
-- Uses accounting profit
+- Uses accounting profit instead of cash flows
 + Ignores cash flows after the payback point
-- Is hard to calculate
-- Always picks the larger project
+- Is too hard to calculate for long projects
+- Always picks the larger of the two projects
 = Payback ignores A's large year-4 inflow.
 
 ? What is the present value of 1,210 received in 2 years at 10%?
@@ -32,10 +32,10 @@
 = Average investment = (400,000 + 0) ÷ 2 = 200,000, so ARR = 63,750 ÷ 200,000 = 31.875%.
 
 ? NPV of zero means:
-- Reject the project
-+ Indifferent: the project earns exactly the required return (accept if necessary)
-- The project has no cash flows
-- IRR is zero
+- Reject the project, because it adds no value at all
++ Indifferent: it earns exactly the required return
+- The project has no cash inflows or outflows
+- The internal rate of return (IRR) is zero
 = NPV > 0 accept; < 0 reject; = 0 indifferent.
 
 ? Four projects have NPVs of +517,327, +214,920, 0 and a negative value. With resources for only one, choose:

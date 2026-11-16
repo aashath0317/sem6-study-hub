@@ -6,10 +6,10 @@
 = Memory chain C-I-S-T-M-E-P: "Can I See The Mined Evidence Please".
 
 ? Which KDD steps are data **preprocessing**?
-+ Steps 1–4 (cleaning, integration, selection, transformation)
-- Steps 5–7
-- Only step 1
-- Only step 5
++ Steps 1–4: cleaning, integration, selection, transformation
+- Steps 5–7: mining, pattern evaluation, knowledge presentation
+- Only step 1, data cleaning; the others are mining
+- Only step 5, because mining prepares the data
 = Mining is step 5; evaluation and presentation follow it.
 
 ? Data mining relates to KDD how?
@@ -27,10 +27,10 @@
 = The architecture is UI, pattern evaluation, mining engine, knowledge base, and DB/DW server.
 
 ? A data warehouse is:
-+ A repository of data from multiple sources, stored under a unified schema at a single site
-- A transactional database for daily operations
-- A single spreadsheet
-- A backup tape
++ A repository of data from many sources under one unified schema
+- A transactional database that runs the day-to-day operations
+- A single large spreadsheet shared by all departments
+- A backup copy of the operational database kept on tape
 = It's built by cleaning, integrating, transforming, loading and periodically refreshing data.
 
 ? A database where each record is a transaction ID plus a list of items bought is a:

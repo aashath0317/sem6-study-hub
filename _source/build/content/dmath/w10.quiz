@@ -10,10 +10,10 @@
 = The degree is the number of fields in each tuple.
 
 ? A **primary key** is:
-+ A chosen field or minimal combination of fields whose values uniquely identify each tuple
-- Any field with numbers
-- The first column always
-- A field that repeats
++ A field or minimal set of fields that uniquely identifies each tuple
+- Any field that contains only numbers, such as an amount or a price
+- Always the first column of the table, whatever it holds
+- A field whose values repeat across many tuples
 = E.g. a student index number.
 
 ? Which is the most suitable primary key for students?
@@ -39,9 +39,9 @@
 
 ? Selection S꜀ does what?
 + Keeps the rows (tuples) that satisfy condition C
-- Keeps the chosen columns
-- Combines two tables
-- Sorts the table
+- Keeps only the chosen columns (attributes)
+- Combines two tables on a common field
+- Sorts the rows of the table by C
 = E.g. Area = CS ∧ GPA > 3.5 keeps only Ackermann.
 
 ? Applying projection P₁,₃ to (2, 3, 0, 4) gives:
@@ -53,9 +53,9 @@
 
 ? After a projection, the number of rows can:
 + Decrease, because identical rows merge
-- Only increase
-- Never change
-- Double
+- Only increase, as columns are removed
+- Never change, because rows are kept
+- Double, one row for each column kept
 = Rows that become identical after dropping columns are merged.
 
 ? A **join** combines two relations by:

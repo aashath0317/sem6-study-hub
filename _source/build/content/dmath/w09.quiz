@@ -18,9 +18,9 @@
 
 ? R = {(1,1), (1,2), (2,1)} on {1, 2, 3, 4} is:
 + Not reflexive (missing (2,2), (3,3), (4,4))
-- Reflexive
-- An equivalence relation
-- Transitive and reflexive
+- Reflexive (it contains (1,1))
+- An equivalence relation (it is symmetric)
+- Transitive and reflexive on {1, 2, 3, 4}
 = Every (a, a) is needed.
 
 ? "a < b" on ℕ is:
@@ -31,8 +31,8 @@
 = 1 < 2, but not 2 < 1.
 
 ? "x and y have the same hometown" is:
-+ An equivalence relation (reflexive, symmetric, transitive)
-- Only symmetric
++ An equivalence relation
+- Only a symmetric relation
 - Not transitive
 - Not reflexive
 = Congruence mod m is another example. For lines, include coincident lines to make parallelism reflexive.
@@ -60,9 +60,9 @@
 
 ? A relation is a **function** when:
 + Each element of A appears exactly once as a first element
-- Each element of B appears exactly once
-- It's symmetric
-- It's reflexive
+- Each element of B appears exactly once as a second element
+- It is symmetric: (a, b) in R means (b, a) in R
+- It is reflexive: every (a, a) is in R
 = E.g. {(1,1), (2,4), (3,9), (4,16)} for b = a².
 
 ? A relation on {1, 2, 3} is transitive and contains (1,2) and (2,3). Which pair must it also contain?

@@ -3,17 +3,17 @@
 = 1,600 ÷ 800 = 2 : 1, the textbook rule of thumb.
 
 ? Why does the quick (acid-test) ratio exclude inventory?
-- Inventory is not an asset
-+ Inventory is the least liquid current asset: it must be sold and then collected
-- Inventory is already counted in receivables
-- Accounting standards require it
+- Inventory is not an asset until it has been sold
++ Inventory is the least liquid current asset: it must be sold first
+- Inventory is already counted inside the trade receivables figure
+- Accounting standards require inventory to be left out
 = The quick ratio tests whether short-term debts can be paid without selling stock.
 
 ? A very high current ratio (e.g. 5 : 1) may indicate:
-- Severe liquidity problems
-+ Strong liquidity, but too much capital tied up in idle assets
-- High gearing
-- Low profitability for certain
+- Severe liquidity problems and a risk of not paying debts
++ Strong liquidity, but too much money tied up in idle assets
+- High gearing, with too much long-term borrowing
+- Certain low profitability for the whole year
 = The lecture warns that too much liquidity can be unproductive.
 
 ? Using the lecture formula, non-current liabilities Rs 1,800k and equity Rs 3,000k. What is the gearing ratio (%)?
@@ -21,10 +21,10 @@
 = Gearing = NCL ÷ (equity + NCL) = 1,800 ÷ 4,800 = 37.5%.
 
 ? A debt-to-equity ratio of 1.5 means:
-+ Rs 1.50 of debt for every Rs 1 of equity: more reliance on debt and higher risk
-- The firm has no debt
-- Equity is 1.5 times debt
-- The firm is highly liquid
++ Rs 1.50 of debt for every Rs 1 of equity: higher risk
+- The firm has no debt, only Rs 1.50 of equity
+- Rs 1.50 of equity for every Rs 1 of debt: low risk
+- The firm is highly liquid and pays debts easily
 = A ratio above 1 means more debt than equity.
 
 ? Receivables Rs 700k and sales Rs 5,000k. What are the receivables (collection) days?
@@ -51,16 +51,16 @@
 
 ? Interest cover of 3× means:
 + Operating profit (EBIT) is three times the interest expense
-- Debt is three times equity
-- The current ratio is 3 : 1
-- The firm pays three dividends a year
+- Total debt is three times the shareholders' equity in the business
+- Current assets are three times the current liabilities
+- The firm pays its interest three times a year
 = A higher cover means a bigger buffer for paying interest.
 
 ? Which is a **limitation** of ratio analysis?
-- It makes financial data more meaningful
-- It helps judge creditworthiness
-+ It's based on past data, and different accounting policies make comparisons unreliable
-- It helps spot weaknesses
+- It makes the financial data more meaningful to users
+- It helps lenders judge the firm's creditworthiness before lending
++ It uses past data, and different policies distort comparisons
+- It helps managers spot weaknesses in performance
 = Other limitations: window dressing, inflation (historical cost), hard-to-set benchmarks, subjective interpretation.
 
 ? Which ratio family assesses **short-term solvency**?

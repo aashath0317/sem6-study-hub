@@ -7,9 +7,9 @@
 
 ? Vannevar Bush's 1945 essay "As We May Think" argued that:
 + Humans should be at the centre, with technology in the background
-- Computers should replace humans
-- Only experts should use computers
-- Interfaces should be command-line only
+- Computers should replace humans in routine knowledge work
+- Only trained experts should be allowed to use computers
+- Interfaces should be command-line only, for precision
 = It's an early vision of human-centred technology.
 
 ? Processors embedded everywhere (ATMs, cars, rice cookers) is called:
@@ -28,9 +28,9 @@
 
 ? The word "credit" meaning different things in finance and in education shows that:
 + Perception is shaped by context and experience
-- Words have only one meaning
-- Users can't read
-- Interfaces should avoid words
+- Every word has only one fixed meaning for all users
+- Users cannot read financial terms correctly
+- Interfaces should avoid using words at all
 = Designers must support the right perception for their users.
 
 ? A face-recognition door that opens as you approach is an example of:
@@ -49,23 +49,23 @@
 
 ? In the HCI space, HCI sits under human factors engineering alongside:
 + Industrial design and product design
-- Accounting and law
-- Networking and databases
-- Marketing and sales
+- Accounting and business law
+- Computer networking and databases
+- Marketing and sales management
 = HCI itself includes UI design, UX design and interaction design.
 
 ? The main difference between HCI and human factors engineering is:
-+ HCI covers digital interfaces only; HFE covers digital and physical
-- HFE is only about software
-- They are identical
-- HCI covers only hardware
++ HCI covers digital interfaces; HFE covers digital and physical
+- HFE is only about software screens, while HCI covers physical hardware
+- They are identical fields with two different names
+- HCI covers only physical hardware such as keyboards and mice
 = HFE is broader.
 
 ? A task-centred view of HCI says that:
-+ Users interact with the task, and the interface should become invisible
-- Users should focus on the interface
-- Tasks don't matter
-- Interfaces should be as visible as possible
++ Users focus on the task, and the interface should become invisible
+- Users should focus on learning the interface itself
+- Tasks don't matter as long as the interface looks good
+- Interfaces should be as visible and noticeable as possible
 = Good interfaces get out of the way.
 
 ? HCI is multidisciplinary. Which discipline is **not** usually part of it?

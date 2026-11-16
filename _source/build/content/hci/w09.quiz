@@ -33,16 +33,16 @@
 
 ? Fitts's law is MT = a + b·log₂(2D/W). Movement time increases when:
 + The distance is larger or the target is smaller
-- The target is bigger
-- The target is closer
-- The colour is brighter
+- The target is bigger and easier to see
+- The target is closer to the cursor
+- The target's colour is brighter or bolder
 = Far and small means slow; near and big means fast.
 
 ? Why are screen edges and corners (Start menu, Apple menu) easy targets?
-+ The cursor is stopped at a screen edge, reducing overshoot in that direction
-- They're brighter
-- They're closer to the centre
-- They use keyboard shortcuts
++ The cursor stops at the edge, so you can't overshoot
+- They are brighter than the rest of the screen
+- They are closer to the centre of the screen
+- They can only be reached with keyboard shortcuts
 = Fitts's law design implication.
 
 ? D = 8 and W = 2. What is the index of difficulty ID = log₂(2D/W)?
@@ -50,15 +50,15 @@
 = log₂(16/2) = log₂ 8 = 3.
 
 ? Which is a **limitation** of GOMS and KLM?
-+ They ignore novices, errors, emotion and fatigue, and need structured goals
-- They need working prototypes
-- They need many real users
-- They can't predict time
++ They ignore novices, errors, emotion and fatigue
+- They need a fully working prototype to run
+- They need many real users in a lab study
+- They cannot predict how long a task will take
 = They predict performance without prototypes or users, which is their advantage.
 
 ? The KLM operator H stands for:
 + Homing: moving the hand between keyboard and mouse
-- Holding a key
-- Help
-- Highlight
+- Holding a key down for a long press
+- Help: looking up how to do the task in the manual
+- Highlighting text by dragging the mouse
 = It takes about 0.4 s.

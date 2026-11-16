@@ -1,15 +1,15 @@
 ? A decision tree is best described as:
 + A map of the possible outcomes of a series of related choices
-- A graph with no vertices
-- A list of edges sorted by weight
-- A binary search tree of words
+- A graph with no vertices, only weighted edges
+- A list of the graph's edges sorted in order of their weight
+- A binary search tree that stores words
 = It weighs actions by their costs, probabilities and benefits.
 
 ? In Definition 1, each internal vertex of a decision tree corresponds to:
-+ A decision, with a subtree for each possible outcome
-- A leaf
-- A circuit
-- An edge weight
++ A decision, with a subtree for each outcome
+- A leaf, which holds one final outcome
+- A circuit back to the root
+- An edge weight that gives the path's cost
 = The leaves are the final results.
 
 ? When drawing a decision tree, an uncertain outcome is drawn as a:
@@ -44,9 +44,9 @@
 
 ? Preorder traversal visits:
 + The root first, then each subtree left to right in preorder
-- Each subtree in postorder, then the root
-- Only the leaves
-- The vertices in alphabetical order
+- Each subtree left to right in postorder, then the root last
+- The first subtree, then the root, then the other subtrees
+- The vertices level by level from the top
 = Postorder visits the root last.
 
 ? In Example 13.2.1 (a → b, c, d; b → e, f; e → j, k; k → n, o, p; d → g, h, i; g → l, m), what is the last vertex of the postorder traversal?
@@ -65,9 +65,9 @@
 
 ? A spanning tree of a simple graph G is:
 + A subgraph of G that is a tree containing every vertex of G
-- Any path in G
-- G with all edges removed
-- The longest circuit in G
+- Any path in G that visits each vertex of G exactly once
+- G with all of its edges removed
+- The longest simple circuit in G
 = Remove edges from simple circuits until none remain.
 
 ? Theorem 1 states that a simple graph is connected if and only if:
@@ -89,10 +89,10 @@
 = The leaves are the subnetworks containing receiving computers.
 
 ? Why do multicast routers use a spanning tree?
-+ So data never loops back to a router it has already reached
-- To send a separate copy to every computer
-- To make the network slower
-- Because unicasting is required
++ So data never loops back to a router it already reached
+- To send a separate copy of the data to every computer
+- To make the network slower but more secure
+- Because unicasting is required by the routers
 = Loops are circuits; a tree has none.
 
 ? A decision tree that becomes over-complex and doesn't generalise well to new data suffers from:
@@ -104,7 +104,7 @@
 
 ? In the badminton tree, when the outlook is cloudy:
 + You play, whatever the other variables are
-- It depends on humidity
-- It depends on wind
-- You never play
+- It depends on the humidity being normal
+- It depends on whether it is windy
+- You never play when it is cloudy
 = Sunny depends on humidity; rainy depends on wind.

@@ -7,16 +7,16 @@
 
 ? Why is evaluation called the core of user-centred design?
 + Without user feedback you can't know if users are satisfied
-- It's the first stage of the life cycle
-- It replaces prototyping
-- It needs no users
+- It is always the very first stage of the life cycle
+- It replaces the need for building any prototypes
+- It needs no users, only the designer's judgement
 = Feedback shows satisfaction, areas to improve and preferred features.
 
 ? Evaluation gives feedback on:
 + What we have designed, not what we planned
-- Only what we planned
-- Only the competitor's product
-- The programming language
+- Only what we planned, before any design exists
+- Only the competitor's product and its features
+- The programming language used to build it
 = It tests the actual design, usually through a prototype.
 
 ? The evaluation method should match the prototype based on its:
@@ -28,9 +28,9 @@
 
 ? Asking users whether they like a colour theme or concept is typical of evaluation at which stage?
 + Early: qualitative feedback
-- Middle: usability
-- Late: quantitative
-- After release only
+- Middle: usability testing
+- Late: quantitative tests
+- After release: sales data
 = Early feedback is abstract and about preferences.
 
 ? "Does it minimise your workload? Is it intuitive? Is it easy to learn?" These questions check:
@@ -48,10 +48,10 @@
 = Other late measures: jobs completed per day, sales volumes.
 
 ? Why is evaluation described as a journey?
-+ You evaluate early, in the middle and late, iterating until the interface meets user needs
-- It's done only once at the end
-- It requires travelling to users
-- It never involves prototypes
++ You evaluate early, middle and late, iterating until needs are met
+- It is done only once, at the very end of the project before release
+- It requires the team to travel to every user's home
+- It never involves prototypes, only finished products
 = The evaluation type is coupled with the design stage.
 
 ? Which is **not** one of the three main types of evaluation?
@@ -63,9 +63,9 @@
 
 ? Empirical evaluation typically uses:
 + Controlled experiments to evaluate quantitatively
-- Only users' opinions about patterns
-- A model with no users
-- Guesswork
+- Users' opinions about patterns and colours
+- A predictive model with no users at all
+- The designer's guesswork about usability
 = The lecture recommends qualitative feedback to inform experiment design. Empirical evidence more broadly can also include qualitative observation.
 
 ? Predictive evaluation is different because it:
@@ -76,10 +76,10 @@
 = Modelling effort varies. It can compare designs before implementation, but does not replace real-user evidence.
 
 ? Why should predictive evaluation be complemented by real-user studies?
-+ A model estimate can miss actual users' errors, learning, context and satisfaction
-- Models are illegal
-- Models always need hundreds of test users
-- Real-user feedback cannot inform design
++ A model can miss real users' errors, learning, context and satisfaction
+- Predictive models are not allowed in published studies
+- Models always need hundreds of real test users before they can be run
+- Real-user feedback cannot be used to improve a design
 = Use model predictions as one source of evidence; verify relevant assumptions with users.
 
 ? An assessment that gives the same result each time you repeat it is:

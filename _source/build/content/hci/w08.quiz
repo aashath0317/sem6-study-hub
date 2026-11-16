@@ -1,36 +1,36 @@
 ? A mental model is:
-+ An internal simulation the user relies on to predict how a system will behave
-- The system's source code
-- A diagram drawn by the designer
-- A user's password
++ An internal simulation the user uses to predict how a system behaves
+- The system's source code and internal data structures
+- An architecture diagram drawn by the designer for developers
+- The set of passwords and settings a user remembers
 = Mismatched models cause errors.
 
 ? The bus bell rope was silently replaced by seat buttons with no signs. Passengers are confused because:
-+ Their old mental model no longer applies, and there are no signifiers for the new system
-- The rope is mechanically broken
-- They have bad memory
-- The bus is too fast
++ Their old mental model no longer applies, and there are no signifiers
+- The new buttons are mechanically broken and don't ring the bell
+- Passengers have poor memory and forget where the rope was
+- The bus moves too fast for passengers to reach the buttons
 = If the rope were simply broken, the model would be correct but the mechanism faulty.
 
 ? An interface representation should match:
 + The user's mental model, not the implementation model
-- The database schema
-- The programmer's code structure
-- The hardware layout
+- The database schema that is used to store the data
+- The programmer's code structure, classes and modules
+- The physical hardware layout of the device
 = E.g. inline attachments in Gmail vs a legacy "Update" step that lost files.
 
 ? Which is a characteristic of a good representation?
-+ It makes relationships explicit and excludes extraneous detail
-- It shows every internal detail
-- It hides all constraints
-- It separates objects from their actions
++ It makes relationships explicit and leaves out extra detail
+- It shows every internal detail so nothing is hidden
+- It hides all constraints so users feel free
+- It separates objects from the actions done on them
 = It also keeps objects and actions together and exposes constraints.
 
 ? Pouring orange juice into your coffee instead of the glass is a:
 + Action-based slip (right action, wrong object)
-- Knowledge-based mistake
-- Rule-based mistake
-- Memory-lapse mistake
+- Knowledge-based mistake (wrong mental model)
+- Rule-based mistake (wrong rule applied)
+- Memory-lapse mistake (forgot the goal)
 = The plan was right; the execution went wrong.
 
 ? Forgetting to collect your card after an ATM withdrawal is a:
@@ -49,21 +49,21 @@
 
 ? Learned helplessness happens when:
 + Repeated failures make the user give up trying
-- The user becomes an expert
-- The designer forgets the user
-- The system is too simple
+- The user practises until they become an expert
+- The designer forgets who the users are
+- The system is too simple to be interesting
 = Avoid it with forgiving designs and support for different learners.
 
 ? Expert blindness is when:
-+ Designers miss steps that seem "obvious" to them but aren't to novices
-- Experts can't see the screen
-- Users refuse to learn
-- The interface has no colour
++ Designers skip steps that seem "obvious" to them but not to novices
+- Expert users can no longer see small text and icons on the screen
+- Users refuse to learn anything new once they are experts
+- The interface uses no colour, so experts miss warnings
 = The fix is to test with novices.
 
 ? Which design principles most help users form accurate mental models?
 + Consistency, affordance and mapping
-- Colour and sound only
-- Long manuals
-- Random layouts
+- Bright colours and sound effects
+- Long, detailed user manuals
+- Random layouts on each screen
 = They make the system's behaviour predictable.

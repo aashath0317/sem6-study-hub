@@ -1,8 +1,8 @@
 ? f : ℤ → ℤ, f(x) = x². The **range** is:
 + The perfect squares {0, 1, 4, 9, …}
-- All integers
-- All positive integers
-- {0, 1}
+- All integers {…, −1, 0, 1, …}
+- All positive integers {1, 2, 3, …}
+- Only {0, 1}, the fixed points
 = The range need not equal the codomain.
 
 ? The domain of f(x) = √(x − 1) is:
@@ -28,9 +28,9 @@
 
 ? f : ℝ → ℝ, f(x) = 3x − 5 is:
 + A bijection (one-to-one and onto)
-- One-to-one only
-- Onto only
-- Neither
+- One-to-one only (not onto)
+- Onto only (not one-to-one)
+- Neither one-to-one nor onto
 = So it has an inverse.
 
 ? For f(x) = 3x − 5, what is f⁻¹(10)?
@@ -54,14 +54,14 @@
 
 ? f⁻¹(x) means:
 + The inverse function, which undoes f
-- 1/f(x)
-- f(x) − 1
-- −f(x)
+- The reciprocal 1/f(x) of each value
+- The value f(x) − 1 for each x
+- The negative −f(x) of each value
 = The inverse exists only for bijections; f⁻¹ ≠ 1/f.
 
 ? A function is **onto** when:
-+ Every element of the codomain has at least one preimage (range = codomain)
-- Different inputs give different outputs
-- It's defined on all real numbers
-- It's increasing
++ Every codomain element has at least one preimage
+- Different inputs always give different outputs
+- It is defined for every real number input
+- It is strictly increasing over its domain
 = Different inputs giving different outputs is one-to-one.

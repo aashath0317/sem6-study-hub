@@ -1,8 +1,8 @@
 ? Feedback is:
-+ Information about the effect of an action, returned to the person who acted
-- The action itself
-- The effect itself
-- An error message only
++ Information about the effect of an action, returned to the actor
+- The action itself, such as pressing a button
+- The effect itself, such as the file being saved
+- An error message only, shown to the user when something fails
 = The effect is that the volume goes up; the feedback is hearing it louder.
 
 ? A kettle whistling when the water boils is an example of:
@@ -14,9 +14,9 @@
 
 ? Why do feedback cycles matter?
 + We learn through them, so the next interaction improves
-- They make interfaces slower
-- They replace the need for design
-- They only matter for games
+- They make interfaces slower, so they should be removed
+- They replace the need for careful interface design
+- They only matter for games, not for everyday apps
 = They bridge the gulfs of execution and evaluation.
 
 ? The bridge of **execution** consists of:
@@ -35,9 +35,9 @@
 
 ? The **visceral** level of design is about:
 + Look and feel: the immediate reaction
-- Usability and function
-- Meaning, pride and brand
-- Price
+- Usability and function: how well it works
+- Meaning, pride and brand: what it says about you
+- Price and value for money
 = Behavioural = usability; reflective = meaning and self-image.
 
 ? Being proud to own a luxury brand appeals to which level?
@@ -56,14 +56,14 @@
 
 ? A bank app showing "Transfer successful" after you send money is:
 + Feedback that closes the evaluation side of the cycle
-- A gulf of execution
-- A slip
-- Unnecessary
+- A gulf of execution between you and the bank
+- A slip, because the transfer was a mistake
+- Unnecessary, since the money has already gone
 = Without it, the user can't tell what happened.
 
 ? Designer's question: "How easily can one tell what actions are possible?" relates to:
 + The gulf of execution (what the user can do)
-- The gulf of evaluation
-- The reflective level
-- Ergonomics only
+- The gulf of evaluation (what state it is in)
+- The reflective level of design (brand, pride)
+- Ergonomics only (posture and comfort)
 = Questions about perceiving and interpreting the state relate to evaluation.

@@ -49,16 +49,16 @@
 
 ? An Undo button demonstrates:
 + Tolerance (and reversibility)
-- Simplicity
-- Mapping
-- Equity
+- Simplicity (fewer steps)
+- Mapping (natural layout)
+- Equity (equal access)
 = This is also called defensive design.
 
 ? Using colour **plus** an icon (not colour alone) demonstrates:
 + Perceptibility (multi-modal)
-- Consistency
-- Simplicity
-- Comfort
+- Consistency (same look)
+- Simplicity (less clutter)
+- Comfort (less strain)
 = Colour-blind users still get the message.
 
 ? A door handle that invites pulling demonstrates:
@@ -69,8 +69,8 @@
 = Affordance means an object's design suggests how to use it.
 
 ? Which principle appears in nearly every principle set (the common core)?
-+ Feedback (with visibility, consistency, error prevention and memory load)
-- Equity
-- Comfort
-- Documentation
++ Feedback, alongside visibility and consistency
+- Equity, alongside flexibility and comfort
+- Comfort, alongside structure and equity
+- Documentation, alongside help and training
 = These recur in Norman, Nielsen and Shneiderman.

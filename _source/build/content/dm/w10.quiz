@@ -1,8 +1,8 @@
 ? The two main costs of Apriori that FP-growth avoids are:
 + Huge candidate sets and repeated database scans
-- Too few rules and slow memory
-- Lack of support and confidence
-- Its need for class labels
+- Too few rules and too little memory use
+- Missing support counts and confidence values
+- Its need for class labels and training data
 = With 10⁴ frequent items, Apriori generates about 10⁷ candidate pairs.
 
 ? How many database scans does FP-growth need?
@@ -10,24 +10,24 @@
 = One scan to count item supports, and one to build the FP-tree.
 
 ? When building an FP-tree, items in each transaction are first:
-+ Sorted in descending order of support (infrequent items removed)
-- Sorted alphabetically
-- Shuffled randomly
-- Sorted by price
++ Sorted by descending support, infrequent items removed
+- Sorted alphabetically, keeping every item
+- Sorted by ascending support, so rare items come first
+- Kept in the order they were bought
 = Shared prefixes then share branches, with counts incremented.
 
 ? The header table in an FP-tree:
-+ Lists each frequent item with node-links to all its occurrences in the tree
-- Stores the transactions
-- Holds the confidence values
-- Is the root node
++ Lists each frequent item with node-links to its occurrences
+- Stores the original transactions in their scanned order
+- Holds the confidence value of each generated rule
+- Is the null root node from which every branch starts
 = Node-links let mining start from each item quickly.
 
 ? FP-growth mining starts from:
-+ The least frequent item (the bottom of the header table) as a suffix
-- The most frequent item
-- The root
-- A random item
++ The least frequent item (bottom of the header table)
+- The most frequent item (top of the header table)
+- The null root node of the FP-tree
+- A randomly chosen frequent item
 = Then: conditional pattern base → conditional FP-tree → recurse.
 
 ? Item p has prefix paths {f,c,a,m}:2 and {c,b}:1, with min_sup 3. Which frequent pattern contains p?
@@ -40,15 +40,15 @@
 ? FP-growth is described as a:
 + Divide-and-conquer method without candidate generation
 - Level-wise candidate generate-and-test method
-- Clustering algorithm
-- Decision tree method
+- Density-based clustering method for transactions
+- Decision tree method using information gain
 = FP-growth avoids explicit candidate generation, but the speedup depends on data and implementation.
 
 ? If the FP-tree doesn't fit in memory, use:
 + Projected databases (partition the data)
-- A bigger min_conf
-- Apriori pruning
-- Normalisation
+- A higher minimum confidence threshold
+- Apriori pruning of the candidate sets
+- Min-max normalisation of the items
 = Each projected database is mined separately.
 
 ? Rules over concept hierarchies (e.g. milk ⇒ bread at different levels) are:
@@ -60,9 +60,9 @@
 
 ? age(X, "20–29") ∧ occupation(X, "student") ⇒ buys(X, "laptop") is a:
 + Multidimensional (inter-dimension) association rule
-- Single-dimensional rule
-- Hybrid-dimension rule
-- Multilevel rule
+- Single-dimensional (intra-dimension) association rule
+- Hybrid-dimension rule with a repeated predicate
+- Multilevel rule across a concept hierarchy
 = No predicate is repeated. Hybrid rules repeat a predicate.
 
 ? Specifying the form of rules to mine, e.g. P(X) ∧ Q(X) ⇒ buys(X, "office software"), uses:

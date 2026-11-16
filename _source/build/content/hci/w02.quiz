@@ -4,9 +4,9 @@
 
 ? The **gulf of execution** is the gap between:
 + What the user intends to do and the actions the system allows
-- The system state and the user's interpretation of it
-- Two users
-- Input and output devices
+- The system's current state and the user's interpretation of that state
+- Two different users doing the same task
+- The system's input devices and output devices
 = Fix it with affordances and good mapping.
 
 ? A file upload with no progress bar mainly creates a wide:
@@ -24,17 +24,17 @@
 = The user knows the goal but can't see how to do it.
 
 ? A **slip** is:
-+ The right plan, but the wrong action (e.g. hitting a tiny adjacent button)
-- A wrong goal or mental model
-- A system crash
-- A deliberate violation
++ The right plan but the wrong action, e.g. a tiny adjacent button
+- A wrong goal or plan, caused by an incorrect mental model
+- A system crash that loses the user's work
+- A deliberate violation of a known safety rule
 = Fix slips with better design.
 
 ? A **mistake** is:
 + A wrong goal or plan, from an incorrect mental model
-- The right plan carried out wrongly
-- A typing error
-- A hardware fault
+- The right plan carried out with the wrong action
+- A typing error made while entering text quickly
+- A hardware fault that stops the device working
 = Fix mistakes by educating the user and giving clearer models.
 
 ? Abowd and Beale's framework has which four components?
@@ -45,17 +45,17 @@
 = Articulation and performance make up execution; presentation and observation make up evaluation.
 
 ? How does Abowd and Beale's framework differ from Norman's model?
-+ It models both the user and the system; Norman's is user-centred only
-- It has 7 stages
-- It ignores the system
-- It only covers ergonomics
++ It models both the user and the system; Norman's is user-centred
+- It has seven stages, the same as Norman's action cycle
+- It ignores the system completely and models only the user's goals
+- It only covers ergonomics, such as posture and lighting
 = Norman's model has 7 stages and 2 gulfs.
 
 ? Ergonomics in HCI is mainly about:
 + The physical side: controls, environment, health and colour
-- Programming languages
-- Marketing
-- Database design
+- Choosing programming languages for the interface code
+- Marketing the product to the right customers
+- Designing the database behind the interface
 = Example: red/green colour-blindness affects colour choices.
 
 ? Which interaction style uses Windows, Icons, Menus and Pointers?

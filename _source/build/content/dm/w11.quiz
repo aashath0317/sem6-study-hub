@@ -1,15 +1,15 @@
 ? Classification differs from (numeric) prediction because classification predicts:
 + Categorical class labels; prediction models continuous values
-- Continuous values; prediction predicts labels
-- Clusters without labels
-- Only yes/no answers
+- Continuous values; prediction predicts categorical labels
+- Clusters of similar objects, without any class labels
+- Only yes/no answers, never more than two classes
 = Both are supervised learning.
 
 ? Why must the test set be independent of the training set?
-+ Testing on training data gives an optimistic estimate because of overfitting
-- It makes training faster
-- The algorithm requires it to run
-- It reduces the number of attributes
++ Testing on training data gives an over-optimistic accuracy (overfitting)
+- It makes training faster because there is less data to learn from
+- The algorithm cannot run unless the two sets are separate
+- It reduces the number of attributes the model has to use
 = An overfitted model learns anomalies of the training data.
 
 ? In a decision tree, a **leaf node** represents:
@@ -21,9 +21,9 @@
 
 ? ID3, C4.5 and CART use which attribute selection measures?
 + Information gain, gain ratio, Gini index (respectively)
-- Gini, information gain, gain ratio
-- Support, confidence, lift
-- Mean, median, mode
+- Gini index, information gain, gain ratio (respectively)
+- Support, confidence, lift (respectively)
+- Gain ratio, Gini index, information gain (respectively)
 = All three are greedy, top-down, recursive algorithms.
 
 ? A set has 9 "yes" and 5 "no". What is its entropy Info(D) (3 decimals)?
@@ -39,10 +39,10 @@
 = A pure node has zero uncertainty.
 
 ? Why use **gain ratio** instead of information gain?
-+ Information gain is biased towards attributes with many values (e.g. IDs); gain ratio normalises by SplitInfo
-- Gain ratio is faster
-- Information gain can't handle numbers
-- Gain ratio needs no class labels
++ Information gain favours many-valued attributes (e.g. IDs); gain ratio corrects this
+- Gain ratio is faster because it skips the whole entropy calculation for each split
+- Information gain cannot handle numeric attributes at all
+- Gain ratio does not need class labels to choose a split
 = Gain ratio = Gain ÷ SplitInfo.
 
 ? Gini index for a node with class proportions 0.5 and 0.5 is:
@@ -50,10 +50,10 @@
 = 1 − (0.25 + 0.25) = 0.5.
 
 ? With the Gini index (CART), the attribute chosen for the split is the one with:
-+ The minimum Gini index (largest reduction in impurity), using binary splits
-- The maximum Gini index
-- The most values
-- The highest support
++ The minimum Gini index (largest drop in impurity)
+- The maximum Gini index (most mixed partitions)
+- The most distinct values, giving the most branches
+- The highest support among the candidate attributes
 = There are 2ᵛ − 2 nonempty proper subsets, or (2ᵛ − 2)/2 distinct unordered binary splits.
 
 ? Which is **not** a criterion for comparing classifiers?

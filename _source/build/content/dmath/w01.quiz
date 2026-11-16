@@ -6,10 +6,10 @@
 = 2 > 3 is false.
 
 ? P(x, y, z): "x + y = z". P(x, 3, z) is:
-- True
-- False
+- True (any x and z satisfy it once y = 3)
+- False (x + 3 can never equal z)
 + Not a proposition (x and z are still free)
-- Always true
+- Always true, because 3 is a constant
 = A propositional function becomes a proposition only when all its variables are given values or quantified.
 
 ? p ⇒ q is false only when:

@@ -1,8 +1,8 @@
 ? A tree is:
 + A connected undirected graph with no simple circuits
-- Any graph with no loops
-- A disconnected graph
-- A directed graph with cycles
+- Any undirected graph that has no loops or multiple edges
+- A disconnected graph with no circuits
+- A directed graph that contains cycles
 = A forest has no simple circuits but may be disconnected.
 
 ? How many edges does a tree with 15 vertices have?
@@ -11,9 +11,9 @@
 
 ? A graph with 10 vertices and 10 edges is:
 + Not a tree (a tree would have 9 edges)
-- Definitely a tree
-- A forest of two trees
-- A binary tree
+- Definitely a tree (edges = vertices)
+- A forest of exactly two trees
+- A full binary tree of height 3
 = Too many edges means there must be a circuit.
 
 ? In a tree, between any two vertices there is:
@@ -45,10 +45,10 @@
 = Follow the path from e up to the root.
 
 ? In a binary search tree, each vertex's key is:
-+ Greater than every key in its left subtree and less than every key in its right subtree
-- Smaller than all keys below it
-- Equal to its children's keys
-- Random
++ Greater than all keys in its left subtree, less than all in its right
+- Smaller than all the keys in both of its subtrees
+- Equal to the keys of its two children
+- Less than all keys in its left subtree, greater than all in its right
 = New items are inserted by comparing from the root.
 
 ? Building a BST from "mathematics, physics, geography, …": where does "physics" go?

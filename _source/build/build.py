@@ -160,6 +160,11 @@ def parse_quiz(path):
             cur["q"] += "<br>" + md_inline(line.strip())
     for q in qs:
         if "n" not in q and "a" not in q: raise ValueError(f"{path}: no answer for {q['q'][:60]}")
+        if q.get("o") and len(q["o"]) > 1:
+            # Warn when the right answer stands out as the longest option: students can guess it by length.
+            ls = sorted((len(html.unescape(re.sub("<[^>]+>", "", o))), i) for i, o in enumerate(q["o"]))
+            if ls[-1][1] == q["a"] and ls[-1][0] > ls[-2][0] * 1.15 and ls[-1][0] - ls[-2][0] > 8:
+                print(f"warning: {os.path.basename(os.path.dirname(path))}/{os.path.basename(path)}: right answer is clearly the longest option: {re.sub('<[^>]+>', '', q['q'])[:60]}")
         if not q["o"]: del q["o"]
     return qs
 

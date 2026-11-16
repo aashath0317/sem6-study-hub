@@ -42,17 +42,17 @@
 = Depth = 12 ÷ 3 = 4.
 
 ? A weakness of **equal-width** binning is that:
-+ Outliers can stretch the range, leaving most values in a few bins and some bins empty
-- It needs class labels
-- It always gives the same count per bin
-- It can't be computed
++ Outliers stretch the range, so most values crowd into a few bins
+- It needs class labels to decide where each bin starts
+- It always puts the same number of values in every bin
+- It cannot be computed when the data contains negative numbers
 = Equal-depth bins avoid this by holding the same number of values each.
 
 ? With β buckets, the MaxDiff histogram places boundaries at:
 + The β − 1 largest differences between adjacent values
-- Every value
-- Equal widths
-- The mean and median
+- Between every pair of adjacent values in the data
+- At equal widths across the whole range of values
+- At the mean and the median of the values
 = V-Optimal minimises the variance within buckets.
 
 ? Discretisation that uses class labels is called:
@@ -63,8 +63,8 @@
 = Top-down (splitting) and bottom-up (merging) describe the direction instead.
 
 ? A concept hierarchy for age (youth / middle-aged / senior) is an example of:
-+ Recursive discretisation, replacing low-level values with higher-level concepts
-- Normalisation
-- Sampling
-- Correlation analysis
++ Discretisation that replaces low-level values with higher-level concepts
+- Normalisation that rescales every age value into a fixed range like [0, 1]
+- Sampling that keeps a small subset of the ages
+- Correlation analysis between age and another attribute
 = It's done before mining, giving concise, knowledge-level results.

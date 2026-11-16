@@ -1,15 +1,15 @@
 ? A business process is best described as:
-+ A structured, sequenced set of activities that produces a product or service for customers
-- A single accounting entry
-- The company's organisation chart
-- A software package such as SAP
++ A structured set of activities that delivers a product or service
+- A single accounting entry recorded in the general journal for one sale
+- The company's organisation chart showing who reports to whom
+- A software package such as SAP that runs the business
 = Business processes are repeatable and standardised.
 
 ? The three core business processes (Klamm, 2004) are:
 + Acquire & pay · convert · sell & collect
-- Plan · do · check
-- Record · classify · summarise
-- Buy · store · audit
+- Plan & budget · do · check & review
+- Record · classify · summarise & report
+- Buy & store · produce · audit & file
 = Acquisition/payment, conversion (production) and sales/collection.
 
 ? Which is an **external** user of accounting information?
@@ -20,10 +20,10 @@
 = External users also include vendors, investors and lenders.
 
 ? An accounting information system (AIS) is a system that:
-+ Collects, stores, manages, processes, retrieves and reports financial data
-- Only prints invoices
-- Replaces the need for accountants
-- Manages only HR records
++ Collects, stores, processes and reports financial data
+- Only prints invoices and receipts for customers
+- Replaces the need for accountants in the business
+- Manages only the human resources (HR) records
 = It turns transaction data into useful information for decision-makers.
 
 ? Which is **not** one of the five components of a computerised AIS (Moscove)?
@@ -34,10 +34,10 @@
 = The five are people, procedures, data, software and hardware.
 
 ? Data vs information: which is **information**?
-- A raw list of individual sales transactions
-+ A summary showing total sales by product for the month, used for a decision
-- A single invoice number
-- The selling date of one item
+- A raw list of every individual sales transaction for the month
++ A summary of total sales by product, used for a decision
+- A single invoice number printed on one sales document
+- The selling date and time of one item at the till
 = Information is data organised in a meaningful way that supports decisions.
 
 ? The design principle requiring that an AIS's benefits exceed its costs is:
@@ -55,10 +55,10 @@
 = SAP Business One suits SMEs; Dynamics GP and PeopleSoft suit larger organisations.
 
 ? Which is an objective of internal control?
-- Increasing sales prices
-+ Safeguarding assets and ensuring accurate, reliable data
-- Avoiding all taxes
-- Eliminating the need for audits
+- Increasing sales prices to improve profit margins
++ Safeguarding assets and ensuring reliable data
+- Avoiding all taxes the business would have to pay
+- Eliminating the need for any external audit
 = Internal control also promotes operational efficiency and adherence to policies.
 
 ? In Porter's value chain, which is a **support** activity?
@@ -70,14 +70,14 @@
 
 ? The business entity concept means:
 + The business is treated as separate from its owner
-- The business will continue indefinitely
-- Only money-measurable items are recorded
-- Assets are recorded at historical cost
+- The business is expected to continue operating indefinitely
+- Only items that can be measured in money are recorded
+- Assets are recorded at the historical cost paid for them
 = Personal transactions of the owner are not business transactions.
 
 ? The going concern assumption means that:
-- Only cash transactions are recorded
-+ The business is assumed to continue operating for the foreseeable future
-- Assets are always shown at market value
-- Profit is recognised only when cash is received
+- Only cash transactions are recorded, not credit ones
++ The business will continue operating for the foreseeable future
+- Assets must always be shown at their current market value
+- Profit is recognised only when the cash is actually received
 = That's why assets are valued at cost, not liquidation value.

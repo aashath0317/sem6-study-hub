@@ -1,22 +1,22 @@
 ? Direct manipulation means:
-+ Acting on the object itself (pinch to zoom, drag and drop)
-- Typing commands
-- Using menus only
-- Asking someone else
++ Acting on the object itself, e.g. pinch to zoom, drag and drop
+- Typing text commands that describe what to do
+- Choosing every action from drop-down menus and dialog boxes only
+- Asking another person to operate the system for you
 = It narrows both gulfs.
 
 ? Moving a file by dragging it into a folder, instead of typing `mv` in a CLI, is an example of:
 + The desktop metaphor (direct manipulation)
-- Indirect manipulation
-- A slip
-- Semantic memory
+- Indirect manipulation through a command
+- An action slip with the mouse
+- Semantic memory of file paths
 = The CLI requires remembering syntax.
 
 ? A good interface is described as:
 + Metaphorically invisible but literally present (it still gives feedback)
-- Literally invisible, with no feedback
-- Highly visible and distracting
-- Text-only
+- Literally invisible, giving no feedback at all so that it never distracts
+- Highly visible and eye-catching on every screen
+- Text-only, so there are no confusing icons
 = The user thinks about the task, not the interface.
 
 ? An interface that is **literally** invisible (no feedback) is bad because:
@@ -49,21 +49,21 @@
 
 ? Which task is given as an example **lacking** direct manipulation?
 + Picking an emoji or fixing a typo on a phone
-- Pinch to zoom
-- Drag and drop
-- Swiping photos
+- Pinching to zoom into a photo or map
+- Dragging and dropping a file into a folder
+- Swiping left and right through photos
 = Car climate controls are another example.
 
 ? Direct manipulation helps because it reduces:
 + Both the gulf of execution and the gulf of evaluation
-- Only screen size
-- The number of users
-- Feedback
+- Only the screen size needed for the interface
+- The number of users who can use the system
+- The amount of feedback the system has to give
 = The object's response is visible straight away.
 
 ? Invisibility **by design** means:
-+ The interface is intuitive from the first use; the designer does the work
-- Users must practise for months
-- The interface has no screen
-- There's no feedback
++ It's intuitive from the first use; the designer does the work
+- Users must practise for months until it feels natural
+- The interface has no screen, only voice commands
+- The system gives no feedback, so nothing distracts
 = Example: YouTube on an iPad.

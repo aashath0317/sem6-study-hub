@@ -67,8 +67,8 @@
 = The order reverses.
 
 ? A⁰ for an n × n matrix A is:
-+ Iₙ (the identity matrix)
-- The zero matrix
-- A
-- Undefined
++ Iₙ, the identity matrix
+- 0ₙ, the zero matrix
+- A itself, unchanged
+- Undefined for matrices
 = IₙA = AIₙ = A.

@@ -1,8 +1,8 @@
 ? The "naive" assumption in naive Bayes is:
-+ Attributes are conditionally independent of each other given the class
-- All classes are equally likely
-- Attributes are numeric
-- The data has no missing values
++ Attributes are conditionally independent given the class
+- All classes are equally likely before seeing the data
+- All attributes are numeric and normally distributed
+- The training data has no missing or noisy values
 = This makes P(X|C) the product of individual P(xₖ|C).
 
 ? Bayes' theorem is:
@@ -28,17 +28,17 @@
 = 2 ÷ 9 = 0.222.
 
 ? For a continuous attribute such as age, naive Bayes usually estimates P(xₖ|Cᵢ) with:
-+ A Gaussian (normal) density using the class mean and standard deviation
-- A simple count
-- The median
-- A decision tree
++ A Gaussian density using the class mean and standard deviation
+- A simple count of the tuples that have exactly that age value
+- The median age of the class, used as the probability
+- A decision tree built on age for each class
 = g(x, μ, σ) = 1/(√(2π)σ) · e^(−(x−μ)²/2σ²).
 
 ? A zero count (e.g. no "no" tuple with income = high) makes the whole product zero. The fix is:
 + The Laplacian correction (add 1 to each count)
-- Delete the attribute
-- Multiply by 100
-- Use gain ratio
+- Delete the attribute that caused the zero count
+- Multiply every probability by 100 first
+- Switch to gain ratio for that attribute
 = For a categorical attribute with v possible values, use (count+1)/(class_count+v); update the denominator as well.
 
 ? Final scores: yes = 0.044 × 0.643 = 0.028; no = 0.019 × 0.357 = 0.007. The predicted class is:
@@ -61,7 +61,7 @@
 
 ? Bayesian belief networks improve on naive Bayes by:
 + Allowing dependencies between attributes, shown in a graph
-- Removing probabilities
-- Using only one attribute
-- Needing no training data
+- Removing probabilities and using simple rules instead
+- Using only the single most important attribute
+- Needing no training data to estimate the network
 = They model conditional dependencies with a directed acyclic graph and probability tables.

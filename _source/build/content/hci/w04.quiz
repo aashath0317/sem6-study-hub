@@ -13,38 +13,38 @@
 = Usable = effective, efficient and pleasant; used = long-term acceptance.
 
 ? Why must designers understand tasks before designing?
-+ Premature design can deviate from or complicate the real task
-- Tasks never change
-- Design is cheaper than research
-- Users don't have tasks
++ Premature design can drift from or complicate the real task
+- Tasks never change, so they only need studying once
+- Designing is cheaper than doing any user research
+- Users don't really have tasks, only preferences
 = This is "task primacy".
 
 ? The GPS rerouting example shows that:
-+ An algorithmically optimal route may not suit the driver's real sub-tasks and context
-- GPS is always wrong
-- Drivers don't need maps
-- Shorter routes are always better
++ An optimal route may not fit the driver's real sub-tasks and context
+- GPS navigation is always wrong and should not be trusted
+- Drivers no longer need maps once they have GPS
+- The shortest route is always the best route for every driver and trip
 = Consider context and sub-tasks.
 
 ? Viewing the user as a **processor** focuses on:
 + Human limits, measured quantitatively, without explaining why
-- The user's knowledge and reasoning
-- The full context of use
-- Emotions only
+- The user's knowledge, reasoning and expectations
+- The full real-world context in which the system is used
+- The user's emotions and feelings about the product
 = Weakness: it gives no explanation and no support for redesign.
 
 ? Viewing the user as a **predictor** uses methods like:
-+ Think-aloud and cognitive walkthroughs (qualitative, ex-situ)
-- Reaction-time experiments
-- Long field studies
-- Eye surgery
++ Think-aloud and cognitive walkthroughs (qualitative)
+- Reaction-time experiments (quantitative, in a lab)
+- Long field studies of users at work (in-situ)
+- Server logs of clicks, collected automatically
 = It uses human knowledge, but ignores the context of use.
 
 ? Viewing the user as a **participant** studies:
 + Users in their real context (in-situ field studies)
-- Users in a lab with timers only
-- Only the designer's opinion
-- Machines only
+- Users in a lab, timed on fixed tasks
+- Only the designer's own opinion of the design
+- The machine's performance, not the users
 = It's authentic but expensive.
 
 ? GPS prompts at 500 m with multiple alerts come from which view of the user?
@@ -56,9 +56,9 @@
 
 ? UX (user experience) is mainly concerned with:
 + Emotion and personal fit, for individuals, teams and society
-- Hardware speed
-- Database normalisation
-- Server uptime
+- Hardware speed and how quickly the device responds to each input
+- Normalising the database behind the product
+- Server uptime and availability across regions
 = It goes beyond usability.
 
 ? Something that is useful and usable but nobody adopts long-term fails which criterion?

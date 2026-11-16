@@ -1,8 +1,8 @@
 ? A graph G = (V, E) consists of:
-+ A non-empty set of vertices and a set of edges, each with one or two endpoints
-- Only vertices
-- Only edges
-- A table of numbers
++ A non-empty set of vertices and a set of edges with one or two endpoints
+- Only a non-empty set of vertices, with the edges between them left implicit
+- Only a set of edges, each joining two numbers
+- A table of numbers showing distances between cities
 = A graph is finite if V and E are finite.
 
 ? How many landmasses and bridges were in the Königsberg problem?
@@ -14,16 +14,16 @@
 
 ? Why is the Königsberg walk impossible?
 + More than two vertices have odd degree
-- There are too many bridges
-- The graph is disconnected
-- All degrees are even
+- There are too many bridges to cross once
+- The graph of the city is disconnected
+- Every vertex has an even degree
 = In a finite undirected graph, an Euler trail requires 0 or 2 odd-degree vertices and connectivity of the non-isolated vertices.
 
 ? A **simple graph** has:
 + Undirected edges, no multiple edges, no loops
-- Loops but no multiple edges
-- Directed edges only
-- Multiple edges allowed
+- Undirected edges and loops, but no multiple edges
+- Directed edges only, with no loops
+- Multiple edges allowed, but no loops
 = Multigraphs allow multiple edges; pseudographs also allow loops.
 
 ? An undirected graph with multiple edges **and** loops is a:

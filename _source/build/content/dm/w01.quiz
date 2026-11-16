@@ -1,15 +1,15 @@
 ? Data mining is best defined as:
-+ Discovering interesting (non-trivial, implicit, previously unknown, potentially useful) patterns from large amounts of data
-- Running SQL queries on a database
-- Storing data efficiently
-- Deleting old data
++ Discovering interesting, previously unknown and useful patterns in large data
+- Running SQL queries to retrieve records that match known conditions
+- Storing large amounts of data efficiently in a database or warehouse
+- Removing old or duplicate records so the database stays small
 = Simple query processing is not data mining.
 
 ? What is the best caution when using the course history of the term "Big Data"?
-+ A 2005 attribution is not proof of earliest use; the phrase was documented earlier
-- No one used the phrase before 2005
-- Big data means only large spreadsheets
-- The five Vs are all about database size
++ A 2005 attribution is not proof of earliest use; it was used earlier
+- No one used the phrase "Big Data" before the course's 2005 attribution
+- Big data only means very large spreadsheets kept by companies
+- The five Vs all describe the physical size of a database
 = NASA documents the phrase in a 1997 visualization paper; distinguish a course attribution from an earliest-use claim.
 
 ? The original three V's of big data are:
@@ -20,24 +20,24 @@
 = Veracity and Value were added later.
 
 ? **Veracity** refers to:
-- The speed at which data arrives
+- The speed at which new data arrives and must be processed
 + The trustworthiness and quality of the data
-- The size of the data
-- The number of data formats
+- The total size of the data, measured in terabytes or more
+- The number of different data formats and sources
 = Velocity = speed; volume = size; variety = formats.
 
 ? The nature of data mining is described as:
-+ Iterative and exploratory, involving cooperation between human and computer
-- Fully automatic, with no human involvement
-- A one-step process
-- Only for scientists
++ Iterative and exploratory, with human and computer working together
+- Fully automatic: the computer finds patterns with no human involvement
+- A single one-step process that runs once on the final data
+- A purely statistical method used only by trained scientists
 = The user guides the discovery and interprets the patterns.
 
 ? Why is data mining needed?
-+ Huge amounts of data are collected but mostly unused; databases are designed for storage, not analysis
-- Databases can't store data
-- It replaces databases
-- It's required by law
++ Huge amounts of data are collected but mostly unused; databases store, not analyse
+- Databases can no longer physically store the amount of data that companies collect
+- It replaces databases, so data no longer needs to be stored at all
+- Data protection laws require every company to mine its data
 = Organisations are "data rich but information poor".
 
 ? Market basket analysis, CRM and fraud detection are typical data mining applications in:
@@ -49,16 +49,16 @@
 
 ? A "black box" pattern is one that:
 + Can't be understood by humans, even though it predicts well
-- Is always wrong
-- Is a decision tree
-- Is shown as a chart
+- Is always wrong, so its predictions should be ignored
+- Is a decision tree that anyone can read as rules
+- Is shown as a chart instead of a table of numbers
 = Transparent-box patterns (e.g. rules, trees) reveal their structure.
 
 ? **Variety** in big data refers to:
-- How fast data is produced
-+ The many forms of data: structured, semi-structured and unstructured (text, images, video)
-- How much the data is worth
-- How accurate the data is
+- How fast data is produced and has to be processed
++ Its many forms: structured, semi-structured, unstructured
+- How much business value can be extracted from all the data collected
+- How accurate and trustworthy the collected data is
 = The lecture also calls it the complexity of data.
 
 ? Weather forecasting and criminal investigation are applications of data mining in:

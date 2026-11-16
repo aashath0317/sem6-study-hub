@@ -1,8 +1,8 @@
 ? A proof by mathematical induction needs:
 + A basis step P(1) and an inductive step P(k) → P(k + 1)
-- Only the basis step
-- Only the inductive step
-- A counterexample
+- Only a basis step, checked for P(1), P(2) and P(3)
+- Only an inductive step P(k) → P(k + 1)
+- A counterexample showing P(n) fails
 = The domino picture: the first falls, and each one knocks over the next.
 
 ? In the inductive step, assuming P(k) is true is called the:
@@ -35,9 +35,9 @@
 
 ? The well-ordering property says:
 + Every non-empty set of non-negative integers has a least element
-- Every set has a largest element
-- Every infinite set is empty
-- Integers can't be ordered
+- Every non-empty set of non-negative integers has a largest element
+- Every infinite set of integers has a least element
+- Integers cannot be put in any order
 = E.g. {n ∈ ℕ : n > 7} has least element 8.
 
 ? What is the least element of {3, 11, 5, 9, 2, 8, 16, 21}?

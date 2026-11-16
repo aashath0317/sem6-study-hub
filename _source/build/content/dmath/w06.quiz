@@ -25,10 +25,10 @@
 = 2·1 = 2. Congruences can be multiplied.
 
 ? If a | b and a | c, then:
-+ a | (mb + nc) for any integers m, n
-- b | c
-- c | a
-- a = b
++ a
+- b
+- c
+- a
 = This is the corollary of Theorem 1.
 
 ? The prime factorisation of 748 is:

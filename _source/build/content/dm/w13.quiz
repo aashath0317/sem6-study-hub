@@ -1,15 +1,15 @@
 ? A cluster is a collection of data objects that are:
-+ Similar within the same cluster and dissimilar to objects in other clusters
-- Labelled with known classes before mining
-- Always spherical and the same size
-- Randomly grouped
++ Similar within a cluster and dissimilar to other clusters
+- Labelled with known classes before the mining begins
+- Always spherical and exactly the same size
+- Grouped at random, then checked by an expert
 = High intracluster similarity, low intercluster similarity.
 
 ? How does clustering differ from classification?
-+ Clustering doesn't need labelled training data; groups are found first and labelled afterwards
-- Clustering needs a larger labelled training set
-- They are the same thing
-- Classification never uses training data
++ Clustering needs no labelled training data; groups are found first
+- Clustering needs a larger labelled training set than classification
+- They are the same technique with two different names
+- Classification never uses training data; clustering always does
 = Clustering is unsupervised; classification is supervised.
 
 ? Detecting credit card fraud as values "far away" from any cluster is called:
@@ -20,10 +20,10 @@
 = Outliers can be more interesting than the common cases.
 
 ? Ordinary k-means tends to work best with clusters that are:
-+ Compact, roughly spherical, and of comparable scale
-- Any arbitrary shape
-- Always one cluster
-- Hierarchical
++ Compact, roughly spherical and of similar size
+- Any arbitrary shape, such as long chains
+- Very different in size and density
+- Nested inside one another hierarchically
 = This is a limitation of the centroid-based method, not a restriction on every algorithm using a distance metric.
 
 ? Clustering households to place new ATMs while respecting rivers and highways illustrates:
@@ -42,16 +42,16 @@
 
 ? k-means represents each cluster by:
 + The mean value of the objects in the cluster
-- One actual object near the centre
-- The first object chosen
-- A grid cell
+- One actual object near the centre of the cluster
+- The first object chosen when the cluster started
+- The grid cell that contains the most objects
 = k-medoids uses a representative object instead.
 
 ? The agglomerative hierarchical approach:
-+ Starts with each object as its own group and merges the closest groups
-- Starts with one cluster and splits it
-- Uses a grid of cells
-- Fits a statistical model
++ Starts with each object as a group and merges the closest
+- Starts with one cluster of all objects and splits it
+- Divides the space into a grid of cells first
+- Fits a statistical model to each cluster
 = Agglomerative is bottom-up; divisive is top-down.
 
 ? A main weakness of hierarchical methods is that:
@@ -69,17 +69,17 @@
 = Density-based methods find arbitrary shapes and filter out noise.
 
 ? The main advantage of grid-based methods is:
-+ After grid construction, clustering operates on cells, which can make it fast
-- They find the exact global optimum
-- They need no parameters at all
-- They can undo merges
++ It works on grid cells, not objects, so it can be fast
+- It always finds the exact global optimum clustering
+- It needs no input parameters of any kind
+- It can undo earlier merges that were poor
 = STING is a typical example. Reading data and constructing the grid still depends on the input size.
 
 ? Which is a model-based clustering algorithm?
 + EM (expectation-maximisation)
-- BIRCH
-- DBSCAN
-- WaveCluster
+- BIRCH (balanced iterative reducing)
+- DBSCAN (density-based scanning)
+- WaveCluster (wavelet-based grid)
 = Other model-based examples: COBWEB and SOM.
 
 ? With Manhattan distance, what is the distance between (8, 4) and (2, 10)?
@@ -98,10 +98,10 @@
 = A8 is 3 from (2, 10) but 5 from (6, 6).
 
 ? What is a key weakness of k-means?
-+ You must choose k in advance, and outliers pull the means
-- It can't handle numeric data
-- It always finds arbitrary-shaped clusters
-- It never converges
++ k must be chosen in advance, and outliers pull the means
+- It cannot handle numeric data, only categorical attributes
+- It always finds clusters of any arbitrary shape
+- It never converges, however many iterations
 = Its result also depends on the initial centres.
 
 ? With q = 2, the Minkowski distance becomes:
@@ -131,9 +131,9 @@
 
 ? Stratified cross-validation ensures that:
 + Each fold has about the right proportion of each class
-- Each fold has exactly one instance
-- The folds overlap
-- Only the training set is used
+- Each fold contains exactly one instance of the data
+- The folds overlap so every instance is tested twice
+- Only the training set is used, with no test folds
 = It reduces the variance of the estimate further, and it's Weka's default.
 
 ? With 10-fold cross-validation, how many times does Weka run the learning algorithm?
@@ -142,7 +142,7 @@
 
 ? Compared with repeated holdout, 10-fold cross-validation on the diabetes data gave:
 + About the same mean but a much smaller standard deviation
-- A much higher mean
-- A larger standard deviation
-- Exactly the baseline accuracy
+- A much higher mean and about the same standard deviation
+- About the same mean but a larger standard deviation
+- Exactly the baseline (ZeroR) accuracy every time
 = 74.5% ± 0.9% vs 74.8% ± 4.6%.

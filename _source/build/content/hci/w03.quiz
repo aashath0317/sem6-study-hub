@@ -1,8 +1,8 @@
 ? The three human sub-systems in the information-processor model are:
 + Perceptual (input), cognitive (processing), motor (output)
-- Visual, auditory, haptic
-- Short-term, long-term, sensory
-- Goal, plan, action
+- Visual (input), auditory (processing), haptic (output)
+- Sensory (input), short-term (processing), long-term (output)
+- Goal (input), plan (processing), action (output)
 = The hot-surface example walks through all three.
 
 ? Touching a hot surface: detecting the heat with skin receptors is which stage?
@@ -48,17 +48,17 @@
 = Low engagement may cause boredom and attention lapses. Demo percentages are illustrations, not measured universal thresholds.
 
 ? Why is sound good for alerts but sometimes a problem?
-+ It's non-directional, so it gets attention anywhere, but it can annoy others
-- It's always private
-- It can't be heard
-- It's directional
++ It's non-directional, so it reaches you anywhere, but can annoy others
+- It's always private, so only the person using the device can ever hear it
+- It can't be heard over normal background noise
+- It's directional, so users must face the speaker
 = Vision is directional; touch is private.
 
 ? How should critical interface information be presented?
-+ With clear visual priority in a task-appropriate location, supported by readable contrast and cues
-- Always in one fixed corner on every device
-- Off-screen until an error occurs
-- In very small text
++ With clear visual priority where the task needs it, in readable contrast
+- Always in one fixed corner of the screen, the same on every device
+- Hidden off-screen until an error actually occurs
+- In very small text so it doesn't distract the user
 = Foveal/peripheral differences matter, but a fixed corner rule is not a substitute for task and context analysis.
 
 ? About what proportion of men are colour-blind (red–green)?
@@ -69,8 +69,8 @@
 = So never rely on colour alone.
 
 ? Divided attention (switching between tasks) leads to:
-+ A switching penalty: slower and more errors
-- Better performance
-- No effect
-- Perfect recall
++ A switching penalty: slower work and more errors
+- Better performance, because both tasks stay active
+- No effect, as long as the tasks are simple
+- Perfect recall of both tasks afterwards
 = Selective attention on one task works better.

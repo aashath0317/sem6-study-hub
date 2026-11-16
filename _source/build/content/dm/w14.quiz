@@ -1,15 +1,15 @@
 ? In k-medoids, each cluster is represented by:
-+ An actual object located near the centre (the medoid)
-- The mean of the cluster's objects
-- A random point in space
-- The first object in the data set
++ An actual object near the centre (the medoid)
+- The mean of all the objects in the cluster
+- A random point chosen anywhere in the space
+- The first object of the cluster in the data set
 = k-means uses the mean, which may not be a real point.
 
 ? Why is k-medoids less sensitive to outliers than k-means?
-+ A medoid is a real central object, so an outlier can't drag it far the way it drags a mean
-- It ignores half the data
-- It uses no distance function
-- It always uses k = 1
++ A medoid is a real central object, so an outlier can't drag it far
+- It ignores half of the data, including most of the outliers
+- It uses no distance function, so distances don't matter
+- It always uses k = 1, so there is only one centre
 = It's more robust but more expensive to compute.
 
 ? PAM stands for:
@@ -50,9 +50,9 @@
 
 ? Agglomerative hierarchical clustering:
 + Starts with each object in its own cluster and merges them
-- Starts with one cluster and splits it
-- Needs k as input
-- Uses medoids
+- Starts with one cluster of all objects and splits it
+- Needs the number of clusters k as an input
+- Represents each cluster by its medoid
 = It's bottom-up, and most hierarchical methods are agglomerative.
 
 ? DIANA is an example of:
@@ -63,10 +63,10 @@
 = AGNES is the agglomerative one.
 
 ? The main weakness of pure hierarchical clustering is that:
-+ It can't backtrack and correct a poor merge or split
-- It can't handle more than five objects
-- It always needs labelled data
-- It ignores distances
++ It can't backtrack to correct a poor merge or split
+- It can't handle more than a few hundred objects
+- It always needs labelled training data
+- It ignores the distances between objects
 = Once a step is done, it can never be undone.
 
 ? Using the minimum distance between the closest pair of points in two clusters is called:
@@ -77,15 +77,15 @@
 = AGNES in the lesson uses single linkage.
 
 ? Using the maximum distance d_max between clusters gives:
-+ Complete linkage (farthest-neighbour)
-- Single linkage
-- k-means
-- Grid clustering
++ Complete linkage (farthest neighbour)
+- Single linkage (nearest neighbour)
+- Average linkage (mean distance)
+- Centroid linkage (distance of means)
 = Complete linkage is a cluster-distance rule. DIANA is a divisive algorithm with its own splitting procedure, not a synonym for complete linkage.
 
 ? Which statement about mean or average cluster distances is accurate?
-+ They offer different trade-offs, but do not guarantee immunity to outliers
-- They are always the smallest distance
-- They need no computation
-- They only work for one cluster
++ They offer trade-offs but are not immune to outliers
+- They always give the smallest possible distance
+- They need no computation beyond one subtraction
+- They are completely unaffected by outliers
 = Single linkage can chain through noise, complete linkage depends on extremes, and mean/average measures can also be affected by outliers.

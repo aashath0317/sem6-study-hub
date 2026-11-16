@@ -25,10 +25,10 @@
 = 2·1 = 2. சமானங்களைப் பெருக்கலாம்.
 
 ? a | b, a | c எனில்:
-+ எந்த முழு எண்கள் m, n-க்கும் a | (mb + nc)
-- b | c
-- c | a
-- a = b
++ (mb + nc) for any integers m, n|எந்த integers m, n-க்கும் a | (mb + nc)
+- c, since both share the divisor a|இரண்டும் a என்ற வகுத்தியைப் பகிர்வதால் b | c
+- a, since a divides c|a, c-ஐ வகுப்பதால் c | a
+- (bc) only, not a | (b + c)|a | (bc) மட்டும், a | (b + c) அல்ல
 = இது தேற்றம் 1-இன் பெறுபேறு.
 
 ? 748-இன் பகாக் காரணிப்படுத்தல்:

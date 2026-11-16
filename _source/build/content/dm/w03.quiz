@@ -13,17 +13,17 @@
 = Preprocessing dominates the time spent.
 
 ? Which missing-value method predicts the missing entry using information from other attributes?
-- Ignore the tuple
-- Use a global constant
-- Use the attribute mean
-+ Use the most probable value (e.g. regression, Bayesian inference, decision tree)
+- Ignore the tuple, removing the whole record from the data
+- Fill every gap with a global constant such as "Unknown"
+- Fill the gap with the mean of that attribute for all tuples
++ Use the most probable value, e.g. by regression or a decision tree
 = It uses the other attributes to predict the missing value.
 
 ? What is the trap in filling missing values with a global constant like "Unknown"?
 + The mining algorithm may treat "Unknown" as a real, meaningful group
-- It's too slow
-- It deletes the tuple
-- It changes other attributes
+- It is far too slow to fill a constant into very large data sets
+- It deletes the tuple, so the record is lost from the data
+- It changes the values of the other attributes in the tuple
 = Many records sharing "Unknown" can create false patterns.
 
 ? Bin 1 holds 4, 8, 15. After smoothing **by bin means**, every value becomes:
@@ -44,16 +44,16 @@
 
 ? Which statement about z-score normalisation is accurate?
 + It uses mean and standard deviation, and is still sensitive to outliers
-- It guarantees a [0,1] output range
-- It removes all outliers
-- It is defined when the standard deviation is zero
+- It always maps the values into the range [0, 1], like min-max scaling
+- It removes all outliers from the data before scaling
+- It still works when the standard deviation is zero
 = Fit scaling statistics on training data; outliers can affect both mean and standard deviation.
 
 ? A correlation coefficient near +1 between two attributes in data integration suggests:
 + Strong positive correlation: one may be redundant
-- They're independent
-- A negative relationship
-- A data entry error
+- They are independent, so both must be kept
+- A strong negative relationship between them
+- A data entry error in one of the two columns
 = r = 0 means no linear correlation; r < 0 is negative correlation.
 
 ? Squeezing a new attribute into unused bits of an existing field is called:
@@ -64,8 +64,8 @@
 = It's a source of discrepancies that cleaning must detect.
 
 ? The two main issues in data integration are:
-+ Entity identification (use metadata) and redundancy (use correlation analysis)
-- Binning and clustering
-- Volume and velocity
++ Entity identification and redundancy
+- Binning and clustering of noisy values
+- Data volume and data velocity
 - Lossy and lossless compression
 = E.g. customer_id vs cust_number may be the same attribute.

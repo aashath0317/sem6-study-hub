@@ -1,8 +1,8 @@
 ? LKAS 2 requires inventories to be measured at:
 + The lower of cost and net realisable value
-- Market value
-- Selling price
-- The higher of cost and NRV
+- Current market value at the reporting date
+- Expected selling price less trade discount
+- The higher of cost and net realisable value
 = NRV = estimated selling price − costs of completion − selling costs.
 
 ? Which cost is **excluded** from the cost of inventory under LKAS 2?
@@ -36,17 +36,17 @@
 = ROL = maximum usage × maximum lead time.
 
 ? The correct order of the purchase documents is:
-+ Purchase requisition → purchase order → goods received note → invoice
++ Requisition → purchase order → GRN → invoice
 - Invoice → GRN → purchase order → requisition
 - Purchase order → requisition → invoice → GRN
-- GRN → invoice → requisition → order
+- GRN → invoice → requisition → purchase order
 = The GRN is the basis for stores ledger entries.
 
 ? An advantage of **centralised** purchasing is:
-+ Better control and concentration of expert buying staff
-- Lower transport costs
-- Faster local settlement of shortages
-- Benefits from local seasonal prices
++ Better control and a concentration of expert buyers
+- Lower transport costs because goods go straight to each site
+- Faster settlement of local shortages at each branch
+- Taking advantage of local seasonal prices in each area
 = Those other three are advantages of decentralised buying.
 
 ? 200 units at Rs 500 are in stock; 300 units are bought at Rs 600. 250 units are issued. Using **FIFO**, what is the issue value?
@@ -54,8 +54,8 @@
 = 200 × 500 + 50 × 600 = 130,000.
 
 ? A cash discount (e.g. 5% for paying within 10 days) is treated in material cost as:
-- A reduction of material cost
-+ Ignored: it's a financing benefit, not part of material cost
-- An addition to cost
-- A trade discount
+- Deducted from material cost, like a trade discount
++ Ignored: it is a financing benefit, not material cost
+- Added to the material cost as an extra charge
+- Spread over the units as part of the issue price
 = Only trade discounts reduce the purchase cost.

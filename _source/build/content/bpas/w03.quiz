@@ -1,8 +1,8 @@
 ? Why is the cash book special?
 + It's both a book of prime entry and a ledger account
-- It records only credit transactions
-- It's prepared only once a year
-- It replaces the trial balance
+- It records only credit transactions with customers
+- It's prepared only once a year, at the year end
+- It replaces the trial balance at the end of the period
 = Because of this dual purpose, cash book entries don't need a separate cash ledger account.
 
 ? A three-column cash book has columns for:
@@ -13,10 +13,10 @@
 = Two-column = cash + bank; three-column adds discount.
 
 ? Cash deposited into the bank is a **contra entry**. It is recorded:
-+ On both sides of the cash book: credit the cash column and debit the bank column, marked "C"
-- Only in the general journal
-- Only in the bank column
-- In the sales journal
++ On both sides: credit the cash column, debit the bank column, marked "C"
+- Only in the general journal, because no cash leaves the business
+- Only in the bank column, as a receipt on the debit side
+- In the sales journal, since it is money coming in
 = A contra is a movement between cash and bank, so both entries are in the cash book.
 
 ? Discount **allowed** to customers appears on which side of the cash book, and what is it?
@@ -45,22 +45,22 @@
 = The top-up equals the amount spent, restoring the fixed float.
 
 ? Which transaction is recorded in the **general journal**?
-- A cash sale
+- A cash sale of goods to a customer
 - A credit purchase of goods for resale
-+ Owner withdrawing office equipment for personal use
-- Paying a supplier by cheque
++ Owner taking office equipment for personal use
+- Paying a supplier by cheque for an invoice
 = Others include opening entries, credit asset purchases and sales, corrections and adjustments.
 
 ? A "narration" in the general journal is:
 + A short explanation under the entry, starting "Being…"
-- The ledger folio number
-- The total of the debit column
-- A type of source document
+- The ledger folio number written beside the entry
+- The total of the debit column for the page
+- A type of source document, such as a receipt
 = Each journal entry needs a narration.
 
 ? Which is an advantage of a petty cash book?
-- It eliminates the need for receipts
-+ It keeps small expenses out of the main cash book and allows delegation to a petty cashier
-- It records large capital expenditure
-- It replaces the bank reconciliation
+- It removes the need to keep receipts for any small payments made
++ It keeps small expenses out of the main cash book
+- It records large capital expenditure such as new machinery
+- It replaces the bank reconciliation at the month end
 = It also improves control and record keeping for small items.

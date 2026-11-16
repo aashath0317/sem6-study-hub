@@ -6,10 +6,10 @@
 = Capital expenditure acquires or enhances an asset and is capitalised. Repairs and maintenance are revenue expenditure.
 
 ? Revenue expenditure is:
-- Added to the cost of the asset
+- Added to the cost of the asset in the balance sheet
 + Charged as an expense in the income statement
-- Shown as a liability
-- Ignored
+- Shown as a liability until it is paid
+- Ignored, because it does not create an asset
 = It maintains an asset at its existing level without increasing earning capacity.
 
 ? Upgrading a machine to increase its capacity is:
@@ -34,17 +34,17 @@
 = Expenses are debit balances.
 
 ? The main purpose of a trial balance is to:
-+ Check the arithmetical accuracy of double entry and act as a working paper for the financial statements
-- Prove there are no errors at all
-- Calculate tax payable
-- Record cash transactions
++ Check the arithmetic of double entry and act as a working paper
+- Prove that the accounts contain no errors of any kind
+- Calculate the tax payable for the year from the balances
+- Record the cash transactions that are not in the cash book
 = It catches errors early, before the statements are prepared.
 
 ? Which error is **not** revealed by a trial balance?
 - Entering a debit as Rs 500 and the matching credit as Rs 50
-- Posting only the debit side of a transaction
-+ Recording a transaction in the wrong customer's account (error of commission)
-- Adding up a ledger account incorrectly
+- Posting only the debit side of a transaction to the ledger
++ Recording a sale in the wrong customer's account
+- Adding up the balance of a ledger account incorrectly
 = Errors of omission, commission, principle, original entry, reversal and compensating errors all leave the TB agreeing.
 
 ? Buying a vehicle on credit, then debiting the motor expenses account instead of the vehicles account, is an error of:
@@ -56,9 +56,9 @@
 
 ? Day-book **totals** are posted to:
 + The main (nominal) accounts in the general ledger
-- Each customer's personal account
-- The cash book
-- The trial balance directly
+- Each customer's personal account in the sales ledger
+- The cash book, as receipts and payments
+- The trial balance directly, skipping the ledger
 = Individual lines go to personal accounts. Totals go to sales, purchases and returns accounts.
 
 ? A transaction completely left out of the books is an error of:

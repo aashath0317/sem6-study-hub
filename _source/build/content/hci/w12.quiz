@@ -1,8 +1,8 @@
 ? Needfinding is mainly about:
 + Understanding the user and understanding the context
-- Writing code
-- Choosing colours
-- Testing the final product
+- Writing the first version of the code quickly
+- Choosing the colours and fonts of the interface
+- Testing the final product just before release
 = It's the first and most important stage of the design life cycle.
 
 ? Which is **not** one of the seven needfinding questions?
@@ -42,23 +42,23 @@
 
 ? The remedy for **observer bias** is to:
 + Script the interactions and have someone else review the script
-- Ask leading questions
-- Help only your favourite users
-- Avoid writing anything down
+- Ask leading questions so that users confirm your own ideas
+- Help only the users who seem most interested
+- Avoid writing anything down during the session
 = Also separate the experimenter's motives from the participant.
 
 ? A limitation of **naturalistic observation** is that:
-+ Observation alone does not directly reveal users' thoughts, and intervention can change the activity
-- It gives very little information
-- It requires users to fill in forms
-- It's always biased in the user's favour
++ It doesn't reveal users' thoughts, and stepping in changes the activity
+- It gives very little information about what users do
+- It requires every user to fill in a long questionnaire
+- It is always biased in the users' favour, never the designer's
 = Follow-up methods may reveal reasoning. Recording depends on consent, privacy and the research protocol; it is not universally forbidden by the method.
 
 ? A customer avoids the ATM's cheque deposit and walks to the counter instead. This is a:
 + Workaround (a hack), revealing an unfriendly feature
-- Slip
-- Focus group
-- Recall bias
+- Slip, because they pressed the wrong ATM button
+- Focus group, run informally at the bank
+- Recall bias in the customer's memory
 = Look for hacks and workarounds when observing.
 
 ? Interviews that use the same predefined, closed questions in the same order for everyone are:
@@ -70,9 +70,9 @@
 
 ? A focus group usually has:
 + 3–10 people led by a trained facilitator
-- 1 person
-- 100+ people online
-- No facilitator
+- 1 person interviewed alone in depth
+- 100+ people answering online at once
+- A group of users with no facilitator
 = Risk: dominant talkers drown out the quiet ones.
 
 ? Which survey tip means "every question must map to a data item you need"?
@@ -83,8 +83,8 @@
 = Drop any question that doesn't map to a required data item.
 
 ? The main concern with the think-aloud technique is:
-+ Thinking aloud makes users behave more deliberately and unnaturally
-- It's too cheap
-- It needs no users
-- It always causes recall bias
++ Thinking aloud makes users act more deliberately and less naturally
+- It is too cheap and quick to be taken seriously by managers
+- It needs no users, so the results are just guesses
+- It always causes recall bias about past events
 = A compromise is retrospective think-aloud, done immediately after the task.

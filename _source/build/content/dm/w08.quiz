@@ -21,10 +21,10 @@
 = (4+1)(2+1)(3+1) = 60.
 
 ? An **iceberg cube** stores:
-+ Only cells whose measure meets a threshold (e.g. count ≥ 10)
-- Every possible cell
-- Only base cells
-- Only the apex
++ Only cells whose measure meets a threshold, e.g. count ≥ 10
+- Every possible cell of every cuboid, including empty ones
+- Only the base cells, with no aggregates at all
+- Only the apex cell holding the grand total
 = This avoids storing a huge number of trivial cells.
 
 ? In the MultiWay array approach, reading one base cell:
@@ -35,24 +35,24 @@
 = Chunked arrays let all cuboids be computed in one pass.
 
 ? BUC computes the cube:
-+ From the apex towards the base (exploring top-down), pruning branches that fail the iceberg condition
-- From the base upwards only
-- Without any pruning
-- Only for 2-D cubes
++ From the apex towards the base, pruning cells that fail the iceberg condition
+- From the base cuboid upwards, computing every single cell before any pruning
+- All cuboids at once, with no pruning of any branch
+- Only for 2-D cubes, by scanning each pair of dimensions
 = It's called "bottom-up" but explores from the apex.
 
 ? In Star-Cubing, a **star-node** is:
-+ A dimension value whose 1-D aggregate fails the iceberg condition, so it's replaced by \*
-- The root of the tree
-- The most frequent value
-- A base cell
++ A value whose 1-D aggregate fails the iceberg condition, replaced by \*
+- The root node of the star-tree, which holds the total count of tuples
+- The most frequent value of a dimension, kept at the top
+- A base cell that has all dimensions filled in
 = Collapsing star-nodes makes the star-tree much smaller.
 
 ? Attribute-oriented induction (AOI) is:
-+ A query-oriented, on-line generalisation technique that removes or generalises attributes
-- A classification algorithm
-- A clustering method
-- A cube storage format
++ A query-oriented, on-line generalisation technique
+- A supervised classification algorithm for labels
+- A density-based clustering method
+- A compressed storage format for cubes
 = The prime relation keeps counts of merged tuples.
 
 ? In AOI, an attribute such as **name** (many distinct values, no hierarchy) is:
@@ -63,8 +63,8 @@
 = Attributes with a concept hierarchy (e.g. birth_place) are generalised instead.
 
 ? A cell is a **parent** of another when it:
-+ Has exactly one fewer non-\* dimension and agrees on all its non-\* values
-- Has the same number of dimensions
-- Has a larger count
-- Is in a different cube
++ Has one fewer non-\* dimension and agrees on all its non-\* values
+- Has the same number of non-\* dimensions but a larger count
+- Has one more non-\* dimension and a smaller count
+- Belongs to a different cube with the same dimensions
 = Ancestors in general can have any fewer dimensions.

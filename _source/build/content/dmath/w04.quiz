@@ -46,7 +46,7 @@
 
 ? A string is:
 + A finite sequence; its length is the number of terms
-- An infinite sequence
-- A sum of terms
-- A set with no order
+- An infinite sequence of characters with no end
+- The sum of the terms of a sequence
+- A set of symbols where order doesn't matter
 = The empty string has length 0.

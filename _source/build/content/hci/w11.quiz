@@ -1,15 +1,15 @@
 ? User-centred design (UCD) differs from specification-driven design because UCD:
-+ Involves real users throughout, to discover what we don't know about them
-- Assumes the users' needs from a specification
-- Never tests with users
-- Is only for games
++ Involves real users throughout, to learn what we don't know about them
+- Assumes the users' needs are fully captured in the specification
+- Never tests with users, relying on expert reviews instead
+- Is mainly used for games and entertainment apps
 = Spec-driven systems can meet 100% of the spec and still fail adoption.
 
 ? Design guidelines in UCD are:
 + Necessary but not sufficient, because usability depends on context
-- Sufficient on their own
-- Unnecessary
-- Only for hardware
+- Sufficient on their own to guarantee a usable design in any context
+- Unnecessary once you have tested with real users
+- Only relevant for hardware, not for software
 = You still need to involve users.
 
 ? Which is **not** one of the eight user characteristics?
@@ -20,38 +20,38 @@
 = The rest: gender, education, culture, interests, professional level.
 
 ? Personas are:
-+ Concrete profiles representing user types, instead of an "average user"
-- Real customers' passwords
-- Marketing slogans
-- System requirements documents
++ Concrete profiles of user types, instead of an "average user"
+- Lists of real customers' names, emails and contact details
+- Marketing slogans written for each target group
+- Formal system requirements documents
 = They keep the design focused on real kinds of people.
 
 ? Which is one of the six ISO 9241-210 principles?
 + The design is driven and refined by user-centred evaluation
-- Ship first, test later
-- Avoid user involvement
-- Design only for experts
+- Ship the product first, then test it with users later
+- Avoid user involvement so the designers can work freely
+- Design only for expert users, who know the domain
 = The others: understand users and context, involve users, iterate, address the whole UX, multidisciplinary teams.
 
 ? The design life cycle stages, in order, are:
-+ Requirements (needfinding) → design alternatives → prototype → evaluate (and loop)
-- Code → test → design → requirements
++ Requirements → design alternatives → prototype → evaluate
+- Code → test → design alternatives → requirements → release
 - Prototype → requirements → release → evaluate
-- Evaluate → code → deploy → stop
+- Evaluate → design alternatives → code → deploy
 = It's iterative: evaluation feeds back into requirements.
 
 ? Paper prototypes are:
 + Low fidelity: cheap and quick, for early ideas
-- High fidelity
-- The final product
-- Not prototypes
+- High fidelity: close to the final look and feel
+- The final product, ready to be released
+- Not prototypes, since they cannot be clicked
 = High-fidelity prototypes are clickable and realistic.
 
 ? Why can early usability evaluation save money?
-+ It can expose design problems before implementation makes changes expensive
-- Every project has exactly the same 100-fold cost increase
-- It removes all need for later testing
-- Prototypes guarantee error-free software
++ It finds design problems before implementation makes changes expensive
+- Every project has exactly the same 100-fold increase in fixing costs
+- It removes the need for any testing later in the project
+- Prototypes guarantee that the final software has no errors
 = Early iteration may reduce rework; the actual cost difference depends on the project.
 
 ? In the Moodle example, the photocopy shop that uses reports from the system is a:

@@ -380,6 +380,19 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .tsrc{display:flex;flex-wrap:wrap;gap:8px}
 .tsrc span{background:var(--code-bg);border-style:dashed}
 @media (max-width:640px){.tier{grid-template-columns:1fr;gap:8px}}
+/* Cuboid lattice diagram */
+.lattice{display:grid;grid-template-columns:320px 1fr;gap:18px;align-items:start;margin:16px 0;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--code-bg)}
+.lat-svg{width:320px;max-width:100%;height:auto}
+.lat-svg line{stroke:var(--muted);stroke-width:1.4;opacity:.6}
+.lat-svg rect{stroke:var(--line);stroke-width:1.5}
+.lat-svg text{font-size:14px;font-weight:700;fill:var(--ink)}
+.lat-svg .l0 rect{fill:var(--accent)}.lat-svg .l0 text{fill:#fff}
+.lat-svg .l1 rect{fill:var(--accent-soft)}.lat-svg .l2 rect{fill:var(--tip-bg)}.lat-svg .l3 rect{fill:var(--key-bg)}
+.lat-labels{display:grid;grid-template-rows:repeat(4,75px)}
+.lat-labels>div{display:flex;flex-direction:column;justify-content:center;border-left:4px solid var(--line);padding-left:12px}
+.lat-labels .l0{border-color:var(--accent)}.lat-labels .l1{border-color:#8fa8e8}.lat-labels .l2{border-color:#4fae8a}.lat-labels .l3{border-color:#d4a72c}
+.lat-labels b{font-size:15px}.lat-labels span{color:var(--muted);font-size:14px}
+@media (max-width:640px){.lattice{grid-template-columns:1fr}.lat-svg{margin:0 auto;display:block}.lat-labels{grid-template-rows:none;gap:10px}}
 
 .study-plan{margin:24px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow);scroll-margin-top:80px}
 .sp-heading,.sp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.sp-heading h2{margin:2px 0 8px}.sp-heading p{font-size:15px;color:var(--muted)}
@@ -407,11 +420,11 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 Ancestor summary-இலிருந்து child details-ஐ முழுமையாக reconstruct செய்ய முடியாது. மொத்தத்தைக் கண்டதால் ஒவ்வொரு நகரத்தின் விற்பனை தெரிந்துவிடாது.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
 <p><strong>Base cell</strong> எல்லா n dimensions specified; aggregate cell-இல் சில dimensions <strong>all(*)</strong>. (Jan,<em>,Business)→2-D; (Jan,Toronto,Business)→3-D base. Ancestor குறைந்த specified dimensions உடையதும் மீதியெல்லாம் descendant-உடன் பொருந்துவதும்; parent-க்கு exactly one specified dimension குறைவு. </em><em>Cuboid</em><em> ஒரே group-by level; </em><em>cell</em>* அதிலுள்ள ஒரு aggregate.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p>A data cube is a <strong>lattice of cuboids</strong>, and <strong>each cuboid is a group-by</strong>. For dimensions A, B, C:</p>
-<pre><code>                 all            ← apex cuboid (0-D): most generalized, ONE value
-           A      B      C      ← 1-D cuboids
-          AB     AC     BC      ← 2-D cuboids
-                ABC             ← base cuboid (3-D): least generalized
-</code></pre>
+<div class="lattice">
+<svg viewBox="0 0 320 300" class="lat-svg" role="img" aria-label="Lattice of cuboids"><line x1="160" y1="52.5" x2="70" y2="97.5"/><line x1="160" y1="52.5" x2="160" y2="97.5"/><line x1="160" y1="52.5" x2="250" y2="97.5"/><line x1="70" y1="127.5" x2="70" y2="172.5"/><line x1="70" y1="127.5" x2="160" y2="172.5"/><line x1="160" y1="127.5" x2="70" y2="172.5"/><line x1="160" y1="127.5" x2="250" y2="172.5"/><line x1="250" y1="127.5" x2="160" y2="172.5"/><line x1="250" y1="127.5" x2="250" y2="172.5"/><line x1="70" y1="202.5" x2="160" y2="247.5"/><line x1="160" y1="202.5" x2="160" y2="247.5"/><line x1="250" y1="202.5" x2="160" y2="247.5"/><g class="l0"><rect x="128.0" y="22.5" width="64" height="30" rx="15"/><text x="160" y="42.5" text-anchor="middle">all</text></g><g class="l1"><rect x="40.0" y="97.5" width="60" height="30" rx="15"/><text x="70" y="117.5" text-anchor="middle">A</text></g><g class="l1"><rect x="130.0" y="97.5" width="60" height="30" rx="15"/><text x="160" y="117.5" text-anchor="middle">B</text></g><g class="l1"><rect x="220.0" y="97.5" width="60" height="30" rx="15"/><text x="250" y="117.5" text-anchor="middle">C</text></g><g class="l2"><rect x="40.0" y="172.5" width="60" height="30" rx="15"/><text x="70" y="192.5" text-anchor="middle">AB</text></g><g class="l2"><rect x="130.0" y="172.5" width="60" height="30" rx="15"/><text x="160" y="192.5" text-anchor="middle">AC</text></g><g class="l2"><rect x="220.0" y="172.5" width="60" height="30" rx="15"/><text x="250" y="192.5" text-anchor="middle">BC</text></g><g class="l3"><rect x="128.0" y="247.5" width="64" height="30" rx="15"/><text x="160" y="267.5" text-anchor="middle">ABC</text></g></svg>
+<div class="lat-labels"><div class="l0"><b>0-D · Apex cuboid</b><span>Most generalized: ONE value (“all”)</span></div><div class="l1"><b>1-D cuboids</b><span>Group by one dimension</span></div><div class="l2"><b>2-D cuboids</b><span>Group by two dimensions</span></div><div class="l3"><b>3-D · Base cuboid</b><span>Least generalized: every dimension</span></div></div>
+</div>
+
 <ul>
 <li><strong>Drill down</strong>: move from the apex <strong>down</strong> toward the base.</li>
 <li><strong>Roll up</strong>: move from the base <strong>up</strong> toward the apex.</li>
@@ -474,11 +487,11 @@ h+=sel?'<p class="note">Selected '+sel.replace(/\|/g,', ')+' · <span class="pil
 R.querySelector('.out').innerHTML=h;R.querySelectorAll('[data-c]').forEach(function(s){s.style.cursor='pointer';s.onclick=function(){sel=sel===s.dataset.c?null:s.dataset.c;run()}})}
 R.addEventListener('change',function(){sel=null;run()});run();})();
 </script></div></div><div class="hci-ta" lang="ta" hidden data-title="கனசதுரப் பொருளாக்கம்: கலங்களும் கனச்செவ்வகங்களும்"><p>தரவுக் கனசதுரம் என்பது <strong>கனச்செவ்வகங்களின் பின்னல்</strong>; <strong>ஒவ்வொரு கனச்செவ்வகமும் ஒரு group-by</strong>. A, B, C பரிமாணங்களுக்கு:</p>
-<pre><code>                 all            ← உச்சிக் கனச்செவ்வகம் (0-D): மிகவும் பொதுமைப்படுத்தப்பட்டது, ஒரு பெறுமதி
-           A      B      C      ← 1-D கனச்செவ்வகங்கள்
-          AB     AC     BC      ← 2-D கனச்செவ்வகங்கள்
-                ABC             ← அடிப்படைக் கனச்செவ்வகம் (3-D): மிகக்குறைவாகப் பொதுமைப்படுத்தப்பட்டது
-</code></pre>
+<div class="lattice">
+<svg viewBox="0 0 320 300" class="lat-svg" role="img" aria-label="Lattice of cuboids"><line x1="160" y1="52.5" x2="70" y2="97.5"/><line x1="160" y1="52.5" x2="160" y2="97.5"/><line x1="160" y1="52.5" x2="250" y2="97.5"/><line x1="70" y1="127.5" x2="70" y2="172.5"/><line x1="70" y1="127.5" x2="160" y2="172.5"/><line x1="160" y1="127.5" x2="70" y2="172.5"/><line x1="160" y1="127.5" x2="250" y2="172.5"/><line x1="250" y1="127.5" x2="160" y2="172.5"/><line x1="250" y1="127.5" x2="250" y2="172.5"/><line x1="70" y1="202.5" x2="160" y2="247.5"/><line x1="160" y1="202.5" x2="160" y2="247.5"/><line x1="250" y1="202.5" x2="160" y2="247.5"/><g class="l0"><rect x="128.0" y="22.5" width="64" height="30" rx="15"/><text x="160" y="42.5" text-anchor="middle">all</text></g><g class="l1"><rect x="40.0" y="97.5" width="60" height="30" rx="15"/><text x="70" y="117.5" text-anchor="middle">A</text></g><g class="l1"><rect x="130.0" y="97.5" width="60" height="30" rx="15"/><text x="160" y="117.5" text-anchor="middle">B</text></g><g class="l1"><rect x="220.0" y="97.5" width="60" height="30" rx="15"/><text x="250" y="117.5" text-anchor="middle">C</text></g><g class="l2"><rect x="40.0" y="172.5" width="60" height="30" rx="15"/><text x="70" y="192.5" text-anchor="middle">AB</text></g><g class="l2"><rect x="130.0" y="172.5" width="60" height="30" rx="15"/><text x="160" y="192.5" text-anchor="middle">AC</text></g><g class="l2"><rect x="220.0" y="172.5" width="60" height="30" rx="15"/><text x="250" y="192.5" text-anchor="middle">BC</text></g><g class="l3"><rect x="128.0" y="247.5" width="64" height="30" rx="15"/><text x="160" y="267.5" text-anchor="middle">ABC</text></g></svg>
+<div class="lat-labels"><div class="l0"><b>0-D · உச்சிக் கனச்செவ்வகம்</b><span>மிகவும் பொதுமைப்படுத்தப்பட்டது: ஒரு பெறுமதி (“all”)</span></div><div class="l1"><b>1-D கனச்செவ்வகங்கள்</b><span>ஒரு பரிமாணத்தால் குழுவாக்கல்</span></div><div class="l2"><b>2-D கனச்செவ்வகங்கள்</b><span>இரண்டு பரிமாணங்களால் குழுவாக்கல்</span></div><div class="l3"><b>3-D · அடிப்படைக் கனச்செவ்வகம்</b><span>மிகக்குறைவாகப் பொதுமைப்படுத்தப்பட்டது: எல்லாப் பரிமாணங்களும்</span></div></div>
+</div>
+
 <ul>
 <li><strong>கீழ்விரிப்பு</strong>: உச்சியிலிருந்து <strong>கீழே</strong> அடிப்படையை நோக்கிச் செல்லுதல்.</li>
 <li><strong>மேல்சுருக்கம்</strong>: அடிப்படையிலிருந்து <strong>மேலே</strong> உச்சியை நோக்கிச் செல்லுதல்.</li>

@@ -386,13 +386,121 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .lat-svg line{stroke:var(--muted);stroke-width:1.4;opacity:.6}
 .lat-svg rect{stroke:var(--line);stroke-width:1.5}
 .lat-svg text{font-size:14px;font-weight:700;fill:var(--ink)}
-.lat-svg .l0 rect{fill:var(--accent)}.lat-svg .l0 text{fill:#fff}
+.lat-svg .l0 rect{fill:var(--accent)}.lat-svg .l0 text{fill:var(--panel)}
 .lat-svg .l1 rect{fill:var(--accent-soft)}.lat-svg .l2 rect{fill:var(--tip-bg)}.lat-svg .l3 rect{fill:var(--key-bg)}
 .lat-labels{display:grid;grid-template-rows:repeat(4,75px)}
 .lat-labels>div{display:flex;flex-direction:column;justify-content:center;border-left:4px solid var(--line);padding-left:12px}
 .lat-labels .l0{border-color:var(--accent)}.lat-labels .l1{border-color:#8fa8e8}.lat-labels .l2{border-color:#4fae8a}.lat-labels .l3{border-color:#d4a72c}
 .lat-labels b{font-size:15px}.lat-labels span{color:var(--muted);font-size:14px}
 @media (max-width:640px){.lattice{grid-template-columns:1fr}.lat-svg{margin:0 auto;display:block}.lat-labels{grid-template-rows:none;gap:10px}}
+/* ---- Diagrams: shared frame ---- */
+.otree,.vtree,.arch,.dfig,.bbox,.dsteps{margin:16px 0;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--code-bg)}
+/* Branching tree (org-chart style) */
+.otree{overflow-x:auto}
+.ot-in{width:max-content;min-width:100%}
+.otree ul{display:flex;justify-content:center;list-style:none;margin:0;padding:18px 0 0;position:relative}
+.otree .ot-in>ul{padding-top:0}
+.otree ul ul::before{content:"";position:absolute;top:0;left:50%;height:18px;border-left:1.5px solid var(--muted)}
+.otree li{display:flex;flex-direction:column;align-items:center;position:relative;padding:18px 4px 0;margin:0}
+.otree li::before,.otree li::after{content:"";position:absolute;top:0;right:50%;width:50%;height:18px;border-top:1.5px solid var(--muted)}
+.otree li::after{right:auto;left:50%;border-left:1.5px solid var(--muted)}
+.otree li:only-child{padding-top:0}
+.otree li:only-child::before,.otree li:only-child::after{display:none}
+.otree li:first-child::before,.otree li:last-child::after{border:0 none}
+.otree li:last-child::before{border-right:1.5px solid var(--muted);border-radius:0 7px 0 0}
+.otree li:first-child::after{border-radius:7px 0 0 0}
+.otree .ot-in>ul>li{padding-top:0}
+.otree .ot-in>ul>li::before,.otree .ot-in>ul>li::after{display:none}
+.otree span{display:inline-block;padding:6px 9px;border-radius:9px;background:var(--panel);border:1px solid var(--line);font-weight:600;font-size:14px;white-space:nowrap;line-height:1.3}
+.otree .ot-in>ul>li>span{background:var(--accent);color:var(--panel);border-color:transparent}
+.otree em{font-style:normal;font-size:12.5px;color:var(--muted);margin:2px 0 4px;line-height:1.2}
+.otree span.yes{background:var(--tip-bg);color:var(--tip);border-color:transparent}
+.otree span.no{background:var(--warn-bg);color:var(--warn);border-color:transparent}
+.otree span.more{background:transparent;border-style:dashed;color:var(--muted)}
+.otree li.ghost::before,.otree li.ghost::after{border-color:transparent!important}
+.otree li.ghost>span{visibility:hidden}
+.otree li:has(+ li.ghost)::after{border-left:1.5px solid var(--muted)}
+/* Outline tree */
+.vtree ul{list-style:none;margin:0;padding:0}
+.vtree ul ul{padding-left:26px}
+.vtree li{position:relative;padding:5px 0;margin:0}
+.vtree ul ul>li::before{content:"";position:absolute;left:-16px;top:0;bottom:0;border-left:1.5px solid var(--muted)}
+.vtree ul ul>li:last-child::before{bottom:auto;height:22px}
+.vtree ul ul>li::after{content:"";position:absolute;left:-16px;top:22px;width:12px;border-top:1.5px solid var(--muted)}
+.vn{display:flex;flex-wrap:wrap;align-items:center;gap:6px;line-height:1.4}
+.vn .d{color:var(--muted);font-size:14px}
+.vbox{display:inline-block;padding:6px 11px;border-radius:9px;background:var(--panel);border:1px solid var(--line);font-weight:600;font-size:14.5px}
+.vbox b{color:var(--accent)}
+.vtag{display:inline-block;padding:3px 9px;border-radius:999px;font-size:13px;font-weight:700;background:var(--accent-soft);color:var(--accent-ink)}
+.vtag.g{background:var(--accent);color:var(--panel)}.vtag.r{background:var(--key-bg);color:var(--key)}.vtag.m{background:var(--tip-bg);color:var(--tip)}
+.vtag.e{background:var(--accent-soft);color:var(--accent-ink);font-weight:600}.vtag.f{background:var(--ex-bg);color:var(--ex);font-weight:600}
+.chain{display:inline-flex;flex-wrap:wrap;gap:4px 0;align-items:center}
+.chain i{position:relative;font-style:normal;font-size:13.5px;background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:3px 8px}
+.chain i+i{margin-left:20px}
+.chain i+i::before{content:"→";position:absolute;left:-16px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.vplans{margin-top:12px;display:grid;gap:6px}
+.vplans div{font-size:14.5px;padding:7px 11px;border-left:3px solid var(--accent);background:var(--panel);border-radius:0 8px 8px 0}
+/* System architecture with side box */
+.arch{display:grid;grid-template-columns:1fr 34px minmax(110px,190px);align-items:center}
+.ab{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;text-align:center;font-weight:600;font-size:14.5px}
+.ab.top{background:var(--accent-soft)}.ab.db{background:var(--key-bg)}
+.aa{text-align:center;color:var(--muted);font-size:12px;letter-spacing:.3em;padding:4px 0}
+.aa.etl{letter-spacing:normal;font-weight:600;color:var(--ink);font-size:13px;padding:8px 0 6px}
+.ah{text-align:center;color:var(--muted);font-size:12px}
+.akb{align-self:stretch;display:grid;place-items:center;text-align:center;background:var(--tip-bg);border:1px solid var(--line);border-radius:10px;padding:10px;font-weight:700;font-size:14.5px}
+/* Small drawn figures */
+.dsvg{display:block;margin:0 auto;width:440px;max-width:100%;height:auto}
+.dsvg.sm{width:300px}
+.dsvg ellipse{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.5}
+.dsvg text{fill:var(--ink);font-size:15px;font-weight:600}
+.dsvg text.set{font-size:17px;font-weight:800;fill:var(--accent-ink)}
+.dsvg text.acc{fill:var(--accent);font-style:italic;font-weight:700}
+.dsvg line,.dsvg .curve{stroke:var(--ink);stroke-width:1.5;fill:none}
+.dsvg .curve{stroke:var(--accent);stroke-dasharray:5 4}
+.dsvg .mk{fill:var(--ink)}
+.dcap{text-align:center;margin-top:8px;font-size:15px;color:var(--muted)}
+/* Stimulus → black box → response */
+.bbox{display:grid;grid-template-columns:1fr 26px 1.4fr 26px 1fr;gap:6px;align-items:stretch}
+.bcol{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px}
+.bcol.black{background:#1d2330;color:#e6e8ee;border-color:#1d2330}
+.bcol h5{margin:0 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.bcol p{margin:8px 0 4px;font-size:13px;font-weight:700;color:var(--muted)}
+.bcol.black p{color:#9aa3b5}
+.bcol ul{margin:0;padding-left:18px;font-size:14.5px}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chips span{font-size:13px;padding:3px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font-weight:600}
+.bcol.black .chips span{background:#2b3240;color:#e6e8ee}
+.bcol.black .chain i{background:#2b3240;border-color:#3a4252;color:#e6e8ee}
+.barr{display:grid;place-items:center;color:var(--muted);font-size:20px}
+/* Decision steps with options */
+.dsteps{display:flex;flex-wrap:wrap;gap:8px 26px}
+.ds{flex:1 1 130px;position:relative;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.ds+.ds::before{content:"→";position:absolute;left:-20px;top:12px;color:var(--muted);font-size:17px}
+.ds b{display:block;color:var(--accent-ink);font-size:14.5px;margin-bottom:6px}
+.ds ul{margin:0;padding-left:16px;font-size:14px}
+@media (max-width:640px){
+  .bbox{grid-template-columns:1fr}.barr{transform:rotate(90deg);padding:2px 0}
+  .dsteps{flex-direction:column;gap:22px}.ds+.ds::before{content:"↓";left:50%;top:-21px}
+  .arch{grid-template-columns:1fr 24px 96px}
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bcol.black{background:#0b0d12;border-color:#3a4252}}
+:root[data-theme="dark"] .bcol.black{background:#0b0d12;border-color:#3a4252}
+/* Branching trees become an indented outline on phones */
+@media (max-width:640px){
+  .otree{overflow:visible}
+  .ot-in{width:auto;min-width:0}
+  .otree ul{display:block;padding:0 0 0 24px}
+  .otree .ot-in>ul{padding-left:0}
+  .otree ul ul::before{display:none}
+  .otree li{display:block;padding:4px 0!important}
+  .otree li::before{content:"";display:block!important;position:absolute;left:-15px;top:0;bottom:0;right:auto;width:0;height:auto;border:0!important;border-left:1.5px solid var(--muted)!important;border-radius:0!important}
+  .otree li:last-child::before{bottom:auto;height:21px}
+  .otree li::after{content:"";display:block!important;position:absolute;left:-15px;top:21px;width:11px;height:0;border:0!important;border-top:1.5px solid var(--muted)!important;border-radius:0!important}
+  .otree .ot-in>ul>li::before,.otree .ot-in>ul>li::after{display:none!important}
+  .otree em{display:inline-block;margin:0 6px 0 0}
+  .otree li.ghost{display:none}
+  .otree li:has(+ li.ghost)::before{bottom:auto;height:21px}
+}
 
 .study-plan{margin:24px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow);scroll-margin-top:80px}
 .sp-heading,.sp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.sp-heading h2{margin:2px 0 8px}.sp-heading p{font-size:15px;color:var(--muted)}
@@ -536,11 +644,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 </table>
 <figure><img src="Figure%209.1.PNG" alt="GOMS methods and selection rules"><figcaption>Figure 9.1: Methods and selection rules branching from a goal</figcaption></figure>
 
-<pre><code>GOAL: Send report to manager
- ├─ [Selection rule] IF formal THEN use METHOD-A ELSE METHOD-B
- ├─ METHOD-A (Email):  open mail → click Compose → type address → attach file → click Send
- └─ METHOD-B (Chat):   open chat → find manager → drag file in → press Enter
-</code></pre></div><div class="hci-ta" lang="ta" hidden data-title="GOMS கட்டமைப்பு"><p><strong>GOMS</strong> (கார்ட், மோரன், நியூவெல்), <strong>இலக்கு நோக்கிய, பிழையற்ற</strong> பணிகளைச் செய்யும் வல்லுநரை மாதிரியாக்குகிறது:</p>
+<div class="vtree"><ul><li><div class="vn"><span class="vtag g">GOAL</span> <b>Send report to manager</b></div><ul><li><div class="vn"><span class="vtag r">Selection rule</span> IF formal THEN use METHOD-A ELSE METHOD-B</div></li><li><div class="vn"><span class="vtag m">METHOD-A · Email</span> <span class="chain"><i>open mail</i><i>click Compose</i><i>type address</i><i>attach file</i><i>click Send</i></span></div></li><li><div class="vn"><span class="vtag m">METHOD-B · Chat</span> <span class="chain"><i>open chat</i><i>find manager</i><i>drag file in</i><i>press Enter</i></span></div></li></ul></li></ul></div></div><div class="hci-ta" lang="ta" hidden data-title="GOMS கட்டமைப்பு"><p><strong>GOMS</strong> (கார்ட், மோரன், நியூவெல்), <strong>இலக்கு நோக்கிய, பிழையற்ற</strong> பணிகளைச் செய்யும் வல்லுநரை மாதிரியாக்குகிறது:</p>
 <table>
 <thead>
 <tr>
@@ -579,11 +683,7 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 </table>
 <figure><img src="Figure%209.1.PNG" alt="GOMS முறைகளும் தெரிவு விதிகளும்"><figcaption>படம் 9.1: இலக்கிலிருந்து கிளைக்கும் முறைகளும் தெரிவு விதிகளும்</figcaption></figure>
 
-<pre><code>இலக்கு: மேலாளருக்கு அறிக்கை அனுப்புதல்
- ├─ [தெரிவு விதி] அதிகாரபூர்வமானது எனில் முறை-A; இல்லையெனில் முறை-B
- ├─ முறை-A (மின்னஞ்சல்): அஞ்சலைத் திற → புதிய அஞ்சலைச் சொடுக்கு → முகவரியைத் தட்டச்சு செய் → கோப்பை இணை → அனுப்பு என்பதைச் சொடுக்கு
- └─ முறை-B (உரையாடல்): உரையாடலைத் திற → மேலாளரைக் கண்டுபிடி → கோப்பை இழுத்துச் சேர் → Enter அழுத்து
-</code></pre></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Keystroke-Level Model (KLM)"><span class="num">3</span>Keystroke-Level Model (KLM)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>அடிப்படைச் செயல்களால் நேரம் கணித்தல்</h3><p>வேலையைச் சிறு செயல்களாக எழுதி, ஒவ்வொரு செயலுக்கான நேரத்தைச் சேர்க்கும் முறை இது. ஒரு எழுத்து அல்லது குறி பலமுறை வந்தால் அவ்வளவு முறைக்கான நேரத்தையும் சேர்க்க வேண்டும்.</p><div class="ta-table-wrap"><table class="ta-readable-table" role="table"><caption>KLM குறிகள்: எதை எண்ண வேண்டும்?</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">குறி</th><th scope="col" role="columnheader">செயல் என்ன?</th><th scope="col" role="columnheader">பாடத்தில் பயன்படுத்தும் நேரம்</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">குறி</span>K · Keystroke</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">செயல் என்ன?</span>விசையை அழுத்துதல் அல்லது குறிப்பிடப்பட்ட பொத்தான் செயல்.</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">பாடத்தில் பயன்படுத்தும் நேரம்</span>சாதாரண பாட மதிப்பு 0.20 வினாடி. தட்டச்சுத் திறனுக்கு ஏற்ப மாறலாம்; பாடத்தில் 0.12 மற்றும் 0.40 வினாடி மதிப்புகளும் வருகின்றன.</td></tr><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">குறி</span>P · Pointing</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">செயல் என்ன?</span>மவுஸ் சுட்டியை இலக்குக்குக் கொண்டு செல்லுதல்.</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">பாடத்தில் பயன்படுத்தும் நேரம்</span>சுமார் 1.10 வினாடி.</td></tr><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">குறி</span>H · Homing</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">செயல் என்ன?</span>விசைப்பலகையிலிருந்து மவுஸிற்கு அல்லது மறுதிசையில் கையை மாற்றுதல்.</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">பாடத்தில் பயன்படுத்தும் நேரம்</span>சுமார் 0.40 வினாடி.</td></tr><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">குறி</span>M · Mental preparation</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">செயல் என்ன?</span>அடுத்த செயல் தொகுதிக்குத் தேவையான மனத் தயாரிப்பு.</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">பாடத்தில் பயன்படுத்தும் நேரம்</span>சுமார் 1.35 வினாடி.</td></tr><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">குறி</span>D · Drawing</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">செயல் என்ன?</span>பேனா அல்லது மவுஸால் வரைதல்.</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">பாடத்தில் பயன்படுத்தும் நேரம்</span>வேலையைப் பொறுத்து மாறும்.</td></tr><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">குறி</span>R · Response time</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">செயல் என்ன?</span>அமைப்பின் பதிலுக்குக் காத்திருத்தல்.</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">பாடத்தில் பயன்படுத்தும் நேரம்</span>அமைப்பின் பதில் நேரத்தைப் பொறுத்து மாறும்.</td></tr></tbody></table></div><div class="ta-table-wrap"><table class="ta-readable-table" role="table"><caption>ஒரே சேமிப்பு வேலை: பாடத்தின் இரண்டு கணக்குகள்</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">வழி</th><th scope="col" role="columnheader">நேரத்தைச் சேர்ப்பது</th><th scope="col" role="columnheader">மொத்தம்</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">வழி</span>மவுஸ் மெனு வழி</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">நேரத்தைச் சேர்ப்பது</span>H + M + P + BB + M + P + BB = 0.40 + 1.35 + 1.10 + 0.20 + 1.35 + 1.10 + 0.20</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">மொத்தம்</span>5.70 வினாடி.</td></tr><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">வழி</span>Ctrl+S வழி</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">நேரத்தைச் சேர்ப்பது</span>M + K + K = 1.35 + 0.20 + 0.20</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">மொத்தம்</span>1.75 வினாடி.</td></tr><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">வழி</span>இந்தக் கருதுகோள்களில் உள்ள வேறுபாடு</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">நேரத்தைச் சேர்ப்பது</span>5.70 − 1.75</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">மொத்தம்</span>3.95 வினாடி.</td></tr></tbody></table></div><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>இந்த உதாரணத்தில் <strong>B</strong> என்பது மவுஸ் பொத்தானை அழுத்துதல் அல்லது விடுதல்; தலா 0.10 வினாடி. எனவே <strong>BB = 0.20 வினாடி</strong>. அதை K-க்கான மதிப்புடன் குழப்ப வேண்டாம்.</p>
+<div class="vtree"><ul><li><div class="vn"><span class="vtag g">இலக்கு</span> <b>மேலாளருக்கு அறிக்கை அனுப்புதல்</b></div><ul><li><div class="vn"><span class="vtag r">தெரிவு விதி</span> அதிகாரபூர்வமானது எனில் முறை-A; இல்லையெனில் முறை-B</div></li><li><div class="vn"><span class="vtag m">முறை-A · மின்னஞ்சல்</span> <span class="chain"><i>அஞ்சலைத் திற</i><i>புதிய அஞ்சலைச் சொடுக்கு</i><i>முகவரியைத் தட்டச்சு செய்</i><i>கோப்பை இணை</i><i>அனுப்பு என்பதைச் சொடுக்கு</i></span></div></li><li><div class="vn"><span class="vtag m">முறை-B · உரையாடல்</span> <span class="chain"><i>உரையாடலைத் திற</i><i>மேலாளரைக் கண்டுபிடி</i><i>கோப்பை இழுத்துச் சேர்</i><i>Enter அழுத்து</i></span></div></li></ul></li></ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Keystroke-Level Model (KLM)"><span class="num">3</span>Keystroke-Level Model (KLM)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>அடிப்படைச் செயல்களால் நேரம் கணித்தல்</h3><p>வேலையைச் சிறு செயல்களாக எழுதி, ஒவ்வொரு செயலுக்கான நேரத்தைச் சேர்க்கும் முறை இது. ஒரு எழுத்து அல்லது குறி பலமுறை வந்தால் அவ்வளவு முறைக்கான நேரத்தையும் சேர்க்க வேண்டும்.</p><div class="ta-table-wrap"><table class="ta-readable-table" role="table"><caption>KLM குறிகள்: எதை எண்ண வேண்டும்?</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">குறி</th><th scope="col" role="columnheader">செயல் என்ன?</th><th scope="col" role="columnheader">பாடத்தில் பயன்படுத்தும் நேரம்</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">குறி</span>K · Keystroke</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">செயல் என்ன?</span>விசையை அழுத்துதல் அல்லது குறிப்பிடப்பட்ட பொத்தான் செயல்.</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">பாடத்தில் பயன்படுத்தும் நேரம்</span>சாதாரண பாட மதிப்பு 0.20 வினாடி. தட்டச்சுத் திறனுக்கு ஏற்ப மாறலாம்; பாடத்தில் 0.12 மற்றும் 0.40 வினாடி மதிப்புகளும் வருகின்றன.</td></tr><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">குறி</span>P · Pointing</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">செயல் என்ன?</span>மவுஸ் சுட்டியை இலக்குக்குக் கொண்டு செல்லுதல்.</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">பாடத்தில் பயன்படுத்தும் நேரம்</span>சுமார் 1.10 வினாடி.</td></tr><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">குறி</span>H · Homing</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">செயல் என்ன?</span>விசைப்பலகையிலிருந்து மவுஸிற்கு அல்லது மறுதிசையில் கையை மாற்றுதல்.</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">பாடத்தில் பயன்படுத்தும் நேரம்</span>சுமார் 0.40 வினாடி.</td></tr><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">குறி</span>M · Mental preparation</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">செயல் என்ன?</span>அடுத்த செயல் தொகுதிக்குத் தேவையான மனத் தயாரிப்பு.</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">பாடத்தில் பயன்படுத்தும் நேரம்</span>சுமார் 1.35 வினாடி.</td></tr><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">குறி</span>D · Drawing</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">செயல் என்ன?</span>பேனா அல்லது மவுஸால் வரைதல்.</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">பாடத்தில் பயன்படுத்தும் நேரம்</span>வேலையைப் பொறுத்து மாறும்.</td></tr><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">குறி</span>R · Response time</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">செயல் என்ன?</span>அமைப்பின் பதிலுக்குக் காத்திருத்தல்.</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">பாடத்தில் பயன்படுத்தும் நேரம்</span>அமைப்பின் பதில் நேரத்தைப் பொறுத்து மாறும்.</td></tr></tbody></table></div><div class="ta-table-wrap"><table class="ta-readable-table" role="table"><caption>ஒரே சேமிப்பு வேலை: பாடத்தின் இரண்டு கணக்குகள்</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">வழி</th><th scope="col" role="columnheader">நேரத்தைச் சேர்ப்பது</th><th scope="col" role="columnheader">மொத்தம்</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">வழி</span>மவுஸ் மெனு வழி</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">நேரத்தைச் சேர்ப்பது</span>H + M + P + BB + M + P + BB = 0.40 + 1.35 + 1.10 + 0.20 + 1.35 + 1.10 + 0.20</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">மொத்தம்</span>5.70 வினாடி.</td></tr><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">வழி</span>Ctrl+S வழி</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">நேரத்தைச் சேர்ப்பது</span>M + K + K = 1.35 + 0.20 + 0.20</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">மொத்தம்</span>1.75 வினாடி.</td></tr><tr role="row"><th scope="row" role="rowheader"><span class="ta-cell-label" aria-hidden="true">வழி</span>இந்தக் கருதுகோள்களில் உள்ள வேறுபாடு</th><td role="cell"><span class="ta-cell-label" aria-hidden="true">நேரத்தைச் சேர்ப்பது</span>5.70 − 1.75</td><td role="cell"><span class="ta-cell-label" aria-hidden="true">மொத்தம்</span>3.95 வினாடி.</td></tr></tbody></table></div><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>இந்த உதாரணத்தில் <strong>B</strong> என்பது மவுஸ் பொத்தானை அழுத்துதல் அல்லது விடுதல்; தலா 0.10 வினாடி. எனவே <strong>BB = 0.20 வினாடி</strong>. அதை K-க்கான மதிப்புடன் குழப்ப வேண்டாம்.</p>
 <p><strong>மொத்த நேரம் = பயன்படுத்திய எல்லாச் செயல்களுக்கான நேரங்களின் கூட்டுத்தொகை.</strong> மனத் தயாரிப்பு M-ஐ ஒவ்வொரு நகர்வுக்கும் காரணமின்றிச் சேர்க்க வேண்டாம்; செயல்தொகுதி மற்றும் சூழலைக் கவனிக்க வேண்டும். இவை பாடத்தின் மதிப்பீடுகள்; எல்லா நபருக்கும் உறுதியான நேரங்கள் அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><p>KLM is a <strong>simplified, quantitative version of GOMS</strong>. It calculates the <strong>execution time for an expert doing a routine task with no errors</strong>:</p>
 <div class="formula">T<sub>execute</sub> = T<sub>K</sub> + T<sub>P</sub> + T<sub>H</sub> + T<sub>D</sub> + T<sub>M</sub> + T<sub>R</sub></div>
 <table>

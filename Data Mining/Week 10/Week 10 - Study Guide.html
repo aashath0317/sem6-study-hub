@@ -386,13 +386,121 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .lat-svg line{stroke:var(--muted);stroke-width:1.4;opacity:.6}
 .lat-svg rect{stroke:var(--line);stroke-width:1.5}
 .lat-svg text{font-size:14px;font-weight:700;fill:var(--ink)}
-.lat-svg .l0 rect{fill:var(--accent)}.lat-svg .l0 text{fill:#fff}
+.lat-svg .l0 rect{fill:var(--accent)}.lat-svg .l0 text{fill:var(--panel)}
 .lat-svg .l1 rect{fill:var(--accent-soft)}.lat-svg .l2 rect{fill:var(--tip-bg)}.lat-svg .l3 rect{fill:var(--key-bg)}
 .lat-labels{display:grid;grid-template-rows:repeat(4,75px)}
 .lat-labels>div{display:flex;flex-direction:column;justify-content:center;border-left:4px solid var(--line);padding-left:12px}
 .lat-labels .l0{border-color:var(--accent)}.lat-labels .l1{border-color:#8fa8e8}.lat-labels .l2{border-color:#4fae8a}.lat-labels .l3{border-color:#d4a72c}
 .lat-labels b{font-size:15px}.lat-labels span{color:var(--muted);font-size:14px}
 @media (max-width:640px){.lattice{grid-template-columns:1fr}.lat-svg{margin:0 auto;display:block}.lat-labels{grid-template-rows:none;gap:10px}}
+/* ---- Diagrams: shared frame ---- */
+.otree,.vtree,.arch,.dfig,.bbox,.dsteps{margin:16px 0;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--code-bg)}
+/* Branching tree (org-chart style) */
+.otree{overflow-x:auto}
+.ot-in{width:max-content;min-width:100%}
+.otree ul{display:flex;justify-content:center;list-style:none;margin:0;padding:18px 0 0;position:relative}
+.otree .ot-in>ul{padding-top:0}
+.otree ul ul::before{content:"";position:absolute;top:0;left:50%;height:18px;border-left:1.5px solid var(--muted)}
+.otree li{display:flex;flex-direction:column;align-items:center;position:relative;padding:18px 4px 0;margin:0}
+.otree li::before,.otree li::after{content:"";position:absolute;top:0;right:50%;width:50%;height:18px;border-top:1.5px solid var(--muted)}
+.otree li::after{right:auto;left:50%;border-left:1.5px solid var(--muted)}
+.otree li:only-child{padding-top:0}
+.otree li:only-child::before,.otree li:only-child::after{display:none}
+.otree li:first-child::before,.otree li:last-child::after{border:0 none}
+.otree li:last-child::before{border-right:1.5px solid var(--muted);border-radius:0 7px 0 0}
+.otree li:first-child::after{border-radius:7px 0 0 0}
+.otree .ot-in>ul>li{padding-top:0}
+.otree .ot-in>ul>li::before,.otree .ot-in>ul>li::after{display:none}
+.otree span{display:inline-block;padding:6px 9px;border-radius:9px;background:var(--panel);border:1px solid var(--line);font-weight:600;font-size:14px;white-space:nowrap;line-height:1.3}
+.otree .ot-in>ul>li>span{background:var(--accent);color:var(--panel);border-color:transparent}
+.otree em{font-style:normal;font-size:12.5px;color:var(--muted);margin:2px 0 4px;line-height:1.2}
+.otree span.yes{background:var(--tip-bg);color:var(--tip);border-color:transparent}
+.otree span.no{background:var(--warn-bg);color:var(--warn);border-color:transparent}
+.otree span.more{background:transparent;border-style:dashed;color:var(--muted)}
+.otree li.ghost::before,.otree li.ghost::after{border-color:transparent!important}
+.otree li.ghost>span{visibility:hidden}
+.otree li:has(+ li.ghost)::after{border-left:1.5px solid var(--muted)}
+/* Outline tree */
+.vtree ul{list-style:none;margin:0;padding:0}
+.vtree ul ul{padding-left:26px}
+.vtree li{position:relative;padding:5px 0;margin:0}
+.vtree ul ul>li::before{content:"";position:absolute;left:-16px;top:0;bottom:0;border-left:1.5px solid var(--muted)}
+.vtree ul ul>li:last-child::before{bottom:auto;height:22px}
+.vtree ul ul>li::after{content:"";position:absolute;left:-16px;top:22px;width:12px;border-top:1.5px solid var(--muted)}
+.vn{display:flex;flex-wrap:wrap;align-items:center;gap:6px;line-height:1.4}
+.vn .d{color:var(--muted);font-size:14px}
+.vbox{display:inline-block;padding:6px 11px;border-radius:9px;background:var(--panel);border:1px solid var(--line);font-weight:600;font-size:14.5px}
+.vbox b{color:var(--accent)}
+.vtag{display:inline-block;padding:3px 9px;border-radius:999px;font-size:13px;font-weight:700;background:var(--accent-soft);color:var(--accent-ink)}
+.vtag.g{background:var(--accent);color:var(--panel)}.vtag.r{background:var(--key-bg);color:var(--key)}.vtag.m{background:var(--tip-bg);color:var(--tip)}
+.vtag.e{background:var(--accent-soft);color:var(--accent-ink);font-weight:600}.vtag.f{background:var(--ex-bg);color:var(--ex);font-weight:600}
+.chain{display:inline-flex;flex-wrap:wrap;gap:4px 0;align-items:center}
+.chain i{position:relative;font-style:normal;font-size:13.5px;background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:3px 8px}
+.chain i+i{margin-left:20px}
+.chain i+i::before{content:"→";position:absolute;left:-16px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.vplans{margin-top:12px;display:grid;gap:6px}
+.vplans div{font-size:14.5px;padding:7px 11px;border-left:3px solid var(--accent);background:var(--panel);border-radius:0 8px 8px 0}
+/* System architecture with side box */
+.arch{display:grid;grid-template-columns:1fr 34px minmax(110px,190px);align-items:center}
+.ab{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;text-align:center;font-weight:600;font-size:14.5px}
+.ab.top{background:var(--accent-soft)}.ab.db{background:var(--key-bg)}
+.aa{text-align:center;color:var(--muted);font-size:12px;letter-spacing:.3em;padding:4px 0}
+.aa.etl{letter-spacing:normal;font-weight:600;color:var(--ink);font-size:13px;padding:8px 0 6px}
+.ah{text-align:center;color:var(--muted);font-size:12px}
+.akb{align-self:stretch;display:grid;place-items:center;text-align:center;background:var(--tip-bg);border:1px solid var(--line);border-radius:10px;padding:10px;font-weight:700;font-size:14.5px}
+/* Small drawn figures */
+.dsvg{display:block;margin:0 auto;width:440px;max-width:100%;height:auto}
+.dsvg.sm{width:300px}
+.dsvg ellipse{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.5}
+.dsvg text{fill:var(--ink);font-size:15px;font-weight:600}
+.dsvg text.set{font-size:17px;font-weight:800;fill:var(--accent-ink)}
+.dsvg text.acc{fill:var(--accent);font-style:italic;font-weight:700}
+.dsvg line,.dsvg .curve{stroke:var(--ink);stroke-width:1.5;fill:none}
+.dsvg .curve{stroke:var(--accent);stroke-dasharray:5 4}
+.dsvg .mk{fill:var(--ink)}
+.dcap{text-align:center;margin-top:8px;font-size:15px;color:var(--muted)}
+/* Stimulus → black box → response */
+.bbox{display:grid;grid-template-columns:1fr 26px 1.4fr 26px 1fr;gap:6px;align-items:stretch}
+.bcol{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px}
+.bcol.black{background:#1d2330;color:#e6e8ee;border-color:#1d2330}
+.bcol h5{margin:0 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.bcol p{margin:8px 0 4px;font-size:13px;font-weight:700;color:var(--muted)}
+.bcol.black p{color:#9aa3b5}
+.bcol ul{margin:0;padding-left:18px;font-size:14.5px}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chips span{font-size:13px;padding:3px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font-weight:600}
+.bcol.black .chips span{background:#2b3240;color:#e6e8ee}
+.bcol.black .chain i{background:#2b3240;border-color:#3a4252;color:#e6e8ee}
+.barr{display:grid;place-items:center;color:var(--muted);font-size:20px}
+/* Decision steps with options */
+.dsteps{display:flex;flex-wrap:wrap;gap:8px 26px}
+.ds{flex:1 1 130px;position:relative;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.ds+.ds::before{content:"→";position:absolute;left:-20px;top:12px;color:var(--muted);font-size:17px}
+.ds b{display:block;color:var(--accent-ink);font-size:14.5px;margin-bottom:6px}
+.ds ul{margin:0;padding-left:16px;font-size:14px}
+@media (max-width:640px){
+  .bbox{grid-template-columns:1fr}.barr{transform:rotate(90deg);padding:2px 0}
+  .dsteps{flex-direction:column;gap:22px}.ds+.ds::before{content:"↓";left:50%;top:-21px}
+  .arch{grid-template-columns:1fr 24px 96px}
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bcol.black{background:#0b0d12;border-color:#3a4252}}
+:root[data-theme="dark"] .bcol.black{background:#0b0d12;border-color:#3a4252}
+/* Branching trees become an indented outline on phones */
+@media (max-width:640px){
+  .otree{overflow:visible}
+  .ot-in{width:auto;min-width:0}
+  .otree ul{display:block;padding:0 0 0 24px}
+  .otree .ot-in>ul{padding-left:0}
+  .otree ul ul::before{display:none}
+  .otree li{display:block;padding:4px 0!important}
+  .otree li::before{content:"";display:block!important;position:absolute;left:-15px;top:0;bottom:0;right:auto;width:0;height:auto;border:0!important;border-left:1.5px solid var(--muted)!important;border-radius:0!important}
+  .otree li:last-child::before{bottom:auto;height:21px}
+  .otree li::after{content:"";display:block!important;position:absolute;left:-15px;top:21px;width:11px;height:0;border:0!important;border-top:1.5px solid var(--muted)!important;border-radius:0!important}
+  .otree .ot-in>ul>li::before,.otree .ot-in>ul>li::after{display:none!important}
+  .otree em{display:inline-block;margin:0 6px 0 0}
+  .otree li.ghost{display:none}
+  .otree li:has(+ li.ghost)::before{bottom:auto;height:21px}
+}
 
 .study-plan{margin:24px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow);scroll-margin-top:80px}
 .sp-heading,.sp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.sp-heading h2{margin:2px 0 8px}.sp-heading p{font-size:15px;color:var(--muted)}
@@ -496,18 +604,7 @@ Branch count அந்த prefix-க்கு உரியது; ஒரே item
 <li><strong>T200</strong> shares the prefix f-c-a, so those become f:2, c:2, a:2, and a new branch <strong>b:1 → m:1</strong> is added under a.</li>
 <li>After all five transactions, the FP-tree is:</li>
 </ul>
-<pre><code>                 null
-               /      \
-            f:4        c:1
-           /   \         \
-        c:3    b:1       b:1
-         |                 \
-        a:3                p:1
-       /    \
-     m:2    b:1
-      |       \
-     p:2      m:1
-</code></pre></div><div class="hci-ta" lang="ta" hidden data-title="செய்முறை எடுத்துக்காட்டு (min_sup = 3)"><table>
+<div class="otree fp"><div class="ot-in"><ul><li><span>null</span><ul><li><span>f:4</span><ul><li><span>c:3</span><ul><li><span>a:3</span><ul><li><span>m:2</span><ul><li><span>p:2</span></li></ul></li><li><span>b:1</span><ul><li><span>m:1</span></li></ul></li></ul></li></ul></li><li><span>b:1</span></li></ul></li><li><span>c:1</span><ul><li><span>b:1</span><ul><li><span>p:1</span></li></ul></li></ul></li></ul></li></ul></div></div></div><div class="hci-ta" lang="ta" hidden data-title="செய்முறை எடுத்துக்காட்டு (min_sup = 3)"><table>
 <thead>
 <tr>
 <th>TID</th>
@@ -551,18 +648,7 @@ Branch count அந்த prefix-க்கு உரியது; ஒரே item
 <li><strong>T200</strong>, f-c-a முன்னொட்டைப் பகிர்வதால் அவை f:2, c:2, a:2 ஆகின்றன; a-க்குக் கீழ் புதிய <strong>b:1 → m:1</strong> கிளை சேர்க்கப்படுகிறது.</li>
 <li>ஐந்து பரிவர்த்தனைகளுக்கும் பின் FP-tree:</li>
 </ul>
-<pre><code>                 null
-               /      \
-            f:4        c:1
-           /   \         \
-        c:3    b:1       b:1
-         |                 \
-        a:3                p:1
-       /    \
-     m:2    b:1
-      |       \
-     p:2      m:1
-</code></pre></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Mining the FP-tree"><span class="num">4</span>Mining the FP-tree</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>FP-tree-ஐ Mine செய்வது</h3><p>ஒரு item-க்கு முன் உள்ள prefix paths அதன் <strong>Conditional pattern base</strong>. அதிலிருந்து சிறிய conditional tree செய்து தேடலைத் தொடர்வோம். Path count-ஐ ஒருமுறை மட்டும் கணக்கிடுவது முக்கியம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>ஒரு suffix item-ஐத் தேர்வு செய்து அதன் எல்லா prefix paths-ஐ suffix node count-உடன் எடுங்கள். இதுவே <strong>Conditional pattern base</strong>. Weighted counts மூலம் conditional FP-tree உருவாக்கி recursion தொடரும்.
+<div class="otree fp"><div class="ot-in"><ul><li><span>null</span><ul><li><span>f:4</span><ul><li><span>c:3</span><ul><li><span>a:3</span><ul><li><span>m:2</span><ul><li><span>p:2</span></li></ul></li><li><span>b:1</span><ul><li><span>m:1</span></li></ul></li></ul></li></ul></li><li><span>b:1</span></li></ul></li><li><span>c:1</span><ul><li><span>b:1</span><ul><li><span>p:1</span></li></ul></li></ul></li></ul></li></ul></div></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Mining the FP-tree"><span class="num">4</span>Mining the FP-tree</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>FP-tree-ஐ Mine செய்வது</h3><p>ஒரு item-க்கு முன் உள்ள prefix paths அதன் <strong>Conditional pattern base</strong>. அதிலிருந்து சிறிய conditional tree செய்து தேடலைத் தொடர்வோம். Path count-ஐ ஒருமுறை மட்டும் கணக்கிடுவது முக்கியம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>ஒரு suffix item-ஐத் தேர்வு செய்து அதன் எல்லா prefix paths-ஐ suffix node count-உடன் எடுங்கள். இதுவே <strong>Conditional pattern base</strong>. Weighted counts மூலம் conditional FP-tree உருவாக்கி recursion தொடரும்.
 Path-இல் suffix-ஐ மீண்டும் சேர்த்து இருமுறை எண்ணாதீர்கள். ஒரு single path மட்டுமே இருந்தால் அதிலிருந்து combinations எளிதாக உருவாகலாம்.</p>
 <p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
 <p>Suffix <strong>p</strong>: prefixes <strong>f,c,a,m:2</strong> மற்றும் <strong>c,b:1</strong>. Totals c3, f/a/m2,b1→conditional tree c3→pattern{c,p}:3. Suffix <strong>m</strong>: f,c,a:2 மற்றும் f,c,a,b:1→f/c/a3,b1; f,c,a subsets-உடன் m சேர்த்து frequent patterns. Prefix counts weighted; path-ஐ ஒருமுறை எண்ணுவது மட்டும் போதாது. Recursively suffix சேர்த்துச் செல்லுங்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>For each frequent item, <strong>starting from the least frequent</strong> (bottom of L) as the <strong>suffix</strong>:</p>
@@ -749,12 +835,8 @@ Hierarchy-யில் parent-child தொடர்பைத் தெளிவ�
 <li>Strong associations at <strong>high levels</strong> may just be <strong>common sense</strong>, but what is common sense to one user may be <strong>novel</strong> to another.</li>
 <li>So the system should mine at <strong>multiple levels of abstraction</strong> using <strong>concept hierarchies</strong>:</li>
 </ul>
-<pre><code>                       all
-        ┌───────┬──────┼───────┬─────────────┐
-    computer  software printer  computer accessory
-     ┌──┴──┐     …       …            …
-  laptop desktop
-</code></pre>
+<div class="otree"><div class="ot-in"><ul><li><span>all</span><ul><li><span>computer</span><ul><li><span>laptop</span></li><li><span>desktop</span></li></ul></li><li><span>software</span><ul><li><span class="more">…</span></li></ul></li><li><span>printer</span><ul><li><span class="more">…</span></li></ul></li><li><span>computer accessory</span><ul><li><span class="more">…</span></li></ul></li></ul></li></ul></div></div>
+
 <ul>
 <li>Rules mined at multiple levels are <strong>multilevel association rules</strong>.</li>
 <li>They're mined under a <strong>support-confidence framework</strong> with a <strong>top-down</strong> strategy: count frequent itemsets at <strong>level 1</strong>, then go <strong>down</strong> level by level until no more frequent itemsets are found. Any algorithm (e.g. Apriori) works at each level.</li>
@@ -785,12 +867,8 @@ Hierarchy-யில் parent-child தொடர்பைத் தெளிவ�
 <li><strong>உயர் நிலைகளிலுள்ள</strong> வலுவான தொடர்புகள் <strong>பொது அறிவாக</strong> இருக்கலாம்; ஆனால் ஒருவருக்குப் பொது அறிவானது மற்றொருவருக்கு <strong>புதிதாக</strong> இருக்கலாம்.</li>
 <li>எனவே <strong>கருத்துப் படிநிலைகளைப்</strong> பயன்படுத்தி முறைமை <strong>பல அருவாக்க நிலைகளில்</strong> சுரங்கம் செய்ய வேண்டும்:</li>
 </ul>
-<pre><code>                       அனைத்தும்
-        ┌───────┬──────┼───────┬─────────────┐
-      கணினி  மென்பொருள் அச்சுப்பொறி  கணினித் துணைப்பொருள்
-     ┌──┴──┐     …       …            …
- மடிக்கணினி மேசைக்கணினி
-</code></pre>
+<div class="otree"><div class="ot-in"><ul><li><span>அனைத்தும்</span><ul><li><span>கணினி</span><ul><li><span>மடிக்கணினி</span></li><li><span>மேசைக்கணினி</span></li></ul></li><li><span>மென்பொருள்</span><ul><li><span class="more">…</span></li></ul></li><li><span>அச்சுப்பொறி</span><ul><li><span class="more">…</span></li></ul></li><li><span>கணினித் துணைப்பொருள்</span><ul><li><span class="more">…</span></li></ul></li></ul></li></ul></div></div>
+
 <ul>
 <li>பல நிலைகளில் சுரங்கப்படும் விதிகள் <strong>பல்நிலைத் தொடர்பு விதிகள்</strong>.</li>
 <li><strong>ஆதரவு-நம்பிக்கைக் கட்டமைப்பின்கீழ்</strong>, <strong>மேலிருந்து கீழ்</strong> உத்தியுடன் சுரங்கப்படுகின்றன: <strong>நிலை 1</strong>-இல் அடிக்கடி நிகழும் பொருட்கணங்களை எண்ணி, மேலும் கிடைக்காதவரை நிலைவாரியாக <strong>கீழே</strong> செல்லவும். ஒவ்வொரு நிலையிலும் எந்தப் படிமுறையும் (எ.கா. Apriori) இயங்கும்.</li>

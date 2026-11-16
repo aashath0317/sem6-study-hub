@@ -386,13 +386,121 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .lat-svg line{stroke:var(--muted);stroke-width:1.4;opacity:.6}
 .lat-svg rect{stroke:var(--line);stroke-width:1.5}
 .lat-svg text{font-size:14px;font-weight:700;fill:var(--ink)}
-.lat-svg .l0 rect{fill:var(--accent)}.lat-svg .l0 text{fill:#fff}
+.lat-svg .l0 rect{fill:var(--accent)}.lat-svg .l0 text{fill:var(--panel)}
 .lat-svg .l1 rect{fill:var(--accent-soft)}.lat-svg .l2 rect{fill:var(--tip-bg)}.lat-svg .l3 rect{fill:var(--key-bg)}
 .lat-labels{display:grid;grid-template-rows:repeat(4,75px)}
 .lat-labels>div{display:flex;flex-direction:column;justify-content:center;border-left:4px solid var(--line);padding-left:12px}
 .lat-labels .l0{border-color:var(--accent)}.lat-labels .l1{border-color:#8fa8e8}.lat-labels .l2{border-color:#4fae8a}.lat-labels .l3{border-color:#d4a72c}
 .lat-labels b{font-size:15px}.lat-labels span{color:var(--muted);font-size:14px}
 @media (max-width:640px){.lattice{grid-template-columns:1fr}.lat-svg{margin:0 auto;display:block}.lat-labels{grid-template-rows:none;gap:10px}}
+/* ---- Diagrams: shared frame ---- */
+.otree,.vtree,.arch,.dfig,.bbox,.dsteps{margin:16px 0;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--code-bg)}
+/* Branching tree (org-chart style) */
+.otree{overflow-x:auto}
+.ot-in{width:max-content;min-width:100%}
+.otree ul{display:flex;justify-content:center;list-style:none;margin:0;padding:18px 0 0;position:relative}
+.otree .ot-in>ul{padding-top:0}
+.otree ul ul::before{content:"";position:absolute;top:0;left:50%;height:18px;border-left:1.5px solid var(--muted)}
+.otree li{display:flex;flex-direction:column;align-items:center;position:relative;padding:18px 4px 0;margin:0}
+.otree li::before,.otree li::after{content:"";position:absolute;top:0;right:50%;width:50%;height:18px;border-top:1.5px solid var(--muted)}
+.otree li::after{right:auto;left:50%;border-left:1.5px solid var(--muted)}
+.otree li:only-child{padding-top:0}
+.otree li:only-child::before,.otree li:only-child::after{display:none}
+.otree li:first-child::before,.otree li:last-child::after{border:0 none}
+.otree li:last-child::before{border-right:1.5px solid var(--muted);border-radius:0 7px 0 0}
+.otree li:first-child::after{border-radius:7px 0 0 0}
+.otree .ot-in>ul>li{padding-top:0}
+.otree .ot-in>ul>li::before,.otree .ot-in>ul>li::after{display:none}
+.otree span{display:inline-block;padding:6px 9px;border-radius:9px;background:var(--panel);border:1px solid var(--line);font-weight:600;font-size:14px;white-space:nowrap;line-height:1.3}
+.otree .ot-in>ul>li>span{background:var(--accent);color:var(--panel);border-color:transparent}
+.otree em{font-style:normal;font-size:12.5px;color:var(--muted);margin:2px 0 4px;line-height:1.2}
+.otree span.yes{background:var(--tip-bg);color:var(--tip);border-color:transparent}
+.otree span.no{background:var(--warn-bg);color:var(--warn);border-color:transparent}
+.otree span.more{background:transparent;border-style:dashed;color:var(--muted)}
+.otree li.ghost::before,.otree li.ghost::after{border-color:transparent!important}
+.otree li.ghost>span{visibility:hidden}
+.otree li:has(+ li.ghost)::after{border-left:1.5px solid var(--muted)}
+/* Outline tree */
+.vtree ul{list-style:none;margin:0;padding:0}
+.vtree ul ul{padding-left:26px}
+.vtree li{position:relative;padding:5px 0;margin:0}
+.vtree ul ul>li::before{content:"";position:absolute;left:-16px;top:0;bottom:0;border-left:1.5px solid var(--muted)}
+.vtree ul ul>li:last-child::before{bottom:auto;height:22px}
+.vtree ul ul>li::after{content:"";position:absolute;left:-16px;top:22px;width:12px;border-top:1.5px solid var(--muted)}
+.vn{display:flex;flex-wrap:wrap;align-items:center;gap:6px;line-height:1.4}
+.vn .d{color:var(--muted);font-size:14px}
+.vbox{display:inline-block;padding:6px 11px;border-radius:9px;background:var(--panel);border:1px solid var(--line);font-weight:600;font-size:14.5px}
+.vbox b{color:var(--accent)}
+.vtag{display:inline-block;padding:3px 9px;border-radius:999px;font-size:13px;font-weight:700;background:var(--accent-soft);color:var(--accent-ink)}
+.vtag.g{background:var(--accent);color:var(--panel)}.vtag.r{background:var(--key-bg);color:var(--key)}.vtag.m{background:var(--tip-bg);color:var(--tip)}
+.vtag.e{background:var(--accent-soft);color:var(--accent-ink);font-weight:600}.vtag.f{background:var(--ex-bg);color:var(--ex);font-weight:600}
+.chain{display:inline-flex;flex-wrap:wrap;gap:4px 0;align-items:center}
+.chain i{position:relative;font-style:normal;font-size:13.5px;background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:3px 8px}
+.chain i+i{margin-left:20px}
+.chain i+i::before{content:"→";position:absolute;left:-16px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.vplans{margin-top:12px;display:grid;gap:6px}
+.vplans div{font-size:14.5px;padding:7px 11px;border-left:3px solid var(--accent);background:var(--panel);border-radius:0 8px 8px 0}
+/* System architecture with side box */
+.arch{display:grid;grid-template-columns:1fr 34px minmax(110px,190px);align-items:center}
+.ab{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;text-align:center;font-weight:600;font-size:14.5px}
+.ab.top{background:var(--accent-soft)}.ab.db{background:var(--key-bg)}
+.aa{text-align:center;color:var(--muted);font-size:12px;letter-spacing:.3em;padding:4px 0}
+.aa.etl{letter-spacing:normal;font-weight:600;color:var(--ink);font-size:13px;padding:8px 0 6px}
+.ah{text-align:center;color:var(--muted);font-size:12px}
+.akb{align-self:stretch;display:grid;place-items:center;text-align:center;background:var(--tip-bg);border:1px solid var(--line);border-radius:10px;padding:10px;font-weight:700;font-size:14.5px}
+/* Small drawn figures */
+.dsvg{display:block;margin:0 auto;width:440px;max-width:100%;height:auto}
+.dsvg.sm{width:300px}
+.dsvg ellipse{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.5}
+.dsvg text{fill:var(--ink);font-size:15px;font-weight:600}
+.dsvg text.set{font-size:17px;font-weight:800;fill:var(--accent-ink)}
+.dsvg text.acc{fill:var(--accent);font-style:italic;font-weight:700}
+.dsvg line,.dsvg .curve{stroke:var(--ink);stroke-width:1.5;fill:none}
+.dsvg .curve{stroke:var(--accent);stroke-dasharray:5 4}
+.dsvg .mk{fill:var(--ink)}
+.dcap{text-align:center;margin-top:8px;font-size:15px;color:var(--muted)}
+/* Stimulus → black box → response */
+.bbox{display:grid;grid-template-columns:1fr 26px 1.4fr 26px 1fr;gap:6px;align-items:stretch}
+.bcol{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px}
+.bcol.black{background:#1d2330;color:#e6e8ee;border-color:#1d2330}
+.bcol h5{margin:0 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.bcol p{margin:8px 0 4px;font-size:13px;font-weight:700;color:var(--muted)}
+.bcol.black p{color:#9aa3b5}
+.bcol ul{margin:0;padding-left:18px;font-size:14.5px}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chips span{font-size:13px;padding:3px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font-weight:600}
+.bcol.black .chips span{background:#2b3240;color:#e6e8ee}
+.bcol.black .chain i{background:#2b3240;border-color:#3a4252;color:#e6e8ee}
+.barr{display:grid;place-items:center;color:var(--muted);font-size:20px}
+/* Decision steps with options */
+.dsteps{display:flex;flex-wrap:wrap;gap:8px 26px}
+.ds{flex:1 1 130px;position:relative;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.ds+.ds::before{content:"→";position:absolute;left:-20px;top:12px;color:var(--muted);font-size:17px}
+.ds b{display:block;color:var(--accent-ink);font-size:14.5px;margin-bottom:6px}
+.ds ul{margin:0;padding-left:16px;font-size:14px}
+@media (max-width:640px){
+  .bbox{grid-template-columns:1fr}.barr{transform:rotate(90deg);padding:2px 0}
+  .dsteps{flex-direction:column;gap:22px}.ds+.ds::before{content:"↓";left:50%;top:-21px}
+  .arch{grid-template-columns:1fr 24px 96px}
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bcol.black{background:#0b0d12;border-color:#3a4252}}
+:root[data-theme="dark"] .bcol.black{background:#0b0d12;border-color:#3a4252}
+/* Branching trees become an indented outline on phones */
+@media (max-width:640px){
+  .otree{overflow:visible}
+  .ot-in{width:auto;min-width:0}
+  .otree ul{display:block;padding:0 0 0 24px}
+  .otree .ot-in>ul{padding-left:0}
+  .otree ul ul::before{display:none}
+  .otree li{display:block;padding:4px 0!important}
+  .otree li::before{content:"";display:block!important;position:absolute;left:-15px;top:0;bottom:0;right:auto;width:0;height:auto;border:0!important;border-left:1.5px solid var(--muted)!important;border-radius:0!important}
+  .otree li:last-child::before{bottom:auto;height:21px}
+  .otree li::after{content:"";display:block!important;position:absolute;left:-15px;top:21px;width:11px;height:0;border:0!important;border-top:1.5px solid var(--muted)!important;border-radius:0!important}
+  .otree .ot-in>ul>li::before,.otree .ot-in>ul>li::after{display:none!important}
+  .otree em{display:inline-block;margin:0 6px 0 0}
+  .otree li.ghost{display:none}
+  .otree li:has(+ li.ghost)::before{bottom:auto;height:21px}
+}
 
 .study-plan{margin:24px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow);scroll-margin-top:80px}
 .sp-heading,.sp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.sp-heading h2{margin:2px 0 8px}.sp-heading p{font-size:15px;color:var(--muted)}
@@ -934,12 +1042,8 @@ Aaker loyalty levels: price switcher; satisfied; switching-cost satisfied; brand
 <strong>Brand strategy:</strong> line extension அதே category-இல் variants; brand extension புதிய category-க்கு பெயர்; multibrands ஒரே category-இல் வேறு names; new brand தனிப்பெயர். Repositioning existing brand perception-ஐ மாற்ற முயலும்; logo மாற்றுவது மட்டும் அல்ல.</p>
 <p><strong>பாடத்தைப் படிப்படியாகப் புரிந்துகொள்ள</strong></p>
 <p>Sponsor manufacturer/private/licensed/mixed; naming individual/blanket/separate families/company+individual. Individual brand risk-ஐப் பிரிக்க உதவலாம்; parent reputation-க்கு பாதிப்பே வராது என்று உறுதி இல்லை.
-Existing name+existing category=line extension; existing+new category=brand extension; new name+existing category=multibrands; new+new=new brands. Co-brand இரண்டு brands சேர்வு, தனி matrix cell அல்ல. Name benefit/quality/easy/distinct/cross-language fit சோதிக்க வேண்டும்; Nova anecdote-ஐ verified failure evidence ஆகக் கொள்ளாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><pre><code>Branding? ─▶ Brand sponsor ─▶ Brand name ─▶ Brand strategy ─▶ Repositioning?
- brand /      manufacturer /    individual /     line ext. / brand ext. /   reposition /
- no brand     private /         blanket family / multibrands / new brands / no reposition
-              licensed          separate family / co-brands
-                                company + individual
-</code></pre>
+Existing name+existing category=line extension; existing+new category=brand extension; new name+existing category=multibrands; new+new=new brands. Co-brand இரண்டு brands சேர்வு, தனி matrix cell அல்ல. Name benefit/quality/easy/distinct/cross-language fit சோதிக்க வேண்டும்; Nova anecdote-ஐ verified failure evidence ஆகக் கொள்ளாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><div class="dsteps"><div class="ds"><b>Branding?</b><ul><li>Brand</li><li>No brand</li></ul></div><div class="ds"><b>Brand sponsor</b><ul><li>Manufacturer</li><li>Private</li><li>Licensed</li></ul></div><div class="ds"><b>Brand name</b><ul><li>Individual</li><li>Blanket family</li><li>Separate family</li><li>Company + individual</li></ul></div><div class="ds"><b>Brand strategy</b><ul><li>Line extensions</li><li>Brand extensions</li><li>Multibrands</li><li>New brands</li><li>Co-brands</li></ul></div><div class="ds"><b>Repositioning?</b><ul><li>Reposition</li><li>No repositioning</li></ul></div></div>
+
 <h3 id="1-to-brand-or-not">1. To brand or not</h3>
 <p>Branding costs money but gives:</p>
 <ul>
@@ -1051,12 +1155,8 @@ function run(){var k=R.querySelector('.b').value+R.querySelector('.c').value,m=M
 </script></div>
 <h3 id="5-brand-repositioning">5. Brand repositioning</h3>
 <p>New competition or changing preferences may force a brand to <strong>reposition</strong>.</p>
-<p><em>Example:</em> <strong>7 Up</strong> started as a mild lemon drink for <strong>older people</strong>. Research showed many soft-drink drinkers didn't want cola all the time, so 7 Up repositioned as <strong>"the Uncola"</strong>: youthful, refreshing, <strong>the alternative to colas</strong>.</p></div><div class="hci-ta" lang="ta" hidden data-title="வர்த்தகநாமமிடல் முடிவுகள்"><pre><code>வர்த்தகநாமமா? ─▶ உரிமை வழங்குநர் ─▶ பெயர் ─▶ உத்தி ─▶ மறுநிலைப்படுத்தலா?
- ஆம் /          உற்பத்தியாளர் /   தனிப்பட்ட /    வரிசை விரிவாக்கம் / பெயர் விரிவாக்கம் /   ஆம் /
- இல்லை          தனியார் /        பொதுக் குடும்ப / பல்பெயர்கள் / புதிய பெயர்கள் /         இல்லை
-                உரிமம்பெற்ற       தனிக் குடும்ப / இணைப் பெயர்கள்
-                                  நிறுவனம் + தனிப்பட்ட
-</code></pre>
+<p><em>Example:</em> <strong>7 Up</strong> started as a mild lemon drink for <strong>older people</strong>. Research showed many soft-drink drinkers didn't want cola all the time, so 7 Up repositioned as <strong>"the Uncola"</strong>: youthful, refreshing, <strong>the alternative to colas</strong>.</p></div><div class="hci-ta" lang="ta" hidden data-title="வர்த்தகநாமமிடல் முடிவுகள்"><div class="dsteps"><div class="ds"><b>வர்த்தகநாமமா?</b><ul><li>ஆம்</li><li>இல்லை</li></ul></div><div class="ds"><b>உரிமை வழங்குநர்</b><ul><li>உற்பத்தியாளர்</li><li>தனியார்</li><li>உரிமம்பெற்ற</li></ul></div><div class="ds"><b>பெயர்</b><ul><li>தனிப்பட்ட</li><li>பொதுக் குடும்ப</li><li>தனிக் குடும்ப</li><li>நிறுவனம் + தனிப்பட்ட</li></ul></div><div class="ds"><b>உத்தி</b><ul><li>வரிசை விரிவாக்கம்</li><li>பெயர் விரிவாக்கம்</li><li>பல்பெயர்கள்</li><li>புதிய பெயர்கள்</li><li>இணைப் பெயர்கள்</li></ul></div><div class="ds"><b>மறுநிலைப்படுத்தலா?</b><ul><li>ஆம்</li><li>இல்லை</li></ul></div></div>
+
 <h3>1. வர்த்தகநாமமிடுவதா இல்லையா?</h3>
 <p>வர்த்தகநாமமிடலுக்குச் செலவாகும்; ஆனால் தருபவை:</p>
 <ul>

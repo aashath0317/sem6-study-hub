@@ -386,13 +386,121 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .lat-svg line{stroke:var(--muted);stroke-width:1.4;opacity:.6}
 .lat-svg rect{stroke:var(--line);stroke-width:1.5}
 .lat-svg text{font-size:14px;font-weight:700;fill:var(--ink)}
-.lat-svg .l0 rect{fill:var(--accent)}.lat-svg .l0 text{fill:#fff}
+.lat-svg .l0 rect{fill:var(--accent)}.lat-svg .l0 text{fill:var(--panel)}
 .lat-svg .l1 rect{fill:var(--accent-soft)}.lat-svg .l2 rect{fill:var(--tip-bg)}.lat-svg .l3 rect{fill:var(--key-bg)}
 .lat-labels{display:grid;grid-template-rows:repeat(4,75px)}
 .lat-labels>div{display:flex;flex-direction:column;justify-content:center;border-left:4px solid var(--line);padding-left:12px}
 .lat-labels .l0{border-color:var(--accent)}.lat-labels .l1{border-color:#8fa8e8}.lat-labels .l2{border-color:#4fae8a}.lat-labels .l3{border-color:#d4a72c}
 .lat-labels b{font-size:15px}.lat-labels span{color:var(--muted);font-size:14px}
 @media (max-width:640px){.lattice{grid-template-columns:1fr}.lat-svg{margin:0 auto;display:block}.lat-labels{grid-template-rows:none;gap:10px}}
+/* ---- Diagrams: shared frame ---- */
+.otree,.vtree,.arch,.dfig,.bbox,.dsteps{margin:16px 0;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--code-bg)}
+/* Branching tree (org-chart style) */
+.otree{overflow-x:auto}
+.ot-in{width:max-content;min-width:100%}
+.otree ul{display:flex;justify-content:center;list-style:none;margin:0;padding:18px 0 0;position:relative}
+.otree .ot-in>ul{padding-top:0}
+.otree ul ul::before{content:"";position:absolute;top:0;left:50%;height:18px;border-left:1.5px solid var(--muted)}
+.otree li{display:flex;flex-direction:column;align-items:center;position:relative;padding:18px 4px 0;margin:0}
+.otree li::before,.otree li::after{content:"";position:absolute;top:0;right:50%;width:50%;height:18px;border-top:1.5px solid var(--muted)}
+.otree li::after{right:auto;left:50%;border-left:1.5px solid var(--muted)}
+.otree li:only-child{padding-top:0}
+.otree li:only-child::before,.otree li:only-child::after{display:none}
+.otree li:first-child::before,.otree li:last-child::after{border:0 none}
+.otree li:last-child::before{border-right:1.5px solid var(--muted);border-radius:0 7px 0 0}
+.otree li:first-child::after{border-radius:7px 0 0 0}
+.otree .ot-in>ul>li{padding-top:0}
+.otree .ot-in>ul>li::before,.otree .ot-in>ul>li::after{display:none}
+.otree span{display:inline-block;padding:6px 9px;border-radius:9px;background:var(--panel);border:1px solid var(--line);font-weight:600;font-size:14px;white-space:nowrap;line-height:1.3}
+.otree .ot-in>ul>li>span{background:var(--accent);color:var(--panel);border-color:transparent}
+.otree em{font-style:normal;font-size:12.5px;color:var(--muted);margin:2px 0 4px;line-height:1.2}
+.otree span.yes{background:var(--tip-bg);color:var(--tip);border-color:transparent}
+.otree span.no{background:var(--warn-bg);color:var(--warn);border-color:transparent}
+.otree span.more{background:transparent;border-style:dashed;color:var(--muted)}
+.otree li.ghost::before,.otree li.ghost::after{border-color:transparent!important}
+.otree li.ghost>span{visibility:hidden}
+.otree li:has(+ li.ghost)::after{border-left:1.5px solid var(--muted)}
+/* Outline tree */
+.vtree ul{list-style:none;margin:0;padding:0}
+.vtree ul ul{padding-left:26px}
+.vtree li{position:relative;padding:5px 0;margin:0}
+.vtree ul ul>li::before{content:"";position:absolute;left:-16px;top:0;bottom:0;border-left:1.5px solid var(--muted)}
+.vtree ul ul>li:last-child::before{bottom:auto;height:22px}
+.vtree ul ul>li::after{content:"";position:absolute;left:-16px;top:22px;width:12px;border-top:1.5px solid var(--muted)}
+.vn{display:flex;flex-wrap:wrap;align-items:center;gap:6px;line-height:1.4}
+.vn .d{color:var(--muted);font-size:14px}
+.vbox{display:inline-block;padding:6px 11px;border-radius:9px;background:var(--panel);border:1px solid var(--line);font-weight:600;font-size:14.5px}
+.vbox b{color:var(--accent)}
+.vtag{display:inline-block;padding:3px 9px;border-radius:999px;font-size:13px;font-weight:700;background:var(--accent-soft);color:var(--accent-ink)}
+.vtag.g{background:var(--accent);color:var(--panel)}.vtag.r{background:var(--key-bg);color:var(--key)}.vtag.m{background:var(--tip-bg);color:var(--tip)}
+.vtag.e{background:var(--accent-soft);color:var(--accent-ink);font-weight:600}.vtag.f{background:var(--ex-bg);color:var(--ex);font-weight:600}
+.chain{display:inline-flex;flex-wrap:wrap;gap:4px 0;align-items:center}
+.chain i{position:relative;font-style:normal;font-size:13.5px;background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:3px 8px}
+.chain i+i{margin-left:20px}
+.chain i+i::before{content:"→";position:absolute;left:-16px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.vplans{margin-top:12px;display:grid;gap:6px}
+.vplans div{font-size:14.5px;padding:7px 11px;border-left:3px solid var(--accent);background:var(--panel);border-radius:0 8px 8px 0}
+/* System architecture with side box */
+.arch{display:grid;grid-template-columns:1fr 34px minmax(110px,190px);align-items:center}
+.ab{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;text-align:center;font-weight:600;font-size:14.5px}
+.ab.top{background:var(--accent-soft)}.ab.db{background:var(--key-bg)}
+.aa{text-align:center;color:var(--muted);font-size:12px;letter-spacing:.3em;padding:4px 0}
+.aa.etl{letter-spacing:normal;font-weight:600;color:var(--ink);font-size:13px;padding:8px 0 6px}
+.ah{text-align:center;color:var(--muted);font-size:12px}
+.akb{align-self:stretch;display:grid;place-items:center;text-align:center;background:var(--tip-bg);border:1px solid var(--line);border-radius:10px;padding:10px;font-weight:700;font-size:14.5px}
+/* Small drawn figures */
+.dsvg{display:block;margin:0 auto;width:440px;max-width:100%;height:auto}
+.dsvg.sm{width:300px}
+.dsvg ellipse{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.5}
+.dsvg text{fill:var(--ink);font-size:15px;font-weight:600}
+.dsvg text.set{font-size:17px;font-weight:800;fill:var(--accent-ink)}
+.dsvg text.acc{fill:var(--accent);font-style:italic;font-weight:700}
+.dsvg line,.dsvg .curve{stroke:var(--ink);stroke-width:1.5;fill:none}
+.dsvg .curve{stroke:var(--accent);stroke-dasharray:5 4}
+.dsvg .mk{fill:var(--ink)}
+.dcap{text-align:center;margin-top:8px;font-size:15px;color:var(--muted)}
+/* Stimulus → black box → response */
+.bbox{display:grid;grid-template-columns:1fr 26px 1.4fr 26px 1fr;gap:6px;align-items:stretch}
+.bcol{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px}
+.bcol.black{background:#1d2330;color:#e6e8ee;border-color:#1d2330}
+.bcol h5{margin:0 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.bcol p{margin:8px 0 4px;font-size:13px;font-weight:700;color:var(--muted)}
+.bcol.black p{color:#9aa3b5}
+.bcol ul{margin:0;padding-left:18px;font-size:14.5px}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chips span{font-size:13px;padding:3px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font-weight:600}
+.bcol.black .chips span{background:#2b3240;color:#e6e8ee}
+.bcol.black .chain i{background:#2b3240;border-color:#3a4252;color:#e6e8ee}
+.barr{display:grid;place-items:center;color:var(--muted);font-size:20px}
+/* Decision steps with options */
+.dsteps{display:flex;flex-wrap:wrap;gap:8px 26px}
+.ds{flex:1 1 130px;position:relative;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.ds+.ds::before{content:"→";position:absolute;left:-20px;top:12px;color:var(--muted);font-size:17px}
+.ds b{display:block;color:var(--accent-ink);font-size:14.5px;margin-bottom:6px}
+.ds ul{margin:0;padding-left:16px;font-size:14px}
+@media (max-width:640px){
+  .bbox{grid-template-columns:1fr}.barr{transform:rotate(90deg);padding:2px 0}
+  .dsteps{flex-direction:column;gap:22px}.ds+.ds::before{content:"↓";left:50%;top:-21px}
+  .arch{grid-template-columns:1fr 24px 96px}
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bcol.black{background:#0b0d12;border-color:#3a4252}}
+:root[data-theme="dark"] .bcol.black{background:#0b0d12;border-color:#3a4252}
+/* Branching trees become an indented outline on phones */
+@media (max-width:640px){
+  .otree{overflow:visible}
+  .ot-in{width:auto;min-width:0}
+  .otree ul{display:block;padding:0 0 0 24px}
+  .otree .ot-in>ul{padding-left:0}
+  .otree ul ul::before{display:none}
+  .otree li{display:block;padding:4px 0!important}
+  .otree li::before{content:"";display:block!important;position:absolute;left:-15px;top:0;bottom:0;right:auto;width:0;height:auto;border:0!important;border-left:1.5px solid var(--muted)!important;border-radius:0!important}
+  .otree li:last-child::before{bottom:auto;height:21px}
+  .otree li::after{content:"";display:block!important;position:absolute;left:-15px;top:21px;width:11px;height:0;border:0!important;border-top:1.5px solid var(--muted)!important;border-radius:0!important}
+  .otree .ot-in>ul>li::before,.otree .ot-in>ul>li::after{display:none!important}
+  .otree em{display:inline-block;margin:0 6px 0 0}
+  .otree li.ghost{display:none}
+  .otree li:has(+ li.ghost)::before{bottom:auto;height:21px}
+}
 
 .study-plan{margin:24px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow);scroll-margin-top:80px}
 .sp-heading,.sp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.sp-heading h2{margin:2px 0 8px}.sp-heading p{font-size:15px;color:var(--muted)}
@@ -489,26 +597,14 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 </tbody>
 </table></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="The black box model (stimulus → response)"><span class="num">3</span>The black box model (stimulus → response)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>தூண்டுதலிலிருந்து வாங்கும் முடிவு வரை</h3><p>Marketing மற்றும் environment stimuli பயனரின் பண்புகளும் decision process-உம் வழியாக purchase response ஆகும். ஒரே advertisement எல்லோருக்கும் ஒரே விளைவு தராது. உள்ளே நடக்கும் சிந்தனையை ஆராய வேண்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>பாடத்தைப் படிப்படியாகப் புரிந்துகொள்ள</strong></p>
 <p><strong>Input:</strong> 4Ps + economic/technological/political/cultural stimuli. <strong>Black box:</strong> buyer characteristics + five-stage decision process. <strong>Output:</strong> product, brand, dealer, time, amount அல்லது வாங்காமை.
-ஒரே discount-க்கு ஒருவருக்கு affordability, மற்றவருக்கு low-quality signal தோன்றலாம். ஆகவே inputs ஒரேதாக இருந்தாலும் outputs ஒன்றாக இருக்க வேண்டியதில்லை.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><pre><code> STIMULI                      BUYER'S BLACK BOX                     RESPONSES
- Marketing: Product,     →   Buyer characteristics:          →   Product choice
-   Price, Place,              Cultural · Social                   Brand choice
-   Promotion                  Personal · Psychological            Dealer choice
- Other: Economic,             Buyer decision process:             Purchase timing
-   Technological,             Problem recognition → Search →      Purchase amount
-   Political, Cultural        Evaluation → Decision → Post-purchase
-</code></pre>
+ஒரே discount-க்கு ஒருவருக்கு affordability, மற்றவருக்கு low-quality signal தோன்றலாம். ஆகவே inputs ஒரேதாக இருந்தாலும் outputs ஒன்றாக இருக்க வேண்டியதில்லை.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><div class="bbox"><div class="bcol"><h5>Stimuli</h5><p>Marketing</p><div class="chips"><span>Product</span><span>Price</span><span>Place</span><span>Promotion</span></div><p>Other</p><div class="chips"><span>Economic</span><span>Technological</span><span>Political</span><span>Cultural</span></div></div><div class="barr">→</div><div class="bcol black"><h5>Buyer's black box</h5><p>Buyer characteristics</p><div class="chips"><span>Cultural</span><span>Social</span><span>Personal</span><span>Psychological</span></div><p>Buyer decision process</p><span class="chain"><i>Problem recognition</i><i>Search</i><i>Evaluation</i><i>Decision</i><i>Post-purchase</i></span></div><div class="barr">→</div><div class="bcol"><h5>Responses</h5><ul><li>Product choice</li><li>Brand choice</li><li>Dealer choice</li><li>Purchase timing</li><li>Purchase amount</li></ul></div></div>
+
 <ul>
 <li><strong>Stimuli:</strong> the <strong>4 Ps</strong> plus <strong>other</strong> environmental stimuli (economic, technological, political, cultural).</li>
 <li><strong>Desired responses:</strong> buying or <strong>not</strong> buying a product, buying <strong>at a particular place</strong>, buying <strong>from a particular dealer</strong>.</li>
 <li><strong>The challenge:</strong> people <strong>don't respond uniformly</strong> to the same stimuli at different times, because of the <strong>buyer's black box</strong>: their <strong>characteristics and decision process</strong>. Marketers try to understand what goes on inside it.</li>
-</ul></div><div class="hci-ta" lang="ta" hidden data-title="கருப்புப் பெட்டி மாதிரி (தூண்டுதல் → பதில்)"><pre><code> தூண்டுதல்கள்                 வாங்குபவரின் கருப்புப் பெட்டி             பதில்கள்
- சந்தைப்படுத்தல்: தயாரிப்பு, → வாங்குபவர் பண்புகள்:                → தயாரிப்புத் தெரிவு
-   விலை, இடம்,                பண்பாடு · சமூகம்                        வர்த்தகநாமத் தெரிவு
-   மேம்படுத்தல்                தனிநபர் · உளவியல்                       விற்பனையாளர் தெரிவு
- மற்றவை: பொருளாதாரம்,        வாங்குபவர் முடிவெடுக்கும் செயல்முறை:     கொள்வனவு நேரம்
-   தொழில்நுட்பம்,              சிக்கலை அறிதல் → தேடல் →                கொள்வனவு அளவு
-   அரசியல், பண்பாடு           மதிப்பீடு → முடிவு → கொள்வனவுக்குப் பின்
-</code></pre>
+</ul></div><div class="hci-ta" lang="ta" hidden data-title="கருப்புப் பெட்டி மாதிரி (தூண்டுதல் → பதில்)"><div class="bbox"><div class="bcol"><h5>தூண்டுதல்கள்</h5><p>சந்தைப்படுத்தல்</p><div class="chips"><span>தயாரிப்பு</span><span>விலை</span><span>இடம்</span><span>மேம்படுத்தல்</span></div><p>மற்றவை</p><div class="chips"><span>பொருளாதாரம்</span><span>தொழில்நுட்பம்</span><span>அரசியல்</span><span>பண்பாடு</span></div></div><div class="barr">→</div><div class="bcol black"><h5>வாங்குபவரின் கருப்புப் பெட்டி</h5><p>வாங்குபவர் பண்புகள்</p><div class="chips"><span>பண்பாடு</span><span>சமூகம்</span><span>தனிநபர்</span><span>உளவியல்</span></div><p>வாங்குபவர் முடிவெடுக்கும் செயல்முறை</p><span class="chain"><i>சிக்கலை அறிதல்</i><i>தேடல்</i><i>மதிப்பீடு</i><i>முடிவு</i><i>கொள்வனவுக்குப் பின்</i></span></div><div class="barr">→</div><div class="bcol"><h5>பதில்கள்</h5><ul><li>தயாரிப்புத் தெரிவு</li><li>வர்த்தகநாமத் தெரிவு</li><li>விற்பனையாளர் தெரிவு</li><li>கொள்வனவு நேரம்</li><li>கொள்வனவு அளவு</li></ul></div></div>
+
 <ul>
 <li><strong>தூண்டுதல்கள்:</strong> <strong>4 Ps</strong> மற்றும் <strong>பிற</strong> சூழல் தூண்டுதல்கள் (பொருளாதாரம், தொழில்நுட்பம், அரசியல், பண்பாடு).</li>
 <li><strong>விரும்பப்படும் பதில்கள்:</strong> தயாரிப்பை வாங்குதல் அல்லது <strong>வாங்காமை</strong>, <strong>குறிப்பிட்ட இடத்தில்</strong> வாங்குதல், <strong>குறிப்பிட்ட விற்பனையாளரிடமிருந்து</strong> வாங்குதல்.</li>
@@ -539,14 +635,8 @@ function show(i){t.querySelectorAll('button').forEach(function(b,j){b.className=
 </ul>
 <h3 id="2-social-factors">2. Social factors</h3>
 <p><strong>Reference groups</strong> influence attitudes and behaviour, directly or indirectly:</p>
-<pre><code>Reference groups
-├── Membership groups
-│     ├── Primary   (family, friends, neighbours: frequent, informal)
-│     └── Secondary (clubs, professional bodies: formal, less frequent)
-└── Non-membership groups
-      ├── Aspirational groups   (you want to belong)
-      └── Dissociative groups   (you want to avoid)
-</code></pre>
+<div class="vtree"><ul><li><div class="vn"><b>Reference groups</b></div><ul><li><div class="vn"><span class="vtag m">Membership groups</span></div><ul><li><div class="vn"><b>Primary</b> <span class="d">family, friends, neighbours: frequent, informal</span></div></li><li><div class="vn"><b>Secondary</b> <span class="d">clubs, professional bodies: formal, less frequent</span></div></li></ul></li><li><div class="vn"><span class="vtag r">Non-membership groups</span></div><ul><li><div class="vn"><b>Aspirational groups</b> <span class="d">you want to belong</span></div></li><li><div class="vn"><b>Dissociative groups</b> <span class="d">you want to avoid</span></div></li></ul></li></ul></li></ul></div>
+
 <p>They influence buyers in three ways:</p>
 <ol>
 <li><strong>Expose</strong> the person to <strong>new behaviours and lifestyles</strong>.</li>
@@ -583,14 +673,8 @@ function show(i){t.querySelectorAll('button').forEach(function(b,j){b.className=
 </ul>
 <h3>2. சமூகக் காரணிகள்</h3>
 <p><strong>முன்மாதிரிக் குழுக்கள்</strong>, மனப்பாங்குகளிலும் நடத்தையிலும் நேரடியாகவோ மறைமுகமாகவோ செல்வாக்குச் செலுத்துகின்றன:</p>
-<pre><code>முன்மாதிரிக் குழுக்கள்
-├── உறுப்பினர் குழுக்கள்
-│     ├── முதன்மை   (குடும்பம், நண்பர்கள், அயலவர்கள்: அடிக்கடி, முறைசாராதவை)
-│     └── இரண்டாம் நிலை (மன்றங்கள், தொழில்முறை அமைப்புகள்: முறையானவை, குறைந்த அடிக்கடி)
-└── உறுப்பினர் அல்லாத குழுக்கள்
-      ├── விரும்பிச் சேரும் குழுக்கள்   (சேர விரும்புபவை)
-      └── விலகும் குழுக்கள்   (தவிர்க்க விரும்புபவை)
-</code></pre>
+<div class="vtree"><ul><li><div class="vn"><b>முன்மாதிரிக் குழுக்கள்</b></div><ul><li><div class="vn"><span class="vtag m">உறுப்பினர் குழுக்கள்</span></div><ul><li><div class="vn"><b>முதன்மை</b> <span class="d">குடும்பம், நண்பர்கள், அயலவர்கள்: அடிக்கடி, முறைசாராதவை</span></div></li><li><div class="vn"><b>இரண்டாம் நிலை</b> <span class="d">மன்றங்கள், தொழில்முறை அமைப்புகள்: முறையானவை, குறைந்த அடிக்கடி</span></div></li></ul></li><li><div class="vn"><span class="vtag r">உறுப்பினர் அல்லாத குழுக்கள்</span></div><ul><li><div class="vn"><b>விரும்பிச் சேரும் குழுக்கள்</b> <span class="d">சேர விரும்புபவை</span></div></li><li><div class="vn"><b>விலகும் குழுக்கள்</b> <span class="d">தவிர்க்க விரும்புபவை</span></div></li></ul></li></ul></li></ul></div>
+
 <p>மூன்று வழிகளில் வாங்குபவர்களைப் பாதிக்கின்றன:</p>
 <ol>
 <li>நபருக்கு <strong>புதிய நடத்தைகளையும் வாழ்க்கைமுறைகளையும் அறிமுகப்படுத்துதல்</strong>.</li>

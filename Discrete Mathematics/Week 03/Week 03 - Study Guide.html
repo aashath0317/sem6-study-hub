@@ -386,13 +386,121 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 .lat-svg line{stroke:var(--muted);stroke-width:1.4;opacity:.6}
 .lat-svg rect{stroke:var(--line);stroke-width:1.5}
 .lat-svg text{font-size:14px;font-weight:700;fill:var(--ink)}
-.lat-svg .l0 rect{fill:var(--accent)}.lat-svg .l0 text{fill:#fff}
+.lat-svg .l0 rect{fill:var(--accent)}.lat-svg .l0 text{fill:var(--panel)}
 .lat-svg .l1 rect{fill:var(--accent-soft)}.lat-svg .l2 rect{fill:var(--tip-bg)}.lat-svg .l3 rect{fill:var(--key-bg)}
 .lat-labels{display:grid;grid-template-rows:repeat(4,75px)}
 .lat-labels>div{display:flex;flex-direction:column;justify-content:center;border-left:4px solid var(--line);padding-left:12px}
 .lat-labels .l0{border-color:var(--accent)}.lat-labels .l1{border-color:#8fa8e8}.lat-labels .l2{border-color:#4fae8a}.lat-labels .l3{border-color:#d4a72c}
 .lat-labels b{font-size:15px}.lat-labels span{color:var(--muted);font-size:14px}
 @media (max-width:640px){.lattice{grid-template-columns:1fr}.lat-svg{margin:0 auto;display:block}.lat-labels{grid-template-rows:none;gap:10px}}
+/* ---- Diagrams: shared frame ---- */
+.otree,.vtree,.arch,.dfig,.bbox,.dsteps{margin:16px 0;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--code-bg)}
+/* Branching tree (org-chart style) */
+.otree{overflow-x:auto}
+.ot-in{width:max-content;min-width:100%}
+.otree ul{display:flex;justify-content:center;list-style:none;margin:0;padding:18px 0 0;position:relative}
+.otree .ot-in>ul{padding-top:0}
+.otree ul ul::before{content:"";position:absolute;top:0;left:50%;height:18px;border-left:1.5px solid var(--muted)}
+.otree li{display:flex;flex-direction:column;align-items:center;position:relative;padding:18px 4px 0;margin:0}
+.otree li::before,.otree li::after{content:"";position:absolute;top:0;right:50%;width:50%;height:18px;border-top:1.5px solid var(--muted)}
+.otree li::after{right:auto;left:50%;border-left:1.5px solid var(--muted)}
+.otree li:only-child{padding-top:0}
+.otree li:only-child::before,.otree li:only-child::after{display:none}
+.otree li:first-child::before,.otree li:last-child::after{border:0 none}
+.otree li:last-child::before{border-right:1.5px solid var(--muted);border-radius:0 7px 0 0}
+.otree li:first-child::after{border-radius:7px 0 0 0}
+.otree .ot-in>ul>li{padding-top:0}
+.otree .ot-in>ul>li::before,.otree .ot-in>ul>li::after{display:none}
+.otree span{display:inline-block;padding:6px 9px;border-radius:9px;background:var(--panel);border:1px solid var(--line);font-weight:600;font-size:14px;white-space:nowrap;line-height:1.3}
+.otree .ot-in>ul>li>span{background:var(--accent);color:var(--panel);border-color:transparent}
+.otree em{font-style:normal;font-size:12.5px;color:var(--muted);margin:2px 0 4px;line-height:1.2}
+.otree span.yes{background:var(--tip-bg);color:var(--tip);border-color:transparent}
+.otree span.no{background:var(--warn-bg);color:var(--warn);border-color:transparent}
+.otree span.more{background:transparent;border-style:dashed;color:var(--muted)}
+.otree li.ghost::before,.otree li.ghost::after{border-color:transparent!important}
+.otree li.ghost>span{visibility:hidden}
+.otree li:has(+ li.ghost)::after{border-left:1.5px solid var(--muted)}
+/* Outline tree */
+.vtree ul{list-style:none;margin:0;padding:0}
+.vtree ul ul{padding-left:26px}
+.vtree li{position:relative;padding:5px 0;margin:0}
+.vtree ul ul>li::before{content:"";position:absolute;left:-16px;top:0;bottom:0;border-left:1.5px solid var(--muted)}
+.vtree ul ul>li:last-child::before{bottom:auto;height:22px}
+.vtree ul ul>li::after{content:"";position:absolute;left:-16px;top:22px;width:12px;border-top:1.5px solid var(--muted)}
+.vn{display:flex;flex-wrap:wrap;align-items:center;gap:6px;line-height:1.4}
+.vn .d{color:var(--muted);font-size:14px}
+.vbox{display:inline-block;padding:6px 11px;border-radius:9px;background:var(--panel);border:1px solid var(--line);font-weight:600;font-size:14.5px}
+.vbox b{color:var(--accent)}
+.vtag{display:inline-block;padding:3px 9px;border-radius:999px;font-size:13px;font-weight:700;background:var(--accent-soft);color:var(--accent-ink)}
+.vtag.g{background:var(--accent);color:var(--panel)}.vtag.r{background:var(--key-bg);color:var(--key)}.vtag.m{background:var(--tip-bg);color:var(--tip)}
+.vtag.e{background:var(--accent-soft);color:var(--accent-ink);font-weight:600}.vtag.f{background:var(--ex-bg);color:var(--ex);font-weight:600}
+.chain{display:inline-flex;flex-wrap:wrap;gap:4px 0;align-items:center}
+.chain i{position:relative;font-style:normal;font-size:13.5px;background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:3px 8px}
+.chain i+i{margin-left:20px}
+.chain i+i::before{content:"→";position:absolute;left:-16px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.vplans{margin-top:12px;display:grid;gap:6px}
+.vplans div{font-size:14.5px;padding:7px 11px;border-left:3px solid var(--accent);background:var(--panel);border-radius:0 8px 8px 0}
+/* System architecture with side box */
+.arch{display:grid;grid-template-columns:1fr 34px minmax(110px,190px);align-items:center}
+.ab{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;text-align:center;font-weight:600;font-size:14.5px}
+.ab.top{background:var(--accent-soft)}.ab.db{background:var(--key-bg)}
+.aa{text-align:center;color:var(--muted);font-size:12px;letter-spacing:.3em;padding:4px 0}
+.aa.etl{letter-spacing:normal;font-weight:600;color:var(--ink);font-size:13px;padding:8px 0 6px}
+.ah{text-align:center;color:var(--muted);font-size:12px}
+.akb{align-self:stretch;display:grid;place-items:center;text-align:center;background:var(--tip-bg);border:1px solid var(--line);border-radius:10px;padding:10px;font-weight:700;font-size:14.5px}
+/* Small drawn figures */
+.dsvg{display:block;margin:0 auto;width:440px;max-width:100%;height:auto}
+.dsvg.sm{width:300px}
+.dsvg ellipse{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.5}
+.dsvg text{fill:var(--ink);font-size:15px;font-weight:600}
+.dsvg text.set{font-size:17px;font-weight:800;fill:var(--accent-ink)}
+.dsvg text.acc{fill:var(--accent);font-style:italic;font-weight:700}
+.dsvg line,.dsvg .curve{stroke:var(--ink);stroke-width:1.5;fill:none}
+.dsvg .curve{stroke:var(--accent);stroke-dasharray:5 4}
+.dsvg .mk{fill:var(--ink)}
+.dcap{text-align:center;margin-top:8px;font-size:15px;color:var(--muted)}
+/* Stimulus → black box → response */
+.bbox{display:grid;grid-template-columns:1fr 26px 1.4fr 26px 1fr;gap:6px;align-items:stretch}
+.bcol{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px}
+.bcol.black{background:#1d2330;color:#e6e8ee;border-color:#1d2330}
+.bcol h5{margin:0 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.bcol p{margin:8px 0 4px;font-size:13px;font-weight:700;color:var(--muted)}
+.bcol.black p{color:#9aa3b5}
+.bcol ul{margin:0;padding-left:18px;font-size:14.5px}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chips span{font-size:13px;padding:3px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font-weight:600}
+.bcol.black .chips span{background:#2b3240;color:#e6e8ee}
+.bcol.black .chain i{background:#2b3240;border-color:#3a4252;color:#e6e8ee}
+.barr{display:grid;place-items:center;color:var(--muted);font-size:20px}
+/* Decision steps with options */
+.dsteps{display:flex;flex-wrap:wrap;gap:8px 26px}
+.ds{flex:1 1 130px;position:relative;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.ds+.ds::before{content:"→";position:absolute;left:-20px;top:12px;color:var(--muted);font-size:17px}
+.ds b{display:block;color:var(--accent-ink);font-size:14.5px;margin-bottom:6px}
+.ds ul{margin:0;padding-left:16px;font-size:14px}
+@media (max-width:640px){
+  .bbox{grid-template-columns:1fr}.barr{transform:rotate(90deg);padding:2px 0}
+  .dsteps{flex-direction:column;gap:22px}.ds+.ds::before{content:"↓";left:50%;top:-21px}
+  .arch{grid-template-columns:1fr 24px 96px}
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bcol.black{background:#0b0d12;border-color:#3a4252}}
+:root[data-theme="dark"] .bcol.black{background:#0b0d12;border-color:#3a4252}
+/* Branching trees become an indented outline on phones */
+@media (max-width:640px){
+  .otree{overflow:visible}
+  .ot-in{width:auto;min-width:0}
+  .otree ul{display:block;padding:0 0 0 24px}
+  .otree .ot-in>ul{padding-left:0}
+  .otree ul ul::before{display:none}
+  .otree li{display:block;padding:4px 0!important}
+  .otree li::before{content:"";display:block!important;position:absolute;left:-15px;top:0;bottom:0;right:auto;width:0;height:auto;border:0!important;border-left:1.5px solid var(--muted)!important;border-radius:0!important}
+  .otree li:last-child::before{bottom:auto;height:21px}
+  .otree li::after{content:"";display:block!important;position:absolute;left:-15px;top:21px;width:11px;height:0;border:0!important;border-top:1.5px solid var(--muted)!important;border-radius:0!important}
+  .otree .ot-in>ul>li::before,.otree .ot-in>ul>li::after{display:none!important}
+  .otree em{display:inline-block;margin:0 6px 0 0}
+  .otree li.ghost{display:none}
+  .otree li:has(+ li.ghost)::before{bottom:auto;height:21px}
+}
 
 .study-plan{margin:24px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow);scroll-margin-top:80px}
 .sp-heading,.sp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.sp-heading h2{margin:2px 0 8px}.sp-heading p{font-size:15px;color:var(--muted)}
@@ -676,9 +784,8 @@ f(g(x)) வரையறுக்க g(x) output f-இன் domain-இல் இ
 <p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
 <p><strong>f∘g:g முதலில்</strong>. f=x²−1,g=√x+1: f∘g=x+2√x,domainx≥0;g∘f=√(x²−1)+1,domainx≤−1 அல்லதுx≥1. Formula simplify செய்தபின் original domain restrictions மறக்காதீர்கள். Whole domain-இல் composition வேண்டுமெனில் inner function image outer domain-க்குள் இருக்கவேண்டும்;இல்லையெனில் restricted composite domain குறிப்பிடவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Definition</div><p>Let g : A → B and f : B → C. The <strong>composition f ∘ g</strong> is defined by <strong>(f ∘ g)(a) = f(g(a))</strong>.</p>
 <p><strong>Apply g first, then f.</strong> f ∘ g is only defined when the <strong>range of g is a subset of the domain of f</strong>.</p></div>
-<pre><code>   A ──g──▶ B ──f──▶ C
-   a  ↦  g(a)  ↦  f(g(a))      (f∘g)(a) = f(g(a))
-</code></pre>
+<div class="dfig"><svg viewBox="0 -12 440 205" class="dsvg" role="img" aria-label="Composition f of g"><defs><marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="mk"/></marker></defs><path d="M80,50 Q220,-14 360,50" class="curve" marker-end="url(#ar3)"/><text x="220" y="10" text-anchor="middle" class="acc">f ∘ g</text><ellipse cx="70" cy="100" rx="52" ry="52"/><text x="70" y="178" text-anchor="middle" class="set">A</text><ellipse cx="220" cy="100" rx="52" ry="52"/><text x="220" y="178" text-anchor="middle" class="set">B</text><ellipse cx="370" cy="100" rx="52" ry="52"/><text x="370" y="178" text-anchor="middle" class="set">C</text><text x="70" y="105" text-anchor="middle">a</text><text x="220" y="105" text-anchor="middle">g(a)</text><text x="370" y="105" text-anchor="middle">f(g(a))</text><line x1="82" y1="100" x2="196" y2="100" marker-end="url(#ar3)"/><text x="140" y="92" text-anchor="middle" class="acc">g</text><line x1="244" y1="100" x2="336" y2="100" marker-end="url(#ar3)"/><text x="290" y="92" text-anchor="middle" class="acc">f</text></svg><div class="dcap">(f ∘ g)(a) = f(g(a)): apply <b>g</b> first, then <b>f</b></div></div>
+
 <div class="call example"><div class="ct">Example — f(x) = x² − 1, g(x) = √x + 1</div><p><strong>(a) g ∘ f.</strong> Put f(x) into g:</p>
 <p>(g ∘ f)(x) = g(f(x)) = √(f(x)) + 1 = <strong>√(x² − 1) + 1</strong></p>
 <p>Over the reals, <strong>g ∘ f</strong> has domain <strong>(−∞, −1] ∪ [1, ∞)</strong> because x² − 1 ≥ 0.</p>
@@ -709,9 +816,8 @@ R.addEventListener('input',run);run();})();
 <li>Computing <strong>f ∘ g and g ∘ f</strong></li>
 </ul></div></div><div class="hci-ta" lang="ta" hidden data-title="சார்புகளின் தொகுப்பு"><div class="call key"><div class="ct">வரையறை</div><p>g : A → B, f : B → C என்க. <strong>f ∘ g தொகுப்பு</strong>, <strong>(f ∘ g)(a) = f(g(a))</strong> என வரையறுக்கப்படுகிறது.</p>
 <p><strong>முதலில் g, பின்னர் f-ஐப் பயன்படுத்தவும்.</strong> <strong>g-இன் வீச்சு, f-இன் ஆட்களத்தின் உட்கணமாக</strong> இருந்தால் மட்டுமே f ∘ g வரையறுக்கப்படுகிறது.</p></div>
-<pre><code>   A ──g──▶ B ──f──▶ C
-   a  ↦  g(a)  ↦  f(g(a))      (f∘g)(a) = f(g(a))
-</code></pre>
+<div class="dfig"><svg viewBox="0 -12 440 205" class="dsvg" role="img" aria-label="Composition f of g"><defs><marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="mk"/></marker></defs><path d="M80,50 Q220,-14 360,50" class="curve" marker-end="url(#ar3)"/><text x="220" y="10" text-anchor="middle" class="acc">f ∘ g</text><ellipse cx="70" cy="100" rx="52" ry="52"/><text x="70" y="178" text-anchor="middle" class="set">A</text><ellipse cx="220" cy="100" rx="52" ry="52"/><text x="220" y="178" text-anchor="middle" class="set">B</text><ellipse cx="370" cy="100" rx="52" ry="52"/><text x="370" y="178" text-anchor="middle" class="set">C</text><text x="70" y="105" text-anchor="middle">a</text><text x="220" y="105" text-anchor="middle">g(a)</text><text x="370" y="105" text-anchor="middle">f(g(a))</text><line x1="82" y1="100" x2="196" y2="100" marker-end="url(#ar3)"/><text x="140" y="92" text-anchor="middle" class="acc">g</text><line x1="244" y1="100" x2="336" y2="100" marker-end="url(#ar3)"/><text x="290" y="92" text-anchor="middle" class="acc">f</text></svg><div class="dcap">(f ∘ g)(a) = f(g(a)): apply <b>g</b> first, then <b>f</b></div></div>
+
 <div class="call example"><div class="ct">எடுத்துக்காட்டு — f(x) = x² − 1, g(x) = √x + 1</div><p><strong>(a) g ∘ f.</strong> f(x)-ஐ g-க்குள் இடவும்:</p>
 <p>(g ∘ f)(x) = g(f(x)) = √(f(x)) + 1 = <strong>√(x² − 1) + 1</strong></p>
 <p>மெய்யெண்களில் <strong>g ∘ f</strong>-இன் ஆட்களம் <strong>(−∞, −1] ∪ [1, ∞)</strong>; ஏனெனில் x² − 1 ≥ 0.</p>

@@ -366,6 +366,20 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ex-head{background:#24376b}}
 :root[data-theme="dark"] .ex-head{background:#24376b}
+/* Stacked architecture diagram (e.g. three-tier warehouse) */
+.tiers{margin:16px 0;display:flex;flex-direction:column;gap:0}
+.tier{display:grid;grid-template-columns:170px 1fr;gap:12px;align-items:center;padding:12px 14px;border-radius:12px;border:1px solid var(--line)}
+.tier.t1{background:var(--accent-soft)}.tier.t2{background:var(--tip-bg)}.tier.t3{background:var(--key-bg)}
+.tl b{display:block;font-size:15px;text-transform:uppercase;letter-spacing:.04em}
+.tl small{display:block;color:var(--muted);font-size:13.5px;margin-top:2px}
+.tb{display:flex;flex-wrap:wrap;gap:8px}
+.tb span,.tsrc span{flex:1 1 140px;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:9px 11px;text-align:center;font-weight:600;font-size:14.5px}
+.tb span.wide{flex:3 1 220px}
+.tarrow{text-align:center;color:var(--muted);font-size:13px;padding:5px 0;letter-spacing:.3em}
+.tarrow.etl{letter-spacing:normal;font-weight:600;color:var(--ink)}
+.tsrc{display:flex;flex-wrap:wrap;gap:8px}
+.tsrc span{background:var(--code-bg);border-style:dashed}
+@media (max-width:640px){.tier{grid-template-columns:1fr;gap:8px}}
 
 .study-plan{margin:24px 0;padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:var(--shadow);scroll-margin-top:80px}
 .sp-heading,.sp-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.sp-heading h2{margin:2px 0 8px}.sp-heading p{font-size:15px;color:var(--muted)}
@@ -604,19 +618,16 @@ R.addEventListener('input',run);run();})();
 </ol>
 <p><div data-ta-tool="wiz"></div></p>
 <div class="call exam"><div class="ct">Exam focus</div><p>"கிடங்கு வடிவமைப்புச் செயல்முறையின் படிகளைக் கூறுக" எனில் <strong>செயல்முறை → நுணுக்கநிலை → பரிமாணங்கள் → அளவைகள்</strong>, ஒவ்வொன்றுக்கும் எடுத்துக்காட்டுடன். <strong>மேலிருந்து கீழ் மற்றும் கீழிருந்து மேல்</strong> என்பவற்றையும் விளக்கத் தெரிய வேண்டும்.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Three-tier data warehouse architecture"><span class="num">5</span>Three-tier data warehouse architecture</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>மூன்று அடுக்குக் கட்டமைப்பு</h3><p>கீழ்தளத்தில் database மற்றும் ETL; நடுவில் OLAP server; மேல்தளத்தில் report, analysis tools. பயனர் காணும் chart-க்கு பின்னால் data cleaning, loading போன்ற பல வேலைகள் நடக்கின்றன.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>விரிவான விளக்கம் · கணக்கும் தேர்வுப் புள்ளிகளும்</strong></p>
-<p><strong>மூன்று tiers:</strong> bottom warehouse DB+marts+metadata மற்றும் extract/clean/transform/load/refresh; middle OLAP server; top query/report/analysis/mining tools. Sources bottom-க்கு data தரும். Enterprise warehouse organisation-wide; mart focused; virtual warehouse operational sources மேலான views. Virtual design physical data duplication குறைக்கலாம்; query load/freshness/source availability இன்னும் முக்கியம்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><pre><code> TOP TIER     ┌─────────────────────────────────────────────┐
- Front-end    │ Query/report tools · Analysis · Data mining │
- client       └──────────────────────┬──────────────────────┘
- MIDDLE TIER  ┌──────────────────────┴──────────────────────┐
- OLAP server  │        ROLAP  or  MOLAP  OLAP server         │
-              └──────────────────────┬──────────────────────┘
- BOTTOM TIER  ┌──────────────────────┴──────────┬───────────┐
- Warehouse    │ Data warehouse (relational DB)  │ Metadata  │
- DB server    │       + Data marts              │ repository│
-              └──────────────────────┬──────────┴───────────┘
-        Extract · Clean · Transform · Load · Refresh
-              Operational databases    External sources
-</code></pre>
+<p><strong>மூன்று tiers:</strong> bottom warehouse DB+marts+metadata மற்றும் extract/clean/transform/load/refresh; middle OLAP server; top query/report/analysis/mining tools. Sources bottom-க்கு data தரும். Enterprise warehouse organisation-wide; mart focused; virtual warehouse operational sources மேலான views. Virtual design physical data duplication குறைக்கலாம்; query load/freshness/source availability இன்னும் முக்கியம்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><div class="tiers">
+<div class="tier t1"><div class="tl"><b>Top tier</b><small>Front-end client</small></div><div class="tb"><span>Query / report tools</span><span>Analysis tools</span><span>Data mining tools</span></div></div>
+<div class="tarrow">▲ ▼</div>
+<div class="tier t2"><div class="tl"><b>Middle tier</b><small>OLAP server</small></div><div class="tb"><span>ROLAP <i>or</i> MOLAP server</span></div></div>
+<div class="tarrow">▲ ▼</div>
+<div class="tier t3"><div class="tl"><b>Bottom tier</b><small>Warehouse DB server</small></div><div class="tb"><span class="wide">Data warehouse (relational DB) + data marts</span><span>Metadata repository</span></div></div>
+<div class="tarrow etl">▲ Extract · Clean · Transform · Load · Refresh</div>
+<div class="tsrc"><span>Operational databases</span><span>External sources</span></div>
+</div>
+
 <table>
 <thead>
 <tr>
@@ -648,16 +659,16 @@ R.addEventListener('input',run);run();})();
 <li><strong>Enterprise warehouse</strong>: covers the whole organisation.</li>
 <li><strong>Data mart</strong>: a departmental subset.</li>
 <li><strong>Virtual warehouse</strong>: a set of <strong>views over operational databases</strong>; easy to build but needs spare capacity on the operational servers.</li>
-</ul></div><div class="hci-ta" lang="ta" hidden data-title="மூன்றடுக்கு தரவுக் கிடங்குக் கட்டமைப்பு"><pre><code> மேல் அடுக்கு       வினவல்/அறிக்கை கருவிகள் · பகுப்பாய்வு · தரவுச் சுரங்கம்
- முன்முனை வாடிக்கையகம்                       ↕
- நடு அடுக்கு                   ROLAP அல்லது MOLAP OLAP சேவையகம்
- OLAP சேவையகம்                               ↕
- கீழ் அடுக்கு       தரவுக் கிடங்கு (தொடர்புநிலைத் தரவுத்தளம்) │ மேல்தரவுச்
- கிடங்குத் தரவுத்தளச் சேவையகம்      + தரவுச் சந்தைகள்         │ சேமிப்பகம்
-                                             ↑
-             பிரித்தெடு · தூய்மைப்படுத்து · உருமாற்று · ஏற்று · புதுப்பி
-                       செயல்பாட்டுத் தரவுத்தளங்கள்  வெளிப்புற மூலங்கள்
-</code></pre>
+</ul></div><div class="hci-ta" lang="ta" hidden data-title="மூன்றடுக்கு தரவுக் கிடங்குக் கட்டமைப்பு"><div class="tiers">
+<div class="tier t1"><div class="tl"><b>மேல் அடுக்கு</b><small>முன்முனை வாடிக்கையகம்</small></div><div class="tb"><span>வினவல் / அறிக்கை கருவிகள்</span><span>பகுப்பாய்வுக் கருவிகள்</span><span>தரவுச் சுரங்கக் கருவிகள்</span></div></div>
+<div class="tarrow">▲ ▼</div>
+<div class="tier t2"><div class="tl"><b>நடு அடுக்கு</b><small>OLAP சேவையகம்</small></div><div class="tb"><span>ROLAP <i>அல்லது</i> MOLAP சேவையகம்</span></div></div>
+<div class="tarrow">▲ ▼</div>
+<div class="tier t3"><div class="tl"><b>கீழ் அடுக்கு</b><small>கிடங்குத் தரவுத்தளச் சேவையகம்</small></div><div class="tb"><span class="wide">தரவுக் கிடங்கு (தொடர்புநிலைத் தரவுத்தளம்) + தரவுச் சந்தைகள்</span><span>மேல்தரவுச் சேமிப்பகம்</span></div></div>
+<div class="tarrow etl">▲ பிரித்தெடு · தூய்மைப்படுத்து · உருமாற்று · ஏற்று · புதுப்பி</div>
+<div class="tsrc"><span>செயல்பாட்டுத் தரவுத்தளங்கள்</span><span>வெளிப்புற மூலங்கள்</span></div>
+</div>
+
 <table>
 <thead>
 <tr>

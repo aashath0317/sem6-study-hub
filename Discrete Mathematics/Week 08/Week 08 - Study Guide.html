@@ -543,8 +543,47 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dmath-Week08" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
 <div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Discrete Mathematics</a> › Week 08</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 08</div><h1>Counting — Product &amp; Sum Rules, Permutations &amp; Combinations</h1><p>Why counting matters, the product rule, the sum rule, inclusion–exclusion for counting, tree diagrams, combinations ⁿCᵣ, and permutations with and without repetition.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">1 video · 36 min</span><span class="chip">📄 Lesson 8- Basics of counting.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Lesson 8 – Counting, Permutations &amp; Combinations · 36 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- Lesson 8 - Basics of Counting, Permutations &amp; Combinations - CODL-UOM.mp4" data-drive="1-IVgArzUDKxwBlqjDK4lPUxqHK-oHmRf"><source src="ITE3822-25S2-%20Lesson%208%20-%20Basics%20of%20Counting%2C%20Permutations%20%26%20Combinations%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Lesson 8 – Counting, Permutations &amp; Combinations</p><p class="vs">Counting principles and how to choose between permutations and combinations.</p><a href="#" data-v="0" data-t="1"><b>00:01</b><span>Lesson 8: counting, permutations and combinations</span></a><a href="#" data-v="0" data-t="163"><b>02:43</b><span>The product rule</span></a><a href="#" data-v="0" data-t="221"><b>03:41</b><span>Example: Lily's shirts and pants</span></a><a href="#" data-v="0" data-t="433"><b>07:13</b><span>Counting functions: nᵐ</span></a><a href="#" data-v="0" data-t="603"><b>10:03</b><span>Counting one-to-one functions</span></a><a href="#" data-v="0" data-t="943"><b>15:43</b><span>The sum rule: 37 + 83 representatives</span></a><a href="#" data-v="0" data-t="1116"><b>18:36</b><span>Subtraction rule (inclusion–exclusion)</span></a><a href="#" data-v="0" data-t="1228"><b>20:28</b><span>Tree diagrams: bit strings with no two consecutive 1s</span></a><a href="#" data-v="0" data-t="1399"><b>23:19</b><span>Permutations vs combinations</span></a><a href="#" data-v="0" data-t="1562"><b>26:02</b><span>Combinations: ⁿCᵣ and the magician example</span></a><a href="#" data-v="0" data-t="1716"><b>28:36</b><span>Permutations: ⁿPᵣ</span></a><a href="#" data-v="0" data-t="1933"><b>32:13</b><span>Example: picking the top three goals (720 ways)</span></a><a href="#" data-v="0" data-t="2151"><b>35:51</b><span>Self-assessment questions</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why counting?"><span class="num">1</span>Why counting?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>ஏன் Counting கற்கிறோம்?</h3><p>எல்லா arrangements-ஐயும் எழுதாமல் சாத்தியமான வழிகளின் எண்ணிக்கையை அறியலாம். Password, team, route ஆகியவற்றில் எந்தத் தேர்வுகள் ஒன்றையொன்று சார்கின்றன என்பதை முதலில் பார்க்க வேண்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Counting-க்கு முதலில் sample space/constraints:order முக்கியமா?repetition உண்டா?leading zero அனுமதியா? AlphabetL letters,D digits,lengthr,குறைந்தது ஒரு digit என்றால் <strong>(L+D)ʳ−Lʳ</strong>,repetition allowed assumption. Length6…8 என்றால் மூன்று disjoint lengths-இன் counts கூட்டவும். Equally likely outcomes இருந்தால்தான் simple favourable/total probability formula.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p><em>How many passwords of 6–8 characters (digits or letters) contain at least one digit?</em> Questions like this need <strong>counting techniques</strong>. Counting appears all over maths and CS:</p>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 08</div><h1>Counting — Product &amp; Sum Rules, Permutations &amp; Combinations</h1><p>Why counting matters, the product rule, the sum rule, inclusion–exclusion for counting, tree diagrams, combinations ⁿCᵣ, and permutations with and without repetition.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">1 video · 36 min</span><span class="chip">📄 Lesson 8- Basics of counting.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Lesson 8 – Counting, Permutations &amp; Combinations · 36 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- Lesson 8 - Basics of Counting, Permutations &amp; Combinations - CODL-UOM.mp4" data-drive="1-IVgArzUDKxwBlqjDK4lPUxqHK-oHmRf"><source src="ITE3822-25S2-%20Lesson%208%20-%20Basics%20of%20Counting%2C%20Permutations%20%26%20Combinations%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Lesson 8 – Counting, Permutations &amp; Combinations</p><p class="vs">Counting principles and how to choose between permutations and combinations.</p><a href="#" data-v="0" data-t="1"><b>00:01</b><span>Lesson 8: counting, permutations and combinations</span></a><a href="#" data-v="0" data-t="163"><b>02:43</b><span>The product rule</span></a><a href="#" data-v="0" data-t="221"><b>03:41</b><span>Example: Lily's shirts and pants</span></a><a href="#" data-v="0" data-t="433"><b>07:13</b><span>Counting functions: nᵐ</span></a><a href="#" data-v="0" data-t="603"><b>10:03</b><span>Counting one-to-one functions</span></a><a href="#" data-v="0" data-t="943"><b>15:43</b><span>The sum rule: 37 + 83 representatives</span></a><a href="#" data-v="0" data-t="1116"><b>18:36</b><span>Subtraction rule (inclusion–exclusion)</span></a><a href="#" data-v="0" data-t="1228"><b>20:28</b><span>Tree diagrams: bit strings with no two consecutive 1s</span></a><a href="#" data-v="0" data-t="1399"><b>23:19</b><span>Permutations vs combinations</span></a><a href="#" data-v="0" data-t="1562"><b>26:02</b><span>Combinations: ⁿCᵣ and the magician example</span></a><a href="#" data-v="0" data-t="1716"><b>28:36</b><span>Permutations: ⁿPᵣ</span></a><a href="#" data-v="0" data-t="1933"><b>32:13</b><span>Example: picking the top three goals (720 ways)</span></a><a href="#" data-v="0" data-t="2151"><b>35:51</b><span>Self-assessment questions</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why counting?"><span class="num">1</span>Why counting?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>எண்ணுதல் ஏன்? — Counting techniques</h3><p><em>"6–8 எழுத்துகள் (digits அல்லது letters) கொண்ட passwords-இல், குறைந்தது ஒரு digit உள்ளவை எத்தனை?"</em> — இப்படிப்பட்ட கேள்விகளுக்கு <strong>counting techniques</strong> தேவை.</p>
+<p><strong>எங்கே பயன்படும்:</strong></p>
+<ul>
+<li><strong>Probability:</strong> வெற்றிகரமான outcomes ÷ எல்லா outcomes — இரண்டையும் எண்ண வேண்டும்.</li>
+<li><strong>Algorithm complexity:</strong> ஒரு algorithm எத்தனை operations செய்கிறது என்று எண்ண வேண்டும்.</li>
+</ul>
+<p><strong>இரண்டு அடிப்படை விதிகள்:</strong> <strong>product rule</strong> (×), <strong>sum rule</strong> (+).</p>
+<p><strong>Password கேள்விக்கு விடை (A–Z, 0–9 மட்டும்):</strong></p>
+<ul>
+<li>மொத்தம் 36 எழுத்துகள்; அவற்றில் 26 letters.</li>
+<li>"குறைந்தது ஒரு digit" = எல்லாம் − "<strong>digit இல்லாதவை</strong>" (letters மட்டும்).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>நீளம்</th>
+<th>கணக்கு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>36⁶ − 26⁶</td>
+</tr>
+<tr>
+<td>7</td>
+<td>36⁷ − 26⁷</td>
+</tr>
+<tr>
+<td>8</td>
+<td>36⁸ − 26⁸</td>
+</tr>
+</tbody>
+</table>
+<p>மூன்றையும் <strong>கூட்டு</strong> (sum rule) → <strong>2,684,483,063,360</strong>.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>இங்கே 3 யோசனைகள் ஒன்றாக வருகின்றன:</strong></p>
+<ol>
+<li><strong>Product rule:</strong> ஒவ்வொரு இடத்துக்கும் 36 தேர்வுகள் → 36⁶</li>
+<li><strong>Complement:</strong> "குறைந்தது ஒன்று" = மொத்தம் − "ஒன்றுமில்லை"</li>
+<li><strong>Sum rule:</strong> 6, 7, 8 நீளங்கள் தனித்தனி cases → கூட்டு</li>
+</ol>
+<p>இந்த மூன்றையும் இந்த வாரம் முழுவதும் பார்ப்போம்.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p><em>How many passwords of 6–8 characters (digits or letters) contain at least one digit?</em> Questions like this need <strong>counting techniques</strong>. Counting appears all over maths and CS:</p>
 <ul>
 <li><strong>Probability:</strong> count the successful outcomes and all possible outcomes.</li>
 <li><strong>Algorithm complexity:</strong> count the operations an algorithm performs.</li>
@@ -556,10 +595,80 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <li><strong>படிமுறைச் சிக்கல்தன்மை:</strong> படிமுறை மேற்கொள்ளும் செயல்பாடுகளை எண்ணுதல்.</li>
 </ul>
 <p>இரு அடிப்படைக் கொள்கைகள்: <strong>பெருக்கல் விதி</strong>, <strong>கூட்டல் விதி</strong>.</p>
-<div class="call example"><div class="ct">விடை (பாடநூலில் உள்ளபடி A–Z, 0–9 எழுத்துக்குறிகள் மட்டும்)</div><p>மொத்தம் 36 எழுத்துக்குறிகள்; அவற்றில் 26 எழுத்துகள். ஒவ்வொரு நீளத்துக்கும் எல்லாக் கடவுச்சொற்களையும் எண்ணி, <strong>இலக்கமே இல்லாதவற்றைக்</strong> (எழுத்துகள் மட்டும்) கழிக்கவும்: 36⁶ − 26⁶, பின்னர் 36⁷ − 26⁷, பின்னர் 36⁸ − 26⁸. மூன்று நீளங்களையும் கூட்டினால் (கூட்டல் விதி) <strong>2,684,483,063,360</strong>. "குறைந்தது ஓர் இலக்கம்" என்பது "இலக்கம் இல்லை" என்பதன் நிரப்பி: கீழே உள்ள "At least" பகுதியின் முறை.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="The product rule (&quot;AND&quot;, then multiply)"><span class="num">2</span>The product rule ("AND", then multiply)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>தொடர் தேர்வுகளில் பெருக்குதல்</h3><p>இரண்டு தொடர்ச்சியான தேர்வுகளில் முதலாவது m வழி, ஒவ்வொன்றுக்கும் அடுத்தது n வழி என்றால் <strong>m×n</strong>. 3 shirts, 2 trousers என்றால் 6 outfits. ஒவ்வொரு படியிலும் வாய்ப்புகள் ஒரே எண்ணிக்கையா பாருங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Repetition allowed length-r strings, alphabet size n என்றால் <strong>nʳ</strong>. Without repetition என்றால் n(n−1)…(n−r+1).
-முதல் தேர்வு அடுத்ததை மாற்றினால் ஒவ்வொரு level-இன் count வேறுபடும். 5 seats-க்கு 5 people ஒதுக்குவது 5⁵ அல்ல; <strong>5!</strong>.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Sequential choices multiplication;Lily3shirts×2pants=6;32computers×24ports=768. m-domain→n-codomain functions <strong>nᵐ</strong>;injective m≤n என்றால்n!/(n−m)!,m&gt;n→0. 3→5:125functions,60injective. Independence என்பது probability தேவையல்ல;ஒவ்வொரு preceding choice-க்கும் அதே number of next options இருக்கவேண்டும்.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><div class="call key"><div class="ct">The product rule</div><p>If a procedure breaks into a <strong>sequence of two tasks</strong>, with <strong>n₁</strong> ways to do the first and <strong>n₂</strong> ways to do the second (for each way of doing the first), then there are <strong>n₁ × n₂</strong> ways to do the procedure.</p></div>
+<div class="call example"><div class="ct">விடை (பாடநூலில் உள்ளபடி A–Z, 0–9 எழுத்துக்குறிகள் மட்டும்)</div><p>மொத்தம் 36 எழுத்துக்குறிகள்; அவற்றில் 26 எழுத்துகள். ஒவ்வொரு நீளத்துக்கும் எல்லாக் கடவுச்சொற்களையும் எண்ணி, <strong>இலக்கமே இல்லாதவற்றைக்</strong> (எழுத்துகள் மட்டும்) கழிக்கவும்: 36⁶ − 26⁶, பின்னர் 36⁷ − 26⁷, பின்னர் 36⁸ − 26⁸. மூன்று நீளங்களையும் கூட்டினால் (கூட்டல் விதி) <strong>2,684,483,063,360</strong>. "குறைந்தது ஓர் இலக்கம்" என்பது "இலக்கம் இல்லை" என்பதன் நிரப்பி: கீழே உள்ள "At least" பகுதியின் முறை.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="The product rule (&quot;AND&quot;, then multiply)"><span class="num">2</span>The product rule ("AND", then multiply)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>Product rule — &quot;AND&quot; என்றால் பெருக்கு</h3><p><strong>🔑 Product rule:</strong> ஒரு வேலை <strong>இரண்டு படிகளின் வரிசையாக</strong> (sequence) பிரிகிறது. முதல் படிக்கு <strong>n₁</strong> வழிகள், (ஒவ்வொரு முதல் வழிக்கும்) இரண்டாம் படிக்கு <strong>n₂</strong> வழிகள் → மொத்தம் <strong>n₁ × n₂</strong> வழிகள்.</p>
+<p><strong>ஒப்புமை:</strong> இது <strong>"இதைச் செய், அதன் பிறகு அதைச் செய்"</strong> — AND → <strong>பெருக்கு</strong>.</p>
+<p><strong>உதாரணங்கள்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>கணக்கு</th>
+<th>விடை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8.1.1 Lily-இன் உடைகள்: 3 shirts, 2 pants</td>
+<td>3 × 2</td>
+<td><strong>6</strong></td>
+</tr>
+<tr>
+<td>8.1.3 32 computers, ஒவ்வொன்றிலும் 24 ports</td>
+<td>32 × 24</td>
+<td><strong>768</strong></td>
+</tr>
+<tr>
+<td>8.1.2 3-element set → 5-element set functions</td>
+<td>5 × 5 × 5 = 5³</td>
+<td><strong>125</strong></td>
+</tr>
+<tr>
+<td>8.1.4 3-set → 5-set <strong>one-to-one</strong> functions</td>
+<td>5 × 4 × 3</td>
+<td><strong>60</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Functions m-set → n-set (Example 8.1.2):</strong> Domain-இன் ஒவ்வொரு உறுப்பும் n codomain உறுப்புகளில் ஒன்றைத் <strong>தனியாகத்</strong> தேர்ந்தெடுக்கிறது → n · n · … · n (m முறை) = <strong>nᵐ</strong>.</p>
+<p><strong>One-to-one functions m-set → n-set (Example 8.1.4):</strong></p>
+<ul>
+<li><strong>m &gt; n</strong> என்றால் → <strong>ஒன்றுமில்லை</strong> (இரண்டு உறுப்புகள் ஒரே image-ஐப் பகிர வேண்டி வரும்).</li>
+<li>m ≤ n என்றால்:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>உறுப்பு</th>
+<th>தேர்வுகள்</th>
+<th>ஏன்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a₁</td>
+<td>n</td>
+<td>எதுவும் எடுக்கலாம்</td>
+</tr>
+<tr>
+<td>a₂</td>
+<td>n − 1</td>
+<td>a₁ எடுத்ததை மீண்டும் எடுக்க முடியாது</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td>aₘ</td>
+<td>n − m + 1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>மொத்தம் = <strong>n(n − 1)⋯(n − m + 1)</strong>.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>பொதுவான தவறு:</strong> Functions எண்ணிக்கையில் <strong>nᵐ</strong>, <strong>mⁿ</strong> இரண்டையும் குழப்புவது.</p>
+<p><strong>நினைவு வழி:</strong> <strong>Domain</strong>-இன் ஒவ்வொரு உறுப்பும் ஒரு <strong>தேர்வு செய்கிறது</strong>. தேர்வுகளின் எண்ணிக்கை = codomain அளவு (n). தேர்வு செய்பவர்கள் = domain அளவு (m). ஆகவே <strong>(codomain)^(domain) = nᵐ</strong>.</p>
+<p>3-set → 5-set: 5³ = 125 ✓ (3⁵ = 243 அல்ல).</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><div class="call key"><div class="ct">The product rule</div><p>If a procedure breaks into a <strong>sequence of two tasks</strong>, with <strong>n₁</strong> ways to do the first and <strong>n₂</strong> ways to do the second (for each way of doing the first), then there are <strong>n₁ × n₂</strong> ways to do the procedure.</p></div>
 <div class="call example"><div class="ct">Example 8.1.1 — Lily's outfits</div><p>Shirts: red, purple, blue (3). Pants: black, white (2). Outfits = <strong>3 × 2 = 6</strong>.</p>
 <table>
 <thead>
@@ -633,8 +742,39 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <li>…</li>
 <li>aₘ-க்கு n − m + 1.</li>
 </ul>
-<p>மொத்தம் = <strong>n(n − 1)⋯(n − m + 1)</strong>. <em>எ.கா.</em> 3-கணத்திலிருந்து 5-கணத்துக்கு: 5 × 4 × 3 = <strong>60</strong>.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="The sum rule (&quot;OR&quot;, then add)"><span class="num">3</span>The sum rule ("OR", then add)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>தனித்தனி வாய்ப்புகளைக் கூட்டுதல்</h3><p>ஒன்றுக்குப் பதில் மற்றொன்றைத் தேர்வு செய்யும், overlap இல்லாத வழிகள் m+n. Overlap இருந்தால் இருமுறை எண்ணியதை கழிக்க வேண்டும். “OR” என்ற சொல்லைப் பார்த்தவுடனே கண்மூடி கூட்டாதீர்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Disjoint alternatives sum:37faculty அல்லது83students,nobody both→120. Overlap இருந்தால் subtractintersection. “AND” என்ற சொல்லைக் கண்டவுடன் multiply செய்யாமல் construction steps பார்க்கவும்;“OR” disjoint தானா சோதி. Committee குறைந்தது1boy→all committees−all-girl,இது complement counting.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><div class="call key"><div class="ct">The sum rule</div><p>If a task can be done in <strong>one of n₁ ways OR one of n₂ ways</strong>, and <strong>no way is in both sets</strong>, then there are <strong>n₁ + n₂</strong> ways.</p></div>
+<p>மொத்தம் = <strong>n(n − 1)⋯(n − m + 1)</strong>. <em>எ.கா.</em> 3-கணத்திலிருந்து 5-கணத்துக்கு: 5 × 4 × 3 = <strong>60</strong>.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="The sum rule (&quot;OR&quot;, then add)"><span class="num">3</span>The sum rule ("OR", then add)</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Sum rule — &quot;OR&quot; என்றால் கூட்டு</h3><p><strong>🔑 Sum rule:</strong> ஒரு வேலையை <strong>n₁ வழிகளில் ஒன்றால் அல்லது (OR) n₂ வழிகளில் ஒன்றால்</strong> செய்யலாம், <strong>இரண்டு தொகுப்புகளுக்கும் பொதுவான வழி இல்லை</strong> என்றால் → <strong>n₁ + n₂</strong> வழிகள்.</p>
+<p><strong>Example 8.1.5 — பிரதிநிதி தேர்வு:</strong> பிரதிநிதி ஒரு maths faculty உறுப்பினர் (37) <strong>அல்லது</strong> ஒரு maths major மாணவர் (83). யாரும் இரண்டிலும் இல்லை → 37 + 83 = <strong>120</strong>.</p>
+<p><strong>Inclusion–exclusion (subtraction principle):</strong> சில வழிகள் <strong>இரண்டிலும் பொதுவாக</strong> இருந்தால், கூட்டும்போது அவை <strong>இரண்டு முறை எண்ணப்படும்</strong>. அதனால் overlap-ஐக் கழி:</p>
+<p><strong>|A₁ ∪ A₂| = |A₁| + |A₂| − |A₁ ∩ A₂|</strong></p>
+<p>இது Week 2-இல் sets-இல் பார்த்த அதே விதிதான்.</p>
+<p><strong>🔑 Product-ஆ Sum-ஆ? — முடிவு செய்யும் அட்டவணை:</strong></p>
+<table>
+<thead>
+<tr>
+<th>கேள்வியின் வடிவம்</th>
+<th>விதி</th>
+<th>செயல்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>இதைச் செய், <strong>பிறகு</strong> அதைச் செய் (படிகள்)</td>
+<td>Product</td>
+<td><strong>×</strong></td>
+</tr>
+<tr>
+<td>இது <strong>அல்லது</strong> அது (தனித்த cases)</td>
+<td>Sum</td>
+<td><strong>+</strong></td>
+</tr>
+<tr>
+<td>Cases ஒன்றுடன் ஒன்று overlap ஆகின்றன</td>
+<td>Inclusion–exclusion</td>
+<td><strong>+ பிறகு −</strong></td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Overlap உதாரணம்:</strong> ஒரு வகுப்பில் 20 பேர் cricket விளையாடுகிறார்கள், 15 பேர் football, 5 பேர் இரண்டும். குறைந்தது ஒன்று விளையாடுபவர்கள் = 20 + 15 − 5 = <strong>30</strong>. (35 அல்ல — அந்த 5 பேர் இரண்டு முறை எண்ணப்பட்டனர்.)</p>
+<p><strong>Exam tip:</strong> Sum rule பயன்படுத்தும் முன் "<strong>யாராவது / ஏதாவது இரண்டிலும் இருக்கிறதா?</strong>" என்று கேளுங்கள். இருந்தால் overlap-ஐக் கழிக்க வேண்டும்.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><div class="call key"><div class="ct">The sum rule</div><p>If a task can be done in <strong>one of n₁ ways OR one of n₂ ways</strong>, and <strong>no way is in both sets</strong>, then there are <strong>n₁ + n₂</strong> ways.</p></div>
 <div class="call example"><div class="ct">Example 8.1.5 — choosing a representative</div><p>The representative is either a maths faculty member (37) or a maths major (83). Nobody is both, so there are 37 + 83 = <strong>120</strong> choices.</p></div>
 <h3 id="inclusionexclusion-the-subtraction-principle">Inclusion–exclusion (the subtraction principle)</h3>
 <p>If some ways are <strong>common to both</strong> sets, adding <strong>double-counts</strong> them, so subtract the overlap:</p>
@@ -654,8 +794,36 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <li>இதைச் செய்; <strong>அதன்பின்</strong> அதைச் செய் (படிகளின் தொடர்) → <strong>பெருக்கு</strong>.</li>
 <li>இதைச் செய் <strong>அல்லது</strong> அதைச் செய் (தனித்த, வெட்டாத நிகழ்வுகள்) → <strong>கூட்டு</strong>.</li>
 <li>நிகழ்வுகள் வெட்டினால் → <strong>கூட்டிப் பின்னர் பொதுப் பகுதியைக் கழி</strong>.</li>
-</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Tree diagrams"><span class="num">4</span>Tree diagrams</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>தேர்வுகளை மரமாக வரைதல்</h3><p>ஒவ்வொரு branch ஒரு தேர்வு; root-இலிருந்து leaf வரை ஒரு முழு outcome. கட்டுப்பாடு வந்தால் அனுமதிக்காத branches நீக்குங்கள். சிறிய பிரச்சினையில் வழிகளைத் தவறாமல் எண்ண இது உதவும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Branch invalid ஆனவுடன் prune;length4 bits,no11→<strong>0000,0001,0010,0100,0101,1000,1001,1010</strong>,8 outcomes. Branching choices prefix-ஐப் பொறுத்து மாறுவதால் naive2⁴ சரியல்ல. Distinct complete leaves எண்ணுங்கள்;intermediate nodes எண்ணுவது outcomes அல்ல.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>A <strong>tree</strong> has a <strong>root</strong>, <strong>branches</strong> for each possible choice, and <strong>leaves</strong> (endpoints with no further branches), which are the <strong>possible outcomes</strong>. Count the leaves.</p>
+</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Tree diagrams"><span class="num">4</span>Tree diagrams</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Tree diagrams — இலைகளை எண்ணு</h3><p>ஒரு <strong>tree diagram</strong>-இல்:</p>
+<ul>
+<li><strong>Root</strong> — தொடக்கம்</li>
+<li><strong>Branches</strong> — ஒவ்வொரு சாத்தியமான தேர்வுக்கும் ஒரு கிளை</li>
+<li><strong>Leaves</strong> — மேலும் கிளை இல்லாத முனைகள் = <strong>சாத்தியமான outcomes</strong></li>
+</ul>
+<p><strong>Outcomes எண்ணிக்கை = leaves எண்ணிக்கை.</strong></p>
+<p><strong>Example — நீளம் 4 bit strings, இரண்டு 1-கள் அடுத்தடுத்து வரக்கூடாது:</strong></p>
+<table>
+<thead>
+<tr>
+<th>விதி</th>
+<th>பொருள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ஒரு bit <strong>1</strong> என்றால்</td>
+<td>அடுத்தது <strong>கட்டாயம் 0</strong> (1 கிளை மட்டும்)</td>
+</tr>
+<tr>
+<td>ஒரு bit <strong>0</strong> என்றால்</td>
+<td>அடுத்தது 0 அல்லது 1 (2 கிளைகள்)</td>
+</tr>
+</tbody>
+</table>
+<p>Tree-ஐப் பின்பற்றினால் <strong>8</strong> strings கிடைக்கும்:</p>
+<p><strong>1010, 1001, 1000, 0101, 0100, 0010, 0001, 0000</strong></p>
+<p><strong>ஏன் tree தேவை?</strong> Product rule-இல் ஒவ்வொரு படிக்கும் <strong>அதே</strong> எண்ணிக்கையில் தேர்வுகள் இருக்க வேண்டும். இங்கே தேர்வுகள் <strong>முந்தைய bit-ஐப் பொறுத்து மாறுகின்றன</strong> (1 அல்லது 2). அப்படிப்பட்ட இடங்களில் tree உதவுகிறது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>சரிபார்ப்பு:</strong> 4-bit strings மொத்தம் 2⁴ = 16. "11" உள்ளவை: 0011, 0110, 0111, 1011, 1100, 1101, 1110, 1111 = 8. ஆகவே 16 − 8 = <strong>8</strong> ✓</p>
+<p><strong>Exam tip:</strong> Tree-ஐ <strong>முழுமையாக வரையுங்கள்</strong>, leaves-க்குக் கீழே string-ஐ எழுதுங்கள், பிறகு எண்ணுங்கள். ஒரு கிளையை விட்டால் விடை தவறும்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>A <strong>tree</strong> has a <strong>root</strong>, <strong>branches</strong> for each possible choice, and <strong>leaves</strong> (endpoints with no further branches), which are the <strong>possible outcomes</strong>. Count the leaves.</p>
 <div class="call example"><div class="ct">Example 8.1.5 — bit strings of length 4 with no two consecutive 1s</div><ul>
 <li>First bit: 1 or 0.</li>
 <li>If a bit is <strong>1</strong>, the next must be <strong>0</strong>.</li>
@@ -684,10 +852,38 @@ R.addEventListener('input',run);run();})();
 </ul>
 <p>மரத்தைப் பின்பற்றினால் <strong>8</strong> சரங்கள் கிடைக்கின்றன: 1010, 1001, 1000, 0101, 0100, 0010, 0001, 0000.</p>
 <p><strong>மரத்தைப் பயன்படுத்தும்போது ஒவ்வொரு இலையையும் நோக்கிச் செல்லும் பாதையின் தெரிவு எண்ணிக்கைகள் மாறலாம்.</strong> எனவே சாதாரண பெருக்கல் விதி உதவாத இடங்களில் மரங்கள் உதவுகின்றன.</p></div>
-<p><div data-ta-tool="bt2"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Combinations — order doesn&#x27;t matter"><span class="num">5</span>Combinations — order doesn't matter</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>வரிசையின்றித் தேர்வு செய்தல்</h3><p>குழுவில் யார் இருக்கிறார்கள் என்பதே முக்கியம்; வரிசை முக்கியமில்லை. <strong>nCr=n!/[r!(n−r)!]</strong>. A,B மற்றும் B,A ஒரே குழு; அதனால் permutations-இன் r! arrangements-ஐப் பிரிக்கிறோம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>nCr=n!/[r!(n−r)!]</strong>; <strong>nCr=nC(n−r)</strong>. 6 boys,4 girls-இல் 4 பேர், குறைந்தது ஒரு boy என்றால் total C(10,4)−all-girls C(4,4)=210−1=<strong>209</strong>.
-“At least one” கணக்கில் பல cases-ஐப் பிரிப்பதைவிட prohibited complement-ஐ கழிப்பது எளிதாகலாம். Overlap இல்லாத cases-ஆ என்பதைச் சரிபாருங்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Unordered selection,no repeats <strong>C(n,r)=n!/[r!(n−r)!]</strong>.10choose2=45;choosingAB மற்றும்BA same. C(n,0)=1,0!=1,C(n,r)=C(n,n−r). Repetition allowed unordered selection வேறு formula;அதை nʳ என கருதாதீர்கள். Factorials cancel செய்து overflow குறைக்கவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><p>Two kinds of question:</p>
+<p><div data-ta-tool="bt2"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Combinations — order doesn&#x27;t matter"><span class="num">5</span>Combinations — order doesn't matter</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>Combinations — வரிசை முக்கியமில்லை</h3><p><strong>இரண்டு வகைக் கேள்விகள்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>கேள்வி</th>
+<th>வரிசை முக்கியமா?</th>
+<th>வகை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5 மாணவர்களில் 3 பேரை photo-க்கு <strong>வரிசையில்</strong> நிறுத்து</td>
+<td>✅ ஆம்</td>
+<td><strong>Permutation</strong></td>
+</tr>
+<tr>
+<td>4 மாணவர்களில் 3 பேர் கொண்ட <strong>குழு (committee)</strong> தேர்ந்தெடு</td>
+<td>❌ இல்லை</td>
+<td><strong>Combination</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>🔑 Combination:</strong> பொருட்களின் ஒரு <strong>தேர்வு (selection)</strong> — <strong>வரிசை முக்கியமில்லை</strong>, <strong>மீண்டும் எடுக்க முடியாது</strong>.</p>
+<p><strong>ⁿCᵣ = C(n, r) = n! / ( r! (n − r)! )</strong>   (0 ≤ r ≤ n)</p>
+<p>இங்கே n! = 1 × 2 × ⋯ × n, மற்றும் <strong>0! = 1</strong>.</p>
+<p><strong>Example 8.2.1 — மந்திரவாதி:</strong> 10 பேர் கொண்ட பார்வையாளர்களில் 2 பேரைத் தேர்ந்தெடு. John &amp; Alice = Alice &amp; John (ஒரே ஜோடி).</p>
+<p>¹⁰C₂ = 10! / (2! · 8!) = (10 × 9) / (2 × 1) = <strong>45</strong></p>
+<p><strong>💡 பெருக்கும் முன் வெட்டு (cancel):</strong> 10!/(2!·8!)-இல் 8!-ஐ வெட்டினால் மேலே 10 × 9 மட்டும் மிஞ்சும்; பிறகு 2!-ஆல் வகு. 10!-ஐ முழுமையாகக் கணக்கிட வேண்டியதில்லை.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>ஒரு பயனுள்ள பண்பு:</strong> <strong>C(n, r) = C(n, n − r)</strong>. 10 பேரில் 2 பேரைத் தேர்ந்தெடுப்பது = விடப்படும் 8 பேரைத் தேர்ந்தெடுப்பது. ஆகவே ¹⁰C₈ = ¹⁰C₂ = 45.</p>
+<p><strong>Exam template (English):</strong></p>
+<blockquote>
+<p>Since the order of selection does not matter, this is a combination. The number of ways is ¹⁰C₂ = 10!/(2!·8!) = (10 × 9)/2 = 45.</p>
+</blockquote></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><p>Two kinds of question:</p>
 <ul>
 <li>Arrange 3 of 5 students <strong>in a line</strong> for a photo → <strong>order matters</strong> → <strong>permutation</strong>.</li>
 <li>Choose a <strong>committee</strong> of 3 from 4 students → <strong>order doesn't matter</strong> → <strong>combination</strong>.</li>
@@ -707,10 +903,136 @@ R.addEventListener('input',run);run();})();
 <p>இங்கு n! = 1 × 2 × 3 × ⋯ × (n − 1) × n (மேலும் 0! = 1). <strong>0 ≤ r ≤ n</strong>-க்கு செல்லுபடியாகும்.</p></div>
 <div class="call example"><div class="ct">எடுத்துக்காட்டு 8.2.1 — மந்திரவாதி</div><p>10 பார்வையாளர்களில் 2 பேரைத் தேர்ந்தெடுக்கவும். John, Alice-ஐத் தேர்ந்தெடுப்பதும் Alice, John-ஐத் தேர்ந்தெடுப்பதும் அதே சோடி.</p>
 <p>¹⁰C₂ = 10! / (2! · 8!) = (10 × 9) / (2 × 1) = <strong>45</strong></p></div>
-<div class="call tip"><div class="ct">பெருக்குமுன் வெட்டிச்சுருக்கவும்</div><p>10!/(2!·8!): 8!-ஐ வெட்டினால் மேலே 10 × 9 மட்டுமே மீதமாகும்; பின்னர் 2!-ஆல் வகுக்கவும். முழு 10!-ஐக் கணக்கிடத் தேவையில்லை.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Permutations — order matters"><span class="num">6</span>Permutations — order matters</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>வரிசையுடன் அமைத்தல்</h3><p>யார் முதலாவது, இரண்டாவது என்று வரிசை முக்கியமானால் <strong>nPr=n!/(n−r)!</strong>. திரும்பத் தேர்வு செய்ய அனுமதியா, ஒரே மாதிரியான உறுப்புகள் உள்ளனவா என்பதைப் பொறுத்து formula மாறும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>nPr=n!/(n−r)!</strong> order முக்கியமான without-replacement தேர்வு. Repeated identical letters இருப்பின் arrangements = n!/(n₁!n₂!…). வேறுபட்ட objects போல எண்ணினால் overcount ஆகும்.
-Circular arrangements-க்கு rotations ஒன்றாகக் கருதப்படுகிறதா என்பது கூடுதல் assumption. கேள்வி line-ஆ circle-ஆ தெளிவாகப் படியுங்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Ordered no repeats <strong>nPr=n!/(n−r)!</strong>;repeats allowed ordered strings <strong>nʳ</strong>.10P3=720;100P3=970200;nPr=C(n,r)r!. Repeated identical letters arrangements n!/(m1!m2!…). PIN-க்கு leading0 பொதுவாக அனுமதி;4-digit integer-க்கு first0 இல்லை. Notation P(n,r)-ஐ ஒரே இடத்தில் இரு அர்த்தங்களில் பயன்படுத்தாமல் assumptions தெளிவாக்கவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p>A <strong>permutation</strong> is an <strong>ordered arrangement</strong> of distinct objects. "top" and "pot" are different permutations of the same three letters.</p>
+<div class="call tip"><div class="ct">பெருக்குமுன் வெட்டிச்சுருக்கவும்</div><p>10!/(2!·8!): 8!-ஐ வெட்டினால் மேலே 10 × 9 மட்டுமே மீதமாகும்; பின்னர் 2!-ஆல் வகுக்கவும். முழு 10!-ஐக் கணக்கிடத் தேவையில்லை.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Permutations — order matters"><span class="num">6</span>Permutations — order matters</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>Permutations — வரிசை முக்கியம்</h3><p><strong>Permutation</strong> = தனித்த பொருட்களின் <strong>வரிசைப்படுத்திய அமைப்பு (ordered arrangement)</strong>. "top", "pot" — அதே 3 எழுத்துகள், ஆனால் <strong>வேறு</strong> permutations.</p>
+<p><strong>Case 1 — மீண்டும் எடுக்கலாம் (repetition allowed):</strong> ஒவ்வொரு r இடத்துக்கும் n தேர்வுகள் → <strong>nʳ</strong>. உதா: 4-digit PIN = 10⁴ = <strong>10,000</strong>.</p>
+<p><strong>Case 2 — மீண்டும் எடுக்க முடியாது:</strong> தேர்வுகள் ஒவ்வொரு முறையும் ஒன்று குறையும்:</p>
+<p><strong>ⁿPᵣ = n × (n − 1) × ⋯ × (n − r + 1) = n! / (n − r)!</strong></p>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>கணக்கு</th>
+<th>விடை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10 goals-இல் top 3</td>
+<td>¹⁰P₃ = 10 × 9 × 8</td>
+<td><strong>720</strong></td>
+</tr>
+<tr>
+<td>100 பேருக்கு 1st, 2nd, 3rd பரிசு</td>
+<td>¹⁰⁰P₃ = 100 × 99 × 98</td>
+<td><strong>970,200</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>🔑 P-க்கும் C-க்கும் தொடர்பு:</strong> <strong>ⁿPᵣ = ⁿCᵣ × r!</strong> — முதலில் குழுவைத் தேர்ந்தெடு (C), பிறகு அதை r! வழிகளில் வரிசைப்படுத்து. உதா: ¹⁰P₂ = 45 × 2 = 90.</p>
+<p><strong>Repeated letters கொண்ட அமைப்புகள் (model paper):</strong> சில பொருட்கள் <strong>ஒரே மாதிரி</strong> இருந்தால், அவற்றை மாற்றினாலும் அதே அமைப்பு வரும். ஆகவே ஒவ்வொரு repeat குழுவின் factorial-ஆல் வகு:</p>
+<p><strong>n! / (n₁! · n₂! · ⋯ · nₖ!)</strong></p>
+<table>
+<thead>
+<tr>
+<th>சொல்</th>
+<th>எழுத்துகள்</th>
+<th>Repeats</th>
+<th>அமைப்புகள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BANANA</td>
+<td>6</td>
+<td>A × 3, N × 2</td>
+<td>6!/(3!·2!) = <strong>60</strong></td>
+</tr>
+<tr>
+<td>ABRACADABRA</td>
+<td>11</td>
+<td>A × 5, B × 2, R × 2</td>
+<td>11!/(5!·2!·2!) = <strong>83,160</strong></td>
+</tr>
+<tr>
+<td>MISSISSIPPI</td>
+<td>11</td>
+<td>I × 4, S × 4, P × 2</td>
+<td>11!/(4!·4!·2!) = <strong>34,650</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>"At least" / "at most" கேள்விகள் (2019, model paper) — 2 பாதுகாப்பான வழிகள்:</strong></p>
+<ul>
+<li><strong>Complement:</strong> மொத்தம் − வேண்டாத cases (வேண்டாதது சிறியதாக இருக்கும்போது சிறந்தது)</li>
+<li><strong>Cases:</strong> தனித்தனி cases-ஆகப் பிரி (சரியாக 3, சரியாக 4, …), ஒவ்வொன்றுக்கும் C, பிறகு <strong>கூட்டு</strong></li>
+</ul>
+<p><strong>2019 Q4(b) — 6 boys, 4 girls-இல் 4 பேர், குறைந்தது ஒரு boy:</strong> மொத்தம் C(10, 4) = 210. "Boy இல்லை" = 4 girls மட்டும் = C(4, 4) = 1. விடை <strong>210 − 1 = 209</strong>.</p>
+<p><strong>Model Q4(c) — 7 men, 6 women-இல் 5 பேர், குறைந்தது 3 men:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>வழிகள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 men, 2 women</td>
+<td>C(7, 3)·C(6, 2) = 35 · 15 = 525</td>
+</tr>
+<tr>
+<td>4 men, 1 woman</td>
+<td>C(7, 4)·C(6, 1) = 35 · 6 = 210</td>
+</tr>
+<tr>
+<td>5 men</td>
+<td>C(7, 5) = 21</td>
+</tr>
+<tr>
+<td><strong>மொத்தம்</strong></td>
+<td><strong>756</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Onto (surjective) functions (model paper):</strong> எல்லா functions-இலிருந்து தொடங்கு, ஒரு உறுப்பைத் தவறவிடுபவற்றைக் கழி, இரண்டைத் தவறவிடுபவற்றை மீண்டும் கூட்டு, …</p>
+<p><strong>nᵐ − C(n, 1)(n − 1)ᵐ + C(n, 2)(n − 2)ᵐ − ⋯</strong></p>
+<p><strong>Model Q3(b) — {1, 2, 3, 4} → {1, 2, 3} onto:</strong> 3⁴ − 3·2⁴ + 3·1⁴ = 81 − 48 + 3 = <strong>36</strong></p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>⚠️ Overcounting பொறி:</strong> "குறைந்தது ஒரு boy" என்பதற்கு "முதலில் ஒரு boy-ஐத் தேர்ந்தெடு, பிறகு மீதி 9-இல் 3" என்று செய்யாதீர்கள்: 6 × C(9, 3) = 504 — <strong>தவறு</strong>. ஒரே குழு பலமுறை எண்ணப்படுகிறது (அதில் உள்ள ஒவ்வொரு boy-க்கும் ஒருமுறை). Complement அல்லது cases பயன்படுத்துங்கள்.</p>
+<p><strong>Onto சரிபார்ப்பு:</strong> 4-set → 2-set onto = 2⁴ − 2·1⁴ = <strong>14</strong> (மொத்த 16 functions-இல் 2 constant functions தவிர).</p>
+<p><strong>🔑 Exam முடிவு வரைபடம்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>கேள்வி</th>
+<th>பதில்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>வரிசை முக்கியமா?</td>
+<td>ஆம் → <strong>P</strong>; இல்லை → <strong>C</strong></td>
+</tr>
+<tr>
+<td>Repetition அனுமதியா?</td>
+<td>ஆம் → <strong>nʳ</strong></td>
+</tr>
+<tr>
+<td>படிகளா, தனித்த cases-ஆ?</td>
+<td>படிகள் → <strong>×</strong>; cases → <strong>+</strong></td>
+</tr>
+<tr>
+<td>ஒரே மாதிரி பொருட்கள்?</td>
+<td>Repeats-இன் factorials-ஆல் <strong>வகு</strong></td>
+</tr>
+<tr>
+<td>"At least / at most"?</td>
+<td><strong>Complement</strong> அல்லது <strong>cases கூட்டு</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exam template (English):</strong></p>
+<blockquote>
+<p>The number of ways to choose 4 people from 6 boys and 4 girls with at least one boy is C(10, 4) − C(4, 4) = 210 − 1 = 209, since the only selections with no boys are those consisting of all 4 girls.</p>
+</blockquote></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><p>A <strong>permutation</strong> is an <strong>ordered arrangement</strong> of distinct objects. "top" and "pot" are different permutations of the same three letters.</p>
 <h3 id="case-1-repetition-allowed">Case 1: repetition allowed</h3>
 <p>Each of the r positions has n choices independently, so by the product rule:</p>
 <div class="formula"><strong>P(n, r) = nʳ</strong>   (with repetition)</div>
@@ -927,25 +1249,68 @@ R.querySelector('.out').innerHTML=h}R.addEventListener('input',run);run();})();
 <li>சில உருப்படிகள் ஒரே மாதிரியானவையா? → மீளும் ஒவ்வொன்றின் காரணியத்தால் வகுக்கவும்.</li>
 <li>"குறைந்தது" அல்லது "அதிகபட்சம்" என்று உள்ளதா? → <strong>நிரப்பி</strong> அல்லது <strong>நிகழ்வுகளைக் கூட்டுதல்</strong>.</li>
 </ul>
-<p>பின்னர் சூத்திரம், பிரதியீடு, வெட்டிச்சுருக்கல் காட்டவும். வழக்கமான கேள்விகள்: உடைகள், எண் தகடுகள் (பெருக்கல் விதி); வெட்டாத குழுக்களிலிருந்து பிரதிநிதி (கூட்டல் விதி); பிட் சரங்கள் (மர வரைபடம்); பரிசு வெற்றியாளர்கள் (P); குழுக்கள் (C).</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Quick revision sheet"><span class="num">7</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>ஏன் Counting கற்கிறோம்?</h4><p>எல்லா arrangements-ஐயும் எழுதாமல் சாத்தியமான வழிகளின் எண்ணிக்கையை அறியலாம். Password, team, route ஆகியவற்றில் எந்தத் தேர்வுகள் ஒன்றையொன்று சார்கின்றன என்பதை முதலில் பார்க்க வேண்டும்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Counting-க்கு முதலில் sample space/constraints:order முக்கியமா?repetition உண்டா?leading zero அனுமதியா? AlphabetL letters,D digits,lengthr,குறைந்தது ஒரு digit என்றால் <strong>(L+D)ʳ−Lʳ</strong>,repetition allowed assumption. Length6…8 என்றால் மூன்று disjoint lengths-இன் counts கூட்டவும். Equally likely outcomes இருந்தால்தான் simple favourable/total probability formula.</p></div><div class="ta-recap-item"><h4>தொடர் தேர்வுகளில் பெருக்குதல்</h4><p>இரண்டு தொடர்ச்சியான தேர்வுகளில் முதலாவது m வழி, ஒவ்வொன்றுக்கும் அடுத்தது n வழி என்றால் <strong>m×n</strong>. 3 shirts, 2 trousers என்றால் 6 outfits. ஒவ்வொரு படியிலும் வாய்ப்புகள் ஒரே எண்ணிக்கையா பாருங்கள்.</p>
-<p>Repetition allowed length-r strings, alphabet size n என்றால் <strong>nʳ</strong>. Without repetition என்றால் n(n−1)…(n−r+1).
-முதல் தேர்வு அடுத்ததை மாற்றினால் ஒவ்வொரு level-இன் count வேறுபடும். 5 seats-க்கு 5 people ஒதுக்குவது 5⁵ அல்ல; <strong>5!</strong>.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Sequential choices multiplication;Lily3shirts×2pants=6;32computers×24ports=768. m-domain→n-codomain functions <strong>nᵐ</strong>;injective m≤n என்றால்n!/(n−m)!,m&gt;n→0. 3→5:125functions,60injective. Independence என்பது probability தேவையல்ல;ஒவ்வொரு preceding choice-க்கும் அதே number of next options இருக்கவேண்டும்.</p></div><div class="ta-recap-item"><h4>தனித்தனி வாய்ப்புகளைக் கூட்டுதல்</h4><p>ஒன்றுக்குப் பதில் மற்றொன்றைத் தேர்வு செய்யும், overlap இல்லாத வழிகள் m+n. Overlap இருந்தால் இருமுறை எண்ணியதை கழிக்க வேண்டும். “OR” என்ற சொல்லைப் பார்த்தவுடனே கண்மூடி கூட்டாதீர்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Disjoint alternatives sum:37faculty அல்லது83students,nobody both→120. Overlap இருந்தால் subtractintersection. “AND” என்ற சொல்லைக் கண்டவுடன் multiply செய்யாமல் construction steps பார்க்கவும்;“OR” disjoint தானா சோதி. Committee குறைந்தது1boy→all committees−all-girl,இது complement counting.</p></div><div class="ta-recap-item"><h4>தேர்வுகளை மரமாக வரைதல்</h4><p>ஒவ்வொரு branch ஒரு தேர்வு; root-இலிருந்து leaf வரை ஒரு முழு outcome. கட்டுப்பாடு வந்தால் அனுமதிக்காத branches நீக்குங்கள். சிறிய பிரச்சினையில் வழிகளைத் தவறாமல் எண்ண இது உதவும்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Branch invalid ஆனவுடன் prune;length4 bits,no11→<strong>0000,0001,0010,0100,0101,1000,1001,1010</strong>,8 outcomes. Branching choices prefix-ஐப் பொறுத்து மாறுவதால் naive2⁴ சரியல்ல. Distinct complete leaves எண்ணுங்கள்;intermediate nodes எண்ணுவது outcomes அல்ல.</p></div><div class="ta-recap-item"><h4>வரிசையின்றித் தேர்வு செய்தல்</h4><p>குழுவில் யார் இருக்கிறார்கள் என்பதே முக்கியம்; வரிசை முக்கியமில்லை. <strong>nCr=n!/[r!(n−r)!]</strong>. A,B மற்றும் B,A ஒரே குழு; அதனால் permutations-இன் r! arrangements-ஐப் பிரிக்கிறோம்.</p>
-<p><strong>nCr=n!/[r!(n−r)!]</strong>; <strong>nCr=nC(n−r)</strong>. 6 boys,4 girls-இல் 4 பேர், குறைந்தது ஒரு boy என்றால் total C(10,4)−all-girls C(4,4)=210−1=<strong>209</strong>.
-“At least one” கணக்கில் பல cases-ஐப் பிரிப்பதைவிட prohibited complement-ஐ கழிப்பது எளிதாகலாம். Overlap இல்லாத cases-ஆ என்பதைச் சரிபாருங்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Unordered selection,no repeats <strong>C(n,r)=n!/[r!(n−r)!]</strong>.10choose2=45;choosingAB மற்றும்BA same. C(n,0)=1,0!=1,C(n,r)=C(n,n−r). Repetition allowed unordered selection வேறு formula;அதை nʳ என கருதாதீர்கள். Factorials cancel செய்து overflow குறைக்கவும்.</p></div><div class="ta-recap-item"><h4>வரிசையுடன் அமைத்தல்</h4><p>யார் முதலாவது, இரண்டாவது என்று வரிசை முக்கியமானால் <strong>nPr=n!/(n−r)!</strong>. திரும்பத் தேர்வு செய்ய அனுமதியா, ஒரே மாதிரியான உறுப்புகள் உள்ளனவா என்பதைப் பொறுத்து formula மாறும்.</p>
-<p><strong>nPr=n!/(n−r)!</strong> order முக்கியமான without-replacement தேர்வு. Repeated identical letters இருப்பின் arrangements = n!/(n₁!n₂!…). வேறுபட்ட objects போல எண்ணினால் overcount ஆகும்.
-Circular arrangements-க்கு rotations ஒன்றாகக் கருதப்படுகிறதா என்பது கூடுதல் assumption. கேள்வி line-ஆ circle-ஆ தெளிவாகப் படியுங்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Ordered no repeats <strong>nPr=n!/(n−r)!</strong>;repeats allowed ordered strings <strong>nʳ</strong>.10P3=720;100P3=970200;nPr=C(n,r)r!. Repeated identical letters arrangements n!/(m1!m2!…). PIN-க்கு leading0 பொதுவாக அனுமதி;4-digit integer-க்கு first0 இல்லை. Notation P(n,r)-ஐ ஒரே இடத்தில் இரு அர்த்தங்களில் பயன்படுத்தாமல் assumptions தெளிவாக்கவும்.</p></div><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><table>
+<p>பின்னர் சூத்திரம், பிரதியீடு, வெட்டிச்சுருக்கல் காட்டவும். வழக்கமான கேள்விகள்: உடைகள், எண் தகடுகள் (பெருக்கல் விதி); வெட்டாத குழுக்களிலிருந்து பிரதிநிதி (கூட்டல் விதி); பிட் சரங்கள் (மர வரைபடம்); பரிசு வெற்றியாளர்கள் (P); குழுக்கள் (C).</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s7"><h2 id="s7" data-t="Quick revision sheet"><span class="num">7</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s7 en-s7" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s7" lang="ta" hidden><h3>விரைவு மீள்பார்வை — Week 8</h3><table>
+<thead>
+<tr>
+<th>தலைப்பு</th>
+<th>ஒரு வரியில்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product rule</td>
+<td>படிகளின் வரிசை → n₁ × n₂ (shirts × pants = 6)</td>
+</tr>
+<tr>
+<td>Functions m → n</td>
+<td>nᵐ (5³ = 125)</td>
+</tr>
+<tr>
+<td>One-to-one m → n</td>
+<td>n(n−1)⋯(n−m+1); m &gt; n என்றால் 0 (5·4·3 = 60)</td>
+</tr>
+<tr>
+<td>Sum rule</td>
+<td>தனித்த மாற்றுகள் → n₁ + n₂ (37 + 83 = 120)</td>
+</tr>
+<tr>
+<td>Inclusion–exclusion</td>
+<td>|A∪B| = |A| + |B| − |A∩B|</td>
+</tr>
+<tr>
+<td>Tree diagram</td>
+<td>Leaves = outcomes; "11" இல்லாத 4-bit strings = 8</td>
+</tr>
+<tr>
+<td>Combination</td>
+<td>ⁿCᵣ = n!/(r!(n−r)!); வரிசை முக்கியமில்லை (¹⁰C₂ = 45)</td>
+</tr>
+<tr>
+<td>Permutation</td>
+<td>ⁿPᵣ = n!/(n−r)!; வரிசை முக்கியம் (¹⁰P₃ = 720, ¹⁰⁰P₃ = 970,200)</td>
+</tr>
+<tr>
+<td>Repetition உடன்</td>
+<td>nʳ</td>
+</tr>
+<tr>
+<td>தொடர்பு</td>
+<td>ⁿPᵣ = ⁿCᵣ · r!</td>
+</tr>
+<tr>
+<td>Repeated letters</td>
+<td>n!/(n₁! n₂! ⋯) (ABRACADABRA = 83,160)</td>
+</tr>
+<tr>
+<td>At least</td>
+<td>மொத்தம் − வேண்டாதவை, அல்லது cases கூட்டு (209; 756)</td>
+</tr>
+<tr>
+<td>Onto m → n</td>
+<td>nᵐ − C(n,1)(n−1)ᵐ + C(n,2)(n−2)ᵐ − ⋯ (4 onto 3: 36)</td>
+</tr>
+</tbody>
+</table><button type="button" class="native-reference" aria-controls="en-s7" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s7" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>

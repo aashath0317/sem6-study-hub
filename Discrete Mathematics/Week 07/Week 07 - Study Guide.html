@@ -543,10 +543,62 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dmath-Week07" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
 <div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Discrete Mathematics</a> › Week 07</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 07</div><h1>Mathematical Induction &amp; Recursion</h1><p>The principle of mathematical induction (basis step, inductive step, inductive hypothesis), four fully worked proofs, the well-ordering property, and recursively defined sequences and functions (factorial, powers, sums, Fibonacci).</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">1 video · 39 min</span><span class="chip">📄 Lesson 7- Induction  Recursion.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Lesson 7 – Induction &amp; Recursion · 39 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- Lesson 07- Induction and Recursion - CODL-UOM.mp4" data-drive="1btzE2zc2c_-h6Ve40QoHIhksDc1tsdqz"><source src="ITE3822-25S2-%20Lesson%2007-%20Induction%20and%20Recursion%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Lesson 7 – Induction &amp; Recursion</p><p class="vs">Proof by induction and recursive definitions.</p><a href="#" data-v="0" data-t="0"><b>00:00</b><span>Lesson 7: induction and recursion</span></a><a href="#" data-v="0" data-t="50"><b>00:50</b><span>Mathematical induction: basis step and inductive step</span></a><a href="#" data-v="0" data-t="178"><b>02:58</b><span>Example: 1 + 2 + … + n = n(n + 1)/2</span></a><a href="#" data-v="0" data-t="404"><b>06:44</b><span>Example: sum of the first n odd numbers = n²</span></a><a href="#" data-v="0" data-t="565"><b>09:25</b><span>Proving n &lt; 2ⁿ</span></a><a href="#" data-v="0" data-t="780"><b>13:00</b><span>Proving n³ − n is divisible by 3</span></a><a href="#" data-v="0" data-t="943"><b>15:43</b><span>The well-ordering property</span></a><a href="#" data-v="0" data-t="1113"><b>18:33</b><span>Self-assessment: sum of squares</span></a><a href="#" data-v="0" data-t="1342"><b>22:22</b><span>Exercise 3: sum of odd squares</span></a><a href="#" data-v="0" data-t="1457"><b>24:17</b><span>Recursive definitions</span></a><a href="#" data-v="0" data-t="1570"><b>26:10</b><span>aₙ = 3ⁿ defined recursively</span></a><a href="#" data-v="0" data-t="1630"><b>27:10</b><span>Recursively defined functions: f(n + 1) = 2f(n) + 3</span></a><a href="#" data-v="0" data-t="1867"><b>31:07</b><span>Factorial defined recursively</span></a><a href="#" data-v="0" data-t="2028"><b>33:48</b><span>aⁿ and Σ defined recursively</span></a><a href="#" data-v="0" data-t="2191"><b>36:31</b><span>Fibonacci numbers</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why induction?"><span class="num">1</span>Why induction?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>Induction ஏன்?</h3><p>எல்லா positive integers-க்கும் ஒரு கூற்றை ஒவ்வொன்றாகச் சோதிக்க முடியாது. <strong>Base case</strong> உண்மை; <strong>P(k) உண்மையெனில் P(k+1) உண்மை</strong> என்று நிரூபித்தால் சங்கிலிபோல் எல்லாவற்றுக்கும் பரவும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Induction proof இரண்டு பகுதிகளும் அவசியம்: <strong>P(n₀)</strong> base; <strong>P(k)⇒P(k+1)</strong> step. Base இல்லாமல் step மட்டும் இருந்தால் தொடங்காத domino chain போல.
-Step-இல் arbitrary k≥n₀-ஐ எடுத்துக்கொள்ளுங்கள்; ஒரு குறிப்பிட்ட k-க்கு மட்டும் நிரூபித்தால் எல்லா integers-க்கும் கிடைக்காது. Strong induction பயன்படுத்தினால் அதற்கான பல முந்தைய cases hypothesis-ஐத் தெளிவாக எழுதுங்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Induction <strong>base+universal inductive implication</strong> இரண்டும் வேண்டும். P(k) assume செய்வது எல்லாn-க்கும் conclusion assume செய்தல் அல்ல;arbitraryk-இல்P(k)⇒P(k+1) நிரூபிக்கிறோம். Startn0 என்றால் அதற்கான base;induction chain அந்த இடத்திலிருந்துதான். Numeric checker சில cases மட்டும்;proof மாற்றாகாது.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p>Many statements claim a property holds for <strong>all positive integers n</strong>. For example:</p>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 07</div><h1>Mathematical Induction &amp; Recursion</h1><p>The principle of mathematical induction (basis step, inductive step, inductive hypothesis), four fully worked proofs, the well-ordering property, and recursively defined sequences and functions (factorial, powers, sums, Fibonacci).</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">1 video · 39 min</span><span class="chip">📄 Lesson 7- Induction  Recursion.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Lesson 7 – Induction &amp; Recursion · 39 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- Lesson 07- Induction and Recursion - CODL-UOM.mp4" data-drive="1btzE2zc2c_-h6Ve40QoHIhksDc1tsdqz"><source src="ITE3822-25S2-%20Lesson%2007-%20Induction%20and%20Recursion%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Lesson 7 – Induction &amp; Recursion</p><p class="vs">Proof by induction and recursive definitions.</p><a href="#" data-v="0" data-t="0"><b>00:00</b><span>Lesson 7: induction and recursion</span></a><a href="#" data-v="0" data-t="50"><b>00:50</b><span>Mathematical induction: basis step and inductive step</span></a><a href="#" data-v="0" data-t="178"><b>02:58</b><span>Example: 1 + 2 + … + n = n(n + 1)/2</span></a><a href="#" data-v="0" data-t="404"><b>06:44</b><span>Example: sum of the first n odd numbers = n²</span></a><a href="#" data-v="0" data-t="565"><b>09:25</b><span>Proving n &lt; 2ⁿ</span></a><a href="#" data-v="0" data-t="780"><b>13:00</b><span>Proving n³ − n is divisible by 3</span></a><a href="#" data-v="0" data-t="943"><b>15:43</b><span>The well-ordering property</span></a><a href="#" data-v="0" data-t="1113"><b>18:33</b><span>Self-assessment: sum of squares</span></a><a href="#" data-v="0" data-t="1342"><b>22:22</b><span>Exercise 3: sum of odd squares</span></a><a href="#" data-v="0" data-t="1457"><b>24:17</b><span>Recursive definitions</span></a><a href="#" data-v="0" data-t="1570"><b>26:10</b><span>aₙ = 3ⁿ defined recursively</span></a><a href="#" data-v="0" data-t="1630"><b>27:10</b><span>Recursively defined functions: f(n + 1) = 2f(n) + 3</span></a><a href="#" data-v="0" data-t="1867"><b>31:07</b><span>Factorial defined recursively</span></a><a href="#" data-v="0" data-t="2028"><b>33:48</b><span>aⁿ and Σ defined recursively</span></a><a href="#" data-v="0" data-t="2191"><b>36:31</b><span>Fibonacci numbers</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Why induction?"><span class="num">1</span>Why induction?</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>Induction ஏன்? — Domino விளைவு</h3><p>பல கூற்றுகள் <strong>எல்லா positive integers n-க்கும்</strong> ஒரு பண்பு உண்மை என்று சொல்கின்றன. உதாரணங்கள்:</p>
+<ul>
+<li>1 + 2 + … + n = n(n + 1)/2</li>
+<li>n³ − n, 3-ஆல் வகுபடும்</li>
+</ul>
+<p>n = 1, 2, 3, … என்று <strong>முடிவில்லாத</strong> cases-ஐ ஒவ்வொன்றாகச் சரிபார்க்க முடியாது. <strong>Mathematical induction</strong> அவை எல்லாவற்றையும் <strong>ஒரே நேரத்தில்</strong> நிரூபிக்கிறது.</p>
+<p><strong>🔑 Principle of mathematical induction — 2 படிகள்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>படி</th>
+<th>பெயர்</th>
+<th>என்ன செய்வது</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Basis step</strong></td>
+<td><strong>P(1)</strong> உண்மை என்று சரிபார்</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Inductive step</strong></td>
+<td><strong>எல்லா k-க்கும் P(k) → P(k + 1)</strong> என்று காட்டு</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Inductive hypothesis:</strong> Inductive step-இல் ஏதோ ஒரு k-க்கு <strong>P(k) உண்மை என்று எடுத்துக்கொள்கிறோம் (assume)</strong>. இந்த அனுமானமே <strong>inductive hypothesis</strong>. அதைப் பயன்படுத்தி <strong>P(k + 1)</strong>-ஐ நிரூபிக்கிறோம்.</p>
+<p><strong>ஏன் வேலை செய்கிறது — சங்கிலி:</strong></p>
+<p>P(1) உண்மை → P(2) உண்மை → P(3) உண்மை → … → <strong>எல்லா P(n)-உம் உண்மை</strong>.</p>
+<p><strong>Domino ஒப்புமை:</strong> முடிவில்லாத dominoes வரிசையாக நிற்கின்றன. P(n) = "domino n விழும்".</p>
+<ul>
+<li><strong>Basis:</strong> முதல் domino-வை நீங்களே தள்ளுகிறீர்கள் → P(1) ✓</li>
+<li><strong>Inductive step:</strong> ஏதாவது domino k விழுந்தால், அது <strong>அடுத்த</strong> domino k + 1-ஐத் தள்ளும் → P(k) → P(k + 1) ✓</li>
+<li>ஆகவே <strong>எல்லா dominoes-உம் விழும்</strong>.</li>
+</ul><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>இரண்டு படிகளும் கட்டாயம்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>விடுபட்டது</th>
+<th>என்ன நடக்கும்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basis இல்லை</td>
+<td>முதல் domino-வே விழவில்லை → சங்கிலி தொடங்கவே இல்லை → <strong>எதுவும் நிரூபிக்கப்படவில்லை</strong></td>
+</tr>
+<tr>
+<td>Inductive step இல்லை</td>
+<td>முதல் domino விழும், ஆனால் அடுத்ததைத் தள்ளும் என்று உத்தரவாதம் இல்லை → <strong>P(1) மட்டும்</strong> நிரூபணம்</td>
+</tr>
+</tbody>
+</table>
+<p><strong>⚠️ பொதுவான தவறு:</strong> Inductive step-இல் <strong>P(k + 1)-ஐ assume</strong> செய்வது. Assume செய்ய வேண்டியது <strong>P(k)</strong> மட்டுமே. <strong>P(k + 1)</strong> என்பது நாம் <strong>காட்ட வேண்டியது</strong>.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p>Many statements claim a property holds for <strong>all positive integers n</strong>. For example:</p>
 <ul>
 <li>1 + 2 + … + n = n(n + 1)/2</li>
 <li>n³ − n is divisible by 3</li>
@@ -611,10 +663,95 @@ tm=setInterval(function(){n++;draw(n);if(n>=14){clearInterval(tm);o.innerHTML='<
 <li><strong>தொகுத்தறிதல் படி:</strong> டொமினோ k விழும்போதெல்லாம் k + 1-ஐ விழுத்துகிறது; எனவே P(k) → P(k + 1).</li>
 </ul>
 <p>ஆகவே <strong>ஒவ்வொரு டொமினோவும் விழுகிறது</strong>.</p>
-<p><div data-ta-tool="dm"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Worked induction proofs"><span class="num">2</span>Worked induction proofs</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>Induction proof எழுதுதல்</h3><p>முதலில் தொடக்க எண்ணிற்குச் சோதியுங்கள். பிறகு P(k)-ஐ hypothesis-ஆகப் பயன்படுத்தி P(k+1)-ஐ உருவாக்குங்கள். நிரூபிக்க வேண்டிய P(k+1)-ஐ ஆரம்பத்திலேயே உண்மை என்று எடுத்துக்கொள்ளக்கூடாது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Σᵢ₌₁ⁿ i=n(n+1)/2</strong> proof: n=1 true. k வரை formula சரி எனில் k+1 term சேர்த்து k(k+1)/2+(k+1)=(k+1)(k+2)/2. இது P(k+1)-க்கு வேண்டிய வடிவம்.
-Induction hypothesis எங்கு பயன்படுத்தப்பட்டது என்று குறிப்பிடுங்கள். இருபுறமும் ஒரே மாற்றம் செய்வதால் மட்டும் proof ஆகாது; known case-இலிருந்து next case வர வேண்டும்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p><strong>Sum:</strong>k(k+1)/2+(k+1)=(k+1)(k+2)/2. <strong>Odd sum:</strong>k²+(2k+1)=(k+1)². <strong>Inequality:</strong>k+1&lt;2ᵏ+1≤2ᵏ+2ᵏ=2ᵏ⁺¹,k≥1. <strong>Divisibility:</strong>(k+1)³−(k+1)=(k³−k)+3(k²+k). ஒவ்வொன்றிலும்base n1 சரிபார்;hypothesis பகுதியைப் பிரித்துக் காட்டி desired next form அடைந்து conclude.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><div class="call example"><div class="ct">Example 7.1.1 — 1 + 2 + ⋯ + n = n(n + 1)/2</div><p>Let P(n): "the sum of the first n positive integers is n(n + 1)/2".</p>
+<p><div data-ta-tool="dm"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Worked induction proofs"><span class="num">2</span>Worked induction proofs</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>Induction நிரூபணங்கள் — 4 வகை உதாரணங்கள்</h3><p><strong>Example 7.1.1 — 1 + 2 + ⋯ + n = n(n + 1)/2</strong></p>
+<table>
+<thead>
+<tr>
+<th>படி</th>
+<th>வேலை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basis</td>
+<td>n = 1: இடது = 1, வலது = 1·2/2 = 1 ✓</td>
+</tr>
+<tr>
+<td>Assume P(k)</td>
+<td>1 + 2 + ⋯ + k = k(k + 1)/2</td>
+</tr>
+<tr>
+<td>Show P(k + 1)</td>
+<td>1 + 2 + ⋯ + (k + 1) = (k + 1)(k + 2)/2</td>
+</tr>
+<tr>
+<td>இரு பக்கமும் (k + 1) கூட்டு</td>
+<td>k(k + 1)/2 + (k + 1) = [k(k + 1) + 2(k + 1)]/2 = <strong>(k + 1)(k + 2)/2</strong> ✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example 7.1.2 — 1 + 3 + ⋯ + (2n − 1) = n²</strong></p>
+<ul>
+<li>Basis: 1 = 1² ✓</li>
+<li>Assume: 1 + 3 + ⋯ + (2k − 1) = k²</li>
+<li>அடுத்த odd எண் <strong>(2k + 1)</strong>-ஐக் கூட்டு: k² + 2k + 1 = <strong>(k + 1)²</strong> ✓</li>
+</ul>
+<p><strong>Example 7.1.3 — n &lt; 2ⁿ (inequality)</strong></p>
+<ul>
+<li>Basis: 1 &lt; 2 ✓</li>
+<li>Assume: k &lt; 2ᵏ</li>
+<li>இரு பக்கமும் 1 கூட்டு: k + 1 &lt; 2ᵏ + 1</li>
+<li>1 ≤ 2ᵏ என்பதால்: 2ᵏ + 1 ≤ 2ᵏ + 2ᵏ = 2·2ᵏ = <strong>2ᵏ⁺¹</strong></li>
+<li>ஆகவே k + 1 &lt; 2ᵏ⁺¹ ✓</li>
+</ul>
+<p><strong>Example 7.1.4 — 3 | (n³ − n) (divisibility)</strong></p>
+<ul>
+<li>Basis: 1³ − 1 = 0, 3 | 0 ✓</li>
+<li>Assume: 3 | (k³ − k)</li>
+<li>விரித்து மீண்டும் குழுவாக்கு:</li>
+</ul>
+<p>(k + 1)³ − (k + 1) = k³ + 3k² + 3k + 1 − k − 1 = <strong>(k³ − k) + 3(k² + k)</strong></p>
+<ul>
+<li>முதல் பகுதி 3-ஆல் வகுபடும் (hypothesis). இரண்டாவது = 3 × integer. <strong>கூட்டுத்தொகையும் 3-ஆல் வகுபடும்</strong> ✓</li>
+</ul>
+<p><strong>🔑 பொது சமையல் குறிப்பு (Recipe):</strong></p>
+<ol>
+<li><strong>P(n)-ஐ</strong> தெளிவாக எழுது.</li>
+<li><strong>Basis:</strong> n = 1 (அல்லது கொடுத்த தொடக்க மதிப்பு) போட்டு இரு பக்கமும் சரிபார்.</li>
+<li><strong>Hypothesis P(k)</strong>, <strong>target P(k + 1)</strong> இரண்டையும் வெளிப்படையாக எழுது.</li>
+<li>P(k + 1)-க்குள் P(k)-ஐக் கண்டுபிடித்து <strong>hypothesis-ஐப் பயன்படுத்து</strong>.</li>
+<li><strong>முடிவு:</strong> "by the principle of mathematical induction…" </li>
+</ol><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>எந்த வகைக்கு என்ன தந்திரம்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>வகை</th>
+<th>தந்திரம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sum (கூட்டல்)</strong></td>
+<td>கடைசி term-ஐப் பிரித்தெடு / இரு பக்கமும் அடுத்த term-ஐக் கூட்டு</td>
+</tr>
+<tr>
+<td><strong>Divisibility</strong></td>
+<td>"(hypothesis பகுதி) + m × (integer)" என்று குழுவாக்கு</td>
+</tr>
+<tr>
+<td><strong>Inequality</strong></td>
+<td>இரு பக்கமும் கூட்டு, பிறகு bound பயன்படுத்து (1 ≤ 2ᵏ)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>எண்களால் சரிபார்த்தல் நிரூபணம் அல்ல:</strong> n = 1 முதல் 8 வரை சூத்திரம் சரியாக வருவது நம்பிக்கை தரும், ஆனால் <strong>எல்லா n-க்கும்</strong> நிரூபிப்பது induction மட்டுமே.</p>
+<p><strong>Exam template (English):</strong></p>
+<blockquote>
+<p>Let P(n) be the statement 1 + 2 + ⋯ + n = n(n + 1)/2.
+<em>Basis step:</em> P(1) is true since 1 = 1(2)/2.
+<em>Inductive step:</em> Assume P(k) is true, i.e. 1 + 2 + ⋯ + k = k(k + 1)/2 (inductive hypothesis). Then 1 + 2 + ⋯ + k + (k + 1) = k(k + 1)/2 + (k + 1) = (k + 1)(k + 2)/2, so P(k + 1) is true.
+Hence, by the principle of mathematical induction, P(n) is true for all positive integers n. ∎</p>
+</blockquote></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><div class="call example"><div class="ct">Example 7.1.1 — 1 + 2 + ⋯ + n = n(n + 1)/2</div><p>Let P(n): "the sum of the first n positive integers is n(n + 1)/2".</p>
 <p><strong>Basis step:</strong> 1 = 1·(1 + 1)/2, so P(1) is true.</p>
 <p><strong>Inductive step:</strong>
 - <strong>Assume P(k):</strong> 1 + 2 + ⋯ + k = k(k + 1)/2. (This is the inductive hypothesis.)
@@ -692,8 +829,59 @@ R.querySelector('.out').innerHTML=h+'</table><p class="note">Checking examples i
 <li><strong>P(k + 1)-இலிருந்து தொடங்கி</strong>, அதற்குள் P(k)-ஐக் கண்டறிந்து <strong>கருதுகோளைப் பயன்படுத்தவும்</strong>. கூட்டுத்தொகைகளுக்கு இறுதி உறுப்பைப் பிரிக்கவும். வகுபடுதன்மைக்கு "கருதுகோள் பகுதி + m-இன் மடங்கு" என மீள்தொகுக்கவும்.</li>
 <li><strong>முடிக்கவும்:</strong> "கணிதத் தொகுத்தறிதல் கொள்கையால் அனைத்து n-க்கும் P(n) பொருந்துகிறது."</li>
 </ol></div>
-<p><div data-ta-tool="ck"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="The well-ordering property"><span class="num">3</span>The well-ordering property</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>மிகச் சிறிய உறுப்பின் பண்பு</h3><p>Positive integers-இன் காலியல்லாத எந்த subset-க்கும் மிகச் சிறிய உறுப்பு உள்ளது. இதை வைத்து “மிகச் சிறிய counterexample” தேர்ந்தெடுத்து contradiction பெறலாம். Real numbers-க்கு இதே கூற்றை அப்படியே சொல்ல முடியாது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p><strong>Well-ordering:</strong>nonempty subset of nonnegative integers-க்கு least element உண்டு;infinite set-க்கும் உண்டு,உதாரணம்{n∈ℕ:n&gt;7} least8. எல்லா integer subsets-க்கும் அல்ல:ℤ itself least இல்லை. காலி set-க்கும் least இல்லை. Induction-உடன் equivalent principle;smallest counterexample arguments-க்கு பயன்படும்.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Well-ordering property</div><p><strong>Every non-empty set of non-negative integers has a least element.</strong> For each such set A there is some a ∈ A with a ≤ x for all x ∈ A.</p>
+<p><div data-ta-tool="ck"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="The well-ordering property"><span class="num">3</span>The well-ordering property</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Well-ordering property — எப்போதும் ஒரு சிறிய எண் உண்டு</h3><p><strong>🔑 Well-ordering property:</strong> <strong>Non-negative integers கொண்ட, காலியில்லாத (non-empty) ஒவ்வொரு set-க்கும் ஒரு மிகச்சிறிய உறுப்பு (least element) உண்டு.</strong></p>
+<p>அதாவது A அப்படிப்பட்ட set என்றால், A-இல் <strong>a</strong> என்று ஒரு உறுப்பு இருக்கும்; A-இன் எல்லா x-க்கும் <strong>a ≤ x</strong>.</p>
+<p><strong>உதாரணங்கள்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Least element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td 11_="11," 16_="16," 21="21" 2_="2," 3_="3," 5_="5," 8_="8," 9_="9,">A =</td>
+<td><strong>2</strong></td>
+</tr>
+<tr>
+<td>A = {n ∈ ℕ : n &gt; 7} (முடிவிலி set)</td>
+<td><strong>8</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>கவனி:</strong> இரண்டாவது set-க்கு <strong>பெரிய</strong> உறுப்பு இல்லை (முடிவிலி), ஆனால் <strong>சிறிய</strong> உறுப்பு எப்போதும் உண்டு.</p>
+<p><strong>முக்கிய உண்மை:</strong> Well-ordering principle, mathematical induction-க்கு <strong>சமமானது (equivalent)</strong> — ஒன்றிலிருந்து மற்றதை நிரூபிக்கலாம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>ஏன் "non-negative integers" என்ற நிபந்தனை?</strong></p>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Least element உண்டா?</th>
+<th>ஏன்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>எல்லா integers ℤ</td>
+<td>❌</td>
+<td>…, −3, −2, −1 — கீழே முடிவில்லை</td>
+</tr>
+<tr>
+<td>(0, 1) இடையிலான real எண்கள்</td>
+<td>❌</td>
+<td>எந்த எண்ணுக்கும் அதைவிடச் சிறியது உண்டு</td>
+</tr>
+<tr>
+<td>காலி set ∅</td>
+<td>❌</td>
+<td>உறுப்பே இல்லை — அதனால் "non-empty"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exam template (English):</strong></p>
+<blockquote>
+<p><em>Well-ordering property:</em> Every non-empty set of non-negative integers has a least element. For example, {n ∈ ℕ : n &gt; 7} has least element 8.</p>
+</blockquote></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Well-ordering property</div><p><strong>Every non-empty set of non-negative integers has a least element.</strong> For each such set A there is some a ∈ A with a ≤ x for all x ∈ A.</p>
 <p>The well-ordering principle is <strong>equivalent</strong> to the principle of mathematical induction.</p></div>
 <div class="call example"><div class="ct">Examples 7.1.5 and 7.1.6</div><ul>
 <li>A = {3, 11, 5, 9, 2, 8, 16, 21} has least element <strong>2</strong>.</li>
@@ -703,10 +891,168 @@ R.querySelector('.out').innerHTML=h+'</table><p class="note">Checking examples i
 <div class="call example"><div class="ct">எடுத்துக்காட்டுகள் 7.1.5, 7.1.6</div><ul>
 <li>A = {3, 11, 5, 9, 2, 8, 16, 21}-இன் மிகச்சிறிய மூலகம் <strong>2</strong>.</li>
 <li>A = {n ∈ ℕ : n &gt; 7} முடிவற்றது; இருந்தாலும் மிகச்சிறிய மூலகம் <strong>8</strong> உள்ளது.</li>
-</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Recursion"><span class="num">4</span>Recursion</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>முந்தைய மதிப்பிலிருந்து அடுத்த மதிப்பு</h3><p>ஒரு term-ஐ முந்தைய terms மூலம் வரையறுப்பது <strong>Recursion</strong>. Fibonacci-இல் fₙ=fₙ₋₁+fₙ₋₂; தொடக்க மதிப்புகளும் தேவை. விதி மட்டும் இருந்தால் sequence முழுவதும் தீர்மானிக்கப்படாது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Recursive definition-க்கு <strong>base values + recursive rule</strong> தேவை. f(0)=1, f(n+1)=2f(n)+3 என்றால் f(1)=5, f(2)=13, f(3)=29.
-Factorial: 0!=1; n!=n(n−1)!, n≥1. Base இல்லாவிட்டால் recursion நிற்காது அல்லது பல sequences அதே rule-க்கு பொருந்தலாம்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Recursion initial values+smaller arguments-இலிருந்து next rule. f0=3,f(n+1)=2fn+3→<strong>3,9,21,45,93</strong>. FactorialF0=1,F(n+1)=(n+1)Fn. Powersa0=1,nexta×previous. FibonacciF0=0,F1=1→0,1,1,2,3,5,8;two initials வேண்டும். Base இல்லாத circular rule unique sequence தராது. Induction statement நிரூபிக்கும்;recursion object வரையறுக்கும்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>Sometimes it's hard to define an object <strong>explicitly</strong>, but easy to define it <strong>in terms of itself</strong>. This is <strong>recursion</strong>. It can define <strong>sequences, functions and sets</strong>.</p>
+</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Recursion"><span class="num">4</span>Recursion</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Recursion — தன்னைக் கொண்டே வரையறுத்தல்</h3><p>சில பொருட்களை <strong>நேரடியாக (explicitly)</strong> வரையறுப்பது கடினம், ஆனால் <strong>தன்னைக் கொண்டே</strong> வரையறுப்பது எளிது. இதுவே <strong>recursion</strong>. Sequences, functions, sets மூன்றையும் இப்படி வரையறுக்கலாம்.</p>
+<p><strong>2 பகுதிகள்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>பகுதி</th>
+<th>Sequence</th>
+<th>Function (domain = non-negative integers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basis step</strong></td>
+<td>தொடக்க term a₀ கொடு</td>
+<td><strong>பூஜ்யத்தில்</strong> மதிப்பு கொடு</td>
+</tr>
+<tr>
+<td><strong>Recursive step</strong></td>
+<td>ஒவ்வொரு term-ஐயும் <strong>முந்தைய</strong> term(s) கொண்டு கணக்கிடும் விதி</td>
+<td>ஒரு integer-இல் மதிப்பை <strong>சிறிய</strong> integers-இன் மதிப்புகளால் கணக்கிடும் விதி</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ஒப்புமை — படிக்கட்டு:</strong> முதல் படியில் நிற்கிறீர்கள் (basis). "ஒரு படியிலிருந்து அடுத்த படிக்குப் போவது எப்படி" என்று தெரியும் (recursive step). இரண்டும் இருந்தால் எந்தப் படியையும் அடையலாம்.</p>
+<p><strong>உதாரணங்கள்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>பெயர்</th>
+<th>Basis</th>
+<th>Recursive step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3-இன் அடுக்குகள் (aₙ = 3ⁿ)</td>
+<td>a₀ = 1</td>
+<td>aₙ₊₁ = 3aₙ</td>
+</tr>
+<tr>
+<td>Factorial F(n) = n!</td>
+<td>F(0) = 1</td>
+<td>F(n + 1) = (n + 1)·F(n)</td>
+</tr>
+<tr>
+<td>Powers aⁿ</td>
+<td>a⁰ = 1</td>
+<td>aⁿ⁺¹ = a·aⁿ</td>
+</tr>
+<tr>
+<td>முதல் n terms கூட்டு</td>
+<td>Σ<sub>k=0</sub><sup>0</sup> aₖ = a₀</td>
+<td>Σ<sub>k=0</sub><sup>n+1</sup> aₖ = (Σ<sub>k=0</sub><sup>n</sup> aₖ) + aₙ₊₁</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example 7.2.2 — f(0) = 3, f(n + 1) = 2f(n) + 3:</strong></p>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>கணக்கு</th>
+<th>f(n)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2·3 + 3</td>
+<td><strong>9</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>2·9 + 3</td>
+<td><strong>21</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>2·21 + 3</td>
+<td><strong>45</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>2·45 + 3</td>
+<td><strong>93</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fibonacci எண்கள்:</strong></p>
+<ul>
+<li><strong>f₀ = 0, f₁ = 1</strong></li>
+<li><strong>fₙ = fₙ₋₁ + fₙ₋₂</strong> (n ≥ 2)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fₙ</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td><strong>8</strong></td>
+</tr>
+</tbody>
+</table>
+<p>ஒவ்வொரு term-உம் <strong>முந்தைய இரண்டைப்</strong> பயன்படுத்துவதால், <strong>இரண்டு</strong> தொடக்க மதிப்புகள் தேவை.</p>
+<p><strong>Remark 2:</strong> Recursive functions <strong>well defined</strong> — ஒவ்வொரு positive integer-இலும் மதிப்பு <strong>ஒரே ஒரு விதமாக</strong> தீர்மானிக்கப்படும். இது induction-ஆல் நிரூபணமாகிறது.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Exam பிடித்தது — "Give a recursive definition":</strong> aₙ-இன் வெளிப்படையான சூத்திரம் கொடுத்தால், a₁ கண்டுபிடி, பிறகு "அடுத்த term-க்கு எவ்வளவு மாறுகிறது" என்று பார்.</p>
+<table>
+<thead>
+<tr>
+<th>aₙ</th>
+<th>a₁</th>
+<th>Recursive step</th>
+<th>ஏன்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6n</td>
+<td>6</td>
+<td>aₙ₊₁ = aₙ + 6</td>
+<td>ஒவ்வொரு முறையும் +6</td>
+</tr>
+<tr>
+<td>2n + 1</td>
+<td>3</td>
+<td>aₙ₊₁ = aₙ + 2</td>
+<td>ஒவ்வொரு முறையும் +2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5</td>
+<td>aₙ₊₁ = aₙ</td>
+<td>மாற்றமே இல்லை</td>
+</tr>
+<tr>
+<td>4n − 2</td>
+<td>2</td>
+<td>aₙ₊₁ = aₙ + 4</td>
+<td>ஒவ்வொரு முறையும் +4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>சரிபார்ப்பு:</strong> aₙ₊₁ − aₙ கணக்கிடு. உதாரணம் 4n − 2: [4(n + 1) − 2] − [4n − 2] = <strong>4</strong> ✓</p>
+<p><strong>Exam template (English):</strong></p>
+<blockquote>
+<p>The sequence aₙ = 2n + 1 (n ≥ 1) can be defined recursively by a₁ = 3 and aₙ₊₁ = aₙ + 2 for n ≥ 1.</p>
+</blockquote></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>Sometimes it's hard to define an object <strong>explicitly</strong>, but easy to define it <strong>in terms of itself</strong>. This is <strong>recursion</strong>. It can define <strong>sequences, functions and sets</strong>.</p>
 <div class="grid2"><div><p><strong>Recursively defined sequence</strong></p>
 <ul>
 <li><strong>Basis step:</strong> give the initial term a₀.</li>
@@ -829,21 +1175,64 @@ R.addEventListener('input',function(){fib=false;run()});run();})();
 </ul>
 </li>
 <li>"மறுசுழற்சி விதி கொடுக்கப்பட்டால் f(1)…f(5) கண்டறியவும்."</li>
-</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Quick revision sheet"><span class="num">5</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>Induction ஏன்?</h4><p>எல்லா positive integers-க்கும் ஒரு கூற்றை ஒவ்வொன்றாகச் சோதிக்க முடியாது. <strong>Base case</strong> உண்மை; <strong>P(k) உண்மையெனில் P(k+1) உண்மை</strong> என்று நிரூபித்தால் சங்கிலிபோல் எல்லாவற்றுக்கும் பரவும்.</p>
-<p>Induction proof இரண்டு பகுதிகளும் அவசியம்: <strong>P(n₀)</strong> base; <strong>P(k)⇒P(k+1)</strong> step. Base இல்லாமல் step மட்டும் இருந்தால் தொடங்காத domino chain போல.
-Step-இல் arbitrary k≥n₀-ஐ எடுத்துக்கொள்ளுங்கள்; ஒரு குறிப்பிட்ட k-க்கு மட்டும் நிரூபித்தால் எல்லா integers-க்கும் கிடைக்காது. Strong induction பயன்படுத்தினால் அதற்கான பல முந்தைய cases hypothesis-ஐத் தெளிவாக எழுதுங்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Induction <strong>base+universal inductive implication</strong> இரண்டும் வேண்டும். P(k) assume செய்வது எல்லாn-க்கும் conclusion assume செய்தல் அல்ல;arbitraryk-இல்P(k)⇒P(k+1) நிரூபிக்கிறோம். Startn0 என்றால் அதற்கான base;induction chain அந்த இடத்திலிருந்துதான். Numeric checker சில cases மட்டும்;proof மாற்றாகாது.</p></div><div class="ta-recap-item"><h4>Induction proof எழுதுதல்</h4><p>முதலில் தொடக்க எண்ணிற்குச் சோதியுங்கள். பிறகு P(k)-ஐ hypothesis-ஆகப் பயன்படுத்தி P(k+1)-ஐ உருவாக்குங்கள். நிரூபிக்க வேண்டிய P(k+1)-ஐ ஆரம்பத்திலேயே உண்மை என்று எடுத்துக்கொள்ளக்கூடாது.</p>
-<p><strong>Σᵢ₌₁ⁿ i=n(n+1)/2</strong> proof: n=1 true. k வரை formula சரி எனில் k+1 term சேர்த்து k(k+1)/2+(k+1)=(k+1)(k+2)/2. இது P(k+1)-க்கு வேண்டிய வடிவம்.
-Induction hypothesis எங்கு பயன்படுத்தப்பட்டது என்று குறிப்பிடுங்கள். இருபுறமும் ஒரே மாற்றம் செய்வதால் மட்டும் proof ஆகாது; known case-இலிருந்து next case வர வேண்டும்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p><strong>Sum:</strong>k(k+1)/2+(k+1)=(k+1)(k+2)/2. <strong>Odd sum:</strong>k²+(2k+1)=(k+1)². <strong>Inequality:</strong>k+1&lt;2ᵏ+1≤2ᵏ+2ᵏ=2ᵏ⁺¹,k≥1. <strong>Divisibility:</strong>(k+1)³−(k+1)=(k³−k)+3(k²+k). ஒவ்வொன்றிலும்base n1 சரிபார்;hypothesis பகுதியைப் பிரித்துக் காட்டி desired next form அடைந்து conclude.</p></div><div class="ta-recap-item"><h4>மிகச் சிறிய உறுப்பின் பண்பு</h4><p>Positive integers-இன் காலியல்லாத எந்த subset-க்கும் மிகச் சிறிய உறுப்பு உள்ளது. இதை வைத்து “மிகச் சிறிய counterexample” தேர்ந்தெடுத்து contradiction பெறலாம். Real numbers-க்கு இதே கூற்றை அப்படியே சொல்ல முடியாது.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p><strong>Well-ordering:</strong>nonempty subset of nonnegative integers-க்கு least element உண்டு;infinite set-க்கும் உண்டு,உதாரணம்{n∈ℕ:n&gt;7} least8. எல்லா integer subsets-க்கும் அல்ல:ℤ itself least இல்லை. காலி set-க்கும் least இல்லை. Induction-உடன் equivalent principle;smallest counterexample arguments-க்கு பயன்படும்.</p></div><div class="ta-recap-item"><h4>முந்தைய மதிப்பிலிருந்து அடுத்த மதிப்பு</h4><p>ஒரு term-ஐ முந்தைய terms மூலம் வரையறுப்பது <strong>Recursion</strong>. Fibonacci-இல் fₙ=fₙ₋₁+fₙ₋₂; தொடக்க மதிப்புகளும் தேவை. விதி மட்டும் இருந்தால் sequence முழுவதும் தீர்மானிக்கப்படாது.</p>
-<p>Recursive definition-க்கு <strong>base values + recursive rule</strong> தேவை. f(0)=1, f(n+1)=2f(n)+3 என்றால் f(1)=5, f(2)=13, f(3)=29.
-Factorial: 0!=1; n!=n(n−1)!, n≥1. Base இல்லாவிட்டால் recursion நிற்காது அல்லது பல sequences அதே rule-க்கு பொருந்தலாம்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Recursion initial values+smaller arguments-இலிருந்து next rule. f0=3,f(n+1)=2fn+3→<strong>3,9,21,45,93</strong>. FactorialF0=1,F(n+1)=(n+1)Fn. Powersa0=1,nexta×previous. FibonacciF0=0,F1=1→0,1,1,2,3,5,8;two initials வேண்டும். Base இல்லாத circular rule unique sequence தராது. Induction statement நிரூபிக்கும்;recursion object வரையறுக்கும்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><table>
+</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Quick revision sheet"><span class="num">5</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>விரைவு மீள்பார்வை — Week 7</h3><table>
+<thead>
+<tr>
+<th>தலைப்பு</th>
+<th>ஒரு வரியில்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Induction</td>
+<td>Basis P(1) + inductive step P(k) → P(k + 1)</td>
+</tr>
+<tr>
+<td>Inductive hypothesis</td>
+<td>ஏதோ k-க்கு P(k)-ஐ assume செய்</td>
+</tr>
+<tr>
+<td>Domino</td>
+<td>முதலாவது விழும் + ஒவ்வொன்றும் அடுத்ததைத் தள்ளும் = எல்லாம் விழும்</td>
+</tr>
+<tr>
+<td>Sum நிரூபணம்</td>
+<td>P(k)-இன் இரு பக்கமும் அடுத்த term-ஐக் கூட்டு</td>
+</tr>
+<tr>
+<td>Divisibility நிரூபணம்</td>
+<td>(hypothesis பகுதி) + m·(integer) என்று குழுவாக்கு</td>
+</tr>
+<tr>
+<td>Inequality நிரூபணம்</td>
+<td>இரு பக்கமும் கூட்டு, பிறகு bound (1 ≤ 2ᵏ)</td>
+</tr>
+<tr>
+<td>Well-ordering</td>
+<td>Non-empty non-negative integer set-க்கு least element உண்டு; induction-க்குச் சமம்</td>
+</tr>
+<tr>
+<td>Recursive definition</td>
+<td>Basis (தொடக்க மதிப்பு) + recursive விதி</td>
+</tr>
+<tr>
+<td>Factorial</td>
+<td>F(0) = 1, F(n+1) = (n+1)F(n)</td>
+</tr>
+<tr>
+<td>Powers</td>
+<td>a⁰ = 1, aⁿ⁺¹ = a·aⁿ</td>
+</tr>
+<tr>
+<td>Fibonacci</td>
+<td>f₀ = 0, f₁ = 1, fₙ = fₙ₋₁ + fₙ₋₂ → 0, 1, 1, 2, 3, 5, 8</td>
+</tr>
+<tr>
+<td>f(0)=3, f(n+1)=2f(n)+3</td>
+<td>9, 21, 45, 93</td>
+</tr>
+</tbody>
+</table><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>

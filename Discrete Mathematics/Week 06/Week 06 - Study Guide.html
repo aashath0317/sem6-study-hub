@@ -543,10 +543,135 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dmath-Week06" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
 <div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Discrete Mathematics</a> › Week 06</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 06</div><h1>Number Theory &amp; Cryptography</h1><p>Divisibility and its theorem, the division algorithm (div and mod), congruence modulo m, congruence classes, primes and composites, the fundamental theorem of arithmetic, and Caesar's cipher.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">1 video · 33 min</span><span class="chip">📄 Lesson 6 - Number Theory  Cryptography.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Lesson 6 – Number Theory &amp; Cryptography · 33 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- Lesson 06- Number Theory and Cryptography - CODL-UOM.mp4" data-drive="15J2QEQWFX9ollRnjpSsyIQhT4jRhvKnZ"><source src="ITE3822-25S2-%20Lesson%2006-%20Number%20Theory%20and%20Cryptography%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Lesson 6 – Number Theory &amp; Cryptography</p><p class="vs">Divisibility, modular arithmetic, primes and the Caesar cipher.</p><a href="#" data-v="0" data-t="0"><b>00:00</b><span>Lesson 6: number theory and cryptography</span></a><a href="#" data-v="0" data-t="106"><b>01:46</b><span>Divisibility: a | b</span></a><a href="#" data-v="0" data-t="214"><b>03:34</b><span>Theorem 1 and its proofs</span></a><a href="#" data-v="0" data-t="445"><b>07:25</b><span>The division algorithm: quotient and remainder</span></a><a href="#" data-v="0" data-t="503"><b>08:23</b><span>27 = 4 · 6 + 3; −23 mod 5</span></a><a href="#" data-v="0" data-t="609"><b>10:09</b><span>Congruence modulo m: Theorem 3</span></a><a href="#" data-v="0" data-t="664"><b>11:04</b><span>Example: 17 ≡ 3 (mod 7)</span></a><a href="#" data-v="0" data-t="767"><b>12:47</b><span>Theorem 4: adding and multiplying congruences</span></a><a href="#" data-v="0" data-t="881"><b>14:41</b><span>Primes and composites</span></a><a href="#" data-v="0" data-t="1171"><b>19:31</b><span>Prime factorisation examples</span></a><a href="#" data-v="0" data-t="1290"><b>21:30</b><span>Self-assessment exercises</span></a><a href="#" data-v="0" data-t="1460"><b>24:20</b><span>Caesar cipher: f(p) = (p + 3) mod 26</span></a><a href="#" data-v="0" data-t="1567"><b>26:07</b><span>Encrypting YARD → BDUG</span></a><a href="#" data-v="0" data-t="1777"><b>29:37</b><span>Decrypting: CHVW → ZEST</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Divisibility"><span class="num">1</span>Divisibility</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>மீதியில்லாமல் வகுபடுதல்</h3><p><strong>a|b</strong> என்றால் b=ak ஆகும் ஒரு integer k உள்ளது. 3|12 ஏனெனில் 12=3×4. இது a÷b என்ற division instruction அல்ல; மீதியில்லாமல் வகுபடுகிறதா என்ற கூற்று.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>a|b, a|c என்றால் a|(b+c) மற்றும் a|(b−c). a|b, b|c என்றால் a|c. b=ak, c=aℓ என்று எழுதி factor a வெளியே எடுத்தால் proof கிடைக்கும்.
-a|b என்பதால் b|a என்று சொல்ல முடியாது: 3|12 true; 12|3 false. Division notation-உடன் divisibility symbol-ஐக் குழப்பாதீர்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>a|b என்றால்b=ak,integerk,a≠0 (course definition);a/b numerical division வேறு. a|b,a|c→a|(b+c) மற்றும்a|(mb+nc). b=as,c=at substitute→a(ms+nt). a|b,b|c→a|c. Definition-இன் integer multiplier-ஐ explicit காட்டுவது proof-இன் முக்கியப் படி.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p><strong>Number theory</strong> ("higher arithmetic") studies <strong>integers and their properties</strong>. This lesson covers divisibility, modular arithmetic, primes and a cryptography application.</p>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 06</div><h1>Number Theory &amp; Cryptography</h1><p>Divisibility and its theorem, the division algorithm (div and mod), congruence modulo m, congruence classes, primes and composites, the fundamental theorem of arithmetic, and Caesar's cipher.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">1 video · 33 min</span><span class="chip">📄 Lesson 6 - Number Theory  Cryptography.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Lesson 6 – Number Theory &amp; Cryptography · 33 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="ITE3822-25S2- Lesson 06- Number Theory and Cryptography - CODL-UOM.mp4" data-drive="15J2QEQWFX9ollRnjpSsyIQhT4jRhvKnZ"><source src="ITE3822-25S2-%20Lesson%2006-%20Number%20Theory%20and%20Cryptography%20-%20CODL-UOM.mp4"></video></div><div class="chap"><p class="vt">Lesson 6 – Number Theory &amp; Cryptography</p><p class="vs">Divisibility, modular arithmetic, primes and the Caesar cipher.</p><a href="#" data-v="0" data-t="0"><b>00:00</b><span>Lesson 6: number theory and cryptography</span></a><a href="#" data-v="0" data-t="106"><b>01:46</b><span>Divisibility: a | b</span></a><a href="#" data-v="0" data-t="214"><b>03:34</b><span>Theorem 1 and its proofs</span></a><a href="#" data-v="0" data-t="445"><b>07:25</b><span>The division algorithm: quotient and remainder</span></a><a href="#" data-v="0" data-t="503"><b>08:23</b><span>27 = 4 · 6 + 3; −23 mod 5</span></a><a href="#" data-v="0" data-t="609"><b>10:09</b><span>Congruence modulo m: Theorem 3</span></a><a href="#" data-v="0" data-t="664"><b>11:04</b><span>Example: 17 ≡ 3 (mod 7)</span></a><a href="#" data-v="0" data-t="767"><b>12:47</b><span>Theorem 4: adding and multiplying congruences</span></a><a href="#" data-v="0" data-t="881"><b>14:41</b><span>Primes and composites</span></a><a href="#" data-v="0" data-t="1171"><b>19:31</b><span>Prime factorisation examples</span></a><a href="#" data-v="0" data-t="1290"><b>21:30</b><span>Self-assessment exercises</span></a><a href="#" data-v="0" data-t="1460"><b>24:20</b><span>Caesar cipher: f(p) = (p + 3) mod 26</span></a><a href="#" data-v="0" data-t="1567"><b>26:07</b><span>Encrypting YARD → BDUG</span></a><a href="#" data-v="0" data-t="1777"><b>29:37</b><span>Decrypting: CHVW → ZEST</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Divisibility"><span class="num">1</span>Divisibility</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>வகுபடுதல் (Divisibility) — a | b</h3><p><strong>Number theory</strong> ("உயர் எண்கணிதம்") = <strong>integers-ஐயும் அவற்றின் பண்புகளையும்</strong> படிப்பது. இந்தப் பாடம்: வகுபடுதல், modular arithmetic, primes, cryptography.</p>
+<p><strong>🔑 Definition 1:</strong> a, b integers, <strong>a ≠ 0</strong>. <strong>b = ac</strong> ஆகும்படி ஒரு integer c இருந்தால் → <strong>a, b-ஐ வகுக்கும்</strong>: <strong>a | b</strong>.</p>
+<ul>
+<li>a = b-இன் <strong>காரணி (factor)</strong>; b = a-இன் <strong>மடங்கு (multiple)</strong>.</li>
+<li>வகுக்காவிட்டால்: <strong>a ∤ b</strong>.</li>
+</ul>
+<p><strong>எளிய ஒப்புமை:</strong> 20 இனிப்புகளை 4 பேருக்கு <strong>மீதமின்றி</strong> சமமாகப் பகிர முடியுமா? ஆம் (ஒவ்வொருவருக்கும் 5) → <strong>4 | 20</strong>. 17 இனிப்புகளை 6 பேருக்கு? இல்லை (மீதம் 5) → <strong>6 ∤ 17</strong>.</p>
+<p><strong>⚠️ குறியீடுகளைக் குழப்பாதீர்கள்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>குறியீடு</th>
+<th>என்ன</th>
+<th>உதாரணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>a | b</strong></td>
+<td>ஒரு <strong>கூற்று</strong> (True / False): "a, b-ஐ வகுக்கும்"</td>
+<td>3 | 12 → <strong>True</strong></td>
+</tr>
+<tr>
+<td><strong>a / b</strong></td>
+<td>ஒரு <strong>எண்</strong>: a ÷ b</td>
+<td>12/3 → <strong>4</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Theorem 1 — வகுபடுதலின் 3 பண்புகள்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>பண்பு</th>
+<th>எண் உதாரணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>a | b, a | c ⇒ <strong>a | (b + c)</strong></td>
+<td>3 | 6, 3 | 9 ⇒ 3 | 15 ✓</td>
+</tr>
+<tr>
+<td>2</td>
+<td>a | b ⇒ எந்த c-க்கும் <strong>a | bc</strong></td>
+<td>3 | 6 ⇒ 3 | 42 (6 × 7) ✓</td>
+</tr>
+<tr>
+<td>3</td>
+<td>a | b, b | c ⇒ <strong>a | c</strong> (transitivity)</td>
+<td>2 | 4, 4 | 12 ⇒ 2 | 12 ✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>நிரூபணங்கள் (direct — definition பயன்படுத்தி):</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Assume</th>
+<th>Algebra</th>
+<th>முடிவு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>(i)</strong></td>
+<td>b = as, c = at</td>
+<td>b + c = as + at = <strong>a(s + t)</strong></td>
+<td>a | (b + c) ∎</td>
+</tr>
+<tr>
+<td><strong>(ii)</strong></td>
+<td>b = as</td>
+<td>bc = asc = <strong>a(sc)</strong></td>
+<td>a | bc ∎</td>
+</tr>
+<tr>
+<td><strong>(iii)</strong></td>
+<td>b = as, c = bt</td>
+<td>c = (as)t = <strong>a(st)</strong></td>
+<td>a | c ∎</td>
+</tr>
+</tbody>
+</table>
+<p><strong>🔑 Corollary:</strong> a | b, a | c ⇒ எந்த m, n-க்கும் <strong>a | (mb + nc)</strong>. (ii)-ஆல் a | mb, a | nc; பிறகு (i). ∎</p>
+<p><strong>Exam பிடித்தவை:</strong></p>
+<p><strong>"7 | 4n ⇒ 7 | n" (January &amp; July 2023):</strong></p>
+<table>
+<thead>
+<tr>
+<th>படி</th>
+<th>வேலை</th>
+<th>ஏன்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>7 | 4n → <strong>4n = 7k</strong></td>
+<td>Definition</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>தந்திரம்:</strong> 2 × 4 = 8 = 7 + 1, ஆகவே <strong>n = 8n − 7n</strong></td>
+<td>8n − 7n = n</td>
+</tr>
+<tr>
+<td>3</td>
+<td>n = 2(4n) − 7n = 2(7k) − 7n = <strong>7(2k − n)</strong></td>
+<td>4n = 7k substitute</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2k − n integer → <strong>7 | n</strong> ∎</td>
+<td>Definition</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ஏன் வேலை செய்கிறது:</strong> 4, 7-க்குப் பொதுக் காரணி இல்லை. பொது விதி: coefficient-இன் ஒரு மடங்கு, <strong>வகுக்கும் எண்ணின் மடங்கை விட 1 அதிகமாக</strong> இருக்கும்படி கண்டுபிடி (8 = 7 + 1).</p>
+<p><strong>"a | b, c | d ⇒ ac | bd" (January 2023):</strong></p>
+<p>b = ak, d = cm → bd = (ak)(cm) = <strong>(ac)(km)</strong> → ac | bd ∎</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>🔑 வகுபடுதல் நிரூபணங்களின் ஒரே இரகசியம்:</strong> "a | b" என்று பார்த்தவுடன் <strong>"b = a × (integer)"</strong> என்று எழுதுங்கள். இறுதியில் <strong>"= a × (ஏதோ integer)"</strong> வடிவம் வர வேண்டும்.</p>
+<p><strong>பொதுவான தவறு:</strong> இரண்டு வகுபடுதல்களுக்கும் <strong>ஒரே எழுத்து</strong> (b = as, c = as) பயன்படுத்துவது — <strong>வேறு எழுத்துகள்</strong> (s, t) வேண்டும்.</p>
+<p><strong>Exam template (English):</strong></p>
+<blockquote>
+<p><em>Proof.</em> Since a | b and a | c, there are integers s and t with b = as and c = at. Then b + c = as + at = a(s + t). Since s + t is an integer, a | (b + c). ∎</p>
+</blockquote></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><p><strong>Number theory</strong> ("higher arithmetic") studies <strong>integers and their properties</strong>. This lesson covers divisibility, modular arithmetic, primes and a cryptography application.</p>
 <div class="call key"><div class="ct">Definition 1</div><p>Let a and b be integers with <strong>a ≠ 0</strong>. If there is an integer c with <strong>b = ac</strong>, then <strong>a divides b</strong>, written <strong>a | b</strong>.</p>
 <ul>
 <li>a is a <strong>factor</strong> of b; b is a <strong>multiple</strong> of a.</li>
@@ -615,8 +740,141 @@ Then b + c = as + at = <strong>a(s + t)</strong>, so a | (b + c). ∎</p>
 <li>2k − n is an integer, so <strong>7 | n</strong>. ∎</li>
 </ol>
 <p>This works because 4 and 7 share no common factor. In general, find a multiple of the coefficient that is <strong>1 more than a multiple of the divisor</strong>.</p></div>
-<div class="call example"><div class="ct">If a | b and c | d, then ac | bd (January 2023)</div><p>b = ak and d = cm for integers k and m. Then bd = (ak)(cm) = <strong>(ac)(km)</strong>, so ac | bd. ∎</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="The division algorithm"><span class="num">2</span>The division algorithm</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>ஈவும் மீதியும்</h3><p><strong>a=bq+r</strong>, b&gt;0, <strong>0≤r&lt;b</strong>. Negative a இருந்தாலும் remainder non-negative வர வேண்டும். −23=5(−5)+2; ஆகவே −23 mod 5 = 2.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p><strong>a=dq+r,d&gt;0,0≤r&lt;d</strong>,q/r unique.27=4·6+3;−23=5·(−5)+2. q−4,r−3 அனுமதி இல்லை. Mathematical q=floor(a/d). சில programming மொழிகளின் % negative remainder தரலாம்;அதை course mod-உடன் தானாக ஒப்பிடாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Theorem 2 (the division algorithm)</div><p>Let a be an integer and d a <strong>positive</strong> integer. Then there are <strong>unique</strong> integers q and r with <strong>0 ≤ r &lt; d</strong> such that</p>
+<div class="call example"><div class="ct">If a | b and c | d, then ac | bd (January 2023)</div><p>b = ak and d = cm for integers k and m. Then bd = (ak)(cm) = <strong>(ac)(km)</strong>, so ac | bd. ∎</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="The division algorithm"><span class="num">2</span>The division algorithm</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>Division algorithm — a = dq + r</h3><p><strong>🔑 Theorem 2:</strong> a integer, d <strong>positive</strong> integer. <strong>0 ≤ r &lt; d</strong> ஆகும்படி <strong>தனித்த (unique)</strong> integers q, r உண்டு:</p>
+<p><strong>a = dq + r</strong></p>
+<table>
+<thead>
+<tr>
+<th>பெயர்</th>
+<th>குறியீடு</th>
+<th>குறிப்பு</th>
+<th>27 ÷ 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dividend</strong> (வகுபடும் எண்)</td>
+<td>a</td>
+<td>—</td>
+<td>27</td>
+</tr>
+<tr>
+<td><strong>Divisor</strong> (வகுக்கும் எண்)</td>
+<td>d</td>
+<td>—</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Quotient</strong> (ஈவு)</td>
+<td>q</td>
+<td><strong>q = a div d</strong></td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Remainder</strong> (மீதி)</td>
+<td>r</td>
+<td><strong>r = a mod d</strong></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>27 = 4 · 6 + 3 → <strong>27 div 4 = 6</strong>, <strong>27 mod 4 = 3</strong></p>
+<p><strong>இனிப்பு ஒப்புமை:</strong> 27 இனிப்புகள், 4 பேர் → ஒவ்வொருவருக்கும் <strong>6</strong> (q), <strong>3</strong> மீதம் (r).</p>
+<p><strong>Negative எண் — −23 ÷ 5:</strong></p>
+<p><strong>⚠️ மீதி ஒருபோதும் negative அல்ல!</strong> 0 ≤ r &lt; d.</p>
+<table>
+<thead>
+<tr>
+<th>முயற்சி</th>
+<th>கணக்கு</th>
+<th>சரியா?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>q = −4</td>
+<td>−23 = 5(−4) + <strong>(−3)</strong></td>
+<td>❌ r = −3 &lt; 0</td>
+</tr>
+<tr>
+<td>q = −5</td>
+<td>−23 = 5(−5) + <strong>2</strong></td>
+<td>✅ 0 ≤ 2 &lt; 5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>−23 div 5 = −5</strong>, <strong>−23 mod 5 = 2</strong></p>
+<p><strong>எப்படி:</strong> −23-க்குக் <strong>கீழே</strong> உள்ள 5-இன் மிக அருகிய மடங்கைத் தேடுங்கள் → −25. மீதி = −23 − (−25) = <strong>2</strong>.</p>
+<p><strong>எண் கோடு:</strong> … −25 ← <strong>−23</strong> … −20. −23, −25-இலிருந்து <strong>2 அடி மேலே</strong>.</p>
+<p>மீதி <strong>பூஜ்ஜியம்</strong> என்றால் → y | x (மீதமின்றி வகுபடும்).</p>
+<p><strong>Remainders மூலம் cases proof:</strong></p>
+<p>Division algorithm: ஒவ்வொரு integer-க்கும் m-ஆல் வகுக்கும்போது <strong>சரியாக ஒரு</strong> மீதி. அதனால் <strong>ஒவ்வொரு சாத்தியமான மீதியையும் தனி case-ஆகச்</strong> சோதித்து நிரூபிக்கலாம்.</p>
+<p><strong>January 2023 Q2(c): a² = 3k அல்லது 3k + 1 வடிவம், ஒருபோதும் 3k + 2 அல்ல</strong></p>
+<p>a-ஐ 3-ஆல் வகு: a = 3q + r, r = 0, 1, அல்லது 2.</p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>a² கணக்கு</th>
+<th>வடிவம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r = 0</td>
+<td>(3q)² = 9q² = 3(3q²)</td>
+<td><strong>3k</strong></td>
+</tr>
+<tr>
+<td>r = 1</td>
+<td>(3q + 1)² = 9q² + 6q + 1 = 3(3q² + 2q) + 1</td>
+<td><strong>3k + 1</strong></td>
+</tr>
+<tr>
+<td>r = 2</td>
+<td>(3q + 2)² = 9q² + 12q + 4 = 3(3q² + 4q + 1) + <strong>1</strong></td>
+<td><strong>3k + 1</strong></td>
+</tr>
+</tbody>
+</table>
+<p>எல்லா cases-உம் 3k அல்லது 3k + 1 → a² <strong>ஒருபோதும் 3k + 2 அல்ல</strong> ∎</p>
+<p><strong>எண் சரிபார்ப்பு:</strong> 4² = 16 = 3·5 + 1 ✓; 5² = 25 = 3·8 + 1 ✓; 6² = 36 = 3·12 ✓</p>
+<p><strong>r = 2 தந்திரம்:</strong> +4 = 3 + <strong>1</strong> — 3-ஐ factor-க்குள் தள்ளி, <strong>1</strong> மட்டும் வெளியே விடுங்கள்.</p>
+<p><strong>Model Q1(b): n odd ⇒ 4 | n² − 5, ஆனால் 8 ∤ n² − 5</strong></p>
+<table>
+<thead>
+<tr>
+<th>படி</th>
+<th>வேலை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n = 2k + 1</td>
+<td>n² − 5 = 4k² + 4k + 1 − 5 = 4k² + 4k − 4 = <strong>4(k² + k − 1)</strong> → 4 வகுக்கும் ✓</td>
+</tr>
+<tr>
+<td>k² + k = k(k + 1)</td>
+<td><strong>அடுத்தடுத்த integers-இன் பெருக்கம் → எப்போதும் even</strong> (ஒன்று கட்டாயம் even)</td>
+</tr>
+<tr>
+<td>k² + k − 1</td>
+<td>even − 1 = <strong>odd</strong></td>
+</tr>
+<tr>
+<td>4 × odd</td>
+<td>8-ஆல் <strong>ஒருபோதும்</strong> வகுபடாது (8 = 4 × 2 வேண்டும், ஆனால் odd-இல் 2 இல்லை) ∎</td>
+</tr>
+</tbody>
+</table>
+<p><em>சரிபார்ப்பு:</em> n = 3 → 9 − 5 = 4 (4 | 4 ✓, 8 ∤ 4 ✓); n = 5 → 20 (4 | 20 ✓, 8 ∤ 20 ✓)</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Cases proof template:</strong></p>
+<ol>
+<li>"By the division algorithm, a = 3q + r where r ∈ {0, 1, 2}."</li>
+<li>ஒவ்வொரு case-ஐயும் <strong>table அல்லது பட்டியலில்</strong> கணக்கிடு.</li>
+<li>"In every case, …, hence …" என்று முடி.</li>
+</ol>
+<p><strong>ஒரு case-ஐ விட்டால் மதிப்பெண் போகும்!</strong></p>
+<p><strong>mod கணக்கிட — calculator முறை:</strong> a mod d = a − d × ⌊a/d⌋. உதா: −23/5 = −4.6 → ⌊−4.6⌋ = <strong>−5</strong> (கீழ்நோக்கி!) → −23 − 5(−5) = 2.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Theorem 2 (the division algorithm)</div><p>Let a be an integer and d a <strong>positive</strong> integer. Then there are <strong>unique</strong> integers q and r with <strong>0 ≤ r &lt; d</strong> such that</p>
 <p><strong>a = dq + r</strong></p></div>
 <table>
 <thead>
@@ -772,10 +1030,80 @@ R.addEventListener('input',run);run();})();
 <p>Every case gives 3k or 3k + 1, so a² is <strong>never 3k + 2</strong>. ∎</p></div>
 <div class="call example"><div class="ct">Model Q1(b): n odd ⇒ 4 | n² − 5, but 8 ∤ n² − 5</div><p>Write n = 2k + 1. Then n² − 5 = 4k² + 4k − 4 = <strong>4(k² + k − 1)</strong>, so 4 divides it.</p>
 <p>k² + k = k(k + 1) is a product of consecutive integers, so it is <strong>even</strong>. Then k² + k − 1 is <strong>odd</strong>, and 4 × (odd) is never divisible by 8. ∎</p></div>
-<div class="call tip"><div class="ct">Template for a cases proof</div><p>State the cases from the division algorithm, work out each case in a table or list, and finish with "every case gives …, so …". Missing one case loses the marks.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Modular arithmetic &amp; congruence"><span class="num">3</span>Modular arithmetic &amp; congruence</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>மீதியை அடிப்படையாகக் கொண்ட கணக்கு</h3><p>Clock-இல் 12-க்குப் பிறகு மீண்டும் 1 வருவது போல ஒரு modulus-க்குள் எண்ணுகிறோம். <strong>a≡b (mod m)</strong> என்றால் m, a−b-ஐ வகுக்கும். இரண்டுக்கும் ஒரே remainder என்பதும் அதே பொருள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>a≡b(mod m) iff m|(a−b)</strong>. ஒரே remainder கொண்ட அனைத்தும் ஒரு congruence class. Classes [0],…,[m−1].
-Congruences-ஐ கூட்டவும் பெருக்கவும்லாம். ஆனால் இருபுறமும் ஒரு எண்ணால் cancel செய்வது எல்லா நேரமும் அனுமதி இல்லை; modulus-உடன் அந்த எண்ணின் gcd போன்ற நிபந்தனை தேவை. Modular arithmetic-இல் ordinary division-ஐக் கண்மூடி செய்யாதீர்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>a≡b(modm)⇔m|(a−b)⇔same remainder.17≡3(mod7);21≢6(mod8). Add/multiply congruences valid. <strong>Cancellation பொதுவாக தவறு:</strong>2·1≡2·4(mod6),ஆனால்1≢4. gcd(c,m)=1 என்றால் c cancel செய்யலாம். Class[a]ₘ={a+km:k∈ℤ};residues0…m−1.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Definition 2 — congruence</div><p>Let m be a positive integer. <strong>a is congruent to b modulo m</strong>, written <strong>a ≡ b (mod m)</strong>, if <strong>m divides a − b</strong>. If not, write a ≢ b (mod m).</p></div>
+<div class="call tip"><div class="ct">Template for a cases proof</div><p>State the cases from the division algorithm, work out each case in a table or list, and finish with "every case gives …, so …". Missing one case loses the marks.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Modular arithmetic &amp; congruence"><span class="num">3</span>Modular arithmetic &amp; congruence</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Modular arithmetic &amp; Congruence — கடிகாரக் கணக்கு</h3><p><strong>🕐 கடிகார ஒப்புமை:</strong> இப்போது 10 மணி. 5 மணிநேரம் கழித்து? 15 அல்ல — <strong>3 மணி</strong>. ஏனெனில் கடிகாரம் <strong>12-இல் சுற்றி வருகிறது</strong>. இதுவே <strong>mod 12</strong> கணக்கு: 15 mod 12 = 3.</p>
+<p><strong>🔑 Definition 2 — Congruence:</strong> m positive integer. <strong>m | (a − b)</strong> என்றால், <strong>a, b-க்கு m-ஐ modulo-வாகக் கொண்டு ஒத்தது (congruent)</strong>: <strong>a ≡ b (mod m)</strong>. இல்லையெனில் a ≢ b (mod m).</p>
+<p><strong>🔑 Theorem 3:</strong> <strong>a ≡ b (mod m) ⇔ a mod m = b mod m</strong> — m-ஆல் வகுக்கும்போது <strong>ஒரே மீதி</strong>.</p>
+<p><strong>கடிகாரத்தில்:</strong> 15 ≡ 3 (mod 12) — இரண்டும் கடிகாரத்தில் "3"-ஐக் காட்டும்.</p>
+<p><strong>Example 6.3.1:</strong></p>
+<table>
+<thead>
+<tr>
+<th>கேள்வி</th>
+<th>முறை 1: m | (a − b)?</th>
+<th>முறை 2: ஒரே மீதி?</th>
+<th>விடை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17 ≡ 3 (mod 7)?</td>
+<td>17 − 3 = 14; 7 | 14 ✓</td>
+<td>17 mod 7 = 3; 3 mod 7 = 3 ✓</td>
+<td><strong>ஆம்</strong></td>
+</tr>
+<tr>
+<td>21 ≡ 6 (mod 8)?</td>
+<td>21 − 6 = 15; 8 ∤ 15 ✗</td>
+<td>21 mod 8 = 5; 6 mod 8 = 6 ✗</td>
+<td><strong>இல்லை</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>🔑 Theorem 4 — Congruences-ஐக் கூட்டலாம், பெருக்கலாம்:</strong></p>
+<p>a ≡ b (mod m), c ≡ d (mod m) என்றால்:</p>
+<ul>
+<li><strong>a + c ≡ b + d (mod m)</strong></li>
+<li><strong>ac ≡ bd (mod m)</strong></li>
+</ul>
+<p><strong>Example 6.3.2:</strong> 12 ≡ 2 (mod 5), 16 ≡ 1 (mod 5)</p>
+<table>
+<thead>
+<tr>
+<th>கணக்கு</th>
+<th>பெரிய எண்களுடன்</th>
+<th>சிறிய எண்களுடன் (தந்திரம்)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12 + 16</td>
+<td>28 mod 5 = 3</td>
+<td>2 + 1 = <strong>3</strong> ✓</td>
+</tr>
+<tr>
+<td>12 × 16</td>
+<td>192 mod 5 = 2</td>
+<td>2 × 1 = <strong>2</strong> ✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>பயன்:</strong> பெரிய எண்களைக் கணக்கிடாமல், <strong>முதலில் சிறிய மீதிகளாக மாற்றிப்</strong> பிறகு கணக்கிடலாம்!</p>
+<p><strong>Congruence classes (Definition 3):</strong></p>
+<p>n-ஆல் வகுக்கும்போது <strong>a-இன் அதே மீதி உள்ள எல்லா integers-இன்</strong> set.</p>
+<p><strong>Example 6.3.3 — 2-இன் congruence class (mod 7):</strong></p>
+<p><strong>2-இலிருந்து தொடங்கி 7-ஐக் கூட்டிக்கொண்டும் கழித்துக்கொண்டும்</strong> போங்கள்:</p>
+<p>… −40, −33, −26, −19, −12, −5, <strong>2</strong>, 9, 16, 23, 30, 37, …</p>
+<p>இவை எல்லாம் 7-ஆல் வகுத்தால் மீதி <strong>2</strong>. பொது வடிவம்: <strong>2 + 7k</strong>.</p>
+<p><strong>கிழமை ஒப்புமை:</strong> இன்று செவ்வாய். 7, 14, 21 நாள் கழித்தும் <strong>செவ்வாய்</strong> — அவை எல்லாம் ஒரே "congruence class" (mod 7)!</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>≡ சரிபார்க்க 2 வழிகள்:</strong></p>
+<ol>
+<li><strong>வித்தியாசம்:</strong> a − b-ஐ m வகுக்கிறதா?</li>
+<li><strong>மீதி:</strong> a mod m = b mod m?</li>
+</ol>
+<p><strong>Theorem 4 பயன் — பெரிய எண் தந்திரம்:</strong> 99 × 98 mod 10 = ? 99 ≡ 9, 98 ≡ 8 → 9 × 8 = 72 ≡ <strong>2</strong> (mod 10). சரிபார்ப்பு: 9702 → கடைசி இலக்கம் 2 ✓</p>
+<p><strong>Exam template (English):</strong></p>
+<blockquote>
+<p>a ≡ b (mod m) if m divides a − b, equivalently if a and b leave the same remainder when divided by m. For example, 17 ≡ 3 (mod 7) since 7 | 14. Congruences can be added and multiplied: if a ≡ b and c ≡ d (mod m), then a + c ≡ b + d and ac ≡ bd (mod m).</p>
+</blockquote></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Definition 2 — congruence</div><p>Let m be a positive integer. <strong>a is congruent to b modulo m</strong>, written <strong>a ≡ b (mod m)</strong>, if <strong>m divides a − b</strong>. If not, write a ≢ b (mod m).</p></div>
 <div class="call key"><div class="ct">Theorem 3</div><p><strong>a ≡ b (mod m) if and only if a mod m = b mod m</strong>: a and b leave the <strong>same remainder</strong>.</p></div>
 <div class="call example"><div class="ct">Example 6.3.1</div><ul>
 <li>Is 17 ≡ 3 (mod 7)? 17 − 3 = 14, and 7 | 14. <strong>Yes</strong>, 17 ≡ 3 (mod 7).</li>
@@ -823,10 +1151,161 @@ R.addEventListener('input',run);run();})();
 <p><strong>a-இன் மட்டு n சமான வகுப்பு</strong>, n-ஆல் வகுக்கும்போது <strong>a-இன் அதே மீதியை விடும் அனைத்து முழு எண்களினதும்</strong> கணம்.</p>
 <div class="call example"><div class="ct">எடுத்துக்காட்டு 6.3.3</div><p>… ≡ −40 ≡ −33 ≡ −26 ≡ −19 ≡ −12 ≡ −5 ≡ 2 ≡ 9 ≡ 16 ≡ 23 ≡ 30 ≡ 37 ≡ … ≡ 2 (mod 7)</p>
 <p>எனவே <strong>2-இன் மட்டு 7 சமான வகுப்பு</strong> {…, −40, −33, −26, −19, −12, −5, 2, 9, 16, 23, 30, 37, …}. 2-இல் தொடங்கி 7-ஐச் சேர்த்தோ கழித்தோ செல்லவும்.</p></div>
-<p><div data-ta-tool="cg"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Primes"><span class="num">4</span>Primes</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>பகா எண்கள்</h3><p>1-ஐவிடப் பெரிய எண்ணை 1 மற்றும் அதே எண்ணால் மட்டுமே வகுக்க முடிந்தால் <strong>Prime</strong>. 1 prime அல்ல. பெரிய எண்ணின் prime factors-ஐப் பிரித்தால் gcd, lcm போன்றவற்றைக் கணக்கிட உதவும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Prime factor தேட n-க்கு <strong>√n</strong> வரை possible divisors சோதித்தால் போதும். n=ab-இல் இரண்டும் √n-ஐவிடப் பெரியதாக இருந்தால் product&gt;n ஆகிவிடும் என்பதே காரணம்.
-2 ஒரே even prime. 1 neither prime nor composite. n&gt;2 even என்றால் 2 என்ற nontrivial divisor இருப்பதால் composite.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Primep&gt;1 factors1,p;1 neither prime nor composite;2 மட்டும் even prime. Factor748=2²·11·17. Check primes≤√n போதும். Unique prime factorisation order தவிர. Euclid proof:finite primes product+1 எந்த listed prime-ஆலும் divide ஆகாது;அந்த number தானே prime ஆகவேண்டும் என்றில்லை,புதிய prime factor இருக்கவேண்டும்.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>Every positive integer greater than 1 is divisible by at least 1 and itself.</p>
+<p><div data-ta-tool="cg"></div></p></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Primes"><span class="num">4</span>Primes</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>Prime எண்கள் — எண்களின் &quot;அணுக்கள்&quot;</h3><p>1-ஐவிடப் பெரிய ஒவ்வொரு positive integer-உம் குறைந்தது 1-ஆலும் தன்னாலும் வகுபடும்.</p>
+<p><strong>🔑 Definition 4:</strong></p>
+<ul>
+<li><strong>p &gt; 1</strong>, அதன் <strong>ஒரே positive காரணிகள் 1, p</strong> என்றால் → <strong>prime</strong> (பகா எண்).</li>
+<li>1-ஐவிடப் பெரிய, prime <strong>அல்லாத</strong> integer → <strong>composite</strong> (பகு எண்).</li>
+<li><strong>Remark:</strong> n composite ⇔ <strong>a | n, 1 &lt; a &lt; n</strong> ஆகும்படி ஒரு a உண்டு.</li>
+</ul>
+<p><strong>எளிய ஒப்புமை:</strong> 7 இனிப்புகளை <strong>சம குழுக்களாக</strong> (1-ஐ விட அதிகம், 7-ஐ விடக் குறைவு) பிரிக்க முடியுமா? <strong>முடியாது</strong> → prime. 6 இனிப்புகள்? 2 குழு × 3 அல்லது 3 குழு × 2 → composite.</p>
+<table>
+<thead>
+<tr>
+<th>உதாரணம்</th>
+<th>காரணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>7 prime</strong> (6.4.1)</td>
+<td>1 × 7, 7 × 1 மட்டுமே</td>
+</tr>
+<tr>
+<td><strong>6 composite</strong> (6.4.2)</td>
+<td>6 = 2 × 3 — இரண்டும் 6-ஐவிடச் சிறியவை</td>
+</tr>
+<tr>
+<td><strong>2-ஐவிடப் பெரிய எல்லா even எண்களும் composite</strong> (6.4.3)</td>
+<td>x = 2 × (x/2), x/2 integer</td>
+</tr>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>Prime-உம் அல்ல, composite-உம் அல்ல</strong> (p &gt; 1 வேண்டும்)</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>ஒரே even prime</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>முதல் primes:</strong> 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, …</p>
+<p><strong>🔑 Theorem 5 (Euclid):</strong> <strong>Primes முடிவிலியாக உள்ளன.</strong> n சிறிய primes p₁, …, pₙ எடுத்தால், அந்தப் பட்டியலில் இல்லாத பெரிய prime எப்போதும் உண்டு.</p>
+<p><strong>🔑 Theorem 6 — எண்கணிதத்தின் அடிப்படைத் தேற்றம் (FTA):</strong></p>
+<p>1-ஐவிடப் பெரிய ஒவ்வொரு positive integer-ஐயும் ஒரு <strong>prime</strong>-ஆக அல்லது <strong>primes-இன் பெருக்கமாக</strong> — <strong>ஒரே ஒரு வழியில் (uniquely)</strong> — ஏறுவரிசையில் எழுதலாம்.</p>
+<p><strong>அணு ஒப்புமை:</strong> நீர் = H₂O — எப்போதும் <strong>அதே அணுக்கள்</strong>. 12 = 2² × 3 — எப்போதும் <strong>அதே primes</strong>. Primes = எண்களின் <strong>அணுக்கள்</strong>.</p>
+<p><strong>Example 6.4.4 — A = {4, 5, 12, 49, 748}:</strong></p>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>வகை</th>
+<th>Prime factorisation</th>
+<th>எப்படி</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>Composite</td>
+<td><strong>2²</strong></td>
+<td>4 = 2 × 2</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Prime</strong></td>
+<td><strong>5</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Composite</td>
+<td><strong>2² × 3</strong></td>
+<td>12 → 2 × 6 → 2 × 2 × 3</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Composite</td>
+<td><strong>7²</strong></td>
+<td>49 = 7 × 7</td>
+</tr>
+<tr>
+<td>748</td>
+<td>Composite</td>
+<td><strong>2² × 11 × 17</strong></td>
+<td>கீழே</td>
+</tr>
+</tbody>
+</table>
+<p><strong>748 — படிப்படியாக (factor tree):</strong></p>
+<table>
+<thead>
+<tr>
+<th>படி</th>
+<th>வகுத்தல்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>748 ÷ 2</td>
+<td>374</td>
+</tr>
+<tr>
+<td>374 ÷ 2</td>
+<td>187</td>
+</tr>
+<tr>
+<td>187 ÷ 3?</td>
+<td>❌ (1+8+7 = 16, 3-ஆல் வகுபடாது)</td>
+</tr>
+<tr>
+<td>187 ÷ 7?</td>
+<td>❌ (7 × 26 = 182, மீதி 5)</td>
+</tr>
+<tr>
+<td>187 ÷ 11</td>
+<td><strong>17</strong> ✓</td>
+</tr>
+<tr>
+<td>17</td>
+<td>prime</td>
+</tr>
+</tbody>
+</table>
+<p>748 = 2 × 2 × 11 × 17 = <strong>2² × 11 × 17</strong></p>
+<p><strong>💡 வேகமான prime சோதனை:</strong> n-ஐச் சோதிக்க <strong>√n வரையுள்ள</strong> வகுப்பிகளை மட்டும் சோதித்தால் போதும்.</p>
+<p><strong>ஏன்?</strong> n = ab, a, b இரண்டும் √n-ஐவிடப் பெரியவை என்றால் ab &gt; n — சாத்தியமில்லை. ஆகவே ஒரு காரணி <strong>√n-க்குக் கீழே</strong> இருக்க வேண்டும்.</p>
+<p><em>உதா:</em> 97 prime-ஆ? √97 ≈ 9.8 → 2, 3, 5, 7 மட்டும் சோதி. எதுவும் வகுக்கவில்லை → <strong>97 prime</strong> ✓</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>வகுபடுதல் குறுக்கு வழிகள்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>வகுப்பி</th>
+<th>விதி</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>கடைசி இலக்கம் even</td>
+</tr>
+<tr>
+<td>3</td>
+<td>இலக்கங்களின் கூட்டு 3-ஆல் வகுபடும்</td>
+</tr>
+<tr>
+<td>5</td>
+<td>கடைசி இலக்கம் 0 அல்லது 5</td>
+</tr>
+<tr>
+<td>11</td>
+<td>இலக்கங்களின் மாறி மாறிய கூட்டு (+ − +) 11-ஆல் வகுபடும்: 187 → 1 − 8 + 7 = 0 ✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exam template (English):</strong></p>
+<blockquote>
+<p>A positive integer p &gt; 1 is prime if its only positive factors are 1 and p; otherwise it is composite. By the fundamental theorem of arithmetic, every integer greater than 1 can be written uniquely as a product of primes in non-decreasing order, e.g. 748 = 2² × 11 × 17. To test whether n is prime it suffices to check divisors up to √n.</p>
+</blockquote></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><p>Every positive integer greater than 1 is divisible by at least 1 and itself.</p>
 <div class="call key"><div class="ct">Definition 4</div><ul>
 <li>A positive integer <strong>p &gt; 1</strong> is <strong>prime</strong> if its <strong>only positive factors are 1 and p</strong>.</li>
 <li>An integer <strong>&gt; 1 that is not prime</strong> is <strong>composite</strong>.</li>
@@ -972,10 +1451,184 @@ R.addEventListener('input',run);run();})();
 </tbody>
 </table></div>
 <p><div data-ta-tool="pf"></div></p>
-<div class="call tip"><div class="ct">விரைவான பகாத்தன்மைச் சோதனை</div><p>n-ஐச் சோதிக்க <strong>√n வரையான</strong> வகுப்பான்களை மட்டும் முயன்றால் போதும். n = ab; a, b இரண்டும் √n-ஐவிடப் பெரியவை எனில் ab &gt; n; அது இயலாது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Cryptography — Caesar&#x27;s cipher"><span class="num">5</span>Cryptography — Caesar's cipher</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>எழுத்துகளை நகர்த்தி மறைகுறியாக்குதல்</h3><p>எழுத்துகளை ஒரு நிரந்தர எண்ணால் நகர்த்துவோம். A=0,…,Z=25 என்றால் <strong>E(x)=(x+k) mod 26</strong>. Decode செய்ய k-ஐக் கழிக்க வேண்டும். இது கருத்தைப் புரிய உதவும் எளிய cipher; வலுவான நவீன பாதுகாப்பு அல்ல.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>k=3 என்றால் Y(24)→B(1), A(0)→D(3); அதனால் <strong>YARD→BDUG</strong>. Decode-இல் <strong>CHVW→ZEST</strong>.
-Alphabet A=0 convention-ஐப் பின்பற்றுங்கள்; A=1 என்று நடுவில் மாற்றினால் answer shift ஆகிவிடும். Negative remainder வந்தால் 26 சேர்த்து 0…25 range-க்கு மாற்றுங்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>A0…Z25;encrypt(p+k)mod26;decrypt(c−k)mod26. YARD→BDUG;CHVW→ZEST. Y24+3=27→1B;C2−3=−1→25Z. Shift map alphabet residues-இல் bijective. இது mathematical teaching cipher;நவீன secure encryption என்று கருதாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><p><strong>Cryptography</strong> is the study of <strong>secret messages</strong>. It has two parts:</p>
+<div class="call tip"><div class="ct">விரைவான பகாத்தன்மைச் சோதனை</div><p>n-ஐச் சோதிக்க <strong>√n வரையான</strong> வகுப்பான்களை மட்டும் முயன்றால் போதும். n = ab; a, b இரண்டும் √n-ஐவிடப் பெரியவை எனில் ab &gt; n; அது இயலாது.</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s5"><h2 id="s5" data-t="Cryptography — Caesar&#x27;s cipher"><span class="num">5</span>Cryptography — Caesar's cipher</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s5 en-s5" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s5" lang="ta" hidden><h3>Caesar&#x27;s cipher — இரகசியச் செய்தி</h3><p><strong>Cryptography</strong> = <strong>இரகசியச் செய்திகள்</strong> பற்றிய படிப்பு. இரண்டு பகுதிகள்:</p>
+<ul>
+<li><strong>Encryption (குறியாக்கம்):</strong> செய்தியை இரகசியமாக்குதல்.</li>
+<li><strong>Decryption (குறிவிலக்கம்):</strong> மூலச் செய்தியை மீட்டெடுத்தல்.</li>
+</ul>
+<p><strong>Caesar's cipher</strong> (Julius Caesar பயன்படுத்தியது): <strong>ஒவ்வொரு எழுத்தையும் 3 இடங்கள் முன்னே நகர்த்து</strong>. C → F; Y → B (Z-க்குப் பிறகு <strong>A-க்குச் சுற்றி வரும்</strong> — கடிகாரம் போல!).</p>
+<p>எழுத்துகளுக்கு எண்கள்: <strong>A = 0, B = 1, …, Z = 25</strong></p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+<th>G</th>
+<th>H</th>
+<th>I</th>
+<th>J</th>
+<th>K</th>
+<th>L</th>
+<th>M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>N</th>
+<th>O</th>
+<th>P</th>
+<th>Q</th>
+<th>R</th>
+<th>S</th>
+<th>T</th>
+<th>U</th>
+<th>V</th>
+<th>W</th>
+<th>X</th>
+<th>Y</th>
+<th>Z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Encrypt:</strong> f(p) = <strong>(p + 3) mod 26</strong></p>
+<p><strong>Decrypt:</strong> f⁻¹(p) = <strong>(p − 3) mod 26</strong></p>
+<p>f, {0, …, 25}-இல் <strong>one-to-one</strong> (உண்மையில் bijection) → <strong>f⁻¹ உண்டு</strong> (Week 3 இணைப்பு!).</p>
+<p><strong>Example 6.5.1 — YARD-ஐ encrypt செய்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>எழுத்து</th>
+<th>Y</th>
+<th>A</th>
+<th>R</th>
+<th>D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td>24</td>
+<td>0</td>
+<td>17</td>
+<td>3</td>
+</tr>
+<tr>
+<td>p + 3</td>
+<td>27</td>
+<td>3</td>
+<td>20</td>
+<td>6</td>
+</tr>
+<tr>
+<td>mod 26</td>
+<td><strong>1</strong> (27 − 26)</td>
+<td><strong>3</strong></td>
+<td><strong>20</strong></td>
+<td><strong>6</strong></td>
+</tr>
+<tr>
+<td>Cipher</td>
+<td><strong>B</strong></td>
+<td><strong>D</strong></td>
+<td><strong>U</strong></td>
+<td><strong>G</strong></td>
+</tr>
+</tbody>
+</table>
+<p>YARD → <strong>BDUG</strong></p>
+<p><strong>CHVW-ஐ decrypt செய்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>எழுத்து</th>
+<th>C</th>
+<th>H</th>
+<th>V</th>
+<th>W</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td>2</td>
+<td>7</td>
+<td>21</td>
+<td>22</td>
+</tr>
+<tr>
+<td>p − 3</td>
+<td>−1</td>
+<td>4</td>
+<td>18</td>
+<td>19</td>
+</tr>
+<tr>
+<td>mod 26</td>
+<td><strong>25</strong> (−1 + 26)</td>
+<td><strong>4</strong></td>
+<td><strong>18</strong></td>
+<td><strong>19</strong></td>
+</tr>
+<tr>
+<td>Plain</td>
+<td><strong>Z</strong></td>
+<td><strong>E</strong></td>
+<td><strong>S</strong></td>
+<td><strong>T</strong></td>
+</tr>
+</tbody>
+</table>
+<p>CHVW → <strong>ZEST</strong></p>
+<p><strong>−1 mod 26 = 25 ஏன்?</strong> −1 = 26 × (−1) + <strong>25</strong> (மீதி negative ஆகக்கூடாது — division algorithm!). எளிய வழி: negative வந்தால் <strong>26-ஐக் கூட்டு</strong>.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Wrap-around விதிகள்:</strong></p>
+<ul>
+<li>Encrypt-இல் <strong>26 அல்லது அதற்கு மேல்</strong> வந்தால் → <strong>26-ஐக் கழி</strong> (X, Y, Z → A, B, C)</li>
+<li>Decrypt-இல் <strong>negative</strong> வந்தால் → <strong>26-ஐக் கூட்டு</strong> (A, B, C → X, Y, Z)</li>
+</ul>
+<p><strong>Exam tip:</strong> <strong>எப்போதும் 4 வரிசை table</strong> வரையுங்கள் (எழுத்து → p → கணக்கு → புதிய எழுத்து) — course worked example அப்படியே.</p>
+<p><strong>Exam template (English):</strong></p>
+<blockquote>
+<p>Caesar's cipher replaces each letter p (A = 0, …, Z = 25) by f(p) = (p + 3) mod 26. Since f is a bijection on {0, …, 25}, it has an inverse f⁻¹(p) = (p − 3) mod 26 for decryption. For example, YARD (24, 0, 17, 3) encrypts to (1, 3, 20, 6) = BDUG.</p>
+</blockquote></div><button type="button" class="native-reference" aria-controls="en-s5" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s5" lang="en"><div class="hci-en"><p><strong>Cryptography</strong> is the study of <strong>secret messages</strong>. It has two parts:</p>
 <ul>
 <li><strong>Encryption</strong>: making a message secret.</li>
 <li><strong>Decryption</strong>: recovering the original message.</li>
@@ -1164,25 +1817,72 @@ R.addEventListener('input',run);run();})();
 <li>சமான வகுப்புகளைப் பட்டியலிடுதல்</li>
 <li>பகா அல்லது பகு + <strong>பகாக் காரணிப்படுத்தல்</strong></li>
 <li><strong>செய்முறை அட்டவணையுடன் சீசர் மறைகுறியாக்கமும் மறைவிலக்கலும்</strong></li>
-</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>மீதியில்லாமல் வகுபடுதல்</h4><p><strong>a|b</strong> என்றால் b=ak ஆகும் ஒரு integer k உள்ளது. 3|12 ஏனெனில் 12=3×4. இது a÷b என்ற division instruction அல்ல; மீதியில்லாமல் வகுபடுகிறதா என்ற கூற்று.</p>
-<p>a|b, a|c என்றால் a|(b+c) மற்றும் a|(b−c). a|b, b|c என்றால் a|c. b=ak, c=aℓ என்று எழுதி factor a வெளியே எடுத்தால் proof கிடைக்கும்.
-a|b என்பதால் b|a என்று சொல்ல முடியாது: 3|12 true; 12|3 false. Division notation-உடன் divisibility symbol-ஐக் குழப்பாதீர்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>a|b என்றால்b=ak,integerk,a≠0 (course definition);a/b numerical division வேறு. a|b,a|c→a|(b+c) மற்றும்a|(mb+nc). b=as,c=at substitute→a(ms+nt). a|b,b|c→a|c. Definition-இன் integer multiplier-ஐ explicit காட்டுவது proof-இன் முக்கியப் படி.</p></div><div class="ta-recap-item"><h4>ஈவும் மீதியும்</h4><p><strong>a=bq+r</strong>, b&gt;0, <strong>0≤r&lt;b</strong>. Negative a இருந்தாலும் remainder non-negative வர வேண்டும். −23=5(−5)+2; ஆகவே −23 mod 5 = 2.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p><strong>a=dq+r,d&gt;0,0≤r&lt;d</strong>,q/r unique.27=4·6+3;−23=5·(−5)+2. q−4,r−3 அனுமதி இல்லை. Mathematical q=floor(a/d). சில programming மொழிகளின் % negative remainder தரலாம்;அதை course mod-உடன் தானாக ஒப்பிடாதீர்கள்.</p></div><div class="ta-recap-item"><h4>மீதியை அடிப்படையாகக் கொண்ட கணக்கு</h4><p>Clock-இல் 12-க்குப் பிறகு மீண்டும் 1 வருவது போல ஒரு modulus-க்குள் எண்ணுகிறோம். <strong>a≡b (mod m)</strong> என்றால் m, a−b-ஐ வகுக்கும். இரண்டுக்கும் ஒரே remainder என்பதும் அதே பொருள்.</p>
-<p><strong>a≡b(mod m) iff m|(a−b)</strong>. ஒரே remainder கொண்ட அனைத்தும் ஒரு congruence class. Classes [0],…,[m−1].
-Congruences-ஐ கூட்டவும் பெருக்கவும்லாம். ஆனால் இருபுறமும் ஒரு எண்ணால் cancel செய்வது எல்லா நேரமும் அனுமதி இல்லை; modulus-உடன் அந்த எண்ணின் gcd போன்ற நிபந்தனை தேவை. Modular arithmetic-இல் ordinary division-ஐக் கண்மூடி செய்யாதீர்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>a≡b(modm)⇔m|(a−b)⇔same remainder.17≡3(mod7);21≢6(mod8). Add/multiply congruences valid. <strong>Cancellation பொதுவாக தவறு:</strong>2·1≡2·4(mod6),ஆனால்1≢4. gcd(c,m)=1 என்றால் c cancel செய்யலாம். Class[a]ₘ={a+km:k∈ℤ};residues0…m−1.</p></div><div class="ta-recap-item"><h4>பகா எண்கள்</h4><p>1-ஐவிடப் பெரிய எண்ணை 1 மற்றும் அதே எண்ணால் மட்டுமே வகுக்க முடிந்தால் <strong>Prime</strong>. 1 prime அல்ல. பெரிய எண்ணின் prime factors-ஐப் பிரித்தால் gcd, lcm போன்றவற்றைக் கணக்கிட உதவும்.</p>
-<p>Prime factor தேட n-க்கு <strong>√n</strong> வரை possible divisors சோதித்தால் போதும். n=ab-இல் இரண்டும் √n-ஐவிடப் பெரியதாக இருந்தால் product&gt;n ஆகிவிடும் என்பதே காரணம்.
-2 ஒரே even prime. 1 neither prime nor composite. n&gt;2 even என்றால் 2 என்ற nontrivial divisor இருப்பதால் composite.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Primep&gt;1 factors1,p;1 neither prime nor composite;2 மட்டும் even prime. Factor748=2²·11·17. Check primes≤√n போதும். Unique prime factorisation order தவிர. Euclid proof:finite primes product+1 எந்த listed prime-ஆலும் divide ஆகாது;அந்த number தானே prime ஆகவேண்டும் என்றில்லை,புதிய prime factor இருக்கவேண்டும்.</p></div><div class="ta-recap-item"><h4>எழுத்துகளை நகர்த்தி மறைகுறியாக்குதல்</h4><p>எழுத்துகளை ஒரு நிரந்தர எண்ணால் நகர்த்துவோம். A=0,…,Z=25 என்றால் <strong>E(x)=(x+k) mod 26</strong>. Decode செய்ய k-ஐக் கழிக்க வேண்டும். இது கருத்தைப் புரிய உதவும் எளிய cipher; வலுவான நவீன பாதுகாப்பு அல்ல.</p>
-<p>k=3 என்றால் Y(24)→B(1), A(0)→D(3); அதனால் <strong>YARD→BDUG</strong>. Decode-இல் <strong>CHVW→ZEST</strong>.
-Alphabet A=0 convention-ஐப் பின்பற்றுங்கள்; A=1 என்று நடுவில் மாற்றினால் answer shift ஆகிவிடும். Negative remainder வந்தால் 26 சேர்த்து 0…25 range-க்கு மாற்றுங்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>A0…Z25;encrypt(p+k)mod26;decrypt(c−k)mod26. YARD→BDUG;CHVW→ZEST. Y24+3=27→1B;C2−3=−1→25Z. Shift map alphabet residues-இல் bijective. இது mathematical teaching cipher;நவீன secure encryption என்று கருதாதீர்கள்.</p></div><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><table>
+</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s6"><h2 id="s6" data-t="Quick revision sheet"><span class="num">6</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s6 en-s6" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s6" lang="ta" hidden><h3>விரைவு மீள்பார்வை — Week 6</h3><table>
+<thead>
+<tr>
+<th>தலைப்பு</th>
+<th>ஒரு வரியில்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a | b</td>
+<td>ஏதோ integer c-க்கு b = ac (a ≠ 0); இல்லையெனில் a ∤ b</td>
+</tr>
+<tr>
+<td>Theorem 1</td>
+<td>a|b, a|c ⇒ a|(b+c); a|b ⇒ a|bc; a|b, b|c ⇒ a|c</td>
+</tr>
+<tr>
+<td>Corollary</td>
+<td>a|b, a|c ⇒ a|(mb + nc)</td>
+</tr>
+<tr>
+<td>Division algorithm</td>
+<td>a = dq + r, 0 ≤ r &lt; d; q = a div d, r = a mod d</td>
+</tr>
+<tr>
+<td>Negative a</td>
+<td>−23 = 5(−5) + 2 → r = 2 (ஒருபோதும் negative அல்ல)</td>
+</tr>
+<tr>
+<td>a ≡ b (mod m)</td>
+<td>m | (a − b) ⇔ ஒரே மீதி</td>
+</tr>
+<tr>
+<td>Theorem 4</td>
+<td>Congruences-ஐக் கூட்டலாம், பெருக்கலாம்</td>
+</tr>
+<tr>
+<td>Congruence class</td>
+<td>ஒரே மீதி உள்ள எல்லா integers: r + km</td>
+</tr>
+<tr>
+<td>Prime</td>
+<td>&gt; 1, காரணிகள் 1, தானே மட்டும்; இல்லையெனில் composite</td>
+</tr>
+<tr>
+<td>Euclid</td>
+<td>Primes முடிவிலி</td>
+</tr>
+<tr>
+<td>FTA</td>
+<td>தனித்த prime factorisation (748 = 2² × 11 × 17)</td>
+</tr>
+<tr>
+<td>7 | 4n ⇒ 7 | n</td>
+<td>n = 8n − 7n = 2(4n) − 7n</td>
+</tr>
+<tr>
+<td>Cases proof</td>
+<td>a = 3q + r, r = 0, 1, 2; ஒவ்வொரு case-உம்</td>
+</tr>
+<tr>
+<td>Caesar</td>
+<td>Encrypt (p + 3) mod 26; decrypt (p − 3) mod 26; YARD → BDUG</td>
+</tr>
+</tbody>
+</table><button type="button" class="native-reference" aria-controls="en-s6" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s6" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>

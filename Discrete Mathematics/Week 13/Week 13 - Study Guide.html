@@ -543,11 +543,172 @@ mark{background:#ffe680;color:#000;border-radius:3px}
 <body data-key="dmath-Week13" data-study-home="../../SEM%206%20Study%20Hub.html#study-plan">
 <div class="topbar"><button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button><div class="crumb"><a href="../../SEM 6 Study Hub.html">SEM 6</a> › <a href="../Study%20Guide%20-%20Index.html">Discrete Mathematics</a> › Week 13</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>
-<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 13</div><h1>Decision Trees, Tree Traversal &amp; Spanning Trees</h1><p>Decision trees as maps of choices and outcomes (drawing, evaluating with expected values, pros and cons), preorder and postorder traversal of ordered rooted trees, and spanning trees with their use in IP multicasting.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">2 videos · 24 min</span><span class="chip">📄 Lesson 12 - Trees_2.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Video Lecture 1 – Decision trees · 11 min</button><button>2. Video Lecture 2 – Expected values, traversal &amp; spanning trees · 13 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Lesson 13 - Video Lecture 1.mp4" data-drive="1YBa4YF-28Y6ySITCUf6UXgnmO8cReGGt"><source src="Lesson%2013%20-%20Video%20Lecture%201.mp4"></video></div><div class="chap"><p class="vt">Video Lecture 1 – Decision trees</p><p class="vs">What a decision tree is, the buy-a-car example, drawing with squares and circles, extra advantages, disadvantages and applications, and the badminton tree.</p><a href="#" data-v="0" data-t="1"><b>00:01</b><span>Lesson 12.2: decision trees, traversal, spanning trees</span></a><a href="#" data-v="0" data-t="89"><b>01:29</b><span>A decision tree weighs possible actions</span></a><a href="#" data-v="0" data-t="104"><b>01:44</b><span>Informal example: should I buy a car?</span></a><a href="#" data-v="0" data-t="182"><b>03:02</b><span>Definition: rooted tree, internal vertex = decision</span></a><a href="#" data-v="0" data-t="284"><b>04:44</b><span>Drawing: lines = options, squares = decisions, circles = uncertainty</span></a><a href="#" data-v="0" data-t="323"><b>05:23</b><span>Seven extra advantages</span></a><a href="#" data-v="0" data-t="398"><b>06:38</b><span>Disadvantages: overfitting, instability, many classes</span></a><a href="#" data-v="0" data-t="434"><b>07:14</b><span>When to use decision trees, and application areas</span></a><a href="#" data-v="0" data-t="501"><b>08:21</b><span>Example: play badminton?</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Lesson 13 - Video Lecture 2.mp4" data-drive="15XhqYcQMeMXF_uxzNutRl5DpaTgYuxLH"><source src="Lesson%2013%20-%20Video%20Lecture%202.mp4"></video></div><div class="chap"><p class="vt">Video Lecture 2 – Expected values, traversal &amp; spanning trees</p><p class="vs">The new-product expected-value exercise, preorder and postorder traversal, and spanning trees.</p><a href="#" data-v="1" data-t="8"><b>00:08</b><span>Self-assessment 2: launch a new product?</span></a><a href="#" data-v="1" data-t="88"><b>01:28</b><span>Draw the decision tree: develop or not</span></a><a href="#" data-v="1" data-t="153"><b>02:33</b><span>EV at A = $780,000; EV at C = 0.7 × A + 0.3 × B</span></a><a href="#" data-v="1" data-t="223"><b>03:43</b><span>Tree traversal: visit every node exactly once</span></a><a href="#" data-v="1" data-t="297"><b>04:57</b><span>Preorder: start with the root</span></a><a href="#" data-v="1" data-t="471"><b>07:51</b><span>Postorder: subtrees first, root last</span></a><a href="#" data-v="1" data-t="603"><b>10:03</b><span>Spanning trees: G is connected</span></a><a href="#" data-v="1" data-t="689"><b>11:29</b><span>Connected ⇔ has a spanning tree</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Decision trees"><span class="num">1</span>Decision trees</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>கேள்விகள் மூலம் முடிவெடுக்கும் மரம்</h3><p>ஒரு முடிவை எடுக்கத் தேவையான கேள்விகளை tree-ஆக வரிசைப்படுத்துவோம். Branch-கள் தேர்வுகள் அல்லது நிகழ்வுகள். Chance node-இல் probability×value சேர்க்கலாம்; decision node-இல் நோக்கத்திற்கு ஏற்ற சிறந்த தேர்வை எடுப்போம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Square</strong> முடிவுத் தேர்வு; <strong>circle</strong> chance/uncertainty; <strong>leaf/triangle</strong> இறுதி outcome. Chance branches probabilities கூட்டினால் 1. <strong>Expected value=Σp×payoff</strong>; cost இருந்தால் நிகர value-இல் சேர்க்க வேண்டும்.
-Rightmost outcomes-இலிருந்து பின்னோக்கிச் சுருக்குவது உதவும்: chance node-இல் weighted sum; decision node-இல் சிறந்த alternative. Badminton example: sunny→humidity, rainy→wind; cloudy என்றால் play. Decision trees overfit ஆகலாம்; small data changes tree-ஐ மாற்றலாம்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p><strong>Chance node(circle)</strong> probability-weighted sum;<strong>decision(square)</strong> feasible alternatives-இல் best value;leaf payoff. SuccessEV .2·1000000+.5·800000+.3·600000=<strong>780000</strong>;failureEV.6·50000=30000;gross.7·780000+.3·30000=555000;R&amp;D400000 கழித்து <strong>155000</strong>. Costs double-subtract வேண்டாம்;probabilities eachchance node sum1. Expectedvalue guaranteed outcome அல்ல,risk-neutral assumption.</p>
-<p>Classification tree வேறு role:attribute→test,leafclass;sunnyhumidity,rainywind,cloudyplay. Tree arbitrary nonlinearity எல்லாம் perfect handle செய்யாது;data cleaning தேவையில்லை என்பதும் தவறு. Length6 A/B noAA/noBBB leaves<strong>9</strong>;branchinvalid ஆனவுடன்prune.</p></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><div class="call key"><div class="ct">What is a decision tree?</div><p>A <strong>decision tree</strong> is a <strong>map of the possible outcomes of a series of related choices</strong>. It lets a person or organisation <strong>weigh possible actions against one another</strong> based on their <strong>costs, probabilities and benefits</strong>.</p></div>
+<div class="layout"><nav class="toc" id="toc"><p class="tt">On this page</p></nav><main><div class="hero"><div class="sub">Discrete Mathematics · Week 13</div><h1>Decision Trees, Tree Traversal &amp; Spanning Trees</h1><p>Decision trees as maps of choices and outcomes (drawing, evaluating with expected values, pros and cons), preorder and postorder traversal of ordered rooted trees, and spanning trees with their use in IP multicasting.</p><div class="meta"><span class="chip">ITE3822</span><span class="chip">2 videos · 24 min</span><span class="chip">📄 Lesson 12 - Trees_2.pdf</span><span class="chip" id="donecount"></span></div></div><div class="vwrap" id="videos"><h2 id="videos-h" data-t="Lecture videos"><span class="num">▶</span>Lecture videos</h2><p style="color:var(--muted);margin-top:0">Click any timestamp — here or inside the notes — to jump the video to that moment. Your position is remembered.</p><div class="vtabs"><button>1. Video Lecture 1 – Decision trees · 11 min</button><button>2. Video Lecture 2 – Expected values, traversal &amp; spanning trees · 13 min</button></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Lesson 13 - Video Lecture 1.mp4" data-drive="1YBa4YF-28Y6ySITCUf6UXgnmO8cReGGt"><source src="Lesson%2013%20-%20Video%20Lecture%201.mp4"></video></div><div class="chap"><p class="vt">Video Lecture 1 – Decision trees</p><p class="vs">What a decision tree is, the buy-a-car example, drawing with squares and circles, extra advantages, disadvantages and applications, and the badminton tree.</p><a href="#" data-v="0" data-t="1"><b>00:01</b><span>Lesson 12.2: decision trees, traversal, spanning trees</span></a><a href="#" data-v="0" data-t="89"><b>01:29</b><span>A decision tree weighs possible actions</span></a><a href="#" data-v="0" data-t="104"><b>01:44</b><span>Informal example: should I buy a car?</span></a><a href="#" data-v="0" data-t="182"><b>03:02</b><span>Definition: rooted tree, internal vertex = decision</span></a><a href="#" data-v="0" data-t="284"><b>04:44</b><span>Drawing: lines = options, squares = decisions, circles = uncertainty</span></a><a href="#" data-v="0" data-t="323"><b>05:23</b><span>Seven extra advantages</span></a><a href="#" data-v="0" data-t="398"><b>06:38</b><span>Disadvantages: overfitting, instability, many classes</span></a><a href="#" data-v="0" data-t="434"><b>07:14</b><span>When to use decision trees, and application areas</span></a><a href="#" data-v="0" data-t="501"><b>08:21</b><span>Example: play badminton?</span></a></div></div></div><div class="vpane"><div class="vgrid"><div><video controls preload="metadata" data-file="Lesson 13 - Video Lecture 2.mp4" data-drive="15XhqYcQMeMXF_uxzNutRl5DpaTgYuxLH"><source src="Lesson%2013%20-%20Video%20Lecture%202.mp4"></video></div><div class="chap"><p class="vt">Video Lecture 2 – Expected values, traversal &amp; spanning trees</p><p class="vs">The new-product expected-value exercise, preorder and postorder traversal, and spanning trees.</p><a href="#" data-v="1" data-t="8"><b>00:08</b><span>Self-assessment 2: launch a new product?</span></a><a href="#" data-v="1" data-t="88"><b>01:28</b><span>Draw the decision tree: develop or not</span></a><a href="#" data-v="1" data-t="153"><b>02:33</b><span>EV at A = $780,000; EV at C = 0.7 × A + 0.3 × B</span></a><a href="#" data-v="1" data-t="223"><b>03:43</b><span>Tree traversal: visit every node exactly once</span></a><a href="#" data-v="1" data-t="297"><b>04:57</b><span>Preorder: start with the root</span></a><a href="#" data-v="1" data-t="471"><b>07:51</b><span>Postorder: subtrees first, root last</span></a><a href="#" data-v="1" data-t="603"><b>10:03</b><span>Spanning trees: G is connected</span></a><a href="#" data-v="1" data-t="689"><b>11:29</b><span>Connected ⇔ has a spanning tree</span></a></div></div></div></div><section class="card" data-sec="s1"><h2 id="s1" data-t="Decision trees"><span class="num">1</span>Decision trees</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s1 en-s1" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s1" lang="ta" hidden><h3>Decision trees — முடிவெடுக்கும் மரம்</h3><p><strong>🔑 Decision tree என்றால் என்ன?</strong> தொடர்புடைய தேர்வுகளின் <strong>சாத்தியமான விளைவுகளின் வரைபடம் (map)</strong>. ஒவ்வொரு செயலையும் அதன் <strong>செலவு, probability, நன்மை</strong> அடிப்படையில் <strong>ஒப்பிட்டு எடை போட</strong> உதவுகிறது.</p>
+<ul>
+<li><strong>ஒரே node</strong>-இல் தொடங்கி, சாத்தியமான விளைவுகளாகக் <strong>கிளை பிரிகிறது</strong>; ஒவ்வொரு விளைவும் மேலும் nodes-க்கு வழிவகுக்கும்.</li>
+<li>முறைசாரா <strong>கலந்துரையாடலுக்கும்</strong>, சிறந்த தேர்வைக் கணிக்கும் <strong>algorithm</strong>-க்கும் பயன்படும்.</li>
+</ul>
+<p><strong>உதாரணம் — நான் கார் வாங்கலாமா?</strong></p>
+<ul>
+<li>நல்ல பொதுப் போக்குவரத்து உண்டா? <strong>ஆம்</strong> → வாங்காதே; <strong>இல்லை</strong> → வாங்கு</li>
+<li>வாங்கவில்லை என்றால் → அடிக்கடி நகரத்துக்கு வெளியே போகிறேனா? <strong>ஆம்</strong> → வாங்குவதைப் பரிசீலி; <strong>இல்லை</strong> → வாங்காதே</li>
+</ul>
+<p><strong>🔑 Definition 1:</strong> ஒரு rooted tree-இல் <strong>ஒவ்வொரு internal vertex-உம் ஒரு முடிவு</strong>, அந்த முடிவின் <strong>ஒவ்வொரு சாத்தியமான விளைவுக்கும் ஒரு subtree</strong> இருந்தால் → <strong>decision tree</strong>.</p>
+<p><strong>வரையும் குறியீடுகள்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>குறியீடு</th>
+<th>பொருள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>சதுரம் ■</strong></td>
+<td>எடுக்க வேண்டிய <strong>முடிவு</strong></td>
+</tr>
+<tr>
+<td><strong>வட்டம் ●</strong></td>
+<td><strong>நிச்சயமற்ற</strong> விளைவு (வாய்ப்பு / chance)</td>
+</tr>
+<tr>
+<td>ஒன்றுமில்லை / <strong>முக்கோணம் ▲</strong></td>
+<td>இறுதி <strong>முடிவு (result)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>வரையும் படிகள்:</strong> (1) இடதுபக்கம் சிறிய சதுரம் (முடிவு) → (2) ஒவ்வொரு option-க்கும் ஒரு கோடு, label போடு → (3) கோட்டின் முடிவில்: இன்னொரு முடிவு → சதுரம்; நிச்சயமற்றது → வட்டம்; result → ஒன்றுமில்லை → (4) எல்லாப் பாதைகளும் result-இல் முடியும் வரை தொடர்.</p>
+<p><strong>மதிப்பிடுதல் (Evaluating):</strong></p>
+<ol>
+<li>ஒவ்வொரு இறுதி விளைவின் <strong>மதிப்பை</strong> மதிப்பிடு.</li>
+<li>ஒவ்வொரு <strong>வட்டத்திலும்</strong> probabilities கொடு — கூட்டு <strong>1 (100%)</strong> ஆக வேண்டும்.</li>
+<li><strong>Expected value = Σ (probability × மதிப்பு)</strong>; வழியில் உள்ள <strong>செலவுகளைக் கழி</strong> → <strong>net value</strong>.</li>
+<li><strong>அதிக மதிப்பு</strong> உள்ள option-ஐத் தேர்ந்தெடு.</li>
+</ol>
+<p>உதா: பதவி உயர்வு probability <strong>0.7</strong>, மதிப்பு <strong>80,000</strong> → 0.7 × 80,000 = <strong>56,000</strong>.</p>
+<p><strong>Self-assessment 2 — புதிய product launch செய்யலாமா?</strong> R&amp;D செலவு <strong>$400,000</strong>. வெற்றி <strong>70%</strong>, தோல்வி <strong>30%</strong>.</p>
+<p><strong>வெற்றியானால் (இரண்டு ஆண்டு லாபம்):</strong></p>
+<table>
+<thead>
+<tr>
+<th>பிரபலம்</th>
+<th>Probability</th>
+<th>வருட லாபம்</th>
+<th>2-ஆண்டு லாபம்</th>
+<th>Prob × லாபம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High</td>
+<td>0.2</td>
+<td>$500,000</td>
+<td>$1,000,000</td>
+<td>$200,000</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>0.5</td>
+<td>$400,000</td>
+<td>$800,000</td>
+<td>$400,000</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>0.3</td>
+<td>$300,000</td>
+<td>$600,000</td>
+<td>$180,000</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>EV(வெற்றி)</strong></td>
+<td><strong>$780,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>தோல்வியானால்:</strong> 0.6 × $50,000 + 0.4 × $0 = <strong>$30,000</strong></p>
+<p><strong>Launch:</strong> 0.7 × 780,000 + 0.3 × 30,000 = 546,000 + 9,000 = <strong>$555,000</strong></p>
+<p><strong>R&amp;D கழித்து:</strong> 555,000 − 400,000 = <strong>$155,000 &gt; 0</strong> → <strong>Develop செய்து launch செய்</strong> (launch செய்யாவிட்டால் $0).</p>
+<p><strong>Example 13.1 — Badminton விளையாடலாமா?</strong> கடந்த 10 நாட்களின் வெப்பநிலை, காற்று, ஈரப்பதம், வானிலை (sunny, cloudy, rainy) ஒரு lookup table-இல் உள்ளன. சனிக்கிழமை வானிலை <strong>எந்த வரிசையுடனும் பொருந்தாமல் போகலாம்</strong> — decision tree <strong>எல்லாப் பாதைகளையும்</strong> கணக்கில் கொள்கிறது.</p>
+<table>
+<thead>
+<tr>
+<th>Outlook</th>
+<th>அடுத்து பார்ப்பது</th>
+<th>முடிவு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sunny</strong></td>
+<td>Humidity</td>
+<td>High → <strong>விளையாடாதே</strong>; Normal → <strong>விளையாடு</strong></td>
+</tr>
+<tr>
+<td><strong>Cloudy</strong></td>
+<td>—</td>
+<td><strong>விளையாடு</strong></td>
+</tr>
+<tr>
+<td><strong>Rainy</strong></td>
+<td>Wind</td>
+<td>Strong → <strong>விளையாடாதே</strong>; Weak → <strong>விளையாடு</strong></td>
+</tr>
+</tbody>
+</table>
+<p>இந்த tree-இல் <strong>வெப்பநிலை ஒருபோதும் முக்கியமில்லை</strong>. Node = attribute, branch = அதன் விளைவு, leaf = இறுதி முடிவு.</p>
+<p><strong>Self-assessment 1 — A, B sequences (நீளம் 6, AA இல்லை, BBB இல்லை):</strong> ஒவ்வொரு எழுத்தாக tree கட்டு; <strong>AA</strong> அல்லது <strong>BBB</strong> வந்தவுடன் அந்தக் கிளையை வெட்டு. <strong>9</strong> leaves:</p>
+<p>ABABAB · ABABBA · ABBABA · ABBABB · BABABA · BABABB · BABBAB · BBABAB · BBABBA</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>நன்மைகள் vs தீமைகள்:</strong></p>
+<table>
+<thead>
+<tr>
+<th>நன்மைகள்</th>
+<th>தீமைகள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>அதிக கணக்கு இல்லாமல்</strong> வகைப்படுத்தும்</td>
+<td><strong>பல classes, குறைந்த training examples</strong> இருந்தால் பிழைகள்</td>
+</tr>
+<tr>
+<td><strong>Continuous, categorical</strong> இரண்டு variables-உம்</td>
+<td><strong>Train செய்ய அதிகச் செலவு</strong></td>
+</tr>
+<tr>
+<td><strong>எந்த fields மிக முக்கியம்</strong> என்று தெளிவாகக் காட்டும்</td>
+<td><strong>Overfitting</strong> — பொதுமைப்படுத்தாத சிக்கலான trees</td>
+</tr>
+<tr>
+<td><strong>புரிந்துகொள்ள எளிது</strong> — analytical பின்னணி இல்லாதவர்களுக்கும்</td>
+<td><strong>Unstable</strong> — data-வில் சிறிய மாற்றம் → <strong>முற்றிலும் வேறு tree</strong></td>
+</tr>
+<tr>
+<td>Data exploration-க்கு — முக்கிய variables-ஐ வேகமாகக் கண்டுபிடிக்கும்</td>
+<td><strong>பல class labels</strong> இருந்தால் கணக்குகள் சிக்கலாகும்</td>
+</tr>
+<tr>
+<td><strong>Non-parametric</strong> — distribution பற்றி அனுமானம் இல்லை</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>எப்போது பயன்படுத்துவது (5 நிபந்தனைகள்):</strong></p>
+<ol>
+<li>முடிவெடுப்பவருக்கு ஒரு <strong>இலக்கு</strong> (லாபத்தை அதிகரி, செலவைக் குறை)</li>
+<li><strong>பல செயல் வழிகள்</strong></li>
+<li>மாற்றுகளுக்கு <strong>கணக்கிடக்கூடிய நன்மை அளவு</strong></li>
+<li>முடிவெடுப்பவரின் <strong>கட்டுப்பாட்டுக்கு அப்பாற்பட்ட நிகழ்வுகள்</strong></li>
+<li>எந்த விளைவு நடக்கும் என்பதில் <strong>நிச்சயமின்மை</strong></li>
+</ol>
+<p><strong>பயன்படும் துறைகள்:</strong> மருத்துவம், திட்டமிடல், மருந்தியல், மூலக்கூறு உயிரியல், வானியல், biomedical engineering, உற்பத்தி.</p>
+<p><strong>Exam template (English):</strong></p>
+<blockquote>
+<p>Expected value of launching = 0.7 × 780,000 + 0.3 × 30,000 = $555,000. After subtracting the R&amp;D cost of $400,000, the expected net value is $155,000, which is greater than $0 for not launching. Therefore the company should develop and launch the product.</p>
+</blockquote></div><button type="button" class="native-reference" aria-controls="en-s1" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s1" lang="en"><div class="hci-en"><div class="call key"><div class="ct">What is a decision tree?</div><p>A <strong>decision tree</strong> is a <strong>map of the possible outcomes of a series of related choices</strong>. It lets a person or organisation <strong>weigh possible actions against one another</strong> based on their <strong>costs, probabilities and benefits</strong>.</p></div>
 <ul>
 <li>It uses a <strong>tree-like model of decisions</strong>: it starts at a <strong>single node</strong> that branches into possible outcomes, and each outcome leads to further nodes.</li>
 <li>It can drive <strong>informal discussion</strong> or map out an <strong>algorithm</strong> that predicts the best choice mathematically.</li>
@@ -902,10 +1063,129 @@ R.addEventListener('input',run);run();})();
 <p>இந்த மரத்தில் வெப்பநிலை ஒருபோதும் முக்கியமல்ல.</p></div>
 <div class="call example"><div class="ct">சுயமதிப்பீடு 1: A, B தொடரிகள்</div><p><strong>அடுத்தடுத்த இரு A-கள் இல்லாமலும்</strong>, <strong>ஒருபோதும் அடுத்தடுத்த மூன்று B-கள் இல்லாமலும்</strong>, அகரவரிசை இலைகளுடன் நீளம் ஆறுடைய அனைத்துத் தொடரிகளையும் பட்டியலிடவும்.</p>
 <p>ஒவ்வொரு எழுத்தாக மரத்தை உருவாக்கி, <strong>AA</strong> அல்லது <strong>BBB</strong> உருவான உடனே கிளையை வெட்டவும். <strong>9</strong> இலைகள் உள்ளன:</p>
-<p>ABABAB · ABABBA · ABBABA · ABBABB · BABABA · BABABB · BABBAB · BBABAB · BBABBA</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Tree traversal"><span class="num">2</span>Tree traversal</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>Traversal வரிசை</h3><p><strong>Preorder</strong>-இல் node முதலில்; <strong>Postorder</strong>-இல் children முதலில், node கடைசியில். இடமிருந்து வலமாக அதே child order-ஐப் பின்பற்றுங்கள். எல்லா nodes-உம் ஒருமுறை வந்துள்ளனவா இறுதியில் பாருங்கள்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>சிறு மரம்: root A; children B,C; B-க்கு D,E என்றால் <strong>Preorder A,B,D,E,C</strong>; <strong>Postorder D,E,B,C,A</strong>. Left-to-right child order முக்கியம்.
-Preorder என்றால் alphabetical order அல்ல; node-ஐ <em>எப்போது</em> visit செய்கிறோம் என்பதே பெயரின் பொருள். எல்லா nodes-உம் ஒருமுறை உள்ளனவா சோதியுங்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p><strong>Preorder root→subtrees lefttoright;postorder subtrees→root.</strong> Examplepre: a,b,e,j,k,n,o,p,f,c,d,g,l,m,h,i. Post:j,n,o,p,k,e,f,b,c,l,m,g,h,i,d,a. ஒவ்வொருvertex exactlyonce;pre-list-இன் secondj source typo உண்மையில்f. Binaryinorder வேறு traversal;arbitrary multi-child tree-க்கு ஒரே standard inorder இல்லை.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p><strong>Tree traversal</strong> is a form of graph traversal: visiting <strong>each node of a tree exactly once</strong> <a class="ts" href="#" data-v="1" data-t="223">03:43</a>. <strong>Ordered rooted trees</strong> store information and can represent <strong>expressions</strong> (numbers, variables, operations). To use the data, we need procedures that <strong>visit every vertex</strong>: <strong>traversal algorithms</strong>. Both are defined <strong>recursively</strong>.</p>
+<p>ABABAB · ABABBA · ABBABA · ABBABB · BABABA · BABABB · BABBAB · BBABAB · BBABBA</p></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s2"><h2 id="s2" data-t="Tree traversal"><span class="num">2</span>Tree traversal</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s2 en-s2" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s2" lang="ta" hidden><h3>Tree traversal — Preorder &amp; Postorder</h3><p><strong>Tree traversal</strong> = tree-இன் <strong>ஒவ்வொரு node-ஐயும் சரியாக ஒருமுறை</strong> சந்திப்பது. <strong>Ordered rooted trees</strong> தகவல்களைச் சேமிக்கின்றன, <strong>expressions</strong>-ஐக் காட்டுகின்றன. அந்த data-வைப் பயன்படுத்த <strong>எல்லா vertices-ஐயும் சந்திக்கும்</strong> procedures தேவை — அவையே <strong>traversal algorithms</strong>. இரண்டும் <strong>recursive</strong> ஆக வரையறுக்கப்படுகின்றன.</p>
+<table>
+<thead>
+<tr>
+<th>வகை</th>
+<th>விதி</th>
+<th>நினைவு வழி</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Preorder</strong></td>
+<td><strong>Root r-ஐ முதலில்</strong>, பிறகு T₁, T₂, …, Tₙ-ஐ preorder-இல் (<strong>இடமிருந்து வலம்</strong>)</td>
+<td><strong>Root முதலில்</strong> (<strong>pre</strong> = முன்)</td>
+</tr>
+<tr>
+<td><strong>Postorder</strong></td>
+<td>T₁, T₂, …, Tₙ-ஐ postorder-இல், <strong>கடைசியில் root r</strong></td>
+<td><strong>Root கடைசியில்</strong> (<strong>post</strong> = பின்)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Definition 2 (postorder):</strong> T-இல் r மட்டும் இருந்தால் → r. இல்லையெனில் subtrees T₁, …, Tₙ (இடமிருந்து வலம்) ஒவ்வொன்றையும் postorder-இல் சென்று, <strong>இறுதியில் r</strong>-ஐச் சந்தி.</p>
+<p><strong>Example 13.2.1 — Tree T:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Vertex</th>
+<th>Children (இடமிருந்து வலம்)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>a</strong> (root)</td>
+<td>b, c, d</td>
+</tr>
+<tr>
+<td>b</td>
+<td>e, f</td>
+</tr>
+<tr>
+<td>e</td>
+<td>j, k</td>
+</tr>
+<tr>
+<td>k</td>
+<td>n, o, p</td>
+</tr>
+<tr>
+<td>d</td>
+<td>g, h, i</td>
+</tr>
+<tr>
+<td>g</td>
+<td>l, m</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Preorder:</strong> a, <strong>b</strong>, e, j, k, n, o, p, <strong>f</strong>, <strong>c</strong>, <strong>d</strong>, g, l, m, h, i</p>
+<p><strong>Postorder:</strong> j, n, o, p, k, e, f, b, c, l, m, g, h, i, d, a</p>
+<p><strong>⚠️ PDF-இல் திருத்தம்:</strong> PDF preorder-ஐ "a, b, e, j, k, n, o, p, <strong>j</strong>, c, …" என்று காட்டுகிறது. இரண்டாவது <strong>j</strong> உண்மையில் <strong>f</strong> ஆக வேண்டும். e-இன் subtree முடிந்த பிறகு b-இன் அடுத்த child <strong>f</strong>-க்குப் போகிறோம்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>Preorder படிப்படியாக:</strong></p>
+<table>
+<thead>
+<tr>
+<th>படி</th>
+<th>இருக்கும் இடம்</th>
+<th>எழுது</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Root</td>
+<td>a</td>
+</tr>
+<tr>
+<td>2</td>
+<td>a-இன் முதல் child</td>
+<td>b</td>
+</tr>
+<tr>
+<td>3</td>
+<td>b-இன் முதல் child</td>
+<td>e</td>
+</tr>
+<tr>
+<td>4</td>
+<td>e-இன் children</td>
+<td>j, k</td>
+</tr>
+<tr>
+<td>5</td>
+<td>k-இன் children</td>
+<td>n, o, p</td>
+</tr>
+<tr>
+<td>6</td>
+<td>b-இன் அடுத்த child</td>
+<td>f</td>
+</tr>
+<tr>
+<td>7</td>
+<td>a-இன் அடுத்த child (leaf)</td>
+<td>c</td>
+</tr>
+<tr>
+<td>8</td>
+<td>a-இன் கடைசி child</td>
+<td>d</td>
+</tr>
+<tr>
+<td>9</td>
+<td>d-இன் children (g-இன் subtree உட்பட)</td>
+<td>g, l, m, h, i</td>
+</tr>
+</tbody>
+</table>
+<p><strong>💡 விரைவு தந்திரம்:</strong> Root-இலிருந்து tree-ஐச் <strong>சுற்றி வலம் வா</strong> (இடதுபக்கமாக, counter-clockwise):</p>
+<ul>
+<li><strong>Preorder:</strong> ஒவ்வொரு vertex-ஐயும் <strong>முதல் முறை</strong> கடக்கும்போது எழுது.</li>
+<li><strong>Postorder:</strong> ஒவ்வொரு vertex-ஐயும் <strong>கடைசி முறை</strong> கடக்கும்போது எழுது.</li>
+</ul>
+<p><strong>சரிபார்ப்பு:</strong> ஒவ்வொரு vertex-உம் <strong>சரியாக ஒருமுறை</strong> வர வேண்டும் — T-இல் 16 vertices (a–p), list-இலும் 16. Preorder <strong>root-இல் தொடங்கும்</strong>; postorder <strong>root-இல் முடியும்</strong>.</p></div><button type="button" class="native-reference" aria-controls="en-s2" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s2" lang="en"><div class="hci-en"><p><strong>Tree traversal</strong> is a form of graph traversal: visiting <strong>each node of a tree exactly once</strong> <a class="ts" href="#" data-v="1" data-t="223">03:43</a>. <strong>Ordered rooted trees</strong> store information and can represent <strong>expressions</strong> (numbers, variables, operations). To use the data, we need procedures that <strong>visit every vertex</strong>: <strong>traversal algorithms</strong>. Both are defined <strong>recursively</strong>.</p>
 <div class="grid2"><div><p><strong>Preorder: root first</strong></p>
 <p>Visit the <strong>root r</strong>, then traverse T₁ in preorder, then T₂, … then Tₙ (subtrees <strong>left to right</strong>).</p></div><div><p><strong>Postorder: root last</strong></p>
 <p>Traverse T₁ in postorder, then T₂, … then Tₙ, and <strong>finally visit the root r</strong>.</p></div></div>
@@ -964,10 +1244,96 @@ R.querySelector('.nx').onclick=function(){if(n<seq.length)n++;draw()};draw();})(
 <div class="call tip"><div class="ct">விரைவான உத்தி</div><ul>
 <li><strong>முன்வரிசை:</strong> வேரிலிருந்து மரத்தைச் சுற்றி இடஞ்சுழியாக நடந்து, ஒவ்வொரு முனையையும் கடக்கும் <strong>முதல்</strong> முறை பட்டியலிடவும்.</li>
 <li><strong>பின்வரிசை:</strong> ஒவ்வொரு முனையையும் கடக்கும் <strong>இறுதி</strong> முறை பட்டியலிடவும்.</li>
-</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Spanning trees"><span class="num">3</span>Spanning trees</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>எல்லா முனைகளையும் இணைக்கும் மரம்</h3><p>Graph-இன் எல்லா vertices-ஐயும் cycle இல்லாமல் இணைக்கும் subgraph <strong>Spanning tree</strong>. Connected graph-க்குத்தான் அது இருக்கும். n vertices என்றால் n−1 edges; extra edges நீக்கினாலும் connectivity காக்க வேண்டும்.</p><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p>Connected graph-இல் cycle edge-ஐ நீக்கினால் connectivity காக்கப்படும்; cycle-இன் redundant edges நீக்கித் தொடருங்கள். n vertices, m edges இருந்தால் spanning tree பெற <strong>m−n+1</strong> edges நீக்க வேண்டும்.
-எந்த edge-ஐயும் சீரற்ற முறையில் நீக்காதீர்கள்; bridge நீக்கினால் disconnect ஆகும். Spanning tree பல இருக்கலாம். Weighted minimum spanning tree என்பது கூடுதல் optimisation problem.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Spanningtree original graph-இன் <strong>allvertices</strong>,subsetedges,connected+acyclic. Finite connected graph iff spanningtree exists;nvertices,medges→remove m−n+1 <strong>cycle edges safely</strong>. Arbitrary அந்தஎண்ணிக்கை edges remove செய்தால் connectedness உறுதி இல்லை;bridge remove செய்யாதீர்கள். Disconnected graph-க்கு spanningforest. Multicast deliverytree participating network/receivers-ஐ இணைக்கலாம்;entirephysicalnetwork எல்லாவற்றையும் span செய்யவேண்டிய அவசியமில்லை.</p></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Definition</div><p>Let G be a simple graph. A <strong>spanning tree</strong> of G is a <strong>subgraph of G that is a tree containing every vertex of G</strong>.</p></div>
+</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s3"><h2 id="s3" data-t="Spanning trees"><span class="num">3</span>Spanning trees</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s3 en-s3" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s3" lang="ta" hidden><h3>Spanning trees — எல்லா vertices-ஐயும் தொடும் tree</h3><p><strong>🔑 Definition:</strong> G ஒரு simple graph. G-இன் <strong>spanning tree</strong> = <strong>G-இன் எல்லா vertices-ஐயும் கொண்ட, tree ஆக உள்ள ஒரு subgraph</strong>.</p>
+<p><strong>ஒப்புமை:</strong> ஒரு கிராமத்தின் எல்லா வீடுகளையும் இணைக்க <strong>குறைந்தபட்ச</strong> மின்கம்பிகள் — எல்லா வீடும் இணைந்திருக்க வேண்டும், ஆனால் தேவையற்ற <strong>சுற்றுகள் (circuits)</strong> இல்லை.</p>
+<p><strong>ஒன்றைக் கண்டுபிடிப்பது — circuits-இலிருந்து edges-ஐ நீக்கு (Example 13.3.1):</strong></p>
+<p>G <strong>connected</strong>, ஆனால் <strong>simple circuits</strong> இருப்பதால் tree அல்ல.</p>
+<table>
+<thead>
+<tr>
+<th>படி</th>
+<th>நீக்கு</th>
+<th>விளைவு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>{a, e}</strong></td>
+<td>ஒரு circuit போனது; G இன்னும் connected</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>{e, f}</strong></td>
+<td>இரண்டாவது circuit போனது</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>{c, g}</strong></td>
+<td>Simple circuits எதுவும் இல்லை</td>
+</tr>
+</tbody>
+</table>
+<p>விளைவு = G-இன் <strong>spanning tree</strong>.</p>
+<p><strong>🔑 Theorem 1:</strong> ஒரு simple graph <strong>connected ⇔ அதற்கு ஒரு spanning tree உண்டு</strong>.</p>
+<p><strong>🔑 எத்தனை edges நீக்க வேண்டும்:</strong> n vertices கொண்ட tree-க்கு <strong>n − 1</strong> edges. ஆகவே <strong>n vertices, m edges</strong> கொண்ட connected graph-இலிருந்து <strong>m − (n − 1) = m − n + 1</strong> edges நீக்க வேண்டும்.</p>
+<p>உதா: 7 vertices, 9 edges → 9 − 7 + 1 = <strong>3</strong> edges நீக்கு.</p>
+<p><strong>பயன்பாடு — IP multicasting (Example 13.3.2):</strong></p>
+<table>
+<thead>
+<tr>
+<th>முறை</th>
+<th>எப்படி</th>
+<th>பிரச்சனை</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unicasting</strong></td>
+<td>ஒவ்வொரு receiver-க்கும் <strong>தனிப் பிரதி</strong></td>
+<td>ஒரே data-வின் பல பிரதிகள் network-இல் — <strong>வீண்</strong></td>
+</tr>
+<tr>
+<td><strong>IP multicasting</strong></td>
+<td><strong>Loop இல்லாத delivery tree</strong> — தேவையான இடத்தில் மட்டும் பிரதிகள் கிளை பிரியும்</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Data <strong>ஒருபோதும் சுற்றக்கூடாது</strong>: ஒரு router-ஐ அடைந்தால் மீண்டும் அங்கே வரக்கூடாது. Loops = <strong>circuits</strong> → routers ஒரு <strong>spanning tree</strong> கட்டுகின்றன.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Graph பகுதி</th>
+<th>Network-இல்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vertices</strong></td>
+<td>Multicast source, routers, receiving computers உள்ள subnetworks</td>
+</tr>
+<tr>
+<td><strong>Edges</strong></td>
+<td>Computers / routers இடையிலான links</td>
+</tr>
+<tr>
+<td><strong>Root</strong></td>
+<td><strong>Multicast source</strong></td>
+</tr>
+<tr>
+<td><strong>Leaves</strong></td>
+<td><strong>Receiving computers உள்ள subnetworks</strong></td>
+</tr>
+</tbody>
+</table><div class="tamil-details"><p class="ta-detail-label">மேலும் புரிந்துகொள்ள · தேர்வுக் குறிப்புகள்</p><p><strong>⚠️ Edge நீக்கும்போது கவனம்:</strong> ஒரு <strong>circuit-இல் உள்ள</strong> edge-ஐ மட்டும் நீக்கு. Circuit-இல் இல்லாத edge-ஐ நீக்கினால் graph <strong>துண்டாகும்</strong> (disconnected) — அது spanning tree அல்ல.</p>
+<p><strong>ஒரு graph-க்குப் பல spanning trees இருக்கலாம்</strong> — எந்த edges-ஐ நீக்குகிறோம் என்பதைப் பொறுத்து. ஆனால் <strong>எல்லாவற்றிலும் n − 1 edges</strong> தான்.</p>
+<p><strong>Exam template (English):</strong></p>
+<blockquote>
+<p>A spanning tree of a connected graph with n vertices has n − 1 edges, so m − n + 1 edges must be removed. Removing {a, e}, {e, f} and {c, g}, each lying on a simple circuit, breaks every simple circuit while keeping G connected and containing every vertex, so the result is a spanning tree of G.</p>
+</blockquote></div><button type="button" class="native-reference" aria-controls="en-s3" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s3" lang="en"><div class="hci-en"><div class="call key"><div class="ct">Definition</div><p>Let G be a simple graph. A <strong>spanning tree</strong> of G is a <strong>subgraph of G that is a tree containing every vertex of G</strong>.</p></div>
 <h3 id="finding-one-remove-edges-from-circuits">Finding one: remove edges from circuits</h3>
 <div class="call example"><div class="ct">Example 13.3.1</div><p>G is <strong>connected</strong> but not a tree, because it has <strong>simple circuits</strong>.</p>
 <ol>
@@ -1029,20 +1395,68 @@ R.addEventListener('input',run);run();})();
 <li><strong>முடிவெடுக்கும் மரம்:</strong> சதுரங்கள், வட்டங்களுடன் வரைந்து, ஒவ்வொரு வாய்ப்புக் கணுவிலும் <strong>நிகழ்தகவு × மதிப்பு</strong> காட்டி, <strong>செலவுகளைக்</strong> கழித்து, தெளிவான <strong>பரிந்துரையை</strong> வழங்கவும்.</li>
 <li><strong>சுற்றல்:</strong> முழு முனைப் பட்டியலையும் எழுதி, ஒவ்வொரு முனையும் <strong>துல்லியமாக ஒருமுறை</strong> வருகிறதா எனச் சரிபார்க்கவும்.</li>
 <li><strong>படரும் மரம்:</strong> ஒவ்வொரு சுற்றிலிருந்தும் ஒரு விளிம்பை நீக்கவும்; n முனைகளுள்ள மரத்துக்கு <strong>n − 1 விளிம்புகள்</strong>.</li>
-</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Quick revision sheet"><span class="num">4</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>விரைவாக நினைவுபடுத்திக்கொள்ள</h3><div class="ta-recap-item"><h4>கேள்விகள் மூலம் முடிவெடுக்கும் மரம்</h4><p>ஒரு முடிவை எடுக்கத் தேவையான கேள்விகளை tree-ஆக வரிசைப்படுத்துவோம். Branch-கள் தேர்வுகள் அல்லது நிகழ்வுகள். Chance node-இல் probability×value சேர்க்கலாம்; decision node-இல் நோக்கத்திற்கு ஏற்ற சிறந்த தேர்வை எடுப்போம்.</p>
-<p><strong>Square</strong> முடிவுத் தேர்வு; <strong>circle</strong> chance/uncertainty; <strong>leaf/triangle</strong> இறுதி outcome. Chance branches probabilities கூட்டினால் 1. <strong>Expected value=Σp×payoff</strong>; cost இருந்தால் நிகர value-இல் சேர்க்க வேண்டும்.
-Rightmost outcomes-இலிருந்து பின்னோக்கிச் சுருக்குவது உதவும்: chance node-இல் weighted sum; decision node-இல் சிறந்த alternative. Badminton example: sunny→humidity, rainy→wind; cloudy என்றால் play. Decision trees overfit ஆகலாம்; small data changes tree-ஐ மாற்றலாம்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p><strong>Chance node(circle)</strong> probability-weighted sum;<strong>decision(square)</strong> feasible alternatives-இல் best value;leaf payoff. SuccessEV .2·1000000+.5·800000+.3·600000=<strong>780000</strong>;failureEV.6·50000=30000;gross.7·780000+.3·30000=555000;R&amp;D400000 கழித்து <strong>155000</strong>. Costs double-subtract வேண்டாம்;probabilities eachchance node sum1. Expectedvalue guaranteed outcome அல்ல,risk-neutral assumption.</p>
-<p>Classification tree வேறு role:attribute→test,leafclass;sunnyhumidity,rainywind,cloudyplay. Tree arbitrary nonlinearity எல்லாம் perfect handle செய்யாது;data cleaning தேவையில்லை என்பதும் தவறு. Length6 A/B noAA/noBBB leaves<strong>9</strong>;branchinvalid ஆனவுடன்prune.</p></div><div class="ta-recap-item"><h4>Traversal வரிசை</h4><p><strong>Preorder</strong>-இல் node முதலில்; <strong>Postorder</strong>-இல் children முதலில், node கடைசியில். இடமிருந்து வலமாக அதே child order-ஐப் பின்பற்றுங்கள். எல்லா nodes-உம் ஒருமுறை வந்துள்ளனவா இறுதியில் பாருங்கள்.</p>
-<p>சிறு மரம்: root A; children B,C; B-க்கு D,E என்றால் <strong>Preorder A,B,D,E,C</strong>; <strong>Postorder D,E,B,C,A</strong>. Left-to-right child order முக்கியம்.
-Preorder என்றால் alphabetical order அல்ல; node-ஐ <em>எப்போது</em> visit செய்கிறோம் என்பதே பெயரின் பொருள். எல்லா nodes-உம் ஒருமுறை உள்ளனவா சோதியுங்கள்.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p><strong>Preorder root→subtrees lefttoright;postorder subtrees→root.</strong> Examplepre: a,b,e,j,k,n,o,p,f,c,d,g,l,m,h,i. Post:j,n,o,p,k,e,f,b,c,l,m,g,h,i,d,a. ஒவ்வொருvertex exactlyonce;pre-list-இன் secondj source typo உண்மையில்f. Binaryinorder வேறு traversal;arbitrary multi-child tree-க்கு ஒரே standard inorder இல்லை.</p></div><div class="ta-recap-item"><h4>எல்லா முனைகளையும் இணைக்கும் மரம்</h4><p>Graph-இன் எல்லா vertices-ஐயும் cycle இல்லாமல் இணைக்கும் subgraph <strong>Spanning tree</strong>. Connected graph-க்குத்தான் அது இருக்கும். n vertices என்றால் n−1 edges; extra edges நீக்கினாலும் connectivity காக்க வேண்டும்.</p>
-<p>Connected graph-இல் cycle edge-ஐ நீக்கினால் connectivity காக்கப்படும்; cycle-இன் redundant edges நீக்கித் தொடருங்கள். n vertices, m edges இருந்தால் spanning tree பெற <strong>m−n+1</strong> edges நீக்க வேண்டும்.
-எந்த edge-ஐயும் சீரற்ற முறையில் நீக்காதீர்கள்; bridge நீக்கினால் disconnect ஆகும். Spanning tree பல இருக்கலாம். Weighted minimum spanning tree என்பது கூடுதல் optimisation problem.</p>
-<p><strong>முழுப் படிகளுடன் புரிந்துகொள்ள</strong></p>
-<p>Spanningtree original graph-இன் <strong>allvertices</strong>,subsetedges,connected+acyclic. Finite connected graph iff spanningtree exists;nvertices,medges→remove m−n+1 <strong>cycle edges safely</strong>. Arbitrary அந்தஎண்ணிக்கை edges remove செய்தால் connectedness உறுதி இல்லை;bridge remove செய்யாதீர்கள். Disconnected graph-க்கு spanningforest. Multicast deliverytree participating network/receivers-ஐ இணைக்கலாம்;entirephysicalnetwork எல்லாவற்றையும் span செய்யவேண்டிய அவசியமில்லை.</p></div><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><table>
+</ul></div></div></div><button class="done-btn"></button></section><section class="card" data-sec="s4"><h2 id="s4" data-t="Quick revision sheet"><span class="num">4</span>Quick revision sheet</h2><div class="section-language"><button type="button" class="native-toggle" aria-controls="ta-s4 en-s4" aria-expanded="false" lang="ta">தமிழில் புரிந்துகொள்ள</button></div><div class="tamil-native" id="ta-s4" lang="ta" hidden><h3>விரைவு மீள்பார்வை — Week 13</h3><table>
+<thead>
+<tr>
+<th>தலைப்பு</th>
+<th>ஒரு வரியில்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decision tree</td>
+<td>தொடர்புடைய தேர்வுகளின் விளைவுகளின் வரைபடம்; internal vertex = முடிவு, ஒவ்வொரு விளைவுக்கும் subtree</td>
+</tr>
+<tr>
+<td>குறியீடுகள்</td>
+<td>சதுரம் = முடிவு · வட்டம் = நிச்சயமின்மை · ஒன்றுமில்லை/முக்கோணம் = result</td>
+</tr>
+<tr>
+<td>மதிப்பிடு</td>
+<td>Chance nodes-இல் probability × மதிப்பு; செலவு கழி; அதிகமானதைத் தேர்</td>
+</tr>
+<tr>
+<td>Product உதாரணம்</td>
+<td>EV = 0.7 × 780,000 + 0.3 × 30,000 = 555,000; net <strong>+155,000</strong> → launch</td>
+</tr>
+<tr>
+<td>நன்மைகள்</td>
+<td>குறைந்த கணக்கு; continuous + categorical; முக்கிய fields தெரியும்</td>
+</tr>
+<tr>
+<td>தீமைகள்</td>
+<td>பல classes/குறைந்த examples-இல் பிழை; train செலவு; overfitting; unstable</td>
+</tr>
+<tr>
+<td>A/B பயிற்சி</td>
+<td>9 sequences (AA இல்லை, BBB இல்லை)</td>
+</tr>
+<tr>
+<td>Preorder</td>
+<td>Root, பிறகு subtrees இடமிருந்து வலம்: a b e j k n o p f c d g l m h i</td>
+</tr>
+<tr>
+<td>Postorder</td>
+<td>Subtrees இடமிருந்து வலம், பிறகு root: j n o p k e f b c l m g h i d a</td>
+</tr>
+<tr>
+<td>Spanning tree</td>
+<td>எல்லா vertices-ஐயும் கொண்ட tree ஆன subgraph</td>
+</tr>
+<tr>
+<td>Theorem 1</td>
+<td>Connected ⇔ spanning tree உண்டு</td>
+</tr>
+<tr>
+<td>நீக்க வேண்டிய edges</td>
+<td>m − n + 1</td>
+</tr>
+<tr>
+<td>Multicasting</td>
+<td>Spanning tree, loops இல்லை; root = source, leaves = receiving subnetworks</td>
+</tr>
+</tbody>
+</table><button type="button" class="native-reference" aria-controls="en-s4" aria-expanded="false">முழு விவரம், கணக்கு, படம், கருவிகள் · English</button></div><div class="section-english" id="en-s4" lang="en"><div class="hci-en"><table>
 <thead>
 <tr>
 <th>Concept</th>

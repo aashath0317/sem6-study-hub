@@ -382,7 +382,8 @@ def weeks_of(skey):
 
 PAPERS = "Past Papers.html"
 QUIZZES = "Quizzes.html"
-EXTRA = {"papers": ("Past papers", PAPERS), "quizzes": ("Official quizzes", QUIZZES)}
+REVISION = "One-Shot Revision.html"
+EXTRA = {"papers": ("Past papers", PAPERS), "quizzes": ("Official quizzes", QUIZZES), "revision": ("One-shot revision", REVISION)}
 
 
 def build_papers(skey, kind="papers"):
@@ -417,6 +418,9 @@ def build_subject(skey):
         _, meta_peek = None, parse(os.path.join(HERE, "content", skey, f))[0]
         info.append(("Week " + re.search(r"(\d+)", f).group(1).zfill(2), re.sub(r"[*`]", "", meta_peek["title"])))
     cards, allq = [], []
+    if build_papers(skey, "revision"):
+        cards.append(f'<a href="{quote(REVISION)}" data-key="{skey}-revision" class="papers"><small>Last-minute revision</small><span>One-shot revision — all weeks on one page</span>'
+                     f'<em>Every week\'s must-know lists, classic exam tables, answer frames and a self-test. Built for a 5-hour final read.</em><div class="pg"><i></i></div></a>')
     if build_papers(skey):
         cards.append(f'<a href="{quote(PAPERS)}" data-key="{skey}-papers" class="papers"><small>Exam practice</small><span>Past papers with worked answers</span>'
                      f'<em>Real exam questions from previous years, fully solved, plus which topics come up most.</em><div class="pg"><i></i></div></a>')

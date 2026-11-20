@@ -48,9 +48,9 @@
 # 19
 = g(3) = 9, then f(9) = 19.
 
-? Using the same functions, what is (g ∘ f)(3)?
+? f(x) = 2x + 1 and g(x) = x². What is (g ∘ f)(3)?
 # 49
-= f(3) = 7, then g(7) = 49. So f ∘ g ≠ g ∘ f.
+= f first: f(3) = 7, then g(7) = 49. Compare (f ∘ g)(3) = 19, so f ∘ g ≠ g ∘ f.
 
 ? f⁻¹(x) means:
 + The inverse function, which undoes f

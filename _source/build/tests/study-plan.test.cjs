@@ -35,11 +35,11 @@ m=model([subject('a','2026-11-01')]);assert.equal(m.remaining,0);assert.equal(m.
 // The catalogue covers six subjects and 84 weeks. Preserve the five existing subjects exactly.
 const html=fs.readFileSync(path.resolve(__dirname,'../../..','SEM 6 Study Hub.html'),'utf8');
 const cat=JSON.parse(html.match(/<script type="application\/json" id="study-data">([\s\S]*?)<\/script>/)[1]);
-assert.equal(cat.length,6);assert.equal(cat.flatMap(s=>s.weeks).filter(w=>!w.paper).length,84);assert.equal(cat.flatMap(s=>s.weeks).filter(w=>w.paper).length,12);
+assert.equal(cat.length,6);assert.equal(cat.flatMap(s=>s.weeks).filter(w=>!w.paper).length,84);assert.equal(cat.flatMap(s=>s.weeks).filter(w=>w.paper).length,13);
 assert.equal(cat.filter(s=>s.key!=='mm').flatMap(s=>s.weeks).reduce((n,w)=>n+w.sections.length,0),621);
 assert.deepEqual(cat.find(s=>s.key==='mm').exam,['2026-11-28','13:30','15:30']);
 assert.equal(cat.find(s=>s.key==='mm').weeks.filter(w=>!w.paper).length,14);
-m=model(cat);assert.equal(m.subjects.reduce((a,s)=>a+s.total,0),743);assert.ok(m.remaining>0);assert.ok(m.todayPlan.blocks.length);
+m=model(cat);assert.equal(m.subjects.reduce((a,s)=>a+s.total,0),762);assert.ok(m.remaining>0);assert.ok(m.todayPlan.blocks.length);
 // Every BPAS week includes a new practice section without removing existing sections.
 const bpas=cat.find(s=>s.key==='bpas').weeks.filter(w=>!w.paper);
 assert.equal(bpas.length,15);

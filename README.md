@@ -110,3 +110,5 @@ python3 _source/build/tests/mm-numeric-02-05.test.py
 python3 _source/build/tests/mm-numeric-06-10.test.py
 python3 _source/build/tests/mm-numeric-11-14.test.py
 ```
+
+The Multimedia one-shot revision page gives Tamil explanations for all 14 weeks, comparison tables, a formula sheet, English exam-answer frames, a self-test, a 25–28 November study plan and a two-hour exam time plan. Study priorities are labelled as guesses rather than known exam questions.

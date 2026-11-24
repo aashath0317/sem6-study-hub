@@ -112,3 +112,15 @@ python3 _source/build/tests/mm-numeric-11-14.test.py
 ```
 
 The Multimedia one-shot revision page gives Tamil explanations for all 14 weeks, comparison tables, a formula sheet, English exam-answer frames, a self-test, a 25–28 November study plan and a two-hour exam time plan. Study priorities are labelled as guesses rather than known exam questions.
+
+
+Multimedia also has full authored offline Tamil notes and quizzes for all 14 weeks, tool labels and feedback, and 141 per-section explanations including revision. Technical terms and English exam-answer templates remain in English. Switching languages preserves edited inputs and quiz selections. The source hash manifest detects English changes that need translation review.
+
+```sh
+STUDY_TRANSLATION_SUBJECT=mm STUDY_TRANSLATION_REQUIRE_COMPLETE=1 python3 _source/build/tests/tamil-source.test.py
+STUDY_TRANSLATION_SUBJECT=mm node _source/build/tests/hci-translation.test.cjs
+python3 _source/build/tests/translation-preservation.test.py mm
+node _source/build/tests/mm-backup.test.cjs
+```
+
+The DOM tests need `jsdom`; the preservation test needs `beautifulsoup4`. Existing subjects' note content and saved progress keys are preserved.

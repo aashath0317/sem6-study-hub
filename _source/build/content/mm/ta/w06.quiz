@@ -1,0 +1,83 @@
+? Raster-transform PDF எந்த vector முறையைப் பயன்படுத்துகிறது?
++ Column vector
+- Row vector
+- Scalar மட்டும்
+- Polar vector
+= Matrices point columns-ஐ இடப்புறத்திலிருந்து multiply செய்கின்றன.
+
+? Shape, orientation இரண்டையும் எந்த operation காக்கிறது?
++ Translation
+- Nonuniform scaling
+- பொதுவான rotation
+- Perspective projection
+= Translation எல்லா points-க்கும் ஒரே shift சேர்க்கிறது.
+
+? Point (2,3)-ஐ (4,−1) translate செய்தால் என்ன வரும்?
++ (6,2)
+- (8,−3)
+- (−2,4)
+- (6,4)
+= Coordinates, shifts சேர்க்கவும்: (2+4,3−1).
+
+? (2,3)-ஐ origin சுற்றி 90° counterclockwise rotate செய்தால்?
++ (−3,2)
+- (3,−2)
+- (2,−3)
+- (−2,−3)
+= x′ = −y, y′ = x பயன்படுத்தவும்.
+
+? 2D transformations-க்கு homogeneous coordinates ஏன்?
++ Translation-உம் multiplication ஆகும்
+- Translation division மட்டும் பயன்படுத்தும்
+- Rotation-க்கு angles தேவையில்லை
+- Scaling எல்லா distances-ஐயும் காக்கும்
+= அவை transformations-க்கு ஒரே representation தருகின்றன.
+
+? Column vectors-இல் முதலில் translate செய்து பிறகு scale செய்யும் order?
++ STP
+- TSP
+- PTS
+- PST
+= முதல் operation P-க்கு அருகில் இருக்கும்.
+
+? எந்த pivot C-ஐச் சுற்றியும் rotate செய்வது எப்படி?
++ −C நகர்த்து, rotate செய்து, C நகர்த்தவும்
+- C நகர்த்து, rotate செய்து, C நகர்த்தவும்
+- முதலில் rotate செய்து −C நகர்த்தவும்
+- முதலில் scale செய்து origin-இல் rotate செய்யவும்
+= Pivot தற்காலிகமாக origin-க்கு நகர்த்தப்படுகிறது.
+
+? ஒளி வெளியிடும் screen-க்கு எந்த colour mode?
++ RGB additive colour
+- CMYK subtractive colour
+- Grayscale ink separation
+- Indexed printing plates
+= Screens நிற ஒளிகளை இணைக்கின்றன.
+
+? Image-இலிருந்து colour sample எடுக்கும் tool?
++ Eyedropper
+- Hand
+- Crop
+- Marquee
+= Eyedropper sample colour-ஐத் தேர்வு செய்யும்.
+
+? Editable Photoshop master-க்கு சிறந்த file?
++ Layers கொண்ட PSD
+- Flattened JPEG
+- Reduced-palette GIF
+- Screen screenshot
+= PSD layers, masks, effects வைத்திருக்க முடியும்.
+
+? Layer blending mode எதை நிர்ணயிக்கிறது?
++ மேல், கீழ் pixels சேரும் விதம்
+- Mouse window-க்குள் நுழையும் விதம்
+- File names அகரவரிசைப்படும் விதம்
+- எத்தனை menus தெரியும் என்பது
+= Blending pixel-combination விதியைத் தருகிறது.
+
+? வழக்கமான Zoom எதை மாற்றும்?
++ காட்டப்படும் view magnification
+- சேமித்த pixel dimensions
+- Image colour depth
+- Layer blending formula
+= Zoom view அளவை மாற்றும்; image data size-ஐ மாற்றாது.

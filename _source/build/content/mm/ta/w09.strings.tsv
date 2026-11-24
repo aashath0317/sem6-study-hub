@@ -1,0 +1,16 @@
+3D Graphics: Coordinates, Projection and Transformations	3D Graphics: coordinates, projection, transformations
+3D systems, display methods, projection taxonomy, depth, wireframes, control points, viewing pipeline and fully worked column-vector transformations.	3D systems, display முறைகள், projection வகைகள், depth, wireframes, control points, viewing pipeline, column-vector கணக்குகள் கற்போம்.
+Compare perspective and orthographic coordinates	Perspective, orthographic coordinates ஒப்பிடவும்
+Projection	Projection
+Perspective	Perspective
+Orthographic	Orthographic
+Perspective needs z ≠ 0.	Perspective-க்கு z ≠ 0 தேவை.
+Compare rotations around all three axes	மூன்று axes சுற்றிய rotations ஒப்பிடவும்
+Axis	Axis
+Calculate projection before revealing the answer	விடையைப் பார்க்குமுன் projection கணக்கிடவும்
+For x = 6, z = 8 and d = 2, find perspective x′.	x = 6, z = 8, d = 2 எனில் perspective x′ காண்க.
+Use xd/z, not x+ d.	xd/z பயன்படுத்தவும்; x+ d அல்ல.
+6 × 2 / 8 = 1.5.	6 × 2 / 8 = 1.5.
+For orthographic projection of (6,4,8) onto z = 2, find x′.	(6,4,8)-ஐ z = 2-க்கு orthographic project செய்தால் x′ காண்க.
+Orthographic projection preserves x in this setup.	இந்த அமைப்பில் orthographic projection x-ஐக் காக்கும்.
+x′ = x = 6.	x′ = x = 6.

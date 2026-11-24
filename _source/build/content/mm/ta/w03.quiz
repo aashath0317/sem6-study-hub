@@ -1,0 +1,80 @@
+? Typeface என்றால் என்ன?
++ Characters, symbols-க்கான visual design family
+- காட்டப்படும் ஒவ்வொரு image-க்கும் fixed pixel dimension
+- Audio sample-ஐக் குறிக்கும் numerical code
+- Animation frames synchronise செய்யும் timing rule
+= Typeface character design-ஐக் குறிக்கிறது. குறிப்பிட்ட style, size உள்ள font-இலிருந்து இதைப் பாடம் வேறுபடுத்துகிறது.
+
+? Serif typeface-ஐ sans serif typeface-இலிருந்து வேறுபடுத்துவது எது?
++ Main stroke ends-இல் சிறிய finishing strokes இருக்கும்
+- ஒவ்வொரு character-உம் தனியான video frame-ஆக இருக்கும்
+- Uppercase alphabetic characters மட்டும் எப்போதும் இருக்கும்
+- அதன் text-இல் hyperlinks, punctuation இருக்க முடியாது
+= Serifs சிறிய finishing features. Sans serif-இல் அவை இல்லை.
+
+? குறிப்பிட்ட letter pair-இன் spacing மாற்றும் typography adjustment எது?
++ Kerning
+- Leading
+- Sampling
+- Encoding
+= Kerning குறிப்பிட்ட pair-ஐ மாற்றும். Tracking characters வரிசையையும் leading lines-ஐயும் பாதிக்கும்.
+
+? h போன்ற lowercase letter-இல் மேலே செல்லும் stroke-இன் பெயர் என்ன?
++ Ascender
+- Descender
+- Baseline
+- Code point
+= Ascender main lowercase body-க்கு மேலே உயரும். Descender baseline-க்குக் கீழே செல்லும்.
+
+? Leading எதை மாற்றுகிறது?
++ Text lines இடையிலான spacing
+- Letter-க்கு ஒதுக்கப்பட்ட code point
+- Video frame-இன் bytes எண்ணிக்கை
+- Photographic palette-இன் size
+= Leading line spacing. Tracking, kerning ஆகியவற்றிலிருந்து வேறுபட்டது.
+
+? Bitmap font முக்கியமாக எப்படி represent செய்யப்படுகிறது?
++ Glyphs-க்காக stored pixel patterns
+- Characters-க்கான audio frequencies
+- Documents இடையே hyperlinks மட்டும்
+- Animation timelines தொகுப்பு
+= Bitmap fonts pixel patterns வைத்திருக்கும்; வடிவமைத்த pixel sizes-உடன் தொடர்புடையவை.
+
+? Outline font-இன் rasterization என்றால் என்ன?
++ Glyph outlines-ஐ display pixels-ஆக மாற்றுதல்
+- Text-ஐ spoken audio samples-ஆக மாற்றுதல்
+- எல்லா character meanings-ஐயும் hyperlinks-ஆக மாற்றுதல்
+- Printed document-இல் line spacing முழுவதையும் அகற்றுதல்
+= Font scalable outlines-ஆக இருந்தாலும் display-க்கு discrete pixel coverage தேவை.
+
+? Anti-aliasing rasterized text தோற்றத்தை எப்படி மேம்படுத்துகிறது?
++ Edge intensities blend செய்து jagged தோற்றத்தைக் குறைக்கும்
+- Screen-இன் physical pixel எண்ணிக்கையை அதிகரிக்கும்
+- எல்லா lowercase letters-ஐ uppercase letters-ஆக மாற்றும்
+- Missing fonts அனைத்தும் கிடைக்கும் என்று உறுதி செய்யும்
+= Intermediate edge intensities boundary smooth-ஆகத் தெரிய உதவும். Screen-இன் finite resolution மாறாது.
+
+? Plain text என்றால் என்ன?
++ Embedded presentation formatting இல்லாத character content
+- எப்போதும் decorative outline typeface பயன்படுத்தும் text
+- Edit செய்ய முடியாத photographic pixels-ஆக மட்டும் உள்ள text
+- Animation, sound tracks கட்டாயம் உள்ள document
+= Plain text ASCII அல்லது Unicode encoding பயன்படுத்தலாம். Plain என்பது embedded presentation formatting இல்லாமையைக் குறிக்கிறது.
+
+? ASCII, Unicode பற்றிய சரியான ஒப்பீடு எது?
++ Basic ASCII காட்ட முடியாத பல scripts-ஐ Unicode ஆதரிக்கும்
+- ASCII-இல் தமிழ், சிங்கள எழுத்துகள் அனைத்தும் இயல்பாக உள்ளன
+- எல்லா devices-இலும் ஒரே visible typeface-ஐ Unicode தேர்ந்தெடுக்கும்
+- ASCII, Unicode இரண்டும் ஒரே font file format-இன் பெயர்கள்
+= Unicode-இல் மிகவும் விரிவான character repertoire உள்ளது. பொருத்தமான encoding, font ஆகியவையும் தேவை.
+
+? தேவையான typeface user computer-இல் இல்லை. Font mapping எதைச் சொல்கிறது?
++ அதற்குப் பதிலாகப் பயன்படுத்தும் substitute font
+- Display-க்கான புதிய screen resolution
+- Labels படிப்பதற்கான audio codec
+- Animation playback-க்கான timing interval
+= Font mapping substitute தேர்ந்தெடுக்கிறது. தோற்றம் மாறலாம் என்பதால் coverage, layout test செய்யவும்.
+
+? பாடத்தின் point definition-படி 72 typographic points எத்தனை inches?
+# 1
+= One point = 1/72 inch. ஆகவே 72 × 1/72 = 1 inch. Typeface-க்கு ஏற்ப visible glyph height மாறலாம்.

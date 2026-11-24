@@ -67,6 +67,9 @@ if __name__ == '__main__':
                     continue
                 if not (directory/'papers.md').exists():
                     continue
+            elif key == 'mm-revision':
+                if not (directory/'revision.md').exists():
+                    continue
             elif not key:
                 if not all((directory/('w' + str(i).zfill(2) + '.quiz')).exists() for i in range(1, {'dmath':13,'mkt':14,'mm':14}.get(subject,15)+1)):
                     continue

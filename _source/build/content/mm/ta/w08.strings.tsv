@@ -1,0 +1,14 @@
+Interactive 2D Multimedia and Event Scripting	Interactive 2D Multimedia-உம் event scripting-உம்
+Time and frame control, user actions, event listeners, handlers, reusable library components, widgets and complete interactive-animation activities.	Time/frame control, user actions, event listeners, handlers, library components, widgets, interactive-animation activities அனைத்தையும் கற்போம்.
+Trace an event from input to output	Input முதல் output வரை event-ஐப் பின்தொடரவும்
+Activate the button	Button activate செய்யவும்
+Reset trace	Trace மீட்டமைக்கவும்
+User action: activation	User action: activate செய்தல்
+Event: click	Event: click
+Listener: registered on this button	Listener: இந்த button-இல் register செய்யப்பட்டது
+Handler: increment state	Handler: state எண்ணிக்கையை அதிகரிக்கும்
+Output: refreshed trace	Output: புதுப்பித்த trace
+Trace cleared.	Trace அழிக்கப்பட்டது.
+Control the butterfly position	Butterfly position-ஐக் கட்டுப்படுத்தவும்
+Click the stage or focus it and use arrow keys.	Stage-இல் click செய்யவும் அல்லது focus செய்து arrow keys பயன்படுத்தவும்.
+Butterfly stage: click or use arrow keys	Butterfly stage: click செய்யவும் அல்லது arrow keys பயன்படுத்தவும்

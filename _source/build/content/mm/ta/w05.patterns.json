@@ -1,0 +1,47 @@
+[
+  {
+    "pattern": "^Step (\\d+) / (\\d+)\\. ",
+    "replacement": "படி $1 / $2. ",
+    "selector": "#mm05-pixels .out"
+  },
+  {
+    "pattern": "Start; p = ",
+    "replacement": "தொடக்கம்; p = ",
+    "selector": "#mm05-pixels .out"
+  },
+  {
+    "pattern": "rounded b = ",
+    "replacement": "round செய்த b = ",
+    "selector": "#mm05-pixels .out"
+  },
+  {
+    "pattern": "; real \\(",
+    "replacement": "; உண்மை coordinates (",
+    "selector": "#mm05-pixels .out"
+  },
+  {
+    "pattern": "; plot \\(",
+    "replacement": "; plot செய்யும் pixel (",
+    "selector": "#mm05-pixels .out"
+  },
+  {
+    "pattern": "decision ",
+    "replacement": "decision மதிப்பு ",
+    "selector": "#mm05-pixels .out"
+  },
+  {
+    "pattern": "diagonal",
+    "replacement": "diagonal move",
+    "selector": "#mm05-pixels .out"
+  },
+  {
+    "pattern": "major only",
+    "replacement": "major axis மட்டும்",
+    "selector": "#mm05-pixels .out"
+  },
+  {
+    "pattern": "next p = ",
+    "replacement": "அடுத்த p = ",
+    "selector": "#mm05-pixels .out"
+  }
+]

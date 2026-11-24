@@ -1,0 +1,71 @@
+? Multimedia authoring என்றால் என்ன?
++ Assets-ஐத் திட்டமிட்ட title-ஆக இணைத்தல்
+- எல்லா sources-ஐயும் புதிதாக record செய்தல்
+- ஒரு still image-ஐ compress செய்தல்
+= Authoring media, navigation மற்றும் behaviour-ஐ இணைக்கிறது.
+
+? Authoring metaphor என்றால் என்ன?
++ System-இன் organisation அணுகுமுறை
+- Final file-இன் storage capacity
+- Microphone-இன் input voltage
+= Paradigm அனுபவத்தை எப்படித் தொகுப்பது எனக் காட்டுகிறது.
+
+? Timed parallel tracks பயன்படுத்தும் paradigm எது?
++ Timeline-based
+- Structure-only
+- Flowchart-only
+= Timeline media objects தொடங்கும் மற்றும் முடியும் நேரங்களைக் காட்டும்.
+
+? Icon palette மற்றும் connected flow line பயன்படுத்தும் paradigm எது?
++ Flow-control-based
+- Pixel-based capture
+- Frequency-based capture
+= Icons operations-ஐயும் links flow-ஐயும் குறிக்கின்றன.
+
+? Traditional programming-க்கு நெருக்கமான authoring அணுகுமுறை எது?
++ Scripting-language-based
+- Fixed slide viewing
+- Single-frame painting
+= Scripts conditions, events மற்றும் actions-ஐ code-இல் எழுதுகின்றன.
+
+? Visual layout தவிர storyboard எதைக் குறிப்பிட வேண்டும்?
++ Timing, media மற்றும் interaction
+- Drawing colour மட்டும்
+- Computer brand மட்டும்
+= என்ன நடக்கும், எது அதைத் தொடங்கும் என்று production team அறிய வேண்டும்.
+
+? பாடத்தின் scripting process-இல் program idea-க்குப் பின் எது வருகிறது?
++ Program brief
+- Final distribution
+- Archive deletion
+= Brief audience, objectives மற்றும் outline-ஐ விவரிக்கிறது.
+
+? Reusable library asset-ஐ scene-இல் பயன்படுத்தும் வடிவம் என்ன?
++ Instance
+- புதிய codec
+- Sampling rate
+= Instance library item-ஐ authored scene-இல் பயன்படுத்துகிறது.
+
+? Asset orchestration என்றால் என்ன?
++ கதைக்கேற்ப media-ஐ ஒருங்கிணைத்தல்
+- எல்லா imported assets-க்கும் ஒரே பெயர் வைப்பது
+- Navigation மற்றும் event links அனைத்தையும் நீக்குவது
+= Orchestration உறவுகள், timing மற்றும் presentation-ஐக் கட்டுப்படுத்துகிறது.
+
+? Packaged title-ஐ target device-இல் ஏன் test செய்ய வேண்டும்?
++ Editor preview delivery problems-ஐ மறைக்கலாம்
+- Preview compatibility-ஐ எப்போதும் நிரூபிக்கும்
+- Target device storyboard உருவாக்கும்
+= Package உண்மையான files, paths மற்றும் supported formats-உடன் இயங்க வேண்டும்.
+
+? VPN பற்றிய சரியான கூற்று எது?
++ Network access route
+- Video compression codec
+- Optical disk format
+= VPN access மற்றும் network delivery-ஐ மாற்றும்; media file format அல்ல.
+
+? Television delivery specification-ஐ முக்கியமாக எது நிர்ணயிக்கிறது?
++ பெறும் broadcaster-இன் requirements
+- Editor விரும்பும் filename
+- Storyboard colours எண்ணிக்கை
+= Broadcaster ஏற்கப்படும் picture, sound மற்றும் delivery தேவைகளைத் தருகிறது.

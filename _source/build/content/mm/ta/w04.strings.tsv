@@ -1,0 +1,21 @@
+Mix the additive RGB channels	Additive RGB channels கலந்து பாருங்கள்
+Image storage and aspect-ratio calculator	Image storage, aspect-ratio calculator
+Answer it yourself: Activity 4.3	நீங்களே பதில் எழுதுங்கள்: Activity 4.3
+Width	அகலம்
+Height	உயரம்
+Bits/pixel	ஒரு pixel-க்கான bits
+Enter positive whole values within the stated limits.	குறிப்பிட்ட வரம்புகளுக்குள் positive முழு எண்களை உள்ளிடவும்.
+A 240 × 320 image has how many pixels?	240 × 320 image-இல் எத்தனை pixels?
+Multiply width by height.	Width-ஐ height-ஆல் பெருக்கவும்.
+240 × 320 = 76,800 pixels.	240 × 320 = 76,800 pixels.
+At 8 bits/pixel, how many bits does that image need?	8 bits/pixel என்றால் image-க்கு எத்தனை bits தேவை?
+Multiply pixels by bits per pixel.	Pixels-ஐ bits per pixel-ஆல் பெருக்கவும்.
+76,800 × 8 = 614,400 bits.	76,800 × 8 = 614,400 bits.
+How many bytes of pixel data is that?	அதில் pixel data எத்தனை bytes?
+Divide the bit count by 8.	Bit count-ஐ 8-ஆல் வகுக்கவும்.
+614,400 ÷ 8 = 76,800 bytes.	614,400 ÷ 8 = 76,800 bytes.
+How many KiB, using 1024 bytes per KiB?	ஒரு KiB-க்கு 1024 bytes என்றால் எத்தனை KiB?
+Divide bytes by 1024.	Bytes-ஐ 1024-ஆல் வகுக்கவும்.
+76,800 ÷ 1024 = 75 KiB.	76,800 ÷ 1024 = 75 KiB.
+Computer Graphics, Colour and Image Storage	Computer Graphics, Colour மற்றும் Image Storage
+Raster and vector representation, resolution and aspect ratio, colour models, exact uncompressed image calculations, palettes, compression, dithering and file formats.	Raster, vector representation; resolution, aspect ratio, colour models, image-size கணக்குகள், palettes, compression, dithering, file formats.

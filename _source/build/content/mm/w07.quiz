@@ -1,0 +1,83 @@
+? What is a frame in an animation?
++ One image in the sequence
+- The entire movie file
+- The sound playback rate
+- A colour lookup table
+= Frames are displayed in sequence to suggest change.
+
+? What does fps measure?
++ Frames displayed per second
+- Pixels displayed per scene
+- Files produced per script
+- Fonts positioned per screen
+= Frame rate is measured in frames per second.
+
+? Which method updates changes after an initial frame?
++ Delta-frame animation
+- Full-frame replacement only
+- Static vector illustration
+- Single-picture typography
+= Delta refers to the difference between frames.
+
+? What changes in palette animation?
++ Colours or colour-table entries
+- Only the physical display size
+- Only a character voice recording
+- Only the file extension name
+= Colour changes can suggest animation without moving geometry.
+
+? What does a keyframe record?
++ An important state or pose
+- Every possible compressed file
+- Only the application menu
+- Only the background filename
+= The animator sets important states; tweening fills gaps.
+
+? What is tweening?
++ Generating intermediate states
+- Deleting every second picture
+- Changing the display hardware
+- Recording only the final pose
+= Tweens connect keyframes.
+
+? Which animation is best described as an object following a route?
++ Path animation
+- Shape morphing
+- Palette cycling
+- Static composition
+= A path controls position along a route.
+
+? A circle gradually becomes a triangle. Which technique is used?
++ Shape tween
+- Audio mixing
+- Frame cropping
+- Layer renaming
+= The outline geometry changes between key shapes.
+
+? Why separate a moving character and a fixed background?
++ Reuse the background while editing movement
+- Force background and character to share every movement
+- Remove independent timing controls from every layer
+- Prevent later colour adjustments to either visual element
+= This is a useful cel/layer separation.
+
+? Which parameter belongs primarily to timing?
++ Frame rate
+- Stage width
+- Colour mode
+- Vector stroke colour
+= Frame rate affects display timing.
+
+? What should an impact sound align with?
++ The contact frame
+- The filename change
+- The menu opening
+- The colour-profile dialog
+= Synchronised sound reinforces the visible action.
+
+? What does a reduced-motion rule support?
++ Users requesting less animation
+- Only higher screen resolution
+- Only additional music tracks
+- Only larger compressed videos
+= Respect the user preference and keep information accessible.

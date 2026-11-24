@@ -1,0 +1,62 @@
+? Why does a vector line need rasterization on a pixel screen?
++ Its continuous geometry must be mapped onto discrete pixels
+- Every line must first become a compressed audio recording
+- The screen can display mathematical commands without pixels
+- The line must lose all endpoint coordinates before display
+= Rasterization chooses pixel positions approximating mathematical geometry.
+
+? For DDA endpoints (2,2) and (6,7), how many transitions are needed using the dominant-axis method?
+# 5
+= Δx = 4 and Δy = 5, so steps = max(4,5) = 5 transitions. Including the start gives 6 plotted positions.
+
+? For DDA endpoints (2,2) and (6,7), what is the x increment?
+# 0.8
+= x increment = Δx/steps = 4/5 = 0.8; the y increment is 1.
+
+? In DDA, which values should be retained between iterations?
++ The accumulated unrounded coordinate values
+- Only the previously rounded coordinate values
+- Only the colour names used in the final image
+- The previous image's compressed file length
+= Round the plotted point while retaining fractional accumulation. Repeatedly using rounded values can change the path.
+
+? For Bresenham endpoints (5,5) and (10,9), find the initial decision p₁.
+# 3
+= Δx = 5, Δy = 4; p₁ = 2Δy−Δx = 8−5 = 3.
+
+? Bresenham has p = 3, Δx = 5 and Δy = 4. After choosing a diagonal move, what is the next decision?
+# 1
+= p next = p+2Δy−2Δx = 3+8−10 = 1.
+
+? In the PDF's positive shallow-line Bresenham algorithm, what move is chosen when p < 0?
++ (x+1,y)
+- (x+1,y+1)
+- (x−1,y+1)
+- (x,y−1)
+= A negative decision chooses the lower candidate while advancing x. Otherwise the algorithm chooses the diagonal candidate.
+
+? What is the relative upper-circle y value when radius r = 5 and relative x = 3?
+# 4
+= y = √(r²−x²) = √(25−9) = 4 pixel units.
+
+? How many unique reflected points arise from a circle offset (0,5) under eight-way symmetry?
+# 4
+= Some reflections coincide on the axes, leaving the four cardinal points.
+
+? What does a Bézier control handle primarily affect?
++ The direction and shape of its curve
+- The entire display's physical pixel count
+- The sound volume of a linked media file
+- The directory containing the saved file
+= Nodes and handles govern the mathematical path. Changing a handle can reshape a segment without moving its endpoints.
+
+? Which statement correctly distinguishes vectorization from rasterization?
++ Vectorization infers paths; rasterization samples paths into pixels
+- Vectorization records audio; rasterization changes its sample rate
+- Both operations guarantee recovery of the original hidden objects
+- Both operations merely rename the file without changing its data
+= Raster pixels do not explicitly identify the original objects, so tracing can only infer a vector description.
+
+? In the supplied coffee-logo tutorial, which rotation makes the grouped squares into the pictured diamond?
+# 45
+= The numbered procedure uses 45°. The introductory paragraph's 90° conflicts with that procedure and the pictured result.

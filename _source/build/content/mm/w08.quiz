@@ -1,0 +1,83 @@
+? What makes a multimedia title interactive?
++ Behaviour responds to user input
+- Every scene uses a photograph
+- Every file has the same duration
+- All content plays in fixed order
+= Input affects the resulting presentation.
+
+? Which control decides the next branch?
++ Flow control
+- Colour control
+- Font mapping
+- Audio sampling
+= Flow control directs the sequence.
+
+? What is an event handler?
++ A function run for an event
+- A bitmap colour table
+- A physical display cable
+- A library thumbnail image
+= A handler carries out the programmed response.
+
+? What does registering a listener do?
++ Connects an event to a callback
+- Immediately plays every scene
+- Permanently deletes the event
+- Changes all object coordinates
+= The callback is invoked when the event occurs.
+
+? Which can trigger an event-driven action?
++ A user click or timer event
+- Only a physical mouse click
+- Only opening the source file
+- Only the final rendered frame
+= Events can originate from users or the system.
+
+? What is a library instance?
++ A placed use of a definition
+- A separate programming language
+- An uneditable physical photograph
+- A fixed display refresh rate
+= Multiple instances can share a library symbol.
+
+? Which widget suits a continuous range value?
++ Slider
+- Static title
+- Page heading
+- Decorative border
+= A slider lets a user choose within a range.
+
+? What should a butterfly stage-click handler read?
++ Pointer position in stage coordinates
+- Only the browser page title
+- Only the library creation date
+- Only the sound file extension
+= Correct local coordinates identify the destination.
+
+? Why clamp a butterfly target near the stage edge?
++ To keep the whole object visible
+- To change its library definition
+- To delete all repeated events
+- To disable keyboard operation
+= The target can account for the object bounds.
+
+? Random route selection alone has which property?
++ A previous route may repeat
+- Every route must appear once first
+- The same route can never recur
+- No completion event is needed
+= Exclude the previous index if no consecutive repeat is required.
+
+? What should Pause preserve for a route animation?
++ Current route and progress
+- Only the window background
+- Only the source filename
+- Only the library menu order
+= Resume needs the state at which playback stopped.
+
+? Why test every route before random playback?
++ Randomness can hide an untested branch
+- Randomness guarantees all routes work
+- Only the first route can contain errors
+- A route cannot be tested separately
+= Deterministic branch tests expose failures.

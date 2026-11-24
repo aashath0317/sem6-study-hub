@@ -1,0 +1,83 @@
+? Which vector convention does the raster-transform PDF use?
++ Column vector
+- Row vector
+- Scalar only
+- Polar vector
+= The matrices multiply point columns from the left.
+
+? Which operation preserves both shape and orientation?
++ Translation
+- Nonuniform scaling
+- General rotation
+- Perspective projection
+= Translation adds the same shift to every point.
+
+? A point (2,3) is translated by (4,−1). What results?
++ (6,2)
+- (8,−3)
+- (−2,4)
+- (6,4)
+= Add coordinates and shifts: (2+4,3−1).
+
+? What is the origin-centred 90° counterclockwise rotation of (2,3)?
++ (−3,2)
+- (3,−2)
+- (2,−3)
+- (−2,−3)
+= Use x′ = −y and y′ = x.
+
+? Why use homogeneous coordinates for 2D transformations?
++ Translation also becomes multiplication
+- Translation requires division only
+- Rotation no longer uses angles
+- Scaling preserves every distance
+= They unify transformation representation.
+
+? For column vectors, translate first and scale second uses which order?
++ STP
+- TSP
+- PTS
+- PST
+= The first operation is nearest P.
+
+? How do you rotate around an arbitrary pivot C?
++ Shift by −C, rotate, shift by C
+- Shift by C, rotate, shift by C
+- Rotate first, then shift by −C
+- Scale first, then rotate at origin
+= The pivot is temporarily moved to the origin.
+
+? Which colour mode matches a light-emitting screen?
++ RGB additive colour
+- CMYK subtractive colour
+- Grayscale ink separation
+- Indexed printing plates
+= Screens combine coloured light.
+
+? Which tool samples a colour from an image?
++ Eyedropper
+- Hand
+- Crop
+- Marquee
+= Eyedropper selects a sampled colour.
+
+? Which file is the best editable Photoshop master?
++ PSD with layers
+- Flattened JPEG
+- Reduced-palette GIF
+- Screen screenshot
+= PSD can preserve layers, masks and effects.
+
+? What does a layer blending mode determine?
++ How upper and lower pixels combine
+- How the mouse enters the window
+- How file names are alphabetised
+- How many menus are displayed
+= Blending defines the pixel-combination rule.
+
+? What does Zoom change in normal use?
++ The displayed view magnification
+- The saved pixel dimensions
+- The image colour depth
+- The layer blending formula
+= Zoom changes viewing scale, not image data size.

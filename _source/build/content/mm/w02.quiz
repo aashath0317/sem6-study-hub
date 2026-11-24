@@ -1,0 +1,83 @@
+? Which sequence matches the PDF's four broad multimedia-development stages?
++ Planning/costing → designing/producing → testing → delivering
+- Designing/producing → delivering → planning/costing → testing
+- Testing → planning/costing → delivering → designing/producing
+- Delivering → testing → designing/producing → planning/costing
+= Start from purpose and resources, create the title, verify it, then deliver it. Feedback can lead to another cycle.
+
+? What does project scope define when planning a multimedia title?
++ The boundaries of included work and practical constraints
+- The colour values of every pixel in the final title
+- The complete record of every user's future navigation
+- The final audio volume for each individual speaker
+= Scope sets boundaries such as included content, time, skills and organisation. It keeps the project manageable.
+
+? Which set belongs in audience analysis for a learning title?
++ Language, prior knowledge and technological background
+- Colour depth, aspect ratio and compression ratio
+- File extension, folder name and export timestamp
+- Timeline length, render speed and processor model
+= Audience analysis asks who the users are. The PDF also lists age, gender, economic background and profession.
+
+? Which team member primarily integrates prepared assets into a working multimedia application?
++ Multimedia programmer
+- Video specialist
+- Audio specialist
+- Printing operator
+= The multimedia programmer uses an authoring system or programming language to connect assets and behaviour.
+
+? What is the main purpose of a storyboard for an interactive multimedia title?
++ Sketch the content and appearance of its screens
+- Measure the network speed of its delivery server
+- Record only the completed title's sales revenue
+- Replace all detailed scripts with a font catalogue
+= A storyboard shows the planned screens or shots and helps turn the project's goals into a specification.
+
+? What does a navigation map primarily show?
++ Routes linking screens or content components
+- Every pixel's final display colour and location
+- Every sound sample's amplitude and frequency
+- A list of the operating system's device drivers
+= Navigation mapping defines how users can move through the title; it may be combined with a logical-flow definition.
+
+? Which script-writing practice does the PDF recommend for an educational exercise?
++ Give feedback for correct and incorrect choices
+- Hide all feedback until the software is uninstalled
+- Give feedback only when the answer is correct
+- Replace feedback with an unrelated animation
+= Both kinds of feedback support learning. The script should explicitly specify media, interaction and responses.
+
+? A layout repeats the same heading and button treatment throughout a lesson. Which principle most directly explains this organised repetition?
++ Rhythm or pattern
+- Random variation
+- Colour quantisation
+- Audio sampling
+= Repeated elements create rhythm/pattern and can support balance and harmony.
+
+? A designer deliberately makes the main instruction stronger than supporting detail. Which principle is being applied?
++ Hierarchy and emphasis
+- File compression
+- Font rasterization
+- Network routing
+= Hierarchy assigns priority; emphasis attracts attention to the important element.
+
+? Which description best matches alpha testing in the PDF?
++ Early review of concept, interface and layout, often by the team
+- Final release to the whole public with no recorded evaluation
+- Removal of all test records after the software is distributed
+- Recording only the volume and colour of imported media assets
+= Alpha testing occurs earlier and can use a partly implemented title. Beta testing is near release with real users.
+
+? Which authoring metaphor organises media instances in tracks with time running horizontally?
++ Cast, score and scripting
+- Plain-text character coding
+- Colour lookup table indexing
+- Directory-based file compression
+= The PDF uses Director and Lingo as examples of cast/score/scripting authoring.
+
+? What should accompany delivery of a multimedia title?
++ Installation steps, requirements and troubleshooting guidance
+- An internal asset inventory without installation or user guidance
+- A complete design storyboard without a usable delivery package
+- A production budget without any instructions for the target users
+= Delivery includes a usable package and instructions for obtaining, installing and running it, including likely problems and solutions.

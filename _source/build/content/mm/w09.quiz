@@ -1,0 +1,83 @@
+? Which projection has parallel projectors perpendicular to the view plane?
++ Orthographic
+- Perspective
+- Oblique
+- Spherical panorama
+= Orthographic is the perpendicular parallel case.
+
+? In perspective with COP origin and plane z = d, what is x′?
++ xd/z
+- xz/d
+- x+d
+- x−z
+= Similar triangles give x′/x = d/z.
+
+? Project (5,4,7) perspectively onto z = 5. What is x′?
++ 25/7
+- 7
+- 1
+- 35
+= x′ = 5×5/7.
+
+? What happens to equal-size objects at greater depth in perspective?
++ They generally appear smaller
+- They must remain equal size
+- They necessarily become wider
+- Their projected size doubles
+= This is perspective foreshortening.
+
+? What does a vanishing point represent?
++ Image convergence of a parallel direction
+- The physical camera centre itself
+- The nearest model control vertex
+- The origin of every world system
+= A vanishing point is not the COP.
+
+? What is cabinet projection’s receding-depth scale?
++ Half scale
+- Full scale
+- Double scale
+- Zero scale
+= Cabinet halves the receding perpendicular-to-XY lengths.
+
+? Translate P(2,3,1) by T(2,1,4). What results?
++ (4,4,5)
+- (4,3,4)
+- (0,2,−3)
+- (2,1,4)
+= Add each shift to its matching coordinate.
+
+? Which coordinate remains fixed in origin-centred X-axis rotation?
++ x
+- y
+- z
+- All coordinates
+= The YZ pair rotates while x stays fixed.
+
+? Which homogeneous point represents Cartesian (2,3,4) with h = 1?
++ (2,3,4,1)
+- (1,2,3,4)
+- (2,3,4,0)
+- (2,3,1,4)
+= Append the homogeneous coordinate 1.
+
+? What does a wireframe primarily show?
++ Geometric edges or curves
+- Only the final surface colour
+- Only recorded stereo audio
+- Only the camera file name
+= Wireframes reveal structure.
+
+? How can moving control vertices affect an object?
++ Its local curve or surface shape
+- Only the monitor resolution
+- Only the source file extension
+- Only the physical screen size
+= Control vertices influence the geometry.
+
+? What does head tracking contribute to a CAVE?
++ Viewpoint-dependent perspective updates
+- Permanent orthographic-only images
+- Automatic removal of all stereo views
+- A fixed image regardless of movement
+= The rendered view changes with the tracked viewer.

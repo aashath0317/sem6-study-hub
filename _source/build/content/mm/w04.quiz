@@ -1,0 +1,65 @@
+? Which description best matches raster graphics?
++ An image represented by a grid of pixel colour values
+- An image stored only as musical notes and instruments
+- A drawing represented only by unconnected sound tracks
+- A presentation containing only hyperlink destinations
+= Raster graphics store pixels and suit photographs and continuous-tone painting.
+
+? Which artwork is usually most suitable for an editable vector master?
++ A simple logo to scale from cards to signs
+- A detailed camera photograph of a landscape
+- A recorded voice narration for a lesson
+- A live video recording of a cricket match
+= A geometric logo benefits from editable scalable paths. Its displayed or exported form can still be rasterized.
+
+? Which colour model adds coloured light and is commonly used for displays?
++ RGB
+- CMYK
+- CLUT
+- RLE
+= RGB is additive. CMYK models subtractive printing inks; CLUT is a palette and RLE is compression.
+
+? What is the main purpose of the K component in CMYK printing?
++ Supply a useful black ink component
+- Add an independent keyboard channel
+- Replace every coloured ink with light
+- Store the horizontal image dimension
+= Real CMY inks do not produce an ideal pure black mixture; K provides black in four-colour printing.
+
+? How many distinct codes can a 4-bit pixel value represent?
+# 16
+= 2^4 = 16 possible codes. The actual colours depend on how those codes are interpreted.
+
+? What is the minimum ideal packed index depth, in bits, for 100 palette entries?
+# 7
+= 2^6 = 64 is insufficient; 2^7 = 128 is sufficient. Thus 7 bits per index, excluding palette overhead.
+
+? Find the uncompressed pixel-data bytes for 240 × 320 pixels at 8 bits/pixel, ignoring headers and padding.
+# 76800
+= 240 × 320 × 8 ÷ 8 = 76,800 bytes.
+
+? A file has 76,800 bytes of pixel data. How many KiB is that, using 1024 bytes per KiB?
+# 75
+= 76,800 ÷ 1024 = 75 KiB. A decimal kB calculation would use 1000 instead.
+
+? A 16:9 image is 1280 pixels wide. What height in pixels preserves its ratio?
+# 720
+= Height = 1280 × 9/16 = 720 pixels.
+
+? An image is 1200 pixels wide and printed 4 inches wide. Find its horizontal pixel density in ppi.
+# 300
+= 1200 ÷ 4 = 300 pixels per inch.
+
+? Which statement correctly describes lossless compression?
++ Decoding restores the represented data exactly
+- Decoding always invents more original colours
+- Every use permanently discards pixel information
+- Its files must always be smaller than lossy files
+= Lossless means reversible data restoration. File size depends on the image and method.
+
+? What does colour dithering do?
++ Uses patterns of available colours to suggest unavailable tones
+- Adds physical primary colours to the display's hardware
+- Converts every vector object into an audio waveform
+- Guarantees exact recovery of all discarded JPEG details
+= Dithering distributes palette approximation spatially. It is more than simply selecting the nearest colour independently.

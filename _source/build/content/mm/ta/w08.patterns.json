@@ -1,7 +1,0 @@
-[
-  {
-    "pattern": "State count: ",
-    "replacement": "State எண்ணிக்கை: ",
-    "selector": ".tool"
-  }
-]

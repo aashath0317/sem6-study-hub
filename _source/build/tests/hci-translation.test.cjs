@@ -4,20 +4,19 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { JSDOM, VirtualConsole } = require('jsdom');
 const root = path.resolve(__dirname, '../../..');
-const multimedia = process.env.STUDY_TRANSLATION_SUBJECT === 'mm';
 const marketing = process.env.STUDY_TRANSLATION_SUBJECT === 'mkt';
 const discreteMath = process.env.STUDY_TRANSLATION_SUBJECT === 'dmath';
 const partialSubject = marketing || discreteMath || process.env.STUDY_TRANSLATION_SUBJECT === 'dm';
 const dataMining = process.env.STUDY_TRANSLATION_SUBJECT === 'dm';
 const business = process.env.STUDY_TRANSLATION_SUBJECT === 'bpas';
-const directory = path.join(root, multimedia ? 'Multimedia Development' : marketing ? 'Marketing' : discreteMath ? 'Discrete Mathematics' : dataMining ? 'Data Mining' : business ? 'Business Processes and Accounting Systems' : 'Human Computer Interaction');
+const directory = path.join(root, marketing ? 'Marketing' : discreteMath ? 'Discrete Mathematics' : dataMining ? 'Data Mining' : business ? 'Business Processes and Accounting Systems' : 'Human Computer Interaction');
 function files(dir) { return fs.readdirSync(dir, {withFileTypes:true}).flatMap(e => e.isDirectory() ? files(path.join(dir,e.name)) : e.name.endsWith('.html') ? [path.join(dir,e.name)] : []); }
 const tick = () => new Promise(resolve => setTimeout(resolve, 0));
 (async () => {
   let totalSections=0, totalQuestions=0, totalTools=0;
   const untranslated = [];
   const pages = files(directory).filter(file => !partialSubject || fs.readFileSync(file,"utf8").includes('id="hci-tamil-data"'));
-  if (!partialSubject) assert.equal(pages.length,multimedia ? 16 : business ? 17 : 15);
+  if (!partialSubject) assert.equal(pages.length,business ? 17 : 15);
   else if(process.env.STUDY_TRANSLATION_REQUIRE_COMPLETE) assert.equal(pages.length,marketing || discreteMath ? 15 : 16);
   else assert.ok(pages.length > 0);
   for (const file of pages) {
@@ -150,7 +149,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     }
     // Financial controls must keep their edited values and numeric results when labels change.
     const editedInputs = [...d.querySelectorAll('.tool input[type=number],.tool input[type=range]')];
-    if(business || multimedia) {
+    if(business) {
       for(const el of editedInputs) {
         const value=Number(el.value); if(!Number.isFinite(value)) continue;
         el.value=String(value===0 ? 1 : value*1.1);
@@ -163,7 +162,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     const currentTextValues=textInputs.map(el=>el.value);
     const currentCanvasPixels=canvasPixels();
     const numericOutputs=()=>[...d.querySelectorAll('.tool .out')].map(el=>(el.textContent.match(/\d+(?:[,.]\d+)*/g)||[]).sort().join('|'));
-    const tamilNumbers=(business || multimedia || partialSubject) ? numericOutputs() : null;
+    const tamilNumbers=(business || partialSubject) ? numericOutputs() : null;
     // A tool that reads a translated label must still retain its source-language state.
     const principle = d.querySelector('#pr .ps');
     let deletedLabel = null;
@@ -183,7 +182,7 @@ const tick = () => new Promise(resolve => setTimeout(resolve, 0));
     assert.deepEqual(editedInputs.map(el=>el.value),editedValues,'Edited tool values lost');
     assert.deepEqual(textInputs.map(el=>el.value),currentTextValues,'Edited datasets lost on English restore');
     assert.deepEqual(canvasPixels(),currentCanvasPixels,'Diagram shading changed on English restore');
-    if(business || multimedia || partialSubject) assert.deepEqual(numericOutputs(),tamilNumbers,'Language toggle changed calculated results');
+    if(business || partialSubject) assert.deepEqual(numericOutputs(),tamilNumbers,'Language toggle changed calculated results');
     tools.forEach(tool=> assert.ok(tool.closest('.hci-en'),'Live tool not returned'));
     for(const tool of tools) assert.ok(d.contains(tool),'Live tool replaced');
     assert.equal(d.querySelectorAll('.quiz input[type=radio]:checked').length,input?1:0);

@@ -6,12 +6,6 @@ from collections import Counter
 import re, json, hashlib, os
 
 SUBJECT = os.environ.get('STUDY_TRANSLATION_SUBJECT', 'bpas')
-assert SUBJECT in ('bpas', 'dm', 'dmath', 'hci', 'mkt', 'mm'), 'Unsupported subject'
-if SUBJECT == 'mm':
-    expected = {'w' + str(i).zfill(2) for i in range(1,15)}
-    directory = Path(__file__).resolve().parents[1] / 'content' / SUBJECT
-    assert {p.stem for p in directory.glob('w[0-9][0-9].md')} == expected
-    assert {p.stem for p in directory.glob('w[0-9][0-9].quiz')} == expected
 BASE = Path(__file__).resolve().parents[1] / 'content' / SUBJECT
 TA = BASE / 'ta'
 manifest = json.loads((TA / 'source-manifest.json').read_text())

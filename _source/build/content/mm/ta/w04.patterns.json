@@ -1,6 +1,0 @@
-[
-  {
-    "pattern": "^(\\d+) pixels; (\\d+) bits; ([\\d.]+) bytes before padding/headers; ([\\d.]+) KiB; ratio (\\d+):(\\d+)\\.$",
-    "replacement": "$1 pixels; $2 bits; padding/headers முன் $3 bytes; $4 KiB; ratio $5:$6."
-  }
-]

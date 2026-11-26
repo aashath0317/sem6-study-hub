@@ -21,7 +21,7 @@ def _strings(path):
 
 
 def translated_body(body, key, here, render):
-    match = re.fullmatch(r'(hci|bpas|dm|dmath|mkt|mm)-(?:Week(\d+)|(papers|quizzes|revision)|(index))', key)
+    match = re.fullmatch(r'(hci|bpas|dm|dmath|mkt)-(?:Week(\d+)|(papers|quizzes)|(index))', key)
     if not match:
         return body, False
     subject = match[1]
@@ -31,8 +31,6 @@ def translated_body(body, key, here, render):
     if stem != 'index' and not os.path.isfile(path):
         return body, False
     manifest = _json(os.path.join(directory, 'source-manifest.json'), {})
-    if stem == 'index' and not manifest:
-        return body, False
     for source_stem in (manifest if stem == 'index' else [stem]):
         for extension, expected in manifest.get(source_stem, {}).items():
             source = os.path.join(here, 'content', subject, source_stem + '.' + extension)

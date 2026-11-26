@@ -8,35 +8,8 @@ from bs4 import BeautifulSoup
 root = Path(__file__).resolve().parents[3]
 subject = sys.argv[1] if len(sys.argv) > 1 else 'dm'
 folder = {'dm': 'Data Mining', 'bpas': 'Business Processes and Accounting Systems',
-          'mm': 'Multimedia Development', 'mkt': 'Marketing', 'dmath': 'Discrete Mathematics', 'hci': 'Human Computer Interaction'}[subject]
+          'mkt': 'Marketing', 'dmath': 'Discrete Mathematics', 'hci': 'Human Computer Interaction'}[subject]
 baseline = '4def5a9'
-if subject == 'mm':
-    sys.path.insert(0, str(root / '_source' / 'build'))
-    from build import parse, md, parse_quiz
-    import json
-    for page in sorted((root / folder).rglob('*.html')):
-        soup = BeautifulSoup(page.read_text(), 'html.parser')
-        key = soup.body.get('data-key', '')
-        match = re.fullmatch(r'mm-Week(\d+)', key)
-        stem = 'w' + match[1] if match else 'revision' if key == 'mm-revision' else None
-        if stem:
-            source = root / '_source' / 'build' / 'content' / 'mm' / (stem + '.md')
-            _, body = parse(str(source))
-            parts = re.split(r'^## (.+)$', body, flags=re.M)
-            sections = soup.select('section[data-sec]')
-            assert len(sections) == len(parts[1::2]), page
-            for section, text in zip(sections, parts[2::2]):
-                expected = BeautifulSoup(md(text), 'html.parser')
-                english = section.select_one('.hci-en')
-                assert english is not None, (page, 'Missing English panel')
-                assert english.decode_contents().strip() == expected.decode_contents().strip(), (page, section['data-sec'], 'English differs from source')
-            if match:
-                expected = parse_quiz(str(source.with_suffix('.quiz')))
-                for question in expected: question['w'] = 'Week ' + match[1]
-                actual = json.loads(soup.select_one('.qdata').get_text())
-                assert actual == expected, (page, 'Quiz bank changed')
-    print('PASS: MM English sections and weekly quiz banks match authored sources after Tamil embedding.')
-    raise SystemExit(0)
 count = 0
 for page in sorted((root / folder).rglob('*.html')):
     current = page.read_text()

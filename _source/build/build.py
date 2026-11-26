@@ -17,14 +17,12 @@ SUBJECTS = [
     ("dmath", "Discrete Mathematics", "ITE3822", "Discrete Mathematics"),
     ("hci", "Human Computer Interaction", "ITE3752", "Human Computer Interaction"),
     ("mkt", "Marketing", "ITE3642", "Marketing"),
-    ("mm", "Multimedia Development", "ITE2732", "Multimedia Development"),
 ]
 SUBJ = {s[0]: s for s in SUBJECTS}
 # Final exams: corrected timetable image supplied by the user on 2026-11-02; date, start, end (Sri Lanka time).
 EXAMS = {"bpas": ("2026-11-15", "11:00", "14:00"), "dmath": ("2026-11-21", "08:30", "11:30"),
          "hci": ("2026-11-22", "08:30", "11:30"), "dm": ("2026-11-22", "11:30", "14:30"),
-         "mkt": ("2026-11-22", "14:45", "17:45"),
-         "mm": ("2026-11-28", "13:30", "15:30")}
+         "mkt": ("2026-11-22", "14:45", "17:45")}
 CALLS = {"tip": "Tip", "exam": "Exam focus", "warn": "Common mistake", "example": "Worked example",
          "key": "Key idea", "video": "From the lecture video"}
 
@@ -203,7 +201,7 @@ def native_tables(tables):
 
 
 def native_sections(body, key):
-    match = re.fullmatch(r"([a-z]+)-(?:Week(\d+)|(papers|quizzes|revision))", key)
+    match = re.fullmatch(r"([a-z]+)-(?:Week(\d+)|(papers|quizzes))", key)
     if not match:
         return body
     subject, week, papers = match.groups()
@@ -278,15 +276,14 @@ def page(title, body, key="", crumbs=""):
     body = native_sections(body, key)
     translation_key = next((s[0] + "-index" for s in SUBJECTS if not key and title.startswith(s[3])), key)
     body, is_hci = translated_body(body, translation_key, HERE, md)
-    subject_css = open(os.path.join(HERE, "mm.css"), encoding="utf-8").read() if translation_key.startswith("mm-") else ""
     translation = ""
     if is_hci:
         translation = '<style>' + open(os.path.join(HERE, "hci-translate.css"), encoding="utf-8").read() + '</style><script>' + open(os.path.join(HERE, "hci-translate.js"), encoding="utf-8").read() + '</script>'
-    home = ("../../" if re.fullmatch(r"[a-z]+-Week\d+", key) else "../" if (key.endswith(("-papers", "-quizzes")) or key == "mm-revision") or 'href="../SEM 6' in crumbs else "") + "SEM%206%20Study%20Hub.html#study-plan"
+    home = ("../../" if re.fullmatch(r"[a-z]+-Week\d+", key) else "../" if key.endswith(("-papers", "-quizzes")) or 'href="../SEM 6' in crumbs else "") + "SEM%206%20Study%20Hub.html#study-plan"
     menu_button = '<button id="tocbtn" aria-label="Hide or show the contents menu" aria-expanded="true">☰ Menu</button>' if 'id="toc"' in body else ""
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{html.escape(title)}</title><style>{CSS}{subject_css}</style></head>
+<title>{html.escape(title)}</title><style>{CSS}</style></head>
 <body data-key="{key}" data-study-home="{home}">
 <div class="topbar">{menu_button}<div class="crumb">{crumbs}</div>
 <button id="fsm" title="Smaller text">A−</button><button id="fsp" title="Larger text">A+</button><button id="themebtn" title="Dark / light">◐</button><div class="progress"></div></div>

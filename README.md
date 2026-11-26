@@ -7,7 +7,6 @@ Offline study guides for every week of Semester 6:
 - Discrete Mathematics
 - Human Computer Interaction
 - Marketing
-- Multimedia Development (ITE2732)
 
 Each week page has full notes, interactive tools, and a self-check quiz. Every subject page also has a mixed practice exam, and quiz scores are saved in your browser.
 
@@ -36,7 +35,7 @@ python build.py          # or: python build.py bpas dm …
 
 ## Deadline and pace dashboard
 
-The hub's **My finish plan** reads existing section checks and latest quiz scores from this browser. It covers 84 weeks, available past-paper sections and optional mixed practice exams. Set realistic daily focused hours, study days, section/quiz/revision estimates, quiz target and revision buffer. Exam dates use Sri Lanka time and exam days are excluded from study capacity.
+The hub's **My finish plan** reads existing section checks and latest quiz scores from this browser. It covers 70 weeks, available past-paper sections and optional mixed practice exams. Set realistic daily focused hours, study days, section/quiz/revision estimates, quiz target and revision buffer. Exam dates use Sri Lanka time and exam days are excluded from study capacity.
 
 The dashboard checks cumulative work due before every deadline, shows capacity shortfalls and projected completion, and builds today's and the next seven study days' focus blocks. Latest weak quiz results and older passed learning add revision tasks. The default estimates are not a personalised measurement or a guarantee of passing.
 
@@ -95,32 +94,3 @@ Beginner practice and rewritten course-paper practice sections show English unde
 ## Answer-it-yourself practice
 
 Week pages can include step-by-step answer boxes (`_source/build/practice.js`). A wrong answer explains why and how to think about it. Add one in a week's `.md` with a `:::tool` block holding `<div id="gp-wNN-qN" class="gp"><script type="application/json">…</script></div>`; see `content/bpas/w02.md` for examples. The `tests/translation-preservation.test.py` script check compares against an old baseline, so it reports a change whenever shared page scripts change on purpose.
-
-
-## Multimedia Development (ITE2732)
-
-Multimedia Development contains 14 source-based weekly guides, 170 original weekly self-check questions, 34 interactive tools (including six guided calculation practices), and the mixed practice exam. Notes cover all 20 supplied PDFs (191 pages) and explain the visible operations in five silent vector-graphics recordings. Every numbered Activity and review question has a model answer. There are no official Multimedia quizzes or past papers in the supplied folder, so the practice questions are clearly authored learning exercises.
-
-The calculation guides include full DDA/Bresenham/circle iteration tables; image-size, colour-depth, resolution and aspect-ratio calculations; 2D/3D matrices and projections; and video/audio capacity calculations. Source errors and unavailable linked resources are identified in the notes. The exam is 28 November 2026, 13:30–15:30 Sri Lanka time. Existing subjects retain their progress keys.
-
-Independent numeric verification:
-
-```sh
-python3 _source/build/tests/mm-numeric-02-05.test.py
-python3 _source/build/tests/mm-numeric-06-10.test.py
-python3 _source/build/tests/mm-numeric-11-14.test.py
-```
-
-The Multimedia one-shot revision page gives Tamil explanations for all 14 weeks, comparison tables, a formula sheet, English exam-answer frames, a self-test, a 25–28 November study plan and a two-hour exam time plan. Study priorities are labelled as guesses rather than known exam questions.
-
-
-Multimedia also has full authored offline Tamil notes and quizzes for all 14 weeks, tool labels and feedback, and 141 per-section explanations including revision. Technical terms and English exam-answer templates remain in English. Switching languages preserves edited inputs and quiz selections. The source hash manifest detects English changes that need translation review.
-
-```sh
-STUDY_TRANSLATION_SUBJECT=mm STUDY_TRANSLATION_REQUIRE_COMPLETE=1 python3 _source/build/tests/tamil-source.test.py
-STUDY_TRANSLATION_SUBJECT=mm node _source/build/tests/hci-translation.test.cjs
-python3 _source/build/tests/translation-preservation.test.py mm
-node _source/build/tests/mm-backup.test.cjs
-```
-
-The DOM tests need `jsdom`; the preservation test needs `beautifulsoup4`. Existing subjects' note content and saved progress keys are preserved.
